@@ -1,0 +1,134 @@
+ErrorDocument 403 /page111312446.html
+ErrorDocument 404 /page111312446.html
+
+DirectoryIndex page63806411.html
+
+RewriteEngine On
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^dubai/en$ page63806411.html [NC]
+RewriteRule ^dubai/en/$ page63806411.html [NC]
+
+RewriteRule ^dubai/en/tours/full-day-dubai-desert-safari$ page106026336.html [NC]
+RewriteRule ^dubai/en/tours/full-day-dubai-desert-safari/$ page106026336.html [NC]
+
+RewriteRule ^dubai/en/tours/abu-dhabi-city-tour-from-dubai$ page112638996.html [NC]
+RewriteRule ^dubai/en/tours/abu-dhabi-city-tour-from-dubai/$ page112638996.html [NC]
+
+RewriteRule ^dubai/en/tours/hot-air-balloon-sunrise-flight$ page114154666.html [NC]
+RewriteRule ^dubai/en/tours/hot-air-balloon-sunrise-flight/$ page114154666.html [NC]
+
+RewriteRule ^dubai/en/tours/dubai-marina-yacht-party$ page112631276.html [NC]
+RewriteRule ^dubai/en/tours/dubai-marina-yacht-party/$ page112631276.html [NC]
+
+RewriteRule ^dubai/en/tours/dubai-marina-1-hour-shared-yacht-tour$ page116517176.html [NC]
+RewriteRule ^dubai/en/tours/dubai-marina-1-hour-shared-yacht-tour/$ page116517176.html [NC]
+
+RewriteRule ^dubai/en/about$ page112152236.html [NC]
+RewriteRule ^dubai/en/about/$ page112152236.html [NC]
+
+RewriteRule ^dubai/en/faq$ page112258706.html [NC]
+RewriteRule ^dubai/en/faq/$ page112258706.html [NC]
+
+RewriteRule ^dubai/en/header$ page106032666.html [NC]
+RewriteRule ^dubai/en/header/$ page106032666.html [NC]
+
+RewriteRule ^dubai/en/privacy-policy$ page112272486.html [NC]
+RewriteRule ^dubai/en/privacy-policy/$ page112272486.html [NC]
+
+RewriteRule ^dubai/en/footer$ page106032906.html [NC]
+RewriteRule ^dubai/en/footer/$ page106032906.html [NC]
+
+RewriteRule ^dubai/en/terms$ page112277396.html [NC]
+RewriteRule ^dubai/en/terms/$ page112277396.html [NC]
+
+RewriteRule ^not-found$ page111312446.html [NC]
+RewriteRule ^not-found/$ page111312446.html [NC]
+
+RewriteRule ^123456$ page128064616.html [NC]
+RewriteRule ^123456/$ page128064616.html [NC]
+
+RewriteRule ^bali/en/main-page$ page128073236.html [NC]
+RewriteRule ^bali/en/main-page/$ page128073236.html [NC]
+
+RewriteRule ^bali/en/tours/nusa-penida-manta-rays-point$ page132181473.html [NC]
+RewriteRule ^bali/en/tours/nusa-penida-manta-rays-point/$ page132181473.html [NC]
+
+RewriteRule ^bali/en/tours/mount-batur-sunrise-hike$ page132812463.html [NC]
+RewriteRule ^bali/en/tours/mount-batur-sunrise-hike/$ page132812463.html [NC]
+
+RewriteRule ^mount-batur-sunrise-jeep-hot-spring$ page133629743.html [NC]
+RewriteRule ^mount-batur-sunrise-jeep-hot-spring/$ page133629743.html [NC]
+
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^dubai/en$ page63806411.html [NC]
+RewriteRule ^dubai/en/$ page63806411.html [NC]
+
+RewriteRule ^dubai/en/tours/full-day-dubai-desert-safari$ page106026336.html [NC]
+RewriteRule ^dubai/en/tours/full-day-dubai-desert-safari/$ page106026336.html [NC]
+
+RewriteRule ^dubai/en/tours/abu-dhabi-city-tour-from-dubai$ page112638996.html [NC]
+RewriteRule ^dubai/en/tours/abu-dhabi-city-tour-from-dubai/$ page112638996.html [NC]
+
+RewriteRule ^dubai/en/tours/hot-air-balloon-sunrise-flight$ page114154666.html [NC]
+RewriteRule ^dubai/en/tours/hot-air-balloon-sunrise-flight/$ page114154666.html [NC]
+
+RewriteRule ^dubai/en/tours/dubai-marina-yacht-party$ page112631276.html [NC]
+RewriteRule ^dubai/en/tours/dubai-marina-yacht-party/$ page112631276.html [NC]
+
+RewriteRule ^dubai/en/tours/dubai-marina-1-hour-shared-yacht-tour$ page116517176.html [NC]
+RewriteRule ^dubai/en/tours/dubai-marina-1-hour-shared-yacht-tour/$ page116517176.html [NC]
+
+RewriteRule ^dubai/en/about$ page112152236.html [NC]
+RewriteRule ^dubai/en/about/$ page112152236.html [NC]
+
+RewriteRule ^dubai/en/faq$ page112258706.html [NC]
+RewriteRule ^dubai/en/faq/$ page112258706.html [NC]
+
+RewriteRule ^dubai/en/header$ page106032666.html [NC]
+RewriteRule ^dubai/en/header/$ page106032666.html [NC]
+
+RewriteRule ^dubai/en/privacy-policy$ page112272486.html [NC]
+RewriteRule ^dubai/en/privacy-policy/$ page112272486.html [NC]
+
+RewriteRule ^dubai/en/footer$ page106032906.html [NC]
+RewriteRule ^dubai/en/footer/$ page106032906.html [NC]
+
+RewriteRule ^dubai/en/terms$ page112277396.html [NC]
+RewriteRule ^dubai/en/terms/$ page112277396.html [NC]
+
+RewriteRule ^not-found$ page111312446.html [NC]
+RewriteRule ^not-found/$ page111312446.html [NC]
+
+RewriteRule ^123456$ page128064616.html [NC]
+RewriteRule ^123456/$ page128064616.html [NC]
+
+RewriteRule ^bali/en/main-page$ page128073236.html [NC]
+RewriteRule ^bali/en/main-page/$ page128073236.html [NC]
+
+RewriteRule ^bali/en/tours/nusa-penida-manta-rays-point$ page132181473.html [NC]
+RewriteRule ^bali/en/tours/nusa-penida-manta-rays-point/$ page132181473.html [NC]
+
+RewriteRule ^bali/en/tours/mount-batur-sunrise-hike$ page132812463.html [NC]
+RewriteRule ^bali/en/tours/mount-batur-sunrise-hike/$ page132812463.html [NC]
+
+RewriteRule ^mount-batur-sunrise-jeep-hot-spring$ page133629743.html [NC]
+RewriteRule ^mount-batur-sunrise-jeep-hot-spring/$ page133629743.html [NC]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^dubai\/en\/blog(?:/([a-z0-9_-]+(?:/[a-z0-9_-]+)*))?/?$ http://127.0.0.1:39215%{REQUEST_URI}?feeduid=426101175351 [P,L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^bali\/en\/blog(?:/([a-z0-9_-]+(?:/[a-z0-9_-]+)*))?/?$ http://127.0.0.1:39215%{REQUEST_URI}?feeduid=647822476671 [P,L,QSA]
+

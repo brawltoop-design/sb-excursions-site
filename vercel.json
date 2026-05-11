@@ -1,0 +1,100 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/tproduct/1366959501-735097005942-desert-safari-buggy-camel-ride-sandboard",
+      "destination": "/dubai/en/tours/full-day-dubai-desert-safari",
+      "permanent": false
+    },
+    {
+      "source": "/tproduct/1366959501-232604178022-abu-dhabi-from-dubai",
+      "destination": "/dubai/en/tours/abu-dhabi-city-tour-from-dubai",
+      "permanent": false
+    },
+    {
+      "source": "/tproduct/1366959501-643417850282-classical-dubai-city-tour",
+      "destination": "/dubai/en",
+      "permanent": false
+    },
+    {
+      "source": "/tproduct/1366959501-910807092422-full-day-explore-dubai-city-tour",
+      "destination": "/dubai/en",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/dubai/en",
+      "destination": "/page63806411.html"
+    },
+    {
+      "source": "/dubai/en/tours/full-day-dubai-desert-safari",
+      "destination": "/page106026336.html"
+    },
+    {
+      "source": "/dubai/en/tours/abu-dhabi-city-tour-from-dubai",
+      "destination": "/page112638996.html"
+    },
+    {
+      "source": "/dubai/en/tours/hot-air-balloon-sunrise-flight",
+      "destination": "/page114154666.html"
+    },
+    {
+      "source": "/dubai/en/tours/dubai-marina-yacht-party",
+      "destination": "/page112631276.html"
+    },
+    {
+      "source": "/dubai/en/tours/dubai-marina-1-hour-shared-yacht-tour",
+      "destination": "/page116517176.html"
+    },
+    {
+      "source": "/dubai/en/about",
+      "destination": "/page112152236.html"
+    },
+    {
+      "source": "/dubai/en/faq",
+      "destination": "/page112258706.html"
+    },
+    {
+      "source": "/dubai/en/header",
+      "destination": "/page106032666.html"
+    },
+    {
+      "source": "/dubai/en/privacy-policy",
+      "destination": "/page112272486.html"
+    },
+    {
+      "source": "/dubai/en/footer",
+      "destination": "/page106032906.html"
+    },
+    {
+      "source": "/dubai/en/terms",
+      "destination": "/page112277396.html"
+    },
+    {
+      "source": "/not-found",
+      "destination": "/page111312446.html"
+    },
+    {
+      "source": "/123456",
+      "destination": "/page128064616.html"
+    },
+    {
+      "source": "/bali/en/main-page",
+      "destination": "/page128073236.html"
+    },
+    {
+      "source": "/bali/en/tours/nusa-penida-manta-rays-point",
+      "destination": "/page132181473.html"
+    },
+    {
+      "source": "/bali/en/tours/mount-batur-sunrise-hike",
+      "destination": "/page132812463.html"
+    },
+    {
+      "source": "/mount-batur-sunrise-jeep-hot-spring",
+      "destination": "/page133629743.html"
+    }
+  ]
+}
