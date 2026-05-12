@@ -17,7 +17,4 @@ Disallow: /tilda/product*
 Disallow: /tilda/event*
 Disallow:
 
-
-Sitemap: https://sbexcursion.com/sitemap.xml
-Sitemap: https://sbexcursion.com/sitemap-store.xml
-Sitemap: https://sbexcursion.com/sitemap-feeds.xml
+Sitemap: https://sb-excursions-public.vercel.app/sitemap.xml
