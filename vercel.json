@@ -21,6 +21,16 @@
       "source": "/tproduct/1366959501-910807092422-full-day-explore-dubai-city-tour",
       "destination": "/dubai/en",
       "permanent": false
+    },
+    {
+      "source": "/bali/en/tours/ubud-highlights-tour",
+      "destination": "/123456",
+      "permanent": false
+    },
+    {
+      "source": "/bali/en/tours/ubud-highlits-",
+      "destination": "/123456",
+      "permanent": false
     }
   ],
   "rewrites": [
@@ -78,14 +88,6 @@
     },
     {
       "source": "/123456",
-      "destination": "/page128064616.html"
-    },
-    {
-      "source": "/bali/en/tours/ubud-highlights-tour",
-      "destination": "/page128064616.html"
-    },
-    {
-      "source": "/bali/en/tours/ubud-highlits-",
       "destination": "/page128064616.html"
     },
     {
