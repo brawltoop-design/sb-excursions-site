@@ -511,15 +511,22 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 0 0 32px;
-  color: var(--sb-muted);
+  padding: 20px 24px 28px;
+  color: rgba(255, 255, 255, 0.94);
   font-size: 14px;
+  background: linear-gradient(135deg, #68d6ff 0%, #3f9cff 42%, #0b829d 100%);
+  border-radius: 28px 28px 0 0;
+  box-shadow: 0 -10px 28px rgba(18, 62, 118, 0.14);
 }
 
 .sb-tour-footer-links {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+}
+
+.sb-tour-footer a {
+  color: inherit;
 }
 
 .sb-pill-link:hover,

@@ -1,0 +1,10 @@
+<svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="outerRing" d="M110 18C160.81 18 202 59.19 202 110C202 160.81 160.81 202 110 202C59.19 202 18 160.81 18 110C18 59.19 59.19 18 110 18Z"/>
+  </defs>
+  <text fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="5.2">
+    <textPath href="#outerRing" startOffset="0%">
+      WATCH VIDEO WATCH VIDEO WATCH VIDEO
+    </textPath>
+  </text>
+</svg>

@@ -23,13 +23,13 @@
       "permanent": false
     },
     {
-      "source": "/bali/en/tours/ubud-highlights-tour",
-      "destination": "/123456",
+      "source": "/bali/en/tours/ubud-highlights",
+      "destination": "/bali/en/tours/ubud-highlights-tour",
       "permanent": false
     },
     {
       "source": "/bali/en/tours/ubud-highlits-",
-      "destination": "/123456",
+      "destination": "/bali/en/tours/ubud-highlights-tour",
       "permanent": false
     }
   ],
@@ -91,8 +91,24 @@
       "destination": "/page128064616.html"
     },
     {
+      "source": "/bali/en/tours/nusa-penida-west-tour",
+      "destination": "/bali-tour-nusa-penida-west-tour.html"
+    },
+    {
       "source": "/bali/en/main-page",
       "destination": "/page128073236.html"
+    },
+    {
+      "source": "/bali/en/journal",
+      "destination": "/bali-journal.html"
+    },
+    {
+      "source": "/bali/en/journal/:guide",
+      "destination": "/bali-journal-guide-:guide.html"
+    },
+    {
+      "source": "/bali/en/journal/:tour/:article",
+      "destination": "/bali-journal-:tour-:article.html"
     },
     {
       "source": "/bali/en/tours/nusa-penida-manta-rays-point",
@@ -103,8 +119,20 @@
       "destination": "/page132812463.html"
     },
     {
+      "source": "/bali/en/tours/mount-batur-sunrise-jeep-hot-spring",
+      "destination": "/page133629743.html"
+    },
+    {
+      "source": "/beli/en/tours/mount-batur-sunrise-jeep-hot-spring",
+      "destination": "/page133629743.html"
+    },
+    {
       "source": "/mount-batur-sunrise-jeep-hot-spring",
       "destination": "/page133629743.html"
+    },
+    {
+      "source": "/bali/en/tours/:slug",
+      "destination": "/bali-tour-:slug.html"
     }
   ]
 }

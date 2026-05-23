@@ -1,8 +1,10 @@
 import { createReadStream } from "node:fs";
-import { stat } from "node:fs/promises";
+import { readFile, stat } from "node:fs/promises";
 import http from "node:http";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+
+import { buildDubaiCatalogMarkup } from "./dubai-catalog-static.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -25,6 +27,8 @@ const redirects = new Map([
     "/tproduct/1366959501-910807092422-full-day-explore-dubai-city-tour",
     "/dubai/en",
   ],
+  ["/bali/en/tours/ubud-highlights", "/bali/en/tours/ubud-highlights-tour"],
+  ["/bali/en/tours/ubud-highlits-", "/bali/en/tours/ubud-highlights-tour"],
 ]);
 
 const rewrites = new Map([
@@ -43,9 +47,13 @@ const rewrites = new Map([
   ["/dubai/en/terms", "page112277396.html"],
   ["/not-found", "page111312446.html"],
   ["/123456", "page128064616.html"],
+  ["/bali/en/tours/nusa-penida-west-tour", "bali-tour-nusa-penida-west-tour.html"],
   ["/bali/en/main-page", "page128073236.html"],
+  ["/bali/en/journal", "bali-journal.html"],
   ["/bali/en/tours/nusa-penida-manta-rays-point", "page132181473.html"],
   ["/bali/en/tours/mount-batur-sunrise-hike", "page132812463.html"],
+  ["/bali/en/tours/mount-batur-sunrise-jeep-hot-spring", "page133629743.html"],
+  ["/beli/en/tours/mount-batur-sunrise-jeep-hot-spring", "page133629743.html"],
   ["/mount-batur-sunrise-jeep-hot-spring", "page133629743.html"],
 ]);
 
@@ -67,10 +75,150 @@ const mimeTypes = {
   ".xml": "application/xml; charset=utf-8",
 };
 
-function sendFile(res, filePath, statusCode = 200) {
+const dubaiCatalogMarkup = buildDubaiCatalogMarkup();
+const dubaiLegalPagesWithoutFooter = new Set([
+  "page112258706.html",
+  "page112272486.html",
+  "page112277396.html",
+]);
+
+const tildaLabelCleanupStyle = `
+<style data-sb-hide-tilda-label-style>
+#tildacopy,
+.t-tildalabel,
+.t-tildalabel-free {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  max-height: 0 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+</style>`;
+
+const tildaLabelCleanupScript = `
+<script data-sb-hide-tilda-cleanup>
+(() => {
+  const selectors = "#tildacopy, .t-tildalabel, .t-tildalabel-free";
+
+  const hideBadge = () => {
+    document.querySelectorAll(selectors).forEach((node) => {
+      node.style.setProperty("display", "none", "important");
+      node.style.setProperty("visibility", "hidden", "important");
+      node.style.setProperty("opacity", "0", "important");
+      node.style.setProperty("pointer-events", "none", "important");
+      node.style.setProperty("max-height", "0", "important");
+      node.style.setProperty("min-height", "0", "important");
+      node.style.setProperty("overflow", "hidden", "important");
+      node.remove();
+    });
+  };
+
+  const startCleanup = () => {
+    if (!document.documentElement || window.__sbTildaCleanupStarted) {
+      return;
+    }
+
+    window.__sbTildaCleanupStarted = true;
+    const observer = new MutationObserver(hideBadge);
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+
+    const intervalId = window.setInterval(hideBadge, 500);
+    const stopCleanup = () => {
+      window.clearInterval(intervalId);
+      observer.disconnect();
+    };
+
+    hideBadge();
+    window.addEventListener("load", hideBadge, { once: true });
+    window.addEventListener("pageshow", hideBadge);
+    window.setTimeout(hideBadge, 100);
+    window.setTimeout(hideBadge, 700);
+    window.setTimeout(hideBadge, 2000);
+    window.setTimeout(stopCleanup, 30000);
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", startCleanup, { once: true });
+  } else {
+    startCleanup();
+  }
+})();
+</script>`;
+
+function replaceDubaiCatalogBlock(html, filePath) {
+  if (path.basename(filePath) !== "page63806411.html") {
+    return html;
+  }
+
+  const startMarker = '<div id="rec1366959501"';
+  const endMarker = '<div id="rec1803735931"';
+  const start = html.indexOf(startMarker);
+  const end = html.indexOf(endMarker, start);
+
+  if (start === -1 || end === -1) {
+    return html;
+  }
+
+  return `${html.slice(0, start)}${dubaiCatalogMarkup} ${html.slice(end)}`;
+}
+
+function stripDubaiLegalFooter(html, filePath) {
+  if (!dubaiLegalPagesWithoutFooter.has(path.basename(filePath))) {
+    return html;
+  }
+
+  const footerWithCommentsPattern =
+    /\s*<!--footer-->\s*<footer id="t-footer"[^>]*>[\s\S]*?<\/footer>\s*<!--\/footer-->/i;
+  const footerPattern = /\s*<footer id="t-footer"[^>]*>[\s\S]*?<\/footer>/i;
+
+  const strippedWithComments = html.replace(footerWithCommentsPattern, "");
+  if (strippedWithComments !== html) {
+    return strippedWithComments;
+  }
+
+  return html.replace(footerPattern, "");
+}
+
+function injectHtmlEnhancements(html, filePath) {
+  let updatedHtml = replaceDubaiCatalogBlock(html, filePath);
+  updatedHtml = stripDubaiLegalFooter(updatedHtml, filePath);
+
+  if (!updatedHtml.includes("data-sb-hide-tilda-label-style")) {
+    if (updatedHtml.includes("</head>")) {
+      updatedHtml = updatedHtml.replace("</head>", `${tildaLabelCleanupStyle}</head>`);
+    } else {
+      updatedHtml = `${tildaLabelCleanupStyle}${updatedHtml}`;
+    }
+  }
+
+  if (!updatedHtml.includes("data-sb-hide-tilda-cleanup")) {
+    if (updatedHtml.includes("</body>")) {
+      updatedHtml = updatedHtml.replace("</body>", `${tildaLabelCleanupScript}</body>`);
+    } else {
+      updatedHtml = `${updatedHtml}${tildaLabelCleanupScript}`;
+    }
+  }
+
+  return updatedHtml;
+}
+
+async function sendFile(res, filePath, statusCode = 200) {
   const ext = path.extname(filePath).toLowerCase();
+  const contentType = mimeTypes[ext] || "application/octet-stream";
+
+  if (ext === ".html") {
+    const html = await readFile(filePath, "utf8");
+    res.writeHead(statusCode, {
+      "Content-Type": contentType,
+    });
+    res.end(injectHtmlEnhancements(html, filePath));
+    return;
+  }
+
   res.writeHead(statusCode, {
-    "Content-Type": mimeTypes[ext] || "application/octet-stream",
+    "Content-Type": contentType,
   });
   createReadStream(filePath).pipe(res);
 }
@@ -99,11 +247,48 @@ async function resolveFile(urlPathname) {
   } catch {}
 
   const rewritten = rewrites.get(normalized);
-  if (!rewritten) {
-    return null;
+  if (rewritten) {
+    return path.join(__dirname, rewritten);
   }
 
-  return path.join(__dirname, rewritten);
+  if (normalized.startsWith("/bali/en/tours/")) {
+    const slug = normalized.slice("/bali/en/tours/".length);
+    if (slug) {
+      const generatedTourFile = path.join(__dirname, `bali-tour-${slug}.html`);
+      try {
+        const fileStat = await stat(generatedTourFile);
+        if (fileStat.isFile()) {
+          return generatedTourFile;
+        }
+      } catch {}
+    }
+  }
+
+  if (normalized.startsWith("/bali/en/journal/")) {
+    const parts = normalized.slice("/bali/en/journal/".length).split("/").filter(Boolean);
+    if (parts.length === 1) {
+      const [guideSlug] = parts;
+      const generatedGuideFile = path.join(__dirname, `bali-journal-guide-${guideSlug}.html`);
+      try {
+        const fileStat = await stat(generatedGuideFile);
+        if (fileStat.isFile()) {
+          return generatedGuideFile;
+        }
+      } catch {}
+    }
+    if (parts.length === 2) {
+      const [tourSlug, articleSlug] = parts;
+      const generatedJournalFile = path.join(__dirname, `bali-journal-${tourSlug}-${articleSlug}.html`);
+      try {
+        const fileStat = await stat(generatedJournalFile);
+        if (fileStat.isFile()) {
+          return generatedJournalFile;
+        }
+      } catch {}
+    }
+  }
+
+  return null;
 }
 
 const server = http.createServer(async (req, res) => {
@@ -111,7 +296,7 @@ const server = http.createServer(async (req, res) => {
   const pathname = safePathname(url.pathname);
 
   if (!pathname) {
-    sendFile(res, path.join(__dirname, "404.html"), 404);
+    await sendFile(res, path.join(__dirname, "404.html"), 404);
     return;
   }
 
@@ -131,11 +316,11 @@ const server = http.createServer(async (req, res) => {
 
   const filePath = await resolveFile(pathname);
   if (filePath) {
-    sendFile(res, filePath);
+    await sendFile(res, filePath);
     return;
   }
 
-  sendFile(res, path.join(__dirname, "404.html"), 404);
+  await sendFile(res, path.join(__dirname, "404.html"), 404);
 });
 
 server.listen(port, () => {
