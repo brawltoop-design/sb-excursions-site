@@ -287,6 +287,7 @@ const sourceImage = (name) => path.join(projectRoot, "images", name);
 const commonsImage = (fileName, width = 1280) =>
   `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}?width=${width}`;
 const plannerLocalImage = (relativePath) => `/${relativePath.replace(/^\/+/, "")}`;
+const lokasiBaliImage = (imageId) => `https://lokasibali.com/api/images/${imageId}`;
 const BALI_PLANNER_PLACE_IMAGES = {
   cangguSunset: commonsImage("Tanah Lot, Bali, Indonesia, 20220827 0957 1103.jpg"),
   cangguBeach: commonsImage("Batu Bolong Beach, Canggu.jpg"),
@@ -334,107 +335,107 @@ const BALI_PLANNER_PLACE_IMAGES = {
   mountBaturSunriseLocal: plannerLocalImage("images/bali-tours/mount-batur-sunrise-jeep-tour.webp"),
 };
 const BALI_PLANNER_PLACE_IMAGE_BY_TITLE = {
-  "Tanah Lot Temple": BALI_PLANNER_PLACE_IMAGES.cangguSunset,
-  "La Brisa Beach Club": BALI_PLANNER_PLACE_IMAGES.cangguBeachClub,
-  "Batu Bolong Beach": BALI_PLANNER_PLACE_IMAGES.cangguBeach,
-  "The Lawn Canggu": BALI_PLANNER_PLACE_IMAGES.cangguBeach,
-  "Crate Cafe": BALI_PLANNER_PLACE_IMAGES.cangguBeach,
-  "Pererenan Beach": BALI_PLANNER_PLACE_IMAGES.cangguQuietBeach,
-  "Finns Beach Club": BALI_PLANNER_PLACE_IMAGES.cangguBeachClub,
-  "Milk and Madu": BALI_PLANNER_PLACE_IMAGES.cangguQuietBeach,
-  "Seseh Beach": BALI_PLANNER_PLACE_IMAGES.cangguSunset,
-  "Nude Cafe": BALI_PLANNER_PLACE_IMAGES.cangguQuietBeach,
-  "Echo Beach": BALI_PLANNER_PLACE_IMAGES.cangguBeachClub,
-  "Mason Canggu": BALI_PLANNER_PLACE_IMAGES.cangguBeach,
-  "Warung Varuna": BALI_PLANNER_PLACE_IMAGES.cangguSunset,
-  "Love Anchor Market": BALI_PLANNER_PLACE_IMAGES.cangguBeach,
-  "Luma Canggu": BALI_PLANNER_PLACE_IMAGES.cangguQuietBeach,
-  "Seminyak Beach": BALI_PLANNER_PLACE_IMAGES.seminyakBeach,
-  "Potato Head Beach Club": BALI_PLANNER_PLACE_IMAGES.seminyakPetitenget,
+  "Tanah Lot Temple": "https://live.staticflickr.com/4128/4947292419_203860e39c_b.jpg",
+  "La Brisa Beach Club": lokasiBaliImage("business-0x2dd23876693af8ad%3A0x86929db7c4eabc29-0.webp"),
+  "Batu Bolong Beach": "https://live.staticflickr.com/65535/49439825083_4c1d06d9ee_b.jpg",
+  "The Lawn Canggu": lokasiBaliImage("business-0x2dd24787d5600789%3A0xddcc6236335403f0-0.webp"),
+  "Crate Cafe": "https://onbali.com/assets/brands/crate-cafe/cover-crate-cafe-1.jpg",
+  "Pererenan Beach": "https://live.staticflickr.com/2753/4385370628_c017775fa0_b.jpg",
+  "Finns Beach Club": "https://live.staticflickr.com/65535/49333116142_0bb38168ed_b.jpg",
+  "Milk and Madu": "https://live.staticflickr.com/65535/52462510774_17d6a8876f_b.jpg",
+  "Seseh Beach": "https://live.staticflickr.com/2739/4192527024_236362236d_b.jpg",
+  "Nude Cafe": lokasiBaliImage("business-0x2dd2398d368c82ed%3A0x176693a7f7b89243-0.webp"),
+  "Echo Beach": "https://live.staticflickr.com/4153/5094068042_d8a64070f6_b.jpg",
+  "Mason Canggu": "https://live.staticflickr.com/65535/52462766213_a2616b5b9a_b.jpg",
+  "Warung Varuna": "https://foto2.sluurpy.com/locali/id/8460525/70837021.jpg",
+  "Love Anchor Market": lokasiBaliImage("business-0x2dd238796aeea797%3A0xf6fb68fe602b27b2-0.webp"),
+  "Luma Canggu": "https://framerusercontent.com/images/bOJlIj8nvkCzWIhnjtnzw5Cbjs.jpg?width=2560&height=1708",
+  "Seminyak Beach": "https://live.staticflickr.com/7310/10416469375_ac05b9c216_b.jpg",
+  "Potato Head Beach Club": "https://live.staticflickr.com/6042/6281781855_a6df953705_b.jpg",
   "Atlas Beach Club": BALI_PLANNER_PLACE_IMAGES.cangguBeachClub,
-  "Ku De Ta": BALI_PLANNER_PLACE_IMAGES.seminyakSunset,
-  "Sisterfields": BALI_PLANNER_PLACE_IMAGES.seminyakPetitenget,
-  "Petitenget Beach": BALI_PLANNER_PLACE_IMAGES.seminyakPetitenget,
-  "Motel Mexicola": BALI_PLANNER_PLACE_IMAGES.seminyakTemple,
-  "Revolver Espresso": BALI_PLANNER_PLACE_IMAGES.seminyakBeach,
-  "Sea Circus": BALI_PLANNER_PLACE_IMAGES.seminyakBeach,
-  "Mrs Sippy": BALI_PLANNER_PLACE_IMAGES.seminyakPetitenget,
-  "Nook": BALI_PLANNER_PLACE_IMAGES.seminyakSunset,
-  "Double Six Beach": BALI_PLANNER_PLACE_IMAGES.seminyakSunset,
-  "Biku": BALI_PLANNER_PLACE_IMAGES.seminyakTemple,
-  "Kim Soo": BALI_PLANNER_PLACE_IMAGES.seminyakPetitenget,
-  "Coffee Cartel": BALI_PLANNER_PLACE_IMAGES.seminyakBeach,
-  "Petitenget Temple": BALI_PLANNER_PLACE_IMAGES.seminyakTemple,
-  "Tegalalang Rice Terrace": BALI_PLANNER_PLACE_IMAGES.ubudRiceTerrace,
-  "Campuhan Ridge Walk": BALI_PLANNER_PLACE_IMAGES.ubudRidge,
-  "Tibumana Waterfall": BALI_PLANNER_PLACE_IMAGES.ubudWaterfall,
+  "Ku De Ta": "https://live.staticflickr.com/2016/2335088428_88622c3a12_b.jpg",
+  "Sisterfields": "https://live.staticflickr.com/5706/23773451981_2dc59d3577_b.jpg",
+  "Petitenget Beach": "https://live.staticflickr.com/7625/16979410126_7073f1215d_b.jpg",
+  "Motel Mexicola": "https://live.staticflickr.com/8565/16438615141_08a3330b56.jpg",
+  "Revolver Espresso": "https://bali.com/wp-content/uploads/2021/12/Revolver-martini-1200.jpg",
+  "Sea Circus": "https://bali.com/wp-content/uploads/2021/12/Sea-Circus-1080.jpg",
+  "Mrs Sippy": "https://bali.com/wp-content/uploads/2020/10/120128513_1082881742127067_816891588651819007_o.jpg",
+  "Nook": "https://bali.com/wp-content/uploads/2021/12/nook-pic-1.jpg",
+  "Double Six Beach": "https://live.staticflickr.com/5817/23627993520_42e413f236_b.jpg",
+  "Biku": "https://live.staticflickr.com/7152/6598026483_428af69c55_b.jpg",
+  "Kim Soo": "https://static.bali.live/uploads/71689/responsive-images/3a19178e-ff8d-48bb-9231-8a3d6d2ba585___responsive_1280_956.jpg",
+  "Coffee Cartel": "https://lokasibali.com/api/images/business-0x2dd2471373319a33%3A0x26f04bb5cd5ec311-0.webp",
+  "Petitenget Temple": "https://bali.com/wp-content/uploads/2020/09/Petitenget-Temple.jpg",
+  "Tegalalang Rice Terrace": "https://live.staticflickr.com/8376/8413461592_3b2209a736_b.jpg",
+  "Campuhan Ridge Walk": "https://live.staticflickr.com/3887/15103667262_eb062d3d8c_b.jpg",
+  "Tibumana Waterfall": "https://bali.com/wp-content/uploads/2020/11/WhatsApp-Image-2020-11-24-at-15.29.38-1.jpeg",
   "Tukad Cepung Waterfall": BALI_PLANNER_PLACE_IMAGES.ubudTukadCepung,
-  "Tirta Empul Temple": BALI_PLANNER_PLACE_IMAGES.ubudTemple,
-  "Monkey Forest Ubud": BALI_PLANNER_PLACE_IMAGES.ubudMonkeyForest,
-  "Kanto Lampo Waterfall": BALI_PLANNER_PLACE_IMAGES.ubudWaterfall,
-  "Seniman Coffee": BALI_PLANNER_PLACE_IMAGES.ubudPalace,
-  "Sari Organik": BALI_PLANNER_PLACE_IMAGES.ubudRiceTerrace,
-  "Cretya Ubud": BALI_PLANNER_PLACE_IMAGES.ubudRiceTerrace,
-  "Goa Gajah": BALI_PLANNER_PLACE_IMAGES.ubudGoaGajah,
-  "Puri Ubud": BALI_PLANNER_PLACE_IMAGES.ubudPalace,
+  "Tirta Empul Temple": "https://live.staticflickr.com/65535/49422321947_f8ce8db0f9_b.jpg",
+  "Monkey Forest Ubud": "https://live.staticflickr.com/3486/3196628157_1fd6f7d493_b.jpg",
+  "Kanto Lampo Waterfall": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Kanto_lampo_waterfall.jpg",
+  "Seniman Coffee": "https://live.staticflickr.com/7548/16039752825_2c40becbdd_b.jpg",
+  "Sari Organik": "https://live.staticflickr.com/2308/2140359624_43cc3422f8_b.jpg",
+  "Cretya Ubud": "https://alasharum.com/storage/images/1733181605_674e40a5a65be.jpg",
+  "Goa Gajah": "https://live.staticflickr.com/2670/3989580274_dca6a65c9d_b.jpg",
+  "Puri Ubud": "https://commons.wikimedia.org/wiki/Special:FilePath/Ubud%20Palace%2C%20Bali%2C%20Indonesia%2C%2020220822%200904%209820.jpg?width=1280",
   "Ibu Oka": BALI_PLANNER_PLACE_IMAGES.ubudFoodIbuOka,
   "Murni's Warung": BALI_PLANNER_PLACE_IMAGES.ubudFoodClassic,
   "Warung Biah Biah": BALI_PLANNER_PLACE_IMAGES.ubudFoodWarung,
   "Warung Pondok Madu": BALI_PLANNER_PLACE_IMAGES.ubudFoodClassic,
   "Naughty Nuri's": BALI_PLANNER_PLACE_IMAGES.ubudFoodRibs,
   "Warung Tepi Sawah": BALI_PLANNER_PLACE_IMAGES.ubudFoodClassic,
-  "Zest Ubud": BALI_PLANNER_PLACE_IMAGES.ubudRidge,
-  "Alas Harum": BALI_PLANNER_PLACE_IMAGES.ubudRiceTerrace,
-  "Bali Pulina": BALI_PLANNER_PLACE_IMAGES.ubudRiceTerrace,
-  "Clear Cafe Ubud": BALI_PLANNER_PLACE_IMAGES.ubudPalace,
+  "Zest Ubud": "https://static.wixstatic.com/media/a3d323_194ef6d5f0c946bfadbefd958ce85ecaf002.jpg",
+  "Alas Harum": lokasiBaliImage("business-0x2dd2227ee0628013%3A0xf443506a00fa75f3-0.webp"),
+  "Bali Pulina": "https://lokasibali.com/api/images/business-0x2dd222990001f90b%3A0x46117dc3c84b0af2-0.webp",
+  "Clear Cafe Ubud": "https://live.staticflickr.com/5628/23443070193_f64652ecd9_b.jpg",
   "Lempuyang Temple": BALI_PLANNER_PLACE_IMAGES.eastBaliLempuyang,
   "Tirta Gangga": BALI_PLANNER_PLACE_IMAGES.eastBaliTirtaGangga,
   "Nusa Penida east coast": BALI_PLANNER_PLACE_IMAGES.eastBaliNusaPenida,
-  "Melasti Beach": BALI_PLANNER_PLACE_IMAGES.uluwatuMelasti,
-  "Uluwatu Temple": BALI_PLANNER_PLACE_IMAGES.uluwatuTemple,
-  "Padang Padang Beach": BALI_PLANNER_PLACE_IMAGES.uluwatuBeach,
-  "Single Fin": BALI_PLANNER_PLACE_IMAGES.uluwatuSurf,
-  "Savaya": BALI_PLANNER_PLACE_IMAGES.uluwatuMelasti,
-  "Thomas Beach": BALI_PLANNER_PLACE_IMAGES.uluwatuBeach,
-  "Suka Espresso": BALI_PLANNER_PLACE_IMAGES.uluwatuSurf,
-  "Karang Boma Cliff": BALI_PLANNER_PLACE_IMAGES.uluwatuCliff,
-  "Bingin Beach": BALI_PLANNER_PLACE_IMAGES.uluwatuBingin,
-  "El Kabron": BALI_PLANNER_PLACE_IMAGES.uluwatuCliff,
-  "Nourish Cafe": BALI_PLANNER_PLACE_IMAGES.uluwatuSurf,
-  "Drifter Surf Shop and Cafe": BALI_PLANNER_PLACE_IMAGES.uluwatuSurf,
-  "Suluban Beach": BALI_PLANNER_PLACE_IMAGES.uluwatuSurf,
-  "Jimbaran Seafood Dinner": BALI_PLANNER_PLACE_IMAGES.uluwatuMelasti,
-  "Dreamland Beach": BALI_PLANNER_PLACE_IMAGES.uluwatuDreamland,
-  "Geger Beach": BALI_PLANNER_PLACE_IMAGES.nusaDuaBeach,
-  "Waterblow Nusa Dua": BALI_PLANNER_PLACE_IMAGES.nusaDuaWaterblow,
-  "Sundays Beach Club": BALI_PLANNER_PLACE_IMAGES.nusaDuaCliffBeach,
-  "Nusa Dua Beach": BALI_PLANNER_PLACE_IMAGES.nusaDuaBeach,
-  "Bali Collection": BALI_PLANNER_PLACE_IMAGES.nusaDuaBeach,
-  "Manarai Beach House": BALI_PLANNER_PLACE_IMAGES.nusaDuaBeach,
-  "Puja Mandala": BALI_PLANNER_PLACE_IMAGES.nusaDuaTemple,
-  "Kayuputi": BALI_PLANNER_PLACE_IMAGES.nusaDuaBeach,
-  "Mulia Coastline Walk": BALI_PLANNER_PLACE_IMAGES.nusaDuaBeach,
-  "Samuh Beach": BALI_PLANNER_PLACE_IMAGES.nusaDuaBeach,
-  "Babi Guling Dobiel": BALI_PLANNER_PLACE_IMAGES.nusaDuaTemple,
-  "Tropical Temptation": BALI_PLANNER_PLACE_IMAGES.nusaDuaCliffBeach,
-  "Gunung Payung Beach": BALI_PLANNER_PLACE_IMAGES.nusaDuaCliffBeach,
-  "Koral Restaurant": BALI_PLANNER_PLACE_IMAGES.nusaDuaBeach,
-  "Pandawa Beach": BALI_PLANNER_PLACE_IMAGES.nusaDuaPandawa,
-  "Sanur Beach Boardwalk": BALI_PLANNER_PLACE_IMAGES.sanurBoardwalk,
-  "Massimo": BALI_PLANNER_PLACE_IMAGES.sanurCafe,
-  "Cafe Batu Jimbar": BALI_PLANNER_PLACE_IMAGES.sanurCafe,
-  "Byrd House Beach Club": BALI_PLANNER_PLACE_IMAGES.sanurMertasari,
+  "Melasti Beach": "https://live.staticflickr.com/4359/36544779010_4216b5a497_b.jpg",
+  "Uluwatu Temple": "https://live.staticflickr.com/5236/14333598073_e183897422_b.jpg",
+  "Padang Padang Beach": "https://live.staticflickr.com/6023/5900681104_4fe473cf5c.jpg",
+  "Single Fin": lokasiBaliImage("business-0x2dd24ff9434fa3d1%3A0x73306bab5b47f9b4-0.webp"),
+  "Savaya": "https://cdn.prod.website-files.com/5fbc914db82f653793c3875e/63696d2b024e1a72a024c465_svy.webp",
+  "Thomas Beach": "https://live.staticflickr.com/65535/48976502201_f415cc6fa9_b.jpg",
+  "Suka Espresso": "https://live.staticflickr.com/65535/52462503979_c9c201a8d6_b.jpg",
+  "Karang Boma Cliff": lokasiBaliImage("business-0x2dd2500bfc06ef09%3A0xb5e356ec177894d0-0.webp"),
+  "Bingin Beach": "https://live.staticflickr.com/65535/40673058453_496e57d6a8.jpg",
+  "El Kabron": "https://live.staticflickr.com/7155/6768242435_35cdf16065_b.jpg",
+  "Nourish Cafe": "https://lokasibali.com/api/images/business-0x2dd245178e601297%3A0xac1573639130b803-0.webp",
+  "Drifter Surf Shop and Cafe": "https://cdn.shopify.com/s/files/1/0497/4267/6133/files/stephjones-08056-copy.jpg?v=1695654706",
+  "Suluban Beach": "https://live.staticflickr.com/2608/13099532473_7b9d185175_b.jpg",
+  "Jimbaran Seafood Dinner": "https://live.staticflickr.com/6114/6240494269_9ffe297af4_b.jpg",
+  "Dreamland Beach": "https://live.staticflickr.com/6184/6158897588_41b35eb674_b.jpg",
+  "Geger Beach": "https://live.staticflickr.com/1362/5099984222_0d3bc2f4f6_b.jpg",
+  "Waterblow Nusa Dua": "https://live.staticflickr.com/4474/37781456082_9e2bc54082_b.jpg",
+  "Sundays Beach Club": "https://www.sundaysbeachclub.com/wp-content/uploads/2025/09/Sundays-site-card-1024x768.png",
+  "Nusa Dua Beach": "https://www.gooddaybali.com/beaches/nusa-dua-hero.jpg",
+  "Bali Collection": "https://lokasibali.com/api/images/business-0x2dd24324636ca37d%3A0x9d4b4f208e1df4ab-0.webp",
+  "Manarai Beach House": "https://lokasibali.com/api/images/business-0x2dd2431ab3bdbfbf%3A0x2007e1718bf7da70-0.webp",
+  "Puja Mandala": lokasiBaliImage("business-0x2dd243386a82c3fd%3A0xff15dab4ad5b7a51-0.webp"),
+  "Kayuputi": "https://lokasibali.com/api/images/business-0x2dd25cd3081dfb9b%3A0x90a0dc32239a9920-0.webp",
+  "Mulia Coastline Walk": "https://cdn.prod.website-files.com/6624ff6a5db57a668993dd5e/687f1cb7b917c8c80f19c3c9_Drone2025.webp",
+  "Samuh Beach": "https://www.balitropic-resort.com/assets/img/metadata/featured_image/image.png",
+  "Babi Guling Dobiel": "https://bali.com/wp-content/uploads/2021/12/bigul-pak-dobiel-960.jpg",
+  "Tropical Temptation": lokasiBaliImage("business-0x2dd25bd177658d93%3A0x7a02435a34f5d64a-0.webp"),
+  "Gunung Payung Beach": "https://live.staticflickr.com/2846/33285240666_967c3f7832_b.jpg",
+  "Koral Restaurant": "https://www.asiadreams.com/wp-content/uploads/Apurva-Kempinski_Koral-Restaurant_Koral-Tunnel-1.jpg",
+  "Pandawa Beach": "https://live.staticflickr.com/5447/17444541604_228b2a0368_b.jpg",
+  "Sanur Beach Boardwalk": "https://live.staticflickr.com/3086/3162417875_1805291d40_b.jpg",
+  "Massimo": "https://massimobali.com/wp-content/uploads/2022/07/IMG_4418-copy.jpg",
+  "Cafe Batu Jimbar": lokasiBaliImage("business-0x2dd241c8e53cd3d3%3A0x24486a0a41b72b59-0.webp"),
+  "Byrd House Beach Club": "https://static.bali.live/uploads/64323/conversions/19e46e0a-4bfc-4de4-b9e5-0a496e3180e3-preview.jpg",
   "Mertasari Beach": BALI_PLANNER_PLACE_IMAGES.sanurMertasari,
-  "Soul on the Beach": BALI_PLANNER_PLACE_IMAGES.sanurBeach,
-  "Le Mayeur Museum": BALI_PLANNER_PLACE_IMAGES.sanurMuseum,
-  "Icon Bali Mall": BALI_PLANNER_PLACE_IMAGES.sanurBoardwalk,
-  "Sindhu Beach": BALI_PLANNER_PLACE_IMAGES.sanurBeach,
-  "Genius Cafe": BALI_PLANNER_PLACE_IMAGES.sanurMertasari,
-  "Sindhu Night Market": BALI_PLANNER_PLACE_IMAGES.sanurBeach,
-  "Big Garden Corner": BALI_PLANNER_PLACE_IMAGES.sanurMuseum,
-  "Seawalker Sanur": BALI_PLANNER_PLACE_IMAGES.sanurWaterActivity,
-  "Karang Beach": BALI_PLANNER_PLACE_IMAGES.sanurKarang,
-  "Pizzaria Sanur": BALI_PLANNER_PLACE_IMAGES.sanurBoardwalk,
+  "Soul on the Beach": "https://static.bali.live/uploads/67425/conversions/1b58e9fa-d630-4a03-8fca-58c147e18a01-preview.jpg",
+  "Le Mayeur Museum": "https://live.staticflickr.com/6051/6380853817_1766d13fb8.jpg",
+  "Icon Bali Mall": "https://bali.com/wp-content/uploads/2024/09/icon-mall-sanur.webp",
+  "Sindhu Beach": "https://live.staticflickr.com/7189/6954816153_ea24d21170_b.jpg",
+  "Genius Cafe": "https://geniuscafebali.com/wp-content/uploads/2024/01/image-header-opt-1.jpg",
+  "Sindhu Night Market": "https://lokasibali.com/api/images/business-0x2dd24035648dd487%3A0xc347d8c9cc4d9bce-0.webp",
+  "Big Garden Corner": "https://lokasibali.com/api/images/business-0x2dd24071d99200c3%3A0x6b8b5fe4aa9162c0-0.webp",
+  "Seawalker Sanur": "https://live.staticflickr.com/7343/12296298645_3b611d9ca0_b.jpg",
+  "Karang Beach": "https://lokasibali.com/api/images/business-0x2dd214573b2294d5%3A0x33316987ae56a9ce-0.webp",
+  "Pizzaria Sanur": "https://itin-dev.wanderlogstatic.com/freeImage/ZjgnSPtC3sDohKyAwXpHb5WyZb22okU0",
   "Sunset cruise in Bali": BALI_PLANNER_PLACE_IMAGES.sunsetCruiseLocal,
   "Mount Batur sunrise": BALI_PLANNER_PLACE_IMAGES.mountBaturSunriseLocal,
   "Nusa Penida day trip": BALI_PLANNER_PLACE_IMAGES.eastBaliNusaPenida,
@@ -442,19 +443,135 @@ const BALI_PLANNER_PLACE_IMAGE_BY_TITLE = {
 
 function renderPlannerPlaceImageBlock() {
   return `var PLACE_IMAGE = {
-beach:'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&crop=entropy&w=900&h=700&q=72',
-sunset:'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&crop=entropy&w=900&h=700&q=72',
-restaurant:'https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&crop=entropy&w=900&h=700&q=72',
-cafe:'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&crop=entropy&w=900&h=700&q=72',
-beachclub:'https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&crop=entropy&w=900&h=700&q=72',
-temple:'https://images.unsplash.com/photo-1698799619978-872b701b44a8?auto=format&fit=crop&crop=entropy&w=900&h=700&q=72',
-scenic:'https://images.unsplash.com/photo-1557093793-d149a38a1be8?auto=format&fit=crop&crop=entropy&w=900&h=700&q=72',
-waterfall:'https://images.unsplash.com/photo-1564462369783-1860602c6386?auto=format&fit=crop&crop=entropy&w=900&h=700&q=72',
-walk:'https://images.unsplash.com/photo-1559628233-100c798642d4?auto=format&fit=crop&crop=entropy&w=900&h=700&q=72',
-culture:'https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&crop=entropy&w=900&h=700&q=72'
+beach:${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.nusaDuaBeach)},
+sunset:${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.cangguSunset)},
+restaurant:${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudFoodClassic)},
+cafe:${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.sanurCafe)},
+beachclub:${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.cangguBeachClub)},
+temple:${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudTemple)},
+scenic:${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudRiceTerrace)},
+waterfall:${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudWaterfall)},
+walk:${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.sanurBoardwalk)},
+culture:${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudPalace)}
 };
+var PLACE_IMAGE_VERSION = '20260524b';
 var PLACE_IMAGE_BY_TITLE = ${JSON.stringify(BALI_PLANNER_PLACE_IMAGE_BY_TITLE, null, 2)};
-function place(title, kind, maps, copy, vibe){ return { title:title, kind:kind, image:PLACE_IMAGE_BY_TITLE[title] || PLACE_IMAGE[kind] || PLACE_IMAGE.scenic, maps:maps, copy:copy, vibe:vibe || ['couple','friends','family','solo'] }; }`;
+function isPlannerLocalImage(url){
+return !!url && (/^\\//.test(url) || !/^(?:https?:)?\\/\\//i.test(url));
+}
+function withPlannerImageVersion(url){
+if (!url) return url;
+if (!isPlannerLocalImage(url)) return url;
+return url + (url.indexOf('?') === -1 ? '?' : '&') + 'sbv=' + PLACE_IMAGE_VERSION;
+}
+function plannerFallbackImageByKind(kind){
+var kindMap = {
+beach: PLACE_IMAGE.beach,
+sunset: PLACE_IMAGE.sunset,
+restaurant: PLACE_IMAGE.restaurant,
+cafe: PLACE_IMAGE.cafe,
+beachclub: PLACE_IMAGE.beachclub,
+temple: PLACE_IMAGE.temple,
+scenic: PLACE_IMAGE.scenic,
+waterfall: PLACE_IMAGE.waterfall,
+walk: PLACE_IMAGE.walk,
+culture: PLACE_IMAGE.culture
+};
+return kindMap[kind] || PLACE_IMAGE.scenic;
+}
+function plannerFallbackImageByTitle(title, kind){
+var value = String(title || '').toLowerCase();
+if (!value) return plannerFallbackImageByKind(kind);
+if (/nusa penida snorkeling|manta point/.test(value)) return '/images/bali-tours/nusa-penida-manta-rays-point.webp';
+if (/lovina|dolphin/.test(value)) return '/images/bali-tours/dolphin-sunrise-city-tour.jpg';
+if (/ubud instagram/.test(value)) return '/images/bali-tours/ubud-instagram-tour.jpg';
+if (/ubud rice terrace|ubud highlights/.test(value)) return '/images/bali-tours/ubud-highlights-tour.jpg';
+if (/east bali instagram/.test(value)) return '/images/bali-tours/east-bali-instagram-tour.jpg';
+if (/tanah lot and bedugul/.test(value)) return '/images/bali-tours/tanah-lot-bedugul-tour.jpg';
+if (/mount batur/.test(value)) return '/images/bali-tours/mount-batur-sunrise-jeep-tour.webp';
+if (/atv/.test(value)) return '/images/bali-tours/atv-quad-bikes.webp';
+if (/nusa penida west/.test(value)) return '/images/bali-tours/west-collage/nusa-penida-west-kelingking-wide.webp';
+if (/nusa penida east/.test(value)) return '/images/bali-tours/nusa-penida-east-tour.jpg';
+if (/nusa penida full day/.test(value)) return '/images/bali-tours/nusa-penida-full-day-tour.webp';
+if (/nusa penida private car/.test(value)) return '/images/bali-tours/nusa-penida-private-day-tour-manta-snorkeling.webp';
+if (/gili/.test(value)) return '/images/bali-tours/gili-island-tour.jpg';
+if (/whale shark/.test(value)) return '/images/bali-tours/sumbawa-whale-shark-snorkeling-trip.webp';
+if (/blue lagoon/.test(value)) return '/images/bali-tours/blue-lagoon-snorkeling.webp';
+if (/raft/.test(value)) return '/images/bali-tours/white-water-rafting.webp';
+if (/sunset cruise/.test(value)) return '/images/bali-tours/sunset-cruise-bali.jpg';
+if (/surf lesson|surf experience/.test(value)) return '/images/bali-tours/surf-lesson-experience.webp';
+if (/airport transfer/.test(value)) return '/images/bali-tours/bali-airport-transfer.jpg';
+if (/private car with driver|private car/.test(value)) return '/images/bali-tours/private-car-with-driver-bali.jpg';
+if (/fast boat/.test(value)) return '/images/bali-tours/fast-boat-transfer-bali.webp';
+if (/bali helicopter scenic/.test(value)) return '/images/bali-tours/bali-helicopter-scenic-tour.jpg';
+if (/volcano and coastline helicopter/.test(value)) return '/images/bali-tours/volcano-coastline-helicopter-ride.jpeg';
+if (/tanah lot/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.cangguSunset)};
+if (/(la brisa|the lawn canggu|finns beach club|atlas beach club|luma canggu)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.cangguBeachClub)};
+if (/(batu bolong|echo beach|crate cafe|nude cafe|mason canggu|warung varuna|love anchor market|milk and madu)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.cangguBeach)};
+if (/(pererenan|seseh)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.cangguQuietBeach)};
+if (/double six beach/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.seminyakSunset)};
+if (/(potato head|ku de ta|mrs sippy)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.seminyakPetitenget)};
+if (/(seminyak beach|petitenget beach|sisterfields|motel mexicola|revolver espresso|sea circus|nook|biku|kim soo|coffee cartel)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.seminyakBeach)};
+if (/petitenget temple/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.seminyakTemple)};
+if (/(tegalalang|rice terrace|alas harum|bali pulina|cretya ubud)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudRiceTerrace)};
+if (/campuhan ridge/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudRidge)};
+if (/tukad cepung/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudTukadCepung)};
+if (/(tibumana|kanto lampo|waterfall)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudWaterfall)};
+if (/tirta empul/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudTemple)};
+if (/monkey forest/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudMonkeyForest)};
+if (/(seniman coffee|sari organik|murni's warung|warung pondok madu|warung tepi sawah|zest ubud|clear cafe ubud)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudFoodClassic)};
+if (/(ibu oka|babi guling dobiel)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudFoodIbuOka)};
+if (/warung biah biah/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudFoodWarung)};
+if (/naughty nuri/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudFoodRibs)};
+if (/goa gajah/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudGoaGajah)};
+if (/puri ubud/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudPalace)};
+if (/lempuyang/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.eastBaliLempuyang)};
+if (/tirta gangga/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.eastBaliTirtaGangga)};
+if (/(nusa penida east coast|diamond beach|atuh beach)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.eastBaliNusaPenida)};
+if (/(melasti beach|tropical temptation)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.uluwatuMelasti)};
+if (/uluwatu temple/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.uluwatuTemple)};
+if (/(padang padang|thomas beach)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.uluwatuBeach)};
+if (/(single fin|suluban beach|drifter surf shop and cafe)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.uluwatuSurf)};
+if (/(karang boma cliff|savaya|el kabron)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.uluwatuCliff)};
+if (/(bingin beach|suka espresso|nourish cafe)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.uluwatuBingin)};
+if (/dreamland beach/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.uluwatuDreamland)};
+if (/(geger beach|nusa dua beach|samuh beach|manarai beach house|kayuputi|koral restaurant|bali collection|mulia coastline walk)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.nusaDuaBeach)};
+if (/waterblow/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.nusaDuaWaterblow)};
+if (/puja mandala/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.nusaDuaTemple)};
+if (/(gunung payung beach|sundays beach club)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.nusaDuaCliffBeach)};
+if (/pandawa beach/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.nusaDuaPandawa)};
+if (/sanur beach boardwalk/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.sanurBoardwalk)};
+if (/mertasari beach/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.sanurMertasari)};
+if (/karang beach/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.sanurKarang)};
+if (/(le mayeur museum|big garden corner)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.sanurMuseum)};
+if (/(massimo|cafe batu jimbar|genius cafe|pizzaria sanur|sindhu night market)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.sanurCafe)};
+if (/(byrd house beach club|soul on the beach|sindhu beach|icon bali mall)/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.sanurBeach)};
+if (/seawalker sanur/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.sanurWaterActivity)};
+if (/sunset cruise in bali/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.sunsetCruiseLocal)};
+if (/mount batur sunrise/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.mountBaturSunriseLocal)};
+if (/nusa penida day trip/.test(value)) return ${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.eastBaliNusaPenida)};
+return plannerFallbackImageByKind(kind);
+}
+function plannerRecoverImage(img){
+if (!img || img.dataset.sbRecovered === '1') return;
+var card = img.closest ? img.closest('.sb-place-card, .sb-ai-result-card') : null;
+var kindNode = card ? card.querySelector('.sb-place-type') : null;
+var kind = kindNode ? String(kindNode.textContent || '').trim().toLowerCase() : '';
+var fallback = plannerFallbackImageByTitle(img.getAttribute('alt') || '', kind);
+if (!fallback) return;
+img.dataset.sbRecovered = '1';
+img.src = withPlannerImageVersion(fallback);
+if (typeof syncHeightHard === 'function') {
+setTimeout(syncHeightHard, 0);
+}
+}
+document.addEventListener('error', function(event){
+var img = event.target;
+if (!img || img.tagName !== 'IMG') return;
+if (!img.closest || !img.closest('#sbAiResultsGrid')) return;
+plannerRecoverImage(img);
+}, true);
+function place(title, kind, maps, copy, vibe){ return { title:title, kind:kind, image:withPlannerImageVersion(PLACE_IMAGE_BY_TITLE[title] || PLACE_IMAGE[kind] || PLACE_IMAGE.scenic), maps:maps, copy:copy, vibe:vibe || ['couple','friends','family','solo'] }; }`;
 }
 
 const tours = [
@@ -1931,6 +2048,308 @@ const existingRoutes = {
   },
 };
 
+const WEST_ROUTE_POINTS = {
+  "ubud-highlights-tour": {
+    stops: ["Ubud Palace", "Tegallalang", "Tirta Empul", "Goa Gajah", "Tegenungan"],
+    routeStops: [
+      "Ubud Palace, Ubud, Bali",
+      "Tegallalang Rice Terrace, Bali",
+      "Tirta Empul Temple, Tampaksiring, Bali",
+      "Goa Gajah, Gianyar, Bali",
+      "Tegenungan Waterfall, Bali",
+    ],
+  },
+  "north-bali-lovina-dolphins-tour": {
+    stops: ["Lovina Beach", "Gitgit", "Banyumala", "Handara", "Ulun Danu"],
+    routeStops: [
+      "Lovina Beach, Bali",
+      "Gitgit Waterfall, Buleleng, Bali",
+      "Banyumala Twin Waterfalls, Wanagiri, Bali",
+      "Handara Gate, Bedugul, Bali",
+      "Ulun Danu Beratan Temple, Bedugul, Bali",
+    ],
+  },
+  "dolphin-sunrise-city-tour": {
+    stops: ["Lovina Beach", "Dolphin Point", "Gitgit", "Ulun Danu", "Bedugul"],
+    routeStops: [
+      "Lovina Beach, Bali",
+      "Lovina Dolphin Statue, Lovina, Bali",
+      "Gitgit Waterfall, Buleleng, Bali",
+      "Ulun Danu Beratan Temple, Bedugul, Bali",
+      "Bedugul, Bali",
+    ],
+  },
+  "east-bali-instagram-tour": {
+    stops: ["Lempuyang", "Tirta Gangga", "Taman Ujung", "Lahangan", "Virgin Beach"],
+    routeStops: [
+      "Lempuyang Temple, Karangasem, Bali",
+      "Tirta Gangga, Karangasem, Bali",
+      "Taman Ujung Sukasada, Karangasem, Bali",
+      "Lahangan Sweet, Karangasem, Bali",
+      "Virgin Beach, Karangasem, Bali",
+    ],
+  },
+  "tanah-lot-bedugul-tour": {
+    stops: ["Ulun Danu", "Handara", "Candikuning", "Jatiluwih", "Tanah Lot"],
+    routeStops: [
+      "Ulun Danu Beratan Temple, Bedugul, Bali",
+      "Handara Gate, Bedugul, Bali",
+      "Candikuning Traditional Market, Bedugul, Bali",
+      "Jatiluwih Rice Terrace, Tabanan, Bali",
+      "Tanah Lot Temple, Bali",
+    ],
+  },
+  "unesco-heritage-sites-tour": {
+    stops: ["Taman Ayun", "Ulun Danu", "Jatiluwih", "Batukaru", "Tanah Lot"],
+    routeStops: [
+      "Taman Ayun Temple, Mengwi, Bali",
+      "Ulun Danu Beratan Temple, Bedugul, Bali",
+      "Jatiluwih Rice Terrace, Tabanan, Bali",
+      "Batukaru Temple, Tabanan, Bali",
+      "Tanah Lot Temple, Bali",
+    ],
+  },
+  "mount-batur-sunrise-jeep-tour": {
+    stops: ["Toya Bungkah", "Sunrise Point", "Black Lava", "Black Sand", "Hot Spring"],
+    routeStops: [
+      "Toya Bungkah, Kintamani, Bali",
+      "Mount Batur Sunrise Point, Kintamani, Bali",
+      "Black Lava, Kintamani, Bali",
+      "Black Sand Batur, Kintamani, Bali",
+      "Batur Natural Hot Spring, Kintamani, Bali",
+    ],
+  },
+  "atv-ride-adventure": {
+    stops: ["Keliki", "Bresela", "Gorilla Cave", "Ulu Petanu", "Rice Fields"],
+    routeStops: [
+      "Keliki Village, Tegalalang, Bali",
+      "Bresela, Payangan, Bali",
+      "Gorilla Cave ATV, Ubud, Bali",
+      "Ulu Petanu Waterfall, Gianyar, Bali",
+      "Tegallalang Rice Terrace, Bali",
+    ],
+  },
+  "atv-quad-bikes": {
+    stops: ["Gorilla ATV", "Keliki", "Bresela", "Ulu Petanu", "Rice Fields"],
+    routeStops: [
+      "Gorilla ATV Adventure, Tegalalang, Ubud, Bali",
+      "Keliki Village, Tegalalang, Bali",
+      "Bresela, Payangan, Bali",
+      "Ulu Petanu Waterfall, Gianyar, Bali",
+      "Tegallalang Rice Terrace, Bali",
+    ],
+  },
+  "bali-instagram-highlights-tour": {
+    stops: ["Handara", "Ulun Danu", "Lempuyang", "Tirta Gangga", "Tegallalang"],
+    routeStops: [
+      "Handara Gate, Bedugul, Bali",
+      "Ulun Danu Beratan Temple, Bedugul, Bali",
+      "Lempuyang Temple, Karangasem, Bali",
+      "Tirta Gangga, Karangasem, Bali",
+      "Tegallalang Rice Terrace, Bali",
+    ],
+  },
+  "ubud-instagram-tour": {
+    stops: ["Ubud", "Lempuyang", "Tirta Gangga", "Tukad Cepung", "Tegallalang"],
+    routeStops: [
+      "Ubud, Bali",
+      "Lempuyang Temple, Karangasem, Bali",
+      "Tirta Gangga, Karangasem, Bali",
+      "Tukad Cepung Waterfall, Bangli, Bali",
+      "Tegallalang Rice Terrace, Bali",
+    ],
+  },
+  "nusa-penida-private-day-tour-manta-snorkeling": {
+    stops: ["Banjar Nyuh", "Manta Point", "Gamat Bay", "Kelingking", "Crystal Bay"],
+    routeStops: [
+      "Banjar Nyuh Harbour, Nusa Penida",
+      "Manta Point, Nusa Penida",
+      "Gamat Bay, Nusa Penida",
+      "Kelingking Beach, Nusa Penida",
+      "Crystal Bay, Nusa Penida",
+    ],
+  },
+  "nusa-penida-west-tour": {
+    stops: ["Banjar Nyuh", "Broken Beach", "Angel's Billabong", "Kelingking", "Crystal Bay"],
+    routeStops: [
+      "Banjar Nyuh Harbour, Nusa Penida",
+      "Broken Beach, Nusa Penida",
+      "Angel's Billabong, Nusa Penida",
+      "Kelingking Beach, Nusa Penida",
+      "Crystal Bay, Nusa Penida",
+    ],
+  },
+  "nusa-penida-east-tour": {
+    stops: ["Banjar Nyuh", "Diamond Beach", "Atuh Beach", "Tree House", "Teletubbies"],
+    routeStops: [
+      "Banjar Nyuh Harbour, Nusa Penida",
+      "Diamond Beach, Nusa Penida",
+      "Atuh Beach, Nusa Penida",
+      "Molenteng Tree House, Nusa Penida",
+      "Teletubbies Hill, Nusa Penida",
+    ],
+  },
+  "nusa-penida-full-day-tour": {
+    stops: ["Banjar Nyuh", "Kelingking", "Angel's Billabong", "Diamond Beach", "Thousand Islands"],
+    routeStops: [
+      "Banjar Nyuh Harbour, Nusa Penida",
+      "Kelingking Beach, Nusa Penida",
+      "Angel's Billabong, Nusa Penida",
+      "Diamond Beach, Nusa Penida",
+      "Thousand Islands Viewpoint, Nusa Penida",
+    ],
+  },
+  "nusa-penida-manta-rays-point": {
+    stops: ["Sanur Port", "Manta Point", "Gamat Bay", "Crystal Bay", "Wall Bay"],
+    routeStops: [
+      "Sanur Port, Bali",
+      "Manta Point, Nusa Penida",
+      "Gamat Bay, Nusa Penida",
+      "Crystal Bay, Nusa Penida",
+      "Wall Bay Point, Nusa Penida",
+    ],
+  },
+  "nusa-lembongan-ceningan-day-trip": {
+    stops: ["Jungut Batu", "Dream Beach", "Devil's Tear", "Yellow Bridge", "Blue Lagoon"],
+    routeStops: [
+      "Jungut Batu Harbour, Nusa Lembongan",
+      "Dream Beach, Nusa Lembongan",
+      "Devil's Tear, Nusa Lembongan",
+      "Yellow Bridge, Nusa Ceningan",
+      "Blue Lagoon, Nusa Ceningan",
+    ],
+  },
+  "gili-islands-getaway": {
+    stops: ["Padang Bai", "Gili T", "Gili Meno", "Gili Air", "Bangsal"],
+    routeStops: [
+      "Padang Bai Port, Bali",
+      "Gili Trawangan Harbour",
+      "Gili Meno Harbour",
+      "Gili Air Harbour",
+      "Bangsal Harbour, Lombok",
+    ],
+  },
+  "gili-island-tour": {
+    stops: ["Padang Bai", "Gili T", "Turtle Point", "Nest Statues", "Gili Meno"],
+    routeStops: [
+      "Wannen Bali Office, Padang Bai, Bali",
+      "Gili Trawangan Harbour",
+      "Turtle Point, Gili Trawangan",
+      "Nest Underwater Statues, Gili Meno",
+      "Gili Meno Harbour",
+    ],
+  },
+  "sumbawa-whale-shark-snorkeling-trip": {
+    stops: ["Labuan Jambu", "Saleh Bay", "Whale Shark Point", "Bagan", "Sumbawa Besar"],
+    routeStops: [
+      "Labuan Jambu, Tarano, Sumbawa",
+      "Saleh Bay, Sumbawa",
+      "Whale Shark Point, Saleh Bay, Sumbawa",
+      "Bagan Saleh Bay, Sumbawa",
+      "Sumbawa Besar, Sumbawa",
+    ],
+  },
+  "blue-lagoon-snorkeling": {
+    stops: ["Padang Bai", "Blue Lagoon", "Tanjung Jepun", "Bias Tugel", "Harbor"],
+    routeStops: [
+      "Padang Bai, Bali",
+      "Blue Lagoon Beach, Padang Bai, Bali",
+      "Tanjung Jepun, Padang Bai, Bali",
+      "Bias Tugel Beach, Padang Bai, Bali",
+      "Padang Bai Harbor, Bali",
+    ],
+  },
+  "white-water-rafting": {
+    stops: ["Ayung River", "Kedewatan", "Sayan", "Payangan", "Ubud"],
+    routeStops: [
+      "Ayung River Rafting, Ubud, Bali",
+      "Kedewatan, Ubud, Bali",
+      "Sayan, Ubud, Bali",
+      "Payangan, Gianyar, Bali",
+      "Ubud, Bali",
+    ],
+  },
+  "sunset-cruise-bali": {
+    stops: ["Benoa Harbour", "Benoa Bay", "Serangan", "Nusa Dua", "Jimbaran"],
+    routeStops: [
+      "Benoa Harbour, Bali",
+      "Benoa Bay, Bali",
+      "Serangan Island, Bali",
+      "Nusa Dua Beach, Bali",
+      "Jimbaran Bay, Bali",
+    ],
+  },
+  "surf-lesson-experience": {
+    stops: ["Kuta Beach", "Legian", "Double Six", "Batu Bolong", "Nusa Dua"],
+    routeStops: [
+      "Kuta Beach, Bali",
+      "Legian Beach, Bali",
+      "Double Six Beach, Seminyak, Bali",
+      "Batu Bolong Beach, Canggu, Bali",
+      "Nusa Dua Beach, Bali",
+    ],
+  },
+  "bali-airport-transfer": {
+    stops: ["Airport", "Kuta", "Seminyak", "Canggu", "Ubud"],
+    routeStops: [
+      "Ngurah Rai International Airport, Bali",
+      "Kuta, Bali",
+      "Seminyak, Bali",
+      "Canggu, Bali",
+      "Ubud, Bali",
+    ],
+  },
+  "private-car-with-driver-bali": {
+    stops: ["Ubud Palace", "Tegallalang", "Tanah Lot", "Uluwatu", "Seminyak"],
+    routeStops: [
+      "Ubud Palace, Ubud, Bali",
+      "Tegallalang Rice Terrace, Bali",
+      "Tanah Lot Temple, Bali",
+      "Uluwatu Temple, Bali",
+      "Seminyak, Bali",
+    ],
+  },
+  "fast-boat-transfer-bali": {
+    stops: ["Sanur Port", "Padang Bai", "Banjar Nyuh", "Jungut Batu", "Gili T"],
+    routeStops: [
+      "Sanur Port, Bali",
+      "Padang Bai Port, Bali",
+      "Banjar Nyuh Harbour, Nusa Penida",
+      "Jungut Batu Harbour, Nusa Lembongan",
+      "Gili Trawangan Harbour",
+    ],
+  },
+  "bali-helicopter-scenic-tour": {
+    stops: ["Benoa Heliport", "Serangan", "Tanjung Benoa", "GWK", "Nusa Dua"],
+    routeStops: [
+      "Benoa Heliport, Denpasar, Bali",
+      "Serangan Island, Bali",
+      "Tanjung Benoa, Bali",
+      "Garuda Wisnu Kencana, Bali",
+      "Nusa Dua Beach, Bali",
+    ],
+  },
+  "volcano-coastline-helicopter-ride": {
+    stops: ["Benoa Heliport", "Sanur", "Tegallalang", "Mount Batur", "Amed"],
+    routeStops: [
+      "Benoa Heliport, Denpasar, Bali",
+      "Sanur Beach, Bali",
+      "Tegallalang Rice Terrace, Bali",
+      "Mount Batur, Kintamani, Bali",
+      "Amed Beach, Karangasem, Bali",
+    ],
+  },
+};
+
+const WEST_COLLAGE_SLOT_IDS = [
+  "1721248463091",
+  "1721248463131",
+  "1721248463134",
+  "1721248463127",
+  "1721248463137",
+  "1721248463123",
+];
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll("&", "&amp;")
@@ -2293,16 +2712,55 @@ function westRouteLabel(tour) {
   return "Bali route";
 }
 
-function buildWestMapModel(tour) {
-  const query = encodeURIComponent(`${tour.title} ${tour.area || "Bali"}`.trim());
-
+function buildWestMapQueryLinks(routeStops) {
+  const query = routeStops
+    .map((stop) => encodeURIComponent(collapseWhitespace(stop)).replaceAll("'", "%27"))
+    .join("%2C%20");
   return {
     embedRoute: `https://maps.google.com/maps?q=${query}&z=11&output=embed`,
     openRoute: `https://www.google.com/maps/search/?api=1&query=${query}`,
+  };
+}
+
+function buildWestMapDirectionsLinks(routeStops) {
+  const places = routeStops
+    .map((stop) => collapseWhitespace(stop))
+    .filter(Boolean);
+
+  if (places.length < 2) {
+    return buildWestMapQueryLinks(places.length ? places : ["Bali"]);
+  }
+
+  const encodedPlaces = places.map((place) => encodeURIComponent(place).replaceAll("'", "%27"));
+  const [start, ...rest] = encodedPlaces;
+
+  return {
+    embedRoute: `https://maps.google.com/maps?output=embed&f=d&saddr=${start}&daddr=${rest.join("+to:")}`,
+    openRoute: `https://www.google.com/maps/dir/${encodedPlaces.join("/")}`,
+  };
+}
+
+function buildWestMapText(tour, stops) {
+  const points = stops
+    .map((stop) => collapseWhitespace(stop))
+    .filter(Boolean);
+
+  return `Preview the key map points for ${tour.title}. This route usually highlights ${points.join(", ")}. Final timing, pickup, and stop order are confirmed after booking.`;
+}
+
+function buildWestMapModel(tour) {
+  const configuredRoute = WEST_ROUTE_POINTS[tour.slug];
+  const stops = configuredRoute?.stops?.length ? configuredRoute.stops : buildWestRouteStops(tour);
+  const routeStops = configuredRoute?.routeStops?.length ? configuredRoute.routeStops : stops;
+  const links = buildWestMapDirectionsLinks(routeStops);
+
+  return {
+    embedRoute: links.embedRoute,
+    openRoute: links.openRoute,
     label: westRouteLabel(tour),
     title: `${tour.title} route on Google Maps`,
-    text: `Preview the main flow for ${tour.title} around ${tour.area}. Final timing, pickup, and stop order are confirmed after booking.`,
-    stops: buildWestRouteStops(tour),
+    text: buildWestMapText(tour, stops),
+    stops,
   };
 }
 
@@ -2342,7 +2800,7 @@ function buildWestPrivateOfferModel(tour) {
       clampText(includes[0] || highlights[0][0], 28),
       clampText(collapseWhitespace(tour.pickup || "Pickup confirmed after booking"), 28),
     ],
-    ctaLabel: "Book this tour",
+    ctaLabel: "Book now",
     priceValue: privatePriceValue,
   };
 }
@@ -2370,7 +2828,7 @@ function buildWestMiniPromoModel(tour) {
       }[detectTourKind(tour)] || "Best-selling Bali route",
     title: promoTitle,
     text: collapseWhitespace(promoText),
-    ctaLabel: "Book via WhatsApp",
+    ctaLabel: "Book now",
     sideText: collapseWhitespace(tour.overview || tour.summary || tour.lead),
   };
 }
@@ -2455,9 +2913,181 @@ function replaceTildaBackgroundImageByElemId(html, elemId, imagePath, altText) {
   );
 }
 
+function buildCollageAsset(imagePath, altText) {
+  const normalizedImagePath = normalizeJournalImageSrc(imagePath);
+
+  if (!normalizedImagePath) return null;
+
+  return {
+    imagePath: normalizedImagePath,
+    altText: collapseWhitespace(altText),
+  };
+}
+
+function tourHeroImage(slug) {
+  const relatedTour = tourBySlug(slug);
+  return relatedTour ? publicImagePath(relatedTour) : publicImagePath(tours[0]);
+}
+
+function routeStopAltText(stop, tour) {
+  return `${cleanWestStopLabel(stop)} on the ${tour.title}`;
+}
+
+function resolveWestCollageStopImage(stop, tour) {
+  const value = collapseWhitespace(stop);
+  const lower = value.toLowerCase();
+  const exactPlaceImage = (title) => BALI_PLANNER_PLACE_IMAGE_BY_TITLE[title] || "";
+  const altText = routeStopAltText(value, tour);
+  const rules = [
+    [/ubud palace|puri ubud/i, exactPlaceImage("Puri Ubud") || commonsImage("Ubud Palace, Bali, Indonesia, 20220822 0904 9820.jpg")],
+    [/(tega|tega?l+|tega?l+a)l?a?ng|rice terrace/i, exactPlaceImage("Tegalalang Rice Terrace") || BALI_PLANNER_PLACE_IMAGES.ubudRiceTerrace],
+    [/tirta empul/i, exactPlaceImage("Tirta Empul Temple") || BALI_PLANNER_PLACE_IMAGES.ubudTemple],
+    [/goa gajah/i, exactPlaceImage("Goa Gajah") || BALI_PLANNER_PLACE_IMAGES.ubudGoaGajah],
+    [/tegenungan/i, commonsImage("Kanto lampo waterfall.jpg")],
+    [/lovina|dolphin/i, plannerLocalImage("images/bali-tours/dolphin-sunrise-city-tour.jpg")],
+    [/gitgit|banyumala|ulu petanu|waterfall/i, exactPlaceImage("Kanto Lampo Waterfall") || BALI_PLANNER_PLACE_IMAGES.ubudWaterfall],
+    [/handara/i, plannerLocalImage("images/bali-tours/bali-instagram-highlights-tour.jpg")],
+    [/ulun danu|bedugul/i, plannerLocalImage("images/bali-tours/tanah-lot-bedugul-tour.jpg")],
+    [/candikuning/i, plannerLocalImage("images/bali-tours/tanah-lot-bedugul-tour.jpg")],
+    [/taman ayun|batukaru/i, plannerLocalImage("images/bali-tours/unesco-heritage-sites-tour.jpg")],
+    [/jatiluwih/i, plannerLocalImage("images/bali-tours/unesco-heritage-sites-tour.jpg")],
+    [/tanah lot/i, exactPlaceImage("Tanah Lot Temple") || commonsImage("Tanah Lot, Bali, Indonesia, 20220827 0957 1103.jpg")],
+    [/lempuyang/i, exactPlaceImage("Lempuyang Temple") || BALI_PLANNER_PLACE_IMAGES.eastBaliLempuyang],
+    [/tirta gangga/i, exactPlaceImage("Tirta Gangga") || BALI_PLANNER_PLACE_IMAGES.eastBaliTirtaGangga],
+    [/taman ujung/i, plannerLocalImage("images/bali-tours/east-bali-instagram-tour.jpg")],
+    [/lahangan|virgin beach/i, plannerLocalImage("images/bali-tours/east-bali-instagram-tour.jpg")],
+    [/toya bungkah|mount batur sunrise point|black lava|black sand batur|batur natural hot spring|mount batur/i, plannerLocalImage("images/tild3963-6334-4438-b163-623862386363___batur_jeep.jpg")],
+    [/gorilla atv|gorilla cave|keliki|bresela/i, plannerLocalImage("images/bali-tours/atv-quad-bikes.webp")],
+    [/ayung river|kedewatan|sayan|payangan/i, plannerLocalImage("images/bali-tours/white-water-rafting.webp")],
+    [/blue lagoon beach|tanjung jepun|bias tugel/i, plannerLocalImage("images/bali-tours/blue-lagoon-snorkeling.webp")],
+    [/padang bai|wannen bali office/i, plannerLocalImage("images/bali-tours/fast-boat-transfer-bali.webp")],
+    [/kelingking/i, plannerLocalImage("images/bali-tours/west-collage/nusa-penida-west-kelingking-wide.webp")],
+    [/broken beach/i, plannerLocalImage("images/bali-tours/west-collage/nusa-penida-west-broken-beach-card.webp")],
+    [/angel.?s billabong/i, plannerLocalImage("images/bali-tours/west-collage/nusa-penida-west-angels-billabong-card.webp")],
+    [/crystal bay/i, plannerLocalImage("images/bali-tours/west-collage/nusa-penida-west-crystal-bay-wide.webp")],
+    [/diamond beach|atuh beach/i, plannerLocalImage("images/smile-nusa-penida-east-diamond-beach.jpg")],
+    [/molenteng|thousand islands/i, plannerLocalImage("images/bali-tours/nusa-penida-east-tour.jpg")],
+    [/teletubbies/i, plannerLocalImage("images/bali-tours/nusa-penida-east-tour.webp")],
+    [/manta point|gamat bay|wall bay/i, plannerLocalImage("images/bali-tours/nusa-penida-manta-rays-point.webp")],
+    [/banjar nyuh/i, plannerLocalImage("images/bali-tours/nusa-penida-full-day-tour.webp")],
+    [/jungut batu|dream beach|devil.?s tear|yellow bridge|blue lagoon, nusa ceningan/i, plannerLocalImage("images/bali-tours/nusa-lembongan-ceningan-day-trip.webp")],
+    [/gili trawangan|gili meno|gili air|turtle point|nest underwater statues|bangsal/i, plannerLocalImage("images/bali-tours/gili-island-tour.jpg")],
+    [/saleh bay|whale shark|labuan jambu|sumbawa besar|bagan/i, plannerLocalImage("images/bali-tours/sumbawa-whale-shark-snorkeling-trip.webp")],
+    [/benoa harbour|benoa bay|serangan island|jimbaran bay/i, plannerLocalImage("images/bali-tours/sunset-cruise-bali.jpg")],
+    [/nusa dua beach/i, exactPlaceImage("Nusa Dua Beach") || BALI_PLANNER_PLACE_IMAGES.nusaDuaBeach],
+    [/kuta beach|legian beach|double six beach/i, plannerLocalImage("images/bali-tours/surf-lesson-experience.webp")],
+    [/batu bolong/i, exactPlaceImage("Batu Bolong Beach") || BALI_PLANNER_PLACE_IMAGES.cangguBeach],
+    [/airport|ngurah rai/i, plannerLocalImage("images/bali-tours/bali-airport-transfer.jpg")],
+    [/seminyak/i, exactPlaceImage("Seminyak Beach") || BALI_PLANNER_PLACE_IMAGES.seminyakBeach],
+    [/canggu/i, BALI_PLANNER_PLACE_IMAGES.cangguBeach],
+    [/uluwatu/i, exactPlaceImage("Uluwatu Temple") || BALI_PLANNER_PLACE_IMAGES.uluwatuTemple],
+    [/sanur beach|sanur port/i, exactPlaceImage("Sanur Beach Boardwalk") || BALI_PLANNER_PLACE_IMAGES.sanurBeach],
+    [/benoa heliport|tanjung benoa|garuda wisnu kencana|gwk/i, plannerLocalImage("images/bali-tours/bali-helicopter-scenic-tour.jpg")],
+    [/amed beach/i, plannerLocalImage("images/bali-tours/volcano-coastline-helicopter-ride.jpeg")],
+    [/kuta, bali/i, plannerLocalImage("images/bali-tours/bali-airport-transfer.jpg")],
+    [/ubud, bali/i, exactPlaceImage("Puri Ubud") || BALI_PLANNER_PLACE_IMAGES.ubudRiceTerrace],
+  ];
+
+  for (const [pattern, imagePath] of rules) {
+    if (pattern.test(lower)) {
+      return buildCollageAsset(imagePath, altText);
+    }
+  }
+
+  return null;
+}
+
+function buildWestCollageStops(tour) {
+  const configuredRoute = WEST_ROUTE_POINTS[tour.slug];
+  const routeStops = configuredRoute?.routeStops?.length ? configuredRoute.routeStops : buildWestRouteStops(tour);
+  const scenicStops = routeStops.filter((stop) => !/harbour|harbor|port|airport|office/i.test(stop));
+  const prioritizedStops = scenicStops.length ? scenicStops : routeStops;
+  const supportStops = routeStops.filter((stop) => !prioritizedStops.includes(stop));
+
+  return [...prioritizedStops, ...supportStops].slice(0, WEST_COLLAGE_SLOT_IDS.length);
+}
+
+function buildWestCollageFallbackAssets(tour) {
+  const heroAsset = buildCollageAsset(publicImagePath(tour), tour.imageAlt || tour.title);
+  const kindFallbackImages = {
+    sunrise: [
+      plannerLocalImage("images/bali-tours/dolphin-sunrise-city-tour.jpg"),
+      plannerLocalImage("images/tild3963-6334-4438-b163-623862386363___batur_jeep.jpg"),
+      plannerLocalImage("images/bali-tours/north-bali-lovina-dolphins-tour.jpg"),
+    ],
+    marine: [
+      plannerLocalImage("images/bali-tours/nusa-penida-manta-rays-point.webp"),
+      plannerLocalImage("images/bali-tours/blue-lagoon-snorkeling.webp"),
+      plannerLocalImage("images/bali-tours/sunset-cruise-bali.jpg"),
+    ],
+    island: [
+      plannerLocalImage("images/bali-tours/nusa-penida-east-tour.jpg"),
+      plannerLocalImage("images/bali-tours/west-collage/nusa-penida-west-kelingking-wide.webp"),
+      plannerLocalImage("images/bali-tours/nusa-lembongan-ceningan-day-trip.webp"),
+    ],
+    culture: [
+      plannerLocalImage("images/bali-tours/tanah-lot-bedugul-tour.jpg"),
+      BALI_PLANNER_PLACE_IMAGES.ubudRiceTerrace,
+      BALI_PLANNER_PLACE_IMAGES.ubudTemple,
+    ],
+    instagram: [
+      plannerLocalImage("images/bali-tours/bali-instagram-highlights-tour.jpg"),
+      BALI_PLANNER_PLACE_IMAGES.eastBaliLempuyang,
+      BALI_PLANNER_PLACE_IMAGES.eastBaliTirtaGangga,
+    ],
+    adventure: [
+      plannerLocalImage("images/bali-tours/atv-quad-bikes.webp"),
+      plannerLocalImage("images/tild3963-6334-4438-b163-623862386363___batur_jeep.jpg"),
+      plannerLocalImage("images/bali-tours/white-water-rafting.webp"),
+    ],
+    transfer: [
+      plannerLocalImage("images/bali-tours/bali-airport-transfer.jpg"),
+      plannerLocalImage("images/bali-tours/fast-boat-transfer-bali.webp"),
+      BALI_PLANNER_PLACE_IMAGES.sanurBeach,
+    ],
+    helicopter: [
+      plannerLocalImage("images/bali-tours/bali-helicopter-scenic-tour.jpg"),
+      plannerLocalImage("images/bali-tours/volcano-coastline-helicopter-ride.jpeg"),
+      BALI_PLANNER_PLACE_IMAGES.nusaDuaBeach,
+    ],
+  };
+  const fallbackImages = kindFallbackImages[detectTourKind(tour)] || [tourHeroImage("ubud-highlights-tour")];
+
+  return [heroAsset]
+    .concat(
+      fallbackImages.map((imagePath) =>
+        buildCollageAsset(imagePath, `${tour.title} photo stop in ${compactAreaLabel(tour)}`),
+      ),
+    )
+    .filter(Boolean);
+}
+
 function buildWestCollageImageOverrides(tour) {
   if (tour.slug !== "nusa-penida-west-tour") {
-    return [];
+    const stopAssets = buildWestCollageStops(tour)
+      .map((stop) => resolveWestCollageStopImage(stop, tour))
+      .filter(Boolean);
+    const uniqueAssets = [];
+    const seenImagePaths = new Set();
+
+    for (const asset of stopAssets.concat(buildWestCollageFallbackAssets(tour))) {
+      if (!asset || seenImagePaths.has(asset.imagePath)) continue;
+      seenImagePaths.add(asset.imagePath);
+      uniqueAssets.push(asset);
+      if (uniqueAssets.length >= WEST_COLLAGE_SLOT_IDS.length) break;
+    }
+
+    while (uniqueAssets.length < WEST_COLLAGE_SLOT_IDS.length) {
+      uniqueAssets.push(
+        buildCollageAsset(publicImagePath(tour), tour.imageAlt || `${tour.title} in Bali`),
+      );
+    }
+
+    return WEST_COLLAGE_SLOT_IDS.map((elemId, index) => ({
+      elemId,
+      imagePath: uniqueAssets[index].imagePath,
+      altText: uniqueAssets[index].altText,
+    }));
   }
 
   return [
@@ -2715,6 +3345,8 @@ function renderWestStylePage(tour) {
     .replaceAll("4 main stops", escapeJsSingleQuoted(offer.pills[1]))
     .replaceAll("All main tickets included", escapeJsSingleQuoted(offer.pills[2]))
     .replaceAll("Optional Bali pickup", escapeJsSingleQuoted(offer.pills[3]))
+    .replaceAll("Book this tour", escapeHtml(offer.ctaLabel))
+    .replaceAll("Book via WhatsApp", escapeHtml(offer.ctaLabel))
     .replaceAll("Book West Tour", escapeJsSingleQuoted(offer.ctaLabel))
     .replaceAll(">$45<", `>${escapeJsSingleQuoted(offer.priceValue)}<`)
     .replaceAll("Nusa Penida west route on Google Maps", escapeJsSingleQuoted(map.title))
@@ -6347,6 +6979,14 @@ function patchDubaiLinkedFooterContact(html) {
 
 function patchBaliMainFile(filePath) {
   let html = fs.readFileSync(filePath, "utf8");
+  const brokenBaliDestinationsMenu =
+    '<ul role="list" class="t-menusub__list"> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
+    'href="/bali/en/main-page#tours" data-menu-item-number="1">Bali, Indonesia</a> </li> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
+    'href="/bali/en/main-page#tours" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul>';
+  const fixedBaliDestinationsMenu =
+    '<ul role="list" class="t-menusub__list"> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
+    'href="/dubai/en#tours" data-menu-item-number="1">Dubai, UAE</a> </li> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
+    'href="/bali/en/main-page#tours" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul>';
 
   const staticReplacements = [
     [
@@ -6385,6 +7025,9 @@ function patchBaliMainFile(filePath) {
   for (const [from, to] of staticReplacements) {
     html = html.split(from).join(to);
   }
+
+  // The Bali page keeps Bali-specific content, but this menu stays a destination switcher.
+  html = html.split(brokenBaliDestinationsMenu).join(fixedBaliDestinationsMenu);
 
   html = html
     .split("Bali North Tour: Dolphins Sunrise &amp; Hidden Waterfalls")
@@ -6470,6 +7113,32 @@ function patchBaliMainFile(filePath) {
   html = patchPlannerLinks(html);
   html = ensureGeneratedCardsOnMainPage(html);
   html = ensureGeneratedPlannerTours(html);
+
+  html = html
+    .replaceAll('src="images/tild3334-6466-4436-b766-376338363935__sb_excursions_dubai_.png"', 'src="/images/tild3334-6466-4436-b766-376338363935__sb_excursions_dubai_.png"')
+    .replaceAll('src="images/tild3762-3034-4130-b063-643934306634__sb_dubai_logo_2025.png"', 'src="/images/tild3762-3034-4130-b063-643934306634__sb_dubai_logo_2025.png"')
+    .replaceAll('<a href="/" class="t228__imgwrapper">', '<a href="/bali/en/main-page" class="t228__imgwrapper">')
+    .replaceAll('<a class="t451__logo" href="/">', '<a class="t451__logo" href="/bali/en/main-page">')
+    .replace(
+      /href="\/bali\/en\/main-page"([^>]*)>\s*About Us\s*</g,
+      'href="/bali/en/main-page#about"$1>About Us<',
+    )
+    .replace(
+      /href="\/bali\/en\/main-page"([^>]*)>\s*FAQ\s*</g,
+      'href="/bali/en/main-page#faq"$1>FAQ<',
+    )
+    .replaceAll(
+      `<style>@media screen and (max-width:980px){#rec1816521261 .t228__leftcontainer{padding:20px;}#rec1816521261 .t228__imglogo{padding:20px 0;}#rec1816521261 .t228{position:static;}}</style>`,
+      `<style>@media screen and (max-width:980px){#rec1816521261{display:none !important;}#rec1816521261 .t228__leftcontainer{padding:20px;}#rec1816521261 .t228__imglogo{padding:20px 0;}#rec1816521261 .t228{position:static;}#rec2128776473{display:block !important;}}@media screen and (min-width:981px){#rec2128776473{display:none !important;}}</style>`,
+    )
+    .replaceAll(
+      `<div class='tn-atom'><a href="/bali/en/main-page"target="_blank"style="color: inherit"><u>About SB Excursions</u></a></div>`,
+      `<div class='tn-atom'><a name="about" style="font-size:0;"></a><a href="/bali/en/main-page#about"style="color: inherit"><u>About SB Excursions</u></a></div>`,
+    )
+    .replaceAll(
+      `<div class='tn-atom'><a href="/bali/en/main-page"target="_blank"style="color: inherit"><u>FAQ</u></a></div>`,
+      `<div class='tn-atom'><a name="faq" style="font-size:0;"></a><a href="/bali/en/main-page#faq"style="color: inherit"><u>FAQ</u></a></div>`,
+    );
 
   const plannerImageBlockStart = html.indexOf("var PLACE_IMAGE = {");
   const plannerImageBlockEnd = html.indexOf("var FREE_DAY_PLACES = {", plannerImageBlockStart);
