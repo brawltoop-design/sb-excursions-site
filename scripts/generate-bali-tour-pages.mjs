@@ -29,6 +29,8 @@ const JOURNAL_FEATURED_ARTICLES = [
   ["sunset-cruise-bali", "schedule"],
 ];
 const WEATHER_COMPACT_PATCH_FILES = [
+  "page128064616.html",
+  "files/page128064616body.html",
   "page128073236.html",
   "files/page128073236body.html",
   "page132181473.html",
@@ -153,6 +155,16 @@ const WEATHER_COMPACT_OVERRIDE_STYLE = `
 #rec2147449333 .bw-footer {
   grid-template-columns: minmax(0, 1fr) !important;
 }
+
+#rec2147449333 .bali-weather-outer {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  overflow-x: hidden !important;
+  overflow-x: clip !important;
+}
+
 @media screen and (max-width: 959px) {
   #rec2147449333 .bali-weather-outer {
     max-width: 860px;
@@ -282,6 +294,103 @@ const WEATHER_COMPACT_OVERRIDE_STYLE = `
   }
 }
 </style>
+`;
+
+const BALI_MAIN_STABILITY_FIX = `
+<style id="sb-bali-main-stability-fix">
+html,
+body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+#allrecords,
+.t-records,
+.t-rec {
+  max-width: 100% !important;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+#rec1816521261,
+#rec2128776473 {
+  --menusub-active-color: #7ec4f4;
+}
+
+#rec1816521261 .t-menusub__link-item.t-active,
+#rec1816521261 .t-menusub__link-item.t-active-current,
+#rec2128776473 .t-menusub__link-item.t-active,
+#rec2128776473 .t-menusub__link-item.t-active-current {
+  color: #7ec4f4 !important;
+}
+
+html[data-sb-destination="bali"] #rec2128776473 .t-menusub__list .t-menusub__link-item[href*="/dubai/"],
+html[data-sb-destination="bali"] #rec2128776473 .t-menusub__list .t-menusub__link-item[href^="/dubai/"] {
+  color: #ffffff !important;
+}
+
+html[data-sb-destination="bali"] #rec2128776473 .t-menusub__list .t-menusub__link-item[href*="/bali/"],
+html[data-sb-destination="bali"] #rec2128776473 .t-menusub__list .t-menusub__link-item[href^="/bali/"] {
+  color: #7ec4f4 !important;
+}
+</style>
+<script id="sb-bali-main-stability-script">
+(function () {
+  var isApplyingDestinationState = false;
+
+  function syncDestinationMenuState() {
+    var isBali = window.location.pathname.indexOf("/bali/") === 0;
+    var isDubai = window.location.pathname.indexOf("/dubai/") === 0;
+    document.documentElement.setAttribute("data-sb-destination", isBali ? "bali" : (isDubai ? "dubai" : ""));
+    var links = document.querySelectorAll("#rec1816521261 .t-menusub__link-item, #rec2128776473 .t-menusub__link-item");
+    Array.prototype.forEach.call(links, function (link) {
+      var href = link.getAttribute("href") || "";
+      var isActive = (isBali && href.indexOf("/bali/") === 0) || (isDubai && href.indexOf("/dubai/") === 0);
+      link.classList.toggle("t-active", isActive);
+      link.classList.toggle("t-active-current", isActive);
+      if (isActive) {
+        link.setAttribute("aria-current", "page");
+        link.style.setProperty("color", "#7ec4f4", "important");
+      } else {
+        link.removeAttribute("aria-current");
+        if (link.closest("#rec2128776473")) {
+          link.style.setProperty("color", "#ffffff", "important");
+        } else {
+          link.style.removeProperty("color");
+        }
+      }
+    });
+  }
+
+  function queueDestinationMenuState() {
+    if (isApplyingDestinationState) return;
+    isApplyingDestinationState = true;
+    window.requestAnimationFrame(function () {
+      syncDestinationMenuState();
+      isApplyingDestinationState = false;
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", queueDestinationMenuState);
+  } else {
+    queueDestinationMenuState();
+  }
+  window.addEventListener("load", queueDestinationMenuState);
+  window.addEventListener("hashchange", queueDestinationMenuState);
+  setTimeout(queueDestinationMenuState, 500);
+  setTimeout(queueDestinationMenuState, 1200);
+  setTimeout(queueDestinationMenuState, 2500);
+  setTimeout(queueDestinationMenuState, 5000);
+  if ("MutationObserver" in window) {
+    new MutationObserver(queueDestinationMenuState).observe(document.documentElement, {
+      subtree: true,
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  }
+})();
+</script>
 `;
 
 const sourceImage = (name) => path.join(projectRoot, "images", name);
@@ -3015,6 +3124,26 @@ function buildFaqs(tour) {
 
 let westTemplateCache = null;
 
+const BALI_WEATHER_OUTER_100VW_CSS = `  .bali-weather-outer {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    padding: 0 20px;
+  }`;
+const BALI_WEATHER_OUTER_STABLE_CSS = `  .bali-weather-outer {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+    overflow-x: hidden;
+    overflow-x: clip;
+  }`;
+
+function normalizeBaliWeatherOuterCss(html) {
+  return html.split(BALI_WEATHER_OUTER_100VW_CSS).join(BALI_WEATHER_OUTER_STABLE_CSS);
+}
+
 function collapseWhitespace(value) {
   return String(value || "").replace(/\s+/g, " ").trim();
 }
@@ -3880,7 +4009,7 @@ function replaceLdJsonBlocks(html, tour) {
 
 function getWestTemplateHtml() {
   if (!westTemplateCache) {
-    westTemplateCache = fs.readFileSync(WEST_TEMPLATE_SOURCE_FILE, "utf8");
+    westTemplateCache = normalizeBaliWeatherOuterCss(fs.readFileSync(WEST_TEMPLATE_SOURCE_FILE, "utf8"));
   }
 
   return westTemplateCache;
@@ -6441,11 +6570,13 @@ function renderBaliWeatherBlock(primaryRoute = WEATHER_MAIN_PAGE_ROUTE) {
           }
 
           .sb-bali-weather-shell {
-            width: 100vw;
-            max-width: none;
-            margin-left: calc(50% - 50vw);
-            margin-right: calc(50% - 50vw);
+            width: 100%;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
             padding: 0 20px;
+            overflow-x: hidden;
+            overflow-x: clip;
           }
 
           .sb-bali-weather-shell #bwCta {
@@ -7864,6 +7995,18 @@ function patchDubaiLinkedFooterContact(html) {
   return html;
 }
 
+function ensureBaliMainStabilityFix(html) {
+  const clean = html
+    .replace(/<style id="sb-bali-main-stability-fix">[\s\S]*?<\/style>\s*/g, "")
+    .replace(/<script id="sb-bali-main-stability-script">[\s\S]*?<\/script>\s*/g, "");
+
+  if (clean.includes("</head>")) {
+    return clean.replace("</head>", `${BALI_MAIN_STABILITY_FIX}</head>`);
+  }
+
+  return `${BALI_MAIN_STABILITY_FIX}${clean}`;
+}
+
 function patchBaliMainFile(filePath) {
   let html = fs.readFileSync(filePath, "utf8");
   const brokenBaliDestinationsMenu =
@@ -8044,6 +8187,42 @@ function patchBaliMainFile(filePath) {
     "var places = getFreeDayPlaces(input.area, input.group, input.interests, usedPlaceTitles, freeDayIndex++);",
   );
 
+  if (!html.includes("function scrollAiResultsIntoView()")) {
+    html = html.replace(
+      `function debounce(fn, delay) {
+var t;
+return function() {
+clearTimeout(t);
+t = setTimeout(fn, delay);
+};
+}
+if (aiBuildBtn) {`,
+      `function debounce(fn, delay) {
+var t;
+return function() {
+clearTimeout(t);
+t = setTimeout(fn, delay);
+};
+}
+function scrollAiResultsIntoView() {
+if (window.innerWidth > 767) return;
+var target = root.querySelector('.sb-ai-results');
+if (!target) return;
+setTimeout(function() {
+var headerOffset = 78;
+var y = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+window.scrollTo({ top: Math.max(y, 0), behavior: 'smooth' });
+}, 120);
+}
+if (aiBuildBtn) {`,
+    );
+  }
+  html = html
+    .replaceAll("syncHeightHard();\nscrollAiResultsIntoView();\ntry {", "syncHeightHard();\ntry {")
+    .replaceAll("renderPlan(planData);\nscrollAiResultsIntoView();\ntypeFeed(", "renderPlan(planData);\ntypeFeed(")
+    .replace("openAiPanel();\nsyncHeightHard();\ntry {", "openAiPanel();\nsyncHeightHard();\nscrollAiResultsIntoView();\ntry {")
+    .replaceAll("renderPlan(planData);\ntypeFeed(", "renderPlan(planData);\nscrollAiResultsIntoView();\ntypeFeed(");
+
   html = html.replace(
     `#sb-excursions-page .sb-place-card {
 border: 1px solid rgba(21,21,21,0.08);
@@ -8121,6 +8300,7 @@ return '<div class="sb-place-card' + (placeObj.topPick ? ' is-top-pick' : '') + 
   }
 
   html = patchDubaiLinkedFooterContact(html);
+  html = ensureBaliMainStabilityFix(html);
 
   fs.writeFileSync(filePath, html);
 }
@@ -8135,6 +8315,8 @@ function patchCompactWeatherWidget(filePath) {
   if (!html.includes('id="baliWeatherCard"')) {
     return;
   }
+
+  html = normalizeBaliWeatherOuterCss(html);
 
   const existingStylePattern = /<style id="sb-weather-compact-override">[\s\S]*?<\/style>\s*/;
   if (existingStylePattern.test(html)) {

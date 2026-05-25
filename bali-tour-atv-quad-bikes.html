@@ -1714,10 +1714,13 @@ hidden > <div class="t585__textwrapper"> <div class="t585__text t-descr t-descr_
   }
 
   .bali-weather-outer {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 20px;
+    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   .bali-weather-card {

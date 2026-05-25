@@ -381,6 +381,10 @@ hidden > <div class="t585__textwrapper"> <div class="t585__text t-descr t-descr_
 
 
 
+
+
+
+
 <style id="sb-weather-compact-override">
 #bwCta {
   display: none !important;
@@ -389,6 +393,16 @@ hidden > <div class="t585__textwrapper"> <div class="t585__text t-descr t-descr_
 #rec2147449333 .bw-footer {
   grid-template-columns: minmax(0, 1fr) !important;
 }
+
+#rec2147449333 .bali-weather-outer {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  overflow-x: hidden !important;
+  overflow-x: clip !important;
+}
+
 @media screen and (max-width: 959px) {
   #rec2147449333 .bali-weather-outer {
     max-width: 860px;
@@ -525,10 +539,13 @@ hidden > <div class="t585__textwrapper"> <div class="t585__text t-descr t-descr_
   }
 
   .bali-weather-outer {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 20px;
+    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   .bali-weather-card {
