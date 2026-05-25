@@ -7766,6 +7766,15 @@ function patchBaliMainFile(filePath) {
     html = `${html.slice(0, plannerImageBlockStart)}${renderPlannerPlaceImageBlock()}\n${renderPlannerFreeDayBlock()}\n${html.slice(plannerImageBlockEnd)}`;
   }
 
+  html = html.replace(
+    "var usedPlaceTitles = {};\nvar allDays=dates.map(function(d,index){",
+    "var usedPlaceTitles = {};\nvar freeDayIndex = 0;\nvar allDays=dates.map(function(d,index){",
+  );
+  html = html.replace(
+    "var places = getFreeDayPlaces(input.area, input.group, usedPlaceTitles);",
+    "var places = getFreeDayPlaces(input.area, input.group, input.interests, usedPlaceTitles, freeDayIndex++);",
+  );
+
   const newsStart = html.indexOf('<div id="rec2054910081"');
   const newsEnd = html.indexOf('<div id="rec2054910091"');
   if (newsStart !== -1 && newsEnd !== -1 && newsEnd > newsStart) {

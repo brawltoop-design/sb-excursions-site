@@ -2024,12 +2024,13 @@ var mainDays=buildThreeMainDays(input,weatherByDate);
 var mainByIso={};
 mainDays.forEach(function(item){ mainByIso[item.iso]=item; });
 var usedPlaceTitles = {};
+var freeDayIndex = 0;
 var allDays=dates.map(function(d,index){
 var iso=d.toISOString().slice(0,10);
 var weather=weatherByDate[iso] || fallbackWeather;
 if(mainByIso[iso]) return { type:'tour', item:mainByIso[iso] };
 var dayNum=index+1;
-var places = getFreeDayPlaces(input.area, input.group, usedPlaceTitles);
+var places = getFreeDayPlaces(input.area, input.group, input.interests, usedPlaceTitles, freeDayIndex++);
 if(dayNum===1){
 return { type:'places', dateObj:d, iso:iso, weather:weather, title:'Arrival / easy first day', copy:'You just arrived in Bali. Settle in, stay light, and pick one of these easy nearby options so the trip starts smooth.', places:places };
 }
@@ -2383,6 +2384,7 @@ setTimeout(fixAiPlannerMobile,300);
 setTimeout(fixAiPlannerMobile,900);
 })();
 </script> <!-- nominify end --> </div> </div> </div> </div> 
+
 
 
 
