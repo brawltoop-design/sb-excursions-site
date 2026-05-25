@@ -597,10 +597,42 @@ display: flex;
 flex-direction: column;
 min-width: 0;
 }
-#sb-excursions-page .sb-place-card img {
+#sb-excursions-page .sb-place-card.is-top-pick {
+border-color: rgba(245, 158, 11, 0.44);
+box-shadow: 0 10px 24px rgba(245, 158, 11, 0.13), 0 8px 18px rgba(17,17,17,0.05);
+}
+#sb-excursions-page .sb-place-media {
+position: relative;
 width: 100%;
 height: 138px;
+overflow: hidden;
+background: #f3f4f6;
+}
+#sb-excursions-page .sb-place-card img {
+width: 100%;
+height: 100%;
 object-fit: cover;
+display: block;
+}
+#sb-excursions-page .sb-place-badge {
+position: absolute;
+left: 10px;
+top: 10px;
+z-index: 2;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+min-height: 28px;
+padding: 0 10px;
+border-radius: 999px;
+background: rgba(17, 24, 39, 0.86);
+color: #fff;
+font-size: 11px;
+line-height: 1;
+font-weight: 900;
+letter-spacing: 0.02em;
+box-shadow: 0 8px 18px rgba(0,0,0,0.16);
+backdrop-filter: blur(6px);
 }
 #sb-excursions-page .sb-place-card-body {
 padding: 12px;
@@ -1399,7 +1431,7 @@ waterfall:"https://commons.wikimedia.org/wiki/Special:FilePath/Kanto%20lampo%20w
 walk:"https://commons.wikimedia.org/wiki/Special:FilePath/Jl.%20Sanur%20Beach%20Street%20Walk%2C%20Sanur%20Kaja%2C%20Denpasar%20Sel.%2C%20Kota%20Denpasar%2C%20Bali%2080227%2C%20Indonesia%20-%20panoramio%20-%20%EC%9A%B0%ED%95%9C%EA%B8%B8(HK%20Woo)%20(1).jpg?width=1280",
 culture:"https://commons.wikimedia.org/wiki/Special:FilePath/Ubud%20Palace%2C%20Bali%2C%20Indonesia%2C%2020220822%200904%209820.jpg?width=1280"
 };
-var PLACE_IMAGE_VERSION = '20260525a';
+var PLACE_IMAGE_VERSION = '20260525c';
 var PLACE_IMAGE_BY_TITLE = {
   "Tanah Lot Temple": "https://live.staticflickr.com/4128/4947292419_203860e39c_b.jpg",
   "La Brisa Beach Club": "https://lokasibali.com/api/images/business-0x2dd23876693af8ad%3A0x86929db7c4eabc29-0.webp",
@@ -1514,7 +1546,156 @@ var PLACE_IMAGE_BY_TITLE = {
   "Pizzaria Sanur": "https://itin-dev.wanderlogstatic.com/freeImage/ZjgnSPtC3sDohKyAwXpHb5WyZb22okU0",
   "Sunset cruise in Bali": "/images/bali-tours/sunset-cruise-bali.jpg",
   "Mount Batur sunrise": "/images/bali-tours/mount-batur-sunrise-jeep-tour.webp",
-  "Nusa Penida day trip": "https://commons.wikimedia.org/wiki/Special:FilePath/Diamond%20Beach%2C%20Nusa%20Penida.jpg?width=1280"
+  "Nusa Penida day trip": "https://commons.wikimedia.org/wiki/Special:FilePath/Diamond%20Beach%2C%20Nusa%20Penida.jpg?width=1280",
+  "Berawa Beach": "https://commons.wikimedia.org/wiki/Special:FilePath/Batu%20Bolong%20Beach%2C%20Canggu.jpg?width=1280",
+  "Nelayan Beach": "https://commons.wikimedia.org/wiki/Special:FilePath/Batu%20Bolong%20Beach%2C%20Canggu.jpg?width=1280",
+  "Munggu Beach": "https://commons.wikimedia.org/wiki/Special:FilePath/IconPantaiPererenan.jpg?width=1280",
+  "Pura Batu Bolong": "https://commons.wikimedia.org/wiki/Special:FilePath/Tanah%20Lot%2C%20Bali%2C%20Indonesia%2C%2020220827%200957%201103.jpg?width=1280",
+  "Samadi Bali": "https://commons.wikimedia.org/wiki/Special:FilePath/Ubud%20-%20balinese%20food.jpg?width=1280",
+  "Copenhagen Canggu": "https://commons.wikimedia.org/wiki/Special:FilePath/Batu%20Bolong%20Beach%2C%20Canggu.jpg?width=1280",
+  "The Shady Shack": "https://commons.wikimedia.org/wiki/Special:FilePath/Ubud%20-%20balinese%20food.jpg?width=1280",
+  "Luigi's Hot Pizza": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Brisa%20beach%20club%20at%20Echo%20Beach%2C%20Canggu%2C%20Bali.jpg?width=1280",
+  "Old Man's Canggu": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Brisa%20beach%20club%20at%20Echo%20Beach%2C%20Canggu%2C%20Bali.jpg?width=1280",
+  "Deus Ex Machina Canggu": "https://commons.wikimedia.org/wiki/Special:FilePath/Batu%20Bolong%20Beach%2C%20Canggu.jpg?width=1280",
+  "Bali Equestrian Centre": "https://commons.wikimedia.org/wiki/Special:FilePath/IconPantaiPererenan.jpg?width=1280",
+  "Canggu Shortcut Rice Fields": "https://commons.wikimedia.org/wiki/Special:FilePath/Rice%20terraces%20on%20Bali%20-%20Tegalalang%20Rice%20Terrace%20-%20Indonesia%2004.jpg?width=1280",
+  "Alternative Beach Canggu": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Brisa%20beach%20club%20at%20Echo%20Beach%2C%20Canggu%2C%20Bali.jpg?width=1280",
+  "Baked Canggu": "https://commons.wikimedia.org/wiki/Special:FilePath/Batu%20Bolong%20Beach%2C%20Canggu.jpg?width=1280",
+  "Legian Beach": "https://commons.wikimedia.org/wiki/Special:FilePath/Seminyak%20Beach.jpg?width=1280",
+  "La Plancha": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunset-double-six-beach-2023-12-07.jpg?width=1280",
+  "Mano Beach House": "https://commons.wikimedia.org/wiki/Special:FilePath/Jump!%20(Petitengget%20Beach%2C%20Seminyak%2C%20Bali).jpg?width=1280",
+  "Seminyak Square": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Seminyak%2C_Bali%2C_Indonesia_%282012%29.jpg/1280px-Seminyak%2C_Bali%2C_Indonesia_%282012%29.jpg",
+  "Eat Street Seminyak": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Seminyak%2C_Bali%2C_Indonesia_%282012%29.jpg/1280px-Seminyak%2C_Bali%2C_Indonesia_%282012%29.jpg",
+  "Nyaman Gallery": "https://commons.wikimedia.org/wiki/Special:FilePath/Seminyak%20TempleDoors.JPG?width=1280",
+  "Bodyworks Spa Seminyak": "https://commons.wikimedia.org/wiki/Special:FilePath/Seminyak%20Beach.jpg?width=1280",
+  "Shelter Cafe Seminyak": "https://commons.wikimedia.org/wiki/Special:FilePath/Seminyak%20Beach.jpg?width=1280",
+  "Kynd Community": "https://commons.wikimedia.org/wiki/Special:FilePath/Seminyak%20Beach.jpg?width=1280",
+  "Gado Gado Beach": "https://commons.wikimedia.org/wiki/Special:FilePath/Seminyak%20Beach.jpg?width=1280",
+  "W Bali Seminyak": "https://commons.wikimedia.org/wiki/Special:FilePath/Jump!%20(Petitengget%20Beach%2C%20Seminyak%2C%20Bali).jpg?width=1280",
+  "Merah Putih": "https://commons.wikimedia.org/wiki/Special:FilePath/Ubud%20-%20balinese%20food.jpg?width=1280",
+  "Sarong Seminyak": "https://commons.wikimedia.org/wiki/Special:FilePath/Ubud%20-%20balinese%20food.jpg?width=1280",
+  "Shooters Bali": "https://commons.wikimedia.org/wiki/Special:FilePath/Seminyak%20Beach.jpg?width=1280",
+  "Saraswati Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Pura_Taman_Saraswati%2C_Ubud%2C_Bali%2C_Indonesia.jpg/1280px-Pura_Taman_Saraswati%2C_Ubud%2C_Bali%2C_Indonesia.jpg",
+  "Ubud Art Market": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ubud_Market%2C_Bali%2C_Indonesia.jpg/1280px-Ubud_Market%2C_Bali%2C_Indonesia.jpg",
+  "Tegenungan Waterfall": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tegenungan_waterfall%2C_Bali.jpg/1280px-Tegenungan_waterfall%2C_Bali.jpg",
+  "Suwat Waterfall": "https://commons.wikimedia.org/wiki/Special:FilePath/Kanto%20lampo%20waterfall.jpg?width=1280",
+  "Gunung Kawi Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Gunung_Kawi%2C_Bali%2C_Indonesia.jpg/1280px-Gunung_Kawi%2C_Bali%2C_Indonesia.jpg",
+  "Gunung Kawi Sebatu": "https://commons.wikimedia.org/wiki/Special:FilePath/Pura%20Tirta%20Empul%2C%20Ubud%2C%20Bali%2C%20Indonesia.JPG?width=1280",
+  "Blanco Renaissance Museum": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Blanco_Renaissance_Museum%2C_Ubud%2C_Bali.jpg/1280px-Blanco_Renaissance_Museum%2C_Ubud%2C_Bali.jpg",
+  "Neka Art Museum": "https://commons.wikimedia.org/wiki/Special:FilePath/Ubud%20Palace%2C%20Bali%2C%20Indonesia%2C%2020220822%200904%209820.jpg?width=1280",
+  "ARMA Museum": "https://commons.wikimedia.org/wiki/Special:FilePath/Ubud%20Palace%2C%20Bali%2C%20Indonesia%2C%2020220822%200904%209820.jpg?width=1280",
+  "Yoga Barn Ubud": "https://commons.wikimedia.org/wiki/Special:FilePath/Ubud%20-%20balinese%20food.jpg?width=1280",
+  "Alchemy Ubud": "https://commons.wikimedia.org/wiki/Special:FilePath/Ubud%20-%20balinese%20food.jpg?width=1280",
+  "Pison Ubud": "https://commons.wikimedia.org/wiki/Special:FilePath/Ubud%20-%20balinese%20food.jpg?width=1280",
+  "Subak Juwuk Manis": "https://commons.wikimedia.org/wiki/Special:FilePath/Rice%20terraces%20on%20Bali%20-%20Tegalalang%20Rice%20Terrace%20-%20Indonesia%2004.jpg?width=1280",
+  "Sayan Rice Fields": "https://commons.wikimedia.org/wiki/Special:FilePath/Rice%20terraces%20on%20Bali%20-%20Tegalalang%20Rice%20Terrace%20-%20Indonesia%2004.jpg?width=1280",
+  "Penglipuran Village": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Penglipuran_Village_Bali.jpg/1280px-Penglipuran_Village_Bali.jpg",
+  "Sidemen Valley": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Sidemen%2C_Bali%2C_Indonesia.jpg/1280px-Sidemen%2C_Bali%2C_Indonesia.jpg",
+  "Green Bowl Beach": "https://commons.wikimedia.org/wiki/Special:FilePath/Padang%20Padang%20Beach%20Bali.jpg?width=1280",
+  "Tegal Wangi Beach": "https://commons.wikimedia.org/wiki/Special:FilePath/Karang%20Boma%20Cliff.jpg?width=1280",
+  "Jimbaran Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Jimbaran_Beach%2C_Bali.jpg/1280px-Jimbaran_Beach%2C_Bali.jpg",
+  "Kedonganan Fish Market": "https://commons.wikimedia.org/wiki/Special:FilePath/Ubud%20-%20balinese%20food.jpg?width=1280",
+  "Muaya Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Jimbaran_Beach%2C_Bali.jpg/1280px-Jimbaran_Beach%2C_Bali.jpg",
+  "Rock Bar Bali": "https://commons.wikimedia.org/wiki/Special:FilePath/Karang%20Boma%20Cliff.jpg?width=1280",
+  "Ulu Cliffhouse": "https://commons.wikimedia.org/wiki/Special:FilePath/Karang%20Boma%20Cliff.jpg?width=1280",
+  "Mana Uluwatu": "https://commons.wikimedia.org/wiki/Special:FilePath/Karang%20Boma%20Cliff.jpg?width=1280",
+  "The Cashew Tree": "https://commons.wikimedia.org/wiki/Special:FilePath/Bingin%20Beach.PNG?width=1280",
+  "Ours Bali": "https://commons.wikimedia.org/wiki/Special:FilePath/Karang%20Boma%20Cliff.jpg?width=1280",
+  "Gooseberry Uluwatu": "https://commons.wikimedia.org/wiki/Special:FilePath/Karang%20Boma%20Cliff.jpg?width=1280",
+  "Impossibles Beach": "https://commons.wikimedia.org/wiki/Special:FilePath/Padang%20Padang%20Beach%20Bali.jpg?width=1280",
+  "Cemongkak Beach": "https://commons.wikimedia.org/wiki/Special:FilePath/Dreamland%20Beach%20Bali.jpg?width=1280",
+  "Balangan Viewpoint": "https://commons.wikimedia.org/wiki/Special:FilePath/Karang%20Boma%20Cliff.jpg?width=1280",
+  "Blue Point Beach": "https://commons.wikimedia.org/wiki/Special:FilePath/Suluban%20Beach%2C%20Pecatu%2C%20Bali%20-%20Indonesia%20-%20panoramio.jpg?width=1280",
+  "Sawangan Beach": "https://commons.wikimedia.org/wiki/Special:FilePath/Nusa%20Dua%20Bali.jpg?width=1280",
+  "Peninsula Island Nusa Dua": "https://commons.wikimedia.org/wiki/Special:FilePath/Water%20Blow%20Point%2C%20Nusa%20Dua%2C%20Bali.jpg?width=1280",
+  "Devdan Show": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuta%20Bali%20Indonesia%20Puja-Mandala-01.jpg?width=1280",
+  "Bali National Golf Club": "https://commons.wikimedia.org/wiki/Special:FilePath/Nusa%20Dua%20Bali.jpg?width=1280",
+  "The Bay Bali": "https://commons.wikimedia.org/wiki/Special:FilePath/Nusa%20Dua%20Bali.jpg?width=1280",
+  "Tanjung Benoa Water Sports": "/images/bali-tours/blue-lagoon-snorkeling.webp",
+  "Turtle Island Tanjung Benoa": "/images/bali-tours/blue-lagoon-snorkeling.webp",
+  "Benoa Bay Mangrove": "https://commons.wikimedia.org/wiki/Special:FilePath/Jl.%20Sanur%20Beach%20Street%20Walk%2C%20Sanur%20Kaja%2C%20Denpasar%20Sel.%2C%20Kota%20Denpasar%2C%20Bali%2080227%2C%20Indonesia%20-%20panoramio%20-%20%EC%9A%B0%ED%95%9C%EA%B8%B8(HK%20Woo)%20(1).jpg?width=1280",
+  "Timbis Beach": "https://commons.wikimedia.org/wiki/Special:FilePath/Pantai%20Gunung%20Payung.jpg?width=1280",
+  "Timbis Flying Site": "https://commons.wikimedia.org/wiki/Special:FilePath/Pantai%20Gunung%20Payung.jpg?width=1280",
+  "Sawangan Cliff": "https://commons.wikimedia.org/wiki/Special:FilePath/Pantai%20Gunung%20Payung.jpg?width=1280",
+  "Jari Menari Nusa Dua": "https://commons.wikimedia.org/wiki/Special:FilePath/Nusa%20Dua%20Bali.jpg?width=1280",
+  "Geger Temple": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuta%20Bali%20Indonesia%20Puja-Mandala-01.jpg?width=1280",
+  "Bumbu Bali Tanjung Benoa": "https://commons.wikimedia.org/wiki/Special:FilePath/Ubud%20-%20balinese%20food.jpg?width=1280",
+  "Cemara Beach": "https://commons.wikimedia.org/wiki/Special:FilePath/Sanur%20Beach%2C%20Bali.jpg?width=1280",
+  "Semawang Beach": "https://commons.wikimedia.org/wiki/Special:FilePath/Sanur%20Beach%2C%20Bali.jpg?width=1280",
+  "Padang Galak Beach": "https://commons.wikimedia.org/wiki/Special:FilePath/Sanur%20Beach%2C%20Bali.jpg?width=1280",
+  "Bali Orchid Garden": "https://commons.wikimedia.org/wiki/Special:FilePath/Rice%20terraces%20on%20Bali%20-%20Tegalalang%20Rice%20Terrace%20-%20Indonesia%2004.jpg?width=1280",
+  "Taman Festival Bali": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum%20Le%20Mayeur%20-%202025-02-17%20-%20Andy%20Mabbett%20-%2079.jpg?width=1280",
+  "Serangan Island": "https://commons.wikimedia.org/wiki/Special:FilePath/Sanur%20Beach%2C%20Bali.jpg?width=1280",
+  "Turtle Conservation Serangan": "/images/bali-tours/blue-lagoon-snorkeling.webp",
+  "Bali Wake Park": "/images/bali-tours/blue-lagoon-snorkeling.webp",
+  "Sindhu Market": "https://commons.wikimedia.org/wiki/Special:FilePath/Sanur.JPG?width=1280",
+  "Artasedana Sanur": "https://commons.wikimedia.org/wiki/Special:FilePath/Sanur.JPG?width=1280",
+  "Plaza Renon": "https://commons.wikimedia.org/wiki/Special:FilePath/Sanur.JPG?width=1280",
+  "Peek A Boo Sanur": "https://commons.wikimedia.org/wiki/Special:FilePath/Sanur.JPG?width=1280",
+  "Pantai Duyung": "https://commons.wikimedia.org/wiki/Special:FilePath/Sanur%20Beach%2C%20Bali.jpg?width=1280",
+  "Kevala Studio Ceramic": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum%20Le%20Mayeur%20-%202025-02-17%20-%20Andy%20Mabbett%20-%2079.jpg?width=1280"
+};
+var TOP_PICK_PLACES = {
+  "Tanah Lot Temple": true,
+  "La Brisa Beach Club": true,
+  "Batu Bolong Beach": true,
+  "The Lawn Canggu": true,
+  "Finns Beach Club": true,
+  "Echo Beach": true,
+  "Atlas Beach Club": true,
+  "Berawa Beach": true,
+  "Potato Head Beach Club": true,
+  "Ku De Ta": true,
+  "Seminyak Beach": true,
+  "Double Six Beach": true,
+  "Motel Mexicola": true,
+  "Sisterfields": true,
+  "La Plancha": true,
+  "W Bali Seminyak": true,
+  "Tegalalang Rice Terrace": true,
+  "Campuhan Ridge Walk": true,
+  "Tirta Empul Temple": true,
+  "Monkey Forest Ubud": true,
+  "Kanto Lampo Waterfall": true,
+  "Cretya Ubud": true,
+  "Alas Harum": true,
+  "Saraswati Temple": true,
+  "Ubud Art Market": true,
+  "Tegenungan Waterfall": true,
+  "Penglipuran Village": true,
+  "Sidemen Valley": true,
+  "Melasti Beach": true,
+  "Uluwatu Temple": true,
+  "Padang Padang Beach": true,
+  "Single Fin": true,
+  "Savaya": true,
+  "Karang Boma Cliff": true,
+  "Bingin Beach": true,
+  "Nyang Nyang Beach": true,
+  "Balangan Beach": true,
+  "Rock Bar Bali": true,
+  "Green Bowl Beach": true,
+  "Geger Beach": true,
+  "Waterblow Nusa Dua": true,
+  "Sundays Beach Club": true,
+  "Nusa Dua Beach": true,
+  "Manarai Beach House": true,
+  "Koral Restaurant": true,
+  "Pandawa Beach": true,
+  "Tanjung Benoa Beach": true,
+  "Museum Pasifika": true,
+  "Mengiat Beach": true,
+  "Sanur Beach Boardwalk": true,
+  "Massimo": true,
+  "Byrd House Beach Club": true,
+  "Mertasari Beach": true,
+  "Le Mayeur Museum": true,
+  "Sindhu Beach": true,
+  "Segara Ayu Beach": true,
+  "Matahari Terbit Beach": true,
+  "Sanur Port": true,
+  "Turtle Conservation Serangan": true,
+  "Big Garden Corner": true
 };
 function isPlannerLocalImage(url){
 return !!url && (/^\//.test(url) || !/^(?:https?:)?\/\//i.test(url));
@@ -1631,7 +1812,7 @@ if (!img || img.tagName !== 'IMG') return;
 if (!img.closest || !img.closest('#sbAiResultsGrid')) return;
 plannerRecoverImage(img);
 }, true);
-function place(title, kind, maps, copy, vibe, interests){ return { title:title, kind:kind, image:withPlannerImageVersion(PLACE_IMAGE_BY_TITLE[title] || PLACE_IMAGE[kind] || PLACE_IMAGE.scenic), maps:maps, copy:copy, vibe:vibe || ['couple','friends','family','solo'], interests:interests || null }; }
+function place(title, kind, maps, copy, vibe, interests){ return { title:title, kind:kind, image:withPlannerImageVersion(PLACE_IMAGE_BY_TITLE[title] || PLACE_IMAGE[kind] || PLACE_IMAGE.scenic), maps:maps, copy:copy, vibe:vibe || ['couple','friends','family','solo'], interests:interests || null, topPick: !!TOP_PICK_PLACES[title] }; }
 var FREE_DAY_PLACES = {
 canggu: [
 place("Tanah Lot Temple","sunset","https://maps.google.com/?q=Tanah+Lot+Temple","Iconic Bali sunset and temple views. Easy wow-factor stop for a free evening.",["couple","friends","family","solo"]),
@@ -1649,7 +1830,21 @@ place("Mason Canggu","restaurant","https://maps.google.com/?q=Mason+Canggu","One
 place("Warung Varuna","restaurant","https://maps.google.com/?q=Warung+Varuna+Canggu","Easy local seafood idea for a casual meal after a flexible day.",["friends","family","couple"]),
 place("Love Anchor Market","culture","https://maps.google.com/?q=Love+Anchor+Canggu","A fun easy stop for shops, coffee and light browsing.",["friends","solo","couple"]),
 place("Luma Canggu","restaurant","https://maps.google.com/?q=Luma+Canggu","Stylish dinner option for couples or friends.",["couple","friends"]),
-place("Atlas Beach Club","beachclub","https://maps.google.com/?q=Atlas+Beach+Club+Bali","Big-format sunset and entertainment option when guests want a more energetic free evening.",["friends","couple"],["sea","relax","instagram"])
+place("Atlas Beach Club","beachclub","https://maps.google.com/?q=Atlas+Beach+Club+Bali","Big-format sunset and entertainment option when guests want a more energetic free evening.",["friends","couple"],["sea","relax","instagram"]),
+place("Berawa Beach","beach","https://maps.google.com/?q=Berawa+Beach+Bali","Easy beach stop between Canggu and Seminyak with a flexible sunset feel.",["couple","friends","solo"],["sea","relax","instagram"]),
+place("Nelayan Beach","beach","https://maps.google.com/?q=Nelayan+Beach+Canggu","Quieter Canggu coast option for a soft walk and lighter crowd energy.",["couple","solo","family"],["sea","relax"]),
+place("Munggu Beach","sunset","https://maps.google.com/?q=Munggu+Beach+Bali","Peaceful west-coast sunset idea when guests want less traffic and fewer people.",["couple","solo","family"],["sea","relax","instagram"]),
+place("Pura Batu Bolong","temple","https://maps.google.com/?q=Pura+Batu+Bolong+Canggu","Small coastal temple stop that adds a little culture to a beach-heavy Canggu day.",["couple","family","solo"],["culture","sea","instagram"]),
+place("Samadi Bali","cafe","https://maps.google.com/?q=Samadi+Bali+Canggu","Healthy cafe and yoga-side stop for a slower reset morning.",["solo","couple"],["relax"]),
+place("Copenhagen Canggu","cafe","https://maps.google.com/?q=Copenhagen+Canggu","Strong breakfast spot when guests want a simple but polished Canggu morning.",["couple","friends","solo"],["relax"]),
+place("The Shady Shack","cafe","https://maps.google.com/?q=The+Shady+Shack+Canggu","Vegetarian cafe pick that works well for a calm free day.",["solo","couple","friends"],["relax"]),
+place("Luigi's Hot Pizza","restaurant","https://maps.google.com/?q=Luigi%27s+Hot+Pizza+Canggu","Easy dinner and social evening choice without making the day too heavy.",["friends","couple"],["relax"]),
+place("Old Man's Canggu","beachclub","https://maps.google.com/?q=Old+Man%27s+Canggu","Classic Canggu beach-bar option close to Batu Bolong.",["friends","couple"],["sea","relax"]),
+place("Deus Ex Machina Canggu","culture","https://maps.google.com/?q=Deus+Ex+Machina+Canggu","Surf, bikes, food, and lifestyle energy in one easy Canggu stop.",["friends","solo","couple"],["culture","relax"]),
+place("Bali Equestrian Centre","scenic","https://maps.google.com/?q=Bali+Equestrian+Centre+Canggu","Useful family-friendly activity idea when the day should not be only beach and food.",["family","couple"],["relax","adventure"]),
+place("Canggu Shortcut Rice Fields","walk","https://maps.google.com/?q=Canggu+Shortcut","Light rice-field drive or walk mood when guests want a break from beach clubs.",["solo","couple","family"],["nature","relax"]),
+place("Alternative Beach Canggu","beachclub","https://maps.google.com/?q=Alternative+Beach+Canggu","Pool-club backup when guests want Canggu energy without committing to the ocean.",["friends","couple"],["relax"]),
+place("Baked Canggu","cafe","https://maps.google.com/?q=Baked+Canggu","Easy bakery and coffee stop that fits a soft morning or late brunch.",["solo","couple","family"],["relax"])
 ],
 seminyak: [
 place("Seminyak Beach","sunset","https://maps.google.com/?q=Seminyak+Beach","Classic west-coast beach for sunset and a relaxed walk.",["couple","friends","family","solo"]),
@@ -1667,7 +1862,21 @@ place("Biku","restaurant","https://maps.google.com/?q=Biku+Seminyak","Well-known
 place("Kim Soo","cafe","https://maps.google.com/?q=Kim+Soo+Seminyak","Design-forward cafe stop for a relaxed flexible slot.",["couple","solo"]),
 place("Coffee Cartel","cafe","https://maps.google.com/?q=Coffee+Cartel+Seminyak","Easy coffee and breakfast option near the Seminyak core.",["solo","friends","couple"]),
 place("Petitenget Temple","temple","https://maps.google.com/?q=Petitenget+Temple","Small culture stop if you want to mix beach time with a Bali touch.",["family","couple","solo"]),
-place("Seminyak Village","culture","https://maps.google.com/?q=Seminyak+Village","Simple comfort stop with shopping, coffee and air-conditioned reset time.",["family","solo","couple"],["relax","culture"])
+place("Seminyak Village","culture","https://maps.google.com/?q=Seminyak+Village","Simple comfort stop with shopping, coffee and air-conditioned reset time.",["family","solo","couple"],["relax","culture"]),
+place("Legian Beach","beach","https://maps.google.com/?q=Legian+Beach+Bali","Long west-coast beach option for a simple walk and sunset mood.",["family","couple","solo","friends"],["sea","relax"]),
+place("La Plancha","beachclub","https://maps.google.com/?q=La+Plancha+Bali","Colorful beanbag sunset stop that is easy to understand and easy to enjoy.",["couple","friends","family"],["sea","relax","instagram"]),
+place("Mano Beach House","beachclub","https://maps.google.com/?q=Mano+Beach+House+Seminyak","Smaller beach-club option for a calmer Seminyak sunset.",["couple","friends"],["sea","relax"]),
+place("Seminyak Square","culture","https://maps.google.com/?q=Seminyak+Square","Comfortable shopping, coffee, and dinner backup in central Seminyak.",["family","solo","couple"],["relax"]),
+place("Eat Street Seminyak","walk","https://maps.google.com/?q=Jalan+Kayu+Aya+Seminyak","Easy browsing strip for food, boutiques, and a no-pressure evening.",["couple","friends","solo"],["relax"]),
+place("Nyaman Gallery","culture","https://maps.google.com/?q=Nyaman+Gallery+Seminyak","Compact art stop when guests want something calmer than beach clubs.",["solo","couple"],["culture","relax"]),
+place("Bodyworks Spa Seminyak","scenic","https://maps.google.com/?q=Bodyworks+Spa+Seminyak","Spa-style comfort option for a recovery day between excursions.",["couple","solo"],["relax"]),
+place("Shelter Cafe Seminyak","cafe","https://maps.google.com/?q=Shelter+Cafe+Seminyak","Green rooftop cafe pick for breakfast or a softer midday break.",["solo","couple","friends"],["relax"]),
+place("Kynd Community","cafe","https://maps.google.com/?q=Kynd+Community+Seminyak","Bright plant-based cafe that works well for couples and social free days.",["couple","friends","solo"],["relax","instagram"]),
+place("Gado Gado Beach","beach","https://maps.google.com/?q=Gado+Gado+Beach+Seminyak","Simple beach alternative when guests want sand without a big venue.",["couple","family","solo"],["sea","relax"]),
+place("W Bali Seminyak","beachclub","https://maps.google.com/?q=W+Bali+Seminyak","Premium resort-side sunset and drinks idea for a polished free evening.",["couple","friends"],["sea","relax"]),
+place("Merah Putih","restaurant","https://maps.google.com/?q=Merah+Putih+Bali","Special dinner option when the free day needs a strong food finish.",["couple","friends"],["relax"]),
+place("Sarong Seminyak","restaurant","https://maps.google.com/?q=Sarong+Seminyak","Reliable upscale dinner choice for couples or a refined friends evening.",["couple","friends"],["relax"]),
+place("Shooters Bali","culture","https://maps.google.com/?q=Shooters+Bali+Seminyak","Fun games-style stop when friends want a low-effort social plan.",["friends","family"],["relax"])
 ],
 ubud: [
 place("Tegalalang Rice Terrace","scenic","https://maps.google.com/?q=Tegalalang+Rice+Terrace","One of the most famous scenic Bali places and always useful in an Ubud plan.",["couple","family","solo","friends"]),
@@ -1691,7 +1900,23 @@ place("Murni's Warung","restaurant","https://maps.google.com/?q=Murni%27s+Warung
 place("Warung Biah Biah","restaurant","https://maps.google.com/?q=Warung+Biah+Biah+Ubud","Easy local dinner move with a stronger Ubud-food feel.",["friends","solo","couple"]),
 place("Warung Pondok Madu","restaurant","https://maps.google.com/?q=Warung+Pondok+Madu+Ubud","Reliable casual meal stop when guests want something unfussy and good.",["family","friends","couple"]),
 place("Naughty Nuri's","restaurant","https://maps.google.com/?q=Naughty+Nuri%27s+Ubud","Famous Ubud ribs stop that works well as a relaxed evening plan.",["friends","couple"]),
-place("Warung Tepi Sawah","restaurant","https://maps.google.com/?q=Warung+Tepi+Sawah+Ubud","Rice-field dining option for a softer and more scenic Ubud meal.",["couple","family","solo"])
+place("Warung Tepi Sawah","restaurant","https://maps.google.com/?q=Warung+Tepi+Sawah+Ubud","Rice-field dining option for a softer and more scenic Ubud meal.",["couple","family","solo"]),
+place("Saraswati Temple","temple","https://maps.google.com/?q=Saraswati+Temple+Ubud","Beautiful lotus-pond temple stop right in Ubud center.",["couple","family","solo"],["culture","instagram"]),
+place("Ubud Art Market","culture","https://maps.google.com/?q=Ubud+Art+Market","Easy central stop for gifts, textiles, browsing, and a classic Ubud feel.",["family","friends","solo","couple"],["culture","relax"]),
+place("Tegenungan Waterfall","waterfall","https://maps.google.com/?q=Tegenungan+Waterfall","Popular waterfall choice that gives a bigger nature moment near Ubud.",["friends","family","couple"],["nature","adventure","instagram"]),
+place("Suwat Waterfall","waterfall","https://maps.google.com/?q=Suwat+Waterfall","Softer waterfall alternative for guests who want nature without the biggest crowds.",["couple","solo","friends"],["nature","relax","instagram"]),
+place("Gunung Kawi Temple","temple","https://maps.google.com/?q=Gunung+Kawi+Temple+Bali","Atmospheric temple-valley stop with more depth than a quick photo point.",["couple","family","solo"],["culture","nature"]),
+place("Gunung Kawi Sebatu","temple","https://maps.google.com/?q=Gunung+Kawi+Sebatu","Quiet water-temple option for a calm Ubud cultural free day.",["couple","solo","family"],["culture","relax"]),
+place("Blanco Renaissance Museum","culture","https://maps.google.com/?q=Blanco+Renaissance+Museum","Indoor culture stop that helps when the weather is mixed.",["couple","solo","family"],["culture","relax"]),
+place("Neka Art Museum","culture","https://maps.google.com/?q=Neka+Art+Museum","Good art-and-culture backup for guests who want Ubud beyond cafes.",["solo","couple","family"],["culture","relax"]),
+place("ARMA Museum","culture","https://maps.google.com/?q=ARMA+Museum+Ubud","Spacious museum and garden stop that feels calm and easy.",["family","couple","solo"],["culture","relax"]),
+place("Yoga Barn Ubud","scenic","https://maps.google.com/?q=The+Yoga+Barn+Ubud","Wellness-side Ubud idea for guests who want a reset day.",["solo","couple"],["relax"]),
+place("Alchemy Ubud","cafe","https://maps.google.com/?q=Alchemy+Ubud","Healthy cafe stop that fits a slow Ubud morning.",["solo","couple","friends"],["relax"]),
+place("Pison Ubud","cafe","https://maps.google.com/?q=Pison+Ubud","Reliable coffee and meal option when guests want a simple Ubud pause.",["solo","friends","couple"],["relax"]),
+place("Subak Juwuk Manis","walk","https://maps.google.com/?q=Subak+Juwuk+Manis+Ubud","Quiet rice-field walk close to Ubud center for a softer nature day.",["solo","couple","family"],["nature","relax"]),
+place("Sayan Rice Fields","walk","https://maps.google.com/?q=Sayan+Ubud+Rice+Fields","Scenic Ubud-side rice-field mood for couples and slower travelers.",["couple","solo"],["nature","relax","instagram"]),
+place("Penglipuran Village","culture","https://maps.google.com/?q=Penglipuran+Village+Bali","Clean traditional village stop for a stronger culture day from Ubud.",["family","couple","solo"],["culture","instagram"]),
+place("Sidemen Valley","scenic","https://maps.google.com/?q=Sidemen+Bali","Bigger scenic backup when guests want rice fields and mountain mood beyond central Ubud.",["couple","solo","friends"],["nature","instagram"])
 ],
 uluwatu: [
 place("Melasti Beach","beach","https://maps.google.com/?q=Melasti+Beach+Bali","One of the top Bali beaches and a must-have free-day option here.",["couple","friends","family"]),
@@ -1711,7 +1936,22 @@ place("Jimbaran Seafood Dinner","restaurant","https://maps.google.com/?q=Jimbara
 place("Dreamland Beach","beach","https://maps.google.com/?q=Dreamland+Beach+Bali","Beautiful broad beach that still looks strong in mixed weather.",["friends","couple","family"]),
 place("Nyang Nyang Beach","beach","https://maps.google.com/?q=Nyang+Nyang+Beach+Bali","A bigger wow-beach option when the guest wants raw cliff scenery instead of the usual easy picks.",["couple","friends","solo"],["sea","nature","instagram"]),
 place("Garuda Wisnu Kencana","culture","https://maps.google.com/?q=Garuda+Wisnu+Kencana+Bali","Large culture-park stop that gives Uluwatu stays a non-beach free-day option with real scale.",["family","friends","solo"],["culture","instagram"]),
-place("Balangan Beach","beach","https://maps.google.com/?q=Balangan+Beach+Bali","Strong south-Bali beach for travelers who want a broad scenic coastline and less compact feel.",["couple","friends","solo"],["sea","nature","instagram"])
+place("Balangan Beach","beach","https://maps.google.com/?q=Balangan+Beach+Bali","Strong south-Bali beach for travelers who want a broad scenic coastline and less compact feel.",["couple","friends","solo"],["sea","nature","instagram"]),
+place("Green Bowl Beach","beach","https://maps.google.com/?q=Green+Bowl+Beach+Bali","Hidden-feeling beach option for guests who like stairs, cliffs, and quiet water.",["couple","friends","solo"],["sea","nature","instagram"]),
+place("Tegal Wangi Beach","sunset","https://maps.google.com/?q=Tegal+Wangi+Beach+Bali","Cliff and sunset backup near Jimbaran with a strong south-Bali feel.",["couple","friends","solo"],["sea","instagram"]),
+place("Jimbaran Beach","beach","https://maps.google.com/?q=Jimbaran+Beach+Bali","Long easy beach that pairs naturally with seafood dinner.",["family","couple","friends"],["sea","relax"]),
+place("Kedonganan Fish Market","culture","https://maps.google.com/?q=Kedonganan+Fish+Market+Bali","Local food-market stop for guests who want something less polished and more real.",["friends","family","solo"],["culture","relax"]),
+place("Muaya Beach","beach","https://maps.google.com/?q=Muaya+Beach+Jimbaran","Calm Jimbaran beach zone for a simple late-afternoon walk.",["family","couple","solo"],["sea","relax"]),
+place("Rock Bar Bali","beachclub","https://maps.google.com/?q=Rock+Bar+Bali","Iconic cliffside sunset-drinks option with a premium resort feel.",["couple","friends"],["sea","relax","instagram"]),
+place("Ulu Cliffhouse","beachclub","https://maps.google.com/?q=Ulu+Cliffhouse+Bali","Clifftop pool-club option for a polished Uluwatu social day.",["friends","couple"],["sea","relax"]),
+place("Mana Uluwatu","restaurant","https://maps.google.com/?q=Mana+Uluwatu","Sunset-side restaurant and pool vibe that works well without a full beach day.",["couple","friends"],["relax"]),
+place("The Cashew Tree","cafe","https://maps.google.com/?q=The+Cashew+Tree+Bingin","Good Bingin cafe stop for a relaxed morning or post-beach meal.",["solo","friends","couple"],["relax"]),
+place("Ours Bali","restaurant","https://maps.google.com/?q=Ours+Bali+Uluwatu","Polished dinner option for couples or friends staying in Uluwatu.",["couple","friends"],["relax"]),
+place("Gooseberry Uluwatu","restaurant","https://maps.google.com/?q=Gooseberry+Uluwatu","Stylish restaurant choice when the free day needs a stronger food plan.",["couple","friends"],["relax"]),
+place("Impossibles Beach","beach","https://maps.google.com/?q=Impossibles+Beach+Bali","Scenic surf-side beach option between Bingin and Padang Padang.",["friends","couple","solo"],["sea","nature"]),
+place("Cemongkak Beach","beach","https://maps.google.com/?q=Cemongkak+Beach+Bali","Less obvious south-coast beach for guests who already know the headline spots.",["couple","solo","friends"],["sea","relax"]),
+place("Balangan Viewpoint","scenic","https://maps.google.com/?q=Balangan+Viewpoint+Bali","Easy cliff viewpoint that gives a big ocean frame without making the day complex.",["couple","friends","solo"],["sea","nature","instagram"]),
+place("Blue Point Beach","beach","https://maps.google.com/?q=Blue+Point+Beach+Bali","Classic Suluban-side beach mood with caves, cliffs, and surf culture.",["friends","couple","solo"],["sea","nature","instagram"])
 ],
 nusa_dua: [
 place("Geger Beach","beach","https://maps.google.com/?q=Geger+Beach","Calm top beach that works especially well for couples and families.",["family","couple"]),
@@ -1731,7 +1971,21 @@ place("Koral Restaurant","restaurant","https://maps.google.com/?q=Koral+Restaura
 place("Pandawa Beach","beach","https://maps.google.com/?q=Pandawa+Beach","Very popular nearby beach with broad views and easy wow factor.",["family","friends","couple"]),
 place("Tanjung Benoa Beach","beach","https://maps.google.com/?q=Tanjung+Benoa+Beach+Bali","Easy sea-side option for calmer water sports energy and long coastal walks.",["family","friends","couple"],["sea","relax"]),
 place("Museum Pasifika","culture","https://maps.google.com/?q=Museum+Pasifika+Bali","A proper indoor culture stop for mixed-weather days when the guest still wants something memorable.",["solo","family","couple"],["culture","relax"]),
-place("Mengiat Beach","beach","https://maps.google.com/?q=Mengiat+Beach+Bali","Quieter Nusa Dua beach option with a softer pace than the headline spots.",["couple","family","solo"],["sea","relax"])
+place("Mengiat Beach","beach","https://maps.google.com/?q=Mengiat+Beach+Bali","Quieter Nusa Dua beach option with a softer pace than the headline spots.",["couple","family","solo"],["sea","relax"]),
+place("Sawangan Beach","beach","https://maps.google.com/?q=Sawangan+Beach+Bali","Quieter Nusa Dua coastline idea for guests who want more space.",["couple","family","solo"],["sea","relax"]),
+place("Peninsula Island Nusa Dua","walk","https://maps.google.com/?q=Peninsula+Island+Nusa+Dua","Easy landscaped walk close to Waterblow and the main resort area.",["family","couple","solo"],["sea","relax"]),
+place("Devdan Show","culture","https://maps.google.com/?q=Devdan+Show+Bali","Evening culture-show option when the free day needs a clear plan after sunset.",["family","couple","friends"],["culture","relax"]),
+place("Bali National Golf Club","scenic","https://maps.google.com/?q=Bali+National+Golf+Club","Premium relaxed activity idea for guests who want something resort-side and calm.",["couple","friends","solo"],["relax"]),
+place("The Bay Bali","restaurant","https://maps.google.com/?q=The+Bay+Bali+Nusa+Dua","Simple food and beach-walk zone inside the Nusa Dua complex.",["family","couple","friends"],["relax","sea"]),
+place("Tanjung Benoa Water Sports","scenic","https://maps.google.com/?q=Tanjung+Benoa+Water+Sports","Light activity backup for families or friends who want more than a beach chair.",["family","friends"],["sea","adventure"]),
+place("Turtle Island Tanjung Benoa","culture","https://maps.google.com/?q=Turtle+Island+Tanjung+Benoa","Soft family-friendly stop that can pair with the Benoa beach area.",["family"],["sea","culture"]),
+place("Benoa Bay Mangrove","walk","https://maps.google.com/?q=Mangrove+Forest+Benoa+Bali","Nature-side walk or drive idea when guests want a break from resort beaches.",["solo","couple","family"],["nature","relax"]),
+place("Timbis Beach","beach","https://maps.google.com/?q=Timbis+Beach+Bali","Quiet south-coast beach with a more open and local feel.",["couple","solo","friends"],["sea","nature"]),
+place("Timbis Flying Site","scenic","https://maps.google.com/?q=Timbis+Flying+Site+Bali","Paragliding-viewpoint style stop for guests who want a different visual angle.",["friends","couple","solo"],["nature","adventure","instagram"]),
+place("Sawangan Cliff","scenic","https://maps.google.com/?q=Sawangan+Cliff+Bali","Cliffside ocean view near the resort belt for a short scenic stop.",["couple","solo"],["sea","nature","instagram"]),
+place("Jari Menari Nusa Dua","scenic","https://maps.google.com/?q=Jari+Menari+Nusa+Dua","Spa-style recovery idea for a rest day between bigger excursions.",["couple","solo"],["relax"]),
+place("Geger Temple","temple","https://maps.google.com/?q=Pura+Geger+Nusa+Dua","Small temple-side stop that adds culture near Geger Beach.",["couple","family","solo"],["culture","sea"]),
+place("Bumbu Bali Tanjung Benoa","restaurant","https://maps.google.com/?q=Bumbu+Bali+Tanjung+Benoa","Classic Balinese dinner idea close to Nusa Dua and Benoa.",["family","couple","friends"],["culture","relax"])
 ],
 sanur: [
 place("Sanur Beach Boardwalk","walk","https://maps.google.com/?q=Sanur+Beach","One of the easiest Bali free-day areas for soft sunrise or sunset movement.",["family","couple","solo"]),
@@ -1751,7 +2005,21 @@ place("Karang Beach","beach","https://maps.google.com/?q=Karang+Beach+Sanur","Ea
 place("Pizzaria Sanur","restaurant","https://maps.google.com/?q=Pizzaria+Sanur","Reliable beachfront lunch or dinner move.",["family","couple","friends"]),
 place("Segara Ayu Beach","beach","https://maps.google.com/?q=Segara+Ayu+Beach+Sanur","Classic sunrise-side Sanur beach that fits easy families and calm solo mornings.",["family","solo","couple"],["sea","relax"]),
 place("Matahari Terbit Beach","beach","https://maps.google.com/?q=Matahari+Terbit+Beach+Sanur","Strong early-morning beach if the guest wants the softer Sanur sunrise look.",["couple","solo","family"],["sea","relax","instagram"]),
-place("Sanur Port","culture","https://maps.google.com/?q=Sanur+Port+Bali","Useful harbor-side stop for coffee, sea views and watching the island-day flow without booking a full crossing.",["solo","friends","couple"],["sea","relax"])
+place("Sanur Port","culture","https://maps.google.com/?q=Sanur+Port+Bali","Useful harbor-side stop for coffee, sea views and watching the island-day flow without booking a full crossing.",["solo","friends","couple"],["sea","relax"]),
+place("Cemara Beach","beach","https://maps.google.com/?q=Cemara+Beach+Sanur","Calm south Sanur beach for an easy family-friendly free day.",["family","couple","solo"],["sea","relax"]),
+place("Semawang Beach","beach","https://maps.google.com/?q=Semawang+Beach+Sanur","Relaxed Sanur beach zone that pairs well with a simple lunch.",["family","couple","solo"],["sea","relax"]),
+place("Padang Galak Beach","beach","https://maps.google.com/?q=Padang+Galak+Beach","More local beach idea north of Sanur when guests want a different coastline.",["solo","friends","family"],["sea","relax"]),
+place("Bali Orchid Garden","scenic","https://maps.google.com/?q=Bali+Orchid+Garden","Light garden stop when guests want something quiet away from the beach.",["family","couple","solo"],["nature","relax"]),
+place("Taman Festival Bali","culture","https://maps.google.com/?q=Taman+Festival+Bali","Unusual abandoned-park stop for guests who like something less standard.",["friends","solo"],["culture","instagram"]),
+place("Serangan Island","scenic","https://maps.google.com/?q=Serangan+Island+Bali","Nearby island-side option for sea views and a more local detour.",["friends","family","solo"],["sea","nature"]),
+place("Turtle Conservation Serangan","culture","https://maps.google.com/?q=Turtle+Conservation+and+Education+Center+Serangan","Family-friendly conservation stop that adds purpose to a free day.",["family","solo","couple"],["sea","culture"]),
+place("Bali Wake Park","scenic","https://maps.google.com/?q=Bali+Wake+Park","Action backup near Sanur for friends or families who want a sporty day.",["friends","family"],["adventure","sea"]),
+place("Sindhu Market","restaurant","https://maps.google.com/?q=Sindhu+Market+Sanur","Casual local-food stop that keeps the day flexible and grounded.",["family","friends","solo"],["culture","relax"]),
+place("Artasedana Sanur","culture","https://maps.google.com/?q=Artasedana+Sanur","Comfort stop for shopping, supplies, coffee, or rainy-day backup.",["family","solo","couple"],["relax"]),
+place("Plaza Renon","culture","https://maps.google.com/?q=Plaza+Renon+Bali","Indoor comfort option close to Sanur for rain or heat breaks.",["family","solo","friends"],["relax"]),
+place("Peek A Boo Sanur","culture","https://maps.google.com/?q=Peek+A+Boo+Sanur","Useful family stop when traveling with kids and needing an easy lighter day.",["family"],["relax"]),
+place("Pantai Duyung","beach","https://maps.google.com/?q=Pantai+Duyung+Sanur","Easy central Sanur beach for a slow walk and quiet sea view.",["family","couple","solo"],["sea","relax"]),
+place("Kevala Studio Ceramic","culture","https://maps.google.com/?q=Kevala+Studio+Ceramic+Sanur","Creative indoor stop for a calmer Sanur free day.",["solo","couple","family"],["culture","relax"])
 ]
 };
 var FREE_DAY_NEIGHBORS = {
@@ -1872,9 +2140,10 @@ return pool;
 }
 function scoreFreeDayCandidate(item, preferredBucket, group, interests, usedCounts, selectedKinds){
 var score = 0;
-score += item.__areaRank === 0 ? 12 : (item.__areaRank === 1 ? 5 : 2);
+score += item.__areaRank === 0 ? 28 : (item.__areaRank === 1 ? 4 : 0);
 score += matchesGroup(item, group) ? 18 : -6;
 score += placeInterestMatchCount(item, interests) * 10;
+if(item.topPick) score += 7;
 if(preferredBucket && bucketKeyForPlace(item) === preferredBucket) score += 9;
 if(selectedKinds[item.kind]) score -= 12;
 var used = usedCounts[item.title] || 0;
@@ -1885,11 +2154,19 @@ return score;
 }
 function pickFreeDayCandidate(pool, preferredBucket, group, interests, usedCounts, selectedKinds, selectedTitles){
 var best = null;
+function scan(requireBucket, requireUnused){
 pool.forEach(function(item){
 if(selectedTitles[item.title]) return;
+if(requireBucket && bucketKeyForPlace(item) !== preferredBucket) return;
+if(requireUnused && usedCounts[item.title]) return;
 var score = scoreFreeDayCandidate(item, preferredBucket, group, interests, usedCounts, selectedKinds);
 if(!best || score > best.score) best = { item:item, score:score };
 });
+}
+if(preferredBucket) scan(true, true);
+if(!best) scan(false, true);
+if(!best && preferredBucket) scan(true, false);
+if(!best) scan(false, false);
 return best ? best.item : null;
 }
 function getFreeDayPlaces(area, group, interests, usedCounts, dayIndex){
@@ -2058,7 +2335,8 @@ var dateLabel=formatDate(note.dateObj);
 var placeCards=(note.places || []).map(function(placeObj){
 var waText=encodeURIComponent('Hi! Please help me with ' + placeObj.title + ' on ' + dateLabel + '.');
 var waLink='https://wa.me/'+WHATSAPP_NUMBER+'?text='+waText;
-return '<div class="sb-place-card"><img loading="lazy" decoding="async" src="'+escapeHtml(placeObj.image)+'" alt="'+escapeHtml(placeObj.title)+'"><div class="sb-place-card-body"><div class="sb-place-type">'+escapeHtml(placeObj.kind)+'</div><h4 class="sb-place-title">'+escapeHtml(placeObj.title)+'</h4><p class="sb-place-copy">'+escapeHtml(placeObj.copy)+'</p><div class="sb-place-actions"><a href="'+escapeHtml(placeObj.maps)+'" target="_blank" rel="noopener" class="sb-mini-btn">Google Maps</a><a href="'+waLink+'" class="sb-mini-btn">Ask in WhatsApp</a></div></div></div>';
+var topPickBadge = placeObj.topPick ? '<div class="sb-place-badge">5★ SB Top Pick</div>' : '';
+return '<div class="sb-place-card' + (placeObj.topPick ? ' is-top-pick' : '') + '"><div class="sb-place-media"><img loading="lazy" decoding="async" src="'+escapeHtml(placeObj.image)+'" alt="'+escapeHtml(placeObj.title)+'">'+topPickBadge+'</div><div class="sb-place-card-body"><div class="sb-place-type">'+escapeHtml(placeObj.kind)+'</div><h4 class="sb-place-title">'+escapeHtml(placeObj.title)+'</h4><p class="sb-place-copy">'+escapeHtml(placeObj.copy)+'</p><div class="sb-place-actions"><a href="'+escapeHtml(placeObj.maps)+'" target="_blank" rel="noopener" class="sb-mini-btn">Google Maps</a><a href="'+waLink+'" class="sb-mini-btn">Ask in WhatsApp</a></div></div></div>';
 }).join('');
 var body='<strong>🌤 Forecast:</strong> ' + note.weather.temp + '°C, ' + note.weather.label + '.\n' + note.copy;
 return '<article class="sb-ai-note-card"><div class="sb-ai-day-heading">' + escapeHtml(dateLabel) + ' — ' + escapeHtml(note.title) + '</div><div class="sb-ai-weather">A lighter Bali day with 3 nearby options based on your area and who is traveling.</div><div class="sb-ai-note-body">' + escapeHtml(body).replace(/\n/g,'<br>').replace(/&lt;strong&gt;/g,'<strong>').replace(/&lt;\/strong&gt;/g,'</strong>') + '</div><div class="sb-place-grid">'+placeCards+'</div></article>';
@@ -2384,6 +2662,10 @@ setTimeout(fixAiPlannerMobile,300);
 setTimeout(fixAiPlannerMobile,900);
 })();
 </script> <!-- nominify end --> </div> </div> </div> </div> 
+
+
+
+
 
 
 
