@@ -153,92 +153,93 @@ const WEATHER_COMPACT_OVERRIDE_STYLE = `
 #rec2147449333 .bw-footer {
   grid-template-columns: minmax(0, 1fr) !important;
 }
+@media screen and (max-width: 959px) {
+  #rec2147449333 .bali-weather-outer {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 14px;
+  }
 
-#rec2147449333 .bali-weather-outer {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 0 14px;
-}
+  #rec2147449333 .bali-weather-card {
+    min-height: 210px;
+    padding: 15px;
+    border-radius: 20px;
+  }
 
-#rec2147449333 .bali-weather-card {
-  min-height: 210px;
-  padding: 15px;
-  border-radius: 20px;
-}
+  #rec2147449333 .bw-badge {
+    min-height: 25px;
+    padding: 5px 10px;
+    font-size: 10px;
+  }
 
-#rec2147449333 .bw-badge {
-  min-height: 25px;
-  padding: 5px 10px;
-  font-size: 10px;
-}
+  #rec2147449333 .bw-updated {
+    font-size: 10px;
+  }
 
-#rec2147449333 .bw-updated {
-  font-size: 10px;
-}
+  #rec2147449333 .bw-main {
+    margin-top: 14px;
+    grid-template-columns: minmax(0, 1.4fr) 88px;
+    gap: 12px;
+  }
 
-#rec2147449333 .bw-main {
-  margin-top: 14px;
-  grid-template-columns: minmax(0, 1.4fr) 88px;
-  gap: 12px;
-}
+  #rec2147449333 .bw-temp {
+    font-size: clamp(40px, 6.5vw, 62px);
+  }
 
-#rec2147449333 .bw-temp {
-  font-size: clamp(40px, 6.5vw, 62px);
-}
+  #rec2147449333 .bw-condition {
+    margin-top: 6px;
+    font-size: clamp(18px, 2vw, 24px);
+  }
 
-#rec2147449333 .bw-condition {
-  margin-top: 6px;
-  font-size: clamp(18px, 2vw, 24px);
-}
+  #rec2147449333 .bw-summary {
+    margin-top: 8px;
+    font-size: 13px;
+  }
 
-#rec2147449333 .bw-summary {
-  margin-top: 8px;
-  font-size: 13px;
-}
+  #rec2147449333 .bw-hero-icon {
+    width: 88px;
+    height: 88px;
+    border-radius: 18px;
+    font-size: 38px;
+  }
 
-#rec2147449333 .bw-hero-icon {
-  width: 88px;
-  height: 88px;
-  border-radius: 18px;
-  font-size: 38px;
-}
+  #rec2147449333 .bw-metrics {
+    margin-top: 14px;
+    gap: 8px;
+  }
 
-#rec2147449333 .bw-metrics {
-  margin-top: 14px;
-  gap: 8px;
-}
+  #rec2147449333 .bw-metric {
+    padding: 10px 12px;
+    border-radius: 15px;
+  }
 
-#rec2147449333 .bw-metric {
-  padding: 10px 12px;
-  border-radius: 15px;
-}
+  #rec2147449333 .bw-metric-label {
+    margin-bottom: 4px;
+    font-size: 10px;
+  }
 
-#rec2147449333 .bw-metric-label {
-  margin-bottom: 4px;
-  font-size: 10px;
-}
+  #rec2147449333 .bw-metric-value {
+    font-size: 15px;
+  }
 
-#rec2147449333 .bw-metric-value {
-  font-size: 15px;
-}
+  #rec2147449333 .bw-footer {
+    margin-top: 14px;
+  }
 
-#rec2147449333 .bw-footer {
-  margin-top: 14px;
-}
+  #rec2147449333 .bw-tips-title {
+    margin-bottom: 6px;
+    font-size: 10px;
+  }
 
-#rec2147449333 .bw-tips-title {
-  margin-bottom: 6px;
-  font-size: 10px;
-}
+  #rec2147449333 .bw-tips {
+    gap: 6px;
+  }
 
-#rec2147449333 .bw-tips {
-  gap: 6px;
-}
-
-#rec2147449333 .bw-tip {
-  min-height: 25px;
-  padding: 5px 9px;
-  font-size: 10px;
+  #rec2147449333 .bw-tip {
+    min-height: 25px;
+    padding: 5px 9px;
+    font-size: 10px;
+  }
 }
 
 @media screen and (max-width: 639px) {
@@ -350,6 +351,7 @@ const BALI_PLANNER_PLACE_IMAGE_BY_TITLE = {
   "Warung Varuna": "https://foto2.sluurpy.com/locali/id/8460525/70837021.jpg",
   "Love Anchor Market": lokasiBaliImage("business-0x2dd238796aeea797%3A0xf6fb68fe602b27b2-0.webp"),
   "Luma Canggu": "https://framerusercontent.com/images/bOJlIj8nvkCzWIhnjtnzw5Cbjs.jpg?width=2560&height=1708",
+  "Seminyak Village": "https://seminyakvillage.com/wp-content/uploads/2026/03/compress1.webp",
   "Seminyak Beach": "https://live.staticflickr.com/7310/10416469375_ac05b9c216_b.jpg",
   "Potato Head Beach Club": "https://live.staticflickr.com/6042/6281781855_a6df953705_b.jpg",
   "Atlas Beach Club": BALI_PLANNER_PLACE_IMAGES.cangguBeachClub,
@@ -404,6 +406,9 @@ const BALI_PLANNER_PLACE_IMAGE_BY_TITLE = {
   "Nourish Cafe": "https://lokasibali.com/api/images/business-0x2dd245178e601297%3A0xac1573639130b803-0.webp",
   "Drifter Surf Shop and Cafe": "https://cdn.shopify.com/s/files/1/0497/4267/6133/files/stephjones-08056-copy.jpg?v=1695654706",
   "Suluban Beach": "https://live.staticflickr.com/2608/13099532473_7b9d185175_b.jpg",
+  "Nyang Nyang Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Nyang_Nyang_Beach.jpg/1280px-Nyang_Nyang_Beach.jpg",
+  "Garuda Wisnu Kencana": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Sunset_at_Garuda_Wisnu_Kencana_Bali.jpg/1280px-Sunset_at_Garuda_Wisnu_Kencana_Bali.jpg",
+  "Balangan Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Balangan_Beach%2C_Bali_2017-08-16.jpg/1280px-Balangan_Beach%2C_Bali_2017-08-16.jpg",
   "Jimbaran Seafood Dinner": "https://live.staticflickr.com/6114/6240494269_9ffe297af4_b.jpg",
   "Dreamland Beach": "https://live.staticflickr.com/6184/6158897588_41b35eb674_b.jpg",
   "Geger Beach": "https://live.staticflickr.com/1362/5099984222_0d3bc2f4f6_b.jpg",
@@ -419,12 +424,17 @@ const BALI_PLANNER_PLACE_IMAGE_BY_TITLE = {
   "Babi Guling Dobiel": "https://bali.com/wp-content/uploads/2021/12/bigul-pak-dobiel-960.jpg",
   "Tropical Temptation": lokasiBaliImage("business-0x2dd25bd177658d93%3A0x7a02435a34f5d64a-0.webp"),
   "Gunung Payung Beach": "https://live.staticflickr.com/2846/33285240666_967c3f7832_b.jpg",
+  "Tanjung Benoa Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Tanjung_Benoa_Beach_-_Bali.jpg/1280px-Tanjung_Benoa_Beach_-_Bali.jpg",
+  "Museum Pasifika": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/2018_museum_pasifika%2C_nusa_dua%2C_Bali%2C_Indonesia.jpg/1280px-2018_museum_pasifika%2C_nusa_dua%2C_Bali%2C_Indonesia.jpg",
+  "Mengiat Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Beautiful_Mengiat_Beach.jpg/1280px-Beautiful_Mengiat_Beach.jpg",
   "Koral Restaurant": "https://www.asiadreams.com/wp-content/uploads/Apurva-Kempinski_Koral-Restaurant_Koral-Tunnel-1.jpg",
   "Pandawa Beach": "https://live.staticflickr.com/5447/17444541604_228b2a0368_b.jpg",
   "Sanur Beach Boardwalk": "https://live.staticflickr.com/3086/3162417875_1805291d40_b.jpg",
   "Massimo": "https://massimobali.com/wp-content/uploads/2022/07/IMG_4418-copy.jpg",
   "Cafe Batu Jimbar": lokasiBaliImage("business-0x2dd241c8e53cd3d3%3A0x24486a0a41b72b59-0.webp"),
   "Byrd House Beach Club": "https://static.bali.live/uploads/64323/conversions/19e46e0a-4bfc-4de4-b9e5-0a496e3180e3-preview.jpg",
+  "Segara Ayu Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Pantai_Segera_Ayu.jpg/1280px-Pantai_Segera_Ayu.jpg",
+  "Matahari Terbit Beach": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Pantai_Sanur_di_waktu_terbit_matahari.jpg/1280px-Pantai_Sanur_di_waktu_terbit_matahari.jpg",
   "Mertasari Beach": BALI_PLANNER_PLACE_IMAGES.sanurMertasari,
   "Soul on the Beach": "https://static.bali.live/uploads/67425/conversions/1b58e9fa-d630-4a03-8fca-58c147e18a01-preview.jpg",
   "Le Mayeur Museum": "https://live.staticflickr.com/6051/6380853817_1766d13fb8.jpg",
@@ -434,12 +444,273 @@ const BALI_PLANNER_PLACE_IMAGE_BY_TITLE = {
   "Sindhu Night Market": "https://lokasibali.com/api/images/business-0x2dd24035648dd487%3A0xc347d8c9cc4d9bce-0.webp",
   "Big Garden Corner": "https://lokasibali.com/api/images/business-0x2dd24071d99200c3%3A0x6b8b5fe4aa9162c0-0.webp",
   "Seawalker Sanur": "https://live.staticflickr.com/7343/12296298645_3b611d9ca0_b.jpg",
+  "Sanur Port": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sanur_Port_SF0001.jpg/1280px-Sanur_Port_SF0001.jpg",
   "Karang Beach": "https://lokasibali.com/api/images/business-0x2dd214573b2294d5%3A0x33316987ae56a9ce-0.webp",
   "Pizzaria Sanur": "https://itin-dev.wanderlogstatic.com/freeImage/ZjgnSPtC3sDohKyAwXpHb5WyZb22okU0",
   "Sunset cruise in Bali": BALI_PLANNER_PLACE_IMAGES.sunsetCruiseLocal,
   "Mount Batur sunrise": BALI_PLANNER_PLACE_IMAGES.mountBaturSunriseLocal,
   "Nusa Penida day trip": BALI_PLANNER_PLACE_IMAGES.eastBaliNusaPenida,
 };
+
+function plannerFreeDayPlace(title, kind, maps, copy, vibe, interests = null) {
+  return { title, kind, maps, copy, vibe, interests };
+}
+
+const PLANNER_FREE_DAY_PLACES = {
+  canggu: [
+    plannerFreeDayPlace("Tanah Lot Temple", "sunset", "https://maps.google.com/?q=Tanah+Lot+Temple", "Iconic Bali sunset and temple views. Easy wow-factor stop for a free evening.", ["couple", "friends", "family", "solo"]),
+    plannerFreeDayPlace("La Brisa Beach Club", "beachclub", "https://maps.google.com/?q=La+Brisa+Canggu", "One of the most popular Canggu beach clubs for sunset, cocktails and music.", ["couple", "friends"]),
+    plannerFreeDayPlace("Batu Bolong Beach", "beach", "https://maps.google.com/?q=Batu+Bolong+Beach+Canggu", "Classic Canggu beach for a sunset walk or a chilled flexible afternoon.", ["couple", "friends", "family", "solo"]),
+    plannerFreeDayPlace("The Lawn Canggu", "beachclub", "https://maps.google.com/?q=The+Lawn+Canggu", "Stylish oceanfront sunset spot with strong Canggu energy.", ["couple", "friends"]),
+    plannerFreeDayPlace("Crate Cafe", "cafe", "https://maps.google.com/?q=Crate+Cafe+Canggu", "Popular breakfast and coffee stop if you want a softer morning.", ["solo", "friends", "couple"]),
+    plannerFreeDayPlace("Pererenan Beach", "beach", "https://maps.google.com/?q=Pererenan+Beach+Bali", "A calmer beach option when you want less chaos than central Canggu.", ["couple", "solo", "family"]),
+    plannerFreeDayPlace("Finns Beach Club", "beachclub", "https://maps.google.com/?q=Finns+Beach+Club+Bali", "Big social energy and one of the best-known club choices on this side of Bali.", ["friends", "couple"]),
+    plannerFreeDayPlace("Milk and Madu", "restaurant", "https://maps.google.com/?q=Milk+and+Madu+Canggu", "Reliable brunch and dinner option with a friendly easy vibe.", ["family", "couple", "friends"]),
+    plannerFreeDayPlace("Seseh Beach", "sunset", "https://maps.google.com/?q=Seseh+Beach+Bali", "Quiet west-coast sunset for a more peaceful free day.", ["couple", "solo", "family"]),
+    plannerFreeDayPlace("Nude Cafe", "cafe", "https://maps.google.com/?q=Nude+Canggu", "Healthy cafe option for a simple flexible plan.", ["solo", "couple", "family"]),
+    plannerFreeDayPlace("Echo Beach", "beach", "https://maps.google.com/?q=Echo+Beach+Canggu", "Popular surf and sunset area that still works well on a lighter day.", ["friends", "couple", "solo"]),
+    plannerFreeDayPlace("Mason Canggu", "restaurant", "https://maps.google.com/?q=Mason+Canggu", "One of the more polished dinner picks if you want a stronger evening plan.", ["couple", "friends"]),
+    plannerFreeDayPlace("Warung Varuna", "restaurant", "https://maps.google.com/?q=Warung+Varuna+Canggu", "Easy local seafood idea for a casual meal after a flexible day.", ["friends", "family", "couple"]),
+    plannerFreeDayPlace("Love Anchor Market", "culture", "https://maps.google.com/?q=Love+Anchor+Canggu", "A fun easy stop for shops, coffee and light browsing.", ["friends", "solo", "couple"]),
+    plannerFreeDayPlace("Luma Canggu", "restaurant", "https://maps.google.com/?q=Luma+Canggu", "Stylish dinner option for couples or friends.", ["couple", "friends"]),
+    plannerFreeDayPlace("Atlas Beach Club", "beachclub", "https://maps.google.com/?q=Atlas+Beach+Club+Bali", "Big-format sunset and entertainment option when guests want a more energetic free evening.", ["friends", "couple"], ["sea", "relax", "instagram"]),
+  ],
+  seminyak: [
+    plannerFreeDayPlace("Seminyak Beach", "sunset", "https://maps.google.com/?q=Seminyak+Beach", "Classic west-coast beach for sunset and a relaxed walk.", ["couple", "friends", "family", "solo"]),
+    plannerFreeDayPlace("Potato Head Beach Club", "beachclub", "https://maps.google.com/?q=Potato+Head+Seminyak", "One of Bali's most famous beach clubs and a very strong sunset move.", ["couple", "friends"]),
+    plannerFreeDayPlace("Ku De Ta", "beachclub", "https://maps.google.com/?q=Ku+De+Ta+Seminyak", "Stylish beach club with a polished Seminyak feel.", ["couple", "friends"]),
+    plannerFreeDayPlace("Sisterfields", "restaurant", "https://maps.google.com/?q=Sisterfields+Seminyak", "Very popular brunch and all-day comfort option.", ["family", "couple", "solo"]),
+    plannerFreeDayPlace("Petitenget Beach", "beach", "https://maps.google.com/?q=Petitenget+Beach", "Easy beach choice close to central Seminyak.", ["family", "couple", "solo"]),
+    plannerFreeDayPlace("Motel Mexicola", "restaurant", "https://maps.google.com/?q=Motel+Mexicola+Seminyak", "A fun dinner and nightlife option for a more social free evening.", ["friends", "couple"]),
+    plannerFreeDayPlace("Revolver Espresso", "cafe", "https://maps.google.com/?q=Revolver+Espresso+Seminyak", "Great coffee stop if you want an easy reset day.", ["solo", "couple"]),
+    plannerFreeDayPlace("Sea Circus", "restaurant", "https://maps.google.com/?q=Sea+Circus+Seminyak", "Colorful casual food stop that works for a soft day.", ["family", "friends", "solo"]),
+    plannerFreeDayPlace("Mrs Sippy", "beachclub", "https://maps.google.com/?q=Mrs+Sippy+Bali", "Pool-club choice for guests who want more fun energy.", ["friends"]),
+    plannerFreeDayPlace("Nook", "restaurant", "https://maps.google.com/?q=Nook+Seminyak", "Scenic rice-field side restaurant when you want something calmer.", ["couple", "family", "solo"]),
+    plannerFreeDayPlace("Double Six Beach", "beach", "https://maps.google.com/?q=Double+Six+Beach", "Popular open beach for sunset and easy people-watching.", ["friends", "couple", "family"]),
+    plannerFreeDayPlace("Biku", "restaurant", "https://maps.google.com/?q=Biku+Seminyak", "Well-known tea lounge and lunch spot with a softer vibe.", ["family", "couple", "solo"]),
+    plannerFreeDayPlace("Kim Soo", "cafe", "https://maps.google.com/?q=Kim+Soo+Seminyak", "Design-forward cafe stop for a relaxed flexible slot.", ["couple", "solo"]),
+    plannerFreeDayPlace("Coffee Cartel", "cafe", "https://maps.google.com/?q=Coffee+Cartel+Seminyak", "Easy coffee and breakfast option near the Seminyak core.", ["solo", "friends", "couple"]),
+    plannerFreeDayPlace("Petitenget Temple", "temple", "https://maps.google.com/?q=Petitenget+Temple", "Small culture stop if you want to mix beach time with a Bali touch.", ["family", "couple", "solo"]),
+    plannerFreeDayPlace("Seminyak Village", "culture", "https://maps.google.com/?q=Seminyak+Village", "Simple comfort stop with shopping, coffee and air-conditioned reset time.", ["family", "solo", "couple"], ["relax", "culture"]),
+  ],
+  ubud: [
+    plannerFreeDayPlace("Tegalalang Rice Terrace", "scenic", "https://maps.google.com/?q=Tegalalang+Rice+Terrace", "One of the most famous scenic Bali places and always useful in an Ubud plan.", ["couple", "family", "solo", "friends"]),
+    plannerFreeDayPlace("Campuhan Ridge Walk", "walk", "https://maps.google.com/?q=Campuhan+Ridge+Walk", "Easy scenic walk if you want movement without a full excursion.", ["solo", "couple", "family"]),
+    plannerFreeDayPlace("Tibumana Waterfall", "waterfall", "https://maps.google.com/?q=Tibumana+Waterfall", "Popular waterfall stop with strong jungle mood.", ["couple", "friends", "solo"]),
+    plannerFreeDayPlace("Tirta Empul Temple", "temple", "https://maps.google.com/?q=Tirta+Empul+Temple", "Top culture place that works even on mixed-weather days.", ["family", "couple", "solo"]),
+    plannerFreeDayPlace("Monkey Forest Ubud", "culture", "https://maps.google.com/?q=Ubud+Monkey+Forest", "Easy iconic activity close to the center.", ["family", "friends", "couple"]),
+    plannerFreeDayPlace("Kanto Lampo Waterfall", "waterfall", "https://maps.google.com/?q=Kanto+Lampo+Waterfall", "Very popular waterfall if guests still want a visual wow stop.", ["friends", "couple"]),
+    plannerFreeDayPlace("Seniman Coffee", "cafe", "https://maps.google.com/?q=Seniman+Coffee+Ubud", "Best coffee-type reset if the day stays flexible.", ["solo", "couple"]),
+    plannerFreeDayPlace("Sari Organik", "restaurant", "https://maps.google.com/?q=Sari+Organik+Ubud", "Scenic rice-field lunch option with a calmer pace.", ["couple", "solo", "family"]),
+    plannerFreeDayPlace("Cretya Ubud", "beachclub", "https://maps.google.com/?q=Cretya+Ubud", "Pool-club style day option with strong visual appeal.", ["friends", "couple"]),
+    plannerFreeDayPlace("Goa Gajah", "temple", "https://maps.google.com/?q=Goa+Gajah+Ubud", "Classic heritage stop that gives the plan more cultural depth.", ["family", "couple", "solo"]),
+    plannerFreeDayPlace("Puri Ubud", "culture", "https://maps.google.com/?q=Ubud+Palace", "Central and easy culture stop in town.", ["family", "solo", "couple"]),
+    plannerFreeDayPlace("Zest Ubud", "restaurant", "https://maps.google.com/?q=Zest+Ubud", "Healthy relaxed lunch or dinner option.", ["solo", "couple"]),
+    plannerFreeDayPlace("Alas Harum", "scenic", "https://maps.google.com/?q=Alas+Harum+Bali", "Popular rice-terrace and swing area with strong social-media appeal.", ["friends", "couple"]),
+    plannerFreeDayPlace("Bali Pulina", "scenic", "https://maps.google.com/?q=Bali+Pulina+Ubud", "Coffee tasting and scenic terrace views in one easy stop.", ["family", "couple", "solo"]),
+    plannerFreeDayPlace("Clear Cafe Ubud", "restaurant", "https://maps.google.com/?q=Clear+Cafe+Ubud", "Comfortable all-round meal option for a softer day.", ["family", "solo", "couple"]),
+    plannerFreeDayPlace("Tukad Cepung Waterfall", "waterfall", "https://maps.google.com/?q=Tukad+Cepung+Waterfall", "One of the most photogenic waterfall choices when guests want something dramatic but still realistic from Ubud.", ["friends", "couple", "solo"]),
+    plannerFreeDayPlace("Ibu Oka", "restaurant", "https://maps.google.com/?q=Ibu+Oka+Ubud", "Classic local food stop when the guest wants one of Ubud's best-known lunch names.", ["friends", "family", "solo"]),
+    plannerFreeDayPlace("Murni's Warung", "restaurant", "https://maps.google.com/?q=Murni%27s+Warung+Ubud", "Historic riverside restaurant that feels more classic than trendy.", ["couple", "solo", "family"]),
+    plannerFreeDayPlace("Warung Biah Biah", "restaurant", "https://maps.google.com/?q=Warung+Biah+Biah+Ubud", "Easy local dinner move with a stronger Ubud-food feel.", ["friends", "solo", "couple"]),
+    plannerFreeDayPlace("Warung Pondok Madu", "restaurant", "https://maps.google.com/?q=Warung+Pondok+Madu+Ubud", "Reliable casual meal stop when guests want something unfussy and good.", ["family", "friends", "couple"]),
+    plannerFreeDayPlace("Naughty Nuri's", "restaurant", "https://maps.google.com/?q=Naughty+Nuri%27s+Ubud", "Famous Ubud ribs stop that works well as a relaxed evening plan.", ["friends", "couple"]),
+    plannerFreeDayPlace("Warung Tepi Sawah", "restaurant", "https://maps.google.com/?q=Warung+Tepi+Sawah+Ubud", "Rice-field dining option for a softer and more scenic Ubud meal.", ["couple", "family", "solo"]),
+  ],
+  uluwatu: [
+    plannerFreeDayPlace("Melasti Beach", "beach", "https://maps.google.com/?q=Melasti+Beach+Bali", "One of the top Bali beaches and a must-have free-day option here.", ["couple", "friends", "family"]),
+    plannerFreeDayPlace("Uluwatu Temple", "sunset", "https://maps.google.com/?q=Uluwatu+Temple", "One of the biggest Bali classics for cliff views and sunset.", ["couple", "family", "solo", "friends"]),
+    plannerFreeDayPlace("Padang Padang Beach", "beach", "https://maps.google.com/?q=Padang+Padang+Beach", "Famous compact beach with a strong Bali look.", ["friends", "couple"]),
+    plannerFreeDayPlace("Single Fin", "sunset", "https://maps.google.com/?q=Single+Fin+Bali", "Very popular sunset and drinks spot with ocean views.", ["friends", "couple"]),
+    plannerFreeDayPlace("Savaya", "beachclub", "https://maps.google.com/?q=Savaya+Bali", "One of the most famous premium day-club venues in Bali.", ["friends", "couple"]),
+    plannerFreeDayPlace("Thomas Beach", "beach", "https://maps.google.com/?q=Thomas+Beach+Bali", "A quieter beach backup when you want less crowd.", ["couple", "solo"]),
+    plannerFreeDayPlace("Suka Espresso", "cafe", "https://maps.google.com/?q=Suka+Espresso+Uluwatu", "Reliable brunch and coffee stop near many Uluwatu stays.", ["solo", "couple", "family"]),
+    plannerFreeDayPlace("Karang Boma Cliff", "sunset", "https://maps.google.com/?q=Karang+Boma+Cliff", "Dramatic cliff-edge sunset point for a big wow moment.", ["couple", "solo"]),
+    plannerFreeDayPlace("Bingin Beach", "beach", "https://maps.google.com/?q=Bingin+Beach+Bali", "Top beach in the area with a strong cliffside vibe.", ["couple", "friends"]),
+    plannerFreeDayPlace("El Kabron", "restaurant", "https://maps.google.com/?q=El+Kabron+Bali", "Sunset dinner and cliffside view option with premium feel.", ["couple", "friends"]),
+    plannerFreeDayPlace("Nourish Cafe", "cafe", "https://maps.google.com/?q=Nourish+Cafe+Bali", "Simple healthy stop for a soft free day.", ["family", "solo", "couple"]),
+    plannerFreeDayPlace("Drifter Surf Shop and Cafe", "cafe", "https://maps.google.com/?q=Drifter+Cafe+Bali", "Easy surf-town cafe vibe for a lighter plan.", ["solo", "friends", "couple"]),
+    plannerFreeDayPlace("Suluban Beach", "beach", "https://maps.google.com/?q=Suluban+Beach", "Iconic hidden-beach feeling for guests who want scenery.", ["friends", "couple"]),
+    plannerFreeDayPlace("Jimbaran Seafood Dinner", "restaurant", "https://maps.google.com/?q=Jimbaran+Seafood", "Best nearby easy dinner move when you want a classic Bali evening.", ["family", "couple", "friends"]),
+    plannerFreeDayPlace("Dreamland Beach", "beach", "https://maps.google.com/?q=Dreamland+Beach+Bali", "Beautiful broad beach that still looks strong in mixed weather.", ["friends", "couple", "family"]),
+    plannerFreeDayPlace("Nyang Nyang Beach", "beach", "https://maps.google.com/?q=Nyang+Nyang+Beach+Bali", "A bigger wow-beach option when the guest wants raw cliff scenery instead of the usual easy picks.", ["couple", "friends", "solo"], ["sea", "nature", "instagram"]),
+    plannerFreeDayPlace("Garuda Wisnu Kencana", "culture", "https://maps.google.com/?q=Garuda+Wisnu+Kencana+Bali", "Large culture-park stop that gives Uluwatu stays a non-beach free-day option with real scale.", ["family", "friends", "solo"], ["culture", "instagram"]),
+    plannerFreeDayPlace("Balangan Beach", "beach", "https://maps.google.com/?q=Balangan+Beach+Bali", "Strong south-Bali beach for travelers who want a broad scenic coastline and less compact feel.", ["couple", "friends", "solo"], ["sea", "nature", "instagram"]),
+  ],
+  nusa_dua: [
+    plannerFreeDayPlace("Geger Beach", "beach", "https://maps.google.com/?q=Geger+Beach", "Calm top beach that works especially well for couples and families.", ["family", "couple"]),
+    plannerFreeDayPlace("Waterblow Nusa Dua", "scenic", "https://maps.google.com/?q=Waterblow+Nusa+Dua", "Easy scenic stop close to the Nusa Dua resort area.", ["family", "couple", "solo"]),
+    plannerFreeDayPlace("Sundays Beach Club", "beachclub", "https://maps.google.com/?q=Sundays+Beach+Club+Bali", "One of the strongest premium beach-club choices nearby.", ["couple", "friends"]),
+    plannerFreeDayPlace("Nusa Dua Beach", "beach", "https://maps.google.com/?q=Nusa+Dua+Beach", "Classic clean beach option for an easy free day.", ["family", "couple", "solo"]),
+    plannerFreeDayPlace("Bali Collection", "culture", "https://maps.google.com/?q=Bali+Collection+Nusa+Dua", "Simple comfort zone with coffee, shopping and dinner options.", ["family", "solo", "friends"]),
+    plannerFreeDayPlace("Manarai Beach House", "beachclub", "https://maps.google.com/?q=Manarai+Beach+House", "Stylish beach-club option with easy access from Nusa Dua.", ["friends", "couple"]),
+    plannerFreeDayPlace("Puja Mandala", "temple", "https://maps.google.com/?q=Puja+Mandala+Nusa+Dua", "Culture-focused stop that works well if the weather is mixed.", ["family", "solo", "couple"]),
+    plannerFreeDayPlace("Kayuputi", "restaurant", "https://maps.google.com/?q=Kayuputi+Bali", "Luxury dinner option when the plan needs a premium couple move.", ["couple"]),
+    plannerFreeDayPlace("Mulia Coastline Walk", "walk", "https://maps.google.com/?q=The+Mulia+Bali", "Relaxed upscale coastal walk for a softer free day.", ["couple", "solo"]),
+    plannerFreeDayPlace("Samuh Beach", "beach", "https://maps.google.com/?q=Samuh+Beach", "Good easy beach near the main hotel zone.", ["family", "couple"]),
+    plannerFreeDayPlace("Babi Guling Dobiel", "restaurant", "https://maps.google.com/?q=Babi+Guling+Dobiel+Nusa+Dua", "Popular local food stop when guests want something more local.", ["friends", "family", "solo"]),
+    plannerFreeDayPlace("Tropical Temptation", "beachclub", "https://maps.google.com/?q=Tropical+Temptation+Beach+Club", "Beach-club style option close to the southern resorts.", ["friends", "couple"]),
+    plannerFreeDayPlace("Gunung Payung Beach", "beach", "https://maps.google.com/?q=Gunung+Payung+Beach", "Beautiful quieter beach for a scenic free day.", ["couple", "solo"]),
+    plannerFreeDayPlace("Koral Restaurant", "restaurant", "https://maps.google.com/?q=Koral+Restaurant+Bali", "One of the best-known special-occasion dinner ideas nearby.", ["couple"]),
+    plannerFreeDayPlace("Pandawa Beach", "beach", "https://maps.google.com/?q=Pandawa+Beach", "Very popular nearby beach with broad views and easy wow factor.", ["family", "friends", "couple"]),
+    plannerFreeDayPlace("Tanjung Benoa Beach", "beach", "https://maps.google.com/?q=Tanjung+Benoa+Beach+Bali", "Easy sea-side option for calmer water sports energy and long coastal walks.", ["family", "friends", "couple"], ["sea", "relax"]),
+    plannerFreeDayPlace("Museum Pasifika", "culture", "https://maps.google.com/?q=Museum+Pasifika+Bali", "A proper indoor culture stop for mixed-weather days when the guest still wants something memorable.", ["solo", "family", "couple"], ["culture", "relax"]),
+    plannerFreeDayPlace("Mengiat Beach", "beach", "https://maps.google.com/?q=Mengiat+Beach+Bali", "Quieter Nusa Dua beach option with a softer pace than the headline spots.", ["couple", "family", "solo"], ["sea", "relax"]),
+  ],
+  sanur: [
+    plannerFreeDayPlace("Sanur Beach Boardwalk", "walk", "https://maps.google.com/?q=Sanur+Beach", "One of the easiest Bali free-day areas for soft sunrise or sunset movement.", ["family", "couple", "solo"]),
+    plannerFreeDayPlace("Massimo", "restaurant", "https://maps.google.com/?q=Massimo+Sanur", "Very popular Sanur dinner option with reliable crowd appeal.", ["family", "couple", "friends"]),
+    plannerFreeDayPlace("Byrd House Beach Club", "beachclub", "https://maps.google.com/?q=Byrdhouse+Bali", "Stylish relaxed beach-club option for a sunny free day.", ["friends", "couple"]),
+    plannerFreeDayPlace("Mertasari Beach", "beach", "https://maps.google.com/?q=Mertasari+Beach+Sanur", "Calmer beach that works especially well for families.", ["family", "couple"]),
+    plannerFreeDayPlace("Soul on the Beach", "restaurant", "https://maps.google.com/?q=Soul+on+the+Beach+Sanur", "Easy beachfront meal if you want to keep the day simple.", ["couple", "family", "solo"]),
+    plannerFreeDayPlace("Le Mayeur Museum", "culture", "https://maps.google.com/?q=Le+Mayeur+Museum", "A culture stop that fits very well on a mixed-weather day.", ["solo", "family", "couple"]),
+    plannerFreeDayPlace("Icon Bali Mall", "culture", "https://maps.google.com/?q=ICON+Bali+Mall+Sanur", "Comfort backup with food, shopping and AC.", ["family", "solo"]),
+    plannerFreeDayPlace("Sindhu Beach", "beach", "https://maps.google.com/?q=Sindhu+Beach+Sanur", "Classic Sanur beach choice with easy access.", ["family", "couple", "solo"]),
+    plannerFreeDayPlace("Genius Cafe", "cafe", "https://maps.google.com/?q=Genius+Cafe+Sanur", "Good flexible cafe stop with healthy food.", ["solo", "couple", "friends"]),
+    plannerFreeDayPlace("Sindhu Night Market", "restaurant", "https://maps.google.com/?q=Sindhu+Night+Market", "Local evening food option that adds something different to the plan.", ["friends", "family"]),
+    plannerFreeDayPlace("Big Garden Corner", "culture", "https://maps.google.com/?q=Big+Garden+Corner+Sanur", "Light local attraction when the day stays free.", ["family"]),
+    plannerFreeDayPlace("Seawalker Sanur", "scenic", "https://maps.google.com/?q=Sanur+Seawalker", "Fun light activity nearby if you want more than just food and beach.", ["family", "friends"]),
+    plannerFreeDayPlace("Cafe Batu Jimbar", "cafe", "https://maps.google.com/?q=Cafe+Batu+Jimbar+Sanur", "One of the classic cafe and brunch picks in Sanur.", ["solo", "family", "couple"]),
+    plannerFreeDayPlace("Karang Beach", "beach", "https://maps.google.com/?q=Karang+Beach+Sanur", "Easy beach alternative for a calm free day.", ["family", "couple", "solo"]),
+    plannerFreeDayPlace("Pizzaria Sanur", "restaurant", "https://maps.google.com/?q=Pizzaria+Sanur", "Reliable beachfront lunch or dinner move.", ["family", "couple", "friends"]),
+    plannerFreeDayPlace("Segara Ayu Beach", "beach", "https://maps.google.com/?q=Segara+Ayu+Beach+Sanur", "Classic sunrise-side Sanur beach that fits easy families and calm solo mornings.", ["family", "solo", "couple"], ["sea", "relax"]),
+    plannerFreeDayPlace("Matahari Terbit Beach", "beach", "https://maps.google.com/?q=Matahari+Terbit+Beach+Sanur", "Strong early-morning beach if the guest wants the softer Sanur sunrise look.", ["couple", "solo", "family"], ["sea", "relax", "instagram"]),
+    plannerFreeDayPlace("Sanur Port", "culture", "https://maps.google.com/?q=Sanur+Port+Bali", "Useful harbor-side stop for coffee, sea views and watching the island-day flow without booking a full crossing.", ["solo", "friends", "couple"], ["sea", "relax"]),
+  ],
+};
+
+const PLANNER_FREE_DAY_NEIGHBORS = {
+  canggu: ["seminyak"],
+  seminyak: ["canggu", "uluwatu"],
+  ubud: ["sanur"],
+  uluwatu: ["nusa_dua", "seminyak"],
+  nusa_dua: ["uluwatu", "sanur"],
+  sanur: ["nusa_dua", "ubud"],
+};
+
+const PLANNER_FREE_DAY_BUCKETS = [
+  { key: "coast", kinds: ["beach", "sunset", "beachclub"] },
+  { key: "food", kinds: ["restaurant", "cafe"] },
+  { key: "explore", kinds: ["temple", "scenic", "waterfall", "walk", "culture"] },
+];
+
+const PLANNER_FREE_DAY_ROTATIONS = [
+  ["coast", "food", "explore"],
+  ["explore", "coast", "food"],
+  ["food", "explore", "coast"],
+];
+
+function renderPlannerFreeDayPlaceCall(item) {
+  const interestArg = item.interests ? `,${JSON.stringify(item.interests)}` : "";
+  return `place(${JSON.stringify(item.title)},${JSON.stringify(item.kind)},${JSON.stringify(item.maps)},${JSON.stringify(item.copy)},${JSON.stringify(item.vibe)}${interestArg})`;
+}
+
+function renderPlannerFreeDayBlock() {
+  const areasJs = Object.entries(PLANNER_FREE_DAY_PLACES)
+    .map(([area, items]) => `${area}: [\n${items.map((item) => renderPlannerFreeDayPlaceCall(item)).join(",\n")}\n]`)
+    .join(",\n");
+
+  return `var FREE_DAY_PLACES = {\n${areasJs}\n};
+var FREE_DAY_NEIGHBORS = ${JSON.stringify(PLANNER_FREE_DAY_NEIGHBORS, null, 2)};
+var PLACE_BUCKETS = ${JSON.stringify(PLANNER_FREE_DAY_BUCKETS, null, 2)};
+var PLACE_BUCKET_ROTATIONS = ${JSON.stringify(PLANNER_FREE_DAY_ROTATIONS, null, 2)};
+function normalizeAreaKey(area){ return FREE_DAY_PLACES[area] ? area : 'canggu'; }
+function matchesGroup(placeObj, group){ return !placeObj.vibe || placeObj.vibe.indexOf(group) !== -1; }
+function normalizePlannerInterests(interests){
+if(!Array.isArray(interests) || !interests.length) return ['sea','nature','culture','relax','adventure','instagram'];
+return interests.slice();
+}
+function inferPlaceInterests(placeObj){
+if(placeObj && Array.isArray(placeObj.interests) && placeObj.interests.length) return placeObj.interests;
+var map = {
+beach:['sea','relax','instagram'],
+sunset:['sea','relax','instagram'],
+restaurant:['relax'],
+cafe:['relax'],
+beachclub:['sea','relax','instagram'],
+temple:['culture','instagram'],
+scenic:['nature','instagram'],
+waterfall:['nature','adventure','instagram'],
+walk:['nature','relax'],
+culture:['culture','relax']
+};
+return map[(placeObj && placeObj.kind) || ''] || ['relax'];
+}
+function placeInterestMatchCount(placeObj, interests){
+var target = normalizePlannerInterests(interests);
+var own = inferPlaceInterests(placeObj);
+return target.filter(function(item){ return own.indexOf(item) !== -1; }).length;
+}
+function bucketKeyForPlace(placeObj){
+var kind = placeObj && placeObj.kind;
+for(var i=0;i<PLACE_BUCKETS.length;i++){
+if(PLACE_BUCKETS[i].kinds.indexOf(kind) !== -1) return PLACE_BUCKETS[i].key;
+}
+return 'explore';
+}
+function buildFreeDayPool(area){
+var baseArea = normalizeAreaKey(area);
+var keys = [baseArea].concat(FREE_DAY_NEIGHBORS[baseArea] || []);
+var seen = {};
+var pool = [];
+keys.forEach(function(areaKey, index){
+(FREE_DAY_PLACES[areaKey] || []).forEach(function(item){
+if(seen[item.title]) return;
+seen[item.title] = true;
+pool.push(Object.assign({ __areaKey: areaKey, __areaRank: index }, item));
+});
+});
+return pool;
+}
+function scoreFreeDayCandidate(item, preferredBucket, group, interests, usedCounts, selectedKinds){
+var score = 0;
+score += item.__areaRank === 0 ? 12 : (item.__areaRank === 1 ? 5 : 2);
+score += matchesGroup(item, group) ? 18 : -6;
+score += placeInterestMatchCount(item, interests) * 10;
+if(preferredBucket && bucketKeyForPlace(item) === preferredBucket) score += 9;
+if(selectedKinds[item.kind]) score -= 12;
+var used = usedCounts[item.title] || 0;
+if(used === 0) score += 22;
+else score -= used * 36;
+if(item.kind === 'beach' || item.kind === 'sunset') score += 1;
+return score;
+}
+function pickFreeDayCandidate(pool, preferredBucket, group, interests, usedCounts, selectedKinds, selectedTitles){
+var best = null;
+pool.forEach(function(item){
+if(selectedTitles[item.title]) return;
+var score = scoreFreeDayCandidate(item, preferredBucket, group, interests, usedCounts, selectedKinds);
+if(!best || score > best.score) best = { item:item, score:score };
+});
+return best ? best.item : null;
+}
+function getFreeDayPlaces(area, group, interests, usedCounts, dayIndex){
+if(!usedCounts || typeof usedCounts !== 'object') usedCounts = {};
+var pool = buildFreeDayPool(area);
+var safeDayIndex = typeof dayIndex === 'number' && !isNaN(dayIndex) ? dayIndex : Number(usedCounts.__sbFreeDayIndex || 0);
+var rotation = PLACE_BUCKET_ROTATIONS[safeDayIndex % PLACE_BUCKET_ROTATIONS.length];
+var picks = [];
+var selectedKinds = {};
+var selectedTitles = {};
+rotation.forEach(function(bucketKey){
+var item = pickFreeDayCandidate(pool, bucketKey, group, interests, usedCounts, selectedKinds, selectedTitles);
+if(!item) return;
+selectedKinds[item.kind] = (selectedKinds[item.kind] || 0) + 1;
+selectedTitles[item.title] = true;
+picks.push(item);
+});
+while(picks.length < 3 && pool.length){
+var extra = pickFreeDayCandidate(pool, '', group, interests, usedCounts, selectedKinds, selectedTitles);
+if(!extra) break;
+selectedKinds[extra.kind] = (selectedKinds[extra.kind] || 0) + 1;
+selectedTitles[extra.title] = true;
+picks.push(extra);
+}
+picks.forEach(function(item){ usedCounts[item.title] = (usedCounts[item.title] || 0) + 1; });
+usedCounts.__sbFreeDayIndex = safeDayIndex + 1;
+return picks.slice(0,3);
+}`;
+}
 
 function renderPlannerPlaceImageBlock() {
   return `var PLACE_IMAGE = {
@@ -454,7 +725,7 @@ waterfall:${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudWaterfall)},
 walk:${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.sanurBoardwalk)},
 culture:${JSON.stringify(BALI_PLANNER_PLACE_IMAGES.ubudPalace)}
 };
-var PLACE_IMAGE_VERSION = '20260524b';
+var PLACE_IMAGE_VERSION = '20260525a';
 var PLACE_IMAGE_BY_TITLE = ${JSON.stringify(BALI_PLANNER_PLACE_IMAGE_BY_TITLE, null, 2)};
 function isPlannerLocalImage(url){
 return !!url && (/^\\//.test(url) || !/^(?:https?:)?\\/\\//i.test(url));
@@ -571,7 +842,7 @@ if (!img || img.tagName !== 'IMG') return;
 if (!img.closest || !img.closest('#sbAiResultsGrid')) return;
 plannerRecoverImage(img);
 }, true);
-function place(title, kind, maps, copy, vibe){ return { title:title, kind:kind, image:withPlannerImageVersion(PLACE_IMAGE_BY_TITLE[title] || PLACE_IMAGE[kind] || PLACE_IMAGE.scenic), maps:maps, copy:copy, vibe:vibe || ['couple','friends','family','solo'] }; }`;
+function place(title, kind, maps, copy, vibe, interests){ return { title:title, kind:kind, image:withPlannerImageVersion(PLACE_IMAGE_BY_TITLE[title] || PLACE_IMAGE[kind] || PLACE_IMAGE.scenic), maps:maps, copy:copy, vibe:vibe || ['couple','friends','family','solo'], interests:interests || null }; }`;
 }
 
 const tours = [
@@ -2590,6 +2861,39 @@ function buildWestRouteStops(tour) {
   return stops.slice(0, 5);
 }
 
+function cleanWestStopDisplayLabel(value) {
+  return collapseWhitespace(value)
+    .replace(/^\d{1,2}:\d{2}(?:\s*[-–]\s*\d{1,2}:\d{2})?\s*/g, "")
+    .replace(/\boptional\b/gi, "")
+    .replace(/\s+/g, " ")
+    .replace(/\s*,\s*(bali|indonesia)\b.*$/i, "")
+    .trim();
+}
+
+function buildWestReadableStops(tour) {
+  const configuredRoute = WEST_ROUTE_POINTS[tour.slug];
+  const candidates = configuredRoute?.stops?.length
+    ? configuredRoute.stops
+    : configuredRoute?.routeStops?.length
+      ? configuredRoute.routeStops
+      : [
+          ...(tour.itinerary || []).map(([heading]) => heading),
+          ...(tour.highlights || []).map(([heading]) => heading),
+        ];
+  const seen = new Set();
+  const stops = [];
+
+  for (const stop of candidates) {
+    const label = cleanWestStopDisplayLabel(stop);
+    const key = label.toLowerCase();
+    if (!label || seen.has(key)) continue;
+    seen.add(key);
+    stops.push(label);
+  }
+
+  return stops.slice(0, 5);
+}
+
 function buildWestFaqs(tour) {
   const explicitFaqs = (tour.faqs || [])
     .map(([question, answer]) => [collapseWhitespace(question), collapseWhitespace(answer)])
@@ -2677,24 +2981,162 @@ function buildWestFaqs(tour) {
   return combined.slice(0, 12);
 }
 
-function buildWestHighlightsParagraph(tour) {
-  const pieces = [tour.lead, tour.highlights?.map(([heading]) => heading).filter(Boolean).join(", ")]
-    .filter(Boolean)
-    .map(collapseWhitespace);
-
-  return collapseWhitespace(pieces.join(" "));
+function ensureSentence(value) {
+  const text = collapseWhitespace(value);
+  if (!text) return "";
+  return /[.!?…]$/.test(text) ? text : `${text}.`;
 }
 
-function buildWestFullDescription(tour) {
-  return collapseWhitespace([tour.summary, tour.overview].filter(Boolean).join(" "));
+function renderWestRichText(item) {
+  const labelHtml = item.label ? `<strong>${escapeHtml(item.label)}:</strong> ` : "";
+  const textHtml = item.textHtml || escapeHtml(ensureSentence(item.text));
+  return `${labelHtml}${textHtml}`;
 }
 
-function buildWestIncludesParagraph(tour) {
-  return collapseWhitespace(buildIncludes(tour).join(" • "));
+function renderWestRichCopy({ intro = null, items = [] }) {
+  const normalizedItems = items.filter((item) => item && (item.text || item.textHtml));
+  const introHtml = intro && (intro.text || intro.textHtml)
+    ? `<p class="sb-tour-copy__intro"><span class="sb-tour-copy__emoji" aria-hidden="true">${intro.emoji || "✨"}</span><span class="sb-tour-copy__content">${renderWestRichText(intro)}</span></p>`
+    : "";
+
+  if (!normalizedItems.length) return introHtml || "";
+
+  return `${introHtml}<ul class="sb-tour-copy__list">${normalizedItems
+    .map(
+      (item) =>
+        `<li class="sb-tour-copy__item"><span class="sb-tour-copy__emoji" aria-hidden="true">${item.emoji || "✨"}</span><span class="sb-tour-copy__content">${renderWestRichText(item)}</span></li>`,
+    )
+    .join("")}</ul>`;
 }
 
-function buildWestImportantInfoParagraph(tour) {
-  return collapseWhitespace(buildGoodToKnow(tour).join(" "));
+function westCopyEmoji(text, fallback = "✨") {
+  const lower = collapseWhitespace(text).toLowerCase();
+  if (/\bweather|sea conditions|traffic|timing|operator|pace\b/.test(lower)) return "⏱️";
+  if (/\bnot recommended|pregnant|mobility|heart|back|non-swimmer|safety\b/.test(lower)) return "⚠️";
+  if (/\bnot included|cash|personal expenses|tax|admission\b/.test(lower)) return "💵";
+  if (/\bbring\b|\btowel\b|\bswimwear\b|\bsunscreen\b|\bjacket\b|\bsandals\b|\bchange of clothes\b|\bsunglasses\b|\bpassport\b/.test(lower)) {
+    return "🎒";
+  }
+  if (/\bbest fit\b|\bbest for\b|\bcouples\b|\bfamilies\b|\bfriends\b|\bkids\b|\bsolo\b/.test(lower)) return "👥";
+  if (/\bturtle|coral|reef|snorkel|manta|whale|dolphin|surf|ocean|sea|water|lagoon\b/.test(lower)) return "🌊";
+  if (/\btemple|heritage|culture|ceremony|unesco\b/.test(lower)) return "🛕";
+  if (/\bsunrise|sunset|morning\b/.test(lower)) return "🌅";
+  if (/\bvolcano|mount batur|batur|lava|mountain|jeep\b/.test(lower)) return "🌋";
+  if (/\bphoto|instagram|camera|gopro\b/.test(lower)) return "📸";
+  if (/\bboat|harbor|harbour|crossing|ferry|port\b/.test(lower)) return "🚤";
+  if (/\btransfer|pickup|driver|airport|hotel\b/.test(lower)) return "🚗";
+  if (/\bprivate|guide|support|coordination|whatsapp|confirmation\b/.test(lower)) return "🤝";
+  if (/\bfree time|relax|cafe|beach club|sunbed|beach\b/.test(lower)) return "🏝️";
+  if (/\batv|rafting|adventure|active\b/.test(lower)) return "🔥";
+  if (/\bhelicopter|flight|aerial\b/.test(lower)) return "🚁";
+  if (/\bmeeting point|check-in|office|location\b/.test(lower)) return "📍";
+  return fallback;
+}
+
+function westIncludeLabel(item) {
+  const lower = collapseWhitespace(item).toLowerCase();
+  if (/\bguide|private\b/.test(lower)) return "Private support";
+  if (/\bgopro|photo|video\b/.test(lower)) return "Memories";
+  if (/\bsnorkel|life jacket|safety briefing|equipment\b/.test(lower)) return "Water setup";
+  if (/\btransfer|pickup|hotel\b/.test(lower)) return "Transfers";
+  if (/\binsurance|bottled water|tax\b/.test(lower)) return "Useful extras";
+  if (/\bboat|harbor|harbour|port\b/.test(lower)) return "Boat logistics";
+  return "Included";
+}
+
+function westImportantLabel(item) {
+  const lower = collapseWhitespace(item).toLowerCase();
+  if (/\bnot included|personal expenses|cash|tax|admission\b/.test(lower)) return "Extra costs";
+  if (/\bexperience usually runs\b/.test(lower)) return "Route format";
+  if (/\bbest fit\b/.test(lower)) return "Best for";
+  if (/\bweather|sea conditions|traffic|operator|pace|timing\b/.test(lower)) return "Timing can shift";
+  if (/\bbring\b|\btowel\b|\bswimwear\b|\bsunscreen\b|\bjacket\b|\bsandals\b|\bchange of clothes\b|\bsunglasses\b|\bpassport\b/.test(lower)) {
+    return "Bring with you";
+  }
+  if (/\bnot recommended|pregnant|mobility|heart|back|non-swimmer\b/.test(lower)) return "Before you join";
+  if (/\bmeeting point|check-in|office|location\b/.test(lower)) return "Meeting point";
+  if (/\bpickup|hotel\b/.test(lower)) return "Pickup note";
+  return "Good to know";
+}
+
+function buildWestHighlightsHtml(tour) {
+  const items = normalizedWestHighlights(tour).map(([heading, text]) => ({
+    emoji: westCopyEmoji(`${heading} ${text}`, "📍"),
+    label: heading,
+    text,
+  }));
+
+  return renderWestRichCopy({
+    intro: {
+      emoji: "✨",
+      label: "Main vibe",
+      text: tour.lead,
+    },
+    items,
+  });
+}
+
+function buildWestFullDescriptionHtml(tour) {
+  const routeStops = buildWestReadableStops(tour)
+    .filter((stop) => stop && !/return transfer/i.test(stop))
+    .slice(0, 4);
+
+  return renderWestRichCopy({
+    items: [
+      {
+        emoji: "🌴",
+        label: "Why people book it",
+        text: tour.summary,
+      },
+      {
+        emoji: "🧭",
+        label: "How the day feels",
+        text: tour.overview,
+      },
+      routeStops.length
+        ? {
+            emoji: "📍",
+            label: "Key stops",
+            textHtml: `Usually built around <strong>${escapeHtml(routeStops.join(" -> "))}</strong>.`,
+          }
+        : null,
+      {
+        emoji: "👥",
+        label: "Best fit",
+        textHtml: `Great for <strong>${escapeHtml(collapseWhitespace(tour.bestFor))}</strong> with a route that usually runs for <strong>${escapeHtml(collapseWhitespace(tour.duration))}</strong>.`,
+      },
+    ],
+  });
+}
+
+function buildWestIncludesHtml(tour) {
+  return renderWestRichCopy({
+    intro: {
+      emoji: "✅",
+      label: "Booked as one clear package",
+      text: "The core logistics and main support pieces are already wrapped into the route below",
+    },
+    items: buildIncludes(tour).map((item) => ({
+      emoji: westCopyEmoji(item, "✅"),
+      label: westIncludeLabel(item),
+      text: item,
+    })),
+  });
+}
+
+function buildWestImportantInfoHtml(tour) {
+  const notes = buildGoodToKnow(tour).slice();
+  if (!notes.some((note) => /\bbring\b|\btowel\b|\bsunscreen\b|\bjacket\b|\bswimwear\b/i.test(note))) {
+    notes.push(`Bring ${plannerWhatToBring(tour)}.`);
+  }
+
+  return renderWestRichCopy({
+    items: notes.map((note) => ({
+      emoji: westCopyEmoji(note, "ℹ️"),
+      label: westImportantLabel(note),
+      text: note,
+    })),
+  });
 }
 
 function westRouteLabel(tour) {
@@ -3207,12 +3649,20 @@ function renderWestStylePage(tour) {
   const heroArea = compactAreaLabel(tour);
   const heroLead = collapseWhitespace(tour.lead || tour.summary || tour.overview);
   const aboutSubtitle = `${tour.title} from Bali`;
-  const highlightsParagraph = buildWestHighlightsParagraph(tour);
-  const fullDescription = buildWestFullDescription(tour);
-  const includesParagraph = buildWestIncludesParagraph(tour);
-  const importantInfo = buildWestImportantInfoParagraph(tour);
+  const highlightsHtml = buildWestHighlightsHtml(tour);
+  const fullDescriptionHtml = buildWestFullDescriptionHtml(tour);
+  const includesHtml = buildWestIncludesHtml(tour);
+  const importantInfoHtml = buildWestImportantInfoHtml(tour);
   const genericFaqIntro = `Quick answers before booking the ${tour.title}.`;
   const weatherArea = compactAreaLabel(tour).toLowerCase();
+  const brokenBaliDestinationsMenu =
+    '<ul role="list" class="t-menusub__list"> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
+    'href="/bali/en/main-page#tours" data-menu-item-number="1">Dubai, UAE</a> </li> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
+    'href="/bali/en/main-page#tours" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul>';
+  const fixedBaliDestinationsMenu =
+    '<ul role="list" class="t-menusub__list"> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
+    'href="/dubai/en#tours" data-menu-item-number="1">Dubai, UAE</a> </li> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
+    'href="/bali/en/main-page#tours" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul>';
 
   let html = getWestTemplateHtml();
 
@@ -3224,6 +3674,8 @@ function renderWestStylePage(tour) {
     .replaceAll('href="/dubai/en#tours"', 'href="/bali/en/main-page#tours"')
     .replaceAll('href="/" class="t228__imgwrapper"', 'href="/bali/en/main-page" class="t228__imgwrapper"')
     .replaceAll('href="/" class="t451__logowrapper"', 'href="/bali/en/main-page" class="t451__logowrapper"');
+
+  html = html.split(brokenBaliDestinationsMenu).join(fixedBaliDestinationsMenu);
 
   html = replaceMetaTag(html, "description", description);
   html = replaceMetaTag(html, "keywords", collapseWhitespace(buildWestKeywords(tour)));
@@ -3252,10 +3704,10 @@ function renderWestStylePage(tour) {
   html = replaceSingleQuotedField(html, "tn_text_1766442865058", miniPromo.title);
   html = replaceSingleQuotedField(html, "tn_text_1766442925510", escapeHtml(miniPromo.text));
 
-  html = replaceDoubleQuotedField(html, "li_descr__7138223910800", escapeHtml(highlightsParagraph));
-  html = replaceDoubleQuotedField(html, "li_descr__7138223910801", escapeHtml(fullDescription));
-  html = replaceDoubleQuotedField(html, "li_descr__7138223910802", escapeHtml(includesParagraph));
-  html = replaceDoubleQuotedField(html, "li_descr__1767049015805", escapeHtml(importantInfo));
+  html = replaceDoubleQuotedField(html, "li_descr__7138223910800", highlightsHtml);
+  html = replaceDoubleQuotedField(html, "li_descr__7138223910801", fullDescriptionHtml);
+  html = replaceDoubleQuotedField(html, "li_descr__7138223910802", includesHtml);
+  html = replaceDoubleQuotedField(html, "li_descr__1767049015805", importantInfoHtml);
 
   const faqTitleFields = [
     "li_title__4097761591620",
@@ -3406,30 +3858,186 @@ function renderWestStylePage(tour) {
   return html;
 }
 
-function injectWestPageSpecificStyle(html, tour) {
-  const pageSpecificCss = [];
+const WEST_TOUR_LAYOUT_FIX_CSS = `
+#rec2121233163 .tn-elem[data-elem-id="1721240739967"] {
+  text-align: center !important;
+}
 
-  if (tour.slug === "unesco-heritage-sites-tour") {
-    pageSpecificCss.push(`
+#rec2121233163 .tn-elem[data-elem-id="1721240739929"] {
+  overflow: hidden !important;
+  border-radius: 24px !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240739929"] .tn-atom {
+  border-radius: inherit !important;
+}
+
+#rec2121222003 .t585__text {
+  color: #334155;
+  line-height: 1.72 !important;
+}
+
+#rec2121222003 .t585__text .sb-tour-copy__intro,
+#rec2121222003 .t585__text .sb-tour-copy__item {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+#rec2121222003 .t585__text .sb-tour-copy__intro {
+  margin-bottom: 14px;
+}
+
+#rec2121222003 .t585__text .sb-tour-copy__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+#rec2121222003 .t585__text .sb-tour-copy__emoji {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
+  transform: translateY(2px);
+}
+
+#rec2121222003 .t585__text .sb-tour-copy__content {
+  min-width: 0;
+}
+
+#rec2121222003 .t585__text .sb-tour-copy__content strong {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240739967"] .tn-atom {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+@media screen and (max-width: 959px) {
+  #rec2121233163 .tn-elem[data-elem-id="1721240739929"] {
+    border-radius: 18px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739964"] {
+    left: 50% !important;
+    width: 224px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739967"] {
+    left: 50% !important;
+    width: 224px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739967"] .tn-atom {
+    font-size: 15px !important;
+  }
+}
+
 @media screen and (max-width: 639px) {
-  #rec2121221993 .tn-elem[data-elem-id="1721244135153"] {
-    left: calc(50% - 160px + 28px) !important;
-    width: 92px !important;
+  #rec2121221993 {
+    margin-top: 28px !important;
   }
 
-  #rec2121221993 .tn-elem[data-elem-id="1721244135153"] .tn-atom {
-    white-space: nowrap !important;
-    font-size: 9px !important;
+  #rec2121233163 .t396__artboard {
+    overflow: hidden !important;
+    border-radius: 22px !important;
   }
-}`);
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739929"] {
+    border-radius: 22px !important;
+    overflow: hidden !important;
   }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739929"] .tn-atom {
+    border-radius: 22px !important;
+    overflow: hidden !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] {
+    top: 154px !important;
+    left: calc(50% - 160px + 20px) !important;
+    width: 272px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] .tn-atom {
+    font-size: 32px !important;
+    line-height: 1.06 !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1766419725555"] {
+    top: 259px !important;
+    left: calc(50% - 160px + 20px) !important;
+    width: 264px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1766419725555"] .tn-atom {
+    font-size: 11px !important;
+    line-height: 1.52 !important;
+  }
+
+  #rec2121222003 .t585__text .sb-tour-copy__intro,
+  #rec2121222003 .t585__text .sb-tour-copy__item {
+    grid-template-columns: 20px minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  #rec2121222003 .t585__text .sb-tour-copy__intro {
+    margin-bottom: 12px;
+  }
+
+  #rec2121222003 .t585__text .sb-tour-copy__list {
+    gap: 10px;
+  }
+
+  #rec2121222003 .t585__text .sb-tour-copy__emoji {
+    font-size: 17px;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739964"] {
+    top: 390px !important;
+    left: calc(50% - 160px + 18px) !important;
+    width: 210px !important;
+    height: 42px !important;
+    transform: none !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739964"] .tn-atom {
+    border-radius: 14px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739967"] {
+    top: 401px !important;
+    left: calc(50% - 160px + 18px) !important;
+    width: 210px !important;
+    transform: none !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739967"] .tn-atom {
+    font-size: 16px !important;
+    line-height: 1 !important;
+  }
+}`;
+
+function injectWestPageSpecificStyle(html, tour) {
+  const pageSpecificCss = [WEST_TOUR_LAYOUT_FIX_CSS];
 
   if (pageSpecificCss.length === 0) {
     return html;
   }
 
   const styleTag = `<style id="sb-west-page-specific-overrides">\n${pageSpecificCss.join("\n")}\n</style>\n`;
-  return html.replace("</head>", `${styleTag}</head>`);
+  return html.replace("</body>", `${styleTag}</body>`);
 }
 
 function buildWhatsAppMessage(tour) {
@@ -4786,7 +5394,7 @@ function renderJournalNewsBlock() {
 #sb-journal-news .sb-journal-news__eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(47,107,255,0.08);color:#2f6bff;font-size:13px;font-weight:700;letter-spacing:-0.2px;margin-bottom:14px;}
 #sb-journal-news .sb-journal-news__title{margin:0;font-size:48px;line-height:1.04;font-weight:700;letter-spacing:-2px;}
 #sb-journal-news .sb-journal-news__descr{max-width:700px;margin:12px 0 0;color:#6f6f73;font-size:18px;line-height:1.6;}
-#sb-journal-news .sb-journal-news__cta{display:inline-flex;align-items:center;justify-content:center;padding:16px 24px;border-radius:999px;background:#111;color:#fff;text-decoration:none;font-size:16px;font-weight:700;white-space:nowrap;transition:transform .2s ease, box-shadow .2s ease;}
+#sb-journal-news .sb-journal-news__cta{display:inline-flex;align-items:center;justify-content:center;max-width:100%;box-sizing:border-box;padding:16px 24px;border-radius:999px;background:#111;color:#fff;text-decoration:none;font-size:16px;font-weight:700;white-space:nowrap;transition:transform .2s ease, box-shadow .2s ease;}
 #sb-journal-news .sb-journal-news__cta:hover{transform:translateY(-1px);box-shadow:0 12px 24px rgba(17,17,17,0.16);}
 #sb-journal-news .sb-journal-news__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
 #sb-journal-news .sb-journal-card{display:flex;flex-direction:column;min-height:100%;background:#fff;border:1px solid rgba(21,21,21,0.09);border-radius:28px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;}
@@ -4800,7 +5408,7 @@ function renderJournalNewsBlock() {
 #sb-journal-news .sb-journal-card p{margin:0 0 18px;color:#6f6f73;font-size:15px;line-height:1.62;}
 #sb-journal-news .sb-journal-card__cta{margin-top:auto;font-size:14px;font-weight:700;color:#111;}
 @media screen and (max-width:960px){#sb-journal-news .sb-journal-news__shell{padding:28px;}#sb-journal-news .sb-journal-news__top{flex-direction:column;align-items:flex-start;}#sb-journal-news .sb-journal-news__title{font-size:38px;}#sb-journal-news .sb-journal-news__grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
-@media screen and (max-width:640px){#sb-journal-news .sb-journal-news__shell{padding:20px 18px;border-radius:28px;}#sb-journal-news .sb-journal-news__title{font-size:32px;letter-spacing:-1.5px;}#sb-journal-news .sb-journal-news__descr{font-size:16px;}#sb-journal-news .sb-journal-news__grid{grid-template-columns:1fr;}#sb-journal-news .sb-journal-card h3{font-size:22px;}}
+@media screen and (max-width:640px){#sb-journal-news .sb-journal-news__shell{padding:18px 16px;border-radius:24px;}#sb-journal-news .sb-journal-news__top{gap:16px;margin-bottom:20px;}#sb-journal-news .sb-journal-news__top > *{max-width:100%;min-width:0;}#sb-journal-news .sb-journal-news__eyebrow{padding:7px 12px;font-size:12px;margin-bottom:12px;}#sb-journal-news .sb-journal-news__title{font-size:32px;letter-spacing:-1.3px;}#sb-journal-news .sb-journal-news__descr{font-size:15px;line-height:1.55;}#sb-journal-news .sb-journal-news__cta{display:flex;align-self:stretch;width:100%;max-width:100%;padding:14px 18px;font-size:15px;}#sb-journal-news .sb-journal-news__grid{grid-template-columns:1fr;gap:14px;}#sb-journal-news .sb-journal-news__grid .sb-journal-card:nth-child(n+4){display:none !important;}#sb-journal-news .sb-journal-card{border-radius:22px;}#sb-journal-news .sb-journal-card img{aspect-ratio:1.72;}#sb-journal-news .sb-journal-card__body{padding:16px 16px 17px;}#sb-journal-news .sb-journal-card__meta{gap:8px;margin-bottom:10px;}#sb-journal-news .sb-journal-chip{padding:6px 10px;font-size:11px;}#sb-journal-news .sb-journal-card__tour{font-size:11px;}#sb-journal-news .sb-journal-card h3{font-size:20px;line-height:1.16;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}#sb-journal-news .sb-journal-card p{margin-bottom:14px;font-size:14px;line-height:1.52;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}#sb-journal-news .sb-journal-card__cta{font-size:13px;}}
 </style><div class="sb-journal-news__shell"><div class="sb-journal-news__top"><div><div class="sb-journal-news__eyebrow">SB Excursions Journal</div><h2 class="sb-journal-news__title">Bali stories, guides and tour tips</h2><p class="sb-journal-news__descr">Explore our private Bali journal with evergreen destination guides, route ideas, practical timing tips and booking articles. Alongside the tour-support pages, the journal now includes SEO guides on beaches, neighborhoods, nightlife, food and Bali trip planning.</p></div><a class="sb-journal-news__cta" href="${JOURNAL_HUB_ROUTE}">Explore all ${totalArticles} articles</a></div><div class="sb-journal-news__grid">${spotlightArticles.map((article) => renderJournalArticleCard(article)).join("")}</div></div></div></div></div></div>`;
 }
 
@@ -5564,9 +6172,11 @@ function renderBaliWeatherBlock(primaryRoute = WEATHER_MAIN_PAGE_ROUTE) {
           }
 
           .sb-bali-weather-shell {
-            max-width: 860px;
-            margin: 0 auto;
-            padding: 0 14px;
+            width: 100vw;
+            max-width: none;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            padding: 0 20px;
           }
 
           .sb-bali-weather-shell #bwCta {
@@ -5838,6 +6448,14 @@ function renderBaliWeatherBlock(primaryRoute = WEATHER_MAIN_PAGE_ROUTE) {
             background:
               radial-gradient(circle at 18% 18%, rgba(118, 195, 255, 0.16) 0, rgba(118, 195, 255, 0) 36%),
               linear-gradient(135deg, #111827 0%, #1f3b7a 52%, #144b63 100%);
+          }
+
+          @media (max-width: 959px) {
+            .sb-bali-weather-shell {
+              max-width: 860px;
+              margin: 0 auto;
+              padding: 0 14px;
+            }
           }
 
           @media (max-width: 639px) {
@@ -7003,7 +7621,7 @@ function patchBaliMainFile(filePath) {
     ],
     [
       "https://static.tildacdn.one/tild3334-6466-4436-b766-376338363935/SB_Excursions_Dubai_.png",
-      "images/tild6536-3637-4563-a362-633234333130__favikon_sb_excursion.png",
+      "/images/tild3334-6466-4436-b766-376338363935__sb_excursions_dubai_.png",
     ],
     ["/dubai/en#tours", "/bali/en/main-page#tours"],
     [">Dubai, UAE<", ">Bali, Indonesia<"],
@@ -7117,6 +7735,8 @@ function patchBaliMainFile(filePath) {
   html = html
     .replaceAll('src="images/tild3334-6466-4436-b766-376338363935__sb_excursions_dubai_.png"', 'src="/images/tild3334-6466-4436-b766-376338363935__sb_excursions_dubai_.png"')
     .replaceAll('src="images/tild3762-3034-4130-b063-643934306634__sb_dubai_logo_2025.png"', 'src="/images/tild3762-3034-4130-b063-643934306634__sb_dubai_logo_2025.png"')
+    .replaceAll('src="images/tild6536-3637-4563-a362-633234333130__favikon_sb_excursion.png"', 'src="/images/tild3334-6466-4436-b766-376338363935__sb_excursions_dubai_.png"')
+    .replaceAll('src="/images/tild6536-3637-4563-a362-633234333130__favikon_sb_excursion.png"', 'src="/images/tild3334-6466-4436-b766-376338363935__sb_excursions_dubai_.png"')
     .replaceAll('<a href="/" class="t228__imgwrapper">', '<a href="/bali/en/main-page" class="t228__imgwrapper">')
     .replaceAll('<a class="t451__logo" href="/">', '<a class="t451__logo" href="/bali/en/main-page">')
     .replace(
@@ -7141,9 +7761,9 @@ function patchBaliMainFile(filePath) {
     );
 
   const plannerImageBlockStart = html.indexOf("var PLACE_IMAGE = {");
-  const plannerImageBlockEnd = html.indexOf("var FREE_DAY_PLACES = {", plannerImageBlockStart);
+  const plannerImageBlockEnd = html.indexOf("function getTargetMainExcursions", plannerImageBlockStart);
   if (plannerImageBlockStart !== -1 && plannerImageBlockEnd !== -1) {
-    html = `${html.slice(0, plannerImageBlockStart)}${renderPlannerPlaceImageBlock()}\n${html.slice(plannerImageBlockEnd)}`;
+    html = `${html.slice(0, plannerImageBlockStart)}${renderPlannerPlaceImageBlock()}\n${renderPlannerFreeDayBlock()}\n${html.slice(plannerImageBlockEnd)}`;
   }
 
   const newsStart = html.indexOf('<div id="rec2054910081"');
@@ -7164,17 +7784,23 @@ function patchCompactWeatherWidget(filePath) {
 
   let html = fs.readFileSync(filePath, "utf8");
 
-  if (!html.includes('id="baliWeatherCard"') || html.includes('id="sb-weather-compact-override"')) {
+  if (!html.includes('id="baliWeatherCard"')) {
     return;
   }
 
-  const insertBefore = '<div id="rec2147449333"';
-  const insertIndex = html.indexOf(insertBefore);
-  if (insertIndex === -1) {
-    return;
+  const existingStylePattern = /<style id="sb-weather-compact-override">[\s\S]*?<\/style>\s*/;
+  if (existingStylePattern.test(html)) {
+    html = html.replace(existingStylePattern, WEATHER_COMPACT_OVERRIDE_STYLE);
+  } else {
+    const insertBefore = '<div id="rec2147449333"';
+    const insertIndex = html.indexOf(insertBefore);
+    if (insertIndex === -1) {
+      return;
+    }
+
+    html = `${html.slice(0, insertIndex)}${WEATHER_COMPACT_OVERRIDE_STYLE}${html.slice(insertIndex)}`;
   }
 
-  html = `${html.slice(0, insertIndex)}${WEATHER_COMPACT_OVERRIDE_STYLE}${html.slice(insertIndex)}`;
   fs.writeFileSync(filePath, html);
 }
 

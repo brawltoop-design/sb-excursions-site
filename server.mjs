@@ -34,6 +34,7 @@ const redirects = new Map([
 const rewrites = new Map([
   ["/", "index.html"],
   ["/dubai/en", "page63806411.html"],
+  ["/dubai/en/blog", "page63806411.html"],
   ["/dubai/en/tours/full-day-dubai-desert-safari", "page106026336.html"],
   ["/dubai/en/tours/abu-dhabi-city-tour-from-dubai", "page112638996.html"],
   ["/dubai/en/tours/hot-air-balloon-sunrise-flight", "page114154666.html"],
@@ -147,6 +148,54 @@ const tildaLabelCleanupScript = `
 })();
 </script>`;
 
+const sameOriginLinkRewriteScript = `
+<script data-sb-local-link-rewrite>
+(() => {
+  const sbDomainPattern = /^https?:\\/\\/(?:www\\.)?sbexcursion\\.com(?=\\/|$)/i;
+
+  const rewriteAnchor = (anchor) => {
+    if (!anchor || typeof anchor.getAttribute !== "function") return;
+    const href = anchor.getAttribute("href");
+    if (!href || !sbDomainPattern.test(href)) return;
+
+    try {
+      const url = new URL(href);
+      anchor.setAttribute("href", \`\${url.pathname}\${url.search}\${url.hash}\`);
+    } catch {}
+  };
+
+  const rewriteTree = (root) => {
+    if (!root || typeof root.querySelectorAll !== "function") return;
+    root.querySelectorAll("a[href]").forEach(rewriteAnchor);
+  };
+
+  const start = () => {
+    rewriteTree(document);
+
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (!node || node.nodeType !== Node.ELEMENT_NODE) return;
+          if (typeof node.matches === "function" && node.matches("a[href]")) {
+            rewriteAnchor(node);
+          }
+          rewriteTree(node);
+        });
+      });
+    });
+
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    window.addEventListener("load", () => rewriteTree(document), { once: true });
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start, { once: true });
+  } else {
+    start();
+  }
+})();
+</script>`;
+
 function replaceDubaiCatalogBlock(html, filePath) {
   if (path.basename(filePath) !== "page63806411.html") {
     return html;
@@ -198,6 +247,14 @@ function injectHtmlEnhancements(html, filePath) {
       updatedHtml = updatedHtml.replace("</body>", `${tildaLabelCleanupScript}</body>`);
     } else {
       updatedHtml = `${updatedHtml}${tildaLabelCleanupScript}`;
+    }
+  }
+
+  if (!updatedHtml.includes("data-sb-local-link-rewrite")) {
+    if (updatedHtml.includes("</body>")) {
+      updatedHtml = updatedHtml.replace("</body>", `${sameOriginLinkRewriteScript}</body>`);
+    } else {
+      updatedHtml = `${updatedHtml}${sameOriginLinkRewriteScript}`;
     }
   }
 
@@ -283,6 +340,19 @@ async function resolveFile(urlPathname) {
         const fileStat = await stat(generatedJournalFile);
         if (fileStat.isFile()) {
           return generatedJournalFile;
+        }
+      } catch {}
+    }
+  }
+
+  if (normalized.startsWith("/dubai/en/blog/")) {
+    const slug = normalized.slice("/dubai/en/blog/".length);
+    if (slug) {
+      const generatedDubaiBlogFile = path.join(__dirname, `dubai-blog-${slug}.html`);
+      try {
+        const fileStat = await stat(generatedDubaiBlogFile);
+        if (fileStat.isFile()) {
+          return generatedDubaiBlogFile;
         }
       } catch {}
     }

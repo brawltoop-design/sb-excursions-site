@@ -39,6 +39,14 @@
       "destination": "/page63806411.html"
     },
     {
+      "source": "/dubai/en/blog",
+      "destination": "/page63806411.html"
+    },
+    {
+      "source": "/dubai/en/blog/:slug",
+      "destination": "/dubai-blog-:slug.html"
+    },
+    {
       "source": "/dubai/en/tours/full-day-dubai-desert-safari",
       "destination": "/page106026336.html"
     },

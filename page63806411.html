@@ -423,14 +423,338 @@ zen+='</a>';zen+='</div>';socialWrapper.insertAdjacentHTML('beforeend',zen);}
 else if(item.indexOf('rutube.ru')!==-1) {var rutube='<div class="' + groupName + '-social-links__item">';rutube+='<a href="' + item + '" target="_blank">';if(isRoundIcon) {rutube+='<svg class="' + groupName + '-social-links__svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48" fill="none"><path d="M24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0ZM27.1963 17.335H15V32H18.4648V27.2285H24.8516L27.8818 32H31.7617L28.4209 27.2061C29.6525 27.0125 30.206 26.6128 30.6621 25.9531C31.1183 25.2934 31.3467 24.2379 31.3467 22.8301V21.7305C31.3467 20.8958 31.2635 20.2361 31.1182 19.7305C30.9728 19.2248 30.724 18.7847 30.3711 18.3896C29.9983 18.0157 29.5833 17.7517 29.085 17.5752C28.5866 17.4211 27.9632 17.333 27.1963 17.333V17.335ZM26.6357 20.5674C27.1126 20.5674 27.4446 20.6558 27.6113 20.8096C27.7778 20.9636 27.8818 21.2497 27.8818 21.667V22.8984C27.8818 23.3383 27.7779 23.6242 27.6113 23.7783C27.4447 23.9323 27.1128 23.998 26.6357 23.998V23.9971H18.4648V20.5674H26.6357ZM34.3809 12.0957C32.9346 12.0958 31.7619 13.2676 31.7617 14.7139C31.7617 16.1603 32.9345 17.333 34.3809 17.333C35.8273 17.333 37 16.1603 37 14.7139C36.9998 13.2676 35.8272 12.0957 34.3809 12.0957Z" fill="' + fill + '"/></svg>';} else {rutube+='<svg class="' + groupName + '-social-links__svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48" fill="none"><path d="M25.1566 23.6382H10.3004V17.4032H25.1566C26.0244 17.4032 26.6278 17.5636 26.9306 17.8437C27.2334 18.1239 27.421 18.6435 27.421 19.4025V21.6413C27.421 22.441 27.2334 22.9606 26.9306 23.2408C26.6278 23.5209 26.0244 23.6406 25.1566 23.6406V23.6382ZM26.1758 11.5249H4V38.1891H10.3004V29.5141H21.9115L27.421 38.1891H34.4762L28.4018 29.4735C30.6413 29.1215 31.6469 28.3936 32.4762 27.1939C33.3056 25.9944 33.7214 24.0764 33.7214 21.5168V19.5174C33.7214 17.9994 33.57 16.7998 33.3056 15.8803C33.0412 14.9608 32.5892 14.1611 31.9474 13.4428C31.2695 12.7628 30.5147 12.2839 29.6085 11.963C28.7023 11.6829 27.5701 11.5225 26.1758 11.5225V11.5249Z" fill="' + fill + '"/><path d="M39.2381 11.5238C41.8681 11.5238 44 9.39182 44 6.76191C44 4.13198 41.8681 2 39.2381 2C36.6082 2 34.4762 4.13198 34.4762 6.76191C34.4762 9.39182 36.6082 11.5238 39.2381 11.5238Z" fill="' + fill + '"/></svg>';}
 rutube+='</a>';rutube+='</div>';socialWrapper.insertAdjacentHTML('beforeend',rutube);}
 else if(item.indexOf('http://')!==-1||item.indexOf('https://')!==-1) {var website='<div class="' + groupName + '-social-links__item">';website+='<a href="' + item + '" target="_blank">';if(isRoundIcon) {website+='<svg role="presentation" class="' + groupName + '-social-links__svg" width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm23.567-58.55v.125a24.723 24.723 0 0 1 0 16.85v.125a25.074 25.074 0 0 1-47.087 0v-.125a24.723 24.723 0 0 1 0-16.85v-.125a25.073 25.073 0 0 1 47.087 0ZM35.23 44.985h-4.663a19.608 19.608 0 0 0 0 10.03h4.663a41.946 41.946 0 0 1 0-10.03Zm.903 15.044h-3.51a20.06 20.06 0 0 0 6.017 6.444 30.466 30.466 0 0 1-2.507-6.444Zm-3.51-20.058h3.51a30.465 30.465 0 0 1 2.432-6.444 20.059 20.059 0 0 0-5.942 6.444Zm8.75 20.058a15.896 15.896 0 0 0 6.093 9.277V60.03h-6.093Zm-1.078-5.014h7.17v-10.03h-7.17a36.004 36.004 0 0 0 0 10.03Zm1.078-15.044h6.093v-9.277a15.896 15.896 0 0 0-6.093 9.277Zm22.44 0h3.51a20.06 20.06 0 0 0-6.017-6.444 30.466 30.466 0 0 1 2.508 6.444Zm-5.24 0a15.896 15.896 0 0 0-6.092-9.277v9.277h6.092Zm-6.092 20.058v9.277a15.896 15.896 0 0 0 6.092-9.277h-6.092Zm0-5.014h7.17a36.004 36.004 0 0 0 0-10.03h-7.17v10.03Zm11.408 5.014a30.466 30.466 0 0 1-2.508 6.444A20.06 20.06 0 0 0 67.4 60.03h-3.51Zm.827-5.014h4.664c.87-3.287.87-6.743 0-10.03h-4.664c.203 1.664.304 3.339.301 5.015a40.487 40.487 0 0 1-.3 5.015Z" fill="' + fill + '"/></svg>';} else {website+='<svg role="presentation" class="' + groupName + '-social-links__svg" width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M85.8219 37.1946C85.8219 37.1946 85.8219 37.1946 85.8219 37.0041C83.1366 29.6723 78.2642 23.3423 71.8637 18.8703C65.4632 14.3982 57.8436 12 50.0356 12C42.2275 12 34.6079 14.3982 28.2074 18.8703C21.8069 23.3423 16.9345 29.6723 14.2492 37.0041C14.2492 37.0041 14.2492 37.0041 14.2492 37.1946C11.2503 45.4682 11.2503 54.5318 14.2492 62.8053C14.2492 62.8053 14.2492 62.8054 14.2492 62.9959C16.9345 70.3277 21.8069 76.6577 28.2074 81.1297C34.6079 85.6018 42.2275 88 50.0356 88C57.8436 88 65.4632 85.6018 71.8637 81.1297C78.2642 76.6577 83.1366 70.3277 85.8219 62.9959C85.8219 62.9959 85.8219 62.9959 85.8219 62.8053C88.8208 54.5318 88.8208 45.4682 85.8219 37.1946V37.1946ZM20.4613 57.6222C19.1397 52.6267 19.1397 47.3733 20.4613 42.3778H27.55C26.9403 47.441 26.9403 52.559 27.55 57.6222H20.4613ZM23.5864 65.2445H28.922C29.8165 68.6434 31.0951 71.9294 32.7331 75.039C28.9955 72.4929 25.8711 69.1473 23.5864 65.2445ZM28.922 34.7555H23.5864C25.8383 30.8647 28.9227 27.52 32.6187 24.961C31.0202 28.0756 29.78 31.3614 28.922 34.7555V34.7555ZM46.1482 79.3456C41.4673 75.9106 38.1797 70.9049 36.8872 65.2445H46.1482V79.3456ZM46.1482 57.6222H35.2484C34.5372 52.5656 34.5372 47.4344 35.2484 42.3778H46.1482V57.6222ZM46.1482 34.7555H36.8872C38.1797 29.0951 41.4673 24.0894 46.1482 20.6544V34.7555ZM76.3323 34.7555H70.9967C70.1022 31.3566 68.8236 28.0706 67.1856 24.961C70.9232 27.507 74.0475 30.8527 76.3323 34.7555ZM53.7704 20.6544C58.4514 24.0894 61.7389 29.0951 63.0315 34.7555H53.7704V20.6544ZM53.7704 79.3456V65.2445H63.0315C61.7389 70.9049 58.4514 75.9106 53.7704 79.3456V79.3456ZM64.6702 57.6222H53.7704V42.3778H64.6702C65.3814 47.4344 65.3814 52.5656 64.6702 57.6222ZM67.2999 75.039C68.9379 71.9294 70.2165 68.6434 71.111 65.2445H76.4466C74.1618 69.1473 71.0375 72.4929 67.2999 75.039ZM79.4574 57.6222H72.3687C72.6787 55.0934 72.8314 52.5478 72.826 50C72.8302 47.4523 72.6775 44.9067 72.3687 42.3778H79.4574C80.779 47.3733 80.779 52.6267 79.4574 57.6222Z" fill="' + fill + '"/></svg>';}
-website+='</a>';website+='</div>';socialWrapper.insertAdjacentHTML('beforeend',website);}}</script> <script>t_onReady(function() {t_onFuncLoad('t_social_init',function() {t_social_init('1803735931','t-review');});});</script> <style>.t728 .t-review-social-links{margin-top:10px;}@media screen and (max-width:640px){.t728 .t-review-social-links{margin-top:10px;}.t728 .t-review-social-links__wrapper_round .t-review-social-links__item svg{width:17px;height:17px;}}</style> <style> #rec1803735931 .t728__wrapper{border-radius:23px;overflow:hidden;}</style> </div> <div id="rec1802539031" class="r t-rec t-rec_pt_135 t-rec_pb_135" style="padding-top:135px;padding-bottom:135px; " data-animationappear="off" data-record-type="897"> <!-- t897 --> <!-- @classes t-descr t-descr_xxs t-descr_sm t-title t-title_xxs t-text t-text_md t-heading t-heading_lg t-name t-uptitle t-uptitle_sm t-uptitle_xs t-name_md t-btn t-btn_xs t-btn_sm t-btn_md --> <div class="t897"> <div class="t-section__container t-container t-container_flex"> <div class="t-col t-col_12 "> <div
-class="js-block-header-title t-section__title t-title t-title_xs t-align_center t-margin_auto" data-editable="true"
-field="btitle">
-Our news
-</div> </div> </div> <style>.t-section__title,.t-section__descr {overflow-wrap:break-word;}.t-section__descr {max-width:560px;}#rec1802539031 .t-section__title {margin-bottom:90px;}#rec1802539031 .t-section__descr {}@media screen and (max-width:960px) {#rec1802539031 .t-section__title {margin-bottom:45px;}}</style> <!-- grid container start --> <div class="js-feed t-feed t-feed_col" data-feed-grid-type="col" data-feed-recid="1802539031"> <div class="t-feed__container t897__container"> <div class="js-feed-parts-select-container t-col t-col_12"></div> </div> <!-- preloader els --> <div class="js-feed-preloader t-feed__post-preloader_col t-feed__post-preloader__container_hidden t897__container t-feed__container_mobile-grid"> <div class="t-feed__post-preloader t-feed__grid-col t-col t-col_4"> <div class="t-feed__post-preloader__img"> </div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> </div> <div class="t-feed__post-preloader t-feed__grid-col t-col t-col_4"> <div class="t-feed__post-preloader__img"> </div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> </div> <div class="t-feed__post-preloader t-feed__grid-col t-col t-col_4"> <div class="t-feed__post-preloader__img"> </div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> </div> <div class="t-clear t-feed__grid-separator"></div> <div class="t-feed__post-preloader t-feed__grid-col t-col t-col_4"> <div class="t-feed__post-preloader__img"> </div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> </div> <div class="t-feed__post-preloader t-feed__grid-col t-col t-col_4"> <div class="t-feed__post-preloader__img"> </div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> </div> <div class="t-feed__post-preloader t-feed__grid-col t-col t-col_4"> <div class="t-feed__post-preloader__img"> </div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> <div class="t-feed__post-preloader__text"></div> </div> </div> <!-- preloader els end --> <ul role="list" class="js-feed-container t-feed__container t897__container t-feed__container_mobile-grid" data-feed-show-slice="1"></ul> </div> <!-- grid container end --> </div> <style>#rec1802539031 .t-feed__parts-switch-btn{border:1px solid #000000;border-radius:40px;}#rec1802539031 .t-feed__parts-switch-btn span,#rec1802539031 .t-feed__parts-switch-btn a{color:#000000;padding:6px 18px 6px;border-radius:40px;}#rec1802539031 .t-feed__parts-switch-btn.t-active{background-color:#000000;}#rec1802539031 .t-feed__parts-switch-btn.t-active span,#rec1802539031 .t-feed__parts-switch-btn.t-active a{color:#ffffff !important;}#rec1802539031 .t-feed__post-popup__cover-wrapper .t-slds__arrow{background-color:rgba(255,255,255,1);}#rec1802539031 .t-feed__post-popup__cover-wrapper .t-slds__bullet_active .t-slds__bullet_body,#rec1802539031 .t-feed__post-popup__cover-wrapper .t-slds__bullet:hover .t-slds__bullet_body{background-color:#222 !important;}</style> <style> #rec1802539031 .t-feed__parts-switch-btn{color:#000000;font-weight:400;}</style> <script>t_onReady(function() {var separator_optsObj={height:'',color:'',opacity:'',hideSeparator:false};var popup_optsObj={popupBgColor:'#ffffff',overlayBgColorRgba:'rgba(255,255,255,1)',closeText:'',iconColor:'#000000',popupStat:'',titleColor:'',textColor:'',subtitleColor:'',datePos:'aftertext',partsPos:'aftertext',imagePos:'aftertitle',inTwoColumns:false,zoom:false,styleRelevants:'',methodRelevants:'random',titleRelevants:'',showRelevants:'',shareStyle:'',shareBg:'',isShare:false,shareServices:'',shareFBToken:'',showDate:true,bgSize:'cover',titleFontFamily:'',descrFontFamily:'',subtitleFontFamily:''};var arrowtop_optsObj={isShow:false,style:'',color:'',bottom:'',left:'',right:''};var parts_optsObj={partsBgColor:'',partsBorderSize:'1px',partsBorderColor:'#000000',align:'center'};var gallery_optsObj={control:'',arrowSize:'',arrowBorderSize:'',arrowColor:'',arrowColorHover:'',arrowBg:'#ffffff',arrowBgHover:'',arrowBgOpacity:'',arrowBgOpacityHover:'',showBorder:'',dotsWidth:'',dotsBg:'',dotsActiveBg:'',dotsBorderSize:''};var colWithBg_optsObj={paddingSize:'',background:'',borderRadius:'',shadow:'',shadowSize:'',shadowOpacity:'',shadowHover:'',shadowSizeHover:'',shadowOpacityHover:'',shadowShiftyHover:''};var options={recid:'1802539031',feeduid:'426101175351',previewmode:'yes',align:'left',amountOfPosts:'',reverse:'desc',blocksInRow:'3',blocksClass:'t-feed__grid-col t-col t-col_4',blocksWidth:'360',colClass:'',prefixClass:'',vindent:'',dateFormat:'4',timeFormat:'',imageRatio:'75',hasOriginalAspectRatio:false,imageHeight:'',imageWidth:'',dateFilter:'all',showPartAll:true,showImage:true,showShortDescr:true,showParts:true,showDate:true,hideFeedParts:false,parts_opts:parts_optsObj,btnsAlign:false,colWithBg:colWithBg_optsObj,separator:separator_optsObj,btnAllPostsText:'',popup_opts:popup_optsObj,arrowtop_opts:arrowtop_optsObj,gallery:gallery_optsObj,amountOfSymbols:'',btnText:'',isHorizOnMob:false,itemsAnim:'',datePosPs:'beforetitle',partsPosPs:'beforetitle',imagePosPs:'beforetitle',datePos:'afterdescr',partsPos:'onimage',imagePos:'beforetitle'};t_onFuncLoad('t_feed_init',function() {t_feed_init('1802539031',options);});});</script> <script>t_onReady(function() {var rec=document.getElementById('rec1802539031');if(!rec) return;var allRecords=document.getElementById('allrecords');if(!allRecords.getAttribute('data-tilda-mode')&&(window.lazy==='y'||allRecords.getAttribute('data-tilda-lazy')==='yes')) {t_onFuncLoad('t_lazyload_update',function() {var container=rec.querySelector('.js-feed-container.t897__container_mobile-flex');if(!container) return
-container.addEventListener('scroll',t_throttle(function() {t_lazyload_update();}));});}});</script> </div> <div id="rec1819861141" class="r t-rec" style=" " data-record-type="270"> <div class="t270"></div> <script>t_onReady(function() {var hash=window.location.hash;t_onFuncLoad('t270_scroll',function() {t270_scroll(hash,-3);});setTimeout(function() {var curPath=window.location.pathname;var curFullPath=window.location.origin + curPath;var recs=document.querySelectorAll('.r');Array.prototype.forEach.call(recs,function(rec) {var selects='a[href^="#"]:not([href="#"]):not(.carousel-control):not(.t-carousel__control):not([href^="#price"]):not([href^="#submenu"]):not([href^="#popup"]):not([href*="#zeropopup"]):not([href*="#closepopup"]):not([href*="#closeallpopup"]):not([href^="#prodpopup"]):not([href^="#order"]):not([href^="#!"]):not([target="_blank"]),' +
-'a[href^="' + curPath + '#"]:not([href*="#!/tfeeds/"]):not([href*="#!/tproduct/"]):not([href*="#!/tab/"]):not([href*="#popup"]):not([href*="#zeropopup"]):not([href*="#closepopup"]):not([href*="#closeallpopup"]):not([target="_blank"]),' +
-'a[href^="' + curFullPath + '#"]:not([href*="#!/tfeeds/"]):not([href*="#!/tproduct/"]):not([href*="#!/tab/"]):not([href*="#popup"]):not([href*="#zeropopup"]):not([href*="#closepopup"]):not([href*="#closeallpopup"]):not([target="_blank"])';var elements=rec.querySelectorAll(selects);Array.prototype.forEach.call(elements,function(element) {element.addEventListener('click',function(event) {event.preventDefault();var hash=this.hash.trim();t_onFuncLoad('t270_scroll',function() {t270_scroll(hash,-3);});});});});if(document.querySelectorAll('.js-store').length>0||document.querySelectorAll('.js-feed').length>0) {t_onFuncLoad('t270_scroll',function() {t270_scroll(hash,-3,1);});}},500);setTimeout(function() {var hash=window.location.hash;if(hash&&document.querySelectorAll('a[name="' + hash.slice(1) + '"], div[id="' + hash.slice(1) + '"]').length>0) {if(window.isMobile) {t_onFuncLoad('t270_scroll',function() {t270_scroll(hash,0);});} else {t_onFuncLoad('t270_scroll',function() {t270_scroll(hash,0);});}}},1000);window.addEventListener('popstate',function() {var hash=window.location.hash;if(hash&&document.querySelectorAll('a[name="' + hash.slice(1) + '"], div[id="' + hash.slice(1) + '"]').length>0) {if(window.isMobile) {t_onFuncLoad('t270_scroll',function() {t270_scroll(hash,0);});} else {t_onFuncLoad('t270_scroll',function() {t270_scroll(hash,0);});}}});});</script> </div> <div id="rec1597436911" class="r t-rec" style=" " data-animationappear="off" data-record-type="1084"> <!-- t1084 --> <style>::-webkit-scrollbar {width:8px;height:8px;background-color:#ffffff;}::-webkit-scrollbar-track {background-color:#ffffff;}::-webkit-scrollbar-thumb {background-color:#ff8562;border-radius:32px;border:0px solid #ffffff;background-clip:padding-box;}::-webkit-scrollbar-thumb:hover {background-color:#ff8562;}@supports (-moz-appearance:none) {:root,body,.allrecords * {scrollbar-width:thin;scrollbar-color:#ff8562 #ffffff;}}:root,body,.allrecords * {-ms-scrollbar-track-color:#ffffff;-ms-scrollbar-highlight-color:#ffffff;-ms-scrollbar-shadow-color:#ffffff;-ms-scrollbar-3dlight-color:#ffffff;-ms-scrollbar-darkshadow-color:#ffffff;-ms-scrollbar-face-color:#ff8562;}</style> </div> <!--footer--> <footer id="t-footer" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="19714586" data-tilda-page-id="106032906" data-tilda-page-alias="dubai/en/footer" data-tilda-formskey="6887c6b42d1ba9a2fb5eabf119714586" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-project-lang="EN" data-tilda-root-zone="one" data-tilda-project-headcode="yes" data-tilda-ts="y" data-tilda-project-country="ID"> <div id="rec2229189173" class="r t-rec" style=" " data-animationappear="off" data-record-type="131"> <!-- T123 --> <div class="t123"> <div class="t-container_100 "> <div class="t-width t-width_100 "> <!-- nominify begin --> <section class="sb-office-minimal"> <div class="sb-office-minimal__container"> <div class="sb-office-minimal__info"> <div class="sb-office-minimal__label">SB Excursions</div> <h2>Our office in Dubai</h2> <p class="sb-office-minimal__text">
+website+='</a>';website+='</div>';socialWrapper.insertAdjacentHTML('beforeend',website);}}</script> <script>t_onReady(function() {t_onFuncLoad('t_social_init',function() {t_social_init('1803735931','t-review');});});</script> <style>.t728 .t-review-social-links{margin-top:10px;}@media screen and (max-width:640px){.t728 .t-review-social-links{margin-top:10px;}.t728 .t-review-social-links__wrapper_round .t-review-social-links__item svg{width:17px;height:17px;}}</style> <style> #rec1803735931 .t728__wrapper{border-radius:23px;overflow:hidden;}</style> </div> <div id="rec1802539031" class="r t-rec t-rec_pt_135 t-rec_pb_135" style="padding-top:135px;padding-bottom:135px;" data-animationappear="off" data-record-type="131"><div class="t123"><div class="t-container"><div class="t-col t-col_12"><div id="sb-dubai-news"><style>
+#sb-dubai-news{font-family:"TildaSans","Tilda Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#111;}
+#sb-dubai-news .sb-dubai-news__shell{display:grid;gap:30px;}
+#sb-dubai-news .sb-dubai-news__head{text-align:center;}
+#sb-dubai-news .sb-dubai-news__head h2{margin:0;font-size:64px;line-height:1.02;font-weight:700;letter-spacing:-2.4px;}
+#sb-dubai-news .sb-dubai-news__filters{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;}
+#sb-dubai-news .sb-dubai-news__filter{appearance:none;border:1px solid #111;background:#fff;color:#111;min-height:52px;padding:0 24px;border-radius:999px;font-size:16px;font-weight:500;letter-spacing:-0.3px;cursor:pointer;transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease;}
+#sb-dubai-news .sb-dubai-news__filter:hover{transform:translateY(-1px);}
+#sb-dubai-news .sb-dubai-news__filter.is-active{background:#111;color:#fff;border-color:#111;}
+#sb-dubai-news .sb-dubai-news__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;}
+#sb-dubai-news .sb-dubai-news__card{display:flex;flex-direction:column;min-height:100%;color:inherit;text-decoration:none;}
+#sb-dubai-news .sb-dubai-news__media{position:relative;overflow:hidden;border-radius:0;background:#f4f4f4;}
+#sb-dubai-news .sb-dubai-news__media img{display:block;width:100%;aspect-ratio:1.18;object-fit:cover;transition:transform .25s ease;}
+#sb-dubai-news .sb-dubai-news__card:hover .sb-dubai-news__media img{transform:scale(1.02);}
+#sb-dubai-news .sb-dubai-news__tag{position:absolute;left:22px;top:22px;display:inline-flex;align-items:center;min-height:38px;padding:0 14px;border-radius:8px;background:rgba(55,62,71,0.86);color:#fff;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;}
+#sb-dubai-news .sb-dubai-news__body{display:flex;flex:1;flex-direction:column;padding-top:20px;}
+#sb-dubai-news .sb-dubai-news__body h3{margin:0 0 12px;font-size:24px;line-height:1.18;font-weight:700;letter-spacing:-1px;}
+#sb-dubai-news .sb-dubai-news__body p{margin:0 0 18px;color:#444;font-size:15px;line-height:1.7;}
+#sb-dubai-news .sb-dubai-news__meta{margin-top:auto;display:flex;justify-content:space-between;gap:14px;align-items:center;color:#6b6b70;font-size:13px;font-weight:600;letter-spacing:0.02em;text-transform:uppercase;}
+#sb-dubai-news .sb-dubai-news__card[hidden]{display:none !important;}
+@media screen and (max-width:1100px){#sb-dubai-news .sb-dubai-news__head h2{font-size:54px;}#sb-dubai-news .sb-dubai-news__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;}}
+@media screen and (max-width:640px){#sb-dubai-news .sb-dubai-news__shell{gap:24px;}#sb-dubai-news .sb-dubai-news__head h2{font-size:40px;letter-spacing:-1.6px;}#sb-dubai-news .sb-dubai-news__filters{justify-content:flex-start;gap:10px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;}#sb-dubai-news .sb-dubai-news__filters::-webkit-scrollbar{display:none;}#sb-dubai-news .sb-dubai-news__filter{min-height:44px;padding:0 18px;font-size:14px;white-space:nowrap;}#sb-dubai-news .sb-dubai-news__grid{grid-template-columns:1fr;gap:18px;}#sb-dubai-news .sb-dubai-news__media img{aspect-ratio:1.34;}#sb-dubai-news .sb-dubai-news__tag{left:14px;top:14px;min-height:34px;padding:0 12px;font-size:11px;}#sb-dubai-news .sb-dubai-news__body{padding-top:14px;}#sb-dubai-news .sb-dubai-news__body h3{font-size:22px;line-height:1.2;}#sb-dubai-news .sb-dubai-news__body p{font-size:14px;line-height:1.58;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}#sb-dubai-news .sb-dubai-news__meta{font-size:12px;}}
+</style><div class="sb-dubai-news__shell"><div class="sb-dubai-news__head"><h2>Our news</h2></div><div class="sb-dubai-news__filters"><button class="sb-dubai-news__filter is-active" type="button" data-filter="All">All</button><button class="sb-dubai-news__filter" type="button" data-filter="Abu Dhabi">Abu Dhabi</button><button class="sb-dubai-news__filter" type="button" data-filter="Dubai Must-have">Dubai Must-have</button><button class="sb-dubai-news__filter" type="button" data-filter="Desert Safari tour Dubai">Desert Safari tour Dubai</button><button class="sb-dubai-news__filter" type="button" data-filter="Hot air balloon">Hot air balloon</button><button class="sb-dubai-news__filter" type="button" data-filter="Yachts Dubai">Yachts Dubai</button></div><div class="sb-dubai-news__grid">
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/abu-dhabi-how-to-get-to-sheikh-zayed" data-category="Abu Dhabi">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild3638-6232-4264-a639-656661646632/image.png" alt="🕌How to Get to Sheikh Zayed Grand Mosque: Bus, Taxi or All-in-One Tour?" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Abu Dhabi</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>🕌How to Get to Sheikh Zayed Grand Mosque: Bus, Taxi or All-in-One Tour?</h3>
+        <p>Planning to visit the Abu Dhabi Grand Mosque? ⚠️ Avoid huge fines! Updated 2026 dress code, entry rules, and the TRUTH about Bus vs Taxi vs our $45 Tour.</p>
+        <div class="sb-dubai-news__meta">
+          <span>19.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/affordable-valentines-day-dubai-smart-saver-guide" data-category="Dubai Must-have">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild3630-6331-4663-b038-363434323639/4ac48a6aa295849e.webp" alt="💘 3 Romantic Ways to Impress Her in Dubai for Under $100" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Dubai Must-have</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>💘 3 Romantic Ways to Impress Her in Dubai for Under $100</h3>
+        <p>Don&#39;t break the bank! Best affordable romantic activities in Dubai: Yacht tours for $45 and Desert Safaris for $80. Smart romance with SB Excursions.</p>
+        <div class="sb-dubai-news__meta">
+          <span>12.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/best-valentines-day-deals-dubai-2026" data-category="Dubai Must-have">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild3861-3732-4432-a137-633264326362/i.webp" alt="💘 Valentine&#39;s Day Dubai 2026: Top 4 Romantic Adventures to Impress Her" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Dubai Must-have</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>💘 Valentine&#39;s Day Dubai 2026: Top 4 Romantic Adventures to Impress Her</h3>
+        <p>Don&#39;t just buy flowers! Discover the best romantic deals in Dubai for Feb 14th: Hot Air Balloons, Private Yachts, Desert Safaris, and Helicopter tours.</p>
+        <div class="sb-dubai-news__meta">
+          <span>12.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/full-day-dubai-desert-safari-guide-2026" data-category="Desert Safari tour Dubai">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild6165-6236-4163-a463-653334356137/large-vecteezy_picku.webp" alt="🌵Don’t Book a Desert Safari Until You See This Price Comparison! ($45 vs $80 vs $240)" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Desert Safari tour Dubai</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>🌵Don’t Book a Desert Safari Until You See This Price Comparison! ($45 vs $80 vs $240)</h3>
+        <p>Experience the ultimate 7-hour Dubai Desert Safari. Choose from the $45 classic tour, the $80 Quad Bike bestseller, or the $240 Buggy beast.</p>
+        <div class="sb-dubai-news__meta">
+          <span>11.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/alcohol-laws-dubai-tourist-guide-2026" data-category="Dubai Must-have">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild3630-3339-4935-b133-363764366364/alcohol_in_dubai_whe.jpg" alt="Will You Get Arrested for Drinking in Dubai? 🍺 New 2026 Laws!" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Dubai Must-have</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>Will You Get Arrested for Drinking in Dubai? 🍺 New 2026 Laws!</h3>
+        <p>Can you drink on the beach? Do you need a license? We reveal the TRUTH about Dubai’s new alcohol rules so you stay safe and save money.</p>
+        <div class="sb-dubai-news__meta">
+          <span>11.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/best-sim-cards-dubai-airport-dxb-guide-2026" data-category="Dubai Must-have">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild3738-6135-4564-a331-383930303238/images.jpeg" alt="🛑 STOP! Don’t Buy a SIM Card at Dubai Airport Until You Read This!" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Dubai Must-have</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>🛑 STOP! Don’t Buy a SIM Card at Dubai Airport Until You Read This!</h3>
+        <p>Want to save $50 on data? Check out the secret way to get a free SIM at DXB and compare Etisalat vs Du prices. Don&#39;t get ripped off!</p>
+        <div class="sb-dubai-news__meta">
+          <span>11.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/most-romantic-sunrise-hot-air-balloon-dubai" data-category="Hot air balloon">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild6335-6161-4430-a636-343039643064/b3436daa7e268bab9c71.webp" alt="🎈 Dubai’s #1 Most Romantic Experience: Sunrise Hot Air Balloon 2026" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Hot air balloon</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>🎈 Dubai’s #1 Most Romantic Experience: Sunrise Hot Air Balloon 2026</h3>
+        <p>Experience Dubai from 4,000 feet at sunrise for $245. Best views, desert wildlife, and the flight of a lifetime.</p>
+        <div class="sb-dubai-news__meta">
+          <span>11.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/how-to-get-to-baps-hindu-mandir-abu-dhabi-from-dubai" data-category="Abu Dhabi">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild6437-6261-4138-a336-663532333036/Baps20hindu20mandir2.webp" alt="🛕How to Get to BAPS Hindu Mandir: Bus, Taxi or All-in-One Tour?" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Abu Dhabi</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>🛕How to Get to BAPS Hindu Mandir: Bus, Taxi or All-in-One Tour?</h3>
+        <p>Planning a trip from Dubai to BAPS Hindu Mandir? Compare bus, taxi ($80+), and our full-day Abu Dhabi tour ($45). We visit the Mosque, Palace, and more!</p>
+        <div class="sb-dubai-news__meta">
+          <span>07.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/best-shared-yacht-tours-dubai-marina-2026" data-category="Yachts Dubai">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild3262-3232-4162-a338-333363303865/1.webp" alt="Best Shared Yacht Tours in Dubai Marina: Luxury for Less (2026)" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Yachts Dubai</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>Best Shared Yacht Tours in Dubai Marina: Luxury for Less (2026)</h3>
+        <p>Experience a luxury yacht in Dubai without renting the whole boat. Guide to shared yacht tours and the famous Dubai Marina Yacht Party (21+).</p>
+        <div class="sb-dubai-news__meta">
+          <span>07.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/private-yacht-rental-dubai-marina-guide" data-category="Yachts Dubai">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild6635-3466-4161-b136-393137613939/460c0ba639ce4f661f5a.webp" alt="Private Yacht Rental Dubai Marina: The Ultimate Luxury Guide 2026" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Yachts Dubai</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>Private Yacht Rental Dubai Marina: The Ultimate Luxury Guide 2026</h3>
+        <p>Rent a private yacht in Dubai for parties, birthdays, or romantic sunsets. Prices, routes, and what&#39;s included. Book with best price guarante</p>
+        <div class="sb-dubai-news__meta">
+          <span>07.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/o5t2le1jc1-quad-bike-or-buggy-in-dubai-2026-dont-wa" data-category="Desert Safari tour Dubai">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild3536-3236-4263-b733-343866653335/large-vecteezy_girls.webp" alt="🇦🇪Quad Bike or Buggy in Dubai? (2026): Don&#39;t Waste Your Money Before Reading This!" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Desert Safari tour Dubai</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>🇦🇪Quad Bike or Buggy in Dubai? (2026): Don&#39;t Waste Your Money Before Reading This!</h3>
+        <p>hinking about desert racing? 🏎️ We compared Quad Bikes and Buggies by price, safety, and adrenaline level. Discover which one is perfect for you and how to get a 10% discount!</p>
+        <div class="sb-dubai-news__meta">
+          <span>07.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/0r2a4fxi91-hot-air-balloon-dubai-is-it-worth-275-ev" data-category="Hot air balloon">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild3536-6638-4464-b564-306231616432/14d0cf32159fb37e05cd.webp" alt="Hot Air Balloon Dubai: Is It Worth $275? Everything You Need to Know" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Hot air balloon</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>Hot Air Balloon Dubai: Is It Worth $275? Everything You Need to Know</h3>
+        <p>Experience the magic of a Dubai desert sunrise from 4,000 feet. Prices, itinerary, and what&#39;s included in the $275 premium Hot Air Balloon tour.</p>
+        <div class="sb-dubai-news__meta">
+          <span>07.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/best-dubai-marina-yacht-party-guide-21-plus" data-category="Yachts Dubai">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild6637-6364-4233-b135-323962623163/d09522206386b783c57d.webp" alt="Dubai Marina Yacht Party: How to Party Like a Billionaire for $99 (2026 Secret)" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Yachts Dubai</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>Dubai Marina Yacht Party: How to Party Like a Billionaire for $99 (2026 Secret)</h3>
+        <p>Looking for the best yacht party in Dubai Marina? Music, drinks, sunset views, and the coolest crowd. Everything you need to know about the 21+ shared yacht experience.</p>
+        <div class="sb-dubai-news__meta">
+          <span>05.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/best-90-minute-marina-adrenaline-boat-tour-dubai" data-category="Yachts Dubai">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild6562-3261-4034-b238-633234666263/image.png" alt="Why Our 90-Minute Marina sightseeing Adrenaline Tour is the #1 Boat Trip in Dubai" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Yachts Dubai</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>Why Our 90-Minute Marina sightseeing Adrenaline Tour is the #1 Boat Trip in Dubai</h3>
+        <p>Discover why travelers rank our Marina speed boat tour as the best. 90 minutes of adrenaline, sightseeing, and the best views of Atlantis &amp;amp; Burj Al Arab.</p>
+        <div class="sb-dubai-news__meta">
+          <span>03.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/baps-hindu-mandir-abu-dhabi-guide-2026" data-category="Abu Dhabi">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild3630-3061-4566-b535-333934383731/1728218493_6702857d5.png" alt="🛕 BAPS Hindu Mandir Abu Dhabi: 🛑 READ THIS Before You Visit in 2026!" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Abu Dhabi</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>🛕 BAPS Hindu Mandir Abu Dhabi: 🛑 READ THIS Before You Visit in 2026!</h3>
+        <p>Planning to visit the Abu Dhabi Hindu Temple? ⚠️ Don&#39;t get rejected at the entrance! Check out the STRICT dress code, updated 2026 ticket prices, and the secret bus route from Dubai to save $100 on taxi.</p>
+        <div class="sb-dubai-news__meta">
+          <span>03.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/burj-khalifa-vs-sky-views-observatory-wh" data-category="Dubai Must-have">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild3232-3234-4931-b530-396536646365/image.png" alt="Burj Khalifa or Sky Views? Don’t Waste Your Money! Honest Comparison (2026)" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Dubai Must-have</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>Burj Khalifa or Sky Views? Don’t Waste Your Money! Honest Comparison (2026)</h3>
+        <p>Honest comparison of Dubai&#39;s best views. Height of Burj Khalifa vs. the Glass Slide at Sky Views. Prices, tips, and best photo spots for 2026.</p>
+        <div class="sb-dubai-news__meta">
+          <span>03.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/best-apps-dubai-2026" data-category="Dubai Must-have">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild3631-6666-4339-b438-343662393762/large-vecteezy_night.webp" alt="Top 5 MUST-HAVE Apps in Dubai (2026): Save Money &amp;amp; Time!" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Dubai Must-have</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>Top 5 MUST-HAVE Apps in Dubai (2026): Save Money &amp;amp; Time!</h3>
+        <p>Master Dubai with these 5 essential apps. Save money on taxis, find your way in malls, and book the best tours instantly.</p>
+        <div class="sb-dubai-news__meta">
+          <span>03.02.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/7l1bfurkj1-abu-dhabi-in-1-day-see-it-all-without-a" data-category="Abu Dhabi">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild3032-3435-4835-b038-613637316238/large-vecteezy_abu-d.webp" alt="Abu Dhabi in 1 Day: See it All Without a Guide &amp;amp; Save 30% (Direct Price 2026)" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Abu Dhabi</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>Abu Dhabi in 1 Day: See it All Without a Guide &amp;amp; Save 30% (Direct Price 2026)</h3>
+        <p>Explore the best of Abu Dhabi in one day. Visit the stunning Baps Hindu Mandir, Sheikh Zayed Grand Mosque, and Qasr Al Watan. Luxury 2026 tour by SB Excursions.</p>
+        <div class="sb-dubai-news__meta">
+          <span>28.01.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a>
+    <a class="sb-dubai-news__card" href="/dubai/en/blog/morning-vs-evening-safari" data-category="Desert Safari tour Dubai">
+      <div class="sb-dubai-news__media">
+        <img src="https://static.tildacdn.com/tild6436-3566-4034-a164-646363333736/Gemini_Generated_Ima.webp" alt="⛱️Morning vs. Evening Desert Safari Dubai (2026): The Only Guide You Need to Choose Right!" loading="lazy" decoding="async">
+        <span class="sb-dubai-news__tag">Desert Safari tour Dubai</span>
+      </div>
+      <div class="sb-dubai-news__body">
+        <h3>⛱️Morning vs. Evening Desert Safari Dubai (2026): The Only Guide You Need to Choose Right!</h3>
+        <p>Don&#39;t ruin your desert trip! 🏜️ We compared Morning and Evening safaris by heat, activities, and dinner shows. Find out which time is best for photos and why tourists choose the wrong one.</p>
+        <div class="sb-dubai-news__meta">
+          <span>19.01.2026</span>
+          <span>Read article</span>
+        </div>
+      </div>
+    </a></div></div><script>
+(() => {
+  const root = document.getElementById("sb-dubai-news");
+  if (!root) return;
+
+  const buttons = Array.from(root.querySelectorAll(".sb-dubai-news__filter"));
+  const cards = Array.from(root.querySelectorAll(".sb-dubai-news__card"));
+  const feedHashPrefix = "#!/tfeeds/426101175351/c/";
+
+  const applyFilter = (filter) => {
+    const activeFilter = filter && filter !== "All" ? filter : "All";
+
+    buttons.forEach((button) => {
+      button.classList.toggle("is-active", button.dataset.filter === activeFilter);
+    });
+
+    cards.forEach((card) => {
+      const shouldShow = activeFilter === "All" || card.dataset.category === activeFilter;
+      card.hidden = !shouldShow;
+    });
+  };
+
+  const readFilterFromHash = () => {
+    if (!window.location.hash.startsWith(feedHashPrefix)) return "All";
+    const rawCategory = window.location.hash.slice(feedHashPrefix.length);
+    return rawCategory ? decodeURIComponent(rawCategory) : "All";
+  };
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter || "All";
+      applyFilter(filter);
+      const nextHash = filter === "All" ? "" : feedHashPrefix + encodeURIComponent(filter);
+      history.replaceState(null, "", window.location.pathname + window.location.search + nextHash);
+    });
+  });
+
+  window.addEventListener("hashchange", () => {
+    applyFilter(readFilterFromHash());
+  });
+
+  applyFilter(readFilterFromHash());
+})();
+</script></div></div></div></div></div> <div id="rec1597436911" class="r t-rec" style=" " data-animationappear="off" data-record-type="1084"> <!-- t1084 --> <style>::-webkit-scrollbar {width:8px;height:8px;background-color:#ffffff;}::-webkit-scrollbar-track {background-color:#ffffff;}::-webkit-scrollbar-thumb {background-color:#ff8562;border-radius:32px;border:0px solid #ffffff;background-clip:padding-box;}::-webkit-scrollbar-thumb:hover {background-color:#ff8562;}@supports (-moz-appearance:none) {:root,body,.allrecords * {scrollbar-width:thin;scrollbar-color:#ff8562 #ffffff;}}:root,body,.allrecords * {-ms-scrollbar-track-color:#ffffff;-ms-scrollbar-highlight-color:#ffffff;-ms-scrollbar-shadow-color:#ffffff;-ms-scrollbar-3dlight-color:#ffffff;-ms-scrollbar-darkshadow-color:#ffffff;-ms-scrollbar-face-color:#ff8562;}</style> </div> <!--footer--> <footer id="t-footer" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="19714586" data-tilda-page-id="106032906" data-tilda-page-alias="dubai/en/footer" data-tilda-formskey="6887c6b42d1ba9a2fb5eabf119714586" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-project-lang="EN" data-tilda-root-zone="one" data-tilda-project-headcode="yes" data-tilda-ts="y" data-tilda-project-country="ID"> <div id="rec2229189173" class="r t-rec" style=" " data-animationappear="off" data-record-type="131"> <!-- T123 --> <div class="t123"> <div class="t-container_100 "> <div class="t-width t-width_100 "> <!-- nominify begin --> <section class="sb-office-minimal"> <div class="sb-office-minimal__container"> <div class="sb-office-minimal__info"> <div class="sb-office-minimal__label">SB Excursions</div> <h2>Our office in Dubai</h2> <p class="sb-office-minimal__text">
         The Opus by Omniyat<br>
         Business Bay, Dubai, UAE
       </p> <div class="sb-office-minimal__contacts"> <a href="tel:+971506048673" class="sb-office-minimal__phone">+971 50 604 8673</a> <a href="mailto:info@sbexcursion.com">info@sbexcursion.com</a> </div> <div class="sb-office-minimal__actions"> <a href="https://wa.me/971506048673" target="_blank" class="sb-btn sb-btn--dark">

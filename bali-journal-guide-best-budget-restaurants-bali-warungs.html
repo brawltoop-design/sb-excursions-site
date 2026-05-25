@@ -759,9 +759,11 @@
           }
 
           .sb-bali-weather-shell {
-            max-width: 860px;
-            margin: 0 auto;
-            padding: 0 14px;
+            width: 100vw;
+            max-width: none;
+            margin-left: calc(50% - 50vw);
+            margin-right: calc(50% - 50vw);
+            padding: 0 20px;
           }
 
           .sb-bali-weather-shell #bwCta {
@@ -1033,6 +1035,14 @@
             background:
               radial-gradient(circle at 18% 18%, rgba(118, 195, 255, 0.16) 0, rgba(118, 195, 255, 0) 36%),
               linear-gradient(135deg, #111827 0%, #1f3b7a 52%, #144b63 100%);
+          }
+
+          @media (max-width: 959px) {
+            .sb-bali-weather-shell {
+              max-width: 860px;
+              margin: 0 auto;
+              padding: 0 14px;
+            }
           }
 
           @media (max-width: 639px) {
