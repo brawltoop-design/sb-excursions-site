@@ -130,22 +130,7 @@ const BALI_FOOTER_LAYOUT_FIX_STYLE = `
 }
 </style>`;
 const JOURNAL_FOOTER_ASSETS = `
-    <link rel="stylesheet" href="/css/tilda-grid-3.0.min.css">
-    <link rel="stylesheet" href="/css/tilda-blocks-page106032906.min.css">
-    <script>
-      window.t_onReady = window.t_onReady || function (fn) {
-        if (document.readyState !== "loading") {
-          fn();
-          return;
-        }
-        document.addEventListener("DOMContentLoaded", fn, { once: true });
-      };
-      window.t_onFuncLoad = window.t_onFuncLoad || function (name, fn) {
-        if (typeof window[name] === "function") {
-          fn();
-        }
-      };
-    </script>`;
+    <link rel="stylesheet" href="/css/fonts-tildasans.css">`;
 const WEATHER_COMPACT_OVERRIDE_STYLE = `
 <style id="sb-weather-compact-override">
 #bwCta {
@@ -391,6 +376,139 @@ html[data-sb-destination="bali"] #rec2128776473 .t-menusub__list .t-menusub__lin
   }
 })();
 </script>
+`;
+
+const BALI_GLOBAL_UI_FIX = `<style id="sb-bali-global-ui-fix">
+html,
+body {
+  scrollbar-color: #4f9df7 #f5f9ff;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f9ff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7ec4f4 0%, #2f6bff 100%);
+  border: 3px solid #f5f9ff;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2f6bff;
+}
+
+#rec2122133073 .sb-route-map-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  line-height: 1.25 !important;
+}
+
+#rec2121222013,
+#rec2121222013 .t396,
+#rec2121222013 .t396__artboard,
+#rec2121222013 .t396__carrier,
+#rec2121222013 .t396__filter {
+  overflow: visible !important;
+}
+
+#rec2121222013 .sb-private-offer-shell {
+  padding-bottom: 18px !important;
+}
+
+#rec2121222013 .sb-private-card-body {
+  padding-bottom: 22px !important;
+}
+
+#rec2121222013 .sb-private-card-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#rec2121222013 .sb-private-card-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  white-space: normal !important;
+  line-height: 1.2 !important;
+}
+
+@media screen and (max-width: 639px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-width: 2px;
+  }
+
+  #rec2122133073 .sb-route-map-link {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 44px !important;
+    padding: 10px 16px !important;
+    text-align: center !important;
+  }
+
+  #rec2121222013 .sb-private-offer-shell {
+    gap: 14px !important;
+    padding: 8px 10px 18px !important;
+  }
+
+  #rec2121222013 .sb-private-card-media {
+    aspect-ratio: 1.85 / 1 !important;
+  }
+
+  #rec2121222013 .sb-private-card-body {
+    padding: 16px 14px 20px !important;
+  }
+
+  #rec2121222013 .sb-private-card-text {
+    margin-top: 10px !important;
+    font-size: 12.5px !important;
+    line-height: 1.48 !important;
+    -webkit-line-clamp: 4;
+  }
+
+  #rec2121222013 .sb-private-card-pills {
+    gap: 7px !important;
+    margin-top: 14px !important;
+  }
+
+  #rec2121222013 .sb-private-card-pill {
+    min-height: 30px !important;
+    padding: 0 11px !important;
+    font-size: 10.5px !important;
+  }
+
+  #rec2121222013 .sb-private-card-meta {
+    gap: 8px !important;
+    margin-top: 14px !important;
+    font-size: 12.5px !important;
+  }
+
+  #rec2121222013 .sb-private-card-footer {
+    margin-top: 16px !important;
+    gap: 10px !important;
+  }
+
+  #rec2121222013 .sb-private-card-cta {
+    min-height: 48px !important;
+    padding: 0 16px !important;
+    font-size: 14px !important;
+  }
+}
+</style>
 `;
 
 const sourceImage = (name) => path.join(projectRoot, "images", name);
@@ -3144,6 +3262,16 @@ function normalizeBaliWeatherOuterCss(html) {
   return html.split(BALI_WEATHER_OUTER_100VW_CSS).join(BALI_WEATHER_OUTER_STABLE_CSS);
 }
 
+function ensureBaliGlobalUiFix(html) {
+  const clean = html.replace(/<style id="sb-bali-global-ui-fix">[\s\S]*?<\/style>\s*/g, "");
+
+  if (clean.includes("</head>")) {
+    return clean.replace("</head>", `${BALI_GLOBAL_UI_FIX}</head>`);
+  }
+
+  return `${BALI_GLOBAL_UI_FIX}${clean}`;
+}
+
 function collapseWhitespace(value) {
   return String(value || "").replace(/\s+/g, " ").trim();
 }
@@ -3220,6 +3348,164 @@ function normalizedWestHighlights(tour) {
   }
 
   return highlights.slice(0, 4);
+}
+
+function compactWestAboutHeading(value) {
+  const directReplacements = [
+    [/^Molenteng Tree House and Thousand Islands$/i, "Tree House viewpoint"],
+    [/^Fast boat, island car, lunch, and tickets$/i, "Boat, car and tickets"],
+    [/^Turtles, coral, and underwater statues$/i, "Turtles and statues"],
+    [/^Lunch, showers, and transfer support$/i, "Lunch and transfer"],
+    [/^Jungle, river, and tunnel ATV route$/i, "Jungle ATV route"],
+    [/^Private snorkeling boat and guide$/i, "Private snorkel boat"],
+    [/^Celebration and proposal friendly$/i, "Proposal friendly"],
+    [/^Works for multiple island routes$/i, "Multiple island routes"],
+    [/^Lovina sunrise dolphin watching$/i, "Lovina dolphin sunrise"],
+    [/^Beginner-friendly guided format$/i, "Beginner guided route"],
+    [/^Transport coordination included$/i, "Transport included"],
+    [/^Premium short-format experience$/i, "Premium short flight"],
+    [/^Tegalalang Rice Terrace finish$/i, "Tegalalang finish"],
+    [/^Fast boat and transfer support$/i, "Boat transfer support"],
+    [/^Useful for first-time visitors$/i, "First-time friendly"],
+    [/^Useful across the whole island$/i, "Whole-island flexibility"],
+    [/^Travel-day product, not a tour$/i, "Travel-day support"],
+    [/^Couple and honeymoon friendly$/i, "Couple-friendly route"],
+    [/^Mangroves and coastal bridges$/i, "Mangroves and bridges"],
+    [/^Port and luggage practicality$/i, "Port and luggage help"],
+    [/^Good for solo or group travel$/i, "Solo or group friendly"],
+    [/^Private north Bali logistics$/i, "Private north route"],
+    [/^Single or tandem ATV options$/i, "Single or tandem ATV"],
+    [/^Gates of Heaven at Lempuyang$/i, "Gates of Heaven"],
+    [/^Diamond Beach and Atuh Beach$/i, "Diamond and Atuh"],
+    [/^Strong adventure positioning$/i, "Adventure standout"],
+    [/^Shorter and easier logistics$/i, "Easy logistics"],
+    [/^High-value practical product$/i, "Practical high value"],
+    [/^Free time on Gili Trawangan$/i, "Gili free time"],
+    [/^Ulun Danu Beratan Temple$/i, "Ulun Danu Temple"],
+  ];
+  const text = collapseWhitespace(value);
+  const replacement = directReplacements.find(([pattern]) => pattern.test(text));
+  if (replacement) return replacement[1];
+  return clampText(text, 24);
+}
+
+function compactWestAboutDescription(heading, value) {
+  const title = collapseWhitespace(heading);
+  const text = collapseWhitespace(value);
+  if (!text) return "";
+
+  const directReplacements = [
+    [
+      /^A classic Bali landscape day with green terraces, jungle backdrops, and wide open viewpoints\.$/i,
+      "Green terraces, jungle backdrops, and open Bali views.",
+    ],
+    [
+      /^A calm cultural route that still feels premium and visually rich instead of overly touristy\.$/i,
+      "Calm cultural stop with a premium, less touristy feel.",
+    ],
+    [
+      /^Spend more time at the places you like most and skip the unnecessary waiting of shared group trips\.$/i,
+      "More time where you want it, without shared-group waiting.",
+    ],
+    [
+      /^Add a refreshing nature break with an easy waterfall stop that fits your pace and energy\.$/i,
+      "Easy waterfall stop that keeps the route fresh.",
+    ],
+    [
+      /^The strongest west Penida visual and one of the most famous viewpoints in Bali province\.$/i,
+      "One of the strongest cliff views on the whole route.",
+    ],
+    [
+      /^A route built around cliffs, blue water, and big open landscapes instead of soft inland stops\.$/i,
+      "Cliffs, blue water, and open coastal scenery all day.",
+    ],
+    [
+      /^An easy choice when you want the Penida name-value without overthinking the island plan\.$/i,
+      "Easy first Penida choice with the signature route covered.",
+    ],
+    [
+      /^Mainland transfer, harbor flow, and island movement matter a lot here\.$/i,
+      "Mainland, harbor, and island transfers are already coordinated.",
+    ],
+    [
+      /^Head out on a traditional outrigger boat at dawn for one of north Bali's most requested wildlife-style sunrise experiences\.$/i,
+      "Traditional dawn boat ride for Lovina's signature sunrise moment.",
+    ],
+    [
+      /^Add a real waterfall section to the route instead of making the day only about the boat, which keeps the itinerary feeling fuller and more visual\.$/i,
+      "Real waterfall stop that makes the route fuller and more visual.",
+    ],
+    [
+      /^The value of this route is not only the stops but the fact that transport, timing, and the long road sections are already organized cleanly for you\.$/i,
+      "Long north Bali logistics are already organized cleanly for you.",
+    ],
+    [
+      /^Finish with one of Bali's most photogenic lake temples, a strong contrast after the open-water sunrise and forest stop\.$/i,
+      "Photogenic lake-temple finish after the sunrise and forest stops.",
+    ],
+    [
+      /^This is not a flat practice lap\. The route is designed to feel properly adventurous with Bali scenery built into the track itself\.$/i,
+      "Proper off-road ride with Bali scenery built into the track.",
+    ],
+    [
+      /^Professional instructors handle the safety briefing, pacing, and support so first-time riders can still enjoy the day confidently\.$/i,
+      "Guide support keeps first-time riders comfortable and confident.",
+    ],
+    [
+      /^The product works for solo travelers, couples, friends, and mixed-skill groups because you can choose how you want to ride\.$/i,
+      "Flexible ride format for solo travelers, couples, and friends.",
+    ],
+    [
+      /^The practical pieces are already handled, which makes the activity feel smoother and more premium than booking a basic ride only\.$/i,
+      "Useful extras are already handled for a smoother, easier day.",
+    ],
+  ];
+
+  const directReplacement = directReplacements.find(([pattern]) => pattern.test(text));
+  if (directReplacement) return directReplacement[1];
+
+  const keywordTemplates = [
+    [/rice terrace|terrace/i, "Green terraces, jungle backdrops, and open Bali views."],
+    [/temple/i, "Calm cultural stop with a premium, less touristy feel."],
+    [/waterfall/i, "Easy waterfall stop that keeps the route fresh."],
+    [/transport|transfer|boat|harbou?r|logistics|support|included/i, "Transport and timing are already handled for you."],
+    [/private pacing|private route|private island car|private north route/i, "More time where you want it with smooth private pacing."],
+    [/first-time|beginner/i, "Easy to enjoy even on your first Bali route."],
+    [/group|solo|couple|family/i, "Flexible fit for solo travelers, couples, or friends."],
+    [/dolphin/i, "Classic north Bali sunrise moment with dolphin appeal."],
+    [/manta|snorkel|turtle|coral|whale shark/i, "Clear-water marine highlight with memorable wildlife."],
+    [/atv|rafting|adventure/i, "Active route with real movement, scenery, and fun."],
+    [/sunset|cruise|romantic|proposal/i, "Soft scenic timing with a polished Bali feel."],
+    [/viewpoint|views|scenery|coastal|cliff|landscape|diamond|atuh|kelingking|gates of heaven/i, "One of the strongest visual stops on this route."],
+    [/lunch|tickets|shower/i, "Useful extras are already covered for an easier day."],
+    [/guide/i, "Guide support keeps the route easier and smoother."],
+  ];
+
+  const keywordTemplate = keywordTemplates.find(([pattern]) => pattern.test(title));
+  if (keywordTemplate) return keywordTemplate[1];
+
+  const sentence = text.split(/(?<=[.!?])\s+/)[0].trim();
+  const shortened = sentence
+    .replace(/^This is not[^.]*\.\s*/i, "")
+    .replace(/^This (?:route|product|experience) is /i, "")
+    .replace(/^This (?:route|product|experience) works /i, "Works ")
+    .replace(/^A route built around /i, "")
+    .replace(/^An easy choice when you want /i, "")
+    .replace(/^The strongest [^,]+ and /i, "")
+    .replace(/^The practical pieces are already handled, which makes /i, "")
+    .replace(/^The value of this route is not only the stops but the fact that /i, "")
+    .replace(/^Professional instructors handle /i, "Guide support handles ")
+    .replace(/^Add /i, "")
+    .replace(/^Finish with /i, "")
+    .replace(/^Spend more time /i, "More time ")
+    .replace(/\binstead of\b/gi, "over")
+    .replace(/\bthat still feels\b/gi, "with")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const compacted = clampText(shortened, 58).replace(/…$/, "");
+  const finalText = /[.!?]$/.test(compacted) ? compacted : `${compacted}.`;
+  return finalText.charAt(0).toUpperCase() + finalText.slice(1);
 }
 
 function cleanWestStopLabel(value) {
@@ -4038,6 +4324,10 @@ function renderWestStylePage(tour) {
   const absoluteImage = absoluteImageUrl(tour);
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(buildWhatsAppMessage(tour))}`;
   const highlights = normalizedWestHighlights(tour);
+  const aboutHighlights = highlights.map(([heading, text]) => [
+    compactWestAboutHeading(heading),
+    compactWestAboutDescription(heading, text),
+  ]);
   const faq = buildWestFaqs(tour);
   const map = buildWestMapModel(tour);
   const offer = buildWestPrivateOfferModel(tour);
@@ -4067,11 +4357,15 @@ function renderWestStylePage(tour) {
   html = html
     .replace(/<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(title)}</title>`)
     .replace(/data-tilda-page-alias="bali\/en\/tours\/[^"]+"/i, `data-tilda-page-alias="${route.slice(1)}"`)
-    .replaceAll('href="/dubai/en/about"', 'href="/bali/en/main-page"')
-    .replaceAll('href="/dubai/en/faq"', 'href="/bali/en/main-page#tours"')
+    .replaceAll('href="/dubai/en/about"', 'href="/bali/en/main-page#about"')
+    .replaceAll('href="/dubai/en/faq"', 'href="/bali/en/main-page#faq"')
     .replaceAll('href="/dubai/en#tours"', 'href="/bali/en/main-page#tours"')
     .replaceAll('href="/" class="t228__imgwrapper"', 'href="/bali/en/main-page" class="t228__imgwrapper"')
-    .replaceAll('href="/" class="t451__logowrapper"', 'href="/bali/en/main-page" class="t451__logowrapper"');
+    .replaceAll('href="/" class="t451__logowrapper"', 'href="/bali/en/main-page" class="t451__logowrapper"')
+    .replace(
+      /href=""([^>]*data-menu-item-number="5"[^>]*)>\s*Our guides\s*</g,
+      `href="${JOURNAL_HUB_ROUTE}"$1>Our guides<`,
+    );
 
   html = html.split(brokenBaliDestinationsMenu).join(fixedBaliDestinationsMenu);
 
@@ -4089,14 +4383,14 @@ function renderWestStylePage(tour) {
   html = replaceSingleQuotedField(html, "tn_text_1721240739957", escapeHtml(collapseWhitespace(tour.duration)));
   html = replaceSingleQuotedField(html, "tn_text_1766425094306", escapeHtml(heroArea));
   html = replaceSingleQuotedField(html, "tn_text_1721244135148", escapeHtml(aboutSubtitle));
-  html = replaceSingleQuotedField(html, "tn_text_1721244135153", escapeHtml(highlights[0][0]));
-  html = replaceSingleQuotedField(html, "tn_text_1721244135162", escapeHtml(highlights[0][1]));
-  html = replaceSingleQuotedField(html, "tn_text_1721244135179", escapeHtml(highlights[1][0]));
-  html = replaceSingleQuotedField(html, "tn_text_1721244135184", escapeHtml(highlights[1][1]));
-  html = replaceSingleQuotedField(html, "tn_text_1721244135195", escapeHtml(highlights[2][0]));
-  html = replaceSingleQuotedField(html, "tn_text_1721244135199", escapeHtml(highlights[2][1]));
-  html = replaceSingleQuotedField(html, "tn_text_1721244135209", escapeHtml(highlights[3][0]));
-  html = replaceSingleQuotedField(html, "tn_text_1721244135213", escapeHtml(highlights[3][1]));
+  html = replaceSingleQuotedField(html, "tn_text_1721244135153", escapeHtml(aboutHighlights[0][0]));
+  html = replaceSingleQuotedField(html, "tn_text_1721244135162", escapeHtml(aboutHighlights[0][1]));
+  html = replaceSingleQuotedField(html, "tn_text_1721244135179", escapeHtml(aboutHighlights[1][0]));
+  html = replaceSingleQuotedField(html, "tn_text_1721244135184", escapeHtml(aboutHighlights[1][1]));
+  html = replaceSingleQuotedField(html, "tn_text_1721244135195", escapeHtml(aboutHighlights[2][0]));
+  html = replaceSingleQuotedField(html, "tn_text_1721244135199", escapeHtml(aboutHighlights[2][1]));
+  html = replaceSingleQuotedField(html, "tn_text_1721244135209", escapeHtml(aboutHighlights[3][0]));
+  html = replaceSingleQuotedField(html, "tn_text_1721244135213", escapeHtml(aboutHighlights[3][1]));
   html = replaceSingleQuotedField(html, "tn_text_1766481493302000001", escapeHtml(miniPromo.eyebrow));
   html = replaceSingleQuotedField(html, "tn_text_1766620130918", escapeHtml(miniPromo.sideText));
   html = replaceSingleQuotedField(html, "tn_text_1766442865058", miniPromo.title);
@@ -4213,7 +4507,7 @@ function renderWestStylePage(tour) {
       "https://www.google.com/maps/dir/Banjar+Nyuh+Harbor,+Nusa+Penida/Broken+Beach,+Nusa+Penida/Angel%27s+Billabong,+Nusa+Penida/Kelingking+Beach,+Nusa+Penida/Crystal+Bay,+Nusa+Penida/Banjar+Nyuh+Harbor,+Nusa+Penida",
       map.openRoute,
     )
-    .replaceAll("Open the west Penida route in Google Maps", escapeJsSingleQuoted(`Open the ${tour.title} route in Google Maps`))
+    .replaceAll("Open the west Penida route in Google Maps", escapeJsSingleQuoted("Open google maps route"))
     .replaceAll("See west Penida tour", escapeJsSingleQuoted(`See ${tour.title}`))
     .replaceAll(
       "Perfect weather for west Penida viewpoints, clear ocean color and longer island sightseeing.",
@@ -4253,6 +4547,7 @@ function renderWestStylePage(tour) {
   html = injectWestPageSpecificStyle(html, tour);
   html = applyBaliBlueFooter(html);
   html = replaceLdJsonBlocks(html, tour);
+  html = ensureBaliGlobalUiFix(html);
   return html;
 }
 
@@ -4314,6 +4609,25 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
   font-weight: 700;
 }
 
+#rec2121221993 .tn-elem[data-elem-id="1721244135153"],
+#rec2121221993 .tn-elem[data-elem-id="1721244135179"],
+#rec2121221993 .tn-elem[data-elem-id="1721244135195"],
+#rec2121221993 .tn-elem[data-elem-id="1721244135209"] {
+  height: 24px !important;
+  overflow: visible !important;
+  z-index: 5 !important;
+}
+
+#rec2121221993 .tn-elem[data-elem-id="1721244135153"] .tn-atom,
+#rec2121221993 .tn-elem[data-elem-id="1721244135179"] .tn-atom,
+#rec2121221993 .tn-elem[data-elem-id="1721244135195"] .tn-atom,
+#rec2121221993 .tn-elem[data-elem-id="1721244135209"] .tn-atom {
+  display: block !important;
+  white-space: nowrap !important;
+  line-height: 1.15 !important;
+  text-align: center !important;
+}
+
 #rec2121233163 .tn-elem[data-elem-id="1721240739967"] .tn-atom {
   display: block !important;
   width: 100% !important;
@@ -4339,6 +4653,30 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
 
   #rec2121233163 .tn-elem[data-elem-id="1721240739967"] .tn-atom {
     font-size: 15px !important;
+  }
+
+  #rec2121221993 .tn-elem[data-elem-id="1721244135153"],
+  #rec2121221993 .tn-elem[data-elem-id="1721244135209"] {
+    left: calc(50% - 320px + 20px) !important;
+    width: 280px !important;
+  }
+
+  #rec2121221993 .tn-elem[data-elem-id="1721244135179"],
+  #rec2121221993 .tn-elem[data-elem-id="1721244135195"] {
+    left: calc(50% - 320px + 340px) !important;
+    width: 280px !important;
+  }
+
+  #rec2121221993 .tn-elem[data-elem-id="1721244135162"],
+  #rec2121221993 .tn-elem[data-elem-id="1721244135213"] {
+    left: calc(50% - 320px + 30px) !important;
+    width: 260px !important;
+  }
+
+  #rec2121221993 .tn-elem[data-elem-id="1721244135184"],
+  #rec2121221993 .tn-elem[data-elem-id="1721244135199"] {
+    left: calc(50% - 320px + 350px) !important;
+    width: 260px !important;
   }
 }
 
@@ -4425,10 +4763,684 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
     font-size: 16px !important;
     line-height: 1 !important;
   }
+
+  #rec2121221993 .t396__artboard,
+  #rec2121221993 .t396__filter,
+  #rec2121221993 .t396__carrier {
+    height: 390px !important;
+  }
+
+  #rec2121221993 .tn-elem[data-elem-id="1721244135153"],
+  #rec2121221993 .tn-elem[data-elem-id="1721244135209"] {
+    left: calc(50% - 160px + 7px) !important;
+    width: 146px !important;
+  }
+
+  #rec2121221993 .tn-elem[data-elem-id="1721244135179"],
+  #rec2121221993 .tn-elem[data-elem-id="1721244135195"] {
+    left: calc(50% - 160px + 167px) !important;
+    width: 146px !important;
+  }
+
+  #rec2121221993 .tn-elem[data-elem-id="1721244135153"] .tn-atom,
+  #rec2121221993 .tn-elem[data-elem-id="1721244135179"] .tn-atom,
+  #rec2121221993 .tn-elem[data-elem-id="1721244135195"] .tn-atom,
+  #rec2121221993 .tn-elem[data-elem-id="1721244135209"] .tn-atom {
+    font-size: 9px !important;
+    line-height: 1.1 !important;
+  }
+
+  #rec2121221993 .tn-elem[data-elem-id="1721244135162"],
+  #rec2121221993 .tn-elem[data-elem-id="1721244135213"] {
+    left: calc(50% - 160px + 11px) !important;
+    width: 138px !important;
+  }
+
+  #rec2121221993 .tn-elem[data-elem-id="1721244135184"],
+  #rec2121221993 .tn-elem[data-elem-id="1721244135199"] {
+    left: calc(50% - 160px + 171px) !important;
+    width: 138px !important;
+  }
+
+  #rec2121221993 .tn-elem[data-elem-id="1721244135162"] .tn-atom,
+  #rec2121221993 .tn-elem[data-elem-id="1721244135184"] .tn-atom,
+  #rec2121221993 .tn-elem[data-elem-id="1721244135199"] .tn-atom,
+  #rec2121221993 .tn-elem[data-elem-id="1721244135213"] .tn-atom {
+    font-size: 9px !important;
+    line-height: 1.35 !important;
+  }
 }`;
 
+const NUSA_PENIDA_WEST_SYMMETRIC_ABOUT_CSS = `
+#rec2121221993.sb-west-about-symmetric-record {
+  margin-top: 20px !important;
+}
+
+#rec2121221993 .sb-west-about-symmetric {
+  padding: 0 20px;
+}
+
+#rec2121221993 .sb-west-about-symmetric__shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 34px 30px 30px;
+  border-radius: 30px;
+  background: #dcebff;
+}
+
+#rec2121221993 .sb-west-about-symmetric__header {
+  text-align: center;
+  margin: 0 auto 24px;
+}
+
+#rec2121221993 .sb-west-about-symmetric__title {
+  margin: 0;
+  color: #0f172a;
+  font-size: 46px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -1.4px;
+}
+
+#rec2121221993 .sb-west-about-symmetric__subtitle {
+  margin: 10px 0 0;
+  color: #a9b4c7;
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+#rec2121221993 .sb-west-about-symmetric__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+#rec2121221993 .sb-west-about-symmetric__item {
+  min-width: 0;
+  min-height: 208px;
+  padding: 8px 10px 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#rec2121221993 .sb-west-about-symmetric__icon {
+  position: relative;
+  width: 82px;
+  height: 82px;
+  margin-bottom: 14px;
+  background-image: url('https://static.tildacdn.one/tild3134-6563-4262-a165-343566386466/Star_12.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#rec2121221993 .sb-west-about-symmetric__icon svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 34px;
+  height: 34px;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+
+#rec2121221993 .sb-west-about-symmetric__item-title {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+#rec2121221993 .sb-west-about-symmetric__item-copy {
+  margin: 0;
+  max-width: 220px;
+  color: #1f2937;
+  font-size: 15px;
+  line-height: 1.58;
+}
+
+@media screen and (max-width: 959px) {
+  #rec2121221993 .sb-west-about-symmetric__shell {
+    padding: 28px 22px 24px;
+  }
+
+  #rec2121221993 .sb-west-about-symmetric__title {
+    font-size: 36px;
+  }
+
+  #rec2121221993 .sb-west-about-symmetric__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 18px;
+  }
+
+  #rec2121221993 .sb-west-about-symmetric__item {
+    min-height: 188px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121221993.sb-west-about-symmetric-record {
+    margin-top: 28px !important;
+  }
+
+  #rec2121221993 .sb-west-about-symmetric {
+    padding: 0 0;
+  }
+
+  #rec2121221993 .sb-west-about-symmetric__shell {
+    border-radius: 0;
+    padding: 30px 14px 24px;
+  }
+
+  #rec2121221993 .sb-west-about-symmetric__header {
+    margin-bottom: 20px;
+  }
+
+  #rec2121221993 .sb-west-about-symmetric__title {
+    font-size: 25px;
+    letter-spacing: -0.5px;
+  }
+
+  #rec2121221993 .sb-west-about-symmetric__subtitle {
+    margin-top: 8px;
+    font-size: 12px;
+  }
+
+  #rec2121221993 .sb-west-about-symmetric__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 10px;
+  }
+
+  #rec2121221993 .sb-west-about-symmetric__item {
+    min-height: 178px;
+    padding: 4px 4px 0;
+  }
+
+  #rec2121221993 .sb-west-about-symmetric__icon {
+    width: 62px;
+    height: 62px;
+    margin-bottom: 10px;
+  }
+
+  #rec2121221993 .sb-west-about-symmetric__icon svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  #rec2121221993 .sb-west-about-symmetric__item-title {
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+
+  #rec2121221993 .sb-west-about-symmetric__item-copy {
+    max-width: 138px;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+}`;
+
+const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
+#rec2121221993[data-record-type="396"] .t396__artboard,
+#rec2121221993[data-record-type="396"] .t396__filter,
+#rec2121221993[data-record-type="396"] .t396__carrier {
+  height: 362px !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431201693000002"],
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431219359000004"],
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431153685"] {
+  top: 130px !important;
+  transform: translateX(-50%) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"] {
+  left: calc(50% - 600px + 130px) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431201693000002"] {
+  left: calc(50% - 600px + 430px) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431219359000004"] {
+  left: calc(50% - 600px + 730px) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431153685"] {
+  left: calc(50% - 600px + 1030px) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135166"],
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135187"],
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431213467000003"],
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135202"] {
+  top: 151px !important;
+  transform: translateX(-50%) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135166"] {
+  left: calc(50% - 600px + 130px) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135187"] {
+  left: calc(50% - 600px + 430px) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431213467000003"] {
+  left: calc(50% - 600px + 730px) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135202"] {
+  left: calc(50% - 600px + 1030px) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135153"],
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"],
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"],
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"] {
+  top: 223px !important;
+  width: 240px !important;
+  transform: translateX(-50%) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135153"] {
+  left: calc(50% - 600px + 130px) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"] {
+  left: calc(50% - 600px + 430px) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"] {
+  left: calc(50% - 600px + 730px) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"] {
+  left: calc(50% - 600px + 1030px) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135153"] .tn-atom,
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"] .tn-atom,
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"] .tn-atom,
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"] .tn-atom {
+  font-size: 15px !important;
+  line-height: 1.15 !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135162"],
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"],
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"],
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] {
+  top: 252px !important;
+  width: 252px !important;
+  transform: translateX(-50%) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135162"] {
+  left: calc(50% - 600px + 130px) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"] {
+  left: calc(50% - 600px + 430px) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"] {
+  left: calc(50% - 600px + 730px) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] {
+  left: calc(50% - 600px + 1030px) !important;
+}
+
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135162"] .tn-atom,
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"] .tn-atom,
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"] .tn-atom,
+#rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] .tn-atom {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 3 !important;
+  overflow: hidden !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+}
+
+@media screen and (max-width: 1199px) {
+  #rec2121221993[data-record-type="396"] .t396__artboard,
+  #rec2121221993[data-record-type="396"] .t396__filter,
+  #rec2121221993[data-record-type="396"] .t396__carrier {
+    height: 336px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431201693000002"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431219359000004"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431153685"] {
+    top: 122px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"] {
+    left: calc(50% - 480px + 125px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431201693000002"] {
+    left: calc(50% - 480px + 355px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431219359000004"] {
+    left: calc(50% - 480px + 585px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431153685"] {
+    left: calc(50% - 480px + 815px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135166"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135187"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431213467000003"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135202"] {
+    top: 143px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135166"] {
+    left: calc(50% - 480px + 125px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135187"] {
+    left: calc(50% - 480px + 355px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431213467000003"] {
+    left: calc(50% - 480px + 585px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135202"] {
+    left: calc(50% - 480px + 815px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135153"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"] {
+    top: 196px !important;
+    width: 210px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135153"] {
+    left: calc(50% - 480px + 125px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"] {
+    left: calc(50% - 480px + 355px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"] {
+    left: calc(50% - 480px + 585px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"] {
+    left: calc(50% - 480px + 815px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135153"] .tn-atom,
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"] .tn-atom,
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"] .tn-atom,
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"] .tn-atom {
+    font-size: 14px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135162"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] {
+    top: 223px !important;
+    width: 222px !important;
+    transform: translateX(-50%) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135162"] {
+    left: calc(50% - 480px + 125px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"] {
+    left: calc(50% - 480px + 355px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"] {
+    left: calc(50% - 480px + 585px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] {
+    left: calc(50% - 480px + 815px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135162"] .tn-atom,
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"] .tn-atom,
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"] .tn-atom,
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] .tn-atom {
+    font-size: 11px !important;
+    line-height: 1.38 !important;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  #rec2121221993[data-record-type="396"] .t396__artboard,
+  #rec2121221993[data-record-type="396"] .t396__filter,
+  #rec2121221993[data-record-type="396"] .t396__carrier {
+    height: 566px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431201693000002"] {
+    top: 112px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431219359000004"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431153685"] {
+    top: 334px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431219359000004"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431201693000002"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431153685"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135166"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135187"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431213467000003"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135202"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135153"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135162"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] {
+    transform: translateX(-50%) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431219359000004"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135166"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431213467000003"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135153"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135162"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"] {
+    left: calc(50% - 320px + 140px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431201693000002"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431153685"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135187"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135202"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] {
+    left: calc(50% - 320px + 500px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135166"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135187"] {
+    top: 134px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431213467000003"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135202"] {
+    top: 356px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135153"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"] {
+    top: 226px !important;
+    width: 214px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"] {
+    top: 448px !important;
+    width: 214px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135162"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"] {
+    top: 256px !important;
+    width: 248px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] {
+    top: 478px !important;
+    width: 248px !important;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121221993[data-record-type="396"] .t396__artboard,
+  #rec2121221993[data-record-type="396"] .t396__filter,
+  #rec2121221993[data-record-type="396"] .t396__carrier {
+    height: 418px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431201693000002"] {
+    top: 84px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431219359000004"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431153685"] {
+    top: 220px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431219359000004"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431201693000002"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431153685"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135166"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135187"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431213467000003"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135202"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135153"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135162"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] {
+    transform: translateX(-50%) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431219359000004"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135166"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431213467000003"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135153"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135162"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"] {
+    left: calc(50% - 160px + 75px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431201693000002"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431153685"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135187"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135202"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] {
+    left: calc(50% - 160px + 245px) !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135166"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135187"] {
+    top: 97px !important;
+    width: 27px !important;
+    height: 27px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431213467000003"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135202"] {
+    top: 233px !important;
+    width: 27px !important;
+    height: 27px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135153"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"] {
+    top: 136px !important;
+    width: 138px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"] {
+    top: 272px !important;
+    width: 138px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135162"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"] {
+    top: 159px !important;
+    width: 142px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"],
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] {
+    top: 295px !important;
+    width: 142px !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135153"] .tn-atom,
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"] .tn-atom,
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"] .tn-atom,
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"] .tn-atom {
+    font-size: 10px !important;
+    line-height: 1.18 !important;
+    font-weight: 600 !important;
+  }
+
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135162"] .tn-atom,
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"] .tn-atom,
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"] .tn-atom,
+  #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] .tn-atom {
+    font-size: 9.5px !important;
+    line-height: 1.34 !important;
+  }
+}
+`;
+
 function injectWestPageSpecificStyle(html, tour) {
-  const pageSpecificCss = [WEST_TOUR_LAYOUT_FIX_CSS];
+  const pageSpecificCss = [WEST_TOUR_LAYOUT_FIX_CSS, TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS];
 
   if (pageSpecificCss.length === 0) {
     return html;
@@ -4436,6 +5448,66 @@ function injectWestPageSpecificStyle(html, tour) {
 
   const styleTag = `<style id="sb-west-page-specific-overrides">\n${pageSpecificCss.join("\n")}\n</style>\n`;
   return html.replace("</body>", `${styleTag}</body>`);
+}
+
+function renderNusaPenidaWestSymmetricAboutSection(tour) {
+  const aboutSubtitle = `${tour.title} from Bali`;
+  const highlights = normalizedWestHighlights(tour).map(([heading, text]) => [
+    compactWestAboutHeading(heading),
+    compactWestAboutDescription(heading, text),
+  ]);
+  const cards = [
+    {
+      title: highlights[0][0],
+      text: highlights[0][1],
+      icon: `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="m5.5 18 4.4-6 3.1 3.8 3.2-5.1L20 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17.5" cy="6.5" r="1.7" fill="currentColor"/></svg>`,
+    },
+    {
+      title: highlights[1][0],
+      text: highlights[1][1],
+      icon: `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M3 15.5c1.8-1.8 3.5-1.8 5.3 0s3.5 1.8 5.3 0 3.5-1.8 5.4 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M3 11c1.8-1.8 3.5-1.8 5.3 0s3.5 1.8 5.3 0 3.5-1.8 5.4 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16.5 6.5 21 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>`,
+    },
+    {
+      title: "Transport included",
+      text: "Mainland transfer, harbor flow, and island movement matter a lot here.",
+      icon: `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><rect x="4" y="7" width="12" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M16 10h2l2 2v3h-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="17" r="1.7" fill="currentColor"/><circle cx="17" cy="17" r="1.7" fill="currentColor"/></svg>`,
+    },
+    {
+      title: highlights[2][0],
+      text: highlights[2][1],
+      icon: `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><circle cx="12" cy="12" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.8v3.1M12 18.1v3.1M21.2 12h-3.1M5.9 12H2.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="m12 12 3-2.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/></svg>`,
+    },
+  ];
+
+  return `
+<div id="rec2121221993" class="r t-rec t-rec_pt_15 t-rec_pb_30 sb-west-about-symmetric-record" style="padding-top:15px;padding-bottom:30px;" data-animationappear="off" data-record-type="131">
+  <section class="sb-west-about-symmetric" aria-labelledby="sb-west-about-symmetric-title">
+    <div class="sb-west-about-symmetric__shell">
+      <div class="sb-west-about-symmetric__header">
+        <h2 id="sb-west-about-symmetric-title" class="sb-west-about-symmetric__title">About this Activity</h2>
+        <p class="sb-west-about-symmetric__subtitle">${escapeHtml(aboutSubtitle)}</p>
+      </div>
+      <div class="sb-west-about-symmetric__grid">
+        ${cards.map((card) => `
+          <article class="sb-west-about-symmetric__item">
+            <div class="sb-west-about-symmetric__icon">${card.icon}</div>
+            <h3 class="sb-west-about-symmetric__item-title">${escapeHtml(card.title)}</h3>
+            <p class="sb-west-about-symmetric__item-copy">${escapeHtml(card.text)}</p>
+          </article>
+        `).join("")}
+      </div>
+    </div>
+  </section>
+</div>`;
+}
+
+function injectNusaPenidaWestSymmetricAboutSection(html, tour) {
+  if (tour.slug !== "nusa-penida-west-tour") {
+    return html;
+  }
+
+  const aboutSectionPattern = /<div id="rec2121221993"[\s\S]*?(?=<div id="rec2121222003")/;
+  return html.replace(aboutSectionPattern, `${renderNusaPenidaWestSymmetricAboutSection(tour)}\n`);
 }
 
 function buildWhatsAppMessage(tour) {
@@ -4467,9 +5539,9 @@ function renderJournalHeader(tour) {
                   <a href="/bali/en/main-page#tours" role="menuitem">Bali, Indonesia</a>
                 </div>
               </div>
-              <a class="sb-journal-tour-header__nav-link" href="/bali/en/main-page">About Us</a>
+              <a class="sb-journal-tour-header__nav-link" href="/bali/en/main-page#about">About Us</a>
               <a class="sb-journal-tour-header__nav-link" href="${bookingHref}" target="_blank" rel="noopener noreferrer nofollow">Booking</a>
-              <a class="sb-journal-tour-header__nav-link" href="/bali/en/main-page#tours">FAQ</a>
+              <a class="sb-journal-tour-header__nav-link" href="/bali/en/main-page#faq">FAQ</a>
             </nav>
             <div class="sb-journal-tour-header__actions" aria-label="Quick actions">
               <a class="sb-journal-tour-header__button" href="${bookingHref}" target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
@@ -4532,9 +5604,9 @@ function renderJournalHeader(tour) {
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
                 </div>
               </div>
-              <a class="sb-journal-tour-header__drawer-link" href="/bali/en/main-page">About Us</a>
+              <a class="sb-journal-tour-header__drawer-link" href="/bali/en/main-page#about">About Us</a>
               <a class="sb-journal-tour-header__drawer-link" href="${bookingHref}" target="_blank" rel="noopener noreferrer nofollow">Booking</a>
-              <a class="sb-journal-tour-header__drawer-link" href="/bali/en/main-page#tours">FAQ</a>
+              <a class="sb-journal-tour-header__drawer-link" href="/bali/en/main-page#faq">FAQ</a>
               <a class="sb-journal-tour-header__drawer-link" href="${JOURNAL_HUB_ROUTE}">Our guides</a>
             </nav>
             <div class="sb-journal-tour-header__drawer-socials">
@@ -6486,9 +7558,33 @@ function renderJournalSharedStyles() {
   .sb-journal-inline-stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
   .sb-journal-article-hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
   .sb-journal-article-hero__media img{width:100%;aspect-ratio:1.2;object-fit:cover;border-radius:24px}
+  .sb-journal-footer{padding:0 20px 32px}
+  .sb-journal-footer__shell{max-width:1320px;margin:34px auto 0;padding:34px 34px 28px;border-radius:32px;background:linear-gradient(135deg,#7ec4f4 0%,#6789ec 54%,#3f44f0 100%);color:#fff;box-shadow:0 28px 72px rgba(37,54,153,0.22)}
+  .sb-journal-footer__grid{display:grid;grid-template-columns:minmax(0,1.15fr) repeat(4,minmax(0,1fr));gap:28px}
+  .sb-journal-footer__brand,.sb-journal-footer__column{min-width:0}
+  .sb-journal-footer__brand{display:grid;align-content:start;gap:20px}
+  .sb-journal-footer__logo-link{display:inline-flex;width:fit-content}
+  .sb-journal-footer__logo{width:210px;max-width:100%;height:auto;filter:brightness(0) invert(1)}
+  .sb-journal-footer__lead{margin:0;max-width:240px;font-size:18px;line-height:1.65;color:rgba(255,255,255,0.86)}
+  .sb-journal-footer__column{display:grid;align-content:start;gap:12px}
+  .sb-journal-footer__title{font-size:14px;line-height:1.2;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.82)}
+  .sb-journal-footer__link{display:inline-flex;width:fit-content;font-size:18px;line-height:1.45;font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;transition:opacity .2s ease}
+  .sb-journal-footer__link:hover,.sb-journal-footer__link:focus-visible{opacity:.82;outline:none}
+  .sb-journal-footer__text{font-size:18px;line-height:1.55;color:rgba(255,255,255,0.88)}
+  .sb-journal-footer__text_strong{font-weight:700;color:#fff}
+  .sb-journal-footer__chips{display:flex;flex-wrap:wrap;gap:10px}
+  .sb-journal-footer__chip{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.24);background:rgba(255,255,255,0.16);font-size:13px;line-height:1.2;font-weight:700;color:#fff}
+  .sb-journal-footer__bottom{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,0.22)}
+  .sb-journal-footer__copyright{margin:0;font-size:16px;line-height:1.5;color:rgba(255,255,255,0.85)}
+  .sb-journal-footer__socials{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:wrap}
+  .sb-journal-footer__social-label{font-size:16px;line-height:1.4;font-weight:700;color:rgba(255,255,255,0.88);margin-right:4px}
+  .sb-journal-footer__social-link{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:999px;background:#111;color:#fff;box-shadow:0 10px 24px rgba(17,17,17,0.22);transition:transform .2s ease,opacity .2s ease}
+  .sb-journal-footer__social-link:hover,.sb-journal-footer__social-link:focus-visible{transform:translateY(-1px);opacity:.9;outline:none}
+  .sb-journal-footer__social-link svg{width:22px;height:22px}
   .sb-journal-header-lock{overflow:hidden}
-  @media screen and (max-width:1100px){.sb-journal-featured-grid,.sb-journal-tour-grid,.sb-journal-article-layout,.sb-journal-hero,.sb-journal-article-hero,.sb-journal-ranking-grid,.sb-journal-guide-tour-grid{grid-template-columns:1fr}.sb-journal-sidebar{position:static}.sb-journal-hero h1,.sb-journal-article-hero h1{font-size:46px}}
+  @media screen and (max-width:1100px){.sb-journal-featured-grid,.sb-journal-tour-grid,.sb-journal-article-layout,.sb-journal-hero,.sb-journal-article-hero,.sb-journal-ranking-grid,.sb-journal-guide-tour-grid{grid-template-columns:1fr}.sb-journal-sidebar{position:static}.sb-journal-hero h1,.sb-journal-article-hero h1{font-size:46px}.sb-journal-footer__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sb-journal-footer__brand,.sb-journal-footer__payments{grid-column:1/-1}}
   @media screen and (max-width:980px){.sb-journal-tour-header__desktop-inner{grid-template-columns:auto 1fr;gap:18px;padding-top:14px;padding-bottom:14px}.sb-journal-tour-header__nav{justify-content:flex-end;flex-wrap:wrap}.sb-journal-tour-header__actions{grid-column:1/-1;justify-content:flex-start}}
+  @media screen and (max-width:640px){.sb-journal-footer{padding:0 14px 26px}.sb-journal-footer__shell{margin-top:26px;padding:28px 20px 24px;border-radius:28px}.sb-journal-footer__grid{grid-template-columns:1fr;gap:22px}.sb-journal-footer__brand,.sb-journal-footer__payments{grid-column:auto}.sb-journal-footer__lead,.sb-journal-footer__text{font-size:16px}.sb-journal-footer__link{font-size:16px}.sb-journal-footer__bottom{flex-direction:column;align-items:flex-start}.sb-journal-footer__copyright,.sb-journal-footer__social-label{font-size:15px}.sb-journal-footer__social-link{width:42px;height:42px}}
   @media screen and (max-width:480px){.sb-journal-tour-header__desktop{display:none}.sb-journal-tour-header__mobile{display:block;background:transparent;transition:background-color .35s ease,box-shadow .35s ease}.sb-journal-tour-header__mobile-bar{background:transparent;transition:background-color .35s ease,box-shadow .35s ease}.sb-journal-tour-header_scrolled .sb-journal-tour-header__mobile,.sb-journal-tour-header_open .sb-journal-tour-header__mobile{background:#333}.sb-journal-tour-header_scrolled .sb-journal-tour-header__mobile-bar,.sb-journal-tour-header_open .sb-journal-tour-header__mobile-bar{background:#333;box-shadow:0 10px 30px rgba(17,24,39,0.18)}.sb-journal-tour-header_scrolled .sb-journal-tour-header__burger,.sb-journal-tour-header_open .sb-journal-tour-header__burger,.sb-journal-tour-header_scrolled .sb-journal-tour-header__socials a,.sb-journal-tour-header_open .sb-journal-tour-header__socials a{color:#fff}.sb-journal-tour-header_scrolled .sb-journal-tour-header__mobile-logo,.sb-journal-tour-header_open .sb-journal-tour-header__mobile-logo{filter:brightness(0) invert(1)}.sb-journal-main{padding:90px 14px 64px}.sb-journal-hero,.sb-journal-article-hero,.sb-journal-tour-card,.sb-journal-article,.sb-journal-sidebar-card,.sb-journal-ranking-card,.sb-journal-faq-card{border-radius:24px}.sb-journal-hero,.sb-journal-article-hero,.sb-journal-article{padding:20px}.sb-journal-featured-grid,.sb-journal-tour-grid,.sb-journal-ranking-grid,.sb-journal-guide-tour-grid,.sb-journal-faq-grid{gap:16px}.sb-journal-tour-card__copy{left:16px;right:16px;bottom:16px}.sb-journal-tour-card__copy h3{font-size:28px}.sb-journal-hero h1,.sb-journal-article-hero h1{font-size:34px;letter-spacing:-1.6px}.sb-journal-lead{font-size:17px}.sb-journal-section__head{align-items:flex-start;flex-direction:column}.sb-journal-section__head h2{font-size:28px}.sb-journal-card h3,.sb-journal-ranking-card h3,.sb-journal-faq-card h3{font-size:23px}.sb-journal-article-section h2{font-size:26px}.sb-journal-article-section p,.sb-journal-article-section li,.sb-journal-sidebar-card li,.sb-journal-ranking-card p,.sb-journal-faq-card p{font-size:15px}}
   `;
 }
@@ -8037,8 +9133,8 @@ function patchBaliMainFile(filePath) {
     ],
     ["/dubai/en#tours", "/bali/en/main-page#tours"],
     [">Dubai, UAE<", ">Bali, Indonesia<"],
-    ["/dubai/en/about", "/bali/en/main-page"],
-    ["/dubai/en/faq", "/bali/en/main-page"],
+    ["/dubai/en/about", "/bali/en/main-page#about"],
+    ["/dubai/en/faq", "/bali/en/main-page#faq"],
     ["/dubai/en/tours/dubai-marina-1-hour-shared-yacht-tour", "/bali/en/tours/sunset-cruise-bali"],
     ["Shared Yacht tour", "Sunset Cruise"],
     ["Dubai City tour", "Ubud Highlights Tour"],
@@ -8159,17 +9255,21 @@ function patchBaliMainFile(filePath) {
       /href="\/bali\/en\/main-page"([^>]*)>\s*FAQ\s*</g,
       'href="/bali/en/main-page#faq"$1>FAQ<',
     )
+    .replace(
+      /href=""([^>]*data-menu-item-number="5"[^>]*)>\s*Our guides\s*</g,
+      `href="${JOURNAL_HUB_ROUTE}"$1>Our guides<`,
+    )
     .replaceAll(
       `<style>@media screen and (max-width:980px){#rec1816521261 .t228__leftcontainer{padding:20px;}#rec1816521261 .t228__imglogo{padding:20px 0;}#rec1816521261 .t228{position:static;}}</style>`,
       `<style>@media screen and (max-width:980px){#rec1816521261{display:none !important;}#rec1816521261 .t228__leftcontainer{padding:20px;}#rec1816521261 .t228__imglogo{padding:20px 0;}#rec1816521261 .t228{position:static;}#rec2128776473{display:block !important;}}@media screen and (min-width:981px){#rec2128776473{display:none !important;}}</style>`,
     )
-    .replaceAll(
-      `<div class='tn-atom'><a href="/bali/en/main-page"target="_blank"style="color: inherit"><u>About SB Excursions</u></a></div>`,
-      `<div class='tn-atom'><a name="about" style="font-size:0;"></a><a href="/bali/en/main-page#about"style="color: inherit"><u>About SB Excursions</u></a></div>`,
+    .replace(
+      /<div class='tn-atom'><a href="(?:\/dubai\/en\/about|\/bali\/en\/main-page)"target="_blank"style="color: inherit"><u>About SB Excursions<\/u><\/a><\/div>/g,
+      `<div class='tn-atom'><a name="about" style="font-size:0;"></a><a href="/bali/en/main-page#about"target="_blank"style="color: inherit"><u>About SB Excursions</u></a></div>`,
     )
-    .replaceAll(
-      `<div class='tn-atom'><a href="/bali/en/main-page"target="_blank"style="color: inherit"><u>FAQ</u></a></div>`,
-      `<div class='tn-atom'><a name="faq" style="font-size:0;"></a><a href="/bali/en/main-page#faq"style="color: inherit"><u>FAQ</u></a></div>`,
+    .replace(
+      /<div class='tn-atom'><a href="(?:\/dubai\/en\/faq|\/bali\/en\/main-page)"target="_blank"style="color: inherit"><u>FAQ<\/u><\/a><\/div>/g,
+      `<div class='tn-atom'><a name="faq" style="font-size:0;"></a><a href="/bali/en/main-page#faq"target="_blank"style="color: inherit"><u>FAQ</u></a></div>`,
     );
 
   const plannerImageBlockStart = html.indexOf("var PLACE_IMAGE = {");
@@ -8301,8 +9401,9 @@ return '<div class="sb-place-card' + (placeObj.topPick ? ' is-top-pick' : '') + 
 
   html = patchDubaiLinkedFooterContact(html);
   html = ensureBaliMainStabilityFix(html);
+  html = ensureBaliGlobalUiFix(html);
 
-  fs.writeFileSync(filePath, html);
+  writeGeneratedFile(filePath, html);
 }
 
 function patchCompactWeatherWidget(filePath) {
@@ -8331,7 +9432,15 @@ function patchCompactWeatherWidget(filePath) {
     html = `${html.slice(0, insertIndex)}${WEATHER_COMPACT_OVERRIDE_STYLE}${html.slice(insertIndex)}`;
   }
 
-  fs.writeFileSync(filePath, html);
+  writeGeneratedFile(filePath, ensureBaliGlobalUiFix(html));
+}
+
+function normalizeGeneratedHtml(html) {
+  return String(html).replace(/[ \t]+$/gm, "");
+}
+
+function writeGeneratedFile(filePath, html) {
+  fs.writeFileSync(filePath, normalizeGeneratedHtml(html));
 }
 
 function buildBaliTildaFooter() {
@@ -8355,6 +9464,8 @@ function buildBaliTildaFooter() {
     .replaceAll("<div class='tn-atom'field='tn_text_1721245128917'>We Accept</div>", "<div class='tn-atom'field='tn_text_1721245128917'>We Accept</div>")
     .replaceAll(`href="/" target="_blank"`, `href="/bali/en/main-page"`)
     .replaceAll("/dubai/en#tours", "/bali/en/main-page#tours")
+    .replaceAll('href="/dubai/en/about"target="_blank"', 'href="/bali/en/main-page#about"target="_blank"')
+    .replaceAll('href="/dubai/en/faq"target="_blank"', 'href="/bali/en/main-page#faq"target="_blank"')
     .replaceAll('>FullDay Desert safari<', '>Nusa Penida West<')
     .replaceAll('href="/dubai/en/tours/full-day-dubai-desert-safari"', 'href="/bali/en/tours/nusa-penida-west-tour"')
     .replaceAll('>Abu Dhabi City tour<', '>Mount Batur Hike<')
@@ -8370,12 +9481,117 @@ function buildBaliTildaFooter() {
     .replaceAll("+971 50 604 8673", "+62 853 3368 5020")
     .replaceAll("Working hours 24/7", "Daily support 7:00 - 22:00")
     .replaceAll("Write us", "Message us")
-    .replaceAll("Contacts &amp; Location", "Contacts &amp; Location"),
+    .replaceAll("Contacts &amp; Location", "Contacts &amp; Location")
+    .replaceAll(
+      `<div class='tn-atom'><a href="/bali/en/main-page#about"target="_blank"style="color: inherit"><u>About SB Excursions</u></a></div>`,
+      `<div class='tn-atom'><a name="about" style="font-size:0;"></a><a href="/bali/en/main-page#about"target="_blank"style="color: inherit"><u>About SB Excursions</u></a></div>`,
+    )
+    .replaceAll(
+      `<div class='tn-atom'><a href="/bali/en/main-page#faq"target="_blank"style="color: inherit"><u>FAQ</u></a></div>`,
+      `<div class='tn-atom'><a name="faq" style="font-size:0;"></a><a href="/bali/en/main-page#faq"target="_blank"style="color: inherit"><u>FAQ</u></a></div>`,
+    ),
   );
 }
 
 function renderJournalBaliFooter() {
-  return buildBaliTildaFooter();
+  return `
+      <footer class="sb-journal-footer" aria-label="SB Excursions footer">
+        <div class="sb-journal-footer__shell">
+          <div class="sb-journal-footer__grid">
+            <div class="sb-journal-footer__brand">
+              <a class="sb-journal-footer__logo-link" href="/bali/en/main-page" aria-label="SB Excursions Bali">
+                <img
+                  class="sb-journal-footer__logo"
+                  src="https://static.tildacdn.one/tild3334-6466-4436-b766-376338363935/SB_Excursions_Dubai_.png"
+                  alt="SB Excursions"
+                >
+              </a>
+              <p class="sb-journal-footer__lead">Where nature and adventure meet</p>
+            </div>
+
+            <nav class="sb-journal-footer__column" aria-label="Top Bali tours">
+              <div class="sb-journal-footer__title">Our Top Tours</div>
+              <a class="sb-journal-footer__link" href="/bali/en/tours/nusa-penida-west-tour">Nusa Penida West</a>
+              <a class="sb-journal-footer__link" href="/bali/en/tours/ubud-highlights-tour">Ubud Highlights</a>
+              <a class="sb-journal-footer__link" href="/bali/en/tours/mount-batur-sunrise-hike">Mount Batur Hike</a>
+              <a class="sb-journal-footer__link" href="/bali/en/tours/nusa-penida-manta-rays-point">Manta Rays Tour</a>
+            </nav>
+
+            <nav class="sb-journal-footer__column" aria-label="Company and trust links">
+              <div class="sb-journal-footer__title">Company &amp; Trust</div>
+              <a class="sb-journal-footer__link" href="/bali/en/main-page#about">About SB Excursions</a>
+              <a class="sb-journal-footer__link" href="/bali/en/main-page#faq">FAQ</a>
+              <a class="sb-journal-footer__link" href="/dubai/en/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+              <a class="sb-journal-footer__link" href="/dubai/en/terms" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>
+              <a class="sb-journal-footer__link" href="/dubai/en/faq#refund" target="_blank" rel="noopener noreferrer">Refund Policy</a>
+              <a class="sb-journal-footer__link" href="/sitemap.xml" target="_blank" rel="noopener noreferrer">SiteMap</a>
+            </nav>
+
+            <div class="sb-journal-footer__column" aria-label="Contacts and location">
+              <div class="sb-journal-footer__title">Contacts &amp; Location</div>
+              <div class="sb-journal-footer__text sb-journal-footer__text_strong">Bali Office</div>
+              <div class="sb-journal-footer__text">Jl. Petitenget, Seminyak, Bali, Indonesia</div>
+              <a class="sb-journal-footer__link" href="${BALI_GENERIC_FOOTER_WA_LINK}" target="_blank" rel="noopener noreferrer nofollow">+62 853 3368 5020</a>
+              <a class="sb-journal-footer__link" href="mailto:info@sbexcursion.com">info@sbexcursion.com</a>
+              <div class="sb-journal-footer__text">Daily support 7:00 - 22:00</div>
+            </div>
+
+            <div class="sb-journal-footer__column sb-journal-footer__payments" aria-label="Accepted payment methods">
+              <div class="sb-journal-footer__title">We Accept</div>
+              <div class="sb-journal-footer__chips">
+                <span class="sb-journal-footer__chip">Apple Pay</span>
+                <span class="sb-journal-footer__chip">Google Pay</span>
+                <span class="sb-journal-footer__chip">PayPal</span>
+                <span class="sb-journal-footer__chip">Stripe</span>
+                <span class="sb-journal-footer__chip">Visa</span>
+                <span class="sb-journal-footer__chip">Mastercard</span>
+                <span class="sb-journal-footer__chip">Amex</span>
+                <span class="sb-journal-footer__chip">Bitcoin</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sb-journal-footer__bottom">
+            <p class="sb-journal-footer__copyright">© 2021-2026 SB Excursions. Crafted for Bali adventures</p>
+            <div class="sb-journal-footer__socials" aria-label="Message us">
+              <span class="sb-journal-footer__social-label">Message us</span>
+              <a
+                class="sb-journal-footer__social-link"
+                href="https://t.me/SurfBase"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="Telegram"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M20.67 3.41 2.93 10.25c-1.21.49-1.2 1.17-.22 1.46l4.56 1.42 10.55-6.65c.5-.3.95-.14.57.19l-8.55 7.72-.32 4.79c.47 0 .68-.22.94-.47l2.28-2.21 4.75 3.51c.88.49 1.5.24 1.72-.82l3.02-14.24c.33-1.29-.49-1.87-1.56-1.39Z"/>
+                </svg>
+              </a>
+              <a
+                class="sb-journal-footer__social-link"
+                href="${BALI_GENERIC_FOOTER_WA_LINK}"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="WhatsApp"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M19.05 4.94A9.94 9.94 0 0 0 12.02 2C6.5 2 2.02 6.48 2.02 12c0 1.77.46 3.49 1.33 5.01L2 22l5.13-1.34A9.96 9.96 0 0 0 12.02 22c5.52 0 10-4.48 10-10 0-2.67-1.04-5.18-2.97-7.06Zm-7.03 15.38c-1.52 0-3-.41-4.29-1.18l-.31-.19-3.05.8.82-2.97-.2-.3a8.2 8.2 0 0 1-1.26-4.48c0-4.57 3.72-8.29 8.29-8.29 2.21 0 4.29.86 5.85 2.43A8.22 8.22 0 0 1 20.3 12c0 4.57-3.71 8.29-8.28 8.29Zm4.55-6.2c-.25-.12-1.49-.73-1.72-.82-.23-.08-.39-.12-.56.12-.16.25-.64.82-.78.99-.14.17-.28.19-.52.06-.25-.12-1.03-.38-1.96-1.22-.73-.65-1.22-1.45-1.37-1.69-.14-.25-.02-.38.11-.51.11-.11.25-.28.37-.42.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.76-1.85-.2-.48-.4-.42-.56-.42h-.48c-.17 0-.43.06-.65.31s-.86.84-.86 2.06.88 2.4 1 2.57c.12.17 1.71 2.62 4.14 3.67.58.25 1.04.4 1.39.51.58.18 1.11.15 1.53.09.47-.07 1.49-.61 1.7-1.21.21-.6.21-1.12.15-1.21-.06-.1-.22-.16-.47-.28Z"/>
+                </svg>
+              </a>
+              <a
+                class="sb-journal-footer__social-link"
+                href="https://www.instagram.com/dubai_sb_excursions?igsh=cTFtcnB0ZTFta2Nq&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="Instagram"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 1.8A3.2 3.2 0 0 0 3.8 7v10A3.2 3.2 0 0 0 7 20.2h10a3.2 3.2 0 0 0 3.2-3.2V7A3.2 3.2 0 0 0 17 3.8H7Zm10.4 1.35a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 6.5A5.5 5.5 0 1 1 6.5 12 5.5 5.5 0 0 1 12 6.5Zm0 1.8A3.7 3.7 0 1 0 15.7 12 3.7 3.7 0 0 0 12 8.3Z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>`.replace(/[ \t]+\n/g, "\n");
 }
 
 function ensureBaliTildaFooter(filePath) {
@@ -8414,7 +9630,7 @@ function ensureBaliTildaFooter(filePath) {
   updated = `${updated.slice(0, closeIndex).trimEnd()} ${footerHtml} ${updated.slice(closeIndex)}`;
 
   if (updated !== html) {
-    fs.writeFileSync(filePath, updated);
+    writeGeneratedFile(filePath, updated);
   }
 }
 
@@ -8424,20 +9640,20 @@ function generatePages() {
     ensureHeroImage(tour);
     const html = renderPage(tour, allTours);
     const filePath = path.join(projectRoot, `bali-tour-${tour.slug}.html`);
-    fs.writeFileSync(filePath, html);
+    writeGeneratedFile(filePath, html);
   }
 
   const journalIndexPath = path.join(projectRoot, "bali-journal.html");
-  fs.writeFileSync(journalIndexPath, renderJournalIndexPage());
+  writeGeneratedFile(journalIndexPath, ensureBaliGlobalUiFix(renderJournalIndexPage()));
 
   for (const article of buildJournalArticles()) {
     const articleFilePath = path.join(projectRoot, journalArticleFileName(article.tour, article.articleType));
-    fs.writeFileSync(articleFilePath, renderJournalArticlePage(article));
+    writeGeneratedFile(articleFilePath, ensureBaliGlobalUiFix(renderJournalArticlePage(article)));
   }
 
   for (const guideArticle of buildSeoGuideArticles()) {
     const guideFilePath = path.join(projectRoot, guideArticleFileName(guideArticle.guide));
-    fs.writeFileSync(guideFilePath, renderSeoGuidePage(guideArticle));
+    writeGeneratedFile(guideFilePath, ensureBaliGlobalUiFix(renderSeoGuidePage(guideArticle)));
   }
 }
 
