@@ -29,6 +29,10 @@ const redirects = new Map([
   ],
   ["/bali/en/tours/ubud-highlights", "/bali/en/tours/ubud-highlights-tour"],
   ["/bali/en/tours/ubud-highlits-", "/bali/en/tours/ubud-highlights-tour"],
+  ["/bali/en/tours/unesco-heritage-sites-tour", "/bali/en/tours/bali-unesco"],
+  ["/bali/en/journal/unesco-heritage-sites-tour/why-book", "/bali/en/journal/bali-unesco/why-book"],
+  ["/bali/en/journal/unesco-heritage-sites-tour/travel-guide", "/bali/en/journal/bali-unesco/travel-guide"],
+  ["/bali/en/journal/unesco-heritage-sites-tour/tour-schedule", "/bali/en/journal/bali-unesco/tour-schedule"],
 ]);
 
 const rewrites = new Map([

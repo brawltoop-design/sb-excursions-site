@@ -28,19 +28,6 @@ const JOURNAL_FEATURED_ARTICLES = [
   ["nusa-penida-east-tour", "interesting"],
   ["sunset-cruise-bali", "schedule"],
 ];
-const WEATHER_COMPACT_PATCH_FILES = [
-  "page128064616.html",
-  "files/page128064616body.html",
-  "page128073236.html",
-  "files/page128073236body.html",
-  "page132181473.html",
-  "files/page132181473body.html",
-  "page132812463.html",
-  "files/page132812463body.html",
-  "page133629743.html",
-  "files/page133629743body.html",
-  "files/page139295043body.html",
-];
 const BALI_TILDA_FOOTER_PATCH_FILES = [
   "page128064616.html",
   "files/page128064616body.html",
@@ -54,6 +41,20 @@ const BALI_TILDA_FOOTER_PATCH_FILES = [
   "files/page133629743body.html",
   "page139295043.html",
   "files/page139295043body.html",
+];
+const TILDA_WEATHER_ROUTE_OVERRIDES = {
+  "mount-batur-sunrise-jeep-hot-spring": "/bali/en/tours/mount-batur-sunrise-jeep-hot-spring",
+};
+const TILDA_WEATHER_FILE_FALLBACKS = {
+  "page128064616body.html": "/bali/en/tours/nusa-penida-west-tour",
+  "page128073236.html": WEATHER_MAIN_PAGE_ROUTE,
+  "page128073236body.html": WEATHER_MAIN_PAGE_ROUTE,
+  "page139295043.html": WEATHER_MAIN_PAGE_ROUTE,
+  "page139295043body.html": WEATHER_MAIN_PAGE_ROUTE,
+};
+const JEEP_HOT_SPRING_ROUTE_PATCH_FILES = [
+  "page133629743.html",
+  "files/page133629743body.html",
 ];
 const BALI_FOOTER_GRADIENT_FROM = "linear-gradient(0.346turn,rgba(255,179,71,1) 0%,rgba(255,204,51,1) 100%)";
 const BALI_FOOTER_GRADIENT_LEGACY_BLUE =
@@ -307,6 +308,22 @@ body {
 #rec2128776473 .t-menusub__link-item.t-active,
 #rec2128776473 .t-menusub__link-item.t-active-current {
   color: #7ec4f4 !important;
+}
+
+#sb-excursions-page .sb-price-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+#sb-excursions-page .sb-price-note {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  color: #7c7c7c;
 }
 
 html[data-sb-destination="bali"] #rec2128776473 .t-menusub__list .t-menusub__link-item[href*="/dubai/"],
@@ -563,7 +580,12 @@ const BALI_PLANNER_PLACE_IMAGES = {
   mountBaturSunriseLocal: plannerLocalImage("images/bali-tours/mount-batur-sunrise-jeep-tour.webp"),
 };
 const BALI_PLANNER_PLACE_IMAGE_BY_TITLE = {
-  "Tanah Lot Temple": "https://live.staticflickr.com/4128/4947292419_203860e39c_b.jpg",
+  "Tanah Lot Temple": plannerLocalImage("images/bali-tours/unesco-tanah-lot-sunset.jpg"),
+  "Taman Ayun Temple": plannerLocalImage("images/bali-tours/unesco-taman-ayun.jpg"),
+  "Ulun Danu Beratan Temple": plannerLocalImage("images/bali-tours/unesco-ulun-danu.jpg"),
+  "Ulun Danu Temple": plannerLocalImage("images/bali-tours/unesco-ulun-danu.jpg"),
+  "Jatiluwih Rice Terrace": plannerLocalImage("images/bali-tours/unesco-jatiluwih-hero.jpg"),
+  "Jatiluwih Rice Terraces": plannerLocalImage("images/bali-tours/unesco-jatiluwih-hero.jpg"),
   "La Brisa Beach Club": lokasiBaliImage("business-0x2dd23876693af8ad%3A0x86929db7c4eabc29-0.webp"),
   "Batu Bolong Beach": "https://live.staticflickr.com/65535/49439825083_4c1d06d9ee_b.jpg",
   "The Lawn Canggu": lokasiBaliImage("business-0x2dd24787d5600789%3A0xddcc6236335403f0-0.webp"),
@@ -945,7 +967,7 @@ Object.assign(BALI_PLANNER_PLACE_IMAGE_BY_TITLE, {
   "Ubud Art Market": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ubud_Market%2C_Bali%2C_Indonesia.jpg/1280px-Ubud_Market%2C_Bali%2C_Indonesia.jpg",
   "Tegenungan Waterfall": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tegenungan_waterfall%2C_Bali.jpg/1280px-Tegenungan_waterfall%2C_Bali.jpg",
   "Suwat Waterfall": BALI_PLANNER_PLACE_IMAGES.ubudWaterfall,
-  "Gunung Kawi Temple": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Gunung_Kawi%2C_Bali%2C_Indonesia.jpg/1280px-Gunung_Kawi%2C_Bali%2C_Indonesia.jpg",
+  "Gunung Kawi Temple": plannerLocalImage("images/bali-tours/gunung-kawi-temple.jpg"),
   "Gunung Kawi Sebatu": BALI_PLANNER_PLACE_IMAGES.ubudTemple,
   "Blanco Renaissance Museum": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Blanco_Renaissance_Museum%2C_Ubud%2C_Bali.jpg/1280px-Blanco_Renaissance_Museum%2C_Ubud%2C_Bali.jpg",
   "Neka Art Museum": BALI_PLANNER_PLACE_IMAGES.ubudPalace,
@@ -1344,39 +1366,81 @@ function place(title, kind, maps, copy, vibe, interests){ return { title:title, 
 const tours = [
   {
     slug: "ubud-highlights-tour",
-    title: "Ubud Highlights Tour",
-    eyebrow: "Culture and nature day trip",
-    duration: "8-10 hours",
-    pickup: "Morning hotel pickup",
+    title: "Ubud Rice Terrace, Temple & Volcano Tour",
+    eyebrow: "All-inclusive Ubud and Kintamani day",
+    mapLabel: "Heritage route",
+    privateOfferEyebrow: "Best-selling heritage route",
+    duration: "10 hours",
+    pickup: "08:00 hotel pickup from covered Bali areas",
     bestFor: "First-time Bali visitors",
-    format: "Private day tour",
-    area: "Ubud and central Bali",
-    price: "Ask price",
+    format: "All-inclusive private day tour",
+    area: "Kintamani, Ubud, and central Bali",
+    price: "From $70",
     image: sourceImage("tild3365-3333-4637-a663-636263353664__dika-pebriyanta-qqxc.jpg"),
-    imageAlt: "Ubud temple and lakeside scenery in Bali",
+    imageAlt: "Rice terraces, temple stops, and Mount Batur viewpoint scenery in Bali",
     lead:
-      "See the most photogenic side of central Bali in one smooth day with rice terraces, temples, waterfalls, and the easy rhythm that makes Ubud so popular.",
+      "Cover central Bali's classic arts villages, temple stops, Mount Batur lunch views, rice terraces, Monkey Forest, and Ubud Palace in one all-inclusive private day.",
     summary:
-      "This Ubud Highlights Tour is built for travelers who want classic Bali scenery without rushing from stop to stop. It works especially well for couples, families, and guests who want a balanced mix of culture, viewpoints, and soft adventure.",
+      "This all-inclusive Ubud and Kintamani day tour is built for travelers who want Bali culture, scenery, and soft adventure without managing tickets, transport, or lunch separately. It works especially well for first-time visitors because the route moves from craft villages and temples to volcano views, rice terraces, and the Ubud center in one organized flow.",
     overview:
-      "Expect a flexible private route that can be adjusted around your hotel area, pace, and preferred photo stops. It is the easiest way to get the signature Ubud look and feel while keeping transport, timing, and route planning simple.",
+      "The route usually starts with Batubulan batik, Celuk silver, and Mas wood carving, then continues to Batuan Temple, Sebatu, Gunung Kawi, a Kintamani buffet lunch with Mount Batur views, Tegalalang rice terraces and coffee tasting, Monkey Forest, and Ubud Palace before the return transfer.",
+    miniPromoSideText:
+      "Batubulan batik, Celuk silver, Batuan Temple, Gunung Kawi, Kintamani lunch views, Tegalalang, Monkey Forest, and Ubud Palace in one smooth route.",
     highlights: [
-      ["Rice terrace viewpoints", "A classic Bali landscape day with green terraces, jungle backdrops, and wide open viewpoints."],
-      ["Temple atmosphere", "A calm cultural route that still feels premium and visually rich instead of overly touristy."],
-      ["Waterfall stop potential", "Add a refreshing nature break with an easy waterfall stop that fits your pace and energy."],
-      ["Private pacing", "Spend more time at the places you like most and skip the unnecessary waiting of shared group trips."],
+      ["Kintamani volcano lunch views", "Indonesian buffet lunch with wide views over Mount Batur and Lake Batur."],
+      ["Temple route with real depth", "Batuan Temple, Sebatu, and Gunung Kawi bring the sacred side of the day into one smooth route."],
+      ["Rice terrace and coffee stop", "Tegalalang scenery plus a plantation break for coffee, tea, and photo time."],
+      ["Arts villages and Ubud finish", "Batik, silver, wood carving, Monkey Forest, and Ubud Palace keep the day full without feeling random."],
     ],
     itinerary: [
-      ["Morning pickup and route planning", "Your day starts with hotel pickup and a route that can be shaped around your area and preferred stop order."],
-      ["Terraces, temples, and scenic stops", "Move through the Ubud area with time for iconic viewpoints, soft walks, and classic photo opportunities."],
-      ["Relaxed return to your hotel", "Finish the route with extra coffee, a last scenic stop, or a direct return depending on how full you want the day to feel."],
+      ["Arts villages and first temple stops", "Start with Batubulan batik, Celuk silver, Mas wood carving, and Batuan Temple before the route climbs inland."],
+      ["Sebatu, Gunung Kawi, and Kintamani", "Continue through the temple valley section and pause in Kintamani for the all-inclusive buffet lunch with Mount Batur views."],
+      ["Tegalalang, Monkey Forest, and Ubud Palace", "Finish with rice terraces, coffee tasting, Monkey Forest, and Ubud Palace before the return transfer to your hotel."],
     ],
-    tags: ["hotelPickup", "private", "temple", "nature", "family"],
+    includes: [
+      "Hotel pickup and return from covered Bali areas",
+      "Private air-conditioned transport",
+      "All entrance tickets and local route fees",
+      "Bottled mineral water",
+      "Indonesian buffet lunch in Kintamani",
+      "Coffee and tea tasting stop",
+    ],
+    goodToKnow: [
+      "Personal drinks, souvenirs, and gratuities are usually not included.",
+      "Bring sunscreen, a hat, sports shoes or strapped sandals, extra cash, and a camera.",
+      "Pickup usually covers Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, and Jimbaran.",
+      "Volcano views in Kintamani always depend on the weather window on the day.",
+      "The final stop order can shift a little with traffic, ceremonies, and the hotel area.",
+    ],
+    meetingPoint:
+      "Most guests are picked up directly from their hotel, villa, or Airbnb in Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, or Jimbaran.",
+    faqs: [
+      [
+        "Which places are included on this Ubud route?",
+        "This all-inclusive day usually runs through Batubulan batik village, Celuk silver, Mas wood carving, Batuan Temple, Sebatu, Gunung Kawi, Kintamani, Tegalalang, Monkey Forest, and Ubud Palace, with the final order adjusted around traffic and timing.",
+      ],
+      [
+        "Is lunch included in the tour?",
+        "Yes. The standard package includes an Indonesian buffet lunch in Kintamani with Mount Batur and Lake Batur views.",
+      ],
+      [
+        "Which areas get hotel pickup?",
+        "Pickup is usually available from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, and Jimbaran. Final timing depends on your hotel area.",
+      ],
+      [
+        "What is included in the package?",
+        "The all-inclusive format usually covers hotel pickup and drop-off, private transport, entrance tickets, bottled water, lunch, and the coffee or tea tasting stop.",
+      ],
+    ],
+    mainPageFeatures: [
+      ["⏰", "10 hours private day tour"],
+      ["🚐", "Free pick up & drop-off included"],
+      ["🎟", "All tickets included"],
+      ["📍", "10 stops: rice terraces, temples, volcano and Ubud"],
+      ["🍽", "Buffet lunch with Mt. Batur view"],
+    ],
+    tags: ["hotelPickup", "private", "temple", "nature", "family", "volcano"],
     related: ["east-bali-instagram-tour", "tanah-lot-bedugul-tour", "private-car-with-driver-bali"],
-    faqExtra: [
-      "Can this Ubud tour be customized?",
-      "Yes. Because this is typically booked as a private Bali day trip, the route can be adjusted around your hotel area, travel pace, and the places you most want to prioritize.",
-    ],
   },
   {
     slug: "north-bali-lovina-dolphins-tour",
@@ -1596,35 +1660,36 @@ const tours = [
     ],
   },
   {
-    slug: "unesco-heritage-sites-tour",
+    slug: "bali-unesco",
     title: "Bali UNESCO Heritage Sites Tour",
-    mainPage: false,
-    aiPlanner: false,
+    metaTitle: "Bali UNESCO Heritage Sites Tour | Taman Ayun, Ulun Danu, Jatiluwih & Tanah Lot",
+    metaDescription:
+      "Book the Bali UNESCO Heritage Sites Tour with Taman Ayun Temple, Ulun Danu Beratan, Jatiluwih Rice Terraces and Tanah Lot, plus private transport and all entrance tickets from $70 per person.",
     eyebrow: "UNESCO temples, rice terraces, and Tanah Lot",
     duration: "10 hours",
     pickup: "Morning hotel pickup from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, or Jimbaran",
-    bestFor: "Culture lovers, families, couples, and first-time Bali sightseeing days",
+    bestFor: "culture lovers, couples, families, and first-time Bali sightseeing days",
     format: "Private heritage sightseeing route",
-    area: "Central and west Bali UNESCO heritage route",
-    price: "From $75",
-    image: sourceImage("bali-tours/tanah-lot-bedugul-tour.jpg"),
-    imageAlt: "Bali UNESCO Heritage Sites Tour with temple and rice terrace scenery",
+    area: "West & Central Bali UNESCO route",
+    price: "From $70",
+    image: sourceImage("bali-tours/unesco-jatiluwih-hero.jpg"),
+    imageAlt: "Jatiluwih rice terraces and mountain scenery on the Bali UNESCO Heritage Sites Tour",
     lead:
-      "See Bali's best-known heritage scenery in one polished private day with Taman Ayun Temple, Ulun Danu Beratan, Jatiluwih Rice Terraces, and Tanah Lot connected in one easy route.",
+      "See Bali's best-known heritage scenery in one polished private day with Taman Ayun Temple, Ulun Danu Beratan, Jatiluwih Rice Terraces, and Tanah Lot connected in one smooth all-inclusive route.",
     summary:
-      "This Bali UNESCO Heritage Sites Tour is built for travelers who want temple courtyards, mountain-lake views, UNESCO rice terraces, and a famous coastal temple finish without stitching separate day trips together. Private transport, all entrance tickets, a sarong, and bottled water are handled from $75.",
+      "This Bali UNESCO Heritage Sites Tour is built for travelers who want temple courtyards, mountain-lake views, UNESCO rice terraces, and a famous coastal temple finish without stitching separate day trips together. Private transport, entrance tickets, a temple sarong, and bottled water are already handled from $70 per person.",
     overview:
-      "The route works well because it keeps the day scenic and varied without making it physically heavy. You start with cultural and architectural stops, continue into the cooler Bedugul highlands, open out into the wide Jatiluwih rice terrace landscape, and finish at Tanah Lot for one of Bali's most recognizable oceanfront temple settings.",
+      "The route works well because it stays scenic and varied without turning physically heavy. You begin with royal-temple architecture at Taman Ayun, continue into the cooler Bedugul highlands for Ulun Danu Beratan, open into the wide UNESCO-listed Jatiluwih terraces, and finish at Tanah Lot for one of Bali's most recognizable oceanfront temple settings.",
     highlights: [
       ["Taman Ayun Temple", "Start with one of Bali's most elegant royal temple complexes and a calm cultural stop that sets the tone for the day."],
-      ["Ulun Danu Beratan", "The mountain lake setting in Bedugul gives the route cooler air, softer light, and one of Bali's most iconic temple backdrops."],
+      ["Ulun Danu Beratan", "The mountain-lake setting in Bedugul gives the route cooler air, softer light, and one of Bali's most iconic temple backdrops."],
       ["Jatiluwih Rice Terraces", "Add the UNESCO-listed rice terrace landscape that makes this route feel broader and more visually complete than a temple-only day."],
-      ["Tanah Lot coastal finish", "Close with Bali's famous sea temple and a coastal atmosphere that gives the final part of the day real payoff."],
+      ["Tanah Lot coastal finish", "Close with Bali's famous sea temple and a sunset-friendly coastal atmosphere that gives the last part of the day real payoff."],
     ],
     itinerary: [
       ["Morning pickup and Taman Ayun Temple", "Begin with hotel pickup from the main south and central Bali areas, then head first to Taman Ayun Temple for the opening cultural stop."],
       ["Ulun Danu Beratan in Bedugul", "Continue into the cooler highlands for Ulun Danu Beratan, where temple scenery, lake views, and mountain air break up the route beautifully."],
-      ["Jatiluwih Rice Terraces", "Drive onward to Jatiluwih for Bali's UNESCO rice terrace landscape and the broad green views travelers usually expect from a heritage route."],
+      ["Jatiluwih Rice Terraces", "Drive onward to Jatiluwih for Bali's UNESCO rice terrace landscape, broad green views, and the optional lunch window with Mount Batukaru scenery nearby."],
       ["Tanah Lot and return transfer", "Finish the day at Tanah Lot before the return drive back to your hotel, with timing adjusted around traffic and the best available light."],
     ],
     includes: [
@@ -1641,6 +1706,8 @@ const tours = [
       "The day is comfortable for most travelers, but like any Bali sightseeing route, exact timing can shift with traffic and weather.",
       "For a full refund, the source says cancellation should be made at least 3 days before the experience start date.",
     ],
+    meetingPoint:
+      "Most travelers are picked up directly from their hotel, villa, or Airbnb in the covered Bali areas before the route begins.",
     faqs: [
       [
         "How long does the Bali UNESCO Heritage Sites Tour take?",
@@ -1692,16 +1759,54 @@ const tours = [
       ],
     ],
     tags: ["hotelPickup", "private", "temple", "culture", "family"],
-    related: ["tanah-lot-bedugul-tour", "ubud-highlights-tour", "east-bali-instagram-tour"],
+    mainPageFilterTags: ["culture"],
+    mainPageRank: 15,
+    plannerPriority: 24,
+    related: ["tanah-lot-bedugul-tour", "ubud-highlights-tour", "private-car-with-driver-bali"],
     whatsappText:
-      "Hello! I want to book the Bali UNESCO Heritage Sites Tour. Please send availability, pickup options, and full details.",
-    metaTitle: "Bali UNESCO Heritage Sites Tour | Jatiluwih, Ulun Danu & Tanah Lot",
-    metaDescription:
-      "Book the Bali UNESCO Heritage Sites Tour with Taman Ayun Temple, Ulun Danu Beratan, Jatiluwih Rice Terraces and Tanah Lot, plus private transport and all entrance tickets from $75.",
+      "Hello! I want to book the Bali UNESCO Heritage Sites Tour for $70 per person. Please send availability, pickup areas, and full details.",
+    mainPageFeatures: [
+      ["⏰", "10 hours private route"],
+      ["🚐", "Hotel pickup from major Bali areas"],
+      ["🛕", "Taman Ayun and Ulun Danu temples"],
+      ["🌾", "Jatiluwih UNESCO rice terraces"],
+      ["🌅", "Tanah Lot coastal finish"],
+    ],
+    privateOfferEyebrow: "UNESCO heritage route",
+    mapLabel: "UNESCO route",
+    miniPromoSideText:
+      "Explore Bali's UNESCO heritage side with royal temple courtyards, Bedugul lake scenery, Jatiluwih rice terraces, and a Tanah Lot sunset-style finish in one private day.",
+    collageImages: [
+      {
+        imagePath: plannerLocalImage("images/bali-tours/unesco-jatiluwih-hero.jpg"),
+        altText: "Jatiluwih rice terraces and mountain scenery on the Bali UNESCO Heritage Sites Tour",
+      },
+      {
+        imagePath: plannerLocalImage("images/bali-tours/unesco-taman-ayun.jpg"),
+        altText: "Taman Ayun Temple courtyards and moat on the Bali UNESCO Heritage Sites Tour",
+      },
+      {
+        imagePath: plannerLocalImage("images/bali-tours/unesco-ulun-danu.jpg"),
+        altText: "Ulun Danu Beratan Temple and Lake Bratan on the Bali UNESCO Heritage Sites Tour",
+      },
+      {
+        imagePath: plannerLocalImage("images/bali-tours/unesco-tanah-lot-sunset.jpg"),
+        altText: "Tanah Lot Temple at sunset on the Bali UNESCO Heritage Sites Tour",
+      },
+      {
+        imagePath: plannerLocalImage("images/bali-tours/unesco-jatiluwih-terraces.jpg"),
+        altText: "Jatiluwih UNESCO rice terraces close landscape on the Bali UNESCO Heritage Sites Tour",
+      },
+      {
+        imagePath: plannerLocalImage("images/bali-tours/unesco-ulun-danu-close.jpg"),
+        altText: "Ulun Danu Beratan Temple close lake view on the Bali UNESCO Heritage Sites Tour",
+      },
+    ],
   },
   {
     slug: "mount-batur-sunrise-jeep-tour",
     title: "Mount Batur Sunrise Jeep Tour",
+    mainPage: false,
     eyebrow: "Volcano sunrise adventure",
     duration: "6-8 hours",
     pickup: "Night or pre-dawn pickup",
@@ -2065,6 +2170,15 @@ const tours = [
     format: "Island day tour",
     area: "West Nusa Penida",
     price: "Ask price",
+    mainPagePrice: "49$",
+    mainPagePriceNote: "per car",
+    mainPageFeatures: [
+      ["⏰", "10-12 hours"],
+      ["⛴", "Fast Boat and Island Transfer"],
+      ["📍", "Kelingking and Top West Coast Stops"],
+      ["📸", "Epic Cliff Views"],
+      ["👥", "Capacity 6 persons"],
+    ],
     image: sourceImage("tild3033-6437-4832-a231-366334396336__connor-2a_nva3oqoe-u.webp"),
     imageAlt: "West Nusa Penida cliffs and ocean views",
     lead:
@@ -2101,6 +2215,15 @@ const tours = [
     format: "Full-day island tour",
     area: "East Nusa Penida",
     price: "From $75",
+    mainPagePrice: "49$",
+    mainPagePriceNote: "per car",
+    mainPageFeatures: [
+      ["⏰", "10-12 hours"],
+      ["⛴", "Fast Boat and Island Transfer"],
+      ["🏝", "Diamond Beach and Atuh Beach"],
+      ["✨", "Molenteng Tree House and Thousand Islands"],
+      ["👥", "Capacity 6 persons"],
+    ],
     image: sourceImage("smile-nusa-penida-east-diamond-beach.jpg"),
     imageAlt: "Diamond Beach cliffs and turquoise water on east Nusa Penida",
     lead:
@@ -2242,6 +2365,13 @@ const tours = [
     format: "Snorkeling tour",
     area: "Manta Point and Nusa Penida waters",
     price: "From $29",
+    mainPageFeatures: [
+      ["🤿", "Snorkeling Experience"],
+      ["🐢", "Gamat Bay with chance to spot sea turtles"],
+      ["🌊", "Wall Point for beautiful snorkeling"],
+      ["🐠", "Manta Point with 80% manta chance"],
+      ["⛴", "Boat and equipment included"],
+    ],
     image: sourceImage("tild6433-3562-4239-b139-323864376162__460c0ba639ce4f661f5a.webp"),
     imageAlt: "Manta rays swimming in blue water near Nusa Penida",
     lead:
@@ -2817,13 +2947,14 @@ const existingRoutes = {
 
 const WEST_ROUTE_POINTS = {
   "ubud-highlights-tour": {
-    stops: ["Ubud Palace", "Tegallalang", "Tirta Empul", "Goa Gajah", "Tegenungan"],
+    stops: ["Batuan Temple", "Gunung Kawi", "Kintamani", "Tegallalang", "Monkey Forest", "Ubud Palace"],
     routeStops: [
-      "Ubud Palace, Ubud, Bali",
+      "Batuan Temple, Gianyar, Bali",
+      "Gunung Kawi Temple, Tampaksiring, Bali",
+      "Kintamani, Bangli, Bali",
       "Tegallalang Rice Terrace, Bali",
-      "Tirta Empul Temple, Tampaksiring, Bali",
-      "Goa Gajah, Gianyar, Bali",
-      "Tegenungan Waterfall, Bali",
+      "Ubud Monkey Forest, Ubud, Bali",
+      "Ubud Palace, Ubud, Bali",
     ],
   },
   "north-bali-lovina-dolphins-tour": {
@@ -2866,13 +2997,12 @@ const WEST_ROUTE_POINTS = {
       "Tanah Lot Temple, Bali",
     ],
   },
-  "unesco-heritage-sites-tour": {
-    stops: ["Taman Ayun", "Ulun Danu", "Jatiluwih", "Batukaru", "Tanah Lot"],
+  "bali-unesco": {
+    stops: ["Taman Ayun", "Ulun Danu", "Jatiluwih", "Tanah Lot"],
     routeStops: [
       "Taman Ayun Temple, Mengwi, Bali",
       "Ulun Danu Beratan Temple, Bedugul, Bali",
       "Jatiluwih Rice Terrace, Tabanan, Bali",
-      "Batukaru Temple, Tabanan, Bali",
       "Tanah Lot Temple, Bali",
     ],
   },
@@ -3585,7 +3715,7 @@ function buildWestFaqs(tour) {
 
   const includes = buildIncludes(tour);
   const notes = buildGoodToKnow(tour);
-  const routeStops = buildWestRouteStops(tour).slice(0, 4);
+  const routeStops = buildWestReadableStops(tour).slice(0, 4);
   const generatedFaqs = [
     [
       `Is hotel pickup included in the ${tour.title}?`,
@@ -3883,7 +4013,7 @@ function buildWestMapModel(tour) {
   return {
     embedRoute: links.embedRoute,
     openRoute: links.openRoute,
-    label: westRouteLabel(tour),
+    label: collapseWhitespace(tour.mapLabel || westRouteLabel(tour)),
     title: `${tour.title} route on Google Maps`,
     text: buildWestMapText(tour, stops),
     stops,
@@ -3899,6 +4029,7 @@ function buildWestPrivateOfferModel(tour) {
 
   return {
     eyebrow:
+      collapseWhitespace(tour.privateOfferEyebrow) ||
       {
         sunrise: "Classic sunrise route",
         marine: "Sea-day favorite",
@@ -3908,7 +4039,8 @@ function buildWestPrivateOfferModel(tour) {
         adventure: "High-energy Bali route",
         transfer: "Easy Bali logistics",
         helicopter: "Premium flight route",
-      }[detectTourKind(tour)] || "Best-selling Bali route",
+      }[detectTourKind(tour)] ||
+      "Best-selling Bali route",
     heading: tour.title,
     text: collapseWhitespace(tour.summary || tour.lead || tour.overview),
     benefits: [
@@ -3955,7 +4087,7 @@ function buildWestMiniPromoModel(tour) {
     title: promoTitle,
     text: collapseWhitespace(promoText),
     ctaLabel: "Book now",
-    sideText: collapseWhitespace(tour.overview || tour.summary || tour.lead),
+    sideText: collapseWhitespace(tour.miniPromoSideText || tour.overview || tour.summary || tour.lead),
   };
 }
 
@@ -4031,11 +4163,15 @@ function replaceDoubleQuotedField(html, field, content) {
 }
 
 function replaceTildaBackgroundImageByElemId(html, elemId, imagePath, altText) {
+  const normalizedImagePath = normalizeJournalImageSrc(imagePath);
   return html.replace(
     new RegExp(
       `(data-elem-id='${escapeRegExp(elemId)}'[\\s\\S]*?<div class='tn-atom t-bgimg' data-original=")([^"]*)("[\\s\\S]*?aria-label=')([^']*)(' role="img")`,
     ),
-    (_, start, __oldPath, middle, __oldAlt, end) => `${start}${escapeHtml(imagePath)}${middle}${escapeHtml(altText)}${end}`,
+    (_, start, __oldPath, middle, __oldAlt, end) =>
+      `${start}${escapeHtml(normalizedImagePath)}${middle}${escapeHtml(altText)}${end} style="background-image:url('${escapeHtml(
+        normalizedImagePath,
+      )}');"`,
   );
 }
 
@@ -4068,15 +4204,20 @@ function resolveWestCollageStopImage(stop, tour) {
     [/ubud palace|puri ubud/i, exactPlaceImage("Puri Ubud") || commonsImage("Ubud Palace, Bali, Indonesia, 20220822 0904 9820.jpg")],
     [/(tega|tega?l+|tega?l+a)l?a?ng|rice terrace/i, exactPlaceImage("Tegalalang Rice Terrace") || BALI_PLANNER_PLACE_IMAGES.ubudRiceTerrace],
     [/tirta empul/i, exactPlaceImage("Tirta Empul Temple") || BALI_PLANNER_PLACE_IMAGES.ubudTemple],
+    [/batuan/i, BALI_PLANNER_PLACE_IMAGES.ubudTemple],
+    [/sebatu/i, exactPlaceImage("Gunung Kawi Sebatu") || BALI_PLANNER_PLACE_IMAGES.ubudTemple],
+    [/gunung kawi/i, exactPlaceImage("Gunung Kawi Temple") || BALI_PLANNER_PLACE_IMAGES.ubudTemple],
+    [/kintamani/i, BALI_PLANNER_PLACE_IMAGES.mountBaturSunriseLocal],
+    [/monkey forest/i, BALI_PLANNER_PLACE_IMAGES.ubudMonkeyForest],
     [/goa gajah/i, exactPlaceImage("Goa Gajah") || BALI_PLANNER_PLACE_IMAGES.ubudGoaGajah],
     [/tegenungan/i, commonsImage("Kanto lampo waterfall.jpg")],
     [/lovina|dolphin/i, plannerLocalImage("images/bali-tours/dolphin-sunrise-city-tour.jpg")],
     [/gitgit|banyumala|ulu petanu|waterfall/i, exactPlaceImage("Kanto Lampo Waterfall") || BALI_PLANNER_PLACE_IMAGES.ubudWaterfall],
     [/handara/i, plannerLocalImage("images/bali-tours/bali-instagram-highlights-tour.jpg")],
-    [/ulun danu|bedugul/i, plannerLocalImage("images/bali-tours/tanah-lot-bedugul-tour.jpg")],
+    [/ulun danu|bedugul/i, exactPlaceImage("Ulun Danu Beratan Temple") || plannerLocalImage("images/bali-tours/tanah-lot-bedugul-tour.jpg")],
     [/candikuning/i, plannerLocalImage("images/bali-tours/tanah-lot-bedugul-tour.jpg")],
-    [/taman ayun|batukaru/i, plannerLocalImage("images/bali-tours/unesco-heritage-sites-tour.jpg")],
-    [/jatiluwih/i, plannerLocalImage("images/bali-tours/unesco-heritage-sites-tour.jpg")],
+    [/taman ayun|batukaru/i, exactPlaceImage("Taman Ayun Temple") || plannerLocalImage("images/bali-tours/unesco-taman-ayun.jpg")],
+    [/jatiluwih/i, exactPlaceImage("Jatiluwih Rice Terrace") || plannerLocalImage("images/bali-tours/unesco-jatiluwih-hero.jpg")],
     [/tanah lot/i, exactPlaceImage("Tanah Lot Temple") || commonsImage("Tanah Lot, Bali, Indonesia, 20220827 0957 1103.jpg")],
     [/lempuyang/i, exactPlaceImage("Lempuyang Temple") || BALI_PLANNER_PLACE_IMAGES.eastBaliLempuyang],
     [/tirta gangga/i, exactPlaceImage("Tirta Gangga") || BALI_PLANNER_PLACE_IMAGES.eastBaliTirtaGangga],
@@ -4190,13 +4331,23 @@ function buildWestCollageFallbackAssets(tour) {
 
 function buildWestCollageImageOverrides(tour) {
   if (tour.slug !== "nusa-penida-west-tour") {
+    const explicitAssets = Array.isArray(tour.collageImages)
+      ? tour.collageImages
+          .map((asset) =>
+            buildCollageAsset(
+              typeof asset === "string" ? asset : asset?.imagePath,
+              typeof asset === "string" ? `${tour.title} in Bali` : asset?.altText || `${tour.title} in Bali`,
+            ),
+          )
+          .filter(Boolean)
+      : [];
     const stopAssets = buildWestCollageStops(tour)
       .map((stop) => resolveWestCollageStopImage(stop, tour))
       .filter(Boolean);
     const uniqueAssets = [];
     const seenImagePaths = new Set();
 
-    for (const asset of stopAssets.concat(buildWestCollageFallbackAssets(tour))) {
+    for (const asset of explicitAssets.concat(stopAssets, buildWestCollageFallbackAssets(tour))) {
       if (!asset || seenImagePaths.has(asset.imagePath)) continue;
       seenImagePaths.add(asset.imagePath);
       uniqueAssets.push(asset);
@@ -4330,10 +4481,60 @@ function renderWestStylePage(tour) {
   ]);
   const faq = buildWestFaqs(tour);
   const map = buildWestMapModel(tour);
+  const mapStopFields = [
+    "tn_text_1721243533774",
+    "tn_text_1721243533790",
+    "tn_text_1721243533793",
+    "tn_text_1721243533797",
+    "tn_text_1721243533799",
+  ];
+  const mapStopLabels =
+    map.stops.length === 4
+      ? [map.stops[0], map.stops[1], map.stops[2], "", map.stops[3]]
+      : mapStopFields.map((_, index) => map.stops[index] || "");
   const offer = buildWestPrivateOfferModel(tour);
   const miniPromo = buildWestMiniPromoModel(tour);
   const reviews = buildWestReviews(tour);
   const imagePath = publicImagePath(tour);
+  const privateOfferAssets = (() => {
+    const explicit = Array.isArray(tour.collageImages)
+      ? tour.collageImages
+          .map((asset) =>
+            buildCollageAsset(
+              typeof asset === "string" ? asset : asset?.imagePath,
+              typeof asset === "string" ? `${tour.title} in Bali` : asset?.altText || `${tour.title} in Bali`,
+            ),
+          )
+          .filter(Boolean)
+      : [];
+    const fallback = buildCollageAsset(imagePath, tour.imageAlt || `${tour.title} in Bali`);
+    const picked = explicit.slice(0, 3);
+
+    while (picked.length < 3 && fallback) {
+      picked.push(fallback);
+    }
+
+    return picked;
+  })();
+  const offerSectionHeading = "Route format & pricing";
+  const offerPrimaryLabel = /private/i.test(collapseWhitespace(tour.format || "")) ? "Private route" : clampText(collapseWhitespace(tour.format || "Bali route"), 18);
+  const offerSupportEyebrow = /optional/i.test(collapseWhitespace(tour.pickup || ""))
+    ? "Optional pickup"
+    : "Pickup included";
+  const offerSupportLabel = clampText(/optional/i.test(collapseWhitespace(tour.pickup || "")) ? "Hotel transfer" : "Major Bali areas", 18);
+  const offerSupportTitle = /hotel|pickup/i.test(collapseWhitespace(tour.pickup || ""))
+    ? "Hotel pickup and return"
+    : "Travel support included";
+  const offerSupportPrice = /optional/i.test(collapseWhitespace(tour.pickup || "")) ? "Optional" : "Free";
+  const offerIncludedEyebrow = clampText(/ticket/i.test((buildIncludes(tour)[0] || "") + " " + (buildIncludes(tour)[1] || "")) ? "Tickets included" : "Easy planning", 18);
+  const offerIncludedLabel = clampText(
+    buildIncludes(tour).find((item) => /private/i.test(item)) || buildIncludes(tour)[0] || "Private car",
+    18,
+  );
+  const offerIncludedTitle = /ticket/i.test(buildIncludes(tour).join(" "))
+    ? "All entrance tickets arranged"
+    : "Private route support";
+  const offerBottomPricePrefix = /\$/.test(offer.priceValue) ? "from" : "";
   const heroArea = compactAreaLabel(tour);
   const heroLead = collapseWhitespace(tour.lead || tour.summary || tour.overview);
   const aboutSubtitle = `${tour.title} from Bali`;
@@ -4395,6 +4596,22 @@ function renderWestStylePage(tour) {
   html = replaceSingleQuotedField(html, "tn_text_1766620130918", escapeHtml(miniPromo.sideText));
   html = replaceSingleQuotedField(html, "tn_text_1766442865058", miniPromo.title);
   html = replaceSingleQuotedField(html, "tn_text_1766442925510", escapeHtml(miniPromo.text));
+  html = replaceSingleQuotedField(html, "tn_text_1766484562953", escapeHtml(offerSectionHeading));
+  html = replaceSingleQuotedField(html, "tn_text_1766484368351000015", formatWestHeroTitle(tour.title));
+  html = replaceSingleQuotedField(html, "tn_text_1766482792574000004", escapeHtml(collapseWhitespace(tour.duration)));
+  html = replaceSingleQuotedField(html, "tn_text_1766482941015000002", escapeHtml(offerPrimaryLabel));
+  html = replaceSingleQuotedField(html, "tn_text_1766493001632000002", escapeHtml(offer.priceValue));
+  html = replaceSingleQuotedField(html, "tn_text_1766484372486000019", escapeHtml(offerSupportEyebrow));
+  html = replaceSingleQuotedField(html, "tn_text_1766484372486000020", escapeHtml(offerSupportLabel));
+  html = replaceSingleQuotedField(html, "tn_text_1766484372486000023", escapeHtml(offerSupportEyebrow));
+  html = replaceSingleQuotedField(html, "tn_text_1766484372486000024", escapeHtml(offerSupportTitle));
+  html = replaceSingleQuotedField(html, "tn_text_1766484393522000025", escapeHtml(offerSupportPrice));
+  html = replaceSingleQuotedField(html, "tn_text_1766485293442000001", escapeHtml(collapseWhitespace(tour.duration)));
+  html = replaceSingleQuotedField(html, "tn_text_1766483692909000006", escapeHtml(offerIncludedLabel));
+  html = replaceSingleQuotedField(html, "tn_text_1766483692909000009", escapeHtml(offerIncludedEyebrow));
+  html = replaceSingleQuotedField(html, "tn_text_1766483692909000010", escapeHtml(offerIncludedTitle));
+  html = replaceSingleQuotedField(html, "tn_text_1766483692909000005", escapeHtml(offerBottomPricePrefix));
+  html = replaceSingleQuotedField(html, "tn_text_1766483730357000013", escapeHtml(offer.priceValue));
 
   html = replaceDoubleQuotedField(html, "li_descr__7138223910800", highlightsHtml);
   html = replaceDoubleQuotedField(html, "li_descr__7138223910801", fullDescriptionHtml);
@@ -4492,6 +4709,7 @@ function renderWestStylePage(tour) {
     .replaceAll("Book this tour", escapeHtml(offer.ctaLabel))
     .replaceAll("Book via WhatsApp", escapeHtml(offer.ctaLabel))
     .replaceAll("Book West Tour", escapeJsSingleQuoted(offer.ctaLabel))
+    .replaceAll('<span class="tn-atom__button-text">Buy now</span>', `<span class="tn-atom__button-text">${escapeHtml(offer.ctaLabel)}</span>`)
     .replaceAll(">$45<", `>${escapeJsSingleQuoted(offer.priceValue)}<`)
     .replaceAll("Nusa Penida west route on Google Maps", escapeJsSingleQuoted(map.title))
     .replaceAll("Island route", escapeJsSingleQuoted(map.label))
@@ -4537,7 +4755,35 @@ function renderWestStylePage(tour) {
     )
     .replaceAll("Book now", escapeHtml(miniPromo.ctaLabel));
 
+  mapStopFields.forEach((field, index) => {
+    html = replaceSingleQuotedField(html, field, escapeHtml(mapStopLabels[index] || ""));
+  });
+
   html = applyWestCollageImageOverrides(html, tour);
+  if (privateOfferAssets[0]) {
+    html = replaceTildaBackgroundImageByElemId(
+      html,
+      "1775497556211000003",
+      privateOfferAssets[0].imagePath,
+      privateOfferAssets[0].altText,
+    );
+  }
+  if (privateOfferAssets[1]) {
+    html = replaceTildaBackgroundImageByElemId(
+      html,
+      "1766477486741000004",
+      privateOfferAssets[1].imagePath,
+      privateOfferAssets[1].altText,
+    );
+  }
+  if (privateOfferAssets[2]) {
+    html = replaceTildaBackgroundImageByElemId(
+      html,
+      "1766477463111000002",
+      privateOfferAssets[2].imagePath,
+      privateOfferAssets[2].altText,
+    );
+  }
 
   html = html.replace(
     /(<div class='tn-atom'><a href=")\/bali\/en\/tours\/nusa-penida-west-tour("target="_blank"style="color: inherit"><u>)Nusa Penida West Tour(<\/u><\/a><\/div>)/,
@@ -5328,7 +5574,7 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
   #rec2121221993[data-record-type="396"] .t396__artboard,
   #rec2121221993[data-record-type="396"] .t396__filter,
   #rec2121221993[data-record-type="396"] .t396__carrier {
-    height: 418px !important;
+    height: 462px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
@@ -5416,7 +5662,7 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] {
-    top: 295px !important;
+    top: 287px !important;
     width: 142px !important;
   }
 
@@ -5433,14 +5679,34 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"] .tn-atom,
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"] .tn-atom,
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] .tn-atom {
-    font-size: 9.5px !important;
-    line-height: 1.34 !important;
+    font-size: 9px !important;
+    line-height: 1.3 !important;
+  }
+}
+`;
+
+const UBUD_COLLAGE_TEXT_MOBILE_FIX_CSS = `
+@media screen and (max-width: 959px) {
+  #rec2121222043 .tn-elem[data-elem-id="1766620130918"] .tn-atom {
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222043 .tn-elem[data-elem-id="1766620130918"] .tn-atom {
+    font-size: 12px !important;
+    line-height: 1.28 !important;
   }
 }
 `;
 
 function injectWestPageSpecificStyle(html, tour) {
   const pageSpecificCss = [WEST_TOUR_LAYOUT_FIX_CSS, TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS];
+
+  if (tour.slug === "ubud-highlights-tour") {
+    pageSpecificCss.push(UBUD_COLLAGE_TEXT_MOBILE_FIX_CSS);
+  }
 
   if (pageSpecificCss.length === 0) {
     return html;
@@ -6025,7 +6291,7 @@ const JOURNAL_SEO_GUIDES = [
     navLabel: "Top places guide",
     cardTourLabel: "First-time Bali highlights",
     heroTourSlug: "ubud-highlights-tour",
-    relatedTourSlugs: ["ubud-highlights-tour", "unesco-heritage-sites-tour", "nusa-penida-west-tour"],
+    relatedTourSlugs: ["ubud-highlights-tour", "bali-unesco", "nusa-penida-west-tour"],
     inlineStats: ["8 first-time picks", "Culture + scenery", "Strong for first itineraries"],
     title: "8 Best Places to Visit in Bali for First-Time Travelers",
     description:
@@ -8477,6 +8743,23 @@ function normalizedCardPrice(price) {
   return String(price || "Ask Price").replace(/^Ask price$/i, "Ask Price").replace(/^From /i, "from ");
 }
 
+function mainPageCardPriceValue(tour, fallbackPrice = "Ask Price") {
+  return normalizedCardPrice(tour?.mainPagePrice || tour?.price || fallbackPrice);
+}
+
+function mainPageCardPriceNote(tour, fallbackPrice = "Ask Price") {
+  if (tour?.mainPagePriceNote) return tour.mainPagePriceNote;
+  const priceText = String(tour?.mainPagePrice || tour?.price || fallbackPrice || "").trim();
+  if (!priceText) return "";
+  return "per person";
+}
+
+function renderMainPagePriceRow(tour, fallbackPrice = "Ask Price") {
+  const priceValue = mainPageCardPriceValue(tour, fallbackPrice);
+  const note = mainPageCardPriceNote(tour, fallbackPrice);
+  return `<div class="sb-price-row">${note ? `<div class="sb-price-note">${escapeHtml(note)}</div>` : ""}<div class="sb-price">${escapeHtml(priceValue)}</div></div>`;
+}
+
 function cardHighlightTitles(tour) {
   return (tour.highlights || []).map(([title]) => title).filter(Boolean);
 }
@@ -8493,6 +8776,12 @@ function mainPageCategories(tour) {
     categories.add("islands");
   }
   if (text.includes("nusa penida") || text.includes("nusa-penida")) categories.add("nusa");
+  if (kind === "culture") categories.add("culture");
+  if (Array.isArray(tour.mainPageFilterTags)) {
+    for (const tag of tour.mainPageFilterTags) {
+      if (tag) categories.add(String(tag).trim().toLowerCase());
+    }
+  }
 
   if (!categories.has("transport") && !categories.has("helicopter")) {
     if (!categories.size || ["sunrise", "culture", "instagram", "adventure", "relax", "scenic"].includes(kind)) {
@@ -8504,6 +8793,12 @@ function mainPageCategories(tour) {
 }
 
 function mainPageFeatureLines(tour) {
+  if (Array.isArray(tour.mainPageFeatures) && tour.mainPageFeatures.length) {
+    return tour.mainPageFeatures
+      .map(([icon, text]) => [icon, clampText(text, 58)])
+      .slice(0, 5);
+  }
+
   const kind = detectTourKind(tour);
   const highlights = cardHighlightTitles(tour);
   const lines = [];
@@ -8551,7 +8846,7 @@ function renderMainPageCard(tour) {
     )
     .join("");
 
-  return `<article class="sb-card sb-reveal" data-category="${escapeHtml(categoryAttr)}"><div class="sb-card-inner"><div class="sb-gallery"><div class="sb-img sb-img-main"><img loading="lazy" decoding="async" src="${escapeHtml(publicImagePath(tour))}" alt="${escapeHtml(tour.imageAlt || tour.title)}"></div></div><div class="sb-content"><h3 class="sb-title">${escapeHtml(tour.title)}</h3><ul class="sb-features">${featuresHtml}</ul><div class="sb-bottom"><div class="sb-price-row"><div class="sb-price">${escapeHtml(normalizedCardPrice(tour.price))}</div></div><a href="${tourRoute(tour)}" class="sb-btn">Details</a></div></div></div></article>`;
+  return `<article class="sb-card sb-reveal" data-category="${escapeHtml(categoryAttr)}"><div class="sb-card-inner"><div class="sb-gallery"><div class="sb-img sb-img-main"><img loading="lazy" decoding="async" src="${escapeHtml(publicImagePath(tour))}" alt="${escapeHtml(tour.imageAlt || tour.title)}"></div></div><div class="sb-content"><h3 class="sb-title">${escapeHtml(tour.title)}</h3><ul class="sb-features">${featuresHtml}</ul><div class="sb-bottom">${renderMainPagePriceRow(tour, tour.price)}<a href="${tourRoute(tour)}" class="sb-btn">Details</a></div></div></div></article>`;
 }
 
 function ensureGeneratedCardsOnMainPage(html) {
@@ -8617,6 +8912,119 @@ function extractMainPageCards(html) {
   }
 
   return cards;
+}
+
+function findTourByMainPageRoute(link, title = "") {
+  const normalizedLink = String(link || "").trim();
+  const normalizedTitle = collapseWhitespace(decodeHtmlEntities(title || ""));
+  const slug = normalizedLink.split("/").filter(Boolean).pop() || "";
+
+  return (
+    tours.find((tour) => tourRoute(tour) === normalizedLink) ||
+    tours.find((tour) => tour.slug === slug) ||
+    tours.find((tour) => collapseWhitespace(tour.title) === normalizedTitle) ||
+    null
+  );
+}
+
+function injectMainPagePriceNotes(html) {
+  return html.replace(
+    /<article class="sb-card sb-reveal" data-category="([^"]*)">([\s\S]*?)<\/article>/g,
+    (article) => {
+      const titleMatch = article.match(/<h3 class="sb-title">([\s\S]*?)<\/h3>/);
+      const linkMatch = article.match(/<a href="([^"]+)" class="sb-btn">Details<\/a>/);
+      const priceMatch = article.match(/<div class="sb-price">([^<]+)<\/div>/);
+      if (!titleMatch || !linkMatch) return article;
+
+      const tour = findTourByMainPageRoute(linkMatch[1], titleMatch[1]);
+      const fallbackPrice = decodeHtmlEntities(priceMatch ? priceMatch[1] : "Ask Price");
+      const nextPriceRow = renderMainPagePriceRow(tour, fallbackPrice);
+
+      return article.replace(
+        /<div class="sb-price-row">[\s\S]*?<\/div>(?=\s*<a href="[^"]+" class="sb-btn">Details<\/a>)/,
+        nextPriceRow,
+      );
+    },
+  );
+}
+
+function ensureCultureFilterButton(html) {
+  if (html.includes('data-filter="culture"')) return html;
+  return html.replace(
+    /(<button class="sb-filter-btn" data-filter="city">🌿 CITY TOURS<\/button>)/,
+    `$1<button class="sb-filter-btn" data-filter="culture">🛕 CULTURE</button>`,
+  );
+}
+
+function syncMainPageCardCategories(html) {
+  return html.replace(
+    /<article class="sb-card sb-reveal" data-category="([^"]*)">([\s\S]*?)<\/article>/g,
+    (article) => {
+      const titleMatch = article.match(/<h3 class="sb-title">([\s\S]*?)<\/h3>/);
+      const linkMatch = article.match(/<a href="([^"]+)" class="sb-btn">Details<\/a>/);
+      if (!titleMatch || !linkMatch) return article;
+
+      const tour = findTourByMainPageRoute(linkMatch[1], titleMatch[1]);
+      if (!tour) return article;
+
+      const nextCategory = mainPageCategories(tour).join(" ");
+      return article.replace(
+        /<article class="sb-card sb-reveal" data-category="[^"]*">/,
+        `<article class="sb-card sb-reveal" data-category="${escapeHtml(nextCategory)}">`,
+      );
+    },
+  );
+}
+
+function reorderMainPageCards(html) {
+  const listRe = /(<div class="sb-list" id="sbList">)([\s\S]*?)(<\/div><div class="sb-empty" id="sbEmpty">)/;
+  const match = listRe.exec(html);
+  if (!match) return html;
+
+  const articleRe = /<article class="sb-card sb-reveal" data-category="([^"]*)">([\s\S]*?)<\/article>/g;
+  const articles = [];
+  let orderIndex = 0;
+
+  for (const articleMatch of match[2].matchAll(articleRe)) {
+    const article = articleMatch[0];
+    const titleMatch = article.match(/<h3 class="sb-title">([\s\S]*?)<\/h3>/);
+    const linkMatch = article.match(/<a href="([^"]+)" class="sb-btn">Details<\/a>/);
+    const tour = titleMatch && linkMatch ? findTourByMainPageRoute(linkMatch[1], titleMatch[1]) : null;
+
+    articles.push({
+      article,
+      orderIndex,
+      mainPageRank: tour?.mainPageRank ?? 1000 + orderIndex,
+    });
+    orderIndex += 1;
+  }
+
+  if (articles.length < 2) return html;
+
+  const reorderedHtml = articles
+    .sort((a, b) => (a.mainPageRank - b.mainPageRank) || (a.orderIndex - b.orderIndex))
+    .map((item) => item.article)
+    .join("");
+
+  return `${html.slice(0, match.index)}${match[1]}${reorderedHtml}${match[3]}${html.slice(match.index + match[0].length)}`;
+}
+
+function removeHiddenMainPageCards(html) {
+  return html.replace(
+    /<article class="sb-card sb-reveal" data-category="([^"]*)">([\s\S]*?)<\/article>/g,
+    (article) => {
+      const titleMatch = article.match(/<h3 class="sb-title">([\s\S]*?)<\/h3>/);
+      const linkMatch = article.match(/<a href="([^"]+)" class="sb-btn">Details<\/a>/);
+      if (!titleMatch || !linkMatch) return article;
+
+      const tour = findTourByMainPageRoute(linkMatch[1], titleMatch[1]);
+      if (tour && !shouldIncludeOnMainPage(tour)) {
+        return "";
+      }
+
+      return article;
+    },
+  );
 }
 
 function plannerIdFromSlug(slug) {
@@ -8695,6 +9103,7 @@ function plannerFormats(tour) {
 }
 
 function plannerPriority(tour) {
+  if (Number.isFinite(tour?.plannerPriority)) return tour.plannerPriority;
   const kind = detectTourKind(tour);
   if (kind === "marine") return 30;
   if (kind === "sunrise") return 28;
@@ -8775,6 +9184,7 @@ const CURATED_PLANNER_ROUTES = new Set([
   "/bali/en/tours/mount-batur-sunrise-jeep-hot-spring",
   "/bali/en/tours/mount-batur-sunrise-hike",
   "/bali/en/tours/tanah-lot-bedugul-tour",
+  "/bali/en/tours/bali-unesco",
   "/bali/en/tours/private-car-with-driver-bali",
 ]);
 
@@ -9232,12 +9642,44 @@ function patchBaliMainFile(filePath) {
     );
   }
 
+  const nusaPenidaWestTour = tours.find((tour) => tour.slug === "nusa-penida-west-tour");
+  if (nusaPenidaWestTour) {
+    html = replaceCardArticle(
+      html,
+      ["Nusa Penida West Tour"],
+      renderMainPageCard(nusaPenidaWestTour),
+    );
+  }
+
+  const nusaPenidaMantaPointTour = tours.find((tour) => tour.slug === "nusa-penida-manta-rays-point");
+  if (nusaPenidaMantaPointTour) {
+    html = replaceCardArticle(
+      html,
+      ["Nusa Penida Snorkeling on Manta Point"],
+      renderMainPageCard(nusaPenidaMantaPointTour),
+    );
+  }
+
+  const ubudTour = tours.find((tour) => tour.slug === "ubud-highlights-tour");
+  if (ubudTour) {
+    html = replaceCardArticle(
+      html,
+      ["Ubud Highlights Tour", "Ubud Rice Terrace, Temple & Volcano Tour"],
+      renderMainPageCard(ubudTour),
+    );
+  }
+
   html = replaceTextInsideCard(html, "Nusa Penida West Tour", ">8 hours north Bali route</span>", ">10-12 hours</span>");
   html = replaceTextInsideCard(html, "Nusa Penida East Tour", ">8 hours north Bali route</span>", ">10-12 hours</span>");
 
   html = patchStaticCardLinks(html);
+  html = removeHiddenMainPageCards(html);
   html = patchPlannerLinks(html);
   html = ensureGeneratedCardsOnMainPage(html);
+  html = syncMainPageCardCategories(html);
+  html = reorderMainPageCards(html);
+  html = injectMainPagePriceNotes(html);
+  html = ensureCultureFilterButton(html);
   html = ensureGeneratedPlannerTours(html);
 
   html = html
@@ -9406,17 +9848,358 @@ return '<div class="sb-place-card' + (placeObj.topPick ? ' is-top-pick' : '') + 
   writeGeneratedFile(filePath, html);
 }
 
-function patchCompactWeatherWidget(filePath) {
+function listWeatherPatchFiles() {
+  const rootFiles = fs
+    .readdirSync(projectRoot)
+    .filter((fileName) => /^page\d+\.html$/.test(fileName))
+    .sort();
+  const bodyFilesDir = path.join(projectRoot, "files");
+  const bodyFiles = fs.existsSync(bodyFilesDir)
+    ? fs
+        .readdirSync(bodyFilesDir)
+        .filter((fileName) => /^page\d+body\.html$/.test(fileName))
+        .sort()
+        .map((fileName) => path.join("files", fileName))
+    : [];
+
+  return [...rootFiles, ...bodyFiles];
+}
+
+function inferWeatherPrimaryRoute(html, filePath) {
+  const aliases = [...html.matchAll(/data-tilda-page-alias="([^"]+)"/g)].map((match) => match[1]);
+  for (const alias of aliases) {
+    if (alias === "bali/en/main-page") return WEATHER_MAIN_PAGE_ROUTE;
+    if (alias.startsWith("bali/en/tours/")) return `/${alias}`;
+    if (alias === "bali/en/journal") return JOURNAL_HUB_ROUTE;
+    if (alias.startsWith("bali/en/journal/")) return `/${alias}`;
+    if (TILDA_WEATHER_ROUTE_OVERRIDES[alias]) return TILDA_WEATHER_ROUTE_OVERRIDES[alias];
+  }
+
+  const fileName = path.basename(filePath);
+  if (TILDA_WEATHER_FILE_FALLBACKS[fileName]) {
+    return TILDA_WEATHER_FILE_FALLBACKS[fileName];
+  }
+
+  return null;
+}
+
+function extractTildaRecordById(html, recordId, commentTag = "T123") {
+  const pattern = new RegExp(
+    String.raw`<div id="rec${recordId}"[^>]*>\s*<!--\s*${commentTag}\s*-->[\s\S]*?<!--\s*\/${commentTag}\s*-->\s*<\/div>`,
+    "i",
+  );
+  return html.match(pattern)?.[0] || "";
+}
+
+function buildWeatherTourLinks(primaryRoute = WEATHER_MAIN_PAGE_ROUTE) {
+  return {
+    hot: primaryRoute,
+    sunny: primaryRoute,
+    partly: primaryRoute,
+    cloudy: primaryRoute,
+    rain: WEATHER_MAIN_PAGE_ROUTE,
+    storm: primaryRoute,
+    night: WEATHER_MAIN_PAGE_ROUTE,
+  };
+}
+
+function replaceWeatherTourLinksConfig(html, primaryRoute = WEATHER_MAIN_PAGE_ROUTE) {
+  return html.replace(
+    /var TOUR_LINKS = \{[\s\S]*?\n\s*\}(?:;)?/,
+    `var TOUR_LINKS = ${JSON.stringify(buildWeatherTourLinks(primaryRoute), null, 6)};`,
+  );
+}
+
+let compactWeatherRecordTemplateCache = null;
+
+function buildCompactWeatherRecord(primaryRoute = WEATHER_MAIN_PAGE_ROUTE) {
+  if (!compactWeatherRecordTemplateCache) {
+    const sourcePath = path.join(projectRoot, "page128073236.html");
+    if (!fs.existsSync(sourcePath)) {
+      return "";
+    }
+
+    const sourceHtml = fs.readFileSync(sourcePath, "utf8");
+    compactWeatherRecordTemplateCache = extractTildaRecordById(sourceHtml, "2147449333", "T123");
+  }
+
+  if (!compactWeatherRecordTemplateCache) {
+    return "";
+  }
+
+  return replaceWeatherTourLinksConfig(compactWeatherRecordTemplateCache, primaryRoute);
+}
+
+function buildJeepHotSpringRouteRecord() {
+  const title = "Mount Batur Sunrise Jeep & Hot Spring route on Google Maps";
+  const text =
+    "Preview the key map points for Mount Batur Sunrise Jeep & Hot Spring. This route usually highlights Toya Bungkah, Sunrise Point, Black Lava, Black Sand, Hot Spring. Final timing, pickup, and stop order are confirmed after booking.";
+  const embedRoute =
+    "https://maps.google.com/maps?output=embed&f=d&saddr=Toya%20Bungkah%2C%20Kintamani%2C%20Bali&daddr=Mount%20Batur%20Sunrise%20Point%2C%20Kintamani%2C%20Bali+to:Black%20Lava%2C%20Kintamani%2C%20Bali+to:Black%20Sand%20Batur%2C%20Kintamani%2C%20Bali+to:Batur%20Natural%20Hot%20Spring%2C%20Kintamani%2C%20Bali";
+  const openRoute =
+    "https://www.google.com/maps/dir/Toya%20Bungkah%2C%20Kintamani%2C%20Bali/Mount%20Batur%20Sunrise%20Point%2C%20Kintamani%2C%20Bali/Black%20Lava%2C%20Kintamani%2C%20Bali/Black%20Sand%20Batur%2C%20Kintamani%2C%20Bali/Batur%20Natural%20Hot%20Spring%2C%20Kintamani%2C%20Bali";
+  const stops = ["Toya Bungkah", "Sunrise Point", "Black Lava", "Black Sand", "Hot Spring"];
+
+  return `
+<style id="sb-jeep-hot-spring-route-style">
+#rec2122133073 .sb-route-map-shell {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 20px 24px;
+  box-sizing: border-box;
+  font-family: "Tilda Sans", "TildaSans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+#rec2122133073 .sb-route-map-shell *,
+#rec2122133073 .sb-route-map-shell *::before,
+#rec2122133073 .sb-route-map-shell *::after {
+  box-sizing: border-box;
+}
+
+#rec2122133073 .sb-route-map-copy {
+  margin: 0 auto 18px;
+  max-width: 900px;
+  text-align: center;
+  width: 100%;
+}
+
+#rec2122133073 .sb-route-map-label {
+  color: #d48c48;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+#rec2122133073 .sb-route-map-title {
+  margin: 10px 0 10px;
+  color: #111111;
+  font-family: "Tilda Sans", "TildaSans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(28px, 3.3vw, 40px);
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+#rec2122133073 .sb-route-map-text {
+  margin: 0 auto;
+  max-width: 820px;
+  color: #626262;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+#rec2122133073 .sb-route-map-frame {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: 0 20px 55px rgba(15, 23, 42, 0.08);
+}
+
+#rec2122133073 .sb-route-map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 640px;
+  border: 0;
+  background: #f7f7f7;
+}
+
+#rec2122133073 .sb-route-map-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+#rec2122133073 .sb-route-map-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: #111111;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+#rec2122133073 .sb-route-map-link:hover {
+  opacity: 0.88;
+}
+
+#rec2122133073 .sb-route-map-stops {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+  width: 100%;
+}
+
+#rec2122133073 .sb-route-map-stop {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 9px 14px;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 999px;
+  background: #ffffff;
+  color: #111111;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2122133073 .sb-route-map-shell {
+    padding: 0 10px 4px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  #rec2122133073 .sb-route-map-copy {
+    margin-bottom: 14px;
+    max-width: 100%;
+    padding: 0 4px;
+  }
+
+  #rec2122133073 .sb-route-map-title {
+    font-size: 28px;
+    line-height: 1.08;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  #rec2122133073 .sb-route-map-text {
+    font-size: 14px;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  #rec2122133073 .sb-route-map-frame {
+    border-radius: 22px;
+  }
+
+  #rec2122133073 .sb-route-map-frame iframe {
+    height: 330px;
+  }
+
+  #rec2122133073 .sb-route-map-link {
+    width: 100%;
+    max-width: 100%;
+    min-height: 40px;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+
+  #rec2122133073 .sb-route-map-stops {
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  #rec2122133073 .sb-route-map-stop {
+    min-height: 28px;
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+}
+</style>
+<div id="rec2122133073" class="r t-rec t-rec_pt_0 t-rec_pb_15" style="padding-top:0px;padding-bottom:15px;" data-record-type="123">
+  <!-- T123 -->
+  <div class="t123">
+    <div class="t-container_100">
+      <div class="t-width t-width_100">
+        <div class="sb-route-map-shell">
+          <div class="sb-route-map-copy">
+            <div class="sb-route-map-label">Sunrise route</div>
+            <h2 class="sb-route-map-title">${title}</h2>
+            <p class="sb-route-map-text">${text}</p>
+          </div>
+          <div class="sb-route-map-frame">
+            <iframe loading="eager" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="${embedRoute}"></iframe>
+          </div>
+          <div class="sb-route-map-actions">
+            <a class="sb-route-map-link" href="${openRoute}" target="_blank" rel="noopener noreferrer">Open google maps route</a>
+          </div>
+          <div class="sb-route-map-stops">
+            ${stops.map((stop) => `<span class="sb-route-map-stop">${stop}</span>`).join("")}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /T123 -->
+</div>`.trim();
+}
+
+function ensureJeepHotSpringRouteMap(filePath) {
+  if (!fs.existsSync(filePath)) {
+    return;
+  }
+
+  const fileName = path.basename(filePath);
+  if (!JEEP_HOT_SPRING_ROUTE_PATCH_FILES.some((candidate) => candidate.endsWith(fileName))) {
+    return;
+  }
+
+  let html = fs.readFileSync(filePath, "utf8");
+  if (html.includes('<div id="rec2122133073"')) {
+    return;
+  }
+
+  const routeRecord = buildJeepHotSpringRouteRecord();
+  const weatherIndex = html.indexOf('<div id="rec2147449333"');
+  const footerCommentIndex = html.indexOf("<!--footer-->");
+  const footerIndex = footerCommentIndex !== -1 ? footerCommentIndex : html.indexOf('<footer id="t-footer"');
+  const closeIndex = html.lastIndexOf("</div> <!--/allrecords-->");
+  const insertIndex = weatherIndex !== -1 ? weatherIndex : footerIndex !== -1 ? footerIndex : closeIndex;
+
+  if (insertIndex === -1) {
+    return;
+  }
+
+  html = `${html.slice(0, insertIndex).trimEnd()}\n${routeRecord}\n${html.slice(insertIndex)}`;
+  writeGeneratedFile(filePath, ensureBaliGlobalUiFix(html));
+}
+
+function ensureCompactWeatherWidget(filePath) {
   if (!fs.existsSync(filePath)) {
     return;
   }
 
   let html = fs.readFileSync(filePath, "utf8");
+  const primaryRoute = inferWeatherPrimaryRoute(html, filePath);
 
-  if (!html.includes('id="baliWeatherCard"')) {
+  if (!primaryRoute) {
     return;
   }
 
+  if (!html.includes('id="baliWeatherCard"')) {
+    const weatherRecord = buildCompactWeatherRecord(primaryRoute);
+    if (!weatherRecord) {
+      return;
+    }
+
+    const footerCommentIndex = html.indexOf("<!--footer-->");
+    const footerIndex = footerCommentIndex !== -1 ? footerCommentIndex : html.indexOf('<footer id="t-footer"');
+    const allRecordsClose = "</div> <!--/allrecords-->";
+    const closeIndex = html.lastIndexOf(allRecordsClose);
+    const insertIndex = footerIndex !== -1 ? footerIndex : closeIndex;
+
+    if (insertIndex === -1) {
+      return;
+    }
+
+    html = `${html.slice(0, insertIndex).trimEnd()}\n${weatherRecord}\n${html.slice(insertIndex)}`;
+  }
+
+  html = replaceWeatherTourLinksConfig(html, primaryRoute);
   html = normalizeBaliWeatherOuterCss(html);
 
   const existingStylePattern = /<style id="sb-weather-compact-override">[\s\S]*?<\/style>\s*/;
@@ -9661,8 +10444,10 @@ function main() {
   generatePages();
   patchBaliMainFile(path.join(projectRoot, "page128073236.html"));
   patchBaliMainFile(path.join(projectRoot, "files", "page128073236body.html"));
-  for (const relativePath of WEATHER_COMPACT_PATCH_FILES) {
-    patchCompactWeatherWidget(path.join(projectRoot, relativePath));
+  for (const relativePath of listWeatherPatchFiles()) {
+    const filePath = path.join(projectRoot, relativePath);
+    ensureJeepHotSpringRouteMap(filePath);
+    ensureCompactWeatherWidget(filePath);
   }
   for (const relativePath of BALI_TILDA_FOOTER_PATCH_FILES) {
     ensureBaliTildaFooter(path.join(projectRoot, relativePath));
