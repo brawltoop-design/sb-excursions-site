@@ -7021,6 +7021,351 @@ const JOURNAL_SEO_GUIDES = [
       },
     ],
   },
+  {
+    key: "temples",
+    slug: "best-temples-bali-cultural-sites",
+    badge: "Evergreen SEO guide",
+    navLabel: "Temples guide",
+    cardTourLabel: "Temples and heritage",
+    heroTourSlug: "bali-unesco",
+    relatedTourSlugs: ["bali-unesco", "tanah-lot-bedugul-tour", "ubud-highlights-tour"],
+    inlineStats: ["7 temple picks", "Culture + scenery", "Strong for first-timers"],
+    title: "7 Best Temples in Bali for Culture, Scenery and First-Time Travelers",
+    description:
+      "Looking for the best temples in Bali? Start with these seven cultural landmarks, from Tanah Lot and Ulun Danu to Tirta Empul, Lempuyang and Goa Gajah.",
+    excerpt:
+      "Bali temples work best when you stop treating them as interchangeable photo stops. The strongest temple route mixes sea temples, mountain-lake settings and deeper spiritual sites so the day feels rich instead of repetitive.",
+    rankings: [
+      {
+        name: "Tanah Lot Temple",
+        imageTitle: "Tanah Lot Temple",
+        area: "West Bali coast",
+        bestFor: "Iconic oceanfront temple",
+        summary:
+          "Tanah Lot is one of Bali's clearest must-see temple names because the setting is instantly recognizable and delivers strong payoff even on a first trip.",
+      },
+      {
+        name: "Ulun Danu Beratan Temple",
+        imageTitle: "Ulun Danu Beratan Temple",
+        area: "Bedugul",
+        bestFor: "Cool mountain-lake scenery",
+        summary:
+          "Ulun Danu stands out because the lake, mountains and cooler air make it feel visually different from almost every south Bali temple stop.",
+      },
+      {
+        name: "Taman Ayun Temple",
+        imageTitle: "Taman Ayun Temple",
+        area: "Mengwi",
+        bestFor: "Royal temple courtyards",
+        summary:
+          "Taman Ayun is a polished cultural stop for travelers who want temple architecture, symmetry and calmer surroundings without heavy crowds.",
+      },
+      {
+        name: "Tirta Empul Temple",
+        imageTitle: "Tirta Empul Temple",
+        area: "Central Bali",
+        bestFor: "Sacred water ritual atmosphere",
+        summary:
+          "Tirta Empul adds real spiritual depth to a Bali itinerary and helps the temple side of the island feel more meaningful than just photo-led sightseeing.",
+      },
+      {
+        name: "Goa Gajah",
+        imageTitle: "Goa Gajah",
+        area: "Near Ubud",
+        bestFor: "Historic stone atmosphere",
+        summary:
+          "Goa Gajah works when you want a smaller but more textured heritage stop that adds an older, carved-stone mood to the day.",
+      },
+      {
+        name: "Uluwatu Temple",
+        imageTitle: "Uluwatu Temple",
+        area: "Uluwatu",
+        bestFor: "Clifftop sunset temple",
+        summary:
+          "Uluwatu is the temple to choose when you want culture with cliff drama and one of the strongest late-day ocean settings in Bali.",
+      },
+      {
+        name: "Lempuyang Temple",
+        imageTitle: "Lempuyang Temple",
+        area: "East Bali",
+        bestFor: "Famous gate framing and long views",
+        summary:
+          "Lempuyang remains a strong headline temple when the goal is one major east Bali cultural landmark with broad visual recognition.",
+      },
+    ],
+    sections: [
+      {
+        heading: "How to choose the right temple route in Bali",
+        paragraphs: [
+          "The strongest Bali temple day usually combines two or three very different moods instead of repeating similar courtyards all day. Pair a sea temple with a lake temple, or mix one spiritual stop with one scenic sunset temple.",
+          "That is why UNESCO and central Bali temple routes convert well: they feel cultural, scenic and practical in the same day.",
+        ],
+        bullets: [
+          "Choose Tanah Lot or Uluwatu for temple-plus-sunset energy.",
+          "Choose Ulun Danu and Taman Ayun for cooler heritage scenery.",
+          "Choose Tirta Empul or Goa Gajah when spiritual depth matters more than pure photo value.",
+        ],
+      },
+      {
+        heading: "Which temple areas work best together",
+        paragraphs: [
+          "Central Bali temple clusters are the easiest for balanced sightseeing because they combine culture, rice terraces and lunch windows. Sea temples work better as late-day anchors, while east Bali temples deserve a dedicated longer route.",
+        ],
+      },
+      {
+        heading: "What travelers should know before visiting temples",
+        paragraphs: [
+          "Temple visits in Bali feel smoother when travelers bring respectful clothing, avoid overloading one day with too many similar sites, and treat the visit as culture first and photos second. That keeps the experience feeling premium and not performative.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "What is the most famous temple in Bali?",
+        answer:
+          "Tanah Lot, Uluwatu and Lempuyang are among the most recognizable temple names in Bali, but the best temple for your itinerary depends on whether you want sunset, scenery or spiritual atmosphere.",
+      },
+      {
+        question: "Which Bali temple is best for first-time travelers?",
+        answer:
+          "Ulun Danu, Tanah Lot and Tirta Empul are all strong first-trip recommendations because they are visually clear, culturally meaningful and easy to build into a day route.",
+      },
+      {
+        question: "What should I wear to temples in Bali?",
+        answer:
+          "Dress respectfully and be ready to cover shoulders and knees where needed. Many temple visits feel smoother when you already plan around modest attire instead of improvising at the entrance.",
+      },
+      {
+        question: "Can I visit several Bali temples in one day?",
+        answer:
+          "Yes, but two or three strong temple stops usually works better than trying to force too many into one route. The better the contrast between sites, the stronger the day feels.",
+      },
+    ],
+  },
+  {
+    key: "waterfalls",
+    slug: "best-waterfalls-bali-day-trips",
+    badge: "Evergreen SEO guide",
+    navLabel: "Waterfalls guide",
+    cardTourLabel: "Waterfalls and jungle stops",
+    heroTourSlug: "ubud-highlights-tour",
+    relatedTourSlugs: ["ubud-highlights-tour", "ubud-instagram-tour", "dolphin-sunrise-city-tour"],
+    inlineStats: ["5 waterfall picks", "Photo + swim value", "Day-trip friendly"],
+    title: "5 Best Waterfalls in Bali for Day Trips, Photos and Easy Jungle Stops",
+    description:
+      "Searching for the best waterfalls in Bali? These five proven waterfall stops work well for day trips, photos, soft adventure and first-time travelers.",
+    excerpt:
+      "Not every Bali waterfall is worth the same effort. The strongest ones either deliver a dramatic visual payoff, a cleaner route from main hotel areas, or a calmer jungle atmosphere that fits naturally into a day trip without turning the day into a trek.",
+    rankings: [
+      {
+        name: "Tukad Cepung Waterfall",
+        imageTitle: "Tukad Cepung Waterfall",
+        area: "Bangli",
+        bestFor: "Cinematic canyon light",
+        summary:
+          "Tukad Cepung remains one of the most photogenic waterfall stops in Bali when conditions line up and the light reaches the canyon well.",
+      },
+      {
+        name: "Kanto Lampo Waterfall",
+        imageTitle: "Kanto Lampo Waterfall",
+        area: "Near Ubud",
+        bestFor: "Easy-access wow factor",
+        summary:
+          "Kanto Lampo is popular because it gives an obvious waterfall payoff without requiring a deep jungle transfer or a full hiking day.",
+      },
+      {
+        name: "Tibumana Waterfall",
+        imageTitle: "Tibumana Waterfall",
+        area: "Bangli side of Ubud",
+        bestFor: "Softer jungle mood",
+        summary:
+          "Tibumana works for travelers who want a cleaner, calmer waterfall stop that still feels memorable without being the most crowded headline option.",
+      },
+      {
+        name: "Gitgit Waterfall",
+        imageSrc: BALI_PLANNER_PLACE_IMAGES.ubudWaterfall,
+        area: "North Bali",
+        bestFor: "Classic cooler-air nature stop",
+        summary:
+          "Gitgit fits especially well into north Bali days because it breaks up longer drives with a real waterfall section and cooler forest atmosphere.",
+      },
+      {
+        name: "Tegenungan Waterfall",
+        imageSrc: BALI_PLANNER_PLACE_IMAGES.ubudWaterfall,
+        area: "South of Ubud",
+        bestFor: "Convenient first-timer stop",
+        summary:
+          "Tegenungan stays useful because it is one of the easiest waterfalls to understand and fit into a broader Bali sightseeing day.",
+      },
+    ],
+    sections: [
+      {
+        heading: "Which Bali waterfalls are actually worth your time",
+        paragraphs: [
+          "The best waterfall choice depends on whether you want drama, convenience or atmosphere. Tukad Cepung is strongest for photo impact, Kanto Lampo is the easy-access crowd favorite, and Tibumana is better when you want a softer jungle mood.",
+        ],
+        bullets: [
+          "Choose central-east waterfalls for easier pairing with temples and rice terraces.",
+          "Choose north Bali waterfalls when you are already doing a Lovina or Bedugul route.",
+          "Choose one or two waterfall stops, not four in one day, if you want the day to stay premium.",
+        ],
+      },
+      {
+        heading: "How to pair waterfalls into a stronger route",
+        paragraphs: [
+          "Waterfalls usually work best as one scenic contrast inside a broader day, not as a stand-alone checklist. Temple-plus-waterfall and rice-terrace-plus-waterfall pairings tend to feel more balanced than trying to jump between multiple jungle stops.",
+        ],
+      },
+      {
+        heading: "Practical expectations for Bali waterfall stops",
+        paragraphs: [
+          "Most Bali waterfalls include stairs, damp surfaces or short walks, so travelers should treat them as light-adventure stops. Good shoes, a towel and realistic timing usually make the difference between a stressful stop and a really enjoyable one.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Which waterfall in Bali is best for photos?",
+        answer:
+          "Tukad Cepung and Kanto Lampo are among the strongest photo waterfalls because they give obvious visual payoff without needing a very technical route.",
+      },
+      {
+        question: "What is the easiest waterfall to visit near Ubud?",
+        answer:
+          "Kanto Lampo and Tegenungan are among the easier first-time waterfall choices from the Ubud side of Bali.",
+      },
+      {
+        question: "Can I combine waterfalls with temples in one Bali day trip?",
+        answer:
+          "Yes, and that is often the strongest structure. One temple, one waterfall and one scenic lunch or rice terrace stop usually feels better than an all-waterfall marathon.",
+      },
+      {
+        question: "Do Bali waterfalls require special shoes?",
+        answer:
+          "Comfortable shoes with grip are strongly recommended. Many waterfall routes include stairs, wet rocks or short muddy sections depending on the season.",
+      },
+    ],
+  },
+  {
+    key: "viewpoints",
+    slug: "best-viewpoints-bali-sunrise-cliffs-rice-terraces",
+    badge: "Evergreen SEO guide",
+    navLabel: "Viewpoints guide",
+    cardTourLabel: "Viewpoints and big scenery",
+    heroTourSlug: "nusa-penida-west-tour",
+    relatedTourSlugs: ["nusa-penida-west-tour", "bali-unesco", "mount-batur-sunrise-hike", "ubud-highlights-tour"],
+    inlineStats: ["7 big-view stops", "Cliffs + volcano + terraces", "Sunrise to sunset"],
+    title: "7 Best Viewpoints in Bali for Cliffs, Volcano Sunrises and Rice Terrace Scenery",
+    description:
+      "Looking for the best viewpoints in Bali? These seven stops cover volcano sunrise scenes, cliff-edge lookouts, rice terraces and broad coastline views.",
+    excerpt:
+      "The strongest Bali viewpoints do not all look the same. Some win because of sunrise scale, some because of cliff drama, and some because the landscape feels wide and calm instead of crowded. The best itineraries mix those moods rather than repeating one kind of stop.",
+    rankings: [
+      {
+        name: "Mount Batur sunrise",
+        imageTitle: "Mount Batur sunrise",
+        area: "Kintamani",
+        bestFor: "Sunrise payoff",
+        summary:
+          "Mount Batur sunrise is the clearest Bali viewpoint pick when you want one big early-morning moment that feels genuinely trip-defining.",
+      },
+      {
+        name: "Karang Boma Cliff",
+        imageTitle: "Karang Boma Cliff",
+        area: "Uluwatu",
+        bestFor: "Pure cliff drama",
+        summary:
+          "Karang Boma gives one of the cleanest ocean-cliff viewpoints in south Bali and works well when you want a stop that feels open and cinematic.",
+      },
+      {
+        name: "Jatiluwih Rice Terrace",
+        imageTitle: "Jatiluwih Rice Terrace",
+        area: "Tabanan highlands",
+        bestFor: "Wide UNESCO landscape",
+        summary:
+          "Jatiluwih feels broader and calmer than tighter rice terrace stops, which makes it one of Bali's strongest big-view landscape locations.",
+      },
+      {
+        name: "Tegalalang Rice Terrace",
+        imageTitle: "Tegalalang Rice Terrace",
+        area: "Ubud",
+        bestFor: "Classic layered greenery",
+        summary:
+          "Tegalalang wins when you want the most recognizable compact rice terrace view with easy access and strong photo value.",
+      },
+      {
+        name: "Campuhan Ridge Walk",
+        imageTitle: "Campuhan Ridge Walk",
+        area: "Ubud",
+        bestFor: "Soft open ridge scenery",
+        summary:
+          "Campuhan is a lighter, more walkable viewpoint pick for travelers who want airy Ubud scenery without a heavy full-day commitment.",
+      },
+      {
+        name: "Tanah Lot Temple",
+        imageTitle: "Tanah Lot Temple",
+        area: "West coast",
+        bestFor: "Sunset landmark framing",
+        summary:
+          "Tanah Lot remains one of the easiest coastal viewpoints to understand because the rock temple silhouette does most of the visual work for you.",
+      },
+      {
+        name: "Nusa Penida east coast",
+        imageTitle: "Nusa Penida east coast",
+        area: "Nusa Penida",
+        bestFor: "Huge cliff-and-ocean scale",
+        summary:
+          "For travelers who want one oversized scenery day, east Nusa Penida gives some of the strongest broad coastline viewpoints anywhere around Bali.",
+      },
+    ],
+    sections: [
+      {
+        heading: "What makes a Bali viewpoint worth adding to your route",
+        paragraphs: [
+          "A good Bali viewpoint should do more than just look nice in one photo. The best ones create a real pause in the day, give contrast with the rest of the route and feel strong enough that travelers remember them afterward.",
+        ],
+        bullets: [
+          "Choose one sunrise viewpoint, one green landscape stop and one coastal viewpoint for the strongest balance.",
+          "Use cliff lookouts later in the day when the light and atmosphere improve.",
+          "Use rice terrace or volcano viewpoints earlier when the route feels fresher and clearer.",
+        ],
+      },
+      {
+        heading: "How to group viewpoints without wasting the day",
+        paragraphs: [
+          "The strongest viewpoint days are clustered by area. Ubud and Kintamani pair naturally, UNESCO highland stops pair naturally, and island cliffs deserve their own dedicated day instead of being squeezed between mainland plans.",
+        ],
+      },
+      {
+        heading: "Who benefits most from viewpoint-led Bali days",
+        paragraphs: [
+          "Viewpoint routes are especially strong for first-time travelers, couples, content-driven trips and travelers who want Bali to feel scenic without doing physically demanding adventure every day.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "What is the best viewpoint in Bali?",
+        answer:
+          "It depends on what kind of scenery you want. Mount Batur is strongest for sunrise, Jatiluwih is strongest for wide green landscape, and Nusa Penida or Karang Boma are strongest for cliff drama.",
+      },
+      {
+        question: "Which Bali viewpoints are best for sunset?",
+        answer:
+          "Tanah Lot and Uluwatu-side cliffs such as Karang Boma are among the easiest high-payoff sunset viewpoint choices.",
+      },
+      {
+        question: "Are rice terraces or cliffs better for first-time visitors?",
+        answer:
+          "They do different jobs. Rice terraces give classic green Bali identity, while cliffs give ocean drama. Most first trips feel best when they include both.",
+      },
+      {
+        question: "Can I do Mount Batur and Uluwatu in the same day?",
+        answer:
+          "Technically possible, but rarely ideal. Those two viewpoint moods work better on separate days so the trip does not feel transport-heavy and rushed.",
+      },
+    ],
+  },
 ];
 
 function guideArticleRoute(guide) {
@@ -9571,11 +9916,19 @@ function patchBaliMainFile(filePath) {
     .split("Experience the romantic North of Bali. Sunrise dolphin watching in Lovina, Ulun Danu Water Temple, and Sekumpul Waterfall. Private transfers, expert guides, and 100% stress-free logistics. Book your dream trip via WhatsApp!")
     .join("Sunrise dolphin watching in Lovina, Gitgit Waterfall, and Ulun Danu Beratan Temple with private transfer, boat ticket, and all entrance fees included.")
     .split('href="/bali/en/tours/north-bali-lovina-dolphins-tour" data-lid="7301316445701"')
-    .join('href="/bali/en/tours/dolphin-sunrise-city-tour" data-lid="7301316445701"')
-    .split('alt="North Bali Tour and Lovina Dolphins"')
-    .join('alt="Lovina Dolphin Sunrise Tour in Bali"')
+    .join('href="/bali/en/tours/bali-unesco" data-lid="7301316445701"')
     .split(">North Bali Tour and Lovina Dolphins</h3>")
     .join(">Lovina Dolphin Sunrise Tour</h3>")
+    .split('href="/bali/en/tours/dolphin-sunrise-city-tour" data-lid="7301316445701"')
+    .join('href="/bali/en/tours/bali-unesco" data-lid="7301316445701"')
+    .split('field="li_title__7301316445701">Lovina Dolphin Sunrise Tour</div>')
+    .join('field="li_title__7301316445701">Bali UNESCO Heritage Sites Tour</div>')
+    .split('field="li_descr__7301316445701">Sunrise dolphin watching in Lovina, Gitgit Waterfall, and Ulun Danu Beratan Temple with private transfer, boat ticket, and all entrance fees included.</div>')
+    .join('field="li_descr__7301316445701">Taman Ayun, Ulun Danu, Jatiluwih rice terraces, and Tanah Lot in one UNESCO-focused private day with hotel pickup from major Bali areas.</div>')
+    .split("https://static.tildacdn.one/tild3365-3333-4637-a663-636263353664/dika-pebriyanta-qQXc.jpg")
+    .join("/images/bali-tours/bali-unesco.jpg")
+    .split("https://thb.tildacdn.one/tild3365-3333-4637-a663-636263353664/-/resizeb/20x/dika-pebriyanta-qQXc.jpg")
+    .join("/images/bali-tours/bali-unesco.jpg")
     .split(">Early Morning Dolphin Watching</span>")
     .join(">Sunrise dolphin watching from Lovina</span>")
     .split(">Private Driver Included</span>")
@@ -9613,6 +9966,11 @@ function patchBaliMainFile(filePath) {
     html,
     ["North Bali Tour and Lovina Dolphins", "Lovina Dolphin Sunrise Tour"],
     '<article class="sb-card sb-reveal" data-category="city water"><div class="sb-card-inner"><div class="sb-gallery"><div class="sb-img sb-img-main"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1585643734412-05ea85526d11?auto=format&fit=crop&crop=entropy&w=960&h=560&q=72" alt="Lovina Dolphin Sunrise Tour in Bali"></div></div><div class="sb-content"><h3 class="sb-title">Lovina Dolphin Sunrise Tour</h3><ul class="sb-features"><li class="sb-feature"><span class="sb-feature-icon">⏰</span><span>8 hours north Bali route</span></li><li class="sb-feature"><span class="sb-feature-icon">🐬</span><span>Sunrise dolphin watching from Lovina</span></li><li class="sb-feature"><span class="sb-feature-icon">🚐</span><span>Private car, boat ticket and entrance fees</span></li><li class="sb-feature"><span class="sb-feature-icon">📍</span><span>Gitgit Waterfall and Ulun Danu Temple</span></li><li class="sb-feature"><span class="sb-feature-icon">🌊</span><span>Best for sunrise lovers and scenic day trips</span></li></ul><div class="sb-bottom"><div class="sb-price-row"><div class="sb-price">from $75</div></div><a href="/bali/en/tours/dolphin-sunrise-city-tour" class="sb-btn">Details</a></div></div></div></article>',
+  );
+
+  html = html.replace(
+    /<article class="sb-card sb-reveal" data-category="city"><div class="sb-card-inner"><div class="sb-gallery"><div class="sb-img sb-img-main"><img loading="lazy" decoding="async" src="https:\/\/images\.unsplash\.com\/photo-1585643734412-05ea85526d11[^"]*" alt="Bali UNESCO Heritage Sites Tour in Bali"><\/div><\/div><div class="sb-content"><h3 class="sb-title">Bali UNESCO Heritage Sites Tour<\/h3>[\s\S]*?<a href="\/bali\/en\/tours\/dolphin-sunrise-city-tour" class="sb-btn">Details<\/a><\/div><\/div><\/div><\/article>/,
+    '<article class="sb-card sb-reveal" data-category="city water"><div class="sb-card-inner"><div class="sb-gallery"><div class="sb-img sb-img-main"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1585643734412-05ea85526d11?auto=format&fit=crop&crop=entropy&w=960&h=560&q=72" alt="Lovina Dolphin Sunrise Tour in Bali"></div></div><div class="sb-content"><h3 class="sb-title">Lovina Dolphin Sunrise Tour</h3><ul class="sb-features"><li class="sb-feature"><span class="sb-feature-icon">⏰</span><span>8 hours north Bali route</span></li><li class="sb-feature"><span class="sb-feature-icon">🐬</span><span>Sunrise dolphin watching from Lovina</span></li><li class="sb-feature"><span class="sb-feature-icon">🚐</span><span>Private car, boat ticket and entrance fees</span></li><li class="sb-feature"><span class="sb-feature-icon">📍</span><span>Gitgit Waterfall and Ulun Danu Temple</span></li><li class="sb-feature"><span class="sb-feature-icon">🌊</span><span>Best for sunrise lovers and scenic day trips</span></li></ul><div class="sb-bottom"><div class="sb-price-row"><div class="sb-price-note">per person</div><div class="sb-price">from $75</div></div><a href="/bali/en/tours/dolphin-sunrise-city-tour" class="sb-btn">Details</a></div></div></div></article>',
   );
 
   const giliIslandTour = tours.find((tour) => tour.slug === "gili-island-tour");
@@ -10218,6 +10576,322 @@ function ensureCompactWeatherWidget(filePath) {
   writeGeneratedFile(filePath, ensureBaliGlobalUiFix(html));
 }
 
+const UNESCO_INTERNAL_TOUR_CHIPS = [
+  ["1649846162388", "Tanah Lot", "/bali/en/tours/tanah-lot-bedugul-tour"],
+  ["1649846180718", "Nusa West", "/bali/en/tours/nusa-penida-west-tour"],
+  ["1649846177921", "Ubud and Volcano", "/bali/en/tours/ubud-highlights-tour"],
+  ["1649846180725", "Lavina dolphins", "/bali/en/tours/dolphin-sunrise-city-tour"],
+  ["1649846178555", "East Bali", "/bali/en/tours/east-bali-instagram-tour"],
+  ["1649846180729", "ATV Ubud", "/bali/en/tours/atv-quad-bikes"],
+  ["1649846185203", "Batur Hike", "/bali/en/tours/mount-batur-sunrise-hike"],
+  ["1649846179102", "Ubud city tour", "/bali/en/tours/ubud-instagram-tour"],
+  ["1649846182361", "Gili Islands", "/bali/en/tours/gili-island-tour"],
+  ["1649846180733", "Batur Jeep & Spring", "/bali/en/tours/mount-batur-sunrise-jeep-hot-spring"],
+  ["1649846185207", "Private Driver", "/bali/en/tours/private-car-with-driver-bali"],
+  ["1649846182365", "Manta Point", "/bali/en/tours/nusa-penida-manta-rays-point"],
+  ["1649846185211", "Nusa Penida tour", "/bali/en/tours/nusa-penida-east-tour"],
+];
+
+const UNESCO_PDF_CHIPS = [
+  [null, "Top Temples", `${JOURNAL_HUB_ROUTE}/best-temples-bali-cultural-sites`],
+  [null, "Top Beaches", `${JOURNAL_HUB_ROUTE}/best-beaches-bali-crystal-clear-water`],
+  [null, "Best Places", `${JOURNAL_HUB_ROUTE}/best-places-to-visit-bali-first-time`],
+  [null, "Waterfalls", `${JOURNAL_HUB_ROUTE}/best-waterfalls-bali-day-trips`],
+  [null, "Viewpoints", `${JOURNAL_HUB_ROUTE}/best-viewpoints-bali-sunrise-cliffs-rice-terraces`],
+  [null, "Photo Spots", `${JOURNAL_HUB_ROUTE}/best-instagram-places-bali`],
+  [null, "Where to Stay", `${JOURNAL_HUB_ROUTE}/where-to-stay-bali-first-time`],
+  [null, "Budget Eats", `${JOURNAL_HUB_ROUTE}/best-budget-restaurants-bali-warungs`],
+  [null, "Beach Clubs", `${JOURNAL_HUB_ROUTE}/best-beach-clubs-bali-young-adults`],
+  [null, "Couples Guide", `${JOURNAL_HUB_ROUTE}/best-things-to-do-bali-for-couples`],
+];
+
+const UNESCO_THINGS_TO_DO_CHIPS = [
+  [null, "UNESCO Temples", "/bali/en/tours/bali-unesco"],
+  [null, "Ubud Volcano Day", "/bali/en/tours/ubud-highlights-tour"],
+  [null, "East Bali Views", "/bali/en/tours/east-bali-instagram-tour"],
+  [null, "Nusa West", "/bali/en/tours/nusa-penida-west-tour"],
+  [null, "Nusa East", "/bali/en/tours/nusa-penida-east-tour"],
+  [null, "Manta Snorkel", "/bali/en/tours/nusa-penida-manta-rays-point"],
+  [null, "Batur Hike", "/bali/en/tours/mount-batur-sunrise-hike"],
+  [null, "Jeep + Spring", "/bali/en/tours/mount-batur-sunrise-jeep-hot-spring"],
+  [null, "Lovina Dolphins", "/bali/en/tours/dolphin-sunrise-city-tour"],
+  [null, "Gili Day Trip", "/bali/en/tours/gili-island-tour"],
+  [null, "ATV Ubud", "/bali/en/tours/atv-quad-bikes"],
+  [null, "Private Driver", "/bali/en/tours/private-car-with-driver-bali"],
+];
+
+function buildUnescoChipSectionBlock(recordId, title, chips, options = {}) {
+  const {
+    wideDesktop = false,
+  } = options;
+  const chipsMarkup = chips.map(([, label, href]) => {
+    const tag = href ? "a" : "span";
+    const hrefAttr = href ? ` href="${href}"` : "";
+    return `<${tag} class="sb-unesco-chip"${hrefAttr}>${escapeHtml(label)}</${tag}>`;
+  }).join("");
+
+  const desktopWideStyles = wideDesktop ? `
+
+    @media screen and (min-width: 1200px) {
+      #${recordId} {
+        padding: 22px 0 34px;
+      }
+
+      #${recordId} .sb-unesco-attractions {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0 32px;
+      }
+
+      #${recordId} .sb-unesco-attractions__title {
+        margin-bottom: 26px;
+        font-size: 58px;
+        line-height: 1.02;
+      }
+
+      #${recordId} .sb-unesco-attractions__chips {
+        gap: 12px 14px;
+      }
+
+      #${recordId} .sb-unesco-chip {
+        min-height: 46px;
+        padding: 0 20px !important;
+        font-size: 17px;
+      }
+    }` : "";
+
+  return `<div id="${recordId}" class="r t-rec" style=" " data-record-type="121" data-alias-record-type="396">
+  <style>
+    #${recordId} {
+      padding: 18px 0 30px;
+      background-color: #ffffff;
+    }
+
+    #${recordId} .sb-unesco-attractions {
+      width: min(100%, 1200px);
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    #${recordId} .sb-unesco-attractions__inner {
+      background: transparent;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #${recordId} .sb-unesco-attractions__title {
+      margin: 0 0 22px;
+      color: #000000;
+      font-family: 'TildaSans', Arial, sans-serif;
+      font-size: 34px;
+      line-height: 1.12;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    #${recordId} .sb-unesco-attractions__chips {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 12px;
+    }
+
+    #${recordId} .sb-unesco-chip {
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto !important;
+      width: auto !important;
+      max-width: none !important;
+      min-width: 0 !important;
+      min-height: 38px;
+      padding: 0 20px !important;
+      box-sizing: border-box;
+      border-radius: 999px;
+      background: #e6e6e6;
+      color: #636363;
+      font-family: 'TildaSans', Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1;
+      font-weight: 400;
+      white-space: nowrap !important;
+      word-break: keep-all !important;
+      overflow-wrap: normal !important;
+      text-decoration: none;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    #${recordId} a.sb-unesco-chip:hover {
+      background: #dcdcdc;
+      color: #4e4e4e;
+    }
+
+    @media screen and (max-width: 1199px) {
+      #${recordId} .sb-unesco-attractions__title {
+        margin-bottom: 22px;
+        font-size: 32px;
+      }
+
+      #${recordId} .sb-unesco-chip {
+        font-size: 14px;
+      }
+    }
+
+    @media screen and (max-width: 639px) {
+      #${recordId} {
+        padding: 18px 0 30px;
+      }
+
+      #${recordId} .sb-unesco-attractions {
+        padding: 0 10px;
+      }
+
+      #${recordId} .sb-unesco-attractions__title {
+        margin-bottom: 18px;
+        font-size: 24px;
+        line-height: 1.2;
+      }
+
+      #${recordId} .sb-unesco-attractions__chips {
+        gap: 10px 10px;
+      }
+
+      #${recordId} .sb-unesco-chip {
+        min-height: 36px;
+        padding: 0 20px !important;
+        font-size: 13px;
+        line-height: 1;
+      }
+    }
+${desktopWideStyles}
+  </style>
+  <div class="sb-unesco-attractions">
+    <div class="sb-unesco-attractions__inner">
+      <h2 class="sb-unesco-attractions__title">${escapeHtml(title)}</h2>
+      <div class="sb-unesco-attractions__chips">${chipsMarkup}</div>
+    </div>
+  </div>
+</div>`;
+}
+
+function buildUnescoInternalTourChipsBlock() {
+  return buildUnescoChipSectionBlock(
+    "rec2121105683",
+    "Best Attractions in Bali",
+    UNESCO_INTERNAL_TOUR_CHIPS,
+  );
+}
+
+function buildUnescoPdfChipsBlock() {
+  return buildUnescoChipSectionBlock(
+    "rec2121105353",
+    "Our helpful PDF-Files about Bali",
+    UNESCO_PDF_CHIPS,
+    { wideDesktop: true },
+  );
+}
+
+function buildUnescoThingsToDoChipsBlock() {
+  return buildUnescoChipSectionBlock(
+    "rec2121105183",
+    "Things to do in Bali",
+    UNESCO_THINGS_TO_DO_CHIPS,
+    { wideDesktop: true },
+  );
+}
+
+function ensureUnescoInternalTourChips(filePath) {
+  if (!fs.existsSync(filePath)) {
+    return;
+  }
+
+  const supportedFiles = new Set([
+    "bali-tour-bali-unesco.html",
+    "page132181473.html",
+    "page132181473body.html",
+  ]);
+
+  if (!supportedFiles.has(path.basename(filePath))) {
+    return;
+  }
+
+  let html = fs.readFileSync(filePath, "utf8");
+  const recordStart = html.indexOf('<div id="rec2121105683"');
+  if (recordStart === -1) {
+    return;
+  }
+
+  const recordEnd = html.indexOf('<div id="rec', recordStart + 20);
+  if (recordEnd === -1) {
+    return;
+  }
+
+  html = `${html.slice(0, recordStart)}${buildUnescoInternalTourChipsBlock()}${html.slice(recordEnd)}`;
+  writeGeneratedFile(filePath, ensureBaliGlobalUiFix(html));
+}
+
+function ensureUnescoPdfChips(filePath) {
+  if (!fs.existsSync(filePath)) {
+    return;
+  }
+
+  const supportedFiles = new Set([
+    "bali-tour-bali-unesco.html",
+    "page132181473.html",
+    "page132181473body.html",
+  ]);
+
+  if (!supportedFiles.has(path.basename(filePath))) {
+    return;
+  }
+
+  let html = fs.readFileSync(filePath, "utf8");
+  const recordStart = html.indexOf('<div id="rec2121105353"');
+  if (recordStart === -1) {
+    return;
+  }
+
+  const recordEnd = html.indexOf('<div id="rec', recordStart + 20);
+  if (recordEnd === -1) {
+    return;
+  }
+
+  html = `${html.slice(0, recordStart)}${buildUnescoPdfChipsBlock()}${html.slice(recordEnd)}`;
+  writeGeneratedFile(filePath, ensureBaliGlobalUiFix(html));
+}
+
+function ensureUnescoThingsToDoChips(filePath) {
+  if (!fs.existsSync(filePath)) {
+    return;
+  }
+
+  const supportedFiles = new Set([
+    "bali-tour-bali-unesco.html",
+    "page132181473.html",
+    "page132181473body.html",
+  ]);
+
+  if (!supportedFiles.has(path.basename(filePath))) {
+    return;
+  }
+
+  let html = fs.readFileSync(filePath, "utf8");
+  const recordStart = html.indexOf('<div id="rec2121105183"');
+  if (recordStart === -1) {
+    return;
+  }
+
+  const recordEnd = html.indexOf('<div id="rec', recordStart + 20);
+  if (recordEnd === -1) {
+    return;
+  }
+
+  html = `${html.slice(0, recordStart)}${buildUnescoThingsToDoChipsBlock()}${html.slice(recordEnd)}`;
+  writeGeneratedFile(filePath, ensureBaliGlobalUiFix(html));
+}
+
 function normalizeGeneratedHtml(html) {
   return String(html).replace(/[ \t]+$/gm, "");
 }
@@ -10442,6 +11116,15 @@ function generatePages() {
 
 function main() {
   generatePages();
+  ensureUnescoInternalTourChips(path.join(projectRoot, "bali-tour-bali-unesco.html"));
+  ensureUnescoInternalTourChips(path.join(projectRoot, "page132181473.html"));
+  ensureUnescoInternalTourChips(path.join(projectRoot, "files", "page132181473body.html"));
+  ensureUnescoPdfChips(path.join(projectRoot, "bali-tour-bali-unesco.html"));
+  ensureUnescoPdfChips(path.join(projectRoot, "page132181473.html"));
+  ensureUnescoPdfChips(path.join(projectRoot, "files", "page132181473body.html"));
+  ensureUnescoThingsToDoChips(path.join(projectRoot, "bali-tour-bali-unesco.html"));
+  ensureUnescoThingsToDoChips(path.join(projectRoot, "page132181473.html"));
+  ensureUnescoThingsToDoChips(path.join(projectRoot, "files", "page132181473body.html"));
   patchBaliMainFile(path.join(projectRoot, "page128073236.html"));
   patchBaliMainFile(path.join(projectRoot, "files", "page128073236body.html"));
   for (const relativePath of listWeatherPatchFiles()) {
