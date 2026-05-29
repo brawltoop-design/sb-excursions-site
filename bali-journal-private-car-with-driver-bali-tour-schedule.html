@@ -328,6 +328,32 @@ body {
   }
 }
 </style>
+
+<style id="sb-journal-language-switcher-style">
+.sb-journal-lang-switcher{position:relative;display:inline-flex;align-items:center}
+.sb-journal-lang-switcher__summary{list-style:none;display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;padding:0;border:0;background:transparent;cursor:pointer}
+.sb-journal-lang-switcher__summary::-webkit-details-marker{display:none}
+.sb-journal-lang-switcher__summary img{width:28px;height:28px;object-fit:contain;display:block}
+.sb-journal-lang-switcher__menu{position:absolute;top:calc(100% + 10px);right:0;display:none;min-width:190px;padding:10px;border-radius:18px;background:#fff;box-shadow:0 18px 46px rgba(17,24,39,0.18);z-index:1006}
+.sb-journal-lang-switcher[open] .sb-journal-lang-switcher__menu{display:grid;gap:6px}
+.sb-journal-lang-switcher__option{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:42px;padding:10px 14px;border-radius:14px;background:rgba(126,196,244,0.08);color:#111827;font-family:'TildaSans',Arial,sans-serif;font-size:15px;line-height:1.2;font-weight:600;text-decoration:none}
+.sb-journal-lang-switcher__option:hover,.sb-journal-lang-switcher__option:focus-visible{background:rgba(126,196,244,0.16);outline:none}
+.sb-journal-lang-switcher__option[data-active="true"]{background:rgba(126,196,244,0.24);color:#0f172a}
+.sb-journal-lang-switcher__code{font-size:12px;line-height:1;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.6}
+.sb-journal-tour-header__langs{display:flex;align-items:center;gap:12px;color:#000;font-size:16px;font-weight:600;letter-spacing:-1px}
+.sb-journal-tour-header__mobile-bar{grid-template-columns:1fr auto auto !important}
+.sb-journal-tour-header__mobile-logo-link{order:1;justify-self:start}
+.sb-journal-tour-header__socials{order:2;justify-self:end}
+.sb-journal-tour-header__burger{order:3;justify-self:end}
+.sb-journal-tour-header__socials{display:flex;align-items:center;gap:10px;justify-content:flex-end}
+.sb-journal-tour-header__socials .sb-journal-lang-switcher__summary{width:30px;height:30px}
+.sb-journal-tour-header__socials .sb-journal-lang-switcher__summary img{width:26px;height:26px}
+.sb-journal-tour-header__socials .sb-journal-lang-switcher__menu{background:#3a3a3a;box-shadow:0 18px 46px rgba(17,24,39,0.28)}
+.sb-journal-tour-header__socials .sb-journal-lang-switcher__option{background:rgba(255,255,255,0.08);color:#fff}
+.sb-journal-tour-header__socials .sb-journal-lang-switcher__option:hover,.sb-journal-tour-header__socials .sb-journal-lang-switcher__option:focus-visible{background:rgba(255,255,255,0.14)}
+.sb-journal-tour-header__socials .sb-journal-lang-switcher__option[data-active="true"]{background:rgba(126,196,244,0.16);color:#7ec4f4}
+@media screen and (max-width:640px){.sb-journal-lang-switcher__menu{min-width:174px}}
+</style>
 </head>
   <body>
     <div class="sb-journal-page">
@@ -352,10 +378,29 @@ body {
             </nav>
             <div class="sb-journal-tour-header__actions" aria-label="Quick actions">
               <a class="sb-journal-tour-header__button" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20Private%20Car%20with%20Driver.%20Please%20send%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
-              <div class="sb-journal-tour-header__langs" aria-hidden="true">
-                <span>Ru</span>
-                <span>Fr</span>
-              </div>
+              <div class="sb-journal-tour-header__langs"><details class="sb-journal-lang-switcher sb-journal-lang-switcher--desktop">
+    <summary class="sb-journal-lang-switcher__summary" aria-label="Choose language">
+      <img src="/images/ui/language-black.png" alt="Choose language">
+    </summary>
+    <div class="sb-journal-lang-switcher__menu">
+      <a class="sb-journal-lang-switcher__option" data-active="true" href="/bali/en/journal/private-car-with-driver-bali/tour-schedule">
+            <span>English</span>
+            <span class="sb-journal-lang-switcher__code">EN</span>
+          </a><a class="sb-journal-lang-switcher__option" data-active="false" href="/bali/zh/journal/private-car-with-driver-bali/tour-schedule">
+            <span>中文</span>
+            <span class="sb-journal-lang-switcher__code">ZH</span>
+          </a><a class="sb-journal-lang-switcher__option" data-active="false" href="/bali/ru/journal/private-car-with-driver-bali/tour-schedule">
+            <span>Русский</span>
+            <span class="sb-journal-lang-switcher__code">RU</span>
+          </a><a class="sb-journal-lang-switcher__option" data-active="false" href="/bali/es/journal/private-car-with-driver-bali/tour-schedule">
+            <span>Español</span>
+            <span class="sb-journal-lang-switcher__code">ES</span>
+          </a><a class="sb-journal-lang-switcher__option" data-active="false" href="/bali/fr/journal/private-car-with-driver-bali/tour-schedule">
+            <span>Français</span>
+            <span class="sb-journal-lang-switcher__code">FR</span>
+          </a>
+    </div>
+  </details></div>
             </div>
           </div>
         </div>
@@ -371,31 +416,29 @@ body {
             <a class="sb-journal-tour-header__mobile-logo-link" href="/bali/en/main-page" aria-label="SB Excursions Bali">
               <img class="sb-journal-tour-header__mobile-logo" src="https://static.tildacdn.one/tild3762-3034-4130-b063-643934306634/SB_DUBAI_LOGO_2025.png" alt="SB Excursions">
             </a>
-            <div class="sb-journal-tour-header__socials" aria-label="Social links">
-              <a href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20Private%20Car%20with%20Driver.%20Please%20send%20details." target="_blank" rel="noopener noreferrer nofollow" aria-label="WhatsApp">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path fill="currentColor" d="M12 2a9.5 9.5 0 0 0-8.2 14.4L2.8 21l4.8-1A9.5 9.5 0 1 0 12 2Zm4.3 13.3c-.2.5-1.2 1-1.6 1-.4.1-.9.1-1.5-.1-.3-.1-.8-.3-1.4-.6-2.4-1-4-3.4-4.1-3.5-.1-.2-1-1.3-1-2.5 0-1.2.6-1.8.8-2 .2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.4.7 1.6.8 1.7.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.3.4-.5.5-.2.2-.4.4-.2.7.2.4.9 1.5 1.9 2.1 1.3.8 1.7.9 2 .7.2-.2.7-.8.9-1.1.2-.3.4-.3.7-.2.3.1 1.9.9 2.2 1 .4.1.6.2.7.4.1.2.1.9-.1 1.4Z"></path>
-                </svg>
-              </a>
-              <a href="https://www.instagram.com/dubai_sb_excursions?igsh=cTFtcnB0ZTFta2Nq&amp;utm_source=qr" target="_blank" rel="noopener noreferrer nofollow" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5" stroke="currentColor" stroke-width="1.8"></rect>
-                  <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"></circle>
-                  <circle cx="17.25" cy="6.75" r="1.2" fill="currentColor"></circle>
-                </svg>
-              </a>
-              <a href="#showfavorites" aria-label="Wishlist">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M12 20.2 4.9 13.6A4.8 4.8 0 0 1 11.7 7l.3.3.3-.3a4.8 4.8 0 0 1 6.8 6.7L12 20.2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-              </a>
-              <a href="#opencart" aria-label="Cart">
-                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <path d="M6 7.5h12l-1 10H7l-1-10Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
-                  <path d="M9 9V7a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
-                </svg>
-              </a>
-            </div>
+            <div class="sb-journal-tour-header__socials" aria-label="Language selector"><details class="sb-journal-lang-switcher sb-journal-lang-switcher--mobile">
+    <summary class="sb-journal-lang-switcher__summary" aria-label="Choose language">
+      <img src="/images/ui/language.png" alt="Choose language">
+    </summary>
+    <div class="sb-journal-lang-switcher__menu">
+      <a class="sb-journal-lang-switcher__option" data-active="true" href="/bali/en/journal/private-car-with-driver-bali/tour-schedule">
+            <span>English</span>
+            <span class="sb-journal-lang-switcher__code">EN</span>
+          </a><a class="sb-journal-lang-switcher__option" data-active="false" href="/bali/zh/journal/private-car-with-driver-bali/tour-schedule">
+            <span>中文</span>
+            <span class="sb-journal-lang-switcher__code">ZH</span>
+          </a><a class="sb-journal-lang-switcher__option" data-active="false" href="/bali/ru/journal/private-car-with-driver-bali/tour-schedule">
+            <span>Русский</span>
+            <span class="sb-journal-lang-switcher__code">RU</span>
+          </a><a class="sb-journal-lang-switcher__option" data-active="false" href="/bali/es/journal/private-car-with-driver-bali/tour-schedule">
+            <span>Español</span>
+            <span class="sb-journal-lang-switcher__code">ES</span>
+          </a><a class="sb-journal-lang-switcher__option" data-active="false" href="/bali/fr/journal/private-car-with-driver-bali/tour-schedule">
+            <span>Français</span>
+            <span class="sb-journal-lang-switcher__code">FR</span>
+          </a>
+    </div>
+  </details></div>
           </div>
           <div class="sb-journal-tour-header__mobile-overlay"></div>
           <aside class="sb-journal-tour-header__drawer" aria-label="Mobile menu">

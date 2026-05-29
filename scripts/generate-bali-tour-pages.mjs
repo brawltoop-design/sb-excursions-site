@@ -18,6 +18,14 @@ const DUBAI_GENERIC_FOOTER_PHONE_LINK = `<a href="${DUBAI_GENERIC_FOOTER_WA_LINK
 const HERO_IMAGE_DIR = path.join(projectRoot, "images", "bali-tours");
 const WEST_TEMPLATE_SOURCE_FILE = path.join(projectRoot, "page128064616.html");
 const JOURNAL_HUB_ROUTE = "/bali/en/journal";
+const BALI_LANGUAGE_OPTIONS = [
+  { code: "en", label: "English" },
+  { code: "zh", label: "中文" },
+  { code: "ru", label: "Русский" },
+  { code: "es", label: "Español" },
+  { code: "fr", label: "Français" },
+];
+const TRANSLATION_CACHE_PATH = path.join(projectRoot, ".generated", "bali-translation-cache.json");
 const JOURNAL_PUBLISHED_DATE = "2026-05-21";
 const WEATHER_MAIN_PAGE_ROUTE = "/bali/en/main-page#tours";
 const JOURNAL_FEATURED_ARTICLES = [
@@ -3264,8 +3272,96 @@ function publicImagePath(tour) {
   return `/images/bali-tours/${tour.slug}${path.extname(tour.image).toLowerCase()}`;
 }
 
+function tourLocale(tour) {
+  return collapseWhitespace(tour?.locale || "en").toLowerCase();
+}
+
+const DEFAULT_WEST_UI_LABELS = {
+  navTours: "Our Tours",
+  navAbout: "About Us",
+  navBooking: "Booking",
+  navFaq: "FAQ",
+  navGuides: "Our guides",
+  navWhatsApp: "WhatsApp",
+  languageSwitcherLabel: "Choose language",
+  destinationDubai: "Dubai, UAE",
+  destinationBali: "Bali, Indonesia",
+  aboutHeading: "About this Activity",
+  highlightsHeading: "Highlights",
+  fullDescriptionHeading: "Full description",
+  whatsIncludedHeading: "What's included",
+  importantInformationHeading: "Important information",
+  faqHeading: "FAQ",
+  bestAttractionsHeading: "Best Attractions in Bali",
+  helpfulPdfHeading: "Our helpful PDF-Files about Bali",
+  thingsToDoHeading: "Things to do in Bali",
+  mapOpenLabel: "Open google maps route",
+  highlightsIntroLabel: "Main vibe",
+  fullDescriptionWhyBookLabel: "Why people book it",
+  fullDescriptionHowDayFeelsLabel: "How the day feels",
+  fullDescriptionKeyStopsLabel: "Key stops",
+  fullDescriptionBestFitLabel: "Best fit",
+  includesIntroLabel: "Booked as one clear package",
+  includesIntroText: "The core logistics and main support pieces are already wrapped into the route below",
+  weatherLive: "Live weather",
+  weatherLoading: "Loading…",
+  weatherChecking: "Checking local conditions…",
+  weatherConditionLoading: "Loading weather…",
+  weatherSummaryLoading: "Finding the best Bali plan for today…",
+  weatherFeelsLike: "Feels like",
+  weatherHumidity: "Humidity",
+  weatherWind: "Wind",
+  weatherTipsTitle: "Today’s tips",
+  weatherSeeRecommended: "See recommended tour",
+  weatherLocation: "Bali, Indonesia",
+  weatherClearSky: "Clear sky",
+  weatherMostlyClear: "Mostly clear",
+  weatherPartlyCloudy: "Partly cloudy",
+  weatherCloudy: "Cloudy",
+  weatherLightRain: "Light rain",
+  weatherRainShowers: "Rain showers",
+  weatherThunderstorm: "Thunderstorm risk",
+  weatherWarmEvening: "Warm Bali evening",
+  weatherSunnyDay: "Sunny Bali day",
+  weatherCloudyDay: "Cloudy Bali day",
+  weatherRainyDay: "Rainy Bali weather",
+  weatherStormyDay: "Storm-watch Bali weather",
+  weatherSunsetTip: "Great for sunset spots",
+  weatherDinnerTip: "Perfect for dinner plans",
+  weatherLightLayerTip: "A light layer is enough",
+  weatherBeachTip: "Best for beach time",
+  weatherSunscreenTip: "Strong sun: sunscreen helps",
+  weatherHydrateTip: "Stay hydrated in the heat",
+  weatherCafeTip: "Nice weather for cafes and easy rides",
+  weatherSpaTip: "Great for spa or cafe stops",
+  weatherGripShoesTip: "Wear shoes with grip",
+  weatherRainLayerTip: "Pack a light rain layer",
+  weatherFlexibleTip: "Keep plans flexible today",
+  weatherShelterTip: "Indoor backup ideas work well",
+  footerTopTours: "Our Top Tours",
+  footerCompanyTrust: "Company & Trust",
+  footerContactsLocation: "Contacts & Location",
+  footerWeAccept: "We Accept",
+  footerMessageUs: "Message us",
+  footerLead: "Where nature and adventure meet",
+  footerAboutCompany: "About SB Excursions",
+  footerPrivacy: "Privacy Policy",
+  footerTerms: "Terms & Conditions",
+  footerRefund: "Refund Policy",
+  footerSiteMap: "SiteMap",
+  footerSupportHours: "Daily support 7:00 - 22:00",
+  footerCopyright: "© 2021-2026 SB Excursions. Crafted for Bali adventures",
+};
+
+function westUiLabels(tour) {
+  return {
+    ...DEFAULT_WEST_UI_LABELS,
+    ...(tour?.ui || {}),
+  };
+}
+
 function absoluteTourUrl(tour) {
-  return `${SITE_URL}/bali/en/tours/${tour.slug}`;
+  return `${SITE_URL}${tourRoute(tour)}`;
 }
 
 function absoluteImageUrl(tour) {
@@ -3420,6 +3516,10 @@ function normalizedWestTemplatePrice(price) {
 }
 
 function compactAreaLabel(tour) {
+  if (tour.compactAreaLabel) {
+    return clampText(collapseWhitespace(tour.compactAreaLabel), 24);
+  }
+
   const search = tourSearchText(tour);
 
   if (search.includes("nusa penida")) return "Nusa Penida";
@@ -3874,6 +3974,7 @@ function westImportantLabel(item) {
 }
 
 function buildWestHighlightsHtml(tour) {
+  const ui = westUiLabels(tour);
   const items = normalizedWestHighlights(tour).map(([heading, text]) => ({
     emoji: westCopyEmoji(`${heading} ${text}`, "📍"),
     label: heading,
@@ -3883,7 +3984,7 @@ function buildWestHighlightsHtml(tour) {
   return renderWestRichCopy({
     intro: {
       emoji: "✨",
-      label: "Main vibe",
+      label: ui.highlightsIntroLabel,
       text: tour.lead,
     },
     items,
@@ -3891,6 +3992,7 @@ function buildWestHighlightsHtml(tour) {
 }
 
 function buildWestFullDescriptionHtml(tour) {
+  const ui = westUiLabels(tour);
   const routeStops = buildWestReadableStops(tour)
     .filter((stop) => stop && !/return transfer/i.test(stop))
     .slice(0, 4);
@@ -3899,36 +4001,41 @@ function buildWestFullDescriptionHtml(tour) {
     items: [
       {
         emoji: "🌴",
-        label: "Why people book it",
+        label: ui.fullDescriptionWhyBookLabel,
         text: tour.summary,
       },
       {
         emoji: "🧭",
-        label: "How the day feels",
+        label: ui.fullDescriptionHowDayFeelsLabel,
         text: tour.overview,
       },
       routeStops.length
         ? {
             emoji: "📍",
-            label: "Key stops",
-            textHtml: `Usually built around <strong>${escapeHtml(routeStops.join(" -> "))}</strong>.`,
+            label: ui.fullDescriptionKeyStopsLabel,
+            textHtml:
+              tour.fullDescriptionKeyStopsHtml ||
+              `Usually built around <strong>${escapeHtml(routeStops.join(" -> "))}</strong>.`,
           }
         : null,
       {
         emoji: "👥",
-        label: "Best fit",
-        textHtml: `Great for <strong>${escapeHtml(collapseWhitespace(tour.bestFor))}</strong> with a route that usually runs for <strong>${escapeHtml(collapseWhitespace(tour.duration))}</strong>.`,
+        label: ui.fullDescriptionBestFitLabel,
+        textHtml:
+          tour.fullDescriptionBestFitHtml ||
+          `Great for <strong>${escapeHtml(collapseWhitespace(tour.bestFor))}</strong> with a route that usually runs for <strong>${escapeHtml(collapseWhitespace(tour.duration))}</strong>.`,
       },
     ],
   });
 }
 
 function buildWestIncludesHtml(tour) {
+  const ui = westUiLabels(tour);
   return renderWestRichCopy({
     intro: {
       emoji: "✅",
-      label: "Booked as one clear package",
-      text: "The core logistics and main support pieces are already wrapped into the route below",
+      label: ui.includesIntroLabel,
+      text: ui.includesIntroText,
     },
     items: buildIncludes(tour).map((item) => ({
       emoji: westCopyEmoji(item, "✅"),
@@ -3997,6 +4104,10 @@ function buildWestMapDirectionsLinks(routeStops) {
 }
 
 function buildWestMapText(tour, stops) {
+  if (tour.mapText) {
+    return collapseWhitespace(tour.mapText);
+  }
+
   const points = stops
     .map((stop) => collapseWhitespace(stop))
     .filter(Boolean);
@@ -4014,7 +4125,7 @@ function buildWestMapModel(tour) {
     embedRoute: links.embedRoute,
     openRoute: links.openRoute,
     label: collapseWhitespace(tour.mapLabel || westRouteLabel(tour)),
-    title: `${tour.title} route on Google Maps`,
+    title: collapseWhitespace(tour.mapTitle || `${tour.title} route on Google Maps`),
     text: buildWestMapText(tour, stops),
     stops,
   };
@@ -4049,7 +4160,9 @@ function buildWestPrivateOfferModel(tour) {
       includes[2] || `${routeStops[2] || "Main highlights"} planned for you`,
     ].map(collapseWhitespace),
     imageAlt: collapseWhitespace(tour.imageAlt || tour.title),
-    topline: `Best for ${collapseWhitespace(tour.bestFor).toLowerCase()}`,
+    topline: collapseWhitespace(
+      tour.privateOfferTopline || `Best for ${collapseWhitespace(tour.bestFor).toLowerCase()}`,
+    ),
     cardTitle: tour.title,
     cardText: collapseWhitespace(tour.lead || tour.summary || tour.overview),
     pills: [
@@ -4058,7 +4171,7 @@ function buildWestPrivateOfferModel(tour) {
       clampText(includes[0] || highlights[0][0], 28),
       clampText(collapseWhitespace(tour.pickup || "Pickup confirmed after booking"), 28),
     ],
-    ctaLabel: "Book now",
+    ctaLabel: collapseWhitespace(tour.ctaLabel || "Book now"),
     priceValue: privatePriceValue,
   };
 }
@@ -4068,12 +4181,16 @@ function buildWestMiniPromoModel(tour) {
     .slice(1, 5)
     .filter(Boolean);
   const promoTitle = `<strong>${formatWestHeroTitle(tour.title).replace(/<br>/g, "</strong><br /><strong>")}</strong>`;
-  const promoText = routeStops.length
-    ? `${routeStops.length} key stops: ${routeStops.join(", ")}.`
-    : collapseWhitespace(tour.lead || tour.summary || tour.overview);
+  const promoText = collapseWhitespace(
+    tour.miniPromoText ||
+      tour.summary ||
+      tour.lead ||
+      (routeStops.length ? `${routeStops.length} key stops: ${routeStops.join(", ")}.` : tour.overview),
+  );
 
   return {
     eyebrow:
+      collapseWhitespace(tour.miniPromoEyebrow) ||
       {
         sunrise: "Early-start favorite",
         marine: "Ocean-day route",
@@ -4086,12 +4203,20 @@ function buildWestMiniPromoModel(tour) {
       }[detectTourKind(tour)] || "Best-selling Bali route",
     title: promoTitle,
     text: collapseWhitespace(promoText),
-    ctaLabel: "Book now",
+    ctaLabel: collapseWhitespace(tour.ctaLabel || "Book now"),
     sideText: collapseWhitespace(tour.miniPromoSideText || tour.overview || tour.summary || tour.lead),
   };
 }
 
 function buildWestReviews(tour) {
+  if (Array.isArray(tour.reviews) && tour.reviews.length) {
+    return tour.reviews.map((review) => ({
+      text: collapseWhitespace(review.text),
+      title: collapseWhitespace(review.title),
+      date: collapseWhitespace(review.date),
+    }));
+  }
+
   const routeStops = buildWestRouteStops(tour).slice(1, 5);
   const highlightNames = normalizedWestHighlights(tour).map(([heading]) => heading);
 
@@ -4516,7 +4641,7 @@ function renderWestStylePage(tour) {
 
     return picked;
   })();
-  const offerSectionHeading = "Route format & pricing";
+  const offerSectionHeading = collapseWhitespace(tour.offerSectionHeading || "Route format & pricing");
   const offerPrimaryLabel = /private/i.test(collapseWhitespace(tour.format || "")) ? "Private route" : clampText(collapseWhitespace(tour.format || "Bali route"), 18);
   const offerSupportEyebrow = /optional/i.test(collapseWhitespace(tour.pickup || ""))
     ? "Optional pickup"
@@ -4537,12 +4662,12 @@ function renderWestStylePage(tour) {
   const offerBottomPricePrefix = /\$/.test(offer.priceValue) ? "from" : "";
   const heroArea = compactAreaLabel(tour);
   const heroLead = collapseWhitespace(tour.lead || tour.summary || tour.overview);
-  const aboutSubtitle = `${tour.title} from Bali`;
+  const aboutSubtitle = collapseWhitespace(tour.aboutSubtitle || tour.title);
   const highlightsHtml = buildWestHighlightsHtml(tour);
   const fullDescriptionHtml = buildWestFullDescriptionHtml(tour);
   const includesHtml = buildWestIncludesHtml(tour);
   const importantInfoHtml = buildWestImportantInfoHtml(tour);
-  const genericFaqIntro = `Quick answers before booking the ${tour.title}.`;
+  const genericFaqIntro = collapseWhitespace(tour.faqIntro || `Quick answers before booking the ${tour.title}.`);
   const weatherArea = compactAreaLabel(tour).toLowerCase();
   const brokenBaliDestinationsMenu =
     '<ul role="list" class="t-menusub__list"> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
@@ -4725,7 +4850,10 @@ function renderWestStylePage(tour) {
       "https://www.google.com/maps/dir/Banjar+Nyuh+Harbor,+Nusa+Penida/Broken+Beach,+Nusa+Penida/Angel%27s+Billabong,+Nusa+Penida/Kelingking+Beach,+Nusa+Penida/Crystal+Bay,+Nusa+Penida/Banjar+Nyuh+Harbor,+Nusa+Penida",
       map.openRoute,
     )
-    .replaceAll("Open the west Penida route in Google Maps", escapeJsSingleQuoted("Open google maps route"))
+    .replaceAll(
+      "Open the west Penida route in Google Maps",
+      escapeJsSingleQuoted(collapseWhitespace(tour.mapOpenLabel || "Open google maps route")),
+    )
     .replaceAll("See west Penida tour", escapeJsSingleQuoted(`See ${tour.title}`))
     .replaceAll(
       "Perfect weather for west Penida viewpoints, clear ocean color and longer island sightseeing.",
@@ -5701,8 +5829,643 @@ const UBUD_COLLAGE_TEXT_MOBILE_FIX_CSS = `
 }
 `;
 
+const TOUR_LOCALIZED_TEXT_SAFETY_CSS = `
+#rec2121233163 .tn-atom,
+#rec2121221993 .tn-atom,
+#rec2121222043 .tn-atom,
+#rec2121222013 .tn-atom {
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+  hyphens: auto !important;
+}
+
+#rec2121221993 .tn-elem[data-elem-id="1721244135153"] .tn-atom,
+#rec2121221993 .tn-elem[data-elem-id="1721244135179"] .tn-atom,
+#rec2121221993 .tn-elem[data-elem-id="1721244135195"] .tn-atom,
+#rec2121221993 .tn-elem[data-elem-id="1721244135209"] .tn-atom {
+  white-space: normal !important;
+}
+
+#rec2121222013 .sb-private-offer-heading,
+#rec2121222013 .sb-private-card-title,
+#rec2121222013 .sb-private-card-pill,
+#rec2122133073 .sb-route-map-title,
+#rec2122133073 .sb-route-map-text {
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+  hyphens: auto !important;
+}
+
+html[lang]:not([lang="en"]) #rec2121233163 .tn-atom,
+html[lang]:not([lang="en"]) #rec2121221993 .tn-atom,
+html[lang]:not([lang="en"]) #rec2121222043 .tn-atom,
+html[lang]:not([lang="en"]) #rec2121222013 .tn-atom,
+html[lang]:not([lang="en"]) #rec2122133073 .sb-route-map-title,
+html[lang]:not([lang="en"]) #rec2122133073 .sb-route-map-text,
+html[lang]:not([lang="en"]) #rec2121222053 .t585__title,
+html[lang]:not([lang="en"]) #rec2121222053 .t585__text {
+  overflow-wrap: anywhere !important;
+  word-break: normal !important;
+  hyphens: auto !important;
+}
+
+html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-pill {
+  white-space: normal !important;
+  line-height: 1.15 !important;
+}
+
+@media screen and (max-width: 639px) {
+  html[lang]:not([lang="en"]) #rec2121221993 .t396__artboard,
+  html[lang]:not([lang="en"]) #rec2121221993 .t396__carrier,
+  html[lang]:not([lang="en"]) #rec2121221993 .t396__filter {
+    min-height: 390px !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121222043 .t396__artboard,
+  html[lang]:not([lang="en"]) #rec2121222043 .t396__carrier,
+  html[lang]:not([lang="en"]) #rec2121222043 .t396__filter {
+    min-height: 760px !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121222013 .t396__artboard,
+  html[lang]:not([lang="en"]) #rec2121222013 .t396__carrier,
+  html[lang]:not([lang="en"]) #rec2121222013 .t396__filter {
+    min-height: 1040px !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] .tn-atom {
+    font-size: 24px !important;
+    line-height: 1.05 !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121233163 .tn-elem[data-elem-id="1766419725555"] .tn-atom {
+    font-size: 10px !important;
+    line-height: 1.42 !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121233163 .tn-elem[data-elem-id="1721240739954"] .tn-atom,
+  html[lang]:not([lang="en"]) #rec2121233163 .tn-elem[data-elem-id="1721240739957"] .tn-atom,
+  html[lang]:not([lang="en"]) #rec2121233163 .tn-elem[data-elem-id="1766425094306"] .tn-atom,
+  html[lang]:not([lang="en"]) #rec2121233163 .tn-elem[data-elem-id="1721240740071"] .tn-atom,
+  html[lang]:not([lang="en"]) #rec2121233163 .tn-elem[data-elem-id="1721240740074"] .tn-atom {
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121221993 .tn-elem[data-elem-id="1721244135148"] .tn-atom {
+    font-size: 10px !important;
+    line-height: 1.25 !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121221993 .tn-elem[data-elem-id="1721244135148"] {
+    display: none !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121221993 .tn-elem[data-elem-id="1721244135153"] .tn-atom,
+  html[lang]:not([lang="en"]) #rec2121221993 .tn-elem[data-elem-id="1721244135179"] .tn-atom,
+  html[lang]:not([lang="en"]) #rec2121221993 .tn-elem[data-elem-id="1721244135209"] .tn-atom,
+  html[lang]:not([lang="en"]) #rec2121221993 .tn-elem[data-elem-id="1721244135195"] .tn-atom {
+    font-size: 9.8px !important;
+    line-height: 1.15 !important;
+    font-weight: 700 !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121221993 .tn-elem[data-elem-id="1721244135162"] .tn-atom,
+  html[lang]:not([lang="en"]) #rec2121221993 .tn-elem[data-elem-id="1721244135184"] .tn-atom,
+  html[lang]:not([lang="en"]) #rec2121221993 .tn-elem[data-elem-id="1721244135213"] .tn-atom,
+  html[lang]:not([lang="en"]) #rec2121221993 .tn-elem[data-elem-id="1721244135199"] .tn-atom {
+    font-size: 8.8px !important;
+    line-height: 1.24 !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121222043 .tn-elem[data-elem-id="1766442865058"] .tn-atom {
+    font-size: 20px !important;
+    line-height: 1.02 !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121222043 .tn-elem[data-elem-id="1766442925510"] .tn-atom,
+  html[lang]:not([lang="en"]) #rec2121222043 .tn-elem[data-elem-id="1766620130918"] .tn-atom {
+    font-size: 10px !important;
+    line-height: 1.3 !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121222013 .sb-private-offer-heading {
+    font-size: 40px !important;
+    line-height: 0.98 !important;
+    letter-spacing: 0 !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121222013 .sb-private-offer-text {
+    font-size: 13px !important;
+    line-height: 1.46 !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-title {
+    font-size: 20px !important;
+    line-height: 1.04 !important;
+    letter-spacing: 0 !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-text {
+    font-size: 12px !important;
+    line-height: 1.42 !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-pill {
+    font-size: 10px !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2122133073 .sb-route-map-title {
+    font-size: 24px !important;
+    line-height: 1.05 !important;
+    letter-spacing: 0 !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2122133073 .sb-route-map-text,
+  html[lang]:not([lang="en"]) #rec2121222053 .t585__text {
+    font-size: 12px !important;
+    line-height: 1.42 !important;
+  }
+
+  html[lang]:not([lang="en"]) #rec2121222053 .t585__title {
+    font-size: 15px !important;
+    line-height: 1.28 !important;
+  }
+}
+`;
+
+const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
+(function () {
+  var HERO_ID = 'rec2121233163';
+  var ABOUT_ID = 'rec2121221993';
+  var PROMO_ID = 'rec2121222043';
+  var TITLE_ID = '1766426116262000001';
+  var DESC_ID = '1766419725555';
+  var PRICE_ID = '1721240739954';
+  var DURATION_ICON_ID = '1721240739962';
+  var DURATION_TEXT_ID = '1721240739957';
+  var LOCATION_ICON_ID = '1766426474516';
+  var LOCATION_TEXT_ID = '1766425094306';
+  var CTA_BG_ID = '1721240739964';
+  var CTA_TEXT_ID = '1721240739967';
+  var RATING_VALUE_ID = '1721240740071';
+  var MAPS_LABEL_ID = '1721240740074';
+  var ABOUT_TITLE_IDS = ['1721244135153', '1721244135179', '1721244135209', '1721244135195'];
+  var ABOUT_DESC_IDS = ['1721244135162', '1721244135184', '1721244135213', '1721244135199'];
+  var ABOUT_ICON_BG_IDS = ['1766431186034000001', '1766431201693000002', '1766431219359000004', '1766431153685'];
+  var ABOUT_ICON_IDS = ['1721244135166', '1721244135187', '1766431213467000003', '1721244135202'];
+  var ABOUT_SUBTITLE_ID = '1721244135148';
+  var ABOUT_HEADING_ID = '1721244135138';
+  var PROMO_TITLE_ID = '1766442865058';
+  var PROMO_TEXT_ID = '1766442925510';
+  var PROMO_SIDE_ID = '1766620130918';
+  var PROMO_BUTTON_ID = '1721248463120';
+  var PROMO_RIGHT_IMAGE_ID = '1721248463131';
+  var PROMO_GRID_LOWER_IMAGE_IDS = ['1721248463127', '1721248463137'];
+  var RATING_ICON_SELECTOR = '[data-elem-id^="172124074006"]';
+  var isLocalizedPage = (document.documentElement.getAttribute('lang') || 'en').toLowerCase() !== 'en';
+
+  function byId(record, id) {
+    return record ? record.querySelector('[data-elem-id="' + id + '"]') : null;
+  }
+
+  function atom(node) {
+    return node ? node.querySelector('.tn-atom') : null;
+  }
+
+  function setImportant(node, prop, value) {
+    if (node) node.style.setProperty(prop, value, 'important');
+  }
+
+  function px(value) {
+    var num = parseFloat(value);
+    return Number.isFinite(num) ? num : 0;
+  }
+
+  function topOf(node) {
+    return px(window.getComputedStyle(node).top);
+  }
+
+  function leftOf(node) {
+    return px(window.getComputedStyle(node).left);
+  }
+
+  function scaleFor(artboard) {
+    if (!artboard || !artboard.offsetWidth) return 1;
+    var rect = artboard.getBoundingClientRect();
+    return rect.width && artboard.offsetWidth ? rect.width / artboard.offsetWidth : 1;
+  }
+
+  function visualHeight(node, scale) {
+    return node ? node.getBoundingClientRect().height / (scale || 1) : 0;
+  }
+
+  function visualWidth(node, scale) {
+    return node ? node.getBoundingClientRect().width / (scale || 1) : 0;
+  }
+
+  function setRecordHeight(record, height) {
+    if (!record || !height) return;
+    var value = Math.ceil(height) + 'px';
+    var artboard = record.querySelector('.t396__artboard');
+    var carrier = record.querySelector('.t396__carrier');
+    var filter = record.querySelector('.t396__filter');
+    [artboard, carrier, filter].forEach(function (node) {
+      if (node) node.style.setProperty('height', value, 'important');
+    });
+  }
+
+  function fitText(node, options) {
+    var target = atom(node) || node;
+    if (!target) return 0;
+    var maxFont = options.maxFont || 18;
+    var minFont = options.minFont || 10;
+    var ratio = options.lineHeightRatio || 1.2;
+    setImportant(target, 'white-space', options.whiteSpace || 'normal');
+    setImportant(target, 'overflow-wrap', 'anywhere');
+    setImportant(target, 'word-break', 'normal');
+    setImportant(target, 'hyphens', 'auto');
+    if (options.textAlign) setImportant(target, 'text-align', options.textAlign);
+    var font = maxFont;
+    while (font >= minFont) {
+      setImportant(target, 'font-size', font.toFixed(2) + 'px');
+      setImportant(target, 'line-height', (font * ratio).toFixed(2) + 'px');
+      if (!options.maxHeight || target.scrollHeight <= options.maxHeight + 1) {
+        break;
+      }
+      font -= options.step || 0.5;
+    }
+    return font;
+  }
+
+  function relaxText(node, align) {
+    var target = atom(node) || node;
+    if (!target) return;
+    setImportant(target, 'white-space', 'normal');
+    setImportant(target, 'overflow-wrap', 'anywhere');
+    setImportant(target, 'word-break', 'normal');
+    setImportant(target, 'hyphens', 'auto');
+    if (align) setImportant(target, 'text-align', align);
+  }
+
+  function layoutHero() {
+    var record = document.getElementById(HERO_ID);
+    if (!record) return;
+    var artboard = record.querySelector('.t396__artboard');
+    if (!artboard) return;
+    var scale = scaleFor(artboard);
+    var isMobile = window.innerWidth <= 639;
+    var isTablet = window.innerWidth > 639 && window.innerWidth <= 959;
+    var isCompact = window.innerWidth <= 959;
+    var artboardWidth = artboard.offsetWidth || 320;
+    var titleWrap = byId(record, TITLE_ID);
+    var descWrap = byId(record, DESC_ID);
+    var priceWrap = byId(record, PRICE_ID);
+    var durationIcon = byId(record, DURATION_ICON_ID);
+    var durationText = byId(record, DURATION_TEXT_ID);
+    var locationIcon = byId(record, LOCATION_ICON_ID);
+    var locationText = byId(record, LOCATION_TEXT_ID);
+    var mapsLabel = byId(record, MAPS_LABEL_ID);
+    var ratingValue = byId(record, RATING_VALUE_ID);
+    var buttonWrap = byId(record, CTA_BG_ID);
+    var buttonText = byId(record, CTA_TEXT_ID);
+    var ratingIcons = Array.prototype.slice.call(record.querySelectorAll(RATING_ICON_SELECTOR));
+    if (!titleWrap || !descWrap || !buttonWrap || !buttonText) return;
+
+    relaxText(titleWrap, 'left');
+    relaxText(descWrap, 'left');
+    relaxText(priceWrap, 'left');
+    relaxText(durationText, 'left');
+    relaxText(locationText, 'left');
+    relaxText(mapsLabel, 'left');
+    relaxText(ratingValue, 'left');
+
+    if (isCompact) {
+      var titleLeft = isMobile ? 20 : 30;
+      var titleWidth = isMobile ? Math.min(artboardWidth - 40, 282) : Math.min(artboardWidth - 60, 400);
+      var descWidth = isMobile ? Math.min(artboardWidth - 40, 282) : Math.min(artboardWidth - 60, 396);
+      var titleTop = isMobile ? 154 : 84;
+      var titleFont = fitText(titleWrap, {
+        maxFont: isMobile ? (isLocalizedPage ? 24.5 : 29) : (isLocalizedPage ? 30 : 34),
+        minFont: isMobile ? 17 : 21,
+        maxHeight: isMobile ? 160 : 132,
+        lineHeightRatio: isMobile ? 1.05 : 1.08,
+      });
+
+      setImportant(titleWrap, 'left', titleLeft + 'px');
+      setImportant(titleWrap, 'top', titleTop + 'px');
+      setImportant(titleWrap, 'width', titleWidth + 'px');
+      if (titleFont) {
+        setImportant(atom(titleWrap), 'font-size', titleFont.toFixed(2) + 'px');
+      }
+
+      var titleBottom = titleTop + visualHeight(titleWrap, scale);
+      var descTop = titleBottom + (isMobile ? 10 : 12);
+      setImportant(descWrap, 'left', titleLeft + 'px');
+      setImportant(descWrap, 'top', descTop + 'px');
+      setImportant(descWrap, 'width', descWidth + 'px');
+      fitText(descWrap, {
+        maxFont: isMobile ? (isLocalizedPage ? 10.2 : 11) : (isLocalizedPage ? 11.5 : 12.5),
+        minFont: isMobile ? 8.6 : 10.4,
+        maxHeight: isMobile ? 110 : 72,
+        lineHeightRatio: 1.48,
+      });
+
+      var descBottom = descTop + visualHeight(descWrap, scale);
+      var metaTop = descBottom + (isMobile ? 12 : 14);
+      [priceWrap, durationIcon, durationText, locationIcon, locationText].forEach(function (node) {
+        if (node) setImportant(node, 'top', metaTop + 'px');
+      });
+      fitText(priceWrap, {
+        maxFont: isMobile ? (isLocalizedPage ? 10.6 : 11.5) : (isLocalizedPage ? 13 : 14),
+        minFont: isMobile ? 9 : 11.2,
+        maxHeight: 36,
+        lineHeightRatio: 1.2,
+      });
+      fitText(durationText, {
+        maxFont: isMobile ? (isLocalizedPage ? 10.6 : 11.5) : (isLocalizedPage ? 12.5 : 13.5),
+        minFont: isMobile ? 9.2 : 11.2,
+        maxHeight: 34,
+        lineHeightRatio: 1.18,
+      });
+      fitText(locationText, {
+        maxFont: isMobile ? (isLocalizedPage ? 10.6 : 11.5) : (isLocalizedPage ? 12.5 : 13.5),
+        minFont: isMobile ? 9.2 : 11.2,
+        maxHeight: isMobile ? 36 : 34,
+        lineHeightRatio: 1.18,
+      });
+
+      var metaBottom = Math.max(
+        priceWrap ? metaTop + visualHeight(priceWrap, scale) : metaTop,
+        durationText ? metaTop + visualHeight(durationText, scale) : metaTop,
+        locationText ? metaTop + visualHeight(locationText, scale) : metaTop
+      );
+
+      var ratingTop = metaBottom + (isMobile ? 10 : 12);
+      ratingIcons.forEach(function (node) {
+        setImportant(node, 'top', (ratingTop + (isMobile ? 4 : 3)) + 'px');
+      });
+      if (ratingValue) setImportant(ratingValue, 'top', ratingTop + 'px');
+      if (mapsLabel) setImportant(mapsLabel, 'top', ratingTop + 'px');
+      fitText(mapsLabel, {
+        maxFont: isMobile ? 10.5 : 12.5,
+        minFont: isMobile ? 8.4 : 10.5,
+        maxHeight: 32,
+        lineHeightRatio: 1.2,
+      });
+      fitText(ratingValue, {
+        maxFont: isMobile ? 12 : 13,
+        minFont: isMobile ? 10 : 11.5,
+        maxHeight: 28,
+        lineHeightRatio: 1.1,
+      });
+
+      var ratingBottom = Math.max(
+        ratingValue ? ratingTop + visualHeight(ratingValue, scale) : ratingTop,
+        mapsLabel ? ratingTop + visualHeight(mapsLabel, scale) : ratingTop
+      );
+
+      var buttonTop = ratingBottom + (isMobile ? 18 : 16);
+      var buttonLeft = isMobile ? 18 : 28;
+      var buttonWidth = isMobile ? 210 : 220;
+      var buttonHeight = isMobile ? 42 : 38;
+      setImportant(buttonWrap, 'top', buttonTop + 'px');
+      setImportant(buttonWrap, 'left', buttonLeft + 'px');
+      setImportant(buttonWrap, 'width', buttonWidth + 'px');
+      setImportant(buttonWrap, 'height', buttonHeight + 'px');
+      setImportant(buttonWrap, 'transform', 'none');
+      setImportant(atom(buttonWrap), 'border-radius', (isMobile ? 14 : 16) + 'px');
+
+      fitText(buttonText, {
+        maxFont: isMobile ? 16 : 14.5,
+        minFont: isMobile ? 13 : 12,
+        maxHeight: buttonHeight - 6,
+        lineHeightRatio: 1.05,
+        textAlign: 'center',
+      });
+      var buttonTextHeight = visualHeight(buttonText, scale);
+      setImportant(buttonText, 'top', (buttonTop + Math.max(8, (buttonHeight - buttonTextHeight) / 2)) + 'px');
+      setImportant(buttonText, 'left', buttonLeft + 'px');
+      setImportant(buttonText, 'width', buttonWidth + 'px');
+      setImportant(buttonText, 'transform', 'none');
+      setImportant(atom(buttonText), 'text-align', 'center');
+
+      setRecordHeight(record, buttonTop + buttonHeight + (isMobile ? 40 : 30));
+    }
+  }
+
+  function layoutAbout() {
+    var record = document.getElementById(ABOUT_ID);
+    if (!record || record.querySelector('.sb-west-about-symmetric')) return;
+    var artboard = record.querySelector('.t396__artboard');
+    if (!artboard) return;
+    var scale = scaleFor(artboard);
+    var isMobile = window.innerWidth <= 639;
+    var isTablet = window.innerWidth > 639 && window.innerWidth <= 959;
+    var isCompact = window.innerWidth <= 959;
+    var artboardWidth = artboard.offsetWidth || 320;
+    var headingWrap = byId(record, ABOUT_HEADING_ID);
+    var subtitleWrap = byId(record, ABOUT_SUBTITLE_ID);
+    var titleWraps = ABOUT_TITLE_IDS.map(function (id) { return byId(record, id); });
+    var descWraps = ABOUT_DESC_IDS.map(function (id) { return byId(record, id); });
+    var iconBgs = ABOUT_ICON_BG_IDS.map(function (id) { return byId(record, id); });
+    var icons = ABOUT_ICON_IDS.map(function (id) { return byId(record, id); });
+    if (!subtitleWrap || titleWraps.some(function (node) { return !node; })) return;
+
+    relaxText(subtitleWrap, 'center');
+    titleWraps.forEach(function (node) { relaxText(node, 'center'); });
+    descWraps.forEach(function (node) { relaxText(node, 'center'); });
+
+    var subtitleTop = isMobile ? 56 : isTablet ? 60 : 72;
+    var subtitleLeft = isMobile ? 20 : 60;
+    var subtitleWidth = isMobile ? artboardWidth - 40 : isTablet ? artboardWidth - 120 : Math.min(artboardWidth - 160, 720);
+    setImportant(subtitleWrap, 'top', subtitleTop + 'px');
+    setImportant(subtitleWrap, 'left', subtitleLeft + 'px');
+    setImportant(subtitleWrap, 'width', subtitleWidth + 'px');
+    fitText(subtitleWrap, {
+      maxFont: isMobile ? (isLocalizedPage ? 10.5 : 12) : isTablet ? (isLocalizedPage ? 12.2 : 13.5) : 18,
+      minFont: isMobile ? 9 : isTablet ? 11 : 13,
+      maxHeight: isMobile ? 46 : isTablet ? 50 : 56,
+      lineHeightRatio: 1.4,
+      textAlign: 'center',
+    });
+
+    var headingTop = headingWrap ? topOf(headingWrap) : 10;
+    var headingBottom = headingWrap ? headingTop + visualHeight(headingWrap, scale) : 40;
+    var subtitleBottom = subtitleTop + visualHeight(subtitleWrap, scale);
+    var firstRowTop = Math.max(headingBottom + 16, subtitleBottom + 16);
+    var rowGap = isMobile ? 18 : isTablet ? 24 : 0;
+    var iconSize = isMobile ? 62 : isTablet ? 70 : 82;
+    var titleGap = isMobile ? 10 : 12;
+    var descGap = isMobile ? 8 : 10;
+    var sidePad = isMobile ? 10 : isTablet ? 30 : 40;
+    var colGap = isMobile ? 18 : isTablet ? 40 : 34;
+    var colCount = isCompact ? 2 : 4;
+    var colWidth = isCompact
+      ? Math.floor((artboardWidth - sidePad * 2 - colGap) / 2)
+      : Math.floor((artboardWidth - sidePad * 2 - colGap * 3) / 4);
+    var rowHeights = [];
+
+    for (var i = 0; i < 4; i += 1) {
+      var col = isCompact ? i % 2 : i;
+      var row = isCompact ? Math.floor(i / 2) : 0;
+      var rowTop = row === 0 ? firstRowTop : rowHeights[0] + rowGap;
+      var colLeft = sidePad + col * (colWidth + colGap);
+      var iconLeft = colLeft + Math.max(0, (colWidth - iconSize) / 2);
+      var titleTop = rowTop + iconSize + titleGap;
+
+      if (iconBgs[i]) {
+        setImportant(iconBgs[i], 'top', rowTop + 'px');
+        setImportant(iconBgs[i], 'left', iconLeft + 'px');
+        setImportant(iconBgs[i], 'transform', 'none');
+      }
+      if (icons[i]) {
+        setImportant(icons[i], 'top', (rowTop + Math.max(0, (iconSize - (isMobile ? 27 : 34)) / 2)) + 'px');
+        setImportant(icons[i], 'left', (iconLeft + Math.max(0, (iconSize - (isMobile ? 27 : 34)) / 2)) + 'px');
+        setImportant(icons[i], 'transform', 'none');
+        if (isMobile) {
+          setImportant(icons[i], 'width', '27px');
+          setImportant(icons[i], 'height', '27px');
+        }
+      }
+
+      setImportant(titleWraps[i], 'top', titleTop + 'px');
+      setImportant(titleWraps[i], 'left', colLeft + 'px');
+      setImportant(titleWraps[i], 'width', colWidth + 'px');
+      setImportant(titleWraps[i], 'transform', 'none');
+      fitText(titleWraps[i], {
+        maxFont: isMobile ? (isLocalizedPage ? 10.3 : 11.5) : isTablet ? (isLocalizedPage ? 12.4 : 13.5) : 15.5,
+        minFont: isMobile ? 8.2 : isTablet ? 10.8 : 12.2,
+        maxHeight: isMobile ? 42 : isTablet ? 50 : 44,
+        lineHeightRatio: 1.18,
+        textAlign: 'center',
+      });
+
+      var titleBottom = titleTop + visualHeight(titleWraps[i], scale);
+      var descTop = titleBottom + descGap;
+      setImportant(descWraps[i], 'top', descTop + 'px');
+      setImportant(descWraps[i], 'left', colLeft + 'px');
+      setImportant(descWraps[i], 'width', colWidth + 'px');
+      setImportant(descWraps[i], 'transform', 'none');
+      fitText(descWraps[i], {
+        maxFont: isMobile ? (isLocalizedPage ? 9.2 : 10) : isTablet ? (isLocalizedPage ? 10.8 : 11.5) : 12.5,
+        minFont: isMobile ? 8 : isTablet ? 9.8 : 10.3,
+        maxHeight: isMobile ? 56 : isTablet ? 62 : 58,
+        lineHeightRatio: 1.35,
+        textAlign: 'center',
+      });
+
+      var descBottom = descTop + visualHeight(descWraps[i], scale);
+      rowHeights[row] = Math.max(rowHeights[row] || 0, descBottom);
+    }
+
+    var totalHeight = (rowHeights[rowHeights.length - 1] || firstRowTop) + (isMobile ? 26 : 28);
+    setRecordHeight(record, totalHeight);
+  }
+
+  function layoutPromo() {
+    var record = document.getElementById(PROMO_ID);
+    if (!record) return;
+    var artboard = record.querySelector('.t396__artboard');
+    if (!artboard) return;
+    var scale = scaleFor(artboard);
+    var isMobile = window.innerWidth <= 639;
+    var isTablet = window.innerWidth > 639 && window.innerWidth <= 959;
+    if (!isMobile && !isTablet) return;
+    var titleWrap = byId(record, PROMO_TITLE_ID);
+    var textWrap = byId(record, PROMO_TEXT_ID);
+    var buttonWrap = byId(record, PROMO_BUTTON_ID);
+    var sideWrap = byId(record, PROMO_SIDE_ID);
+    var rightImage = byId(record, PROMO_RIGHT_IMAGE_ID);
+    if (!titleWrap || !textWrap || !buttonWrap || !sideWrap) return;
+    var artboardWidth = artboard.offsetWidth || 320;
+    var leftColLeft = isMobile ? 12 : 18;
+    var leftColWidth = isMobile ? 146 : 168;
+    var titleTop = isMobile ? 132 : 122;
+    var buttonHeight = isMobile ? 21 : 28;
+
+    relaxText(titleWrap, 'left');
+    relaxText(textWrap, 'left');
+    relaxText(sideWrap, 'left');
+
+    setImportant(titleWrap, 'left', leftColLeft + 'px');
+    setImportant(titleWrap, 'top', titleTop + 'px');
+    setImportant(titleWrap, 'width', leftColWidth + 'px');
+    fitText(titleWrap, {
+      maxFont: isMobile ? (isLocalizedPage ? 12.6 : 14.5) : (isLocalizedPage ? 15.5 : 17),
+      minFont: isMobile ? 9 : 11.4,
+      maxHeight: isMobile ? 96 : 110,
+      lineHeightRatio: 1.1,
+    });
+
+    var titleBottom = titleTop + visualHeight(titleWrap, scale);
+    var textTop = titleBottom + 10;
+    setImportant(textWrap, 'left', leftColLeft + 'px');
+    setImportant(textWrap, 'top', textTop + 'px');
+    setImportant(textWrap, 'width', leftColWidth + 'px');
+    fitText(textWrap, {
+      maxFont: isMobile ? (isLocalizedPage ? 9.6 : 10.5) : (isLocalizedPage ? 11 : 12),
+      minFont: isMobile ? 8.2 : 9.8,
+      maxHeight: isMobile ? 70 : 82,
+      lineHeightRatio: 1.36,
+    });
+
+    var textBottom = textTop + visualHeight(textWrap, scale);
+    var buttonTop = textBottom + 10;
+    setImportant(buttonWrap, 'left', leftColLeft + 'px');
+    setImportant(buttonWrap, 'top', buttonTop + 'px');
+
+    var lowerTop = rightImage ? topOf(rightImage) + visualHeight(rightImage, scale) + 18 : buttonTop + buttonHeight + 24;
+    var sideLeft = Math.max(leftColLeft + leftColWidth + 18, Math.round(artboardWidth * 0.5));
+    var sideWidth = artboardWidth - sideLeft - (isMobile ? 12 : 16);
+    setImportant(sideWrap, 'left', sideLeft + 'px');
+    setImportant(sideWrap, 'top', lowerTop + 'px');
+    setImportant(sideWrap, 'width', Math.max(128, sideWidth) + 'px');
+    fitText(sideWrap, {
+      maxFont: isMobile ? (isLocalizedPage ? 9.6 : 10.5) : (isLocalizedPage ? 11.3 : 12.5),
+      minFont: isMobile ? 8.2 : 9.8,
+      maxHeight: isMobile ? 170 : 138,
+      lineHeightRatio: 1.35,
+    });
+
+    var sideBottom = lowerTop + visualHeight(sideWrap, scale);
+    var lowerImagesBottom = PROMO_GRID_LOWER_IMAGE_IDS
+      .map(function (id) { return byId(record, id); })
+      .filter(Boolean)
+      .reduce(function (maxValue, node) {
+        return Math.max(maxValue, topOf(node) + visualHeight(node, scale));
+      }, 0);
+    setRecordHeight(record, Math.max(sideBottom, lowerImagesBottom) + (isMobile ? 18 : 24));
+  }
+
+  function applyLayouts() {
+    layoutHero();
+    layoutAbout();
+    layoutPromo();
+  }
+
+  var timer;
+  function schedule() {
+    window.clearTimeout(timer);
+    timer = window.setTimeout(applyLayouts, 60);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', schedule);
+  } else {
+    schedule();
+  }
+  window.addEventListener('load', schedule);
+  window.addEventListener('pageshow', schedule);
+  window.addEventListener('resize', schedule, { passive: true });
+  window.setTimeout(schedule, 200);
+  window.setTimeout(schedule, 900);
+})();
+`;
+
 function injectWestPageSpecificStyle(html, tour) {
-  const pageSpecificCss = [WEST_TOUR_LAYOUT_FIX_CSS, TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS];
+  const pageSpecificCss = [WEST_TOUR_LAYOUT_FIX_CSS, TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS, TOUR_LOCALIZED_TEXT_SAFETY_CSS];
 
   if (tour.slug === "ubud-highlights-tour") {
     pageSpecificCss.push(UBUD_COLLAGE_TEXT_MOBILE_FIX_CSS);
@@ -5713,11 +6476,12 @@ function injectWestPageSpecificStyle(html, tour) {
   }
 
   const styleTag = `<style id="sb-west-page-specific-overrides">\n${pageSpecificCss.join("\n")}\n</style>\n`;
-  return html.replace("</body>", `${styleTag}</body>`);
+  const scriptTag = `<script id="sb-west-page-layout-autofit">\n${TOUR_LAYOUT_AUTOFIT_SCRIPT}\n</script>\n`;
+  return html.replace("</body>", `${styleTag}${scriptTag}</body>`);
 }
 
 function renderNusaPenidaWestSymmetricAboutSection(tour) {
-  const aboutSubtitle = `${tour.title} from Bali`;
+  const aboutSubtitle = collapseWhitespace(tour.aboutSubtitle || tour.title);
   const highlights = normalizedWestHighlights(tour).map(([heading, text]) => [
     compactWestAboutHeading(heading),
     compactWestAboutDescription(heading, text),
@@ -8205,7 +8969,7 @@ function tourDataMap() {
 }
 
 function tourRoute(tour) {
-  return `/bali/en/tours/${tour.slug}`;
+  return `/bali/${tourLocale(tour)}/tours/${tour.slug}`;
 }
 
 function renderBaliWeatherBlock(primaryRoute = WEATHER_MAIN_PAGE_ROUTE) {
@@ -8905,6 +9669,7 @@ function renderRelatedCards(tour, allTours) {
 
 function renderStructuredData(tour) {
   const faq = buildFaqs(tour);
+  const locale = tourLocale(tour);
   const graph = [
     {
       "@type": "WebPage",
@@ -8912,7 +9677,7 @@ function renderStructuredData(tour) {
       url: absoluteTourUrl(tour),
       name: tour.title,
       description: tour.metaDescription || tour.summary,
-      inLanguage: "en",
+      inLanguage: locale,
       primaryImageOfPage: {
         "@type": "ImageObject",
         url: absoluteImageUrl(tour),
@@ -8925,13 +9690,13 @@ function renderStructuredData(tour) {
         {
           "@type": "ListItem",
           position: 1,
-          name: "Bali main page",
+          name: tour.breadcrumbHome || "Bali main page",
           item: `${SITE_URL}/bali/en/main-page`,
         },
         {
           "@type": "ListItem",
           position: 2,
-          name: "Tours",
+          name: tour.breadcrumbTours || "Tours",
           item: `${SITE_URL}/bali/en/main-page#tours`,
         },
         {
@@ -9795,6 +10560,16 @@ function replaceCardArticle(html, titles, replacement) {
   return html;
 }
 
+function replaceMainPageCardBySlug(html, slug, titleAliases = []) {
+  const tour = tours.find((item) => item.slug === slug);
+  if (!tour) {
+    return html;
+  }
+
+  const titles = Array.isArray(titleAliases) && titleAliases.length > 0 ? titleAliases : [tour.title];
+  return replaceCardArticle(html, titles, renderMainPageCard(tour));
+}
+
 function replaceTextInsideCard(html, titles, from, to) {
   const titleList = Array.isArray(titles) ? titles : [titles];
 
@@ -9962,16 +10737,52 @@ function patchBaliMainFile(filePath) {
 
   html = html.replace(/\/bali\/en\/tours\/(?:bali\/en\/tours\/)+/g, "/bali/en/tours/");
 
-  html = replaceCardArticle(
+  html = replaceMainPageCardBySlug(
     html,
+    "dolphin-sunrise-city-tour",
     ["North Bali Tour and Lovina Dolphins", "Lovina Dolphin Sunrise Tour"],
-    '<article class="sb-card sb-reveal" data-category="city water"><div class="sb-card-inner"><div class="sb-gallery"><div class="sb-img sb-img-main"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1585643734412-05ea85526d11?auto=format&fit=crop&crop=entropy&w=960&h=560&q=72" alt="Lovina Dolphin Sunrise Tour in Bali"></div></div><div class="sb-content"><h3 class="sb-title">Lovina Dolphin Sunrise Tour</h3><ul class="sb-features"><li class="sb-feature"><span class="sb-feature-icon">⏰</span><span>8 hours north Bali route</span></li><li class="sb-feature"><span class="sb-feature-icon">🐬</span><span>Sunrise dolphin watching from Lovina</span></li><li class="sb-feature"><span class="sb-feature-icon">🚐</span><span>Private car, boat ticket and entrance fees</span></li><li class="sb-feature"><span class="sb-feature-icon">📍</span><span>Gitgit Waterfall and Ulun Danu Temple</span></li><li class="sb-feature"><span class="sb-feature-icon">🌊</span><span>Best for sunrise lovers and scenic day trips</span></li></ul><div class="sb-bottom"><div class="sb-price-row"><div class="sb-price">from $75</div></div><a href="/bali/en/tours/dolphin-sunrise-city-tour" class="sb-btn">Details</a></div></div></div></article>',
   );
 
   html = html.replace(
     /<article class="sb-card sb-reveal" data-category="city"><div class="sb-card-inner"><div class="sb-gallery"><div class="sb-img sb-img-main"><img loading="lazy" decoding="async" src="https:\/\/images\.unsplash\.com\/photo-1585643734412-05ea85526d11[^"]*" alt="Bali UNESCO Heritage Sites Tour in Bali"><\/div><\/div><div class="sb-content"><h3 class="sb-title">Bali UNESCO Heritage Sites Tour<\/h3>[\s\S]*?<a href="\/bali\/en\/tours\/dolphin-sunrise-city-tour" class="sb-btn">Details<\/a><\/div><\/div><\/div><\/article>/,
-    '<article class="sb-card sb-reveal" data-category="city water"><div class="sb-card-inner"><div class="sb-gallery"><div class="sb-img sb-img-main"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1585643734412-05ea85526d11?auto=format&fit=crop&crop=entropy&w=960&h=560&q=72" alt="Lovina Dolphin Sunrise Tour in Bali"></div></div><div class="sb-content"><h3 class="sb-title">Lovina Dolphin Sunrise Tour</h3><ul class="sb-features"><li class="sb-feature"><span class="sb-feature-icon">⏰</span><span>8 hours north Bali route</span></li><li class="sb-feature"><span class="sb-feature-icon">🐬</span><span>Sunrise dolphin watching from Lovina</span></li><li class="sb-feature"><span class="sb-feature-icon">🚐</span><span>Private car, boat ticket and entrance fees</span></li><li class="sb-feature"><span class="sb-feature-icon">📍</span><span>Gitgit Waterfall and Ulun Danu Temple</span></li><li class="sb-feature"><span class="sb-feature-icon">🌊</span><span>Best for sunrise lovers and scenic day trips</span></li></ul><div class="sb-bottom"><div class="sb-price-row"><div class="sb-price-note">per person</div><div class="sb-price">from $75</div></div><a href="/bali/en/tours/dolphin-sunrise-city-tour" class="sb-btn">Details</a></div></div></div></article>',
+    renderMainPageCard(tours.find((tour) => tour.slug === "dolphin-sunrise-city-tour")),
   );
+
+  const localMainPageCardReplacements = [
+    ["east-bali-instagram-tour", ["East Bali Instagram Tour"]],
+    ["tanah-lot-bedugul-tour", ["Tanah Lot and Bedugul Tour"]],
+    ["ubud-instagram-tour", ["Ubud Instagram Tour"]],
+    [
+      "nusa-penida-private-day-tour-manta-snorkeling",
+      ["Nusa Penida Private car Day Tour+Snorkeling Manta Point"],
+    ],
+    ["nusa-penida-full-day-tour", ["Nusa Penida Full Day Tour"]],
+    ["nusa-lembongan-ceningan-day-trip", ["Nusa Lembongan and Ceningan Day Trip"]],
+    ["sumbawa-whale-shark-snorkeling-trip", ["Sumbawa Whale Shark Snorkeling Trip"]],
+    ["blue-lagoon-snorkeling", ["Blue Lagoon Snorkeling"]],
+    ["white-water-rafting", ["White Water Rafting"]],
+    ["sunset-cruise-bali", ["Sunset Cruise"]],
+    ["surf-lesson-experience", ["Surf Lesson Experience"]],
+    ["bali-airport-transfer", ["Airport Transfer"]],
+    ["private-car-with-driver-bali", ["Private Car with Driver"]],
+    ["fast-boat-transfer-bali", ["Fast Boat Transfer"]],
+    ["bali-helicopter-scenic-tour", ["Bali Helicopter Scenic Tour"]],
+    ["volcano-coastline-helicopter-ride", ["Volcano and Coastline Helicopter Ride"]],
+  ];
+
+  for (const [slug, titles] of localMainPageCardReplacements) {
+    html = replaceMainPageCardBySlug(html, slug, titles);
+  }
+
+  html = html
+    .replaceAll(
+      'src="https://static.tildacdn.one/tild3963-6334-4438-b163-623862386363/_batur_jeep.jpg"',
+      'src="/images/bali-tours/mount-batur-sunrise-jeep-hot-spring.jpg"',
+    )
+    .replaceAll(
+      'src="https://static.tildacdn.one/tild6666-6432-4432-b634-356664333739/__2.jpg"',
+      'src="/images/bali-tours/mount-batur-sunrise-hike.jpg"',
+    );
 
   const giliIslandTour = tours.find((tour) => tour.slug === "gili-island-tour");
   if (giliIslandTour) {
@@ -10607,26 +11418,1649 @@ const UNESCO_PDF_CHIPS = [
 
 const UNESCO_THINGS_TO_DO_CHIPS = [
   [null, "UNESCO Temples", "/bali/en/tours/bali-unesco"],
-  [null, "Ubud Volcano Day", "/bali/en/tours/ubud-highlights-tour"],
-  [null, "East Bali Views", "/bali/en/tours/east-bali-instagram-tour"],
+  [null, "Ubud and Volcano", "/bali/en/tours/ubud-highlights-tour"],
+  [null, "East Bali", "/bali/en/tours/east-bali-instagram-tour"],
   [null, "Nusa West", "/bali/en/tours/nusa-penida-west-tour"],
-  [null, "Nusa East", "/bali/en/tours/nusa-penida-east-tour"],
-  [null, "Manta Snorkel", "/bali/en/tours/nusa-penida-manta-rays-point"],
+  [null, "Nusa Penida tour", "/bali/en/tours/nusa-penida-east-tour"],
+  [null, "Manta Point", "/bali/en/tours/nusa-penida-manta-rays-point"],
   [null, "Batur Hike", "/bali/en/tours/mount-batur-sunrise-hike"],
-  [null, "Jeep + Spring", "/bali/en/tours/mount-batur-sunrise-jeep-hot-spring"],
-  [null, "Lovina Dolphins", "/bali/en/tours/dolphin-sunrise-city-tour"],
-  [null, "Gili Day Trip", "/bali/en/tours/gili-island-tour"],
+  [null, "Batur Jeep & Spring", "/bali/en/tours/mount-batur-sunrise-jeep-hot-spring"],
+  [null, "Lavina dolphins", "/bali/en/tours/dolphin-sunrise-city-tour"],
+  [null, "Gili Islands", "/bali/en/tours/gili-island-tour"],
   [null, "ATV Ubud", "/bali/en/tours/atv-quad-bikes"],
   [null, "Private Driver", "/bali/en/tours/private-car-with-driver-bali"],
 ];
 
+const UNESCO_LANGUAGE_OPTIONS = BALI_LANGUAGE_OPTIONS;
+
+const UNESCO_PAGE_TRANSLATIONS = {
+  ru: {
+    title: "Тур по объектам ЮНЕСКО на Бали",
+    metaTitle: "Тур по объектам ЮНЕСКО на Бали | Taman Ayun, Ulun Danu, Jatiluwih и Tanah Lot",
+    metaDescription:
+      "Забронируйте тур по объектам ЮНЕСКО на Бали: Taman Ayun, Ulun Danu Beratan, рисовые террасы Jatiluwih и Tanah Lot, частный трансфер и все входные билеты от $70 за человека.",
+    eyebrow: "Храмы ЮНЕСКО, рисовые террасы и Tanah Lot",
+    duration: "10 часов",
+    pickup: "Утренний трансфер из Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua или Jimbaran",
+    bestFor: "любителей культуры, пар, семей и первого обзорного дня на Бали",
+    format: "Частный маршрут по культурному наследию",
+    area: "Маршрут ЮНЕСКО по западу и центру Бали",
+    compactAreaLabel: "Запад и центр Бали",
+    imageAlt: "Рисовые террасы Jatiluwih и горные виды на туре по объектам ЮНЕСКО на Бали",
+    lead:
+      "Посмотрите самые известные объекты наследия Бали за один аккуратно собранный частный день: Taman Ayun, Ulun Danu Beratan, рисовые террасы Jatiluwih и Tanah Lot в одном цельном all-inclusive маршруте.",
+    summary:
+      "Этот тур по объектам ЮНЕСКО на Бали создан для гостей, которые хотят храмы, горно-озёрные виды, знаменитые рисовые террасы ЮНЕСКО и эффектный финал у океанского храма Tanah Lot без необходимости собирать несколько разных экскурсий. Частный транспорт, входные билеты, храмовый саронг и вода уже включены от $70 за человека.",
+    overview:
+      "Маршрут хорошо работает потому, что остаётся очень красивым и разнообразным, но не утомляет физически. Вы начинаете с королевской храмовой архитектуры Taman Ayun, поднимаетесь в более прохладный Bedugul к Ulun Danu Beratan, выходите к широким зелёным террасам Jatiluwih и завершаете день в Tanah Lot у одного из самых узнаваемых храмов Бали у океана.",
+    aboutSubtitle: "Тур по объектам ЮНЕСКО на Бали",
+    highlights: [
+      ["Храм Taman Ayun", "Спокойный старт дня в одном из самых изящных королевских храмовых комплексов Бали."],
+      ["Ulun Danu Beratan", "Горное озеро и храм в Bedugul дают прохладный воздух, мягкий свет и один из самых узнаваемых видов на Бали."],
+      ["Террасы Jatiluwih", "Знаменитые террасы ЮНЕСКО делают маршрут визуально шире и богаче, чем обычный храмовый день."],
+      ["Финал в Tanah Lot", "Завершение у знаменитого морского храма даёт маршруту сильную и очень фотогеничную концовку."],
+    ],
+    itinerary: [
+      ["Утренний трансфер и храм Taman Ayun", "Стартуйте с трансфера из основных районов юга и центра Бали и первой культурной остановки в Taman Ayun."],
+      ["Ulun Danu Beratan в Bedugul", "Дальше маршрут уходит в более прохладные горные районы к Ulun Danu Beratan с видами на озеро и храм."],
+      ["Рисовые террасы Jatiluwih", "После этого вы едете в Jatiluwih ради зелёных панорам, объекта ЮНЕСКО и удобного окна для обеда рядом с видом на Batukaru."],
+      ["Tanah Lot и возвращение", "День заканчивается в Tanah Lot, после чего идёт обратный трансфер с учётом трафика и лучшего света."],
+    ],
+    includes: [
+      "Частный автомобиль с кондиционером",
+      "Все входные билеты по указанному маршруту",
+      "Саронг для посещения храмов",
+      "Бутилированная вода",
+    ],
+    goodToKnow: [
+      "Обед, личные расходы и дополнительные услуги не входят в стандартную стоимость.",
+      "Трансфер покрывает Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua и Jimbaran.",
+      "Возьмите камеру, наличные, солнцезащитные очки, удобную обувь для храмов и террас, а также лёгкую накидку для прохладной части маршрута в Bedugul.",
+      "Это частный экскурсионный маршрут, а не групповой тур, так как в источнике указан private air-conditioned vehicle.",
+      "Маршрут комфортный для большинства гостей, но точное время может меняться из-за погоды и трафика.",
+      "Для полного возврата отмену лучше оформить минимум за 3 дня до начала поездки.",
+    ],
+    meetingPoint:
+      "Обычно гостей забирают прямо из отеля, виллы или Airbnb в указанных районах Бали до начала маршрута.",
+    faqs: [
+      ["Сколько длится тур по объектам ЮНЕСКО на Бали?", "Источник описывает этот маршрут как экскурсию примерно на 10 часов: утренний выезд, все основные остановки и возвращение после Tanah Lot."],
+      ["Какие места входят в этот тур?", "Маршрут включает Taman Ayun Temple, Ulun Danu Beratan Temple, рисовые террасы Jatiluwih и Tanah Lot."],
+      ["Включён ли трансфер из отеля?", "Да. В источнике указано, что трансфер организуется от места проживания, и заранее нужно отправить название и адрес отеля, виллы или Airbnb."],
+      ["Из каких районов есть трансфер?", "Заявленные районы трансфера: Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua и Jimbaran."],
+      ["Что входит в стоимость экскурсии?", "Включены частный автомобиль с кондиционером, все входные билеты, саронг для храмов и вода."],
+      ["Включён ли обед?", "Нет. Обед, личные расходы и дополнительные сервисы указаны как не включённые."],
+      ["Нужно ли брать саронг для храмов?", "Нет, если не хотите свой. В источнике указано, что саронг для храмов уже включён."],
+      ["Это частный тур или групповой маршрут?", "Мы показываем его как частный маршрут, потому что источник прямо указывает private air-conditioned vehicle."],
+      ["Что взять с собой?", "Лучше взять камеру, наличные, солнцезащитные очки, удобную обувь и лёгкую накидку для более прохладной части дня."],
+      ["Подходит ли маршрут для детей?", "Да. Это спокойный обзорный день, который хорошо подходит парам, семьям и гостям, не ищущим физически тяжёлую активность."],
+      ["Какая политика отмены?", "Для полного возврата источник рекомендует отменять не позже чем за 3 дня до начала экскурсии."],
+      ["Почему этот маршрут бронируют вместо нескольких разных экскурсий?", "Потому что он собирает храмы, озёрные виды, террасы ЮНЕСКО и Tanah Lot в один понятный и визуально сильный день."],
+    ],
+    whatsappText:
+      "Здравствуйте! Хочу забронировать тур по объектам ЮНЕСКО на Бали за $70 с человека. Пришлите, пожалуйста, доступные даты, районы трансфера и полные детали.",
+    privateOfferEyebrow: "Маршрут ЮНЕСКО",
+    privateOfferTopline: "Лучший выбор для храмов и пейзажей Бали",
+    mapLabel: "Маршрут ЮНЕСКО",
+    mapTitle: "Маршрут тура ЮНЕСКО на Google Maps",
+    mapText:
+      "Посмотрите основные точки тура по объектам ЮНЕСКО на Бали. Обычно маршрут включает Taman Ayun, Ulun Danu Beratan, Jatiluwih и Tanah Lot. Точное время и порядок остановок подтверждаются после бронирования.",
+    miniPromoEyebrow: "Маршрут наследия",
+    miniPromoSideText:
+      "Откройте культурную сторону Бали: королевские храмовые дворы, озёрные виды Bedugul, террасы Jatiluwih и финал у Tanah Lot в одном частном дне.",
+    ctaLabel: "Забронировать",
+    faqIntro: "Короткие ответы перед бронированием маршрута по объектам ЮНЕСКО на Бали.",
+    fullDescriptionKeyStopsHtml:
+      "Обычно маршрут строится вокруг <strong>Taman Ayun - Ulun Danu Beratan - Jatiluwih - Tanah Lot</strong>.",
+    fullDescriptionBestFitHtml:
+      "Лучше всего подходит для <strong>любителей культуры, пар и семей</strong> с маршрутом примерно на <strong>10 часов</strong>.",
+    breadcrumbHome: "Главная Бали",
+    breadcrumbTours: "Туры",
+    reviews: [
+      { text: "Мы ехали ради Taman Ayun, но в итоге весь день оказался очень цельным и комфортным. Планирование и тайминг сделали тур по объектам ЮНЕСКО на Бали действительно лёгким.", title: "Emma - Australia", date: "18 апреля 2026 - Подтверждённое бронирование" },
+      { text: "Это был один из самых удобных полноценных дней на Бали. Больше всего запомнились Ulun Danu Beratan и Jatiluwih, а сам маршрут ощущался спокойным и хорошо организованным.", title: "Noah - Canada", date: "27 апреля 2026 - Подтверждённое бронирование" },
+      { text: "Очень хороший value за целый день. Хватило времени и на фото, и на спокойные остановки, а команда помогала с логистикой и таймингом весь маршрут.", title: "Lina - Sweden", date: "6 мая 2026 - Подтверждённое бронирование" },
+    ],
+    ui: {
+      navTours: "Туры",
+      navAbout: "О нас",
+      navBooking: "Бронирование",
+      navGuides: "Гайды",
+      languageSwitcherLabel: "Выбрать язык",
+      aboutHeading: "О туре",
+      highlightsHeading: "Основные моменты",
+      fullDescriptionHeading: "Полное описание",
+      whatsIncludedHeading: "Что включено",
+      importantInformationHeading: "Важная информация",
+      bestAttractionsHeading: "Лучшие места на Бали",
+      helpfulPdfHeading: "Полезные статьи о Бали",
+      thingsToDoHeading: "Чем заняться на Бали",
+      mapOpenLabel: "Открыть маршрут в Google Maps",
+      highlightsIntroLabel: "Главная идея",
+      fullDescriptionWhyBookLabel: "Почему это бронируют",
+      fullDescriptionHowDayFeelsLabel: "Как ощущается день",
+      fullDescriptionKeyStopsLabel: "Ключевые точки",
+      fullDescriptionBestFitLabel: "Кому подойдёт",
+      includesIntroLabel: "Что уже собрано в пакет",
+      includesIntroText: "Основная логистика и важные детали уже включены в этот маршрут",
+      weatherLive: "Погода сейчас",
+      weatherLoading: "Загрузка…",
+      weatherChecking: "Проверяем местные условия…",
+      weatherConditionLoading: "Загружаем погоду…",
+      weatherSummaryLoading: "Подбираем лучший план на день на Бали…",
+      weatherFeelsLike: "Ощущается как",
+      weatherHumidity: "Влажность",
+      weatherWind: "Ветер",
+      weatherTipsTitle: "Советы на сегодня",
+      weatherSeeRecommended: "Посмотреть рекомендуемый тур",
+      weatherLocation: "Бали, Индонезия",
+      weatherClearSky: "Ясно",
+      weatherMostlyClear: "Почти ясно",
+      weatherPartlyCloudy: "Переменная облачность",
+      weatherCloudy: "Облачно",
+      weatherLightRain: "Лёгкий дождь",
+      weatherRainShowers: "Кратковременный дождь",
+      weatherThunderstorm: "Риск грозы",
+      weatherWarmEvening: "Тёплый вечер на Бали",
+      weatherSunnyDay: "Солнечный день на Бали",
+      weatherCloudyDay: "Облачный день на Бали",
+      weatherRainyDay: "Дождливая погода на Бали",
+      weatherStormyDay: "День с риском шторма на Бали",
+      weatherSunsetTip: "Отлично для закатных точек",
+      weatherDinnerTip: "Отлично для планов на ужин",
+      weatherLightLayerTip: "Достаточно лёгкого слоя одежды",
+      weatherBeachTip: "Хорошо для пляжа",
+      weatherSunscreenTip: "Сильное солнце: не забудьте SPF",
+      weatherHydrateTip: "Пейте больше воды в жару",
+      weatherCafeTip: "Хорошая погода для кафе и лёгких поездок",
+      weatherSpaTip: "Подходит для спа или остановок в кафе",
+      weatherGripShoesTip: "Наденьте обувь с хорошим сцеплением",
+      weatherRainLayerTip: "Возьмите лёгкую дождевую куртку",
+      weatherFlexibleTip: "Сегодня лучше держать план гибким",
+      weatherShelterTip: "Хорошо иметь indoor запасной вариант",
+      footerTopTours: "Топ туры",
+      footerCompanyTrust: "Компания и доверие",
+      footerContactsLocation: "Контакты и локация",
+      footerLead: "Там, где встречаются природа и приключения",
+      footerAboutCompany: "О SB Excursions",
+      footerPrivacy: "Политика конфиденциальности",
+      footerTerms: "Условия и положения",
+      footerRefund: "Политика возврата",
+      footerSiteMap: "Карта сайта",
+      footerMessageUs: "Напишите нам",
+      footerSupportHours: "Поддержка ежедневно 7:00 - 22:00",
+      footerCopyright: "© 2021-2026 SB Excursions. Создано для приключений на Бали",
+    },
+  },
+  zh: {
+    title: "巴厘岛联合国教科文组织遗产之旅",
+    metaTitle: "巴厘岛联合国教科文组织遗产之旅 | Taman Ayun、Ulun Danu、Jatiluwih 与 Tanah Lot",
+    metaDescription:
+      "预订巴厘岛联合国教科文组织遗产之旅：Taman Ayun、Ulun Danu Beratan、Jatiluwih 梯田和 Tanah Lot，含私人接送与所有门票，$70/人起。",
+    eyebrow: "联合国教科文组织寺庙、梯田与 Tanah Lot",
+    duration: "10小时",
+    pickup: "早晨可从 Ubud、Sanur、Seminyak、Canggu、Legian、Kuta、Nusa Dua 或 Jimbaran 接送",
+    bestFor: "文化爱好者、情侣、家庭和第一次来巴厘岛的游客",
+    format: "私人文化遗产观光路线",
+    area: "巴厘岛西部与中部 UNESCO 路线",
+    compactAreaLabel: "巴厘岛西中部",
+    imageAlt: "巴厘岛联合国教科文组织遗产之旅中的 Jatiluwih 梯田与山景",
+    lead:
+      "在一天顺畅的私人行程里看遍巴厘岛最有代表性的遗产风景：Taman Ayun、Ulun Danu Beratan、Jatiluwih 梯田和 Tanah Lot 一次走完。",
+    summary:
+      "这条巴厘岛联合国教科文组织遗产之旅适合想在一天内看到寺庙庭院、山湖风景、著名梯田和海边神庙收尾的旅行者，而不用把几条一日游拼在一起。私人用车、门票、寺庙纱笼和饮用水都已包含，$70/人起。",
+    overview:
+      "这条路线的优点是景观层次丰富，但体力负担并不重。你会先到优雅的 Taman Ayun，再进入更凉爽的 Bedugul 看 Ulun Danu Beratan，随后前往世界遗产 Jatiluwih 梯田，最后以 Tanah Lot 海边神庙作为收尾。",
+    aboutSubtitle: "来自巴厘岛的 UNESCO 遗产之旅",
+    highlights: [
+      ["Taman Ayun 寺庙", "以巴厘岛最优雅的皇家寺庙群之一开启一天，文化氛围很舒服。"],
+      ["Ulun Danu Beratan", "Bedugul 的山湖寺景带来更凉爽的空气和巴厘岛最经典的寺庙背景之一。"],
+      ["Jatiluwih 梯田", "联合国教科文组织梯田让整条路线比单纯看寺庙更开阔、更完整。"],
+      ["Tanah Lot 海岸收尾", "在著名海神庙结束一天，让最后一段非常有画面感。"],
+    ],
+    itinerary: [
+      ["早晨接送与 Taman Ayun", "从巴厘岛南部和中部主要区域接送出发，第一站前往 Taman Ayun。"],
+      ["Bedugul 的 Ulun Danu Beratan", "继续前往更凉爽的高地区域，看湖边寺庙和山景。"],
+      ["Jatiluwih 梯田", "之后前往 Jatiluwih，欣赏 UNESCO 梯田景观，并在附近安排舒适的午餐时间。"],
+      ["Tanah Lot 与返程", "最后前往 Tanah Lot，再根据交通与光线情况返回酒店。"],
+    ],
+    includes: [
+      "私人空调车",
+      "行程所列全部门票",
+      "寺庙参观纱笼",
+      "瓶装饮用水",
+    ],
+    goodToKnow: [
+      "午餐、个人消费和额外服务不包含在基础价格中。",
+      "接送范围包括 Ubud、Sanur、Seminyak、Canggu、Legian、Kuta、Nusa Dua 和 Jimbaran。",
+      "建议带相机、现金、太阳镜、适合寺庙和梯田步行的鞋，以及 Bedugul 段可加的一件薄外套。",
+      "这条路线按私人观光路线呈现，而不是拼团，因为来源明确写的是 private air-conditioned vehicle。",
+      "整天节奏对大多数游客都比较轻松，但具体时间仍会受到交通和天气影响。",
+      "如需全额退款，来源建议至少提前 3 天取消。",
+    ],
+    meetingPoint: "大多数客人会在出发前直接从酒店、别墅或 Airbnb 接走。",
+    faqs: [
+      ["这条 UNESCO 行程多长时间？", "来源将其描述为约 10 小时的一日观光路线，通常早晨出发，Tanah Lot 之后返回。"],
+      ["这条行程包含哪些地方？", "路线包含 Taman Ayun Temple、Ulun Danu Beratan Temple、Jatiluwih 梯田和 Tanah Lot。"],
+      ["包含酒店接送吗？", "包含。来源说明会从住宿地接送，并需要提前提供酒店、别墅或 Airbnb 名称和地址。"],
+      ["哪些区域可以接送？", "可接送区域为 Ubud、Sanur、Seminyak、Canggu、Legian、Kuta、Nusa Dua 和 Jimbaran。"],
+      ["价格里包含什么？", "包含私人空调车、全部门票、寺庙纱笼和瓶装水。"],
+      ["包含午餐吗？", "不包含。来源将午餐、个人消费和其他附加服务列为不含项目。"],
+      ["参观寺庙需要自带纱笼吗？", "不需要，除非你更想用自己的。来源说明纱笼已包含。"],
+      ["这是私人团还是拼团？", "我们按私人路线呈现，因为来源直接列出了 private air-conditioned vehicle。"],
+      ["这条路线建议带什么？", "建议带相机、现金、太阳镜、舒适鞋，以及适合 Bedugul 较凉天气的轻薄外套。"],
+      ["适合带孩子吗？", "适合。这是一条比较轻松的观光路线，适合情侣、家庭和不想进行高强度活动的游客。"],
+      ["取消政策是什么？", "如需全额退款，来源建议至少在体验开始前 3 天取消。"],
+      ["为什么很多人会选择这条路线，而不是拆成几条一日游？", "因为它把寺庙、山湖、梯田和 Tanah Lot 海岸景观整合成一天，节奏清晰，画面也更丰富。"],
+    ],
+    whatsappText:
+      "你好！我想预订巴厘岛联合国教科文组织遗产之旅，价格为每人 $70。请发送可订日期、接送区域和完整详情。",
+    privateOfferEyebrow: "UNESCO 文化路线",
+    privateOfferTopline: "适合想一次看尽巴厘岛经典文化景观的人",
+    mapLabel: "UNESCO 路线",
+    mapTitle: "巴厘岛 UNESCO 路线 Google 地图",
+    mapText:
+      "预览这条巴厘岛 UNESCO 路线的主要地图点。通常包括 Taman Ayun、Ulun Danu Beratan、Jatiluwih 和 Tanah Lot。最终时间与停靠顺序会在预订后确认。",
+    miniPromoEyebrow: "文化遗产路线",
+    miniPromoSideText:
+      "在一天私人行程里探索巴厘岛的文化侧面：皇家寺庙庭院、Bedugul 湖景、Jatiluwih 梯田和 Tanah Lot 海岸收尾。",
+    ctaLabel: "立即预订",
+    faqIntro: "预订这条 UNESCO 路线前的快速说明。",
+    fullDescriptionKeyStopsHtml:
+      "通常围绕 <strong>Taman Ayun - Ulun Danu Beratan - Jatiluwih - Tanah Lot</strong> 展开。",
+    fullDescriptionBestFitHtml:
+      "很适合 <strong>文化爱好者、情侣和家庭</strong>，行程通常约 <strong>10小时</strong>。",
+    breadcrumbHome: "巴厘岛主页",
+    breadcrumbTours: "行程",
+    reviews: [
+      { text: "我们原本是为了 Taman Ayun 才订这条路线，但整天比预期更顺畅。节奏、安排和支持都让这条 UNESCO 路线非常好走。", title: "Emma - Australia", date: "2026年4月18日 - 已验证预订" },
+      { text: "这是我们在巴厘岛最轻松的一整天之一。Ulun Danu Beratan 和 Jatiluwih 最让人印象深刻，而整条路线安排得很自然。", title: "Noah - Canada", date: "2026年4月27日 - 已验证预订" },
+      { text: "一整天的体验很值。拍照时间够，路线流畅，团队整天都在帮我们处理节奏和实用细节。", title: "Lina - Sweden", date: "2026年5月6日 - 已验证预订" },
+    ],
+    ui: {
+      navTours: "线路",
+      navAbout: "关于我们",
+      navBooking: "预订",
+      navGuides: "攻略",
+      languageSwitcherLabel: "选择语言",
+      aboutHeading: "关于此行程",
+      highlightsHeading: "亮点",
+      fullDescriptionHeading: "完整介绍",
+      whatsIncludedHeading: "费用包含",
+      importantInformationHeading: "重要信息",
+      bestAttractionsHeading: "巴厘岛热门景点",
+      helpfulPdfHeading: "巴厘岛实用文章",
+      thingsToDoHeading: "巴厘岛玩什么",
+      mapOpenLabel: "打开 Google 地图路线",
+      highlightsIntroLabel: "整体感觉",
+      fullDescriptionWhyBookLabel: "为什么大家会订",
+      fullDescriptionHowDayFeelsLabel: "这一天的节奏",
+      fullDescriptionKeyStopsLabel: "关键停靠",
+      fullDescriptionBestFitLabel: "适合谁",
+      includesIntroLabel: "已打包好的核心内容",
+      includesIntroText: "主要交通与关键支持已经包含在下面这条路线里",
+      weatherLive: "实时天气",
+      weatherLoading: "加载中…",
+      weatherChecking: "正在查看当地天气…",
+      weatherConditionLoading: "正在加载天气…",
+      weatherSummaryLoading: "正在为今天寻找更适合的巴厘岛安排…",
+      weatherFeelsLike: "体感温度",
+      weatherHumidity: "湿度",
+      weatherWind: "风速",
+      weatherTipsTitle: "今日建议",
+      weatherSeeRecommended: "查看推荐行程",
+      weatherLocation: "巴厘岛，印度尼西亚",
+      weatherClearSky: "晴朗",
+      weatherMostlyClear: "大致晴朗",
+      weatherPartlyCloudy: "局部多云",
+      weatherCloudy: "多云",
+      weatherLightRain: "小雨",
+      weatherRainShowers: "阵雨",
+      weatherThunderstorm: "可能有雷暴",
+      weatherWarmEvening: "温暖的巴厘岛夜晚",
+      weatherSunnyDay: "晴朗的巴厘岛白天",
+      weatherCloudyDay: "多云的巴厘岛白天",
+      weatherRainyDay: "巴厘岛雨天",
+      weatherStormyDay: "巴厘岛风暴天气预警",
+      weatherSunsetTip: "适合看日落",
+      weatherDinnerTip: "适合安排晚餐",
+      weatherLightLayerTip: "一件薄外套就够了",
+      weatherBeachTip: "很适合海边时间",
+      weatherSunscreenTip: "太阳很强，记得防晒",
+      weatherHydrateTip: "天气热，记得多喝水",
+      weatherCafeTip: "适合去咖啡馆或轻松出行",
+      weatherSpaTip: "适合 spa 或咖啡馆行程",
+      weatherGripShoesTip: "穿抓地力好的鞋",
+      weatherRainLayerTip: "带一件轻薄雨衣",
+      weatherFlexibleTip: "今天建议保持行程弹性",
+      weatherShelterTip: "室内备选方案会很好用",
+      footerTopTours: "热门线路",
+      footerCompanyTrust: "公司与信任",
+      footerContactsLocation: "联系与位置",
+      footerLead: "自然与冒险相遇的地方",
+      footerAboutCompany: "关于 SB Excursions",
+      footerPrivacy: "隐私政策",
+      footerTerms: "条款与条件",
+      footerRefund: "退款政策",
+      footerSiteMap: "网站地图",
+      footerMessageUs: "联系我们",
+      footerSupportHours: "每日支持 7:00 - 22:00",
+      footerCopyright: "© 2021-2026 SB Excursions. 为巴厘岛旅程打造",
+    },
+  },
+  es: {
+    title: "Tour por los sitios Patrimonio de la UNESCO en Bali",
+    metaTitle: "Tour UNESCO en Bali | Taman Ayun, Ulun Danu, Jatiluwih y Tanah Lot",
+    metaDescription:
+      "Reserva el tour por los sitios Patrimonio de la UNESCO en Bali con Taman Ayun, Ulun Danu Beratan, terrazas de arroz de Jatiluwih y Tanah Lot, transporte privado y entradas incluidas desde $70 por persona.",
+    eyebrow: "Templos UNESCO, arrozales y Tanah Lot",
+    duration: "10 horas",
+    pickup: "Recogida por la mañana desde Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua o Jimbaran",
+    bestFor: "amantes de la cultura, parejas, familias y primeras visitas de sightseeing en Bali",
+    format: "Ruta privada de patrimonio cultural",
+    area: "Ruta UNESCO por el oeste y centro de Bali",
+    compactAreaLabel: "Oeste y centro de Bali",
+    imageAlt: "Terrazas de arroz de Jatiluwih y paisaje de montaña en el tour UNESCO de Bali",
+    lead:
+      "Descubre algunos de los paisajes patrimoniales más conocidos de Bali en un solo día privado y bien armado con Taman Ayun, Ulun Danu Beratan, Jatiluwih y Tanah Lot dentro de una ruta fluida todo incluido.",
+    summary:
+      "Este tour UNESCO de Bali está pensado para viajeros que quieren templos, vistas de lago y montaña, arrozales UNESCO y un final potente en Tanah Lot sin tener que unir varias excursiones separadas. El transporte privado, las entradas, el sarong para templos y el agua ya están resueltos desde $70 por persona.",
+    overview:
+      "La ruta funciona muy bien porque mantiene variedad escénica sin volverse pesada físicamente. Empieza con la arquitectura real de Taman Ayun, sube a las tierras frescas de Bedugul para ver Ulun Danu Beratan, abre el paisaje en Jatiluwih y termina en Tanah Lot con uno de los templos costeros más icónicos de Bali.",
+    aboutSubtitle: "Tour UNESCO de Bali desde Bali",
+    highlights: [
+      ["Templo Taman Ayun", "Empieza con uno de los complejos de templo real más elegantes de Bali y una parada cultural tranquila."],
+      ["Ulun Danu Beratan", "El entorno de lago y montaña en Bedugul aporta aire fresco, luz suave y uno de los fondos de templo más icónicos de Bali."],
+      ["Terrazas de arroz de Jatiluwih", "El paisaje UNESCO hace que la ruta se sienta más amplia y completa que un día solo de templos."],
+      ["Final costero en Tanah Lot", "Cerrar en el famoso templo del mar da un final muy visual y con gran recompensa al día."],
+    ],
+    itinerary: [
+      ["Recogida y Taman Ayun", "Empieza con la recogida desde las principales zonas del sur y centro de Bali y la primera parada cultural en Taman Ayun."],
+      ["Ulun Danu Beratan en Bedugul", "Luego sube hacia las tierras altas para disfrutar del templo junto al lago y el aire más fresco de Bedugul."],
+      ["Terrazas de Jatiluwih", "Después sigue hacia Jatiluwih para ver el paisaje UNESCO y aprovechar una pausa cómoda para almorzar."],
+      ["Tanah Lot y regreso", "La jornada termina en Tanah Lot antes del regreso al hotel, ajustando horarios según tráfico y luz."],
+    ],
+    includes: [
+      "Vehículo privado con aire acondicionado",
+      "Todas las entradas del recorrido indicado",
+      "Sarong para visitas a templos",
+      "Agua embotellada",
+    ],
+    goodToKnow: [
+      "El almuerzo, los gastos personales y los servicios adicionales no están incluidos en el precio base.",
+      "Las zonas cubiertas para recogida son Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua y Jimbaran.",
+      "Lleva cámara, efectivo, gafas de sol, calzado cómodo para templos y terrazas, y una capa ligera para la parte fresca de Bedugul.",
+      "Presentamos esta experiencia como ruta privada porque la fuente especifica private air-conditioned vehicle.",
+      "Es una jornada cómoda para la mayoría de viajeros, aunque el timing exacto puede cambiar por tráfico y clima.",
+      "Para un reembolso completo, la fuente recomienda cancelar al menos 3 días antes del inicio.",
+    ],
+    meetingPoint: "Normalmente la recogida se hace directamente en el hotel, villa o Airbnb antes de comenzar la ruta.",
+    faqs: [
+      ["¿Cuánto dura el tour UNESCO de Bali?", "La fuente lo presenta como una ruta de unas 10 horas, con salida por la mañana y regreso después de Tanah Lot."],
+      ["¿Qué lugares incluye el tour?", "Incluye Taman Ayun Temple, Ulun Danu Beratan Temple, las terrazas de arroz de Jatiluwih y Tanah Lot."],
+      ["¿La recogida en hotel está incluida?", "Sí. La fuente indica recogida desde el alojamiento y pide enviar con antelación el nombre y dirección del hotel, villa o Airbnb."],
+      ["¿Qué zonas cubre la recogida?", "Las zonas cubiertas son Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua y Jimbaran."],
+      ["¿Qué entra en el precio?", "Incluye vehículo privado con aire acondicionado, entradas, sarong para templos y agua embotellada."],
+      ["¿Está incluido el almuerzo?", "No. El almuerzo, los gastos personales y los servicios extra figuran como excluidos."],
+      ["¿Necesito llevar sarong para los templos?", "No, salvo que prefieras el tuyo. La fuente indica que el sarong ya está incluido."],
+      ["¿Es un tour privado o compartido?", "Lo mostramos como tour privado porque la fuente indica private air-conditioned vehicle."],
+      ["¿Qué conviene llevar?", "Te recomendamos cámara, efectivo, gafas de sol, calzado cómodo y una capa ligera para Bedugul."],
+      ["¿Es adecuado para niños?", "Sí. Es una ruta cómoda para parejas, familias y viajeros que quieren cultura y paisajes sin actividad física intensa."],
+      ["¿Cuál es la política de cancelación?", "Para un reembolso completo, la fuente indica cancelar al menos 3 días antes del inicio."],
+      ["¿Por qué la gente reserva esta ruta en vez de varias excursiones separadas?", "Porque reúne templos, lago de montaña, arrozales UNESCO y Tanah Lot en un solo día bien construido."],
+    ],
+    whatsappText:
+      "¡Hola! Quiero reservar el tour UNESCO de Bali por $70 por persona. Por favor envíen disponibilidad, zonas de recogida y todos los detalles.",
+    privateOfferEyebrow: "Ruta patrimonial UNESCO",
+    privateOfferTopline: "Ideal para templos y grandes paisajes de Bali",
+    mapLabel: "Ruta UNESCO",
+    mapTitle: "Ruta UNESCO de Bali en Google Maps",
+    mapText:
+      "Consulta los puntos principales del tour UNESCO de Bali. La ruta suele incluir Taman Ayun, Ulun Danu Beratan, Jatiluwih y Tanah Lot. El horario final y el orden de paradas se confirman después de reservar.",
+    miniPromoEyebrow: "Ruta patrimonial",
+    miniPromoSideText:
+      "Explora el lado patrimonial de Bali con patios reales, vistas al lago en Bedugul, terrazas de Jatiluwih y final costero en Tanah Lot en un solo día privado.",
+    ctaLabel: "Reservar ahora",
+    faqIntro: "Respuestas rápidas antes de reservar este tour UNESCO de Bali.",
+    fullDescriptionKeyStopsHtml:
+      "Normalmente se construye alrededor de <strong>Taman Ayun - Ulun Danu Beratan - Jatiluwih - Tanah Lot</strong>.",
+    fullDescriptionBestFitHtml:
+      "Ideal para <strong>viajeros culturales, parejas y familias</strong> con una ruta de unas <strong>10 horas</strong>.",
+    breadcrumbHome: "Página principal de Bali",
+    breadcrumbTours: "Tours",
+    reviews: [
+      { text: "Reservamos esta ruta sobre todo por Taman Ayun, pero el día entero salió muy fluido. La organización y el ritmo hicieron que el tour UNESCO de Bali fuera muy fácil de disfrutar.", title: "Emma - Australia", date: "18 de abril de 2026 - Reserva verificada" },
+      { text: "Fue uno de los días más sencillos y completos de nuestro viaje. Ulun Danu Beratan y Jatiluwih fueron lo mejor, y todo estuvo bien organizado sin ir con prisas.", title: "Noah - Canada", date: "27 de abril de 2026 - Reserva verificada" },
+      { text: "Muy buena relación calidad-precio para un día entero. Hubo tiempo para fotos y el equipo ayudó durante toda la jornada con horarios y logística.", title: "Lina - Sweden", date: "6 de mayo de 2026 - Reserva verificada" },
+    ],
+    ui: {
+      navTours: "Tours",
+      navAbout: "Sobre nosotros",
+      navBooking: "Reserva",
+      navGuides: "Guías",
+      languageSwitcherLabel: "Elegir idioma",
+      aboutHeading: "Sobre esta actividad",
+      highlightsHeading: "Lo más destacado",
+      fullDescriptionHeading: "Descripción completa",
+      whatsIncludedHeading: "Qué incluye",
+      importantInformationHeading: "Información importante",
+      bestAttractionsHeading: "Mejores atracciones en Bali",
+      helpfulPdfHeading: "Artículos útiles sobre Bali",
+      thingsToDoHeading: "Qué hacer en Bali",
+      mapOpenLabel: "Abrir ruta en Google Maps",
+      highlightsIntroLabel: "Idea general",
+      fullDescriptionWhyBookLabel: "Por qué la reservan",
+      fullDescriptionHowDayFeelsLabel: "Cómo se siente el día",
+      fullDescriptionKeyStopsLabel: "Paradas clave",
+      fullDescriptionBestFitLabel: "Ideal para",
+      includesIntroLabel: "Todo ya armado en un solo paquete",
+      includesIntroText: "La logística principal y los apoyos más importantes ya vienen incluidos en esta ruta",
+      weatherLive: "Clima en vivo",
+      weatherLoading: "Cargando…",
+      weatherChecking: "Revisando condiciones locales…",
+      weatherConditionLoading: "Cargando clima…",
+      weatherSummaryLoading: "Buscando el mejor plan en Bali para hoy…",
+      weatherFeelsLike: "Sensación térmica",
+      weatherHumidity: "Humedad",
+      weatherWind: "Viento",
+      weatherTipsTitle: "Consejos de hoy",
+      weatherSeeRecommended: "Ver tour recomendado",
+      weatherLocation: "Bali, Indonesia",
+      weatherClearSky: "Cielo despejado",
+      weatherMostlyClear: "Casi despejado",
+      weatherPartlyCloudy: "Parcialmente nublado",
+      weatherCloudy: "Nublado",
+      weatherLightRain: "Lluvia ligera",
+      weatherRainShowers: "Chubascos",
+      weatherThunderstorm: "Riesgo de tormenta",
+      weatherWarmEvening: "Tarde cálida en Bali",
+      weatherSunnyDay: "Día soleado en Bali",
+      weatherCloudyDay: "Día nublado en Bali",
+      weatherRainyDay: "Tiempo lluvioso en Bali",
+      weatherStormyDay: "Día con alerta de tormenta en Bali",
+      weatherSunsetTip: "Ideal para sitios de atardecer",
+      weatherDinnerTip: "Perfecto para planes de cena",
+      weatherLightLayerTip: "Una capa ligera es suficiente",
+      weatherBeachTip: "Muy buen clima para playa",
+      weatherSunscreenTip: "Sol fuerte: usa protector",
+      weatherHydrateTip: "Mantente hidratado con el calor",
+      weatherCafeTip: "Buen día para cafés y paseos suaves",
+      weatherSpaTip: "Ideal para spa o cafés",
+      weatherGripShoesTip: "Lleva calzado con buen agarre",
+      weatherRainLayerTip: "Lleva una capa ligera para lluvia",
+      weatherFlexibleTip: "Conviene mantener el plan flexible",
+      weatherShelterTip: "Tener una opción interior ayuda",
+      footerTopTours: "Tours top",
+      footerCompanyTrust: "Empresa y confianza",
+      footerContactsLocation: "Contacto y ubicación",
+      footerLead: "Donde la naturaleza y la aventura se encuentran",
+      footerAboutCompany: "Sobre SB Excursions",
+      footerPrivacy: "Política de privacidad",
+      footerTerms: "Términos y condiciones",
+      footerRefund: "Política de reembolso",
+      footerSiteMap: "Mapa del sitio",
+      footerMessageUs: "Escríbenos",
+      footerSupportHours: "Soporte diario 7:00 - 22:00",
+      footerCopyright: "© 2021-2026 SB Excursions. Creado para aventuras en Bali",
+    },
+  },
+  fr: {
+    title: "Circuit des sites UNESCO de Bali",
+    metaTitle: "Circuit UNESCO de Bali | Taman Ayun, Ulun Danu, Jatiluwih et Tanah Lot",
+    metaDescription:
+      "Réservez le circuit des sites UNESCO de Bali avec Taman Ayun, Ulun Danu Beratan, les rizières de Jatiluwih et Tanah Lot, transport privé et billets inclus à partir de 70 $ par personne.",
+    eyebrow: "Temples UNESCO, rizières et Tanah Lot",
+    duration: "10 heures",
+    pickup: "Prise en charge le matin depuis Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua ou Jimbaran",
+    bestFor: "les amateurs de culture, les couples, les familles et une première journée de découverte à Bali",
+    format: "Circuit privé patrimoine et paysages",
+    area: "Route UNESCO dans l'ouest et le centre de Bali",
+    compactAreaLabel: "Ouest et centre de Bali",
+    imageAlt: "Rizières de Jatiluwih et paysage de montagne pendant le circuit UNESCO de Bali",
+    lead:
+      "Découvrez les plus beaux paysages patrimoniaux de Bali en une seule journée privée bien construite, avec Taman Ayun, Ulun Danu Beratan, Jatiluwih et Tanah Lot réunis dans une même route fluide.",
+    summary:
+      "Ce circuit UNESCO de Bali est pensé pour les voyageurs qui veulent des temples, des vues lac et montagne, les rizières classées de Jatiluwih et une belle fin à Tanah Lot sans devoir assembler plusieurs excursions séparées. Le transport privé, les billets, le sarong pour les temples et l'eau sont déjà inclus à partir de 70 $ par personne.",
+    overview:
+      "La route fonctionne très bien parce qu'elle reste variée et visuelle sans être fatigante. Vous commencez par l'architecture royale de Taman Ayun, continuez vers les hauteurs plus fraîches de Bedugul pour Ulun Danu Beratan, ouvrez les paysages à Jatiluwih, puis terminez à Tanah Lot face à l'océan.",
+    aboutSubtitle: "Circuit UNESCO de Bali depuis Bali",
+    highlights: [
+      ["Temple de Taman Ayun", "Commencez par l'un des ensembles royaux les plus élégants de Bali avec une première étape culturelle calme."],
+      ["Ulun Danu Beratan", "Le cadre entre lac et montagne à Bedugul apporte de l'air frais, une lumière douce et l'un des décors de temple les plus iconiques de Bali."],
+      ["Rizières de Jatiluwih", "Le paysage UNESCO donne au circuit une ampleur visuelle plus forte qu'une simple journée de temples."],
+      ["Final côtier à Tanah Lot", "Terminer au célèbre temple de la mer offre une vraie montée en puissance pour la fin de journée."],
+    ],
+    itinerary: [
+      ["Prise en charge et Taman Ayun", "La journée commence par la prise en charge dans les principales zones du sud et du centre de Bali, puis la première visite à Taman Ayun."],
+      ["Ulun Danu Beratan à Bedugul", "La route continue vers les hauteurs plus fraîches pour profiter du temple au bord du lac et des vues de Bedugul."],
+      ["Rizières de Jatiluwih", "Ensuite, direction Jatiluwih pour les panoramas UNESCO et une pause déjeuner confortable dans la région."],
+      ["Tanah Lot et retour", "La journée se termine à Tanah Lot avant le retour à l'hôtel, avec un timing ajusté selon la circulation et la lumière."],
+    ],
+    includes: [
+      "Véhicule privé climatisé",
+      "Tous les billets d'entrée du parcours indiqué",
+      "Sarong pour les visites de temples",
+      "Eau en bouteille",
+    ],
+    goodToKnow: [
+      "Le déjeuner, les dépenses personnelles et les services additionnels ne sont pas inclus dans le tarif de base.",
+      "Les zones couvertes pour la prise en charge sont Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua et Jimbaran.",
+      "Prévoyez appareil photo, espèces, lunettes de soleil, chaussures confortables pour les temples et rizières, et une couche légère pour la partie plus fraîche de Bedugul.",
+      "Nous présentons cette expérience comme un circuit privé car la source mentionne un private air-conditioned vehicle.",
+      "Le rythme convient à la plupart des voyageurs, mais les horaires exacts peuvent bouger selon la météo et la circulation.",
+      "Pour un remboursement complet, la source recommande d'annuler au moins 3 jours avant l'expérience.",
+    ],
+    meetingPoint: "La plupart des voyageurs sont pris en charge directement à leur hôtel, villa ou Airbnb avant le départ.",
+    faqs: [
+      ["Combien de temps dure le circuit UNESCO de Bali ?", "La source présente cette excursion comme une route d'environ 10 heures, avec départ le matin et retour après Tanah Lot."],
+      ["Quels lieux sont inclus ?", "La route comprend Taman Ayun Temple, Ulun Danu Beratan Temple, les rizières de Jatiluwih et Tanah Lot."],
+      ["La prise en charge à l'hôtel est-elle incluse ?", "Oui. La source précise que la prise en charge se fait depuis votre hébergement et qu'il faut envoyer le nom et l'adresse à l'avance."],
+      ["Quelles zones sont couvertes pour la prise en charge ?", "Les zones indiquées sont Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua et Jimbaran."],
+      ["Qu'est-ce qui est inclus dans le prix ?", "Le prix inclut le véhicule privé climatisé, les billets, le sarong pour les temples et l'eau."],
+      ["Le déjeuner est-il inclus ?", "Non. Le déjeuner, les dépenses personnelles et les services supplémentaires sont indiqués comme exclus."],
+      ["Faut-il apporter un sarong pour les temples ?", "Non, sauf si vous préférez le vôtre. La source précise qu'un sarong est inclus."],
+      ["S'agit-il d'un tour privé ou partagé ?", "Nous le présentons comme privé parce que la source mentionne un private air-conditioned vehicle."],
+      ["Que faut-il apporter ?", "Nous conseillons appareil photo, espèces, lunettes de soleil, chaussures confortables et une couche légère pour Bedugul."],
+      ["Ce circuit convient-il aux enfants ?", "Oui. C'est un itinéraire confortable pour les couples, les familles et les voyageurs qui veulent culture et paysages sans activité physique intense."],
+      ["Quelle est la politique d'annulation ?", "Pour un remboursement complet, la source recommande d'annuler au moins 3 jours avant le départ."],
+      ["Pourquoi réserver cette route plutôt que plusieurs excursions séparées ?", "Parce qu'elle réunit en une journée temples, vues sur le lac, rizières UNESCO et côte de Tanah Lot dans une seule expérience cohérente."],
+    ],
+    whatsappText:
+      "Bonjour ! Je souhaite réserver le circuit UNESCO de Bali à 70 $ par personne. Merci de m'envoyer les disponibilités, les zones de prise en charge et tous les détails.",
+    privateOfferEyebrow: "Route patrimoine UNESCO",
+    privateOfferTopline: "Très bon choix pour temples et grands paysages balinais",
+    mapLabel: "Route UNESCO",
+    mapTitle: "Route UNESCO de Bali sur Google Maps",
+    mapText:
+      "Prévisualisez les principaux points de cette route UNESCO à Bali. Elle passe généralement par Taman Ayun, Ulun Danu Beratan, Jatiluwih et Tanah Lot. L'horaire final et l'ordre des arrêts sont confirmés après réservation.",
+    miniPromoEyebrow: "Route patrimoine",
+    miniPromoSideText:
+      "Explorez le côté patrimoine de Bali avec cours royales, vues sur le lac de Bedugul, rizières de Jatiluwih et final côtier à Tanah Lot dans une seule journée privée.",
+    ctaLabel: "Réserver",
+    faqIntro: "Réponses rapides avant de réserver ce circuit UNESCO de Bali.",
+    fullDescriptionKeyStopsHtml:
+      "Le parcours s'articule généralement autour de <strong>Taman Ayun - Ulun Danu Beratan - Jatiluwih - Tanah Lot</strong>.",
+    fullDescriptionBestFitHtml:
+      "Très bien pour <strong>les voyageurs culture, couples et familles</strong> avec une route d'environ <strong>10 heures</strong>.",
+    breadcrumbHome: "Page principale Bali",
+    breadcrumbTours: "Circuits",
+    reviews: [
+      { text: "Nous avions réservé surtout pour Taman Ayun, mais toute la journée s'est révélée très fluide. L'organisation et le timing ont rendu ce circuit UNESCO de Bali très facile à apprécier.", title: "Emma - Australia", date: "18 avril 2026 - Réservation vérifiée" },
+      { text: "C'était l'une des journées les plus simples et les plus complètes de notre voyage. Ulun Danu Beratan et Jatiluwih ressortent le plus, et tout s'est déroulé sans stress.", title: "Noah - Canada", date: "27 avril 2026 - Réservation vérifiée" },
+      { text: "Très bon rapport qualité-prix pour une journée complète. Nous avons eu du temps pour les photos et l'équipe a géré le rythme et la logistique toute la journée.", title: "Lina - Sweden", date: "6 mai 2026 - Réservation vérifiée" },
+    ],
+    ui: {
+      navTours: "Circuits",
+      navAbout: "À propos",
+      navBooking: "Réserver",
+      navGuides: "Guides",
+      languageSwitcherLabel: "Choisir la langue",
+      aboutHeading: "À propos de cette activité",
+      highlightsHeading: "Points forts",
+      fullDescriptionHeading: "Description complète",
+      whatsIncludedHeading: "Ce qui est inclus",
+      importantInformationHeading: "Informations importantes",
+      bestAttractionsHeading: "Meilleures attractions de Bali",
+      helpfulPdfHeading: "Articles utiles sur Bali",
+      thingsToDoHeading: "Que faire à Bali",
+      mapOpenLabel: "Ouvrir l'itinéraire Google Maps",
+      highlightsIntroLabel: "Ambiance générale",
+      fullDescriptionWhyBookLabel: "Pourquoi on le réserve",
+      fullDescriptionHowDayFeelsLabel: "Le rythme de la journée",
+      fullDescriptionKeyStopsLabel: "Arrêts clés",
+      fullDescriptionBestFitLabel: "Idéal pour",
+      includesIntroLabel: "Un seul package bien clair",
+      includesIntroText: "La logistique principale et les éléments de confort essentiels sont déjà inclus dans la route ci-dessous",
+      weatherLive: "Météo en direct",
+      weatherLoading: "Chargement…",
+      weatherChecking: "Vérification des conditions locales…",
+      weatherConditionLoading: "Chargement de la météo…",
+      weatherSummaryLoading: "Recherche du meilleur plan Bali pour aujourd'hui…",
+      weatherFeelsLike: "Ressenti",
+      weatherHumidity: "Humidité",
+      weatherWind: "Vent",
+      weatherTipsTitle: "Conseils du jour",
+      weatherSeeRecommended: "Voir le circuit conseillé",
+      weatherLocation: "Bali, Indonésie",
+      weatherClearSky: "Ciel dégagé",
+      weatherMostlyClear: "Plutôt dégagé",
+      weatherPartlyCloudy: "Partiellement nuageux",
+      weatherCloudy: "Nuageux",
+      weatherLightRain: "Pluie légère",
+      weatherRainShowers: "Averses",
+      weatherThunderstorm: "Risque d'orage",
+      weatherWarmEvening: "Soirée chaude à Bali",
+      weatherSunnyDay: "Belle journée ensoleillée à Bali",
+      weatherCloudyDay: "Journée nuageuse à Bali",
+      weatherRainyDay: "Temps pluvieux à Bali",
+      weatherStormyDay: "Alerte météo orageuse à Bali",
+      weatherSunsetTip: "Parfait pour les spots de coucher de soleil",
+      weatherDinnerTip: "Très bien pour prévoir un dîner",
+      weatherLightLayerTip: "Une couche légère suffit",
+      weatherBeachTip: "Très bon temps pour la plage",
+      weatherSunscreenTip: "Soleil fort : pensez à la crème",
+      weatherHydrateTip: "Hydratez-vous bien avec la chaleur",
+      weatherCafeTip: "Bonne météo pour cafés et balades faciles",
+      weatherSpaTip: "Très bien pour spa ou pauses café",
+      weatherGripShoesTip: "Prenez des chaussures avec adhérence",
+      weatherRainLayerTip: "Emportez une légère protection pluie",
+      weatherFlexibleTip: "Mieux vaut garder le plan flexible aujourd'hui",
+      weatherShelterTip: "Une option intérieure peut être utile",
+      footerTopTours: "Nos meilleurs circuits",
+      footerCompanyTrust: "Entreprise & confiance",
+      footerContactsLocation: "Contacts & localisation",
+      footerLead: "Là où nature et aventure se rencontrent",
+      footerAboutCompany: "À propos de SB Excursions",
+      footerPrivacy: "Politique de confidentialité",
+      footerTerms: "Conditions générales",
+      footerRefund: "Politique de remboursement",
+      footerSiteMap: "Plan du site",
+      footerMessageUs: "Écrivez-nous",
+      footerSupportHours: "Support tous les jours 7:00 - 22:00",
+      footerCopyright: "© 2021-2026 SB Excursions. Conçu pour les aventures à Bali",
+    },
+  },
+};
+
+function unescoUiLabels(locale = "en") {
+  return {
+    ...DEFAULT_WEST_UI_LABELS,
+    ...(UNESCO_PAGE_TRANSLATIONS[locale]?.ui || {}),
+  };
+}
+
+function sharedBaliUiLabels(locale = "en") {
+  return {
+    ...DEFAULT_WEST_UI_LABELS,
+    ...(UNESCO_PAGE_TRANSLATIONS[locale]?.ui || {}),
+  };
+}
+
+let translationCacheState = null;
+let translationCacheDirty = false;
+
+function ensureTranslationCache() {
+  if (translationCacheState) return translationCacheState;
+
+  try {
+    if (fs.existsSync(TRANSLATION_CACHE_PATH)) {
+      translationCacheState = JSON.parse(fs.readFileSync(TRANSLATION_CACHE_PATH, "utf8"));
+    }
+  } catch {}
+
+  if (!translationCacheState || typeof translationCacheState !== "object") {
+    translationCacheState = {};
+  }
+
+  return translationCacheState;
+}
+
+function saveTranslationCache() {
+  if (!translationCacheDirty) return;
+  fs.mkdirSync(path.dirname(TRANSLATION_CACHE_PATH), { recursive: true });
+  fs.writeFileSync(TRANSLATION_CACHE_PATH, `${JSON.stringify(translationCacheState, null, 2)}\n`);
+  translationCacheDirty = false;
+}
+
+function translationLocaleCode(locale = "en") {
+  return locale === "zh" ? "zh-CN" : locale;
+}
+
+function translationCacheBucket(locale = "en") {
+  const cache = ensureTranslationCache();
+  const key = translationLocaleCode(locale);
+  if (!cache[key] || typeof cache[key] !== "object") {
+    cache[key] = {};
+  }
+  return cache[key];
+}
+
+function shouldTranslateTextValue(value) {
+  const text = String(value || "");
+  const collapsed = collapseWhitespace(text);
+  if (!collapsed) return false;
+  if (/^(?:https?:)?\/\//i.test(collapsed)) return false;
+  if (/^\/(?:bali|dubai|images|css|js|files)\//i.test(collapsed)) return false;
+  if (/^[a-z0-9_-]+(?:\.[a-z0-9_-]+)*$/i.test(collapsed) && !/\s/.test(collapsed)) return false;
+  return /[A-Za-z]/.test(collapsed);
+}
+
+function maskHtmlTags(fragment) {
+  const tags = [];
+  const masked = String(fragment || "").replace(/<[^>]+>/g, (tag) => {
+    const index = tags.push(tag) - 1;
+    return `𓆩SBTAG${index}𓆪`;
+  });
+  return { masked, tags };
+}
+
+function unmaskHtmlTags(fragment, tags = []) {
+  return String(fragment || "").replace(/𓆩SBTAG(\d+)𓆪/g, (_, rawIndex) => tags[Number(rawIndex)] || "");
+}
+
+async function fetchGoogleTranslation(text, locale = "en") {
+  const url = new URL("https://translate.googleapis.com/translate_a/single");
+  url.searchParams.set("client", "gtx");
+  url.searchParams.set("sl", "en");
+  url.searchParams.set("tl", translationLocaleCode(locale));
+  url.searchParams.set("dt", "t");
+  url.searchParams.set("q", text);
+
+  const response = await fetch(url, { headers: { accept: "application/json,text/plain,*/*" } });
+  if (!response.ok) {
+    throw new Error(`Translation request failed with ${response.status}`);
+  }
+
+  const payload = JSON.parse(await response.text());
+  return Array.isArray(payload?.[0]) ? payload[0].map((item) => item?.[0] || "").join("") : text;
+}
+
+async function translateTextMap(texts, locale = "en", options = {}) {
+  const { richText = false } = options;
+  const bucket = translationCacheBucket(locale);
+  const sources = Array.from(new Set((texts || []).filter(shouldTranslateTextValue)));
+  const translated = new Map();
+  const pending = [];
+  const prepared = new Map();
+
+  for (const source of sources) {
+    if (bucket[source]) {
+      translated.set(source, bucket[source]);
+      continue;
+    }
+
+    const preparedValue = richText ? maskHtmlTags(source) : { masked: String(source), tags: [] };
+    prepared.set(source, preparedValue);
+    pending.push(source);
+  }
+
+  const separator = "\n[[SBXSEP]]\n";
+  const maxChunkLength = 2800;
+  let chunk = [];
+  let chunkLength = 0;
+
+  const flushChunk = async () => {
+    if (!chunk.length) return;
+
+    const joined = chunk.map((source) => prepared.get(source)?.masked || source).join(separator);
+    let translatedPieces = [];
+
+    try {
+      const translatedJoined = await fetchGoogleTranslation(joined, locale);
+      translatedPieces = translatedJoined.split("[[SBXSEP]]");
+    } catch {
+      translatedPieces = [];
+    }
+
+    if (translatedPieces.length !== chunk.length) {
+      for (const source of chunk) {
+        const preparedValue = prepared.get(source) || { masked: source, tags: [] };
+        try {
+          const singleTranslation = await fetchGoogleTranslation(preparedValue.masked, locale);
+          const finalText = richText ? unmaskHtmlTags(singleTranslation, preparedValue.tags) : singleTranslation;
+          bucket[source] = finalText;
+          translated.set(source, finalText);
+          translationCacheDirty = true;
+        } catch {
+          bucket[source] = source;
+          translated.set(source, source);
+          translationCacheDirty = true;
+        }
+      }
+    } else {
+      chunk.forEach((source, index) => {
+        const preparedValue = prepared.get(source) || { tags: [] };
+        const piece = translatedPieces[index] ?? source;
+        const finalText = richText ? unmaskHtmlTags(piece.trim(), preparedValue.tags) : piece.trim();
+        bucket[source] = finalText;
+        translated.set(source, finalText);
+      });
+      translationCacheDirty = true;
+    }
+
+    chunk = [];
+    chunkLength = 0;
+  };
+
+  for (const source of pending) {
+    const preparedValue = prepared.get(source)?.masked || source;
+    const nextLength = chunkLength + preparedValue.length + separator.length;
+    if (chunk.length && nextLength > maxChunkLength) {
+      await flushChunk();
+    }
+    chunk.push(source);
+    chunkLength += preparedValue.length + separator.length;
+  }
+
+  await flushChunk();
+
+  for (const source of sources) {
+    if (!translated.has(source)) {
+      translated.set(source, bucket[source] || source);
+    }
+  }
+
+  return translated;
+}
+
+function localizedMainPageRoute(locale = "en") {
+  return `/bali/${locale}/main-page`;
+}
+
+function localizedMainPageFileName(locale = "en") {
+  return locale === "en" ? "page128073236.html" : `bali-main-page-${locale}.html`;
+}
+
+function localizedJournalHubRoute(locale = "en") {
+  return `/bali/${locale}/journal`;
+}
+
+function localizedJournalHubFileName(locale = "en") {
+  return locale === "en" ? "bali-journal.html" : `bali-journal-${locale}.html`;
+}
+
+function localizedBaliInternalRoute(route, locale = "en") {
+  const text = String(route || "");
+  if (locale === "en") return text;
+  return text
+    .replace(/^\/bali\/en(?=\/|$)/i, `/bali/${locale}`)
+    .replace(new RegExp(`^${escapeRegExp(SITE_URL)}\\/bali\\/en(?=\\/|$)`, "i"), `${SITE_URL}/bali/${locale}`);
+}
+
+function localizedTourFileName(slug, locale = "en") {
+  return locale === "en" ? `bali-tour-${slug}.html` : `bali-tour-${slug}-${locale}.html`;
+}
+
+function localizedJournalArticleFileName(tour, articleType, locale = "en") {
+  const base = journalArticleFileName(tour, articleType).replace(/\.html$/i, "");
+  return locale === "en" ? `${base}.html` : `${base}-${locale}.html`;
+}
+
+function localizedGuideArticleFileName(guide, locale = "en") {
+  const base = guideArticleFileName(guide).replace(/\.html$/i, "");
+  return locale === "en" ? `${base}.html` : `${base}-${locale}.html`;
+}
+
+function switchBaliRouteLocale(route, locale = "en") {
+  const text = String(route || "");
+  return text
+    .replace(/^\/bali\/[a-z]{2}(?=\/|$|#)/i, `/bali/${locale}`)
+    .replace(new RegExp(`^${escapeRegExp(SITE_URL)}\\/bali\\/[a-z]{2}(?=\\/|$|#)`, "i"), `${SITE_URL}/bali/${locale}`);
+}
+
+function rewriteBaliLocaleRoutesInHtml(html, locale = "en") {
+  if (locale === "en") return html;
+  return String(html || "")
+    .replace(new RegExp(`${escapeRegExp(SITE_URL)}\\/bali\\/en(?=\\/|$|#|"|')`, "g"), `${SITE_URL}/bali/${locale}`)
+    .replace(/\/bali\/en(?=\/|$|#|"|')/g, `/bali/${locale}`);
+}
+
+function protectHtmlBlocks(html) {
+  const blocks = [];
+  const protectedHtml = String(html || "").replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, (block) => {
+    const token = `__SB_HTML_BLOCK_${blocks.length}__`;
+    blocks.push(block);
+    return token;
+  });
+  return { protectedHtml, blocks };
+}
+
+function restoreHtmlBlocks(html, blocks = []) {
+  return String(html || "").replace(/__SB_HTML_BLOCK_(\d+)__/g, (_, rawIndex) => blocks[Number(rawIndex)] || "");
+}
+
+async function translateStandaloneHtmlVisibleText(html, locale = "en") {
+  if (locale === "en") return html;
+
+  const { protectedHtml, blocks } = protectHtmlBlocks(html);
+  const textValues = new Set();
+
+  protectedHtml.replace(/>([^<>]+)</g, (_, rawText) => {
+    const trimmed = String(rawText || "").replace(/\s+/g, " ").trim();
+    if (shouldTranslateTextValue(trimmed)) {
+      textValues.add(trimmed);
+    }
+    return _;
+  });
+
+  protectedHtml.replace(/<(?:title)>([^<]+)<\/title>/gi, (_, rawText) => {
+    const trimmed = String(rawText || "").replace(/\s+/g, " ").trim();
+    if (shouldTranslateTextValue(trimmed)) {
+      textValues.add(trimmed);
+    }
+    return _;
+  });
+
+  protectedHtml.replace(
+    /(<meta\b[^>]*\b(?:name|property)=["'](?:description|og:title|og:description|twitter:title|twitter:description)["'][^>]*\bcontent=["'])([^"']+)(["'][^>]*>)/gi,
+    (_, __, rawText) => {
+      const trimmed = String(rawText || "").replace(/\s+/g, " ").trim();
+      if (shouldTranslateTextValue(trimmed)) {
+        textValues.add(trimmed);
+      }
+      return _;
+    },
+  );
+
+  protectedHtml.replace(/(\s(?:alt|title|placeholder|aria-label)=["'])([^"']+)(["'])/gi, (_, __, rawText) => {
+    const trimmed = String(rawText || "").replace(/\s+/g, " ").trim();
+    if (shouldTranslateTextValue(trimmed)) {
+      textValues.add(trimmed);
+    }
+    return _;
+  });
+
+  const translationMap = await translateTextMap(Array.from(textValues), locale);
+
+  const translatePreservingWhitespace = (rawText) => {
+    const source = String(rawText || "");
+    const collapsed = source.replace(/\s+/g, " ").trim();
+    if (!collapsed || !translationMap.has(collapsed)) {
+      return source;
+    }
+    const translated = translationMap.get(collapsed) || collapsed;
+    const leading = source.match(/^\s*/)?.[0] || "";
+    const trailing = source.match(/\s*$/)?.[0] || "";
+    return `${leading}${translated}${trailing}`;
+  };
+
+  let localizedHtml = protectedHtml
+    .replace(/>([^<>]+)</g, (match, rawText) => `>${translatePreservingWhitespace(rawText)}<`)
+    .replace(/<(?:title)>([^<]+)<\/title>/gi, (match, rawText) => `<title>${translatePreservingWhitespace(rawText).trim()}</title>`)
+    .replace(
+      /(<meta\b[^>]*\b(?:name|property)=["'](?:description|og:title|og:description|twitter:title|twitter:description)["'][^>]*\bcontent=["'])([^"']+)(["'][^>]*>)/gi,
+      (match, prefix, rawText, suffix) => `${prefix}${translatePreservingWhitespace(rawText).trim()}${suffix}`,
+    )
+    .replace(
+      /(\s(?:alt|title|placeholder|aria-label)=["'])([^"']+)(["'])/gi,
+      (match, prefix, rawText, suffix) => `${prefix}${translatePreservingWhitespace(rawText).trim()}${suffix}`,
+    );
+
+  localizedHtml = restoreHtmlBlocks(localizedHtml, blocks);
+  localizedHtml = localizedHtml.replace(/<html lang="[^"]+"/i, `<html lang="${locale}"`);
+  localizedHtml = localizedHtml.replace(/("inLanguage"\s*:\s*")en(")/g, `$1${locale}$2`);
+  return localizedHtml;
+}
+
+function renderJournalLanguageSwitcherMarkup(locale = "en", currentRoute = localizedJournalHubRoute(locale), variant = "desktop") {
+  const routes = BALI_LANGUAGE_OPTIONS.map((item) => ({
+    ...item,
+    href: switchBaliRouteLocale(currentRoute, item.code),
+    active: item.code === locale,
+  }));
+  const iconPath = variant === "mobile" ? "/images/ui/language.png" : "/images/ui/language-black.png";
+
+  return `<details class="sb-journal-lang-switcher sb-journal-lang-switcher--${variant}">
+    <summary class="sb-journal-lang-switcher__summary" aria-label="${escapeHtml(sharedBaliUiLabels(locale).languageSwitcherLabel)}">
+      <img src="${iconPath}" alt="${escapeHtml(sharedBaliUiLabels(locale).languageSwitcherLabel)}">
+    </summary>
+    <div class="sb-journal-lang-switcher__menu">
+      ${routes
+        .map(
+          (item) => `<a class="sb-journal-lang-switcher__option" data-active="${item.active ? "true" : "false"}" href="${escapeHtml(item.href)}">
+            <span>${escapeHtml(item.label)}</span>
+            <span class="sb-journal-lang-switcher__code">${escapeHtml(item.code.toUpperCase())}</span>
+          </a>`,
+        )
+        .join("")}
+    </div>
+  </details>`;
+}
+
+function buildJournalLanguageSwitcherAssets() {
+  return `
+<style id="sb-journal-language-switcher-style">
+.sb-journal-lang-switcher{position:relative;display:inline-flex;align-items:center}
+.sb-journal-lang-switcher__summary{list-style:none;display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;padding:0;border:0;background:transparent;cursor:pointer}
+.sb-journal-lang-switcher__summary::-webkit-details-marker{display:none}
+.sb-journal-lang-switcher__summary img{width:28px;height:28px;object-fit:contain;display:block}
+.sb-journal-lang-switcher__menu{position:absolute;top:calc(100% + 10px);right:0;display:none;min-width:190px;padding:10px;border-radius:18px;background:#fff;box-shadow:0 18px 46px rgba(17,24,39,0.18);z-index:1006}
+.sb-journal-lang-switcher[open] .sb-journal-lang-switcher__menu{display:grid;gap:6px}
+.sb-journal-lang-switcher__option{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:42px;padding:10px 14px;border-radius:14px;background:rgba(126,196,244,0.08);color:#111827;font-family:'TildaSans',Arial,sans-serif;font-size:15px;line-height:1.2;font-weight:600;text-decoration:none}
+.sb-journal-lang-switcher__option:hover,.sb-journal-lang-switcher__option:focus-visible{background:rgba(126,196,244,0.16);outline:none}
+.sb-journal-lang-switcher__option[data-active="true"]{background:rgba(126,196,244,0.24);color:#0f172a}
+.sb-journal-lang-switcher__code{font-size:12px;line-height:1;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.6}
+.sb-journal-tour-header__langs{display:flex;align-items:center;gap:12px;color:#000;font-size:16px;font-weight:600;letter-spacing:-1px}
+.sb-journal-tour-header__mobile-bar{grid-template-columns:1fr auto auto !important}
+.sb-journal-tour-header__mobile-logo-link{order:1;justify-self:start}
+.sb-journal-tour-header__socials{order:2;justify-self:end}
+.sb-journal-tour-header__burger{order:3;justify-self:end}
+.sb-journal-tour-header__socials{display:flex;align-items:center;gap:10px;justify-content:flex-end}
+.sb-journal-tour-header__socials .sb-journal-lang-switcher__summary{width:30px;height:30px}
+.sb-journal-tour-header__socials .sb-journal-lang-switcher__summary img{width:26px;height:26px}
+.sb-journal-tour-header__socials .sb-journal-lang-switcher__menu{background:#3a3a3a;box-shadow:0 18px 46px rgba(17,24,39,0.28)}
+.sb-journal-tour-header__socials .sb-journal-lang-switcher__option{background:rgba(255,255,255,0.08);color:#fff}
+.sb-journal-tour-header__socials .sb-journal-lang-switcher__option:hover,.sb-journal-tour-header__socials .sb-journal-lang-switcher__option:focus-visible{background:rgba(255,255,255,0.14)}
+.sb-journal-tour-header__socials .sb-journal-lang-switcher__option[data-active="true"]{background:rgba(126,196,244,0.16);color:#7ec4f4}
+@media screen and (max-width:640px){.sb-journal-lang-switcher__menu{min-width:174px}}
+</style>`;
+}
+
+function localizeJournalShell(html, locale = "en", currentRoute = localizedJournalHubRoute(locale)) {
+  let localizedHtml = html.replace(/<html lang="[^"]+"/i, `<html lang="${locale}"`);
+  const assets = buildJournalLanguageSwitcherAssets();
+  if (!localizedHtml.includes('id="sb-journal-language-switcher-style"') && /<\/head>/i.test(localizedHtml)) {
+    localizedHtml = localizedHtml.replace(/<\/head>/i, `${assets}\n</head>`);
+  }
+
+  localizedHtml = rewriteBaliLocaleRoutesInHtml(localizedHtml, locale);
+
+  localizedHtml = localizedHtml.replace(
+    /<div class="sb-journal-tour-header__langs"[\s\S]*?<\/div>/,
+    `<div class="sb-journal-tour-header__langs">${renderJournalLanguageSwitcherMarkup(locale, currentRoute, "desktop")}</div>`,
+  );
+
+  localizedHtml = localizedHtml.replace(
+    /<div class="sb-journal-tour-header__socials"[\s\S]*?<\/div>/,
+    `<div class="sb-journal-tour-header__socials" aria-label="Language selector">${renderJournalLanguageSwitcherMarkup(locale, currentRoute, "mobile")}</div>`,
+  );
+
+  return localizedHtml;
+}
+
+async function buildLocalizedStaticHtmlPage(html, locale = "en", options = {}) {
+  if (locale === "en") return html;
+
+  const {
+    shell = "generic",
+    currentRoute = localizedMainPageRoute(locale),
+    routeBuilder,
+  } = options;
+
+  let localizedHtml = String(html || "");
+
+  if (shell === "tilda") {
+    localizedHtml = localizeUnescoShell(localizedHtml, locale, {
+      routeBuilder: typeof routeBuilder === "function" ? routeBuilder : (code) => switchBaliRouteLocale(currentRoute, code),
+    });
+  } else if (shell === "journal") {
+    localizedHtml = localizeJournalShell(localizedHtml, locale, currentRoute);
+  }
+
+  localizedHtml = rewriteBaliLocaleRoutesInHtml(localizedHtml, locale);
+  localizedHtml = await translateStandaloneHtmlVisibleText(localizedHtml, locale);
+  localizedHtml = rewriteBaliLocaleRoutesInHtml(localizedHtml, locale);
+
+  if (shell === "tilda") {
+    localizedHtml = localizeUnescoShell(localizedHtml, locale, {
+      routeBuilder: typeof routeBuilder === "function" ? routeBuilder : (code) => switchBaliRouteLocale(currentRoute, code),
+    });
+  } else if (shell === "journal") {
+    localizedHtml = localizeJournalShell(localizedHtml, locale, currentRoute);
+  }
+
+  localizedHtml = localizedHtml.replace(/<html lang="[^"]+"/i, `<html lang="${locale}"`);
+  localizedHtml = localizedHtml.replace(/(<link rel="canonical" href=")https:\/\/sbexcursion\.com\/bali\/en/gi, `$1https://sbexcursion.com/bali/${locale}`);
+  localizedHtml = localizedHtml.replace(/(<meta property="og:url" content=")https:\/\/sbexcursion\.com\/bali\/en/gi, `$1https://sbexcursion.com/bali/${locale}`);
+  localizedHtml = localizedHtml.replace(/("inLanguage"\s*:\s*")en(")/g, `$1${locale}$2`);
+  return localizedHtml;
+}
+
+function buildLocalizedUnescoTour(locale = "en") {
+  const baseTour = tourBySlug("bali-unesco");
+  if (!baseTour) return null;
+  if (locale === "en") {
+    return {
+      ...baseTour,
+      locale: "en",
+    };
+  }
+
+  const translation = UNESCO_PAGE_TRANSLATIONS[locale];
+  if (!translation) return null;
+
+  return {
+    ...baseTour,
+    ...translation,
+    locale,
+    mainPage: false,
+    aiPlanner: false,
+    tags: Array.isArray(baseTour.tags) ? [...baseTour.tags] : [],
+    related: Array.isArray(baseTour.related) ? [...baseTour.related] : [],
+    collageImages: Array.isArray(baseTour.collageImages) ? baseTour.collageImages.map((asset) => ({ ...asset })) : [],
+    mainPageFeatures: Array.isArray(baseTour.mainPageFeatures) ? baseTour.mainPageFeatures.map((feature) => [...feature]) : [],
+    highlights: translation.highlights.map((item) => [...item]),
+    itinerary: translation.itinerary.map((item) => [...item]),
+    includes: [...translation.includes],
+    goodToKnow: [...translation.goodToKnow],
+    faqs: translation.faqs.map((item) => [...item]),
+    reviews: translation.reviews.map((item) => ({ ...item })),
+  };
+}
+
+function collectAutoTourTranslations(tour) {
+  const plain = new Set();
+  const rich = new Set();
+  const addPlain = (value) => {
+    if (shouldTranslateTextValue(value)) plain.add(String(value));
+  };
+  const addRich = (value) => {
+    if (shouldTranslateTextValue(value)) rich.add(String(value));
+  };
+
+  [
+    tour.title,
+    tour.metaTitle,
+    tour.metaDescription,
+    tour.eyebrow,
+    tour.duration,
+    tour.pickup,
+    tour.bestFor,
+    tour.format,
+    tour.area,
+    tour.compactAreaLabel,
+    tour.imageAlt,
+    tour.lead,
+    tour.summary,
+    tour.overview,
+    tour.aboutSubtitle,
+    tour.meetingPoint,
+    tour.whatsappText,
+    tour.privateOfferEyebrow,
+    tour.privateOfferTopline,
+    tour.mapLabel,
+    tour.mapTitle,
+    tour.mapText,
+    tour.miniPromoEyebrow,
+    tour.miniPromoSideText,
+    tour.ctaLabel,
+    tour.faqIntro,
+    tour.breadcrumbHome,
+    tour.breadcrumbTours,
+    tour.price,
+    tour.mainPagePrice,
+    tour.mainPagePriceNote,
+    tour.offerSectionHeading,
+  ].forEach(addPlain);
+
+  [tour.fullDescriptionKeyStopsHtml, tour.fullDescriptionBestFitHtml].forEach(addRich);
+
+  (tour.highlights || []).forEach(([title, text]) => {
+    addPlain(title);
+    addPlain(text);
+  });
+
+  (tour.itinerary || []).forEach(([title, text]) => {
+    addPlain(title);
+    addPlain(text);
+  });
+
+  (tour.includes || []).forEach(addPlain);
+  (tour.goodToKnow || []).forEach(addPlain);
+  (tour.faqs || []).forEach(([question, answer]) => {
+    addPlain(question);
+    addPlain(answer);
+  });
+  (tour.reviews || []).forEach((review) => {
+    addPlain(review?.text);
+    addPlain(review?.title);
+    addPlain(review?.date);
+  });
+  (tour.mainPageFeatures || []).forEach((feature) => addPlain(feature?.[1]));
+  (tour.collageImages || []).forEach((asset) => addPlain(asset?.altText));
+
+  return {
+    plain: Array.from(plain),
+    rich: Array.from(rich),
+  };
+}
+
+function withTranslatedText(value, map) {
+  if (!value || !(map instanceof Map)) return value;
+  return map.get(String(value)) || value;
+}
+
+async function buildAutoLocalizedTour(baseTour, locale = "en") {
+  if (!baseTour) return null;
+  if (baseTour.slug === "bali-unesco") {
+    return buildLocalizedUnescoTour(locale);
+  }
+  if (locale === "en") {
+    return {
+      ...baseTour,
+      locale: "en",
+      ui: sharedBaliUiLabels("en"),
+    };
+  }
+
+  const strings = collectAutoTourTranslations(baseTour);
+  const plainMap = await translateTextMap(strings.plain, locale);
+  const richMap = await translateTextMap(strings.rich, locale, { richText: true });
+
+  const translatedTour = {
+    ...baseTour,
+    locale,
+    ui: sharedBaliUiLabels(locale),
+    mainPage: false,
+    aiPlanner: false,
+    title: withTranslatedText(baseTour.title, plainMap),
+    metaTitle: withTranslatedText(baseTour.metaTitle, plainMap),
+    metaDescription: withTranslatedText(baseTour.metaDescription, plainMap),
+    eyebrow: withTranslatedText(baseTour.eyebrow, plainMap),
+    duration: withTranslatedText(baseTour.duration, plainMap),
+    pickup: withTranslatedText(baseTour.pickup, plainMap),
+    bestFor: withTranslatedText(baseTour.bestFor, plainMap),
+    format: withTranslatedText(baseTour.format, plainMap),
+    area: withTranslatedText(baseTour.area, plainMap),
+    compactAreaLabel: withTranslatedText(baseTour.compactAreaLabel, plainMap),
+    imageAlt: withTranslatedText(baseTour.imageAlt, plainMap),
+    lead: withTranslatedText(baseTour.lead, plainMap),
+    summary: withTranslatedText(baseTour.summary, plainMap),
+    overview: withTranslatedText(baseTour.overview, plainMap),
+    aboutSubtitle: withTranslatedText(baseTour.aboutSubtitle, plainMap),
+    meetingPoint: withTranslatedText(baseTour.meetingPoint, plainMap),
+    whatsappText: withTranslatedText(baseTour.whatsappText, plainMap),
+    privateOfferEyebrow: withTranslatedText(baseTour.privateOfferEyebrow, plainMap),
+    privateOfferTopline: withTranslatedText(baseTour.privateOfferTopline, plainMap),
+    mapLabel: withTranslatedText(baseTour.mapLabel, plainMap),
+    mapTitle: withTranslatedText(baseTour.mapTitle, plainMap),
+    mapText: withTranslatedText(baseTour.mapText, plainMap),
+    miniPromoEyebrow: withTranslatedText(baseTour.miniPromoEyebrow, plainMap),
+    miniPromoSideText: withTranslatedText(baseTour.miniPromoSideText, plainMap),
+    ctaLabel: withTranslatedText(baseTour.ctaLabel, plainMap),
+    faqIntro: withTranslatedText(baseTour.faqIntro, plainMap),
+    breadcrumbHome: withTranslatedText(baseTour.breadcrumbHome, plainMap),
+    breadcrumbTours: withTranslatedText(baseTour.breadcrumbTours, plainMap),
+    price: withTranslatedText(baseTour.price, plainMap),
+    mainPagePrice: withTranslatedText(baseTour.mainPagePrice, plainMap),
+    mainPagePriceNote: withTranslatedText(baseTour.mainPagePriceNote, plainMap),
+    offerSectionHeading: withTranslatedText(baseTour.offerSectionHeading, plainMap),
+    fullDescriptionKeyStopsHtml: withTranslatedText(baseTour.fullDescriptionKeyStopsHtml, richMap),
+    fullDescriptionBestFitHtml: withTranslatedText(baseTour.fullDescriptionBestFitHtml, richMap),
+    highlights: (baseTour.highlights || []).map(([title, text]) => [withTranslatedText(title, plainMap), withTranslatedText(text, plainMap)]),
+    itinerary: (baseTour.itinerary || []).map(([title, text]) => [withTranslatedText(title, plainMap), withTranslatedText(text, plainMap)]),
+    includes: (baseTour.includes || []).map((item) => withTranslatedText(item, plainMap)),
+    goodToKnow: (baseTour.goodToKnow || []).map((item) => withTranslatedText(item, plainMap)),
+    faqs: (baseTour.faqs || []).map(([question, answer]) => [withTranslatedText(question, plainMap), withTranslatedText(answer, plainMap)]),
+    reviews: (baseTour.reviews || []).map((review) => ({
+      ...review,
+      text: withTranslatedText(review?.text, plainMap),
+      title: withTranslatedText(review?.title, plainMap),
+      date: withTranslatedText(review?.date, plainMap),
+    })),
+    mainPageFeatures: (baseTour.mainPageFeatures || []).map(([icon, text]) => [icon, withTranslatedText(text, plainMap)]),
+    collageImages: (baseTour.collageImages || []).map((asset) =>
+      asset && typeof asset === "object"
+        ? {
+            ...asset,
+            altText: withTranslatedText(asset.altText, plainMap),
+          }
+        : asset,
+    ),
+    related: Array.isArray(baseTour.related) ? [...baseTour.related] : [],
+    tags: Array.isArray(baseTour.tags) ? [...baseTour.tags] : [],
+    mainPageFilterTags: Array.isArray(baseTour.mainPageFilterTags) ? [...baseTour.mainPageFilterTags] : baseTour.mainPageFilterTags,
+  };
+
+  return translatedTour;
+}
+
+function buildUnescoLanguageSwitcherAssets(locale = "en", routeBuilder = (code) => `/bali/${code}/tours/bali-unesco`) {
+  const currentLocale = BALI_LANGUAGE_OPTIONS.find((item) => item.code === locale)?.code || "en";
+  const currentUi = sharedBaliUiLabels(currentLocale);
+  const localeRoutes = BALI_LANGUAGE_OPTIONS.map((item) => ({
+    ...item,
+    href: routeBuilder(item.code),
+    active: item.code === currentLocale,
+  }));
+  const switcherConfig = JSON.stringify({
+    locales: localeRoutes,
+    currentLocale,
+    ariaLabel: currentUi.languageSwitcherLabel,
+    desktopIcon: "/images/ui/language-black.png",
+    mobileIcon: "/images/ui/language.png",
+  });
+
+  return `
+<style id="sb-unesco-language-switcher-style">
+#rec1816521261 .t228__right_langs{
+  display:flex;
+  align-items:center;
+  margin-left:16px;
+}
+#rec1816521261 .sb-unesco-lang-slot,
+#rec2128776473 .sb-unesco-lang-slot{
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+#rec1816521261 .sb-unesco-lang-trigger,
+#rec2128776473 .sb-unesco-lang-trigger{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  padding:0;
+  border:none;
+  background:transparent;
+  cursor:pointer;
+}
+#rec1816521261 .sb-unesco-lang-trigger img,
+#rec2128776473 .sb-unesco-lang-trigger img{
+  width:28px;
+  height:28px;
+  object-fit:contain;
+  display:block;
+}
+#rec1816521261 .sb-unesco-lang-menu,
+#rec2128776473 .sb-unesco-lang-menu{
+  position:absolute;
+  top:calc(100% + 10px);
+  right:0;
+  min-width:190px;
+  padding:10px;
+  border-radius:18px;
+  background:#ffffff;
+  box-shadow:0 18px 46px rgba(17,24,39,0.18);
+  display:none;
+  z-index:1005;
+}
+#rec2128776473 .sb-unesco-lang-menu{
+  top:calc(100% + 14px);
+  background:#3a3a3a;
+  box-shadow:0 18px 46px rgba(17,24,39,0.28);
+}
+#rec1816521261 .sb-unesco-lang-slot[data-open="true"] .sb-unesco-lang-menu,
+#rec2128776473 .sb-unesco-lang-slot[data-open="true"] .sb-unesco-lang-menu{
+  display:grid;
+  gap:6px;
+}
+#rec1816521261 .sb-unesco-lang-option,
+#rec2128776473 .sb-unesco-lang-option{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  min-height:42px;
+  padding:10px 14px;
+  border-radius:14px;
+  font-family:'TildaSans',Arial,sans-serif;
+  font-size:15px;
+  line-height:1.2;
+  font-weight:600;
+  text-decoration:none;
+  transition:background-color .2s ease,color .2s ease,opacity .2s ease;
+}
+#rec1816521261 .sb-unesco-lang-option{
+  color:#111827;
+  background:rgba(126,196,244,0.08);
+}
+#rec1816521261 .sb-unesco-lang-option:hover,
+#rec1816521261 .sb-unesco-lang-option:focus-visible{
+  background:rgba(126,196,244,0.16);
+  outline:none;
+}
+#rec2128776473 .sb-unesco-lang-option{
+  color:#ffffff;
+  background:rgba(255,255,255,0.08);
+}
+#rec2128776473 .sb-unesco-lang-option:hover,
+#rec2128776473 .sb-unesco-lang-option:focus-visible{
+  background:rgba(255,255,255,0.14);
+  outline:none;
+}
+#rec1816521261 .sb-unesco-lang-option[data-active="true"]{
+  color:#0f172a;
+  background:rgba(126,196,244,0.24);
+}
+#rec2128776473 .sb-unesco-lang-option[data-active="true"]{
+  color:#7ec4f4;
+  background:rgba(126,196,244,0.16);
+}
+#rec1816521261 .sb-unesco-lang-option-code,
+#rec2128776473 .sb-unesco-lang-option-code{
+  font-size:12px;
+  line-height:1;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  opacity:.6;
+}
+#rec2128776473 .t-menuwidgeticons__wrapper{
+  display:none !important;
+}
+#rec2128776473 .t451__burger-wrapper__mobile{
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center;
+  justify-content:flex-end;
+  gap:12px;
+}
+#rec2128776473 .t451__burger-wrapper__mobile > *{
+  flex:0 0 auto;
+}
+#rec2128776473 .sb-unesco-lang-slot{
+  order:1 !important;
+}
+#rec2128776473 .t451__burger,
+#rec2128776473 .t-menuburger{
+  order:2 !important;
+  margin-left:0 !important;
+}
+@media screen and (max-width:640px){
+  #rec1816521261 .sb-unesco-lang-trigger,
+  #rec2128776473 .sb-unesco-lang-trigger{
+    width:40px;
+    height:40px;
+  }
+  #rec1816521261 .sb-unesco-lang-menu,
+  #rec2128776473 .sb-unesco-lang-menu{
+    min-width:174px;
+  }
+}
+</style>
+<script id="sb-unesco-language-switcher-script">
+(function () {
+  var config = ${switcherConfig};
+
+  function buildMenuHtml() {
+    return config.locales.map(function (localeItem) {
+      var safeLabel = String(localeItem.label || "");
+      var safeHref = String(localeItem.href || "#");
+      var safeCode = String(localeItem.code || "").toUpperCase();
+      var isActive = localeItem.active ? "true" : "false";
+      return '<a class="sb-unesco-lang-option" data-active="' + isActive + '" href="' + safeHref + '">' +
+        '<span>' + safeLabel + '</span>' +
+        '<span class="sb-unesco-lang-option-code">' + safeCode + '</span>' +
+      '</a>';
+    }).join("");
+  }
+
+  function buildSlot(className, iconPath) {
+    return '<div class="sb-unesco-lang-slot ' + className + '" data-open="false">' +
+      '<button class="sb-unesco-lang-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-label="' + config.ariaLabel + '">' +
+        '<img src="' + iconPath + '" alt="' + config.ariaLabel + '">' +
+      '</button>' +
+      '<div class="sb-unesco-lang-menu">' + buildMenuHtml() + '</div>' +
+    '</div>';
+  }
+
+  function closeMenus(exceptNode) {
+    var nodes = document.querySelectorAll('.sb-unesco-lang-slot');
+    Array.prototype.forEach.call(nodes, function (node) {
+      if (exceptNode && node === exceptNode) return;
+      node.setAttribute('data-open', 'false');
+      var trigger = node.querySelector('.sb-unesco-lang-trigger');
+      if (trigger) {
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  function injectDesktop() {
+    var host = document.querySelector('#rec1816521261 .t228__right_langs');
+    if (!host || host.querySelector('.sb-unesco-lang-slot')) return;
+    host.innerHTML = buildSlot('sb-unesco-lang-slot--desktop', config.desktopIcon || config.mobileIcon);
+  }
+
+  function injectMobile() {
+    var wrapper = document.querySelector('#rec2128776473 .t451__burger-wrapper__mobile');
+    if (!wrapper || wrapper.querySelector('.sb-unesco-lang-slot--mobile')) return;
+    var burger = wrapper.querySelector('.t451__burger, .t-menuburger');
+    var holder = document.createElement('div');
+    holder.innerHTML = buildSlot('sb-unesco-lang-slot--mobile', config.mobileIcon || config.desktopIcon);
+    var slot = holder.firstElementChild;
+    if (burger) {
+      wrapper.insertBefore(slot, burger);
+    } else {
+      wrapper.appendChild(slot);
+    }
+  }
+
+  function initSlots() {
+    injectDesktop();
+    injectMobile();
+  }
+
+  document.addEventListener('click', function (event) {
+    var trigger = event.target.closest('.sb-unesco-lang-trigger');
+    if (trigger) {
+      var slot = trigger.closest('.sb-unesco-lang-slot');
+      var isOpen = slot && slot.getAttribute('data-open') === 'true';
+      closeMenus(slot);
+      if (slot && !isOpen) {
+        slot.setAttribute('data-open', 'true');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+      event.preventDefault();
+      return;
+    }
+
+    if (!event.target.closest('.sb-unesco-lang-slot')) {
+      closeMenus();
+    }
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSlots);
+  } else {
+    initSlots();
+  }
+  window.addEventListener('load', initSlots);
+  window.setTimeout(initSlots, 600);
+  window.setTimeout(initSlots, 1400);
+})();
+</script>`;
+}
+
+function localizedUnescoFileName(locale = "en") {
+  return locale === "en" ? "bali-tour-bali-unesco.html" : `bali-tour-bali-unesco-${locale}.html`;
+}
+
+function replaceEverywhere(html, source, target) {
+  if (!source || source === target) return html;
+  return html.split(source).join(target);
+}
+
+function localizeUnescoShell(html, locale = "en", options = {}) {
+  const currentLocale = BALI_LANGUAGE_OPTIONS.find((item) => item.code === locale)?.code || "en";
+  const uiResolver = typeof options.uiResolver === "function" ? options.uiResolver : sharedBaliUiLabels;
+  const routeBuilder = typeof options.routeBuilder === "function" ? options.routeBuilder : ((code) => `/bali/${code}/tours/bali-unesco`);
+  const ui = uiResolver(currentLocale);
+  const navFaqLabel = ui.navFaq || ui.faqHeading || "FAQ";
+  const shellReplacements = [
+    ["Our Tours", ui.navTours],
+    ["About Us", ui.navAbout],
+    ["Booking", ui.navBooking],
+    ["Our guides", ui.navGuides],
+    ["WhatsApp", ui.navWhatsApp || "WhatsApp"],
+    ["About this Activity", ui.aboutHeading],
+    ["Highlights", ui.highlightsHeading],
+    ["Full description", ui.fullDescriptionHeading],
+    ["What's included", ui.whatsIncludedHeading],
+    ["Important information", ui.importantInformationHeading],
+    ["Best Attractions in Bali", ui.bestAttractionsHeading],
+    ["Our helpful PDF-Files about Bali", ui.helpfulPdfHeading],
+    ["Things to do in Bali", ui.thingsToDoHeading],
+    ["Open google maps route", ui.mapOpenLabel],
+    ["Live weather", ui.weatherLive],
+    ["Loading…", ui.weatherLoading],
+    ["Checking local conditions…", ui.weatherChecking],
+    ["Loading weather…", ui.weatherConditionLoading],
+    ["Finding the best Bali plan for today…", ui.weatherSummaryLoading],
+    ["Feels like", ui.weatherFeelsLike],
+    ["Humidity", ui.weatherHumidity],
+    ["Wind", ui.weatherWind],
+    ["Today’s tips", ui.weatherTipsTitle],
+    ["See recommended tour", ui.weatherSeeRecommended],
+    ["Bali, Indonesia", ui.weatherLocation],
+    ["Clear sky", ui.weatherClearSky],
+    ["Mostly clear", ui.weatherMostlyClear],
+    ["Partly cloudy", ui.weatherPartlyCloudy],
+    ["Cloudy", ui.weatherCloudy],
+    ["Light rain", ui.weatherLightRain],
+    ["Rain showers", ui.weatherRainShowers],
+    ["Thunderstorm risk", ui.weatherThunderstorm],
+    ["Warm Bali evening", ui.weatherWarmEvening],
+    ["Sunny Bali day", ui.weatherSunnyDay],
+    ["Cloudy Bali day", ui.weatherCloudyDay],
+    ["Rainy Bali weather", ui.weatherRainyDay],
+    ["Storm-watch Bali weather", ui.weatherStormyDay],
+    ["Great for sunset spots", ui.weatherSunsetTip],
+    ["Perfect for dinner plans", ui.weatherDinnerTip],
+    ["A light layer is enough", ui.weatherLightLayerTip],
+    ["Best for beach time", ui.weatherBeachTip],
+    ["Strong sun: sunscreen helps", ui.weatherSunscreenTip],
+    ["Stay hydrated in the heat", ui.weatherHydrateTip],
+    ["Nice weather for cafes and easy rides", ui.weatherCafeTip],
+    ["Great for spa or cafe stops", ui.weatherSpaTip],
+    ["Wear shoes with grip", ui.weatherGripShoesTip],
+    ["Pack a light rain layer", ui.weatherRainLayerTip],
+    ["Keep plans flexible today", ui.weatherFlexibleTip],
+    ["Indoor backup ideas work well", ui.weatherShelterTip],
+    ["Our Top Tours", ui.footerTopTours],
+    ["Company & Trust", ui.footerCompanyTrust],
+    ["Contacts & Location", ui.footerContactsLocation],
+    ["We Accept", ui.footerWeAccept || "We Accept"],
+    ["Message us", ui.footerMessageUs],
+    ["Where nature and adventure meet", ui.footerLead],
+    ["About SB Excursions", ui.footerAboutCompany],
+    ["Privacy Policy", ui.footerPrivacy],
+    ["Terms & Conditions", ui.footerTerms],
+    ["Refund Policy", ui.footerRefund],
+    ["SiteMap", ui.footerSiteMap],
+    ["Daily support 7:00 - 22:00", ui.footerSupportHours],
+    ["© 2021-2026 SB Excursions. Crafted for Bali adventures", ui.footerCopyright],
+  ];
+
+  let localizedHtml = html.replace(/<html lang="[^"]+"/i, `<html lang="${currentLocale}"`);
+
+  shellReplacements.forEach(([source, target]) => {
+    localizedHtml = replaceEverywhere(localizedHtml, source, target);
+  });
+
+  localizedHtml = localizedHtml
+    .replaceAll("/bali/en/main-page#about", `${localizedMainPageRoute(currentLocale)}#about`)
+    .replaceAll("/bali/en/main-page#faq", `${localizedMainPageRoute(currentLocale)}#faq`)
+    .replaceAll("/bali/en/main-page#tours", `${localizedMainPageRoute(currentLocale)}#tours`)
+    .replaceAll('href="/bali/en/main-page"', `href="${localizedMainPageRoute(currentLocale)}"`)
+    .replaceAll(`href="${JOURNAL_HUB_ROUTE}"`, `href="${localizedJournalHubRoute(currentLocale)}"`)
+    .replaceAll("/bali/en/journal/", `/bali/${currentLocale}/journal/`)
+    .replaceAll(`${SITE_URL}/bali/en/journal/`, `${SITE_URL}/bali/${currentLocale}/journal/`)
+    .replaceAll("/bali/en/tours/", `/bali/${currentLocale}/tours/`);
+
+  localizedHtml = replaceEverywhere(localizedHtml, ">FAQ<", `>${escapeHtml(navFaqLabel)}<`);
+
+  const switcherMarkup = buildUnescoLanguageSwitcherAssets(currentLocale, routeBuilder).trim();
+  const switcherPattern = /<style id="sb-unesco-language-switcher-style">[\s\S]*?<\/script>/;
+
+  if (switcherPattern.test(localizedHtml)) {
+    localizedHtml = localizedHtml.replace(switcherPattern, switcherMarkup);
+  } else if (/<\/head>/i.test(localizedHtml)) {
+    localizedHtml = localizedHtml.replace(/<\/head>/i, `${switcherMarkup}\n</head>`);
+  }
+
+  return localizedHtml;
+}
+
 function buildUnescoChipSectionBlock(recordId, title, chips, options = {}) {
   const {
     wideDesktop = false,
+    locale = "en",
   } = options;
   const chipsMarkup = chips.map(([, label, href]) => {
     const tag = href ? "a" : "span";
-    const hrefAttr = href ? ` href="${href}"` : "";
+    const hrefAttr = href ? ` href="${localizedBaliInternalRoute(href, locale)}"` : "";
     return `<${tag} class="sb-unesco-chip"${hrefAttr}>${escapeHtml(label)}</${tag}>`;
   }).join("");
 
@@ -10776,39 +13210,44 @@ ${desktopWideStyles}
 </div>`;
 }
 
-function buildUnescoInternalTourChipsBlock() {
+function buildUnescoInternalTourChipsBlock(locale = "en") {
+  const ui = unescoUiLabels(locale);
   return buildUnescoChipSectionBlock(
     "rec2121105683",
-    "Best Attractions in Bali",
+    ui.bestAttractionsHeading,
     UNESCO_INTERNAL_TOUR_CHIPS,
+    { wideDesktop: true, locale },
   );
 }
 
-function buildUnescoPdfChipsBlock() {
+function buildUnescoPdfChipsBlock(locale = "en") {
+  const ui = unescoUiLabels(locale);
   return buildUnescoChipSectionBlock(
     "rec2121105353",
-    "Our helpful PDF-Files about Bali",
+    ui.helpfulPdfHeading,
     UNESCO_PDF_CHIPS,
-    { wideDesktop: true },
+    { wideDesktop: true, locale },
   );
 }
 
-function buildUnescoThingsToDoChipsBlock() {
+function buildUnescoThingsToDoChipsBlock(locale = "en") {
+  const ui = unescoUiLabels(locale);
   return buildUnescoChipSectionBlock(
     "rec2121105183",
-    "Things to do in Bali",
+    ui.thingsToDoHeading,
     UNESCO_THINGS_TO_DO_CHIPS,
-    { wideDesktop: true },
+    { wideDesktop: true, locale },
   );
 }
 
-function ensureUnescoInternalTourChips(filePath) {
+function ensureUnescoInternalTourChips(filePath, locale = "en") {
   if (!fs.existsSync(filePath)) {
     return;
   }
 
   const supportedFiles = new Set([
     "bali-tour-bali-unesco.html",
+    ...UNESCO_LANGUAGE_OPTIONS.filter((item) => item.code !== "en").map((item) => localizedUnescoFileName(item.code)),
     "page132181473.html",
     "page132181473body.html",
   ]);
@@ -10828,17 +13267,18 @@ function ensureUnescoInternalTourChips(filePath) {
     return;
   }
 
-  html = `${html.slice(0, recordStart)}${buildUnescoInternalTourChipsBlock()}${html.slice(recordEnd)}`;
+  html = `${html.slice(0, recordStart)}${buildUnescoInternalTourChipsBlock(locale)}${html.slice(recordEnd)}`;
   writeGeneratedFile(filePath, ensureBaliGlobalUiFix(html));
 }
 
-function ensureUnescoPdfChips(filePath) {
+function ensureUnescoPdfChips(filePath, locale = "en") {
   if (!fs.existsSync(filePath)) {
     return;
   }
 
   const supportedFiles = new Set([
     "bali-tour-bali-unesco.html",
+    ...UNESCO_LANGUAGE_OPTIONS.filter((item) => item.code !== "en").map((item) => localizedUnescoFileName(item.code)),
     "page132181473.html",
     "page132181473body.html",
   ]);
@@ -10858,17 +13298,18 @@ function ensureUnescoPdfChips(filePath) {
     return;
   }
 
-  html = `${html.slice(0, recordStart)}${buildUnescoPdfChipsBlock()}${html.slice(recordEnd)}`;
+  html = `${html.slice(0, recordStart)}${buildUnescoPdfChipsBlock(locale)}${html.slice(recordEnd)}`;
   writeGeneratedFile(filePath, ensureBaliGlobalUiFix(html));
 }
 
-function ensureUnescoThingsToDoChips(filePath) {
+function ensureUnescoThingsToDoChips(filePath, locale = "en") {
   if (!fs.existsSync(filePath)) {
     return;
   }
 
   const supportedFiles = new Set([
     "bali-tour-bali-unesco.html",
+    ...UNESCO_LANGUAGE_OPTIONS.filter((item) => item.code !== "en").map((item) => localizedUnescoFileName(item.code)),
     "page132181473.html",
     "page132181473body.html",
   ]);
@@ -10888,8 +13329,41 @@ function ensureUnescoThingsToDoChips(filePath) {
     return;
   }
 
-  html = `${html.slice(0, recordStart)}${buildUnescoThingsToDoChipsBlock()}${html.slice(recordEnd)}`;
+  html = `${html.slice(0, recordStart)}${buildUnescoThingsToDoChipsBlock(locale)}${html.slice(recordEnd)}`;
   writeGeneratedFile(filePath, ensureBaliGlobalUiFix(html));
+}
+
+function ensureLocalizedUnescoPage(filePath, locale = "en") {
+  if (!fs.existsSync(filePath)) {
+    return;
+  }
+
+  const supportedFiles = new Set([
+    "bali-tour-bali-unesco.html",
+    ...UNESCO_LANGUAGE_OPTIONS.filter((item) => item.code !== "en").map((item) => localizedUnescoFileName(item.code)),
+    "page132181473.html",
+    "page132181473body.html",
+  ]);
+
+  if (!supportedFiles.has(path.basename(filePath))) {
+    return;
+  }
+
+  const html = fs.readFileSync(filePath, "utf8");
+  writeGeneratedFile(filePath, ensureBaliGlobalUiFix(localizeUnescoShell(html, locale)));
+}
+
+function ensureLocalizedTourPage(filePath, tour) {
+  if (!fs.existsSync(filePath) || !tour) {
+    return;
+  }
+
+  const html = fs.readFileSync(filePath, "utf8");
+  const localizedHtml = localizeUnescoShell(html, tourLocale(tour), {
+    uiResolver: () => westUiLabels(tour),
+    routeBuilder: (code) => `/bali/${code}/tours/${tour.slug}`,
+  });
+  writeGeneratedFile(filePath, ensureBaliGlobalUiFix(localizedHtml));
 }
 
 function normalizeGeneratedHtml(html) {
@@ -11091,13 +13565,29 @@ function ensureBaliTildaFooter(filePath) {
   }
 }
 
-function generatePages() {
+async function generatePages() {
   const allTours = tourDataMap();
+  const englishTargets = [];
+  const localizedTargets = [];
+  const journalTargets = [];
+  const guideTargets = [];
   for (const tour of tours) {
     ensureHeroImage(tour);
     const html = renderPage(tour, allTours);
     const filePath = path.join(projectRoot, `bali-tour-${tour.slug}.html`);
     writeGeneratedFile(filePath, html);
+    englishTargets.push({ filePath, tour });
+  }
+
+  for (const locale of BALI_LANGUAGE_OPTIONS.map((item) => item.code).filter((code) => code !== "en")) {
+    for (const tour of tours) {
+      const localizedTour = await buildAutoLocalizedTour(tour, locale);
+      if (!localizedTour) continue;
+      const localizedHtml = renderPage(localizedTour, allTours);
+      const localizedFilePath = path.join(projectRoot, localizedTourFileName(tour.slug, locale));
+      writeGeneratedFile(localizedFilePath, localizedHtml);
+      localizedTargets.push({ filePath: localizedFilePath, tour: localizedTour });
+    }
   }
 
   const journalIndexPath = path.join(projectRoot, "bali-journal.html");
@@ -11106,25 +13596,36 @@ function generatePages() {
   for (const article of buildJournalArticles()) {
     const articleFilePath = path.join(projectRoot, journalArticleFileName(article.tour, article.articleType));
     writeGeneratedFile(articleFilePath, ensureBaliGlobalUiFix(renderJournalArticlePage(article)));
+    journalTargets.push({ filePath: articleFilePath, article });
   }
 
   for (const guideArticle of buildSeoGuideArticles()) {
     const guideFilePath = path.join(projectRoot, guideArticleFileName(guideArticle.guide));
     writeGeneratedFile(guideFilePath, ensureBaliGlobalUiFix(renderSeoGuidePage(guideArticle)));
+    guideTargets.push({ filePath: guideFilePath, article: guideArticle });
   }
+
+  saveTranslationCache();
+  return { englishTargets, localizedTargets, journalIndexPath, journalTargets, guideTargets };
 }
 
-function main() {
-  generatePages();
-  ensureUnescoInternalTourChips(path.join(projectRoot, "bali-tour-bali-unesco.html"));
-  ensureUnescoInternalTourChips(path.join(projectRoot, "page132181473.html"));
-  ensureUnescoInternalTourChips(path.join(projectRoot, "files", "page132181473body.html"));
-  ensureUnescoPdfChips(path.join(projectRoot, "bali-tour-bali-unesco.html"));
-  ensureUnescoPdfChips(path.join(projectRoot, "page132181473.html"));
-  ensureUnescoPdfChips(path.join(projectRoot, "files", "page132181473body.html"));
-  ensureUnescoThingsToDoChips(path.join(projectRoot, "bali-tour-bali-unesco.html"));
-  ensureUnescoThingsToDoChips(path.join(projectRoot, "page132181473.html"));
-  ensureUnescoThingsToDoChips(path.join(projectRoot, "files", "page132181473body.html"));
+async function main() {
+  const { englishTargets, localizedTargets, journalIndexPath, journalTargets, guideTargets } = await generatePages();
+  const unescoPatchTargets = [
+    { filePath: path.join(projectRoot, "bali-tour-bali-unesco.html"), locale: "en" },
+    { filePath: path.join(projectRoot, "page132181473.html"), locale: "en" },
+    { filePath: path.join(projectRoot, "files", "page132181473body.html"), locale: "en" },
+    ...UNESCO_LANGUAGE_OPTIONS.filter((item) => item.code !== "en").map((item) => ({
+      filePath: path.join(projectRoot, localizedUnescoFileName(item.code)),
+      locale: item.code,
+    })),
+  ];
+
+  for (const target of unescoPatchTargets) {
+    ensureUnescoInternalTourChips(target.filePath, target.locale);
+    ensureUnescoPdfChips(target.filePath, target.locale);
+    ensureUnescoThingsToDoChips(target.filePath, target.locale);
+  }
   patchBaliMainFile(path.join(projectRoot, "page128073236.html"));
   patchBaliMainFile(path.join(projectRoot, "files", "page128073236body.html"));
   for (const relativePath of listWeatherPatchFiles()) {
@@ -11135,9 +13636,116 @@ function main() {
   for (const relativePath of BALI_TILDA_FOOTER_PATCH_FILES) {
     ensureBaliTildaFooter(path.join(projectRoot, relativePath));
   }
+  for (const target of englishTargets) {
+    ensureCompactWeatherWidget(target.filePath);
+    ensureBaliTildaFooter(target.filePath);
+    ensureLocalizedTourPage(target.filePath, target.tour);
+  }
+  for (const target of localizedTargets) {
+    ensureCompactWeatherWidget(target.filePath);
+    ensureBaliTildaFooter(target.filePath);
+    ensureLocalizedTourPage(target.filePath, target.tour);
+  }
+  const englishTildaTourTargets = [
+    { filePath: path.join(projectRoot, "page132812463.html"), tour: tourBySlug("mount-batur-sunrise-hike") },
+    { filePath: path.join(projectRoot, "files", "page132812463body.html"), tour: tourBySlug("mount-batur-sunrise-hike") },
+    { filePath: path.join(projectRoot, "page133629743.html"), tour: tourBySlug("mount-batur-sunrise-jeep-hot-spring") },
+    { filePath: path.join(projectRoot, "files", "page133629743body.html"), tour: tourBySlug("mount-batur-sunrise-jeep-hot-spring") },
+  ];
+  for (const target of englishTildaTourTargets) {
+    ensureCompactWeatherWidget(target.filePath);
+    ensureBaliTildaFooter(target.filePath);
+    ensureLocalizedTourPage(target.filePath, target.tour);
+  }
+  for (const target of unescoPatchTargets) {
+    ensureCompactWeatherWidget(target.filePath);
+    ensureBaliTildaFooter(target.filePath);
+    ensureLocalizedUnescoPage(target.filePath, target.locale);
+  }
+
+  const englishMainPagePath = path.join(projectRoot, "page128073236.html");
+  writeGeneratedFile(
+    englishMainPagePath,
+    localizeUnescoShell(fs.readFileSync(englishMainPagePath, "utf8"), "en", {
+      routeBuilder: (code) => localizedMainPageRoute(code),
+    }),
+  );
+
+  writeGeneratedFile(
+    journalIndexPath,
+    localizeJournalShell(fs.readFileSync(journalIndexPath, "utf8"), "en", localizedJournalHubRoute("en")),
+  );
+  for (const target of journalTargets) {
+    writeGeneratedFile(
+      target.filePath,
+      localizeJournalShell(fs.readFileSync(target.filePath, "utf8"), "en", target.article.route),
+    );
+  }
+  for (const target of guideTargets) {
+    writeGeneratedFile(
+      target.filePath,
+      localizeJournalShell(fs.readFileSync(target.filePath, "utf8"), "en", target.article.route),
+    );
+  }
+
+  const localizedStaticLocales = BALI_LANGUAGE_OPTIONS.map((item) => item.code).filter((code) => code !== "en");
+
+  const englishMainPageHtml = fs.readFileSync(englishMainPagePath, "utf8");
+  for (const locale of localizedStaticLocales) {
+    const localizedMainHtml = await buildLocalizedStaticHtmlPage(englishMainPageHtml, locale, {
+      shell: "tilda",
+      currentRoute: localizedMainPageRoute(locale),
+      routeBuilder: (code) => localizedMainPageRoute(code),
+    });
+    writeGeneratedFile(path.join(projectRoot, localizedMainPageFileName(locale)), localizedMainHtml);
+  }
+
+  const englishJournalHubHtml = fs.readFileSync(journalIndexPath, "utf8");
+  for (const locale of localizedStaticLocales) {
+    const localizedJournalHubHtml = await buildLocalizedStaticHtmlPage(englishJournalHubHtml, locale, {
+      shell: "journal",
+      currentRoute: localizedJournalHubRoute(locale),
+    });
+    writeGeneratedFile(path.join(projectRoot, localizedJournalHubFileName(locale)), localizedJournalHubHtml);
+  }
+
+  for (const target of journalTargets) {
+    const englishJournalHtml = fs.readFileSync(target.filePath, "utf8");
+    for (const locale of localizedStaticLocales) {
+      const localizedRoute = localizedBaliInternalRoute(target.article.route, locale);
+      const localizedJournalHtml = await buildLocalizedStaticHtmlPage(englishJournalHtml, locale, {
+        shell: "journal",
+        currentRoute: localizedRoute,
+      });
+      writeGeneratedFile(
+        path.join(projectRoot, localizedJournalArticleFileName(target.article.tour, target.article.articleType, locale)),
+        localizedJournalHtml,
+      );
+    }
+  }
+
+  for (const target of guideTargets) {
+    const englishGuideHtml = fs.readFileSync(target.filePath, "utf8");
+    for (const locale of localizedStaticLocales) {
+      const localizedRoute = localizedBaliInternalRoute(target.article.route, locale);
+      const localizedGuideHtml = await buildLocalizedStaticHtmlPage(englishGuideHtml, locale, {
+        shell: "journal",
+        currentRoute: localizedRoute,
+      });
+      writeGeneratedFile(
+        path.join(projectRoot, localizedGuideArticleFileName(target.article.guide, locale)),
+        localizedGuideHtml,
+      );
+    }
+  }
+
+  saveTranslationCache();
   console.log(
     `Generated ${tours.length} Bali tour pages, ${buildJournalArticles().length} journal articles, ${buildSeoGuideArticles().length} SEO guides, and patched Bali main page files.`,
   );
 }
 
-main();
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

@@ -312,14 +312,80 @@ async function resolveFile(urlPathname) {
     return path.join(__dirname, rewritten);
   }
 
-  if (normalized.startsWith("/bali/en/tours/")) {
-    const slug = normalized.slice("/bali/en/tours/".length);
-    if (slug) {
-      const generatedTourFile = path.join(__dirname, `bali-tour-${slug}.html`);
+  const localizedTourMatch = normalized.match(/^\/bali\/([a-z]{2})\/tours\/([^/]+)$/i);
+  if (localizedTourMatch) {
+    const [, locale, slug] = localizedTourMatch;
+    const generatedTourFile = path.join(
+      __dirname,
+      locale.toLowerCase() === "en" ? `bali-tour-${slug}.html` : `bali-tour-${slug}-${locale.toLowerCase()}.html`,
+    );
+    try {
+      const fileStat = await stat(generatedTourFile);
+      if (fileStat.isFile()) {
+        return generatedTourFile;
+      }
+    } catch {}
+  }
+
+  const localizedMainPageMatch = normalized.match(/^\/bali\/([a-z]{2})\/main-page$/i);
+  if (localizedMainPageMatch) {
+    const [, locale] = localizedMainPageMatch;
+    const generatedMainPageFile = path.join(
+      __dirname,
+      locale.toLowerCase() === "en" ? "page128073236.html" : `bali-main-page-${locale.toLowerCase()}.html`,
+    );
+    try {
+      const fileStat = await stat(generatedMainPageFile);
+      if (fileStat.isFile()) {
+        return generatedMainPageFile;
+      }
+    } catch {}
+  }
+
+  const localizedJournalHubMatch = normalized.match(/^\/bali\/([a-z]{2})\/journal$/i);
+  if (localizedJournalHubMatch) {
+    const [, locale] = localizedJournalHubMatch;
+    const generatedJournalHubFile = path.join(
+      __dirname,
+      locale.toLowerCase() === "en" ? "bali-journal.html" : `bali-journal-${locale.toLowerCase()}.html`,
+    );
+    try {
+      const fileStat = await stat(generatedJournalHubFile);
+      if (fileStat.isFile()) {
+        return generatedJournalHubFile;
+      }
+    } catch {}
+  }
+
+  const localizedJournalMatch = normalized.match(/^\/bali\/([a-z]{2})\/journal\/(.+)$/i);
+  if (localizedJournalMatch) {
+    const [, locale, suffix] = localizedJournalMatch;
+    const parts = suffix.split("/").filter(Boolean);
+    if (parts.length === 1) {
+      const [guideSlug] = parts;
+      const generatedGuideFile = path.join(
+        __dirname,
+        locale.toLowerCase() === "en" ? `bali-journal-guide-${guideSlug}.html` : `bali-journal-guide-${guideSlug}-${locale.toLowerCase()}.html`,
+      );
       try {
-        const fileStat = await stat(generatedTourFile);
+        const fileStat = await stat(generatedGuideFile);
         if (fileStat.isFile()) {
-          return generatedTourFile;
+          return generatedGuideFile;
+        }
+      } catch {}
+    }
+    if (parts.length === 2) {
+      const [tourSlug, articleSlug] = parts;
+      const generatedJournalFile = path.join(
+        __dirname,
+        locale.toLowerCase() === "en"
+          ? `bali-journal-${tourSlug}-${articleSlug}.html`
+          : `bali-journal-${tourSlug}-${articleSlug}-${locale.toLowerCase()}.html`,
+      );
+      try {
+        const fileStat = await stat(generatedJournalFile);
+        if (fileStat.isFile()) {
+          return generatedJournalFile;
         }
       } catch {}
     }
