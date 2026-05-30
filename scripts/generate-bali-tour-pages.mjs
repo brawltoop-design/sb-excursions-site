@@ -3582,6 +3582,10 @@ function normalizedWestHighlights(tour) {
 
 function compactWestAboutHeading(value) {
   const directReplacements = [
+    [/^Kintamani volcano lunch views$/i, "Kintamani lunch views"],
+    [/^Temple route with real depth$/i, "Temple route"],
+    [/^Rice terrace and coffee stop$/i, "Rice terrace & coffee"],
+    [/^Arts villages and Ubud finish$/i, "Arts & Ubud finish"],
     [/^Molenteng Tree House and Thousand Islands$/i, "Tree House viewpoint"],
     [/^Fast boat, island car, lunch, and tickets$/i, "Boat, car and tickets"],
     [/^Turtles, coral, and underwater statues$/i, "Turtles and statues"],
@@ -3616,7 +3620,7 @@ function compactWestAboutHeading(value) {
   const text = collapseWhitespace(value);
   const replacement = directReplacements.find(([pattern]) => pattern.test(text));
   if (replacement) return replacement[1];
-  return clampText(text, 24);
+  return clampText(text, 26);
 }
 
 function compactWestAboutDescription(heading, value) {
@@ -3632,6 +3636,22 @@ function compactWestAboutDescription(heading, value) {
     [
       /^A calm cultural route that still feels premium and visually rich instead of overly touristy\.$/i,
       "Calm cultural stop with a premium, less touristy feel.",
+    ],
+    [
+      /^Indonesian buffet lunch with wide views over Mount Batur and Lake Batur\.$/i,
+      "Buffet lunch with wide Mount Batur and lake views.",
+    ],
+    [
+      /^Batuan Temple, Sebatu, and Gunung Kawi bring the sacred side of the day into one smooth route\.$/i,
+      "Sacred temple stops that add real depth to the route.",
+    ],
+    [
+      /^Tegalalang scenery plus a plantation break for coffee, tea, and photo time\.$/i,
+      "Tegalalang scenery plus coffee, tea, and photo time.",
+    ],
+    [
+      /^Batik, silver, wood carving, Monkey Forest, and Ubud Palace keep the day full without feeling random\.$/i,
+      "Craft villages, Monkey Forest, and Ubud Palace in one smooth finish.",
     ],
     [
       /^Spend more time at the places you like most and skip the unnecessary waiting of shared group trips\.$/i,
@@ -4926,17 +4946,175 @@ function renderWestStylePage(tour) {
 }
 
 const WEST_TOUR_LAYOUT_FIX_CSS = `
-#rec2121233163 .tn-elem[data-elem-id="1721240739967"] {
-  text-align: center !important;
+#rec2121233163 .t396__artboard,
+#rec2121233163 .t396__filter,
+#rec2121233163 .t396__carrier {
+  height: 609px !important;
 }
 
 #rec2121233163 .tn-elem[data-elem-id="1721240739929"] {
+  top: 48px !important;
+  left: calc(50% - 600px + 20px) !important;
+  width: 1160px !important;
+  height: 555px !important;
   overflow: hidden !important;
   border-radius: 24px !important;
 }
 
+#rec2121233163 .tn-elem[data-elem-id="1721240739967"] {
+  text-align: center !important;
+}
+
 #rec2121233163 .tn-elem[data-elem-id="1721240739929"] .tn-atom {
   border-radius: inherit !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] {
+  top: 60px !important;
+  left: calc(50% - 600px + 67px) !important;
+  width: 796px !important;
+  height: auto !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] .tn-atom {
+  font-size: 66px !important;
+  line-height: 1.1 !important;
+  font-weight: 600 !important;
+  letter-spacing: -1px !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1766419725555"] {
+  top: 264px !important;
+  left: calc(50% - 600px + 69px) !important;
+  width: 665px !important;
+  height: auto !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1766419725555"] .tn-atom {
+  font-size: 20px !important;
+  line-height: 1.55 !important;
+  font-weight: 500 !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240739954"] {
+  top: 363px !important;
+  left: calc(50% - 600px + 68px) !important;
+  width: 238px !important;
+  height: auto !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240739957"] {
+  top: 363px !important;
+  left: calc(50% - 600px + 304px) !important;
+  width: 123px !important;
+  height: auto !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240739962"] {
+  top: 365px !important;
+  left: calc(50% - 600px + 279px) !important;
+  width: 18px !important;
+  height: 18px !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1766426474516"] {
+  top: 365px !important;
+  left: calc(50% - 600px + 393px) !important;
+  width: 18px !important;
+  height: 18px !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1766425094306"] {
+  top: 363px !important;
+  left: calc(50% - 600px + 415px) !important;
+  width: 113px !important;
+  height: auto !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240739962"] .tn-atom,
+#rec2121233163 .tn-elem[data-elem-id="1766426474516"] .tn-atom {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1766426474516"] .tn-atom__img,
+#rec2121233163 .tn-elem[data-elem-id="1766426474516"] .t-img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240739954"] .tn-atom,
+#rec2121233163 .tn-elem[data-elem-id="1721240739957"] .tn-atom,
+#rec2121233163 .tn-elem[data-elem-id="1766425094306"] .tn-atom {
+  display: block !important;
+  line-height: 1.1 !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240740062"] {
+  top: 406px !important;
+  left: calc(50% - 600px + 69px) !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240740064"] {
+  top: 406px !important;
+  left: calc(50% - 600px + 93px) !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240740065"] {
+  top: 406px !important;
+  left: calc(50% - 600px + 118px) !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240740066"] {
+  top: 406px !important;
+  left: calc(50% - 600px + 140px) !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240740067"] {
+  top: 406px !important;
+  left: calc(50% - 600px + 163px) !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240740071"] {
+  top: 404px !important;
+  left: calc(50% - 600px + 188px) !important;
+  width: 22px !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240740074"] {
+  top: 404px !important;
+  left: calc(50% - 600px + 217px) !important;
+  width: 117px !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240739964"] {
+  top: 438px !important;
+  left: calc(50% - 600px + 70px) !important;
+  width: 250px !important;
+  height: 43px !important;
+  transform: none !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240739967"] {
+  top: 451px !important;
+  left: calc(50% - 600px + 125px) !important;
+  width: 145px !important;
+  transform: none !important;
+}
+
+#rec2121233163 .tn-elem[data-elem-id="1721240739967"] .tn-atom {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  font-size: 17px !important;
+  line-height: 1.05 !important;
+  font-weight: 600 !important;
 }
 
 #rec2121222003 .t585__text {
@@ -4987,7 +5165,8 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
 #rec2121221993 .tn-elem[data-elem-id="1721244135179"],
 #rec2121221993 .tn-elem[data-elem-id="1721244135195"],
 #rec2121221993 .tn-elem[data-elem-id="1721244135209"] {
-  height: 24px !important;
+  height: auto !important;
+  min-height: 24px !important;
   overflow: visible !important;
   z-index: 5 !important;
 }
@@ -4997,36 +5176,145 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
 #rec2121221993 .tn-elem[data-elem-id="1721244135195"] .tn-atom,
 #rec2121221993 .tn-elem[data-elem-id="1721244135209"] .tn-atom {
   display: block !important;
-  white-space: nowrap !important;
+  white-space: normal !important;
+  overflow-wrap: break-word !important;
+  word-break: normal !important;
+  hyphens: auto !important;
   line-height: 1.15 !important;
   text-align: center !important;
 }
 
-#rec2121233163 .tn-elem[data-elem-id="1721240739967"] .tn-atom {
-  display: block !important;
-  width: 100% !important;
-  text-align: center !important;
-}
-
 @media screen and (max-width: 959px) {
+  #rec2121233163 .t396__artboard,
+  #rec2121233163 .t396__filter,
+  #rec2121233163 .t396__carrier {
+    height: 380px !important;
+  }
+
   #rec2121233163 .tn-elem[data-elem-id="1721240739929"] {
+    top: 58px !important;
+    left: calc(50% - 320px + 10px) !important;
+    width: 620px !important;
+    height: 319px !important;
     border-radius: 18px !important;
   }
 
+  #rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] {
+    top: 89px !important;
+    left: calc(50% - 320px + 30px) !important;
+    width: 329px !important;
+    height: auto !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] .tn-atom {
+    font-size: 27px !important;
+    line-height: 1.1 !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1766419725555"] {
+    top: 179px !important;
+    left: calc(50% - 320px + 30px) !important;
+    width: 390px !important;
+    height: auto !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1766419725555"] .tn-atom {
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739954"] {
+    top: 225px !important;
+    left: calc(50% - 320px + 28px) !important;
+    width: 150px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739962"] {
+    top: 227px !important;
+    left: calc(50% - 320px + 187px) !important;
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739957"] {
+    top: 225px !important;
+    left: calc(50% - 320px + 211px) !important;
+    width: 92px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1766426474516"] {
+    top: 227px !important;
+    left: calc(50% - 320px + 279px) !important;
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1766425094306"] {
+    top: 225px !important;
+    left: calc(50% - 320px + 298px) !important;
+    width: 86px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240740062"] {
+    top: 258px !important;
+    left: calc(50% - 320px + 28px) !important;
+    width: 8px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240740064"] {
+    top: 258px !important;
+    left: calc(50% - 320px + 39px) !important;
+    width: 8px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240740065"] {
+    top: 258px !important;
+    left: calc(50% - 320px + 61px) !important;
+    width: 8px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240740066"] {
+    top: 258px !important;
+    left: calc(50% - 320px + 72px) !important;
+    width: 8px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240740067"] {
+    top: 258px !important;
+    left: calc(50% - 320px + 50px) !important;
+    width: 8px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240740071"] {
+    top: 252px !important;
+    left: calc(50% - 320px + 85px) !important;
+    width: 22px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240740074"] {
+    top: 252px !important;
+    left: calc(50% - 320px + 110px) !important;
+    width: 89px !important;
+  }
+
   #rec2121233163 .tn-elem[data-elem-id="1721240739964"] {
-    left: 50% !important;
-    width: 224px !important;
-    transform: translateX(-50%) !important;
+    top: 278px !important;
+    left: calc(50% - 320px + 28px) !important;
+    width: 212px !important;
+    height: 37px !important;
+    transform: none !important;
   }
 
   #rec2121233163 .tn-elem[data-elem-id="1721240739967"] {
-    left: 50% !important;
-    width: 224px !important;
-    transform: translateX(-50%) !important;
+    top: 282px !important;
+    left: calc(50% - 320px + 77px) !important;
+    width: 137px !important;
+    transform: none !important;
   }
 
   #rec2121233163 .tn-elem[data-elem-id="1721240739967"] .tn-atom {
-    font-size: 15px !important;
+    font-size: 14px !important;
+    line-height: 1.05 !important;
   }
 
   #rec2121221993 .tn-elem[data-elem-id="1721244135153"],
@@ -5060,11 +5348,21 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
   }
 
   #rec2121233163 .t396__artboard {
+    height: 440px !important;
     overflow: hidden !important;
     border-radius: 22px !important;
   }
 
+  #rec2121233163 .t396__filter,
+  #rec2121233163 .t396__carrier {
+    height: 440px !important;
+  }
+
   #rec2121233163 .tn-elem[data-elem-id="1721240739929"] {
+    top: -22px !important;
+    left: calc(50% - 160px + 10px) !important;
+    width: 301px !important;
+    height: 462px !important;
     border-radius: 22px !important;
     overflow: hidden !important;
   }
@@ -5075,25 +5373,124 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
   }
 
   #rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] {
-    top: 154px !important;
-    left: calc(50% - 160px + 20px) !important;
-    width: 272px !important;
+    top: 163px !important;
+    left: calc(50% - 160px + 22px) !important;
+    width: 258px !important;
+    height: auto !important;
   }
 
   #rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] .tn-atom {
-    font-size: 32px !important;
-    line-height: 1.06 !important;
+    font-size: 25px !important;
+    line-height: 1.08 !important;
   }
 
   #rec2121233163 .tn-elem[data-elem-id="1766419725555"] {
-    top: 259px !important;
-    left: calc(50% - 160px + 20px) !important;
-    width: 264px !important;
+    top: 253px !important;
+    left: calc(50% - 160px + 22px) !important;
+    width: 218px !important;
+    height: auto !important;
   }
 
   #rec2121233163 .tn-elem[data-elem-id="1766419725555"] .tn-atom {
-    font-size: 11px !important;
+    font-size: 10px !important;
     line-height: 1.52 !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739954"] {
+    top: 328px !important;
+    left: calc(50% - 160px + 22px) !important;
+    width: 196px !important;
+    height: auto !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739962"] {
+    top: 328px !important;
+    left: calc(50% - 160px + 139px) !important;
+    width: 11px !important;
+    height: 11px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739957"] {
+    top: 328px !important;
+    left: calc(50% - 160px + 154px) !important;
+    width: 67px !important;
+    height: auto !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1766426474516"] {
+    top: 328px !important;
+    left: calc(50% - 160px + 205px) !important;
+    width: 11px !important;
+    height: 11px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1766425094306"] {
+    top: 328px !important;
+    left: calc(50% - 160px + 217px) !important;
+    width: 65px !important;
+    height: auto !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240740062"] {
+    top: 363px !important;
+    left: calc(50% - 160px + 23px) !important;
+    width: 8px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240740064"] {
+    top: 363px !important;
+    left: calc(50% - 160px + 33px) !important;
+    width: 8px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240740065"] {
+    top: 363px !important;
+    left: calc(50% - 160px + 43px) !important;
+    width: 8px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240740066"] {
+    top: 363px !important;
+    left: calc(50% - 160px + 53px) !important;
+    width: 8px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240740067"] {
+    top: 363px !important;
+    left: calc(50% - 160px + 63px) !important;
+    width: 8px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240740071"] {
+    top: 359px !important;
+    left: calc(50% - 160px + 76px) !important;
+    width: 17px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240740074"] {
+    top: 361px !important;
+    left: calc(50% - 160px + 95px) !important;
+    width: 77px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739964"] {
+    top: 391px !important;
+    left: calc(50% - 160px + 22px) !important;
+    width: 172px !important;
+    height: 30px !important;
+    transform: none !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739967"] {
+    top: 391px !important;
+    left: calc(50% - 160px + 52px) !important;
+    width: 143px !important;
+    transform: none !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739967"] .tn-atom {
+    font-size: 14px !important;
+    line-height: 1 !important;
   }
 
   #rec2121222003 .t585__text .sb-tour-copy__intro,
@@ -5112,30 +5509,6 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
 
   #rec2121222003 .t585__text .sb-tour-copy__emoji {
     font-size: 17px;
-  }
-
-  #rec2121233163 .tn-elem[data-elem-id="1721240739964"] {
-    top: 390px !important;
-    left: calc(50% - 160px + 18px) !important;
-    width: 210px !important;
-    height: 42px !important;
-    transform: none !important;
-  }
-
-  #rec2121233163 .tn-elem[data-elem-id="1721240739964"] .tn-atom {
-    border-radius: 14px !important;
-  }
-
-  #rec2121233163 .tn-elem[data-elem-id="1721240739967"] {
-    top: 401px !important;
-    left: calc(50% - 160px + 18px) !important;
-    width: 210px !important;
-    transform: none !important;
-  }
-
-  #rec2121233163 .tn-elem[data-elem-id="1721240739967"] .tn-atom {
-    font-size: 16px !important;
-    line-height: 1 !important;
   }
 
   #rec2121221993 .t396__artboard,
@@ -5185,192 +5558,18 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
   }
 }`;
 
-const NUSA_PENIDA_WEST_SYMMETRIC_ABOUT_CSS = `
-#rec2121221993.sb-west-about-symmetric-record {
-  margin-top: 20px !important;
-}
-
-#rec2121221993 .sb-west-about-symmetric {
-  padding: 0 20px;
-}
-
-#rec2121221993 .sb-west-about-symmetric__shell {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 34px 30px 30px;
-  border-radius: 30px;
-  background: #dcebff;
-}
-
-#rec2121221993 .sb-west-about-symmetric__header {
-  text-align: center;
-  margin: 0 auto 24px;
-}
-
-#rec2121221993 .sb-west-about-symmetric__title {
-  margin: 0;
-  color: #0f172a;
-  font-size: 46px;
-  line-height: 1.08;
-  font-weight: 700;
-  letter-spacing: -1.4px;
-}
-
-#rec2121221993 .sb-west-about-symmetric__subtitle {
-  margin: 10px 0 0;
-  color: #a9b4c7;
-  font-size: 18px;
-  line-height: 1.45;
-  font-weight: 500;
-}
-
-#rec2121221993 .sb-west-about-symmetric__grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-  align-items: stretch;
-}
-
-#rec2121221993 .sb-west-about-symmetric__item {
-  min-width: 0;
-  min-height: 208px;
-  padding: 8px 10px 2px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-#rec2121221993 .sb-west-about-symmetric__icon {
-  position: relative;
-  width: 82px;
-  height: 82px;
-  margin-bottom: 14px;
-  background-image: url('https://static.tildacdn.one/tild3134-6563-4262-a165-343566386466/Star_12.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-#rec2121221993 .sb-west-about-symmetric__icon svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 34px;
-  height: 34px;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-}
-
-#rec2121221993 .sb-west-about-symmetric__item-title {
-  margin: 0 0 10px;
-  color: #111827;
-  font-size: 17px;
-  line-height: 1.2;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-#rec2121221993 .sb-west-about-symmetric__item-copy {
-  margin: 0;
-  max-width: 220px;
-  color: #1f2937;
-  font-size: 15px;
-  line-height: 1.58;
-}
-
-@media screen and (max-width: 959px) {
-  #rec2121221993 .sb-west-about-symmetric__shell {
-    padding: 28px 22px 24px;
-  }
-
-  #rec2121221993 .sb-west-about-symmetric__title {
-    font-size: 36px;
-  }
-
-  #rec2121221993 .sb-west-about-symmetric__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px 18px;
-  }
-
-  #rec2121221993 .sb-west-about-symmetric__item {
-    min-height: 188px;
-  }
-}
-
-@media screen and (max-width: 639px) {
-  #rec2121221993.sb-west-about-symmetric-record {
-    margin-top: 28px !important;
-  }
-
-  #rec2121221993 .sb-west-about-symmetric {
-    padding: 0 0;
-  }
-
-  #rec2121221993 .sb-west-about-symmetric__shell {
-    border-radius: 0;
-    padding: 30px 14px 24px;
-  }
-
-  #rec2121221993 .sb-west-about-symmetric__header {
-    margin-bottom: 20px;
-  }
-
-  #rec2121221993 .sb-west-about-symmetric__title {
-    font-size: 25px;
-    letter-spacing: -0.5px;
-  }
-
-  #rec2121221993 .sb-west-about-symmetric__subtitle {
-    margin-top: 8px;
-    font-size: 12px;
-  }
-
-  #rec2121221993 .sb-west-about-symmetric__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px 10px;
-  }
-
-  #rec2121221993 .sb-west-about-symmetric__item {
-    min-height: 178px;
-    padding: 4px 4px 0;
-  }
-
-  #rec2121221993 .sb-west-about-symmetric__icon {
-    width: 62px;
-    height: 62px;
-    margin-bottom: 10px;
-  }
-
-  #rec2121221993 .sb-west-about-symmetric__icon svg {
-    width: 27px;
-    height: 27px;
-  }
-
-  #rec2121221993 .sb-west-about-symmetric__item-title {
-    margin-bottom: 8px;
-    font-size: 12px;
-  }
-
-  #rec2121221993 .sb-west-about-symmetric__item-copy {
-    max-width: 138px;
-    font-size: 11px;
-    line-height: 1.45;
-  }
-}`;
-
 const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
 #rec2121221993[data-record-type="396"] .t396__artboard,
 #rec2121221993[data-record-type="396"] .t396__filter,
 #rec2121221993[data-record-type="396"] .t396__carrier {
-  height: 362px !important;
+  height: 420px !important;
 }
 
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431201693000002"],
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431219359000004"],
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431153685"] {
-  top: 130px !important;
+  top: 147px !important;
   transform: translateX(-50%) !important;
 }
 
@@ -5394,7 +5593,7 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135187"],
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431213467000003"],
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135202"] {
-  top: 151px !important;
+  top: 168px !important;
   transform: translateX(-50%) !important;
 }
 
@@ -5418,8 +5617,8 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"],
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"],
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"] {
-  top: 223px !important;
-  width: 240px !important;
+  top: 233px !important;
+  width: 180px !important;
   transform: translateX(-50%) !important;
 }
 
@@ -5451,8 +5650,8 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"],
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"],
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] {
-  top: 252px !important;
-  width: 252px !important;
+  top: 256px !important;
+  width: 210px !important;
   transform: translateX(-50%) !important;
 }
 
@@ -5488,14 +5687,14 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
   #rec2121221993[data-record-type="396"] .t396__artboard,
   #rec2121221993[data-record-type="396"] .t396__filter,
   #rec2121221993[data-record-type="396"] .t396__carrier {
-    height: 336px !important;
+    height: 388px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431201693000002"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431219359000004"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431153685"] {
-    top: 122px !important;
+    top: 123px !important;
     transform: translateX(-50%) !important;
   }
 
@@ -5543,8 +5742,8 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"] {
-    top: 196px !important;
-    width: 210px !important;
+    top: 195px !important;
+    width: 170px !important;
     transform: translateX(-50%) !important;
   }
 
@@ -5575,8 +5774,8 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] {
-    top: 223px !important;
-    width: 222px !important;
+    top: 216px !important;
+    width: 200px !important;
     transform: translateX(-50%) !important;
   }
 
@@ -5609,17 +5808,17 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
   #rec2121221993[data-record-type="396"] .t396__artboard,
   #rec2121221993[data-record-type="396"] .t396__filter,
   #rec2121221993[data-record-type="396"] .t396__carrier {
-    height: 566px !important;
+    height: 584px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431201693000002"] {
-    top: 112px !important;
+    top: 113px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431219359000004"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431153685"] {
-    top: 334px !important;
+    top: 326px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
@@ -5675,26 +5874,26 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135153"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"] {
-    top: 226px !important;
-    width: 214px !important;
+    top: 225px !important;
+    width: 190px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"] {
-    top: 448px !important;
-    width: 214px !important;
+    top: 438px !important;
+    width: 190px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135162"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"] {
-    top: 256px !important;
-    width: 248px !important;
+    top: 251px !important;
+    width: 220px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] {
-    top: 478px !important;
-    width: 248px !important;
+    top: 464px !important;
+    width: 220px !important;
   }
 }
 
@@ -5702,17 +5901,17 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
   #rec2121221993[data-record-type="396"] .t396__artboard,
   #rec2121221993[data-record-type="396"] .t396__filter,
   #rec2121221993[data-record-type="396"] .t396__carrier {
-    height: 462px !important;
+    height: 356px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431201693000002"] {
-    top: 84px !important;
+    top: 88px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431219359000004"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431153685"] {
-    top: 220px !important;
+    top: 202px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
@@ -5758,39 +5957,39 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135166"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135187"] {
-    top: 97px !important;
+    top: 100px !important;
     width: 27px !important;
     height: 27px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431213467000003"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135202"] {
-    top: 233px !important;
+    top: 216px !important;
     width: 27px !important;
     height: 27px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135153"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135179"] {
-    top: 136px !important;
-    width: 138px !important;
+    top: 138px !important;
+    width: 132px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135209"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135195"] {
-    top: 272px !important;
-    width: 138px !important;
+    top: 252px !important;
+    width: 132px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135162"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"] {
-    top: 159px !important;
+    top: 153px !important;
     width: 142px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"],
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] {
-    top: 287px !important;
+    top: 267px !important;
     width: 142px !important;
   }
 
@@ -6109,6 +6308,35 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     if (align) setImportant(target, 'text-align', align);
   }
 
+  function clearImportant(node, prop) {
+    if (node) node.style.removeProperty(prop);
+  }
+
+  function resetInlineBox(node) {
+    if (!node) return;
+    ['top', 'left', 'width', 'height', 'transform'].forEach(function (prop) {
+      clearImportant(node, prop);
+    });
+  }
+
+  function resetInlineText(node) {
+    var target = atom(node) || node;
+    if (!target) return;
+    ['font-size', 'line-height', 'white-space', 'overflow-wrap', 'word-break', 'hyphens', 'text-align'].forEach(function (prop) {
+      clearImportant(target, prop);
+    });
+  }
+
+  function resetRecordHeight(record) {
+    if (!record) return;
+    var artboard = record.querySelector('.t396__artboard');
+    var carrier = record.querySelector('.t396__carrier');
+    var filter = record.querySelector('.t396__filter');
+    [artboard, carrier, filter].forEach(function (node) {
+      clearImportant(node, 'height');
+    });
+  }
+
   function layoutHero() {
     var record = document.getElementById(HERO_ID);
     if (!record) return;
@@ -6142,128 +6370,24 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     relaxText(ratingValue, 'left');
 
     if (isCompact) {
-      var titleLeft = isMobile ? 20 : 30;
-      var titleWidth = isMobile ? Math.min(artboardWidth - 40, 282) : Math.min(artboardWidth - 60, 400);
-      var descWidth = isMobile ? Math.min(artboardWidth - 40, 282) : Math.min(artboardWidth - 60, 396);
-      var titleTop = isMobile ? 154 : 84;
-      var titleFont = fitText(titleWrap, {
-        maxFont: isMobile ? (isLocalizedPage ? 24.5 : 29) : (isLocalizedPage ? 30 : 34),
-        minFont: isMobile ? 17 : 21,
-        maxHeight: isMobile ? 160 : 132,
-        lineHeightRatio: isMobile ? 1.05 : 1.08,
-      });
-
-      setImportant(titleWrap, 'left', titleLeft + 'px');
-      setImportant(titleWrap, 'top', titleTop + 'px');
-      setImportant(titleWrap, 'width', titleWidth + 'px');
-      if (titleFont) {
-        setImportant(atom(titleWrap), 'font-size', titleFont.toFixed(2) + 'px');
-      }
-
-      var titleBottom = titleTop + visualHeight(titleWrap, scale);
-      var descTop = titleBottom + (isMobile ? 10 : 12);
-      setImportant(descWrap, 'left', titleLeft + 'px');
-      setImportant(descWrap, 'top', descTop + 'px');
-      setImportant(descWrap, 'width', descWidth + 'px');
-      fitText(descWrap, {
-        maxFont: isMobile ? (isLocalizedPage ? 10.2 : 11) : (isLocalizedPage ? 11.5 : 12.5),
-        minFont: isMobile ? 8.6 : 10.4,
-        maxHeight: isMobile ? 110 : 72,
-        lineHeightRatio: 1.48,
-      });
-
-      var descBottom = descTop + visualHeight(descWrap, scale);
-      var metaTop = descBottom + (isMobile ? 12 : 14);
-      [priceWrap, durationIcon, durationText, locationIcon, locationText].forEach(function (node) {
-        if (node) setImportant(node, 'top', metaTop + 'px');
-      });
-      fitText(priceWrap, {
-        maxFont: isMobile ? (isLocalizedPage ? 10.6 : 11.5) : (isLocalizedPage ? 13 : 14),
-        minFont: isMobile ? 9 : 11.2,
-        maxHeight: 36,
-        lineHeightRatio: 1.2,
-      });
-      fitText(durationText, {
-        maxFont: isMobile ? (isLocalizedPage ? 10.6 : 11.5) : (isLocalizedPage ? 12.5 : 13.5),
-        minFont: isMobile ? 9.2 : 11.2,
-        maxHeight: 34,
-        lineHeightRatio: 1.18,
-      });
-      fitText(locationText, {
-        maxFont: isMobile ? (isLocalizedPage ? 10.6 : 11.5) : (isLocalizedPage ? 12.5 : 13.5),
-        minFont: isMobile ? 9.2 : 11.2,
-        maxHeight: isMobile ? 36 : 34,
-        lineHeightRatio: 1.18,
-      });
-
-      var metaBottom = Math.max(
-        priceWrap ? metaTop + visualHeight(priceWrap, scale) : metaTop,
-        durationText ? metaTop + visualHeight(durationText, scale) : metaTop,
-        locationText ? metaTop + visualHeight(locationText, scale) : metaTop
-      );
-
-      var ratingTop = metaBottom + (isMobile ? 10 : 12);
-      ratingIcons.forEach(function (node) {
-        setImportant(node, 'top', (ratingTop + (isMobile ? 4 : 3)) + 'px');
-      });
-      if (ratingValue) setImportant(ratingValue, 'top', ratingTop + 'px');
-      if (mapsLabel) setImportant(mapsLabel, 'top', ratingTop + 'px');
-      fitText(mapsLabel, {
-        maxFont: isMobile ? 10.5 : 12.5,
-        minFont: isMobile ? 8.4 : 10.5,
-        maxHeight: 32,
-        lineHeightRatio: 1.2,
-      });
-      fitText(ratingValue, {
-        maxFont: isMobile ? 12 : 13,
-        minFont: isMobile ? 10 : 11.5,
-        maxHeight: 28,
-        lineHeightRatio: 1.1,
-      });
-
-      var ratingBottom = Math.max(
-        ratingValue ? ratingTop + visualHeight(ratingValue, scale) : ratingTop,
-        mapsLabel ? ratingTop + visualHeight(mapsLabel, scale) : ratingTop
-      );
-
-      var buttonTop = ratingBottom + (isMobile ? 18 : 16);
-      var buttonLeft = isMobile ? 18 : 28;
-      var buttonWidth = isMobile ? 210 : 220;
-      var buttonHeight = isMobile ? 42 : 38;
-      setImportant(buttonWrap, 'top', buttonTop + 'px');
-      setImportant(buttonWrap, 'left', buttonLeft + 'px');
-      setImportant(buttonWrap, 'width', buttonWidth + 'px');
-      setImportant(buttonWrap, 'height', buttonHeight + 'px');
-      setImportant(buttonWrap, 'transform', 'none');
-      setImportant(atom(buttonWrap), 'border-radius', (isMobile ? 14 : 16) + 'px');
-
-      fitText(buttonText, {
-        maxFont: isMobile ? 16 : 14.5,
-        minFont: isMobile ? 13 : 12,
-        maxHeight: buttonHeight - 6,
-        lineHeightRatio: 1.05,
-        textAlign: 'center',
-      });
-      var buttonTextHeight = visualHeight(buttonText, scale);
-      setImportant(buttonText, 'top', (buttonTop + Math.max(8, (buttonHeight - buttonTextHeight) / 2)) + 'px');
-      setImportant(buttonText, 'left', buttonLeft + 'px');
-      setImportant(buttonText, 'width', buttonWidth + 'px');
-      setImportant(buttonText, 'transform', 'none');
-      setImportant(atom(buttonText), 'text-align', 'center');
-
-      setRecordHeight(record, buttonTop + buttonHeight + (isMobile ? 40 : 30));
+      resetRecordHeight(record);
+      [titleWrap, descWrap, priceWrap, durationIcon, durationText, locationIcon, locationText, mapsLabel, ratingValue, buttonWrap, buttonText]
+        .concat(ratingIcons)
+        .forEach(resetInlineBox);
+      [titleWrap, descWrap, priceWrap, durationText, locationText, mapsLabel, ratingValue, buttonText].forEach(resetInlineText);
+      return;
     }
   }
 
   function layoutAbout() {
     var record = document.getElementById(ABOUT_ID);
-    if (!record || record.querySelector('.sb-west-about-symmetric')) return;
+    if (!record) return;
     var artboard = record.querySelector('.t396__artboard');
     if (!artboard) return;
     var scale = scaleFor(artboard);
     var isMobile = window.innerWidth <= 639;
     var isTablet = window.innerWidth > 639 && window.innerWidth <= 959;
-    var isCompact = window.innerWidth <= 959;
+    var isNarrowDesktop = window.innerWidth > 959 && window.innerWidth <= 1199;
     var artboardWidth = artboard.offsetWidth || 320;
     var headingWrap = byId(record, ABOUT_HEADING_ID);
     var subtitleWrap = byId(record, ABOUT_SUBTITLE_ID);
@@ -6273,95 +6397,121 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     var icons = ABOUT_ICON_IDS.map(function (id) { return byId(record, id); });
     if (!subtitleWrap || titleWraps.some(function (node) { return !node; })) return;
 
+    var layout = isMobile
+      ? {
+          baseHeight: 327,
+          subtitleTop: 49,
+          subtitleWidth: 335,
+          subtitleMaxFont: isLocalizedPage ? 11.2 : 12,
+          subtitleMinFont: 9.6,
+          subtitleMaxHeight: 40,
+          titleMaxFont: isLocalizedPage ? 10.4 : 10.9,
+          titleMinFont: 8.6,
+          titleMaxHeight: 40,
+          descMaxFont: isLocalizedPage ? 9.1 : 9.5,
+          descMinFont: 8.1,
+          descMaxHeight: 58,
+          bottomPad: 22,
+        }
+      : isTablet
+      ? {
+          baseHeight: 546,
+          subtitleTop: 62,
+          subtitleWidth: artboardWidth - 80,
+          subtitleMaxFont: isLocalizedPage ? 14 : 15.5,
+          subtitleMinFont: 11.5,
+          subtitleMaxHeight: 42,
+          titleMaxFont: isLocalizedPage ? 14.1 : 15,
+          titleMinFont: 11.2,
+          titleMaxHeight: 52,
+          descMaxFont: isLocalizedPage ? 12.2 : 13,
+          descMinFont: 10,
+          descMaxHeight: 86,
+          bottomPad: 28,
+        }
+      : isNarrowDesktop
+      ? {
+          baseHeight: 277,
+          subtitleTop: 64,
+          subtitleWidth: 387,
+          subtitleMaxFont: 17,
+          subtitleMinFont: 13,
+          subtitleMaxHeight: 34,
+          titleMaxFont: 14.2,
+          titleMinFont: 11.5,
+          titleMaxHeight: 34,
+          descMaxFont: 11.2,
+          descMinFont: 9.8,
+          descMaxHeight: 60,
+          bottomPad: 22,
+        }
+      : {
+          baseHeight: 298,
+          subtitleTop: 62,
+          subtitleWidth: 466,
+          subtitleMaxFont: 18,
+          subtitleMinFont: 14,
+          subtitleMaxHeight: 36,
+          titleMaxFont: 15.6,
+          titleMinFont: 12.2,
+          titleMaxHeight: 34,
+          descMaxFont: 12,
+          descMinFont: 9.8,
+          descMaxHeight: 60,
+          bottomPad: 22,
+        };
+
     relaxText(subtitleWrap, 'center');
     titleWraps.forEach(function (node) { relaxText(node, 'center'); });
     descWraps.forEach(function (node) { relaxText(node, 'center'); });
 
-    var subtitleTop = isMobile ? 56 : isTablet ? 60 : 72;
-    var subtitleLeft = isMobile ? 20 : 60;
-    var subtitleWidth = isMobile ? artboardWidth - 40 : isTablet ? artboardWidth - 120 : Math.min(artboardWidth - 160, 720);
-    setImportant(subtitleWrap, 'top', subtitleTop + 'px');
-    setImportant(subtitleWrap, 'left', subtitleLeft + 'px');
-    setImportant(subtitleWrap, 'width', subtitleWidth + 'px');
+    setImportant(subtitleWrap, 'top', layout.subtitleTop + 'px');
+    if (isMobile) {
+      setImportant(subtitleWrap, 'left', '-7px');
+      setImportant(subtitleWrap, 'width', Math.min(artboardWidth - 14, layout.subtitleWidth) + 'px');
+    } else if (isTablet) {
+      setImportant(subtitleWrap, 'left', '50%');
+      setImportant(subtitleWrap, 'transform', 'translateX(-50%)');
+      setImportant(subtitleWrap, 'width', Math.min(artboardWidth - 40, layout.subtitleWidth) + 'px');
+    } else if (isNarrowDesktop) {
+      setImportant(subtitleWrap, 'left', '50%');
+      setImportant(subtitleWrap, 'transform', 'translateX(-50%)');
+      setImportant(subtitleWrap, 'width', layout.subtitleWidth + 'px');
+    } else {
+      setImportant(subtitleWrap, 'left', '50%');
+      setImportant(subtitleWrap, 'transform', 'translateX(-50%)');
+      setImportant(subtitleWrap, 'width', layout.subtitleWidth + 'px');
+    }
     fitText(subtitleWrap, {
-      maxFont: isMobile ? (isLocalizedPage ? 10.5 : 12) : isTablet ? (isLocalizedPage ? 12.2 : 13.5) : 18,
-      minFont: isMobile ? 9 : isTablet ? 11 : 13,
-      maxHeight: isMobile ? 46 : isTablet ? 50 : 56,
+      maxFont: layout.subtitleMaxFont,
+      minFont: layout.subtitleMinFont,
+      maxHeight: layout.subtitleMaxHeight,
       lineHeightRatio: 1.4,
       textAlign: 'center',
     });
 
-    var headingTop = headingWrap ? topOf(headingWrap) : 10;
-    var headingBottom = headingWrap ? headingTop + visualHeight(headingWrap, scale) : 40;
-    var subtitleBottom = subtitleTop + visualHeight(subtitleWrap, scale);
-    var firstRowTop = Math.max(headingBottom + 16, subtitleBottom + 16);
-    var rowGap = isMobile ? 18 : isTablet ? 24 : 0;
-    var iconSize = isMobile ? 62 : isTablet ? 70 : 82;
-    var titleGap = isMobile ? 10 : 12;
-    var descGap = isMobile ? 8 : 10;
-    var sidePad = isMobile ? 10 : isTablet ? 30 : 40;
-    var colGap = isMobile ? 18 : isTablet ? 40 : 34;
-    var colCount = isCompact ? 2 : 4;
-    var colWidth = isCompact
-      ? Math.floor((artboardWidth - sidePad * 2 - colGap) / 2)
-      : Math.floor((artboardWidth - sidePad * 2 - colGap * 3) / 4);
-    var rowHeights = [];
-
     for (var i = 0; i < 4; i += 1) {
-      var col = isCompact ? i % 2 : i;
-      var row = isCompact ? Math.floor(i / 2) : 0;
-      var rowTop = row === 0 ? firstRowTop : rowHeights[0] + rowGap;
-      var colLeft = sidePad + col * (colWidth + colGap);
-      var iconLeft = colLeft + Math.max(0, (colWidth - iconSize) / 2);
-      var titleTop = rowTop + iconSize + titleGap;
-
-      if (iconBgs[i]) {
-        setImportant(iconBgs[i], 'top', rowTop + 'px');
-        setImportant(iconBgs[i], 'left', iconLeft + 'px');
-        setImportant(iconBgs[i], 'transform', 'none');
-      }
-      if (icons[i]) {
-        setImportant(icons[i], 'top', (rowTop + Math.max(0, (iconSize - (isMobile ? 27 : 34)) / 2)) + 'px');
-        setImportant(icons[i], 'left', (iconLeft + Math.max(0, (iconSize - (isMobile ? 27 : 34)) / 2)) + 'px');
-        setImportant(icons[i], 'transform', 'none');
-        if (isMobile) {
-          setImportant(icons[i], 'width', '27px');
-          setImportant(icons[i], 'height', '27px');
-        }
-      }
-
-      setImportant(titleWraps[i], 'top', titleTop + 'px');
-      setImportant(titleWraps[i], 'left', colLeft + 'px');
-      setImportant(titleWraps[i], 'width', colWidth + 'px');
-      setImportant(titleWraps[i], 'transform', 'none');
       fitText(titleWraps[i], {
-        maxFont: isMobile ? (isLocalizedPage ? 10.3 : 11.5) : isTablet ? (isLocalizedPage ? 12.4 : 13.5) : 15.5,
-        minFont: isMobile ? 8.2 : isTablet ? 10.8 : 12.2,
-        maxHeight: isMobile ? 42 : isTablet ? 50 : 44,
+        maxFont: layout.titleMaxFont,
+        minFont: layout.titleMinFont,
+        maxHeight: layout.titleMaxHeight,
         lineHeightRatio: 1.18,
         textAlign: 'center',
       });
-
-      var titleBottom = titleTop + visualHeight(titleWraps[i], scale);
-      var descTop = titleBottom + descGap;
-      setImportant(descWraps[i], 'top', descTop + 'px');
-      setImportant(descWraps[i], 'left', colLeft + 'px');
-      setImportant(descWraps[i], 'width', colWidth + 'px');
-      setImportant(descWraps[i], 'transform', 'none');
       fitText(descWraps[i], {
-        maxFont: isMobile ? (isLocalizedPage ? 9.2 : 10) : isTablet ? (isLocalizedPage ? 10.8 : 11.5) : 12.5,
-        minFont: isMobile ? 8 : isTablet ? 9.8 : 10.3,
-        maxHeight: isMobile ? 56 : isTablet ? 62 : 58,
+        maxFont: layout.descMaxFont,
+        minFont: layout.descMinFont,
+        maxHeight: layout.descMaxHeight,
         lineHeightRatio: 1.35,
         textAlign: 'center',
       });
-
-      var descBottom = descTop + visualHeight(descWraps[i], scale);
-      rowHeights[row] = Math.max(rowHeights[row] || 0, descBottom);
     }
-
-    var totalHeight = (rowHeights[rowHeights.length - 1] || firstRowTop) + (isMobile ? 26 : 28);
-    setRecordHeight(record, totalHeight);
+    var maxBottom = 0;
+    [headingWrap, subtitleWrap].concat(iconBgs, icons, titleWraps, descWraps).forEach(function (node) {
+      if (!node) return;
+      maxBottom = Math.max(maxBottom, topOf(node) + visualHeight(node, scale));
+    });
+    setRecordHeight(record, Math.max(layout.baseHeight, maxBottom + layout.bottomPad));
   }
 
   function layoutPromo() {
@@ -6441,7 +6591,6 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
 
   function applyLayouts() {
     layoutHero();
-    layoutAbout();
     layoutPromo();
   }
 
@@ -6478,66 +6627,6 @@ function injectWestPageSpecificStyle(html, tour) {
   const styleTag = `<style id="sb-west-page-specific-overrides">\n${pageSpecificCss.join("\n")}\n</style>\n`;
   const scriptTag = `<script id="sb-west-page-layout-autofit">\n${TOUR_LAYOUT_AUTOFIT_SCRIPT}\n</script>\n`;
   return html.replace("</body>", `${styleTag}${scriptTag}</body>`);
-}
-
-function renderNusaPenidaWestSymmetricAboutSection(tour) {
-  const aboutSubtitle = collapseWhitespace(tour.aboutSubtitle || tour.title);
-  const highlights = normalizedWestHighlights(tour).map(([heading, text]) => [
-    compactWestAboutHeading(heading),
-    compactWestAboutDescription(heading, text),
-  ]);
-  const cards = [
-    {
-      title: highlights[0][0],
-      text: highlights[0][1],
-      icon: `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M3 18h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="m5.5 18 4.4-6 3.1 3.8 3.2-5.1L20 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17.5" cy="6.5" r="1.7" fill="currentColor"/></svg>`,
-    },
-    {
-      title: highlights[1][0],
-      text: highlights[1][1],
-      icon: `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M3 15.5c1.8-1.8 3.5-1.8 5.3 0s3.5 1.8 5.3 0 3.5-1.8 5.4 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M3 11c1.8-1.8 3.5-1.8 5.3 0s3.5 1.8 5.3 0 3.5-1.8 5.4 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16.5 6.5 21 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>`,
-    },
-    {
-      title: "Transport included",
-      text: "Mainland transfer, harbor flow, and island movement matter a lot here.",
-      icon: `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><rect x="4" y="7" width="12" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M16 10h2l2 2v3h-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="17" r="1.7" fill="currentColor"/><circle cx="17" cy="17" r="1.7" fill="currentColor"/></svg>`,
-    },
-    {
-      title: highlights[2][0],
-      text: highlights[2][1],
-      icon: `<svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><circle cx="12" cy="12" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.8v3.1M12 18.1v3.1M21.2 12h-3.1M5.9 12H2.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="m12 12 3-2.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/></svg>`,
-    },
-  ];
-
-  return `
-<div id="rec2121221993" class="r t-rec t-rec_pt_15 t-rec_pb_30 sb-west-about-symmetric-record" style="padding-top:15px;padding-bottom:30px;" data-animationappear="off" data-record-type="131">
-  <section class="sb-west-about-symmetric" aria-labelledby="sb-west-about-symmetric-title">
-    <div class="sb-west-about-symmetric__shell">
-      <div class="sb-west-about-symmetric__header">
-        <h2 id="sb-west-about-symmetric-title" class="sb-west-about-symmetric__title">About this Activity</h2>
-        <p class="sb-west-about-symmetric__subtitle">${escapeHtml(aboutSubtitle)}</p>
-      </div>
-      <div class="sb-west-about-symmetric__grid">
-        ${cards.map((card) => `
-          <article class="sb-west-about-symmetric__item">
-            <div class="sb-west-about-symmetric__icon">${card.icon}</div>
-            <h3 class="sb-west-about-symmetric__item-title">${escapeHtml(card.title)}</h3>
-            <p class="sb-west-about-symmetric__item-copy">${escapeHtml(card.text)}</p>
-          </article>
-        `).join("")}
-      </div>
-    </div>
-  </section>
-</div>`;
-}
-
-function injectNusaPenidaWestSymmetricAboutSection(html, tour) {
-  if (tour.slug !== "nusa-penida-west-tour") {
-    return html;
-  }
-
-  const aboutSectionPattern = /<div id="rec2121221993"[\s\S]*?(?=<div id="rec2121222003")/;
-  return html.replace(aboutSectionPattern, `${renderNusaPenidaWestSymmetricAboutSection(tour)}\n`);
 }
 
 function buildWhatsAppMessage(tour) {
