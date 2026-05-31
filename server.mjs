@@ -36,8 +36,9 @@ const redirects = new Map([
 ]);
 
 const rewrites = new Map([
-  ["/", "index.html"],
+  ["/", "page128073236.html"],
   ["/dubai/en", "page63806411.html"],
+  ["/dubai/en/main-page", "page63806411.html"],
   ["/dubai/en/blog", "page63806411.html"],
   ["/dubai/en/tours/full-day-dubai-desert-safari", "page106026336.html"],
   ["/dubai/en/tours/abu-dhabi-city-tour-from-dubai", "page112638996.html"],
@@ -56,6 +57,10 @@ const rewrites = new Map([
   ["/bali/en/main-page", "page128073236.html"],
   ["/bali/en/journal", "bali-journal.html"],
   ["/bali/en/tours/nusa-penida-manta-rays-point", "page132181473.html"],
+  ["/bali/ru/tours/nusa-penida-manta-rays-point", "page132181473-ru.html"],
+  ["/bali/es/tours/nusa-penida-manta-rays-point", "page132181473-es.html"],
+  ["/bali/fr/tours/nusa-penida-manta-rays-point", "page132181473-fr.html"],
+  ["/bali/zh/tours/nusa-penida-manta-rays-point", "page132181473-zh.html"],
   ["/bali/en/tours/mount-batur-sunrise-hike", "page132812463.html"],
   ["/bali/en/tours/mount-batur-sunrise-jeep-hot-spring", "page133629743.html"],
   ["/beli/en/tours/mount-batur-sunrise-jeep-hot-spring", "page133629743.html"],
