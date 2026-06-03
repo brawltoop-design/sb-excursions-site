@@ -1,4 +1,4 @@
-import { createReadStream } from "node:fs";
+import { createReadStream, readdirSync } from "node:fs";
 import { readFile, stat } from "node:fs/promises";
 import http from "node:http";
 import path from "node:path";
@@ -9,6 +9,8 @@ import { buildDubaiCatalogMarkup } from "./dubai-catalog-static.mjs";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const port = Number(process.env.PORT || 3000);
+const localCssFiles = new Set(readdirSync(path.join(__dirname, "css")));
+const localJsFiles = new Set(readdirSync(path.join(__dirname, "js")));
 
 const redirects = new Map([
   [
@@ -205,6 +207,64 @@ const sameOriginLinkRewriteScript = `
 })();
 </script>`;
 
+const tildaOverflowGuardScript = `
+<script data-sb-tilda-overflow-guard>
+(() => {
+  const MAX_OVERFLOW_PX = 420;
+  const EXTRA_PAD_PX = 10;
+
+  const applyOverflowGuard = () => {
+    document.querySelectorAll('.r.t-rec[data-record-type="396"]').forEach((record) => {
+      const artboard = record.querySelector('.t396__artboard');
+      const carrier = record.querySelector('.t396__carrier');
+      const filter = record.querySelector('.t396__filter');
+      if (!artboard || !carrier || !filter) return;
+
+      const artRect = artboard.getBoundingClientRect();
+      if (!artRect.height) return;
+
+      const contentNodes = Array.from(record.querySelectorAll('.t396__elem, .t396__group')).filter((node) => {
+        const rect = node.getBoundingClientRect();
+        return rect.width > 0 && rect.height > 0;
+      });
+      if (!contentNodes.length) return;
+
+      const maxBottom = contentNodes.reduce((maxValue, node) => {
+        return Math.max(maxValue, node.getBoundingClientRect().bottom - artRect.top);
+      }, 0);
+
+      const overflow = maxBottom - artRect.height;
+      if (overflow <= 4 || overflow >= MAX_OVERFLOW_PX) return;
+
+      const extraPad = window.innerWidth <= 639 ? 18 : EXTRA_PAD_PX;
+      const targetHeight = Math.ceil(maxBottom + extraPad) + 'px';
+      [artboard, carrier, filter].forEach((node) => {
+        node.style.setProperty('height', targetHeight, 'important');
+      });
+    });
+  };
+
+  let timer = 0;
+  const schedule = () => {
+    window.clearTimeout(timer);
+    timer = window.setTimeout(applyOverflowGuard, 90);
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', schedule, { once: true });
+  } else {
+    schedule();
+  }
+
+  window.addEventListener('load', schedule);
+  window.addEventListener('pageshow', schedule);
+  window.addEventListener('resize', schedule, { passive: true });
+  window.setTimeout(schedule, 220);
+  window.setTimeout(schedule, 900);
+  window.setTimeout(schedule, 1800);
+})();
+</script>`;
+
 function replaceDubaiCatalogBlock(html, filePath) {
   if (path.basename(filePath) !== "page63806411.html") {
     return html;
@@ -239,9 +299,33 @@ function stripDubaiLegalFooter(html, filePath) {
   return html.replace(footerPattern, "");
 }
 
+function rewriteLocalTildaAssetUrls(html) {
+  const rewriteLocalAssetUrl = (match, directory, fileName) => {
+    const normalizedDirectory = String(directory || "").toLowerCase();
+    const localFiles = normalizedDirectory === "css" ? localCssFiles : normalizedDirectory === "js" ? localJsFiles : null;
+
+    if (!localFiles || !localFiles.has(fileName)) {
+      return match;
+    }
+
+    return `/${normalizedDirectory}/${fileName}`;
+  };
+
+  return html
+    .replace(
+      /https:\/\/static\.tildacdn\.one\/ws\/project19714586\/([^"'?\s>]+?\.(css|js))(?:\?[^"' \t\r\n>]*)?/gi,
+      (match, fileName, extension) => rewriteLocalAssetUrl(match, extension, fileName),
+    )
+    .replace(
+      /https:\/\/static\.tildacdn\.one\/(css|js)\/([^"'?\s>]+?)(?:\?[^"' \t\r\n>]*)?/gi,
+      rewriteLocalAssetUrl,
+    );
+}
+
 function injectHtmlEnhancements(html, filePath) {
   let updatedHtml = replaceDubaiCatalogBlock(html, filePath);
   updatedHtml = stripDubaiLegalFooter(updatedHtml, filePath);
+  updatedHtml = rewriteLocalTildaAssetUrls(updatedHtml);
 
   if (!updatedHtml.includes("data-sb-hide-tilda-label-style")) {
     if (updatedHtml.includes("</head>")) {
@@ -264,6 +348,14 @@ function injectHtmlEnhancements(html, filePath) {
       updatedHtml = updatedHtml.replace("</body>", `${sameOriginLinkRewriteScript}</body>`);
     } else {
       updatedHtml = `${updatedHtml}${sameOriginLinkRewriteScript}`;
+    }
+  }
+
+  if (!updatedHtml.includes("data-sb-tilda-overflow-guard")) {
+    if (updatedHtml.includes("</body>")) {
+      updatedHtml = updatedHtml.replace("</body>", `${tildaOverflowGuardScript}</body>`);
+    } else {
+      updatedHtml = `${updatedHtml}${tildaOverflowGuardScript}`;
     }
   }
 

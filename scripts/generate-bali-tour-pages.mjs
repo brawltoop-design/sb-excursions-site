@@ -1390,10 +1390,12 @@ const tours = [
       "Cover central Bali's classic arts villages, temple stops, Mount Batur lunch views, rice terraces, Monkey Forest, and Ubud Palace in one all-inclusive private day.",
     summary:
       "This all-inclusive Ubud and Kintamani day tour is built for travelers who want Bali culture, scenery, and soft adventure without managing tickets, transport, or lunch separately. It works especially well for first-time visitors because the route moves from craft villages and temples to volcano views, rice terraces, and the Ubud center in one organized flow.",
+    miniPromoText:
+      "Private Ubud and Kintamani day with temples, Mount Batur views, rice terraces, and an easy Ubud finish.",
     overview:
       "The route usually starts with Batubulan batik, Celuk silver, and Mas wood carving, then continues to Batuan Temple, Sebatu, Gunung Kawi, a Kintamani buffet lunch with Mount Batur views, Tegalalang rice terraces and coffee tasting, Monkey Forest, and Ubud Palace before the return transfer.",
     miniPromoSideText:
-      "Batubulan batik, Celuk silver, Batuan Temple, Gunung Kawi, Kintamani lunch views, Tegalalang, Monkey Forest, and Ubud Palace in one smooth route.",
+      "Batik, silver, temples, Kintamani, Tegalalang, Monkey Forest, and Ubud Palace in one easy route.",
     highlights: [
       ["Kintamani volcano lunch views", "Indonesian buffet lunch with wide views over Mount Batur and Lake Batur."],
       ["Temple route with real depth", "Batuan Temple, Sebatu, and Gunung Kawi bring the sacred side of the day into one smooth route."],
@@ -4196,6 +4198,31 @@ function buildWestPrivateOfferModel(tour) {
   };
 }
 
+function firstSentence(text) {
+  const source = collapseWhitespace(text || "");
+  if (!source) return "";
+  const match = source.match(/^(.+?[.!?])(?:\s|$)/);
+  return match ? match[1] : source;
+}
+
+function clampPromoText(text, maxLength = 120) {
+  const source = collapseWhitespace(text || "");
+  if (!source || source.length <= maxLength) return source;
+  const sliced = source.slice(0, maxLength + 1);
+  const breakpoints = [sliced.lastIndexOf(". "), sliced.lastIndexOf(", "), sliced.lastIndexOf(" ")];
+  const cut = breakpoints.find((index) => index > maxLength * 0.65);
+  return (cut && cut > 0 ? sliced.slice(0, cut) : sliced.slice(0, maxLength)).replace(/[,\s.;:!?-]+$/g, "");
+}
+
+function compactRouteSentence(stops) {
+  const cleanStops = (stops || []).map((stop) => collapseWhitespace(stop)).filter(Boolean).slice(0, 5);
+  if (!cleanStops.length) return "";
+  if (cleanStops.length === 1) return `${cleanStops[0]} in one easy route.`;
+  if (cleanStops.length === 2) return `${cleanStops[0]} and ${cleanStops[1]} in one easy route.`;
+  const head = cleanStops.slice(0, -1).join(", ");
+  return `${head}, and ${cleanStops.at(-1)} in one easy route.`;
+}
+
 function buildWestMiniPromoModel(tour) {
   const routeStops = buildWestRouteStops(tour)
     .slice(1, 5)
@@ -4203,8 +4230,8 @@ function buildWestMiniPromoModel(tour) {
   const promoTitle = `<strong>${formatWestHeroTitle(tour.title).replace(/<br>/g, "</strong><br /><strong>")}</strong>`;
   const promoText = collapseWhitespace(
     tour.miniPromoText ||
-      tour.summary ||
-      tour.lead ||
+      clampPromoText(firstSentence(tour.lead || tour.summary || "")) ||
+      clampPromoText(routeStops.length ? `${routeStops.length} key stops: ${routeStops.join(", ")}.` : "") ||
       (routeStops.length ? `${routeStops.length} key stops: ${routeStops.join(", ")}.` : tour.overview),
   );
 
@@ -4220,11 +4247,15 @@ function buildWestMiniPromoModel(tour) {
         adventure: "Action route",
         transfer: "Easy logistics",
         helicopter: "Premium aerial route",
-      }[detectTourKind(tour)] || "Best-selling Bali route",
+    }[detectTourKind(tour)] || "Best-selling Bali route",
     title: promoTitle,
     text: collapseWhitespace(promoText),
     ctaLabel: collapseWhitespace(tour.ctaLabel || "Book now"),
-    sideText: collapseWhitespace(tour.miniPromoSideText || tour.overview || tour.summary || tour.lead),
+    sideText: collapseWhitespace(
+      tour.miniPromoSideText ||
+        clampPromoText(compactRouteSentence(routeStops), 110) ||
+        clampPromoText(firstSentence(tour.overview || tour.summary || tour.lead || ""), 110),
+    ),
   };
 }
 
@@ -5102,15 +5133,21 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
 }
 
 #rec2121233163 .tn-elem[data-elem-id="1721240739967"] {
-  top: 451px !important;
-  left: calc(50% - 600px + 125px) !important;
-  width: 145px !important;
+  top: 438px !important;
+  left: calc(50% - 600px + 70px) !important;
+  width: 250px !important;
+  height: 43px !important;
   transform: none !important;
 }
 
 #rec2121233163 .tn-elem[data-elem-id="1721240739967"] .tn-atom {
-  display: block !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
   width: 100% !important;
+  height: 100% !important;
+  padding: 0 16px !important;
   text-align: center !important;
   font-size: 17px !important;
   line-height: 1.05 !important;
@@ -5306,9 +5343,10 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
   }
 
   #rec2121233163 .tn-elem[data-elem-id="1721240739967"] {
-    top: 282px !important;
-    left: calc(50% - 320px + 77px) !important;
-    width: 137px !important;
+    top: 278px !important;
+    left: calc(50% - 320px + 28px) !important;
+    width: 212px !important;
+    height: 37px !important;
     transform: none !important;
   }
 
@@ -5483,8 +5521,9 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
 
   #rec2121233163 .tn-elem[data-elem-id="1721240739967"] {
     top: 391px !important;
-    left: calc(50% - 160px + 52px) !important;
-    width: 143px !important;
+    left: calc(50% - 160px + 22px) !important;
+    width: 172px !important;
+    height: 30px !important;
     transform: none !important;
   }
 
@@ -6197,7 +6236,9 @@ html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-pill {
 const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
 (function () {
   var HERO_ID = 'rec2121233163';
+  var HERO_CARD_ID = '1721240739929';
   var ABOUT_ID = 'rec2121221993';
+  var PRIVATE_OFFER_ID = 'rec2121222013';
   var PROMO_ID = 'rec2121222043';
   var TITLE_ID = '1766426116262000001';
   var DESC_ID = '1766419725555';
@@ -6220,8 +6261,9 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
   var PROMO_TEXT_ID = '1766442925510';
   var PROMO_SIDE_ID = '1766620130918';
   var PROMO_BUTTON_ID = '1721248463120';
-  var PROMO_RIGHT_IMAGE_ID = '1721248463131';
-  var PROMO_GRID_LOWER_IMAGE_IDS = ['1721248463127', '1721248463137'];
+  var PROMO_LOWER_LEFT_MEDIA_ID = '1721248463131';
+  var PROMO_LOWER_RIGHT_MEDIA_ID = '1721248463123';
+  var PROMO_MEDIA_IDS = ['1721248463091', '1721248463134', '1721248463127', '1721248463131', '1721248463123', '1721248463137'];
   var RATING_ICON_SELECTOR = '[data-elem-id^="172124074006"]';
   var isLocalizedPage = (document.documentElement.getAttribute('lang') || 'en').toLowerCase() !== 'en';
 
@@ -6264,10 +6306,14 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     return node ? node.getBoundingClientRect().width / (scale || 1) : 0;
   }
 
-  function setRecordHeight(record, height) {
+  function cssHeight(node) {
+    return node ? (node.offsetHeight || node.getBoundingClientRect().height) : 0;
+  }
+
+  function setRecordHeight(record, height, scale) {
     if (!record || !height) return;
-    var value = Math.ceil(height) + 'px';
     var artboard = record.querySelector('.t396__artboard');
+    var value = Math.ceil(height * (scale || 1)) + 'px';
     var carrier = record.querySelector('.t396__carrier');
     var filter = record.querySelector('.t396__filter');
     [artboard, carrier, filter].forEach(function (node) {
@@ -6345,10 +6391,10 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     var scale = scaleFor(artboard);
     var isMobile = window.innerWidth <= 639;
     var isTablet = window.innerWidth > 639 && window.innerWidth <= 959;
-    var isCompact = window.innerWidth <= 959;
-    var artboardWidth = artboard.offsetWidth || 320;
+    var isNarrowDesktop = window.innerWidth > 959 && window.innerWidth <= 1199;
     var titleWrap = byId(record, TITLE_ID);
     var descWrap = byId(record, DESC_ID);
+    var cardWrap = byId(record, HERO_CARD_ID);
     var priceWrap = byId(record, PRICE_ID);
     var durationIcon = byId(record, DURATION_ICON_ID);
     var durationText = byId(record, DURATION_TEXT_ID);
@@ -6359,7 +6405,7 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     var buttonWrap = byId(record, CTA_BG_ID);
     var buttonText = byId(record, CTA_TEXT_ID);
     var ratingIcons = Array.prototype.slice.call(record.querySelectorAll(RATING_ICON_SELECTOR));
-    if (!titleWrap || !descWrap || !buttonWrap || !buttonText) return;
+    if (!titleWrap || !descWrap || !buttonWrap || !buttonText || !cardWrap) return;
 
     relaxText(titleWrap, 'left');
     relaxText(descWrap, 'left');
@@ -6369,14 +6415,62 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     relaxText(mapsLabel, 'left');
     relaxText(ratingValue, 'left');
 
-    if (isCompact) {
+    if (isMobile) {
       resetRecordHeight(record);
+      clearImportant(cardWrap, 'height');
       [titleWrap, descWrap, priceWrap, durationIcon, durationText, locationIcon, locationText, mapsLabel, ratingValue, buttonWrap, buttonText]
         .concat(ratingIcons)
         .forEach(resetInlineBox);
       [titleWrap, descWrap, priceWrap, durationText, locationText, mapsLabel, ratingValue, buttonText].forEach(resetInlineText);
       return;
     }
+
+    if (isLocalizedPage) {
+      fitText(titleWrap, {
+        maxFont: isTablet ? 27 : isNarrowDesktop ? 40 : 58,
+        minFont: isTablet ? 21 : isNarrowDesktop ? 29 : 40,
+        maxHeight: isTablet ? 88 : isNarrowDesktop ? 128 : 158,
+        lineHeightRatio: isTablet ? 1.08 : 1.06,
+      });
+      fitText(descWrap, {
+        maxFont: isTablet ? 12.5 : isNarrowDesktop ? 16 : 18.5,
+        minFont: isTablet ? 10.2 : isNarrowDesktop ? 12.2 : 14.2,
+        maxHeight: isTablet ? 86 : isNarrowDesktop ? 92 : 98,
+        lineHeightRatio: 1.46,
+      });
+      fitText(locationText, {
+        maxFont: isTablet ? 13 : isNarrowDesktop ? 14.5 : 17,
+        minFont: isTablet ? 10.5 : isNarrowDesktop ? 11.5 : 13,
+        maxHeight: isTablet ? 44 : 50,
+        lineHeightRatio: 1.18,
+      });
+      fitText(durationText, {
+        maxFont: isTablet ? 13 : isNarrowDesktop ? 14.5 : 17,
+        minFont: isTablet ? 10.5 : isNarrowDesktop ? 11.5 : 13,
+        maxHeight: 28,
+        lineHeightRatio: 1.14,
+      });
+      fitText(mapsLabel, {
+        maxFont: isTablet ? 13 : isNarrowDesktop ? 14 : 16,
+        minFont: isTablet ? 10.5 : isNarrowDesktop ? 11.2 : 12.5,
+        maxHeight: 28,
+        lineHeightRatio: 1.12,
+      });
+    } else {
+      [titleWrap, descWrap, durationText, locationText, mapsLabel].forEach(resetInlineText);
+    }
+
+    var minCardHeight = isTablet ? 319 : isNarrowDesktop ? 492 : 555;
+    var cardTop = topOf(cardWrap);
+    var bottomPad = isTablet ? 26 : 30;
+    var maxBottom = Array.prototype.slice.call(record.querySelectorAll('.t396__elem'))
+      .reduce(function (maxValue, node) {
+        if (!node || node === cardWrap) return maxValue;
+        return Math.max(maxValue, topOf(node) + visualHeight(node, scale));
+      }, cardTop + minCardHeight);
+    var cardHeight = Math.max(minCardHeight, maxBottom - cardTop + bottomPad);
+    setImportant(cardWrap, 'height', Math.ceil(cardHeight) + 'px');
+    setRecordHeight(record, cardTop + cardHeight + (isTablet ? 6 : 8), scale);
   }
 
   function layoutAbout() {
@@ -6511,7 +6605,7 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
       if (!node) return;
       maxBottom = Math.max(maxBottom, topOf(node) + visualHeight(node, scale));
     });
-    setRecordHeight(record, Math.max(layout.baseHeight, maxBottom + layout.bottomPad));
+    setRecordHeight(record, Math.max(layout.baseHeight, maxBottom + layout.bottomPad), scale);
   }
 
   function layoutPromo() {
@@ -6527,17 +6621,36 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     var textWrap = byId(record, PROMO_TEXT_ID);
     var buttonWrap = byId(record, PROMO_BUTTON_ID);
     var sideWrap = byId(record, PROMO_SIDE_ID);
-    var rightImage = byId(record, PROMO_RIGHT_IMAGE_ID);
     if (!titleWrap || !textWrap || !buttonWrap || !sideWrap) return;
     var artboardWidth = artboard.offsetWidth || 320;
+    var artboardRect = artboard.getBoundingClientRect();
+    var mediaNodes = PROMO_MEDIA_IDS
+      .map(function (id) { return byId(record, id); })
+      .filter(Boolean);
     var leftColLeft = isMobile ? 12 : 18;
-    var leftColWidth = isMobile ? 146 : 168;
-    var titleTop = isMobile ? 132 : 122;
+    var leftColWidth = isMobile ? 150 : 170;
+    var baseTitleTop = isMobile ? 112 : 114;
     var buttonHeight = isMobile ? 21 : 28;
 
     relaxText(titleWrap, 'left');
     relaxText(textWrap, 'left');
     relaxText(sideWrap, 'left');
+    [titleWrap, textWrap, buttonWrap, sideWrap].forEach(function (node) {
+      clearImportant(node, 'zoom');
+      setImportant(node, 'zoom', '1');
+    });
+
+    var titleTop = mediaNodes.reduce(function (maxValue, node) {
+      var nodeTop = node.getBoundingClientRect().top - artboardRect.top;
+      var nodeLeft = leftOf(node);
+      var nodeRight = nodeLeft + visualWidth(node, scale);
+      var nodeBottom = nodeTop + visualHeight(node, scale);
+      var overlapsLeftCol = nodeRight > leftColLeft + 8 && nodeLeft < leftColLeft + leftColWidth - 8;
+      if (!overlapsLeftCol) return maxValue;
+      if (nodeTop >= baseTitleTop + (isMobile ? 42 : 54)) return maxValue;
+      if (nodeBottom <= baseTitleTop - 2) return maxValue;
+      return Math.max(maxValue, nodeBottom + (isMobile ? 4 : 8));
+    }, baseTitleTop);
 
     setImportant(titleWrap, 'left', leftColLeft + 'px');
     setImportant(titleWrap, 'top', titleTop + 'px');
@@ -6551,46 +6664,105 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
 
     var titleBottom = titleTop + visualHeight(titleWrap, scale);
     var textTop = titleBottom + 10;
+    var leftBlockLimit = mediaNodes.reduce(function (minValue, node) {
+      var nodeTop = node.getBoundingClientRect().top - artboardRect.top;
+      var nodeLeft = leftOf(node);
+      var nodeRight = nodeLeft + visualWidth(node, scale);
+      if (nodeRight <= leftColLeft + 8 || nodeLeft >= leftColLeft + leftColWidth - 8) return minValue;
+      if (nodeTop <= textTop) return minValue;
+      return Math.min(minValue, nodeTop);
+    }, Infinity);
+    var textMaxHeight = isMobile ? 78 : 90;
+    if (Number.isFinite(leftBlockLimit)) {
+      var reservedHeight = (isMobile ? 8 : 10) + buttonHeight + (isMobile ? 4 : 8);
+      textMaxHeight = Math.max(isMobile ? 42 : 60, Math.min(textMaxHeight, leftBlockLimit - textTop - reservedHeight));
+    }
     setImportant(textWrap, 'left', leftColLeft + 'px');
     setImportant(textWrap, 'top', textTop + 'px');
     setImportant(textWrap, 'width', leftColWidth + 'px');
     fitText(textWrap, {
       maxFont: isMobile ? (isLocalizedPage ? 9.6 : 10.5) : (isLocalizedPage ? 11 : 12),
       minFont: isMobile ? 8.2 : 9.8,
-      maxHeight: isMobile ? 70 : 82,
+      maxHeight: textMaxHeight,
       lineHeightRatio: 1.36,
     });
 
     var textBottom = textTop + visualHeight(textWrap, scale);
-    var buttonTop = textBottom + 10;
+    var buttonTop = textBottom + (isMobile ? 8 : 10);
     setImportant(buttonWrap, 'left', leftColLeft + 'px');
     setImportant(buttonWrap, 'top', buttonTop + 'px');
 
-    var lowerTop = rightImage ? topOf(rightImage) + visualHeight(rightImage, scale) + 18 : buttonTop + buttonHeight + 24;
-    var sideLeft = Math.max(leftColLeft + leftColWidth + 18, Math.round(artboardWidth * 0.5));
-    var sideWidth = artboardWidth - sideLeft - (isMobile ? 12 : 16);
-    setImportant(sideWrap, 'left', sideLeft + 'px');
-    setImportant(sideWrap, 'top', lowerTop + 'px');
-    setImportant(sideWrap, 'width', Math.max(128, sideWidth) + 'px');
-    fitText(sideWrap, {
-      maxFont: isMobile ? (isLocalizedPage ? 9.6 : 10.5) : (isLocalizedPage ? 11.3 : 12.5),
-      minFont: isMobile ? 8.2 : 9.8,
-      maxHeight: isMobile ? 170 : 138,
-      lineHeightRatio: 1.35,
-    });
+    var mediaBottom = mediaNodes.reduce(function (maxValue, node) {
+      var rect = node.getBoundingClientRect();
+      return Math.max(maxValue, rect.bottom - artboardRect.top);
+    }, buttonTop + buttonHeight);
+    var lowerLeftMedia = byId(record, PROMO_LOWER_LEFT_MEDIA_ID);
+    var lowerRightMedia = byId(record, PROMO_LOWER_RIGHT_MEDIA_ID);
+    var sidePlacedInGap = false;
 
-    var sideBottom = lowerTop + visualHeight(sideWrap, scale);
-    var lowerImagesBottom = PROMO_GRID_LOWER_IMAGE_IDS
-      .map(function (id) { return byId(record, id); })
-      .filter(Boolean)
-      .reduce(function (maxValue, node) {
-        return Math.max(maxValue, topOf(node) + visualHeight(node, scale));
-      }, 0);
-    setRecordHeight(record, Math.max(sideBottom, lowerImagesBottom) + (isMobile ? 18 : 24));
+    if (isMobile && lowerLeftMedia && lowerRightMedia) {
+      var gapLeft = leftOf(lowerRightMedia);
+      var gapTop = topOf(lowerLeftMedia) + 4;
+      var gapWidth = Math.max(110, visualWidth(lowerRightMedia, scale));
+      var gapBottom = topOf(lowerRightMedia) - 6;
+      var gapHeight = gapBottom - gapTop;
+
+      if (gapHeight >= 40) {
+        setImportant(sideWrap, 'left', gapLeft + 'px');
+        setImportant(sideWrap, 'top', gapTop + 'px');
+        setImportant(sideWrap, 'width', gapWidth + 'px');
+        fitText(sideWrap, {
+          maxFont: isLocalizedPage ? 9.5 : 10.4,
+          minFont: 7.6,
+          maxHeight: gapHeight,
+          lineHeightRatio: 1.28,
+        });
+        sidePlacedInGap = visualHeight(sideWrap, scale) <= gapHeight + 1;
+      }
+    }
+
+    if (!sidePlacedInGap) {
+      var sideLeft = leftColLeft;
+      var sideTop = mediaBottom + (isMobile ? 16 : 20);
+      var sideWidth = artboardWidth - sideLeft * 2;
+      setImportant(sideWrap, 'left', sideLeft + 'px');
+      setImportant(sideWrap, 'top', sideTop + 'px');
+      setImportant(sideWrap, 'width', Math.max(200, sideWidth) + 'px');
+      fitText(sideWrap, {
+        maxFont: isMobile ? (isLocalizedPage ? 9.6 : 10.5) : (isLocalizedPage ? 11.3 : 12.5),
+        minFont: isMobile ? 8.2 : 9.8,
+        maxHeight: isMobile ? 90 : 78,
+        lineHeightRatio: 1.35,
+      });
+    }
+
+    var sideBottom = topOf(sideWrap) + visualHeight(sideWrap, scale);
+    setRecordHeight(record, Math.max(sideBottom, mediaBottom) + (isMobile ? 18 : 24), scale);
+  }
+
+  function layoutPrivateOffer() {
+    var record = document.getElementById(PRIVATE_OFFER_ID);
+    if (!record) return;
+    var artboard = record.querySelector('.t396__artboard');
+    var shell = record.querySelector('.sb-private-offer-shell');
+    if (!artboard || !shell) return;
+
+    var scale = scaleFor(artboard);
+    var artboardRect = artboard.getBoundingClientRect();
+    var shellRect = shell.getBoundingClientRect();
+    var isMobile = window.innerWidth <= 639;
+    var isTablet = window.innerWidth > 639 && window.innerWidth <= 959;
+    var bottomPad = isMobile ? 18 : isTablet ? 22 : 26;
+    var visualBottom = shellRect.bottom - artboardRect.top;
+    var naturalHeight = visualHeight(shell, scale);
+    var requiredHeight = Math.max(visualBottom, naturalHeight) + bottomPad;
+
+    setRecordHeight(record, requiredHeight, scale);
   }
 
   function applyLayouts() {
     layoutHero();
+    layoutPrivateOffer();
     layoutPromo();
   }
 
@@ -12649,6 +12821,7 @@ function collectAutoTourTranslations(tour) {
     tour.mapLabel,
     tour.mapTitle,
     tour.mapText,
+    tour.miniPromoText,
     tour.miniPromoEyebrow,
     tour.miniPromoSideText,
     tour.ctaLabel,
@@ -12743,6 +12916,7 @@ async function buildAutoLocalizedTour(baseTour, locale = "en") {
     mapLabel: withTranslatedText(baseTour.mapLabel, plainMap),
     mapTitle: withTranslatedText(baseTour.mapTitle, plainMap),
     mapText: withTranslatedText(baseTour.mapText, plainMap),
+    miniPromoText: withTranslatedText(baseTour.miniPromoText, plainMap),
     miniPromoEyebrow: withTranslatedText(baseTour.miniPromoEyebrow, plainMap),
     miniPromoSideText: withTranslatedText(baseTour.miniPromoSideText, plainMap),
     ctaLabel: withTranslatedText(baseTour.ctaLabel, plainMap),
