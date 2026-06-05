@@ -4980,7 +4980,8 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
 #rec2121233163 .t396__artboard,
 #rec2121233163 .t396__filter,
 #rec2121233163 .t396__carrier {
-  height: 631px !important;
+  height: 53.5vw !important;
+  min-height: 641px !important;
 }
 
 #rec2121233163 .tn-elem[data-elem-id="1721240739929"] {
@@ -4998,6 +4999,8 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
 
 #rec2121233163 .tn-elem[data-elem-id="1721240739929"] .tn-atom {
   border-radius: inherit !important;
+  overflow: hidden !important;
+  background-clip: padding-box !important;
 }
 
 #rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] {
@@ -5158,7 +5161,8 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
   #rec2121233163 .t396__artboard,
   #rec2121233163 .t396__filter,
   #rec2121233163 .t396__carrier {
-    height: 587px !important;
+    height: 62.2vw !important;
+    min-height: 597px !important;
   }
 
   #rec2121233163 .tn-elem[data-elem-id="1721240739929"] {
@@ -6101,6 +6105,17 @@ const TOUR_PROMO_SCROLL_REVEAL_CSS = `
 
 const BALI_UNESCO_DESKTOP_HERO_SHIFT_CSS = `
 @media screen and (min-width: 1200px) {
+  #rec2121233163 .t396__artboard,
+  #rec2121233163 .t396__filter,
+  #rec2121233163 .t396__carrier {
+    height: 58vw !important;
+    min-height: 696px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739929"] {
+    height: 630px !important;
+  }
+
   #rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] {
     top: 108px !important;
   }
@@ -6306,6 +6321,7 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
   var PROMO_MEDIA_IDS = ['1721248463091', '1721248463134', '1721248463127', '1721248463131', '1721248463123', '1721248463137'];
   var RATING_ICON_SELECTOR = '[data-elem-id^="172124074006"]';
   var isLocalizedPage = (document.documentElement.getAttribute('lang') || 'en').toLowerCase() !== 'en';
+  var isUnescoHeroPage = /\\/bali\\/(?:en|ru|es|fr|zh)\\/tours\\/bali-unesco$/.test(window.location.pathname);
 
   function byId(record, id) {
     return record ? record.querySelector('[data-elem-id="' + id + '"]') : null;
@@ -6500,7 +6516,7 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
       [titleWrap, descWrap, durationText, locationText, mapsLabel].forEach(resetInlineText);
     }
 
-    var minCardHeight = isTablet ? 338 : isNarrowDesktop ? 531 : 575;
+    var minCardHeight = isTablet ? 338 : isNarrowDesktop ? 531 : (isUnescoHeroPage ? 630 : 575);
     var cardTop = topOf(cardWrap);
     var bottomPad = isTablet ? 26 : 30;
     var maxContentBottom = Array.prototype.slice.call(record.querySelectorAll('.t396__elem'))
@@ -6511,7 +6527,9 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     var cardBottom = Math.max(cardTop + minCardHeight, maxContentBottom + bottomPad);
     var cardHeight = Math.max(minCardHeight, cardBottom - cardTop);
     setImportant(cardWrap, 'height', Math.ceil(cardHeight) + 'px');
-    setRecordHeight(record, cardTop + cardHeight + (isTablet ? 6 : 8), scale);
+    var recordPad = isTablet ? 6 : 18;
+    var childZoom = px(window.getComputedStyle(cardWrap).zoom) || 1;
+    setRecordHeight(record, cardTop + cardHeight + recordPad, Math.max(scale, childZoom));
   }
 
   function layoutAbout() {
