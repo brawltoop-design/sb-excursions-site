@@ -6779,7 +6779,7 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     target.classList.add('sb-letter-rise');
 
     if (!target.dataset.sbLetterSource) {
-      var sourceText = target.textContent.replace(/\s+/g, ' ').trim();
+      var sourceText = target.textContent.replace(/\\s+/g, ' ').trim();
       if (!sourceText) return false;
 
       target.dataset.sbLetterSource = sourceText;
@@ -6787,7 +6787,7 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
 
       var fragment = document.createDocumentFragment();
       Array.prototype.forEach.call(sourceText, function (char) {
-        if (/\s/.test(char)) {
+        if (/\\s/.test(char)) {
           fragment.appendChild(document.createTextNode(char));
           return;
         }
@@ -6887,6 +6887,7 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
 
   function applyLayouts() {
     layoutHero();
+    layoutAbout();
     layoutPrivateOffer();
     layoutPromo();
     if (initPromoSideLetterAnimation()) {

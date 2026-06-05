@@ -2101,6 +2101,7 @@ hidden > <div class="t585__textwrapper"> <div class="t585__text t-descr t-descr_
 
 
 
+
 <style id="sb-weather-compact-override">
 #bwCta {
   display: none !important;
@@ -4939,7 +4940,7 @@ html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-pill {
     target.classList.add('sb-letter-rise');
 
     if (!target.dataset.sbLetterSource) {
-      var sourceText = target.textContent.replace(/s+/g, ' ').trim();
+      var sourceText = target.textContent.replace(/\s+/g, ' ').trim();
       if (!sourceText) return false;
 
       target.dataset.sbLetterSource = sourceText;
@@ -4947,7 +4948,7 @@ html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-pill {
 
       var fragment = document.createDocumentFragment();
       Array.prototype.forEach.call(sourceText, function (char) {
-        if (/s/.test(char)) {
+        if (/\s/.test(char)) {
           fragment.appendChild(document.createTextNode(char));
           return;
         }
@@ -5047,6 +5048,7 @@ html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-pill {
 
   function applyLayouts() {
     layoutHero();
+    layoutAbout();
     layoutPrivateOffer();
     layoutPromo();
     if (initPromoSideLetterAnimation()) {
