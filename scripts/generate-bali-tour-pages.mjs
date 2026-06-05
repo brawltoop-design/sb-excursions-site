@@ -4980,14 +4980,14 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
 #rec2121233163 .t396__artboard,
 #rec2121233163 .t396__filter,
 #rec2121233163 .t396__carrier {
-  height: 609px !important;
+  height: 631px !important;
 }
 
 #rec2121233163 .tn-elem[data-elem-id="1721240739929"] {
   top: 48px !important;
   left: calc(50% - 600px + 20px) !important;
   width: 1160px !important;
-  height: 555px !important;
+  height: 575px !important;
   overflow: hidden !important;
   border-radius: 24px !important;
 }
@@ -5154,6 +5154,18 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
   font-weight: 600 !important;
 }
 
+@media screen and (max-width: 1199px) and (min-width: 960px) {
+  #rec2121233163 .t396__artboard,
+  #rec2121233163 .t396__filter,
+  #rec2121233163 .t396__carrier {
+    height: 587px !important;
+  }
+
+  #rec2121233163 .tn-elem[data-elem-id="1721240739929"] {
+    height: 531px !important;
+  }
+}
+
 #rec2121222003 .t585__text {
   color: #334155;
   line-height: 1.72 !important;
@@ -5225,14 +5237,14 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
   #rec2121233163 .t396__artboard,
   #rec2121233163 .t396__filter,
   #rec2121233163 .t396__carrier {
-    height: 380px !important;
+    height: 402px !important;
   }
 
   #rec2121233163 .tn-elem[data-elem-id="1721240739929"] {
     top: 58px !important;
     left: calc(50% - 320px + 10px) !important;
     width: 620px !important;
-    height: 319px !important;
+    height: 338px !important;
     border-radius: 18px !important;
   }
 
@@ -6488,15 +6500,16 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
       [titleWrap, descWrap, durationText, locationText, mapsLabel].forEach(resetInlineText);
     }
 
-    var minCardHeight = isTablet ? 319 : isNarrowDesktop ? 492 : 555;
+    var minCardHeight = isTablet ? 338 : isNarrowDesktop ? 531 : 575;
     var cardTop = topOf(cardWrap);
     var bottomPad = isTablet ? 26 : 30;
-    var maxBottom = Array.prototype.slice.call(record.querySelectorAll('.t396__elem'))
+    var maxContentBottom = Array.prototype.slice.call(record.querySelectorAll('.t396__elem'))
       .reduce(function (maxValue, node) {
         if (!node || node === cardWrap) return maxValue;
         return Math.max(maxValue, topOf(node) + visualHeight(node, scale));
-      }, cardTop + minCardHeight);
-    var cardHeight = Math.max(minCardHeight, maxBottom - cardTop + bottomPad);
+      }, 0);
+    var cardBottom = Math.max(cardTop + minCardHeight, maxContentBottom + bottomPad);
+    var cardHeight = Math.max(minCardHeight, cardBottom - cardTop);
     setImportant(cardWrap, 'height', Math.ceil(cardHeight) + 'px');
     setRecordHeight(record, cardTop + cardHeight + (isTablet ? 6 : 8), scale);
   }
@@ -6912,7 +6925,11 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
   window.addEventListener('resize', schedule, { passive: true });
   window.addEventListener('scroll', scheduleScrollAnimationUpdate, { passive: true });
   window.setTimeout(schedule, 200);
-  window.setTimeout(schedule, 900);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(schedule).catch(function () {});
+  } else {
+    window.setTimeout(schedule, 900);
+  }
 })();
 `;
 

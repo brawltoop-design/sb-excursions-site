@@ -3,6 +3,13 @@
   const sbDomainPattern = /^https?:\/\/(?:www\.)?sbexcursion\.com(?=\/|$)/i;
   const MAX_OVERFLOW_PX = 420;
   const EXTRA_PAD_PX = 10;
+  const SKIP_RECORD_IDS = new Set([
+    "rec2121233163",
+    "rec2121221993",
+    "rec2121222013",
+    "rec2121222043",
+    "rec2122133073",
+  ]);
 
   const hideBadge = () => {
     document.querySelectorAll(badgeSelectors).forEach((node) => {
@@ -35,6 +42,7 @@
 
   const applyOverflowGuard = () => {
     document.querySelectorAll('.r.t-rec[data-record-type="396"]').forEach((record) => {
+      if (SKIP_RECORD_IDS.has(record.id)) return;
       const artboard = record.querySelector(".t396__artboard");
       const carrier = record.querySelector(".t396__carrier");
       const filter = record.querySelector(".t396__filter");
