@@ -6067,6 +6067,34 @@ const UBUD_COLLAGE_TEXT_MOBILE_FIX_CSS = `
 }
 `;
 
+const TOUR_PROMO_SCROLL_REVEAL_CSS = `
+#rec2121222043 .sb-letter-rise {
+  display: block;
+}
+
+#rec2121222043 .sb-letter-rise .sb-letter-rise-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  will-change: transform, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #rec2121222043 .sb-letter-rise .sb-letter-rise-char {
+    opacity: 1;
+    transform: none;
+  }
+}
+`;
+
+const BALI_UNESCO_DESKTOP_HERO_SHIFT_CSS = `
+@media screen and (min-width: 1200px) {
+  #rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] {
+    top: 108px !important;
+  }
+}
+`;
+
 const TOUR_LOCALIZED_TEXT_SAFETY_CSS = `
 #rec2121233163 .tn-atom,
 #rec2121221993 .tn-atom,
@@ -6740,6 +6768,103 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     setRecordHeight(record, Math.max(sideBottom, mediaBottom) + (isMobile ? 18 : 24), scale);
   }
 
+  function initPromoSideLetterAnimation() {
+    var record = document.getElementById(PROMO_ID);
+    if (!record) return false;
+    var sideWrap = byId(record, PROMO_SIDE_ID);
+    var target = atom(sideWrap);
+    if (!target) return false;
+
+    var didWrap = false;
+    target.classList.add('sb-letter-rise');
+
+    if (!target.dataset.sbLetterSource) {
+      var sourceText = target.textContent.replace(/\s+/g, ' ').trim();
+      if (!sourceText) return false;
+
+      target.dataset.sbLetterSource = sourceText;
+      target.textContent = '';
+
+      var fragment = document.createDocumentFragment();
+      Array.prototype.forEach.call(sourceText, function (char) {
+        if (/\s/.test(char)) {
+          fragment.appendChild(document.createTextNode(char));
+          return;
+        }
+
+        var span = document.createElement('span');
+        span.className = 'sb-letter-rise-char';
+        span.textContent = char;
+        fragment.appendChild(span);
+      });
+
+      target.appendChild(fragment);
+      didWrap = true;
+    }
+
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      Array.prototype.forEach.call(target.querySelectorAll('.sb-letter-rise-char'), function (charNode) {
+        charNode.style.opacity = '1';
+        charNode.style.transform = 'translate3d(0, 0, 0)';
+      });
+      return didWrap;
+    }
+
+    updatePromoSideLetterAnimation();
+    return didWrap;
+  }
+
+  function updatePromoSideLetterAnimation() {
+    var record = document.getElementById(PROMO_ID);
+    if (!record) return;
+    var sideWrap = byId(record, PROMO_SIDE_ID);
+    var target = atom(sideWrap);
+    if (!target || !target.classList.contains('sb-letter-rise')) return;
+
+    var charNodes = target.querySelectorAll('.sb-letter-rise-char');
+    if (!charNodes.length) return;
+
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      Array.prototype.forEach.call(charNodes, function (charNode) {
+        charNode.style.opacity = '1';
+        charNode.style.transform = 'translate3d(0, 0, 0)';
+      });
+      return;
+    }
+
+    var rect = target.getBoundingClientRect();
+    var viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+    if (!viewportHeight) return;
+
+    var start = viewportHeight * 0.92;
+    var end = viewportHeight * 0.24;
+    var progress = (start - rect.top) / Math.max(1, start - end);
+    progress = Math.max(0, Math.min(1, progress));
+
+    var charCount = charNodes.length;
+    var totalStagger = Math.min(0.8, Math.max(0.54, charCount * 0.012));
+    var step = charCount > 1 ? totalStagger / (charCount - 1) : 0;
+    var revealSpan = Math.max(0.18, 1 - totalStagger);
+
+    Array.prototype.forEach.call(charNodes, function (charNode, index) {
+      var localProgress = (progress - index * step) / revealSpan;
+      localProgress = Math.max(0, Math.min(1, localProgress));
+      var offsetY = (1 - localProgress) * 22;
+      charNode.style.opacity = localProgress.toFixed(3);
+      charNode.style.transform = 'translate3d(0, ' + offsetY.toFixed(2) + 'px, 0)';
+    });
+  }
+
+  var scrollAnimationTicking = false;
+  function scheduleScrollAnimationUpdate() {
+    if (scrollAnimationTicking) return;
+    scrollAnimationTicking = true;
+    window.requestAnimationFrame(function () {
+      scrollAnimationTicking = false;
+      updatePromoSideLetterAnimation();
+    });
+  }
+
   function layoutPrivateOffer() {
     var record = document.getElementById(PRIVATE_OFFER_ID);
     if (!record) return;
@@ -6764,6 +6889,10 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     layoutHero();
     layoutPrivateOffer();
     layoutPromo();
+    if (initPromoSideLetterAnimation()) {
+      layoutPromo();
+    }
+    updatePromoSideLetterAnimation();
   }
 
   var timer;
@@ -6780,16 +6909,21 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
   window.addEventListener('load', schedule);
   window.addEventListener('pageshow', schedule);
   window.addEventListener('resize', schedule, { passive: true });
+  window.addEventListener('scroll', scheduleScrollAnimationUpdate, { passive: true });
   window.setTimeout(schedule, 200);
   window.setTimeout(schedule, 900);
 })();
 `;
 
 function injectWestPageSpecificStyle(html, tour) {
-  const pageSpecificCss = [WEST_TOUR_LAYOUT_FIX_CSS, TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS, TOUR_LOCALIZED_TEXT_SAFETY_CSS];
+  const pageSpecificCss = [WEST_TOUR_LAYOUT_FIX_CSS, TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS, TOUR_LOCALIZED_TEXT_SAFETY_CSS, TOUR_PROMO_SCROLL_REVEAL_CSS];
 
   if (tour.slug === "ubud-highlights-tour") {
     pageSpecificCss.push(UBUD_COLLAGE_TEXT_MOBILE_FIX_CSS);
+  }
+
+  if (tour.slug === "bali-unesco") {
+    pageSpecificCss.push(BALI_UNESCO_DESKTOP_HERO_SHIFT_CSS);
   }
 
   if (pageSpecificCss.length === 0) {
