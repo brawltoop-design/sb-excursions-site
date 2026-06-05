@@ -13764,8 +13764,20 @@ function ensureLocalizedTourPage(filePath, tour) {
   writeGeneratedFile(filePath, ensureBaliGlobalUiFix(localizedHtml));
 }
 
+function localizeTildaBlockAssetUrls(html) {
+  return String(html)
+    .replace(
+      /https:\/\/static\.tildacdn\.one\/ws\/project19714586\/(tilda-blocks-page\d+\.min\.css)(?:\?t=\d+)?/g,
+      "/css/$1",
+    )
+    .replace(
+      /https:\/\/static\.tildacdn\.one\/ws\/project19714586\/(tilda-blocks-page\d+\.min\.js)(?:\?t=\d+)?/g,
+      "/js/$1",
+    );
+}
+
 function normalizeGeneratedHtml(html) {
-  return String(html).replace(/[ \t]+$/gm, "");
+  return localizeTildaBlockAssetUrls(String(html)).replace(/[ \t]+$/gm, "");
 }
 
 function writeGeneratedFile(filePath, html) {

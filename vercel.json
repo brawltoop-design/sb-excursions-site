@@ -35,7 +35,15 @@
   ],
   "rewrites": [
     {
+      "source": "/",
+      "destination": "/page128073236.html"
+    },
+    {
       "source": "/dubai/en",
+      "destination": "/page63806411.html"
+    },
+    {
+      "source": "/dubai/en/main-page",
       "destination": "/page63806411.html"
     },
     {
@@ -107,20 +115,52 @@
       "destination": "/page128073236.html"
     },
     {
+      "source": "/bali/:lang/main-page",
+      "destination": "/bali-main-page-:lang.html"
+    },
+    {
       "source": "/bali/en/journal",
       "destination": "/bali-journal.html"
+    },
+    {
+      "source": "/bali/:lang/journal",
+      "destination": "/bali-journal-:lang.html"
     },
     {
       "source": "/bali/en/journal/:guide",
       "destination": "/bali-journal-guide-:guide.html"
     },
     {
+      "source": "/bali/:lang/journal/:guide",
+      "destination": "/bali-journal-guide-:guide-:lang.html"
+    },
+    {
       "source": "/bali/en/journal/:tour/:article",
       "destination": "/bali-journal-:tour-:article.html"
     },
     {
+      "source": "/bali/:lang/journal/:tour/:article",
+      "destination": "/bali-journal-:tour-:article-:lang.html"
+    },
+    {
       "source": "/bali/en/tours/nusa-penida-manta-rays-point",
       "destination": "/page132181473.html"
+    },
+    {
+      "source": "/bali/ru/tours/nusa-penida-manta-rays-point",
+      "destination": "/page132181473-ru.html"
+    },
+    {
+      "source": "/bali/es/tours/nusa-penida-manta-rays-point",
+      "destination": "/page132181473-es.html"
+    },
+    {
+      "source": "/bali/fr/tours/nusa-penida-manta-rays-point",
+      "destination": "/page132181473-fr.html"
+    },
+    {
+      "source": "/bali/zh/tours/nusa-penida-manta-rays-point",
+      "destination": "/page132181473-zh.html"
     },
     {
       "source": "/bali/en/tours/mount-batur-sunrise-hike",
@@ -141,6 +181,10 @@
     {
       "source": "/bali/en/tours/:slug",
       "destination": "/bali-tour-:slug.html"
+    },
+    {
+      "source": "/bali/:lang/tours/:slug",
+      "destination": "/bali-tour-:slug-:lang.html"
     }
   ]
 }
