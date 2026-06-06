@@ -5004,7 +5004,7 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
 }
 
 #rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] {
-  top: 60px !important;
+  top: 110px !important;
   left: calc(50% - 600px + 67px) !important;
   width: 796px !important;
   height: auto !important;
@@ -5617,7 +5617,7 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
 #rec2121221993[data-record-type="396"] .t396__artboard,
 #rec2121221993[data-record-type="396"] .t396__filter,
 #rec2121221993[data-record-type="396"] .t396__carrier {
-  height: 420px !important;
+  height: 520px !important;
 }
 
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
@@ -5730,19 +5730,19 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"] .tn-atom,
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"] .tn-atom,
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] .tn-atom {
-  display: -webkit-box !important;
-  -webkit-box-orient: vertical !important;
-  -webkit-line-clamp: 3 !important;
-  overflow: hidden !important;
-  font-size: 12px !important;
-  line-height: 1.4 !important;
+  display: block !important;
+  overflow: visible !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  font-size: 12.5px !important;
+  line-height: 1.45 !important;
 }
 
 @media screen and (max-width: 1199px) {
   #rec2121221993[data-record-type="396"] .t396__artboard,
   #rec2121221993[data-record-type="396"] .t396__filter,
   #rec2121221993[data-record-type="396"] .t396__carrier {
-    height: 388px !important;
+    height: 500px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
@@ -5863,7 +5863,7 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
   #rec2121221993[data-record-type="396"] .t396__artboard,
   #rec2121221993[data-record-type="396"] .t396__filter,
   #rec2121221993[data-record-type="396"] .t396__carrier {
-    height: 584px !important;
+    height: 690px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
@@ -5956,7 +5956,7 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
   #rec2121221993[data-record-type="396"] .t396__artboard,
   #rec2121221993[data-record-type="396"] .t396__filter,
   #rec2121221993[data-record-type="396"] .t396__carrier {
-    height: 356px !important;
+    height: 430px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
@@ -6117,7 +6117,7 @@ const BALI_UNESCO_DESKTOP_HERO_SHIFT_CSS = `
   }
 
   #rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] {
-    top: 108px !important;
+    top: 110px !important;
   }
 }
 `;
@@ -6327,6 +6327,10 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     return record ? record.querySelector('[data-elem-id="' + id + '"]') : null;
   }
 
+  function findHeroRecord() {
+    return document.getElementById(HERO_ID) || document.querySelector('[data-elem-id="' + TITLE_ID + '"]')?.closest('.t-rec');
+  }
+
   function atom(node) {
     return node ? node.querySelector('.tn-atom') : null;
   }
@@ -6440,7 +6444,7 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
   }
 
   function layoutHero() {
-    var record = document.getElementById(HERO_ID);
+    var record = findHeroRecord();
     if (!record) return;
     var artboard = record.querySelector('.t396__artboard');
     if (!artboard) return;
@@ -6516,6 +6520,29 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
       [titleWrap, descWrap, durationText, locationText, mapsLabel].forEach(resetInlineText);
     }
 
+    if (!isTablet && !isNarrowDesktop) {
+      setImportant(titleWrap, 'top', '110px');
+    }
+
+    var stackNodes = [descWrap, priceWrap, durationIcon, durationText, locationIcon, locationText, mapsLabel, ratingValue, buttonWrap, buttonText]
+      .concat(ratingIcons);
+    stackNodes.forEach(function (node) {
+      clearImportant(node, 'top');
+    });
+
+    if (!isTablet && !isNarrowDesktop) {
+      var titleGap = 34;
+      var titleHeight = Math.max(cssHeight(titleWrap), visualHeight(titleWrap, scale));
+      var titleBottom = topOf(titleWrap) + titleHeight;
+      var requiredDescTop = titleBottom + titleGap;
+      var descShift = Math.max(0, requiredDescTop - topOf(descWrap));
+      if (descShift > 0) {
+        stackNodes.forEach(function (node) {
+          if (node) setImportant(node, 'top', Math.ceil(topOf(node) + descShift) + 'px');
+        });
+      }
+    }
+
     var minCardHeight = isTablet ? 338 : isNarrowDesktop ? 531 : (isUnescoHeroPage ? 630 : 575);
     var cardTop = topOf(cardWrap);
     var bottomPad = isTablet ? 26 : 30;
@@ -6552,7 +6579,7 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
 
     var layout = isMobile
       ? {
-          baseHeight: 327,
+          baseHeight: 430,
           subtitleTop: 49,
           subtitleWidth: 335,
           subtitleMaxFont: isLocalizedPage ? 11.2 : 12,
@@ -6563,12 +6590,12 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
           titleMaxHeight: 40,
           descMaxFont: isLocalizedPage ? 9.1 : 9.5,
           descMinFont: 8.1,
-          descMaxHeight: 58,
-          bottomPad: 22,
+          descMaxHeight: 78,
+          bottomPad: 34,
         }
       : isTablet
       ? {
-          baseHeight: 546,
+          baseHeight: 690,
           subtitleTop: 62,
           subtitleWidth: artboardWidth - 80,
           subtitleMaxFont: isLocalizedPage ? 14 : 15.5,
@@ -6579,12 +6606,12 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
           titleMaxHeight: 52,
           descMaxFont: isLocalizedPage ? 12.2 : 13,
           descMinFont: 10,
-          descMaxHeight: 86,
-          bottomPad: 28,
+          descMaxHeight: 118,
+          bottomPad: 38,
         }
       : isNarrowDesktop
       ? {
-          baseHeight: 277,
+          baseHeight: 500,
           subtitleTop: 64,
           subtitleWidth: 387,
           subtitleMaxFont: 17,
@@ -6593,13 +6620,13 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
           titleMaxFont: 14.2,
           titleMinFont: 11.5,
           titleMaxHeight: 34,
-          descMaxFont: 11.2,
+          descMaxFont: 12,
           descMinFont: 9.8,
-          descMaxHeight: 60,
-          bottomPad: 22,
+          descMaxHeight: 112,
+          bottomPad: 40,
         }
       : {
-          baseHeight: 298,
+          baseHeight: 520,
           subtitleTop: 62,
           subtitleWidth: 466,
           subtitleMaxFont: 18,
@@ -6608,10 +6635,10 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
           titleMaxFont: 15.6,
           titleMinFont: 12.2,
           titleMaxHeight: 34,
-          descMaxFont: 12,
+          descMaxFont: 12.5,
           descMinFont: 9.8,
-          descMaxHeight: 60,
-          bottomPad: 22,
+          descMaxHeight: 118,
+          bottomPad: 44,
         };
 
     relaxText(subtitleWrap, 'center');
@@ -6951,24 +6978,49 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
 })();
 `;
 
-function injectWestPageSpecificStyle(html, tour) {
+function westTourPageSpecificCss(tour = null) {
   const pageSpecificCss = [WEST_TOUR_LAYOUT_FIX_CSS, TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS, TOUR_LOCALIZED_TEXT_SAFETY_CSS, TOUR_PROMO_SCROLL_REVEAL_CSS];
 
-  if (tour.slug === "ubud-highlights-tour") {
+  if (tour?.slug === "ubud-highlights-tour") {
     pageSpecificCss.push(UBUD_COLLAGE_TEXT_MOBILE_FIX_CSS);
   }
 
-  if (tour.slug === "bali-unesco") {
+  if (tour?.slug === "bali-unesco") {
     pageSpecificCss.push(BALI_UNESCO_DESKTOP_HERO_SHIFT_CSS);
   }
+
+  return pageSpecificCss;
+}
+
+function injectWestPageSpecificStyle(html, tour) {
+  const pageSpecificCss = westTourPageSpecificCss(tour);
 
   if (pageSpecificCss.length === 0) {
     return html;
   }
 
+  const clean = String(html)
+    .replace(/<style id="sb-west-page-specific-overrides">[\s\S]*?<\/style>\s*/g, "")
+    .replace(/<script id="sb-west-page-layout-autofit">[\s\S]*?<\/script>\s*/g, "");
   const styleTag = `<style id="sb-west-page-specific-overrides">\n${pageSpecificCss.join("\n")}\n</style>\n`;
   const scriptTag = `<script id="sb-west-page-layout-autofit">\n${TOUR_LAYOUT_AUTOFIT_SCRIPT}\n</script>\n`;
-  return html.replace("</body>", `${styleTag}${scriptTag}</body>`);
+  if (clean.includes("</body>")) {
+    return clean.replace("</body>", `${styleTag}${scriptTag}</body>`);
+  }
+  return `${clean}${styleTag}${scriptTag}`;
+}
+
+function ensureLegacyTildaTourLayout(filePath, tour = null) {
+  if (!fs.existsSync(filePath)) {
+    return;
+  }
+
+  const html = fs.readFileSync(filePath, "utf8");
+  if (!html.includes("data-elem-id='1766426116262000001'") && !html.includes('data-elem-id="1766426116262000001"')) {
+    return;
+  }
+
+  writeGeneratedFile(filePath, injectWestPageSpecificStyle(html, tour));
 }
 
 function buildWhatsAppMessage(tour) {
@@ -14106,6 +14158,21 @@ async function main() {
     ensureCompactWeatherWidget(target.filePath);
     ensureBaliTildaFooter(target.filePath);
     ensureLocalizedUnescoPage(target.filePath, target.locale);
+  }
+
+  const legacyMantaTour = tourBySlug("nusa-penida-manta-rays-point");
+  const legacyTildaTourTargets = [
+    ...englishTildaTourTargets,
+    { filePath: path.join(projectRoot, "page132181473.html"), tour: legacyMantaTour },
+    { filePath: path.join(projectRoot, "files", "page132181473body.html"), tour: legacyMantaTour },
+    ...BALI_LANGUAGE_OPTIONS.filter((item) => item.code !== "en").map((item) => ({
+      filePath: path.join(projectRoot, `page132181473-${item.code}.html`),
+      tour: legacyMantaTour,
+    })),
+  ];
+
+  for (const target of legacyTildaTourTargets) {
+    ensureLegacyTildaTourLayout(target.filePath, target.tour);
   }
 
   const englishMainPagePath = path.join(projectRoot, "page128073236.html");

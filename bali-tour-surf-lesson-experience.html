@@ -2108,6 +2108,11 @@ hidden > <div class="t585__textwrapper"> <div class="t585__text t-descr t-descr_
 
 
 
+
+
+
+
+
 <style id="sb-weather-compact-override">
 #bwCta {
   display: none !important;
@@ -3182,7 +3187,7 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
 }
 
 #rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] {
-  top: 60px !important;
+  top: 110px !important;
   left: calc(50% - 600px + 67px) !important;
   width: 796px !important;
   height: auto !important;
@@ -3794,7 +3799,7 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
 #rec2121221993[data-record-type="396"] .t396__artboard,
 #rec2121221993[data-record-type="396"] .t396__filter,
 #rec2121221993[data-record-type="396"] .t396__carrier {
-  height: 420px !important;
+  height: 520px !important;
 }
 
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
@@ -3907,19 +3912,19 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135184"] .tn-atom,
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135213"] .tn-atom,
 #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1721244135199"] .tn-atom {
-  display: -webkit-box !important;
-  -webkit-box-orient: vertical !important;
-  -webkit-line-clamp: 3 !important;
-  overflow: hidden !important;
-  font-size: 12px !important;
-  line-height: 1.4 !important;
+  display: block !important;
+  overflow: visible !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  font-size: 12.5px !important;
+  line-height: 1.45 !important;
 }
 
 @media screen and (max-width: 1199px) {
   #rec2121221993[data-record-type="396"] .t396__artboard,
   #rec2121221993[data-record-type="396"] .t396__filter,
   #rec2121221993[data-record-type="396"] .t396__carrier {
-    height: 388px !important;
+    height: 500px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
@@ -4040,7 +4045,7 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
   #rec2121221993[data-record-type="396"] .t396__artboard,
   #rec2121221993[data-record-type="396"] .t396__filter,
   #rec2121221993[data-record-type="396"] .t396__carrier {
-    height: 584px !important;
+    height: 690px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
@@ -4133,7 +4138,7 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
   #rec2121221993[data-record-type="396"] .t396__artboard,
   #rec2121221993[data-record-type="396"] .t396__filter,
   #rec2121221993[data-record-type="396"] .t396__carrier {
-    height: 356px !important;
+    height: 430px !important;
   }
 
   #rec2121221993[data-record-type="396"] .tn-elem[data-elem-id="1766431186034000001"],
@@ -4468,6 +4473,10 @@ html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-pill {
     return record ? record.querySelector('[data-elem-id="' + id + '"]') : null;
   }
 
+  function findHeroRecord() {
+    return document.getElementById(HERO_ID) || document.querySelector('[data-elem-id="' + TITLE_ID + '"]')?.closest('.t-rec');
+  }
+
   function atom(node) {
     return node ? node.querySelector('.tn-atom') : null;
   }
@@ -4581,7 +4590,7 @@ html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-pill {
   }
 
   function layoutHero() {
-    var record = document.getElementById(HERO_ID);
+    var record = findHeroRecord();
     if (!record) return;
     var artboard = record.querySelector('.t396__artboard');
     if (!artboard) return;
@@ -4657,6 +4666,29 @@ html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-pill {
       [titleWrap, descWrap, durationText, locationText, mapsLabel].forEach(resetInlineText);
     }
 
+    if (!isTablet && !isNarrowDesktop) {
+      setImportant(titleWrap, 'top', '110px');
+    }
+
+    var stackNodes = [descWrap, priceWrap, durationIcon, durationText, locationIcon, locationText, mapsLabel, ratingValue, buttonWrap, buttonText]
+      .concat(ratingIcons);
+    stackNodes.forEach(function (node) {
+      clearImportant(node, 'top');
+    });
+
+    if (!isTablet && !isNarrowDesktop) {
+      var titleGap = 34;
+      var titleHeight = Math.max(cssHeight(titleWrap), visualHeight(titleWrap, scale));
+      var titleBottom = topOf(titleWrap) + titleHeight;
+      var requiredDescTop = titleBottom + titleGap;
+      var descShift = Math.max(0, requiredDescTop - topOf(descWrap));
+      if (descShift > 0) {
+        stackNodes.forEach(function (node) {
+          if (node) setImportant(node, 'top', Math.ceil(topOf(node) + descShift) + 'px');
+        });
+      }
+    }
+
     var minCardHeight = isTablet ? 338 : isNarrowDesktop ? 531 : (isUnescoHeroPage ? 630 : 575);
     var cardTop = topOf(cardWrap);
     var bottomPad = isTablet ? 26 : 30;
@@ -4693,7 +4725,7 @@ html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-pill {
 
     var layout = isMobile
       ? {
-          baseHeight: 327,
+          baseHeight: 430,
           subtitleTop: 49,
           subtitleWidth: 335,
           subtitleMaxFont: isLocalizedPage ? 11.2 : 12,
@@ -4704,12 +4736,12 @@ html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-pill {
           titleMaxHeight: 40,
           descMaxFont: isLocalizedPage ? 9.1 : 9.5,
           descMinFont: 8.1,
-          descMaxHeight: 58,
-          bottomPad: 22,
+          descMaxHeight: 78,
+          bottomPad: 34,
         }
       : isTablet
       ? {
-          baseHeight: 546,
+          baseHeight: 690,
           subtitleTop: 62,
           subtitleWidth: artboardWidth - 80,
           subtitleMaxFont: isLocalizedPage ? 14 : 15.5,
@@ -4720,12 +4752,12 @@ html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-pill {
           titleMaxHeight: 52,
           descMaxFont: isLocalizedPage ? 12.2 : 13,
           descMinFont: 10,
-          descMaxHeight: 86,
-          bottomPad: 28,
+          descMaxHeight: 118,
+          bottomPad: 38,
         }
       : isNarrowDesktop
       ? {
-          baseHeight: 277,
+          baseHeight: 500,
           subtitleTop: 64,
           subtitleWidth: 387,
           subtitleMaxFont: 17,
@@ -4734,13 +4766,13 @@ html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-pill {
           titleMaxFont: 14.2,
           titleMinFont: 11.5,
           titleMaxHeight: 34,
-          descMaxFont: 11.2,
+          descMaxFont: 12,
           descMinFont: 9.8,
-          descMaxHeight: 60,
-          bottomPad: 22,
+          descMaxHeight: 112,
+          bottomPad: 40,
         }
       : {
-          baseHeight: 298,
+          baseHeight: 520,
           subtitleTop: 62,
           subtitleWidth: 466,
           subtitleMaxFont: 18,
@@ -4749,10 +4781,10 @@ html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-pill {
           titleMaxFont: 15.6,
           titleMinFont: 12.2,
           titleMaxHeight: 34,
-          descMaxFont: 12,
+          descMaxFont: 12.5,
           descMinFont: 9.8,
-          descMaxHeight: 60,
-          bottomPad: 22,
+          descMaxHeight: 118,
+          bottomPad: 44,
         };
 
     relaxText(subtitleWrap, 'center');
