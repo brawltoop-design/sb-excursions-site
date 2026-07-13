@@ -127,7 +127,7 @@ function buildNewsMarkup(items) {
     .join("");
 
   return `<div id="rec1802539031" class="r t-rec t-rec_pt_135 t-rec_pb_135" style="padding-top:135px;padding-bottom:135px;" data-animationappear="off" data-record-type="131"><div class="t123"><div class="t-container"><div class="t-col t-col_12"><div id="sb-dubai-news"><style>
-#sb-dubai-news{font-family:"TildaSans","Tilda Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#111;}
+#sb-dubai-news{font-family:"Cina GEO", "TildaSans","Tilda Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#111;}
 #sb-dubai-news .sb-dubai-news__shell{display:grid;gap:30px;}
 #sb-dubai-news .sb-dubai-news__head{text-align:center;}
 #sb-dubai-news .sb-dubai-news__head h2{margin:0;font-size:64px;line-height:1.02;font-weight:700;letter-spacing:-2.4px;}

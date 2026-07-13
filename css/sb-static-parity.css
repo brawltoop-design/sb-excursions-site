@@ -9,3 +9,86 @@
   min-height: 0 !important;
   overflow: hidden !important;
 }
+
+/* ------------------------------------------------------------------ */
+/* Thinner headings site-wide. `html` prefix raises specificity above  */
+/* the generator's inline body rules so this wins from the <head>.     */
+/* ------------------------------------------------------------------ */
+
+/* Tour pages — hero title & subtitle heading */
+html #rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] .tn-atom,
+html #rec2121221993 .tn-elem[data-elem-id="1721244135138"] .tn-atom {
+  font-weight: 400 !important;
+}
+
+/* Tour pages — "About this Activity" accordion section titles */
+html #rec2121222003 .t585__title {
+  font-weight: 400 !important;
+}
+
+/* Tour pages — FAQ & Reviews section titles */
+html #rec2121222053 .t-section__title,
+html #rec2121222073 .t-section__title {
+  font-weight: 400 !important;
+}
+
+/* Tour pages — promo panel heading */
+html #rec2121222043 .tn-elem[data-elem-id="1766442865058"] .tn-atom,
+html #rec2121222043 .tn-elem[data-elem-id="1766442865058"] strong {
+  font-weight: 400 !important;
+}
+
+/* Tour pages — route map title */
+html #rec2122133073 .sb-route-map-title {
+  font-weight: 400 !important;
+}
+
+/* Tour pages — private offer block headings */
+html #rec2121222013 .tn-elem[data-elem-id="1766484562953"] .tn-atom,
+html #rec2121222013 .sb-private-offer-heading,
+html #rec2121222013 .sb-private-card-title {
+  font-weight: 400 !important;
+}
+
+/* Tour pages — weather condition heading */
+html #rec2147449333 .bw-condition {
+  font-weight: 400 !important;
+}
+
+/* Tour pages — bottom chip section titles ("Things to do in Bali" etc.) */
+html .sb-unesco-attractions__title {
+  font-weight: 400 !important;
+}
+
+/* Generic semantic headings are thinned in fonts-cinageo.css, which is
+   linked on every page (including journal/guide pages that do not load
+   this file). The rec-specific rules above cover the Tilda tour pages. */
+
+/* Lift the hero description text 20px higher on every tour page. */
+html #rec2121233163 .tn-elem[data-elem-id="1766419725555"] {
+  transform: translateY(-20px) !important;
+}
+
+/* Nudge the whole hero block 10px lower on every tour page. padding-top
+   (not margin-top, which collapses into #t-header and drags the nav down)
+   pushes the artboard + overlaid text down together, leaving the header
+   and menu in place. */
+html #rec2121233163 {
+  padding-top: 10px !important;
+}
+
+/* Promo block — mobile overrides. */
+@media screen and (max-width: 640px) {
+  html #rec2121222043 .tn-elem[data-elem-id="1721398681171"] {
+    transform: translate(60px, 40px) !important;
+  }
+  /* Move promo description into the white gap right of the beach photo. */
+  html #rec2121222043 .tn-elem[data-elem-id="1766620130918"] {
+    transform: translate(27px, 68px) !important;
+    z-index: 10 !important;
+  }
+  html #rec2121222043 .tn-elem[data-elem-id="1766620130918"] .sb-letter-rise-char {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

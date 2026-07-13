@@ -1,0 +1,120 @@
+/*
+ * Cina GEO (Test) — Public Type / Michael Cina.
+ * Test build covers only A-Z, a-z, 0-9 and , - . — the unicode-range below
+ * limits it to those codepoints so every other character (Cyrillic, CJK,
+ * accents, punctuation) falls back to TildaSans seamlessly.
+ * For the full character set license the family at https://www.publictype.us/fonts/cina-geo
+ */
+@font-face {
+  font-family: 'Cina GEO';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url('/css/fonts/cina-geo/CinaGEO-Thin.woff2') format('woff2');
+  unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'Cina GEO';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url('/css/fonts/cina-geo/CinaGEO-ExtraLight.woff2') format('woff2');
+  unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'Cina GEO';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/css/fonts/cina-geo/CinaGEO-Light.woff2') format('woff2');
+  unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'Cina GEO';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/css/fonts/cina-geo/CinaGEO-Regular.woff2') format('woff2');
+  unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'Cina GEO';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/css/fonts/cina-geo/CinaGEO-Medium.woff2') format('woff2');
+  unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'Cina GEO';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/css/fonts/cina-geo/CinaGEO-SemiBold.woff2') format('woff2');
+  unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'Cina GEO';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/css/fonts/cina-geo/CinaGEO-Bold.woff2') format('woff2');
+  unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'Cina GEO';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/css/fonts/cina-geo/CinaGEO-ExtraBold.woff2') format('woff2');
+  unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
+}
+@font-face {
+  font-family: 'Cina GEO';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/css/fonts/cina-geo/CinaGEO-Black.woff2') format('woff2');
+  unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
+}
+
+/*
+ * Thinner headings site-wide. This file is linked on every page, so the
+ * generic heading rule reaches journal/guide pages too. Tour pages layer
+ * additional rec-specific overrides via css/sb-static-parity.css.
+ * Prices and stat numbers live in div/span, so they keep their weight.
+ */
+html h1,
+html h2,
+html h3,
+html h4 {
+  font-weight: 400 !important;
+}
+
+/* Tour-card price texts, thinned to match the rest of the card copy. */
+html .sb-price,
+html .sb-price-note {
+  font-weight: 400 !important;
+}
+
+/* Tighter letter-spacing site-wide. Set on <body> so it INHERITS into all
+   default text; elements with their own letter-spacing (uppercase eyebrows,
+   badges, display headings) keep their intentional tracking. */
+html body {
+  letter-spacing: -0.03em !important;
+  background-color: #ffffff !important;
+}
+
+/* Thinner header nav links site-wide. */
+html .t228__list .t-menu__link-item,
+html .t228__list .t-menusub__link-item {
+  font-weight: 400 !important;
+}
+
+/* Catalog: filter buttons and headings → medium (500). */
+html #sb-excursions-page .sb-filter-btn,
+html #sb-excursions-page h2,
+html #sb-excursions-page h3,
+html #sb-excursions-page .sb-title {
+  font-weight: 500 !important;
+}

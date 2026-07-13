@@ -139,7 +139,8 @@ const BALI_FOOTER_LAYOUT_FIX_STYLE = `
 }
 </style>`;
 const JOURNAL_FOOTER_ASSETS = `
-    <link rel="stylesheet" href="/css/fonts-tildasans.css">`;
+    <link rel="stylesheet" href="/css/fonts-tildasans.css">
+    <link rel="stylesheet" href="/css/fonts-cinageo.css">`;
 const WEATHER_COMPACT_OVERRIDE_STYLE = `
 <style id="sb-weather-compact-override">
 #bwCta {
@@ -3508,6 +3509,21 @@ function escapeJsSingleQuoted(value) {
   return collapseWhitespace(value).replaceAll("\\", "\\\\").replaceAll("'", "\\'");
 }
 
+function compactWestHeroDuration(value) {
+  const text = collapseWhitespace(String(value || ""));
+  const match =
+    text.match(/^((?:всего\s+|总共\s*)?\d+(?:[.,]\d+)?(?:\s*(?:[-–—]|à|to)\s*\d+(?:[.,]\d+)?)?\s*(?:hours?|часа|часов|час|horas?|heures?|小时))/iu) ||
+    text.match(/^(full day|half day|полный день|día completo|journée complète|全天)/iu);
+  if (match && match[1].length < text.length) {
+    return match[1].trim();
+  }
+  const cut = text.split(/\s+(?:or|with|to|avec|con|с|со|или)\s+|,(?!\d)|，|\(|（/iu)[0].trim();
+  if (cut && cut.length < text.length) {
+    return cut;
+  }
+  return text;
+}
+
 function normalizedWestTemplatePrice(price) {
   const text = collapseWhitespace(price || "Ask price");
   if (!text) return "Ask price";
@@ -4757,7 +4773,7 @@ function renderWestStylePage(tour) {
   html = replaceSingleQuotedField(html, "tn_text_1766426116262000001", formatWestHeroTitle(tour.title));
   html = replaceSingleQuotedField(html, "tn_text_1766419725555", escapeHtml(heroLead));
   html = replaceSingleQuotedField(html, "tn_text_1721240739954", escapeHtml(normalizedWestTemplatePrice(tour.price)));
-  html = replaceSingleQuotedField(html, "tn_text_1721240739957", escapeHtml(collapseWhitespace(tour.duration)));
+  html = replaceSingleQuotedField(html, "tn_text_1721240739957", escapeHtml(compactWestHeroDuration(tour.duration)));
   html = replaceSingleQuotedField(html, "tn_text_1766425094306", escapeHtml(heroArea));
   html = replaceSingleQuotedField(html, "tn_text_1721244135148", escapeHtml(aboutSubtitle));
   html = replaceSingleQuotedField(html, "tn_text_1721244135153", escapeHtml(aboutHighlights[0][0]));
@@ -6443,6 +6459,101 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     });
   }
 
+  function measureNaturalTextWidth(node) {
+    var target = atom(node) || node;
+    if (!target) return 0;
+    var range = document.createRange();
+    range.selectNodeContents(target);
+    var rectW = range.getBoundingClientRect().width;
+    var zoom = target.offsetWidth ? ((target.getBoundingClientRect().width || target.offsetWidth) / target.offsetWidth) : 1;
+    return Math.ceil(rectW / (zoom || 1)) + 2;
+  }
+
+  function layoutHeroMetaRow(record) {
+    var priceText = byId(record, PRICE_ID);
+    var durationIcon = byId(record, DURATION_ICON_ID);
+    var durationText = byId(record, DURATION_TEXT_ID);
+    var locationIcon = byId(record, LOCATION_ICON_ID);
+    var locationText = byId(record, LOCATION_TEXT_ID);
+    if (!durationText || !locationIcon || !locationText) return;
+    var artboard = record.querySelector('.t396__artboard');
+    if (!artboard) return;
+    var dAtom = atom(durationText) || durationText;
+    clearImportant(durationText, 'width');
+    [durationIcon, durationText, locationIcon, locationText].forEach(function (node) {
+      clearImportant(node, 'left');
+    });
+    clearImportant(locationText, 'width');
+
+    setImportant(dAtom, 'white-space', 'nowrap');
+    var natural = measureNaturalTextWidth(durationText);
+    setImportant(dAtom, 'white-space', 'normal');
+    var slotWidth = Math.round(px(window.getComputedStyle(durationText).width)) || durationText.offsetWidth || 0;
+    if (!natural || !slotWidth) return;
+
+    var isMobile = window.innerWidth <= 639;
+    var durLeft = leftOf(durationText);
+    var dIconLeft = durationIcon ? leftOf(durationIcon) : durLeft;
+    var lIconLeft = leftOf(locationIcon);
+    var lTextLeft = leftOf(locationText);
+    if (lIconLeft <= durLeft) return;
+
+    // 1) Keep the duration group clear of the price text.
+    var rowShift = 0;
+    if (priceText && durationIcon) {
+      var pNatural = measureNaturalTextWidth(priceText);
+      var pLeft = leftOf(priceText);
+      var pGap = isMobile ? 10 : 18;
+      rowShift = Math.max(0, Math.ceil(pLeft + pNatural + pGap - dIconLeft));
+    }
+
+    // 2) Fit the duration text and keep the location group clear of it.
+    var rowGap = isMobile ? 8 : 14;
+    var available = lIconLeft - durLeft - rowGap;
+    if (available <= 0) return;
+    if (rowShift === 0 && natural <= Math.min(slotWidth, available)) {
+      return;
+    }
+
+    var lNatural = measureNaturalTextWidth(locationText);
+    var lBox = Math.round(px(window.getComputedStyle(locationText).width)) || locationText.offsetWidth || 0;
+    var lWidth = Math.min(lBox, Math.max(lNatural, 24));
+    var elemZoom = px(window.getComputedStyle(durationText).zoom) || 1;
+    var artW = artboard.offsetWidth || (isMobile ? 360 : 1200);
+    var rightLimit = Math.floor(artW / (elemZoom || 1)) - 12;
+    var maxShift = Math.max(0, rightLimit - (lTextLeft + rowShift + lWidth));
+    var maxSlot = isMobile ? 150 : 240;
+    var width = Math.min(Math.max(natural, Math.min(slotWidth, available)), maxSlot);
+    var shift = Math.min(Math.max(0, width - available), maxShift);
+    var effAvailable = available + shift;
+    if (width > effAvailable) {
+      width = Math.max(isMobile ? 56 : 90, Math.floor(effAvailable));
+    }
+    setImportant(durationText, 'width', width + 'px');
+    if (natural > width) {
+      var baseFont = px(window.getComputedStyle(dAtom).fontSize) || (isMobile ? 13 : 20);
+      fitText(durationText, {
+        maxFont: baseFont,
+        minFont: Math.max(9.5, baseFont - 7),
+        maxHeight: Math.ceil(baseFont * 2.6),
+        lineHeightRatio: 1.15,
+      });
+    }
+
+    if (rowShift > 0 && durationIcon) {
+      setImportant(durationIcon, 'left', Math.ceil(dIconLeft + rowShift) + 'px');
+      setImportant(durationText, 'left', Math.ceil(durLeft + rowShift) + 'px');
+    }
+    var locShift = rowShift + shift;
+    if (locShift > 0) {
+      if (lWidth < lBox) {
+        setImportant(locationText, 'width', lWidth + 'px');
+      }
+      setImportant(locationIcon, 'left', Math.ceil(lIconLeft + locShift) + 'px');
+      setImportant(locationText, 'left', Math.ceil(lTextLeft + locShift) + 'px');
+    }
+  }
+
   function layoutHero() {
     var record = findHeroRecord();
     if (!record) return;
@@ -6482,6 +6593,7 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
         .concat(ratingIcons)
         .forEach(resetInlineBox);
       [titleWrap, descWrap, priceWrap, durationText, locationText, mapsLabel, ratingValue, buttonText].forEach(resetInlineText);
+      layoutHeroMetaRow(record);
       return;
     }
 
@@ -6542,6 +6654,8 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
         });
       }
     }
+
+    layoutHeroMetaRow(record);
 
     var minCardHeight = isTablet ? 338 : isNarrowDesktop ? 531 : (isUnescoHeroPage ? 630 : 575);
     var cardTop = topOf(cardWrap);
@@ -6943,15 +7057,45 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     setRecordHeight(record, requiredHeight, scale);
   }
 
+  var applyingLayouts = false;
+  var metaObserver = null;
+
+  function ensureMetaObserver() {
+    if (metaObserver || !window.MutationObserver) return;
+    var record = findHeroRecord();
+    if (!record) return;
+    metaObserver = new MutationObserver(function () {
+      if (applyingLayouts) return;
+      schedule();
+    });
+    var ids = [TITLE_ID, DESC_ID, PRICE_ID, DURATION_ICON_ID, DURATION_TEXT_ID, LOCATION_ICON_ID, LOCATION_TEXT_ID, RATING_VALUE_ID, MAPS_LABEL_ID, CTA_BG_ID, CTA_TEXT_ID];
+    ids.forEach(function (id) {
+      var node = byId(record, id);
+      if (node) metaObserver.observe(node, { attributes: true, attributeFilter: ['style'] });
+    });
+    Array.prototype.forEach.call(record.querySelectorAll(RATING_ICON_SELECTOR), function (node) {
+      metaObserver.observe(node, { attributes: true, attributeFilter: ['style'] });
+    });
+  }
+
   function applyLayouts() {
-    layoutHero();
-    layoutAbout();
-    layoutPrivateOffer();
-    layoutPromo();
-    if (initPromoSideLetterAnimation()) {
+    if (!window.innerWidth) return;
+    applyingLayouts = true;
+    try {
+      layoutHero();
+      layoutAbout();
+      layoutPrivateOffer();
       layoutPromo();
+      if (initPromoSideLetterAnimation()) {
+        layoutPromo();
+      }
+      updatePromoSideLetterAnimation();
+      ensureMetaObserver();
+    } finally {
+      window.setTimeout(function () {
+        applyingLayouts = false;
+      }, 0);
     }
-    updatePromoSideLetterAnimation();
   }
 
   var timer;
@@ -6970,6 +7114,8 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
   window.addEventListener('resize', schedule, { passive: true });
   window.addEventListener('scroll', scheduleScrollAnimationUpdate, { passive: true });
   window.setTimeout(schedule, 200);
+  window.setTimeout(schedule, 700);
+  window.setTimeout(schedule, 1600);
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(schedule).catch(function () {});
   } else {
@@ -7004,10 +7150,19 @@ function injectWestPageSpecificStyle(html, tour) {
     .replace(/<script id="sb-west-page-layout-autofit">[\s\S]*?<\/script>\s*/g, "");
   const styleTag = `<style id="sb-west-page-specific-overrides">\n${pageSpecificCss.join("\n")}\n</style>\n`;
   const scriptTag = `<script id="sb-west-page-layout-autofit">\n${TOUR_LAYOUT_AUTOFIT_SCRIPT}\n</script>\n`;
-  if (clean.includes("</body>")) {
-    return clean.replace("</body>", `${styleTag}${scriptTag}</body>`);
+
+  let result = clean;
+  if (result.includes("</head>")) {
+    result = result.replace("</head>", `${styleTag}</head>`);
+  } else {
+    result = `${styleTag}${result}`;
   }
-  return `${clean}${styleTag}${scriptTag}`;
+  if (result.includes("</body>")) {
+    result = result.replace("</body>", `${scriptTag}</body>`);
+  } else {
+    result = `${result}${scriptTag}`;
+  }
+  return result;
 }
 
 function ensureLegacyTildaTourLayout(filePath, tour = null) {
@@ -8716,7 +8871,7 @@ function renderJournalNewsBlock() {
   const totalArticles = totalJournalArticleCount();
 
   return `<div id="rec2054910081" class="r t-rec t-rec_pt_135 t-rec_pb_135" style="padding-top:135px;padding-bottom:135px;" data-animationappear="off" data-record-type="131"><div class="t123"><div class="t-container"><div class="t-col t-col_12"><div id="sb-journal-news"><style>
-#sb-journal-news{font-family:"TildaSans","Tilda Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#151515;}
+#sb-journal-news{font-family:"Cina GEO", "TildaSans","Tilda Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#151515;}
 #sb-journal-news .sb-journal-news__shell{background:#fff;border:1px solid rgba(21,21,21,0.08);border-radius:36px;padding:36px;box-shadow:0 18px 52px rgba(17,17,17,0.05);}
 #sb-journal-news .sb-journal-news__top{display:flex;gap:20px;align-items:flex-end;justify-content:space-between;margin-bottom:28px;}
 #sb-journal-news .sb-journal-news__eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(47,107,255,0.08);color:#2f6bff;font-size:13px;font-weight:700;letter-spacing:-0.2px;margin-bottom:14px;}
@@ -9280,7 +9435,7 @@ function renderJournalSharedStyles() {
     --sbj-radius-md:20px;
   }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--sbj-bg);color:var(--sbj-text);font-family:"TildaSans","Tilda Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+  body{margin:0;background:var(--sbj-bg);color:var(--sbj-text);font-family:"Cina GEO", "TildaSans","Tilda Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
   img{max-width:100%;display:block}
   a{text-decoration:none;color:inherit}
   .sb-journal-page{min-height:100vh;overflow-x:hidden}
@@ -9290,7 +9445,7 @@ function renderJournalSharedStyles() {
   .sb-journal-tour-header__logo-link{display:inline-flex;align-items:center}
   .sb-journal-tour-header__logo{width:135px;max-width:135px;height:auto}
   .sb-journal-tour-header__nav{display:flex;align-items:center;justify-content:center;gap:0}
-  .sb-journal-tour-header__nav-link,.sb-journal-tour-header__dropdown-trigger{appearance:none;border:0;background:transparent;padding:0 30px;color:#000;font-family:"TildaSans","Tilda Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:16px;font-weight:600;letter-spacing:-1px;line-height:1;cursor:pointer;transition:color .2s ease}
+  .sb-journal-tour-header__nav-link,.sb-journal-tour-header__dropdown-trigger{appearance:none;border:0;background:transparent;padding:0 30px;color:#000;font-family:"Cina GEO", "TildaSans","Tilda Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:16px;font-weight:600;letter-spacing:-1px;line-height:1;cursor:pointer;transition:color .2s ease}
   .sb-journal-tour-header__nav-link:last-child{padding-right:0}
   .sb-journal-tour-header__nav-link:hover,.sb-journal-tour-header__dropdown-trigger:hover,.sb-journal-tour-header__nav-link:focus-visible,.sb-journal-tour-header__dropdown-trigger:focus-visible{color:#fca347;outline:none}
   .sb-journal-tour-header__dropdown{position:relative}
@@ -9545,7 +9700,7 @@ function renderBaliWeatherBlock(primaryRoute = WEATHER_MAIN_PAGE_ROUTE) {
             padding: 15px;
             border-radius: 20px;
             color: #ffffff;
-            font-family: "Tilda Sans", "TildaSans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-family: "Cina GEO", "Tilda Sans", "TildaSans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             box-shadow: 0 24px 80px rgba(15, 23, 42, 0.18);
             isolation: isolate;
           }
@@ -11600,7 +11755,7 @@ function buildJeepHotSpringRouteRecord() {
   margin: 0 auto;
   padding: 18px 20px 24px;
   box-sizing: border-box;
-  font-family: "Tilda Sans", "TildaSans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Cina GEO", "Tilda Sans", "TildaSans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 #rec2122133073 .sb-route-map-shell *,
@@ -11627,7 +11782,7 @@ function buildJeepHotSpringRouteRecord() {
 #rec2122133073 .sb-route-map-title {
   margin: 10px 0 10px;
   color: #111111;
-  font-family: "Tilda Sans", "TildaSans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Cina GEO", "Tilda Sans", "TildaSans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: clamp(28px, 3.3vw, 40px);
   line-height: 1.08;
   font-weight: 700;
@@ -12898,7 +13053,7 @@ function buildJournalLanguageSwitcherAssets() {
 .sb-journal-lang-switcher__summary img{width:28px;height:28px;object-fit:contain;display:block}
 .sb-journal-lang-switcher__menu{position:absolute;top:calc(100% + 10px);right:0;display:none;min-width:190px;padding:10px;border-radius:18px;background:#fff;box-shadow:0 18px 46px rgba(17,24,39,0.18);z-index:1006}
 .sb-journal-lang-switcher[open] .sb-journal-lang-switcher__menu{display:grid;gap:6px}
-.sb-journal-lang-switcher__option{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:42px;padding:10px 14px;border-radius:14px;background:rgba(126,196,244,0.08);color:#111827;font-family:'TildaSans',Arial,sans-serif;font-size:15px;line-height:1.2;font-weight:600;text-decoration:none}
+.sb-journal-lang-switcher__option{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:42px;padding:10px 14px;border-radius:14px;background:rgba(126,196,244,0.08);color:#111827;font-family:'Cina GEO', 'TildaSans',Arial,sans-serif;font-size:15px;line-height:1.2;font-weight:600;text-decoration:none}
 .sb-journal-lang-switcher__option:hover,.sb-journal-lang-switcher__option:focus-visible{background:rgba(126,196,244,0.16);outline:none}
 .sb-journal-lang-switcher__option[data-active="true"]{background:rgba(126,196,244,0.24);color:#0f172a}
 .sb-journal-lang-switcher__code{font-size:12px;line-height:1;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.6}
@@ -13259,7 +13414,7 @@ function buildUnescoLanguageSwitcherAssets(locale = "en", routeBuilder = (code) 
   min-height:42px;
   padding:10px 14px;
   border-radius:14px;
-  font-family:'TildaSans',Arial,sans-serif;
+  font-family:'Cina GEO', 'TildaSans',Arial,sans-serif;
   font-size:15px;
   line-height:1.2;
   font-weight:600;
@@ -13603,7 +13758,7 @@ function buildUnescoChipSectionBlock(recordId, title, chips, options = {}) {
     #${recordId} .sb-unesco-attractions__title {
       margin: 0 0 22px;
       color: #000000;
-      font-family: 'TildaSans', Arial, sans-serif;
+      font-family: 'Cina GEO', 'TildaSans', Arial, sans-serif;
       font-size: 34px;
       line-height: 1.12;
       font-weight: 700;
@@ -13631,7 +13786,7 @@ function buildUnescoChipSectionBlock(recordId, title, chips, options = {}) {
       border-radius: 999px;
       background: #e6e6e6;
       color: #636363;
-      font-family: 'TildaSans', Arial, sans-serif;
+      font-family: 'Cina GEO', 'TildaSans', Arial, sans-serif;
       font-size: 15px;
       line-height: 1;
       font-weight: 400;
@@ -13725,19 +13880,25 @@ function buildUnescoThingsToDoChipsBlock(locale = "en") {
   );
 }
 
+const UNESCO_CHIPS_EXTRA_FILES = new Set([
+  "page132181473.html",
+  "page132181473body.html",
+  "page132812463.html",
+  "page132812463body.html",
+  "page133629743.html",
+  "page133629743body.html",
+]);
+
+function isUnescoChipsPatchableFile(fileName) {
+  return /^bali-tour-.+\.html$/.test(fileName) || UNESCO_CHIPS_EXTRA_FILES.has(fileName);
+}
+
 function ensureUnescoInternalTourChips(filePath, locale = "en") {
   if (!fs.existsSync(filePath)) {
     return;
   }
 
-  const supportedFiles = new Set([
-    "bali-tour-bali-unesco.html",
-    ...UNESCO_LANGUAGE_OPTIONS.filter((item) => item.code !== "en").map((item) => localizedUnescoFileName(item.code)),
-    "page132181473.html",
-    "page132181473body.html",
-  ]);
-
-  if (!supportedFiles.has(path.basename(filePath))) {
+  if (!isUnescoChipsPatchableFile(path.basename(filePath))) {
     return;
   }
 
@@ -13761,14 +13922,7 @@ function ensureUnescoPdfChips(filePath, locale = "en") {
     return;
   }
 
-  const supportedFiles = new Set([
-    "bali-tour-bali-unesco.html",
-    ...UNESCO_LANGUAGE_OPTIONS.filter((item) => item.code !== "en").map((item) => localizedUnescoFileName(item.code)),
-    "page132181473.html",
-    "page132181473body.html",
-  ]);
-
-  if (!supportedFiles.has(path.basename(filePath))) {
+  if (!isUnescoChipsPatchableFile(path.basename(filePath))) {
     return;
   }
 
@@ -13792,14 +13946,7 @@ function ensureUnescoThingsToDoChips(filePath, locale = "en") {
     return;
   }
 
-  const supportedFiles = new Set([
-    "bali-tour-bali-unesco.html",
-    ...UNESCO_LANGUAGE_OPTIONS.filter((item) => item.code !== "en").map((item) => localizedUnescoFileName(item.code)),
-    "page132181473.html",
-    "page132181473body.html",
-  ]);
-
-  if (!supportedFiles.has(path.basename(filePath))) {
+  if (!isUnescoChipsPatchableFile(path.basename(filePath))) {
     return;
   }
 
@@ -14118,7 +14265,17 @@ async function main() {
     })),
   ];
 
-  for (const target of unescoPatchTargets) {
+  const chipsPatchTargets = [
+    ...unescoPatchTargets,
+    { filePath: path.join(projectRoot, "page132812463.html"), locale: "en" },
+    { filePath: path.join(projectRoot, "files", "page132812463body.html"), locale: "en" },
+    { filePath: path.join(projectRoot, "page133629743.html"), locale: "en" },
+    { filePath: path.join(projectRoot, "files", "page133629743body.html"), locale: "en" },
+    ...englishTargets.map((target) => ({ filePath: target.filePath, locale: "en" })),
+    ...localizedTargets.map((target) => ({ filePath: target.filePath, locale: tourLocale(target.tour) })),
+  ];
+
+  for (const target of chipsPatchTargets) {
     ensureUnescoInternalTourChips(target.filePath, target.locale);
     ensureUnescoPdfChips(target.filePath, target.locale);
     ensureUnescoThingsToDoChips(target.filePath, target.locale);
