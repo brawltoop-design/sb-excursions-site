@@ -103,6 +103,8 @@ html .sb-price-note {
 html body {
   letter-spacing: -0.03em !important;
   background-color: #ffffff !important;
+  opacity: 1 !important;
+  transition: opacity 0.15s ease-out;
 }
 
 /* Thinner header nav links site-wide. */
