@@ -3287,6 +3287,11 @@ function renderRichText(value) {
   return escapeHtml(String(value ?? "")).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
 }
 
+// Structured data must be plain text — strip the ** markers instead of rendering them.
+function stripRichText(value) {
+  return String(value ?? "").replace(/\*\*(.+?)\*\*/g, "$1");
+}
+
 function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
@@ -9615,6 +9620,809 @@ const JOURNAL_SEO_GUIDES = [
       },
     ],
   },
+  {
+    key: "itinerary7",
+    slug: "bali-itinerary-7-days-first-time",
+    badge: "Evergreen SEO guide",
+    navLabel: "7-day itinerary",
+    cardTourLabel: "Trip planning",
+    heroTourSlug: "ubud-highlights-tour",
+    relatedTourSlugs: ["ubud-highlights-tour", "nusa-penida-west-tour", "mount-batur-sunrise-jeep-tour"],
+    inlineStats: ["Day-by-day plan", "Balanced pacing", "Built around real drive times"],
+    title: "The Perfect 7-Day Bali Itinerary for First-Time Visitors (Day by Day)",
+    description:
+      "A realistic 7-day Bali itinerary that accounts for actual drive times: where to base yourself, which days to pair, and how to fit Ubud, Nusa Penida, Mount Batur and the south coast without burning out.",
+    excerpt:
+      "Most Bali itineraries fail for one reason: they ignore driving time. Bali looks small on a map, but Canggu to Uluwatu can take **90 minutes** and Kuta to Ubud can take **two hours** in traffic. This plan groups stops by area so you spend your week seeing Bali instead of sitting in a car.",
+    rankings: [
+      {
+        name: "Day 1 — Arrive and stay south",
+        imageTitle: "Arrival day in south Bali",
+        area: "Seminyak or Canggu",
+        bestFor: "Recovering from the flight",
+        summary:
+          "Land at Ngurah Rai (DPS), transfer to your south Bali base and do nothing ambitious. A beach walk and an early dinner beat forcing a temple run on zero sleep.",
+      },
+      {
+        name: "Day 2 — South coast and sunset temple",
+        imageTitle: "Uluwatu cliffs at sunset",
+        area: "Uluwatu and the Bukit",
+        bestFor: "Easing into the island",
+        summary:
+          "Beaches in the morning, Uluwatu Temple for sunset and the Kecak fire dance. Short distances, big payoff, no alarm clock required.",
+      },
+      {
+        name: "Day 3 — Move to Ubud, culture en route",
+        imageTitle: "Tegalalang rice terraces",
+        area: "Central Bali",
+        bestFor: "Temples, rice terraces, craft villages",
+        summary:
+          "Check out of the south and make the drive productive: craft villages, Tegalalang rice terraces and a Kintamani lunch with volcano views before settling into Ubud.",
+      },
+      {
+        name: "Day 4 — Sunrise volcano, slow afternoon",
+        imageTitle: "Mount Batur sunrise",
+        area: "Kintamani",
+        bestFor: "The signature Bali sunrise",
+        summary:
+          "Pickup is around **02:00–03:00**, so plan a genuinely lazy afternoon afterwards. A spa or pool day is the correct call, not another temple.",
+      },
+      {
+        name: "Day 5 — Nusa Penida day trip",
+        imageTitle: "Kelingking Beach viewpoint",
+        area: "Nusa Penida",
+        bestFor: "The island's most dramatic scenery",
+        summary:
+          "A long but unforgettable day: **30–45 minute** speedboat from Sanur, then Kelingking, Broken Beach and Angel's Billabong. Book the earliest boat you can.",
+      },
+      {
+        name: "Day 6 — Waterfalls or adventure",
+        imageTitle: "Bali waterfall",
+        area: "Ubud and Bangli",
+        bestFor: "Choosing your own pace",
+        summary:
+          "Pick one lane: waterfalls, white water rafting on the Ayung, or an ATV route through rice paddies and river beds. One is plenty for a day.",
+      },
+      {
+        name: "Day 7 — Back south and fly out",
+        imageTitle: "Bali beach club",
+        area: "Seminyak or Canggu",
+        bestFor: "A soft landing before the airport",
+        summary:
+          "Return to the coast, keep it low-key with a beach club or a massage, and leave buffer for airport traffic. Do not schedule a tour on departure day.",
+      },
+    ],
+    sections: [
+      {
+        heading: "🚗 The one rule that makes a Bali itinerary work",
+        paragraphs: [
+          "Group your days by region, not by wish list. Bali has no motorways across the middle, so distance on a map means very little. **Kuta to Ubud** can take up to two hours, **Canggu to Uluwatu** around 90 minutes, and **Ubud to Mount Batur** about an hour and a half.",
+          "The practical consequence is simple: change your base once, not every night. Three or four nights in the south and three in Ubud covers the whole island comfortably. Hopping hotels daily eats your holiday in checkouts and transfers.",
+        ],
+        bullets: [
+          "Base 1: **Seminyak, Canggu or Uluwatu** for beaches, sunsets and food",
+          "Base 2: **Ubud** for temples, rice terraces, waterfalls and the volcano",
+          "Day trips from either base: **Nusa Penida**, Gili Islands, north Bali",
+        ],
+      },
+      {
+        heading: "🌅 Where to put the early starts",
+        paragraphs: [
+          "Bali's two best experiences both begin in the dark. Mount Batur sunrise pickups run from around **02:00 in the south** and **02:30–03:00 from Ubud**. The Nusa Penida boat leaves Sanur around **07:30–08:00**, which means leaving Ubud by 06:30.",
+          "Never stack those two days back to back, and never put one the night before a flight. Put a deliberately empty afternoon after each — that is what separates a trip people enjoy from one they need a holiday to recover from.",
+        ],
+      },
+      {
+        heading: "📆 If you only have 5 days — or have 10",
+        paragraphs: [
+          "For a **5-day trip**, cut Day 6 and one of the south coast days. Keep Ubud, keep the volcano sunrise, and choose either Nusa Penida or waterfalls, not both.",
+          "For a **10-day trip**, the best additions are not more day trips from the same bases. Add the Gili Islands or Nusa Lembongan for two or three nights, or head to Amed or Munduk for a completely different, quieter side of the island.",
+        ],
+      },
+      {
+        heading: "💡 Mistakes that cost first-timers a day",
+        bullets: [
+          "Booking a tour for the morning after a red-eye arrival",
+          "Putting Mount Batur and Nusa Penida on consecutive days",
+          "Staying in Kuta and day-tripping to Ubud repeatedly instead of moving base",
+          "Scheduling anything on departure day — airport traffic is unpredictable",
+          "Underestimating **Nyepi**, when the whole island including the airport shuts for 24 hours",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Is 7 days enough for Bali?",
+        answer:
+          "Yes, seven days is enough to see Ubud, the south coast, a volcano sunrise and one island day trip without rushing — provided you split your stay between two bases instead of moving hotels every night.",
+      },
+      {
+        question: "Where should I stay for a 7-day Bali trip?",
+        answer:
+          "Split it: three or four nights in the south (Seminyak, Canggu or Uluwatu) for beaches and food, then three nights in Ubud for temples, rice terraces and the volcano. One hotel change, not six.",
+      },
+      {
+        question: "How many days do I need in Ubud?",
+        answer:
+          "Three nights is the sweet spot. That covers a culture day, a sunrise volcano trip with a recovery afternoon, and one waterfall or adventure day without feeling rushed.",
+      },
+      {
+        question: "Should I rent a scooter or hire a driver for a week in Bali?",
+        answer:
+          "For a first trip, a private driver for the long days is far less stressful — full-day charters typically run around $30–50 and remove all navigation and parking problems. Scooters make sense for short local hops if you are already an experienced rider.",
+      },
+      {
+        question: "What is the best order to do things in Bali?",
+        answer:
+          "South coast first while you recover from the flight, then move inland to Ubud for culture and the volcano, then return south for the last night so you are close to the airport on departure day.",
+      },
+    ],
+  },
+  {
+    key: "ubudArea",
+    slug: "things-to-do-ubud-bali-complete-guide",
+    badge: "Evergreen SEO guide",
+    navLabel: "Ubud guide",
+    cardTourLabel: "Ubud area",
+    heroTourSlug: "ubud-highlights-tour",
+    relatedTourSlugs: ["ubud-highlights-tour", "white-water-rafting", "atv-ride-adventure"],
+    inlineStats: ["Culture and jungle", "Best base for day trips", "Walkable centre"],
+    title: "Things to Do in Ubud, Bali: The Complete Area Guide",
+    description:
+      "What to actually do in Ubud, Bali — rice terraces, temples, the Monkey Forest, waterfalls, rafting and jungle swings — plus where to stay and how long to spend.",
+    excerpt:
+      "Ubud is Bali's cultural centre and the single best base for day trips inland. The town itself is walkable and green; everything dramatic — volcanoes, waterfalls, river gorges — sits within about an hour's drive. Most travelers underestimate it and give it one rushed day.",
+    rankings: [
+      {
+        name: "Tegalalang Rice Terrace",
+        imageTitle: "Tegalalang rice terraces",
+        area: "North of Ubud",
+        bestFor: "The classic Bali photo",
+        summary:
+          "Entry is around **IDR 25,000**. Go before **08:30** — by mid-morning the swings have queues and the light goes flat. Farmers maintaining the paths may ask a small donation.",
+      },
+      {
+        name: "Sacred Monkey Forest Sanctuary",
+        imageTitle: "Ubud Monkey Forest",
+        area: "Central Ubud",
+        bestFor: "Walkable jungle temple",
+        summary:
+          "Home to over **1,200 long-tailed macaques** among 14th-century temples. Secure sunglasses, water bottles and anything dangling — and never bring food in.",
+      },
+      {
+        name: "Tirta Empul Temple",
+        imageTitle: "Tirta Empul holy spring",
+        area: "Tampaksiring",
+        bestFor: "The purification ritual",
+        summary:
+          "A working holy-spring temple where visitors can join the **melukat** purification. A sarong comes with the ticket; a separate bathing sarong is used in the water.",
+      },
+      {
+        name: "Ayung River rafting",
+        imageTitle: "Ayung River gorge",
+        area: "Sayan gorge",
+        bestFor: "Scenery with mild adrenaline",
+        summary:
+          "Class **II–III** rapids through a gorge with carved stone reliefs and small waterfalls. Beginner-friendly, roughly two hours on the water.",
+      },
+      {
+        name: "Tukad Cepung Waterfall",
+        imageTitle: "Tukad Cepung light beams",
+        area: "Bangli, ~40 min",
+        bestFor: "Light beams in a cave canyon",
+        summary:
+          "The famous sunbeams appear roughly **09:00–11:00** on clear days. You wade through shallow water, so bring shoes with grip and a dry bag.",
+      },
+      {
+        name: "Campuhan Ridge Walk",
+        imageTitle: "Campuhan Ridge",
+        area: "Central Ubud",
+        bestFor: "A free early-morning walk",
+        summary:
+          "An easy ridge path straight out of town. Best at sunrise before the heat — no ticket, no driver, no planning required.",
+      },
+    ],
+    sections: [
+      {
+        heading: "📍 Why Ubud is the best inland base",
+        paragraphs: [
+          "Ubud sits roughly in the middle of everything worth driving to. Mount Batur is about **90 minutes** away, the main waterfalls **30–50 minutes**, and the Ayung River gorge is on the doorstep. From the south coast, every one of those becomes a much longer day.",
+          "The town also solves evenings. You can walk to dinner, a market and a dance performance without arranging transport, which is not true of most Bali areas.",
+        ],
+      },
+      {
+        heading: "⏰ How to time the popular stops",
+        paragraphs: [
+          "Ubud's headline sights are all better early. The pattern is consistent: arrive before **09:00** and you get soft light and space; arrive at **11:00** and you get tour buses.",
+        ],
+        bullets: [
+          "Tegalalang rice terraces: **06:00–08:30**",
+          "Tukad Cepung waterfall: **09:00–10:00** for the light beams",
+          "Monkey Forest: opens **09:00**, quietest in the first hour",
+          "Campuhan Ridge Walk: sunrise, before it gets hot",
+          "Tirta Empul: early, before tour groups fill the pools",
+        ],
+      },
+      {
+        heading: "🏨 Where to stay in and around Ubud",
+        paragraphs: [
+          "Staying **in the centre** means walkable restaurants and the Monkey Forest, but more scooter noise. Staying in the **rice-field fringe** (Penestanan, Sayan, Nyuh Kuning) buys quiet and views at the cost of a short ride into town each evening.",
+          "For a three-night stay, central is usually the better trade. For a week or a honeymoon, the valley resorts along the Sayan ridge are what people picture when they imagine Ubud.",
+        ],
+      },
+      {
+        heading: "👗 Temple etiquette that actually matters",
+        bullets: [
+          "Sarong and sash are required — usually provided at the entrance",
+          "Shoulders and knees covered inside temple grounds",
+          "Do not stand higher than offerings or point your feet at shrines",
+          "Menstruating women are traditionally asked not to enter temple grounds",
+          "Remove hats and keep voices down during ceremonies",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "How many days should I spend in Ubud?",
+        answer:
+          "Three nights suits most travelers: one culture day, one sunrise volcano trip with a slow afternoon, and one waterfall or adventure day. Two nights works if you only want the highlights.",
+      },
+      {
+        question: "Is Ubud worth visiting if I prefer beaches?",
+        answer:
+          "Yes, but treat it as a base rather than a beach substitute. Ubud is where the temples, rice terraces, waterfalls, river rafting and the volcano sunrise all become short drives instead of full-day expeditions.",
+      },
+      {
+        question: "Is the Ubud Monkey Forest safe?",
+        answer:
+          "Generally yes, with basic care. The macaques are wild and fast — do not carry food, secure sunglasses and loose items, avoid direct eye contact, and watch small children closely.",
+      },
+      {
+        question: "How far is Ubud from the airport?",
+        answer:
+          "Roughly 1 to 1.5 hours in normal traffic, and about 50–60 minutes late at night. Peak-hour departures through Denpasar can push it considerably longer.",
+      },
+    ],
+  },
+  {
+    key: "tripCost",
+    slug: "how-much-does-a-bali-trip-cost",
+    badge: "Evergreen SEO guide",
+    navLabel: "Bali trip cost",
+    cardTourLabel: "Budget planning",
+    heroTourSlug: "private-car-with-driver-bali",
+    relatedTourSlugs: ["private-car-with-driver-bali", "ubud-highlights-tour", "nusa-penida-west-tour"],
+    inlineStats: ["Real 2026 prices", "Three budget tiers", "Hidden costs included"],
+    title: "How Much Does a Bali Trip Cost? Real Prices for 2026",
+    description:
+      "A realistic Bali budget breakdown: accommodation, food, transport, activities and the two costs most travelers forget — the 21% restaurant surcharge and the tourist levy.",
+    excerpt:
+      "Bali can be a **$30 a day** island or a **$400 a day** island, and both are honest answers. What decides it is where you eat and how you move around, not how nice your room is. This breakdown uses real 2026 prices so you can build a number that survives contact with the island.",
+    rankings: [
+      {
+        name: "Backpacker",
+        imageTitle: "Budget travel in Bali",
+        area: "$25–50 per day",
+        bestFor: "Hostels, warungs, scooter",
+        summary:
+          "Dorm bed **$6–12**, warung meals **$1.50–3**, scooter **$4–6.50** a day. Comfortable if you eat local and stay off beach clubs.",
+      },
+      {
+        name: "Mid-range",
+        imageTitle: "Mid-range hotel in Bali",
+        area: "$70–130 per day",
+        bestFor: "Most travelers",
+        summary:
+          "Boutique hotel or small pool villa **$28–56**, a mix of warungs and cafes, a driver for the long days and one paid activity every couple of days.",
+      },
+      {
+        name: "Comfort and luxury",
+        imageTitle: "Luxury resort in Bali",
+        area: "$300–500+ per day",
+        bestFor: "Resorts and private drivers",
+        summary:
+          "Resort or multi-bedroom villa from **$185**, restaurant dining throughout, private driver daily and spa treatments at hotel prices.",
+      },
+      {
+        name: "Accommodation",
+        imageTitle: "Bali villa with pool",
+        area: "Per night",
+        bestFor: "The biggest single variable",
+        summary:
+          "Hostel dorm **$6–12**, guesthouse **$12–28**, mid-range hotel **$28–56**, private pool villa from **$56**, luxury resort **$185–500+**. Seminyak and Canggu run 40–60% above inland equivalents.",
+      },
+      {
+        name: "Food and drink",
+        imageTitle: "Balinese warung meal",
+        area: "Per meal",
+        bestFor: "Where budgets are won or lost",
+        summary:
+          "Warung nasi goreng **$1.30–2.60**, mid-range restaurant dish **$5–15**, western cafe breakfast **$5–9**. Beach club daybeds carry minimum spends from **$31** up past **$125**.",
+      },
+      {
+        name: "Getting around",
+        imageTitle: "Scooter and driver in Bali",
+        area: "Per day or ride",
+        bestFor: "Cheaper than most expect",
+        summary:
+          "Scooter **$4–13** a day, private driver for 8–10 hours **$35–65**, Grab or Gojek car for a short hop **$3–5**, airport to Seminyak **$8–12**.",
+      },
+      {
+        name: "Activities",
+        imageTitle: "Mount Batur sunrise trek",
+        area: "Per person",
+        bestFor: "Planning the fun budget",
+        summary:
+          "Temple entry **$3–8**, waterfall **$1.20–2**, Mount Batur sunrise trek around **$31**, surf lesson **$28–35**, Ayung rafting **$35–55**, full-day tour with driver **$35–65**.",
+      },
+    ],
+    sections: [
+      {
+        heading: "💸 The two costs almost everyone forgets",
+        paragraphs: [
+          "First: nearly every restaurant, cafe and beach club adds **21% on top of menu prices** — 10% government tax plus 11% service, usually shown as \"++\" in tiny print. A menu that reads $40 for two settles at closer to $48. Warungs generally do not do this, which is part of why they feel so cheap.",
+          "Second: every foreign visitor pays a one-time **Bali tourist levy of IDR 150,000** (about $10, roughly £8) per entry. It applies to every age, including infants. Pay it only through the official **lovebali.baliprov.go.id** site or the Love Bali app — lookalike .com and .org sites charge IDR 300,000 and up.",
+        ],
+      },
+      {
+        heading: "🧮 A real 7-day budget for a couple",
+        paragraphs: [
+          "Mid-range, land costs only, excluding international flights. This is the shape of a typical week rather than a promise — your own number will move mostly with accommodation and how often you eat in restaurants.",
+        ],
+        bullets: [
+          "Accommodation, 6 nights at about $85: **~$510**",
+          "Food and drink for two, 7 days: **~$630**",
+          "Transport — scooter, two driver days, airport transfers: **~$170**",
+          "Activities — volcano trek, day tour, surf lessons, entries: **~$240**",
+          "Spa, two massages each: **~$80**",
+          "SIM cards and tourist levy for two: **~$38**",
+          "**Total: roughly $1,670 for the couple**, about $835 each",
+        ],
+      },
+      {
+        heading: "📅 What season does to the price",
+        paragraphs: [
+          "Only accommodation really swings. Food, scooters, spa treatments and entrance fees stay broadly flat all year.",
+          "**July, August and the Christmas–New Year window** push mid-range rooms 15–25% above shoulder season, and in-demand villas considerably more. **May, June and September** are the value sweet spot — similar weather, 20–30% cheaper. The January–February rainy months run 30–40% below peak.",
+        ],
+      },
+      {
+        heading: "💳 Money, ATMs and avoiding overcharges",
+        bullets: [
+          "Use **BCA or BNI** ATMs — they generally do not add a foreign-card fee. Mandiri now charges **IDR 50,000** per withdrawal",
+          "Always decline \"conversion\" (DCC) and choose to be charged in **rupiah**",
+          "Machines cap withdrawals around **IDR 1,250,000–3,000,000**, so take the maximum to spread any fee",
+          "Cards work in hotels and larger restaurants, often with a **2–3% surcharge**. Warungs, scooter rentals, temple entries and boat counters are **cash only**",
+          "Tipping is not customary — service is usually inside that 21%. Round up, or **IDR 50,000–100,000 a day** for a private driver",
+          "Photograph a rental scooter from every angle in daylight before you ride off, to head off \"damage\" claims",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "How much money do I need for a week in Bali?",
+        answer:
+          "Roughly $250–350 per person for a backpacker week, $700–900 mid-range, and $2,000 and up for comfort or luxury travel. That covers accommodation, food, transport and activities, but not international flights.",
+      },
+      {
+        question: "Is Bali expensive?",
+        answer:
+          "Bali is cheap to eat and move around in, and can be expensive to sleep in. Warung meals run $1.50–3 and scooters $4–6 a day, while beachfront villas and beach clubs sit at Western prices. Your accommodation choice drives most of the difference.",
+      },
+      {
+        question: "What is the 21% charge on Bali restaurant bills?",
+        answer:
+          "Most restaurants, cafes and beach clubs add 10% government tax plus 11% service on top of menu prices, shown as \"++\". Budget for it when reading menus. Local warungs usually charge the price as listed.",
+      },
+      {
+        question: "How much is the Bali tourist tax?",
+        answer:
+          "IDR 150,000 per person, about $10, paid once per entry by every foreign visitor of any age. Pay through the official lovebali.baliprov.go.id site or the Love Bali app — unofficial sites charge far more.",
+      },
+      {
+        question: "Should I bring cash or use cards in Bali?",
+        answer:
+          "Bring both. Hotels, malls and mid-range restaurants take cards, often with a 2–3% surcharge, but warungs, scooter rentals, temple entries, markets and boat tickets are cash only. Withdraw from BCA or BNI ATMs to avoid fees.",
+      },
+    ],
+  },
+  {
+    key: "visaEntry",
+    slug: "bali-visa-entry-requirements",
+    badge: "Evergreen SEO guide",
+    navLabel: "Visa and entry",
+    cardTourLabel: "Trip admin",
+    heroTourSlug: "bali-airport-transfer",
+    relatedTourSlugs: ["bali-airport-transfer", "private-car-with-driver-bali", "ubud-highlights-tour"],
+    inlineStats: ["Visa on arrival", "Arrival card", "Tourist levy"],
+    title: "Bali Visa and Entry Requirements: What You Actually Need",
+    description:
+      "Visa on arrival, e-VOA, the mandatory All Indonesia arrival card and the Bali tourist levy — what to prepare before you fly, and the mistakes that cause problems at immigration.",
+    excerpt:
+      "Three things now catch travelers out on arrival in Bali: the visa on arrival is **no longer extendable online**, the customs form has been folded into a **mandatory arrival card** filed within 72 hours of landing, and the tourist levy has a swarm of lookalike scam sites. None are difficult — they just need doing before you fly.",
+    rankings: [
+      {
+        name: "Visa on Arrival (B1)",
+        imageTitle: "Bali immigration",
+        area: "IDR 500,000",
+        bestFor: "Most Western passports",
+        summary:
+          "**30 days**, single entry, payable by cash or card on arrival. Extendable once for another 30 days, for the same fee, giving 60 days maximum.",
+      },
+      {
+        name: "e-VOA (apply online first)",
+        imageTitle: "Online visa application",
+        area: "Same fee, less queueing",
+        bestFor: "Skipping the payment counter",
+        summary:
+          "Apply at **evisa.imigrasi.go.id** before you fly. Approval usually takes 24–48 hours. The real benefit: e-VOA holders can use the **airport autogates**.",
+      },
+      {
+        name: "All Indonesia arrival card",
+        imageTitle: "Digital arrival card",
+        area: "Free, mandatory",
+        bestFor: "Everyone, no exceptions",
+        summary:
+          "The old e-CD and health declaration merged into one form at **allindonesia.imigrasi.go.id**. File it **within 72 hours before arrival** — the system rejects earlier submissions.",
+      },
+      {
+        name: "Bali tourist levy",
+        imageTitle: "Love Bali levy",
+        area: "IDR 150,000",
+        bestFor: "Pay before you land",
+        summary:
+          "One time per entry, every age including infants. Official channels only: **lovebali.baliprov.go.id** or the Love Bali app. You get a QR voucher by email.",
+      },
+      {
+        name: "Visa-free entry",
+        imageTitle: "Passport control",
+        area: "About 19 countries",
+        bestFor: "Mostly ASEAN passports",
+        summary:
+          "30 days, **non-extendable and non-convertible**. Covers ASEAN states plus a short list of others. The US, UK, EU and Australia are **not** on it.",
+      },
+    ],
+    sections: [
+      {
+        heading: "📋 What to have ready before you fly",
+        bullets: [
+          "Passport valid **at least 6 months** from arrival, with **2 blank pages**, undamaged",
+          "A **return or onward ticket** — airlines check this at boarding and will refuse you without it",
+          "The **All Indonesia arrival card**, filed inside the 72-hour window",
+          "The **tourist levy** voucher, or be ready to pay at the airport counter",
+          "e-VOA approval if you applied online, so you can use the autogates",
+          "Officers may ask for proof of funds; travelers commonly cite around **$1,000** equivalent, though this is guidance rather than a published rule",
+        ],
+      },
+      {
+        heading: "⏳ Extending your stay — the rule that changed",
+        paragraphs: [
+          "This is the single most out-of-date thing in older guides. The visa on arrival extension **can no longer be completed entirely online**. Since mid-2025 it requires an **in-person visit** to the immigration office covering your registered address, where they take fingerprints, a photo and a signature.",
+          "The flow is hybrid: register online, receive a QR code by email, attend the office for biometrics, then wait roughly **5–7 working days**. Because of that, start the process **10–14 days before your visa expires**, not in the final days. Your arrival day counts as day one.",
+          "Visa-free entry works differently: those 30 days **cannot be extended or converted** at all. If you might want longer, take the visa on arrival even if you qualify for visa-free.",
+        ],
+      },
+      {
+        heading: "⚠️ Overstaying is expensive",
+        paragraphs: [
+          "The fine is **IDR 1,000,000 per day**, counted from day one — two weeks over is IDR 14,000,000. Up to 59 days can be settled with the fine. **From 60 days it becomes deportation and a blacklist**, with re-entry bans running from six months to ten years.",
+          "Biometric exit checks mean an overstay is always detected. If your plans change, extend properly rather than hoping to pay quietly on the way out.",
+        ],
+      },
+      {
+        heading: "🚫 Mistakes that cause real problems",
+        bullets: [
+          "Booking a **one-way ticket** — you get stopped at check-in, before immigration ever sees you",
+          "Assuming a Western passport gets visa-free entry. It does not",
+          "Assuming visa-free 30 days can be extended. It cannot",
+          "Expecting to extend the VOA from your phone — biometrics are in person now",
+          "Filing the arrival card **more than 72 hours** ahead, so it is rejected",
+          "Paying the levy on a lookalike site. Only **.go.id** is official",
+          "Staying in a private villa and not registering with local police — hotels do this for you, private hosts may not, and the fine is **IDR 5,000,000**",
+          "Working or earning on a tourist visa, including paid content creation",
+        ],
+      },
+      {
+        heading: "💉 Health requirements",
+        paragraphs: [
+          "There are **no routine vaccination requirements** and no COVID-era rules left. A yellow fever certificate is required only if you are arriving from a country on the transmission-risk list. The health declaration that used to be separate is now part of the All Indonesia arrival card.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Do I need a visa for Bali?",
+        answer:
+          "Most travelers, including US, UK, EU, Australian and Canadian passport holders, need a visa on arrival costing IDR 500,000 for 30 days. Around 19 mostly ASEAN nationalities get 30 days visa-free instead, but that version cannot be extended.",
+      },
+      {
+        question: "How much is the Bali visa on arrival?",
+        answer:
+          "IDR 500,000, roughly $30–35, payable by cash or card at the airport. Extending it for another 30 days costs the same again, giving a 60-day maximum.",
+      },
+      {
+        question: "Can I extend my Bali visa online?",
+        answer:
+          "No, not fully. Since mid-2025 the extension requires an in-person visit to the immigration office for fingerprints and a photo. You register online first, then attend in person, then wait around 5–7 working days. Start 10–14 days before your visa expires.",
+      },
+      {
+        question: "What is the All Indonesia arrival card?",
+        answer:
+          "A free, mandatory digital form that replaced the separate customs declaration and health declaration. File it at allindonesia.imigrasi.go.id within 72 hours before arrival. It applies to everyone, including children.",
+      },
+      {
+        question: "How long can I stay in Bali as a tourist?",
+        answer:
+          "Thirty days on a visa on arrival, extendable once for a total of 60 days. Visa-free entry gives 30 days with no extension possible. Overstaying costs IDR 1,000,000 per day and leads to deportation past 60 days.",
+      },
+      {
+        question: "Does my passport need 6 months validity for Bali?",
+        answer:
+          "Yes. Your passport must be valid for at least six months from your arrival date and have at least two blank pages. A damaged passport can be grounds for refusal.",
+      },
+    ],
+  },
+  {
+    key: "gettingAround",
+    slug: "how-to-get-around-bali-transport-guide",
+    badge: "Evergreen SEO guide",
+    navLabel: "Getting around",
+    cardTourLabel: "Transport",
+    heroTourSlug: "private-car-with-driver-bali",
+    relatedTourSlugs: ["private-car-with-driver-bali", "bali-airport-transfer", "fast-boat-transfer-bali"],
+    inlineStats: ["Scooter vs driver", "Real drive times", "Grab and Gojek zones"],
+    title: "How to Get Around Bali: Scooter, Driver, Grab and Real Drive Times",
+    description:
+      "Scooter rental, private drivers, Grab and Gojek, airport transfers and fast boats in Bali — what each costs, where apps get blocked, and how long journeys actually take.",
+    excerpt:
+      "Bali has no motorways across the middle, so a 30 km trip can take two hours. Choosing between a scooter, a driver and a ride app is less about price than about which one matches the day you have planned. Here is what each really costs and where each one fails.",
+    rankings: [
+      {
+        name: "Private driver with car",
+        imageTitle: "Private driver in Bali",
+        area: "IDR 650,000–900,000 per day",
+        bestFor: "Full-day sightseeing",
+        summary:
+          "Around **$40–55** for **10 hours** including car, fuel and driver, usually a 6–7 seat air-con SUV. Overtime about **IDR 100,000** an hour. Entry tickets and your meals are extra.",
+      },
+      {
+        name: "Scooter rental",
+        imageTitle: "Scooter in Bali",
+        area: "IDR 60,000–200,000 per day",
+        bestFor: "Short local hops",
+        summary:
+          "A 110cc Scoopy runs **$4–6.50** a day, a 125–155cc Vario or NMAX **$6.50–13**. Weekly and monthly deals cut the daily rate by 30–50%.",
+      },
+      {
+        name: "Grab and Gojek",
+        imageTitle: "Ride hailing app",
+        area: "From IDR 15,000",
+        bestFor: "Everyday short trips",
+        summary:
+          "A 5 km hop costs about **IDR 15,000–25,000** by bike or **IDR 50,000–80,000** by car. Expect roughly **1.5x surge** in rain or at peak hours.",
+      },
+      {
+        name: "Bluebird taxi",
+        imageTitle: "Bluebird taxi",
+        area: "Metered",
+        bestFor: "When apps are blocked",
+        summary:
+          "The one street taxi worth flagging down. Flag fall **IDR 7,000**, then about **IDR 6,500 per km**, always metered. Book through the MyBluebird app to avoid copycats.",
+      },
+      {
+        name: "Airport transfer",
+        imageTitle: "Bali airport arrivals",
+        area: "IDR 100,000–500,000",
+        bestFor: "Arrival day",
+        summary:
+          "Fixed-price counter fares: Kuta **IDR 100,000–200,000**, Seminyak **IDR 150,000–250,000**, Canggu **IDR 250,000–400,000**, Ubud **IDR 350,000–500,000**. Add **IDR 50,000** between 22:00 and 06:00.",
+      },
+      {
+        name: "Fast boats",
+        imageTitle: "Fast boat from Sanur",
+        area: "From IDR 115,000",
+        bestFor: "Island day trips",
+        summary:
+          "From Sanur: Nusa Lembongan **30–35 min**, Nusa Penida about **45 min** (IDR 150,000–250,000), Gili Islands and Lombok around **3 hours**.",
+      },
+    ],
+    sections: [
+      {
+        heading: "🛵 The scooter question, answered honestly",
+        paragraphs: [
+          "Scooters are cheap, fun and the reason most travel insurance claims in Bali get refused. Legally you need **both** your home motorcycle licence **and an International Driving Permit with a motorcycle endorsement**. Most rental shops only ask for a passport — that does not make you legal, and it does not make you insured.",
+          "The numbers are worth knowing before you decide. Bali recorded **7,224 crashes and 632 deaths in 2023**, roughly double the previous year, and about **86% involved motorcycles**. If something goes wrong without a valid licence, an air ambulance to Singapore runs **$50,000–100,000** and an international-standard hospital bed **$1,000–5,000 a day**.",
+          "There is **no ban** on tourists renting scooters in 2026 — the proposed one was never enacted. What did change is enforcement: random checkpoints are routine in Canggu, Kuta, Ubud and Uluwatu, usually mid-morning. Missing documents cost around **IDR 300,000–500,000** each, and riding without a helmet is an instant **IDR 250,000**.",
+        ],
+      },
+      {
+        heading: "📱 Where Grab and Gojek stop working",
+        paragraphs: [
+          "Both apps are legal across the island. The restrictions you will run into are informal, enforced by local transport cooperatives rather than by law, and they are concentrated in predictable places.",
+          "The workaround is always the same: walk five or ten minutes to a main road, or set your pickup at a nearby cafe or minimart instead of the entrance you are standing at.",
+        ],
+        bullets: [
+          "Posted \"no online taxi\" zones near major temples, beach clubs and some markets",
+          "**Central Ubud** is patchy — walk out a few minutes and it works",
+          "**Canggu** works about 95% of the time; **Jalan Pantai Batu Mejan (Echo Beach)** is the firm exception",
+          "At the airport, app pickup happens in a designated area, not the arrivals curb",
+          "Gojek is slightly cheaper on short bike rides; Grab has better car availability in rain",
+        ],
+      },
+      {
+        heading: "⏱️ Real drive times between the main areas",
+        paragraphs: [
+          "Plan around these rather than around map distance. The single biggest time saver in Bali is leaving early.",
+        ],
+        bullets: [
+          "Kuta → Ubud: **1h–1h30** off-peak, up to **2h30** in traffic",
+          "Canggu → Uluwatu: about **1 hour** late evening, **2h30–3h** at peak",
+          "Kuta → Uluwatu: **45–60 min**, 90+ min after 15:00",
+          "Ubud → Seminyak: **45 min to 2 hours** depending on the hour",
+          "Ubud → Mount Batur: **1h15–1h30**",
+          "Ubud → Amed: **2h30–3h30**",
+          "Worst hours: **07:00–09:30** and **15:00–18:30**, worst in the south",
+        ],
+      },
+      {
+        heading: "🙏 One thing no app can route around",
+        paragraphs: [
+          "Balinese ceremony processions close roads with no warning, often for **30 to 60 minutes**. There is no diversion and no arguing with it — the procession has right of way and drivers simply wait.",
+          "Build slack into any day with a fixed deadline, especially a flight. This is the most common reason a perfectly planned Bali schedule falls apart.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Do I need an international driving permit to rent a scooter in Bali?",
+        answer:
+          "Yes. Legally you need your home country motorcycle licence plus an International Driving Permit with a motorcycle endorsement. Rental shops often only ask for a passport, but without the correct licence you are riding illegally and your travel insurance will not cover a motorbike accident.",
+      },
+      {
+        question: "Is it better to rent a scooter or hire a driver in Bali?",
+        answer:
+          "A driver for long sightseeing days, a scooter for short local hops if you are an experienced rider. A full-day driver costs about $40–55 including fuel, which is often cheaper than several ride-app trips and far less stressful in Bali traffic.",
+      },
+      {
+        question: "Does Grab work in Bali?",
+        answer:
+          "Yes, Grab and Gojek both work island-wide and are legal. You will hit informal no-pickup zones near some temples, beach clubs and in central Ubud and at Echo Beach in Canggu. Walking a few minutes to a main road solves it.",
+      },
+      {
+        question: "How much is a taxi from Bali airport to Seminyak?",
+        answer:
+          "About IDR 150,000–250,000 from the official fixed-price counter, taking 25–40 minutes. There is a IDR 50,000 surcharge between 22:00 and 06:00, and peak-hour traffic can add 20–30 minutes.",
+      },
+      {
+        question: "How long does it take to drive from Kuta to Ubud?",
+        answer:
+          "Between 1 hour and 1 hour 30 off-peak, and up to 2 hours 30 in heavy traffic, for around 35 km. Leaving before 07:00 or after 19:00 makes the biggest difference.",
+      },
+    ],
+  },
+  {
+    key: "bestTime",
+    slug: "best-time-to-visit-bali-month-by-month",
+    badge: "Evergreen SEO guide",
+    navLabel: "Best time to visit",
+    cardTourLabel: "When to go",
+    heroTourSlug: "nusa-penida-manta-rays-point",
+    relatedTourSlugs: ["nusa-penida-manta-rays-point", "mount-batur-sunrise-jeep-tour", "surf-lesson-experience"],
+    inlineStats: ["Month-by-month table", "Activity seasons", "Nyepi dates"],
+    title: "Best Time to Visit Bali: A Month-by-Month Guide",
+    description:
+      "When to visit Bali, month by month: dry and wet season reality, crowds and prices, the best months for surfing, diving, manta rays and waterfalls, plus Nyepi and Galungan dates.",
+    excerpt:
+      "Bali is warm all year — sea temperature never drops below **27°C**. What actually changes is rain, crowds and price, and they do not move together. The cheapest months have the fullest waterfalls, and the driest month is also the most expensive and crowded.",
+    rankings: [
+      {
+        name: "April to June",
+        imageTitle: "Bali in shoulder season",
+        area: "Shoulder season",
+        bestFor: "The best all-round window",
+        summary:
+          "Dry weather without peak prices or peak crowds. **May** is a sweet spot: manta numbers peak and the island is not yet full.",
+      },
+      {
+        name: "July and August",
+        imageTitle: "Bali in peak season",
+        area: "Peak season",
+        bestFor: "Driest weather, if you book early",
+        summary:
+          "**August is the driest month** (~15–40 mm) with the best underwater visibility. It is also the most expensive and busiest — Mount Batur sees **600+ climbers a day**.",
+      },
+      {
+        name: "September and October",
+        imageTitle: "Bali in September",
+        area: "Shoulder season",
+        bestFor: "The underrated months",
+        summary:
+          "Dry season holds while crowds thin and prices ease. **September** is arguably the best value month of the year.",
+      },
+      {
+        name: "November and December",
+        imageTitle: "Bali green season",
+        area: "Wet season begins",
+        bestFor: "Green landscapes, low prices",
+        summary:
+          "Short afternoon showers rather than all-day rain. Prices are low until the **20 Dec–5 Jan** holiday spike.",
+      },
+      {
+        name: "January to March",
+        imageTitle: "Bali in rainy season",
+        area: "Green season",
+        bestFor: "Waterfalls and cheap villas",
+        summary:
+          "**January is wettest** (~350 mm) and rates run **30–40% below peak**. Waterfalls are at full power; seas are roughest and some fast boats cancel.",
+      },
+    ],
+    sections: [
+      {
+        heading: "🌦️ Dry and wet season, without the myths",
+        paragraphs: [
+          "**Dry season runs April to October, wet season November to March.** Daily temperatures sit around **26.5–28°C** all year, with a 22–32°C range, and the sea stays between **27 and 29°C**. Ubud and Kintamani run several degrees cooler than the coast.",
+          "The wet season does **not** mean all-day rain. The usual pattern is a heavy downpour of one to two hours in the late afternoon or evening, with sunshine either side. Even in January there are plenty of clear mornings. The trade is real though: more humidity and mosquitoes, rougher seas, occasional boat cancellations, and beach trash washing onto the west coast between December and February.",
+          "The practical strategy for green season is simply to front-load the day — outdoor plans before 14:00, indoor plans after.",
+        ],
+      },
+      {
+        heading: "🤿 Best months for specific activities",
+        bullets: [
+          "**Surfing, west coast** (Uluwatu, Bingin, Canggu): **April–October**, biggest swell June–August",
+          "**Surfing, east coast** (Keramas, Sanur, Nusa Dua): **November–March**, smaller and more forgiving",
+          "**Diving and snorkeling visibility**: **June–October**, 25–30 m+ around Nusa Penida",
+          "**Manta rays**: year-round at Manta Point, most reliable **April–October**, numbers peak in **May**",
+          "**Mola-mola (ocean sunfish)**: **July–October** at Crystal Bay — water can drop to **18–20°C**",
+          "**Waterfalls**: strongest **November–March**, but best photographed **late March–April** for full flow without brown water",
+          "**Mount Batur sunrise**: **April–October**, clearest **June–September**, best crowd-to-weather balance **April–June**",
+        ],
+      },
+      {
+        heading: "🤫 Nyepi — the one date that can ruin a trip",
+        paragraphs: [
+          "Nyepi, the Balinese Day of Silence, is the single most important date to plan around. The next one is **Monday 8 March 2027**, running 06:00 to 06:00 the following morning.",
+          "For 24 hours **Ngurah Rai airport closes completely** — no arrivals, no departures. Roads and ports close, shops and restaurants shut, mobile data is switched off island-wide, and everyone including tourists must stay on hotel or villa grounds. Village security patrol to enforce it.",
+          "Plan to **arrive the day before at the latest and depart the day after**, confirm your hotel is serving meals, and stock water and snacks. The upside: the **ogoh-ogoh parades on the eve of Nyepi** are one of the best spectacles in Bali, and the night sky with the island's lights off is extraordinary.",
+        ],
+      },
+      {
+        heading: "🎋 Other dates worth knowing",
+        bullets: [
+          "**Galungan and Kuningan 2027**: 13–23 January and 11–21 August. Tourist areas run normally, but expect frequent road processions and penjor poles lining every street",
+          "**Melasti**, two or three days before Nyepi: mass purification processions to the beaches, spectacular but coastal roads get blocked",
+          "**Indonesian Independence Day, 17 August**: a domestic travel surge on top of peak season",
+          "**Idul Fitri**: a large domestic influx with packed flights and ferries; dates shift each year with moon sighting",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "What is the best month to visit Bali?",
+        answer:
+          "May, June and September offer the best balance — dry weather without peak-season crowds or prices. August has the driest weather and best underwater visibility but is the busiest and most expensive month.",
+      },
+      {
+        question: "Is Bali worth visiting in the rainy season?",
+        answer:
+          "Yes, with a flexible schedule. Rain usually comes as a heavy one to two hour downpour in the late afternoon rather than all day. The island is greener, waterfalls are at full power, crowds thin out, and rates run 30–40% below peak.",
+      },
+      {
+        question: "When is Nyepi and how does it affect travel?",
+        answer:
+          "The next Nyepi is Monday 8 March 2027. For 24 hours the airport closes entirely, roads and shops shut, mobile data is switched off, and everyone must stay on their accommodation grounds. Arrive at least a day before and depart at least a day after.",
+      },
+      {
+        question: "What is the cheapest time to go to Bali?",
+        answer:
+          "January to March, and November. Accommodation runs 30–40% below peak-season rates and flights are cheaper. Expect afternoon rain, rougher seas and the occasional fast-boat cancellation.",
+      },
+      {
+        question: "When can you see manta rays in Bali?",
+        answer:
+          "Manta rays are at Manta Point off Nusa Penida year-round, but sightings are most reliable from April to October, with numbers often peaking in May. Underwater visibility is best between June and October.",
+      },
+    ],
+  },
 ];
 
 function guideArticleRoute(guide) {
@@ -9892,11 +10700,11 @@ function renderGuideRankingCard(item) {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>${escapeHtml(item.area)}</span>
-          <span>${escapeHtml(item.bestFor)}</span>
+          <span>${renderRichText(item.area)}</span>
+          <span>${renderRichText(item.bestFor)}</span>
         </div>
         <h3>${escapeHtml(item.name)}</h3>
-        <p>${escapeHtml(item.summary)}</p>
+        <p>${renderRichText(item.summary)}</p>
       </div>
     </article>
   `;
@@ -9967,7 +10775,7 @@ function renderSeoGuidePage(article) {
         item: {
           "@type": "TouristAttraction",
           name: item.name,
-          description: item.summary,
+          description: stripRichText(item.summary),
           image: absoluteJournalImageUrl(item.image),
         },
       })),
@@ -9980,7 +10788,7 @@ function renderSeoGuidePage(article) {
         name: item.question,
         acceptedAnswer: {
           "@type": "Answer",
-          text: item.answer,
+          text: stripRichText(item.answer),
         },
       })),
     },
@@ -10022,7 +10830,7 @@ ${JOURNAL_FOOTER_ASSETS}
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">${escapeHtml(article.articleType.badge)}</div>
             <h1>${escapeHtml(article.title)}</h1>
-            <p class="sb-journal-lead">${escapeHtml(article.excerpt)}</p>
+            <p class="sb-journal-lead">${renderRichText(article.excerpt)}</p>
             <div class="sb-journal-inline-stats">
               ${article.inlineStats.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
             </div>
@@ -10191,7 +10999,7 @@ ${JOURNAL_FOOTER_ASSETS}
           mainEntity: article.faq.map(([q, a]) => ({
             "@type": "Question",
             name: q,
-            acceptedAnswer: { "@type": "Answer", text: a },
+            acceptedAnswer: { "@type": "Answer", text: stripRichText(a) },
           })),
         }] : []),
       ],
@@ -10216,7 +11024,7 @@ ${JOURNAL_FOOTER_ASSETS}
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">${escapeHtml(article.articleType.badge)}</div>
             <h1>${escapeHtml(article.title)}</h1>
-            <p class="sb-journal-lead">${escapeHtml(article.excerpt)}</p>
+            <p class="sb-journal-lead">${renderRichText(article.excerpt)}</p>
             <div class="sb-journal-inline-stats">
               <span>${escapeHtml(article.tour.duration)}</span>
               <span>${escapeHtml(article.tour.format)}</span>
