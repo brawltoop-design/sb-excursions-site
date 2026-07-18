@@ -119,6 +119,30 @@
       "destination": "/bali-main-page-:lang.html"
     },
     {
+      "source": "/bali/en/about",
+      "destination": "/bali-about.html"
+    },
+    {
+      "source": "/bali/en/faq",
+      "destination": "/bali-faq.html"
+    },
+    {
+      "source": "/bali/:lang/about",
+      "destination": "/bali-about-:lang.html"
+    },
+    {
+      "source": "/bali/:lang/faq",
+      "destination": "/bali-faq-:lang.html"
+    },
+    {
+      "source": "/bali/en/guides",
+      "destination": "/bali-guides.html"
+    },
+    {
+      "source": "/bali/:lang/guides",
+      "destination": "/bali-guides-:lang.html"
+    },
+    {
       "source": "/bali/en/journal",
       "destination": "/bali-journal.html"
     },

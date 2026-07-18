@@ -37,6 +37,8 @@ const JOURNAL_FEATURED_ARTICLES = [
   ["sunset-cruise-bali", "schedule"],
 ];
 const BALI_TILDA_FOOTER_PATCH_FILES = [
+  "bali-about.html",
+  "bali-faq.html",
   "page128064616.html",
   "files/page128064616body.html",
   "page128073236.html",
@@ -3298,6 +3300,10 @@ const DEFAULT_WEST_UI_LABELS = {
   bestAttractionsHeading: "Best Attractions in Bali",
   helpfulPdfHeading: "Our helpful PDF-Files about Bali",
   thingsToDoHeading: "Things to do in Bali",
+  tourArticlesHeading: "Articles about this tour",
+  chipTravelGuide: "Travel Guide",
+  chipTourSchedule: "Tour Schedule",
+  chipWhyBook: "Why Book",
   mapOpenLabel: "Open google maps route",
   highlightsIntroLabel: "Main vibe",
   fullDescriptionWhyBookLabel: "Why people book it",
@@ -4267,11 +4273,16 @@ function buildWestMiniPromoModel(tour) {
     title: promoTitle,
     text: collapseWhitespace(promoText),
     ctaLabel: collapseWhitespace(tour.ctaLabel || "Book now"),
-    sideText: collapseWhitespace(
-      tour.miniPromoSideText ||
-        clampPromoText(compactRouteSentence(routeStops), 110) ||
-        clampPromoText(firstSentence(tour.overview || tour.summary || tour.lead || ""), 110),
-    ),
+    sideText: (function () {
+      const curated = collapseWhitespace(tour.miniPromoSideText);
+      if (curated) return curated;
+      const full =
+        collapseWhitespace(firstSentence(tour.summary || tour.lead || tour.overview || "")) ||
+        collapseWhitespace(compactRouteSentence(routeStops));
+      if (!full) return "";
+      const clamped = clampPromoText(full, 104);
+      return clamped.length < full.length ? `${clamped}…` : clamped;
+    })(),
   };
 }
 
@@ -6593,6 +6604,20 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
         .concat(ratingIcons)
         .forEach(resetInlineBox);
       [titleWrap, descWrap, priceWrap, durationText, locationText, mapsLabel, ratingValue, buttonText].forEach(resetInlineText);
+      var heroAtom = atom(titleWrap);
+      if (heroAtom) heroAtom.innerHTML = heroAtom.innerHTML.replace(/<br\\s*\\/?>/gi, ' ');
+      var heroMaxFont = isLocalizedPage ? 24 : 25;
+      var heroLhRatio = isLocalizedPage ? 1.05 : 1.08;
+      var heroTwoLine = Math.ceil(2 * heroMaxFont * heroLhRatio);
+      var heroFont = fitText(titleWrap, {
+        maxFont: heroMaxFont,
+        minFont: 14,
+        maxHeight: heroTwoLine,
+        lineHeightRatio: heroLhRatio,
+      });
+      var heroClip = Math.ceil(2 * heroFont * heroLhRatio);
+      setImportant(atom(titleWrap), 'max-height', heroClip + 'px');
+      setImportant(atom(titleWrap), 'overflow', 'hidden');
       layoutHeroMetaRow(record);
       return;
     }
@@ -6901,22 +6926,32 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     var sidePlacedInGap = false;
 
     if (isMobile && lowerLeftMedia && lowerRightMedia) {
-      var gapLeft = leftOf(lowerRightMedia);
-      var gapTop = topOf(lowerLeftMedia) + 4;
+      var gapLeft = lowerRightMedia.getBoundingClientRect().left - artboardRect.left;
+      var gapTop = lowerLeftMedia.getBoundingClientRect().top - artboardRect.top;
       var gapWidth = Math.max(110, visualWidth(lowerRightMedia, scale));
-      var gapBottom = topOf(lowerRightMedia) - 6;
+      // Keep a clear breathing gap above the photo so the text never touches its frame.
+      var photoClearance = 16;
+      var gapBottom = (lowerRightMedia.getBoundingClientRect().top - artboardRect.top) - photoClearance;
       var gapHeight = gapBottom - gapTop;
 
       if (gapHeight >= 40) {
+        var sideMaxFont = isLocalizedPage ? 9.5 : 10.4;
+        var sideLhRatio = 1.28;
+        var sixLineMax = Math.ceil(6 * sideMaxFont * sideLhRatio);
+        var sideMaxHeight = Math.min(gapHeight, sixLineMax);
         setImportant(sideWrap, 'left', gapLeft + 'px');
         setImportant(sideWrap, 'top', gapTop + 'px');
         setImportant(sideWrap, 'width', gapWidth + 'px');
-        fitText(sideWrap, {
-          maxFont: isLocalizedPage ? 9.5 : 10.4,
+        var sideFinalFont = fitText(sideWrap, {
+          maxFont: sideMaxFont,
           minFont: 7.6,
-          maxHeight: gapHeight,
-          lineHeightRatio: 1.28,
+          maxHeight: sideMaxHeight,
+          lineHeightRatio: sideLhRatio,
         });
+        // Never let the clip box grow past the gap — it stays clear of the photo.
+        var clipH = Math.min(Math.ceil(6 * sideFinalFont * sideLhRatio), Math.floor(gapHeight));
+        setImportant(atom(sideWrap), 'max-height', clipH + 'px');
+        setImportant(atom(sideWrap), 'overflow', 'hidden');
         sidePlacedInGap = visualHeight(sideWrap, scale) <= gapHeight + 1;
       }
     }
@@ -7207,9 +7242,9 @@ function renderJournalHeader(tour) {
                   <a href="/bali/en/main-page#tours" role="menuitem">Bali, Indonesia</a>
                 </div>
               </div>
-              <a class="sb-journal-tour-header__nav-link" href="/bali/en/main-page#about">About Us</a>
+              <a class="sb-journal-tour-header__nav-link" href="/bali/en/about">About Us</a>
               <a class="sb-journal-tour-header__nav-link" href="${bookingHref}" target="_blank" rel="noopener noreferrer nofollow">Booking</a>
-              <a class="sb-journal-tour-header__nav-link" href="/bali/en/main-page#faq">FAQ</a>
+              <a class="sb-journal-tour-header__nav-link" href="/bali/en/faq">FAQ</a>
             </nav>
             <div class="sb-journal-tour-header__actions" aria-label="Quick actions">
               <a class="sb-journal-tour-header__button" href="${bookingHref}" target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
@@ -7272,9 +7307,9 @@ function renderJournalHeader(tour) {
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
                 </div>
               </div>
-              <a class="sb-journal-tour-header__drawer-link" href="/bali/en/main-page#about">About Us</a>
+              <a class="sb-journal-tour-header__drawer-link" href="/bali/en/about">About Us</a>
               <a class="sb-journal-tour-header__drawer-link" href="${bookingHref}" target="_blank" rel="noopener noreferrer nofollow">Booking</a>
-              <a class="sb-journal-tour-header__drawer-link" href="/bali/en/main-page#faq">FAQ</a>
+              <a class="sb-journal-tour-header__drawer-link" href="/bali/en/faq">FAQ</a>
               <a class="sb-journal-tour-header__drawer-link" href="${JOURNAL_HUB_ROUTE}">Our guides</a>
             </nav>
             <div class="sb-journal-tour-header__drawer-socials">
@@ -7359,122 +7394,815 @@ function renderJournalHeader(tour) {
   `;
 }
 
+// ─── Rich local context for journal articles (SEO / GEO / AEO) ───────────────
+// Each entry adds real-world detail the templates weave into longer, more
+// authoritative articles.  Keys that are missing fall back to tag-based defaults.
+const TOUR_LOCAL_CONTEXT = {
+  "ubud-highlights-tour": {
+    bestMonths: "April–October (dry season) for clearest Kintamani volcano views",
+    whatToBring: "Comfortable walking shoes, sunscreen, a sarong for temple entry (often provided), cash for souvenirs at craft villages, and a camera with good zoom for volcano panoramas.",
+    insiderNote: "Ask your driver to start with Gunung Kawi early — it is one of Bali's most dramatic temple complexes but gets crowded by 10 AM. The 300-step descent is worth the effort for the river-valley rock carvings.",
+    practicalTips: [
+      "Tegalalang Rice Terrace entrance costs around IDR 25,000 (≈ $1.60). The swing photos are extra — negotiate before sitting.",
+      "Monkey Forest entrance is IDR 80,000 for adults (≈ $5). Secure sunglasses, water bottles, and dangling items — the long-tailed macaques are fast and curious.",
+      "Kintamani lunch buffets overlooking Mount Batur (1,717 m) are included in the tour. Arrive before noon for the clearest caldera view.",
+      "Luwak coffee tasting stops are free, but the premium civet coffee cup costs around IDR 50,000 (≈ $3) if you want to try it.",
+      "Batuan Temple requires a sarong and sash — usually provided at the entrance for a small donation of IDR 10,000–20,000.",
+    ],
+    comparison: "This is the most popular all-day culture tour in Bali. Compared to the UNESCO Heritage Sites Tour, this route trades world-heritage depth for broader variety — you see craft villages, a volcano, rice terraces, and Ubud in one loop.",
+    faq: [
+      ["Is the Ubud Highlights tour suitable for children?", "Yes. The route is low-impact with short walks. Children enjoy the Monkey Forest and the Kintamani lunch views. Car seats can be arranged on request."],
+      ["What time does the Ubud tour start and finish?", "Hotel pickup is around 08:00. The route runs roughly 10 hours, returning by 17:00–18:00 depending on your hotel location."],
+      ["Do I need to bring a sarong for temple visits?", "Sarongs are usually provided at each temple entrance, but bringing your own is fine. Knees and shoulders should be covered inside temple grounds."],
+      ["Is lunch included in the tour price?", "Yes — an Indonesian buffet lunch at a Kintamani restaurant with volcano views is included. Drinks are usually extra."],
+      ["Can I customize the stops on the Ubud tour?", "Yes. Private tours can adjust the order or swap stops — for example, skipping craft villages to spend more time in Ubud or adding Tirta Empul water temple."],
+      ["What is the best time of year for clear volcano views?", "May through September offers the driest weather and best visibility for Mount Batur and Lake Batur panoramas. Morning cloud can still roll in, so early lunch timing helps."],
+    ],
+  },
+  "mount-batur-sunrise-jeep-tour": {
+    bestMonths: "April–October for the clearest sunrises; the trek runs year-round, but dry season mornings have the highest chance of a cloud-free caldera view",
+    whatToBring: "Warm layers (summit temperature drops to 12–18 °C / 54–64 °F before sunrise), a headlamp or flashlight, closed-toe shoes, at least 1 L of water, sunscreen for the descent, and a rain jacket in wet season.",
+    insiderNote: "Guides cook breakfast eggs using volcanic steam vents on the caldera rim — a genuinely unique experience. If you add the hot springs, arrive before 9 AM while the pools are quiet.",
+    practicalTips: [
+      "Pickup from south Bali (Kuta, Seminyak, Nusa Dua) is around 01:40–02:00 AM. From Ubud it is around 02:30–03:00 AM.",
+      "The jeep ride avoids the 2-hour hike entirely — ideal for travelers who want the sunrise without the physical effort. The 4WD climbs to a viewpoint near the summit.",
+      "Mount Batur stands at 1,717 m (5,633 ft). Even in the jeep, temperatures at the top feel 10–15 °C cooler than at sea level.",
+      "Batur Natural Hot Spring entry costs around $15–20 and includes towel, welcome drink, and locker. The pools overlook Lake Batur.",
+      "A certified local guide is mandatory for all Batur treks — enforced by the Kintamani trekking association (HPPGB).",
+    ],
+    comparison: "The jeep tour is the non-hiking alternative to the classic Mount Batur sunrise trek. You get the same caldera sunrise view without the 2-hour climb, which makes it suitable for families, older travelers, or anyone who prefers comfort over adventure.",
+    faq: [
+      ["How early is the pickup for the Mount Batur sunrise jeep tour?", "Pickup is between 01:40 and 03:00 AM depending on your hotel location. South Bali hotels depart earliest; Ubud hotels depart around 02:30–03:00 AM."],
+      ["Do I need to hike on the jeep tour?", "No. The 4WD jeep drives to a viewpoint near the summit. There is a short walk of about 5–10 minutes to the best sunrise spot, but no strenuous climbing."],
+      ["What temperature should I expect at the summit?", "Expect 12–18 °C (54–64 °F) before sunrise, which can feel colder with wind chill. Bring a warm jacket or hoodie even if Bali feels hot at sea level."],
+      ["Is the hot spring included in the tour price?", "Some packages include hot spring entry; others offer it as an add-on. Confirm when booking. Entry alone costs around $15–20 per person."],
+      ["Can children do the Mount Batur jeep tour?", "Yes. The jeep tour is suitable for all ages since there is no significant hiking involved. Children should still dress warmly for the pre-dawn temperature."],
+      ["What happens if it rains or is cloudy?", "The tour runs in all weather. Cloud cover can obscure the sunrise, but the experience above the clouds is often dramatic in its own way. Dry season (April–October) gives the best odds of clear skies."],
+    ],
+  },
+  "nusa-penida-manta-rays-point": {
+    bestMonths: "Year-round, but April–November has calmer seas and 80%+ manta sighting rates; July–October is peak season",
+    whatToBring: "Swimwear, reef-safe sunscreen, a towel, motion sickness tablets (the boat crossing can be rough), an underwater camera or GoPro, and a light jacket for the speedboat.",
+    insiderNote: "Manta rays are found at a cleaning station at Manta Point where they circle to have parasites removed by smaller fish. They are wild animals, so sightings cannot be guaranteed — but local crews report 80–90% success rates in peak months.",
+    practicalTips: [
+      "The speedboat from Sanur Harbor to Nusa Penida takes 30–45 minutes. Seas are calmest before 10 AM.",
+      "Snorkeling at Manta Point typically lasts 30–45 minutes. The ocean-floor depth is 10–15 m but mantas feed near the surface.",
+      "Crystal Bay is a common second stop with 15–25 m visibility and colorful reef fish. The bay is also a mola-mola (ocean sunfish) hotspot from July to November.",
+      "All snorkeling gear (mask, snorkel, fins, life jacket) is provided. If you wear prescription glasses, bring your own prescription mask.",
+      "Motion sickness is common on the crossing. Take medication 30 minutes before departure. Sitting near the center of the boat helps.",
+    ],
+    comparison: "This is the focused manta-only snorkeling trip. The Nusa Penida West Tour covers the famous cliff viewpoints (Kelingking, Broken Beach) on land instead. The Full Day Tour combines both land sightseeing and snorkeling.",
+    faq: [
+      ["What are the chances of seeing manta rays at Manta Point?", "Local operators report an 80–90% sighting rate during peak season (July–October). Mantas are wild, so sightings depend on conditions, but the cleaning station at Manta Point draws them consistently."],
+      ["Is the Manta Point snorkeling tour suitable for beginners?", "Yes. Life jackets are provided, and you snorkel on the surface — no diving required. Basic swimming comfort is recommended since the open ocean has some current."],
+      ["How long is the boat ride from Bali to Nusa Penida?", "The speedboat from Sanur Harbor takes approximately 30–45 minutes, depending on sea conditions. Morning departures generally have calmer water."],
+      ["What other snorkeling spots are included?", "Most tours include Crystal Bay (clear water, reef fish, possible mola-mola sightings) and sometimes Gamat Bay or Wall Point, depending on conditions."],
+      ["Should I take motion sickness medication?", "If you are prone to seasickness, yes. The open-water crossing and boat positioning at snorkel sites involve swells. Take medication 30 minutes before departure."],
+    ],
+  },
+  "nusa-penida-west-tour": {
+    bestMonths: "April–October for the driest weather and clearest coastal views; sunrise-side light is best in the morning",
+    whatToBring: "Good walking shoes (the Kelingking descent has 400+ steep steps), at least 1.5 L of water, sunscreen, a hat, and a camera. Wear clothes you can sweat in.",
+    insiderNote: "The Kelingking Beach viewpoint — the famous T-Rex-shaped cliff — is one of Bali's most photographed spots. Getting down to the beach takes 30–40 minutes on a steep, narrow trail with over 400 steps. Most visitors stay at the viewpoint.",
+    practicalTips: [
+      "Roads on Nusa Penida are narrow, bumpy, and often unpaved between attractions. Travel time between stops is longer than the map distance suggests.",
+      "Angel's Billabong is a natural infinity pool carved into the rocks. Swimming is only possible at low tide — at high tide or during large swells, waves crash over the pool and it becomes dangerous. Check tide times.",
+      "Broken Beach is a dramatic natural rock arch over turquoise water. Swimming is not possible here, but the viewpoint is stunning.",
+      "The speedboat crossing from Sanur to Nusa Penida takes 30–45 minutes. Departures are usually around 07:30–08:00 AM.",
+      "Local lunch is typically included at a warung near Broken Beach. Expect Indonesian dishes — nasi goreng, mie goreng, or grilled fish.",
+    ],
+    comparison: "This is the Instagram-famous route covering Kelingking, Angel's Billabong, and Broken Beach — all on the west coast. The East Tour covers Diamond Beach, Atuh Beach, and Thousand Islands viewpoint. The Full Day Tour attempts both coasts in one day.",
+    faq: [
+      ["How difficult is the hike down to Kelingking Beach?", "The descent involves 400+ steep, narrow steps and takes 30–40 minutes each way. It is physically demanding and not recommended for those with knee issues or vertigo. The viewpoint at the top offers the iconic photo without the climb."],
+      ["Is Angel's Billabong safe to swim in?", "Only at low tide with calm conditions. At high tide or during swells, powerful waves crash over the rock pool and swimming is extremely dangerous. Your guide will advise on the day."],
+      ["How long does the Nusa Penida West Tour take?", "The full day including boat transfers runs approximately 10–12 hours from hotel pickup to drop-off. Time on the island is roughly 6–7 hours."],
+      ["Are roads on Nusa Penida paved?", "Main roads are paved but narrow. Side roads to viewpoints are often unpaved, bumpy, and steep. A local driver who knows the terrain is essential."],
+      ["Can I do both west and east Nusa Penida in one day?", "It is possible but rushed. Each coast takes 4–5 hours. The Full Day Tour covers highlights from both sides but with less time at each stop."],
+    ],
+  },
+  "nusa-penida-east-tour": {
+    bestMonths: "April–October; east coast cliffs are most photogenic in morning light",
+    whatToBring: "Sturdy shoes for the Diamond Beach staircase, water, sunscreen, a hat, and a waterproof phone case for beach photos.",
+    insiderNote: "Diamond Beach has an almost surreal white-sand cove at the base of towering cliffs — it went from unknown to Instagram-famous in just a few years. The staircase down was carved directly into the cliff face.",
+    practicalTips: [
+      "Diamond Beach stairs are steep and carved from stone — manageable for most fit adults but challenging for those with mobility issues.",
+      "Atuh Beach offers a secluded cove with a dramatic rock arch in the water. The descent is moderate.",
+      "Thousand Islands Viewpoint (Pulau Seribu) offers panoramic views of limestone islets scattered across turquoise water — no hiking required.",
+      "Tree House is a popular photo stop with a wooden platform built into a tree overlooking the cliff edge.",
+      "East coast roads are some of the roughest on Nusa Penida — expect 30–45 minutes of bumpy driving between main stops.",
+    ],
+    comparison: "The East Tour focuses on beaches and dramatic coastline, while the West Tour covers the most famous viewpoints (Kelingking, Broken Beach). The East is generally less crowded and more beach-focused.",
+    faq: [
+      ["What makes Diamond Beach special?", "Diamond Beach features a white-sand cove at the base of dramatic limestone cliffs, accessed by stairs carved directly into the rock face. The turquoise water and dramatic setting make it one of Bali's most photogenic beaches."],
+      ["Is the East Nusa Penida tour less crowded than the West?", "Generally yes. The west coast (Kelingking, Broken Beach) draws the biggest crowds. The east coast sees fewer visitors, especially at Diamond Beach and Atuh Beach."],
+      ["How long is the boat ride to Nusa Penida?", "About 30–45 minutes by speedboat from Sanur Harbor, Bali."],
+      ["Can I swim at Diamond Beach?", "Yes, swimming is possible when conditions are calm. The beach is sheltered by cliffs but can have currents. Always assess conditions with your guide."],
+    ],
+  },
+  "nusa-penida-full-day-tour": {
+    bestMonths: "April–October for calm seas and clear skies",
+    whatToBring: "Good shoes for cliff walks, swimwear, sunscreen, at least 2 L of water, and a GoPro or waterproof camera if snorkeling is included.",
+    insiderNote: "This is the most ambitious Nusa Penida option — covering highlights from both coasts in a single day. It is a long but rewarding day for travelers with limited time on the island.",
+    practicalTips: [
+      "Expect a 10–12 hour day from pickup to drop-off. Pace yourself — the island is bigger than it looks.",
+      "Most full-day tours cover Kelingking Viewpoint, Broken Beach, Angel's Billabong, and either Diamond Beach or Crystal Bay.",
+      "Lunch is usually included at a local warung between coast stops.",
+      "The speedboat crossing departs Sanur around 07:30–08:00 AM and returns around 16:00–17:00.",
+      "If snorkeling is included, it typically happens either first or last, depending on tide and sea conditions.",
+    ],
+    comparison: "This combines west and east coast highlights into one action-packed day. If you have two days, splitting into separate West Tour and East Tour gives more time at each stop.",
+    faq: [
+      ["Is a full day on Nusa Penida too exhausting?", "It is a long day (10–12 hours including transfers), but manageable with a private driver who handles the rough roads. Bring snacks and water to keep energy up between stops."],
+      ["What is the best order for the full-day route?", "Most tours start with the west coast (Kelingking, Broken Beach, Angel's Billabong) in the morning, then move east for Diamond Beach or to snorkeling spots in the afternoon."],
+      ["Does the full-day tour include snorkeling?", "Some packages include a snorkeling stop at Crystal Bay or Manta Point. Confirm when booking if snorkeling is a priority for you."],
+      ["How much does the Nusa Penida full day tour cost?", "Private full-day tours typically start from $35–50 per person including boat transfers, driver, and lunch. Group tours can be less."],
+    ],
+  },
+  "nusa-penida-private-day-tour-manta-snorkeling": {
+    bestMonths: "April–November for best snorkeling visibility and manta sightings",
+    whatToBring: "Swimwear, towel, reef-safe sunscreen, motion sickness medication, underwater camera, light jacket for the speedboat, and dry clothes to change into.",
+    insiderNote: "This tour combines sightseeing and snorkeling — you get the famous cliff viewpoints AND manta ray snorkeling in one day. It is the premium option for travelers who want both experiences.",
+    practicalTips: [
+      "The tour typically alternates between land sightseeing (viewpoints) and water activities (snorkeling at Manta Point and Crystal Bay).",
+      "Snorkeling gear including life jackets is provided. An experienced snorkeling guide accompanies you in the water.",
+      "Book this option when you only have one day for Nusa Penida but want both the iconic views and marine encounters.",
+      "Manta rays can have wingspans of 3–5 meters. They are gentle filter feeders and pose no danger to snorkelers.",
+    ],
+    comparison: "This is the all-in-one Nusa Penida experience. The standalone Manta Point tour focuses only on snorkeling, while the West/East tours focus only on sightseeing. This combines both.",
+    faq: [
+      ["Can I see manta rays and Kelingking Beach in one day?", "Yes — that is exactly what this private day tour is designed for. It combines the west coast viewpoints with snorkeling at Manta Point."],
+      ["Do I need snorkeling experience?", "No prior experience is needed. Life jackets and guided supervision are included. You snorkel on the surface watching mantas below."],
+      ["How big are the manta rays?", "Oceanic manta rays at Manta Point typically have wingspans of 3–5 meters (10–16 feet). They are gentle plankton feeders and not dangerous."],
+    ],
+  },
+  "white-water-rafting": {
+    bestMonths: "Year-round; December–March (wet season) has the highest water levels and most exciting rapids. Dry season is calmer and better for families.",
+    whatToBring: "Quick-dry clothing or shorts and a t-shirt you do not mind getting soaked, secure sandals or water shoes (not flip-flops), a change of dry clothes, sunscreen, and a waterproof phone case.",
+    insiderNote: "The Ayung River runs through a stunning gorge with 30-meter-high cliff walls covered in tropical vegetation, carved stone reliefs, and small waterfalls cascading down the sides. It is as much a scenic experience as an adventure sport.",
+    practicalTips: [
+      "The Ayung River near Ubud is Bali's most popular rafting river — Class II–III rapids suitable for beginners and families (minimum age usually 5–7 years).",
+      "The rafting section covers approximately 10–12 km and takes 1.5–2 hours on the water.",
+      "You will get completely wet. There is no dry option. Valuables should be left with the operator or in a waterproof bag.",
+      "Most tours include hotel transfer, safety briefing, all equipment (helmet, life jacket, paddle), and a buffet lunch overlooking the river valley.",
+      "The Telaga Waja River in east Bali is the alternative for thrill-seekers — Class III–IV rapids with steeper drops.",
+    ],
+    comparison: "The Ayung River near Ubud is the scenic, beginner-friendly option. The Telaga Waja River near Karangasem is the more intense, advanced option with bigger rapids and a waterfall finish.",
+    faq: [
+      ["Is Bali white water rafting safe for beginners?", "Yes. The Ayung River has Class II–III rapids, which are suitable for first-timers and families. Professional guides, life jackets, and helmets are provided. Minimum age is typically 5–7 years."],
+      ["How long does the rafting last?", "The active rafting section takes approximately 1.5–2 hours, covering 10–12 km of the Ayung River gorge. Total tour time including transfers and lunch is 5–6 hours."],
+      ["Will I get wet?", "Absolutely — you will be soaked. Wear quick-dry clothing and bring a complete change of dry clothes. Do not bring valuables onto the raft."],
+      ["Which river is better — Ayung or Telaga Waja?", "Ayung (near Ubud) is scenic and beginner-friendly with carved cliff walls. Telaga Waja (east Bali) has bigger Class III–IV rapids and a final waterfall drop. Choose based on your comfort level."],
+      ["Is lunch included?", "Yes — most rafting tours include a buffet lunch at the base camp overlooking the river valley after the run."],
+    ],
+  },
+  "tanah-lot-bedugul-tour": {
+    bestMonths: "Year-round; sunset at Tanah Lot is spectacular any season. April–October has less rain.",
+    whatToBring: "Sarong for temples (usually provided), camera with sunset capability, comfortable shoes for Bedugul botanical garden walks, and a light jacket for the cooler highlands.",
+    insiderNote: "Tanah Lot is best at sunset when the sea temple silhouette against the orange sky becomes one of Bali's most iconic images. Arrive at least 30 minutes before sunset to secure a good viewpoint.",
+    practicalTips: [
+      "Tanah Lot entrance fee is IDR 60,000 for adults (≈ $4). At low tide, you can walk across to the base of the temple — but non-Hindus cannot enter the temple itself.",
+      "Ulun Danu Beratan Temple sits on the shore of Lake Beratan at 1,200 m elevation — it is noticeably cooler than the coast.",
+      "The Bedugul area includes the temple, Bali Botanical Garden, and a traditional market selling spices, strawberries, and local crafts.",
+      "The route from south Bali to Bedugul passes through Jatiluwih rice terraces (UNESCO World Heritage) — worth a brief stop if time allows.",
+      "Tanah Lot gets very crowded at sunset. Weekday visits are less busy than weekends.",
+    ],
+    comparison: "This route combines highland culture (Bedugul, lake temple) with the island's most famous sunset temple. It covers a different region than the Ubud Highlights tour, giving you a west-central Bali experience.",
+    faq: [
+      ["When is the best time to visit Tanah Lot?", "Late afternoon for sunset — the sea temple silhouette against the sky is iconic. Arrive 30 minutes before sunset. At low tide, you can walk to the temple base."],
+      ["What is Ulun Danu Beratan Temple?", "A photogenic Hindu-Buddhist temple on the shore of Lake Beratan at 1,200 m elevation in Bali's central highlands. The temple appears to float on the lake when water levels are high."],
+      ["Is this tour suitable for the same day as an Ubud tour?", "They are separate regions and each takes a full day. The Tanah Lot-Bedugul route covers west-central Bali while Ubud tours cover the east-central area."],
+      ["Can I enter Tanah Lot Temple?", "Non-Hindu visitors can walk to the temple base at low tide but cannot enter the temple itself. The sunset viewpoint from the cliffs is the main attraction."],
+    ],
+  },
+  "bali-unesco": {
+    bestMonths: "April–October for dry weather; mornings are best for cooler temperatures at temple sites",
+    whatToBring: "Sarong and sash for all temple entries, comfortable walking shoes (some sites have uneven stone paths), water, sunscreen, and a hat.",
+    insiderNote: "Bali's UNESCO Cultural Landscape (inscribed 2012) protects the Subak irrigation system — a 1,000-year-old cooperative water management tradition that shapes the island's rice terraces. Understanding Subak transforms temple visits from photo ops into cultural encounters.",
+    practicalTips: [
+      "Tirta Empul Temple is famous for its holy spring water purification ritual. Visitors can participate — wear modest clothing (sarong provided) and follow the guide's instructions for the blessing sequence.",
+      "Jatiluwih Rice Terraces are a UNESCO World Heritage Site covering 600+ hectares. The walking paths range from 30 minutes to 2 hours depending on your route.",
+      "Taman Ayun Royal Temple in Mengwi features classic Balinese multi-tiered shrines (merus) surrounded by a moat. Entrance is IDR 50,000 (≈ $3).",
+      "Gunung Kawi is accessed via 300+ steps down to a river valley with 9th-century rock-cut shrines. Start early to avoid crowds and heat.",
+      "Temple etiquette: remove hats inside, do not point feet at shrines, avoid standing higher than offerings, and do not touch sacred objects.",
+    ],
+    comparison: "This tour focuses specifically on UNESCO-recognized heritage sites and the Subak cultural landscape. It is more culturally focused than the Ubud Highlights tour, which balances temples with rice terraces, craft villages, and Ubud town.",
+    faq: [
+      ["What is the Bali UNESCO Cultural Landscape?", "Inscribed in 2012, it protects the Subak system — a 1,000-year-old Balinese cooperative irrigation network linked to Hindu water temples. It includes Jatiluwih rice terraces, Taman Ayun Temple, and several holy water temples."],
+      ["Can I do the purification ritual at Tirta Empul?", "Yes, visitors can participate in the melukat (purification) ritual at Tirta Empul. Wear the provided sarong, follow the sequence of fountains as directed, and maintain respectful silence during the ritual."],
+      ["How much walking is involved in the UNESCO tour?", "Moderate walking at each site. Gunung Kawi has 300+ steps. Jatiluwih rice terrace walks range from 30 minutes to 2 hours. Other temples have flat grounds."],
+      ["Is this tour different from the Ubud Highlights tour?", "Yes — the UNESCO tour focuses on heritage sites and cultural depth, while the Ubud Highlights tour is a broader introduction to central Bali including craft villages, Monkey Forest, and a volcano lunch."],
+    ],
+  },
+  "gili-islands-getaway": {
+    bestMonths: "April–October for calm seas and best snorkeling visibility; June–September is peak season",
+    whatToBring: "Swimwear, reef-safe sunscreen, a waterproof bag for electronics, sandals, a light cover-up, cash (ATMs on Gili T are unreliable), and snorkeling gear if you prefer your own.",
+    insiderNote: "The Gili Islands have no motorized vehicles — transport is by bicycle or horse-drawn cart (cidomo). This car-free atmosphere makes them feel worlds apart from mainland Bali. Gili Trawangan is the party island, Gili Air is relaxed, and Gili Meno is the quietest.",
+    practicalTips: [
+      "Fast boat from Bali (Padang Bai or Serangan) takes 1.5–2.5 hours depending on the operator and sea conditions.",
+      "Sea turtles are regularly spotted while snorkeling off all three Gilis. Turtle Point between Gili Meno and Gili Trawangan is the most reliable spot.",
+      "There are no motorized vehicles on any Gili island. Get around by bicycle (rental: IDR 50,000/day ≈ $3) or walking.",
+      "Gili Trawangan has the most restaurants, bars, and nightlife. Gili Air is a good mix of quiet and social. Gili Meno is the honeymoon island.",
+      "Underwater statues (NEST sculpture garden) near Gili Meno are a unique snorkeling attraction, created as artificial reef habitats.",
+    ],
+    comparison: "The Gili Islands Getaway is a multi-day trip with an overnight stay, while the Gili Island Day Tour covers one island in a single day. The getaway gives you time to explore, snorkel multiple sites, and experience sunset and sunrise on the islands.",
+    faq: [
+      ["How do I get to the Gili Islands from Bali?", "Fast boats depart from Padang Bai or Serangan Harbor and take 1.5–2.5 hours. Hotel pickup and boat transfers are included in the tour package."],
+      ["Which Gili island is best?", "Gili Trawangan for nightlife and social energy, Gili Air for a relaxed mix of restaurants and quiet beaches, and Gili Meno for seclusion and honeymoon vibes."],
+      ["Can I see sea turtles while snorkeling?", "Yes — sea turtles are regularly spotted off all three islands. Turtle Point between Gili Meno and Gili Trawangan has the highest sighting rate."],
+      ["Are there ATMs on the Gili Islands?", "Gili Trawangan has a few ATMs, but they frequently run out of cash or charge high fees. Bring sufficient Indonesian Rupiah from Bali."],
+      ["Are there cars on the Gili Islands?", "No. The Gili Islands have no motorized vehicles. Transport is by bicycle, walking, or horse-drawn cart (cidomo)."],
+    ],
+  },
+  "gili-island-tour": {
+    bestMonths: "April–October for calm crossings; year-round for snorkeling",
+    whatToBring: "Swimwear, sunscreen, towel, waterproof camera, cash for the island, and motion sickness medication for the boat.",
+    insiderNote: "A day trip to Gili gives you a taste of the island atmosphere without committing to an overnight. You will typically visit one island with time for snorkeling, beach time, and a local lunch.",
+    practicalTips: [
+      "Day trips usually focus on Gili Trawangan or Gili Air — the most accessible from Bali.",
+      "Snorkeling around the Gili Islands offers exceptional visibility (15–30 m) and regular turtle sightings.",
+      "The fast boat crossing can be rough — sit near the center of the boat if you are prone to motion sickness.",
+      "Island time is limited on a day trip (usually 4–5 hours), so prioritize — either snorkeling or island exploration, not both in depth.",
+    ],
+    comparison: "This is the single-day version of the Gili experience. The Gili Islands Getaway includes an overnight stay and more time to explore. Choose the day tour when your schedule is tight.",
+    faq: [
+      ["Is a Gili Islands day trip worth it?", "Yes, if you want a taste of the car-free island atmosphere and some of the best snorkeling in the region. For a deeper experience, consider the overnight getaway."],
+      ["How long is the boat to Gili Islands?", "Fast boats take 1.5–2.5 hours from Bali depending on the departure point and sea conditions."],
+      ["Will I have time to snorkel on a day trip?", "Yes — day trips typically include 1–2 snorkeling stops plus free time on the island. Total island time is roughly 4–5 hours."],
+    ],
+  },
+  "blue-lagoon-snorkeling": {
+    bestMonths: "April–November for calmest seas; water temperature is 27–29 °C year-round",
+    whatToBring: "Swimwear, reef-safe sunscreen, towel, underwater camera, and light clothing for the boat ride.",
+    insiderNote: "Blue Lagoon in Padang Bai is one of Bali's best mainland snorkeling spots — a sheltered bay with calm, clear water and a sandy bottom that makes it ideal for beginners and families.",
+    practicalTips: [
+      "Blue Lagoon is near Padang Bai port in east Bali — about 1.5 hours drive from Ubud or south Bali.",
+      "The snorkeling area is sheltered and shallow (2–8 m), making it one of the safest ocean snorkeling spots in Bali.",
+      "Expect to see colorful coral, parrotfish, clownfish, sea turtles, and sometimes reef sharks in deeper sections.",
+      "Most tours include 2–3 snorkeling spots: Blue Lagoon, Tanjung Jepun, and sometimes Bias Tugel beach.",
+      "Equipment (mask, snorkel, fins, life jacket) is included. An experienced guide accompanies you in the water.",
+    ],
+    comparison: "Blue Lagoon is the mainland alternative to Nusa Penida snorkeling — calmer water, shorter travel time, and better for beginners. Nusa Penida offers manta rays and more dramatic marine life but requires a 45-minute boat crossing.",
+    faq: [
+      ["Is Blue Lagoon snorkeling suitable for kids?", "Yes — the sheltered bay has calm, shallow water (2–8 m) and is one of Bali's most family-friendly snorkeling spots. Life jackets are provided."],
+      ["What marine life can I see at Blue Lagoon?", "Colorful reef fish (parrotfish, clownfish, angelfish), sea turtles, and healthy coral formations. Occasionally small reef sharks in deeper areas."],
+      ["How does Blue Lagoon compare to Nusa Penida snorkeling?", "Blue Lagoon is calmer, closer to mainland Bali, and ideal for beginners. Nusa Penida offers manta rays and more dramatic underwater scenery but requires a longer boat crossing."],
+    ],
+  },
+  "sunset-cruise-bali": {
+    bestMonths: "Year-round; April–October has the calmest seas and most reliable sunset colors",
+    whatToBring: "Smart casual clothing (it is a cruise, not a beach trip), a light jacket for wind on deck, sunscreen, and a camera.",
+    insiderNote: "Bali's west-facing coastline creates ideal conditions for dramatic sunset cruises. The best departures are from Benoa Harbor, heading along the coast toward Uluwatu or Tanah Lot direction.",
+    practicalTips: [
+      "Sunset cruises typically depart 2–3 hours before sunset and return after dark. Total time on the water is 2.5–3.5 hours.",
+      "Most cruises include welcome drinks, canapés or a light dinner, and sometimes live music or a DJ.",
+      "Benoa Harbor is the main departure point — about 20 minutes from Nusa Dua and 40 minutes from Seminyak.",
+      "The best sunset viewing is on the port (left) side of the boat heading south.",
+    ],
+    comparison: "A sunset cruise offers a different perspective of Bali from the water — more relaxed and romantic than a land-based sunset at Tanah Lot or Uluwatu Temple.",
+    faq: [
+      ["What time does the sunset cruise depart?", "Typically 2–3 hours before sunset, so around 15:00–16:00 depending on the season. The cruise returns after dark."],
+      ["Is food included on the sunset cruise?", "Most cruises include welcome drinks, canapés, and sometimes a light dinner. Confirm the specific inclusions when booking."],
+      ["Will I get seasick on the cruise?", "The cruise stays in relatively sheltered waters along the Bali coast, so motion is usually mild. If you are prone to seasickness, take precautions."],
+    ],
+  },
+  "atv-ride-adventure": {
+    bestMonths: "Year-round; wet season (November–March) makes the trails muddier and more exciting for experienced riders",
+    whatToBring: "Clothes you do not mind getting dirty (you will get muddy), closed-toe shoes, a change of clothes, sunscreen, and insect repellent.",
+    insiderNote: "Bali ATV rides go through terrain you would never see on a regular tour — river crossings, rice paddy edges, jungle trails, and sometimes through small traditional villages where locals wave as you pass.",
+    practicalTips: [
+      "No prior ATV experience needed. A safety briefing and practice run are included before the main trail.",
+      "Trails run through rice terraces, river beds, bamboo forests, and village paths — lasting 1.5–2 hours of riding time.",
+      "You will get dirty. Operators provide shower and changing facilities after the ride.",
+      "Helmet and safety gear are provided. Long pants and closed shoes are required.",
+      "Minimum age varies: typically 7–12 years for riding as a passenger, 16+ for solo driving.",
+    ],
+    comparison: "The ATV Ride Adventure is the longer, more terrain-diverse option. The ATV Quad Bikes tour is a shorter ride focused on a specific trail area.",
+    faq: [
+      ["Do I need experience to ride an ATV in Bali?", "No. All tours include a safety briefing, instruction on controls, and a practice area before heading onto the main trail. Guides accompany you throughout."],
+      ["How dirty will I get?", "Very. River crossings and muddy trails are part of the experience. Operators provide showers and changing facilities after the ride."],
+      ["Is the ATV ride safe?", "Yes — professional guides lead the group, helmets and safety gear are provided, and speeds are controlled. The terrain is adventurous but not dangerous for attentive riders."],
+      ["Can children ride ATVs in Bali?", "Children aged 7–12 can typically ride as passengers with an adult. Solo riding is usually age 16+. Check specific operator policies."],
+    ],
+  },
+  "atv-quad-bikes": {
+    bestMonths: "Year-round; wet season trails are muddier but more fun",
+    whatToBring: "Old clothes, closed shoes, a change of outfit, and sunscreen.",
+    insiderNote: "Quad bike tours offer a shorter but equally thrilling off-road experience through Bali's countryside. The smaller vehicles are easier to handle for first-timers.",
+    practicalTips: [
+      "Shorter ride time (1–1.5 hours) than the ATV adventure, making it easier to combine with another activity the same day.",
+      "Trails typically go through rice paddies, river crossings, and village paths.",
+      "Shower and changing facilities are available after the ride.",
+      "Photo stops are built into the route at scenic viewpoints.",
+    ],
+    comparison: "Shorter and more accessible than the full ATV Ride Adventure. Good as a half-day activity combined with a temple or cultural stop.",
+    faq: [
+      ["What is the difference between ATV and quad bike tours?", "In Bali, they refer to similar vehicles. The Quad Bike tour is typically a shorter ride (1–1.5 hours) while the ATV Ride Adventure is longer (1.5–2 hours) with more diverse terrain."],
+      ["Can beginners ride quad bikes?", "Yes. Instruction is provided, and the trails are suitable for first-time riders. Guides accompany the group."],
+    ],
+  },
+  "surf-lesson-experience": {
+    bestMonths: "Year-round; April–October has cleaner wave conditions. Beginners do well in all seasons at Kuta and Seminyak beaches.",
+    whatToBring: "Swimwear, reef-safe sunscreen (you will be in the water 1.5–2 hours), a rash guard if you have one, and a towel.",
+    insiderNote: "Kuta and Seminyak beaches have some of the best beginner waves in Asia — long, gentle, sandy-bottom breaks that are ideal for learning. The warm water (27–29 °C) means you do not need a wetsuit.",
+    practicalTips: [
+      "Lessons usually last 1.5–2 hours with a certified instructor. Soft-top boards are provided for safety.",
+      "Most beginners stand up within the first lesson. The sandy bottom and waist-deep starting position make Bali one of the safest places to learn.",
+      "Morning sessions (07:00–09:00) have smaller crowds and often cleaner wave conditions.",
+      "Rash guards or UV shirts are recommended — sunburn happens fast in equatorial water reflection.",
+      "Experienced surfers should head to Uluwatu, Padang Padang, or Canggu for more challenging reef breaks.",
+    ],
+    comparison: "Bali surf lessons are shore-based on Kuta/Seminyak beaches, using the gentle sandy-bottom breaks. This is not a surf safari to reef breaks — it is a controlled learning environment ideal for first-timers.",
+    faq: [
+      ["Can complete beginners learn to surf in Bali?", "Absolutely. Kuta and Seminyak beaches have gentle, sandy-bottom waves specifically suited for learning. Most beginners stand up during their first 2-hour lesson."],
+      ["Do I need to bring my own surfboard?", "No. Soft-top beginner boards are provided by the operator. These boards are larger and more stable than standard surfboards."],
+      ["What is the best time of day for a surf lesson?", "Early morning (07:00–09:00) is ideal — smaller crowds, cleaner waves, and cooler temperatures before the midday sun."],
+    ],
+  },
+  "sumbawa-whale-shark-snorkeling-trip": {
+    bestMonths: "Year-round, but June–October has the highest whale shark concentration around Saleh Bay, Sumbawa",
+    whatToBring: "Underwater camera, swimwear, reef-safe sunscreen, motion sickness medication, warm layers for early departure, and a sense of adventure.",
+    insiderNote: "This is a genuinely rare experience — swimming alongside whale sharks, the world's largest fish (up to 12 m / 40 ft). Sumbawa's Saleh Bay is one of the few accessible locations in Indonesia for consistent sightings.",
+    practicalTips: [
+      "Whale sharks are filter feeders and completely harmless to humans — they eat plankton, not fish or people.",
+      "The trip involves significant travel from Bali (ferry or flight to Sumbawa + local transfer). This is typically a multi-day excursion.",
+      "Snorkeling only — no diving certification required. Life jackets available.",
+      "Whale shark encounters are regulated to minimize disturbance — maintain a respectful distance and do not touch the animals.",
+      "Sumbawa is much less developed than Bali — expect basic facilities and authentic Indonesian village atmosphere.",
+    ],
+    comparison: "This is a multi-day expedition, not a casual day trip. It offers a completely different scale of marine encounter compared to Nusa Penida manta ray snorkeling.",
+    faq: [
+      ["How big are whale sharks?", "Whale sharks can reach up to 12 meters (40 feet) in length, making them the world's largest fish. They are gentle filter feeders and completely harmless to swimmers."],
+      ["Is it safe to swim with whale sharks?", "Yes. Whale sharks eat plankton and pose no threat to humans. You snorkel on the surface while they feed below. Certified guides ensure safe, respectful encounters."],
+      ["How long is the trip to Sumbawa from Bali?", "Sumbawa is a separate island east of Bali. The trip involves a ferry or domestic flight plus local transfers. This is typically a multi-day excursion, not a day trip."],
+    ],
+  },
+  "nusa-lembongan-ceningan-day-trip": {
+    bestMonths: "April–October for calm seas; the islands are pleasant year-round",
+    whatToBring: "Swimwear, sunscreen, waterproof bag for electronics, comfortable clothes, cash for the island, and a towel.",
+    insiderNote: "Nusa Lembongan and Nusa Ceningan are connected by a famous yellow suspension bridge — an Instagram-worthy photo spot. The islands are smaller and more laid-back than Nusa Penida, with better swimming beaches.",
+    practicalTips: [
+      "The fast boat from Sanur to Nusa Lembongan takes about 30 minutes — shorter than the Nusa Penida crossing.",
+      "Dream Beach on Lembongan has crystal-clear water and dramatic cliff backdrops.",
+      "The Yellow Bridge connecting Lembongan to Ceningan is a must-see photo stop.",
+      "Devil's Tear is a dramatic blowhole where waves crash through a gap in the cliff — spectacular at high tide.",
+      "Mangrove tours by boat offer a peaceful contrast to the cliff and beach scenery.",
+    ],
+    comparison: "Nusa Lembongan is closer to Bali (30-minute crossing vs. 45 minutes to Nusa Penida), smaller, more relaxed, and has better swimming beaches. Nusa Penida has more dramatic cliff scenery and manta ray snorkeling.",
+    faq: [
+      ["How far is Nusa Lembongan from Bali?", "About 30 minutes by fast boat from Sanur Harbor — shorter and smoother than the Nusa Penida crossing."],
+      ["What is the Yellow Bridge?", "A bright yellow suspension bridge connecting Nusa Lembongan to neighboring Nusa Ceningan. It is a popular photo spot and the only road connection between the two islands."],
+      ["Is Nusa Lembongan better than Nusa Penida?", "They are different. Lembongan is smaller, more relaxed, with better swimming beaches. Penida is bigger with more dramatic cliffs and manta ray snorkeling. Lembongan is better for a chill beach day; Penida for adventure."],
+    ],
+  },
+  "bali-instagram-highlights-tour": {
+    bestMonths: "Year-round; morning light (07:00–10:00) gives the best photo conditions",
+    whatToBring: "Camera or phone with storage space, portable charger, sarong for temples, sunscreen, and an outfit you want to photograph.",
+    insiderNote: "This tour is designed specifically for photography — the route is planned around golden-hour timing and the least-crowded windows at each Instagram hotspot.",
+    practicalTips: [
+      "Lempuyang Temple (Gates of Heaven) is the most-queued Instagram shot in Bali. Arriving early (07:00) reduces wait times from 1+ hour to 15–20 minutes.",
+      "Tirta Gangga Water Palace features ornate fountains and stepping stones over koi ponds — excellent for walk-through photos.",
+      "Handara Gate is a Balinese split gate (candi bentar) on a golf course — surprisingly photogenic and less crowded on weekdays.",
+      "The tour optimizes order so you hit each spot at its best light. Morning for east-facing sites, afternoon for west-facing ones.",
+    ],
+    comparison: "This is the photo-optimized route. The Ubud Highlights tour covers similar territory but focuses on cultural experience rather than photography timing.",
+    faq: [
+      ["What is the Gates of Heaven in Bali?", "Lempuyang Temple's split gate (Pura Penataran Agung) frames Mount Agung in the background. It is one of Bali's most photographed spots. A mirror reflection effect was originally created by a phone held under the camera."],
+      ["How long do you wait at Lempuyang Temple?", "Wait times for the iconic gate photo can exceed 1 hour at peak times (10:00 AM–2:00 PM). Early arrival (before 08:00) reduces the wait to 15–20 minutes."],
+      ["Do I need a photographer for the Instagram tour?", "Your private driver/guide can take photos for you, but they are not professional photographers. Some operators offer a photography add-on."],
+    ],
+  },
+  "ubud-instagram-tour": {
+    bestMonths: "Year-round; best morning light for Tegalalang photos is 08:00–10:00",
+    whatToBring: "Camera, portable charger, sarong, comfortable shoes for rice terrace walks, and sunscreen.",
+    insiderNote: "The Ubud Instagram route focuses on the central Bali corridor — rice terraces, jungle swings, coffee plantations, and temple gates in one photogenic loop.",
+    practicalTips: [
+      "Tegalalang rice terrace swings cost IDR 100,000–200,000 (≈ $7–13) depending on the height and location. Photos are included in swing fees.",
+      "The Ubud area has several jungle swing operators — Bali Swing is the most famous but also the most crowded. Smaller operators nearby offer similar views with shorter waits.",
+      "Coffee plantation stops are free (the coffee tasting is complimentary), but purchasing premium luwak coffee is encouraged.",
+      "Temple dress codes apply at all stops — sarong and sash required, usually provided.",
+    ],
+    comparison: "This is the Ubud-area-specific photo tour. The Bali Instagram Highlights Tour covers a wider area including east Bali (Lempuyang, Tirta Gangga).",
+    faq: [
+      ["How much does the Tegalalang swing cost?", "Swing experiences at Tegalalang cost IDR 100,000–200,000 (≈ $7–13) per person depending on the height and operator. Photos taken by staff are usually included."],
+      ["Is the Ubud Instagram tour different from the Ubud Highlights tour?", "Yes — the Instagram tour is optimized for photo opportunities and timing, while the Highlights tour focuses on cultural experiences and includes temple interiors, craft villages, and volcano views."],
+    ],
+  },
+  "east-bali-instagram-tour": {
+    bestMonths: "April–October; early morning for Lempuyang gate photos with Mount Agung visible",
+    whatToBring: "Camera, sarong, comfortable shoes for temple grounds, sunscreen, and water.",
+    insiderNote: "East Bali has a completely different feel from the tourist centers — more rural, less developed, and with some of the island's most dramatic landscapes including views of Mount Agung (3,031 m).",
+    practicalTips: [
+      "Lempuyang Temple is in east Bali, about 2 hours from Ubud and 2.5 hours from Seminyak. The early start is worth it for shorter gate photo queues.",
+      "Tirta Gangga Water Palace entrance is IDR 50,000 (≈ $3). The stepping stones over the koi ponds make for memorable walk-through photos.",
+      "Tukad Cepung Waterfall is a hidden gem accessible through a cave entrance — the light beams through a narrow canyon for incredible photos (best around 09:00–10:00 AM).",
+      "The drive through east Bali passes traditional villages, rice terraces, and views of Mount Agung — the island's highest and holiest volcano.",
+    ],
+    comparison: "Focuses on east Bali's less-visited but more dramatic landscape. The Bali Instagram Highlights Tour may include some of these stops but covers a broader area.",
+    faq: [
+      ["How far is Lempuyang Temple from Ubud?", "About 2 hours by car. From Seminyak or Kuta, it is approximately 2.5 hours. Early departure (05:00–06:00) is recommended."],
+      ["What is special about Tukad Cepung Waterfall?", "Light beams filter through a narrow canyon onto the waterfall, creating a cathedral-like effect. Best photo conditions are between 09:00–10:00 AM when sunlight enters at the right angle."],
+    ],
+  },
+  "north-bali-lovina-dolphins-tour": {
+    bestMonths: "April–October for calmest seas; dolphin sightings are year-round",
+    whatToBring: "Light jacket for the early morning boat ride, binoculars if you have them, camera with zoom lens, swimwear for hot springs, and comfortable clothes.",
+    insiderNote: "Lovina's dolphin-watching boats head out before sunrise — the dolphins feed in the early morning waters. Spinner dolphins are the most common species, often leaping and spinning in groups of 20–100+.",
+    practicalTips: [
+      "Pickup from south Bali is around 02:00–03:00 AM for the predawn boat departure at Lovina Beach.",
+      "Dolphin sightings are common (80%+ success rate) but not guaranteed. Spinner dolphins are the primary species.",
+      "After dolphins, the route typically includes Gitgit Waterfall, Ulun Danu Beratan Temple, and Jatiluwih rice terraces.",
+      "Bali's north coast (Lovina area) is quieter and more local-feeling than the tourist south — a good contrast experience.",
+      "The drive from south Bali to Lovina takes about 3 hours through mountain roads with scenic views.",
+    ],
+    comparison: "This is the comprehensive north Bali route. The Dolphin Sunrise City Tour is a more focused, shorter version of the experience.",
+    faq: [
+      ["What time do I need to wake up for Lovina dolphins?", "Hotel pickup from south Bali is around 02:00–03:00 AM. The boat departs Lovina Beach before sunrise, around 06:00 AM."],
+      ["What kind of dolphins are in Lovina?", "Primarily spinner dolphins, known for their acrobatic leaping and spinning. They typically travel in pods of 20–100+ individuals."],
+      ["What else is included in the North Bali tour?", "After the dolphin excursion, the route typically visits Gitgit Waterfall, Ulun Danu Beratan Temple on Lake Beratan, and sometimes Jatiluwih rice terraces on the return journey."],
+    ],
+  },
+  "dolphin-sunrise-city-tour": {
+    bestMonths: "Year-round; April–October for calmest seas",
+    whatToBring: "Light jacket, camera with zoom, swimwear (optional for hot springs), and comfortable clothes.",
+    insiderNote: "This is the streamlined version of the Lovina dolphin experience — fewer stops than the full North Bali tour, designed for travelers who want the core dolphin encounter without a 12-hour day.",
+    practicalTips: [
+      "Shorter than the full North Bali tour (8 hours vs. 10–12), focusing on dolphins plus 2–3 key sightseeing stops.",
+      "Gitgit Waterfall is a common included stop — a 40-meter waterfall accessed via a short forest walk.",
+      "Ulun Danu Beratan Temple is the iconic lake temple featured on Indonesia's 50,000 rupiah banknote.",
+    ],
+    comparison: "Compact version of the North Bali Lovina Dolphins Tour. Less driving, fewer stops, same dolphin experience.",
+    faq: [
+      ["How does this differ from the full North Bali tour?", "This is a shorter 8-hour version focused on the dolphin sunrise and 2–3 key stops. The full North Bali tour is 10–12 hours with more sightseeing."],
+      ["Are dolphin sightings guaranteed?", "Not guaranteed, but Lovina has an 80%+ sighting rate. Spinner dolphins are present year-round, with morning feeding being the most reliable viewing window."],
+    ],
+  },
+  "bali-airport-transfer": {
+    bestMonths: "Year-round",
+    whatToBring: "Flight details, hotel confirmation, and enough cash for tips.",
+    insiderNote: "Ngurah Rai International Airport (DPS) is in south Bali. Traffic between the airport and popular tourist areas varies dramatically — Kuta is 15 minutes while Ubud can be 1.5–2 hours in traffic.",
+    practicalTips: [
+      "Transfer times: Airport to Kuta/Legian: 15–20 min. To Seminyak: 25–40 min. To Canggu: 45–60 min. To Ubud: 1–1.5 hours. To Nusa Dua: 20–30 min.",
+      "Late-night arrivals (22:00+) have much lighter traffic — transfers to Ubud drop to 50–60 minutes.",
+      "Your driver will wait in the arrivals hall with a name sign. Share your flight number so they can track delays.",
+      "Private transfers are significantly more comfortable and reliable than flagging a taxi at the airport.",
+    ],
+    comparison: "Private airport transfer vs. taxi: fixed price, air-conditioned vehicle, driver waiting with name sign, no meter negotiation, no luggage hassle.",
+    faq: [
+      ["How long is the transfer from Bali airport to Ubud?", "1–1.5 hours in normal traffic, or 50–60 minutes late at night. Traffic around Denpasar can add significant time during peak hours (08:00–10:00, 17:00–19:00)."],
+      ["Will my driver meet me inside the airport?", "Yes — your driver will be in the arrivals hall holding a name sign. Share your flight number in advance so they can monitor for delays."],
+      ["How much does a private airport transfer cost?", "Private transfers typically start from $15–25 depending on destination distance. This is competitive with metered taxis and includes door-to-door service with a name sign."],
+    ],
+  },
+  "private-car-with-driver-bali": {
+    bestMonths: "Year-round",
+    whatToBring: "A rough itinerary or list of places you want to visit. Your driver can help plan the route.",
+    insiderNote: "Hiring a private car with driver is the most flexible way to explore Bali. Drivers are knowledgeable locals who double as informal guides — they know traffic patterns, temple etiquette, and the best lunch spots.",
+    practicalTips: [
+      "Standard booking is for 10 hours. Extra hours can usually be added for a reasonable fee.",
+      "Drivers provide an air-conditioned car (usually Toyota Avanza or similar) with bottled water.",
+      "Entrance fees and meals are typically not included in the driver price — budget extra for these.",
+      "Discuss your itinerary with the driver at pickup. They can suggest optimal routing based on traffic and opening hours.",
+      "Tipping your driver is appreciated — IDR 50,000–100,000 (≈ $3–7) is a common gesture for good service.",
+    ],
+    comparison: "More flexible than a fixed-route tour — you choose where to go. More comfortable and knowledgeable than renting a scooter. Ideal for groups of 2–4 who want to customize their day.",
+    faq: [
+      ["What is included with a private car and driver?", "An air-conditioned vehicle, an experienced local driver, bottled water, and typically 10 hours of service. Entrance fees, meals, and parking are usually extra."],
+      ["Can the driver help plan my itinerary?", "Yes — Bali drivers are experienced informal guides. Share your interests and they will suggest an efficient route based on location, traffic, and opening hours."],
+      ["How much should I tip my Bali driver?", "Tipping is not mandatory but appreciated. IDR 50,000–100,000 (≈ $3–7) is a common gesture for a full day of good service."],
+    ],
+  },
+  "fast-boat-transfer-bali": {
+    bestMonths: "April–October for calmest crossings; boats run year-round",
+    whatToBring: "Light luggage (space is limited on fast boats), waterproof bag, motion sickness medication, sunscreen, and warm layer for wind on the boat.",
+    insiderNote: "Fast boat transfers connect Bali to the Gili Islands, Nusa Lembongan, and Lombok. Booking through a tour operator includes hotel pickup and harbor coordination, which eliminates the stress of navigating Bali's port areas independently.",
+    practicalTips: [
+      "Boats depart from Padang Bai, Serangan, or Sanur — your operator will advise the best harbor based on your hotel location.",
+      "Crossing to Gili Islands: 1.5–2.5 hours. To Nusa Lembongan: 30 minutes. To Lombok: 2–3 hours.",
+      "Seas can be rough, especially in wet season (November–March). Motion sickness medication is recommended.",
+      "Luggage allowance is typically 15–20 kg per person on fast boats. Oversized luggage may incur extra fees.",
+    ],
+    comparison: "Private fast boat transfer vs. public ferry: faster, more comfortable, hotel pickup included, but more expensive. Public ferries from Padang Bai to Lombok take 4–5 hours.",
+    faq: [
+      ["How long is the fast boat from Bali to Gili Islands?", "1.5–2.5 hours depending on the operator and which Gili island. Seas are calmer in dry season (April–October)."],
+      ["Do fast boats run in rainy season?", "Yes, but cancellations and delays are more common in rough seas (November–March). Operators will notify you of any weather-related changes."],
+    ],
+  },
+  "bali-helicopter-scenic-tour": {
+    bestMonths: "April–October for clearest visibility; mornings are best before afternoon clouds build",
+    whatToBring: "Camera, sunglasses, comfortable clothing, and a sense of wonder.",
+    insiderNote: "A helicopter tour compresses hours of Bali driving into 30–60 minutes of aerial perspective. You see the scale of rice terrace systems, volcanic craters, and coastline geometry that are invisible from the ground.",
+    practicalTips: [
+      "Flights typically depart from a helipad near Benoa or Ubud area. Exact location depends on the operator.",
+      "Weight limits apply — combined passenger weight is usually capped around 300 kg per flight. Disclose accurate weights when booking.",
+      "Morning flights (07:00–10:00) have the best visibility. Afternoon flights risk cloud cover over the mountains.",
+      "Photography through helicopter windows works best without polarizing filters. Open-door flights offer the best photos but cost more.",
+    ],
+    comparison: "This is the scenic overview flight. The Volcano & Coastline Helicopter Ride is a specific route focusing on Mount Batur and the south coast.",
+    faq: [
+      ["How long is the helicopter tour?", "Standard scenic flights are 30–60 minutes depending on the route. Longer custom flights are available at premium pricing."],
+      ["Is the helicopter tour safe?", "Yes. Operators use well-maintained helicopters with experienced commercial pilots. Safety briefings are provided before each flight."],
+      ["What will I see from the helicopter?", "Depending on the route: rice terrace systems, Mount Batur volcanic crater and lake, Mount Agung, Uluwatu cliffs, temple complexes, and the coastline from Tanah Lot to Nusa Dua."],
+    ],
+  },
+  "volcano-coastline-helicopter-ride": {
+    bestMonths: "April–October; early morning for clearest volcano views",
+    whatToBring: "Camera, sunglasses, light clothing. No loose items that could fly in open-door flights.",
+    insiderNote: "This route specifically traces Mount Batur's caldera and the southern coastline — combining Bali's volcanic interior with its dramatic sea cliffs in one flight.",
+    practicalTips: [
+      "The route typically covers Mount Batur crater, Lake Batur, the south coast cliffs near Uluwatu, and the Bukit Peninsula.",
+      "Open-door flights are available for photographers — expect wind and incredible unobstructed views.",
+      "Weight restrictions apply. Book early for popular morning departure slots.",
+    ],
+    comparison: "A route-specific helicopter experience focused on volcano and coastline. The broader Scenic Helicopter Tour may cover a wider area including rice terraces.",
+    faq: [
+      ["What is the volcano and coastline route?", "The flight traces Mount Batur's crater and Lake Batur, then follows the southern coastline past Uluwatu's sea cliffs and the Bukit Peninsula before returning."],
+      ["Can I do an open-door helicopter flight?", "Some operators offer open-door flights at premium pricing. These give unobstructed views and are popular with photographers. Safety harnesses are mandatory."],
+    ],
+  },
+  "unesco-heritage-sites-tour": {
+    bestMonths: "April–October for dry weather; mornings are cooler for temple walks",
+    whatToBring: "Sarong and sash, comfortable shoes for stone paths and stairs, water, sunscreen, hat, and camera.",
+    insiderNote: "This tour goes deeper into Bali's UNESCO Cultural Landscape than any other route — focusing on the ancient Subak irrigation system, royal temples, and cultural sites that earned Bali its world heritage designation.",
+    practicalTips: [
+      "The Subak system is over 1,000 years old and still actively manages water distribution across Bali's rice terraces through a network of temples and cooperative agreements.",
+      "Taman Ayun Temple in Mengwi has some of the finest merus (multi-tiered shrines) in Bali, surrounded by a decorative moat.",
+      "Jatiluwih rice terraces cover 600+ hectares and offer walking paths through active paddies — a completely different scale from Tegalalang.",
+      "This tour is more educational and slower-paced than the Ubud Highlights tour — ideal for travelers interested in history and cultural understanding.",
+    ],
+    comparison: "More focused on UNESCO heritage and cultural depth than the Ubud Highlights tour. Less variety (no craft villages or Monkey Forest) but deeper understanding of Bali's spiritual and agricultural heritage.",
+    faq: [
+      ["What is included in the UNESCO Heritage Sites tour?", "The tour typically covers Jatiluwih Rice Terraces, Taman Ayun Temple, Tirta Empul, and sites connected to the Subak water temple system. Private transport and guide are included."],
+      ["How is this different from the regular Bali UNESCO tour?", "Both cover UNESCO-related sites. This tour may include additional heritage locations and provide deeper cultural context about the Subak irrigation system."],
+    ],
+  },
+};
+
+function getTourLocalContext(tour) {
+  return TOUR_LOCAL_CONTEXT[tour.slug] || {};
+}
+
+function aOrAn(word) {
+  return /^[aeiou]/i.test(word) ? "an" : "a";
+}
+
 const JOURNAL_ARTICLE_TYPES = [
   {
     key: "selling",
     slug: "why-book",
     badge: "Selling article",
     navLabel: "Why book it",
-    title: (tour) => `Why Book the ${tour.title} in Bali`,
+    title: (tour) => `Why Book the ${tour.title} in Bali — Is It Worth It?`,
     description: (tour) =>
-      `See why travelers choose the ${tour.title}, what is usually included, and how to decide if this Bali route fits your trip.`,
-    excerpt: (tour) =>
-      `${tour.summary} This guide focuses on value, fit, and the practical reasons travelers book this route before they land in Bali.`,
-    sections: (tour) => [
-      {
-        heading: `Why ${tour.title} works as a Bali booking`,
-        paragraphs: [tour.summary, tour.overview],
-      },
-      {
-        heading: "What gives this route its value",
-        bullets: tour.highlights.map(([heading, text]) => `${heading}: ${text}`),
-      },
-      {
-        heading: "Who should choose this route",
+      `Honest breakdown of the ${tour.title}: what you actually get, who it suits best, practical tips from travelers, and how it compares to similar Bali experiences.`,
+    excerpt: (tour) => {
+      const ctx = getTourLocalContext(tour);
+      return ctx.insiderNote
+        ? `${tour.summary} ${ctx.insiderNote}`
+        : `${tour.summary} This guide focuses on value, fit, and the practical reasons travelers book this route before they land in Bali.`;
+    },
+    sections: (tour) => {
+      const ctx = getTourLocalContext(tour);
+      const sections = [
+        {
+          heading: `What the ${tour.title} actually delivers`,
+          paragraphs: [
+            tour.overview,
+            ctx.insiderNote || tour.summary,
+            `This experience runs as ${aOrAn(tour.format.split(" ")[0])} ${tour.format.toLowerCase()} covering ${tour.area.toLowerCase()}. The typical duration is ${tour.duration.toLowerCase()}, and it works best for ${tour.bestFor.toLowerCase()}.`,
+          ],
+        },
+        {
+          heading: "Highlights that make this route stand out",
+          paragraphs: [
+            `Every route in Bali competes for your limited vacation days. Here is what sets the ${tour.title} apart from the dozens of alternatives.`,
+          ],
+          bullets: tour.highlights.map(([heading, text]) => `${heading} — ${text}`),
+        },
+      ];
+      if (ctx.practicalTips?.length) {
+        sections.push({
+          heading: "Practical tips from real visitors",
+          paragraphs: [
+            `The details below come from travelers who have done this exact route. They cover pricing, timing, and the small things that guidebooks tend to skip.`,
+          ],
+          bullets: ctx.practicalTips,
+        });
+      }
+      sections.push({
+        heading: "Who should book this tour — and who should not",
         paragraphs: [
-          `This experience is best for ${tour.bestFor.toLowerCase()}. It usually runs as a ${tour.format.toLowerCase()} in ${tour.area.toLowerCase()}, and the overall pacing works especially well when you want ${tour.duration.toLowerCase()} that feels organized instead of improvised.`,
-          `The pickup flow normally starts with ${tour.pickup.toLowerCase()}, so most travelers book it when they want a smoother day with the main logistics already lined up.`,
+          `The ${tour.title} is ideal for ${tour.bestFor.toLowerCase()}. The pickup flow starts with ${tour.pickup.toLowerCase()}, which means the logistics are handled from your hotel door.`,
+          ctx.comparison || `If you are comparing multiple Bali experiences, this route works especially well when you want ${tour.duration.toLowerCase()} that feels organized instead of improvised.`,
         ],
-      },
-      {
-        heading: "What is usually included",
+      });
+      sections.push({
+        heading: "What is included in the price",
+        paragraphs: [
+          `Pricing for the ${tour.title} starts from ${tour.price}. Here is what a typical booking covers.`,
+        ],
         bullets: buildIncludes(tour),
-      },
-      {
-        heading: "What to confirm before you book",
-        bullets: [
-          `Current pricing reference: ${tour.price}. Final availability is normally confirmed after you send the date, hotel area, and group size.`,
-          ...buildGoodToKnow(tour).slice(0, 4),
+      });
+      if (ctx.bestMonths) {
+        sections.push({
+          heading: "Best time of year to go",
+          paragraphs: [
+            `Timing matters more than most travelers realize. ${ctx.bestMonths}.`,
+            ctx.whatToBring ? `Pack accordingly: ${ctx.whatToBring}` : "",
+          ].filter(Boolean),
+        });
+      }
+      sections.push({
+        heading: "What to know before you book",
+        paragraphs: [
+          `A few practical details that help set the right expectations for the ${tour.title}.`,
         ],
-      },
-    ],
+        bullets: [
+          `Current pricing reference: ${tour.price}. Final availability is confirmed after you send the date, hotel area, and group size.`,
+          ...buildGoodToKnow(tour),
+        ],
+      });
+      return sections;
+    },
+    faq: (tour) => {
+      const ctx = getTourLocalContext(tour);
+      return ctx.faq || [];
+    },
   },
   {
     key: "interesting",
     slug: "travel-guide",
-    badge: "Interesting guide",
-    navLabel: "Interesting guide",
-    title: (tour) => `${tour.title}: What Makes This Bali Route Special`,
+    badge: "Travel guide",
+    navLabel: "Travel guide",
+    title: (tour) => `${tour.title} — The Complete Bali Travel Guide`,
     description: (tour) =>
-      `Learn what makes the ${tour.title} interesting, what kind of scenery and rhythm to expect, and why this route feels different from other Bali experiences.`,
-    excerpt: (tour) =>
-      `Every strong Bali tour has its own identity. This guide explains the mood, scenery, standout stops, and small local details that make the ${tour.title} memorable.`,
-    sections: (tour) => [
-      {
-        heading: `The identity of the ${tour.title}`,
+      `Everything you need to know about the ${tour.title}: what to expect, insider tips, best time to visit, what to bring, and answers to the most common questions.`,
+    excerpt: (tour) => {
+      const ctx = getTourLocalContext(tour);
+      return ctx.insiderNote
+        ? `${ctx.insiderNote} This guide covers everything from practical tips to insider knowledge that will help you get the most out of the ${tour.title}.`
+        : `Every strong Bali tour has its own identity. This guide explains the mood, scenery, standout stops, and practical details that make the ${tour.title} memorable.`;
+    },
+    sections: (tour) => {
+      const ctx = getTourLocalContext(tour);
+      const sections = [
+        {
+          heading: `What makes the ${tour.title} worth your time`,
+          paragraphs: [
+            tour.overview,
+            ctx.insiderNote || journalInterestingHook(tour),
+            `The route covers ${tour.area.toLowerCase()} and is designed for ${tour.bestFor.toLowerCase()}. Most travelers find the ${tour.duration.toLowerCase()} pacing comfortable without feeling rushed.`,
+          ],
+        },
+        {
+          heading: "Route highlights at a glance",
+          paragraphs: [
+            `Here are the standout moments that travelers consistently mention after completing the ${tour.title}.`,
+          ],
+          bullets: tour.highlights.map(([heading, text]) => `${heading} — ${text}`),
+        },
+        {
+          heading: "How the day unfolds — step by step",
+          paragraphs: [
+            `Understanding the flow of the day helps you pack the right gear and set realistic expectations. Here is the typical itinerary for the ${tour.title}.`,
+          ],
+          bullets: tour.itinerary.map(([heading, text]) => `${heading} — ${text}`),
+        },
+      ];
+      if (ctx.practicalTips?.length) {
+        sections.push({
+          heading: "Insider tips and local knowledge",
+          paragraphs: [
+            `These details are the kind of thing your guide might mention in passing — but knowing them in advance helps you plan a better day.`,
+          ],
+          bullets: ctx.practicalTips,
+        });
+      }
+      if (ctx.bestMonths || ctx.whatToBring) {
+        const paragraphs = [];
+        if (ctx.bestMonths) paragraphs.push(`Best months to visit: ${ctx.bestMonths}.`);
+        if (ctx.whatToBring) paragraphs.push(`What to bring: ${ctx.whatToBring}`);
+        sections.push({
+          heading: "Best time to visit and what to bring",
+          paragraphs,
+        });
+      }
+      if (ctx.comparison) {
+        sections.push({
+          heading: "How this compares to similar Bali tours",
+          paragraphs: [
+            ctx.comparison,
+            `When deciding between Bali experiences, consider what matters most to you: the ${tour.title} is specifically designed around ${tour.area.toLowerCase()} and works best when you want ${tour.format.toLowerCase()}.`,
+          ],
+        });
+      }
+      sections.push({
+        heading: "Practical details and good to know",
         paragraphs: [
-          `The ${tour.title} stands out because it is built around ${tour.area.toLowerCase()} and works best for ${tour.bestFor.toLowerCase()}. Instead of trying to be everything at once, this route leans into a clear experience profile and that usually makes the day feel stronger from start to finish.`,
-          journalInterestingHook(tour),
+          `Before you book, here are the logistics that shape the experience.`,
         ],
-      },
-      {
-        heading: "What travelers usually remember most",
-        bullets: tour.highlights.map(([heading, text]) => `${heading}: ${text}`),
-      },
-      {
-        heading: "How the experience unfolds on the ground",
-        bullets: tour.itinerary.map(([heading, text]) => `${heading}: ${text}`),
-      },
-      {
-        heading: "Useful local context before you go",
-        paragraphs: [
-          `The route usually feels best when you match your expectations to the actual format: ${tour.format.toLowerCase()}, ${tour.duration.toLowerCase()}, and a day shaped around ${tour.pickup.toLowerCase()}.`,
-        ],
-        bullets: buildGoodToKnow(tour).slice(0, 5),
-      },
-    ],
-  },
-  {
-    key: "schedule",
-    slug: "tour-schedule",
-    badge: "Schedule article",
-    navLabel: "Schedule",
-    title: (tour) => `${tour.title} Itinerary, Timing and What to Expect`,
-    description: (tour) =>
-      `Read a practical schedule guide for the ${tour.title}, including timing, route flow, what to bring, and the best way to prepare for the day.`,
-    excerpt: (tour) =>
-      `If you want the practical version before booking, this article breaks down the usual timing, route flow, and prep details for the ${tour.title}.`,
-    sections: (tour) => [
-      {
-        heading: "Quick timing snapshot",
         bullets: [
           `Duration: ${tour.duration}`,
           `Format: ${tour.format}`,
           `Area: ${tour.area}`,
-          `Pickup flow: ${tour.pickup}`,
-          `Best for: ${tour.bestFor}`,
+          `Pickup: ${tour.pickup}`,
+          `Pricing: ${tour.price}`,
+          ...buildGoodToKnow(tour),
         ],
-      },
-      {
-        heading: "Step-by-step route flow",
-        bullets: tour.itinerary.map(([heading, text], index) => `${journalPhaseLabel(index)} ${heading}: ${text}`),
-      },
-      {
+      });
+      return sections;
+    },
+    faq: (tour) => {
+      const ctx = getTourLocalContext(tour);
+      return ctx.faq || [];
+    },
+  },
+  {
+    key: "schedule",
+    slug: "tour-schedule",
+    badge: "Schedule guide",
+    navLabel: "Schedule",
+    title: (tour) => `${tour.title} — Full Itinerary, Schedule and Packing List`,
+    description: (tour) =>
+      `Detailed schedule for the ${tour.title}: exact timing, step-by-step route, what to bring, best months to go, and practical booking tips.`,
+    excerpt: (tour) => {
+      const ctx = getTourLocalContext(tour);
+      return ctx.bestMonths
+        ? `Planning the ${tour.title}? This guide covers the complete schedule, what to pack, and when to go. Best months: ${ctx.bestMonths.split(";")[0].trim()}.`
+        : `If you want the practical version before booking, this article breaks down the timing, route flow, and prep details for the ${tour.title}.`;
+    },
+    sections: (tour) => {
+      const ctx = getTourLocalContext(tour);
+      const sections = [
+        {
+          heading: "Tour overview at a glance",
+          paragraphs: [
+            tour.summary,
+          ],
+          bullets: [
+            `Duration: ${tour.duration}`,
+            `Format: ${tour.format}`,
+            `Area: ${tour.area}`,
+            `Pickup: ${tour.pickup}`,
+            `Best for: ${tour.bestFor}`,
+            `Starting from: ${tour.price}`,
+          ],
+        },
+        {
+          heading: "Complete itinerary — what happens and when",
+          paragraphs: [
+            `Here is the step-by-step flow of the ${tour.title}. Exact timing can shift depending on your hotel location, traffic, weather, and group size — but this is the standard sequence.`,
+          ],
+          bullets: tour.itinerary.map(([heading, text], index) => `${journalPhaseLabel(index)} ${heading} — ${text}`),
+        },
+      ];
+      if (ctx.practicalTips?.length) {
+        sections.push({
+          heading: "What to expect at each stop — tips from travelers",
+          paragraphs: [
+            `The numbers and details below help you plan around the real experience, not the brochure version.`,
+          ],
+          bullets: ctx.practicalTips,
+        });
+      }
+      const packingItems = [];
+      if (ctx.whatToBring) packingItems.push(ctx.whatToBring);
+      const goodToKnow = buildGoodToKnow(tour);
+      sections.push({
         heading: "What to bring and how to prepare",
-        bullets: buildGoodToKnow(tour),
-      },
-      {
-        heading: "Booking and confirmation checklist",
+        paragraphs: packingItems,
+        bullets: goodToKnow,
+      });
+      if (ctx.bestMonths) {
+        sections.push({
+          heading: "Best time of year for this tour",
+          paragraphs: [
+            `${ctx.bestMonths}.`,
+            `Bali has two main seasons: dry season (April–October) with less rain and cooler mornings, and wet season (November–March) with afternoon showers and higher humidity. Both seasons are warm — daytime temperatures average 27–30 °C (80–86 °F) at sea level.`,
+          ],
+        });
+      }
+      if (ctx.comparison) {
+        sections.push({
+          heading: "How this fits with other Bali experiences",
+          paragraphs: [
+            ctx.comparison,
+          ],
+        });
+      }
+      sections.push({
+        heading: "Booking and confirmation — what you need to send",
         paragraphs: [
-          `Before the day is locked in, send the operator your date, hotel area, and group size. That is usually the fastest way to confirm the right timing window and the exact package details for the ${tour.title}.`,
-          `If you are comparing multiple routes, this schedule article is most useful when you want to understand how the experience actually flows rather than only how it looks in marketing photos.`,
+          `To confirm the ${tour.title}, you will need to share your preferred date, hotel name and area, and group size. This lets the operator match the right vehicle, guide, and timing window.`,
+          `Pricing starts from ${tour.price}. The exact quote depends on your group size, hotel distance, and any add-on options.`,
         ],
-        bullets: [
-          `Pricing reference: ${tour.price}`,
-          ...buildIncludes(tour).slice(0, 4),
-        ],
-      },
-    ],
+        bullets: buildIncludes(tour),
+      });
+      return sections;
+    },
+    faq: (tour) => {
+      const ctx = getTourLocalContext(tour);
+      return ctx.faq || [];
+    },
   },
 ];
 
@@ -7531,6 +8259,7 @@ function buildJournalArticle(tour, articleType) {
     description: articleType.description(tour),
     excerpt: articleType.excerpt(tour),
     sections: articleType.sections(tour),
+    faq: articleType.faq ? articleType.faq(tour) : [],
   };
 }
 
@@ -9338,6 +10067,15 @@ ${JOURNAL_FOOTER_ASSETS}
             { "@type": "ListItem", position: 4, name: article.title, item: article.url },
           ],
         },
+        ...(article.faq.length ? [{
+          "@type": "FAQPage",
+          "@id": `${article.url}#faq`,
+          mainEntity: article.faq.map(([q, a]) => ({
+            "@type": "Question",
+            name: q,
+            acceptedAnswer: { "@type": "Answer", text: a },
+          })),
+        }] : []),
       ],
     })}</script>
     <style>${renderJournalSharedStyles()}</style>
@@ -9389,6 +10127,19 @@ ${JOURNAL_FOOTER_ASSETS}
             `,
               )
               .join("")}
+            ${article.faq.length ? `
+              <section class="sb-journal-article-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="sb-journal-faq-grid">
+                  ${article.faq.map(([q, a]) => `
+                    <article class="sb-journal-faq-card">
+                      <h3>${escapeHtml(q)}</h3>
+                      <p>${escapeHtml(a)}</p>
+                    </article>
+                  `).join("")}
+                </div>
+              </section>
+            ` : ""}
           </article>
 
           <aside class="sb-journal-sidebar">
@@ -11498,11 +12249,11 @@ function patchBaliMainFile(filePath) {
     .replaceAll('<a class="t451__logo" href="/">', '<a class="t451__logo" href="/bali/en/main-page">')
     .replace(
       /href="\/bali\/en\/main-page"([^>]*)>\s*About Us\s*</g,
-      'href="/bali/en/main-page#about"$1>About Us<',
+      'href="/bali/en/about"$1>About Us<',
     )
     .replace(
       /href="\/bali\/en\/main-page"([^>]*)>\s*FAQ\s*</g,
-      'href="/bali/en/main-page#faq"$1>FAQ<',
+      'href="/bali/en/faq"$1>FAQ<',
     )
     .replace(
       /href=""([^>]*data-menu-item-number="5"[^>]*)>\s*Our guides\s*</g,
@@ -11514,11 +12265,11 @@ function patchBaliMainFile(filePath) {
     )
     .replace(
       /<div class='tn-atom'><a href="(?:\/dubai\/en\/about|\/bali\/en\/main-page)"target="_blank"style="color: inherit"><u>About SB Excursions<\/u><\/a><\/div>/g,
-      `<div class='tn-atom'><a name="about" style="font-size:0;"></a><a href="/bali/en/main-page#about"target="_blank"style="color: inherit"><u>About SB Excursions</u></a></div>`,
+      `<div class='tn-atom'><a name="about" style="font-size:0;"></a><a href="/bali/en/about"target="_blank"style="color: inherit"><u>About SB Excursions</u></a></div>`,
     )
     .replace(
       /<div class='tn-atom'><a href="(?:\/dubai\/en\/faq|\/bali\/en\/main-page)"target="_blank"style="color: inherit"><u>FAQ<\/u><\/a><\/div>/g,
-      `<div class='tn-atom'><a name="faq" style="font-size:0;"></a><a href="/bali/en/main-page#faq"target="_blank"style="color: inherit"><u>FAQ</u></a></div>`,
+      `<div class='tn-atom'><a name="faq" style="font-size:0;"></a><a href="/bali/en/faq"target="_blank"style="color: inherit"><u>FAQ</u></a></div>`,
     );
 
   const plannerImageBlockStart = html.indexOf("var PLACE_IMAGE = {");
@@ -11653,6 +12404,176 @@ return '<div class="sb-place-card' + (placeObj.topPick ? ' is-top-pick' : '') + 
   html = ensureBaliGlobalUiFix(html);
 
   writeGeneratedFile(filePath, html);
+}
+
+// ─── Bali static info pages (About / FAQ) built 1:1 from the Dubai design ─────
+// Copies the Dubai About/FAQ Tilda pages, keeps the exact layout, and swaps the
+// header nav, visible content, imagery, and meta to Bali. The Dubai footer is
+// replaced later by ensureBaliTildaFooter (both files are in
+// BALI_TILDA_FOOTER_PATCH_FILES).
+const BALI_INFO_SHARED_REPLACEMENTS = [
+  // Logos → local Bali assets
+  [
+    "https://static.tildacdn.one/tild3334-6466-4436-b766-376338363935/SB_Excursions_Dubai_.png",
+    "/images/tild3334-6466-4436-b766-376338363935__sb_excursions_dubai_.png",
+  ],
+  [
+    "https://static.tildacdn.one/tild3762-3034-4130-b063-643934306634/SB_DUBAI_LOGO_2025.png",
+    "/images/tild3762-3034-4130-b063-643934306634__sb_dubai_logo_2025.png",
+  ],
+  // Logo link targets
+  ['<a href="/" class="t228__imgwrapper">', '<a href="/bali/en/main-page" class="t228__imgwrapper">'],
+  ['<a class="t451__logo" href="/">', '<a class="t451__logo" href="/bali/en/main-page">'],
+  // Header nav + footer routes → dedicated Bali pages
+  ["/dubai/en/about", "/bali/en/about"],
+  ["/dubai/en/faq", "/bali/en/faq"],
+  // WhatsApp number everywhere
+  ["971506048673", WHATSAPP_NUMBER],
+  // Office block (visible + map embed + footer text)
+  ["The Opus by Omniyat<br>", "Jl. Petitenget<br>"],
+  ["Business Bay, Dubai, UAE", "Seminyak, Bali, Indonesia"],
+  [
+    "The%20Opus%20by%20Omniyat%2C%20Business%20Bay%2C%20Dubai%2C%20UAE",
+    "Jl.%20Petitenget%2C%20Seminyak%2C%20Bali%2C%20Indonesia",
+  ],
+  ["The Opus by Omniyat, Al A'amal St, Business Bay, Dubai, UAE", "Jl. Petitenget, Seminyak, Bali, Indonesia"],
+  ["+971 50 604 8673", "+62 853 3368 5020"],
+  ["<h2>Our office in Dubai</h2>", "<h2>Our office in Bali</h2>"],
+];
+
+// Dubai stock imagery → local Bali photos (keyed by unique Tilda image id).
+const BALI_INFO_IMAGE_REPLACEMENTS = [
+  ["tild3134-3731-4563-b139-633435626664", "/images/bali-tours/ubud-hero-yousef.webp"], // uae-d (hero)
+  ["tild3432-6435-4938-b264-383033313166", "/images/bali-tours/nusa-penida-manta-rays-point.webp"], // a-boat
+  ["tild3038-6138-4239-b630-643330383636", "/images/bali-tours/bali-unesco.jpg"], // abu-d / Sheikh Zayed
+  ["tild3336-3862-4365-a132-366638663331", "/images/bali-tours/nusa-penida-west-tour.webp"], // beaut / Dubai Marina
+  ["tild6139-3437-4131-b562-373762343432", "/images/bali-tours/tanah-lot-bedugul-tour.jpg"], // dubai-uae-d / Dubai Frame
+  ["tild3238-6161-4539-b837-633466653436", "/images/bali-tours/ubud-highlights-tour.jpg"], // elega / Louvre
+  ["tild6264-3034-4033-b961-386337663264", "/images/bali-tours/sunset-cruise-bali.jpg"], // dubai / yacht
+  ["tild3065-3533-4864-a435-316535613436", "/images/bali-tours/bali-helicopter-scenic-tour.jpg"], // panor / Atlantis
+  ["tild3239-3939-4138-a634-626563376638", "/images/bali-tours/nusa-penida-east-tour.jpg"], // natur
+  ["tild3563-6663-4636-a132-653538353738", "/images/bali-tours/mount-batur-sunrise-hike.jpg"], // beaut #2 (About + FAQ)
+];
+
+const BALI_ABOUT_CONTENT_REPLACEMENTS = [
+  [
+    "<title>About SB Excursions | Global Travel Expertise in Dubai</title>",
+    "<title>About SB Excursions | Bali Tours &amp; Local Travel Expertise</title>",
+  ],
+  [
+    "About SB Excursions | Global Travel Expertise in Dubai",
+    "About SB Excursions | Bali Tours & Local Travel Expertise",
+  ],
+  [
+    "Meet the founder who explored 15+ countries to bring world-class service to Dubai. Learn why SB Excursions is the top choice for couples and young travelers.",
+    "Meet the founder who explored 15+ countries and brought world-class service to Bali. Learn why SB Excursions is the top choice for couples and young travelers exploring the island.",
+  ],
+  ["SB Excursions | Expert-Led Tours in Dubai &amp; Abu Dhabi", "SB Excursions | Expert-Led Tours Across Bali"],
+  [
+    'offers curated Dubai adventures. From romantic "Perfect Dates" to adrenaline desert safaris, we bring world-class travel standards to the UAE.',
+    'offers curated Bali adventures. From romantic "Perfect Dates" to adrenaline volcano sunrise treks, we bring world-class travel standards to the island.',
+  ],
+  ["From Global Expeditions to Dubai Dunes", "From Global Expeditions to Bali Shores"],
+  ["Adventurers served across the UAE with love.", "Adventurers served across Bali with love."],
+  [
+    "I created SB Excursions to bring that world-class standard to Dubai.",
+    "I created SB Excursions to bring that world-class standard to Bali.",
+  ],
+  ["From Global Traveler to Your Dubai Guide", "From Global Traveler to Your Bali Guide"],
+  [
+    "We specialize in romantic yacht sunsets and private desert dinners designed for couples.",
+    "We specialize in romantic sunset cruises and private beach dinners designed for couples.",
+  ],
+  [
+    "I've brought those high service standards to Dubai to ensure your safety and comfort on every tour.",
+    "I've brought those high service standards to Bali to ensure your safety and comfort on every tour.",
+  ],
+  [
+    "Whether it’s a Hot Air Balloon or Deep Sea Fishing, you get the best equipment and licensed guides.",
+    "Whether it’s a Mount Batur sunrise trek or Nusa Penida snorkeling, you get the best equipment and licensed guides.",
+  ],
+  // Gallery aria-labels (Dubai landmarks → Bali)
+  [
+    "A must-visit landmark: The Sheikh Zayed Grand Mosque in the UAE capital",
+    "A must-visit landmark: a classic Balinese Hindu temple",
+  ],
+  [
+    "Panoramic view of Dubai Marina skyline and Ain Dubai Ferris wheel",
+    "Panoramic view of the Kelingking Beach cliffs on Nusa Penida",
+  ],
+  [
+    "Dubai Frame view framed by tropical palm trees under a clear blue sky",
+    "Tanah Lot sea temple framed by tropical palm trees under a clear blue sky",
+  ],
+  ["aesthetic shot Ladder in Louvre", "aesthetic shot of the Tegalalang rice terraces in Ubud"],
+  [
+    "Luxury private yacht cruising past the Dubai Marina skyline and Ain Dubai",
+    "Luxury private sunset cruise along the Bali coastline",
+  ],
+  [
+    "Aerial view of Atlantis The Royal hotel and Palm Jumeirah from a helicopter",
+    "Aerial view of Bali's rice terraces and coastline from a helicopter",
+  ],
+];
+
+const BALI_FAQ_CONTENT_REPLACEMENTS = [
+  [
+    "General FAQ | SB Excursions Dubai - Safety, Booking & Insurance",
+    "General FAQ | SB Excursions Bali - Safety, Booking & Insurance",
+  ],
+  [
+    "Get answers to all your questions about booking, payments, insurance, and safety with SB Excursions. 20+ global questions answered for your peace of mind.",
+    "Get answers to all your questions about booking, payments, insurance, and safety with SB Excursions Bali. 20+ questions answered for your peace of mind.",
+  ],
+  ["according to UAE laws", "according to Indonesian laws"],
+  ["protected by <strong>UAE legal regulations</strong>", "protected by <strong>Indonesian legal regulations</strong>"],
+  ["protected by UAE legal regulations", "protected by Indonesian legal regulations"],
+  [
+    "office in <strong>Business Bay, Dubai</strong> (The Opus by Omniyat)",
+    "office in <strong>Seminyak, Bali</strong>",
+  ],
+  ["office in Business Bay, Dubai (The Opus by Omniyat)", "office in Seminyak, Bali"],
+  ["within Dubai city limits", "within Bali (Seminyak, Kuta, Canggu, Ubud, Nusa Dua and nearby areas)"],
+  ["I%20want%20to%20book%20your%20Dubai%20Safari%20desert%20tour%21", "I%20want%20to%20book%20a%20Bali%20tour%21"],
+];
+
+function applyBaliInfoHeaderNav(html) {
+  return html
+    .replace(
+      /href=""([^>]*data-menu-item-number="5"[^>]*)>\s*Our guides\s*</g,
+      `href="${JOURNAL_HUB_ROUTE}"$1>Our guides<`,
+    )
+    .replace(/\/bali\/en\/tours\/(?:bali\/en\/tours\/)+/g, "/bali/en/tours/");
+}
+
+function applyBaliInfoImages(html) {
+  let out = html;
+  for (const [id, localPath] of BALI_INFO_IMAGE_REPLACEMENTS) {
+    out = out.replace(new RegExp(`https://(?:static|thb)\\.tildacdn\\.one/${id}/[^"')\\s]*`, "g"), localPath);
+  }
+  return out;
+}
+
+function buildBaliInfoPage(sourceFile, outFile, contentReplacements) {
+  const sourcePath = path.join(projectRoot, sourceFile);
+  if (!fs.existsSync(sourcePath)) {
+    console.warn(`Bali info page source missing: ${sourceFile}`);
+    return;
+  }
+  let html = fs.readFileSync(sourcePath, "utf8");
+  html = html.replace(/<html lang="[^"]*"/i, '<html lang="en"');
+  for (const [from, to] of [...BALI_INFO_SHARED_REPLACEMENTS, ...contentReplacements]) {
+    html = html.split(from).join(to);
+  }
+  html = applyBaliInfoImages(html);
+  html = applyBaliInfoHeaderNav(html);
+  html = ensureBaliGlobalUiFix(html);
+  writeGeneratedFile(path.join(projectRoot, outFile), html);
+}
+
+function buildBaliInfoPages() {
+  buildBaliInfoPage("page112152236.html", "bali-about.html", BALI_ABOUT_CONTENT_REPLACEMENTS);
+  buildBaliInfoPage("page112258706.html", "bali-faq.html", BALI_FAQ_CONTENT_REPLACEMENTS);
 }
 
 function listWeatherPatchFiles() {
@@ -12172,6 +13093,10 @@ const UNESCO_PAGE_TRANSLATIONS = {
       bestAttractionsHeading: "Лучшие места на Бали",
       helpfulPdfHeading: "Полезные статьи о Бали",
       thingsToDoHeading: "Чем заняться на Бали",
+      tourArticlesHeading: "Статьи об этом туре",
+      chipTravelGuide: "Путеводитель",
+      chipTourSchedule: "Расписание тура",
+      chipWhyBook: "Почему стоит бронировать",
       mapOpenLabel: "Открыть маршрут в Google Maps",
       highlightsIntroLabel: "Главная идея",
       fullDescriptionWhyBookLabel: "Почему это бронируют",
@@ -12328,6 +13253,10 @@ const UNESCO_PAGE_TRANSLATIONS = {
       bestAttractionsHeading: "巴厘岛热门景点",
       helpfulPdfHeading: "巴厘岛实用文章",
       thingsToDoHeading: "巴厘岛玩什么",
+      tourArticlesHeading: "关于此行程的文章",
+      chipTravelGuide: "旅行指南",
+      chipTourSchedule: "行程安排",
+      chipWhyBook: "为何预订",
       mapOpenLabel: "打开 Google 地图路线",
       highlightsIntroLabel: "整体感觉",
       fullDescriptionWhyBookLabel: "为什么大家会订",
@@ -12484,6 +13413,10 @@ const UNESCO_PAGE_TRANSLATIONS = {
       bestAttractionsHeading: "Mejores atracciones en Bali",
       helpfulPdfHeading: "Artículos útiles sobre Bali",
       thingsToDoHeading: "Qué hacer en Bali",
+      tourArticlesHeading: "Artículos sobre este tour",
+      chipTravelGuide: "Guía de viaje",
+      chipTourSchedule: "Horario del tour",
+      chipWhyBook: "Por qué reservar",
       mapOpenLabel: "Abrir ruta en Google Maps",
       highlightsIntroLabel: "Idea general",
       fullDescriptionWhyBookLabel: "Por qué la reservan",
@@ -12640,6 +13573,10 @@ const UNESCO_PAGE_TRANSLATIONS = {
       bestAttractionsHeading: "Meilleures attractions de Bali",
       helpfulPdfHeading: "Articles utiles sur Bali",
       thingsToDoHeading: "Que faire à Bali",
+      tourArticlesHeading: "Articles sur cette excursion",
+      chipTravelGuide: "Guide de voyage",
+      chipTourSchedule: "Programme du tour",
+      chipWhyBook: "Pourquoi réserver",
       mapOpenLabel: "Ouvrir l'itinéraire Google Maps",
       highlightsIntroLabel: "Ambiance générale",
       fullDescriptionWhyBookLabel: "Pourquoi on le réserve",
@@ -13670,6 +14607,24 @@ function localizeUnescoShell(html, locale = "en", options = {}) {
   });
 
   localizedHtml = localizedHtml
+    .replaceAll(
+      'href="/bali/en/main-page#about" data-menu-submenu-hook="" data-menu-item-number="2"',
+      `href="/bali/${currentLocale}/about" data-menu-submenu-hook="" data-menu-item-number="2"`,
+    )
+    .replaceAll(
+      'href="/bali/en/main-page#about"target="_blank"',
+      `href="/bali/${currentLocale}/about"target="_blank"`,
+    )
+    .replaceAll('href="/bali/en/about"', `href="/bali/${currentLocale}/about"`)
+    .replaceAll(
+      'href="/bali/en/main-page#faq" data-menu-submenu-hook="" data-menu-item-number="4"',
+      `href="/bali/${currentLocale}/faq" data-menu-submenu-hook="" data-menu-item-number="4"`,
+    )
+    .replaceAll(
+      'href="/bali/en/main-page#faq"target="_blank"',
+      `href="/bali/${currentLocale}/faq"target="_blank"`,
+    )
+    .replaceAll('href="/bali/en/faq"', `href="/bali/${currentLocale}/faq"`)
     .replaceAll("/bali/en/main-page#about", `${localizedMainPageRoute(currentLocale)}#about`)
     .replaceAll("/bali/en/main-page#faq", `${localizedMainPageRoute(currentLocale)}#faq`)
     .replaceAll("/bali/en/main-page#tours", `${localizedMainPageRoute(currentLocale)}#tours`)
@@ -13870,6 +14825,47 @@ function buildUnescoPdfChipsBlock(locale = "en") {
   );
 }
 
+function buildTourJournalChipsBlock(tour, locale = "en") {
+  const ui = tour?.ui?.chipTravelGuide ? westUiLabels(tour) : unescoUiLabels(locale);
+  const journalBase = `/bali/${locale}/journal/${tour.slug}`;
+  const chips = [
+    [null, ui.chipTravelGuide, `${journalBase}/travel-guide`],
+    [null, ui.chipTourSchedule, `${journalBase}/tour-schedule`],
+    [null, ui.chipWhyBook, `${journalBase}/why-book`],
+  ];
+  return buildUnescoChipSectionBlock(
+    "rec2121105354",
+    ui.tourArticlesHeading,
+    chips,
+    { wideDesktop: true, locale },
+  );
+}
+
+function ensureTourJournalChips(filePath, tour, locale = "en") {
+  if (!fs.existsSync(filePath) || !tour) {
+    return;
+  }
+  let html = fs.readFileSync(filePath, "utf8");
+  const block = buildTourJournalChipsBlock(tour, locale);
+
+  const existingStart = html.indexOf('<div id="rec2121105354"');
+  if (existingStart !== -1) {
+    const existingEnd = html.indexOf('<div id="rec', existingStart + 20);
+    if (existingEnd !== -1) {
+      html = `${html.slice(0, existingStart)}${block}${html.slice(existingEnd)}`;
+    }
+  } else {
+    const pdfStart = html.indexOf('<div id="rec2121105353"');
+    if (pdfStart !== -1) {
+      const pdfEnd = html.indexOf('<div id="rec', pdfStart + 20);
+      if (pdfEnd !== -1) {
+        html = `${html.slice(0, pdfEnd)}${block}${html.slice(pdfEnd)}`;
+      }
+    }
+  }
+  writeGeneratedFile(filePath, ensureBaliGlobalUiFix(html));
+}
+
 function buildUnescoThingsToDoChipsBlock(locale = "en") {
   const ui = unescoUiLabels(locale);
   return buildUnescoChipSectionBlock(
@@ -14059,11 +15055,11 @@ function buildBaliTildaFooter() {
     .replaceAll("Contacts &amp; Location", "Contacts &amp; Location")
     .replaceAll(
       `<div class='tn-atom'><a href="/bali/en/main-page#about"target="_blank"style="color: inherit"><u>About SB Excursions</u></a></div>`,
-      `<div class='tn-atom'><a name="about" style="font-size:0;"></a><a href="/bali/en/main-page#about"target="_blank"style="color: inherit"><u>About SB Excursions</u></a></div>`,
+      `<div class='tn-atom'><a name="about" style="font-size:0;"></a><a href="/bali/en/about"target="_blank"style="color: inherit"><u>About SB Excursions</u></a></div>`,
     )
     .replaceAll(
       `<div class='tn-atom'><a href="/bali/en/main-page#faq"target="_blank"style="color: inherit"><u>FAQ</u></a></div>`,
-      `<div class='tn-atom'><a name="faq" style="font-size:0;"></a><a href="/bali/en/main-page#faq"target="_blank"style="color: inherit"><u>FAQ</u></a></div>`,
+      `<div class='tn-atom'><a name="faq" style="font-size:0;"></a><a href="/bali/en/faq"target="_blank"style="color: inherit"><u>FAQ</u></a></div>`,
     ),
   );
 }
@@ -14094,8 +15090,8 @@ function renderJournalBaliFooter() {
 
             <nav class="sb-journal-footer__column" aria-label="Company and trust links">
               <div class="sb-journal-footer__title">Company &amp; Trust</div>
-              <a class="sb-journal-footer__link" href="/bali/en/main-page#about">About SB Excursions</a>
-              <a class="sb-journal-footer__link" href="/bali/en/main-page#faq">FAQ</a>
+              <a class="sb-journal-footer__link" href="/bali/en/about">About SB Excursions</a>
+              <a class="sb-journal-footer__link" href="/bali/en/faq">FAQ</a>
               <a class="sb-journal-footer__link" href="/dubai/en/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
               <a class="sb-journal-footer__link" href="/dubai/en/terms" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>
               <a class="sb-journal-footer__link" href="/dubai/en/faq#refund" target="_blank" rel="noopener noreferrer">Refund Policy</a>
@@ -14209,6 +15205,309 @@ function ensureBaliTildaFooter(filePath) {
   }
 }
 
+const STANDALONE_PAGE_CONTENT = {
+  en: {
+    about: {
+      title: "About SB Excursions",
+      metaDescription: "Learn about SB Excursions — a Bali-based tour operator offering private day tours, transfers, and curated island experiences with local drivers and daily support.",
+      heading: "About SB Excursions",
+      sections: [
+        {
+          heading: "Who we are",
+          text: "SB Excursions is a Bali-based tour operator that organizes private day tours, airport transfers, boat trips, and curated island experiences. We work directly with local drivers and guides to keep every route practical, well-paced, and genuinely enjoyable.",
+        },
+        {
+          heading: "How we work",
+          text: "Every tour runs as a private booking — no strangers on the bus, no rigid group schedule. You pick the date, we confirm availability and handle the logistics: vehicle, driver, entrance fees, and pickup from your hotel, villa, or Airbnb anywhere in southern or central Bali.",
+        },
+        {
+          heading: "What we cover",
+          text: "Our catalog covers the most popular Bali experiences — Nusa Penida day trips, Ubud cultural routes, volcano sunrise hikes, snorkeling excursions, ATV rides, surf lessons, helicopter tours, and more. We also run transfers to and from the airport and fast boats to Gili Islands and Nusa Lembongan.",
+        },
+        {
+          heading: "Daily support",
+          text: "Our team is available daily from 7:00 to 22:00 Bali time via WhatsApp. Whether you need to adjust a pickup time, add a stop, or ask about weather conditions — we respond fast and keep things flexible.",
+        },
+        {
+          heading: "Why travelers choose us",
+          text: "Transparent pricing, no hidden fees, real reviews, and the kind of local knowledge you only get from operators who live on the island. We do not resell third-party packages — every route is built and managed by our team.",
+        },
+      ],
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      metaDescription: "Answers to common questions about booking Bali tours with SB Excursions — pricing, pickups, cancellations, group sizes, what to bring, and how our tours work.",
+      heading: "Frequently Asked Questions",
+      items: [
+        ["How do I book a tour?", "Send us a message on WhatsApp with the tour name, your preferred date, hotel area, and group size. We confirm availability and send booking details within a few hours."],
+        ["Is pickup from my hotel included?", "Yes. Most tours include free pickup and drop-off from hotels, villas, and Airbnbs in major Bali areas — Ubud, Seminyak, Canggu, Kuta, Legian, Sanur, Nusa Dua, Jimbaran, and Uluwatu."],
+        ["Are the tours private or shared?", "All our tours run as private bookings. You travel with your own group and driver — no strangers, no waiting for other guests."],
+        ["What is your cancellation policy?", "Free cancellation up to 3 days before the tour date for a full refund. Cancellations within 3 days may incur a partial charge depending on the tour."],
+        ["What should I bring?", "Comfortable clothes, sunscreen, a camera, and some cash for personal expenses. Specific tours may require swimwear, closed shoes, or a light rain jacket — check the tour page for details."],
+        ["Do you offer tours in other languages?", "Our website is available in English, Russian, French, Spanish, and Chinese. Most drivers speak basic English. For other language needs, let us know and we will do our best to arrange."],
+        ["How long do tours usually last?", "Most day tours run 8–12 hours including pickup and drop-off. Half-day options and transfers are shorter. Exact timing is listed on each tour page."],
+        ["Can I customize a tour route?", "Yes. Many of our routes allow adding or swapping stops. Message us on WhatsApp with your preferences and we will build a route that works."],
+        ["What payment methods do you accept?", "We accept bank transfers, major credit cards, and cash payment. Payment details are shared after booking confirmation."],
+        ["Is travel insurance included?", "Travel insurance is not included in the tour price. We recommend purchasing your own travel insurance before your trip to Bali."],
+      ],
+    },
+    guides: {
+      title: "Our Bali Travel Guides",
+      metaDescription: "Free travel guides by SB Excursions — beaches, temples, waterfalls, viewpoints, restaurants, photo spots, and practical tips for your Bali trip.",
+      heading: "Our Bali Travel Guides",
+      intro: "Browse our collection of practical Bali guides — written by our team who live and work on the island. Each guide covers a specific topic to help you plan your trip.",
+    },
+  },
+  ru: {
+    about: {
+      title: "О компании SB Excursions",
+      metaDescription: "Узнайте о SB Excursions — туроператоре на Бали, организующем частные экскурсии, трансферы и островные маршруты с местными гидами и ежедневной поддержкой.",
+      heading: "О компании SB Excursions",
+      sections: [
+        { heading: "Кто мы", text: "SB Excursions — туроператор на Бали, который организует частные экскурсии, трансферы из аэропорта, морские прогулки и продуманные островные маршруты. Мы работаем напрямую с местными водителями и гидами." },
+        { heading: "Как мы работаем", text: "Каждый тур — это частное бронирование: никаких незнакомцев, никакого жёсткого группового расписания. Вы выбираете дату, мы подтверждаем и берём на себя всю логистику." },
+        { heading: "Что мы предлагаем", text: "Наш каталог охватывает самые популярные маршруты Бали — Нуса Пенида, культурные маршруты по Убуду, восход на вулкане, снорклинг, квадроциклы, сёрфинг, вертолётные туры и многое другое." },
+        { heading: "Ежедневная поддержка", text: "Наша команда доступна ежедневно с 7:00 до 22:00 по времени Бали через WhatsApp. Мы быстро отвечаем и сохраняем гибкость." },
+        { heading: "Почему нас выбирают", text: "Прозрачные цены, никаких скрытых сборов, реальные отзывы и местные знания от команды, которая живёт на острове." },
+      ],
+    },
+    faq: {
+      title: "Часто задаваемые вопросы",
+      metaDescription: "Ответы на частые вопросы о бронировании туров на Бали с SB Excursions — цены, трансферы, отмена, размер группы и как работают наши туры.",
+      heading: "Часто задаваемые вопросы",
+      items: [
+        ["Как забронировать тур?", "Напишите нам в WhatsApp с названием тура, датой, районом отеля и размером группы. Мы подтвердим доступность в течение нескольких часов."],
+        ["Трансфер из отеля включён?", "Да. Большинство туров включают бесплатный трансфер из отелей, вилл и Airbnb в основных районах Бали."],
+        ["Туры частные или групповые?", "Все наши туры — частные. Вы путешествуете только со своей группой и водителем."],
+        ["Какая политика отмены?", "Бесплатная отмена за 3 дня до даты тура с полным возвратом. При отмене менее чем за 3 дня может взиматься частичная плата."],
+        ["Что нужно взять с собой?", "Удобную одежду, солнцезащитный крем, камеру и наличные на личные расходы. Подробности на странице каждого тура."],
+        ["Есть ли туры на других языках?", "Наш сайт доступен на английском, русском, французском, испанском и китайском. Большинство водителей говорят на базовом английском."],
+        ["Сколько длятся туры?", "Большинство дневных туров длятся 8–12 часов включая трансфер. Точное время указано на странице каждого тура."],
+        ["Можно ли изменить маршрут?", "Да. Многие маршруты позволяют добавить или заменить остановки. Напишите нам в WhatsApp."],
+        ["Какие способы оплаты?", "Мы принимаем банковские переводы, основные кредитные карты и оплату наличными."],
+        ["Включена ли страховка?", "Туристическая страховка не включена в стоимость тура. Мы рекомендуем оформить собственную страховку перед поездкой."],
+      ],
+    },
+    guides: {
+      title: "Путеводители по Бали",
+      metaDescription: "Бесплатные путеводители от SB Excursions — пляжи, храмы, водопады, смотровые площадки, рестораны, фотоспоты и практические советы для поездки на Бали.",
+      heading: "Путеводители по Бали",
+      intro: "Коллекция практических путеводителей по Бали от нашей команды, которая живёт и работает на острове. Каждый путеводитель посвящён конкретной теме.",
+    },
+  },
+  fr: {
+    about: {
+      title: "À propos de SB Excursions",
+      metaDescription: "Découvrez SB Excursions — un tour-opérateur basé à Bali proposant des excursions privées, des transferts et des expériences insulaires avec des chauffeurs locaux.",
+      heading: "À propos de SB Excursions",
+      sections: [
+        { heading: "Qui sommes-nous", text: "SB Excursions est un tour-opérateur basé à Bali qui organise des excursions privées, des transferts aéroport, des sorties en bateau et des itinéraires insulaires soigneusement conçus." },
+        { heading: "Comment nous travaillons", text: "Chaque excursion est une réservation privée — pas d'inconnus, pas d'horaire de groupe rigide. Vous choisissez la date, nous confirmons et gérons toute la logistique." },
+        { heading: "Ce que nous proposons", text: "Notre catalogue couvre les expériences les plus populaires de Bali — Nusa Penida, circuits culturels à Ubud, lever de soleil sur le volcan, snorkeling, quad, surf, tours en hélicoptère et bien plus." },
+        { heading: "Assistance quotidienne", text: "Notre équipe est disponible tous les jours de 7h à 22h heure de Bali via WhatsApp. Nous répondons rapidement et restons flexibles." },
+        { heading: "Pourquoi nous choisir", text: "Tarifs transparents, pas de frais cachés, vrais avis et connaissances locales d'une équipe qui vit sur l'île." },
+      ],
+    },
+    faq: {
+      title: "Questions fréquentes",
+      metaDescription: "Réponses aux questions courantes sur la réservation d'excursions à Bali avec SB Excursions — tarifs, transferts, annulations et fonctionnement de nos tours.",
+      heading: "Questions fréquentes",
+      items: [
+        ["Comment réserver une excursion ?", "Envoyez-nous un message sur WhatsApp avec le nom du tour, votre date préférée, la zone de votre hôtel et la taille du groupe."],
+        ["Le transfert depuis l'hôtel est-il inclus ?", "Oui. La plupart des excursions incluent un transfert gratuit depuis les hôtels, villas et Airbnb dans les principales zones de Bali."],
+        ["Les excursions sont-elles privées ?", "Toutes nos excursions sont privées. Vous voyagez uniquement avec votre groupe et votre chauffeur."],
+        ["Quelle est la politique d'annulation ?", "Annulation gratuite jusqu'à 3 jours avant la date du tour pour un remboursement complet."],
+        ["Que faut-il apporter ?", "Des vêtements confortables, de la crème solaire, un appareil photo et de l'argent liquide pour les dépenses personnelles."],
+        ["Proposez-vous des excursions dans d'autres langues ?", "Notre site est disponible en anglais, russe, français, espagnol et chinois."],
+        ["Combien de temps durent les excursions ?", "La plupart des excursions durent 8 à 12 heures, transfert inclus."],
+        ["Puis-je personnaliser l'itinéraire ?", "Oui. De nombreux itinéraires permettent d'ajouter ou de remplacer des arrêts."],
+        ["Quels modes de paiement acceptez-vous ?", "Nous acceptons les virements bancaires, les principales cartes de crédit et le paiement en espèces."],
+        ["L'assurance voyage est-elle incluse ?", "L'assurance voyage n'est pas incluse. Nous recommandons de souscrire votre propre assurance avant votre voyage."],
+      ],
+    },
+    guides: {
+      title: "Nos guides de voyage à Bali",
+      metaDescription: "Guides de voyage gratuits par SB Excursions — plages, temples, cascades, points de vue, restaurants, spots photo et conseils pratiques pour votre séjour à Bali.",
+      heading: "Nos guides de voyage à Bali",
+      intro: "Parcourez notre collection de guides pratiques sur Bali, rédigés par notre équipe qui vit et travaille sur l'île. Chaque guide couvre un sujet spécifique.",
+    },
+  },
+  es: {
+    about: {
+      title: "Sobre SB Excursions",
+      metaDescription: "Conoce SB Excursions — operador turístico en Bali que ofrece tours privados, traslados y experiencias en la isla con conductores locales y soporte diario.",
+      heading: "Sobre SB Excursions",
+      sections: [
+        { heading: "Quiénes somos", text: "SB Excursions es un operador turístico en Bali que organiza excursiones privadas, traslados al aeropuerto, paseos en barco y rutas insulares cuidadosamente diseñadas." },
+        { heading: "Cómo trabajamos", text: "Cada tour es una reserva privada — sin desconocidos, sin horario grupal rígido. Tú eliges la fecha, nosotros confirmamos y nos encargamos de toda la logística." },
+        { heading: "Qué ofrecemos", text: "Nuestro catálogo cubre las experiencias más populares de Bali — Nusa Penida, rutas culturales por Ubud, amanecer en el volcán, snorkel, cuatrimotos, surf, tours en helicóptero y mucho más." },
+        { heading: "Soporte diario", text: "Nuestro equipo está disponible todos los días de 7:00 a 22:00 hora de Bali por WhatsApp. Respondemos rápido y mantenemos la flexibilidad." },
+        { heading: "Por qué elegirnos", text: "Precios transparentes, sin cargos ocultos, reseñas reales y conocimiento local de un equipo que vive en la isla." },
+      ],
+    },
+    faq: {
+      title: "Preguntas frecuentes",
+      metaDescription: "Respuestas a preguntas comunes sobre reservar tours en Bali con SB Excursions — precios, traslados, cancelaciones y cómo funcionan nuestros tours.",
+      heading: "Preguntas frecuentes",
+      items: [
+        ["¿Cómo reservo un tour?", "Envíanos un mensaje por WhatsApp con el nombre del tour, tu fecha preferida, la zona de tu hotel y el tamaño del grupo."],
+        ["¿Está incluido el traslado desde el hotel?", "Sí. La mayoría de los tours incluyen traslado gratuito desde hoteles, villas y Airbnbs en las principales zonas de Bali."],
+        ["¿Los tours son privados o compartidos?", "Todos nuestros tours son privados. Viajas solo con tu grupo y conductor."],
+        ["¿Cuál es la política de cancelación?", "Cancelación gratuita hasta 3 días antes de la fecha del tour para un reembolso completo."],
+        ["¿Qué debo llevar?", "Ropa cómoda, protector solar, cámara y efectivo para gastos personales."],
+        ["¿Ofrecen tours en otros idiomas?", "Nuestro sitio está disponible en inglés, ruso, francés, español y chino."],
+        ["¿Cuánto duran los tours?", "La mayoría de los tours duran de 8 a 12 horas incluyendo el traslado."],
+        ["¿Puedo personalizar la ruta?", "Sí. Muchas rutas permiten agregar o cambiar paradas."],
+        ["¿Qué métodos de pago aceptan?", "Aceptamos transferencias bancarias, tarjetas de crédito principales y pago en efectivo."],
+        ["¿Está incluido el seguro de viaje?", "El seguro de viaje no está incluido. Recomendamos contratar su propio seguro antes de viajar."],
+      ],
+    },
+    guides: {
+      title: "Nuestras guías de viaje de Bali",
+      metaDescription: "Guías de viaje gratuitas de SB Excursions — playas, templos, cascadas, miradores, restaurantes, spots de fotos y consejos prácticos para tu viaje a Bali.",
+      heading: "Nuestras guías de viaje de Bali",
+      intro: "Explora nuestra colección de guías prácticas de Bali, escritas por nuestro equipo que vive y trabaja en la isla. Cada guía cubre un tema específico.",
+    },
+  },
+  zh: {
+    about: {
+      title: "关于 SB Excursions",
+      metaDescription: "了解 SB Excursions — 一家巴厘岛旅游运营商，提供私人一日游、接送服务和精心策划的岛屿体验。",
+      heading: "关于 SB Excursions",
+      sections: [
+        { heading: "我们是谁", text: "SB Excursions 是一家巴厘岛旅游运营商，组织私人一日游、机场接送、出海旅行和精心策划的岛屿路线。我们直接与当地司机和导游合作。" },
+        { heading: "我们如何运作", text: "每个旅游团都是私人预订——没有陌生人，没有固定的团体时间表。您选择日期，我们确认并处理所有后勤工作。" },
+        { heading: "我们提供什么", text: "我们的目录涵盖巴厘岛最受欢迎的体验——努沙佩尼达、乌布文化路线、火山日出、浮潜、全地形车、冲浪、直升机之旅等等。" },
+        { heading: "每日支持", text: "我们的团队每天巴厘岛时间 7:00 至 22:00 通过 WhatsApp 提供服务。我们快速回复并保持灵活。" },
+        { heading: "为什么选择我们", text: "透明的价格，没有隐藏费用，真实的评价，以及来自生活在岛上的团队的本地知识。" },
+      ],
+    },
+    faq: {
+      title: "常见问题",
+      metaDescription: "关于通过 SB Excursions 预订巴厘岛旅游的常见问题解答——价格、接送、取消政策和我们旅游的运作方式。",
+      heading: "常见问题",
+      items: [
+        ["如何预订旅游？", "通过 WhatsApp 向我们发送消息，包括旅游名称、首选日期、酒店区域和团体人数。"],
+        ["酒店接送是否包含在内？", "是的。大多数旅游包括从巴厘岛主要地区的酒店、别墅和 Airbnb 的免费接送。"],
+        ["旅游是私人的还是拼团的？", "我们所有的旅游都是私人预订。您只与自己的团体和司机一起旅行。"],
+        ["取消政策是什么？", "旅游日期前3天免费取消，全额退款。"],
+        ["需要带什么？", "舒适的衣服、防晒霜、相机和个人消费的现金。"],
+        ["你们提供其他语言的旅游吗？", "我们的网站提供英语、俄语、法语、西班牙语和中文版本。"],
+        ["旅游通常持续多长时间？", "大多数一日游持续8-12小时，包括接送。"],
+        ["我可以自定义路线吗？", "可以。许多路线允许添加或更换停靠点。"],
+        ["接受哪些付款方式？", "我们接受银行转账、主要信用卡和现金支付。"],
+        ["旅行保险是否包含在内？", "旅行保险不包含在旅游价格中。我们建议您在旅行前购买自己的旅行保险。"],
+      ],
+    },
+    guides: {
+      title: "巴厘岛旅行指南",
+      metaDescription: "SB Excursions 免费旅行指南 — 海滩、寺庙、瀑布、观景点、餐厅、拍照地点和巴厘岛旅行实用建议。",
+      heading: "巴厘岛旅行指南",
+      intro: "浏览我们团队编写的巴厘岛实用指南合集——我们在岛上生活和工作。每篇指南覆盖一个具体主题。",
+    },
+  },
+};
+
+function renderStandalonePage(type, locale) {
+  const content = STANDALONE_PAGE_CONTENT[locale]?.[type] || STANDALONE_PAGE_CONTENT.en[type];
+  const langCodes = BALI_LANGUAGE_OPTIONS.map((o) => o.code);
+  const altLinks = langCodes.map((code) =>
+    `<link rel="alternate" hreflang="${code}" href="${SITE_URL}/bali/${code}/${type}">`
+  ).join("\n    ");
+
+  let body = "";
+  if (type === "about") {
+    body = content.sections.map((s) => `
+            <section class="sb-journal-article-section">
+              <h2>${escapeHtml(s.heading)}</h2>
+              <p>${escapeHtml(s.text)}</p>
+            </section>`).join("");
+  } else if (type === "guides") {
+    const guideArticles = buildSeoGuideArticles();
+    body = `
+            <p style="color:#555;line-height:1.6;margin:0 0 32px;">${escapeHtml(content.intro)}</p>
+            <div class="sb-guides-grid">
+              ${guideArticles.map((g) => {
+                const guideRoute = `/bali/${locale}/journal/${g.guide.slug}`;
+                return `<a class="sb-guide-card" href="${guideRoute}">
+                <h2>${escapeHtml(g.title)}</h2>
+                <p>${escapeHtml(g.description.slice(0, 120))}${g.description.length > 120 ? "..." : ""}</p>
+              </a>`;
+              }).join("\n              ")}
+            </div>`;
+  } else {
+    body = `
+            <div class="sb-faq-list">
+              ${content.items.map(([q, a]) => `
+              <details class="sb-faq-item">
+                <summary>${escapeHtml(q)}</summary>
+                <p>${escapeHtml(a)}</p>
+              </details>`).join("")}
+            </div>`;
+  }
+
+  const faqSchema = type === "faq" ? `
+    <script type="application/ld+json">${JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: content.items.map(([q, a]) => ({
+        "@type": "Question",
+        name: q,
+        acceptedAnswer: { "@type": "Answer", text: a },
+      })),
+    })}</script>` : "";
+
+  return `<!DOCTYPE html>
+<html lang="${locale}">
+  <head><style>body{opacity:0!important}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>${escapeHtml(content.title)} | SB Excursions</title>
+    <meta name="description" content="${escapeHtml(content.metaDescription)}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="${escapeHtml(content.title)} | SB Excursions">
+    <meta property="og:description" content="${escapeHtml(content.metaDescription)}">
+    <meta property="og:url" content="${SITE_URL}/bali/${locale}/${type}">
+    <link rel="canonical" href="${SITE_URL}/bali/${locale}/${type}">
+    ${altLinks}
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/tild6536-3637-4563-a362-633234333130__favikon_sb_excursion.png">
+    <link rel="stylesheet" href="/css/bali-tour-pages.css">
+${JOURNAL_FOOTER_ASSETS}${faqSchema}
+    <style>${renderJournalSharedStyles()}
+    .sb-faq-list { max-width: 800px; margin: 0 auto; }
+    .sb-faq-item { border-bottom: 1px solid #e5e5e5; padding: 18px 0; }
+    .sb-faq-item summary { font-size: 18px; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-family: 'Cina GEO', 'TildaSans', Arial, sans-serif; }
+    .sb-faq-item summary::after { content: '+'; font-size: 22px; color: #999; flex-shrink: 0; margin-left: 16px; transition: transform 0.2s; }
+    .sb-faq-item[open] summary::after { content: '\\2212'; }
+    .sb-faq-item summary::-webkit-details-marker { display: none; }
+    .sb-faq-item p { margin: 12px 0 0; color: #555; line-height: 1.6; }
+    .sb-guides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .sb-guide-card { display: block; padding: 24px; border-radius: 16px; background: #f5f5f5; text-decoration: none; color: inherit; transition: box-shadow 0.2s, transform 0.2s; }
+    .sb-guide-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); transform: translateY(-2px); }
+    .sb-guide-card h2 { font-family: 'Cina GEO', 'TildaSans', Arial, sans-serif; font-weight: 400; font-size: 18px; margin: 0 0 8px; line-height: 1.3; }
+    .sb-guide-card p { font-size: 14px; color: #666; line-height: 1.5; margin: 0; }
+    </style>
+  </head>
+  <body>
+    <div class="sb-journal-page">
+      ${renderJournalHeader()}
+      <main class="sb-tour-main sb-journal-main">
+        <nav class="sb-journal-breadcrumbs">
+          <a href="/bali/${locale}/main-page">Bali</a>
+          <span>/</span>
+          <span>${escapeHtml(content.heading)}</span>
+        </nav>
+        <article class="sb-journal-article" style="max-width:900px;margin:0 auto;">
+          <h1 style="font-family:'Cina GEO','TildaSans',Arial,sans-serif;font-weight:400;font-size:clamp(28px,5vw,48px);margin:24px 0 32px;">${escapeHtml(content.heading)}</h1>
+          ${body}
+        </article>
+      </main>
+    </div>
+  </body>
+</html>`;
+}
+
 async function generatePages() {
   const allTours = tourDataMap();
   const englishTargets = [];
@@ -14249,8 +15548,18 @@ async function generatePages() {
     guideTargets.push({ filePath: guideFilePath, article: guideArticle });
   }
 
+  const standaloneTargets = [];
+  for (const locale of BALI_LANGUAGE_OPTIONS.map((o) => o.code)) {
+    for (const type of ["about", "faq", "guides"]) {
+      const suffix = locale === "en" ? "" : `-${locale}`;
+      const filePath = path.join(projectRoot, `bali-${type}${suffix}.html`);
+      writeGeneratedFile(filePath, renderStandalonePage(type, locale));
+      standaloneTargets.push({ filePath, type, locale });
+    }
+  }
+
   saveTranslationCache();
-  return { englishTargets, localizedTargets, journalIndexPath, journalTargets, guideTargets };
+  return { englishTargets, localizedTargets, journalIndexPath, journalTargets, guideTargets, standaloneTargets };
 }
 
 async function main() {
@@ -14280,8 +15589,15 @@ async function main() {
     ensureUnescoPdfChips(target.filePath, target.locale);
     ensureUnescoThingsToDoChips(target.filePath, target.locale);
   }
+  for (const target of englishTargets) {
+    ensureTourJournalChips(target.filePath, target.tour, "en");
+  }
+  for (const target of localizedTargets) {
+    ensureTourJournalChips(target.filePath, target.tour, tourLocale(target.tour));
+  }
   patchBaliMainFile(path.join(projectRoot, "page128073236.html"));
   patchBaliMainFile(path.join(projectRoot, "files", "page128073236body.html"));
+  buildBaliInfoPages();
   for (const relativePath of listWeatherPatchFiles()) {
     const filePath = path.join(projectRoot, relativePath);
     ensureJeepHotSpringRouteMap(filePath);
@@ -14301,12 +15617,13 @@ async function main() {
     ensureLocalizedTourPage(target.filePath, target.tour);
   }
   const englishTildaTourTargets = [
-    { filePath: path.join(projectRoot, "page132812463.html"), tour: tourBySlug("mount-batur-sunrise-hike") },
-    { filePath: path.join(projectRoot, "files", "page132812463body.html"), tour: tourBySlug("mount-batur-sunrise-hike") },
-    { filePath: path.join(projectRoot, "page133629743.html"), tour: tourBySlug("mount-batur-sunrise-jeep-hot-spring") },
-    { filePath: path.join(projectRoot, "files", "page133629743body.html"), tour: tourBySlug("mount-batur-sunrise-jeep-hot-spring") },
+    { filePath: path.join(projectRoot, "page132812463.html"), tour: tourBySlug("mount-batur-sunrise-jeep-tour") },
+    { filePath: path.join(projectRoot, "files", "page132812463body.html"), tour: tourBySlug("mount-batur-sunrise-jeep-tour") },
+    { filePath: path.join(projectRoot, "page133629743.html"), tour: tourBySlug("mount-batur-sunrise-jeep-tour") },
+    { filePath: path.join(projectRoot, "files", "page133629743body.html"), tour: tourBySlug("mount-batur-sunrise-jeep-tour") },
   ];
   for (const target of englishTildaTourTargets) {
+    ensureTourJournalChips(target.filePath, target.tour, "en");
     ensureCompactWeatherWidget(target.filePath);
     ensureBaliTildaFooter(target.filePath);
     ensureLocalizedTourPage(target.filePath, target.tour);
@@ -14330,6 +15647,12 @@ async function main() {
 
   for (const target of legacyTildaTourTargets) {
     ensureLegacyTildaTourLayout(target.filePath, target.tour);
+  }
+  for (const target of legacyTildaTourTargets) {
+    if (target.tour) {
+      const locale = target.filePath.match(/-(\w{2})\.html$/)?.[1] || "en";
+      ensureTourJournalChips(target.filePath, target.tour, locale);
+    }
   }
 
   const englishMainPagePath = path.join(projectRoot, "page128073236.html");
