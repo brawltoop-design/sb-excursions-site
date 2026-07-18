@@ -139,6 +139,17 @@ const BALI_FOOTER_LAYOUT_FIX_STYLE = `
     white-space:normal !important;
   }
 }
+/* Localized footers: translated link labels ("Политика конфиденциальности",
+   "Politique de confidentialité", …) wrap to two lines and collide with the
+   next absolutely-positioned link. Tighten them so two lines fit the slot. */
+html[lang]:not([lang="en"]) #rec1803718291 .tn-elem .tn-atom a{
+  font-size:11px !important;
+  line-height:12.5px !important;
+  display:inline-block !important;
+}
+html[lang]:not([lang="en"]) #rec1803718291 .tn-elem .tn-atom:has(> a){
+  line-height:12.5px !important;
+}
 </style>`;
 const JOURNAL_FOOTER_ASSETS = `
     <link rel="stylesheet" href="/css/fonts-tildasans.css">
@@ -13814,7 +13825,25 @@ async function translateTextMap(texts, locale = "en", options = {}) {
     }
   }
 
+  // "SB Excursions" is a brand name — machine translation localizes it
+  // ("СБ Экскурсии", "SB Excursiones", …). Restore it everywhere, including
+  // values that came straight from the cache.
+  for (const [source, value] of translated) {
+    translated.set(source, normalizeBrandName(value));
+  }
+
   return translated;
+}
+
+const BRAND_NAME = "SB Excursions";
+
+function normalizeBrandName(text) {
+  if (!text) return text;
+  return String(text)
+    .replace(/(?:СБ|SB)\s*[-–—]?\s*Экскурси[а-яё]*/giu, BRAND_NAME)
+    .replace(/SB\s*[-–—]?\s*(?:Excursiones|Excursões|Escursioni)/giu, BRAND_NAME)
+    .replace(/(?:Excursiones|Excursões|Escursioni|Excursions)\s+(?:de|del|di)\s+SB/giu, BRAND_NAME)
+    .replace(/SB\s*(?:短途旅行|游览|旅游|远足|观光)/gu, BRAND_NAME);
 }
 
 function localizedMainPageRoute(locale = "en") {
@@ -15728,6 +15757,22 @@ async function main() {
         path.join(projectRoot, localizedGuideArticleFileName(target.article.guide, locale)),
         localizedGuideHtml,
       );
+    }
+  }
+
+  // Localized Bali About / FAQ pages, built from the finished English ones so
+  // they keep the exact Dubai-derived design plus the Bali footer.
+  for (const infoRoute of ["about", "faq"]) {
+    const englishInfoPath = path.join(projectRoot, `bali-${infoRoute}.html`);
+    if (!fs.existsSync(englishInfoPath)) continue;
+    const englishInfoHtml = fs.readFileSync(englishInfoPath, "utf8");
+    for (const locale of localizedStaticLocales) {
+      const localizedInfoHtml = await buildLocalizedStaticHtmlPage(englishInfoHtml, locale, {
+        shell: "tilda",
+        currentRoute: `/bali/${locale}/${infoRoute}`,
+        routeBuilder: (code) => `/bali/${code}/${infoRoute}`,
+      });
+      writeGeneratedFile(path.join(projectRoot, `bali-${infoRoute}-${locale}.html`), localizedInfoHtml);
     }
   }
 
