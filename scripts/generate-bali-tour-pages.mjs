@@ -3565,6 +3565,17 @@ const AI_BUTTON_BEAM_STYLE = `
 #sbAiBuild {
   width: 100%;
 }
+/* Below 768px the design strips filter buttons down to plain text. The beam
+   needs an opaque face to hide behind, so keep the pill for the AI toggle. */
+@media (max-width: 767px) {
+  #sbAiPlannerToggle {
+    border: 1.5px solid var(--blue-border) !important;
+    background: #fff !important;
+    border-radius: 999px !important;
+    padding: 10px 18px !important;
+    min-height: 44px !important;
+  }
+}
 </style>`;
 
 const AI_BEAM_SPAN = '<span class="sb-q-beam" aria-hidden="true"></span>';

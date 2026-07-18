@@ -416,6 +416,17 @@ html[data-sb-destination="bali"] #rec2128776473 .t-menusub__list .t-menusub__lin
 #sbAiBuild {
   width: 100%;
 }
+/* Below 768px the design strips filter buttons down to plain text. The beam
+   needs an opaque face to hide behind, so keep the pill for the AI toggle. */
+@media (max-width: 767px) {
+  #sbAiPlannerToggle {
+    border: 1.5px solid var(--blue-border) !important;
+    background: #fff !important;
+    border-radius: 999px !important;
+    padding: 10px 18px !important;
+    min-height: 44px !important;
+  }
+}
 </style><style id="sb-bali-global-ui-fix">
 html,
 body {
@@ -3227,6 +3238,7 @@ setTimeout(fixAiPlannerMobile,300);
 setTimeout(fixAiPlannerMobile,900);
 })();
 </script> <!-- nominify end --> </div> </div> </div> </div>
+
 
 
 
