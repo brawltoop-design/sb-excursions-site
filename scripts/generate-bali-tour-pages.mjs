@@ -14846,7 +14846,7 @@ function buildUnescoChipSectionBlock(recordId, title, chips, options = {}) {
       font-family: 'Cina GEO', 'TildaSans', Arial, sans-serif;
       font-size: 34px;
       line-height: 1.12;
-      font-weight: 700;
+      font-weight: 400;
       letter-spacing: 0;
     }
 
@@ -15089,6 +15089,42 @@ function ensureUnescoThingsToDoChips(filePath, locale = "en") {
 
   html = `${html.slice(0, recordStart)}${buildUnescoThingsToDoChipsBlock(locale)}${html.slice(recordEnd)}`;
   writeGeneratedFile(filePath, ensureBaliGlobalUiFix(html));
+}
+
+// The main page ships three Tilda chip blocks still holding template
+// placeholders ("Paperwork", "Rental Housing", …) rendered as plain buttons
+// with no links. Replace them with the real, linked Bali chip sets. Two of the
+// blocks use different record ids than the tour pages, so they need their own
+// mapping.
+const MAIN_PAGE_CHIP_SECTIONS = [
+  ["rec2147451593", "Best Attractions in Bali", UNESCO_INTERNAL_TOUR_CHIPS],
+  ["rec2147451533", "Our helpful PDF-Files about Bali", UNESCO_PDF_CHIPS],
+  ["rec2121105183", "Things to do in Bali", UNESCO_THINGS_TO_DO_CHIPS],
+];
+
+function ensureMainPageChipSections(filePath, locale = "en") {
+  if (!fs.existsSync(filePath)) {
+    return;
+  }
+
+  let html = fs.readFileSync(filePath, "utf8");
+  let changed = false;
+
+  for (const [recordId, title, chips] of MAIN_PAGE_CHIP_SECTIONS) {
+    const recordStart = html.indexOf(`<div id="${recordId}"`);
+    if (recordStart === -1) continue;
+
+    const recordEnd = html.indexOf('<div id="rec', recordStart + 20);
+    if (recordEnd === -1) continue;
+
+    const block = buildUnescoChipSectionBlock(recordId, title, chips, { wideDesktop: true, locale });
+    html = `${html.slice(0, recordStart)}${block}${html.slice(recordEnd)}`;
+    changed = true;
+  }
+
+  if (changed) {
+    writeGeneratedFile(filePath, ensureBaliGlobalUiFix(html));
+  }
 }
 
 function ensureLocalizedUnescoPage(filePath, locale = "en") {
@@ -15727,6 +15763,8 @@ async function main() {
   }
   patchBaliMainFile(path.join(projectRoot, "page128073236.html"));
   patchBaliMainFile(path.join(projectRoot, "files", "page128073236body.html"));
+  ensureMainPageChipSections(path.join(projectRoot, "page128073236.html"));
+  ensureMainPageChipSections(path.join(projectRoot, "files", "page128073236body.html"));
   buildBaliInfoPages();
   for (const relativePath of listWeatherPatchFiles()) {
     const filePath = path.join(projectRoot, relativePath);
