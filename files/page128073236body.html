@@ -129,6 +129,50 @@ body {
   }
 }
 </style>
+<style id="sb-ai-button-beam">
+@property --sb-beam-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+#sbAiPlannerToggle,
+#sbAiBuild {
+  position: relative;
+}
+#sbAiPlannerToggle::before,
+#sbAiBuild::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 999px;
+  padding: 4px;
+  background: conic-gradient(
+    from var(--sb-beam-angle),
+    rgba(79, 134, 255, 0) 0deg,
+    rgba(79, 134, 255, 0) 190deg,
+    #4f86ff 250deg,
+    #a855f7 296deg,
+    #22d3ee 332deg,
+    rgba(34, 211, 238, 0) 360deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  filter: drop-shadow(0 0 7px rgba(79, 134, 255, 0.55));
+  animation: sb-beam-spin 2.8s linear infinite;
+  pointer-events: none;
+}
+@keyframes sb-beam-spin {
+  to { --sb-beam-angle: 360deg; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #sbAiPlannerToggle::before,
+  #sbAiBuild::before {
+    animation: none;
+  }
+}
+</style>
 <style id="sb-bali-main-stability-fix">
 html,
 body {
@@ -2919,6 +2963,7 @@ setTimeout(fixAiPlannerMobile,300);
 setTimeout(fixAiPlannerMobile,900);
 })();
 </script> <!-- nominify end --> </div> </div> </div> </div>
+
 
 
 

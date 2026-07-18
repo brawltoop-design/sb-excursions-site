@@ -3508,6 +3508,64 @@ function normalizeBaliWeatherOuterCss(html) {
   return html.split(BALI_WEATHER_OUTER_100VW_CSS).join(BALI_WEATHER_OUTER_STABLE_CSS);
 }
 
+// Rotating gradient "beam" ring around the two AI buttons. The ring lives in a
+// ::before that sits entirely outside the button box (inset -4px / padding 4px),
+// so it never covers the label and needs no negative z-index.
+const AI_BUTTON_BEAM_STYLE = `
+<style id="sb-ai-button-beam">
+@property --sb-beam-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+#sbAiPlannerToggle,
+#sbAiBuild {
+  position: relative;
+}
+#sbAiPlannerToggle::before,
+#sbAiBuild::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 999px;
+  padding: 4px;
+  background: conic-gradient(
+    from var(--sb-beam-angle),
+    rgba(79, 134, 255, 0) 0deg,
+    rgba(79, 134, 255, 0) 190deg,
+    #4f86ff 250deg,
+    #a855f7 296deg,
+    #22d3ee 332deg,
+    rgba(34, 211, 238, 0) 360deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  filter: drop-shadow(0 0 7px rgba(79, 134, 255, 0.55));
+  animation: sb-beam-spin 2.8s linear infinite;
+  pointer-events: none;
+}
+@keyframes sb-beam-spin {
+  to { --sb-beam-angle: 360deg; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #sbAiPlannerToggle::before,
+  #sbAiBuild::before {
+    animation: none;
+  }
+}
+</style>`;
+
+function ensureAiButtonBeamStyle(html) {
+  const clean = html.replace(/<style id="sb-ai-button-beam">[\s\S]*?<\/style>\s*/g, "");
+  if (!clean.includes("sbAiPlannerToggle") && !clean.includes("sbAiBuild")) return clean;
+  if (clean.includes("</head>")) {
+    return clean.replace("</head>", `${AI_BUTTON_BEAM_STYLE}</head>`);
+  }
+  return `${AI_BUTTON_BEAM_STYLE}${clean}`;
+}
+
 function ensureBaliGlobalUiFix(html) {
   const clean = html.replace(/<style id="sb-bali-global-ui-fix">[\s\S]*?<\/style>\s*/g, "");
 
@@ -12412,6 +12470,7 @@ return '<div class="sb-place-card' + (placeObj.topPick ? ' is-top-pick' : '') + 
 
   html = patchDubaiLinkedFooterContact(html);
   html = ensureBaliMainStabilityFix(html);
+  html = ensureAiButtonBeamStyle(html);
   html = ensureBaliGlobalUiFix(html);
 
   writeGeneratedFile(filePath, html);
