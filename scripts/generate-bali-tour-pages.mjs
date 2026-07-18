@@ -3508,78 +3508,93 @@ function normalizeBaliWeatherOuterCss(html) {
   return html.split(BALI_WEATHER_OUTER_100VW_CSS).join(BALI_WEATHER_OUTER_STABLE_CSS);
 }
 
-// Rotating gradient "beam" ring around the two AI buttons. The ring lives in a
-// ::before that sits entirely outside the button box (inset -4px / padding 4px),
-// so it never covers the label and needs no negative z-index.
+// Rotating gradient "beam" behind the two AI buttons, matching the reference
+// q-beam effect: a full conic gradient is blurred inside a padded wrapper, and
+// the button's own opaque background hides the centre so only the halo shows.
 const AI_BUTTON_BEAM_STYLE = `
 <style id="sb-ai-button-beam">
-@property --sb-beam-angle {
+@property --q-beam-angle {
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
 }
+.sb-beam-wrap {
+  position: relative;
+  display: inline-block;
+  padding: 6px;
+  border-radius: 999px;
+  vertical-align: middle;
+  flex: 0 0 auto;
+}
+.sb-beam-wrap--block {
+  display: block;
+  width: 100%;
+}
+.sb-q-beam {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: conic-gradient(
+    from var(--q-beam-angle),
+    #7dd3fc,
+    #c4b5fd,
+    #f9a8d4,
+    #fcd34d,
+    #6ee7b7,
+    #7dd3fc
+  );
+  filter: blur(7px);
+  opacity: 0.7;
+  animation: q-beam-spin 7s linear infinite;
+}
+@keyframes q-beam-spin {
+  to { --q-beam-angle: 360deg; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sb-q-beam { animation: none; }
+}
 #sbAiPlannerToggle,
 #sbAiBuild {
   position: relative;
+  z-index: 1;
 }
-#sbAiPlannerToggle::before,
-#sbAiPlannerToggle::after,
-#sbAiBuild::before,
-#sbAiBuild::after {
-  content: "";
-  position: absolute;
-  border-radius: 999px;
-  background: conic-gradient(
-    from var(--sb-beam-angle),
-    rgba(79, 134, 255, 0) 0deg,
-    rgba(79, 134, 255, 0) 185deg,
-    #4f86ff 250deg,
-    #a855f7 296deg,
-    #22d3ee 332deg,
-    rgba(34, 211, 238, 0) 360deg
-  );
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  mask-composite: exclude;
-  animation: sb-beam-spin 2.8s linear infinite;
-  pointer-events: none;
+#sbAiPlannerToggle {
+  transform: none !important;
 }
-/* Soft core beam */
-#sbAiPlannerToggle::before,
-#sbAiBuild::before {
-  inset: -6px;
-  padding: 6px;
-  filter: blur(3px);
-}
-/* Wide blurred halo */
-#sbAiPlannerToggle::after,
-#sbAiBuild::after {
-  inset: -14px;
-  padding: 14px;
-  filter: blur(9px);
-  opacity: 0.9;
-}
-@keyframes sb-beam-spin {
-  to { --sb-beam-angle: 360deg; }
-}
-@media (prefers-reduced-motion: reduce) {
-  #sbAiPlannerToggle::before,
-  #sbAiPlannerToggle::after,
-  #sbAiBuild::before,
-  #sbAiBuild::after {
-    animation: none;
-  }
+#sbAiBuild {
+  width: 100%;
 }
 </style>`;
+
+const AI_BEAM_SPAN = '<span class="sb-q-beam" aria-hidden="true"></span>';
+
+// patchBaliMainFile rewrites the same file it reads, so the wrapper survives
+// between runs. Guard on its presence instead of trying to unwrap: an unwrap
+// regex cannot safely find the button's matching </span> and will corrupt the
+// nested markup.
+function wrapAiButtonsWithBeam(html) {
+  if (html.includes("sb-beam-wrap")) return html;
+
+  return html
+    .replace(
+      /<button([^>]*\bid="sbAiPlannerToggle"[^>]*)>([\s\S]*?)<\/button>/,
+      `<span class="sb-beam-wrap sb-beam-wrap--toggle">${AI_BEAM_SPAN}<button$1>$2</button></span>`,
+    )
+    .replace(
+      /<button([^>]*\bid="sbAiBuild"[^>]*)>([\s\S]*?)<\/button>/,
+      `<span class="sb-beam-wrap sb-beam-wrap--block">${AI_BEAM_SPAN}<button$1>$2</button></span>`,
+    );
+}
 
 function ensureAiButtonBeamStyle(html) {
   const clean = html.replace(/<style id="sb-ai-button-beam">[\s\S]*?<\/style>\s*/g, "");
   if (!clean.includes("sbAiPlannerToggle") && !clean.includes("sbAiBuild")) return clean;
-  if (clean.includes("</head>")) {
-    return clean.replace("</head>", `${AI_BUTTON_BEAM_STYLE}</head>`);
+  const wrapped = wrapAiButtonsWithBeam(clean);
+  if (wrapped.includes("</head>")) {
+    return wrapped.replace("</head>", `${AI_BUTTON_BEAM_STYLE}</head>`);
   }
-  return `${AI_BUTTON_BEAM_STYLE}${clean}`;
+  return `${AI_BUTTON_BEAM_STYLE}${wrapped}`;
 }
 
 function ensureBaliGlobalUiFix(html) {
