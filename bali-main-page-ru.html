@@ -363,16 +363,16 @@ html[data-sb-destination="bali"] #rec2128776473 .t-menusub__list .t-menusub__lin
   position: relative;
 }
 #sbAiPlannerToggle::before,
-#sbAiBuild::before {
+#sbAiPlannerToggle::after,
+#sbAiBuild::before,
+#sbAiBuild::after {
   content: "";
   position: absolute;
-  inset: -4px;
   border-radius: 999px;
-  padding: 4px;
   background: conic-gradient(
     from var(--sb-beam-angle),
     rgba(79, 134, 255, 0) 0deg,
-    rgba(79, 134, 255, 0) 190deg,
+    rgba(79, 134, 255, 0) 185deg,
     #4f86ff 250deg,
     #a855f7 296deg,
     #22d3ee 332deg,
@@ -382,16 +382,32 @@ html[data-sb-destination="bali"] #rec2128776473 .t-menusub__list .t-menusub__lin
   -webkit-mask-composite: xor;
   mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   mask-composite: exclude;
-  filter: drop-shadow(0 0 7px rgba(79, 134, 255, 0.55));
   animation: sb-beam-spin 2.8s linear infinite;
   pointer-events: none;
+}
+/* Soft core beam */
+#sbAiPlannerToggle::before,
+#sbAiBuild::before {
+  inset: -6px;
+  padding: 6px;
+  filter: blur(3px);
+}
+/* Wide blurred halo */
+#sbAiPlannerToggle::after,
+#sbAiBuild::after {
+  inset: -14px;
+  padding: 14px;
+  filter: blur(9px);
+  opacity: 0.9;
 }
 @keyframes sb-beam-spin {
   to { --sb-beam-angle: 360deg; }
 }
 @media (prefers-reduced-motion: reduce) {
   #sbAiPlannerToggle::before,
-  #sbAiBuild::before {
+  #sbAiPlannerToggle::after,
+  #sbAiBuild::before,
+  #sbAiBuild::after {
     animation: none;
   }
 }
@@ -3206,6 +3222,7 @@ setTimeout(fixAiPlannerMobile,300);
 setTimeout(fixAiPlannerMobile,900);
 })();
 </script> <!-- nominify end --> </div> </div> </div> </div>
+
 
 
 
