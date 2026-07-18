@@ -80,11 +80,10 @@ html #rec2121233163 {
 /* Promo block — mobile overrides. */
 @media screen and (max-width: 640px) {
   html #rec2121222043 .tn-elem[data-elem-id="1721398681171"] {
-    transform: translate(60px, 40px) !important;
+    transform: translate(60px, 50px) !important;
   }
-  /* Move promo description into the white gap right of the beach photo. */
+  /* Ensure promo description stays above photos. */
   html #rec2121222043 .tn-elem[data-elem-id="1766620130918"] {
-    transform: translate(27px, 68px) !important;
     z-index: 10 !important;
   }
   html #rec2121222043 .tn-elem[data-elem-id="1766620130918"] .sb-letter-rise-char {

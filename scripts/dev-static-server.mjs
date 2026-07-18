@@ -31,6 +31,16 @@ function rewrite(urlPath) {
   if ((m = urlPath.match(/^\/bali\/(ru|es|fr|zh)\/tours\/nusa-penida-manta-rays-point$/))) return `/page132181473-${m[1]}.html`;
   if ((m = urlPath.match(/^\/bali\/en\/tours\/mount-batur-sunrise-hike$/))) return "/page132812463.html";
   if ((m = urlPath.match(/^\/bali\/en\/tours\/mount-batur-sunrise-jeep-hot-spring$/))) return "/page133629743.html";
+  if (urlPath === "/bali/en/about") return "/bali-about.html";
+  if (urlPath === "/bali/en/faq") return "/bali-faq.html";
+  if ((m = urlPath.match(/^\/bali\/(ru|es|fr|zh)\/(about|faq|guides)$/))) return `/bali-${m[2]}-${m[1]}.html`;
+  if (urlPath === "/bali/en/guides") return "/bali-guides.html";
+  if (urlPath === "/bali/en/journal") return "/bali-journal.html";
+  if ((m = urlPath.match(/^\/bali\/(ru|es|fr|zh)\/journal$/))) return `/bali-journal-${m[1]}.html`;
+  if ((m = urlPath.match(/^\/bali\/en\/journal\/([a-z0-9-]+)\/([a-z0-9-]+)$/))) return `/bali-journal-${m[1]}-${m[2]}.html`;
+  if ((m = urlPath.match(/^\/bali\/(ru|es|fr|zh)\/journal\/([a-z0-9-]+)\/([a-z0-9-]+)$/))) return `/bali-journal-${m[2]}-${m[3]}-${m[1]}.html`;
+  if ((m = urlPath.match(/^\/bali\/en\/journal\/([a-z0-9-]+)$/))) return `/bali-journal-guide-${m[1]}.html`;
+  if ((m = urlPath.match(/^\/bali\/(ru|es|fr|zh)\/journal\/([a-z0-9-]+)$/))) return `/bali-journal-guide-${m[2]}-${m[1]}.html`;
   if ((m = urlPath.match(/^\/bali\/en\/tours\/([a-z0-9-]+)$/))) return `/bali-tour-${m[1]}.html`;
   if ((m = urlPath.match(/^\/bali\/(ru|es|fr|zh)\/tours\/([a-z0-9-]+)$/))) return `/bali-tour-${m[2]}-${m[1]}.html`;
   if (urlPath === "/bali/en/main-page") return "/page128073236.html";
