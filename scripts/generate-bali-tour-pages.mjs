@@ -3280,6 +3280,13 @@ function escapeHtml(value) {
     .replaceAll("'", "&#39;");
 }
 
+// Article copy may use **bold** to highlight the numbers and names readers scan
+// for. Escape first, then introduce our own tags, so nothing in the source text
+// can inject markup.
+function renderRichText(value) {
+  return escapeHtml(String(value ?? "")).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+}
+
 function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
@@ -8075,15 +8082,15 @@ const JOURNAL_ARTICLE_TYPES = [
       const ctx = getTourLocalContext(tour);
       const sections = [
         {
-          heading: `What the ${tour.title} actually delivers`,
+          heading: `🎯 What the ${tour.title} actually delivers`,
           paragraphs: [
             tour.overview,
             ctx.insiderNote || tour.summary,
-            `This experience runs as ${aOrAn(tour.format.split(" ")[0])} ${tour.format.toLowerCase()} covering ${tour.area.toLowerCase()}. The typical duration is ${tour.duration.toLowerCase()}, and it works best for ${tour.bestFor.toLowerCase()}.`,
+            `This experience runs as ${aOrAn(tour.format.split(" ")[0])} ${tour.format.toLowerCase()} covering **${tour.area}**. The typical duration is **${tour.duration}**, and it works best for ${tour.bestFor.toLowerCase()}.`,
           ],
         },
         {
-          heading: "Highlights that make this route stand out",
+          heading: "⭐ Highlights that make this route stand out",
           paragraphs: [
             `Every route in Bali competes for your limited vacation days. Here is what sets the ${tour.title} apart from the dozens of alternatives.`,
           ],
@@ -8092,7 +8099,7 @@ const JOURNAL_ARTICLE_TYPES = [
       ];
       if (ctx.practicalTips?.length) {
         sections.push({
-          heading: "Practical tips from real visitors",
+          heading: "💡 Practical tips from real visitors",
           paragraphs: [
             `The details below come from travelers who have done this exact route. They cover pricing, timing, and the small things that guidebooks tend to skip.`,
           ],
@@ -8100,14 +8107,14 @@ const JOURNAL_ARTICLE_TYPES = [
         });
       }
       sections.push({
-        heading: "Who should book this tour — and who should not",
+        heading: "👥 Who should book this tour — and who should not",
         paragraphs: [
           `The ${tour.title} is ideal for ${tour.bestFor.toLowerCase()}. The pickup flow starts with ${tour.pickup.toLowerCase()}, which means the logistics are handled from your hotel door.`,
           ctx.comparison || `If you are comparing multiple Bali experiences, this route works especially well when you want ${tour.duration.toLowerCase()} that feels organized instead of improvised.`,
         ],
       });
       sections.push({
-        heading: "What is included in the price",
+        heading: "💰 What is included in the price",
         paragraphs: [
           `Pricing for the ${tour.title} starts from ${tour.price}. Here is what a typical booking covers.`,
         ],
@@ -8115,7 +8122,7 @@ const JOURNAL_ARTICLE_TYPES = [
       });
       if (ctx.bestMonths) {
         sections.push({
-          heading: "Best time of year to go",
+          heading: "📅 Best time of year to go",
           paragraphs: [
             `Timing matters more than most travelers realize. ${ctx.bestMonths}.`,
             ctx.whatToBring ? `Pack accordingly: ${ctx.whatToBring}` : "",
@@ -8123,7 +8130,7 @@ const JOURNAL_ARTICLE_TYPES = [
         });
       }
       sections.push({
-        heading: "What to know before you book",
+        heading: "✅ What to know before you book",
         paragraphs: [
           `A few practical details that help set the right expectations for the ${tour.title}.`,
         ],
@@ -8157,22 +8164,22 @@ const JOURNAL_ARTICLE_TYPES = [
       const ctx = getTourLocalContext(tour);
       const sections = [
         {
-          heading: `What makes the ${tour.title} worth your time`,
+          heading: `🌟 What makes the ${tour.title} worth your time`,
           paragraphs: [
             tour.overview,
             ctx.insiderNote || journalInterestingHook(tour),
-            `The route covers ${tour.area.toLowerCase()} and is designed for ${tour.bestFor.toLowerCase()}. Most travelers find the ${tour.duration.toLowerCase()} pacing comfortable without feeling rushed.`,
+            `The route covers **${tour.area}** and is designed for ${tour.bestFor.toLowerCase()}. Most travelers find the **${tour.duration}** pacing comfortable without feeling rushed.`,
           ],
         },
         {
-          heading: "Route highlights at a glance",
+          heading: "⭐ Route highlights at a glance",
           paragraphs: [
             `Here are the standout moments that travelers consistently mention after completing the ${tour.title}.`,
           ],
           bullets: tour.highlights.map(([heading, text]) => `${heading} — ${text}`),
         },
         {
-          heading: "How the day unfolds — step by step",
+          heading: "🗺️ How the day unfolds — step by step",
           paragraphs: [
             `Understanding the flow of the day helps you pack the right gear and set realistic expectations. Here is the typical itinerary for the ${tour.title}.`,
           ],
@@ -8181,7 +8188,7 @@ const JOURNAL_ARTICLE_TYPES = [
       ];
       if (ctx.practicalTips?.length) {
         sections.push({
-          heading: "Insider tips and local knowledge",
+          heading: "💡 Insider tips and local knowledge",
           paragraphs: [
             `These details are the kind of thing your guide might mention in passing — but knowing them in advance helps you plan a better day.`,
           ],
@@ -8193,30 +8200,30 @@ const JOURNAL_ARTICLE_TYPES = [
         if (ctx.bestMonths) paragraphs.push(`Best months to visit: ${ctx.bestMonths}.`);
         if (ctx.whatToBring) paragraphs.push(`What to bring: ${ctx.whatToBring}`);
         sections.push({
-          heading: "Best time to visit and what to bring",
+          heading: "🎒 Best time to visit and what to bring",
           paragraphs,
         });
       }
       if (ctx.comparison) {
         sections.push({
-          heading: "How this compares to similar Bali tours",
+          heading: "⚖️ How this compares to similar Bali tours",
           paragraphs: [
             ctx.comparison,
-            `When deciding between Bali experiences, consider what matters most to you: the ${tour.title} is specifically designed around ${tour.area.toLowerCase()} and works best when you want ${tour.format.toLowerCase()}.`,
+            `When deciding between Bali experiences, consider what matters most to you: the ${tour.title} is specifically designed around **${tour.area}** and works best when you want ${tour.format.toLowerCase()}.`,
           ],
         });
       }
       sections.push({
-        heading: "Practical details and good to know",
+        heading: "📋 Practical details and good to know",
         paragraphs: [
           `Before you book, here are the logistics that shape the experience.`,
         ],
         bullets: [
-          `Duration: ${tour.duration}`,
-          `Format: ${tour.format}`,
-          `Area: ${tour.area}`,
-          `Pickup: ${tour.pickup}`,
-          `Pricing: ${tour.price}`,
+          `Duration: **${tour.duration}**`,
+          `Format: **${tour.format}**`,
+          `Area: **${tour.area}**`,
+          `Pickup: **${tour.pickup}**`,
+          `Pricing: **${tour.price}**`,
           ...buildGoodToKnow(tour),
         ],
       });
@@ -8245,21 +8252,21 @@ const JOURNAL_ARTICLE_TYPES = [
       const ctx = getTourLocalContext(tour);
       const sections = [
         {
-          heading: "Tour overview at a glance",
+          heading: "📌 Tour overview at a glance",
           paragraphs: [
             tour.summary,
           ],
           bullets: [
-            `Duration: ${tour.duration}`,
-            `Format: ${tour.format}`,
-            `Area: ${tour.area}`,
-            `Pickup: ${tour.pickup}`,
-            `Best for: ${tour.bestFor}`,
-            `Starting from: ${tour.price}`,
+            `Duration: **${tour.duration}**`,
+            `Format: **${tour.format}**`,
+            `Area: **${tour.area}**`,
+            `Pickup: **${tour.pickup}**`,
+            `Best for: **${tour.bestFor}**`,
+            `Starting from: **${tour.price}**`,
           ],
         },
         {
-          heading: "Complete itinerary — what happens and when",
+          heading: "🗺️ Complete itinerary — what happens and when",
           paragraphs: [
             `Here is the step-by-step flow of the ${tour.title}. Exact timing can shift depending on your hotel location, traffic, weather, and group size — but this is the standard sequence.`,
           ],
@@ -8268,7 +8275,7 @@ const JOURNAL_ARTICLE_TYPES = [
       ];
       if (ctx.practicalTips?.length) {
         sections.push({
-          heading: "What to expect at each stop — tips from travelers",
+          heading: "💡 What to expect at each stop — tips from travelers",
           paragraphs: [
             `The numbers and details below help you plan around the real experience, not the brochure version.`,
           ],
@@ -8279,13 +8286,13 @@ const JOURNAL_ARTICLE_TYPES = [
       if (ctx.whatToBring) packingItems.push(ctx.whatToBring);
       const goodToKnow = buildGoodToKnow(tour);
       sections.push({
-        heading: "What to bring and how to prepare",
+        heading: "🎒 What to bring and how to prepare",
         paragraphs: packingItems,
         bullets: goodToKnow,
       });
       if (ctx.bestMonths) {
         sections.push({
-          heading: "Best time of year for this tour",
+          heading: "📅 Best time of year for this tour",
           paragraphs: [
             `${ctx.bestMonths}.`,
             `Bali has two main seasons: dry season (April–October) with less rain and cooler mornings, and wet season (November–March) with afternoon showers and higher humidity. Both seasons are warm — daytime temperatures average 27–30 °C (80–86 °F) at sea level.`,
@@ -8294,14 +8301,14 @@ const JOURNAL_ARTICLE_TYPES = [
       }
       if (ctx.comparison) {
         sections.push({
-          heading: "How this fits with other Bali experiences",
+          heading: "⚖️ How this fits with other Bali experiences",
           paragraphs: [
             ctx.comparison,
           ],
         });
       }
       sections.push({
-        heading: "Booking and confirmation — what you need to send",
+        heading: "✉️ Booking and confirmation — what you need to send",
         paragraphs: [
           `To confirm the ${tour.title}, you will need to share your preferred date, hotel name and area, and group size. This lets the operator match the right vehicle, guide, and timing window.`,
           `Pricing starts from ${tour.price}. The exact quote depends on your group size, hotel distance, and any add-on options.`,
@@ -10042,8 +10049,8 @@ ${JOURNAL_FOOTER_ASSETS}
                 (section) => `
               <section class="sb-journal-article-section">
                 <h2>${escapeHtml(section.heading)}</h2>
-                ${(section.paragraphs || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
-                ${section.bullets?.length ? `<ul>${section.bullets.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : ""}
+                ${(section.paragraphs || []).map((paragraph) => `<p>${renderRichText(paragraph)}</p>`).join("")}
+                ${section.bullets?.length ? `<ul>${section.bullets.map((item) => `<li>${renderRichText(item)}</li>`).join("")}</ul>` : ""}
               </section>
             `,
               )
@@ -10056,7 +10063,7 @@ ${JOURNAL_FOOTER_ASSETS}
                     (item) => `
                   <article class="sb-journal-faq-card">
                     <h3>${escapeHtml(item.question)}</h3>
-                    <p>${escapeHtml(item.answer)}</p>
+                    <p>${renderRichText(item.answer)}</p>
                   </article>
                 `,
                   )
@@ -10075,7 +10082,7 @@ ${JOURNAL_FOOTER_ASSETS}
             <div class="sb-journal-sidebar-card">
               <h3>Guide snapshot</h3>
               <ul>
-                ${article.inlineStats.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+                ${article.inlineStats.map((item) => `<li>${renderRichText(item)}</li>`).join("")}
                 <li>Recommended route anchor: ${escapeHtml(article.tour.title)}</li>
               </ul>
             </div>
@@ -10227,13 +10234,23 @@ ${JOURNAL_FOOTER_ASSETS}
 
         <div class="sb-journal-article-layout">
           <article class="sb-journal-article">
+            <aside class="sb-journal-keyfacts">
+              <h2>⚡ Quick facts</h2>
+              <ul>
+                <li>⏱️ Duration: <strong>${escapeHtml(article.tour.duration)}</strong></li>
+                <li>🚐 Pickup: <strong>${escapeHtml(article.tour.pickup)}</strong></li>
+                <li>📍 Area: <strong>${escapeHtml(article.tour.area)}</strong></li>
+                <li>👥 Best for: <strong>${escapeHtml(article.tour.bestFor)}</strong></li>
+                <li>💰 Price: <strong>${escapeHtml(article.tour.price)}</strong></li>
+              </ul>
+            </aside>
             ${article.sections
               .map(
                 (section) => `
               <section class="sb-journal-article-section">
                 <h2>${escapeHtml(section.heading)}</h2>
-                ${(section.paragraphs || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
-                ${section.bullets?.length ? `<ul>${section.bullets.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : ""}
+                ${(section.paragraphs || []).map((paragraph) => `<p>${renderRichText(paragraph)}</p>`).join("")}
+                ${section.bullets?.length ? `<ul>${section.bullets.map((item) => `<li>${renderRichText(item)}</li>`).join("")}</ul>` : ""}
               </section>
             `,
               )
@@ -10245,7 +10262,7 @@ ${JOURNAL_FOOTER_ASSETS}
                   ${article.faq.map(([q, a]) => `
                     <article class="sb-journal-faq-card">
                       <h3>${escapeHtml(q)}</h3>
-                      <p>${escapeHtml(a)}</p>
+                      <p>${renderRichText(a)}</p>
                     </article>
                   `).join("")}
                 </div>
@@ -10415,6 +10432,17 @@ function renderJournalSharedStyles() {
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
+  .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
+  .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+  .sb-journal-keyfacts li{margin:0;padding:0;font-size:15px;line-height:1.5;color:#404047}
+  .sb-journal-keyfacts strong{color:#151515;font-weight:600}
+  .sb-journal-article-section strong{font-weight:600;color:#151515}
+  @media screen and (max-width:480px){
+    .sb-journal-keyfacts{padding:16px 18px;border-radius:16px}
+    .sb-journal-keyfacts h2{font-size:18px}
+    .sb-journal-keyfacts li{font-size:14px}
+  }
   .sb-journal-tour-card__link,.sb-journal-primary,.sb-journal-secondary{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:999px;font-size:15px;font-weight:800;transition:transform .2s ease, box-shadow .2s ease}
   .sb-journal-tour-card__link,.sb-journal-primary{background:#111;color:#fff}
   .sb-journal-secondary{background:#fff;color:#111;border:1px solid rgba(21,21,21,0.12)}
@@ -15607,7 +15635,7 @@ function renderStandalonePage(type, locale) {
               ${content.items.map(([q, a]) => `
               <details class="sb-faq-item">
                 <summary>${escapeHtml(q)}</summary>
-                <p>${escapeHtml(a)}</p>
+                <p>${renderRichText(a)}</p>
               </details>`).join("")}
             </div>`;
   }
