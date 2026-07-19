@@ -10423,6 +10423,1039 @@ const JOURNAL_SEO_GUIDES = [
       },
     ],
   },
+  {
+    key: "nusaPenida",
+    slug: "nusa-penida-complete-guide",
+    badge: "Evergreen SEO guide",
+    navLabel: "Nusa Penida guide",
+    cardTourLabel: "Nusa Penida",
+    heroTourSlug: "nusa-penida-west-tour",
+    relatedTourSlugs: ["nusa-penida-west-tour", "nusa-penida-east-tour", "nusa-penida-manta-rays-point"],
+    inlineStats: ["West vs east routes", "Real hike difficulty", "Safety warnings"],
+    title: "Nusa Penida: The Complete Guide to Bali's Most Dramatic Island",
+    description:
+      "Everything to plan a Nusa Penida trip: Kelingking, Broken Beach, Diamond Beach and Manta Point, how hard the hikes really are, boat times and fees, road conditions and the safety rules that matter.",
+    excerpt:
+      "Nusa Penida has Bali's most spectacular scenery and its most underestimated logistics. The island is bigger than photos suggest, the roads between viewpoints are rough, and two of its famous spots have genuine safety records. Plan it as a real day out, not a photo stop.",
+    rankings: [
+      {
+        name: "Kelingking Beach",
+        imageTitle: "Kelingking Beach T-Rex cliff",
+        area: "West coast",
+        bestFor: "The island's signature view",
+        summary:
+          "The T-Rex-shaped cliff. The **viewpoint is an easy flat walk**; the descent is about **250 irregular steps** and **150 m** down, taking 20–45 minutes down and 30–60 up. **Swimming is forbidden** — there are regular drownings.",
+      },
+      {
+        name: "Angel's Billabong",
+        imageTitle: "Angel's Billabong rock pool",
+        area: "West coast",
+        bestFor: "A natural infinity pool — to look at",
+        summary:
+          "**Swimming has been officially prohibited since 2023** after at least four deaths. Rogue waves crash into the pool without warning even at low tide. Photograph it, do not get in.",
+      },
+      {
+        name: "Broken Beach (Pasih Uug)",
+        imageTitle: "Broken Beach arch",
+        area: "West coast",
+        bestFor: "A collapsed sea cave",
+        summary:
+          "A circular bay linked to the ocean through a natural rock arch. **There is no way down to the water** — it is a clifftop viewpoint, a few minutes' walk from Angel's Billabong.",
+      },
+      {
+        name: "Diamond Beach",
+        imageTitle: "Diamond Beach cliffs",
+        area: "East coast",
+        bestFor: "White sand under limestone cliffs",
+        summary:
+          "Reached by a staircase carved into the cliff face. Steep but manageable for most fit adults, and noticeably less crowded than the west coast.",
+      },
+      {
+        name: "Manta Point",
+        imageTitle: "Manta ray snorkeling",
+        area: "South coast, by boat",
+        bestFor: "Snorkeling with manta rays",
+        summary:
+          "A cleaning station with a **90–95% sighting rate**. Mantas reach **up to 7 m** across and are harmless plankton feeders. Snorkelers must keep **3 m** distance.",
+      },
+      {
+        name: "Crystal Bay",
+        imageTitle: "Crystal Bay",
+        area: "West coast",
+        bestFor: "Snorkeling and sunsets",
+        summary:
+          "Sheltered, with visibility **15–30 m** on a good morning. The **mola-mola** season runs roughly July–October, when water can drop to **18–20°C**.",
+      },
+    ],
+    sections: [
+      {
+        heading: "🚤 Getting there and what it costs",
+        paragraphs: [
+          "Fast boats leave **Sanur Harbour** and take about **30–45 minutes**. Departures start around **07:00–07:30** and the last return is typically **15:30**, which is why day trips feel tight. Take the earliest boat you can — seas are calmest in the morning and you beat the tour groups to Kelingking.",
+        ],
+        bullets: [
+          "Fast boat one way: **IDR 117,000–250,000** depending on operator",
+          "Island entry fee: **IDR 25,000** adult, **IDR 15,000** child — now **cashless**",
+          "Marine conservation fee for snorkeling or diving: **IDR 100,000** per person per day",
+          "Car with driver for the day: **IDR 500,000–800,000** (about $30–50)",
+          "Scooter rental: **IDR 75,000–100,000** a day — only for experienced riders",
+          "**Grab and Gojek do not operate on Nusa Penida** — arrange transport in advance",
+        ],
+      },
+      {
+        heading: "🛣️ Why the roads change the plan",
+        paragraphs: [
+          "The main north coast road is paved and fine. The side roads to the famous viewpoints are a different story: narrow, steep, potholed and often unsealed. Travel time between stops is far longer than the map distance suggests.",
+          "The road down to Kelingking is a one-metre-wide cliffside track with no guardrail. Scooters are genuinely dangerous here for anyone who is not an experienced rider — this is not the place to learn. For most visitors a **driver who knows the terrain** is the right call, and it costs about the same as a taxi ride in the south of Bali.",
+        ],
+      },
+      {
+        heading: "🗺️ West, east, or both?",
+        paragraphs: [
+          "**West** covers Kelingking, Broken Beach, Angel's Billabong and Crystal Bay — the famous images, and the busier side. **East** covers Diamond Beach, Atuh Beach and the Thousand Islands viewpoint — quieter, more beach-focused, and some of the roughest roads.",
+          "Doing both in one day is possible but rushed: each coast realistically needs 4–5 hours. If you only have one day, pick west for the iconic views or east for fewer people. If you want mantas as well, take a tour that pairs snorkeling with the viewpoints rather than trying to improvise it.",
+        ],
+      },
+      {
+        heading: "⚠️ Safety — the part most guides skip",
+        paragraphs: [
+          "Nusa Penida is beautiful and genuinely unforgiving in places. Two rules are worth taking literally.",
+        ],
+        bullets: [
+          "**Do not swim at Kelingking Beach.** Powerful rip currents; there are recurring drownings",
+          "**Do not enter Angel's Billabong.** Swimming has been banned since 2023 after multiple deaths from rogue waves",
+          "Cliff edges are unstable and mostly unfenced — stay back from the lip for photos",
+          "Wear proper shoes with grip; the Kelingking descent is rock scrambling in places, not stairs",
+          "Carry more water than you think — there is little shade and few shops between stops",
+          "Take motion sickness tablets 30 minutes before the boat if you are prone to it",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Is Nusa Penida worth visiting?",
+        answer:
+          "Yes — it has the most dramatic coastal scenery in the Bali area, and Manta Point offers one of the most reliable manta ray encounters anywhere. Just budget a full day and accept that the roads between viewpoints are rough.",
+      },
+      {
+        question: "How hard is the hike down to Kelingking Beach?",
+        answer:
+          "Hard. It is roughly 250 irregular steps and about 150 metres of descent, part of it rock scrambling with rope and bamboo handrails. Allow 20–45 minutes down and 30–60 minutes back up. The viewpoint at the top requires no climbing at all.",
+      },
+      {
+        question: "Can you swim at Kelingking Beach or Angel's Billabong?",
+        answer:
+          "No. Swimming at Kelingking is forbidden because of severe rip currents, and Angel's Billabong has been officially closed to swimmers since 2023 after several deaths caused by rogue waves. Both are viewpoints only.",
+      },
+      {
+        question: "Can you do Nusa Penida as a day trip from Bali?",
+        answer:
+          "Yes, and most people do. Boats leave Sanur from around 07:00 and the last return is usually 15:30, so take the earliest crossing. You will realistically cover one coast well rather than the whole island.",
+      },
+      {
+        question: "Do I need a driver on Nusa Penida?",
+        answer:
+          "For most visitors, yes. Grab and Gojek do not operate on the island, and the roads to the viewpoints are narrow, steep and often unsealed. A car with driver costs about IDR 500,000–800,000 for the day.",
+      },
+    ],
+  },
+  {
+    key: "cangguArea",
+    slug: "things-to-do-canggu-bali-guide",
+    badge: "Evergreen SEO guide",
+    navLabel: "Canggu guide",
+    cardTourLabel: "Canggu area",
+    heroTourSlug: "surf-lesson-experience",
+    relatedTourSlugs: ["surf-lesson-experience", "sunset-cruise-bali", "private-car-with-driver-bali"],
+    inlineStats: ["Surf and cafes", "Digital nomad hub", "Beach club sunsets"],
+    title: "Canggu, Bali: What It's Actually Like and What to Do There",
+    description:
+      "An honest guide to Canggu — surf beaches, cafe culture, beach clubs and coworking — plus the traffic reality, who it suits, and who would be happier somewhere else.",
+    excerpt:
+      "Canggu is Bali's young, caffeinated, scooter-heavy coastal strip: black-sand surf beaches, cafes built for laptops, and sunset beach clubs. It suits some travelers perfectly and frustrates others completely. The deciding factor is usually whether you like the traffic and the crowd.",
+    rankings: [
+      {
+        name: "Beginner surfing",
+        imageTitle: "Surfing in Canggu",
+        area: "Batu Bolong, Berawa",
+        bestFor: "Learning to surf",
+        summary:
+          "Sandy-bottom breaks and warm water at **27–29°C** mean no wetsuit. A two-hour group lesson runs about **$28–35** with a soft-top board included.",
+      },
+      {
+        name: "Cafe and coworking culture",
+        imageTitle: "Canggu cafe",
+        area: "Berawa and Batu Bolong",
+        bestFor: "Remote work",
+        summary:
+          "The densest concentration of laptop-friendly cafes in Bali. A western brunch with coffee runs **$12–20** — remember the **21% \"++\"** on top of menu prices.",
+      },
+      {
+        name: "Beach clubs at sunset",
+        imageTitle: "Canggu beach club",
+        area: "Along the coast",
+        bestFor: "Sundowners",
+        summary:
+          "Canggu's beach clubs have some of the more reasonable minimum spends on the island, generally starting around **$31** per daybed versus far higher on the Bukit.",
+      },
+      {
+        name: "Rice field scooter loops",
+        imageTitle: "Canggu rice fields",
+        area: "Inland from the beach",
+        bestFor: "A break from the strip",
+        summary:
+          "A few minutes inland the traffic thins and rice fields open up. The shortcut lanes are also how locals bypass the main road jams.",
+      },
+    ],
+    sections: [
+      {
+        heading: "🚦 The traffic, honestly",
+        paragraphs: [
+          "Canggu's main roads were village lanes and were never designed for this volume. Sunset hours are reliably jammed, and the **15:00–18:30** window is the worst of it.",
+          "Drive times are the thing to plan around: **Canggu to Uluwatu takes 2h30–3h at peak**, versus about an hour late in the evening. Airport transfers run **IDR 250,000–400,000** and take **45–75 minutes**.",
+          "One practical quirk: ride-hailing works in about 95% of Canggu, but **Jalan Pantai Batu Mejan (Echo Beach) is a firm no-pickup zone**. Walk a few minutes to a main road and the apps work again.",
+        ],
+      },
+      {
+        heading: "🏄 Where to surf as a beginner",
+        paragraphs: [
+          "Canggu's beaches are **black volcanic sand**, not white — that surprises people who only saw the cafes on social media. The upside is consistent, forgiving beach breaks that are genuinely good for learning.",
+          "West coast surf season runs **April to October**, with the biggest swell June to August. If you are a complete beginner arriving in peak swell months, take a lesson rather than renting a board and guessing.",
+        ],
+      },
+      {
+        heading: "👥 Who Canggu suits — and who it doesn't",
+        bullets: [
+          "**Good fit:** surfers, remote workers, travelers in their 20s–30s, anyone who wants nightlife and cafes within scooter distance",
+          "**Poor fit:** families wanting calm swimming, anyone sensitive to traffic noise, travelers looking for quiet or traditional Bali",
+          "**Consider instead:** Sanur or Nusa Dua for calm water and families, Ubud for culture, Uluwatu for cliffs and a slower pace",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Is Canggu worth staying in?",
+        answer:
+          "It is, if you want surf, cafes and nightlife within easy reach and you can tolerate heavy traffic. If you want calm swimming beaches, quiet or traditional Balinese atmosphere, Sanur, Nusa Dua, Uluwatu or Ubud will suit you better.",
+      },
+      {
+        question: "Is Canggu good for beginner surfers?",
+        answer:
+          "Yes. The beaches have sandy-bottom breaks and the water sits at 27–29°C, so no wetsuit is needed. A two-hour group lesson with a soft-top board costs roughly $28–35.",
+      },
+      {
+        question: "Does Grab work in Canggu?",
+        answer:
+          "Almost everywhere, with one notable exception: Jalan Pantai Batu Mejan at Echo Beach is a no-pickup zone enforced by local transport cooperatives. Walking a few minutes to a main road solves it.",
+      },
+      {
+        question: "How far is Canggu from the airport?",
+        answer:
+          "About 45–75 minutes depending on traffic, with a fixed-price airport transfer costing roughly IDR 250,000–400,000. Add 20–30 minutes if you land during peak hours.",
+      },
+    ],
+  },
+  {
+    key: "uluwatuArea",
+    slug: "things-to-do-uluwatu-bali-guide",
+    badge: "Evergreen SEO guide",
+    navLabel: "Uluwatu guide",
+    cardTourLabel: "Uluwatu area",
+    heroTourSlug: "sunset-cruise-bali",
+    relatedTourSlugs: ["sunset-cruise-bali", "surf-lesson-experience", "private-car-with-driver-bali"],
+    inlineStats: ["Cliffs and sunsets", "World-class surf", "Clearest south beaches"],
+    title: "Uluwatu and the Bukit Peninsula: Cliffs, Beaches and Sunsets",
+    description:
+      "A guide to Uluwatu and the Bukit — the clifftop temple and Kecak dance, the clearest beaches in south Bali, serious surf breaks, and how to plan around the distances.",
+    excerpt:
+      "The Bukit Peninsula is where Bali gets vertical. Limestone cliffs drop into water that is noticeably clearer than the west coast, the surf is world class, and the sunset at Uluwatu Temple is the one south Bali experience almost everyone agrees on.",
+    rankings: [
+      {
+        name: "Uluwatu Temple at sunset",
+        imageTitle: "Uluwatu Temple cliff",
+        area: "Uluwatu",
+        bestFor: "The classic Bali sunset",
+        summary:
+          "A sea temple on a cliff edge with a **Kecak fire dance** at sunset. Arrive well before the show — it fills up. Watch your belongings: the resident monkeys are notorious for taking sunglasses and phones.",
+      },
+      {
+        name: "Melasti Beach",
+        imageTitle: "Melasti Beach",
+        area: "Ungasan",
+        bestFor: "Clear water and cliff scenery",
+        summary:
+          "One of the easiest wins in south Bali — dramatic limestone walls and water that usually looks far clearer than the busy west coast surf beaches.",
+      },
+      {
+        name: "Padang Padang Beach",
+        imageTitle: "Padang Padang Beach",
+        area: "Uluwatu",
+        bestFor: "Compact, photogenic swimming",
+        summary:
+          "Small and reached through a gap in the rocks. Excellent as one stop in a broader Bukit day rather than a full-day beach.",
+      },
+      {
+        name: "Serious surf breaks",
+        imageTitle: "Uluwatu surf",
+        area: "Bukit west coast",
+        bestFor: "Experienced surfers",
+        summary:
+          "Uluwatu, Bingin and Padang Padang are **reef breaks for confident surfers**, not beginners. Offshore winds blow roughly 300 days a year; swell is biggest **June–August**.",
+      },
+      {
+        name: "Cliff-edge beach clubs",
+        imageTitle: "Bukit beach club",
+        area: "Ungasan and Uluwatu",
+        bestFor: "The view, if you budget for it",
+        summary:
+          "The most dramatic settings in Bali — and the **highest minimum spends**, often well past **$125** per daybed. Check the minimum before you commit.",
+      },
+    ],
+    sections: [
+      {
+        heading: "🌊 Why the water looks different here",
+        paragraphs: [
+          "South and east-facing beaches on the Bukit sit behind reef and limestone headlands, so they get less of the sediment and swell that make the west coast beaches around Kuta and Canggu look grey-brown.",
+          "This is the practical reason to come here if clear water matters to you. The trade is access: many Bukit beaches involve **steep staircases down the cliff**, and a few are only comfortable at certain tides.",
+        ],
+      },
+      {
+        heading: "🏄 Surf here is not beginner territory",
+        paragraphs: [
+          "Uluwatu, Bingin and Padang Padang break over **shallow reef**. They are famous because they are excellent, not because they are easy, and every season produces injuries among visitors who overestimated themselves.",
+          "If you are learning, take lessons on the sandy beach breaks at Kuta, Seminyak or Canggu and come to the Bukit to watch. Peak west coast season is **April–October**, biggest **June–August**.",
+        ],
+      },
+      {
+        heading: "🚗 Distances are the catch",
+        paragraphs: [
+          "The Bukit is a peninsula, and everything funnels through a couple of roads. **Kuta to Uluwatu** is 45–60 minutes normally but 90+ after 15:00. **Canggu to Uluwatu** can take **2h30–3h at peak** and about an hour late evening.",
+          "The practical consequence: do not day-trip here repeatedly from the north. Either stay on the Bukit for a few nights, or treat it as one dedicated day with an early start and a sunset finish.",
+        ],
+      },
+      {
+        heading: "🐒 Uluwatu Temple, practically",
+        bullets: [
+          "**Sarong and sash required** — usually provided at the entrance",
+          "**Secure sunglasses, phones and hats** before entering; the monkeys are practised thieves",
+          "Arrive early for the sunset Kecak dance, seating is limited and fills fast",
+          "Non-Hindu visitors can walk the clifftop grounds but not enter the inner temple",
+          "The cliff path is unfenced in places — keep children close",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Is Uluwatu worth visiting?",
+        answer:
+          "Yes, especially for the sunset temple and Kecak dance, the clearest beaches in south Bali and world-class surf. Just plan the distances — traffic from Canggu or Seminyak can take two to three hours at peak.",
+      },
+      {
+        question: "Can beginners surf at Uluwatu?",
+        answer:
+          "No. Uluwatu, Bingin and Padang Padang break over shallow reef and are for experienced surfers. Beginners should learn on the sandy beach breaks at Kuta, Seminyak or Canggu.",
+      },
+      {
+        question: "What time should I arrive at Uluwatu Temple for sunset?",
+        answer:
+          "Well before sunset, ideally an hour or more, especially if you want a seat for the Kecak fire dance. The clifftop area and the amphitheatre both fill up quickly.",
+      },
+      {
+        question: "Which Uluwatu beach has the clearest water?",
+        answer:
+          "Melasti is the usual answer for clear water with easy access, with Padang Padang and Pandawa also strong choices. All sit behind reef and limestone headlands, which is why they look clearer than the west coast surf beaches.",
+      },
+    ],
+  },
+  {
+    key: "seminyakArea",
+    slug: "things-to-do-seminyak-bali-guide",
+    badge: "Evergreen SEO guide",
+    navLabel: "Seminyak guide",
+    cardTourLabel: "Seminyak area",
+    heroTourSlug: "sunset-cruise-bali",
+    relatedTourSlugs: ["sunset-cruise-bali", "bali-airport-transfer", "tanah-lot-bedugul-tour"],
+    inlineStats: ["Restaurants and spas", "Easy airport access", "Sunset beach bars"],
+    title: "Seminyak, Bali: The Comfortable Base for a First Trip",
+    description:
+      "Why Seminyak works as a first-trip base — restaurants, spas, shopping and sunset beach bars — plus how it compares with Canggu, Kuta and Uluwatu.",
+    excerpt:
+      "Seminyak is the polished middle ground of south Bali: better restaurants than Kuta, calmer than Canggu, closer to the airport than anywhere else worth staying. It is not the most exciting part of the island, and for a first trip that is usually the point.",
+    rankings: [
+      {
+        name: "Sunset beach bars",
+        imageTitle: "Seminyak sunset",
+        area: "Seminyak beach",
+        bestFor: "Low-effort evenings",
+        summary:
+          "Long west-facing sand with beanbag bars along it. No entry fee, no minimum spend, no planning — the easiest good evening in south Bali.",
+      },
+      {
+        name: "Restaurants",
+        imageTitle: "Seminyak restaurant",
+        area: "Oberoi and Petitenget",
+        bestFor: "Eating well without a scooter",
+        summary:
+          "The densest walkable restaurant strip on the island. Mid-range mains run **$5–15**, plus the **21% \"++\"** that appears on almost every bill.",
+      },
+      {
+        name: "Spas and massage",
+        imageTitle: "Balinese massage",
+        area: "Throughout Seminyak",
+        bestFor: "Cheap luxury",
+        summary:
+          "A good mid-range 60-minute massage runs **$15–25**, hotel spas **$25–50**. One of the best value-for-money experiences in Bali.",
+      },
+      {
+        name: "Shopping",
+        imageTitle: "Seminyak boutiques",
+        area: "Jalan Kayu Aya",
+        bestFor: "Boutiques over markets",
+        summary:
+          "Design shops and homeware rather than souvenir stalls. Prices are fixed, which many travelers prefer to haggling.",
+      },
+    ],
+    sections: [
+      {
+        heading: "📍 Why it works for a first trip",
+        paragraphs: [
+          "Seminyak solves the two problems that catch first-timers: **you can walk to dinner**, and you are **25–40 minutes from the airport** (IDR 150,000–250,000 by fixed-price transfer) rather than an hour or more.",
+          "It is also a sensible launch point. Tanah Lot is a straightforward afternoon, the Bukit is a day trip, and Ubud is 45 minutes to 2 hours depending on when you leave. You are not committing your whole trip to one corner of the island.",
+        ],
+      },
+      {
+        heading: "⚖️ Seminyak vs Canggu vs Kuta vs Uluwatu",
+        bullets: [
+          "**Seminyak** — restaurants, spas, walkable, calmer. Costs 40–60% more than inland areas",
+          "**Canggu** — surf, cafes, nightlife, young crowd, heavy traffic",
+          "**Kuta** — cheapest and busiest, party-focused, less appealing beach",
+          "**Uluwatu** — cliffs, clear water, serious surf, but long drives to everywhere else",
+          "**Sanur or Nusa Dua** — calm water, better for families and older travelers",
+        ],
+      },
+      {
+        heading: "🌊 About the beach itself",
+        paragraphs: [
+          "Seminyak beach is **grey-brown volcanic sand with real surf**, not a calm turquoise swimming bay. It is excellent for sunsets and walking, and fine for a dip if you respect the currents, but it is not where you go for clear snorkeling water.",
+          "For that, head to the Bukit beaches like Melasti, or take a boat day to Nusa Penida or the Gili Islands. Between **December and February** the west coast also collects washed-up debris, which is worth knowing before you book a beachfront room in green season.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Is Seminyak or Canggu better?",
+        answer:
+          "Seminyak for restaurants, spas and a calmer, more walkable stay. Canggu for surf, cafe culture and nightlife with a younger crowd. Seminyak is generally quieter and closer to the airport; Canggu has worse traffic but more energy.",
+      },
+      {
+        question: "Is Seminyak beach good for swimming?",
+        answer:
+          "It is fine for a dip if you respect the currents, but it is a grey-sand surf beach rather than a calm swimming bay. For clear water, head to the Bukit beaches or take a boat day to Nusa Penida or the Gilis.",
+      },
+      {
+        question: "How far is Seminyak from the airport?",
+        answer:
+          "About 25–40 minutes, with a fixed-price transfer around IDR 150,000–250,000. There is a IDR 50,000 surcharge between 22:00 and 06:00.",
+      },
+      {
+        question: "Is Seminyak expensive?",
+        answer:
+          "It runs roughly 40–60% above equivalent inland accommodation, and restaurant bills carry a 21% tax and service charge. Massages, local food and transport remain inexpensive, so daily costs stay reasonable if you mix warungs with restaurants.",
+      },
+    ],
+  },
+  {
+    key: "withKids",
+    slug: "bali-with-kids-family-guide",
+    badge: "Evergreen SEO guide",
+    navLabel: "Bali with kids",
+    cardTourLabel: "Family travel",
+    heroTourSlug: "blue-lagoon-snorkeling",
+    relatedTourSlugs: ["blue-lagoon-snorkeling", "ubud-highlights-tour", "private-car-with-driver-bali"],
+    inlineStats: ["Where to base", "Age-appropriate tours", "What to skip"],
+    title: "Bali With Kids: Where to Stay, What to Do and What to Skip",
+    description:
+      "A practical family guide to Bali — the best areas for calm swimming, which tours suit which ages, minimum ages for activities, and the popular attractions that do not work with young children.",
+    excerpt:
+      "Bali works well with children, but not in the areas most first-timers book. Calm water, short drives and shade matter far more than a famous beach name. The biggest planning mistake is basing yourself on the surf coast and then spending the week in a car.",
+    rankings: [
+      {
+        name: "Sanur or Nusa Dua as a base",
+        imageTitle: "Calm beach in Bali",
+        area: "East and south-east coast",
+        bestFor: "Calm swimming water",
+        summary:
+          "Reef-protected, gentle water and flat footpaths — the two areas that genuinely suit small children. Very different from the surf beaches of Kuta and Canggu.",
+      },
+      {
+        name: "Blue Lagoon snorkeling",
+        imageTitle: "Blue Lagoon Padang Bai",
+        area: "Padang Bai, east Bali",
+        bestFor: "First-time snorkeling, ages ~6+",
+        summary:
+          "A sheltered bay, **2–8 m** deep with a sandy bottom and life jackets provided. One of the safest ocean snorkeling spots in Bali for families.",
+      },
+      {
+        name: "Ubud Monkey Forest",
+        imageTitle: "Ubud Monkey Forest",
+        area: "Central Ubud",
+        bestFor: "Ages ~7+, closely supervised",
+        summary:
+          "Over **1,200 macaques**. Genuinely fun, but they are wild, fast and will grab food or dangling items. Keep small children close and carry nothing loose.",
+      },
+      {
+        name: "White water rafting",
+        imageTitle: "Ayung River rafting",
+        area: "Ayung River, Ubud",
+        bestFor: "Ages 5–7 minimum",
+        summary:
+          "Class **II–III** rapids, life jackets and helmets included. Minimum age is typically **5–7** depending on operator; the maximum is usually 65.",
+      },
+      {
+        name: "Mount Batur by jeep",
+        imageTitle: "Mount Batur jeep",
+        area: "Kintamani",
+        bestFor: "Sunrise without the hike",
+        summary:
+          "The 4WD version reaches the viewpoint with only a short walk, so children can see the sunrise. Dress warmly — it is **12–18°C** before dawn.",
+      },
+    ],
+    sections: [
+      {
+        heading: "🏝️ Where to base yourself",
+        paragraphs: [
+          "This is the decision that shapes the whole trip. **Sanur and Nusa Dua** have reef-protected, calm water and flat, walkable areas. **Kuta, Seminyak and Canggu** have real surf, strong currents and grey volcanic sand — fine for teenagers, stressful with a five-year-old.",
+          "**Ubud** works well as a second base: green, cooler than the coast, and short drives to rice terraces, rafting and the volcano. What it does not have is a beach, so most families split the week between one coastal base and Ubud.",
+        ],
+      },
+      {
+        heading: "⏳ Drive times decide your day",
+        paragraphs: [
+          "Bali's distances punish over-ambitious plans, and children feel it first. **Kuta to Ubud** can take up to **2h30** in traffic. **Canggu to Uluwatu** can take **3 hours** at peak.",
+          "The rule that works: **one main activity a day**, mornings for anything outdoors, afternoons near the pool. A private driver for the long days costs about **$40–55** for 10 hours including fuel, which is usually less stressful and not much more expensive than several app rides.",
+        ],
+      },
+      {
+        heading: "🚫 What does not work with young children",
+        bullets: [
+          "**Kelingking Beach descent** on Nusa Penida — 250 irregular steps and rock scrambling",
+          "**Angel's Billabong** — swimming is banned after multiple deaths; it is a viewpoint only",
+          "**Mount Batur hiking** trek — the jeep version is the family-friendly alternative",
+          "**Uluwatu reef surf breaks** — shallow reef, for experienced surfers only",
+          "**Sunrise starts back to back** — one pre-dawn wake-up per trip is plenty",
+          "Long temple circuits in midday heat, with dress codes and little shade",
+        ],
+      },
+      {
+        heading: "🧴 Practical family notes",
+        bullets: [
+          "Car seats can usually be arranged with a private driver, but **ask when booking** — they are not standard",
+          "Sun is equatorial and stronger than it feels; hats, high SPF and shade breaks matter",
+          "Stick to **bottled or filtered water**, including for brushing teeth",
+          "Warungs are cheap and generally fine; nasi goreng and mie goreng are reliable child-friendly options at **$1.30–2.60**",
+          "Mosquito repellent for dawn and dusk, especially inland and around Ubud",
+          "Bali's international-standard clinics are good but expensive — **travel insurance is not optional**",
+          "The tourist levy of **IDR 150,000** applies to every visitor including infants",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Is Bali good for families with young children?",
+        answer:
+          "Yes, if you base yourself in the right area. Sanur and Nusa Dua have calm, reef-protected water suited to small children, while Kuta, Seminyak and Canggu have real surf and strong currents. Pairing a calm coastal base with a few nights in Ubud works well.",
+      },
+      {
+        question: "What is the best area in Bali for families?",
+        answer:
+          "Sanur and Nusa Dua for calm swimming and easy walking, plus Ubud as a green second base for rice terraces, rafting and the volcano. Avoid basing a family trip on the surf coast unless your children are teenagers.",
+      },
+      {
+        question: "What is the minimum age for rafting in Bali?",
+        answer:
+          "Typically 5 to 7 years depending on the operator, with a maximum around 65. The Ayung River near Ubud runs Class II–III rapids and includes life jackets, helmets and a guide in every raft.",
+      },
+      {
+        question: "Can children see the Mount Batur sunrise?",
+        answer:
+          "Yes, using the jeep tour rather than the trek. A 4WD drives to a viewpoint near the summit with only a short walk. Dress warmly — temperatures before dawn sit around 12–18°C even though it is hot at sea level.",
+      },
+      {
+        question: "Is the Ubud Monkey Forest safe for kids?",
+        answer:
+          "With close supervision. The macaques are wild and quick to grab food, sunglasses or anything dangling. Carry no food, secure loose items, avoid direct eye contact and keep young children within arm's reach.",
+      },
+    ],
+  },
+  {
+    key: "packing",
+    slug: "what-to-pack-for-bali",
+    badge: "Evergreen SEO guide",
+    navLabel: "Packing list",
+    cardTourLabel: "Trip prep",
+    heroTourSlug: "mount-batur-sunrise-jeep-tour",
+    relatedTourSlugs: ["mount-batur-sunrise-jeep-tour", "nusa-penida-west-tour", "white-water-rafting"],
+    inlineStats: ["Season-specific", "Activity add-ons", "What to leave home"],
+    title: "What to Pack for Bali: A Practical Checklist by Activity",
+    description:
+      "A Bali packing list that accounts for temple dress codes, a 12°C volcano sunrise, wet season downpours and what you can simply buy cheaply once you arrive.",
+    excerpt:
+      "Bali packing goes wrong in two predictable ways: people bring far too many clothes, and nobody brings a warm layer. It is **27–30°C** at sea level all year, but the Mount Batur sunrise sits at **12–18°C**, and temples have a dress code that beachwear does not meet.",
+    rankings: [
+      {
+        name: "A warm layer",
+        imageTitle: "Warm layer for sunrise",
+        area: "The one thing people forget",
+        bestFor: "Volcano sunrises and highlands",
+        summary:
+          "Pre-dawn at Mount Batur is **12–18°C** with wind chill. A hoodie or light fleece is the single most forgotten item on the island.",
+      },
+      {
+        name: "Shoes with grip",
+        imageTitle: "Hiking shoes",
+        area: "Waterfalls and cliffs",
+        bestFor: "Not falling over",
+        summary:
+          "Wet stone steps are the leading cause of tourist injuries at waterfalls. Flip-flops are genuinely dangerous on the Kelingking descent and waterfall stairs.",
+      },
+      {
+        name: "Modest temple outfit",
+        imageTitle: "Temple dress code",
+        area: "Any temple visit",
+        bestFor: "Getting in at all",
+        summary:
+          "Shoulders and knees covered. Sarongs are usually provided at entrances, but bringing light long clothing saves you wearing a shared one in the heat.",
+      },
+      {
+        name: "Dry bag and waterproof case",
+        imageTitle: "Dry bag",
+        area: "Boats and waterfalls",
+        bestFor: "Protecting your phone",
+        summary:
+          "Fast boat crossings, rafting and waterfall wading all soak whatever you are carrying. Cheap to buy locally, easy to forget entirely.",
+      },
+      {
+        name: "Reef-safe sunscreen",
+        imageTitle: "Sunscreen",
+        area: "Everywhere",
+        bestFor: "Equatorial sun",
+        summary:
+          "The sun is far stronger than it feels, especially on boats. Sunscreen is expensive in Bali compared to home — worth packing.",
+      },
+    ],
+    sections: [
+      {
+        heading: "🧳 The core list",
+        bullets: [
+          "Light, breathable clothing — you will wear less than you pack",
+          "**A hoodie or fleece** for volcano sunrise and highland evenings",
+          "**Closed shoes with grip** for waterfalls, cliffs and rice terraces",
+          "Long, light trousers or a skirt for temples",
+          "Swimwear (two sets — things rarely dry in wet season)",
+          "**Reef-safe sunscreen**, hat and sunglasses",
+          "Insect repellent for dawn and dusk",
+          "A basic medical kit: rehydration salts, plasters, antiseptic, any prescriptions",
+          "**Travel insurance documents**, and a power bank",
+        ],
+      },
+      {
+        heading: "🎯 Activity-specific additions",
+        bullets: [
+          "**Mount Batur sunrise:** warm layer, headlamp or torch, closed shoes, 1 L water",
+          "**Nusa Penida:** grippy shoes, 1.5 L water, motion sickness tablets, dry bag",
+          "**Snorkeling:** own mask if you wear prescription glasses, rash guard against sun",
+          "**Rafting or ATV:** clothes you will ruin, secure sandals or water shoes, full change of clothes",
+          "**Waterfalls:** water shoes, waterproof phone case, small towel",
+          "**Temples:** sarong if you prefer your own, and something to cover shoulders",
+        ],
+      },
+      {
+        heading: "🌧️ If you are coming in wet season",
+        paragraphs: [
+          "**November to March** brings heavy afternoon downpours rather than all-day rain. The kit that makes the difference is small: a **light rain jacket or poncho**, quick-dry clothing, and a dry bag for electronics.",
+          "Add grip to your footwear priorities — stone steps at waterfalls and temples get genuinely slippery, and this is when most falls happen. Landslide risk also rises on north and east mountain roads, which is worth factoring into ambitious drive days.",
+        ],
+      },
+      {
+        heading: "🛍️ What to leave at home",
+        paragraphs: [
+          "Bali sells almost everything cheaply, so packing light is the right instinct. Toiletries, beachwear, sarongs, flip-flops, towels and basic medicines are all readily available and usually cheaper than at home.",
+          "A **local SIM** is worth buying on arrival rather than roaming: a 30-day Telkomsel tourist package with plenty of data costs around **$10**, though airport kiosks charge more than shops in town. Bring an **unlocked phone** or arrange an eSIM before you fly.",
+        ],
+        bullets: [
+          "Heavy jeans and formal clothes — the climate makes them unwearable",
+          "A hairdryer — almost every hotel has one",
+          "Large towels — hotels provide them, and beach towels are cheap locally",
+          "More than a week of clothing — laundry is inexpensive and fast",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "What should I wear in Bali?",
+        answer:
+          "Light, breathable clothing for the 27–30°C heat, plus something that covers shoulders and knees for temples. Add a hoodie or fleece if you plan a volcano sunrise, where pre-dawn temperatures sit at 12–18°C.",
+      },
+      {
+        question: "Do I need a sarong for Bali temples?",
+        answer:
+          "A sarong and sash are required to enter temple grounds, but they are usually provided free or for a small donation at the entrance. Bringing your own is optional and mostly a comfort preference.",
+      },
+      {
+        question: "What do most people forget to pack for Bali?",
+        answer:
+          "A warm layer. Sea level is hot year-round, so travelers do not expect the Mount Batur sunrise at 12–18°C with wind chill. Shoes with proper grip for wet waterfall steps are the second most common omission.",
+      },
+      {
+        question: "What should I not pack for Bali?",
+        answer:
+          "Heavy jeans, formal clothes, a hairdryer, large towels and more than about a week of outfits. Laundry is cheap and fast, and toiletries, beachwear and sarongs are all inexpensive to buy locally.",
+      },
+      {
+        question: "Should I buy a SIM card in Bali?",
+        answer:
+          "Yes, it is far cheaper than roaming. A 30-day Telkomsel tourist package with generous data costs around $10, and Telkomsel has the best island-wide coverage. Buy in town rather than at the airport, or arrange an eSIM before flying.",
+      },
+    ],
+  },
+  {
+    key: "foodGuide",
+    slug: "what-to-eat-in-bali-food-guide",
+    badge: "Evergreen SEO guide",
+    navLabel: "Food guide",
+    cardTourLabel: "Balinese food",
+    heroTourSlug: "ubud-highlights-tour",
+    relatedTourSlugs: ["ubud-highlights-tour", "bali-unesco", "private-car-with-driver-bali"],
+    inlineStats: ["Dishes worth seeking", "Warung how-to", "Safety and etiquette"],
+    title: "What to Eat in Bali: Balinese Dishes, Warung Culture and Food Safety",
+    description:
+      "The Balinese dishes actually worth seeking out — babi guling, bebek betutu, sate lilit, lawar — plus how warungs work, what things cost, vegetarian options and how to avoid Bali belly.",
+    excerpt:
+      "Bali is the one part of Indonesia where **pork is a celebrated food**, because the island is Hindu rather than Muslim. That single fact shapes its whole cuisine. Much of what you can now eat casually — babi guling, bebek betutu, sate lilit — was, within living memory, food you only ate on holy days.",
+    rankings: [
+      {
+        name: "Babi guling",
+        imageTitle: "Babi guling suckling pig",
+        area: "The island's signature dish",
+        bestFor: "Lunch, never dinner",
+        summary:
+          "Spit-roast suckling pig stuffed with **base genep** spice paste. **IDR 35,000–60,000** at a local warung. It sells out by early afternoon — this is a lunch dish.",
+      },
+      {
+        name: "Bebek betutu",
+        imageTitle: "Bebek betutu duck",
+        area: "Ubud and Gianyar",
+        bestFor: "A special meal",
+        summary:
+          "Whole duck packed with spice paste, wrapped and slow-cooked for **6–12 hours** until it falls apart. Usually needs **ordering a day ahead**. The chicken version, ayam betutu, is everywhere and cheaper.",
+      },
+      {
+        name: "Sate lilit",
+        imageTitle: "Sate lilit satay",
+        area: "Coastal areas and Jimbaran",
+        bestFor: "Bali's own satay",
+        summary:
+          "Minced fish or chicken with coconut and lemongrass, **wrapped** around a stick rather than cubed. About **IDR 5,000–10,000** a skewer.",
+      },
+      {
+        name: "Nasi campur Bali",
+        imageTitle: "Nasi campur plate",
+        area: "Every warung",
+        bestFor: "The default Balinese meal",
+        summary:
+          "Rice with a spread of small portions — lawar, satay, tempeh, egg, sambal. **IDR 15,000–40,000** local. The best way to try several dishes at once.",
+      },
+      {
+        name: "Lawar",
+        imageTitle: "Lawar salad",
+        area: "Served with babi guling",
+        bestFor: "Trying the real thing",
+        summary:
+          "Minced meat, vegetables and grated coconut. **Lawar merah** contains fresh pig's blood; **lawar putih** does not — ask for putih if you would rather skip it.",
+      },
+      {
+        name: "Tipat cantok",
+        imageTitle: "Tipat cantok",
+        area: "Roadside stalls",
+        bestFor: "Vegetarians",
+        summary:
+          "Rice cake with blanched vegetables and tofu in a peanut, chilli and tamarind sauce. Around **IDR 10,000–20,000** and naturally meat-free.",
+      },
+    ],
+    sections: [
+      {
+        heading: "🍽️ How a warung actually works",
+        paragraphs: [
+          "A **warung** is a small family-run eatery, often literally the front room of a house. There are two ordering models and knowing which one you are in saves confusion.",
+          "The **nasi campur \"point and pick\"** warung has a glass cabinet of ten or twenty dishes cooked that morning. You take a plate of rice and point at what you want; the price scales with how much you take. Say **\"sedikit\"** for a little or **\"banyak\"** for a lot, and **\"berapa?\"** to ask the total. The other model is a normal menu, more common in tourist areas.",
+          "A full local warung meal runs **IDR 15,000–35,000** — about **$1–2.20**. Tourist-facing warungs in Canggu and Seminyak charge two to three times that for the same food.",
+        ],
+        bullets: [
+          "**tidak pedas** — not spicy",
+          "**tanpa daging** — without meat",
+          "**tanpa terasi** — without shrimp paste",
+          "**bungkus** — takeaway",
+          "**air putih** — plain water",
+        ],
+      },
+      {
+        heading: "🦠 Food safety, without the paranoia",
+        paragraphs: [
+          "Warungs are not the risk people assume. A busy warung with high turnover, serving hot food cooked that morning, is safer than a quiet upmarket restaurant washing salad leaves in tap water. Judge by **turnover and temperature**, not by price.",
+          "**Do not drink the tap water** — Indonesia has no enforced municipal purification standard. Cautious travelers use bottled water for teeth too. **Ice is generally fine**: the cylindrical kind with a hole through the middle is commercially produced from purified water and is what cafes and bars use.",
+          "**Bali belly** is ordinary traveler's diarrhoea, usually bacterial, appearing 6–72 hours after exposure and lasting two to four days. Rehydration matters more than anti-diarrhoeals — **oralit** rehydration salts cost pennies in any pharmacy. See a doctor if you have fever, blood in your stool, or symptoms beyond three days.",
+        ],
+        bullets: [
+          "Eat where locals are queueing",
+          "Prefer food cooked to order or still steaming",
+          "**Lunchtime is safest** for nasi campur — by late afternoon the display has sat out for hours",
+          "Peel your own fruit; raw salad rinsed in tap water is the main avoidable risk",
+          "Ease into chilli and street food rather than going hard on day one",
+        ],
+      },
+      {
+        heading: "🌱 Vegetarian and vegan in Bali",
+        paragraphs: [
+          "Bali is one of the easiest destinations in Asia for this. **Tempeh and tofu are staples, not substitutes**, and Ubud has the highest density of dedicated vegan cafes on the island, followed by Canggu and Seminyak.",
+          "The catch is hidden ingredients rather than availability. **Terasi (shrimp paste)** is in most sambals and peanut sauces, chicken stock is common in soups, and some kitchens cook with pork fat. Broth and sambal are where a vegetarian meal quietly stops being vegetarian — ask specifically.",
+        ],
+      },
+      {
+        heading: "☕ Drinks — and one to skip",
+        paragraphs: [
+          "**Kopi luwak deserves an honest warning.** The traditional practice collected beans from wild civets, but the modern tourist trade cages wild-caught animals and force-feeds them coffee cherries. Peer-reviewed research in the journal *Animal Welfare* assessed Bali's civet-coffee plantations and found conditions inadequate, with documented malnutrition, wounds and stereotypic behaviour. National Geographic, PETA and World Animal Protection have all investigated. The roadside \"coffee plantation\" stops on the Kintamani route almost universally keep caged civets. **Our advice is to skip it** — and by most specialty assessments the coffee is not even very good.",
+          "Better options are easy. **Kintamani arabica** is bright and clean, often grown intercropped with citrus. **Kopi tubruk** is coarse grounds brewed directly in the glass — let it settle and leave the last centimetre.",
+          "**Arak**, the local palm or rice spirit, needs one safety note: bootleg arak has repeatedly been cut with **methanol**, causing deaths and blindness. Drink branded, bottled, licensed arak from proper bars — and be wary of unlabelled village arak and unusually cheap free-flow cocktail deals.",
+        ],
+      },
+      {
+        heading: "🤝 Etiquette that matters",
+        bullets: [
+          "**Right hand only** for eating, passing and paying — the left is considered unclean",
+          "Menu prices often carry **\"++\"**: roughly **15–21%** in tax and service on top",
+          "Tipping is not obligatory. Rounding up at a warung, or 5–10% where no service charge applies, is generous",
+          "Never step on or take from **canang sari**, the small palm-leaf offerings on pavements and doorsteps",
+          "Dishes arrive when ready, not in courses — that is normal, not a mistake",
+          "For Muslim travelers: pork is mainstream here and pork fat is sometimes a cooking medium. Halal options concentrate in **Kuta, Denpasar, Seminyak and Nusa Dua**; look for the green MUI certification or Javanese and Padang-run warungs",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "What food is Bali famous for?",
+        answer:
+          "Babi guling (spit-roast suckling pig), bebek betutu (slow-cooked duck), sate lilit (minced satay wrapped on lemongrass), lawar and nasi campur Bali. Because Bali is Hindu rather than Muslim, pork dishes are a mainstream local speciality here unlike the rest of Indonesia.",
+      },
+      {
+        question: "Is it safe to eat at warungs in Bali?",
+        answer:
+          "Yes, if you choose sensibly. A busy warung serving hot, freshly cooked food with high turnover is lower risk than a quiet restaurant serving salad washed in tap water. Eat where locals queue, prefer steaming food, and treat lunchtime as the safest window for nasi campur.",
+      },
+      {
+        question: "How much does food cost in Bali?",
+        answer:
+          "A local warung meal runs IDR 15,000–35,000, about $1–2.20. Mid-range restaurant mains are $5–15 and western cafe breakfasts $5–9, plus roughly 15–21% in tax and service on top of menu prices.",
+      },
+      {
+        question: "Can I drink the tap water in Bali?",
+        answer:
+          "No. Stick to sealed bottled or filtered water, and use it for brushing teeth if you are cautious. Commercially produced ice — the cylindrical kind with a hole through it, used in cafes and bars — is made from purified water and is generally safe.",
+      },
+      {
+        question: "Is Bali good for vegetarians and vegans?",
+        answer:
+          "Very good. Tempeh and tofu are staples rather than substitutes, and Ubud has the highest concentration of vegan cafes, followed by Canggu. Watch for hidden shrimp paste in sambal and peanut sauce, and chicken stock in soups — ask for tanpa terasi and tanpa daging.",
+      },
+      {
+        question: "Should I try kopi luwak in Bali?",
+        answer:
+          "We recommend skipping it. The tourist trade largely relies on caged, force-fed civets, and peer-reviewed research on Bali's civet-coffee plantations found welfare conditions inadequate. Kintamani arabica or kopi tubruk are better coffee and carry none of the ethical problems.",
+      },
+    ],
+  },
+  {
+    key: "safety",
+    slug: "bali-safety-scams-and-health",
+    badge: "Evergreen SEO guide",
+    navLabel: "Safety and scams",
+    cardTourLabel: "Staying safe",
+    heroTourSlug: "private-car-with-driver-bali",
+    relatedTourSlugs: ["private-car-with-driver-bali", "blue-lagoon-snorkeling", "bali-airport-transfer"],
+    inlineStats: ["Common scams", "Real risks ranked", "Emergency numbers"],
+    title: "Bali Safety Guide: Scams, Health Risks and What Actually Goes Wrong",
+    description:
+      "An honest Bali safety guide — the scams travelers really meet, scooter and water risks, rabies and Bali belly, methanol in cheap spirits, medical costs and emergency numbers.",
+    excerpt:
+      "Violent crime against tourists in Bali is rare. What actually hurts people is mundane: **scooter crashes, rip currents, stomach illness and cheap spirits**. Australia and the UK both rate Indonesia \"exercise a high degree of caution\" with no advisory against visiting Bali. Knowing the real risks — rather than the imagined ones — is most of the work.",
+    rankings: [
+      {
+        name: "Scooter crashes",
+        imageTitle: "Scooter safety in Bali",
+        area: "The number one risk",
+        bestFor: "Taking seriously",
+        summary:
+          "**142 crashes involving foreign tourists in 2024**, up about 35% year on year, causing **21 deaths**. Most travel insurance voids motorcycle claims without the correct licence.",
+      },
+      {
+        name: "Rip currents",
+        imageTitle: "Bali surf beach",
+        area: "West coast and Nusa Penida",
+        bestFor: "Respecting the flags",
+        summary:
+          "Research at Kuta found rip currents present about **83% of the time**. Swim between the **red-and-yellow flags**; red flags mean no swimming.",
+      },
+      {
+        name: "Methanol in cheap spirits",
+        imageTitle: "Drinks safety",
+        area: "Bars and beach shacks",
+        bestFor: "Choosing beer",
+        summary:
+          "As little as **10 ml can blind and around 30 ml can kill**, with symptoms often delayed **12–24 hours**. Bootleg arak and refilled brand-name bottles are the usual source.",
+      },
+      {
+        name: "Rabies",
+        imageTitle: "Bali street dog",
+        area: "Island-wide, endemic",
+        bestFor: "Knowing the first aid",
+        summary:
+          "Roughly **30,000 suspected rabid-animal bites between January and May 2026**. Wash any bite for **15 minutes** and get treatment the **same day** — rabies is fatal once symptomatic.",
+      },
+      {
+        name: "Bag snatching from scooters",
+        imageTitle: "Bali street at night",
+        area: "Seminyak, Kuta, Canggu",
+        bestFor: "Simple prevention",
+        summary:
+          "Riders trail pedestrians and grab bags and phones. Worst after dark near bar strips. Victims are often dragged — carry bags on the shoulder away from the road.",
+      },
+      {
+        name: "Money changer sleight of hand",
+        imageTitle: "Money exchange",
+        area: "Tourist strips",
+        bestFor: "Counting twice",
+        summary:
+          "Notes removed mid-fold while the cashier distracts you. Use **licensed** changers or banks, and count the money yourself before handing over your own.",
+      },
+    ],
+    sections: [
+      {
+        heading: "🛵 Scooters: the risk people underestimate",
+        paragraphs: [
+          "This is where tourists actually get hurt. Legally you need an **International Driving Permit with a motorcycle (A) endorsement**, backed by a motorcycle licence at home — a car-only IDP is not valid. Roadside licence and helmet checks have increased since 2025.",
+          "The insurance consequence is the expensive part. Most policies **void motorcycle claims** if you lacked the correct licence, were not wearing a helmet, or had any alcohol in your system. Repatriating an injured rider commonly runs into tens of thousands of dollars, which is why crowdfunding appeals for injured travelers are so common.",
+          "Bali-specific hazards worth knowing: unlit potholes and open roadside drains, sand on corners near beaches, painted road markings that turn slick in a downpour, dogs on the road, and unpredictable right of way. Night riding and riding after drinking are heavily over-represented in fatalities.",
+        ],
+      },
+      {
+        heading: "🎭 The scams you will actually meet",
+        bullets: [
+          "**Money changers** — notes palmed mid-count. Use licensed offices or banks; count after they finish, before handing over your currency",
+          "**Fake or rogue police** — an invented violation and an on-the-spot \"settlement\". Ask for the official ticket (**surat tilang**) and say you will pay at the station",
+          "**Scooter damage claims** — a pre-existing scuff becomes your bill. **Film a slow 360° video with the odometer** in front of the agent before riding off",
+          "**ATM skimming** — use machines inside bank branches, not standalone ones outside minimarts",
+          "**Temple \"donations\"** — real temples have posted fixed fees and printed tickets. Decline unsolicited \"guides\" at the gate",
+          "**Bracelet sellers** — an item tied onto you then payment demanded. Do not accept anything placed on you",
+          "**Fake Bluebird taxis** — copycats in near-identical blue. Book through the **MyBluebird app**, or use Grab or Gojek for upfront pricing",
+        ],
+      },
+      {
+        heading: "🍹 Methanol — the one drink risk that kills",
+        paragraphs: [
+          "This deserves its own section because it is lethal and invisible. Methanol has no taste or smell. **Around 10 ml can cause blindness and about 30 ml — less than a shot — can kill.** Symptoms are typically delayed **12 to 24 hours**: vision disturbance often described as a snowstorm, severe headache, abdominal pain, breathlessness.",
+          "**Delayed presentation is what kills people.** If you suspect methanol, go to hospital immediately rather than sleeping it off.",
+          "The source is bootleg **arak** and counterfeit brand-name spirits — real bottles refilled and resold, sometimes to licensed venues. Highest risk: free welcome shots, arak cocktails, unbranded spirits, bottomless-brunch deals, mixed jugs and cheap cocktails at beach shacks. **Sealed beer, or canned and bottled drinks opened in front of you, are the safest choice.**",
+        ],
+      },
+      {
+        heading: "🐕 Rabies and other health risks",
+        paragraphs: [
+          "**Bali is rabies-endemic and this is a live risk, not a theoretical one.** Around 30,000 people were bitten by suspected rabid animals between January and May 2026. Dogs cause the overwhelming majority of human deaths, but monkeys — including at the Ubud Monkey Forest and Uluwatu — and cats also transmit it.",
+          "**If you are bitten, scratched, or licked on broken skin:** wash the wound with soap under running water for a full **15 minutes**, apply iodine or alcohol, and get to a hospital the **same day** for post-exposure treatment. Unvaccinated travelers need immunoglobulin as well as the vaccine series, and immunoglobulin is scarce in Bali. Pre-travel rabies vaccination removes that problem and is worth discussing with a travel clinic if you plan to ride scooters or visit monkey forests.",
+          "**Dengue** is present and peaks in the wet season, roughly January to April. Bali recorded 10,391 cases in 2025, down from 15,570 in 2024. The mosquito bites in **daylight**, so daytime repellent matters. **Bali belly** is ordinary traveler's diarrhoea — rehydration salts are the priority, and you should see a doctor for fever, blood, or symptoms past 48 hours.",
+        ],
+        bullets: [
+          "Recommended vaccinations usually include **hepatitis A and typhoid** for most travelers",
+          "**Rabies and Japanese encephalitis** for at-risk or longer stays — see a travel clinic 4–6 weeks ahead",
+          "Malaria risk in Bali itself is negligible; prophylaxis is generally not recommended",
+        ],
+      },
+      {
+        heading: "🌊 Water safety and where not to swim",
+        paragraphs: [
+          "Rip currents are the leading environmental killer of tourists in Bali. **Swim between the red-and-yellow flags** at lifeguarded beaches — Kuta, Legian, Seminyak, Jimbaran, Nusa Dua, Sanur, Double Six and Batu Bolong. Red flags mean no swimming, and they are ignored to fatal effect every year.",
+          "**Nusa Penida has recorded at least 14 tourist drownings since 2023** and most of its beaches have no professional rescue cover. **Angel's Billabong has killed at least four people** — rogue waves sweep the overhang and drag people out. It is a photo spot, not a swimming pool. Kelingking has an official no-swimming rule that is widely ignored.",
+          "If you are caught in a rip: **do not fight it**. Swim parallel to the shore, or float and signal.",
+        ],
+      },
+      {
+        heading: "🏥 Medical care and why insurance is not optional",
+        paragraphs: [
+          "Bali has genuinely good international-standard facilities in the south — BIMC in Nusa Dua and Kuta, and Siloam in Denpasar — with 24-hour emergency departments and English-speaking staff. Quality drops sharply outside the south.",
+          "The costs are the issue. An emergency visit with IV fluids typically runs **$200–500**, and hospitals require **payment or a guarantee upfront**. An air ambulance from Bali to Singapore costs **$55,000–100,000**, and uninsured patients must fund evacuation in full before it is arranged.",
+          "Carry a policy with at least **$250,000** of medical and evacuation cover. Check explicitly that it covers **motorcycle riding** under the licence conditions above, plus surfing or diving if you plan them, and confirm your insurer is on the direct-billing list at BIMC or Siloam.",
+        ],
+      },
+      {
+        heading: "📞 Emergency numbers",
+        bullets: [
+          "**112** — universal emergency, works from any mobile",
+          "**110** — police · **113** — fire",
+          "**118 / 119** — ambulance and medical emergency",
+          "**115** — Search and Rescue (Basarnas), for water and marine incidents",
+          "**Bali Tourist Police, Kuta:** +62 361 300 7777",
+          "**Tourist Assistance Centre:** +62 361 224111",
+          "Add **+62** before any number if you are using a foreign SIM",
+        ],
+      },
+      {
+        heading: "⚖️ Legal risks worth taking seriously",
+        paragraphs: [
+          "**Drug laws are among the most severe anywhere.** Zero tolerance applies fully to foreigners and consulates have essentially no leverage. Penalties run from years of imprisonment and very large fines to life sentences or the death penalty for trafficking quantities. **Cannabis is illegal in all forms, including CBD oil and prescribed medical cannabis.** Never carry anything for anyone.",
+          "Bali also introduced formal tourist conduct rules in 2025 covering temple etiquette, dress, licensed guides and accommodation, traffic law and the tourist levy. Penalties range from fines to **deportation and blacklisting**, and deportations have been publicised repeatedly. Working on a tourist visa — including paid remote work and content creation — is being enforced far more aggressively.",
+          "At temples: sarong and sash are required, do not climb sacred structures, do not stand in front of people praying, and do not touch the offerings on the ground. Nude or lewd photos at sacred sites are treated as a serious offence and have led to deportations.",
+        ],
+      },
+      {
+        heading: "👩 Solo female travelers",
+        paragraphs: [
+          "Bali is generally one of Asia's more comfortable destinations for solo women, with low street harassment and rare violent crime. Both the UK and Australian advisories do, however, flag **sexual assault reports in Bali, Lombok and the Gilis**, frequently linked to **drink spiking** and to unregistered taxis or scooter taxis hailed off the street.",
+          "The practical measures are straightforward: book transport through **Grab or Gojek** rather than street taxis at night, keep to the drink rules above, choose accommodation with 24-hour reception over remote villas when travelling alone, share your live location, and avoid unlit stretches in Canggu and Kuta after dark — which are also the bag-snatching hours.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Is Bali safe for tourists?",
+        answer:
+          "Generally yes. Violent crime against visitors is rare, and Australia and the UK both advise a high degree of caution without advising against travel. The real risks are scooter crashes, rip currents, stomach illness, bag snatching and methanol in cheap spirits — all largely avoidable.",
+      },
+      {
+        question: "What are the most common scams in Bali?",
+        answer:
+          "Money changer sleight of hand, scooter rental damage claims, fake or rogue police demanding on-the-spot settlements, fake Bluebird taxis, unsolicited temple guides and compulsory-sounding donations, and bracelet sellers who tie an item on you then demand payment.",
+      },
+      {
+        question: "Do I need travel insurance for Bali?",
+        answer:
+          "Yes, and with at least $250,000 of medical and evacuation cover. Hospitals require payment upfront, an emergency visit runs $200–500, and an air ambulance to Singapore costs $55,000–100,000. Check the policy explicitly covers motorcycle riding if you intend to use a scooter.",
+      },
+      {
+        question: "Is it safe to drink alcohol in Bali?",
+        answer:
+          "Stick to sealed beer or canned and bottled drinks opened in front of you. Bootleg arak and refilled counterfeit spirit bottles have caused methanol poisoning — around 10 ml can blind and 30 ml can kill, with symptoms delayed 12 to 24 hours. Avoid free shots, unbranded spirits and very cheap cocktails.",
+      },
+      {
+        question: "What should I do if a monkey or dog bites me in Bali?",
+        answer:
+          "Wash the wound with soap under running water for a full 15 minutes, apply iodine or alcohol, and get to a hospital the same day for post-exposure treatment. Bali is rabies-endemic and rabies is fatal once symptoms appear, so this is not something to postpone.",
+      },
+      {
+        question: "Which beaches in Bali are dangerous for swimming?",
+        answer:
+          "Unpatrolled Bukit beaches such as Nyang-Nyang, Uluwatu, Bingin and Balangan, and most of Nusa Penida. Angel's Billabong has killed at least four people and swimming there is banned, and Kelingking Beach also has a no-swimming rule. Stick to lifeguarded beaches and swim between the red-and-yellow flags.",
+      },
+    ],
+  },
 ];
 
 function guideArticleRoute(guide) {
