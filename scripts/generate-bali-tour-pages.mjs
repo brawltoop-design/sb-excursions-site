@@ -8498,8 +8498,8 @@ const JOURNAL_SEO_GUIDES = [
           "This is also where planning helps sales. Once travelers understand that beach quality depends on area, they become far more open to a structured day trip instead of improvising with long drives and random stops.",
         ],
         bullets: [
-          "Choose south Bali for cliff-backed beaches and better-looking water in photos.",
-          "Choose Nusa Dua or Sanur when calm swimming matters more than party energy.",
+          "Choose south Bali for cliff-backed beaches and better-looking water in photos — the [Uluwatu and Bukit guide](/bali/en/journal/things-to-do-uluwatu-bali-guide) covers that coast in detail.",
+          "Choose Nusa Dua or Sanur when calm swimming matters more than party energy — they are also the best bases [with kids](/bali/en/journal/bali-with-kids-family-guide).",
           "Choose boat-based excursions when you want the strongest water color of the whole trip.",
         ],
       },
@@ -8632,7 +8632,7 @@ const JOURNAL_SEO_GUIDES = [
           "Search traffic often asks for the best places to visit in Bali, but the smarter question is which places create the clearest memory in the time you actually have.",
         ],
         bullets: [
-          "Combine Ubud landmarks together instead of mixing them with long south-coast jumps on the same day.",
+          "Combine [Ubud](/bali/en/journal/things-to-do-ubud-bali-complete-guide) landmarks together instead of mixing them with long south-coast jumps on the same day — see the [7-day itinerary](/bali/en/journal/bali-itinerary-7-days-first-time) for a worked example.",
           "Use one coastline day for sunsets and beaches rather than adding five extra inland stops.",
           "Save island routes like Nusa Penida for a dedicated full-day experience.",
         ],
@@ -8752,7 +8752,7 @@ const JOURNAL_SEO_GUIDES = [
           "Young travelers often search for the best beach clubs in Bali as if they all do the same job. They do not. Seminyak is smoother and more design-led, Canggu is stronger for large social energy, and Uluwatu is where you go when views and venue drama matter as much as the music.",
         ],
         bullets: [
-          "Choose Seminyak for stylish sunset sessions and easier mixed-age groups.",
+          "Choose [Seminyak](/bali/en/journal/things-to-do-seminyak-bali-guide) for stylish sunset sessions and easier mixed-age groups.",
           "Choose Canggu for bigger crowds and a more obvious social scene.",
           "Choose Uluwatu when the venue itself should feel like an event.",
         ],
@@ -8882,7 +8882,7 @@ const JOURNAL_SEO_GUIDES = [
         bullets: [
           "Warungs are usually the highest-value format for first-time visitors.",
           "Ubud stays one of the easiest areas for affordable food with character.",
-          "Sanur is underrated when you want calmer dining without inflated beach-club pricing.",
+          "Sanur is underrated when you want calmer dining without inflated beach-club pricing. For what the dishes actually are, see the [Bali food guide](/bali/en/journal/what-to-eat-in-bali-food-guide).",
         ],
       },
       {
@@ -8894,7 +8894,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         heading: "When budget travelers still book premium tours",
         paragraphs: [
-          "Budget-conscious travelers still spend on experiences when the value is obvious. That is why food-led Bali itineraries often pair well with one or two stronger tours while keeping daily meals highly efficient.",
+          "Budget-conscious travelers still spend on experiences when the value is obvious — see the full [trip cost breakdown](/bali/en/journal/how-much-does-a-bali-trip-cost). That is why food-led Bali itineraries often pair well with one or two stronger tours while keeping daily meals highly efficient.",
         ],
       },
     ],
@@ -9016,7 +9016,7 @@ const JOURNAL_SEO_GUIDES = [
         bullets: [
           "Use early starts for the most crowded hero landmarks.",
           "Keep outfit-heavy stops close together to save time and energy.",
-          "Choose one route region instead of trying to cross the island for every famous photo.",
+          "Choose one route region instead of trying to cross the island for every famous photo — [real drive times](/bali/en/journal/how-to-get-around-bali-transport-guide) are longer than the map suggests.",
         ],
       },
       {
@@ -9123,7 +9123,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         heading: "The smartest first-time Bali combinations",
         paragraphs: [
-          "For many first trips, the strongest structure is two bases instead of one. Ubud plus Seminyak, or Ubud plus Uluwatu, often gives better balance than committing the whole trip to one travel mood.",
+          "For many first trips, the strongest structure is two bases instead of one. [Ubud](/bali/en/journal/things-to-do-ubud-bali-complete-guide) plus [Seminyak](/bali/en/journal/things-to-do-seminyak-bali-guide), or Ubud plus [Uluwatu](/bali/en/journal/things-to-do-uluwatu-bali-guide), often gives better balance than committing the whole trip to one travel mood.",
         ],
         bullets: [
           "Choose Ubud + Seminyak for culture plus dining.",
@@ -9134,7 +9134,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         heading: "Why hotel area matters for tours",
         paragraphs: [
-          "The moment you start adding day trips, your base affects pickup windows, traffic exposure and how much energy you lose between experiences. That is why the right hotel area improves not only sleep and restaurants, but also tour quality.",
+          "The moment you start adding day trips, your base affects pickup windows, [traffic exposure](/bali/en/journal/how-to-get-around-bali-transport-guide) and how much energy you lose between experiences. That is why the right hotel area improves not only sleep and restaurants, but also tour quality.",
         ],
       },
     ],
@@ -9243,7 +9243,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         heading: "The best romantic mix for a Bali itinerary",
         paragraphs: [
-          "For most couples, one sunrise or scenic milestone day, one dedicated sunset or cruise evening and one soft Ubud-style day is already a very strong structure.",
+          "For most couples, one sunrise or scenic milestone day, one dedicated sunset or cruise evening and one soft [Ubud](/bali/en/journal/things-to-do-ubud-bali-complete-guide)-style day is already a very strong structure.",
         ],
         bullets: [
           "Use Ubud for green, slower daytime romance.",
@@ -9358,7 +9358,7 @@ const JOURNAL_SEO_GUIDES = [
         heading: "How to choose the right temple route in Bali",
         paragraphs: [
           "The strongest Bali temple day usually combines two or three very different moods instead of repeating similar courtyards all day. Pair a sea temple with a lake temple, or mix one spiritual stop with one scenic sunset temple.",
-          "That is why UNESCO and central Bali temple routes convert well: they feel cultural, scenic and practical in the same day.",
+          "That is why UNESCO and central Bali temple routes convert well: they feel cultural, scenic and practical in the same day. Most of them sit within easy reach of [Ubud](/bali/en/journal/things-to-do-ubud-bali-complete-guide).",
         ],
         bullets: [
           "Choose Tanah Lot or Uluwatu for temple-plus-sunset energy.",
@@ -9465,8 +9465,8 @@ const JOURNAL_SEO_GUIDES = [
           "The best waterfall choice depends on whether you want drama, convenience or atmosphere. Tukad Cepung is strongest for photo impact, Kanto Lampo is the easy-access crowd favorite, and Tibumana is better when you want a softer jungle mood.",
         ],
         bullets: [
-          "Choose central-east waterfalls for easier pairing with temples and rice terraces.",
-          "Choose north Bali waterfalls when you are already doing a Lovina or Bedugul route.",
+          "Choose central-east waterfalls for easier pairing with [temples](/bali/en/journal/best-temples-bali-cultural-sites) and rice terraces.",
+          "Choose north Bali waterfalls when you are already doing a Lovina or Bedugul route, and check [when to go](/bali/en/journal/best-time-to-visit-bali-month-by-month) — flow and safety change a lot between seasons.",
           "Choose one or two waterfall stops, not four in one day, if you want the day to stay premium.",
         ],
       },
@@ -9585,7 +9585,7 @@ const JOURNAL_SEO_GUIDES = [
           "A good Bali viewpoint should do more than just look nice in one photo. The best ones create a real pause in the day, give contrast with the rest of the route and feel strong enough that travelers remember them afterward.",
         ],
         bullets: [
-          "Choose one sunrise viewpoint, one green landscape stop and one coastal viewpoint for the strongest balance.",
+          "Choose one sunrise viewpoint, one green landscape stop and one coastal viewpoint for the strongest balance — and check [the season](/bali/en/journal/best-time-to-visit-bali-month-by-month), since clear sunrises are far more reliable some months than others.",
           "Use cliff lookouts later in the day when the light and atmosphere improve.",
           "Use rice terrace or volcano viewpoints earlier when the route feels fresher and clearer.",
         ],
@@ -9832,7 +9832,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         heading: "📍 Why Ubud is the best inland base",
         paragraphs: [
-          "Ubud sits roughly in the middle of everything worth driving to. Mount Batur is about **90 minutes** away, the main waterfalls **30–50 minutes**, and the Ayung River gorge is on the doorstep. From the south coast, every one of those becomes a much longer day.",
+          "Ubud sits roughly in the middle of everything worth driving to, which is why the [7-day itinerary](/bali/en/journal/bali-itinerary-7-days-first-time) uses it as the inland base. Mount Batur is about **90 minutes** away, the main waterfalls **30–50 minutes**, and the Ayung River gorge is on the doorstep. From the south coast, every one of those becomes a much longer day.",
           "The town also solves evenings. You can walk to dinner, a market and a dance performance without arranging transport, which is not true of most Bali areas.",
         ],
       },
@@ -9843,7 +9843,7 @@ const JOURNAL_SEO_GUIDES = [
         ],
         bullets: [
           "Tegalalang rice terraces: **06:00–08:30**",
-          "Tukad Cepung waterfall: **09:00–10:00** for the light beams",
+          "Tukad Cepung waterfall: **09:00–10:00** for the light beams — more in the [waterfalls guide](/bali/en/journal/best-waterfalls-bali-day-trips)",
           "Monkey Forest: opens **09:00**, quietest in the first hour",
           "Campuhan Ridge Walk: sunrise, before it gets hot",
           "Tirta Empul: early, before tour groups fill the pools",
@@ -10097,7 +10097,7 @@ const JOURNAL_SEO_GUIDES = [
           "The **All Indonesia arrival card**, filed inside the 72-hour window",
           "The **tourist levy** voucher, or be ready to pay at the airport counter",
           "e-VOA approval if you applied online, so you can use the autogates",
-          "Officers may ask for proof of funds; travelers commonly cite around **$1,000** equivalent, though this is guidance rather than a published rule",
+          "Officers may ask for proof of funds; travelers commonly cite around **$1,000** equivalent, though this is guidance rather than a published rule — see the [trip cost breakdown](/bali/en/journal/how-much-does-a-bali-trip-cost) for what a week actually runs to",
         ],
       },
       {
@@ -10125,7 +10125,7 @@ const JOURNAL_SEO_GUIDES = [
           "Filing the arrival card **more than 72 hours** ahead, so it is rejected",
           "Paying the levy on a lookalike site. Only **.go.id** is official",
           "Staying in a private villa and not registering with local police — hotels do this for you, private hosts may not, and the fine is **IDR 5,000,000**",
-          "Working or earning on a tourist visa, including paid content creation",
+          "Working or earning on a tourist visa, including paid content creation — enforcement tightened recently, as covered in the [safety and rules guide](/bali/en/journal/bali-safety-scams-and-health)",
         ],
       },
       {
@@ -10722,14 +10722,14 @@ const JOURNAL_SEO_GUIDES = [
         heading: "🌊 Why the water looks different here",
         paragraphs: [
           "South and east-facing beaches on the Bukit sit behind reef and limestone headlands, so they get less of the sediment and swell that make the west coast beaches around Kuta and Canggu look grey-brown.",
-          "This is the practical reason to come here if clear water matters to you. The trade is access: many Bukit beaches involve **steep staircases down the cliff**, and a few are only comfortable at certain tides.",
+          "This is the practical reason to come here if clear water matters to you — the [clear-water beaches guide](/bali/en/journal/best-beaches-bali-crystal-clear-water) ranks them. The trade is access: many Bukit beaches involve **steep staircases down the cliff**, and a few are only comfortable at certain tides.",
         ],
       },
       {
         heading: "🏄 Surf here is not beginner territory",
         paragraphs: [
           "Uluwatu, Bingin and Padang Padang break over **shallow reef**. They are famous because they are excellent, not because they are easy, and every season produces injuries among visitors who overestimated themselves.",
-          "If you are learning, take lessons on the sandy beach breaks at Kuta, Seminyak or Canggu and come to the Bukit to watch. Peak west coast season is **April–October**, biggest **June–August**.",
+          "If you are learning, take lessons on the sandy beach breaks at [Seminyak](/bali/en/journal/things-to-do-seminyak-bali-guide) or [Canggu](/bali/en/journal/things-to-do-canggu-bali-guide) and come to the Bukit to watch. Peak west coast season is **April–October**, biggest **June–August**.",
         ],
       },
       {
@@ -10833,10 +10833,10 @@ const JOURNAL_SEO_GUIDES = [
         heading: "⚖️ Seminyak vs Canggu vs Kuta vs Uluwatu",
         bullets: [
           "**Seminyak** — restaurants, spas, walkable, calmer. Costs 40–60% more than inland areas",
-          "**Canggu** — surf, cafes, nightlife, young crowd, heavy traffic",
+          "[**Canggu**](/bali/en/journal/things-to-do-canggu-bali-guide) — surf, cafes, nightlife, young crowd, heavy traffic",
           "**Kuta** — cheapest and busiest, party-focused, less appealing beach",
-          "**Uluwatu** — cliffs, clear water, serious surf, but long drives to everywhere else",
-          "**Sanur or Nusa Dua** — calm water, better for families and older travelers",
+          "[**Uluwatu**](/bali/en/journal/things-to-do-uluwatu-bali-guide) — cliffs, clear water, serious surf, but long drives to everywhere else",
+          "**Sanur or Nusa Dua** — calm water, better [for families](/bali/en/journal/bali-with-kids-family-guide) and older travelers",
         ],
       },
       {
