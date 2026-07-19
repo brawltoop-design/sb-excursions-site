@@ -151,6 +151,14 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
+  .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
+  .sb-journal-article-section a{color:var(--sbj-blue);text-decoration:underline;text-underline-offset:2px}
+  .sb-journal-article-section .sb-journal-related-guide{text-decoration:none}
+  @media screen and (max-width:640px){.sb-journal-related-guides{grid-template-columns:1fr}}
   .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
   .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
   .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -695,7 +703,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>🚗 The one rule that makes a Bali itinerary work</h2>
                 <p>Group your days by region, not by wish list. Bali has no motorways across the middle, so distance on a map means very little. <strong>Kuta to Ubud</strong> can take up to two hours, <strong>Canggu to Uluwatu</strong> around 90 minutes, and <strong>Ubud to Mount Batur</strong> about an hour and a half.</p><p>The practical consequence is simple: change your base once, not every night. Three or four nights in the south and three in Ubud covers the whole island comfortably. Hopping hotels daily eats your holiday in checkouts and transfers.</p>
-                <ul><li>Base 1: <strong>Seminyak, Canggu or Uluwatu</strong> for beaches, sunsets and food</li><li>Base 2: <strong>Ubud</strong> for temples, rice terraces, waterfalls and the volcano</li><li>Day trips from either base: <strong>Nusa Penida</strong>, Gili Islands, north Bali</li></ul>
+                <ul><li>Base 1: <a href="/bali/en/journal/things-to-do-seminyak-bali-guide"><strong>Seminyak</strong></a>, <a href="/bali/en/journal/things-to-do-canggu-bali-guide"><strong>Canggu</strong></a> or <a href="/bali/en/journal/things-to-do-uluwatu-bali-guide"><strong>Uluwatu</strong></a> for beaches, sunsets and food</li><li>Base 2: <a href="/bali/en/journal/things-to-do-ubud-bali-complete-guide"><strong>Ubud</strong></a> for temples, rice terraces, waterfalls and the volcano</li><li>Day trips from either base: <a href="/bali/en/journal/nusa-penida-complete-guide"><strong>Nusa Penida</strong></a>, Gili Islands, north Bali</li></ul>
               </section>
 
               <section class="sb-journal-article-section">
@@ -713,7 +721,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>💡 Mistakes that cost first-timers a day</h2>
 
-                <ul><li>Booking a tour for the morning after a red-eye arrival</li><li>Putting Mount Batur and Nusa Penida on consecutive days</li><li>Staying in Kuta and day-tripping to Ubud repeatedly instead of moving base</li><li>Scheduling anything on departure day — airport traffic is unpredictable</li><li>Underestimating <strong>Nyepi</strong>, when the whole island including the airport shuts for 24 hours</li></ul>
+                <ul><li>Booking a tour for the morning after a red-eye arrival</li><li>Putting Mount Batur and Nusa Penida on consecutive days</li><li>Staying in Kuta and day-tripping to Ubud repeatedly instead of moving base</li><li>Scheduling anything on departure day — airport traffic is unpredictable</li><li>Underestimating <a href="/bali/en/journal/best-time-to-visit-bali-month-by-month"><strong>Nyepi</strong></a>, when the whole island including the airport shuts for 24 hours</li></ul>
               </section>
 
             <section class="sb-journal-article-section">
@@ -792,6 +800,34 @@ body {
 
               </div>
             </section>
+
+            <section class="sb-journal-article-section">
+              <h2>📚 Keep reading</h2>
+              <div class="sb-journal-related-guides">
+
+                  <a class="sb-journal-related-guide" href="/bali/en/journal/best-time-to-visit-bali-month-by-month">
+                    <span class="sb-journal-related-guide__label">Best time to visit</span>
+                    <span class="sb-journal-related-guide__title">Best Time to Visit Bali: A Month-by-Month Guide</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/en/journal/how-much-does-a-bali-trip-cost">
+                    <span class="sb-journal-related-guide__label">Bali trip cost</span>
+                    <span class="sb-journal-related-guide__title">How Much Does a Bali Trip Cost? Real Prices for 2026</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/en/journal/bali-visa-entry-requirements">
+                    <span class="sb-journal-related-guide__label">Visa and entry</span>
+                    <span class="sb-journal-related-guide__title">Bali Visa and Entry Requirements: What You Actually Need</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/en/journal/how-to-get-around-bali-transport-guide">
+                    <span class="sb-journal-related-guide__label">Getting around</span>
+                    <span class="sb-journal-related-guide__title">How to Get Around Bali: Scooter, Driver, Grab and Real Drive Times</span>
+                  </a>
+
+              </div>
+            </section>
+
           </article>
 
           <aside class="sb-journal-sidebar">

@@ -150,6 +150,14 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
+  .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
+  .sb-journal-article-section a{color:var(--sbj-blue);text-decoration:underline;text-underline-offset:2px}
+  .sb-journal-article-section .sb-journal-related-guide{text-decoration:none}
+  @media screen and (max-width:640px){.sb-journal-related-guides{grid-template-columns:1fr}}
   .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
   .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
   .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -695,7 +703,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>🚗 La seule règle qui fait qu'un itinéraire à Bali fonctionne</h2>
                 <p>Regroupez vos journées par région et non par liste de souhaits. Bali n’a pas d’autoroute au milieu, donc la distance sur une carte signifie très peu. <strong>Kuta à Ubud</strong> peut prendre jusqu'à deux heures, <strong>Canggu à Uluwatu</strong> environ 90 minutes, et <strong>Ubud au Mont Batur</strong> environ une heure et demie.</p><p>La conséquence pratique est simple : changez de base une fois, pas tous les soirs. Trois ou quatre nuits dans le sud et trois à Ubud couvrent confortablement toute l'île. Les hôtels qui passent quotidiennement mangent vos vacances en caisses et en transferts.</p>
-                <ul><li>Base 1 : <strong>Seminyak, Canggu ou Uluwatu</strong> pour les plages, les couchers de soleil et la nourriture</li><li>Base 2 : <strong>Ubud</strong> pour les temples, les rizières en terrasses, les cascades et le volcan</li><li>Excursions d'une journée depuis l'une ou l'autre base : <strong>Nusa Penida</strong>, Îles Gili, nord de Bali</li></ul>
+                <ul><li>Base 1 : <a href="/bali/fr/journal/things-to-do-seminyak-bali-guide"><strong>Seminyak</strong></a>, <a href="/bali/fr/journal/things-to-do-canggu-bali-guide"><strong>Canggu</strong></a> or <a href="/bali/fr/journal/things-to-do-uluwatu-bali-guide"><strong>Uluwatu</strong></a> pour les plages, les couchers de soleil et la nourriture</li><li>Base 2 : <a href="/bali/fr/journal/things-to-do-ubud-bali-complete-guide"><strong>Ubud</strong></a> pour les temples, les rizières en terrasses, les cascades et le volcan</li><li>Excursions d'une journée depuis l'une ou l'autre base : <a href="/bali/fr/journal/nusa-penida-complete-guide"><strong>Nusa Penida</strong></a>, Îles Gili, nord de Bali</li></ul>
               </section>
 
               <section class="sb-journal-article-section">
@@ -713,7 +721,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>💡 Des erreurs qui coûtent une journée aux débutants</h2>
 
-                <ul><li>Réservation d'une visite pour le matin après une arrivée aux yeux rouges</li><li>Mettre le mont Batur et Nusa Penida sur des jours consécutifs</li><li>Rester à Kuta et faire des excursions d'une journée à Ubud à plusieurs reprises au lieu de déménager</li><li>Planifier quoi que ce soit le jour du départ : le trafic à l'aéroport est imprévisible</li><li>Underestimating <strong>Nyepi</strong>, quand toute l'île, y compris l'aéroport, ferme pendant 24 heures</li></ul>
+                <ul><li>Réservation d'une visite pour le matin après une arrivée aux yeux rouges</li><li>Mettre le mont Batur et Nusa Penida sur des jours consécutifs</li><li>Rester à Kuta et faire des excursions d'une journée à Ubud à plusieurs reprises au lieu de déménager</li><li>Planifier quoi que ce soit le jour du départ : le trafic à l'aéroport est imprévisible</li><li>Underestimating <a href="/bali/fr/journal/best-time-to-visit-bali-month-by-month"><strong>Nyepi</strong></a>, quand toute l'île, y compris l'aéroport, ferme pendant 24 heures</li></ul>
               </section>
 
             <section class="sb-journal-article-section">
@@ -792,6 +800,34 @@ body {
 
               </div>
             </section>
+
+            <section class="sb-journal-article-section">
+              <h2>📚 Continuez à lire</h2>
+              <div class="sb-journal-related-guides">
+
+                  <a class="sb-journal-related-guide" href="/bali/fr/journal/best-time-to-visit-bali-month-by-month">
+                    <span class="sb-journal-related-guide__label">Meilleur moment pour visiter</span>
+                    <span class="sb-journal-related-guide__title">Meilleur moment pour visiter Bali : un guide mois par mois</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/fr/journal/how-much-does-a-bali-trip-cost">
+                    <span class="sb-journal-related-guide__label">Coût du voyage à Bali</span>
+                    <span class="sb-journal-related-guide__title">Combien coûte un voyage à Bali ? Prix réels pour 2026</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/fr/journal/bali-visa-entry-requirements">
+                    <span class="sb-journal-related-guide__label">Visa et entrée</span>
+                    <span class="sb-journal-related-guide__title">Visa de Bali et conditions d’entrée : ce dont vous avez réellement besoin</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/fr/journal/how-to-get-around-bali-transport-guide">
+                    <span class="sb-journal-related-guide__label">Se déplacer</span>
+                    <span class="sb-journal-related-guide__title">Comment se déplacer à Bali : scooter, chauffeur, prise en main et temps de conduite réels</span>
+                  </a>
+
+              </div>
+            </section>
+
           </article>
 
           <aside class="sb-journal-sidebar">

@@ -150,6 +150,14 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
+  .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
+  .sb-journal-article-section a{color:var(--sbj-blue);text-decoration:underline;text-underline-offset:2px}
+  .sb-journal-article-section .sb-journal-related-guide{text-decoration:none}
+  @media screen and (max-width:640px){.sb-journal-related-guides{grid-template-columns:1fr}}
   .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
   .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
   .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -679,7 +687,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>🛵 滑板车问题，如实回答</h2>
-                <p>滑板车便宜又有趣，这也是巴厘岛大多数旅行保险索赔被拒绝的原因。从法律上讲你需要 <strong>both</strong> 你的家庭摩托车执照 <strong>以及带有摩托车认可的国际驾驶许可证</strong>。大多数租赁店只要求护照——这并不意味着你合法，也不意味着你有保险。</p><p>在您做出决定之前，值得了解这些数字。巴厘岛记录 <strong>2023 年将发生 7,224 起车祸，632 人死亡</strong>，大约是前一年的两倍，大约 <strong>86%涉及摩托车</strong>。如果在没有有效执照的情况下出现问题，空中救护车将飞往新加坡 <strong>$50,000–100,000</strong> 以及一张国际标准病床 <strong>每天 1,000–5,000 美元</strong>.</p><p>有 <strong>没有禁令</strong> 关于 2026 年游客租赁滑板车的法案——拟议的法案从未实施。改变的是执法：在仓古、库塔、乌布和乌鲁瓦图，随机检查站是例行公事，通常是在上午。丢失文件的费用约为 <strong>300,000–500,000 印尼盾</strong> 每个，不戴头盔骑行都是瞬间 <strong>250,000 印尼盾</strong>.</p>
+                <p>滑板车便宜又有趣，这也是巴厘岛大多数旅行保险索赔被拒绝的原因。从法律上讲你需要 <strong>both</strong> 你的家庭摩托车执照 <strong>以及带有摩托车认可的国际驾驶许可证</strong>。大多数租赁店只要求护照——这并不意味着你合法，也不意味着你有保险。</p><p>The <a href="/bali/zh/journal/bali-safety-scams-and-health">数字值得了解</a> 在你决定之前。巴厘岛记录 <strong>2023 年将发生 7,224 起车祸，632 人死亡</strong>，大约是前一年的两倍，大约 <strong>86%涉及摩托车</strong>。如果在没有有效执照的情况下出现问题，空中救护车将飞往新加坡 <strong>$50,000–100,000</strong> 以及一张国际标准病床 <strong>每天 1,000–5,000 美元</strong>.</p><p>有 <strong>没有禁令</strong> 关于 2026 年游客租赁滑板车的法案——拟议的法案从未实施。改变的是执法：在仓古、库塔、乌布和乌鲁瓦图，随机检查站是例行公事，通常是在上午。丢失文件的费用约为 <strong>300,000–500,000 印尼盾</strong> 每个，不戴头盔骑行都是瞬间 <strong>250,000 印尼盾</strong>.</p>
 
               </section>
 
@@ -777,6 +785,34 @@ body {
 
               </div>
             </section>
+
+            <section class="sb-journal-article-section">
+              <h2>📚继续阅读</h2>
+              <div class="sb-journal-related-guides">
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/bali-itinerary-7-days-first-time">
+                    <span class="sb-journal-related-guide__label">7天行程</span>
+                    <span class="sb-journal-related-guide__title">适合初次游客的完美巴厘岛 7 天行程（逐日）</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/best-time-to-visit-bali-month-by-month">
+                    <span class="sb-journal-related-guide__label">最佳游览时间</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛最佳旅游时间：每月指南</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/how-much-does-a-bali-trip-cost">
+                    <span class="sb-journal-related-guide__label">巴厘岛旅行费用</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛旅行要花多少钱？ 2026 年实际价格</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/bali-visa-entry-requirements">
+                    <span class="sb-journal-related-guide__label">签证和入境</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛签证和入境要求：您实际需要什么</span>
+                  </a>
+
+              </div>
+            </section>
+
           </article>
 
           <aside class="sb-journal-sidebar">

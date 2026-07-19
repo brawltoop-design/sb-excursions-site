@@ -150,6 +150,14 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
+  .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
+  .sb-journal-article-section a{color:var(--sbj-blue);text-decoration:underline;text-underline-offset:2px}
+  .sb-journal-article-section .sb-journal-related-guide{text-decoration:none}
+  @media screen and (max-width:640px){.sb-journal-related-guides{grid-template-columns:1fr}}
   .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
   .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
   .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -685,7 +693,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>🦠食品安全，无偏执</h2>
-                <p>Warungs 并不是人们承担的风险。营业额高、繁忙的小吃店提供当天早上烹制的热食，比安静的高档餐厅用自来水清洗沙拉叶更安全。判断依据 <strong>营业额和温度</strong>，不是按价格。</p><p><strong>不要饮用自来水</strong> — 印度尼西亚没有强制执行的市政净化标准。谨慎的旅行者也会使用瓶装水来保护牙齿。 <strong>冰一般都可以</strong>：中间有孔的圆柱形是用纯净水商业化生产的，是咖啡馆和酒吧使用的。</p><p><strong>巴厘岛肚</strong> 是普通旅行者腹泻，通常是细菌性腹泻，在接触后 6 至 72 小时内出现，持续两到四天。补液比止泻更重要—— <strong>oralit</strong> 补液盐在任何药房都花费几美分。如果您出现发烧、便血或症状超过三天，请去看医生。</p>
+                <p>Warungs 并不是人们承担的风险。营业额高、繁忙的小吃店提供当天早上烹制的热食，比安静的高档餐厅用自来水清洗沙拉叶更安全。判断依据 <strong>营业额和温度</strong>，不是按价格。</p><p><strong>不要饮用自来水</strong> — 印度尼西亚没有强制执行的市政净化标准。谨慎的旅行者也会使用瓶装水来保护牙齿。 <strong>冰一般都可以</strong>：中间有孔的圆柱形是用纯净水商业化生产的，是咖啡馆和酒吧使用的。</p><p><a href="/bali/zh/journal/bali-safety-scams-and-health"><strong>巴厘岛肚</strong></a> 是普通旅行者腹泻，通常是细菌性腹泻，在接触后 6 至 72 小时内出现，持续两到四天。补液比止泻更重要—— <strong>oralit</strong> 补液盐在任何药房都花费几美分。如果您出现发烧、便血或症状超过三天，请去看医生。</p>
                 <ul><li>在当地人排队的地方吃饭</li><li>喜欢现点现做或仍在热气腾腾的食物</li><li><strong>午餐时间最安全</strong> 椰浆饭 — 到下午晚些时候，显示屏已经闲置了几个小时</li><li>自己剥水果；用自来水冲洗生沙拉是主要可避免的风险</li><li>轻松地吃辣椒和街头小吃，而不是第一天就吃得很辛苦</li></ul>
               </section>
 
@@ -788,6 +796,34 @@ body {
 
               </div>
             </section>
+
+            <section class="sb-journal-article-section">
+              <h2>📚继续阅读</h2>
+              <div class="sb-journal-related-guides">
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/bali-safety-scams-and-health">
+                    <span class="sb-journal-related-guide__label">安全与诈骗</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛安全指南：诈骗、健康风险和实际问题</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/bali-with-kids-family-guide">
+                    <span class="sb-journal-related-guide__label">带孩子去巴厘岛</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛与孩子们：住在哪里、该做什么、该跳过什么</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/best-budget-restaurants-bali-warungs">
+                    <span class="sb-journal-related-guide__label">预算食品指南</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛 8 家最实惠的餐厅和值得一试、价格实惠的小吃店</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/best-beach-clubs-bali-young-adults">
+                    <span class="sb-journal-related-guide__label">海滩俱乐部指南</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛 7 个最适合年轻人、日落聚会和美好夜晚的海滩俱乐部</span>
+                  </a>
+
+              </div>
+            </section>
+
           </article>
 
           <aside class="sb-journal-sidebar">

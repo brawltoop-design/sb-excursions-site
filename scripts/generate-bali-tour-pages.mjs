@@ -3284,12 +3284,18 @@ function escapeHtml(value) {
 // for. Escape first, then introduce our own tags, so nothing in the source text
 // can inject markup.
 function renderRichText(value) {
-  return escapeHtml(String(value ?? "")).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  return escapeHtml(String(value ?? ""))
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    // [label](/internal/path) — internal paths only, so copy cannot inject an
+    // external or javascript: destination.
+    .replace(/\[([^\]]+)\]\((\/[a-zA-Z0-9\-_\/#]*)\)/g, '<a href="$2">$1</a>');
 }
 
 // Structured data must be plain text — strip the ** markers instead of rendering them.
 function stripRichText(value) {
-  return String(value ?? "").replace(/\*\*(.+?)\*\*/g, "$1");
+  return String(value ?? "")
+    .replace(/\*\*(.+?)\*\*/g, "$1")
+    .replace(/\[([^\]]+)\]\(\/[^)]*\)/g, "$1");
 }
 
 function escapeRegExp(value) {
@@ -9700,9 +9706,9 @@ const JOURNAL_SEO_GUIDES = [
           "The practical consequence is simple: change your base once, not every night. Three or four nights in the south and three in Ubud covers the whole island comfortably. Hopping hotels daily eats your holiday in checkouts and transfers.",
         ],
         bullets: [
-          "Base 1: **Seminyak, Canggu or Uluwatu** for beaches, sunsets and food",
-          "Base 2: **Ubud** for temples, rice terraces, waterfalls and the volcano",
-          "Day trips from either base: **Nusa Penida**, Gili Islands, north Bali",
+          "Base 1: [**Seminyak**](/bali/en/journal/things-to-do-seminyak-bali-guide), [**Canggu**](/bali/en/journal/things-to-do-canggu-bali-guide) or [**Uluwatu**](/bali/en/journal/things-to-do-uluwatu-bali-guide) for beaches, sunsets and food",
+          "Base 2: [**Ubud**](/bali/en/journal/things-to-do-ubud-bali-complete-guide) for temples, rice terraces, waterfalls and the volcano",
+          "Day trips from either base: [**Nusa Penida**](/bali/en/journal/nusa-penida-complete-guide), Gili Islands, north Bali",
         ],
       },
       {
@@ -9726,7 +9732,7 @@ const JOURNAL_SEO_GUIDES = [
           "Putting Mount Batur and Nusa Penida on consecutive days",
           "Staying in Kuta and day-tripping to Ubud repeatedly instead of moving base",
           "Scheduling anything on departure day — airport traffic is unpredictable",
-          "Underestimating **Nyepi**, when the whole island including the airport shuts for 24 hours",
+          "Underestimating [**Nyepi**](/bali/en/journal/best-time-to-visit-bali-month-by-month), when the whole island including the airport shuts for 24 hours",
         ],
       },
     ],
@@ -9937,7 +9943,7 @@ const JOURNAL_SEO_GUIDES = [
         area: "Per meal",
         bestFor: "Where budgets are won or lost",
         summary:
-          "Warung nasi goreng **$1.30–2.60**, mid-range restaurant dish **$5–15**, western cafe breakfast **$5–9**. Beach club daybeds carry minimum spends from **$31** up past **$125**.",
+          "[Warung](/bali/en/journal/what-to-eat-in-bali-food-guide) nasi goreng **$1.30–2.60**, mid-range restaurant dish **$5–15**, western cafe breakfast **$5–9**. Beach club daybeds carry minimum spends from **$31** up past **$125**.",
       },
       {
         name: "Getting around",
@@ -9945,7 +9951,7 @@ const JOURNAL_SEO_GUIDES = [
         area: "Per day or ride",
         bestFor: "Cheaper than most expect",
         summary:
-          "Scooter **$4–13** a day, private driver for 8–10 hours **$35–65**, Grab or Gojek car for a short hop **$3–5**, airport to Seminyak **$8–12**.",
+          "[Scooter](/bali/en/journal/how-to-get-around-bali-transport-guide) **$4–13** a day, private driver for 8–10 hours **$35–65**, Grab or Gojek car for a short hop **$3–5**, airport to Seminyak **$8–12**.",
       },
       {
         name: "Activities",
@@ -10231,7 +10237,7 @@ const JOURNAL_SEO_GUIDES = [
         heading: "🛵 The scooter question, answered honestly",
         paragraphs: [
           "Scooters are cheap, fun and the reason most travel insurance claims in Bali get refused. Legally you need **both** your home motorcycle licence **and an International Driving Permit with a motorcycle endorsement**. Most rental shops only ask for a passport — that does not make you legal, and it does not make you insured.",
-          "The numbers are worth knowing before you decide. Bali recorded **7,224 crashes and 632 deaths in 2023**, roughly double the previous year, and about **86% involved motorcycles**. If something goes wrong without a valid licence, an air ambulance to Singapore runs **$50,000–100,000** and an international-standard hospital bed **$1,000–5,000 a day**.",
+          "The [numbers are worth knowing](/bali/en/journal/bali-safety-scams-and-health) before you decide. Bali recorded **7,224 crashes and 632 deaths in 2023**, roughly double the previous year, and about **86% involved motorcycles**. If something goes wrong without a valid licence, an air ambulance to Singapore runs **$50,000–100,000** and an international-standard hospital bed **$1,000–5,000 a day**.",
           "There is **no ban** on tourists renting scooters in 2026 — the proposed one was never enacted. What did change is enforcement: random checkpoints are routine in Canggu, Kuta, Ubud and Uluwatu, usually mid-morning. Missing documents cost around **IDR 300,000–500,000** each, and riding without a helmet is an instant **IDR 250,000**.",
         ],
       },
@@ -10374,7 +10380,7 @@ const JOURNAL_SEO_GUIDES = [
           "**Manta rays**: year-round at Manta Point, most reliable **April–October**, numbers peak in **May**",
           "**Mola-mola (ocean sunfish)**: **July–October** at Crystal Bay — water can drop to **18–20°C**",
           "**Waterfalls**: strongest **November–March**, but best photographed **late March–April** for full flow without brown water",
-          "**Mount Batur sunrise**: **April–October**, clearest **June–September**, best crowd-to-weather balance **April–June**",
+          "[**Mount Batur sunrise**](/bali/en/journal/bali-itinerary-7-days-first-time): **April–October**, clearest **June–September**, best crowd-to-weather balance **April–June**",
         ],
       },
       {
@@ -10499,7 +10505,7 @@ const JOURNAL_SEO_GUIDES = [
           "Marine conservation fee for snorkeling or diving: **IDR 100,000** per person per day",
           "Car with driver for the day: **IDR 500,000–800,000** (about $30–50)",
           "Scooter rental: **IDR 75,000–100,000** a day — only for experienced riders",
-          "**Grab and Gojek do not operate on Nusa Penida** — arrange transport in advance",
+          "**Grab and Gojek do not operate on Nusa Penida** — [arrange transport](/bali/en/journal/how-to-get-around-bali-transport-guide) in advance",
         ],
       },
       {
@@ -10628,7 +10634,7 @@ const JOURNAL_SEO_GUIDES = [
         bullets: [
           "**Good fit:** surfers, remote workers, travelers in their 20s–30s, anyone who wants nightlife and cafes within scooter distance",
           "**Poor fit:** families wanting calm swimming, anyone sensitive to traffic noise, travelers looking for quiet or traditional Bali",
-          "**Consider instead:** Sanur or Nusa Dua for calm water and families, Ubud for culture, Uluwatu for cliffs and a slower pace",
+          "**Consider instead:** Sanur or Nusa Dua for [calm water and families](/bali/en/journal/bali-with-kids-family-guide), [Ubud](/bali/en/journal/things-to-do-ubud-bali-complete-guide) for culture, [Uluwatu](/bali/en/journal/things-to-do-uluwatu-bali-guide) for cliffs and a slower pace",
         ],
       },
     ],
@@ -10952,9 +10958,9 @@ const JOURNAL_SEO_GUIDES = [
           "Car seats can usually be arranged with a private driver, but **ask when booking** — they are not standard",
           "Sun is equatorial and stronger than it feels; hats, high SPF and shade breaks matter",
           "Stick to **bottled or filtered water**, including for brushing teeth",
-          "Warungs are cheap and generally fine; nasi goreng and mie goreng are reliable child-friendly options at **$1.30–2.60**",
+          "[Warungs](/bali/en/journal/what-to-eat-in-bali-food-guide) are cheap and generally fine; nasi goreng and mie goreng are reliable child-friendly options at **$1.30–2.60**",
           "Mosquito repellent for dawn and dusk, especially inland and around Ubud",
-          "Bali's international-standard clinics are good but expensive — **travel insurance is not optional**",
+          "Bali's international-standard clinics are good but expensive — [**travel insurance is not optional**](/bali/en/journal/bali-safety-scams-and-health)",
           "The tourist levy of **IDR 150,000** applies to every visitor including infants",
         ],
       },
@@ -11072,7 +11078,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         heading: "🌧️ If you are coming in wet season",
         paragraphs: [
-          "**November to March** brings heavy afternoon downpours rather than all-day rain. The kit that makes the difference is small: a **light rain jacket or poncho**, quick-dry clothing, and a dry bag for electronics.",
+          "[**November to March**](/bali/en/journal/best-time-to-visit-bali-month-by-month) brings heavy afternoon downpours rather than all-day rain. The kit that makes the difference is small: a **light rain jacket or poncho**, quick-dry clothing, and a dry bag for electronics.",
           "Add grip to your footwear priorities — stone steps at waterfalls and temples get genuinely slippery, and this is when most falls happen. Landslide risk also rises on north and east mountain roads, which is worth factoring into ambitious drive days.",
         ],
       },
@@ -11203,7 +11209,7 @@ const JOURNAL_SEO_GUIDES = [
         paragraphs: [
           "Warungs are not the risk people assume. A busy warung with high turnover, serving hot food cooked that morning, is safer than a quiet upmarket restaurant washing salad leaves in tap water. Judge by **turnover and temperature**, not by price.",
           "**Do not drink the tap water** — Indonesia has no enforced municipal purification standard. Cautious travelers use bottled water for teeth too. **Ice is generally fine**: the cylindrical kind with a hole through the middle is commercially produced from purified water and is what cafes and bars use.",
-          "**Bali belly** is ordinary traveler's diarrhoea, usually bacterial, appearing 6–72 hours after exposure and lasting two to four days. Rehydration matters more than anti-diarrhoeals — **oralit** rehydration salts cost pennies in any pharmacy. See a doctor if you have fever, blood in your stool, or symptoms beyond three days.",
+          "[**Bali belly**](/bali/en/journal/bali-safety-scams-and-health) is ordinary traveler's diarrhoea, usually bacterial, appearing 6–72 hours after exposure and lasting two to four days. Rehydration matters more than anti-diarrhoeals — **oralit** rehydration salts cost pennies in any pharmacy. See a doctor if you have fever, blood in your stool, or symptoms beyond three days.",
         ],
         bullets: [
           "Eat where locals are queueing",
@@ -11344,6 +11350,7 @@ const JOURNAL_SEO_GUIDES = [
           "This is where tourists actually get hurt. Legally you need an **International Driving Permit with a motorcycle (A) endorsement**, backed by a motorcycle licence at home — a car-only IDP is not valid. Roadside licence and helmet checks have increased since 2025.",
           "The insurance consequence is the expensive part. Most policies **void motorcycle claims** if you lacked the correct licence, were not wearing a helmet, or had any alcohol in your system. Repatriating an injured rider commonly runs into tens of thousands of dollars, which is why crowdfunding appeals for injured travelers are so common.",
           "Bali-specific hazards worth knowing: unlit potholes and open roadside drains, sand on corners near beaches, painted road markings that turn slick in a downpour, dogs on the road, and unpredictable right of way. Night riding and riding after drinking are heavily over-represented in fatalities.",
+          "If any of that gives you pause, hiring a [private driver](/bali/en/journal/how-to-get-around-bali-transport-guide) costs about $40–55 for a full day including fuel — cheap relative to the risk, and it removes navigation and parking from your holiday entirely.",
         ],
       },
       {
@@ -11458,6 +11465,76 @@ const JOURNAL_SEO_GUIDES = [
   },
 ];
 
+// Topical clusters for internal linking. A guide links to its siblings first,
+// then borrows from a complementary cluster, so related links stay on-topic
+// instead of pointing at whatever happens to be next in the array.
+const GUIDE_CLUSTERS = {
+  planning: [
+    "bali-itinerary-7-days-first-time",
+    "best-time-to-visit-bali-month-by-month",
+    "how-much-does-a-bali-trip-cost",
+    "bali-visa-entry-requirements",
+    "how-to-get-around-bali-transport-guide",
+    "what-to-pack-for-bali",
+  ],
+  areas: [
+    "things-to-do-ubud-bali-complete-guide",
+    "things-to-do-canggu-bali-guide",
+    "things-to-do-seminyak-bali-guide",
+    "things-to-do-uluwatu-bali-guide",
+    "nusa-penida-complete-guide",
+    "where-to-stay-bali-first-time",
+  ],
+  experiences: [
+    "best-beaches-bali-crystal-clear-water",
+    "best-waterfalls-bali-day-trips",
+    "best-temples-bali-cultural-sites",
+    "best-viewpoints-bali-sunrise-cliffs-rice-terraces",
+    "best-instagram-places-bali",
+    "best-places-to-visit-bali-first-time",
+  ],
+  practical: [
+    "bali-safety-scams-and-health",
+    "what-to-eat-in-bali-food-guide",
+    "bali-with-kids-family-guide",
+    "best-budget-restaurants-bali-warungs",
+    "best-beach-clubs-bali-young-adults",
+    "best-things-to-do-bali-for-couples",
+  ],
+};
+
+const GUIDE_CLUSTER_PARTNERS = {
+  planning: "areas",
+  areas: "experiences",
+  experiences: "areas",
+  practical: "planning",
+};
+
+function guideClusterOf(slug) {
+  return Object.keys(GUIDE_CLUSTERS).find((key) => GUIDE_CLUSTERS[key].includes(slug)) || null;
+}
+
+function relatedGuidesFor(guide, limit = 4) {
+  const cluster = guideClusterOf(guide.slug);
+  const bySlug = new Map(JOURNAL_SEO_GUIDES.map((item) => [item.slug, item]));
+  const picked = [];
+  const take = (slugs) => {
+    for (const slug of slugs) {
+      if (picked.length >= limit) return;
+      if (slug === guide.slug || picked.some((item) => item.slug === slug)) continue;
+      const match = bySlug.get(slug);
+      if (match) picked.push(match);
+    }
+  };
+
+  if (cluster) {
+    take(GUIDE_CLUSTERS[cluster]);
+    take(GUIDE_CLUSTERS[GUIDE_CLUSTER_PARTNERS[cluster]] || []);
+  }
+  take(JOURNAL_SEO_GUIDES.map((item) => item.slug));
+  return picked.slice(0, limit);
+}
+
 function guideArticleRoute(guide) {
   return `${JOURNAL_HUB_ROUTE}/${guide.slug}`;
 }
@@ -11497,6 +11574,7 @@ function buildSeoGuideArticle(guide) {
     heroImage: rankings[0]?.image || publicImagePath(heroTour),
     heroImageAlt: `${leadPlace} in Bali`,
     relatedTours: guide.relatedTourSlugs.map((slug) => tourBySlug(slug)).filter(Boolean),
+    relatedGuides: relatedGuidesFor(guide),
   };
 }
 
@@ -11917,6 +11995,23 @@ ${JOURNAL_FOOTER_ASSETS}
                 ${article.relatedTours.map((tour) => renderGuideRelatedTourCard(tour)).join("")}
               </div>
             </section>
+            ${article.relatedGuides?.length ? `
+            <section class="sb-journal-article-section">
+              <h2>📚 Keep reading</h2>
+              <div class="sb-journal-related-guides">
+                ${article.relatedGuides
+                  .map(
+                    (item) => `
+                  <a class="sb-journal-related-guide" href="${guideArticleRoute(item)}">
+                    <span class="sb-journal-related-guide__label">${escapeHtml(item.navLabel)}</span>
+                    <span class="sb-journal-related-guide__title">${escapeHtml(item.title)}</span>
+                  </a>
+                `,
+                  )
+                  .join("")}
+              </div>
+            </section>
+            ` : ""}
           </article>
 
           <aside class="sb-journal-sidebar">
@@ -12273,6 +12368,14 @@ function renderJournalSharedStyles() {
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
+  .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
+  .sb-journal-article-section a{color:var(--sbj-blue);text-decoration:underline;text-underline-offset:2px}
+  .sb-journal-article-section .sb-journal-related-guide{text-decoration:none}
+  @media screen and (max-width:640px){.sb-journal-related-guides{grid-template-columns:1fr}}
   .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
   .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
   .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -14954,6 +15057,20 @@ const UNESCO_PDF_CHIPS = [
   [null, "Budget Eats", `${JOURNAL_HUB_ROUTE}/best-budget-restaurants-bali-warungs`],
   [null, "Beach Clubs", `${JOURNAL_HUB_ROUTE}/best-beach-clubs-bali-young-adults`],
   [null, "Couples Guide", `${JOURNAL_HUB_ROUTE}/best-things-to-do-bali-for-couples`],
+  [null, "7-Day Itinerary", `${JOURNAL_HUB_ROUTE}/bali-itinerary-7-days-first-time`],
+  [null, "When to Go", `${JOURNAL_HUB_ROUTE}/best-time-to-visit-bali-month-by-month`],
+  [null, "Trip Cost", `${JOURNAL_HUB_ROUTE}/how-much-does-a-bali-trip-cost`],
+  [null, "Visa & Entry", `${JOURNAL_HUB_ROUTE}/bali-visa-entry-requirements`],
+  [null, "Getting Around", `${JOURNAL_HUB_ROUTE}/how-to-get-around-bali-transport-guide`],
+  [null, "What to Pack", `${JOURNAL_HUB_ROUTE}/what-to-pack-for-bali`],
+  [null, "Ubud Guide", `${JOURNAL_HUB_ROUTE}/things-to-do-ubud-bali-complete-guide`],
+  [null, "Canggu Guide", `${JOURNAL_HUB_ROUTE}/things-to-do-canggu-bali-guide`],
+  [null, "Uluwatu Guide", `${JOURNAL_HUB_ROUTE}/things-to-do-uluwatu-bali-guide`],
+  [null, "Seminyak Guide", `${JOURNAL_HUB_ROUTE}/things-to-do-seminyak-bali-guide`],
+  [null, "Nusa Penida", `${JOURNAL_HUB_ROUTE}/nusa-penida-complete-guide`],
+  [null, "With Kids", `${JOURNAL_HUB_ROUTE}/bali-with-kids-family-guide`],
+  [null, "Food Guide", `${JOURNAL_HUB_ROUTE}/what-to-eat-in-bali-food-guide`],
+  [null, "Safety Tips", `${JOURNAL_HUB_ROUTE}/bali-safety-scams-and-health`],
 ];
 
 const UNESCO_THINGS_TO_DO_CHIPS = [

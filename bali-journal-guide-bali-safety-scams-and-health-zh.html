@@ -150,6 +150,14 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
+  .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
+  .sb-journal-article-section a{color:var(--sbj-blue);text-decoration:underline;text-underline-offset:2px}
+  .sb-journal-article-section .sb-journal-related-guide{text-decoration:none}
+  @media screen and (max-width:640px){.sb-journal-related-guides{grid-template-columns:1fr}}
   .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
   .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
   .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -679,7 +687,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>🛵 滑板车：人们低估的风险</h2>
-                <p>这才是游客真正受伤的地方。从法律上讲你需要一个 <strong>摩托车国际驾驶许可证（A）加注</strong>，并有国内摩托车驾照 — 仅驾驶汽车的 IDP 无效。自 2025 年以来，路边驾照和头盔检查有所增加。</p><p>保险后果是昂贵的部分。大多数政策 <strong>摩托车索赔无效</strong> 如果您没有正确的驾照、未戴头盔或体内含有酒精。遣返受伤乘客通常要花费数万美元，这就是为什么为受伤旅行者筹集资金的呼吁如此普遍。</p><p>巴厘岛特有的危险值得了解：没有灯光的坑洼和开放的路边排水沟、海滩附近角落的沙子、在倾盆大雨中变得光滑的油漆道路标记、路上的狗以及不可预测的通行权。夜间骑行和酒后骑行在死亡人数中所占比例过高。</p>
+                <p>这才是游客真正受伤的地方。从法律上讲你需要一个 <strong>摩托车国际驾驶许可证（A）加注</strong>，并有国内摩托车驾照 — 仅驾驶汽车的 IDP 无效。自 2025 年以来，路边驾照和头盔检查有所增加。</p><p>保险后果是昂贵的部分。大多数政策 <strong>摩托车索赔无效</strong> 如果您没有正确的驾照、未戴头盔或体内含有酒精。遣返受伤乘客通常要花费数万美元，这就是为什么为受伤旅行者筹集资金的呼吁如此普遍。</p><p>巴厘岛特有的危险值得了解：没有灯光的坑洼和开放的路边排水沟、海滩附近角落的沙子、在倾盆大雨中变得光滑的油漆道路标记、路上的狗以及不可预测的通行权。夜间骑行和酒后骑行在死亡人数中所占比例过高。</p><p>如果其中任何一个让您犹豫不决，请聘请 <a href="/bali/zh/journal/how-to-get-around-bali-transport-guide">私人司机</a> 一整天的费用约为 40-55 美元，包括燃料——相对于风险来说便宜，而且它完全消除了你假期中的导航和停车。</p>
 
               </section>
 
@@ -812,6 +820,34 @@ body {
 
               </div>
             </section>
+
+            <section class="sb-journal-article-section">
+              <h2>📚继续阅读</h2>
+              <div class="sb-journal-related-guides">
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/what-to-eat-in-bali-food-guide">
+                    <span class="sb-journal-related-guide__label">美食指南</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛吃什么：巴厘岛菜肴、小吃文化和食品安全</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/bali-with-kids-family-guide">
+                    <span class="sb-journal-related-guide__label">带孩子去巴厘岛</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛与孩子们：住在哪里、该做什么、该跳过什么</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/best-budget-restaurants-bali-warungs">
+                    <span class="sb-journal-related-guide__label">预算食品指南</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛 8 家最实惠的餐厅和值得一试、价格实惠的小吃店</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/best-beach-clubs-bali-young-adults">
+                    <span class="sb-journal-related-guide__label">海滩俱乐部指南</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛 7 个最适合年轻人、日落聚会和美好夜晚的海滩俱乐部</span>
+                  </a>
+
+              </div>
+            </section>
+
           </article>
 
           <aside class="sb-journal-sidebar">

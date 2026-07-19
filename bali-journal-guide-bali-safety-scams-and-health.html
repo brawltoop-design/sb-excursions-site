@@ -151,6 +151,14 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
+  .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
+  .sb-journal-article-section a{color:var(--sbj-blue);text-decoration:underline;text-underline-offset:2px}
+  .sb-journal-article-section .sb-journal-related-guide{text-decoration:none}
+  @media screen and (max-width:640px){.sb-journal-related-guides{grid-template-columns:1fr}}
   .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
   .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
   .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -679,7 +687,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>🛵 Scooters: the risk people underestimate</h2>
-                <p>This is where tourists actually get hurt. Legally you need an <strong>International Driving Permit with a motorcycle (A) endorsement</strong>, backed by a motorcycle licence at home — a car-only IDP is not valid. Roadside licence and helmet checks have increased since 2025.</p><p>The insurance consequence is the expensive part. Most policies <strong>void motorcycle claims</strong> if you lacked the correct licence, were not wearing a helmet, or had any alcohol in your system. Repatriating an injured rider commonly runs into tens of thousands of dollars, which is why crowdfunding appeals for injured travelers are so common.</p><p>Bali-specific hazards worth knowing: unlit potholes and open roadside drains, sand on corners near beaches, painted road markings that turn slick in a downpour, dogs on the road, and unpredictable right of way. Night riding and riding after drinking are heavily over-represented in fatalities.</p>
+                <p>This is where tourists actually get hurt. Legally you need an <strong>International Driving Permit with a motorcycle (A) endorsement</strong>, backed by a motorcycle licence at home — a car-only IDP is not valid. Roadside licence and helmet checks have increased since 2025.</p><p>The insurance consequence is the expensive part. Most policies <strong>void motorcycle claims</strong> if you lacked the correct licence, were not wearing a helmet, or had any alcohol in your system. Repatriating an injured rider commonly runs into tens of thousands of dollars, which is why crowdfunding appeals for injured travelers are so common.</p><p>Bali-specific hazards worth knowing: unlit potholes and open roadside drains, sand on corners near beaches, painted road markings that turn slick in a downpour, dogs on the road, and unpredictable right of way. Night riding and riding after drinking are heavily over-represented in fatalities.</p><p>If any of that gives you pause, hiring a <a href="/bali/en/journal/how-to-get-around-bali-transport-guide">private driver</a> costs about $40–55 for a full day including fuel — cheap relative to the risk, and it removes navigation and parking from your holiday entirely.</p>
 
               </section>
 
@@ -812,6 +820,34 @@ body {
 
               </div>
             </section>
+
+            <section class="sb-journal-article-section">
+              <h2>📚 Keep reading</h2>
+              <div class="sb-journal-related-guides">
+
+                  <a class="sb-journal-related-guide" href="/bali/en/journal/what-to-eat-in-bali-food-guide">
+                    <span class="sb-journal-related-guide__label">Food guide</span>
+                    <span class="sb-journal-related-guide__title">What to Eat in Bali: Balinese Dishes, Warung Culture and Food Safety</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/en/journal/bali-with-kids-family-guide">
+                    <span class="sb-journal-related-guide__label">Bali with kids</span>
+                    <span class="sb-journal-related-guide__title">Bali With Kids: Where to Stay, What to Do and What to Skip</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/en/journal/best-budget-restaurants-bali-warungs">
+                    <span class="sb-journal-related-guide__label">Budget food guide</span>
+                    <span class="sb-journal-related-guide__title">8 Best Budget Restaurants in Bali and Affordable Warungs Worth Trying</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/en/journal/best-beach-clubs-bali-young-adults">
+                    <span class="sb-journal-related-guide__label">Beach clubs guide</span>
+                    <span class="sb-journal-related-guide__title">7 Best Beach Clubs in Bali for Young Adults, Sunset Sessions and Big Nights</span>
+                  </a>
+
+              </div>
+            </section>
+
           </article>
 
           <aside class="sb-journal-sidebar">

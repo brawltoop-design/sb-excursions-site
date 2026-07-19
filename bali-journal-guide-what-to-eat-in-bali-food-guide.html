@@ -151,6 +151,14 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
+  .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
+  .sb-journal-article-section a{color:var(--sbj-blue);text-decoration:underline;text-underline-offset:2px}
+  .sb-journal-article-section .sb-journal-related-guide{text-decoration:none}
+  @media screen and (max-width:640px){.sb-journal-related-guides{grid-template-columns:1fr}}
   .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
   .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
   .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -685,7 +693,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>🦠 Food safety, without the paranoia</h2>
-                <p>Warungs are not the risk people assume. A busy warung with high turnover, serving hot food cooked that morning, is safer than a quiet upmarket restaurant washing salad leaves in tap water. Judge by <strong>turnover and temperature</strong>, not by price.</p><p><strong>Do not drink the tap water</strong> — Indonesia has no enforced municipal purification standard. Cautious travelers use bottled water for teeth too. <strong>Ice is generally fine</strong>: the cylindrical kind with a hole through the middle is commercially produced from purified water and is what cafes and bars use.</p><p><strong>Bali belly</strong> is ordinary traveler&#39;s diarrhoea, usually bacterial, appearing 6–72 hours after exposure and lasting two to four days. Rehydration matters more than anti-diarrhoeals — <strong>oralit</strong> rehydration salts cost pennies in any pharmacy. See a doctor if you have fever, blood in your stool, or symptoms beyond three days.</p>
+                <p>Warungs are not the risk people assume. A busy warung with high turnover, serving hot food cooked that morning, is safer than a quiet upmarket restaurant washing salad leaves in tap water. Judge by <strong>turnover and temperature</strong>, not by price.</p><p><strong>Do not drink the tap water</strong> — Indonesia has no enforced municipal purification standard. Cautious travelers use bottled water for teeth too. <strong>Ice is generally fine</strong>: the cylindrical kind with a hole through the middle is commercially produced from purified water and is what cafes and bars use.</p><p><a href="/bali/en/journal/bali-safety-scams-and-health"><strong>Bali belly</strong></a> is ordinary traveler&#39;s diarrhoea, usually bacterial, appearing 6–72 hours after exposure and lasting two to four days. Rehydration matters more than anti-diarrhoeals — <strong>oralit</strong> rehydration salts cost pennies in any pharmacy. See a doctor if you have fever, blood in your stool, or symptoms beyond three days.</p>
                 <ul><li>Eat where locals are queueing</li><li>Prefer food cooked to order or still steaming</li><li><strong>Lunchtime is safest</strong> for nasi campur — by late afternoon the display has sat out for hours</li><li>Peel your own fruit; raw salad rinsed in tap water is the main avoidable risk</li><li>Ease into chilli and street food rather than going hard on day one</li></ul>
               </section>
 
@@ -788,6 +796,34 @@ body {
 
               </div>
             </section>
+
+            <section class="sb-journal-article-section">
+              <h2>📚 Keep reading</h2>
+              <div class="sb-journal-related-guides">
+
+                  <a class="sb-journal-related-guide" href="/bali/en/journal/bali-safety-scams-and-health">
+                    <span class="sb-journal-related-guide__label">Safety and scams</span>
+                    <span class="sb-journal-related-guide__title">Bali Safety Guide: Scams, Health Risks and What Actually Goes Wrong</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/en/journal/bali-with-kids-family-guide">
+                    <span class="sb-journal-related-guide__label">Bali with kids</span>
+                    <span class="sb-journal-related-guide__title">Bali With Kids: Where to Stay, What to Do and What to Skip</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/en/journal/best-budget-restaurants-bali-warungs">
+                    <span class="sb-journal-related-guide__label">Budget food guide</span>
+                    <span class="sb-journal-related-guide__title">8 Best Budget Restaurants in Bali and Affordable Warungs Worth Trying</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/en/journal/best-beach-clubs-bali-young-adults">
+                    <span class="sb-journal-related-guide__label">Beach clubs guide</span>
+                    <span class="sb-journal-related-guide__title">7 Best Beach Clubs in Bali for Young Adults, Sunset Sessions and Big Nights</span>
+                  </a>
+
+              </div>
+            </section>
+
           </article>
 
           <aside class="sb-journal-sidebar">

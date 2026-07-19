@@ -150,6 +150,14 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
+  .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
+  .sb-journal-article-section a{color:var(--sbj-blue);text-decoration:underline;text-underline-offset:2px}
+  .sb-journal-article-section .sb-journal-related-guide{text-decoration:none}
+  @media screen and (max-width:640px){.sb-journal-related-guides{grid-template-columns:1fr}}
   .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
   .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
   .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -683,7 +691,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>🧴 Notas familiares prácticas</h2>
 
-                <ul><li>Los asientos para el automóvil generalmente se pueden contratar con un conductor privado, pero <strong>preguntar al reservar</strong> — no son estándar</li><li>El sol es ecuatorial y más fuerte de lo que se siente; Los sombreros, el SPF alto y el tono rompen la cuestión.</li><li>Quédate con <strong>agua embotellada o filtrada</strong>, incluso para cepillarse los dientes</li><li>Los warungs son baratos y, en general, buenos; nasi goreng y mie goreng son opciones confiables para niños en <strong>$1.30–2.60</strong></li><li>Repelente de mosquitos para el amanecer y el anochecer, especialmente en el interior y alrededor de Ubud</li><li>Las clínicas de nivel internacional de Bali son buenas pero caras. <strong>el seguro de viaje no es opcional</strong></li><li>El impuesto turístico de <strong>150.000 IDR</strong> Se aplica a todos los visitantes, incluidos los bebés.</li></ul>
+                <ul><li>Los asientos para el automóvil generalmente se pueden contratar con un conductor privado, pero <strong>preguntar al reservar</strong> — no son estándar</li><li>El sol es ecuatorial y más fuerte de lo que se siente; Los sombreros, el SPF alto y el tono rompen la cuestión.</li><li>Quédate con <strong>agua embotellada o filtrada</strong>, incluso para cepillarse los dientes</li><li><a href="/bali/es/journal/what-to-eat-in-bali-food-guide">Warungs</a> son baratos y en general buenos; nasi goreng y mie goreng son opciones confiables para niños en <strong>$1.30–2.60</strong></li><li>Repelente de mosquitos para el amanecer y el anochecer, especialmente en el interior y alrededor de Ubud</li><li>Las clínicas de nivel internacional de Bali son buenas pero caras. <a href="/bali/es/journal/bali-safety-scams-and-health"><strong>el seguro de viaje no es opcional</strong></a></li><li>El impuesto turístico de <strong>150.000 IDR</strong> Se aplica a todos los visitantes, incluidos los bebés.</li></ul>
               </section>
 
             <section class="sb-journal-article-section">
@@ -762,6 +770,34 @@ body {
 
               </div>
             </section>
+
+            <section class="sb-journal-article-section">
+              <h2>📚 Sigue leyendo</h2>
+              <div class="sb-journal-related-guides">
+
+                  <a class="sb-journal-related-guide" href="/bali/es/journal/bali-safety-scams-and-health">
+                    <span class="sb-journal-related-guide__label">Seguridad y estafas</span>
+                    <span class="sb-journal-related-guide__title">Guía de seguridad de Bali: estafas, riesgos para la salud y lo que realmente sale mal</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/es/journal/what-to-eat-in-bali-food-guide">
+                    <span class="sb-journal-related-guide__label">guía alimentaria</span>
+                    <span class="sb-journal-related-guide__title">Qué comer en Bali: platos balineses, cultura Warung y seguridad alimentaria</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/es/journal/best-budget-restaurants-bali-warungs">
+                    <span class="sb-journal-related-guide__label">guía de comida económica</span>
+                    <span class="sb-journal-related-guide__title">8 mejores restaurantes económicos en Bali y Warungs asequibles que vale la pena probar</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/es/journal/best-beach-clubs-bali-young-adults">
+                    <span class="sb-journal-related-guide__label">guía de clubes de playa</span>
+                    <span class="sb-journal-related-guide__title">Los 7 mejores clubes de playa de Bali para adultos jóvenes, sesiones al atardecer y grandes noches</span>
+                  </a>
+
+              </div>
+            </section>
+
           </article>
 
           <aside class="sb-journal-sidebar">

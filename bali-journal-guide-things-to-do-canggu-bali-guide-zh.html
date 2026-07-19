@@ -150,6 +150,14 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
+  .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
+  .sb-journal-article-section a{color:var(--sbj-blue);text-decoration:underline;text-underline-offset:2px}
+  .sb-journal-article-section .sb-journal-related-guide{text-decoration:none}
+  @media screen and (max-width:640px){.sb-journal-related-guides{grid-template-columns:1fr}}
   .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
   .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
   .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -662,7 +670,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>👥 Canggu 适合谁，不适合谁</h2>
 
-                <ul><li><strong>合身性好：</strong> 冲浪者、远程工作者、20 至 30 多岁的旅行者、任何想要在摩托车距离内享受夜生活和咖啡馆的人</li><li><strong>不合身：</strong> 想要平静游泳的家庭、对交通噪音敏感的任何人、寻求安静或传统巴厘岛的旅行者</li><li><strong>请考虑：</strong> 沙努尔或努沙杜瓦享受平静的海水和家庭，乌布享受文化，乌鲁瓦图享受悬崖和慢节奏</li></ul>
+                <ul><li><strong>合身性好：</strong> 冲浪者、远程工作者、20 至 30 多岁的旅行者、任何想要在摩托车距离内享受夜生活和咖啡馆的人</li><li><strong>不合身：</strong> 想要平静游泳的家庭、对交通噪音敏感的任何人、寻求安静或传统巴厘岛的旅行者</li><li><strong>请考虑：</strong> 沙努尔或努沙杜瓦 <a href="/bali/zh/journal/bali-with-kids-family-guide">平静的水面和家人</a>, <a href="/bali/zh/journal/things-to-do-ubud-bali-complete-guide">Ubud</a> 对于文化， <a href="/bali/zh/journal/things-to-do-uluwatu-bali-guide">Uluwatu</a> 对于悬崖和较慢的节奏</li></ul>
               </section>
 
             <section class="sb-journal-article-section">
@@ -736,6 +744,34 @@ body {
 
               </div>
             </section>
+
+            <section class="sb-journal-article-section">
+              <h2>📚继续阅读</h2>
+              <div class="sb-journal-related-guides">
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/things-to-do-ubud-bali-complete-guide">
+                    <span class="sb-journal-related-guide__label">乌布指南</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛乌布景点：完整地区指南</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/things-to-do-seminyak-bali-guide">
+                    <span class="sb-journal-related-guide__label">水明漾指南</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛水明漾：首次旅行的舒适基地</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/things-to-do-uluwatu-bali-guide">
+                    <span class="sb-journal-related-guide__label">乌鲁瓦图指南</span>
+                    <span class="sb-journal-related-guide__title">乌鲁瓦图和武吉半岛：悬崖、海滩和日落</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/nusa-penida-complete-guide">
+                    <span class="sb-journal-related-guide__label">珀尼达岛指南</span>
+                    <span class="sb-journal-related-guide__title">努沙佩尼达岛：巴厘岛最引人注目的岛屿完整指南</span>
+                  </a>
+
+              </div>
+            </section>
+
           </article>
 
           <aside class="sb-journal-sidebar">

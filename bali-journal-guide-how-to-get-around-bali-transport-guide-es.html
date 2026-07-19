@@ -150,6 +150,14 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
+  .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
+  .sb-journal-article-section a{color:var(--sbj-blue);text-decoration:underline;text-underline-offset:2px}
+  .sb-journal-article-section .sb-journal-related-guide{text-decoration:none}
+  @media screen and (max-width:640px){.sb-journal-related-guides{grid-template-columns:1fr}}
   .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
   .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
   .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -679,7 +687,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>🛵 La pregunta sobre el scooter, respondida con sinceridad</h2>
-                <p>Los scooters son baratos, divertidos y la razón por la que se rechazan la mayoría de las reclamaciones de seguros de viaje en Bali. Legalmente necesitas <strong>both</strong> tu carnet de moto de casa <strong>y un Permiso de Conducir Internacional con endoso de motocicleta</strong>. La mayoría de las tiendas de alquiler sólo piden un pasaporte, lo que no te convierte en legal ni asegurado.</p><p>Vale la pena conocer los números antes de decidir. Bali grabado <strong>7.224 accidentes y 632 muertes en 2023</strong>, aproximadamente el doble que el año anterior, y aproximadamente <strong>86% involucraron motocicletas</strong>. Si algo sale mal sin una licencia válida, sale una ambulancia aérea a Singapur <strong>$50,000–100,000</strong> y una cama de hospital de nivel internacional <strong>Entre 1.000 y 5.000 dólares al día</strong>.</p><p>hay <strong>sin prohibición</strong> sobre los turistas que alquilan scooters en 2026; la propuesta nunca se promulgó. Lo que sí cambió es la aplicación de la ley: los puntos de control aleatorios son rutinarios en Canggu, Kuta, Ubud y Uluwatu, generalmente a media mañana. Los documentos perdidos cuestan alrededor <strong>300.000-500.000 IDR</strong> cada uno, y montar sin casco es un instante <strong>250.000 IDR</strong>.</p>
+                <p>Los scooters son baratos, divertidos y la razón por la que se rechazan la mayoría de las reclamaciones de seguros de viaje en Bali. Legalmente necesitas <strong>both</strong> tu carnet de moto de casa <strong>y un Permiso de Conducir Internacional con endoso de motocicleta</strong>. La mayoría de las tiendas de alquiler sólo piden un pasaporte, lo que no te convierte en legal ni asegurado.</p><p>The <a href="/bali/es/journal/bali-safety-scams-and-health">vale la pena conocer los números</a> antes de que decidas. Bali grabado <strong>7.224 accidentes y 632 muertes en 2023</strong>, aproximadamente el doble que el año anterior, y aproximadamente <strong>86% involucraron motocicletas</strong>. Si algo sale mal sin una licencia válida, sale una ambulancia aérea a Singapur <strong>$50,000–100,000</strong> y una cama de hospital de nivel internacional <strong>Entre 1.000 y 5.000 dólares al día</strong>.</p><p>hay <strong>sin prohibición</strong> sobre los turistas que alquilan scooters en 2026; la propuesta nunca se promulgó. Lo que sí cambió es la aplicación de la ley: los puntos de control aleatorios son rutinarios en Canggu, Kuta, Ubud y Uluwatu, generalmente a media mañana. Los documentos perdidos cuestan alrededor <strong>300.000-500.000 IDR</strong> cada uno, y montar sin casco es un instante <strong>250.000 IDR</strong>.</p>
 
               </section>
 
@@ -777,6 +785,34 @@ body {
 
               </div>
             </section>
+
+            <section class="sb-journal-article-section">
+              <h2>📚 Sigue leyendo</h2>
+              <div class="sb-journal-related-guides">
+
+                  <a class="sb-journal-related-guide" href="/bali/es/journal/bali-itinerary-7-days-first-time">
+                    <span class="sb-journal-related-guide__label">itinerario de 7 días</span>
+                    <span class="sb-journal-related-guide__title">El itinerario perfecto de 7 días por Bali para quienes visitan por primera vez (día a día)</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/es/journal/best-time-to-visit-bali-month-by-month">
+                    <span class="sb-journal-related-guide__label">Mejor momento para visitar</span>
+                    <span class="sb-journal-related-guide__title">Mejor época para visitar Bali: una guía mes a mes</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/es/journal/how-much-does-a-bali-trip-cost">
+                    <span class="sb-journal-related-guide__label">Costo del viaje a Bali</span>
+                    <span class="sb-journal-related-guide__title">¿Cuánto cuesta un viaje a Bali? Precios reales para 2026</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/es/journal/bali-visa-entry-requirements">
+                    <span class="sb-journal-related-guide__label">Visa y entrada</span>
+                    <span class="sb-journal-related-guide__title">Visa de Bali y requisitos de entrada: lo que realmente necesita</span>
+                  </a>
+
+              </div>
+            </section>
+
           </article>
 
           <aside class="sb-journal-sidebar">

@@ -150,6 +150,14 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
+  .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
+  .sb-journal-article-section a{color:var(--sbj-blue);text-decoration:underline;text-underline-offset:2px}
+  .sb-journal-article-section .sb-journal-related-guide{text-decoration:none}
+  @media screen and (max-width:640px){.sb-journal-related-guides{grid-template-columns:1fr}}
   .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
   .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
   .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -655,7 +663,7 @@ body {
           <span>Где выигрывают или проигрывают бюджеты</span>
         </div>
         <h3>Еда и напитки</h3>
-        <p>Варунг наси горенг <strong>$1.30–2.60</strong>, ресторанное блюдо средней ценовой категории <strong>$5–15</strong>, завтрак в западном кафе <strong>$5–9</strong>. Лежаки в пляжном клубе требуют минимальных затрат от <strong>$31</strong> прошлое <strong>$125</strong>.</p>
+        <p><a href="/bali/ru/journal/what-to-eat-in-bali-food-guide">Warung</a> наси горенг <strong>$1.30–2.60</strong>, ресторанное блюдо средней ценовой категории <strong>$5–15</strong>, завтрак в западном кафе <strong>$5–9</strong>. Лежаки в пляжном клубе требуют минимальных затрат от <strong>$31</strong> прошлое <strong>$125</strong>.</p>
       </div>
     </article>
 
@@ -670,7 +678,7 @@ body {
           <span>Дешевле, чем многие ожидают</span>
         </div>
         <h3>Передвижение</h3>
-        <p>Scooter <strong>$4–13</strong> в день, личный водитель на 8–10 часов <strong>$35–65</strong>, Возьмите машину или автомобиль Gojek для короткой поездки <strong>$3–5</strong>, аэропорт Семиньяка <strong>$8–12</strong>.</p>
+        <p><a href="/bali/ru/journal/how-to-get-around-bali-transport-guide">Scooter</a> <strong>$4–13</strong> в день, личный водитель на 8–10 часов <strong>$35–65</strong>, Возьмите машину или автомобиль Gojek для короткой поездки <strong>$3–5</strong>, аэропорт Семиньяка <strong>$8–12</strong>.</p>
       </div>
     </article>
 
@@ -792,6 +800,34 @@ body {
 
               </div>
             </section>
+
+            <section class="sb-journal-article-section">
+              <h2>📚 Продолжайте читать</h2>
+              <div class="sb-journal-related-guides">
+
+                  <a class="sb-journal-related-guide" href="/bali/ru/journal/bali-itinerary-7-days-first-time">
+                    <span class="sb-journal-related-guide__label">7-дневный маршрут</span>
+                    <span class="sb-journal-related-guide__title">Идеальный 7-дневный маршрут на Бали для тех, кто впервые (день за днем)</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/ru/journal/best-time-to-visit-bali-month-by-month">
+                    <span class="sb-journal-related-guide__label">Лучшее время для посещения</span>
+                    <span class="sb-journal-related-guide__title">Лучшее время для посещения Бали: ежемесячное руководство</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/ru/journal/bali-visa-entry-requirements">
+                    <span class="sb-journal-related-guide__label">Виза и въезд</span>
+                    <span class="sb-journal-related-guide__title">Виза на Бали и въездные требования: что вам на самом деле нужно</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/ru/journal/how-to-get-around-bali-transport-guide">
+                    <span class="sb-journal-related-guide__label">Передвижение</span>
+                    <span class="sb-journal-related-guide__title">Как передвигаться по Бали: скутер, водитель, захват и реальное время в пути</span>
+                  </a>
+
+              </div>
+            </section>
+
           </article>
 
           <aside class="sb-journal-sidebar">

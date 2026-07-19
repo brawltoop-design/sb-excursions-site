@@ -150,6 +150,14 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
+  .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
+  .sb-journal-article-section a{color:var(--sbj-blue);text-decoration:underline;text-underline-offset:2px}
+  .sb-journal-article-section .sb-journal-related-guide{text-decoration:none}
+  @media screen and (max-width:640px){.sb-journal-related-guides{grid-template-columns:1fr}}
   .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
   .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
   .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -751,6 +759,34 @@ body {
 
               </div>
             </section>
+
+            <section class="sb-journal-article-section">
+              <h2>📚 Sigue leyendo</h2>
+              <div class="sb-journal-related-guides">
+
+                  <a class="sb-journal-related-guide" href="/bali/es/journal/best-beaches-bali-crystal-clear-water">
+                    <span class="sb-journal-related-guide__label">guía de playas</span>
+                    <span class="sb-journal-related-guide__title">8 mejores playas de Bali con aguas cristalinas para nadar, hacer snorkel y tomar fotografías</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/es/journal/best-temples-bali-cultural-sites">
+                    <span class="sb-journal-related-guide__label">guía de templos</span>
+                    <span class="sb-journal-related-guide__title">Los 7 mejores templos de Bali para cultura, paisajes y viajeros primerizos</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/es/journal/best-viewpoints-bali-sunrise-cliffs-rice-terraces">
+                    <span class="sb-journal-related-guide__label">Guía de miradores</span>
+                    <span class="sb-journal-related-guide__title">Los 7 mejores miradores de Bali para acantilados, amaneceres de volcanes y paisajes de terrazas de arroz</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/es/journal/best-instagram-places-bali">
+                    <span class="sb-journal-related-guide__label">guía de instagram</span>
+                    <span class="sb-journal-related-guide__title">8 mejores lugares de Instagram en Bali para tomar fotos que aún se ven bien en la vida real</span>
+                  </a>
+
+              </div>
+            </section>
+
           </article>
 
           <aside class="sb-journal-sidebar">

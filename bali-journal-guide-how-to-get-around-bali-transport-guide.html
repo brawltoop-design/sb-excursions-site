@@ -151,6 +151,14 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
+  .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
+  .sb-journal-article-section a{color:var(--sbj-blue);text-decoration:underline;text-underline-offset:2px}
+  .sb-journal-article-section .sb-journal-related-guide{text-decoration:none}
+  @media screen and (max-width:640px){.sb-journal-related-guides{grid-template-columns:1fr}}
   .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
   .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
   .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -679,7 +687,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>🛵 The scooter question, answered honestly</h2>
-                <p>Scooters are cheap, fun and the reason most travel insurance claims in Bali get refused. Legally you need <strong>both</strong> your home motorcycle licence <strong>and an International Driving Permit with a motorcycle endorsement</strong>. Most rental shops only ask for a passport — that does not make you legal, and it does not make you insured.</p><p>The numbers are worth knowing before you decide. Bali recorded <strong>7,224 crashes and 632 deaths in 2023</strong>, roughly double the previous year, and about <strong>86% involved motorcycles</strong>. If something goes wrong without a valid licence, an air ambulance to Singapore runs <strong>$50,000–100,000</strong> and an international-standard hospital bed <strong>$1,000–5,000 a day</strong>.</p><p>There is <strong>no ban</strong> on tourists renting scooters in 2026 — the proposed one was never enacted. What did change is enforcement: random checkpoints are routine in Canggu, Kuta, Ubud and Uluwatu, usually mid-morning. Missing documents cost around <strong>IDR 300,000–500,000</strong> each, and riding without a helmet is an instant <strong>IDR 250,000</strong>.</p>
+                <p>Scooters are cheap, fun and the reason most travel insurance claims in Bali get refused. Legally you need <strong>both</strong> your home motorcycle licence <strong>and an International Driving Permit with a motorcycle endorsement</strong>. Most rental shops only ask for a passport — that does not make you legal, and it does not make you insured.</p><p>The <a href="/bali/en/journal/bali-safety-scams-and-health">numbers are worth knowing</a> before you decide. Bali recorded <strong>7,224 crashes and 632 deaths in 2023</strong>, roughly double the previous year, and about <strong>86% involved motorcycles</strong>. If something goes wrong without a valid licence, an air ambulance to Singapore runs <strong>$50,000–100,000</strong> and an international-standard hospital bed <strong>$1,000–5,000 a day</strong>.</p><p>There is <strong>no ban</strong> on tourists renting scooters in 2026 — the proposed one was never enacted. What did change is enforcement: random checkpoints are routine in Canggu, Kuta, Ubud and Uluwatu, usually mid-morning. Missing documents cost around <strong>IDR 300,000–500,000</strong> each, and riding without a helmet is an instant <strong>IDR 250,000</strong>.</p>
 
               </section>
 
@@ -777,6 +785,34 @@ body {
 
               </div>
             </section>
+
+            <section class="sb-journal-article-section">
+              <h2>📚 Keep reading</h2>
+              <div class="sb-journal-related-guides">
+
+                  <a class="sb-journal-related-guide" href="/bali/en/journal/bali-itinerary-7-days-first-time">
+                    <span class="sb-journal-related-guide__label">7-day itinerary</span>
+                    <span class="sb-journal-related-guide__title">The Perfect 7-Day Bali Itinerary for First-Time Visitors (Day by Day)</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/en/journal/best-time-to-visit-bali-month-by-month">
+                    <span class="sb-journal-related-guide__label">Best time to visit</span>
+                    <span class="sb-journal-related-guide__title">Best Time to Visit Bali: A Month-by-Month Guide</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/en/journal/how-much-does-a-bali-trip-cost">
+                    <span class="sb-journal-related-guide__label">Bali trip cost</span>
+                    <span class="sb-journal-related-guide__title">How Much Does a Bali Trip Cost? Real Prices for 2026</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/en/journal/bali-visa-entry-requirements">
+                    <span class="sb-journal-related-guide__label">Visa and entry</span>
+                    <span class="sb-journal-related-guide__title">Bali Visa and Entry Requirements: What You Actually Need</span>
+                  </a>
+
+              </div>
+            </section>
+
           </article>
 
           <aside class="sb-journal-sidebar">

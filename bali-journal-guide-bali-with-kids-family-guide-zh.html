@@ -150,6 +150,14 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
+  .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
+  .sb-journal-article-section a{color:var(--sbj-blue);text-decoration:underline;text-underline-offset:2px}
+  .sb-journal-article-section .sb-journal-related-guide{text-decoration:none}
+  @media screen and (max-width:640px){.sb-journal-related-guides{grid-template-columns:1fr}}
   .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
   .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
   .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -683,7 +691,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>🧴实用的家庭笔记</h2>
 
-                <ul><li>汽车座椅通常可以由私人司机安排，但是 <strong>预订时询问</strong> — 它们不是标准的</li><li>太阳位于赤道，比感觉上更强烈；帽子、高防晒系数和遮荫很重要</li><li>坚持 <strong>瓶装水或过滤水</strong>，包括刷牙</li><li>小吃店很便宜，而且一般都还不错。炒饭和炒饭是适合儿童的可靠选择 <strong>$1.30–2.60</strong></li><li>黎明和黄昏时的驱蚊剂，尤其是内陆和乌布周围</li><li>巴厘岛的国际标准诊所不错，但价格昂贵—— <strong>旅行保险不是可选的</strong></li><li>旅游税为 <strong>150,000 印尼盾</strong> 适用于所有访客，包括婴儿</li></ul>
+                <ul><li>汽车座椅通常可以由私人司机安排，但是 <strong>预订时询问</strong> — 它们不是标准的</li><li>太阳位于赤道，比感觉上更强烈；帽子、高防晒系数和遮荫很重要</li><li>坚持 <strong>瓶装水或过滤水</strong>，包括刷牙</li><li><a href="/bali/zh/journal/what-to-eat-in-bali-food-guide">Warungs</a> 价格便宜，总体还不错；炒饭和炒饭是适合儿童的可靠选择 <strong>$1.30–2.60</strong></li><li>黎明和黄昏时的驱蚊剂，尤其是内陆和乌布周围</li><li>巴厘岛的国际标准诊所不错，但价格昂贵—— <a href="/bali/zh/journal/bali-safety-scams-and-health"><strong>旅行保险不是可选的</strong></a></li><li>旅游税为 <strong>150,000 印尼盾</strong> 适用于所有访客，包括婴儿</li></ul>
               </section>
 
             <section class="sb-journal-article-section">
@@ -762,6 +770,34 @@ body {
 
               </div>
             </section>
+
+            <section class="sb-journal-article-section">
+              <h2>📚继续阅读</h2>
+              <div class="sb-journal-related-guides">
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/bali-safety-scams-and-health">
+                    <span class="sb-journal-related-guide__label">安全与诈骗</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛安全指南：诈骗、健康风险和实际问题</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/what-to-eat-in-bali-food-guide">
+                    <span class="sb-journal-related-guide__label">美食指南</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛吃什么：巴厘岛菜肴、小吃文化和食品安全</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/best-budget-restaurants-bali-warungs">
+                    <span class="sb-journal-related-guide__label">预算食品指南</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛 8 家最实惠的餐厅和值得一试、价格实惠的小吃店</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/zh/journal/best-beach-clubs-bali-young-adults">
+                    <span class="sb-journal-related-guide__label">海滩俱乐部指南</span>
+                    <span class="sb-journal-related-guide__title">巴厘岛 7 个最适合年轻人、日落聚会和美好夜晚的海滩俱乐部</span>
+                  </a>
+
+              </div>
+            </section>
+
           </article>
 
           <aside class="sb-journal-sidebar">

@@ -150,6 +150,14 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
+  .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
+  .sb-journal-article-section a{color:var(--sbj-blue);text-decoration:underline;text-underline-offset:2px}
+  .sb-journal-article-section .sb-journal-related-guide{text-decoration:none}
+  @media screen and (max-width:640px){.sb-journal-related-guides{grid-template-columns:1fr}}
   .sb-journal-keyfacts{background:#f4f7ff;border:1px solid rgba(47,107,255,0.18);border-radius:20px;padding:20px 24px;margin:0 0 30px}
   .sb-journal-keyfacts h2{margin:0 0 12px;font-size:20px;line-height:1.2;letter-spacing:-0.4px}
   .sb-journal-keyfacts ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
@@ -679,7 +687,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>🛵 Trottinettes : le risque que l'on sous-estime</h2>
-                <p>C’est là que les touristes sont réellement blessés. Légalement, vous avez besoin d'un <strong>Permis de conduire international avec mention moto (A)</strong>, soutenu par un permis moto à la maison – un IDP uniquement pour voiture n’est pas valide. Les contrôles du permis routier et du casque se sont multipliés depuis 2025.</p><p>La conséquence de l'assurance est la partie la plus coûteuse. La plupart des politiques <strong>annuler les réclamations de moto</strong> si vous n'aviez pas le bon permis, si vous ne portiez pas de casque ou si vous aviez de l'alcool dans votre organisme. Le rapatriement d'un passager blessé coûte généralement des dizaines de milliers de dollars, c'est pourquoi les appels au financement participatif en faveur des voyageurs blessés sont si fréquents.</p><p>Les dangers spécifiques à Bali méritent d'être connus : nids-de-poule non éclairés et drains ouverts en bordure de route, sable dans les coins près des plages, marquages ​​routiers peints qui deviennent glissants sous une averse, chiens sur la route et droit de passage imprévisible. Les déplacements de nuit et les déplacements après avoir bu sont largement surreprésentés dans les décès.</p>
+                <p>C’est là que les touristes sont réellement blessés. Légalement, vous avez besoin d'un <strong>Permis de conduire international avec mention moto (A)</strong>, soutenu par un permis moto à la maison – un IDP uniquement pour voiture n’est pas valide. Les contrôles du permis routier et du casque se sont multipliés depuis 2025.</p><p>La conséquence de l'assurance est la partie la plus coûteuse. La plupart des politiques <strong>annuler les réclamations de moto</strong> si vous n'aviez pas le bon permis, si vous ne portiez pas de casque ou si vous aviez de l'alcool dans votre organisme. Le rapatriement d'un passager blessé coûte généralement des dizaines de milliers de dollars, c'est pourquoi les appels au financement participatif en faveur des voyageurs blessés sont si fréquents.</p><p>Les dangers spécifiques à Bali méritent d'être connus : nids-de-poule non éclairés et drains ouverts en bordure de route, sable dans les coins près des plages, marquages ​​routiers peints qui deviennent glissants sous une averse, chiens sur la route et droit de passage imprévisible. Les déplacements de nuit et les déplacements après avoir bu sont largement surreprésentés dans les décès.</p><p>Si tout cela vous fait réfléchir, embaucher un <a href="/bali/fr/journal/how-to-get-around-bali-transport-guide">chauffeur privé</a> coûte environ 40 à 55 $ pour une journée complète, carburant compris – bon marché par rapport au risque, et cela supprime complètement la navigation et le stationnement de vos vacances.</p>
 
               </section>
 
@@ -812,6 +820,34 @@ body {
 
               </div>
             </section>
+
+            <section class="sb-journal-article-section">
+              <h2>📚 Continuez à lire</h2>
+              <div class="sb-journal-related-guides">
+
+                  <a class="sb-journal-related-guide" href="/bali/fr/journal/what-to-eat-in-bali-food-guide">
+                    <span class="sb-journal-related-guide__label">Guide alimentaire</span>
+                    <span class="sb-journal-related-guide__title">Que manger à Bali : plats balinais, culture Warung et sécurité alimentaire</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/fr/journal/bali-with-kids-family-guide">
+                    <span class="sb-journal-related-guide__label">Bali avec des enfants</span>
+                    <span class="sb-journal-related-guide__title">Bali avec des enfants : où séjourner, que faire et que éviter</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/fr/journal/best-budget-restaurants-bali-warungs">
+                    <span class="sb-journal-related-guide__label">Guide alimentaire économique</span>
+                    <span class="sb-journal-related-guide__title">8 meilleurs restaurants économiques à Bali et Warungs abordables qui valent la peine d'être essayés</span>
+                  </a>
+
+                  <a class="sb-journal-related-guide" href="/bali/fr/journal/best-beach-clubs-bali-young-adults">
+                    <span class="sb-journal-related-guide__label">Guide des clubs de plage</span>
+                    <span class="sb-journal-related-guide__title">7 meilleurs clubs de plage à Bali pour les jeunes adultes, les séances au coucher du soleil et les grandes soirées</span>
+                  </a>
+
+              </div>
+            </section>
+
           </article>
 
           <aside class="sb-journal-sidebar">
