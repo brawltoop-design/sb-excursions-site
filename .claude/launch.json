@@ -5,7 +5,8 @@
       "name": "static-site",
       "runtimeExecutable": "node",
       "runtimeArgs": ["scripts/dev-static-server.mjs"],
-      "port": 8923
+      "port": 8923,
+      "autoPort": true
     }
   ]
 }

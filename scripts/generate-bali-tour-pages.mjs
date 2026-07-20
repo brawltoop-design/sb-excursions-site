@@ -17545,6 +17545,9 @@ function normalizeGeneratedHtml(html) {
       `/images/tours-real/${slug}.jpg`,
     );
   }
+  // bali-unesco deliberately keeps its original Jatiluwih photo. The main page is
+  // patched in place, so an old tours-real reference can linger — undo it here.
+  out = out.replaceAll("/images/tours-real/bali-unesco.jpg", "/images/bali-tours/bali-unesco.jpg");
   return out.replace(/[ \t]+$/gm, "");
 }
 

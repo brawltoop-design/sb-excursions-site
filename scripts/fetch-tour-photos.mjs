@@ -28,7 +28,8 @@ const TOURS = {
   "dolphin-sunrise-city-tour": { query: "dolphin jumping ocean sunrise", alt: "Spinner dolphins leaping at sunrise off Lovina, north Bali" },
   "east-bali-instagram-tour": { query: "Lempuyang temple gates of heaven Bali", alt: "Lempuyang Temple Gates of Heaven framing Mount Agung in east Bali" },
   "tanah-lot-bedugul-tour": { query: "Tanah Lot temple sunset Bali", alt: "Tanah Lot sea temple silhouetted at sunset in Bali" },
-  "bali-unesco": { query: "Jatiluwih rice terrace Bali", alt: "Jatiluwih UNESCO rice terraces in the central Bali highlands" },
+  // bali-unesco intentionally keeps its original Jatiluwih photo (nicer than any
+  // stock match), so it is excluded here and served from /images/bali-tours/.
   "mount-batur-sunrise-jeep-tour": { query: "Mount Batur sunrise volcano Bali", alt: "Sunrise over Mount Batur volcano and its caldera in Kintamani, Bali" },
   "mount-batur-sunrise-hike": { query: "volcano summit sunrise hikers", alt: "Hikers watching sunrise from the summit of Mount Batur, Bali" },
   "mount-batur-sunrise-jeep-hot-spring": { query: "natural hot spring pool mountain", alt: "Natural hot spring pools below Mount Batur after the sunrise jeep tour" },
