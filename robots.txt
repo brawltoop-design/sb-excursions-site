@@ -1,20 +1,4 @@
-User-Agent: *
-Disallow: /page106032666.html
-Disallow: /dubai/en/header
-Disallow: /page106032906.html
-Disallow: /dubai/en/footer
-Disallow: /page111312446.html
-Disallow: /not-found
-Disallow: /page128064616.html
-Disallow: /123456
-Disallow: /tilda/form*
-Disallow: /tilda/rec*
-Disallow: /tilda/click*
-Disallow: /tilda/scroll*
-Disallow: /tilda/popup*
-Disallow: /tilda/cart*
-Disallow: /tilda/product*
-Disallow: /tilda/event*
-Disallow:
+User-agent: *
+Allow: /
 
-Sitemap: https://sb-excursions-public.vercel.app/sitemap.xml
+Sitemap: https://sbexcursion.com/sitemap.xml

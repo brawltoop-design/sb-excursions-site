@@ -8411,6 +8411,160 @@ const JOURNAL_FEATURED_GUIDE_SLUGS = [
 
 const JOURNAL_SEO_GUIDES = [
   {
+    key: "firstTime",
+    slug: "first-time-in-bali-complete-guide",
+    badge: "Start here",
+    navLabel: "First time in Bali",
+    cardTourLabel: "The complete first-timer guide",
+    heroTourSlug: "ubud-highlights-tour",
+    relatedTourSlugs: ["private-car-with-driver-bali", "bali-airport-transfer", "ubud-highlights-tour"],
+    inlineStats: ["Villa, SIM, scooter", "Licences by nationality", "First-week checklist"],
+    title: "First Time Flying to Bali? The Complete Setup Guide",
+    description:
+      "The practical first-timer guide to Bali: how to rent a villa by the month, where to buy a SIM, how to rent a scooter, and exactly what driving documents you need — US, French, Russian, Chinese, Spanish and more.",
+    excerpt:
+      "This is the guide we wish every first-timer read on the plane. Not what to see — the tours cover that — but how to **set yourself up** in the first 48 hours: a place to stay, a working phone, a way to get around, and the paperwork that keeps you out of trouble. Do these four things right and the rest of Bali is easy.",
+    rankings: [
+      {
+        name: "1. A place to stay",
+        imageTitle: "Bali villa with pool",
+        area: "First decision",
+        bestFor: "Monthly deals beat nightly rates",
+        summary:
+          "Booking sites are for the first few nights. For a **month or more**, prices drop hard when you rent direct — often **40–60% below** the nightly rate multiplied out.",
+      },
+      {
+        name: "2. A working phone",
+        imageTitle: "Bali SIM card",
+        area: "Do it day one",
+        bestFor: "Telkomsel or an eSIM",
+        summary:
+          "A **Telkomsel** tourist SIM with plenty of data is about **$10** for 30 days and has the best island-wide coverage. Buy in town, not at the airport kiosks.",
+      },
+      {
+        name: "3. A way to get around",
+        imageTitle: "Scooter rental Bali",
+        area: "Scooter or driver",
+        bestFor: "Know the licence rules first",
+        summary:
+          "A scooter is **$4–6.50** a day; a private driver for a full day is **$35–55**. Before you ride, read the licence section — it is where travelers get fined and lose insurance.",
+      },
+      {
+        name: "4. The paperwork",
+        imageTitle: "Bali immigration",
+        area: "Before and on arrival",
+        bestFor: "Levy, arrival card, licence",
+        summary:
+          "The **tourist levy** (IDR 150,000), the mandatory **arrival card** filed within 72 hours, and — if you plan to drive — an **IDP from home** with a motorcycle category.",
+      },
+    ],
+    sections: [
+      {
+        heading: "🏡 How to rent a villa by the month (cheaply)",
+        paragraphs: [
+          "The single biggest money mistake first-timers make is booking a whole trip on nightly booking-site rates. Those sites are perfect for your **first three or four nights** — arrive with a guaranteed bed and no stress. For anything longer, they are the most expensive way to stay in Bali.",
+          "The moment you want a **month or more**, renting direct is dramatically cheaper — commonly **40–60% below** the equivalent nightly rate. A room or small villa that costs $60 a night on a platform is often **$500–900 a month** direct. The trade is that you take on a little verification work yourself.",
+          "**Facebook groups and Marketplace** are where most of this happens. Search groups like \"Bali Long Term Rentals\", \"Canggu Community\" and area-specific villa groups, or Marketplace filtered to the area you want. Message a few listings, ask for a video walkthrough, and negotiate the monthly rate — the first price is rarely the real one.",
+        ],
+        bullets: [
+          "**Never pay a full deposit before seeing the place** — video call or, better, arrive first and view in person",
+          "Pay the deposit only once you have seen it, ideally with a simple written agreement",
+          "Be wary of listings far below market price, urgency (\"another person is interested, pay now\"), or a refusal to video call — these are the classic scam signals",
+          "Prefer hosts with history — a real profile, reviews in the group, or a personal recommendation",
+          "Check what is included: is it **electricity, water, wifi, pool cleaning, staff**? Power especially can add up",
+          "Agents (a small finder's fee) are a reasonable middle ground if you would rather not deal direct",
+        ],
+      },
+      {
+        heading: "📶 Where and how to buy a SIM",
+        paragraphs: [
+          "Get connected on day one — a working phone makes everything else easier, from Grab rides to messaging villa hosts. **Telkomsel** has the best coverage across the island, including Nusa Penida and the north; **XL** and **Indosat** are cheaper and fine if you are staying in the south.",
+          "A 30-day tourist package with generous data runs about **$10** in town. The catch: **airport kiosks charge noticeably more** than shops in Kuta, Seminyak, Ubud or Canggu, so unless you need it the moment you land, wait until you are in town. Bring an **unlocked phone**, and staff will set it up for you.",
+          "If your phone supports **eSIM**, buying one before you fly is the smoothest option — you land already connected and skip the shop entirely. A 30-day data eSIM runs roughly **$14–23** depending on the allowance.",
+        ],
+      },
+      {
+        heading: "🛵 Renting a scooter — and the licence rules that matter",
+        paragraphs: [
+          "A scooter is how most people get around Bali, and it is cheap — **$4–6.50** a day for a 110cc Scoopy, a little more for a 125–155cc. The problem is not the bike; it is the paperwork, because this is where travelers get fined and, far more expensively, lose their insurance cover.",
+          "Here is the rule, stated plainly. You legally need **your home driving licence AND an International Driving Permit (IDP)** — the IDP is only a translation of your licence, so you need both. Crucially, the IDP must carry a **motorcycle category (A)**, which means you need a **motorcycle entitlement at home**. A **car-only IDP does not cover a scooter** — that is the single most common trap, because almost every Bali rental bike counts as a motorcycle under Indonesian law regardless of its small engine.",
+          "**You must get the IDP in your home country before you travel.** You cannot legitimately obtain one after arriving — the old 30-day tourist licence at the Denpasar police office was discontinued, and online \"get your IDP in Bali\" offers are not genuine documents. Only residents on a KITAS can apply for a local Indonesian licence.",
+        ],
+        bullets: [
+          "Rental shops usually rent on **just a passport and deposit** and do not check documents — this is not a legal defence and does not restore your insurance",
+          "**Never leave your passport** as a deposit; a photocopy is enough, and being without your passport is itself an offence",
+          "**Helmets are mandatory** for rider and passenger — the fine is about **IDR 250,000 each**",
+          "Photograph the bike from every angle in daylight before riding off, to head off later \"damage\" claims",
+          "Checkpoint fines for missing or wrong-category documents run roughly **IDR 250,000–1,000,000**",
+        ],
+      },
+      {
+        heading: "🌍 What licence do I need? By nationality",
+        paragraphs: [
+          "One myth to clear up first: you will read that \"Indonesia follows the 1949 Geneva Convention, so you need a Geneva IDP.\" **Indonesia has actually ratified neither the Geneva nor the Vienna convention** — it recognises foreign IDPs through its own national law, and in practice Bali police and rental shops **accept an IDP of either format**. So the format debate is a distraction. What matters is that your country can issue you a real IDP at all, and that it carries the motorcycle category.",
+          "For almost every nationality the answer is the same and simple. **China is the one genuine exception** — and it is a big one.",
+        ],
+        bullets: [
+          "🇺🇸 **United States** — get an IDP from **AAA** (or AATA) before you fly, plus a motorcycle endorsement on your state licence. Fine in Bali",
+          "🇫🇷 **France** — France issues the *permis international*; French licence plus IDP with an *A* category. No special issue",
+          "🇪🇸 **Spain** — the *permiso internacional de conducción* from the DGT, plus your licence. No special issue",
+          "🇷🇺 **Russia** — a Russian-issued IDP plus your domestic licence (category **A** for scooters) is accepted in practice. Carry the physical booklet, not a photo",
+          "🇨🇳 **China (mainland) — the hard case.** Mainland China belongs to neither convention, so Chinese licences are not internationally recognised and **China does not issue a valid IDP**. Any \"international licence\" sold online to a mainland holder is not genuine. The realistic options are a licence from another country you have lived in, or, if you hold a KITAS, an Indonesian licence — otherwise you cannot legally ride",
+          "🇬🇧 🇦🇺 🇨🇦 🇩🇪 **UK, Australia, Canada, Germany** — all can issue a recognised IDP (Post Office, auto clubs, or the German *Internationaler Führerschein*). Licence plus IDP, category A for scooters",
+        ],
+      },
+      {
+        heading: "💳 The paperwork you cannot skip",
+        paragraphs: [
+          "Two items are mandatory for every visitor, and both are easiest done before you land. The **tourist levy** is IDR 150,000 (about $10) per person, paid once through the official **lovebali.baliprov.go.id** site — ignore the lookalike sites that charge double. The **All Indonesia arrival card** replaced the old customs and health forms and must be filed at **allindonesia.imigrasi.go.id within 72 hours** of arrival; the system rejects it if you try earlier.",
+          "Most travelers also need a **visa on arrival** (IDR 500,000 for 30 days, extendable once). Our separate visa guide covers the details, including the extension, which now needs an in-person office visit rather than being fully online.",
+        ],
+      },
+      {
+        heading: "✅ Your first 48 hours, in order",
+        bullets: [
+          "**Before you fly:** pay the tourist levy, file the arrival card within 72 hours, and — if driving — get your IDP with a motorcycle category",
+          "**At the airport:** use a fixed-price transfer counter or a pre-booked driver, not a tout",
+          "**Day one:** buy a SIM in town, settle into your first booked nights, and do nothing ambitious",
+          "**Days two to three:** view any monthly villa in person before paying a deposit; sort out a scooter or a regular driver",
+          "**Then:** start booking the experiences — and read the [7-day itinerary](/bali/en/journal/bali-itinerary-7-days-first-time) so you group them by area instead of sitting in traffic",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "How do I rent a villa in Bali for a month cheaply?",
+        answer:
+          "Use booking sites only for your first few nights, then rent direct through Facebook long-term rental groups, Marketplace or a local agent for anything longer — monthly direct rates are commonly 40–60% below the nightly rate multiplied out. Always view the place by video call or in person before paying a deposit, and never pay in full up front.",
+      },
+      {
+        question: "Where should I buy a SIM card in Bali?",
+        answer:
+          "Buy a Telkomsel tourist SIM in town rather than at the airport, where kiosks charge more. About $10 gets a 30-day package with plenty of data and the best island-wide coverage. If your phone supports eSIM, buying one before you fly is even smoother.",
+      },
+      {
+        question: "What licence do I need to rent a scooter in Bali?",
+        answer:
+          "Your home driving licence plus an International Driving Permit that carries a motorcycle category (A), which requires a motorcycle entitlement at home. A car-only IDP does not cover a scooter. You must obtain the IDP in your home country before you travel — you cannot legitimately get one in Bali.",
+      },
+      {
+        question: "Can Chinese tourists drive in Bali?",
+        answer:
+          "Mainland Chinese licence holders cannot easily drive legally, because China belongs to neither international driving convention and does not issue a recognised International Driving Permit. Any online \"international licence\" for a mainland holder is not genuine. The realistic options are a licence from another country of residence, or an Indonesian licence if you hold a KITAS.",
+      },
+      {
+        question: "Do rental shops in Bali check for a licence?",
+        answer:
+          "Usually not — most rent on just a passport and deposit. That does not make riding legal, and it does not restore insurance. Police checkpoints do check, with fines of roughly IDR 250,000–1,000,000 for missing or wrong-category documents, and travel insurance voids motorbike claims if you were not properly licensed.",
+      },
+      {
+        question: "What do I need to do before arriving in Bali?",
+        answer:
+          "Pay the IDR 150,000 tourist levy through the official Love Bali site, file the All Indonesia arrival card within 72 hours of arrival, arrange your visa on arrival, and — if you plan to drive — get an International Driving Permit with a motorcycle category from your home country.",
+      },
+    ],
+  },
+  {
     key: "beaches",
     slug: "best-beaches-bali-crystal-clear-water",
     badge: "Evergreen SEO guide",
@@ -11470,6 +11624,7 @@ const JOURNAL_SEO_GUIDES = [
 // instead of pointing at whatever happens to be next in the array.
 const GUIDE_CLUSTERS = {
   planning: [
+    "first-time-in-bali-complete-guide",
     "bali-itinerary-7-days-first-time",
     "best-time-to-visit-bali-month-by-month",
     "how-much-does-a-bali-trip-cost",
@@ -11578,6 +11733,67 @@ function buildSeoGuideArticle(guide) {
   };
 }
 
+// Slug of the flagship "first time in Bali" guide, featured in the hub hero.
+const JOURNAL_FLAGSHIP_SLUG = "first-time-in-bali-complete-guide";
+
+// Human-labelled rows for the journal hub. Each is a horizontal carousel, so
+// a first-time visitor reads it like a landing page instead of an SEO index.
+const JOURNAL_HUB_ROWS = [
+  {
+    title: "Plan your first trip",
+    subtitle: "The essentials, in the order you need them",
+    slugs: [
+      "bali-itinerary-7-days-first-time",
+      "best-time-to-visit-bali-month-by-month",
+      "how-much-does-a-bali-trip-cost",
+      "bali-visa-entry-requirements",
+      "how-to-get-around-bali-transport-guide",
+      "what-to-pack-for-bali",
+    ],
+  },
+  {
+    title: "Where to stay and live",
+    subtitle: "Pick the right base before you book anything",
+    slugs: [
+      "things-to-do-ubud-bali-complete-guide",
+      "things-to-do-canggu-bali-guide",
+      "things-to-do-seminyak-bali-guide",
+      "things-to-do-uluwatu-bali-guide",
+      "nusa-penida-complete-guide",
+      "where-to-stay-bali-first-time",
+    ],
+  },
+  {
+    title: "Beaches, waterfalls and views",
+    subtitle: "The scenery people fly to Bali for",
+    slugs: [
+      "best-beaches-bali-crystal-clear-water",
+      "best-waterfalls-bali-day-trips",
+      "best-viewpoints-bali-sunrise-cliffs-rice-terraces",
+      "best-temples-bali-cultural-sites",
+      "best-instagram-places-bali",
+      "best-places-to-visit-bali-first-time",
+    ],
+  },
+  {
+    title: "Food, safety and daily life",
+    subtitle: "Everything for a smooth, worry-free stay",
+    slugs: [
+      "what-to-eat-in-bali-food-guide",
+      "bali-safety-scams-and-health",
+      "bali-with-kids-family-guide",
+      "best-budget-restaurants-bali-warungs",
+      "best-beach-clubs-bali-young-adults",
+      "best-things-to-do-bali-for-couples",
+    ],
+  },
+];
+
+function guideArticleBySlug(slug) {
+  const guide = JOURNAL_SEO_GUIDES.find((item) => item.slug === slug);
+  return guide ? buildSeoGuideArticle(guide) : null;
+}
+
 function buildSeoGuideArticles() {
   return JOURNAL_SEO_GUIDES.map((guide) => buildSeoGuideArticle(guide));
 }
@@ -11621,6 +11837,63 @@ function renderJournalArticleCard(article, options = {}) {
       </div>
     </a>
   `;
+}
+
+function renderJournalHubCard(article) {
+  const search = `${article.title} ${article.description} ${article.cardTourLabel || ""} ${article.navLabel || ""}`.toLowerCase();
+  return `
+    <a class="sb-jhub-card" href="${article.route}" data-jhub-searchable data-search="${escapeHtml(search)}">
+      <div class="sb-jhub-card__media">
+        <img src="${journalCardImageSrc(article)}" alt="${escapeHtml(journalCardImageAlt(article))}" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">${escapeHtml(article.articleType.navLabel || article.cardTourLabel || "Guide")}</span>
+        <h3>${escapeHtml(article.title)}</h3>
+        <p>${escapeHtml(article.description)}</p>
+      </div>
+    </a>
+  `;
+}
+
+function renderJournalHubScript() {
+  return `<script>
+  (function () {
+    var input = document.getElementById('sbJournalSearch');
+    var emptyMsg = document.getElementById('sbJournalSearchEmpty');
+    var cards = Array.prototype.slice.call(document.querySelectorAll('[data-jhub-searchable]'));
+    var rows = Array.prototype.slice.call(document.querySelectorAll('[data-jhub-row]'));
+
+    if (input) {
+      input.addEventListener('input', function () {
+        var q = input.value.trim().toLowerCase();
+        var anyVisible = false;
+        cards.forEach(function (card) {
+          var hit = !q || (card.getAttribute('data-search') || '').indexOf(q) !== -1;
+          card.style.display = hit ? '' : 'none';
+          if (hit) anyVisible = true;
+        });
+        rows.forEach(function (row) {
+          var visible = row.querySelectorAll('[data-jhub-searchable]:not([style*="display: none"])').length;
+          row.style.display = visible ? '' : 'none';
+        });
+        if (emptyMsg) emptyMsg.hidden = anyVisible || !q;
+      });
+    }
+
+    document.querySelectorAll('[data-jhub-row]').forEach(function (row) {
+      var track = row.querySelector('[data-jhub-track]');
+      if (!track) return;
+      var prev = row.querySelector('[data-jhub-prev]');
+      var next = row.querySelector('[data-jhub-next]');
+      var step = function () {
+        var card = track.querySelector('.sb-jhub-card');
+        return card ? card.getBoundingClientRect().width + 18 : 300;
+      };
+      if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step() * 2, behavior: 'smooth' }); });
+      if (next) next.addEventListener('click', function () { track.scrollBy({ left: step() * 2, behavior: 'smooth' }); });
+    });
+  })();
+  </script>`;
 }
 
 function getFeaturedJournalArticles() {
@@ -11670,6 +11943,11 @@ function renderJournalIndexPage() {
   const featuredArticles = getFeaturedJournalArticles();
   const featuredGuides = getFeaturedGuideArticles();
   const totalArticles = totalJournalArticleCount();
+  const flagship = guideArticleBySlug(JOURNAL_FLAGSHIP_SLUG);
+  const hubRows = JOURNAL_HUB_ROWS.map((row) => ({
+    ...row,
+    articles: row.slugs.map((slug) => guideArticleBySlug(slug)).filter(Boolean),
+  })).filter((row) => row.articles.length);
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -11677,7 +11955,7 @@ function renderJournalIndexPage() {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bali Journal and SEO Articles | SB Excursions</title>
+    <title>Bali Travel Guides for First-Time Visitors | SB Excursions</title>
     <meta name="description" content="Browse the SB Excursions Bali Journal with evergreen Bali guides, selling articles, route guides and schedule pages for every Bali tour and excursion on the site.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Bali Journal and SEO Articles | SB Excursions">
@@ -11716,58 +11994,64 @@ ${JOURNAL_FOOTER_ASSETS}
     <div class="sb-journal-page">
       ${renderJournalHeader()}
       <main class="sb-tour-main sb-journal-main">
-        <section class="sb-journal-hero">
-          <div class="sb-journal-kicker">Local SEO content hub</div>
-          <h1>SB Excursions Bali Journal</h1>
-          <p class="sb-journal-lead">A polished Bali journal designed for stronger search coverage and better internal linking. Every tour page now has three supporting articles, and the journal now also includes evergreen Bali guides for beaches, places, clubs, food, neighborhoods, romance and photo planning.</p>
-          <div class="sb-journal-stats">
-            <div><span>${tours.length}</span><small>Tours covered</small></div>
-            <div><span>${guideArticles.length}</span><small>SEO guides</small></div>
-            <div><span>${totalArticles}</span><small>Articles live</small></div>
-            <div><span>3</span><small>Articles per tour</small></div>
-          </div>
+        ${flagship ? `
+        <section class="sb-jhub-hero">
+          <a class="sb-jhub-hero__card" href="${flagship.route}">
+            <img src="${flagship.heroImage}" alt="${escapeHtml(flagship.heroImageAlt)}" loading="eager" decoding="async" fetchpriority="high">
+            <div class="sb-jhub-hero__overlay"></div>
+            <div class="sb-jhub-hero__copy">
+              <span class="sb-jhub-hero__badge">Start here</span>
+              <h1>First time flying to Bali? Read this first.</h1>
+              <p>${escapeHtml(flagship.description)}</p>
+              <span class="sb-jhub-hero__cta">Open the complete first-timer guide →</span>
+            </div>
+          </a>
+        </section>
+        ` : ""}
+
+        <section class="sb-jhub-search">
+          <label class="sb-jhub-search__field">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input type="search" id="sbJournalSearch" placeholder="Search guides — beaches, visa, scooter, food…" autocomplete="off" aria-label="Search Bali guides">
+          </label>
+          <p class="sb-jhub-search__empty" id="sbJournalSearchEmpty" hidden>No guides match that search. Try a shorter word.</p>
         </section>
 
-        <section class="sb-journal-section">
-          <div class="sb-journal-section__head">
-            <h2>Featured SEO guides</h2>
-            <span>Evergreen content built for broad Bali search intent</span>
+        ${hubRows
+          .map(
+            (row) => `
+        <section class="sb-jhub-row" data-jhub-row>
+          <div class="sb-jhub-row__head">
+            <div>
+              <h2>${escapeHtml(row.title)}</h2>
+              <span>${escapeHtml(row.subtitle)}</span>
+            </div>
+            ${row.articles.length > 3 ? `
+            <div class="sb-jhub-row__nav" aria-hidden="true">
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-prev>‹</button>
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-next>›</button>
+            </div>` : ""}
           </div>
-          <div class="sb-journal-featured-grid">
-            ${featuredGuides.map((article) => renderJournalArticleCard(article)).join("")}
-          </div>
-        </section>
-
-        <section class="sb-journal-section">
-          <div class="sb-journal-section__head">
-            <h2>Featured tour articles</h2>
-            <a href="/bali/en/main-page#tours">Back to tours</a>
-          </div>
-          <div class="sb-journal-featured-grid">
-            ${featuredArticles.map((article) => renderJournalArticleCard(article)).join("")}
-          </div>
-        </section>
-
-        <section class="sb-journal-section">
-          <div class="sb-journal-section__head">
-            <h2>Evergreen Bali guides</h2>
-            <span>Search-first destination content with built-in tour links</span>
-          </div>
-          <div class="sb-journal-featured-grid">
-            ${guideArticles.map((article) => renderJournalArticleCard(article)).join("")}
+          <div class="sb-jhub-track" data-jhub-track>
+            ${row.articles.map((article) => renderJournalHubCard(article)).join("")}
           </div>
         </section>
+        `,
+          )
+          .join("")}
 
-        <section class="sb-journal-section">
-          <div class="sb-journal-section__head">
-            <h2>All tour article groups</h2>
-            <span>Each tour includes 3 internal-support articles</span>
+        <section class="sb-jhub-row" data-jhub-row>
+          <div class="sb-jhub-row__head">
+            <div>
+              <h2>Browse tours by article</h2>
+              <span>Every Bali tour has a why-book, a travel guide and a schedule</span>
+            </div>
           </div>
-          <div class="sb-journal-tour-grid">
+          <div class="sb-journal-tour-grid" data-jhub-tourgrid>
             ${articleGroups
               .map(
                 ({ tour, articles }) => `
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="${escapeHtml((tour.title + " " + tour.area + " " + tour.summary).toLowerCase())}">
                 <div class="sb-journal-tour-card__hero">
                   <img src="${publicImagePath(tour)}" alt="${escapeHtml(tour.imageAlt)}" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -11794,6 +12078,7 @@ ${JOURNAL_FOOTER_ASSETS}
           </div>
         </section>
 
+        ${renderJournalHubScript()}
         ${renderBaliWeatherBlock()}
       </main>
       ${renderJournalBaliFooter()}
@@ -12368,6 +12653,50 @@ function renderJournalSharedStyles() {
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  /* ── Journal hub: hero, search, themed carousels ── */
+  .sb-jhub-hero{margin:0 0 26px}
+  .sb-jhub-hero__card{position:relative;display:block;border-radius:28px;overflow:hidden;min-height:340px;text-decoration:none;color:#fff}
+  .sb-jhub-hero__card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .sb-jhub-hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,30,0.15) 0%,rgba(10,14,30,0.35) 45%,rgba(10,14,30,0.86) 100%)}
+  .sb-jhub-hero__copy{position:relative;z-index:1;max-width:640px;padding:36px 34px;display:flex;flex-direction:column;justify-content:flex-end;min-height:340px}
+  .sb-jhub-hero__badge{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;background:#2f6bff;color:#fff;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+  .sb-jhub-hero__copy h1{margin:0 0 12px;font-size:38px;line-height:1.06;letter-spacing:-1.4px}
+  .sb-jhub-hero__copy p{margin:0 0 16px;font-size:17px;line-height:1.55;color:rgba(255,255,255,0.92)}
+  .sb-jhub-hero__cta{font-weight:700;font-size:15px}
+  .sb-jhub-hero__card:hover .sb-jhub-hero__cta{text-decoration:underline}
+  .sb-jhub-search{margin:0 0 30px}
+  .sb-jhub-search__field{display:flex;align-items:center;gap:12px;background:#fff;border:1.5px solid rgba(21,21,21,0.12);border-radius:999px;padding:14px 22px;box-shadow:0 8px 22px rgba(17,17,17,0.05);transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-jhub-search__field:focus-within{border-color:rgba(47,107,255,0.55);box-shadow:0 10px 26px rgba(47,107,255,0.12)}
+  .sb-jhub-search__field svg{width:22px;height:22px;color:#8a8a90;flex:0 0 22px}
+  .sb-jhub-search__field input{flex:1;border:none;outline:none;background:transparent;font-size:16px;color:#151515}
+  .sb-jhub-search__empty{margin:14px 4px 0;color:var(--sbj-muted);font-size:15px}
+  .sb-jhub-row{margin:0 0 34px}
+  .sb-jhub-row__head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 0 16px}
+  .sb-jhub-row__head h2{margin:0 0 4px;font-size:26px;line-height:1.1;letter-spacing:-0.8px}
+  .sb-jhub-row__head span{color:var(--sbj-muted);font-size:15px}
+  .sb-jhub-row__nav{display:flex;gap:8px}
+  .sb-jhub-row__arrow{width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(21,21,21,0.14);background:#fff;color:#151515;font-size:20px;line-height:1;cursor:pointer;transition:border-color .2s ease,background .2s ease}
+  .sb-jhub-row__arrow:hover{border-color:rgba(47,107,255,0.5);background:#f4f7ff}
+  .sb-jhub-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(300px,1fr);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 12px;scrollbar-width:thin}
+  .sb-jhub-track::-webkit-scrollbar{height:6px}
+  .sb-jhub-track::-webkit-scrollbar-thumb{background:rgba(21,21,21,0.16);border-radius:6px}
+  .sb-jhub-card{scroll-snap-align:start;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(21,21,21,0.08);border-radius:22px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+  .sb-jhub-card:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(17,17,17,0.1);border-color:rgba(47,107,255,0.32)}
+  .sb-jhub-card__media{aspect-ratio:16/10;overflow:hidden}
+  .sb-jhub-card__media img{width:100%;height:100%;object-fit:cover}
+  .sb-jhub-card__body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px}
+  .sb-jhub-card__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-jhub-card__body h3{margin:0;font-size:19px;line-height:1.2;letter-spacing:-0.5px}
+  .sb-jhub-card__body p{margin:0;color:#55555c;font-size:14px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  @media screen and (min-width:900px){
+    .sb-jhub-track{grid-auto-columns:minmax(0,calc((100% - 36px)/3))}
+  }
+  @media screen and (max-width:640px){
+    .sb-jhub-hero__copy h1{font-size:29px}
+    .sb-jhub-hero__copy{padding:26px 22px}
+    .sb-jhub-row__head h2{font-size:22px}
+    .sb-jhub-track{grid-auto-columns:minmax(78%,78%)}
+  }
   .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
   .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
   .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
@@ -15047,6 +15376,7 @@ const UNESCO_INTERNAL_TOUR_CHIPS = [
 ];
 
 const UNESCO_PDF_CHIPS = [
+  [null, "First Time in Bali", `${JOURNAL_HUB_ROUTE}/first-time-in-bali-complete-guide`],
   [null, "Top Temples", `${JOURNAL_HUB_ROUTE}/best-temples-bali-cultural-sites`],
   [null, "Top Beaches", `${JOURNAL_HUB_ROUTE}/best-beaches-bali-crystal-clear-water`],
   [null, "Best Places", `${JOURNAL_HUB_ROUTE}/best-places-to-visit-bali-first-time`],
@@ -17901,10 +18231,84 @@ async function main() {
     }
   }
 
+  writeSitemap();
+
   saveTranslationCache();
   console.log(
     `Generated ${tours.length} Bali tour pages, ${buildJournalArticles().length} journal articles, ${buildSeoGuideArticles().length} SEO guides, and patched Bali main page files.`,
   );
+}
+
+// Build a complete sitemap from the data model, so it never drifts from the
+// pages we actually ship. Each Bali page group emits one <url> per language
+// with xhtml:link hreflang alternates (plus x-default) pointing at the English
+// version — the correct multilingual signal for search engines.
+function writeSitemap() {
+  const langs = BALI_LANGUAGE_OPTIONS.map((option) => option.code);
+  const lastmod = new Date().toISOString().slice(0, 10);
+
+  const localizedPath = (code, enPath) => (code === "en" ? enPath : enPath.replace("/bali/en/", `/bali/${code}/`));
+
+  const groupEntries = (enPath) => {
+    const alternates = langs
+      .map((code) => `\n    <xhtml:link rel="alternate" hreflang="${code}" href="${SITE_URL}${localizedPath(code, enPath)}"/>`)
+      .join("");
+    const xDefault = `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}${enPath}"/>`;
+    return langs
+      .map(
+        (code) => `  <url>
+    <loc>${SITE_URL}${localizedPath(code, enPath)}</loc>${alternates}${xDefault}
+    <lastmod>${lastmod}</lastmod>
+  </url>`,
+      )
+      .join("\n");
+  };
+
+  const simpleEntry = (path) => `  <url>
+    <loc>${SITE_URL}${path}</loc>
+    <lastmod>${lastmod}</lastmod>
+  </url>`;
+
+  const baliGroups = [
+    "/bali/en/main-page",
+    "/bali/en/about",
+    "/bali/en/faq",
+    "/bali/en/journal",
+    ...tours.map((tour) => `/bali/en/tours/${tour.slug}`),
+    ...tours.flatMap((tour) =>
+      JOURNAL_ARTICLE_TYPES.map((articleType) => `/bali/en/journal/${tour.slug}/${articleType.slug}`),
+    ),
+    ...JOURNAL_SEO_GUIDES.map((guide) => `/bali/en/journal/${guide.slug}`),
+  ];
+
+  const dubaiSingles = [
+    "/",
+    "/dubai/en",
+    "/dubai/en/about",
+    "/dubai/en/faq",
+    "/dubai/en/tours/full-day-dubai-desert-safari",
+    "/dubai/en/tours/abu-dhabi-city-tour-from-dubai",
+    "/dubai/en/tours/hot-air-balloon-sunrise-flight",
+    "/dubai/en/tours/dubai-marina-yacht-party",
+    "/dubai/en/tours/dubai-marina-1-hour-shared-yacht-tour",
+  ];
+
+  const body = [...dubaiSingles.map(simpleEntry), ...baliGroups.map(groupEntries)].join("\n");
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${body}
+</urlset>
+`;
+
+  fs.writeFileSync(path.join(projectRoot, "sitemap.xml"), xml);
+
+  const robots = `User-agent: *
+Allow: /
+
+Sitemap: ${SITE_URL}/sitemap.xml
+`;
+  fs.writeFileSync(path.join(projectRoot, "robots.txt"), robots);
 }
 
 main().catch((error) => {

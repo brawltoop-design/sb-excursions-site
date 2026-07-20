@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Балийский журнал и статьи по SEO | SB Excursions</title>
+    <title>Путеводители по Бали для тех, кто впервые посещает Бали | SB Excursions</title>
     <meta name="description" content="Просмотрите журнал SB Excursions Bali Journal с вечно актуальными путеводителями по Бали, продающими статьями, путеводителями и страницами с расписанием для каждого тура и экскурсии по Бали на сайте.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Балийский журнал и статьи по SEO | SB Excursions">
@@ -150,6 +150,50 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  /* ── Journal hub: hero, search, themed carousels ── */
+  .sb-jhub-hero{margin:0 0 26px}
+  .sb-jhub-hero__card{position:relative;display:block;border-radius:28px;overflow:hidden;min-height:340px;text-decoration:none;color:#fff}
+  .sb-jhub-hero__card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .sb-jhub-hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,30,0.15) 0%,rgba(10,14,30,0.35) 45%,rgba(10,14,30,0.86) 100%)}
+  .sb-jhub-hero__copy{position:relative;z-index:1;max-width:640px;padding:36px 34px;display:flex;flex-direction:column;justify-content:flex-end;min-height:340px}
+  .sb-jhub-hero__badge{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;background:#2f6bff;color:#fff;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+  .sb-jhub-hero__copy h1{margin:0 0 12px;font-size:38px;line-height:1.06;letter-spacing:-1.4px}
+  .sb-jhub-hero__copy p{margin:0 0 16px;font-size:17px;line-height:1.55;color:rgba(255,255,255,0.92)}
+  .sb-jhub-hero__cta{font-weight:700;font-size:15px}
+  .sb-jhub-hero__card:hover .sb-jhub-hero__cta{text-decoration:underline}
+  .sb-jhub-search{margin:0 0 30px}
+  .sb-jhub-search__field{display:flex;align-items:center;gap:12px;background:#fff;border:1.5px solid rgba(21,21,21,0.12);border-radius:999px;padding:14px 22px;box-shadow:0 8px 22px rgba(17,17,17,0.05);transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-jhub-search__field:focus-within{border-color:rgba(47,107,255,0.55);box-shadow:0 10px 26px rgba(47,107,255,0.12)}
+  .sb-jhub-search__field svg{width:22px;height:22px;color:#8a8a90;flex:0 0 22px}
+  .sb-jhub-search__field input{flex:1;border:none;outline:none;background:transparent;font-size:16px;color:#151515}
+  .sb-jhub-search__empty{margin:14px 4px 0;color:var(--sbj-muted);font-size:15px}
+  .sb-jhub-row{margin:0 0 34px}
+  .sb-jhub-row__head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 0 16px}
+  .sb-jhub-row__head h2{margin:0 0 4px;font-size:26px;line-height:1.1;letter-spacing:-0.8px}
+  .sb-jhub-row__head span{color:var(--sbj-muted);font-size:15px}
+  .sb-jhub-row__nav{display:flex;gap:8px}
+  .sb-jhub-row__arrow{width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(21,21,21,0.14);background:#fff;color:#151515;font-size:20px;line-height:1;cursor:pointer;transition:border-color .2s ease,background .2s ease}
+  .sb-jhub-row__arrow:hover{border-color:rgba(47,107,255,0.5);background:#f4f7ff}
+  .sb-jhub-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(300px,1fr);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 12px;scrollbar-width:thin}
+  .sb-jhub-track::-webkit-scrollbar{height:6px}
+  .sb-jhub-track::-webkit-scrollbar-thumb{background:rgba(21,21,21,0.16);border-radius:6px}
+  .sb-jhub-card{scroll-snap-align:start;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(21,21,21,0.08);border-radius:22px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+  .sb-jhub-card:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(17,17,17,0.1);border-color:rgba(47,107,255,0.32)}
+  .sb-jhub-card__media{aspect-ratio:16/10;overflow:hidden}
+  .sb-jhub-card__media img{width:100%;height:100%;object-fit:cover}
+  .sb-jhub-card__body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px}
+  .sb-jhub-card__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-jhub-card__body h3{margin:0;font-size:19px;line-height:1.2;letter-spacing:-0.5px}
+  .sb-jhub-card__body p{margin:0;color:#55555c;font-size:14px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  @media screen and (min-width:900px){
+    .sb-jhub-track{grid-auto-columns:minmax(0,calc((100% - 36px)/3))}
+  }
+  @media screen and (max-width:640px){
+    .sb-jhub-hero__copy h1{font-size:29px}
+    .sb-jhub-hero__copy{padding:26px 22px}
+    .sb-jhub-row__head h2{font-size:22px}
+    .sb-jhub-track{grid-auto-columns:minmax(78%,78%)}
+  }
   .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
   .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
   .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
@@ -560,485 +604,373 @@ body {
       </script>
 
       <main class="sb-tour-main sb-journal-main">
-        <section class="sb-journal-hero">
-          <div class="sb-journal-kicker">Местный центр SEO-контента</div>
-          <h1>SB Excursions Бали Журнал</h1>
-          <p class="sb-journal-lead">Изысканный журнал о Бали, созданный для более широкого охвата поисковых систем и улучшения внутренних ссылок. На каждой странице тура теперь есть три вспомогательные статьи, а журнал теперь также включает вечно актуальные путеводители по Бали о пляжах, местах, клубах, еде, окрестностях, романтике и планировании фотографий.</p>
-          <div class="sb-journal-stats">
-            <div><span>29</span><small>Охваченные туры</small></div>
-            <div><span>24</span><small>SEO-руководства</small></div>
-            <div><span>111</span><small>Статьи живут</small></div>
-            <div><span>3</span><small>Статьи за тур</small></div>
-          </div>
+
+        <section class="sb-jhub-hero">
+          <a class="sb-jhub-hero__card" href="/bali/ru/journal/first-time-in-bali-complete-guide">
+            <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="1. Место для отдыха на Бали" loading="eager" decoding="async" fetchpriority="high">
+            <div class="sb-jhub-hero__overlay"></div>
+            <div class="sb-jhub-hero__copy">
+              <span class="sb-jhub-hero__badge">Начните здесь</span>
+              <h1>Впервые летите на Бали? Прочтите это в первую очередь.</h1>
+              <p>Практическое руководство для новичков на Бали: как арендовать виллу помесячно, где купить SIM-карту, как арендовать скутер и какие именно водительские документы вам нужны — американские, французские, русские, китайские, испанские и другие.</p>
+              <span class="sb-jhub-hero__cta">Открыть полное руководство для новичков →</span>
+            </div>
+          </a>
         </section>
 
-        <section class="sb-journal-section">
-          <div class="sb-journal-section__head">
-            <h2>Рекомендуемые руководства по SEO</h2>
-            <span>Контент Evergreen создан для широких поисковых запросов на Бали</span>
-          </div>
-          <div class="sb-journal-featured-grid">
 
-    <a class="sb-journal-card" href="/bali/ru/journal/best-beaches-bali-crystal-clear-water">
-      <img src="https://live.staticflickr.com/4359/36544779010_4216b5a497_b.jpg" alt="Пляж Меласти на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Пляжи и купание</span>
-        </div>
-        <h3>8 лучших пляжей Бали с кристально чистой водой для купания, подводного плавания и фотографий</h3>
-        <p>Ищете кристально чистую воду на Бали? В этом путеводителе описаны лучшие пляжи Бали для купания, подводного плавания, фотографии и легкий доступ: от Меласти и Нуса-Дуа до Паданг-Паданга и Пандавы.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/best-places-to-visit-bali-first-time">
-      <img src="/images/bali-tours/unesco-tanah-lot-sunset.jpg" alt="Храм Танах Лот на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Основные моменты первого посещения Бали</span>
-        </div>
-        <h3>8 лучших мест для посещения на Бали для начинающих путешественников</h3>
-        <p>Планируете свое первое путешествие на Бали? Это лучшие места для посещения на Бали для начинающих путешественников, включая храмы, рисовые террасы, смотровые площадки на пляже и знаковые места для однодневных поездок.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/best-beach-clubs-bali-young-adults">
-      <img src="https://live.staticflickr.com/6042/6281781855_a6df953705_b.jpg" alt="Пляжный клуб Potato Head на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Молодежь и ночная жизнь</span>
-        </div>
-        <h3>7 лучших пляжных клубов на Бали для молодежи, закатов и больших ночей</h3>
-        <p>Ищете лучшие пляжные клубы на Бали для молодежи? Начните с этих проверенных названий в Семиньяке, Чангу и Улувату, от Potato Head и Savaya до Atlas и La Brisa.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/best-budget-restaurants-bali-warungs">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nasi%20babi%20guling.jpg?width=1280" alt="Ибу Ока на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Доступная еда на Бали</span>
-        </div>
-        <h3>8 лучших бюджетных ресторанов на Бали и доступные блюда, которые стоит попробовать</h3>
-        <p>Ищете дешевую еду на Бали, которая по-прежнему останется незабываемой? Эти доступные балийские рестораны и варунги — отличный выбор для новичков, особенно в окрестностях Убуда и Санура.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-          </div>
+        <section class="sb-jhub-search">
+          <label class="sb-jhub-search__field">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input type="search" id="sbJournalSearch" placeholder="Поиск гидов — пляжи, виза, скутер, еда…" autocomplete="off" aria-label="Поиск гидов на Бали">
+          </label>
+          <p class="sb-jhub-search__empty" id="sbJournalSearchEmpty" hidden>Ни один гид не соответствует этому запросу. Попробуйте использовать более короткое слово.</p>
         </section>
 
-        <section class="sb-journal-section">
-          <div class="sb-journal-section__head">
-            <h2>Избранные статьи о турах</h2>
-            <a href="/bali/ru/main-page#tours">Вернуться к турам</a>
+
+        <section class="sb-jhub-row" data-jhub-row>
+          <div class="sb-jhub-row__head">
+            <div>
+              <h2>Спланируйте свою первую поездку</h2>
+              <span>Самое необходимое в том порядке, в котором оно вам нужно</span>
+            </div>
+
+            <div class="sb-jhub-row__nav" aria-hidden="true">
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-prev>‹</button>
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-next>›</button>
+            </div>
           </div>
-          <div class="sb-journal-featured-grid">
+          <div class="sb-jhub-track" data-jhub-track>
 
-    <a class="sb-journal-card" href="/bali/ru/journal/ubud-highlights-tour/why-book">
-      <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="Рисовые террасы, остановки у храмов и смотровая площадка на горе Батур на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Продающая статья</span>
-          <span class="sb-journal-card__tour">Рисовая терраса Убуда, экскурсия по храмам и вулканам</span>
-        </div>
-        <h3>Зачем заказывать тур по рисовым террасам, храмам и вулканам Убуда на Бали — стоит ли оно того?</h3>
-        <p>Честная разбивка тура по рисовым террасам, храмам и вулканам Убуда: что вы на самом деле получаете, кому он подходит лучше всего, практические советы путешественников и чем он отличается от аналогичных впечатлений на Бали.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
+    <a class="sb-jhub-card" href="/bali/ru/journal/bali-itinerary-7-days-first-time" data-jhub-searchable data-search="the perfect 7-day bali itinerary for first-time visitors (day by day) a realistic 7-day bali itinerary that accounts for actual drive times: where to base yourself, which days to pair, and how to fit ubud, nusa penida, mount batur and the south coast without burning out. trip planning ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="День 1 — Прибытие и пребывание на юге Бали." loading="lazy" decoding="async">
       </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/nusa-penida-manta-rays-point/travel-guide">
-      <img src="/images/bali-tours/nusa-penida-manta-rays-point.webp" alt="Скаты манты плавают в голубой воде возле острова Нуса Пенида" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Путеводитель</span>
-          <span class="sb-journal-card__tour">Нуса Пенида: сноркелинг на мысе Манта</span>
-        </div>
-        <h3>Сноркелинг на Нуса Пениде на мысе Манта — Полный путеводитель по Бали</h3>
-        <p>Все, что вам нужно знать о подводном плавании на острове Нуса-Пенида на мысе Манта: чего ожидать, полезные советы, лучшее время для посещения, что взять с собой и ответы на наиболее распространенные вопросы.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/ubud-instagram-tour/why-book">
-      <img src="/images/bali-tours/ubud-instagram-tour.jpg" alt="«Ворота рая» в стиле пейзажей Бали для инстаграм-тура по Убуду" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Продающая статья</span>
-          <span class="sb-journal-card__tour">Инстаграм-тур по Убуду</span>
-        </div>
-        <h3>Зачем заказывать инстаграм-тур по Убуду на Бали — стоит ли оно того?</h3>
-        <p>Честная разбивка Инстаграм-тура по Убуду: что вы на самом деле получаете, кому он подходит лучше всего, практические советы путешественников и чем он отличается от аналогичных впечатлений на Бали.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/nusa-penida-east-tour/travel-guide">
-      <img src="/images/bali-tours/nusa-penida-east-tour.jpg" alt="Скалы Даймонд-Бич и бирюзовая вода на востоке острова Нуса-Пенида" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Путеводитель</span>
-          <span class="sb-journal-card__tour">Восточный тур по Нуса Пениде</span>
-        </div>
-        <h3>Восточный тур по Нуса Пениде — Полный путеводитель по Бали</h3>
-        <p>Все, что вам нужно знать о восточном туре Нуса-Пенида: чего ожидать, полезные советы, лучшее время для посещения, что взять с собой и ответы на наиболее распространенные вопросы.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/sunset-cruise-bali/tour-schedule">
-      <img src="/images/bali-tours/sunset-cruise-bali.jpg" alt="Лодки на ярко-голубой воде на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство по расписанию</span>
-          <span class="sb-journal-card__tour">Круиз на закате</span>
-        </div>
-        <h3>Круиз на закате — полный маршрут, расписание и упаковочный лист</h3>
-        <p>Подробное расписание круиза на закате: точное время, пошаговый маршрут, что взять с собой, лучшие месяцы для поездки и практические советы по бронированию.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-          </div>
-        </section>
-
-        <section class="sb-journal-section">
-          <div class="sb-journal-section__head">
-            <h2>Гиды Эвергрин Бали</h2>
-            <span>Содержимое пункта назначения в первую очередь при поиске со встроенными ссылками на туры</span>
-          </div>
-          <div class="sb-journal-featured-grid">
-
-    <a class="sb-journal-card" href="/bali/ru/journal/best-beaches-bali-crystal-clear-water">
-      <img src="https://live.staticflickr.com/4359/36544779010_4216b5a497_b.jpg" alt="Пляж Меласти на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Пляжи и купание</span>
-        </div>
-        <h3>8 лучших пляжей Бали с кристально чистой водой для купания, подводного плавания и фотографий</h3>
-        <p>Ищете кристально чистую воду на Бали? В этом путеводителе описаны лучшие пляжи Бали для купания, подводного плавания, фотографии и легкий доступ: от Меласти и Нуса-Дуа до Паданг-Паданга и Пандавы.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/best-places-to-visit-bali-first-time">
-      <img src="/images/bali-tours/unesco-tanah-lot-sunset.jpg" alt="Храм Танах Лот на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Основные моменты первого посещения Бали</span>
-        </div>
-        <h3>8 лучших мест для посещения на Бали для начинающих путешественников</h3>
-        <p>Планируете свое первое путешествие на Бали? Это лучшие места для посещения на Бали для начинающих путешественников, включая храмы, рисовые террасы, смотровые площадки на пляже и знаковые места для однодневных поездок.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/best-beach-clubs-bali-young-adults">
-      <img src="https://live.staticflickr.com/6042/6281781855_a6df953705_b.jpg" alt="Пляжный клуб Potato Head на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Молодежь и ночная жизнь</span>
-        </div>
-        <h3>7 лучших пляжных клубов на Бали для молодежи, закатов и больших ночей</h3>
-        <p>Ищете лучшие пляжные клубы на Бали для молодежи? Начните с этих проверенных названий в Семиньяке, Чангу и Улувату, от Potato Head и Savaya до Atlas и La Brisa.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/best-budget-restaurants-bali-warungs">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nasi%20babi%20guling.jpg?width=1280" alt="Ибу Ока на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Доступная еда на Бали</span>
-        </div>
-        <h3>8 лучших бюджетных ресторанов на Бали и доступные блюда, которые стоит попробовать</h3>
-        <p>Ищете дешевую еду на Бали, которая по-прежнему останется незабываемой? Эти доступные балийские рестораны и варунги — отличный выбор для новичков, особенно в окрестностях Убуда и Санура.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/best-instagram-places-bali">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gates%20of%20Heaven%2C%20Lempuyang%20Temple%2C%20Bali.jpg?width=1280" alt="Храм Лемпуянг на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Руководство по фотографиям и содержанию</span>
-        </div>
-        <h3>8 лучших мест в Instagram на Бали для фотографий, которые все еще хорошо выглядят в реальной жизни</h3>
-        <p>Ищете лучшие места для Instagram на Бали? Начните с этих фотогеничных храмов, рисовых террас, скал и водопадов, вместо того, чтобы тратить время на слабые остановки.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/where-to-stay-bali-first-time">
-      <img src="https://lokasibali.com/api/images/business-0x2dd23876693af8ad%3A0x86929db7c4eabc29-0.webp" alt="Чангу на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Где остановиться</span>
-        </div>
-        <h3>Где остановиться на Бали для тех, кто приезжает впервые: Чангу, Семиньяк, Убуд, Улувату, Нуса Дуа, Санур</h3>
-        <p>Не знаете, где остановиться на Бали во время первой поездки? В этом путеводителе Чангу, Семиньяк, Убуд, Улувату, Нуса-Дуа и Санур сравниваются по атмосфере, транспорту и удобству для путешествий.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/best-things-to-do-bali-for-couples">
-      <img src="/images/bali-tours/sunset-cruise-bali.jpg" alt="Круиз на закате на Бали на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Пары и романтика</span>
-        </div>
-        <h3>7 лучших развлечений на Бали для пар, медового месяца и романтических поездок</h3>
-        <p>Планируете романтическое путешествие на Бали? Это лучшее, чем можно заняться на Бали для пар: от смотровых площадок на рассвете и рисовых террас до пляжных закатов и дневных впечатлений премиум-класса.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/best-temples-bali-cultural-sites">
-      <img src="/images/bali-tours/unesco-tanah-lot-sunset.jpg" alt="Храм Танах Лот на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Храмы и наследие</span>
-        </div>
-        <h3>7 лучших храмов на Бали для культуры, пейзажей и новичков</h3>
-        <p>Ищете лучшие храмы на Бали? Начните с этих семи культурных достопримечательностей: от Танах Лот и Улун Дану до Тирта Эмпула, Лемпуянга и Гоа Гаджа.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/best-waterfalls-bali-day-trips">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tukad%20Cepung%20Waterfall%20(52462237566).jpg?width=1280" alt="Водопад Тукад Чепунг на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Водопады и остановки в джунглях</span>
-        </div>
-        <h3>5 лучших водопадов на Бали для однодневных поездок, фотографий и остановок в джунглях</h3>
-        <p>Ищете лучшие водопады на Бали? Эти пять проверенных остановок у водопадов хорошо подходят для однодневных поездок, фотографий, легких приключений и путешественников-новичков.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/best-viewpoints-bali-sunrise-cliffs-rice-terraces">
-      <img src="/images/bali-tours/mount-batur-sunrise-jeep-tour.webp" alt="Рассвет на горе Батур на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Смотровые площадки и большие пейзажи</span>
-        </div>
-        <h3>7 лучших смотровых площадок на Бали со скалами, восходами вулканов и пейзажами рисовых террас</h3>
-        <p>Ищете лучшие смотровые площадки на Бали? На этих семи остановках можно увидеть восход солнца на вулкане, смотровые площадки на краю скалы, рисовые террасы и широкие виды на побережье.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/bali-itinerary-7-days-first-time">
-      <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="День 1 — Прибытие и пребывание на юге Бали." loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Планирование поездки</span>
-        </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">7-дневный маршрут</span>
         <h3>Идеальный 7-дневный маршрут на Бали для тех, кто впервые (день за днем)</h3>
         <p>Реалистичный 7-дневный маршрут по Бали, в котором учитывается фактическое время в пути: где остановиться, в какие дни спариваться и как добраться до Убуда, Нуса-Пениды, горы Батур и южного побережья, не выгорев.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
       </div>
     </a>
 
-    <a class="sb-journal-card" href="/bali/ru/journal/things-to-do-ubud-bali-complete-guide">
-      <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="Рисовая терраса Тегалаланг на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Убуд район</span>
-        </div>
-        <h3>Чем заняться в Убуде, Бали: полный путеводитель</h3>
-        <p>Чем на самом деле заняться в Убуде, Бали — рисовые террасы, храмы, Обезьяний лес, водопады, рафтинг и качели в джунглях — плюс где остановиться и сколько времени провести.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
+    <a class="sb-jhub-card" href="/bali/ru/journal/best-time-to-visit-bali-month-by-month" data-jhub-searchable data-search="best time to visit bali: a month-by-month guide when to visit bali, month by month: dry and wet season reality, crowds and prices, the best months for surfing, diving, manta rays and waterfalls, plus nyepi and galungan dates. when to go ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/nusa-penida-manta-rays-point.webp" alt="С апреля по июнь на Бали" loading="lazy" decoding="async">
       </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/how-much-does-a-bali-trip-cost">
-      <img src="/images/bali-tours/private-car-with-driver-bali.jpg" alt="Путешественник на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Планирование бюджета</span>
-        </div>
-        <h3>Сколько стоит поездка на Бали? Реальные цены на 2026 год</h3>
-        <p>Реалистичная разбивка бюджета Бали: проживание, еда, транспорт, развлечения и две расходы, о которых большинство путешественников забывают: надбавка в ресторане в размере 21% и туристический сбор.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/bali-visa-entry-requirements">
-      <img src="/images/bali-tours/bali-airport-transfer.jpg" alt="Виза по прибытии (B1) на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Администратор поездки</span>
-        </div>
-        <h3>Виза на Бали и въездные требования: что вам на самом деле нужно</h3>
-        <p>Виза по прибытии, e-VOA, обязательная карта прибытия всей Индонезии и туристический сбор на Бали — что подготовить перед полетом и ошибки, которые вызывают проблемы при иммиграции.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/how-to-get-around-bali-transport-guide">
-      <img src="/images/bali-tours/private-car-with-driver-bali.jpg" alt="Частный водитель с автомобилем на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Transport</span>
-        </div>
-        <h3>Как передвигаться по Бали: скутер, водитель, захват и реальное время в пути</h3>
-        <p>Прокат скутеров, частные водители, Grab и Gojek, трансферы из аэропорта и скоростные катера на Бали — сколько стоит каждый из них, где приложения блокируются и сколько времени на самом деле занимает поездка.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/best-time-to-visit-bali-month-by-month">
-      <img src="/images/bali-tours/nusa-penida-manta-rays-point.webp" alt="С апреля по июнь на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Когда идти</span>
-        </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Лучшее время для посещения</span>
         <h3>Лучшее время для посещения Бали: ежемесячное руководство</h3>
         <p>Когда посещать Бали, месяц за месяцем: реальность сухого и влажного сезона, толпы людей и цены, лучшие месяцы для серфинга, дайвинга, скатов манта и водопадов, а также даты Ньепи и Галунгана.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
       </div>
     </a>
 
-    <a class="sb-journal-card" href="/bali/ru/journal/nusa-penida-complete-guide">
-      <img src="/images/bali-tours/nusa-penida-west-tour.webp" alt="Пляж Келингкинг на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Нуса Пенида</span>
-        </div>
-        <h3>Нуса Пенида: Полный путеводитель по самому живописному острову Бали</h3>
-        <p>Все для планирования поездки на Нуса-Пениду: Келингкинг, Брокен-Бич, Даймонд-Бич и Манта-Пойнт, насколько на самом деле сложны походы, время на лодке и оплата, дорожные условия и важные правила безопасности.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
+    <a class="sb-jhub-card" href="/bali/ru/journal/how-much-does-a-bali-trip-cost" data-jhub-searchable data-search="how much does a bali trip cost? real prices for 2026 a realistic bali budget breakdown: accommodation, food, transport, activities and the two costs most travelers forget — the 21% restaurant surcharge and the tourist levy. budget planning ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/private-car-with-driver-bali.jpg" alt="Путешественник на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Стоимость поездки на Бали</span>
+        <h3>Сколько стоит поездка на Бали? Реальные цены на 2026 год</h3>
+        <p>Реалистичная разбивка бюджета Бали: проживание, еда, транспорт, развлечения и две расходы, о которых большинство путешественников забывают: надбавка в ресторане в размере 21% и туристический сбор.</p>
       </div>
     </a>
 
-    <a class="sb-journal-card" href="/bali/ru/journal/things-to-do-canggu-bali-guide">
-      <img src="/images/bali-tours/surf-lesson-experience.webp" alt="Серфинг для начинающих на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Район Чангу</span>
-        </div>
-        <h3>Чангу, Бали: что это такое на самом деле и чем там заняться</h3>
-        <p>Честный путеводитель по Чангу — пляжи для серфинга, культура кафе, пляжные клубы и коворкинг — плюс дорожная реальность, кому это подходит, а кто будет счастливее где-нибудь в другом месте.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
+    <a class="sb-jhub-card" href="/bali/ru/journal/bali-visa-entry-requirements" data-jhub-searchable data-search="bali visa and entry requirements: what you actually need visa on arrival, e-voa, the mandatory all indonesia arrival card and the bali tourist levy — what to prepare before you fly, and the mistakes that cause problems at immigration. trip admin ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/bali-airport-transfer.jpg" alt="Виза по прибытии (B1) на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Виза и въезд</span>
+        <h3>Виза на Бали и въездные требования: что вам на самом деле нужно</h3>
+        <p>Виза по прибытии, e-VOA, обязательная карта прибытия всей Индонезии и туристический сбор на Бали — что подготовить перед полетом и ошибки, которые вызывают проблемы при иммиграции.</p>
       </div>
     </a>
 
-    <a class="sb-journal-card" href="/bali/ru/journal/things-to-do-uluwatu-bali-guide">
-      <img src="/images/bali-tours/sunset-cruise-bali.jpg" alt="Храм Улувату на закате на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">район Улувату</span>
-        </div>
-        <h3>Улувату и полуостров Букит: скалы, пляжи и закаты</h3>
-        <p>Путеводитель по Улувату и Букиту — храму на вершине скалы и танцу Кечак, самым чистым пляжам на юге Бали, серьезным перерывам в серфинге и тому, как спланировать расстояние.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
+    <a class="sb-jhub-card" href="/bali/ru/journal/how-to-get-around-bali-transport-guide" data-jhub-searchable data-search="how to get around bali: scooter, driver, grab and real drive times scooter rental, private drivers, grab and gojek, airport transfers and fast boats in bali — what each costs, where apps get blocked, and how long journeys actually take. transport ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/private-car-with-driver-bali.jpg" alt="Частный водитель с автомобилем на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Передвижение</span>
+        <h3>Как передвигаться по Бали: скутер, водитель, захват и реальное время в пути</h3>
+        <p>Прокат скутеров, частные водители, Grab и Gojek, трансферы из аэропорта и скоростные катера на Бали — сколько стоит каждый из них, где приложения блокируются и сколько времени на самом деле занимает поездка.</p>
       </div>
     </a>
 
-    <a class="sb-journal-card" href="/bali/ru/journal/things-to-do-seminyak-bali-guide">
-      <img src="/images/bali-tours/sunset-cruise-bali.jpg" alt="Пляжные бары на закате на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Семиньяк район</span>
-        </div>
-        <h3>Семиньяк, Бали: удобная база для первой поездки</h3>
-        <p>Почему Семиньяк является отправной точкой для первого путешествия — рестораны, спа-центры, магазины и пляжные бары на закате — а также его сравнение с Чангу, Кутой и Улувату.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
+    <a class="sb-jhub-card" href="/bali/ru/journal/what-to-pack-for-bali" data-jhub-searchable data-search="what to pack for bali: a practical checklist by activity a bali packing list that accounts for temple dress codes, a 12°c volcano sunrise, wet season downpours and what you can simply buy cheaply once you arrive. trip prep ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/mount-batur-sunrise-jeep-tour.webp" alt="Теплый слой на Бали" loading="lazy" decoding="async">
       </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/bali-with-kids-family-guide">
-      <img src="/images/bali-tours/blue-lagoon-snorkeling.webp" alt="Санур или Нуса Дуа как база на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Семейное путешествие</span>
-        </div>
-        <h3>Бали с детьми: где остановиться, чем заняться и что пропустить</h3>
-        <p>Практичный семейный путеводитель по Бали — лучшие места для спокойного купания, какие туры подходят для любого возраста, минимальный возраст для занятий и популярные достопримечательности, которые не подходят для маленьких детей.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/what-to-pack-for-bali">
-      <img src="/images/bali-tours/mount-batur-sunrise-jeep-tour.webp" alt="Теплый слой на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Подготовка к поездке</span>
-        </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Упаковочный лист</span>
         <h3>Что взять с собой на Бали: практический контрольный список по видам деятельности</h3>
         <p>Список вещей на Бали, включающий храмовый дресс-код, восход вулкана с температурой 12°C, ливни в сезон дождей и то, что вы можете просто купить по дешевке, когда приедете.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/what-to-eat-in-bali-food-guide">
-      <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="Баби Гулинг на Бали" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Балийская кухня</span>
-        </div>
-        <h3>Что поесть на Бали: балийские блюда, культура варунгов и безопасность пищевых продуктов</h3>
-        <p>Балийские блюда, которые действительно стоит попробовать — баби гулинг, бебек бетуту, сате лилит, лавар — а также то, как работают варунги, сколько они стоят, вегетарианские блюда и как избежать балийского живота.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/ru/journal/bali-safety-scams-and-health">
-      <img src="/images/bali-tours/private-car-with-driver-bali.jpg" alt="На Бали разбился скутер" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Руководство Evergreen по SEO</span>
-          <span class="sb-journal-card__tour">Оставайтесь в безопасности</span>
-        </div>
-        <h3>Руководство по безопасности на Бали: мошенничество, риски для здоровья и что на самом деле идет не так</h3>
-        <p>Честный путеводитель по безопасности на Бали — мошенники действительно встречаются путешественникам, риски на скутере и воде, бешенство и балийский живот, метанол в дешевом спирте, медицинские расходы и номера экстренных служб.</p>
-        <span class="sb-journal-card__cta">Читать статью</span>
       </div>
     </a>
 
           </div>
         </section>
 
-        <section class="sb-journal-section">
-          <div class="sb-journal-section__head">
-            <h2>Все группы статей тура</h2>
-            <span>Каждый тур включает в себя 3 статьи внутренней поддержки.</span>
-          </div>
-          <div class="sb-journal-tour-grid">
+        <section class="sb-jhub-row" data-jhub-row>
+          <div class="sb-jhub-row__head">
+            <div>
+              <h2>Где остановиться и жить</h2>
+              <span>Выберите подходящую базу, прежде чем что-либо бронировать</span>
+            </div>
 
-              <article class="sb-journal-tour-card">
+            <div class="sb-jhub-row__nav" aria-hidden="true">
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-prev>‹</button>
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-next>›</button>
+            </div>
+          </div>
+          <div class="sb-jhub-track" data-jhub-track>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/things-to-do-ubud-bali-complete-guide" data-jhub-searchable data-search="things to do in ubud, bali: the complete area guide what to actually do in ubud, bali — rice terraces, temples, the monkey forest, waterfalls, rafting and jungle swings — plus where to stay and how long to spend. ubud area ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="Рисовая терраса Тегалаланг на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Путеводитель по Убуду</span>
+        <h3>Чем заняться в Убуде, Бали: полный путеводитель</h3>
+        <p>Чем на самом деле заняться в Убуде, Бали — рисовые террасы, храмы, Обезьяний лес, водопады, рафтинг и качели в джунглях — плюс где остановиться и сколько времени провести.</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/things-to-do-canggu-bali-guide" data-jhub-searchable data-search="canggu, bali: what it&#39;s actually like and what to do there an honest guide to canggu — surf beaches, cafe culture, beach clubs and coworking — plus the traffic reality, who it suits, and who would be happier somewhere else. canggu area ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/surf-lesson-experience.webp" alt="Серфинг для начинающих на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Путеводитель по Чангу</span>
+        <h3>Чангу, Бали: что это такое на самом деле и чем там заняться</h3>
+        <p>Честный путеводитель по Чангу — пляжи для серфинга, культура кафе, пляжные клубы и коворкинг — плюс дорожная реальность, кому это подходит, а кто будет счастливее где-нибудь в другом месте.</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/things-to-do-seminyak-bali-guide" data-jhub-searchable data-search="seminyak, bali: the comfortable base for a first trip why seminyak works as a first-trip base — restaurants, spas, shopping and sunset beach bars — plus how it compares with canggu, kuta and uluwatu. seminyak area ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/sunset-cruise-bali.jpg" alt="Пляжные бары на закате на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Путеводитель по Семиньяку</span>
+        <h3>Семиньяк, Бали: удобная база для первой поездки</h3>
+        <p>Почему Семиньяк является отправной точкой для первого путешествия — рестораны, спа-центры, магазины и пляжные бары на закате — а также его сравнение с Чангу, Кутой и Улувату.</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/things-to-do-uluwatu-bali-guide" data-jhub-searchable data-search="uluwatu and the bukit peninsula: cliffs, beaches and sunsets a guide to uluwatu and the bukit — the clifftop temple and kecak dance, the clearest beaches in south bali, serious surf breaks, and how to plan around the distances. uluwatu area ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/sunset-cruise-bali.jpg" alt="Храм Улувату на закате на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Путеводитель по Улувату</span>
+        <h3>Улувату и полуостров Букит: скалы, пляжи и закаты</h3>
+        <p>Путеводитель по Улувату и Букиту — храму на вершине скалы и танцу Кечак, самым чистым пляжам на юге Бали, серьезным перерывам в серфинге и тому, как спланировать расстояние.</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/nusa-penida-complete-guide" data-jhub-searchable data-search="nusa penida: the complete guide to bali&#39;s most dramatic island everything to plan a nusa penida trip: kelingking, broken beach, diamond beach and manta point, how hard the hikes really are, boat times and fees, road conditions and the safety rules that matter. nusa penida ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/nusa-penida-west-tour.webp" alt="Пляж Келингкинг на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Путеводитель по Нуса Пениде</span>
+        <h3>Нуса Пенида: Полный путеводитель по самому живописному острову Бали</h3>
+        <p>Все для планирования поездки на Нуса-Пениду: Келингкинг, Брокен-Бич, Даймонд-Бич и Манта-Пойнт, насколько на самом деле сложны походы, время на лодке и оплата, дорожные условия и важные правила безопасности.</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/where-to-stay-bali-first-time" data-jhub-searchable data-search="where to stay in bali for first-time visitors: canggu vs seminyak vs ubud vs uluwatu vs nusa dua vs sanur not sure where to stay in bali for a first trip? this guide compares canggu, seminyak, ubud, uluwatu, nusa dua and sanur by vibe, transport and travel fit. where to stay ">
+      <div class="sb-jhub-card__media">
+        <img src="https://lokasibali.com/api/images/business-0x2dd23876693af8ad%3A0x86929db7c4eabc29-0.webp" alt="Чангу на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Путеводитель по местности</span>
+        <h3>Где остановиться на Бали для тех, кто приезжает впервые: Чангу, Семиньяк, Убуд, Улувату, Нуса Дуа, Санур</h3>
+        <p>Не знаете, где остановиться на Бали во время первой поездки? В этом путеводителе Чангу, Семиньяк, Убуд, Улувату, Нуса-Дуа и Санур сравниваются по атмосфере, транспорту и удобству для путешествий.</p>
+      </div>
+    </a>
+
+          </div>
+        </section>
+
+        <section class="sb-jhub-row" data-jhub-row>
+          <div class="sb-jhub-row__head">
+            <div>
+              <h2>Пляжи, водопады и виды</h2>
+              <span>Пейзажи, ради которых люди летят на Бали</span>
+            </div>
+
+            <div class="sb-jhub-row__nav" aria-hidden="true">
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-prev>‹</button>
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-next>›</button>
+            </div>
+          </div>
+          <div class="sb-jhub-track" data-jhub-track>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/best-beaches-bali-crystal-clear-water" data-jhub-searchable data-search="8 best beaches in bali with crystal clear water for swimming, snorkeling and photos looking for crystal clear water in bali? this guide covers the best bali beaches for swimming, snorkeling, photos and easy access, from melasti and nusa dua to padang padang and pandawa. beaches and swimming ">
+      <div class="sb-jhub-card__media">
+        <img src="https://live.staticflickr.com/4359/36544779010_4216b5a497_b.jpg" alt="Пляж Меласти на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Путеводитель по пляжам</span>
+        <h3>8 лучших пляжей Бали с кристально чистой водой для купания, подводного плавания и фотографий</h3>
+        <p>Ищете кристально чистую воду на Бали? В этом путеводителе описаны лучшие пляжи Бали для купания, подводного плавания, фотографии и легкий доступ: от Меласти и Нуса-Дуа до Паданг-Паданга и Пандавы.</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/best-waterfalls-bali-day-trips" data-jhub-searchable data-search="5 best waterfalls in bali for day trips, photos and easy jungle stops searching for the best waterfalls in bali? these five proven waterfall stops work well for day trips, photos, soft adventure and first-time travelers. waterfalls and jungle stops ">
+      <div class="sb-jhub-card__media">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tukad%20Cepung%20Waterfall%20(52462237566).jpg?width=1280" alt="Водопад Тукад Чепунг на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Путеводитель по водопадам</span>
+        <h3>5 лучших водопадов на Бали для однодневных поездок, фотографий и остановок в джунглях</h3>
+        <p>Ищете лучшие водопады на Бали? Эти пять проверенных остановок у водопадов хорошо подходят для однодневных поездок, фотографий, легких приключений и путешественников-новичков.</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/best-viewpoints-bali-sunrise-cliffs-rice-terraces" data-jhub-searchable data-search="7 best viewpoints in bali for cliffs, volcano sunrises and rice terrace scenery looking for the best viewpoints in bali? these seven stops cover volcano sunrise scenes, cliff-edge lookouts, rice terraces and broad coastline views. viewpoints and big scenery ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/mount-batur-sunrise-jeep-tour.webp" alt="Рассвет на горе Батур на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Путеводитель по точкам зрения</span>
+        <h3>7 лучших смотровых площадок на Бали со скалами, восходами вулканов и пейзажами рисовых террас</h3>
+        <p>Ищете лучшие смотровые площадки на Бали? На этих семи остановках можно увидеть восход солнца на вулкане, смотровые площадки на краю скалы, рисовые террасы и широкие виды на побережье.</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/best-temples-bali-cultural-sites" data-jhub-searchable data-search="7 best temples in bali for culture, scenery and first-time travelers looking for the best temples in bali? start with these seven cultural landmarks, from tanah lot and ulun danu to tirta empul, lempuyang and goa gajah. temples and heritage ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/unesco-tanah-lot-sunset.jpg" alt="Храм Танах Лот на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Путеводитель по храмам</span>
+        <h3>7 лучших храмов на Бали для культуры, пейзажей и новичков</h3>
+        <p>Ищете лучшие храмы на Бали? Начните с этих семи культурных достопримечательностей: от Танах Лот и Улун Дану до Тирта Эмпула, Лемпуянга и Гоа Гаджа.</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/best-instagram-places-bali" data-jhub-searchable data-search="8 best instagram places in bali for photos that still look good in real life looking for the best instagram places in bali? start with these photogenic temples, rice terraces, cliffs and waterfalls instead of wasting time on weak stops. photo and content guide ">
+      <div class="sb-jhub-card__media">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gates%20of%20Heaven%2C%20Lempuyang%20Temple%2C%20Bali.jpg?width=1280" alt="Храм Лемпуянг на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Руководство по Инстаграм</span>
+        <h3>8 лучших мест в Instagram на Бали для фотографий, которые все еще хорошо выглядят в реальной жизни</h3>
+        <p>Ищете лучшие места для Instagram на Бали? Начните с этих фотогеничных храмов, рисовых террас, скал и водопадов, вместо того, чтобы тратить время на слабые остановки.</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/best-places-to-visit-bali-first-time" data-jhub-searchable data-search="8 best places to visit in bali for first-time travelers planning your first bali trip? these are the best places to visit in bali for first-time travelers, including temples, rice terraces, beach viewpoints and iconic day-trip areas. first-time bali highlights ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/unesco-tanah-lot-sunset.jpg" alt="Храм Танах Лот на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Путеводитель по лучшим местам</span>
+        <h3>8 лучших мест для посещения на Бали для начинающих путешественников</h3>
+        <p>Планируете свое первое путешествие на Бали? Это лучшие места для посещения на Бали для начинающих путешественников, включая храмы, рисовые террасы, смотровые площадки на пляже и знаковые места для однодневных поездок.</p>
+      </div>
+    </a>
+
+          </div>
+        </section>
+
+        <section class="sb-jhub-row" data-jhub-row>
+          <div class="sb-jhub-row__head">
+            <div>
+              <h2>Еда, безопасность и повседневная жизнь</h2>
+              <span>Все для комфортного и беззаботного отдыха</span>
+            </div>
+
+            <div class="sb-jhub-row__nav" aria-hidden="true">
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-prev>‹</button>
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-next>›</button>
+            </div>
+          </div>
+          <div class="sb-jhub-track" data-jhub-track>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/what-to-eat-in-bali-food-guide" data-jhub-searchable data-search="what to eat in bali: balinese dishes, warung culture and food safety the balinese dishes actually worth seeking out — babi guling, bebek betutu, sate lilit, lawar — plus how warungs work, what things cost, vegetarian options and how to avoid bali belly. balinese food ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="Баби Гулинг на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Путеводитель по еде</span>
+        <h3>Что поесть на Бали: балийские блюда, культура варунгов и безопасность пищевых продуктов</h3>
+        <p>Балийские блюда, которые действительно стоит попробовать — баби гулинг, бебек бетуту, сате лилит, лавар — а также то, как работают варунги, сколько они стоят, вегетарианские блюда и как избежать балийского живота.</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/bali-safety-scams-and-health" data-jhub-searchable data-search="bali safety guide: scams, health risks and what actually goes wrong an honest bali safety guide — the scams travelers really meet, scooter and water risks, rabies and bali belly, methanol in cheap spirits, medical costs and emergency numbers. staying safe ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/private-car-with-driver-bali.jpg" alt="На Бали разбился скутер" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Безопасность и мошенничество</span>
+        <h3>Руководство по безопасности на Бали: мошенничество, риски для здоровья и что на самом деле идет не так</h3>
+        <p>Честный путеводитель по безопасности на Бали — мошенники действительно встречаются путешественникам, риски на скутере и воде, бешенство и балийский живот, метанол в дешевом спирте, медицинские расходы и номера экстренных служб.</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/bali-with-kids-family-guide" data-jhub-searchable data-search="bali with kids: where to stay, what to do and what to skip a practical family guide to bali — the best areas for calm swimming, which tours suit which ages, minimum ages for activities, and the popular attractions that do not work with young children. family travel ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/blue-lagoon-snorkeling.webp" alt="Санур или Нуса Дуа как база на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Бали с детьми</span>
+        <h3>Бали с детьми: где остановиться, чем заняться и что пропустить</h3>
+        <p>Практичный семейный путеводитель по Бали — лучшие места для спокойного купания, какие туры подходят для любого возраста, минимальный возраст для занятий и популярные достопримечательности, которые не подходят для маленьких детей.</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/best-budget-restaurants-bali-warungs" data-jhub-searchable data-search="8 best budget restaurants in bali and affordable warungs worth trying looking for cheap food in bali that still feels memorable? these affordable bali restaurants and warungs are strong picks for first-timers, especially around ubud and sanur. affordable food in bali ">
+      <div class="sb-jhub-card__media">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nasi%20babi%20guling.jpg?width=1280" alt="Ибу Ока на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Гид по бюджетному питанию</span>
+        <h3>8 лучших бюджетных ресторанов на Бали и доступные блюда, которые стоит попробовать</h3>
+        <p>Ищете дешевую еду на Бали, которая по-прежнему останется незабываемой? Эти доступные балийские рестораны и варунги — отличный выбор для новичков, особенно в окрестностях Убуда и Санура.</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/best-beach-clubs-bali-young-adults" data-jhub-searchable data-search="7 best beach clubs in bali for young adults, sunset sessions and big nights searching for the best beach clubs in bali for young adults? start with these proven names in seminyak, canggu and uluwatu, from potato head and savaya to atlas and la brisa. youth and nightlife ">
+      <div class="sb-jhub-card__media">
+        <img src="https://live.staticflickr.com/6042/6281781855_a6df953705_b.jpg" alt="Пляжный клуб Potato Head на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Путеводитель по пляжным клубам</span>
+        <h3>7 лучших пляжных клубов на Бали для молодежи, закатов и больших ночей</h3>
+        <p>Ищете лучшие пляжные клубы на Бали для молодежи? Начните с этих проверенных названий в Семиньяке, Чангу и Улувату, от Potato Head и Savaya до Atlas и La Brisa.</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/ru/journal/best-things-to-do-bali-for-couples" data-jhub-searchable data-search="7 best things to do in bali for couples, honeymoons and romantic trips planning a romantic bali trip? these are the best things to do in bali for couples, from sunrise viewpoints and rice terraces to beach sunsets and premium day experiences. couples and romance ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/sunset-cruise-bali.jpg" alt="Круиз на закате на Бали на Бали" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Путеводитель для пар</span>
+        <h3>7 лучших развлечений на Бали для пар, медового месяца и романтических поездок</h3>
+        <p>Планируете романтическое путешествие на Бали? Это лучшее, чем можно заняться на Бали для пар: от смотровых площадок на рассвете и рисовых террас до пляжных закатов и дневных впечатлений премиум-класса.</p>
+      </div>
+    </a>
+
+          </div>
+        </section>
+
+
+        <section class="sb-jhub-row" data-jhub-row>
+          <div class="sb-jhub-row__head">
+            <div>
+              <h2>Просмотр туров по статьям</h2>
+              <span>У каждого тура на Бали есть инструкция, путеводитель и расписание.</span>
+            </div>
+          </div>
+          <div class="sb-journal-tour-grid" data-jhub-tourgrid>
+
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="ubud rice terrace, temple &amp; volcano tour kintamani, ubud, and central bali this all-inclusive ubud and kintamani day tour is built for travelers who want bali culture, scenery, and soft adventure without managing tickets, transport, or lunch separately. it works especially well for first-time visitors because the route moves from craft villages and temples to volcano views, rice terraces, and the ubud center in one organized flow.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="Рисовые террасы, остановки у храмов и смотровая площадка на горе Батур на Бали" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1099,7 +1031,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="north bali tour and lovina dolphins lovina and north bali this is one of the fullest bali day trips on the island, but it pays off with a completely different mood from the south. the route combines sea, mountain air, and scenic temple stops in one professionally paced private experience.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/north-bali-lovina-dolphins-tour.jpg" alt="Храм Северного Бали и горный пейзаж" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1160,7 +1092,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="lovina dolphin sunrise tour lovina, gitgit waterfall and ulun danu beratan this lovina dolphin sunrise tour is the cleanest way to do north bali in one early-start day when you want the sea, a waterfall, and a lake temple without stitching the route together yourself. it includes hotel pickup, private air-conditioned transport, the traditional lovina outrigger boat, entrance fees, mineral water, and insurance, with the page price set from $75.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/dolphin-sunrise-city-tour.jpg" alt="Традиционная лодка с дельфинами Ловина на рассвете на севере Бали" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1221,7 +1153,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="east bali instagram tour lempuyang and east bali this route is perfect when you want bali&#39;s most recognizable visual locations without guessing the driving order yourself. it works best for couples, creators, and anyone who wants an east bali signature day with polished logistics.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/east-bali-instagram-tour.jpg" alt="Пейзажи Восточного Бали в стиле Небесных врат" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1282,7 +1214,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="tanah lot and bedugul tour west and central bali this is a strong all-round bali day for guests who want culture, wide viewpoints, cooler mountain air, and a memorable coastal finish. it is easy to enjoy and easy to sell because the scenery stays varied all day.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/tanah-lot-bedugul-tour.jpg" alt="Пейзажи храмов и озер в Бедугул Бали" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1343,7 +1275,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="bali unesco heritage sites tour west &amp; central bali unesco route this bali unesco heritage sites tour is built for travelers who want temple courtyards, mountain-lake views, unesco rice terraces, and a famous coastal temple finish without stitching separate day trips together. private transport, entrance tickets, a temple sarong, and bottled water are already handled from $70 per person.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/bali-unesco.jpg" alt="Рисовые террасы Джатилуви и горные пейзажи во время тура по объектам наследия ЮНЕСКО на Бали" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1404,7 +1336,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="mount batur sunrise jeep tour kintamani and mount batur this is one of the most accessible sunrise adventures in bali because you still get the volcano mood without committing to a full trekking route. it is ideal for couples, small groups, and guests who want a signature morning with strong visuals.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/mount-batur-sunrise-jeep-tour.webp" alt="Колонна джипов на вулканическом ландшафте горы Батур" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1465,7 +1397,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="atv ride adventure bali off-road routes an atv session is perfect when you want a short, energetic experience that feels very different from temples and beach clubs. it works well as a half-day highlight or as part of a more active bali itinerary.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/atv-ride-adventure.webp" alt="Внедорожный приключенческий маршрут на Бали" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1526,7 +1458,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="ubud atv quad bike adventure ubud off-road jungle, rice field, river, and tunnel track this ubud atv quad bike adventure is built for travelers who want action without overcomplicating the day. the route combines bali jungle, rice paddies, bumpy mud tracks, river sections, and natural tunnels in one guided ride, with safety gear, lunch, showers, and optional hotel transfer included from $20.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/atv-quad-bikes.webp" alt="Маршрут на квадроциклах по грязным джунглям в Убуде, Бали" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1587,7 +1519,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="bali instagram highlights tour flexible scenic bali route choose this tour when you want a polished bali day that feels visual from start to finish. it is more flexible than a single-region route and works well when you want to shape the day around your own content priorities.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/bali-instagram-highlights-tour.jpg" alt="Живописная смотровая площадка Бали для тура в Instagram" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1648,7 +1580,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="ubud instagram tour east bali icons with a tegalalang rice terrace finish this ubud instagram tour is the strongest all-inclusive bali photo day when you want iconic stops, polished logistics, and real guidance with your content. it combines east bali&#39;s most recognizable landmarks with a softer ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $75.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/ubud-instagram-tour.jpg" alt="«Ворота рая» в стиле пейзажей Бали для инстаграм-тура по Убуду" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1709,7 +1641,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="nusa penida private car day tour+snorkeling manta point nusa penida this is the highest-value option for many first-time nusa penida visitors because it avoids choosing between island sightseeing and the signature snorkeling experience. the private land transport keeps the second half of the day efficient and much more comfortable.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/nusa-penida-private-day-tour-manta-snorkeling.webp" alt="Вид на скалы Нуса Пенида над голубым океаном" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1770,7 +1702,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="nusa penida west tour west nusa penida if your priority is bold scenery over snorkeling, the west route is the cleanest and most iconic penida choice. it is especially strong for couples and first-time visitors who want the headline views with transport handled professionally.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/nusa-penida-west-tour.webp" alt="Западные скалы Нуса Пенида и вид на океан" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1831,7 +1763,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="nusa penida east tour east nusa penida this nusa penida east tour from bali covers diamond beach, atuh beach, molenteng tree house, thousand islands viewpoint, and teletubbies hill. it is the right choice when you want the classic east route with fast boat tickets, island transport, lunch, and entrance fees handled from $75.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/nusa-penida-east-tour.jpg" alt="Скалы Даймонд-Бич и бирюзовая вода на востоке острова Нуса-Пенида" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1892,7 +1824,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="nusa penida full day tour nusa penida this tour is the practical middle ground between the fully fixed scenic routes and the sea-plus-land combo packages. it works well for travelers who want penida&#39;s name-value but also want room to adapt around conditions, pace, or group energy.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/nusa-penida-full-day-tour.webp" alt="Панорамный вид на побережье Нуса Пенида" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1953,7 +1885,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="nusa penida snorkeling on manta point manta point and nusa penida waters this is one of bali&#39;s strongest sea-day products because the experience starts delivering early and stays visually powerful all day. it works for couples, small groups, and first-time snorkelers who want clear planning and strong photo value.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/nusa-penida-manta-rays-point.webp" alt="Скаты манты плавают в голубой воде возле острова Нуса Пенида" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2014,7 +1946,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="nusa lembongan and ceningan day trip nusa lembongan and ceningan this is a great alternative when you want an island day that feels scenic and fresh but less intense than a packed nusa penida route. it works especially well for couples, families, and travelers who want sea views without a hard adventure profile.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/nusa-lembongan-ceningan-day-trip.webp" alt="Мангровые леса и лодки вокруг острова Нуса-Лембонган" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2075,7 +2007,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="gili islands getaway gili islands connection the gili trip is perfect for travelers who want to connect bali with a slower island stay or a big sea-focused day. timing, departure ports, and luggage flow matter here, so setup support adds real value.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/gili-islands-getaway.jpg" alt="Яркие бирюзовые лодки и островная вода" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2136,7 +2068,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="gili islands private snorkeling day trip gili trawangan and gili meno this route is built for travelers who want turtles, clear water, and a real gili islands experience without organizing fast boats, harbor flow, snorkeling logistics, and local coordination on their own. the private snorkeling setup makes the day feel cleaner and more premium than a basic shared island transfer.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/gili-island-tour.jpg" alt="Частная лодка для подводного плавания на чистой бирюзовой воде недалеко от островов Гили" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2197,7 +2129,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="sumbawa whale shark snorkeling trip sumbawa waters this is not an everyday casual activity. it is for guests who want a major marine experience and understand that distance, timing, and sea conditions are a real part of the product. done right, it becomes one of the most memorable water-based adventures in the wider region.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/sumbawa-whale-shark-snorkeling-trip.webp" alt="Большое морское существо и подводная сцена в стиле сноркелинга" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2258,7 +2190,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="blue lagoon snorkeling padang bai and blue lagoon this is one of the easiest snorkeling products to recommend for beginners and casual sea-day travelers. it gives you underwater visibility, reef-life value, and a cleaner half-day or lighter full-day structure than more demanding offshore routes.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/blue-lagoon-snorkeling.webp" alt="Красочный коралловый риф в воде для подводного плавания на Бали" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2319,7 +2251,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="white water rafting bali river routes white water rafting is one of bali&#39;s easiest adventure products to fit into a trip because it feels active without being overly technical. it is especially strong for guests who want something memorable that still works for mixed groups.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/white-water-rafting.webp" alt="Водные приключения и речная активность на Бали" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2380,7 +2312,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="sunset cruise bali coastal waters this experience is ideal for couples, celebration groups, and travelers who want a premium-feeling evening without needing a full-day commitment. the main value is atmosphere, timing, and easy sea-facing views at the right hour.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/sunset-cruise-bali.jpg" alt="Лодки на ярко-голубой воде на Бали" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2441,7 +2373,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="surf lesson experience beginner-friendly bali surf beaches a surf lesson is one of the best short-format bali activities because it feels local, active, and iconic without taking over the whole day. it is ideal for couples, friends, solo travelers, and anyone curious about the island&#39;s surf culture.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/surf-lesson-experience.webp" alt="Голубая тропическая вода для урока серфинга на Бали" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2502,7 +2434,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="airport transfer ngurah rai airport and bali hotel areas airport transfers are not glamorous, but they have an outsized impact on how the trip starts. a clean pickup, clear driver coordination, and direct route to the hotel make a huge difference after a long flight.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/bali-airport-transfer.jpg" alt="Чистый трансфер на Бали и атмосфера дня путешествия" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2563,7 +2495,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="private car with driver all major bali regions this is one of the most useful products in bali because so many plans become easier once transport is flexible. it is perfect for custom sightseeing, shopping days, family pacing, and travelers who already know roughly where they want to go.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/private-car-with-driver-bali.jpg" alt="Атмосфера частного тура по Бали с живописными храмами" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2624,7 +2556,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="fast boat transfer bali harbors and island routes fast boats are simple once booked correctly, but confusing when you are juggling ports, check-in windows, and hotel distance. this service helps turn the whole process into a clean transfer day instead of a stressful logistics puzzle.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/fast-boat-transfer-bali.webp" alt="Трансфер на остров на скоростном катере в водах Бали" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2685,7 +2617,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="bali helicopter scenic tour bali aerial sightseeing this is a short-format luxury product with very high perceived value. it is ideal for proposals, anniversaries, premium travelers, and anyone who wants a true hero experience instead of another standard sightseeing day.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/bali-helicopter-scenic-tour.jpg" alt="Восход солнца и горная атмосфера для живописного воздушного тура по Бали" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2746,7 +2678,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="volcano and coastline helicopter ride volcano and coastline aerial route this is the stronger storytelling version of a scenic flight when you want bali&#39;s natural contrasts to hit hard from the air. the route is ideal for premium travelers, milestone moments, and anyone who wants the island&#39;s biggest landforms in one visual arc.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/volcano-coastline-helicopter-ride.jpeg" alt="Вид в стиле вулканического восхода солнца на вертолетный маршрут Бали" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2810,6 +2742,44 @@ body {
           </div>
         </section>
 
+        <script>
+  (function () {
+    var input = document.getElementById('sbJournalSearch');
+    var emptyMsg = document.getElementById('sbJournalSearchEmpty');
+    var cards = Array.prototype.slice.call(document.querySelectorAll('[data-jhub-searchable]'));
+    var rows = Array.prototype.slice.call(document.querySelectorAll('[data-jhub-row]'));
+
+    if (input) {
+      input.addEventListener('input', function () {
+        var q = input.value.trim().toLowerCase();
+        var anyVisible = false;
+        cards.forEach(function (card) {
+          var hit = !q || (card.getAttribute('data-search') || '').indexOf(q) !== -1;
+          card.style.display = hit ? '' : 'none';
+          if (hit) anyVisible = true;
+        });
+        rows.forEach(function (row) {
+          var visible = row.querySelectorAll('[data-jhub-searchable]:not([style*="display: none"])').length;
+          row.style.display = visible ? '' : 'none';
+        });
+        if (emptyMsg) emptyMsg.hidden = anyVisible || !q;
+      });
+    }
+
+    document.querySelectorAll('[data-jhub-row]').forEach(function (row) {
+      var track = row.querySelector('[data-jhub-track]');
+      if (!track) return;
+      var prev = row.querySelector('[data-jhub-prev]');
+      var next = row.querySelector('[data-jhub-next]');
+      var step = function () {
+        var card = track.querySelector('.sb-jhub-card');
+        return card ? card.getBoundingClientRect().width + 18 : 300;
+      };
+      if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step() * 2, behavior: 'smooth' }); });
+      if (next) next.addEventListener('click', function () { track.scrollBy({ left: step() * 2, behavior: 'smooth' }); });
+    });
+  })();
+  </script>
 
         <section class="sb-bali-weather-block" aria-label="Живая погода на Бали">
           <div class="sb-bali-weather-shell">

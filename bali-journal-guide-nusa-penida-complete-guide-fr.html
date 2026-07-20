@@ -150,6 +150,50 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  /* ── Journal hub: hero, search, themed carousels ── */
+  .sb-jhub-hero{margin:0 0 26px}
+  .sb-jhub-hero__card{position:relative;display:block;border-radius:28px;overflow:hidden;min-height:340px;text-decoration:none;color:#fff}
+  .sb-jhub-hero__card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .sb-jhub-hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,30,0.15) 0%,rgba(10,14,30,0.35) 45%,rgba(10,14,30,0.86) 100%)}
+  .sb-jhub-hero__copy{position:relative;z-index:1;max-width:640px;padding:36px 34px;display:flex;flex-direction:column;justify-content:flex-end;min-height:340px}
+  .sb-jhub-hero__badge{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;background:#2f6bff;color:#fff;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+  .sb-jhub-hero__copy h1{margin:0 0 12px;font-size:38px;line-height:1.06;letter-spacing:-1.4px}
+  .sb-jhub-hero__copy p{margin:0 0 16px;font-size:17px;line-height:1.55;color:rgba(255,255,255,0.92)}
+  .sb-jhub-hero__cta{font-weight:700;font-size:15px}
+  .sb-jhub-hero__card:hover .sb-jhub-hero__cta{text-decoration:underline}
+  .sb-jhub-search{margin:0 0 30px}
+  .sb-jhub-search__field{display:flex;align-items:center;gap:12px;background:#fff;border:1.5px solid rgba(21,21,21,0.12);border-radius:999px;padding:14px 22px;box-shadow:0 8px 22px rgba(17,17,17,0.05);transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-jhub-search__field:focus-within{border-color:rgba(47,107,255,0.55);box-shadow:0 10px 26px rgba(47,107,255,0.12)}
+  .sb-jhub-search__field svg{width:22px;height:22px;color:#8a8a90;flex:0 0 22px}
+  .sb-jhub-search__field input{flex:1;border:none;outline:none;background:transparent;font-size:16px;color:#151515}
+  .sb-jhub-search__empty{margin:14px 4px 0;color:var(--sbj-muted);font-size:15px}
+  .sb-jhub-row{margin:0 0 34px}
+  .sb-jhub-row__head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 0 16px}
+  .sb-jhub-row__head h2{margin:0 0 4px;font-size:26px;line-height:1.1;letter-spacing:-0.8px}
+  .sb-jhub-row__head span{color:var(--sbj-muted);font-size:15px}
+  .sb-jhub-row__nav{display:flex;gap:8px}
+  .sb-jhub-row__arrow{width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(21,21,21,0.14);background:#fff;color:#151515;font-size:20px;line-height:1;cursor:pointer;transition:border-color .2s ease,background .2s ease}
+  .sb-jhub-row__arrow:hover{border-color:rgba(47,107,255,0.5);background:#f4f7ff}
+  .sb-jhub-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(300px,1fr);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 12px;scrollbar-width:thin}
+  .sb-jhub-track::-webkit-scrollbar{height:6px}
+  .sb-jhub-track::-webkit-scrollbar-thumb{background:rgba(21,21,21,0.16);border-radius:6px}
+  .sb-jhub-card{scroll-snap-align:start;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(21,21,21,0.08);border-radius:22px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+  .sb-jhub-card:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(17,17,17,0.1);border-color:rgba(47,107,255,0.32)}
+  .sb-jhub-card__media{aspect-ratio:16/10;overflow:hidden}
+  .sb-jhub-card__media img{width:100%;height:100%;object-fit:cover}
+  .sb-jhub-card__body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px}
+  .sb-jhub-card__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-jhub-card__body h3{margin:0;font-size:19px;line-height:1.2;letter-spacing:-0.5px}
+  .sb-jhub-card__body p{margin:0;color:#55555c;font-size:14px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  @media screen and (min-width:900px){
+    .sb-jhub-track{grid-auto-columns:minmax(0,calc((100% - 36px)/3))}
+  }
+  @media screen and (max-width:640px){
+    .sb-jhub-hero__copy h1{font-size:29px}
+    .sb-jhub-hero__copy{padding:26px 22px}
+    .sb-jhub-row__head h2{font-size:22px}
+    .sb-jhub-track{grid-auto-columns:minmax(78%,78%)}
+  }
   .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
   .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
   .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
@@ -869,6 +913,19 @@ body {
               <h3>Plus de guides de Bali</h3>
               <div class="sb-journal-article-list">
 
+    <a class="sb-journal-card sb-journal-card_compact" href="/bali/fr/journal/first-time-in-bali-complete-guide">
+
+      <div class="sb-journal-card__body">
+        <div class="sb-journal-card__meta">
+          <span class="sb-journal-chip">Commencez ici</span>
+          <span class="sb-journal-card__tour">Le guide complet du débutant</span>
+        </div>
+        <h3>Vous partez pour la première fois à Bali ? Le guide de configuration complet</h3>
+        <p>Le guide pratique de Bali pour les débutants : comment louer une villa au mois, où acheter une carte SIM, comment louer un scooter et exactement de quels documents de conduite vous avez besoin : américains, français, russes, chinois, espagnols et plus encore.</p>
+        <span class="sb-journal-card__cta">Lire l'article</span>
+      </div>
+    </a>
+
     <a class="sb-journal-card sb-journal-card_compact" href="/bali/fr/journal/best-beaches-bali-crystal-clear-water">
 
       <div class="sb-journal-card__body">
@@ -891,19 +948,6 @@ body {
         </div>
         <h3>8 meilleurs endroits à visiter à Bali pour les nouveaux voyageurs</h3>
         <p>Vous planifiez votre premier voyage à Bali ? Ce sont les meilleurs endroits à visiter à Bali pour les nouveaux voyageurs, y compris les temples, les rizières en terrasses, les points de vue sur la plage et les zones emblématiques d'excursion d'une journée.</p>
-        <span class="sb-journal-card__cta">Lire l'article</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card sb-journal-card_compact" href="/bali/fr/journal/best-beach-clubs-bali-young-adults">
-
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">Guide de référencement à feuilles persistantes</span>
-          <span class="sb-journal-card__tour">Jeunesse et vie nocturne</span>
-        </div>
-        <h3>7 meilleurs clubs de plage à Bali pour les jeunes adultes, les séances au coucher du soleil et les grandes soirées</h3>
-        <p>Vous recherchez les meilleurs clubs de plage à Bali pour les jeunes adultes ? Commencez par ces noms éprouvés à Seminyak, Canggu et Uluwatu, de Potato Head et Savaya à Atlas et La Brisa.</p>
         <span class="sb-journal-card__cta">Lire l'article</span>
       </div>
     </a>

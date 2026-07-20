@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>巴厘岛期刊和 SEO 文章 | SB Excursions</title>
+    <title>巴厘岛首次游客旅游指南| SB Excursions</title>
     <meta name="description" content="浏览 SB Excursions Bali Journal，其中包含常青的巴厘岛指南、网站上每个巴厘岛旅游和短途旅行的销售文章、路线指南和时间表页面。">
     <meta property="og:type" content="website">
     <meta property="og:title" content="巴厘岛期刊和 SEO 文章 | SB Excursions">
@@ -150,6 +150,50 @@
   .sb-journal-ranking-card h3,.sb-journal-faq-card h3{margin:0 0 10px;font-size:24px;line-height:1.1;letter-spacing:-0.8px}
   .sb-journal-ranking-card p,.sb-journal-faq-card p{margin:0;color:#404047;font-size:15px;line-height:1.68}
   .sb-journal-faq-card{padding:20px 22px}
+  /* ── Journal hub: hero, search, themed carousels ── */
+  .sb-jhub-hero{margin:0 0 26px}
+  .sb-jhub-hero__card{position:relative;display:block;border-radius:28px;overflow:hidden;min-height:340px;text-decoration:none;color:#fff}
+  .sb-jhub-hero__card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .sb-jhub-hero__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,14,30,0.15) 0%,rgba(10,14,30,0.35) 45%,rgba(10,14,30,0.86) 100%)}
+  .sb-jhub-hero__copy{position:relative;z-index:1;max-width:640px;padding:36px 34px;display:flex;flex-direction:column;justify-content:flex-end;min-height:340px}
+  .sb-jhub-hero__badge{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;background:#2f6bff;color:#fff;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+  .sb-jhub-hero__copy h1{margin:0 0 12px;font-size:38px;line-height:1.06;letter-spacing:-1.4px}
+  .sb-jhub-hero__copy p{margin:0 0 16px;font-size:17px;line-height:1.55;color:rgba(255,255,255,0.92)}
+  .sb-jhub-hero__cta{font-weight:700;font-size:15px}
+  .sb-jhub-hero__card:hover .sb-jhub-hero__cta{text-decoration:underline}
+  .sb-jhub-search{margin:0 0 30px}
+  .sb-jhub-search__field{display:flex;align-items:center;gap:12px;background:#fff;border:1.5px solid rgba(21,21,21,0.12);border-radius:999px;padding:14px 22px;box-shadow:0 8px 22px rgba(17,17,17,0.05);transition:border-color .2s ease,box-shadow .2s ease}
+  .sb-jhub-search__field:focus-within{border-color:rgba(47,107,255,0.55);box-shadow:0 10px 26px rgba(47,107,255,0.12)}
+  .sb-jhub-search__field svg{width:22px;height:22px;color:#8a8a90;flex:0 0 22px}
+  .sb-jhub-search__field input{flex:1;border:none;outline:none;background:transparent;font-size:16px;color:#151515}
+  .sb-jhub-search__empty{margin:14px 4px 0;color:var(--sbj-muted);font-size:15px}
+  .sb-jhub-row{margin:0 0 34px}
+  .sb-jhub-row__head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 0 16px}
+  .sb-jhub-row__head h2{margin:0 0 4px;font-size:26px;line-height:1.1;letter-spacing:-0.8px}
+  .sb-jhub-row__head span{color:var(--sbj-muted);font-size:15px}
+  .sb-jhub-row__nav{display:flex;gap:8px}
+  .sb-jhub-row__arrow{width:38px;height:38px;border-radius:50%;border:1.5px solid rgba(21,21,21,0.14);background:#fff;color:#151515;font-size:20px;line-height:1;cursor:pointer;transition:border-color .2s ease,background .2s ease}
+  .sb-jhub-row__arrow:hover{border-color:rgba(47,107,255,0.5);background:#f4f7ff}
+  .sb-jhub-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(300px,1fr);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 12px;scrollbar-width:thin}
+  .sb-jhub-track::-webkit-scrollbar{height:6px}
+  .sb-jhub-track::-webkit-scrollbar-thumb{background:rgba(21,21,21,0.16);border-radius:6px}
+  .sb-jhub-card{scroll-snap-align:start;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(21,21,21,0.08);border-radius:22px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+  .sb-jhub-card:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(17,17,17,0.1);border-color:rgba(47,107,255,0.32)}
+  .sb-jhub-card__media{aspect-ratio:16/10;overflow:hidden}
+  .sb-jhub-card__media img{width:100%;height:100%;object-fit:cover}
+  .sb-jhub-card__body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:8px}
+  .sb-jhub-card__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
+  .sb-jhub-card__body h3{margin:0;font-size:19px;line-height:1.2;letter-spacing:-0.5px}
+  .sb-jhub-card__body p{margin:0;color:#55555c;font-size:14px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  @media screen and (min-width:900px){
+    .sb-jhub-track{grid-auto-columns:minmax(0,calc((100% - 36px)/3))}
+  }
+  @media screen and (max-width:640px){
+    .sb-jhub-hero__copy h1{font-size:29px}
+    .sb-jhub-hero__copy{padding:26px 22px}
+    .sb-jhub-row__head h2{font-size:22px}
+    .sb-jhub-track{grid-auto-columns:minmax(78%,78%)}
+  }
   .sb-journal-related-guides{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
   .sb-journal-related-guide{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border:1px solid rgba(21,21,21,0.1);border-radius:16px;background:#fbfbfb;text-decoration:none;transition:border-color .2s ease,box-shadow .2s ease}
   .sb-journal-related-guide:hover{border-color:rgba(47,107,255,0.42);box-shadow:0 8px 20px rgba(47,107,255,0.08)}
@@ -560,485 +604,373 @@ body {
       </script>
 
       <main class="sb-tour-main sb-journal-main">
-        <section class="sb-journal-hero">
-          <div class="sb-journal-kicker">本地 SEO 内容中心</div>
-          <h1>SB Excursions巴厘岛杂志</h1>
-          <p class="sb-journal-lead">精心设计的巴厘岛期刊，旨在增强搜索覆盖范围和更好的内部链接。现在每个旅游页面都有三篇支持文章，该杂志现在还包括关于海滩、地方、俱乐部、美食、社区、浪漫和摄影规划的常青巴厘岛指南。</p>
-          <div class="sb-journal-stats">
-            <div><span>29</span><small>行程涵盖</small></div>
-            <div><span>24</span><small>搜索引擎优化指南</small></div>
-            <div><span>111</span><small>文章直播</small></div>
-            <div><span>3</span><small>每次旅行的文章</small></div>
-          </div>
+
+        <section class="sb-jhub-hero">
+          <a class="sb-jhub-hero__card" href="/bali/zh/journal/first-time-in-bali-complete-guide">
+            <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="1. 巴厘岛的住宿地点" loading="eager" decoding="async" fetchpriority="high">
+            <div class="sb-jhub-hero__overlay"></div>
+            <div class="sb-jhub-hero__copy">
+              <span class="sb-jhub-hero__badge">从这里开始</span>
+              <h1>第一次飞往巴厘岛？首先阅读此内容。</h1>
+              <p>巴厘岛实用新手指南：如何按月租别墅、在哪里购买 SIM 卡、如何租一辆摩托车，以及您需要的驾驶证件 - 美国、法国、俄罗斯、中国、西班牙等。</p>
+              <span class="sb-jhub-hero__cta">打开完整的新手指南 →</span>
+            </div>
+          </a>
         </section>
 
-        <section class="sb-journal-section">
-          <div class="sb-journal-section__head">
-            <h2>精选 SEO 指南</h2>
-            <span>为广泛的巴厘岛搜索意图而构建的常青内容</span>
-          </div>
-          <div class="sb-journal-featured-grid">
 
-    <a class="sb-journal-card" href="/bali/zh/journal/best-beaches-bali-crystal-clear-water">
-      <img src="https://live.staticflickr.com/4359/36544779010_4216b5a497_b.jpg" alt="巴厘岛美乐思海滩" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">海滩和游泳</span>
-        </div>
-        <h3>巴厘岛 8 个最佳海滩，海水清澈，适合游泳、浮潜和拍照</h3>
-        <p>在巴厘岛寻找清澈见底的水吗？本指南涵盖了巴厘岛最适合游泳、浮潜、拍照和轻松前往的海滩，从美拉斯蒂和努沙杜瓦到巴东巴东和潘达瓦。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/best-places-to-visit-bali-first-time">
-      <img src="/images/bali-tours/unesco-tanah-lot-sunset.jpg" alt="巴厘岛海神庙" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">第一次巴厘岛亮点</span>
-        </div>
-        <h3>巴厘岛 8 个最适合初次旅行者游览的地方</h3>
-        <p>计划您的第一次巴厘岛旅行？对于初次旅行者来说，这些是巴厘岛的最佳游览地点，包括寺庙、梯田、海滩观景台和标志性的一日游区域。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/best-beach-clubs-bali-young-adults">
-      <img src="https://live.staticflickr.com/6042/6281781855_a6df953705_b.jpg" alt="巴厘岛土豆头海滩俱乐部" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">青年和夜生活</span>
-        </div>
-        <h3>巴厘岛 7 个最适合年轻人、日落聚会和美好夜晚的海滩俱乐部</h3>
-        <p>正在寻找巴厘岛最适合年轻人的海滩俱乐部？从水明漾、苍古和乌鲁瓦图这些久负盛名的名字开始，从 Potato Head 和 Savaya 到 Atlas 和 La Brisa。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/best-budget-restaurants-bali-warungs">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nasi%20babi%20guling.jpg?width=1280" alt="巴厘岛的伊布奥卡" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">巴厘岛的食物价格实惠</span>
-        </div>
-        <h3>巴厘岛 8 家最实惠的餐厅和值得一试、价格实惠的小吃店</h3>
-        <p>在巴厘岛寻找仍然令人难忘的廉价美食吗？这些价格实惠的巴厘岛餐厅和小吃店是第一次来者的首选，尤其是在乌布和沙努尔附近。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-          </div>
+        <section class="sb-jhub-search">
+          <label class="sb-jhub-search__field">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input type="search" id="sbJournalSearch" placeholder="搜索指南——海滩、签证、摩托车、食物……" autocomplete="off" aria-label="搜索巴厘岛指南">
+          </label>
+          <p class="sb-jhub-search__empty" id="sbJournalSearchEmpty" hidden>没有与该搜索匹配的指南。尝试使用更短的单词。</p>
         </section>
 
-        <section class="sb-journal-section">
-          <div class="sb-journal-section__head">
-            <h2>特色旅游文章</h2>
-            <a href="/bali/zh/main-page#tours">返回旅游</a>
+
+        <section class="sb-jhub-row" data-jhub-row>
+          <div class="sb-jhub-row__head">
+            <div>
+              <h2>计划你的第一次旅行</h2>
+              <span>必需品，按照您需要的顺序排列</span>
+            </div>
+
+            <div class="sb-jhub-row__nav" aria-hidden="true">
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-prev>‹</button>
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-next>›</button>
+            </div>
           </div>
-          <div class="sb-journal-featured-grid">
+          <div class="sb-jhub-track" data-jhub-track>
 
-    <a class="sb-journal-card" href="/bali/zh/journal/ubud-highlights-tour/why-book">
-      <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="巴厘岛的水稻梯田、寺庙停靠点和巴杜尔山观景点风景" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">卖文章</span>
-          <span class="sb-journal-card__tour">乌布梯田、寺庙和火山之旅</span>
-        </div>
-        <h3>为什么预订巴厘岛乌布梯田、寺庙和火山之旅——值得吗？</h3>
-        <p>乌布梯田、寺庙和火山之旅的诚实分析：您实际得到什么，最适合谁，来自旅行者的实用提示，以及它与类似巴厘岛体验的比较。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
+    <a class="sb-jhub-card" href="/bali/zh/journal/bali-itinerary-7-days-first-time" data-jhub-searchable data-search="the perfect 7-day bali itinerary for first-time visitors (day by day) a realistic 7-day bali itinerary that accounts for actual drive times: where to base yourself, which days to pair, and how to fit ubud, nusa penida, mount batur and the south coast without burning out. trip planning ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="第一天 — 抵达巴厘岛南部并停留" loading="lazy" decoding="async">
       </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/nusa-penida-manta-rays-point/travel-guide">
-      <img src="/images/bali-tours/nusa-penida-manta-rays-point.webp" alt="蝠鲼在珀尼达岛附近的蓝色海水中游泳" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">旅游指南</span>
-          <span class="sb-journal-card__tour">努沙佩尼达 (Nusa Penida) 在曼塔角 (Manta Point) 浮潜</span>
-        </div>
-        <h3>曼塔角努沙佩尼达浮潜 — 巴厘岛完整旅游指南</h3>
-        <p>关于曼塔角努沙佩尼达浮潜您需要了解的一切：期待什么、内部提示、最佳游览时间、携带什么以及最常见问题的解答。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/ubud-instagram-tour/why-book">
-      <img src="/images/bali-tours/ubud-instagram-tour.jpg" alt="乌布 Instagram 之旅的天堂之门风格巴厘岛风景" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">卖文章</span>
-          <span class="sb-journal-card__tour">乌布 Instagram 之旅</span>
-        </div>
-        <h3>为什么要预订巴厘岛乌布 Instagram 之旅——值得吗？</h3>
-        <p>乌布 Instagram 之旅的诚实分析：您实际得到什么、最适合谁、来自旅行者的实用提示，以及它与类似巴厘岛体验的比较。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/nusa-penida-east-tour/travel-guide">
-      <img src="/images/bali-tours/nusa-penida-east-tour.jpg" alt="珀尼达岛东部的钻石海滩悬崖和碧绿的海水" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">旅游指南</span>
-          <span class="sb-journal-card__tour">努沙佩尼达东部之旅</span>
-        </div>
-        <h3>努沙佩尼达东部之旅 — 完整的巴厘岛旅游指南</h3>
-        <p>关于努沙佩尼达东部之旅您需要了解的一切：期待什么、内部提示、最佳游览时间、携带什么以及最常见问题的解答。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/sunset-cruise-bali/tour-schedule">
-      <img src="/images/bali-tours/sunset-cruise-bali.jpg" alt="巴厘岛明亮蓝色水面上的船只" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">日程指南</span>
-          <span class="sb-journal-card__tour">日落巡游</span>
-        </div>
-        <h3>日落巡游 — 完整行程、时间表和装箱单</h3>
-        <p>日落巡游的详细时间表：准确的时间、分步路线、需要携带的物品、最佳旅行月份以及实用的预订技巧。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-          </div>
-        </section>
-
-        <section class="sb-journal-section">
-          <div class="sb-journal-section__head">
-            <h2>长荣巴厘岛指南</h2>
-            <span>带有内置旅游链接的搜索优先目的地内容</span>
-          </div>
-          <div class="sb-journal-featured-grid">
-
-    <a class="sb-journal-card" href="/bali/zh/journal/best-beaches-bali-crystal-clear-water">
-      <img src="https://live.staticflickr.com/4359/36544779010_4216b5a497_b.jpg" alt="巴厘岛美乐思海滩" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">海滩和游泳</span>
-        </div>
-        <h3>巴厘岛 8 个最佳海滩，海水清澈，适合游泳、浮潜和拍照</h3>
-        <p>在巴厘岛寻找清澈见底的水吗？本指南涵盖了巴厘岛最适合游泳、浮潜、拍照和轻松前往的海滩，从美拉斯蒂和努沙杜瓦到巴东巴东和潘达瓦。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/best-places-to-visit-bali-first-time">
-      <img src="/images/bali-tours/unesco-tanah-lot-sunset.jpg" alt="巴厘岛海神庙" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">第一次巴厘岛亮点</span>
-        </div>
-        <h3>巴厘岛 8 个最适合初次旅行者游览的地方</h3>
-        <p>计划您的第一次巴厘岛旅行？对于初次旅行者来说，这些是巴厘岛的最佳游览地点，包括寺庙、梯田、海滩观景台和标志性的一日游区域。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/best-beach-clubs-bali-young-adults">
-      <img src="https://live.staticflickr.com/6042/6281781855_a6df953705_b.jpg" alt="巴厘岛土豆头海滩俱乐部" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">青年和夜生活</span>
-        </div>
-        <h3>巴厘岛 7 个最适合年轻人、日落聚会和美好夜晚的海滩俱乐部</h3>
-        <p>正在寻找巴厘岛最适合年轻人的海滩俱乐部？从水明漾、苍古和乌鲁瓦图这些久负盛名的名字开始，从 Potato Head 和 Savaya 到 Atlas 和 La Brisa。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/best-budget-restaurants-bali-warungs">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nasi%20babi%20guling.jpg?width=1280" alt="巴厘岛的伊布奥卡" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">巴厘岛的食物价格实惠</span>
-        </div>
-        <h3>巴厘岛 8 家最实惠的餐厅和值得一试、价格实惠的小吃店</h3>
-        <p>在巴厘岛寻找仍然令人难忘的廉价美食吗？这些价格实惠的巴厘岛餐厅和小吃店是第一次来者的首选，尤其是在乌布和沙努尔附近。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/best-instagram-places-bali">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gates%20of%20Heaven%2C%20Lempuyang%20Temple%2C%20Bali.jpg?width=1280" alt="巴厘岛伦普央寺" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">照片和内容指南</span>
-        </div>
-        <h3>巴厘岛 8 个 Instagram 最佳地点，照片在现实生活中依然好看</h3>
-        <p>正在寻找巴厘岛最好的 Instagram 地点？从这些上镜的寺庙、梯田、悬崖和瀑布开始，而不是将时间浪费在薄弱的停留上。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/where-to-stay-bali-first-time">
-      <img src="https://lokasibali.com/api/images/business-0x2dd23876693af8ad%3A0x86929db7c4eabc29-0.webp" alt="巴厘岛长谷" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">住宿地点</span>
-        </div>
-        <h3>首次游客在巴厘岛住在哪里：仓古、水明漾、乌布、乌鲁瓦图、努沙杜瓦、沙努尔</h3>
-        <p>不确定第一次去巴厘岛住在哪里？本指南通过氛围、交通和旅行适合度对苍古、塞米亚克、乌布、乌鲁瓦图、努沙杜瓦和沙努尔进行了比较。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/best-things-to-do-bali-for-couples">
-      <img src="/images/bali-tours/sunset-cruise-bali.jpg" alt="巴厘岛 巴厘岛 日落游船" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">情侣与浪漫</span>
-        </div>
-        <h3>巴厘岛最适合情侣、蜜月和浪漫旅行的 7 件事</h3>
-        <p>计划浪漫的巴厘岛之旅？对于情侣来说，这些是巴厘岛最好的活动，从日出观景点和水稻梯田到海滩日落和优质的一日体验。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/best-temples-bali-cultural-sites">
-      <img src="/images/bali-tours/unesco-tanah-lot-sunset.jpg" alt="巴厘岛海神庙" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">寺庙和遗产</span>
-        </div>
-        <h3>巴厘岛 7 座最适合文化、风景和初次旅行者的寺庙</h3>
-        <p>正在寻找巴厘岛最好的寺庙？从这七个文化地标开始，从海神庙和乌伦达努到圣泉、伦普扬和果阿牙也。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/best-waterfalls-bali-day-trips">
-      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tukad%20Cepung%20Waterfall%20(52462237566).jpg?width=1280" alt="巴厘岛 Tukad Cepung 瀑布" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">瀑布和丛林停留</span>
-        </div>
-        <h3>巴厘岛 5 个最适合一日游、拍照和轻松丛林停留的瀑布</h3>
-        <p>在寻找巴厘岛最好的瀑布吗？这五个经过验证的瀑布停靠点非常适合一日游、拍照、软探险和初次旅行者。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/best-viewpoints-bali-sunrise-cliffs-rice-terraces">
-      <img src="/images/bali-tours/mount-batur-sunrise-jeep-tour.webp" alt="巴厘岛巴杜尔山日出" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">观点和大风景</span>
-        </div>
-        <h3>巴厘岛 7 个最佳悬崖、火山日出和梯田景观观景点</h3>
-        <p>寻找巴厘岛的最佳观景台？这七个站点涵盖了火山日出场景、悬崖边缘观景台、水稻梯田和广阔的海岸线景观。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/bali-itinerary-7-days-first-time">
-      <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="第一天 — 抵达巴厘岛南部并停留" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">行程规划</span>
-        </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">7天行程</span>
         <h3>适合初次游客的完美巴厘岛 7 天行程（逐日）</h3>
         <p>现实的巴厘岛 7 天行程，考虑了实际的驾驶时间：在哪里驻足，哪一天结对，以及如何适应乌布、珀尼达岛、巴杜尔山和南海岸而不会精疲力竭。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
       </div>
     </a>
 
-    <a class="sb-journal-card" href="/bali/zh/journal/things-to-do-ubud-bali-complete-guide">
-      <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="巴厘岛德格拉朗梯田" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">乌布地区</span>
-        </div>
-        <h3>巴厘岛乌布景点：完整地区指南</h3>
-        <p>在巴厘岛乌布实际上可以做什么——水稻梯田、寺庙、猴子森林、瀑布、漂流和丛林秋千——以及住宿地点和停留时间。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
+    <a class="sb-jhub-card" href="/bali/zh/journal/best-time-to-visit-bali-month-by-month" data-jhub-searchable data-search="best time to visit bali: a month-by-month guide when to visit bali, month by month: dry and wet season reality, crowds and prices, the best months for surfing, diving, manta rays and waterfalls, plus nyepi and galungan dates. when to go ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/nusa-penida-manta-rays-point.webp" alt="巴厘岛 4 月至 6 月" loading="lazy" decoding="async">
       </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/how-much-does-a-bali-trip-cost">
-      <img src="/images/bali-tours/private-car-with-driver-bali.jpg" alt="巴厘岛背包客旅馆" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">预算规划</span>
-        </div>
-        <h3>巴厘岛旅行要花多少钱？ 2026 年实际价格</h3>
-        <p>现实的巴厘岛预算明细：住宿、食物、交通、活动以及大多数旅行者忘记的两项费用——21% 的餐厅附加费和游客税。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/bali-visa-entry-requirements">
-      <img src="/images/bali-tours/bali-airport-transfer.jpg" alt="巴厘岛落地签证（B1）" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">行程管理员</span>
-        </div>
-        <h3>巴厘岛签证和入境要求：您实际需要什么</h3>
-        <p>落地签证、电子 VOA、强制性全印度尼西亚入境卡和巴厘岛旅游税 — 起飞前需要准备什么，以及导致入境问题的错误。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/how-to-get-around-bali-transport-guide">
-      <img src="/images/bali-tours/private-car-with-driver-bali.jpg" alt="有汽车的私人司机在巴厘岛" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">Transport</span>
-        </div>
-        <h3>如何游览巴厘岛：踏板车、司机、出租车和实际驾驶时间</h3>
-        <p>巴厘岛的摩托车租赁、私人司机、Grab 和 Gojek、机场接送和快艇 — 每种服务的费用、应用程序在哪些地方被屏蔽以及实际行程需要多长时间。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/best-time-to-visit-bali-month-by-month">
-      <img src="/images/bali-tours/nusa-penida-manta-rays-point.webp" alt="巴厘岛 4 月至 6 月" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">什么时候去</span>
-        </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">最佳游览时间</span>
         <h3>巴厘岛最佳旅游时间：每月指南</h3>
         <p>每月游览巴厘岛的时间：旱季和雨季的实际情况、人群和价格、冲浪、潜水、蝠鲼和瀑布的最佳月份，以及安宁日和加隆安日约会。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
       </div>
     </a>
 
-    <a class="sb-journal-card" href="/bali/zh/journal/nusa-penida-complete-guide">
-      <img src="/images/bali-tours/nusa-penida-west-tour.webp" alt="巴厘岛的 Kelingking 海滩" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">珀尼达岛</span>
-        </div>
-        <h3>努沙佩尼达岛：巴厘岛最引人注目的岛屿完整指南</h3>
-        <p>计划努沙佩尼达岛旅行的一切：Kelingking、破碎海滩、钻石海滩和曼塔角、徒步旅行的难度、乘船时间和费用、道路状况和重要的安全规则。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
+    <a class="sb-jhub-card" href="/bali/zh/journal/how-much-does-a-bali-trip-cost" data-jhub-searchable data-search="how much does a bali trip cost? real prices for 2026 a realistic bali budget breakdown: accommodation, food, transport, activities and the two costs most travelers forget — the 21% restaurant surcharge and the tourist levy. budget planning ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/private-car-with-driver-bali.jpg" alt="巴厘岛背包客旅馆" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">巴厘岛旅行费用</span>
+        <h3>巴厘岛旅行要花多少钱？ 2026 年实际价格</h3>
+        <p>现实的巴厘岛预算明细：住宿、食物、交通、活动以及大多数旅行者忘记的两项费用——21% 的餐厅附加费和游客税。</p>
       </div>
     </a>
 
-    <a class="sb-journal-card" href="/bali/zh/journal/things-to-do-canggu-bali-guide">
-      <img src="/images/bali-tours/surf-lesson-experience.webp" alt="巴厘岛冲浪初学者" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">仓古地区</span>
-        </div>
-        <h3>巴厘岛苍古：实际情况以及在那里可以做什么</h3>
-        <p>一本关于长谷的诚实指南——冲浪海滩、咖啡馆文化、海滩俱乐部和联合办公——以及交通现实、它适合谁，以及谁在其他地方会更快乐。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
+    <a class="sb-jhub-card" href="/bali/zh/journal/bali-visa-entry-requirements" data-jhub-searchable data-search="bali visa and entry requirements: what you actually need visa on arrival, e-voa, the mandatory all indonesia arrival card and the bali tourist levy — what to prepare before you fly, and the mistakes that cause problems at immigration. trip admin ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/bali-airport-transfer.jpg" alt="巴厘岛落地签证（B1）" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">签证和入境</span>
+        <h3>巴厘岛签证和入境要求：您实际需要什么</h3>
+        <p>落地签证、电子 VOA、强制性全印度尼西亚入境卡和巴厘岛旅游税 — 起飞前需要准备什么，以及导致入境问题的错误。</p>
       </div>
     </a>
 
-    <a class="sb-journal-card" href="/bali/zh/journal/things-to-do-uluwatu-bali-guide">
-      <img src="/images/bali-tours/sunset-cruise-bali.jpg" alt="巴厘岛乌鲁瓦图寺日落" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">乌鲁瓦图地区</span>
-        </div>
-        <h3>乌鲁瓦图和武吉半岛：悬崖、海滩和日落</h3>
-        <p>乌鲁瓦图和武吉特指南 — 悬崖顶寺庙和 Kecak 舞蹈、巴厘岛南部最清澈的海滩、冲浪胜地以及如何规划距离。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
+    <a class="sb-jhub-card" href="/bali/zh/journal/how-to-get-around-bali-transport-guide" data-jhub-searchable data-search="how to get around bali: scooter, driver, grab and real drive times scooter rental, private drivers, grab and gojek, airport transfers and fast boats in bali — what each costs, where apps get blocked, and how long journeys actually take. transport ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/private-car-with-driver-bali.jpg" alt="有汽车的私人司机在巴厘岛" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">出行</span>
+        <h3>如何游览巴厘岛：踏板车、司机、出租车和实际驾驶时间</h3>
+        <p>巴厘岛的摩托车租赁、私人司机、Grab 和 Gojek、机场接送和快艇 — 每种服务的费用、应用程序在哪些地方被屏蔽以及实际行程需要多长时间。</p>
       </div>
     </a>
 
-    <a class="sb-journal-card" href="/bali/zh/journal/things-to-do-seminyak-bali-guide">
-      <img src="/images/bali-tours/sunset-cruise-bali.jpg" alt="巴厘岛的日落海滩酒吧" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">水明漾地区</span>
-        </div>
-        <h3>巴厘岛水明漾：首次旅行的舒适基地</h3>
-        <p>为什么水明漾是首次旅行基地——餐厅、水疗中心、购物和日落海滩酒吧——以及它与苍古、库塔和乌鲁瓦图的比较。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
+    <a class="sb-jhub-card" href="/bali/zh/journal/what-to-pack-for-bali" data-jhub-searchable data-search="what to pack for bali: a practical checklist by activity a bali packing list that accounts for temple dress codes, a 12°c volcano sunrise, wet season downpours and what you can simply buy cheaply once you arrive. trip prep ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/mount-batur-sunrise-jeep-tour.webp" alt="巴厘岛的温暖层" loading="lazy" decoding="async">
       </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/bali-with-kids-family-guide">
-      <img src="/images/bali-tours/blue-lagoon-snorkeling.webp" alt="沙努尔或努沙杜瓦作为巴厘岛的基地" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">家庭旅行</span>
-        </div>
-        <h3>巴厘岛与孩子们：住在哪里、该做什么、该跳过什么</h3>
-        <p>巴厘岛实用家庭指南 - 平静游泳的最佳区域、适合哪个年龄段的旅游、活动的最低年龄以及不适合幼儿的热门景点。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/what-to-pack-for-bali">
-      <img src="/images/bali-tours/mount-batur-sunrise-jeep-tour.webp" alt="巴厘岛的温暖层" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">旅行准备</span>
-        </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">装箱单</span>
         <h3>去巴厘岛要带什么：实用的活动清单</h3>
         <p>巴厘岛的装箱单包括寺庙的着装要求、12°C 的火山日出、雨季的倾盆大雨以及您抵达后可以便宜购买的物品。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/what-to-eat-in-bali-food-guide">
-      <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="巴比古林在巴厘岛" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">巴厘岛美食</span>
-        </div>
-        <h3>巴厘岛吃什么：巴厘岛菜肴、小吃文化和食品安全</h3>
-        <p>巴厘岛菜肴确实值得一试——babi guling、bebek betutu、sate lilit、lawar——还有小吃店的运作方式、价格、素食选择以及如何避免巴厘岛肚腩。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
-      </div>
-    </a>
-
-    <a class="sb-journal-card" href="/bali/zh/journal/bali-safety-scams-and-health">
-      <img src="/images/bali-tours/private-car-with-driver-bali.jpg" alt="巴厘岛滑板车发生车祸" loading="lazy" decoding="async">
-      <div class="sb-journal-card__body">
-        <div class="sb-journal-card__meta">
-          <span class="sb-journal-chip">长青SEO指南</span>
-          <span class="sb-journal-card__tour">确保安全</span>
-        </div>
-        <h3>巴厘岛安全指南：诈骗、健康风险和实际问题</h3>
-        <p>一本诚实的巴厘岛安全指南——旅行者真正遇到的骗局、摩托车和水的风险、狂犬病和巴厘岛肚皮病、廉价烈酒中的甲醇、医疗费用和紧急电话号码。</p>
-        <span class="sb-journal-card__cta">阅读文章</span>
       </div>
     </a>
 
           </div>
         </section>
 
-        <section class="sb-journal-section">
-          <div class="sb-journal-section__head">
-            <h2>所有旅游文章组</h2>
-            <span>每个导览包括 3 篇内部支持文章</span>
-          </div>
-          <div class="sb-journal-tour-grid">
+        <section class="sb-jhub-row" data-jhub-row>
+          <div class="sb-jhub-row__head">
+            <div>
+              <h2>住宿和生活的地方</h2>
+              <span>在预订任何东西之前选择合适的基地</span>
+            </div>
 
-              <article class="sb-journal-tour-card">
+            <div class="sb-jhub-row__nav" aria-hidden="true">
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-prev>‹</button>
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-next>›</button>
+            </div>
+          </div>
+          <div class="sb-jhub-track" data-jhub-track>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/things-to-do-ubud-bali-complete-guide" data-jhub-searchable data-search="things to do in ubud, bali: the complete area guide what to actually do in ubud, bali — rice terraces, temples, the monkey forest, waterfalls, rafting and jungle swings — plus where to stay and how long to spend. ubud area ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="巴厘岛德格拉朗梯田" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">乌布指南</span>
+        <h3>巴厘岛乌布景点：完整地区指南</h3>
+        <p>在巴厘岛乌布实际上可以做什么——水稻梯田、寺庙、猴子森林、瀑布、漂流和丛林秋千——以及住宿地点和停留时间。</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/things-to-do-canggu-bali-guide" data-jhub-searchable data-search="canggu, bali: what it&#39;s actually like and what to do there an honest guide to canggu — surf beaches, cafe culture, beach clubs and coworking — plus the traffic reality, who it suits, and who would be happier somewhere else. canggu area ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/surf-lesson-experience.webp" alt="巴厘岛冲浪初学者" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">苍古指南</span>
+        <h3>巴厘岛苍古：实际情况以及在那里可以做什么</h3>
+        <p>一本关于长谷的诚实指南——冲浪海滩、咖啡馆文化、海滩俱乐部和联合办公——以及交通现实、它适合谁，以及谁在其他地方会更快乐。</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/things-to-do-seminyak-bali-guide" data-jhub-searchable data-search="seminyak, bali: the comfortable base for a first trip why seminyak works as a first-trip base — restaurants, spas, shopping and sunset beach bars — plus how it compares with canggu, kuta and uluwatu. seminyak area ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/sunset-cruise-bali.jpg" alt="巴厘岛的日落海滩酒吧" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">水明漾指南</span>
+        <h3>巴厘岛水明漾：首次旅行的舒适基地</h3>
+        <p>为什么水明漾是首次旅行基地——餐厅、水疗中心、购物和日落海滩酒吧——以及它与苍古、库塔和乌鲁瓦图的比较。</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/things-to-do-uluwatu-bali-guide" data-jhub-searchable data-search="uluwatu and the bukit peninsula: cliffs, beaches and sunsets a guide to uluwatu and the bukit — the clifftop temple and kecak dance, the clearest beaches in south bali, serious surf breaks, and how to plan around the distances. uluwatu area ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/sunset-cruise-bali.jpg" alt="巴厘岛乌鲁瓦图寺日落" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">乌鲁瓦图指南</span>
+        <h3>乌鲁瓦图和武吉半岛：悬崖、海滩和日落</h3>
+        <p>乌鲁瓦图和武吉特指南 — 悬崖顶寺庙和 Kecak 舞蹈、巴厘岛南部最清澈的海滩、冲浪胜地以及如何规划距离。</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/nusa-penida-complete-guide" data-jhub-searchable data-search="nusa penida: the complete guide to bali&#39;s most dramatic island everything to plan a nusa penida trip: kelingking, broken beach, diamond beach and manta point, how hard the hikes really are, boat times and fees, road conditions and the safety rules that matter. nusa penida ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/nusa-penida-west-tour.webp" alt="巴厘岛的 Kelingking 海滩" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">珀尼达岛指南</span>
+        <h3>努沙佩尼达岛：巴厘岛最引人注目的岛屿完整指南</h3>
+        <p>计划努沙佩尼达岛旅行的一切：Kelingking、破碎海滩、钻石海滩和曼塔角、徒步旅行的难度、乘船时间和费用、道路状况和重要的安全规则。</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/where-to-stay-bali-first-time" data-jhub-searchable data-search="where to stay in bali for first-time visitors: canggu vs seminyak vs ubud vs uluwatu vs nusa dua vs sanur not sure where to stay in bali for a first trip? this guide compares canggu, seminyak, ubud, uluwatu, nusa dua and sanur by vibe, transport and travel fit. where to stay ">
+      <div class="sb-jhub-card__media">
+        <img src="https://lokasibali.com/api/images/business-0x2dd23876693af8ad%3A0x86929db7c4eabc29-0.webp" alt="巴厘岛长谷" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">区域指南</span>
+        <h3>首次游客在巴厘岛住在哪里：仓古、水明漾、乌布、乌鲁瓦图、努沙杜瓦、沙努尔</h3>
+        <p>不确定第一次去巴厘岛住在哪里？本指南通过氛围、交通和旅行适合度对苍古、塞米亚克、乌布、乌鲁瓦图、努沙杜瓦和沙努尔进行了比较。</p>
+      </div>
+    </a>
+
+          </div>
+        </section>
+
+        <section class="sb-jhub-row" data-jhub-row>
+          <div class="sb-jhub-row__head">
+            <div>
+              <h2>海滩、瀑布和美景</h2>
+              <span>人们飞往巴厘岛的风景</span>
+            </div>
+
+            <div class="sb-jhub-row__nav" aria-hidden="true">
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-prev>‹</button>
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-next>›</button>
+            </div>
+          </div>
+          <div class="sb-jhub-track" data-jhub-track>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/best-beaches-bali-crystal-clear-water" data-jhub-searchable data-search="8 best beaches in bali with crystal clear water for swimming, snorkeling and photos looking for crystal clear water in bali? this guide covers the best bali beaches for swimming, snorkeling, photos and easy access, from melasti and nusa dua to padang padang and pandawa. beaches and swimming ">
+      <div class="sb-jhub-card__media">
+        <img src="https://live.staticflickr.com/4359/36544779010_4216b5a497_b.jpg" alt="巴厘岛美乐思海滩" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">海滩指南</span>
+        <h3>巴厘岛 8 个最佳海滩，海水清澈，适合游泳、浮潜和拍照</h3>
+        <p>在巴厘岛寻找清澈见底的水吗？本指南涵盖了巴厘岛最适合游泳、浮潜、拍照和轻松前往的海滩，从美拉斯蒂和努沙杜瓦到巴东巴东和潘达瓦。</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/best-waterfalls-bali-day-trips" data-jhub-searchable data-search="5 best waterfalls in bali for day trips, photos and easy jungle stops searching for the best waterfalls in bali? these five proven waterfall stops work well for day trips, photos, soft adventure and first-time travelers. waterfalls and jungle stops ">
+      <div class="sb-jhub-card__media">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tukad%20Cepung%20Waterfall%20(52462237566).jpg?width=1280" alt="巴厘岛 Tukad Cepung 瀑布" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">瀑布指南</span>
+        <h3>巴厘岛 5 个最适合一日游、拍照和轻松丛林停留的瀑布</h3>
+        <p>在寻找巴厘岛最好的瀑布吗？这五个经过验证的瀑布停靠点非常适合一日游、拍照、软探险和初次旅行者。</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/best-viewpoints-bali-sunrise-cliffs-rice-terraces" data-jhub-searchable data-search="7 best viewpoints in bali for cliffs, volcano sunrises and rice terrace scenery looking for the best viewpoints in bali? these seven stops cover volcano sunrise scenes, cliff-edge lookouts, rice terraces and broad coastline views. viewpoints and big scenery ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/mount-batur-sunrise-jeep-tour.webp" alt="巴厘岛巴杜尔山日出" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">观点指南</span>
+        <h3>巴厘岛 7 个最佳悬崖、火山日出和梯田景观观景点</h3>
+        <p>寻找巴厘岛的最佳观景台？这七个站点涵盖了火山日出场景、悬崖边缘观景台、水稻梯田和广阔的海岸线景观。</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/best-temples-bali-cultural-sites" data-jhub-searchable data-search="7 best temples in bali for culture, scenery and first-time travelers looking for the best temples in bali? start with these seven cultural landmarks, from tanah lot and ulun danu to tirta empul, lempuyang and goa gajah. temples and heritage ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/unesco-tanah-lot-sunset.jpg" alt="巴厘岛海神庙" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">寺庙指南</span>
+        <h3>巴厘岛 7 座最适合文化、风景和初次旅行者的寺庙</h3>
+        <p>正在寻找巴厘岛最好的寺庙？从这七个文化地标开始，从海神庙和乌伦达努到圣泉、伦普扬和果阿牙也。</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/best-instagram-places-bali" data-jhub-searchable data-search="8 best instagram places in bali for photos that still look good in real life looking for the best instagram places in bali? start with these photogenic temples, rice terraces, cliffs and waterfalls instead of wasting time on weak stops. photo and content guide ">
+      <div class="sb-jhub-card__media">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gates%20of%20Heaven%2C%20Lempuyang%20Temple%2C%20Bali.jpg?width=1280" alt="巴厘岛伦普央寺" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">Instagram 指南</span>
+        <h3>巴厘岛 8 个 Instagram 最佳地点，照片在现实生活中依然好看</h3>
+        <p>正在寻找巴厘岛最好的 Instagram 地点？从这些上镜的寺庙、梯田、悬崖和瀑布开始，而不是将时间浪费在薄弱的停留上。</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/best-places-to-visit-bali-first-time" data-jhub-searchable data-search="8 best places to visit in bali for first-time travelers planning your first bali trip? these are the best places to visit in bali for first-time travelers, including temples, rice terraces, beach viewpoints and iconic day-trip areas. first-time bali highlights ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/unesco-tanah-lot-sunset.jpg" alt="巴厘岛海神庙" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">热门地点指南</span>
+        <h3>巴厘岛 8 个最适合初次旅行者游览的地方</h3>
+        <p>计划您的第一次巴厘岛旅行？对于初次旅行者来说，这些是巴厘岛的最佳游览地点，包括寺庙、梯田、海滩观景台和标志性的一日游区域。</p>
+      </div>
+    </a>
+
+          </div>
+        </section>
+
+        <section class="sb-jhub-row" data-jhub-row>
+          <div class="sb-jhub-row__head">
+            <div>
+              <h2>食品、安全和日常生活</h2>
+              <span>一切为了顺利、无忧的住宿</span>
+            </div>
+
+            <div class="sb-jhub-row__nav" aria-hidden="true">
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-prev>‹</button>
+              <button type="button" class="sb-jhub-row__arrow" data-jhub-next>›</button>
+            </div>
+          </div>
+          <div class="sb-jhub-track" data-jhub-track>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/what-to-eat-in-bali-food-guide" data-jhub-searchable data-search="what to eat in bali: balinese dishes, warung culture and food safety the balinese dishes actually worth seeking out — babi guling, bebek betutu, sate lilit, lawar — plus how warungs work, what things cost, vegetarian options and how to avoid bali belly. balinese food ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="巴比古林在巴厘岛" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">美食指南</span>
+        <h3>巴厘岛吃什么：巴厘岛菜肴、小吃文化和食品安全</h3>
+        <p>巴厘岛菜肴确实值得一试——babi guling、bebek betutu、sate lilit、lawar——还有小吃店的运作方式、价格、素食选择以及如何避免巴厘岛肚腩。</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/bali-safety-scams-and-health" data-jhub-searchable data-search="bali safety guide: scams, health risks and what actually goes wrong an honest bali safety guide — the scams travelers really meet, scooter and water risks, rabies and bali belly, methanol in cheap spirits, medical costs and emergency numbers. staying safe ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/private-car-with-driver-bali.jpg" alt="巴厘岛滑板车发生车祸" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">安全与诈骗</span>
+        <h3>巴厘岛安全指南：诈骗、健康风险和实际问题</h3>
+        <p>一本诚实的巴厘岛安全指南——旅行者真正遇到的骗局、摩托车和水的风险、狂犬病和巴厘岛肚皮病、廉价烈酒中的甲醇、医疗费用和紧急电话号码。</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/bali-with-kids-family-guide" data-jhub-searchable data-search="bali with kids: where to stay, what to do and what to skip a practical family guide to bali — the best areas for calm swimming, which tours suit which ages, minimum ages for activities, and the popular attractions that do not work with young children. family travel ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/blue-lagoon-snorkeling.webp" alt="沙努尔或努沙杜瓦作为巴厘岛的基地" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">带孩子去巴厘岛</span>
+        <h3>巴厘岛与孩子们：住在哪里、该做什么、该跳过什么</h3>
+        <p>巴厘岛实用家庭指南 - 平静游泳的最佳区域、适合哪个年龄段的旅游、活动的最低年龄以及不适合幼儿的热门景点。</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/best-budget-restaurants-bali-warungs" data-jhub-searchable data-search="8 best budget restaurants in bali and affordable warungs worth trying looking for cheap food in bali that still feels memorable? these affordable bali restaurants and warungs are strong picks for first-timers, especially around ubud and sanur. affordable food in bali ">
+      <div class="sb-jhub-card__media">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Nasi%20babi%20guling.jpg?width=1280" alt="巴厘岛的伊布奥卡" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">预算食品指南</span>
+        <h3>巴厘岛 8 家最实惠的餐厅和值得一试、价格实惠的小吃店</h3>
+        <p>在巴厘岛寻找仍然令人难忘的廉价美食吗？这些价格实惠的巴厘岛餐厅和小吃店是第一次来者的首选，尤其是在乌布和沙努尔附近。</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/best-beach-clubs-bali-young-adults" data-jhub-searchable data-search="7 best beach clubs in bali for young adults, sunset sessions and big nights searching for the best beach clubs in bali for young adults? start with these proven names in seminyak, canggu and uluwatu, from potato head and savaya to atlas and la brisa. youth and nightlife ">
+      <div class="sb-jhub-card__media">
+        <img src="https://live.staticflickr.com/6042/6281781855_a6df953705_b.jpg" alt="巴厘岛土豆头海滩俱乐部" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">海滩俱乐部指南</span>
+        <h3>巴厘岛 7 个最适合年轻人、日落聚会和美好夜晚的海滩俱乐部</h3>
+        <p>正在寻找巴厘岛最适合年轻人的海滩俱乐部？从水明漾、苍古和乌鲁瓦图这些久负盛名的名字开始，从 Potato Head 和 Savaya 到 Atlas 和 La Brisa。</p>
+      </div>
+    </a>
+
+    <a class="sb-jhub-card" href="/bali/zh/journal/best-things-to-do-bali-for-couples" data-jhub-searchable data-search="7 best things to do in bali for couples, honeymoons and romantic trips planning a romantic bali trip? these are the best things to do in bali for couples, from sunrise viewpoints and rice terraces to beach sunsets and premium day experiences. couples and romance ">
+      <div class="sb-jhub-card__media">
+        <img src="/images/bali-tours/sunset-cruise-bali.jpg" alt="巴厘岛 巴厘岛 日落游船" loading="lazy" decoding="async">
+      </div>
+      <div class="sb-jhub-card__body">
+        <span class="sb-jhub-card__label">情侣指南</span>
+        <h3>巴厘岛最适合情侣、蜜月和浪漫旅行的 7 件事</h3>
+        <p>计划浪漫的巴厘岛之旅？对于情侣来说，这些是巴厘岛最好的活动，从日出观景点和水稻梯田到海滩日落和优质的一日体验。</p>
+      </div>
+    </a>
+
+          </div>
+        </section>
+
+
+        <section class="sb-jhub-row" data-jhub-row>
+          <div class="sb-jhub-row__head">
+            <div>
+              <h2>按文章浏览旅游</h2>
+              <span>每次巴厘岛之旅都有原因指南、旅行指南和时间表</span>
+            </div>
+          </div>
+          <div class="sb-journal-tour-grid" data-jhub-tourgrid>
+
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="ubud rice terrace, temple &amp; volcano tour kintamani, ubud, and central bali this all-inclusive ubud and kintamani day tour is built for travelers who want bali culture, scenery, and soft adventure without managing tickets, transport, or lunch separately. it works especially well for first-time visitors because the route moves from craft villages and temples to volcano views, rice terraces, and the ubud center in one organized flow.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/ubud-highlights-tour.jpg" alt="巴厘岛的水稻梯田、寺庙停靠点和巴杜尔山观景点风景" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1099,7 +1031,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="north bali tour and lovina dolphins lovina and north bali this is one of the fullest bali day trips on the island, but it pays off with a completely different mood from the south. the route combines sea, mountain air, and scenic temple stops in one professionally paced private experience.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/north-bali-lovina-dolphins-tour.jpg" alt="北巴厘岛寺庙和山风景" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1160,7 +1092,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="lovina dolphin sunrise tour lovina, gitgit waterfall and ulun danu beratan this lovina dolphin sunrise tour is the cleanest way to do north bali in one early-start day when you want the sea, a waterfall, and a lake temple without stitching the route together yourself. it includes hotel pickup, private air-conditioned transport, the traditional lovina outrigger boat, entrance fees, mineral water, and insurance, with the page price set from $75.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/dolphin-sunrise-city-tour.jpg" alt="巴厘岛北部日出时的传统罗维纳海豚船" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1221,7 +1153,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="east bali instagram tour lempuyang and east bali this route is perfect when you want bali&#39;s most recognizable visual locations without guessing the driving order yourself. it works best for couples, creators, and anyone who wants an east bali signature day with polished logistics.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/east-bali-instagram-tour.jpg" alt="东巴厘岛天堂之门风情风光" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1282,7 +1214,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="tanah lot and bedugul tour west and central bali this is a strong all-round bali day for guests who want culture, wide viewpoints, cooler mountain air, and a memorable coastal finish. it is easy to enjoy and easy to sell because the scenery stays varied all day.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/tanah-lot-bedugul-tour.jpg" alt="巴厘岛贝都古的寺庙和湖景" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1343,7 +1275,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="bali unesco heritage sites tour west &amp; central bali unesco route this bali unesco heritage sites tour is built for travelers who want temple courtyards, mountain-lake views, unesco rice terraces, and a famous coastal temple finish without stitching separate day trips together. private transport, entrance tickets, a temple sarong, and bottled water are already handled from $70 per person.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/bali-unesco.jpg" alt="巴厘岛联合国教科文组织遗产之旅中的 Jatiluwih 水稻梯田和山景" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1404,7 +1336,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="mount batur sunrise jeep tour kintamani and mount batur this is one of the most accessible sunrise adventures in bali because you still get the volcano mood without committing to a full trekking route. it is ideal for couples, small groups, and guests who want a signature morning with strong visuals.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/mount-batur-sunrise-jeep-tour.webp" alt="巴杜尔火山景观上的吉普车车队" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1465,7 +1397,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="atv ride adventure bali off-road routes an atv session is perfect when you want a short, energetic experience that feels very different from temples and beach clubs. it works well as a half-day highlight or as part of a more active bali itinerary.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/atv-ride-adventure.webp" alt="巴厘岛越野探险路线" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1526,7 +1458,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="ubud atv quad bike adventure ubud off-road jungle, rice field, river, and tunnel track this ubud atv quad bike adventure is built for travelers who want action without overcomplicating the day. the route combines bali jungle, rice paddies, bumpy mud tracks, river sections, and natural tunnels in one guided ride, with safety gear, lunch, showers, and optional hotel transfer included from $20.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/atv-quad-bikes.webp" alt="ATV 四轮摩托车路线穿过巴厘岛乌布泥泞的丛林地形" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1587,7 +1519,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="bali instagram highlights tour flexible scenic bali route choose this tour when you want a polished bali day that feels visual from start to finish. it is more flexible than a single-region route and works well when you want to shape the day around your own content priorities.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/bali-instagram-highlights-tour.jpg" alt="巴厘岛风景优美的景点，适合 Instagram 游览" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1648,7 +1580,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="ubud instagram tour east bali icons with a tegalalang rice terrace finish this ubud instagram tour is the strongest all-inclusive bali photo day when you want iconic stops, polished logistics, and real guidance with your content. it combines east bali&#39;s most recognizable landmarks with a softer ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $75.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/ubud-instagram-tour.jpg" alt="乌布 Instagram 之旅的天堂之门风格巴厘岛风景" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1709,7 +1641,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="nusa penida private car day tour+snorkeling manta point nusa penida this is the highest-value option for many first-time nusa penida visitors because it avoids choosing between island sightseeing and the signature snorkeling experience. the private land transport keeps the second half of the day efficient and much more comfortable.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/nusa-penida-private-day-tour-manta-snorkeling.webp" alt="蓝色海洋上方的努沙佩尼达悬崖景观" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1770,7 +1702,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="nusa penida west tour west nusa penida if your priority is bold scenery over snorkeling, the west route is the cleanest and most iconic penida choice. it is especially strong for couples and first-time visitors who want the headline views with transport handled professionally.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/nusa-penida-west-tour.webp" alt="西努沙佩尼达悬崖和海景" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1831,7 +1763,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="nusa penida east tour east nusa penida this nusa penida east tour from bali covers diamond beach, atuh beach, molenteng tree house, thousand islands viewpoint, and teletubbies hill. it is the right choice when you want the classic east route with fast boat tickets, island transport, lunch, and entrance fees handled from $75.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/nusa-penida-east-tour.jpg" alt="珀尼达岛东部的钻石海滩悬崖和碧绿的海水" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1892,7 +1824,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="nusa penida full day tour nusa penida this tour is the practical middle ground between the fully fixed scenic routes and the sea-plus-land combo packages. it works well for travelers who want penida&#39;s name-value but also want room to adapt around conditions, pace, or group energy.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/nusa-penida-full-day-tour.webp" alt="努沙佩尼达海岸全景" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -1953,7 +1885,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="nusa penida snorkeling on manta point manta point and nusa penida waters this is one of bali&#39;s strongest sea-day products because the experience starts delivering early and stays visually powerful all day. it works for couples, small groups, and first-time snorkelers who want clear planning and strong photo value.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/nusa-penida-manta-rays-point.webp" alt="蝠鲼在珀尼达岛附近的蓝色海水中游泳" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2014,7 +1946,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="nusa lembongan and ceningan day trip nusa lembongan and ceningan this is a great alternative when you want an island day that feels scenic and fresh but less intense than a packed nusa penida route. it works especially well for couples, families, and travelers who want sea views without a hard adventure profile.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/nusa-lembongan-ceningan-day-trip.webp" alt="蓝梦岛周围的红树林和船只" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2075,7 +2007,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="gili islands getaway gili islands connection the gili trip is perfect for travelers who want to connect bali with a slower island stay or a big sea-focused day. timing, departure ports, and luggage flow matter here, so setup support adds real value.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/gili-islands-getaway.jpg" alt="明亮的绿松石色船只和岛屿水域" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2136,7 +2068,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="gili islands private snorkeling day trip gili trawangan and gili meno this route is built for travelers who want turtles, clear water, and a real gili islands experience without organizing fast boats, harbor flow, snorkeling logistics, and local coordination on their own. the private snorkeling setup makes the day feel cleaner and more premium than a basic shared island transfer.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/gili-island-tour.jpg" alt="吉利群岛附近清澈碧绿的海水上的私人浮潜船" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2197,7 +2129,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="sumbawa whale shark snorkeling trip sumbawa waters this is not an everyday casual activity. it is for guests who want a major marine experience and understand that distance, timing, and sea conditions are a real part of the product. done right, it becomes one of the most memorable water-based adventures in the wider region.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/sumbawa-whale-shark-snorkeling-trip.webp" alt="大型海洋生物和浮潜式水下场景" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2258,7 +2190,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="blue lagoon snorkeling padang bai and blue lagoon this is one of the easiest snorkeling products to recommend for beginners and casual sea-day travelers. it gives you underwater visibility, reef-life value, and a cleaner half-day or lighter full-day structure than more demanding offshore routes.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/blue-lagoon-snorkeling.webp" alt="巴厘岛浮潜水中色彩缤纷的珊瑚礁" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2319,7 +2251,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="white water rafting bali river routes white water rafting is one of bali&#39;s easiest adventure products to fit into a trip because it feels active without being overly technical. it is especially strong for guests who want something memorable that still works for mixed groups.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/white-water-rafting.webp" alt="巴厘岛的水上冒险和河流活动氛围" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2380,7 +2312,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="sunset cruise bali coastal waters this experience is ideal for couples, celebration groups, and travelers who want a premium-feeling evening without needing a full-day commitment. the main value is atmosphere, timing, and easy sea-facing views at the right hour.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/sunset-cruise-bali.jpg" alt="巴厘岛明亮蓝色水面上的船只" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2441,7 +2373,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="surf lesson experience beginner-friendly bali surf beaches a surf lesson is one of the best short-format bali activities because it feels local, active, and iconic without taking over the whole day. it is ideal for couples, friends, solo travelers, and anyone curious about the island&#39;s surf culture.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/surf-lesson-experience.webp" alt="巴厘岛冲浪课程的蓝色热带海水" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2502,7 +2434,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="airport transfer ngurah rai airport and bali hotel areas airport transfers are not glamorous, but they have an outsized impact on how the trip starts. a clean pickup, clear driver coordination, and direct route to the hotel make a huge difference after a long flight.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/bali-airport-transfer.jpg" alt="干净的巴厘岛接送和旅行日氛围" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2563,7 +2495,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="private car with driver all major bali regions this is one of the most useful products in bali because so many plans become easier once transport is flexible. it is perfect for custom sightseeing, shopping days, family pacing, and travelers who already know roughly where they want to go.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/private-car-with-driver-bali.jpg" alt="私人巴厘岛旅游氛围与风景优美的寺庙" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2624,7 +2556,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="fast boat transfer bali harbors and island routes fast boats are simple once booked correctly, but confusing when you are juggling ports, check-in windows, and hotel distance. this service helps turn the whole process into a clean transfer day instead of a stressful logistics puzzle.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/fast-boat-transfer-bali.webp" alt="巴厘岛水域快艇式岛屿接送服务" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2685,7 +2617,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="bali helicopter scenic tour bali aerial sightseeing this is a short-format luxury product with very high perceived value. it is ideal for proposals, anniversaries, premium travelers, and anyone who wants a true hero experience instead of another standard sightseeing day.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/bali-helicopter-scenic-tour.jpg" alt="巴厘岛空中旅游的日出和山地氛围" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2746,7 +2678,7 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="volcano and coastline helicopter ride volcano and coastline aerial route this is the stronger storytelling version of a scenic flight when you want bali&#39;s natural contrasts to hit hard from the air. the route is ideal for premium travelers, milestone moments, and anyone who wants the island&#39;s biggest landforms in one visual arc.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/volcano-coastline-helicopter-ride.jpeg" alt="巴厘岛直升机路线的火山日出风格景观" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
@@ -2810,6 +2742,44 @@ body {
           </div>
         </section>
 
+        <script>
+  (function () {
+    var input = document.getElementById('sbJournalSearch');
+    var emptyMsg = document.getElementById('sbJournalSearchEmpty');
+    var cards = Array.prototype.slice.call(document.querySelectorAll('[data-jhub-searchable]'));
+    var rows = Array.prototype.slice.call(document.querySelectorAll('[data-jhub-row]'));
+
+    if (input) {
+      input.addEventListener('input', function () {
+        var q = input.value.trim().toLowerCase();
+        var anyVisible = false;
+        cards.forEach(function (card) {
+          var hit = !q || (card.getAttribute('data-search') || '').indexOf(q) !== -1;
+          card.style.display = hit ? '' : 'none';
+          if (hit) anyVisible = true;
+        });
+        rows.forEach(function (row) {
+          var visible = row.querySelectorAll('[data-jhub-searchable]:not([style*="display: none"])').length;
+          row.style.display = visible ? '' : 'none';
+        });
+        if (emptyMsg) emptyMsg.hidden = anyVisible || !q;
+      });
+    }
+
+    document.querySelectorAll('[data-jhub-row]').forEach(function (row) {
+      var track = row.querySelector('[data-jhub-track]');
+      if (!track) return;
+      var prev = row.querySelector('[data-jhub-prev]');
+      var next = row.querySelector('[data-jhub-next]');
+      var step = function () {
+        var card = track.querySelector('.sb-jhub-card');
+        return card ? card.getBoundingClientRect().width + 18 : 300;
+      };
+      if (prev) prev.addEventListener('click', function () { track.scrollBy({ left: -step() * 2, behavior: 'smooth' }); });
+      if (next) next.addEventListener('click', function () { track.scrollBy({ left: step() * 2, behavior: 'smooth' }); });
+    });
+  })();
+  </script>
 
         <section class="sb-bali-weather-block" aria-label="实时巴厘岛天气">
           <div class="sb-bali-weather-shell">
