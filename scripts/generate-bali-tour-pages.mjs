@@ -3318,8 +3318,33 @@ function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+// Real, per-tour photos fetched from Pexels (scripts/fetch-tour-photos.mjs).
+// When present they replace the duplicated catalog images and carry an SEO alt.
+const TOUR_REAL_IMAGES = (() => {
+  const manifestPath = path.join(projectRoot, "images", "tours-real", "_manifest.json");
+  if (!fs.existsSync(manifestPath)) return {};
+  try {
+    return JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+  } catch {
+    return {};
+  }
+})();
+
 function publicImagePath(tour) {
+  const real = TOUR_REAL_IMAGES[tour.slug];
+  if (real?.file) return `/images/tours-real/${real.file}`;
   return `/images/bali-tours/${tour.slug}${path.extname(tour.image).toLowerCase()}`;
+}
+
+function tourImageAlt(tour) {
+  return TOUR_REAL_IMAGES[tour.slug]?.alt || tour.imageAlt || tour.title;
+}
+
+// Apply the SEO alt from the manifest to every tour, so all image references —
+// catalog cards, journal cards and og:image alt — describe the real photo.
+for (const t of tours) {
+  const real = TOUR_REAL_IMAGES[t.slug];
+  if (real?.alt) t.imageAlt = real.alt;
 }
 
 function tourLocale(tour) {
@@ -17505,13 +17530,22 @@ function localizeTildaBlockAssetUrls(html) {
 }
 
 function normalizeGeneratedHtml(html) {
-  return localizeTildaBlockAssetUrls(String(html))
+  let out = localizeTildaBlockAssetUrls(String(html))
     // Tilda exports baked the preview deployment domain into canonicals, og:url
     // and image URLs. The custom domain is the canonical one, so normalise it
     // everywhere on write — the alias serves the same files, so images still load.
     .replaceAll("https://sb-excursions-public.vercel.app", SITE_URL)
-    .replaceAll("sb-excursions-public.vercel.app", "sbexcursion.com")
-    .replace(/[ \t]+$/gm, "");
+    .replaceAll("sb-excursions-public.vercel.app", "sbexcursion.com");
+  // Some catalog cards hardcode /images/bali-tours/<slug>.<ext> in the Tilda
+  // HTML. Point any slug that has a real Pexels photo at it, so the whole site
+  // stops repeating the old duplicated images.
+  for (const slug of Object.keys(TOUR_REAL_IMAGES)) {
+    out = out.replace(
+      new RegExp(`/images/bali-tours/${escapeRegExp(slug)}\\.(?:jpg|jpeg|png|webp)`, "g"),
+      `/images/tours-real/${slug}.jpg`,
+    );
+  }
+  return out.replace(/[ \t]+$/gm, "");
 }
 
 function writeGeneratedFile(filePath, html) {
