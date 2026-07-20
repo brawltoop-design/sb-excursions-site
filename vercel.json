@@ -3,6 +3,16 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/",
+      "destination": "/bali/en/main-page",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/bali/en/main-page",
+      "permanent": true
+    },
+    {
       "source": "/tproduct/1366959501-735097005942-desert-safari-buggy-camel-ride-sandboard",
       "destination": "/dubai/en/tours/full-day-dubai-desert-safari",
       "permanent": false
@@ -34,10 +44,6 @@
     }
   ],
   "rewrites": [
-    {
-      "source": "/",
-      "destination": "/page128073236.html"
-    },
     {
       "source": "/dubai/en",
       "destination": "/page63806411.html"

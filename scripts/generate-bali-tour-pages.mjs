@@ -14456,7 +14456,7 @@ function patchBaliMainFile(filePath) {
     ],
     [
       'content="https://static.tildacdn.one/tild3433-3231-4534-b430-373835373464/_3.jpg"',
-      'content="https://sb-excursions-public.vercel.app/images/bali-tours/ubud-highlights-tour.webp"',
+      `content="${SITE_URL}/images/bali-tours/ubud-highlights-tour.webp"`,
     ],
     [
       "https://static.tildacdn.one/tild3334-6466-4436-b766-376338363935/SB_Excursions_Dubai_.png",
@@ -17489,7 +17489,13 @@ function localizeTildaBlockAssetUrls(html) {
 }
 
 function normalizeGeneratedHtml(html) {
-  return localizeTildaBlockAssetUrls(String(html)).replace(/[ \t]+$/gm, "");
+  return localizeTildaBlockAssetUrls(String(html))
+    // Tilda exports baked the preview deployment domain into canonicals, og:url
+    // and image URLs. The custom domain is the canonical one, so normalise it
+    // everywhere on write — the alias serves the same files, so images still load.
+    .replaceAll("https://sb-excursions-public.vercel.app", SITE_URL)
+    .replaceAll("sb-excursions-public.vercel.app", "sbexcursion.com")
+    .replace(/[ \t]+$/gm, "");
 }
 
 function writeGeneratedFile(filePath, html) {
