@@ -5036,6 +5036,14 @@ function renderWestStylePage(tour) {
   });
 
   html = html
+    // The hero card's inline background. The template source keeps the west
+    // tour's own photo here, so every other tour must swap it for its own —
+    // otherwise the hero shows Nusa Penida on every page. This exact inline
+    // style string appears once (the hero); og:image/collage use other formats.
+    .replaceAll(
+      "background-image:url('/images/tours-real/nusa-penida-west-tour.jpg');",
+      `background-image:url('${imagePath}');`,
+    )
     .replaceAll("/images/bali-tours/nusa-penida-west-tour.webp", imagePath)
     .replaceAll("/images/bali-tours/nusa-penida-full-day-tour.webp", imagePath)
     .replaceAll("/images/bali-tours/nusa-penida-manta-rays-point.webp", imagePath)
