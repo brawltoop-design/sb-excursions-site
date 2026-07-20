@@ -1046,6 +1046,22 @@ Object.assign(BALI_PLANNER_PLACE_IMAGE_BY_TITLE, {
   "Kevala Studio Ceramic": BALI_PLANNER_PLACE_IMAGES.sanurMuseum,
 });
 
+// Real place photos fetched from Pexels (scripts/fetch-place-photos.mjs) take
+// priority over the tour-image fallback. The manifest is optional — if it has
+// not been generated yet, the guides simply keep using the fallback image.
+(() => {
+  const manifestPath = path.join(projectRoot, "images", "places", "_manifest.json");
+  if (!fs.existsSync(manifestPath)) return;
+  try {
+    const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+    for (const [title, entry] of Object.entries(manifest)) {
+      if (entry?.file) BALI_PLANNER_PLACE_IMAGE_BY_TITLE[title] = `/images/places/${entry.file}`;
+    }
+  } catch {
+    /* ignore a malformed manifest and fall back to tour images */
+  }
+})();
+
 const PLANNER_TOP_PICK_TITLES = new Set([
   "Tanah Lot Temple",
   "La Brisa Beach Club",
