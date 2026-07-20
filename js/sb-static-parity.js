@@ -252,8 +252,9 @@
     style.id = "sb-plan-wa-style";
     style.textContent =
       ".sb-plan-wa-bar{display:flex;justify-content:center;margin:20px auto 6px;padding:0 8px;}" +
-      ".sb-plan-wa-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;" +
-      "min-height:52px;max-width:560px;width:100%;text-align:center;padding:14px 26px;" +
+      ".sb-plan-wa-wrap{max-width:560px;width:100%;}" +
+      ".sb-plan-wa-btn{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;" +
+      "min-height:52px;width:100%;text-align:center;padding:14px 26px;" +
       "border-radius:999px;border:2px solid #191919 !important;background:#fff !important;color:#191919 !important;" +
       "font-weight:700;font-size:15px;line-height:1.2;text-decoration:none !important;" +
       "box-shadow:0 8px 20px rgba(0,0,0,0.05);cursor:pointer;" +
@@ -279,12 +280,21 @@
       bar = document.createElement("div");
       bar.id = "sbPlanWaBar";
       bar.className = "sb-plan-wa-bar";
+      // Same animated glow ("beam") wrapper the Build AI Plan button uses. The
+      // .sb-beam-wrap / .sb-q-beam styles are already on the page globally.
+      const wrap = document.createElement("span");
+      wrap.className = "sb-beam-wrap sb-beam-wrap--block sb-plan-wa-wrap";
+      const beam = document.createElement("span");
+      beam.className = "sb-q-beam";
+      beam.setAttribute("aria-hidden", "true");
       const btn = document.createElement("a");
       btn.id = "sbPlanWaBtn";
       btn.className = "sb-plan-wa-btn";
       btn.rel = "noopener";
       btn.target = "_blank";
-      bar.appendChild(btn);
+      wrap.appendChild(beam);
+      wrap.appendChild(btn);
+      bar.appendChild(wrap);
       grid.parentNode.insertBefore(bar, grid.nextSibling);
     }
     const btn = bar.querySelector("#sbPlanWaBtn");
