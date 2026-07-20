@@ -72,6 +72,80 @@
     });
   };
 
+  // --- AI-planner conversion analytics -----------------------------------
+  // Fire one named event into every analytics system already on the page:
+  // Yandex.Metrika (goal), GA4 (gtag), and the GTM dataLayer. Each call is
+  // guarded so a missing system never throws.
+  const YM_COUNTER_ID = 106783251;
+  const sbTrack = (name, params) => {
+    const data = params || {};
+    try {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(Object.assign({ event: name }, data));
+    } catch {}
+    try {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", name, Object.assign({ transport_type: "beacon" }, data));
+      }
+    } catch {}
+    try {
+      if (typeof window.ym === "function") window.ym(YM_COUNTER_ID, "reachGoal", name, data);
+    } catch {}
+  };
+
+  const daysBetween = (startStr, endStr) => {
+    if (!startStr || !endStr) return null;
+    const a = new Date(startStr);
+    const b = new Date(endStr);
+    if (isNaN(a) || isNaN(b)) return null;
+    return Math.max(1, Math.round((b - a) / 86400000) + 1);
+  };
+
+  const initPlannerAnalytics = () => {
+    if (window.__sbPlannerAnalytics) return;
+    window.__sbPlannerAnalytics = true;
+    const val = (id) => {
+      const el = document.getElementById(id);
+      return el && typeof el.value === "string" ? el.value.trim() : "";
+    };
+
+    document.addEventListener(
+      "click",
+      (event) => {
+        const target = event.target && event.target.closest ? event.target : null;
+        if (!target) return;
+
+        // "Build my plan" click — the planner engagement signal.
+        const buildBtn = target.closest("#sbAiBuild");
+        if (buildBtn) {
+          sbTrack("planner_build", {
+            planner_area: val("sbAiArea"),
+            planner_group: val("sbAiGroup"),
+            planner_budget: val("sbAiBudget"),
+            planner_days: daysBetween(val("sbAiStart"), val("sbAiEnd")),
+          });
+          return;
+        }
+
+        // Any WhatsApp click — the actual conversion signal.
+        const wa = target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
+        if (wa) {
+          const inPlanner = !!wa.closest(
+            "#sbAiResultsGrid, .sb-ai-results, .sb-place-card, .sb-ai-result-card",
+          );
+          const card = wa.closest(".sb-place-card, .sb-ai-result-card");
+          const titleNode = card ? card.querySelector(".sb-place-title, h4, h3") : null;
+          sbTrack(inPlanner ? "planner_whatsapp" : "whatsapp_click", {
+            place: titleNode ? titleNode.textContent.trim().slice(0, 120) : "",
+            context: inPlanner ? "ai_planner" : "site",
+            page_path: location.pathname,
+          });
+        }
+      },
+      true,
+    );
+  };
+
   const start = () => {
     if (!document.documentElement || window.__sbStaticParityStarted) return;
     window.__sbStaticParityStarted = true;
@@ -79,6 +153,7 @@
     rewriteTree(document);
     hideBadge();
     applyOverflowGuard();
+    initPlannerAnalytics();
 
     const observer = new MutationObserver((mutations) => {
       hideBadge();
