@@ -130,20 +130,179 @@
         // Any WhatsApp click — the actual conversion signal.
         const wa = target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
         if (wa) {
-          const inPlanner = !!wa.closest(
-            "#sbAiResultsGrid, .sb-ai-results, .sb-place-card, .sb-ai-result-card",
-          );
+          const isFullPlan = wa.id === "sbPlanWaBtn";
+          const inPlanner =
+            isFullPlan ||
+            !!wa.closest("#sbAiResultsGrid, .sb-ai-results, .sb-place-card, .sb-ai-result-card");
           const card = wa.closest(".sb-place-card, .sb-ai-result-card");
           const titleNode = card ? card.querySelector(".sb-place-title, h4, h3") : null;
           sbTrack(inPlanner ? "planner_whatsapp" : "whatsapp_click", {
-            place: titleNode ? titleNode.textContent.trim().slice(0, 120) : "",
-            context: inPlanner ? "ai_planner" : "site",
+            place: isFullPlan
+              ? "FULL PLAN"
+              : titleNode
+                ? titleNode.textContent.trim().slice(0, 120)
+                : "",
+            context: isFullPlan ? "full_plan" : inPlanner ? "ai_planner" : "site",
             page_path: location.pathname,
           });
         }
       },
       true,
     );
+  };
+
+  // --- "Send my whole plan to WhatsApp" button ---------------------------
+  // The planner already lets guests message about one place at a time. This
+  // adds a single button under the generated plan that packs the whole
+  // itinerary (exactly what the guest sees) into one WhatsApp message.
+  const WA_FALLBACK_NUMBER = "6285333685020";
+  const PLAN_I18N = {
+    en: {
+      button: "📲 Send my whole plan to WhatsApp",
+      intro: "Hi! Here is the Bali plan I built on your website. Please help me arrange and book it:",
+      day: "Day",
+      details: "My details:",
+      days: "days",
+    },
+    ru: {
+      button: "📲 Отправить весь план в WhatsApp",
+      intro: "Здравствуйте! Вот план по Бали, который я собрал на вашем сайте. Помогите, пожалуйста, его организовать и забронировать:",
+      day: "День",
+      details: "Мои данные:",
+      days: "дн.",
+    },
+    es: {
+      button: "📲 Enviar todo mi plan por WhatsApp",
+      intro: "¡Hola! Este es el plan de Bali que armé en su web. ¿Pueden ayudarme a organizarlo y reservarlo?:",
+      day: "Día",
+      details: "Mis datos:",
+      days: "días",
+    },
+    fr: {
+      button: "📲 Envoyer tout mon plan sur WhatsApp",
+      intro: "Bonjour ! Voici le plan de Bali que j'ai créé sur votre site. Pouvez-vous m'aider à l'organiser et à le réserver :",
+      day: "Jour",
+      details: "Mes infos :",
+      days: "jours",
+    },
+    zh: {
+      button: "📲 把我的整个行程发到 WhatsApp",
+      intro: "你好！这是我在你们网站上制定的巴厘岛行程，请帮我安排并预订：",
+      day: "第",
+      details: "我的信息：",
+      days: "天",
+    },
+  };
+
+  const detectLocale = () => {
+    const m = location.pathname.match(/\/bali\/(en|ru|es|fr|zh)(?:\/|$)/i);
+    if (m) return m[1].toLowerCase();
+    const lang = (document.documentElement.lang || "").slice(0, 2).toLowerCase();
+    return PLAN_I18N[lang] ? lang : "en";
+  };
+
+  const getWaNumber = () => {
+    const anchor =
+      document.querySelector('#sbAiResultsGrid a[href*="wa.me/"]') ||
+      document.querySelector('a[href*="wa.me/"]');
+    if (anchor) {
+      const m = (anchor.getAttribute("href") || "").match(/wa\.me\/(\d+)/);
+      if (m) return m[1];
+    }
+    return WA_FALLBACK_NUMBER;
+  };
+
+  const selectText = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return "";
+    if (el.tagName === "SELECT" && el.selectedIndex >= 0) {
+      return (el.options[el.selectedIndex].textContent || "").trim();
+    }
+    return (el.value || "").trim();
+  };
+
+  const buildPlanMessage = (locale) => {
+    const grid = document.getElementById("sbAiResultsGrid");
+    if (!grid) return "";
+    const t = PLAN_I18N[locale] || PLAN_I18N.en;
+    const lines = [t.intro, ""];
+    let n = 0;
+    grid.querySelectorAll("article").forEach((art) => {
+      const heading = art.querySelector(".sb-ai-day-heading");
+      if (!heading) return;
+      n += 1;
+      lines.push(t.day + " " + n + ": " + heading.textContent.trim());
+      const places = Array.from(art.querySelectorAll(".sb-place-title"))
+        .map((p) => p.textContent.trim())
+        .filter(Boolean);
+      if (places.length) lines.push("   • " + places.join(", "));
+    });
+    const parts = [selectText("sbAiArea"), selectText("sbAiGroup"), selectText("sbAiBudget")].filter(
+      Boolean,
+    );
+    const dayCount = daysBetween(selectText("sbAiStart"), selectText("sbAiEnd"));
+    if (dayCount) parts.push(dayCount + " " + t.days);
+    if (parts.length) lines.push("", t.details + " " + parts.join(", "));
+    return lines.join("\n");
+  };
+
+  const injectPlanWaStyle = () => {
+    if (document.getElementById("sb-plan-wa-style")) return;
+    const style = document.createElement("style");
+    style.id = "sb-plan-wa-style";
+    style.textContent =
+      ".sb-plan-wa-bar{display:flex;justify-content:center;margin:20px auto 6px;padding:0 8px;}" +
+      ".sb-plan-wa-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;" +
+      "background:#25D366 !important;color:#fff !important;font-weight:800;font-size:15px;line-height:1.2;padding:15px 26px;" +
+      "border-radius:999px;text-decoration:none !important;box-shadow:0 10px 24px rgba(37,211,102,.32);cursor:pointer;" +
+      "max-width:560px;width:100%;text-align:center;transition:transform .15s ease,box-shadow .15s ease;}" +
+      ".sb-plan-wa-btn:hover,.sb-plan-wa-btn:focus,.sb-plan-wa-btn:visited{transform:translateY(-1px);box-shadow:0 14px 30px rgba(37,211,102,.42);color:#fff !important;}";
+    document.head.appendChild(style);
+  };
+
+  const ensurePlanWaButton = () => {
+    const grid = document.getElementById("sbAiResultsGrid");
+    if (!grid) return;
+    const hasPlan = !!grid.querySelector("article .sb-ai-day-heading");
+    let bar = document.getElementById("sbPlanWaBar");
+    if (!hasPlan) {
+      if (bar) bar.remove();
+      return;
+    }
+    const locale = detectLocale();
+    const t = PLAN_I18N[locale] || PLAN_I18N.en;
+    if (!bar) {
+      bar = document.createElement("div");
+      bar.id = "sbPlanWaBar";
+      bar.className = "sb-plan-wa-bar";
+      const btn = document.createElement("a");
+      btn.id = "sbPlanWaBtn";
+      btn.className = "sb-plan-wa-btn";
+      btn.rel = "noopener";
+      btn.target = "_blank";
+      bar.appendChild(btn);
+      grid.parentNode.insertBefore(bar, grid.nextSibling);
+    }
+    const btn = bar.querySelector("#sbPlanWaBtn");
+    btn.textContent = t.button;
+    const refresh = () => {
+      btn.setAttribute(
+        "href",
+        "https://wa.me/" + getWaNumber() + "?text=" + encodeURIComponent(buildPlanMessage(locale)),
+      );
+    };
+    refresh();
+    btn.onclick = refresh; // guarantee the freshest plan at click time
+  };
+
+  const initPlanWaButton = () => {
+    if (window.__sbPlanWaButton) return;
+    const grid = document.getElementById("sbAiResultsGrid");
+    if (!grid) return;
+    window.__sbPlanWaButton = true;
+    injectPlanWaStyle();
+    ensurePlanWaButton();
+    new MutationObserver(() => ensurePlanWaButton()).observe(grid, { childList: true });
   };
 
   const start = () => {
@@ -154,9 +313,11 @@
     hideBadge();
     applyOverflowGuard();
     initPlannerAnalytics();
+    initPlanWaButton();
 
     const observer = new MutationObserver((mutations) => {
       hideBadge();
+      initPlanWaButton();
       mutations.forEach((mutation) => {
         mutation.addedNodes.forEach((node) => {
           if (!node || node.nodeType !== Node.ELEMENT_NODE) return;
