@@ -1643,6 +1643,8 @@ const tours = [
       "Build an iconic east Bali photo day around Lempuyang, Tirta Gangga, and elegant royal-style scenery with private transport and practical timing help.",
     summary:
       "This route is perfect when you want Bali's most recognizable visual locations without guessing the driving order yourself. It works best for couples, creators, and anyone who wants an east Bali signature day with polished logistics.",
+    miniPromoSideText:
+      "Lempuyang Gates of Heaven, Tirta Gangga, and Taman Ujung water palaces in one photo day.",
     overview:
       "East Bali is beautiful but time-sensitive, especially around queues and road distance. A private route helps you keep the day efficient while still leaving room for content, photos, and relaxed stopovers.",
     highlights: [
