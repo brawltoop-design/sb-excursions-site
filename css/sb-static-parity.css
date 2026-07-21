@@ -91,3 +91,18 @@ html #rec2121233163 {
     transform: none !important;
   }
 }
+
+/* Promo description — sit it over the left photos on phones (top of the left
+   photo down to the left side of the bottom photo) instead of floating in the
+   right-hand whitespace, and turn it white with a shadow so it reads on top. */
+@media screen and (max-width: 479px) {
+  html #rec2121222043 .tn-elem[data-elem-id="1766620130918"] {
+    transform: translateX(-179px) !important;
+    z-index: 10 !important;
+  }
+  html #rec2121222043 .tn-elem[data-elem-id="1766620130918"] .tn-atom,
+  html #rec2121222043 .tn-elem[data-elem-id="1766620130918"] .sb-letter-rise-char {
+    color: #ffffff !important;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.78), 0 0 2px rgba(0, 0, 0, 0.6) !important;
+  }
+}
