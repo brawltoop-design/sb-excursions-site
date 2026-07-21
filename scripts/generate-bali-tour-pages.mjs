@@ -5044,6 +5044,13 @@ function renderWestStylePage(tour) {
       "background-image:url('/images/tours-real/nusa-penida-west-tour.jpg');",
       `background-image:url('${imagePath}');`,
     )
+    // The private-offer card's <img>. Same story as the hero: the template keeps
+    // the west tour's own photo, so swap it for this tour's image. This src=""
+    // attribute is unique to that card (og:image/collage use content=/data-original=).
+    .replaceAll(
+      'src="/images/tours-real/nusa-penida-west-tour.jpg"',
+      `src="${imagePath}"`,
+    )
     .replaceAll("/images/bali-tours/nusa-penida-west-tour.webp", imagePath)
     .replaceAll("/images/bali-tours/nusa-penida-full-day-tour.webp", imagePath)
     .replaceAll("/images/bali-tours/nusa-penida-manta-rays-point.webp", imagePath)
