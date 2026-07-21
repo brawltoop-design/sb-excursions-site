@@ -97,7 +97,12 @@ html #rec2121233163 {
    right-hand whitespace, and turn it white with a shadow so it reads on top. */
 @media screen and (max-width: 479px) {
   html #rec2121222043 .tn-elem[data-elem-id="1766620130918"] {
-    transform: translateX(-179px) !important;
+    /* Tilda positions this with an inline `left: … !important`, so we can only
+       nudge it with transform. Its box sits at artboard X=163 and the left
+       photos at X=10 in a 320-wide artboard that scales to the viewport, so a
+       shift of (163-10)/320 = 47.8% of the viewport width lands the text flush
+       on the left photo edge at any phone width. */
+    transform: translateX(-47.8vw) !important;
     z-index: 10 !important;
   }
   html #rec2121222043 .tn-elem[data-elem-id="1766620130918"] .tn-atom,
