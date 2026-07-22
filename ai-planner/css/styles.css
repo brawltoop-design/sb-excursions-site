@@ -952,8 +952,11 @@ html.is-embed .app { height: 100vh; }
 /* ---------- Адаптив ---------- */
 
 @media (max-width: 1180px) {
-  /* Планшет: панель слева, карта+план справа стопкой */
-  .app { grid-template-columns: 320px 1fr; height: auto; padding: 16px; }
+  /* Планшет: панель слева, карта+план справа стопкой. Высота — авто, чтобы
+     колонки не схлопывались и поля формы не наезжали на карту (в т.ч. в embed). */
+  .app, html.is-embed .app { height: auto; min-height: 0; }
+  .app { grid-template-columns: 320px 1fr; padding: 16px; }
+  .panel { overflow: visible; }
   .map-col { grid-column: 2; }
   .plan-col { grid-column: 2; overflow: visible; }
   .map-col .map-card { height: 460px; }
@@ -963,7 +966,6 @@ html.is-embed .app { height: 100vh; }
   .site-nav { display: none; }
   .app { grid-template-columns: 1fr; }
   .map-col, .plan-col { grid-column: 1; }
-  .panel { overflow: visible; }
 }
 
 @media (max-width: 720px) {
