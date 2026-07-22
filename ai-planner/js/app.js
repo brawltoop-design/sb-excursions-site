@@ -43,8 +43,8 @@
   ];
   var INTEREST_VIBES = {
     sea: ['beach', 'dive'], nature: ['waterfall', 'chill', 'volcano'],
-    culture: ['temple'], relax: ['chill'], adventure: ['volcano', 'dive'],
-    beauty: ['beach', 'temple', 'waterfall']
+    culture: ['temple'], relax: ['chill'], adventure: ['volcano', 'dive', 'adventure'],
+    beauty: ['beach', 'temple', 'waterfall', 'aerial']
   };
 
   /* ---------- DOM ---------- */
@@ -182,6 +182,7 @@
       var el = pinEl(id); if (!el) return;
       el.className = 'sb-pin sb-pin--sleep';
       el.style.removeProperty('--pin');
+      var num = el.querySelector('.sb-pin-num'); if (num) num.remove();
     });
     Object.keys(dayLayer).forEach(function (k) { map.removeLayer(dayLayer[k]); });
     dayLayer = {}; locDays = {};
@@ -196,6 +197,18 @@
     el.style.setProperty('--pin', color);
     if (!REDUCED) { el.classList.remove('is-pop'); void el.offsetWidth; el.classList.add('is-pop'); }
     if (pins[locId]) pins[locId].dayIndex = dayIndex;
+  }
+
+  // Первая точка дня получает кружок с номером дня — «отсюда начинается день N».
+  function markDayStart(locId, dayNum, color) {
+    var el = pinEl(locId); if (!el) return;
+    if (el.classList.contains('sb-pin--start')) return; // самый ранний день выигрывает
+    el.classList.remove('sb-pin--sleep');
+    el.classList.add('sb-pin--route', 'sb-pin--start');
+    el.style.setProperty('--pin', color);
+    var span = el.querySelector('.sb-pin-num');
+    if (!span) { span = document.createElement('span'); span.className = 'sb-pin-num'; el.appendChild(span); }
+    span.textContent = dayNum;
   }
 
   /* ---------- Подсветка связей при ховере ---------- */
@@ -267,8 +280,14 @@
     return 5;
   }
   // Сколько дней-туров под длину поездки (как getTargetMainExcursions главной) —
-  // остальные дни становятся свободными с рекомендациями.
-  function mainTarget(days) { return days <= 5 ? 3 : (days <= 9 ? 4 : (days <= 13 ? 5 : 6)); }
+  // остальные дни становятся свободными с рекомендациями. На длинных поездках
+  // (2+ недели) показываем больше туров из каталога, оставляя ~треть дней свободными.
+  function mainTarget(days) {
+    if (days <= 5) return 3;
+    if (days <= 9) return 4;
+    if (days <= 13) return 5;
+    return Math.max(6, Math.ceil(days * 0.62));
+  }
   // Ротация зон свободных дней стартует от района проживания
   function areaZoneRotation(area) {
     var ids = SB_FREE_ZONES.map(function (z) { return z.id; });
@@ -292,7 +311,9 @@
 
     // Дни-туры vs свободные дни — как на главной: часть дней тур, остальные
     // свободные с рекомендациями (свободные дни есть всегда для поездки 2+ дней).
-    var tourCount = Math.min(mainTarget(days), Math.ceil(days / 2), scored.length);
+    // Оставляем хотя бы ~четверть дней (мин. 1) свободными — остальное под туры.
+    var freeFloor = Math.max(1, Math.floor(days / 4));
+    var tourCount = Math.min(mainTarget(days), days - freeFloor, scored.length);
     var chosen = scored.slice(0, tourCount).map(function (x) { return x.t; });
     // Тур на Manta Point предлагаем ВСЕГДА (как isPrimaryMantaTour на главной):
     // ставим его первым тур-днём + добираем лучшие по вайбу остальные слоты.
@@ -302,6 +323,29 @@
         .filter(function (t) { return t !== mantaTpl; })
         .slice(0, tourCount - 1);
       chosen = [mantaTpl].concat(others);
+    }
+    // Резерв разнообразия: на длинных поездках (12+ дней) отдаём часть тур-слотов
+    // «нишевым» турам из каталога, которые проигрывают классике по вайбу
+    // (Сумбава, квадроциклы, вертолёты, восток Пениды). Иначе даже трёхнедельный
+    // маршрут крутит один и тот же топ и никогда не показывает эти туры.
+    // Сумбаву (её просил пользователь) ставим в резерв первой. Manta не трогаем.
+    if (days >= 12 && chosen.length >= 4) {
+      var reserve = Math.min(chosen.length - 3, days >= 18 ? 4 : (days >= 15 ? 3 : 2));
+      var chosenIds = {};
+      chosen.forEach(function (t) { chosenIds[t.id] = true; });
+      var pool = tpls.filter(function (t) { return !chosenIds[t.id] && t.id !== 'manta_day'; })
+        .sort(function (a, b) { return b.order - a.order; }); // новые/нишевые (высокий order) вперёд
+      pool.sort(function (a, b) { return (b.id === 'sumbawa_day') - (a.id === 'sumbawa_day'); });
+      var swapIn = pool.slice(0, reserve);
+      if (swapIn.length) {
+        var scoreOf = {};
+        scored.forEach(function (x) { scoreOf[x.t.id] = x.m; });
+        var mantaKeep = chosen.filter(function (t) { return t.id === 'manta_day'; });
+        var rest = chosen.filter(function (t) { return t.id !== 'manta_day'; })
+          .sort(function (a, b) { return (scoreOf[b.id] || 0) - (scoreOf[a.id] || 0); }); // худшие по вайбу — в конец
+        rest = rest.slice(0, Math.max(0, rest.length - swapIn.length)); // отбрасываем худшие
+        chosen = mantaKeep.concat(rest).concat(swapIn);
+      }
     }
     chosen.sort(function (a, b) { return a.order - b.order; });
     var freeCount = days - chosen.length;
@@ -390,7 +434,7 @@
       pickup = '<div class="tl-stop tl-stop--pickup">' +
         '<span class="tl-stop-time">' + esc(mm ? mm[1] : '—') + '</span>' +
         '<span><span class="tl-stop-name">' + esc(T('Забор из отеля')) + '</span><br>' +
-        '<span class="tl-stop-note">' + esc(puNote) + '</span></span>' +
+        '<span class="tl-stop-note">' + esc(T(puNote)) + '</span></span>' +
         '<span class="tl-stop-ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M3 13l1.7-5.4h9.6L17 13M3 13h15v4H3v-4Z"/><circle cx="7" cy="17.4" r="1.5"/><circle cx="14.4" cy="17.4" r="1.5"/></svg></span></div>';
     }
     var stops = pickup + d.stops.map(function (s) {
@@ -547,6 +591,7 @@
         latlngs.push([s.loc.lat, s.loc.lng]);
       });
       drawRoute(i, latlngs, d.color, Math.min(beat * 0.9, 720));
+      if (d.stops.length) markDayStart(d.stops[0].loc.id, i + 1, d.color);
     } else {
       // свободный день — тихие рекомендованные пины рядом
       if (!map.hasLayer(quietLayer)) quietLayer.addTo(map);
@@ -621,6 +666,7 @@
         });
         var g = dayLayer[i] || (dayLayer[i] = L.layerGroup().addTo(map));
         L.polyline(latlngs, { color: d.color, weight: 3, opacity: 0.95, lineJoin: 'round' }).addTo(g);
+        if (d.stops.length) markDayStart(d.stops[0].loc.id, i + 1, d.color);
       } else {
         if (!map.hasLayer(quietLayer)) quietLayer.addTo(map);
         d.zone.recs.forEach(function (r) {

@@ -569,6 +569,23 @@ html.is-embed .app { height: 100vh; }
   box-shadow: 0 3px 10px rgba(17, 17, 17, 0.28);
 }
 
+/* Первая точка дня — крупнее, с номером дня внутри кружка */
+.sb-pin--start {
+  width: 30px;
+  height: 30px;
+  border: 2.5px solid #fff;
+  box-shadow: 0 4px 13px rgba(17, 17, 17, 0.36);
+  z-index: 8;
+}
+.sb-pin-num {
+  font-size: 13px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
 .sb-pin--quiet {
   width: 16px;
   height: 16px;
