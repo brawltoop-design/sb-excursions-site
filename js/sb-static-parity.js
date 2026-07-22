@@ -319,6 +319,72 @@
     new MutationObserver(() => ensurePlanWaButton()).observe(grid, { childList: true });
   };
 
+  // --- "AI PLANNER" button → reveal the new planner INLINE ---------------
+  // The catalog's AI PLANNER chip used to toggle the old inline panel. Keep the
+  // same "slide out below the button" behaviour, but show the new full planner
+  // embedded in an iframe (so its map / i18n / logic run without touching the
+  // Tilda page). Capture-phase + stopImmediatePropagation beats the old handler.
+  const initAiPlannerEmbed = () => {
+    if (window.__sbAiPlannerEmbed) return;
+    window.__sbAiPlannerEmbed = true;
+    const style = document.createElement("style");
+    style.textContent =
+      ".sb-newai-wrap{max-height:0;overflow:hidden;opacity:0;margin:14px auto 0;max-width:1780px;" +
+      "transition:max-height .55s cubic-bezier(.16,1,.3,1),opacity .4s ease,margin .3s ease;}" +
+      ".sb-newai-wrap.is-open{opacity:1;}" +
+      ".sb-newai-frame{width:100%;height:860px;border:0;border-radius:18px;display:block;background:#fff;" +
+      "box-shadow:0 20px 50px rgba(17,17,17,.10);}" +
+      "@media (max-width:900px){.sb-newai-frame{height:1180px;}}";
+    document.head.appendChild(style);
+
+    let wrap = null, open = false;
+    const langFromPath = () => {
+      const m = location.pathname.match(/\/bali\/(en|ru|zh|es|fr)(?=\/|$)/i);
+      return m ? m[1].toLowerCase() : "ru";
+    };
+    const ensureWrap = (btn) => {
+      if (wrap) return wrap;
+      const anchor = document.getElementById("sbAiPanel") || btn.closest(".sb-filters-shell") || btn.closest(".sb-wrap");
+      if (!anchor || !anchor.parentNode) return null;
+      wrap = document.createElement("div");
+      wrap.className = "sb-newai-wrap";
+      const frame = document.createElement("iframe");
+      frame.className = "sb-newai-frame";
+      frame.title = "AI-планировщик Бали";
+      frame.src = "/ai-planner/index.html?embed=1&lang=" + langFromPath();
+      wrap.appendChild(frame);
+      anchor.parentNode.insertBefore(wrap, anchor.nextSibling);
+      return wrap;
+    };
+
+    document.addEventListener(
+      "click",
+      (e) => {
+        const btn = e.target && e.target.closest ? e.target.closest("#sbAiPlannerToggle") : null;
+        if (!btn) return;
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        const oldPanel = document.getElementById("sbAiPanel");
+        if (oldPanel) oldPanel.style.display = "none";
+        const w = ensureWrap(btn);
+        if (!w) return;
+        open = !open;
+        if (open) {
+          w.style.maxHeight = "2200px";
+          w.classList.add("is-open");
+          btn.classList.add("is-active");
+          try { sbTrack("planner_open", { context: "inline", page_path: location.pathname }); } catch {}
+          setTimeout(() => { try { w.scrollIntoView({ behavior: "smooth", block: "center" }); } catch {} }, 120);
+        } else {
+          w.style.maxHeight = "0";
+          w.classList.remove("is-open");
+          btn.classList.remove("is-active");
+        }
+      },
+      true,
+    );
+  };
+
   const start = () => {
     if (!document.documentElement || window.__sbStaticParityStarted) return;
     window.__sbStaticParityStarted = true;
@@ -327,6 +393,7 @@
     hideBadge();
     applyOverflowGuard();
     initPlannerAnalytics();
+    initAiPlannerEmbed();
     initPlanWaButton();
 
     const observer = new MutationObserver((mutations) => {
