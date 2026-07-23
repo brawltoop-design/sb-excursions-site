@@ -730,6 +730,26 @@ html.is-embed .app { height: 100vh; }
 
 .tl-day-title { font-size: 17px; font-weight: 500; flex: 1; min-width: 120px; }
 
+.wx-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-soft);
+  background: rgba(47, 107, 255, 0.09);
+  border: 1px solid rgba(47, 107, 255, 0.16);
+  border-radius: 999px;
+  padding: 3px 9px;
+  white-space: nowrap;
+  cursor: default;
+}
+.wx-chip--wet {
+  color: #4E6B8A;
+  background: rgba(78, 107, 138, 0.1);
+  border-color: rgba(78, 107, 138, 0.2);
+}
+
 .tl-day-tools { display: flex; gap: 6px; }
 .tl-tool {
   border: 1px solid rgba(21, 21, 21, 0.18);
@@ -832,10 +852,17 @@ html.is-embed .app { height: 100vh; }
   display: flex;
   align-items: center;
   gap: 11px;
-  padding: 9px 0;
+  padding: 9px 6px;
+  margin: 0 -6px;
   border-top: 1px dashed rgba(255, 133, 98, 0.3);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s var(--ease);
 }
 .free-rec:first-of-type { border-top: none; }
+.free-rec:hover { background: rgba(255, 133, 98, 0.08); }
+.free-rec:hover .free-rec-thumb { transform: scale(1.04); }
+.free-rec-thumb { transition: transform 0.25s var(--ease); }
 .free-rec-thumb {
   width: 50px; height: 50px;
   border-radius: 9px;

@@ -295,6 +295,67 @@
     return i < 0 ? ids.slice() : ids.slice(i).concat(ids.slice(0, i));
   }
 
+  /* ============================================================
+     ПОГОДА — прогноз Open-Meteo (до 16 дней) + климатология Бали.
+     Хорошая погода -> морские/пляжные туры, плохая -> храмы/спа/культура.
+     ============================================================ */
+  var WX_LL = { lat: -8.6717, lng: 115.2339 };
+  // доля хорошей погоды по месяцам (сухой сезон апр–окт заметно суше)
+  var WX_CLIMO = [0.30, 0.35, 0.50, 0.70, 0.82, 0.90, 0.92, 0.90, 0.85, 0.70, 0.50, 0.35];
+  function wxClassify(code, pop) {
+    if ([95, 96, 99].indexOf(code) !== -1) return { good: false, icon: '⛈️', key: 'Гроза' };
+    if ([51, 53, 55, 56, 57, 61, 63, 65, 66, 67, 80, 81, 82, 85, 86].indexOf(code) !== -1) return { good: false, icon: '🌧️', key: 'Дождь' };
+    if (pop != null && pop >= 60) return { good: false, icon: '🌦️', key: 'Возможен дождь' };
+    if ([3, 45, 48].indexOf(code) !== -1) return { good: true, icon: '☁️', key: 'Облачно' };
+    if (code === 2) return { good: true, icon: '⛅', key: 'Переменная облачность' };
+    return { good: true, icon: '☀️', key: 'Ясно' };
+  }
+  // Чистая арифметика дат по строкам YYYY-MM-DD через UTC — без сдвига по таймзоне
+  function isoAddDays(iso, n) {
+    var p = iso.split('-');
+    var d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2]));
+    d.setUTCDate(d.getUTCDate() + n);
+    return d.toISOString().slice(0, 10);
+  }
+  function todayISO() { var d = new Date(); var m = String(d.getMonth() + 1); var da = String(d.getDate()); return d.getFullYear() + '-' + (m.length < 2 ? '0' + m : m) + '-' + (da.length < 2 ? '0' + da : da); }
+  // Возвращает Promise<[{date,good,icon,key,tmax,pop,real}]> длиной days
+  function fetchTripWeather(startISO, days) {
+    if (!startISO) return Promise.resolve(null);
+    var dates = []; for (var i = 0; i < days; i++) dates.push(isoAddDays(startISO, i));
+    var tISO = todayISO();
+    var maxISO = isoAddDays(tISO, 15); // Open-Meteo даёт прогноз примерно на 16 дней
+    var inWin = dates.filter(function (d) { return d >= tISO && d <= maxISO; }); // сравнение ISO-строк корректно
+    var got = {};
+    var p = Promise.resolve();
+    if (inWin.length) {
+      var url = 'https://api.open-meteo.com/v1/forecast?latitude=' + WX_LL.lat + '&longitude=' + WX_LL.lng +
+        '&daily=weather_code,temperature_2m_max,precipitation_probability_max&timezone=Asia%2FMakassar' +
+        '&start_date=' + inWin[0] + '&end_date=' + inWin[inWin.length - 1];
+      var fetchP = fetch(url).then(function (r) { return r.json(); }).then(function (j) {
+        var t = (j.daily && j.daily.time) || [];
+        t.forEach(function (dd, k) { got[dd] = { code: j.daily.weather_code[k], tmax: Math.round(j.daily.temperature_2m_max[k]), pop: j.daily.precipitation_probability_max[k] }; });
+      }).catch(function () { });
+      var timeoutP = new Promise(function (res) { setTimeout(res, 4500); }); // не ждём вечно — иначе климатология
+      p = Promise.race([fetchP, timeoutP]);
+    }
+    return p.then(function () {
+      return dates.map(function (d, idx) {
+        var w = got[d];
+        if (w) { var c = wxClassify(w.code, w.pop); return { date: d, good: c.good, icon: c.icon, key: c.key, tmax: w.tmax, pop: w.pop, real: true }; }
+        var mo = (+d.split('-')[1]) - 1;
+        var good = ((idx * 7 + 3) % 10) / 10 < WX_CLIMO[mo];
+        return { date: d, good: good, icon: good ? '☀️' : '🌧️', key: good ? 'Ясно' : 'Дождь', tmax: 30, pop: good ? 20 : 70, real: false };
+      });
+    });
+  }
+  // Насколько тур «просит» хорошую погоду: море/виды/полёты > храмы/спа/водопады
+  function sunNeed(tpl) {
+    var v = tpl.vibes || [];
+    var sun = ['beach', 'dive', 'aerial', 'volcano'];
+    var rain = ['temple', 'chill', 'waterfall'];
+    return v.reduce(function (a, x) { return a + (sun.indexOf(x) !== -1 ? 1 : 0) - (rain.indexOf(x) !== -1 ? 1 : 0); }, 0);
+  }
+
   function buildPlan(days, vibes, area) {
     var tpls = SB_DAY_TEMPLATES.slice();
     var scored;
@@ -349,32 +410,70 @@
     }
     chosen.sort(function (a, b) { return a.order - b.order; });
     var freeCount = days - chosen.length;
-
-    // Итоговая последовательность: туры + свободные дни, распределённые ровно
     var rotation = areaZoneRotation(area || state.area);
-    var seq = chosen.map(function (t) { return { kind: 'tour', tpl: t }; });
-    if (freeCount > 0) {
-      var zi = 0;
-      var step = Math.max(1, Math.round((seq.length + freeCount) / (freeCount + 1)));
-      for (var f = 0; f < freeCount; f++) {
-        var zone = SB_FREE_ZONES.filter(function (z) { return z.id === rotation[zi % rotation.length]; })[0];
-        zi++;
-        var pos = Math.min(seq.length, (f + 1) * step + f);
-        seq.splice(pos, 0, { kind: 'free', zone: zone });
+    var wx = state.weather;
+    var seq = new Array(days);
+
+    if (wx && wx.length >= days) {
+      // Дни-туры занимают ЛУЧШИЕ по погоде дни (морские туры любят солнце),
+      // свободные дни уходят на дождливые (кафе/спа/шопинг — им погода не важна),
+      // с лёгким разведением, чтобы не было 3 туров подряд.
+      var ranked = [];
+      for (var q = 0; q < days; q++) ranked.push(q);
+      ranked.sort(function (a, b) { return (wx[b].good - wx[a].good) || ((wx[a].pop || 0) - (wx[b].pop || 0)) || (a - b); });
+      var isTour = [];
+      for (var z0 = 0; z0 < days; z0++) isTour[z0] = false;
+      var assigned = 0;
+      for (var r = 0; r < ranked.length && assigned < chosen.length; r++) {
+        var di = ranked[r];
+        var prev2 = di >= 2 && isTour[di - 1] && isTour[di - 2];
+        var next2 = di <= days - 3 && isTour[di + 1] && isTour[di + 2];
+        if (prev2 || next2) continue;
+        isTour[di] = true; assigned++;
       }
+      for (var r2 = 0; r2 < ranked.length && assigned < chosen.length; r2++) {
+        if (!isTour[ranked[r2]]) { isTour[ranked[r2]] = true; assigned++; }
+      }
+      // сопоставляем туры дням: самый «солнечный» тур — на лучший тур-день
+      var tourDays = [];
+      for (var t0 = 0; t0 < days; t0++) if (isTour[t0]) tourDays.push(t0);
+      var tourDaysByWx = tourDays.slice().sort(function (a, b) { return (wx[b].good - wx[a].good) || ((wx[a].pop || 0) - (wx[b].pop || 0)); });
+      var tplsBySun = chosen.slice().sort(function (a, b) { return sunNeed(b) - sunNeed(a) || a.order - b.order; });
+      var tplForDay = {};
+      tourDaysByWx.forEach(function (dd, k) { tplForDay[dd] = tplsBySun[k]; });
+      var zi = 0;
+      for (var d0 = 0; d0 < days; d0++) {
+        if (isTour[d0]) seq[d0] = { kind: 'tour', tpl: tplForDay[d0] };
+        else { var zn = SB_FREE_ZONES.filter(function (z) { return z.id === rotation[zi % rotation.length]; })[0]; zi++; seq[d0] = { kind: 'free', zone: zn }; }
+      }
+    } else {
+      // Без прогноза — прежнее равномерное распределение туров и свободных дней
+      seq = chosen.map(function (t) { return { kind: 'tour', tpl: t }; });
+      if (freeCount > 0) {
+        var zi2 = 0;
+        var step = Math.max(1, Math.round((seq.length + freeCount) / (freeCount + 1)));
+        for (var f = 0; f < freeCount; f++) {
+          var zone = SB_FREE_ZONES.filter(function (z) { return z.id === rotation[zi2 % rotation.length]; })[0];
+          zi2++;
+          var pos = Math.min(seq.length, (f + 1) * step + f);
+          seq.splice(pos, 0, { kind: 'free', zone: zone });
+        }
+      }
+      seq = seq.slice(0, days);
     }
 
     // Собираем дни с цветами и координатами
     var planDays = seq.slice(0, days).map(function (item, i) {
       var color = SB_DAY_COLORS[i % SB_DAY_COLORS.length];
+      var w = wx && wx[i] ? wx[i] : null;
       if (item.kind === 'tour') {
         var stops = item.tpl.stops.map(function (s) {
           var l = LOC[s.loc];
           return { loc: l, time: s.time, note: s.note };
         });
-        return { kind: 'tour', title: item.tpl.title, tour: SB_TOURS[item.tpl.tour], color: color, stops: stops };
+        return { kind: 'tour', title: item.tpl.title, tour: SB_TOURS[item.tpl.tour], color: color, stops: stops, wx: w };
       }
-      return { kind: 'free', zone: item.zone, color: color };
+      return { kind: 'free', zone: item.zone, color: color, wx: w };
     });
 
     // Статистика
@@ -408,11 +507,18 @@
     return '<span class="tl-day-tools"><button class="tl-tool" data-tool="focus" data-day="' + i + '">' + esc(T('Фокус')) + '</button>' +
       '<button class="tl-tool" data-tool="toggle" data-day="' + i + '">' + esc(T('Скрыть')) + '</button></span>';
   }
+  // Погодный чип дня: иконка + температура (клик-подсказка — условие)
+  function wxChip(d) {
+    if (!d.wx) return '';
+    var tip = T(d.wx.key) + (d.wx.real ? '' : ' · ' + T('оценка по сезону'));
+    return '<span class="wx-chip' + (d.wx.good ? '' : ' wx-chip--wet') + '" title="' + esc(tip) + '">' +
+      d.wx.icon + ' ' + d.wx.tmax + '°</span>';
+  }
   function dayCardHTML(d, i) {
     var num = esc(T('День')) + ' ' + (i + 1 < 10 ? '0' : '') + (i + 1);
     if (d.kind === 'free') {
-      var recs = d.zone.recs.map(function (r) {
-        return '<div class="free-rec">' +
+      var recs = d.zone.recs.map(function (r, k) {
+        return '<div class="free-rec" data-day="' + i + '" data-rec="' + k + '" role="button" tabindex="0">' +
           (r.img ? '<img class="free-rec-thumb" src="' + esc(r.img) + '" alt="' + esc(r.title) + '">' : '') +
           '<div class="free-rec-body"><div class="free-rec-name">' + esc(r.title) +
           (r.topPick ? ' <span class="top-pick">5&#9733; SB Top Pick</span>' : '') +
@@ -422,7 +528,7 @@
       return '<article class="tl-day tl-day--free" data-day="' + i + '" style="--day:' + d.color + '">' +
         '<div class="tl-day-head"><span class="day-num">' + num + '</span>' +
         '<span class="tl-day-title free-title">' + esc(T('Свободный день')) + ' · ' + esc(T(d.zone.name)) + '</span>' +
-        dayTools(i) + '</div>' +
+        wxChip(d) + dayTools(i) + '</div>' +
         '<p class="free-intro">' + esc(T(d.zone.intro)) + '</p>' + recs + '</article>';
     }
     // Забор из отеля — первая строка расписания по времени
@@ -452,7 +558,7 @@
       '<a class="mini-btn" href="' + esc(d.tour.link) + '" target="_blank" rel="noopener">' + esc(T('Страница тура')) + '</a></div></div>' : '';
     return '<article class="tl-day" data-day="' + i + '" style="--day:' + d.color + '">' +
       '<div class="tl-day-head"><span class="day-num">' + num + '</span>' +
-      '<span class="tl-day-title">' + esc(T(d.title)) + '</span>' +
+      '<span class="tl-day-title">' + esc(T(d.title)) + '</span>' + wxChip(d) +
       dayTools(i) + '</div>' +
       '<div class="tl-stops">' + stops + '</div>' + tour + '</article>';
   }
@@ -466,6 +572,18 @@
     // делегированные обработчики
     els.timeline.querySelectorAll('.tl-stop').forEach(function (node) {
       node.addEventListener('click', function () { var l = LOC[node.getAttribute('data-loc')]; if (l) openPlace(l); });
+    });
+    els.timeline.querySelectorAll('.free-rec').forEach(function (node) {
+      function openIt(e) {
+        if (e.target.closest('a')) return; // клик по кнопке Maps
+        e.stopPropagation();
+        var di = parseInt(node.getAttribute('data-day'), 10);
+        var ri = parseInt(node.getAttribute('data-rec'), 10);
+        var d = state.plan.days[di];
+        if (d && d.kind === 'free' && d.zone.recs[ri]) openFreeRec(d.zone.recs[ri]);
+      }
+      node.addEventListener('click', openIt);
+      node.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openIt(e); } });
     });
     els.timeline.querySelectorAll('.tl-tool').forEach(function (btn) {
       btn.addEventListener('click', function (e) {
@@ -534,12 +652,23 @@
   /* ============================================================
      СЦЕНА AI-СБОРКИ — единый конечный автомат
      ============================================================ */
+  // Сначала тянем прогноз погоды, затем запускаем сцену (дни раскладываются по погоде)
   function build() {
+    if (state.building) return;
+    state.building = true;
+    var days = computeDays();
+    els.build.disabled = true; els.rebuild.hidden = true;
+    showStatus(true); typeStatus(T('Смотрю прогноз погоды…'));
+    fetchTripWeather(els.startDate.value, days).then(function (w) {
+      state.weather = w; state.building = false; runBuild(days);
+    }).catch(function () { state.weather = null; state.building = false; runBuild(days); });
+  }
+  function runBuild(days) {
     if (state.building) return;
     resetScene();
     state.building = true;
     state.phase = 'building';
-    state.days = computeDays();
+    state.days = days;
     state.plan = buildPlan(state.days, activeVibes(), state.area);
     els.build.disabled = true;
     els.rebuild.hidden = true;
@@ -718,6 +847,9 @@
      ============================================================ */
   function openPlace(loc, keepOpen) {
     state.currentLoc = loc;
+    // восстановить элементы, которые прячет карточка свободного места
+    els.pcRating.parentElement.style.display = '';
+    els.pcBook.style.display = ''; els.pcAdd.style.display = '';
     els.pcImg.src = loc.img; els.pcImg.alt = T(loc.alt || loc.name);
     els.pcBadge.hidden = !loc.topPick;
     els.pcCat.textContent = T(loc.cat);
@@ -744,6 +876,21 @@
   function closePlace() {
     els.pcOverlay.classList.remove('is-open');
     var d = REDUCED ? 0 : 420; setTimeout(function () { els.pcOverlay.hidden = true; }, d);
+  }
+  // Карточка места свободного дня — большое фото + описание + Google Maps
+  function openFreeRec(rec) {
+    state.currentLoc = null;
+    els.pcImg.src = rec.img; els.pcImg.alt = rec.title;
+    els.pcBadge.hidden = !rec.topPick;
+    els.pcCat.textContent = T('Место для свободного дня');
+    els.pcTitle.textContent = rec.title;
+    els.pcRating.parentElement.style.display = 'none';
+    els.pcDesc.textContent = T(rec.copy);
+    els.pcTour.style.display = 'none';
+    els.pcMaps.href = rec.maps;
+    els.pcBook.style.display = 'none'; els.pcAdd.style.display = 'none';
+    els.pcOverlay.hidden = false;
+    requestAnimationFrame(function () { els.pcOverlay.classList.add('is-open'); });
   }
   els.pcBook.addEventListener('click', function () {
     els.pcBook.textContent = T('Заявка принята'); els.pcBook.classList.add('is-done'); els.pcBook.disabled = true;
