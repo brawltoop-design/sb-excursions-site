@@ -4951,6 +4951,12 @@ function renderWestStylePage(tour) {
   html = replacePropertyTag(html, "og:image", absoluteImage);
   html = replaceCanonicalLink(html, absoluteRoute);
 
+  // Perf: предзагрузка LCP-hero и основного шрифта на каждой странице тура
+  html = html.replace(
+    '<meta name="viewport" content="width=device-width, initial-scale=1.0" />',
+    `<meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="preload" as="image" href="${imagePath}" fetchpriority="high" /> <link rel="preload" as="font" type="font/woff2" href="/css/fonts/cina-geo/CinaGEO-Regular.woff2" crossorigin />`,
+  );
+
   html = replaceSingleQuotedField(html, "tn_text_1766426116262000001", formatWestHeroTitle(tour.title));
   html = replaceSingleQuotedField(html, "tn_text_1766419725555", escapeHtml(heroLead));
   html = replaceSingleQuotedField(html, "tn_text_1721240739954", escapeHtml(normalizedWestTemplatePrice(tour.price)));
@@ -12018,6 +12024,8 @@ function renderJournalIndexPage() {
     <meta property="og:description" content="Browse the SB Excursions Bali Journal with evergreen Bali guides, selling articles, route guides and schedule pages for every Bali tour and excursion on the site.">
     <meta property="og:url" content="${SITE_URL}${JOURNAL_HUB_ROUTE}">
     <meta property="og:image" content="${absoluteJournalImageUrl(featuredGuides[0]?.heroImage || publicImagePath(tours[0]))}">
+    <link rel="preload" as="image" href="${featuredGuides[0]?.heroImage || publicImagePath(tours[0])}" fetchpriority="high">
+    <link rel="preload" as="font" type="font/woff2" href="/css/fonts/cina-geo/CinaGEO-Regular.woff2" crossorigin>
     <link rel="canonical" href="${SITE_URL}${JOURNAL_HUB_ROUTE}">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/tild6536-3637-4563-a362-633234333130__favikon_sb_excursion.png">
     <link rel="stylesheet" href="/css/bali-tour-pages.css">
@@ -12259,6 +12267,8 @@ function renderSeoGuidePage(article) {
     <meta property="og:description" content="${escapeHtml(article.description)}">
     <meta property="og:url" content="${article.url}">
     <meta property="og:image" content="${absoluteJournalImageUrl(article.heroImage)}">
+    <link rel="preload" as="image" href="${article.heroImage}" fetchpriority="high">
+    <link rel="preload" as="font" type="font/woff2" href="/css/fonts/cina-geo/CinaGEO-Regular.woff2" crossorigin>
     <link rel="canonical" href="${article.url}">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/tild6536-3637-4563-a362-633234333130__favikon_sb_excursion.png">
     <link rel="stylesheet" href="/css/bali-tour-pages.css">
@@ -12420,6 +12430,8 @@ function renderJournalArticlePage(article) {
     <meta property="og:description" content="${escapeHtml(article.description)}">
     <meta property="og:url" content="${article.url}">
     <meta property="og:image" content="${SITE_URL}${publicImagePath(article.tour)}">
+    <link rel="preload" as="image" href="${publicImagePath(article.tour)}" fetchpriority="high">
+    <link rel="preload" as="font" type="font/woff2" href="/css/fonts/cina-geo/CinaGEO-Regular.woff2" crossorigin>
     <link rel="canonical" href="${article.url}">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/tild6536-3637-4563-a362-633234333130__favikon_sb_excursion.png">
     <link rel="stylesheet" href="/css/bali-tour-pages.css">
@@ -16668,6 +16680,12 @@ function collectAutoTourTranslations(tour) {
     addPlain(question);
     addPlain(answer);
   });
+  // Полностью собранный FAQ (включая авто-сгенерированные вопросы) — переводим
+  // целыми строками, чтобы на не-EN страницах не оставался английский каркас.
+  buildWestFaqs(tour).forEach(([question, answer]) => {
+    addPlain(question);
+    addPlain(answer);
+  });
   (tour.reviews || []).forEach((review) => {
     addPlain(review?.text);
     addPlain(review?.title);
@@ -16749,7 +16767,7 @@ async function buildAutoLocalizedTour(baseTour, locale = "en") {
     itinerary: (baseTour.itinerary || []).map(([title, text]) => [withTranslatedText(title, plainMap), withTranslatedText(text, plainMap)]),
     includes: (baseTour.includes || []).map((item) => withTranslatedText(item, plainMap)),
     goodToKnow: (baseTour.goodToKnow || []).map((item) => withTranslatedText(item, plainMap)),
-    faqs: (baseTour.faqs || []).map(([question, answer]) => [withTranslatedText(question, plainMap), withTranslatedText(answer, plainMap)]),
+    faqs: buildWestFaqs(baseTour).map(([question, answer]) => [withTranslatedText(question, plainMap), withTranslatedText(answer, plainMap)]),
     reviews: (baseTour.reviews || []).map((review) => ({
       ...review,
       text: withTranslatedText(review?.text, plainMap),
@@ -18020,6 +18038,7 @@ function renderStandalonePage(type, locale) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${escapeHtml(content.title)} | SB Excursions</title>
+    <link rel="preload" as="font" type="font/woff2" href="/css/fonts/cina-geo/CinaGEO-Regular.woff2" crossorigin>
     <meta name="description" content="${escapeHtml(content.metaDescription)}">
     <meta property="og:type" content="website">
     <meta property="og:title" content="${escapeHtml(content.title)} | SB Excursions">
