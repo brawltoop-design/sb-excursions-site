@@ -1405,6 +1405,24 @@ var SB_LOCATIONS = [
     "rating": 4.8,
     "topPick": false,
     "tour": "volcano_coastline_helicopter_ride"
+  },
+  {
+    "id": "batur_trail",
+    "name": "Тропа на Батур (старт восхождения)",
+    "lat": -8.256,
+    "lng": 115.382,
+    "cat": "Восхождение",
+    "vibes": [
+      "volcano",
+      "adventure"
+    ],
+    "desc": "Старт ночного восхождения на вулкан Батур: два часа по тропе к вершине 1717 м ровно к рассвету над кальдерой.",
+    "img": "../images/tours-real/mount-batur-sunrise-hike.jpg",
+    "alt": "Тропа восхождения на вулкан Батур с налобными фонариками до рассвета",
+    "maps": "https://maps.google.com/?q=Mount+Batur+Trekking+Start+Point",
+    "rating": 4.9,
+    "topPick": true,
+    "tour": "batur_sunrise_hike"
   }
 ];
 
@@ -2019,6 +2037,38 @@ var SB_DAY_TEMPLATES = [
         "loc": "poluostrov_bukit",
         "time": "12:55",
         "note": "Пляжи и скалы полуострова Букит"
+      }
+    ]
+  },
+  {
+    "id": "batur_hike_day",
+    "order": 2,
+    "title": "Восхождение на Батур к рассвету",
+    "vibes": [
+      "volcano",
+      "adventure"
+    ],
+    "tour": "batur_sunrise_hike",
+    "stops": [
+      {
+        "loc": "batur_trail",
+        "time": "04:00",
+        "note": "Старт восхождения с фонариками"
+      },
+      {
+        "loc": "batur",
+        "time": "05:45",
+        "note": "Рассвет на вершине и завтрак от пара вулкана"
+      },
+      {
+        "loc": "kintamani",
+        "time": "08:30",
+        "note": "Кофе лювак и вид на кальдеру"
+      },
+      {
+        "loc": "goryachie_istochniki_batur_t",
+        "time": "10:00",
+        "note": "Горячие источники у озера после спуска"
       }
     ]
   }

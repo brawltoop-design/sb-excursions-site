@@ -58,6 +58,7 @@
     skip: $('skipBtn'), rebuild: $('rebuildBtn'), hint: $('mapHint'),
     summary: $('summary'), sumDays: $('sumDays'), sumStops: $('sumStops'),
     sumKm: $('sumKm'), sumBudget: $('sumBudget'), sumBudgetNote: $('sumBudgetNote'),
+    planWa: $('planWa'),
     timeline: $('timeline'), tlEmpty: $('tlEmpty'),
     pcOverlay: $('pcOverlay'), pcBackdrop: $('pcBackdrop'), pcClose: $('pcClose'),
     pcImg: $('pcImg'), pcBadge: $('pcBadge'), pcCat: $('pcCat'), pcTitle: $('pcTitle'),
@@ -385,6 +386,24 @@
         .slice(0, tourCount - 1);
       chosen = [mantaTpl].concat(others);
     }
+    // Восход на Батур — флагманский высокомаржинальный тур: гарантируем ОДИН Батур-день.
+    // Пеший подъём при интересе «Приключения», иначе восход на джипе (без дублей).
+    var baturHike = tpls.filter(function (t) { return t.id === 'batur_hike_day'; })[0];
+    var baturJeep = tpls.filter(function (t) { return t.id === 'batur_day'; })[0];
+    var baturPick = (state.interests && state.interests.adventure && baturHike) ? baturHike : (baturJeep || baturHike);
+    if (baturPick) {
+      var hadBatur = chosen.some(function (t) { return t.id === 'batur_day' || t.id === 'batur_hike_day'; });
+      chosen = chosen.filter(function (t) { return t.id !== 'batur_day' && t.id !== 'batur_hike_day'; }); // мьютекс
+      if ((hadBatur || tourCount >= 2) && chosen.indexOf(baturPick) === -1) {
+        if (chosen.length < tourCount) chosen.push(baturPick);
+        else {
+          var scB = {}; scored.forEach(function (x) { scB[x.t.id] = x.m; });
+          var wi = -1, ws = Infinity;
+          chosen.forEach(function (t, k) { if (t.id !== 'manta_day' && (scB[t.id] || 0) < ws) { ws = scB[t.id] || 0; wi = k; } });
+          if (wi >= 0) chosen[wi] = baturPick; else chosen.push(baturPick);
+        }
+      }
+    }
     // Резерв разнообразия: на длинных поездках (12+ дней) отдаём часть тур-слотов
     // «нишевым» турам из каталога, которые проигрывают классике по вайбу
     // (Сумбава, квадроциклы, вертолёты, восток Пениды). Иначе даже трёхнедельный
@@ -394,18 +413,20 @@
       var reserve = Math.min(chosen.length - 3, days >= 18 ? 4 : (days >= 15 ? 3 : 2));
       var chosenIds = {};
       chosen.forEach(function (t) { chosenIds[t.id] = true; });
-      var pool = tpls.filter(function (t) { return !chosenIds[t.id] && t.id !== 'manta_day'; })
+      var protectedIds = { manta_day: 1 }; if (baturPick) protectedIds[baturPick.id] = 1;
+      // в пул не берём другой Батур-день (чтобы не получить дубль джип+пеший)
+      var pool = tpls.filter(function (t) { return !chosenIds[t.id] && !protectedIds[t.id] && t.id !== 'batur_day' && t.id !== 'batur_hike_day'; })
         .sort(function (a, b) { return b.order - a.order; }); // новые/нишевые (высокий order) вперёд
       pool.sort(function (a, b) { return (b.id === 'sumbawa_day') - (a.id === 'sumbawa_day'); });
       var swapIn = pool.slice(0, reserve);
       if (swapIn.length) {
         var scoreOf = {};
         scored.forEach(function (x) { scoreOf[x.t.id] = x.m; });
-        var mantaKeep = chosen.filter(function (t) { return t.id === 'manta_day'; });
-        var rest = chosen.filter(function (t) { return t.id !== 'manta_day'; })
+        var keepProt = chosen.filter(function (t) { return protectedIds[t.id]; });
+        var rest = chosen.filter(function (t) { return !protectedIds[t.id]; })
           .sort(function (a, b) { return (scoreOf[b.id] || 0) - (scoreOf[a.id] || 0); }); // худшие по вайбу — в конец
         rest = rest.slice(0, Math.max(0, rest.length - swapIn.length)); // отбрасываем худшие
-        chosen = mantaKeep.concat(rest).concat(swapIn);
+        chosen = keepProt.concat(rest).concat(swapIn);
       }
     }
     chosen.sort(function (a, b) { return a.order - b.order; });
@@ -780,6 +801,44 @@
       els.sumBudget.textContent = T('по запросу');
       els.sumBudgetNote.textContent = fmt('{n} туров', { n: s.ask });
     }
+    updatePlanWa();
+  }
+
+  /* ---------- Кнопка «весь план в WhatsApp» ---------- */
+  var SB_WA_PHONE = '6285333685020';
+  function dmy(iso) { if (!iso) return ''; var p = iso.split('-'); return p[2] + '.' + p[1] + '.' + p[0]; }
+  function optText(sel) { return sel && sel.selectedIndex >= 0 ? sel.options[sel.selectedIndex].text.trim() : ''; }
+  function buildWaMessage() {
+    var p = state.plan; if (!p) return '';
+    var start = els.startDate.value;
+    var L = [];
+    L.push(T('Мой AI-план по Бали — SB Excursions'));
+    L.push('');
+    L.push('📅 ' + dmy(start) + ' – ' + dmy(els.endDate.value) + ' · ' + p.stats.days + ' ' + T('дней'));
+    L.push('📍 ' + [optText(els.areaSelect), optText(els.groupSelect), optText(els.budgetSelect)].filter(Boolean).join(' · '));
+    L.push('');
+    p.days.forEach(function (d, i) {
+      var date = start ? dmy(isoAddDays(start, i)) : '';
+      var wx = d.wx ? '  ' + d.wx.icon + ' ' + d.wx.tmax + '°' : '';
+      if (d.kind === 'tour') {
+        L.push('▶ ' + T('День') + ' ' + (i + 1) + (date ? ' · ' + date : '') + wx);
+        L.push('🎟 ' + d.tour.name + ' — ' + d.tour.price);
+        d.stops.forEach(function (s) { L.push('   ' + s.time + '  ' + T(s.loc.name)); });
+      } else {
+        L.push('☕ ' + T('День') + ' ' + (i + 1) + (date ? ' · ' + date : '') + wx + ' — ' + T('Свободный день') + ' · ' + T(d.zone.name));
+        d.zone.recs.forEach(function (r) { L.push('   • ' + r.title); });
+      }
+      L.push('');
+    });
+    L.push('— — —');
+    L.push('📊 ' + p.stats.stops + ' ' + T('точек маршрута') + ' · ~' + p.stats.km + ' ' + T('км'));
+    L.push(T('Хочу забронировать эту поездку 🙌'));
+    return L.join('\n');
+  }
+  function updatePlanWa() {
+    if (!els.planWa) return;
+    els.planWa.href = 'https://wa.me/' + SB_WA_PHONE + '?text=' + encodeURIComponent(buildWaMessage());
+    els.planWa.hidden = false;
   }
 
   /* ---------- Финал без анимации (reduced-motion) ---------- */
@@ -836,6 +895,7 @@
     els.status.hidden = true; els.statusText.textContent = '';
     els.counter.hidden = true;
     els.summary.hidden = true; els.summary.classList.remove('is-in');
+    if (els.planWa) els.planWa.hidden = true;
     state.building = false;
   }
 

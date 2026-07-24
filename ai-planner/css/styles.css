@@ -646,6 +646,29 @@ html.is-embed .app { height: 100vh; }
 .summary.is-in { opacity: 1; transform: none; }
 .summary[hidden] { display: none; }
 
+/* Кнопка «весь план в WhatsApp» */
+.plan-wa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 0 0 14px;
+  padding: 13px 18px;
+  border-radius: 999px;
+  background: #25D366;
+  color: #fff;
+  font-size: 14.5px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.32);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.25s var(--ease);
+}
+.plan-wa:hover { background: #1FBE5A; transform: translateY(-1px); box-shadow: 0 9px 24px rgba(37, 211, 102, 0.4); }
+.plan-wa:active { transform: translateY(0); }
+.plan-wa-ic { flex: 0 0 auto; }
+.plan-wa[hidden] { display: none; }
+.plan-col .plan-wa { flex: 0 0 auto; }
+
 .summary-item {
   background: #fff;
   border: 1px solid var(--card-border);
