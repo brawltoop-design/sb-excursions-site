@@ -4649,55 +4649,88 @@ function buildWestCollageStops(tour) {
 
 function buildWestCollageFallbackAssets(tour) {
   const heroAsset = buildCollageAsset(publicImagePath(tour), tour.imageAlt || tour.title);
+  const P = BALI_PLANNER_PLACE_IMAGES;
+  // По 6–8 РАЗНЫХ тематических фото мест на каждый тип тура, чтобы 6 слотов
+  // коллажа заполнялись разными местами, а не повтором hero-картинки.
   const kindFallbackImages = {
     sunrise: [
-      plannerLocalImage("images/bali-tours/dolphin-sunrise-city-tour.jpg"),
+      P.mountBaturSunriseLocal,
       plannerLocalImage("images/tild3963-6334-4438-b163-623862386363___batur_jeep.jpg"),
+      plannerLocalImage("images/bali-tours/dolphin-sunrise-city-tour.jpg"),
       plannerLocalImage("images/bali-tours/north-bali-lovina-dolphins-tour.jpg"),
+      P.ubudTukadCepung,
+      P.ubudRiceTerrace,
+      P.ubudWaterfall,
     ],
     marine: [
       plannerLocalImage("images/bali-tours/nusa-penida-manta-rays-point.webp"),
       plannerLocalImage("images/bali-tours/blue-lagoon-snorkeling.webp"),
       plannerLocalImage("images/bali-tours/sunset-cruise-bali.jpg"),
+      P.eastBaliNusaPenida,
+      P.uluwatuSurf,
+      P.nusaDuaBeach,
+      P.sanurWaterActivity,
     ],
     island: [
-      plannerLocalImage("images/bali-tours/nusa-penida-east-tour.jpg"),
       plannerLocalImage("images/bali-tours/west-collage/nusa-penida-west-kelingking-wide.webp"),
+      plannerLocalImage("images/bali-tours/nusa-penida-east-tour.jpg"),
       plannerLocalImage("images/bali-tours/nusa-lembongan-ceningan-day-trip.webp"),
+      P.eastBaliNusaPenida,
+      plannerLocalImage("images/bali-tours/gili-island-tour.jpg"),
+      plannerLocalImage("images/bali-tours/blue-lagoon-snorkeling.webp"),
     ],
     culture: [
       plannerLocalImage("images/bali-tours/tanah-lot-bedugul-tour.jpg"),
-      BALI_PLANNER_PLACE_IMAGES.ubudRiceTerrace,
-      BALI_PLANNER_PLACE_IMAGES.ubudTemple,
+      P.ubudTemple,
+      P.ubudRiceTerrace,
+      P.eastBaliLempuyang,
+      P.ubudGoaGajah,
+      P.ubudPalace,
+      P.eastBaliTirtaGangga,
     ],
     instagram: [
-      plannerLocalImage("images/bali-tours/bali-instagram-highlights-tour.jpg"),
-      BALI_PLANNER_PLACE_IMAGES.eastBaliLempuyang,
-      BALI_PLANNER_PLACE_IMAGES.eastBaliTirtaGangga,
+      P.eastBaliLempuyang,
+      P.eastBaliTirtaGangga,
+      P.ubudRiceTerrace,
+      P.ubudTukadCepung,
+      P.ubudRidge,
+      P.cangguSunset,
+      P.uluwatuTemple,
     ],
     adventure: [
       plannerLocalImage("images/bali-tours/atv-quad-bikes.webp"),
       plannerLocalImage("images/tild3963-6334-4438-b163-623862386363___batur_jeep.jpg"),
       plannerLocalImage("images/bali-tours/white-water-rafting.webp"),
+      P.ubudTukadCepung,
+      P.ubudWaterfall,
+      P.ubudRiceTerrace,
+      P.mountBaturSunriseLocal,
     ],
     transfer: [
       plannerLocalImage("images/bali-tours/bali-airport-transfer.jpg"),
       plannerLocalImage("images/bali-tours/fast-boat-transfer-bali.webp"),
-      BALI_PLANNER_PLACE_IMAGES.sanurBeach,
+      P.sanurBeach,
+      P.cangguBeach,
+      P.seminyakBeach,
+      P.nusaDuaBeach,
     ],
     helicopter: [
       plannerLocalImage("images/bali-tours/bali-helicopter-scenic-tour.jpg"),
       plannerLocalImage("images/bali-tours/volcano-coastline-helicopter-ride.jpeg"),
-      BALI_PLANNER_PLACE_IMAGES.nusaDuaBeach,
+      P.nusaDuaBeach,
+      P.uluwatuCliff,
+      P.cangguSunset,
+      P.seminyakSunset,
     ],
   };
   const fallbackImages = kindFallbackImages[detectTourKind(tour)] || [tourHeroImage("ubud-highlights-tour")];
 
-  return [heroAsset]
-    .concat(
-      fallbackImages.map((imagePath) =>
-        buildCollageAsset(imagePath, `${tour.title} photo stop in ${compactAreaLabel(tour)}`),
-      ),
+  // Hero НЕ добавляем в коллаж — он и так на обложке и в приват-карточке;
+  // в галерее хотим только разные места (иначе фото тура повторяется).
+  void heroAsset;
+  return fallbackImages
+    .map((imagePath) =>
+      buildCollageAsset(imagePath, `${tour.title} photo stop in ${compactAreaLabel(tour)}`),
     )
     .filter(Boolean);
 }
@@ -4727,10 +4760,23 @@ function buildWestCollageImageOverrides(tour) {
       if (uniqueAssets.length >= WEST_COLLAGE_SLOT_IDS.length) break;
     }
 
+    // Добиваем недостающие слоты РАЗНЫМИ фото мест Бали, а не повтором hero.
+    const P2 = BALI_PLANNER_PLACE_IMAGES;
+    const genericPool = [
+      P2.ubudRiceTerrace, P2.eastBaliLempuyang, P2.uluwatuTemple, P2.cangguSunset,
+      P2.nusaDuaBeach, P2.ubudTukadCepung, P2.seminyakBeach, P2.sanurBeach,
+      P2.eastBaliTirtaGangga, P2.uluwatuCliff, P2.ubudRidge, P2.eastBaliNusaPenida,
+    ].filter(Boolean);
+    let poolIndex = 0;
     while (uniqueAssets.length < WEST_COLLAGE_SLOT_IDS.length) {
-      uniqueAssets.push(
-        buildCollageAsset(publicImagePath(tour), tour.imageAlt || `${tour.title} in Bali`),
-      );
+      let candidate = null;
+      while (poolIndex < genericPool.length) {
+        const next = genericPool[poolIndex++];
+        if (next && !seenImagePaths.has(next)) { candidate = next; break; }
+      }
+      if (!candidate) candidate = publicImagePath(tour); // абсолютный последний резерв
+      seenImagePaths.add(candidate);
+      uniqueAssets.push(buildCollageAsset(candidate, tour.imageAlt || `${tour.title} in Bali`));
     }
 
     return WEST_COLLAGE_SLOT_IDS.map((elemId, index) => ({
