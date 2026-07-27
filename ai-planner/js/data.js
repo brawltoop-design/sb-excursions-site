@@ -282,7 +282,7 @@ var SB_LOCATIONS = [
       "waterfall"
     ],
     "desc": "Семь мощных струй, падающих в зелёный каньон, — самый впечатляющий водопад Бали.",
-    "img": "../images/places/bali-waterfall.jpg",
+    "img": "../images/bali-tours/bali-airport-transfer.jpg",
     "alt": "Водопад в джунглях северного Бали",
     "maps": "https://maps.google.com/?q=Sekumpul+Waterfall",
     "rating": 4.8,
@@ -353,7 +353,7 @@ var SB_LOCATIONS = [
       "beach"
     ],
     "desc": "Храм на 70-метровой скале над океаном, вечерний танец кечак и легендарные пляжи Букита.",
-    "img": "../images/places/uluwatu-temple-cliff.jpg",
+    "img": "../images/places/bali-in-shoulder-season.jpg",
     "alt": "Храм Улувату на скале над океаном",
     "maps": "https://maps.google.com/?q=Uluwatu+Temple",
     "rating": 4.8,
@@ -371,7 +371,7 @@ var SB_LOCATIONS = [
       "chill"
     ],
     "desc": "Спокойные белые пляжи, брызги Waterblow на скалах и вечерние круизы из гавани Беноа.",
-    "img": "https://live.staticflickr.com/4474/37781456082_9e2bc54082_b.jpg",
+    "img": "../images/places/budget-travel-in-bali.jpg",
     "alt": "Волны Waterblow разбиваются о скалы в Нуса-Дуа",
     "maps": "https://maps.google.com/?q=Nusa+Dua+Beach",
     "rating": 4.7,
@@ -719,7 +719,7 @@ var SB_LOCATIONS = [
       "chill"
     ],
     "desc": "Макаки в тропическом Лесу обезьян Убуда",
-    "img": "../images/places/ubud-monkey-forest.jpg",
+    "img": "../images/places/digital-arrival-card.jpg",
     "alt": "Макаки в тропическом Лесу обезьян Убуда",
     "maps": "https://maps.google.com/?q=Ubud%20Sacred%20Monkey%20Forest%20Bali",
     "rating": 4.8,
@@ -772,7 +772,7 @@ var SB_LOCATIONS = [
       "waterfall"
     ],
     "desc": "Водопад Гитгит в тропическом лесу северного Бали",
-    "img": "../images/places/bali-waterfall.jpg",
+    "img": "../images/places/drinks-safety.jpg",
     "alt": "Водопад Гитгит в тропическом лесу северного Бали",
     "maps": "https://maps.google.com/?q=Gitgit%20Waterfall%20Bali",
     "rating": 4.8,
@@ -895,7 +895,7 @@ var SB_LOCATIONS = [
       "chill"
     ],
     "desc": "Пляжи и лагуна полуострова Танджунг-Беноа",
-    "img": "../images/places/calm-beach-in-bali.jpg",
+    "img": "../images/places/dry-bag.jpg",
     "alt": "Пляжи и лагуна полуострова Танджунг-Беноа",
     "maps": "https://maps.google.com/?q=Tanjung%20Benoa%20beach%20Bali",
     "rating": 4.9,
@@ -1016,7 +1016,7 @@ var SB_LOCATIONS = [
       "chill"
     ],
     "desc": "Спидбот в гавани Санур перед переправой на Нуса-Пениду",
-    "img": "../images/places/fast-boat-from-sanur.jpg",
+    "img": "../images/places/hiking-shoes.jpg",
     "alt": "Спидбот в гавани Санур перед переправой на Нуса-Пениду",
     "maps": "https://maps.google.com/?q=Sanur%20Harbour%20Bali%20fast%20boat",
     "rating": 4.9,
@@ -1067,7 +1067,7 @@ var SB_LOCATIONS = [
       "chill"
     ],
     "desc": "Балийское блюдо на обед в кафе Убуда",
-    "img": "../images/places/balinese-warung-meal.jpg",
+    "img": "../images/places/love-bali-levy.jpg",
     "alt": "Балийское блюдо на обед в кафе Убуда",
     "maps": "https://maps.google.com/?q=Ubud%20organic%20cafe%20healthy%20lunch%20Bali",
     "rating": 4.8,
@@ -1102,7 +1102,7 @@ var SB_LOCATIONS = [
       "adventure"
     ],
     "desc": "Рисовые террасы и джунгли около Паянгана",
-    "img": "../images/places/tegalalang-rice-terraces.jpg",
+    "img": "../images/places/passport-control.jpg",
     "alt": "Рисовые террасы и джунгли около Паянгана",
     "maps": "https://maps.google.com/?q=Bali%20Payangan%20rice%20field%20jungle%20ATV%20trail",
     "rating": 4.9,
@@ -1153,7 +1153,7 @@ var SB_LOCATIONS = [
       "chill"
     ],
     "desc": "Балийский обед в варунге после заезда",
-    "img": "../images/places/balinese-warung-meal.jpg",
+    "img": "../images/places/private-driver-in-bali.jpg",
     "alt": "Балийский обед в варунге после заезда",
     "maps": "https://maps.google.com/?q=Balinese%20lunch%20warung%20meal%20Ubud",
     "rating": 4.9,
@@ -1187,7 +1187,7 @@ var SB_LOCATIONS = [
       "chill"
     ],
     "desc": "Домик на дереве Румах-Похон на обрыве над видом Тысячи островов",
-    "img": "../images/places/kelingking-beach-viewpoint.jpg",
+    "img": "../images/places/ride-hailing-app.jpg",
     "alt": "Домик на дереве Румах-Похон на обрыве над видом Тысячи островов",
     "maps": "https://maps.google.com/?q=Rumah%20Pohon%20Molenteng%20tree%20house%20Nusa%20Penida",
     "rating": 4.9,
@@ -1204,7 +1204,7 @@ var SB_LOCATIONS = [
       "chill"
     ],
     "desc": "Зелёные округлые холмы Телепузиков на Нуса-Пениде над океаном",
-    "img": "../images/places/angels-billabong-rock-pool.jpg",
+    "img": "../images/places/sunscreen.jpg",
     "alt": "Зелёные округлые холмы Телепузиков на Нуса-Пениде над океаном",
     "maps": "https://maps.google.com/?q=Teletubbies%20Hill%20Bukit%20Teletubbies%20Nusa%20Penida%20green%20hills",
     "rating": 4.9,
@@ -1222,7 +1222,7 @@ var SB_LOCATIONS = [
       "chill"
     ],
     "desc": "Природный бассейн Ангелс-Биллабонг у скал",
-    "img": "../images/places/angels-billabong-rock-pool.jpg",
+    "img": "../images/places/uluwatu-cliffs-at-sunset.jpg",
     "alt": "Природный бассейн Ангелс-Биллабонг у скал",
     "maps": "https://maps.google.com/?q=Angel's%20Billabong%20Nusa%20Penida",
     "rating": 4.7,
@@ -1292,7 +1292,7 @@ var SB_LOCATIONS = [
       "adventure"
     ],
     "desc": "Паромный порт Паданг-Бай на востоке Бали",
-    "img": "../images/places/blue-lagoon-padang-bai.jpg",
+    "img": "../images/places/warm-layer-for-sunrise.jpg",
     "alt": "Паромный порт Паданг-Бай на востоке Бали",
     "maps": "https://maps.google.com/?q=Padang%20Bai%20harbour%20Bali%20ferry%20port",
     "rating": 4.7,
@@ -1328,7 +1328,7 @@ var SB_LOCATIONS = [
       "chill"
     ],
     "desc": "Рыбацкая деревня Лабухан-Джамбу на Сумбаве",
-    "img": "../images/tours-real/fast-boat-transfer-bali.jpg",
+    "img": "../images/tours-real/bali-instagram-highlights-tour.jpg",
     "alt": "Рыбацкая деревня Лабухан-Джамбу на Сумбаве",
     "maps": "https://maps.google.com/?q=Labuhan%20Jambu%20fishing%20village%20Sumbawa",
     "rating": 4.9,
@@ -1364,7 +1364,7 @@ var SB_LOCATIONS = [
       "beach"
     ],
     "desc": "Пляж Кута и линия побережья с вертолёта",
-    "img": "../images/places/bali-surf-beach.jpg",
+    "img": "../images/tours-real/north-bali-lovina-dolphins-tour.jpg",
     "alt": "Пляж Кута и линия побережья с вертолёта",
     "maps": "https://maps.google.com/?q=Kuta%20Beach%20Bali%20coastline%20aerial",
     "rating": 4.9,
@@ -1423,6 +1423,165 @@ var SB_LOCATIONS = [
     "rating": 4.9,
     "topPick": true,
     "tour": "batur_sunrise_hike"
+  },
+  {
+    "id": "tochka_voshoda_na_bature",
+    "name": "Точка восхода на Батуре",
+    "lat": -8.2298,
+    "lng": 115.367,
+    "cat": "Смотровая",
+    "vibes": [
+      "volcano",
+      "adventure"
+    ],
+    "desc": "Рассвет над кальдерой с джип-смотровой на склоне Батура",
+    "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunrise%20on%20Mount%20Batur%20-%20panoramio%20(1).jpg?width=1280",
+    "alt": "Рассвет над кальдерой с джип-смотровой на склоне Батура",
+    "maps": "https://maps.google.com/?q=Mount%20Batur%20sunrise%20caldera%20Kintamani%20Bali",
+    "rating": 4.7,
+    "topPick": true,
+    "tour": "batur_sunrise"
+  },
+  {
+    "id": "chernyy_pesok_batura",
+    "name": "Чёрный песок Батура",
+    "lat": -8.2362,
+    "lng": 115.36,
+    "cat": "Приключения",
+    "vibes": [
+      "volcano",
+      "adventure"
+    ],
+    "desc": "Равнина чёрного вулканического песка на западном склоне Батура",
+    "img": "https://commons.wikimedia.org/wiki/Special:FilePath/South%20Batur%2C%20Kintamani%2C%20Bangli%20Regency%2C%20Bali%2C%20Indonesia%20-%20panoramio.jpg?width=1280",
+    "alt": "Равнина чёрного вулканического песка на западном склоне Батура",
+    "maps": "https://maps.google.com/?q=South%20Batur%20Kintamani%20Bangli%20Regency%20Bali",
+    "rating": 4.8,
+    "topPick": false,
+    "tour": "batur_sunrise"
+  },
+  {
+    "id": "vorota_handara_panchasari",
+    "name": "Ворота Хандара (Панчасари)",
+    "lat": -8.2531,
+    "lng": 115.1583,
+    "cat": "Культура",
+    "vibes": [
+      "temple",
+      "chill"
+    ],
+    "desc": "Расколотые балийские ворота Чанди-Бентар курорта Хандара в Панчасари",
+    "img": "../images/tours-real/tanah-lot-bedugul-tour.jpg",
+    "alt": "Расколотые балийские ворота Чанди-Бентар курорта Хандара в Панчасари",
+    "maps": "https://maps.google.com/?q=Handara%20Gate%20Pancasari%20Bali%20candi%20bentar",
+    "rating": 4.7,
+    "topPick": true,
+    "tour": "temple_culture"
+  },
+  {
+    "id": "rynok_chandi_kuning",
+    "name": "Рынок Чанди-Кунинг",
+    "lat": -8.2826,
+    "lng": 115.1623,
+    "cat": "Рынок",
+    "vibes": [
+      "chill"
+    ],
+    "desc": "Прилавки с тропическими фруктами и специями на рынке Чанди-Кунинг в Бедугуле",
+    "img": "../images/tours-real/nusa-lembongan-ceningan-day-trip.jpg",
+    "alt": "Прилавки с тропическими фруктами и специями на рынке Чанди-Кунинг в Бедугуле",
+    "maps": "https://maps.google.com/?q=Candi%20Kuning%20market%20Bedugul%20Bali%20fruit%20stalls",
+    "rating": 4.9,
+    "topPick": false,
+    "tour": "temple_culture"
+  },
+  {
+    "id": "botanicheskiy_sad_bedugula",
+    "name": "Ботанический сад Бедугула",
+    "lat": -8.2778,
+    "lng": 115.1544,
+    "cat": "Природа",
+    "vibes": [
+      "chill",
+      "temple"
+    ],
+    "desc": "Аллеи и коллекция растений ботанического сада Кебун-Рая в Бедугуле",
+    "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Sang%20Waringin%20-%20Kebun%20Raya%20Bedugul%2C%20Tabanan-Bali.%20Photo%20by%20Pratamanese.jpg?width=1280",
+    "alt": "Аллеи и коллекция растений ботанического сада Кебун-Рая в Бедугуле",
+    "maps": "https://maps.google.com/?q=Bali%20Botanic%20Garden%20Kebun%20Raya%20Bedugul",
+    "rating": 4.7,
+    "topPick": false,
+    "tour": "temple_culture"
+  },
+  {
+    "id": "gavan_bandzhar_nyuh",
+    "name": "Гавань Банджар-Нюх",
+    "lat": -8.6772,
+    "lng": 115.4887,
+    "cat": "Гавань",
+    "vibes": [
+      "adventure"
+    ],
+    "desc": "Причал Банджар-Нюх на Нуса-Пениде",
+    "img": "../images/tours-real/nusa-penida-full-day-tour.jpg",
+    "alt": "Причал Банджар-Нюх на Нуса-Пениде",
+    "maps": "https://maps.google.com/?q=Banjar%20Nyuh%20Harbour%20Nusa%20Penida%20fast%20boat%20pier",
+    "rating": 4.7,
+    "topPick": true,
+    "tour": "nusa_penida_full_day_tour"
+  },
+  {
+    "id": "peschernyy_hram_goa_giri_p",
+    "name": "Пещерный храм Гоа Гири Путри",
+    "lat": -8.7091,
+    "lng": 115.5849,
+    "cat": "Храм",
+    "vibes": [
+      "temple",
+      "adventure"
+    ],
+    "desc": "Пещерный храм Гоа Гири Путри на Пениде",
+    "img": "../images/tours-real/nusa-penida-east-tour.jpg",
+    "alt": "Пещерный храм Гоа Гири Путри на Пениде",
+    "maps": "https://maps.google.com/?q=Goa%20Giri%20Putri%20cave%20temple%20Nusa%20Penida",
+    "rating": 4.8,
+    "topPick": false,
+    "tour": "nusa_penida_full_day_tour"
+  },
+  {
+    "id": "tandzhung_dzhepun",
+    "name": "Танджунг-Джепун",
+    "lat": -8.526,
+    "lng": 115.5127,
+    "cat": "Снорклинг",
+    "vibes": [
+      "dive"
+    ],
+    "desc": "Коралловый риф у мыса Танджунг-Джепун",
+    "img": "../images/tours-real/nusa-penida-west-tour.jpg",
+    "alt": "Коралловый риф у мыса Танджунг-Джепун",
+    "maps": "https://maps.google.com/?q=Tanjung%20Jepun%20Padangbai%20Bali%20snorkeling%20coral%20reef%20underwater",
+    "rating": 4.9,
+    "topPick": false,
+    "tour": "blue_lagoon_snorkeling"
+  },
+  {
+    "id": "plyazh_bias_tugel",
+    "name": "Пляж Биас-Тугель",
+    "lat": -8.5363,
+    "lng": 115.509,
+    "cat": "Пляж",
+    "vibes": [
+      "beach",
+      "chill"
+    ],
+    "desc": "Белый песок и скалы пляжа Биас-Тугель",
+    "img": "../images/tours-real/ubud-highlights-tour.jpg",
+    "alt": "Белый песок и скалы пляжа Биас-Тугель",
+    "maps": "https://maps.google.com/?q=Bias%20Tugel%20Beach%20Padangbai%20white%20sand%20Bali",
+    "rating": 4.7,
+    "topPick": false,
+    "tour": "blue_lagoon_snorkeling"
   }
 ];
 
@@ -2071,6 +2230,193 @@ var SB_DAY_TEMPLATES = [
         "note": "Горячие источники у озера после спуска"
       }
     ]
+  },
+  {
+    "id": "batur_jeep_day",
+    "order": 19,
+    "title": "Батур на джипе: восход и чёрная лава",
+    "vibes": [
+      "volcano",
+      "adventure"
+    ],
+    "tour": "batur_sunrise",
+    "stops": [
+      {
+        "loc": "tochka_voshoda_na_bature",
+        "time": "05:15",
+        "note": "Джип поднимает к рассвету над кальдерой"
+      },
+      {
+        "loc": "chernyy_pesok_batura",
+        "time": "06:45",
+        "note": "Гоняем по чёрной вулканической равнине"
+      },
+      {
+        "loc": "chernye_lavovye_polya_batura",
+        "time": "07:45",
+        "note": "Едем 4x4 по застывшей лаве"
+      },
+      {
+        "loc": "kintamani",
+        "time": "09:00",
+        "note": "Завтрак с панорамой кальдеры и озера"
+      },
+      {
+        "loc": "goryachie_istochniki_batur_t",
+        "time": "10:30",
+        "note": "Греемся в термальных бассейнах у озера"
+      }
+    ]
+  },
+  {
+    "id": "bedugul_temple_day",
+    "order": 20,
+    "title": "Храмы Бедугула и Танах-Лот",
+    "vibes": [
+      "temple",
+      "chill"
+    ],
+    "tour": "temple_culture",
+    "stops": [
+      {
+        "loc": "vorota_handara_panchasari",
+        "time": "10:00",
+        "note": "Фото в знаменитых воротах среди гор"
+      },
+      {
+        "loc": "hram_ulun_danu_bratan",
+        "time": "11:00",
+        "note": "Храм на озере Братан среди туманных гор"
+      },
+      {
+        "loc": "rynok_chandi_kuning",
+        "time": "12:30",
+        "note": "Фрукты, специи, клубника и обед"
+      },
+      {
+        "loc": "botanicheskiy_sad_bedugula",
+        "time": "13:45",
+        "note": "Орхидеи, папоротники и храм Тератай-Банг"
+      },
+      {
+        "loc": "tanah_lot",
+        "time": "17:00",
+        "note": "Морской храм на скале на закате"
+      }
+    ]
+  },
+  {
+    "id": "ubud_instagram_day",
+    "order": 21,
+    "title": "Фото-день: Врата рая и террасы",
+    "vibes": [
+      "temple",
+      "waterfall",
+      "chill"
+    ],
+    "tour": "ubud_instagram_tour",
+    "stops": [
+      {
+        "loc": "lempuyang",
+        "time": "09:30",
+        "note": "Кадр в воротах с видом на Агунг"
+      },
+      {
+        "loc": "vodnyy_dvorec_tirta_ganga",
+        "time": "11:15",
+        "note": "Фото на камнях среди прудов с карпами"
+      },
+      {
+        "loc": "vodopad_tukad_chepung",
+        "time": "13:45",
+        "note": "Лучи света в пещере, обед и купание"
+      },
+      {
+        "loc": "tegallalang",
+        "time": "16:00",
+        "note": "Качели над джунглями и зелёные ярусы"
+      }
+    ]
+  },
+  {
+    "id": "penida_west_east_day",
+    "order": 22,
+    "title": "Нуса-Пенида: весь остров за день",
+    "vibes": [
+      "beach",
+      "adventure"
+    ],
+    "tour": "nusa_penida_full_day_tour",
+    "stops": [
+      {
+        "loc": "gavan_bandzhar_nyuh",
+        "time": "08:00",
+        "note": "Высадка со спидбота, пересадка в машину"
+      },
+      {
+        "loc": "kelingking",
+        "time": "09:00",
+        "note": "Смотровая на скалу-динозавра, пока без толп"
+      },
+      {
+        "loc": "angels_billabong",
+        "time": "10:45",
+        "note": "Природный бассейн в скалах, фото в отлив"
+      },
+      {
+        "loc": "broken_beach",
+        "time": "11:20",
+        "note": "Каменная арка и круглая бухта"
+      },
+      {
+        "loc": "peschernyy_hram_goa_giri_p",
+        "time": "13:30",
+        "note": "Вход через узкий лаз в скале"
+      },
+      {
+        "loc": "diamond_beach",
+        "time": "15:00",
+        "note": "Спуск по вырубленной в скале лестнице"
+      }
+    ]
+  },
+  {
+    "id": "blue_lagoon_day",
+    "order": 23,
+    "title": "Голубая лагуна: снорклинг в Паданг-Бае",
+    "vibes": [
+      "dive",
+      "beach",
+      "chill"
+    ],
+    "tour": "blue_lagoon_snorkeling",
+    "stops": [
+      {
+        "loc": "gavan_padang_bay",
+        "time": "09:00",
+        "note": "Получаем маски и садимся на джукунг"
+      },
+      {
+        "loc": "port_padang_bay_bali",
+        "time": "09:45",
+        "note": "Час снорклинга над коралловым садом"
+      },
+      {
+        "loc": "tandzhung_dzhepun",
+        "time": "11:00",
+        "note": "Мелкий риф, кораллы и стайки рыб"
+      },
+      {
+        "loc": "plyazh_bias_tugel",
+        "time": "12:15",
+        "note": "Белый песок и купание в тихой бухте"
+      },
+      {
+        "loc": "port_padang_bay_bali",
+        "time": "13:15",
+        "note": "Индонезийский обед у рыбацких лодок"
+      }
+    ]
   }
 ];
 
@@ -2082,63 +2428,743 @@ var SB_DAY_TEMPLATES = [
    ------------------------------------------------------------ */
 var SB_FREE_ZONES = [
   {
-    id: 'canggu_zone', name: 'Чангу', lat: -8.6478, lng: 115.1385,
-    intro: 'День без будильника: кафе, океан и закат в бич-клубе.',
-    recs: [
-      { title: 'La Brisa Beach Club', img: 'https://lokasibali.com/api/images/business-0x2dd23876693af8ad%3A0x86929db7c4eabc29-0.webp', copy: 'Самый атмосферный бич-клуб Чангу — закат, коктейли и музыка.', maps: 'https://maps.google.com/?q=La+Brisa+Canggu', topPick: true,  lat: -8.6660, lng: 115.1225 },
-      { title: 'Batu Bolong Beach', img: 'https://live.staticflickr.com/65535/49439825083_4c1d06d9ee_b.jpg',   copy: 'Классический пляж Чангу для прогулки и заката.',                maps: 'https://maps.google.com/?q=Batu+Bolong+Beach+Canggu', topPick: true, lat: -8.6612, lng: 115.1305 },
-      { title: 'Crate Cafe', img: 'https://onbali.com/assets/brands/crate-cafe/cover-crate-cafe-1.jpg',          copy: 'Культовый завтрак и кофе для неспешного утра.',                 maps: 'https://maps.google.com/?q=Crate+Cafe+Canggu', topPick: false, lat: -8.6479, lng: 115.1315 }
+    "id": "canggu_zone",
+    "name": "Чангу",
+    "lat": -8.6478,
+    "lng": 115.1385,
+    "intro": "День без будильника: кафе, океан и закат в бич-клубе.",
+    "recs": [
+      {
+        "title": "La Brisa Beach Club",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/La%20Brisa%20beach%20club%20at%20Echo%20Beach%2C%20Canggu%2C%20Bali.jpg?width=1280",
+        "copy": "Самый атмосферный бич-клуб Чангу — закат, коктейли и музыка.",
+        "maps": "https://maps.google.com/?q=La+Brisa+Canggu",
+        "topPick": true,
+        "lat": -8.666,
+        "lng": 115.1225
+      },
+      {
+        "title": "Batu Bolong Beach",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunset%20in%20Batu%20Bolong%2C%20Tanah%20Lot%2C%20Bali.jpg?width=1280",
+        "copy": "Классический пляж Чангу для прогулки и заката.",
+        "maps": "https://maps.google.com/?q=Batu+Bolong+Beach+Canggu",
+        "topPick": true,
+        "lat": -8.6612,
+        "lng": 115.1305
+      },
+      {
+        "title": "Crate Cafe",
+        "img": "https://onbali.com/assets/brands/crate-cafe/cover-crate-cafe-1.jpg",
+        "copy": "Культовый завтрак и кофе для неспешного утра.",
+        "maps": "https://maps.google.com/?q=Crate+Cafe+Canggu",
+        "topPick": false,
+        "lat": -8.6479,
+        "lng": 115.1315
+      },
+      {
+        "title": "Ji Terrace by the Sea (Hotel Tugu Bali)",
+        "img": "../images/places/bali-street-at-night.jpg",
+        "copy": "Суши и закат в 300-летнем храмовом павильоне у моря",
+        "maps": "https://maps.google.com/?q=Ji%20Terrace%20by%20the%20Sea%2C%20Hotel%20Tugu%20Bali%2C%20Jl.%20Pantai%20Batu%20Bolong%2C%20Canggu%2C%20Bali",
+        "topPick": true,
+        "indoor": true,
+        "lat": -8.6582,
+        "lng": 115.1303
+      },
+      {
+        "title": "Tanah Lot Temple",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bali%20-%20Pura%20Tanah%20Lot%2C%2020220827%200958%201114.jpg?width=1280",
+        "copy": "Храм на скале в океане — главный закат Бали",
+        "maps": "https://maps.google.com/?q=Tanah%20Lot%20Temple%2C%20Beraban%2C%20Kediri%2C%20Tabanan%2C%20Bali",
+        "topPick": true,
+        "indoor": false,
+        "lat": -8.6212,
+        "lng": 115.0869
+      },
+      {
+        "title": "AMO Spa",
+        "img": "../images/places/balinese-massage.jpg",
+        "copy": "Сауна, ледяные ванны и массаж — спасение в дождь",
+        "maps": "https://maps.google.com/?q=AMO%20Spa%2C%20Jl.%20Pantai%20Batu%20Bolong%20No.69%2C%20Canggu%2C%20Bali",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.6513,
+        "lng": 115.1345
+      },
+      {
+        "title": "FINNS Beach Club",
+        "img": "../images/places/bali-beach-club.jpg",
+        "copy": "Четыре бассейна, дейбеды и закат над пляжем Берава",
+        "maps": "https://maps.google.com/?q=FINNS%20Beach%20Club%2C%20Jl.%20Pantai%20Berawa%20No.99%2C%20Canggu%2C%20Bali",
+        "topPick": false,
+        "indoor": false,
+        "lat": -8.6668,
+        "lng": 115.1394
+      },
+      {
+        "title": "Samadi Bali",
+        "img": "../images/places/money-exchange.jpg",
+        "copy": "Йога под крышей и воскресный органик-маркет",
+        "maps": "https://maps.google.com/?q=Samadi%20Bali%2C%20Jl.%20Padang%20Linjong%20No.39%2C%20Canggu%2C%20Bali",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.644,
+        "lng": 115.1371
+      },
+      {
+        "title": "Nuanu Creative City",
+        "img": "../images/places/bali-waterfall.jpg",
+        "copy": "Арт-город: башня, лабиринт, галереи и клуб Luna",
+        "maps": "https://maps.google.com/?q=Nuanu%20Creative%20City%2C%20Beraban%2C%20Kediri%2C%20Tabanan%2C%20Bali",
+        "topPick": false,
+        "indoor": false,
+        "lat": -8.6272,
+        "lng": 115.0991
+      }
     ]
   },
   {
-    id: 'seminyak_zone', name: 'Семиньяк', lat: -8.6900, lng: 115.1686,
-    intro: 'Мягкий день: бранч, шопинг и знаменитый закат западного берега.',
-    recs: [
-      { title: 'Potato Head Beach Club', img: 'https://live.staticflickr.com/6042/6281781855_a6df953705_b.jpg', copy: 'Один из самых известных бич-клубов Бали — сильный закатный ход.', maps: 'https://maps.google.com/?q=Potato+Head+Seminyak', topPick: true, lat: -8.6810, lng: 115.1573 },
-      { title: 'Seminyak Beach', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Seminyak%20Beach%20Resort%20Large.JPG?width=1280',         copy: 'Классика западного берега: длинный пляж и прогулка на закате.',   maps: 'https://maps.google.com/?q=Seminyak+Beach', topPick: true, lat: -8.6915, lng: 115.1601 },
-      { title: 'Sisterfields', img: 'https://live.staticflickr.com/5706/23773451981_2dc59d3577_b.jpg',           copy: 'Популярный бранч и комфортная кухня на весь день.',               maps: 'https://maps.google.com/?q=Sisterfields+Seminyak', topPick: true, lat: -8.6842, lng: 115.1638 }
+    "id": "seminyak_zone",
+    "name": "Семиньяк",
+    "lat": -8.69,
+    "lng": 115.1686,
+    "intro": "Мягкий день: бранч, шопинг и знаменитый закат западного берега.",
+    "recs": [
+      {
+        "title": "Potato Head Beach Club",
+        "img": "https://live.staticflickr.com/6042/6281781855_a6df953705_b.jpg",
+        "copy": "Один из самых известных бич-клубов Бали — сильный закатный ход.",
+        "maps": "https://maps.google.com/?q=Potato+Head+Seminyak",
+        "topPick": true,
+        "lat": -8.681,
+        "lng": 115.1573
+      },
+      {
+        "title": "Seminyak Beach",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Seminyak%20Beach%2001.jpg?width=1280",
+        "copy": "Классика западного берега: длинный пляж и прогулка на закате.",
+        "maps": "https://maps.google.com/?q=Seminyak+Beach",
+        "topPick": true,
+        "lat": -8.6915,
+        "lng": 115.1601
+      },
+      {
+        "title": "Sisterfields",
+        "img": "https://live.staticflickr.com/5706/23773451981_2dc59d3577_b.jpg",
+        "copy": "Популярный бранч и комфортная кухня на весь день.",
+        "maps": "https://maps.google.com/?q=Sisterfields+Seminyak",
+        "topPick": true,
+        "lat": -8.6842,
+        "lng": 115.1638
+      },
+      {
+        "title": "Ku De Ta",
+        "img": "../images/places/seminyak-sunset.jpg",
+        "copy": "Легендарный закат у океана с ужином и диджеями",
+        "maps": "https://maps.google.com/?q=Ku%20De%20Ta%20Seminyak%20Bali",
+        "topPick": true,
+        "indoor": false,
+        "lat": -8.6871,
+        "lng": 115.1545
+      },
+      {
+        "title": "Merah Putih",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Retreat%20Militer%20Kabinet%20Merah%20Putih%20(2024).jpg?width=1280",
+        "copy": "Лучший индонезийский ресторан Бали под стеклянными сводами",
+        "maps": "https://maps.google.com/?q=Merah%20Putih%20Restaurant%20Petitenget%20Bali",
+        "topPick": true,
+        "indoor": true,
+        "lat": -8.6769,
+        "lng": 115.1545
+      },
+      {
+        "title": "Jari Menari",
+        "img": "../images/places/bali-street-dog.jpg",
+        "copy": "Лучший массаж Семиньяка: школа с двадцатилетней репутацией",
+        "maps": "https://maps.google.com/?q=Jari%20Menari%20Seminyak%20Bali",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.6848,
+        "lng": 115.1668
+      },
+      {
+        "title": "Pura Petitenget",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Petitenget%20Offerings.JPG?width=1280",
+        "copy": "Морской храм у пляжа — тихая балийская классика",
+        "maps": "https://maps.google.com/?q=Pura%20Petitenget%20Seminyak%20Bali",
+        "topPick": false,
+        "indoor": false,
+        "lat": -8.6821,
+        "lng": 115.1527
+      },
+      {
+        "title": "Seminyak Village",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Street%20in%20Seminyak%202.jpg?width=1280",
+        "copy": "Молл с бутиками и кафе — спасение в дождь",
+        "maps": "https://maps.google.com/?q=Seminyak%20Village%20Mall%20Bali",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.6832,
+        "lng": 115.1569
+      },
+      {
+        "title": "Motel Mexicola",
+        "img": "../images/places/bebek-betutu-duck.jpg",
+        "copy": "Яркая мексиканская кантина под крышей: текила и танцы",
+        "maps": "https://maps.google.com/?q=Motel%20Mexicola%20Seminyak%20Bali",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.6822,
+        "lng": 115.1538
+      }
     ]
   },
   {
-    id: 'ubud_zone', name: 'Убуд', lat: -8.5069, lng: 115.2625,
-    intro: 'Спокойный день в джунглях: прогулка по гребню, источники и рынок.',
-    recs: [
-      { title: 'Campuhan Ridge Walk', img: 'https://live.staticflickr.com/3887/15103667262_eb062d3d8c_b.jpg', copy: 'Лёгкая живописная прогулка по гребню холма.',            maps: 'https://maps.google.com/?q=Campuhan+Ridge+Walk', topPick: true, lat: -8.5030, lng: 115.2549 },
-      { title: 'Tirta Empul Temple', img: 'https://live.staticflickr.com/65535/49422321947_f8ce8db0f9_b.jpg',  copy: 'Храм священных источников — работает даже в дождь.',     maps: 'https://maps.google.com/?q=Tirta+Empul+Temple', topPick: true, lat: -8.4156, lng: 115.3153 },
-      { title: 'Ubud Art Market', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Ubud%20Market%2C%20Ubud%2C%20Bali%20%2815009558597%29.jpg?width=1280',     copy: 'Сувениры, ткани и классический Убуд в самом центре.',    maps: 'https://maps.google.com/?q=Ubud+Art+Market', topPick: true, lat: -8.5077, lng: 115.2640 }
+    "id": "ubud_zone",
+    "name": "Убуд",
+    "lat": -8.5069,
+    "lng": 115.2625,
+    "intro": "Спокойный день в джунглях: прогулка по гребню, источники и рынок.",
+    "recs": [
+      {
+        "title": "Campuhan Ridge Walk",
+        "img": "https://live.staticflickr.com/3887/15103667262_eb062d3d8c_b.jpg",
+        "copy": "Лёгкая живописная прогулка по гребню холма.",
+        "maps": "https://maps.google.com/?q=Campuhan+Ridge+Walk",
+        "topPick": true,
+        "lat": -8.503,
+        "lng": 115.2549
+      },
+      {
+        "title": "Tirta Empul Temple",
+        "img": "https://live.staticflickr.com/65535/49422321947_f8ce8db0f9_b.jpg",
+        "copy": "Храм священных источников — работает даже в дождь.",
+        "maps": "https://maps.google.com/?q=Tirta+Empul+Temple",
+        "topPick": true,
+        "lat": -8.4156,
+        "lng": 115.3153
+      },
+      {
+        "title": "Ubud Art Market",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ubud%20Market%2C%20Ubud%2C%20Bali%20%2815009558597%29.jpg?width=1280",
+        "copy": "Сувениры, ткани и классический Убуд в самом центре.",
+        "maps": "https://maps.google.com/?q=Ubud+Art+Market",
+        "topPick": true,
+        "lat": -8.5077,
+        "lng": 115.264
+      },
+      {
+        "title": "Locavore NXT",
+        "img": "../images/places/nasi-campur-plate.jpg",
+        "copy": "Один из лучших ресторанов Азии, дегустационное меню в джунглях",
+        "maps": "https://maps.google.com/?q=Locavore%20NXT%2C%20Lodtunduh%2C%20Ubud%2C%20Bali",
+        "topPick": true,
+        "indoor": true,
+        "lat": -8.5423,
+        "lng": 115.2572
+      },
+      {
+        "title": "Jungle Fish Pool Bar",
+        "img": "../images/places/broken-beach-arch.jpg",
+        "copy": "Инфинити-бассейн над рекой в джунглях, коктейли и закат",
+        "maps": "https://maps.google.com/?q=Jungle%20Fish%20Pool%20Bar%2C%20Chapung%20Sebali%2C%20Keliki%2C%20Bali",
+        "topPick": true,
+        "indoor": false,
+        "lat": -8.4789,
+        "lng": 115.2608
+      },
+      {
+        "title": "Agung Rai Museum of Art (ARMA)",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pintu%20masuk%20Museum%20Seni%20Agung%20Rai.jpg?width=1280",
+        "copy": "Лучшее собрание балийской живописи, спасение в дождь",
+        "maps": "https://maps.google.com/?q=Agung%20Rai%20Museum%20of%20Art%20ARMA%2C%20Pengosekan%2C%20Ubud%2C%20Bali",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.5229,
+        "lng": 115.2648
+      },
+      {
+        "title": "Taksu Spa",
+        "img": "../images/places/bali-villa-with-pool.jpg",
+        "copy": "Приватные спа-виллы над ручьём, лучший массаж Убуда",
+        "maps": "https://maps.google.com/?q=Taksu%20Spa%2C%20Jalan%20Goutama%20Selatan%2C%20Ubud%2C%20Bali",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.5117,
+        "lng": 115.2637
+      },
+      {
+        "title": "Paon Bali Cooking Class",
+        "img": "../images/places/bluebird-taxi.jpg",
+        "copy": "Готовите балийский обед с семьёй в крытом павильоне",
+        "maps": "https://maps.google.com/?q=Paon%20Bali%20Cooking%20Class%2C%20Jalan%20Raya%20Laplapan%2C%20Ubud%2C%20Bali",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.5025,
+        "lng": 115.2784
+      },
+      {
+        "title": "Sacred Monkey Forest Sanctuary",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Ubud%20Monkey%20Forest%2C%20Bali%2C%2020220822%201033%209999.jpg?width=1280",
+        "copy": "Мшистые храмы и сотни макак в древнем лесу",
+        "maps": "https://maps.google.com/?q=Sacred%20Monkey%20Forest%20Sanctuary%2C%20Ubud%2C%20Bali",
+        "topPick": false,
+        "indoor": false,
+        "lat": -8.5187,
+        "lng": 115.2583
+      }
     ]
   },
   {
-    id: 'uluwatu_zone', name: 'Улувату', lat: -8.8291, lng: 115.0849,
-    intro: 'Пляжный день на Буките: бирюзовые бухты и закат над океаном.',
-    recs: [
-      { title: 'Melasti Beach', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Pantai%20Melasti%2C%20Bali.jpg?width=1280',       copy: 'Один из лучших пляжей Бали — белый песок под скалами.', maps: 'https://maps.google.com/?q=Melasti+Beach+Bali', topPick: true, lat: -8.8483, lng: 115.1590 },
-      { title: 'Single Fin', img: 'https://lokasibali.com/api/images/business-0x2dd24ff9434fa3d1%3A0x73306bab5b47f9b4-0.webp',          copy: 'Знаменитый закат и напитки над океаном.',               maps: 'https://maps.google.com/?q=Single+Fin+Bali', topPick: true, lat: -8.8290, lng: 115.0873 },
-      { title: 'Padang Padang Beach', img: 'https://live.staticflickr.com/6023/5900681104_4fe473cf5c.jpg', copy: 'Компактный пляж с открыточным видом.',                  maps: 'https://maps.google.com/?q=Padang+Padang+Beach', topPick: true, lat: -8.8107, lng: 115.1035 }
+    "id": "uluwatu_zone",
+    "name": "Улувату",
+    "lat": -8.8291,
+    "lng": 115.0849,
+    "intro": "Пляжный день на Буките: бирюзовые бухты и закат над океаном.",
+    "recs": [
+      {
+        "title": "Melasti Beach",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pantai%20Melasti%2C%20Bali.jpg?width=1280",
+        "copy": "Один из лучших пляжей Бали — белый песок под скалами.",
+        "maps": "https://maps.google.com/?q=Melasti+Beach+Bali",
+        "topPick": true,
+        "lat": -8.8483,
+        "lng": 115.159
+      },
+      {
+        "title": "Single Fin",
+        "img": "https://lokasibali.com/api/images/business-0x2dd24ff9434fa3d1%3A0x73306bab5b47f9b4-0.webp",
+        "copy": "Знаменитый закат и напитки над океаном.",
+        "maps": "https://maps.google.com/?q=Single+Fin+Bali",
+        "topPick": true,
+        "lat": -8.829,
+        "lng": 115.0873
+      },
+      {
+        "title": "Padang Padang Beach",
+        "img": "https://live.staticflickr.com/6023/5900681104_4fe473cf5c.jpg",
+        "copy": "Компактный пляж с открыточным видом.",
+        "maps": "https://maps.google.com/?q=Padang+Padang+Beach",
+        "topPick": true,
+        "lat": -8.8107,
+        "lng": 115.1035
+      },
+      {
+        "title": "Pura Luhur Uluwatu",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuta%20Bali%20Indonesia%20Pura-Luhur-Uluwatu-01.jpg?width=1280",
+        "copy": "Храм на 70-метровом обрыве и танец кечак на закате.",
+        "maps": "https://maps.google.com/?q=Pura%20Luhur%20Uluwatu%20Temple%20Pecatu%20Bali",
+        "topPick": true,
+        "indoor": false,
+        "lat": -8.8294,
+        "lng": 115.0843
+      },
+      {
+        "title": "Oneeighty Dayclub at The Edge Bali",
+        "img": "../images/places/uluwatu-surf.jpg",
+        "copy": "Стеклянный бассейн на скале в 162 метрах над океаном.",
+        "maps": "https://maps.google.com/?q=Oneeighty%20Dayclub%20The%20Edge%20Bali%20Jalan%20Pura%20Goa%20Lempeh%20Pecatu",
+        "topPick": true,
+        "indoor": false,
+        "lat": -8.8461,
+        "lng": 115.1254
+      },
+      {
+        "title": "Balangan Beach",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Balangan%20Beach%2C%20Bali%202017-08-16.jpg?width=1280",
+        "copy": "Длинный белый пляж под скалами, варунги и закат.",
+        "maps": "https://maps.google.com/?q=Pantai%20Balangan%20Balangan%20Beach%20Pecatu%20Bali",
+        "topPick": false,
+        "indoor": false,
+        "lat": -8.7923,
+        "lng": 115.1232
+      },
+      {
+        "title": "Menega Cafe Jimbaran",
+        "img": "../images/places/sate-lilit-satay.jpg",
+        "copy": "Свежая рыба на гриле прямо на песке Джимбарана.",
+        "maps": "https://maps.google.com/?q=Menega%20Cafe%20Muaya%20Beach%20Jimbaran%20Bali",
+        "topPick": false,
+        "indoor": false,
+        "lat": -8.7807,
+        "lng": 115.1644
+      },
+      {
+        "title": "JOMO Spa Bali Bingin",
+        "img": "../images/places/luxury-resort-in-bali.jpg",
+        "copy": "Массаж и уход в тишине — идеально в дождь.",
+        "maps": "https://maps.google.com/?q=JOMO%20Spa%20Bali%20Jalan%20Pantai%20Bingin%2011%20Pecatu",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.8111,
+        "lng": 115.1137
+      },
+      {
+        "title": "Jenggala Keramik",
+        "img": "../images/places/seminyak-restaurant.jpg",
+        "copy": "Галерея керамики и мастер-класс по росписи под крышей.",
+        "maps": "https://maps.google.com/?q=Jenggala%20Keramik%20Jalan%20Uluwatu%20II%20Jimbaran%20Bali",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.7848,
+        "lng": 115.1703
+      }
     ]
   },
   {
-    id: 'nusa_dua_zone', name: 'Нуса-Дуа', lat: -8.8067, lng: 115.2280,
-    intro: 'Курортный день: тихие пляжи, лагуны и клубы у воды.',
-    recs: [
-      { title: 'Geger Beach', img: 'https://live.staticflickr.com/1362/5099984222_0d3bc2f4f6_b.jpg',         copy: 'Спокойный светлый пляж с тёплой лагуной.',        maps: 'https://maps.google.com/?q=Geger+Beach', topPick: true, lat: -8.8174, lng: 115.2255 },
-      { title: 'Waterblow Nusa Dua', img: 'https://live.staticflickr.com/4474/37781456082_9e2bc54082_b.jpg',  copy: 'Волны, взрывающиеся о скалы, — короткий вау-стоп.', maps: 'https://maps.google.com/?q=Waterblow+Nusa+Dua', topPick: true, lat: -8.8027, lng: 115.2395 },
-      { title: 'Sundays Beach Club', img: 'https://www.sundaysbeachclub.com/wp-content/uploads/2025/09/Sundays-site-card-1024x768.png',  copy: 'Премиальный клуб у бирюзовой лагуны.',            maps: 'https://maps.google.com/?q=Sundays+Beach+Club+Bali', topPick: true, lat: -8.8446, lng: 115.2124 }
+    "id": "nusa_dua_zone",
+    "name": "Нуса-Дуа",
+    "lat": -8.8067,
+    "lng": 115.228,
+    "intro": "Курортный день: тихие пляжи, лагуны и клубы у воды.",
+    "recs": [
+      {
+        "title": "Geger Beach",
+        "img": "https://live.staticflickr.com/1362/5099984222_0d3bc2f4f6_b.jpg",
+        "copy": "Спокойный светлый пляж с тёплой лагуной.",
+        "maps": "https://maps.google.com/?q=Geger+Beach",
+        "topPick": true,
+        "lat": -8.8174,
+        "lng": 115.2255
+      },
+      {
+        "title": "Waterblow Nusa Dua",
+        "img": "https://live.staticflickr.com/4474/37781456082_9e2bc54082_b.jpg",
+        "copy": "Волны, взрывающиеся о скалы, — короткий вау-стоп.",
+        "maps": "https://maps.google.com/?q=Waterblow+Nusa+Dua",
+        "topPick": true,
+        "lat": -8.8027,
+        "lng": 115.2395
+      },
+      {
+        "title": "Sundays Beach Club",
+        "img": "https://www.sundaysbeachclub.com/wp-content/uploads/2025/09/Sundays-site-card-1024x768.png",
+        "copy": "Премиальный клуб у бирюзовой лагуны.",
+        "maps": "https://maps.google.com/?q=Sundays+Beach+Club+Bali",
+        "topPick": true,
+        "lat": -8.8446,
+        "lng": 115.2124
+      },
+      {
+        "title": "Museum Pasifika",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/2018%20museum%20pasifika%2C%20nusa%20dua%2C%20Bali%2C%20Indonesia.jpg?width=1280",
+        "copy": "600 работ художников Азии и Океании — идеально в дождь",
+        "maps": "https://maps.google.com/?q=Museum%20Pasifika%20Nusa%20Dua%20Bali",
+        "topPick": true,
+        "indoor": true,
+        "lat": -8.7999,
+        "lng": 115.2308
+      },
+      {
+        "title": "Manarai Beach House",
+        "img": "../images/tours-real/surf-lesson-experience.jpg",
+        "copy": "Пляжный клуб с двумя бассейнами прямо на песке Нуса-Дуа",
+        "maps": "https://maps.google.com/?q=Manarai%20Beach%20House%20Nusa%20Dua%20Bali",
+        "topPick": true,
+        "indoor": false,
+        "lat": -8.7912,
+        "lng": 115.2311
+      },
+      {
+        "title": "Mulia Spa",
+        "img": "../images/places/mid-range-hotel-in-bali.jpg",
+        "copy": "Легендарный спа с гидротерапией, сауной и ледяной комнатой",
+        "maps": "https://maps.google.com/?q=Mulia%20Spa%20The%20Mulia%20Nusa%20Dua%20Bali",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.8166,
+        "lng": 115.2224
+      },
+      {
+        "title": "Kayuputi Restaurant",
+        "img": "../images/places/lawar-salad.jpg",
+        "copy": "Паназиатская высокая кухня St. Regis у самого океана",
+        "maps": "https://maps.google.com/?q=Kayuputi%20Restaurant%20St.%20Regis%20Bali%20Nusa%20Dua",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.8135,
+        "lng": 115.2284
+      },
+      {
+        "title": "Bali Nusa Dua Theatre (Devdan Show)",
+        "img": "../images/places/bali-street-at-night.jpg",
+        "copy": "Акробатика и танцы Индонезии — яркое шоу в помещении",
+        "maps": "https://maps.google.com/?q=Bali%20Nusa%20Dua%20Theatre%20Devdan%20Show",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.8007,
+        "lng": 115.2341
+      },
+      {
+        "title": "Puja Mandala",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuta%20Bali%20Indonesia%20Puja-Mandala-01.jpg?width=1280",
+        "copy": "Мечеть, две церкви, вихара и храм рядом",
+        "maps": "https://maps.google.com/?q=Puja%20Mandala%20Nusa%20Dua%20Bali",
+        "topPick": false,
+        "indoor": false,
+        "lat": -8.8006,
+        "lng": 115.2142
+      }
     ]
   },
   {
-    id: 'sanur_zone', name: 'Санур', lat: -8.6931, lng: 115.2625,
-    intro: 'Медленное утро: рассвет над морем и длинная набережная.',
-    recs: [
-      { title: 'Sanur Beach Boardwalk', img: 'https://commons.wikimedia.org/wiki/Special:FilePath/Pemandangan%20Pantai%20Sanur.jpg?width=1280', copy: 'Длинная набережная для прогулки и рассвета.',      maps: 'https://maps.google.com/?q=Sanur+Beach', topPick: true, lat: -8.6931, lng: 115.2637 },
-      { title: 'Big Garden Corner', img: 'https://lokasibali.com/api/images/business-0x2dd24071d99200c3%3A0x6b8b5fe4aa9162c0-0.webp',     copy: 'Парк с инсталляциями и видом на море.',            maps: 'https://maps.google.com/?q=Big+Garden+Corner+Sanur', topPick: true, lat: -8.6640, lng: 115.2600 },
-      { title: 'Genius Cafe', img: 'https://geniuscafebali.com/wp-content/uploads/2024/01/image-header-opt-1.jpg',           copy: 'Кафе у моря для медленного дня и работы с видом.', maps: 'https://maps.google.com/?q=Genius+Cafe+Sanur', topPick: false, lat: -8.7093, lng: 115.2610 }
+    "id": "sanur_zone",
+    "name": "Санур",
+    "lat": -8.6931,
+    "lng": 115.2625,
+    "intro": "Медленное утро: рассвет над морем и длинная набережная.",
+    "recs": [
+      {
+        "title": "Sanur Beach Boardwalk",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Pemandangan%20Pantai%20Sanur.jpg?width=1280",
+        "copy": "Длинная набережная для прогулки и рассвета.",
+        "maps": "https://maps.google.com/?q=Sanur+Beach",
+        "topPick": true,
+        "lat": -8.6931,
+        "lng": 115.2637
+      },
+      {
+        "title": "Big Garden Corner",
+        "img": "https://lokasibali.com/api/images/business-0x2dd24071d99200c3%3A0x6b8b5fe4aa9162c0-0.webp",
+        "copy": "Парк с инсталляциями и видом на море.",
+        "maps": "https://maps.google.com/?q=Big+Garden+Corner+Sanur",
+        "topPick": true,
+        "lat": -8.664,
+        "lng": 115.26
+      },
+      {
+        "title": "Genius Cafe",
+        "img": "https://geniuscafebali.com/wp-content/uploads/2024/01/image-header-opt-1.jpg",
+        "copy": "Кафе у моря для медленного дня и работы с видом.",
+        "maps": "https://maps.google.com/?q=Genius+Cafe+Sanur",
+        "topPick": false,
+        "lat": -8.7093,
+        "lng": 115.261
+      },
+      {
+        "title": "Byrd House Beach Club",
+        "img": "../images/places/arrival-day-in-south-bali.jpg",
+        "copy": "Пляжный клуб Санура: бассейн, шезлонги, средиземноморская кухня.",
+        "maps": "https://maps.google.com/?q=Byrd%20House%20Bali%20Jl.%20Segara%20Ayu%20Sanur",
+        "topPick": true,
+        "indoor": false,
+        "lat": -8.6835,
+        "lng": 115.264
+      },
+      {
+        "title": "Jamu Traditional Spa (Tandjung Sari)",
+        "img": "../images/places/ayung-river-rafting.jpg",
+        "copy": "Спа в легендарном отеле Tandjung Sari — идеально в дождь.",
+        "maps": "https://maps.google.com/?q=Tandjung%20Sari%20Hotel%20Jamu%20Spa%20Sanur%20Bali",
+        "topPick": true,
+        "indoor": true,
+        "lat": -8.6889,
+        "lng": 115.2651
+      },
+      {
+        "title": "Massimo Italian Restaurant",
+        "img": "../images/places/babi-guling-suckling-pig.jpg",
+        "copy": "Итальянская классика Санура: паста, пицца из печи, джелато.",
+        "maps": "https://maps.google.com/?q=Massimo%20Italian%20Restaurant%20Jl.%20Danau%20Tamblingan%20228%20Sanur",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.7051,
+        "lng": 115.2606
+      },
+      {
+        "title": "Museum Le Mayeur",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum%20Le%20Mayeur%20-%202025-02-17%20-%20Andy%20Mabbett%20-%2022.jpg?width=1280",
+        "copy": "Дом-музей бельгийского художника прямо на пляже Санура.",
+        "maps": "https://maps.google.com/?q=Museum%20Le%20Mayeur%20Jl.%20Hang%20Tuah%20Sanur%20Bali",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.6751,
+        "lng": 115.2636
+      },
+      {
+        "title": "Sindhu Night Market",
+        "img": "../images/places/balinese-warung-meal.jpg",
+        "copy": "Вечерний рынок: сатай, мартабак и местные сладости недорого.",
+        "maps": "https://maps.google.com/?q=Sindhu%20Night%20Market%20Pasar%20Sindhu%20Sanur%20Bali",
+        "topPick": false,
+        "indoor": false,
+        "lat": -8.6853,
+        "lng": 115.2602
+      },
+      {
+        "title": "Turtle Conservation and Education Center Serangan",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/AThousand%20Hopes%2COnePhotowiththeSeaTurtle.jpg?width=1280",
+        "copy": "Центр спасения черепах на острове Серанган рядом с Сануром.",
+        "maps": "https://maps.google.com/?q=Turtle%20Conservation%20and%20Education%20Center%20Serangan%20Bali",
+        "topPick": false,
+        "indoor": false,
+        "lat": -8.7241,
+        "lng": 115.2381
+      }
+    ]
+  },
+  {
+    "id": "jimbaran_zone",
+    "name": "Джимбаран",
+    "lat": -8.7897,
+    "lng": 115.1625,
+    "intro": "Джимбаран — это дым от углей и запах свежей рыбы: утро на рыбном рынке, день у диких скал Букита, а вечер за столиком прямо на песке, когда солнце падает в залив.",
+    "recs": [
+      {
+        "title": "Menega Cafe",
+        "img": "../images/places/calm-beach-in-bali.jpg",
+        "copy": "Рыба на углях, столики прямо на песке, закат.",
+        "maps": "https://maps.google.com/?q=Menega%20Cafe%20Jimbaran%20Bali",
+        "topPick": true,
+        "indoor": false,
+        "lat": -8.7807,
+        "lng": 115.1644
+      },
+      {
+        "title": "Garuda Wisnu Kencana Cultural Park",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/View%20north%20over%20Bali%20from%20Garuda%20Wisnu%20Kencana%20Cultural%20Park.jpg?width=1280",
+        "copy": "Гигантский Вишну на Гаруде и вечерний танец кечак.",
+        "maps": "https://maps.google.com/?q=Garuda%20Wisnu%20Kencana%20Cultural%20Park%20Bali",
+        "topPick": true,
+        "indoor": false,
+        "lat": -8.8104,
+        "lng": 115.1668
+      },
+      {
+        "title": "Rock Bar Bali",
+        "img": "../images/bali-tours/blue-lagoon-snorkeling.webp",
+        "copy": "Бар в скале над океаном — бронируйте столик заранее.",
+        "maps": "https://maps.google.com/?q=Rock%20Bar%20AYANA%20Jimbaran%20Bali",
+        "topPick": false,
+        "indoor": false,
+        "lat": -8.7844,
+        "lng": 115.1382
+      },
+      {
+        "title": "Balangan Beach",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Balangan%20Beach%2C%20Bali%202017-08-16.jpg?width=1280",
+        "copy": "Белый песок под скалами, серферы и варунги на обрыве.",
+        "maps": "https://maps.google.com/?q=Balangan%20Beach%20Bali",
+        "topPick": false,
+        "indoor": false,
+        "lat": -8.7923,
+        "lng": 115.1232
+      },
+      {
+        "title": "Kedonganan Fish Market",
+        "img": "../images/places/tipat-cantok.jpg",
+        "copy": "Выбираете рыбу под крышей — рядом её сразу пожарят.",
+        "maps": "https://maps.google.com/?q=Kedonganan%20Fish%20Market%20Jimbaran%20Bali",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.757,
+        "lng": 115.1683
+      },
+      {
+        "title": "Jenggala Keramik Bali",
+        "img": "../images/places/seminyak-boutiques.jpg",
+        "copy": "Керамика ручной работы; можно расписать свою тарелку.",
+        "maps": "https://maps.google.com/?q=Jenggala%20Keramik%20Bali%20Jimbaran",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.7848,
+        "lng": 115.1703
+      },
+      {
+        "title": "Samasta Lifestyle Village",
+        "img": "../images/places/canggu-cafe.jpg",
+        "copy": "Кафе, лавки и балийские танцы в пяти минутах от пляжа.",
+        "maps": "https://maps.google.com/?q=Samasta%20Lifestyle%20Village%20Jimbaran%20Bali",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.7851,
+        "lng": 115.164
+      }
+    ]
+  },
+  {
+    "id": "kuta_legian_zone",
+    "name": "Кута / Легиан",
+    "lat": -8.713,
+    "lng": 115.17,
+    "intro": "Кута и Легиан — самый шумный и демократичный кусок южного Бали: тёплые волны для первых уроков сёрфинга, огромный аквапарк, молл у самого песка и закат, который здесь встречают всей улицей.",
+    "recs": [
+      {
+        "title": "Kuta Beach",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Jerman%20Beach%20in%20Kuta%2C%20Bali%2C%20Indonesia%2C%2020220825%201254%200822.jpg?width=1280",
+        "copy": "Широкий песок, мягкие волны и первый урок сёрфинга",
+        "maps": "https://maps.google.com/?q=Kuta%20Beach%2C%20Kuta%2C%20Badung%2C%20Bali",
+        "topPick": true,
+        "indoor": false,
+        "lat": -8.7182,
+        "lng": 115.1688
+      },
+      {
+        "title": "Waterbom Bali",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/WaterbomParkLazyRiver.jpg?width=1280",
+        "copy": "Горки, ленивая река и тропический сад — на весь день",
+        "maps": "https://maps.google.com/?q=Waterbom%20Bali%2C%20Jl.%20Kartika%20Plaza%2C%20Kuta%2C%20Bali",
+        "topPick": true,
+        "indoor": false,
+        "lat": -8.7283,
+        "lng": 115.1705
+      },
+      {
+        "title": "Beachwalk Shopping Center",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Beachwalk%20Shopping%20Center%20-%20Bali.jpg?width=1280",
+        "copy": "Молл у самого пляжа: бренды, фудкорт и спасительный кондиционер",
+        "maps": "https://maps.google.com/?q=Beachwalk%20Shopping%20Center%2C%20Jl.%20Pantai%20Kuta%2C%20Kuta%2C%20Bali",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.7165,
+        "lng": 115.1693
+      },
+      {
+        "title": "Poppies Restaurant",
+        "img": "../images/places/bali-in-rainy-season.jpg",
+        "copy": "Легенда Куты с 1973 года: ужин в тропическом саду",
+        "maps": "https://maps.google.com/?q=Poppies%20Restaurant%2C%20Jalan%20Poppies%20I%2C%20Kuta%2C%20Bali",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.7215,
+        "lng": 115.1747
+      },
+      {
+        "title": "Vihara Dharmayana Kuta",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Vihara%20Dharmayana%20Kuta%201.jpg?width=1280",
+        "copy": "Китайский храм 1876 года в двух шагах от толпы",
+        "maps": "https://maps.google.com/?q=Vihara%20Dharmayana%20Kuta%2C%20Jalan%20Blambangan%2C%20Kuta%2C%20Bali",
+        "topPick": false,
+        "indoor": true,
+        "lat": -8.724,
+        "lng": 115.1778
+      },
+      {
+        "title": "Ground Zero Monument",
+        "img": "https://commons.wikimedia.org/wiki/Special:FilePath/Bali%20%E2%80%93%20Ground%20Zero%20Monument%20(2692318786).jpg?width=1280",
+        "copy": "Мемориал на Джалан Легиан — тихая точка памяти",
+        "maps": "https://maps.google.com/?q=Ground%20Zero%20Monument%2C%20Jl.%20Raya%20Legian%2C%20Kuta%2C%20Bali",
+        "topPick": false,
+        "indoor": false,
+        "lat": -8.7172,
+        "lng": 115.1744
+      },
+      {
+        "title": "Azul Beach Club",
+        "img": "../images/places/bukit-beach-club.jpg",
+        "copy": "Бамбуковый домик на пляже, бассейн и закатные коктейли",
+        "maps": "https://maps.google.com/?q=Azul%20Beach%20Club%2C%20Jl.%20Padma%2C%20Legian%2C%20Bali",
+        "topPick": false,
+        "indoor": false,
+        "lat": -8.7072,
+        "lng": 115.1665
+      }
     ]
   }
 ];
 
 /* Порядок ротации зон для свободных дней */
-var SB_FREE_ZONE_ROTATION = ['seminyak_zone', 'uluwatu_zone', 'sanur_zone', 'canggu_zone', 'nusa_dua_zone', 'ubud_zone'];
+var SB_FREE_ZONE_ROTATION = ["seminyak_zone","uluwatu_zone","sanur_zone","canggu_zone","nusa_dua_zone","ubud_zone","jimbaran_zone","kuta_legian_zone"];
 
 /* Границы Бали — стартовый вид карты */
 var SB_BALI_BOUNDS = [[-8.95, 114.35], [-8.05, 116.60]];
