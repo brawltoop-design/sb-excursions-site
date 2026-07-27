@@ -180,9 +180,14 @@
 
   function resetPins() {
     Object.keys(pins).forEach(function (id) {
+      // сбрасываем и МОДЕЛЬ, а не только DOM: иначе при повторной отрисовке
+      // (после «Заменить»/«Пересобрать») dayIndex остаётся от прошлого плана
+      // и colorPin больше не вызывается — маршрут на карте остаётся серым
+      if (pins[id]) pins[id].dayIndex = null;
       var el = pinEl(id); if (!el) return;
       el.className = 'sb-pin sb-pin--sleep';
       el.style.removeProperty('--pin');
+      el.style.opacity = '';                 // снимаем приглушение скрытого дня
       var num = el.querySelector('.sb-pin-num'); if (num) num.remove();
     });
     Object.keys(dayLayer).forEach(function (k) { map.removeLayer(dayLayer[k]); });
@@ -357,33 +362,111 @@
     return v.reduce(function (a, x) { return a + (sun.indexOf(x) !== -1 ? 1 : 0) - (rain.indexOf(x) !== -1 ? 1 : 0); }, 0);
   }
 
+  // Бюджет реально влияет на подбор: «до $50» тянет недорогие туры,
+  // «$120+» — премиум (приват, вертолёт, острова, цена по запросу).
+  function budgetFit(tpl) {
+    var tour = SB_TOURS[tpl.tour];
+    var p = priceNum(tour && tour.price); // null у «Ask Price»
+    var b = state.budget;
+    if (b === 'low') return p == null ? -2 : (p <= 50 ? 2 : (p <= 80 ? 0 : -2));
+    if (b === 'high') return p == null ? 2 : (p >= 100 ? 2 : (p >= 60 ? 1 : 0));
+    return p == null ? 0 : (p >= 40 && p <= 120 ? 1 : 0);
+  }
+  // Состав группы тоже влияет: семье не ставим ночные подъёмы и многодневные
+  // выезды, друзьям добавляем драйва, паре — спокойные и видовые дни.
+  function groupFit(tpl) {
+    var g = state.group;
+    var first = (tpl.stops && tpl.stops[0] && tpl.stops[0].time) || '09:00';
+    var startH = parseInt(String(first).split(':')[0], 10);
+    var v = tpl.vibes || [];
+    var has = function (x) { return v.indexOf(x) !== -1; };
+    var s = 0;
+    if (g === 'family') {
+      if (startH < 6) s -= 3;                 // подъём среди ночи с детьми
+      if (tpl.id === 'sumbawa_day') s -= 3;   // многодневный выезд с Бали
+      if (has('chill') || has('waterfall') || has('beach')) s += 1;
+      return s;
+    }
+    if (g === 'couple') {
+      if (has('chill')) s += 1;
+      if (has('temple') || has('aerial')) s += 1;
+      if (startH < 5) s -= 1;
+      return s;
+    }
+    if (g === 'friends') {
+      if (has('adventure') || has('dive')) s += 2;
+      if (has('volcano')) s += 1;
+      return s;
+    }
+    if (has('adventure') || has('dive')) s += 1; // solo
+    if (has('chill')) s += 1;
+    return s;
+  }
+
+  // Все шаблоны восхода на Батур — в поездке должен быть РОВНО ОДИН из них
+  var BATUR_IDS = ['batur_day', 'batur_hike_day', 'batur_jeep_day'];
+
+  // Статистика плана — считается и при сборке, и после ручной замены тура в дне
+  function computeStats(planDays, days) {
+    var stops = 0, km = 0, prev = null, sum = 0, ask = 0, seenTour = {};
+    planDays.forEach(function (d) {
+      if (d.kind !== 'tour') return;
+      d.stops.forEach(function (s) {
+        stops++;
+        if (prev) km += haversine(prev, s.loc);
+        prev = s.loc;
+      });
+      var key = d.tour && d.tour.link;
+      if (d.tour && !seenTour[key]) {
+        seenTour[key] = true;
+        var n = priceNum(d.tour.price);
+        if (n) sum += n; else ask++;
+      }
+    });
+    return { days: days != null ? days : planDays.length, stops: stops, km: Math.round(km / 5) * 5, budget: sum, ask: ask };
+  }
+
   function buildPlan(days, vibes, area) {
     var tpls = SB_DAY_TEMPLATES.slice();
     var scored;
+    function total(t, m) { return m * 3 + budgetFit(t) + groupFit(t); }
     if (vibes.length) {
       scored = tpls.map(function (t) {
         var m = t.vibes.filter(function (v) { return vibes.indexOf(v) !== -1; }).length;
-        return { t: t, m: m };
+        return { t: t, m: m, s: total(t, m) };
       }).filter(function (x) { return x.m > 0; });
-      scored.sort(function (a, b) { return b.m - a.m || a.t.order - b.t.order; });
-      if (!scored.length) scored = tpls.map(function (t) { return { t: t, m: 1 }; });
+      scored.sort(function (a, b) { return b.s - a.s || a.t.order - b.t.order; });
+      if (!scored.length) scored = tpls.map(function (t) { return { t: t, m: 1, s: total(t, 1) }; });
     } else {
-      scored = tpls.map(function (t) { return { t: t, m: 1 }; });
+      scored = tpls.map(function (t) { return { t: t, m: 1, s: total(t, 1) }; });
+      scored.sort(function (a, b) { return b.s - a.s || a.t.order - b.t.order; });
     }
 
     // Дни-туры vs свободные дни — как на главной: часть дней тур, остальные
     // свободные с рекомендациями (свободные дни есть всегда для поездки 2+ дней).
     // Оставляем хотя бы ~четверть дней (мин. 1) свободными — остальное под туры.
-    var freeFloor = Math.max(1, Math.floor(days / 4));
-    var tourCount = Math.min(mainTarget(days), days - freeFloor, scored.length);
-    var chosen = scored.slice(0, tourCount).map(function (x) { return x.t; });
+    var freeFloor = days <= 2 ? 0 : Math.max(1, Math.floor(days / 4)); // на 1–2 дня свободный день не резервируем — иначе план без туров
+    var budgetAdj = state.budget === 'low' ? -1 : (state.budget === 'high' ? 1 : 0);
+    var tourCount = Math.min(Math.max(1, mainTarget(days) + budgetAdj), days - freeFloor, scored.length);
+    // «Пересобрать» должен давать ДРУГОЙ план: сильнейшую половину оставляем,
+    // остальные слоты проворачиваем по пулу — так каждый пересбор свежий.
+    var pool = scored.map(function (x) { return x.t; });
+    var variant = state.variant || 0;
+    if (variant > 0 && pool.length > tourCount) {
+      var keep = Math.max(1, Math.floor(tourCount / 2));
+      var head = pool.slice(0, keep);
+      var rest = pool.slice(keep);
+      var off = rest.length ? (variant * 2) % rest.length : 0;
+      pool = head.concat(rest.slice(off), rest.slice(0, off));
+    }
+    var chosen = pool.slice(0, tourCount);
     // Тур на Manta Point предлагаем ВСЕГДА (как isPrimaryMantaTour на главной):
     // ставим его первым тур-днём + добираем лучшие по вайбу остальные слоты.
     var mantaTpl = tpls.filter(function (t) { return t.id === 'manta_day'; })[0];
     if (mantaTpl && tourCount >= 1 && chosen.indexOf(mantaTpl) === -1) {
-      var others = scored.map(function (x) { return x.t; })
-        .filter(function (t) { return t !== mantaTpl; })
-        .slice(0, tourCount - 1);
+      // добираем из УЖЕ провёрнутого пула, иначе «Пересобрать» каждый раз
+      // возвращало бы один и тот же набор
+      var others = pool.filter(function (t) { return t !== mantaTpl; }).slice(0, tourCount - 1);
       chosen = [mantaTpl].concat(others);
     }
     // Восход на Батур — флагманский высокомаржинальный тур: гарантируем ОДИН Батур-день.
@@ -392,8 +475,8 @@
     var baturJeep = tpls.filter(function (t) { return t.id === 'batur_day'; })[0];
     var baturPick = (state.interests && state.interests.adventure && baturHike) ? baturHike : (baturJeep || baturHike);
     if (baturPick) {
-      var hadBatur = chosen.some(function (t) { return t.id === 'batur_day' || t.id === 'batur_hike_day'; });
-      chosen = chosen.filter(function (t) { return t.id !== 'batur_day' && t.id !== 'batur_hike_day'; }); // мьютекс
+      var hadBatur = chosen.some(function (t) { return BATUR_IDS.indexOf(t.id) !== -1; });
+      chosen = chosen.filter(function (t) { return BATUR_IDS.indexOf(t.id) === -1; }); // мьютекс
       if ((hadBatur || tourCount >= 2) && chosen.indexOf(baturPick) === -1) {
         if (chosen.length < tourCount) chosen.push(baturPick);
         else {
@@ -415,10 +498,10 @@
       chosen.forEach(function (t) { chosenIds[t.id] = true; });
       var protectedIds = { manta_day: 1 }; if (baturPick) protectedIds[baturPick.id] = 1;
       // в пул не берём другой Батур-день (чтобы не получить дубль джип+пеший)
-      var pool = tpls.filter(function (t) { return !chosenIds[t.id] && !protectedIds[t.id] && t.id !== 'batur_day' && t.id !== 'batur_hike_day'; })
+      var reservePool = tpls.filter(function (t) { return !chosenIds[t.id] && !protectedIds[t.id] && BATUR_IDS.indexOf(t.id) === -1; })
         .sort(function (a, b) { return b.order - a.order; }); // новые/нишевые (высокий order) вперёд
-      pool.sort(function (a, b) { return (b.id === 'sumbawa_day') - (a.id === 'sumbawa_day'); });
-      var swapIn = pool.slice(0, reserve);
+      reservePool.sort(function (a, b) { return (b.id === 'sumbawa_day') - (a.id === 'sumbawa_day'); });
+      var swapIn = reservePool.slice(0, reserve);
       if (swapIn.length) {
         var scoreOf = {};
         scored.forEach(function (x) { scoreOf[x.t.id] = x.m; });
@@ -494,7 +577,7 @@
           var l = LOC[s.loc];
           return { loc: l, time: s.time, note: s.note };
         });
-        return { kind: 'tour', title: item.tpl.title, tour: SB_TOURS[item.tpl.tour], color: color, stops: stops, wx: w };
+        return { kind: 'tour', tplId: item.tpl.id, title: item.tpl.title, tour: SB_TOURS[item.tpl.tour], color: color, stops: stops, wx: w };
       }
       // Свободный день: каждый следующий показывает ДРУГИЕ места зоны (прокрутка),
       // а в дождь вперёд выходят места, которые работают в непогоду (спа, музеи, кафе).
@@ -512,35 +595,23 @@
       return { kind: 'free', zone: zone, color: color, wx: w };
     });
 
-    // Статистика
-    var stops = 0, km = 0, prev = null, sum = 0, ask = 0, seenTour = {};
-    planDays.forEach(function (d) {
-      if (d.kind !== 'tour') return;
-      d.stops.forEach(function (s) {
-        stops++;
-        if (prev) km += haversine(prev, s.loc);
-        prev = s.loc;
-      });
-      var key = d.tour && d.tour.link;
-      if (d.tour && !seenTour[key]) {
-        seenTour[key] = true;
-        var n = priceNum(d.tour.price);
-        if (n) sum += n; else ask++;
-      }
-    });
-    return {
-      days: planDays,
-      stats: { days: days, stops: stops, km: Math.round(km / 5) * 5, budget: sum, ask: ask }
-    };
+    return { days: planDays, stats: computeStats(planDays, days) };
   }
 
   /* ============================================================
      РЕНДЕР ТАЙМЛАЙНА
      ============================================================ */
-  function starRow(rating) { return '<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> ' + rating.toFixed(1) + ' · Google maps'; }
+  // звёзды уже есть в разметке карточки — здесь только цифра, иначе двойной ряд
+  function starRow(rating) { return ' ' + rating.toFixed(1) + ' · Google maps'; }
 
-  function dayTools(i) {
-    return '<span class="tl-day-tools"><button class="tl-tool" data-tool="focus" data-day="' + i + '">' + esc(T('Фокус')) + '</button>' +
+  // Manta Point — гарантированный флагман, его день заменять нельзя.
+  // Батур-день заменяется только на другой формат восхода (джип ↔ пеший).
+  function canSwap(d) { return d && d.kind === 'tour' && d.tplId !== 'manta_day'; }
+  function dayTools(i, isTour) {
+    var swappable = isTour && canSwap(state.plan && state.plan.days[i]);
+    return '<span class="tl-day-tools">' +
+      (swappable ? '<button class="tl-tool" data-tool="swap" data-day="' + i + '">' + esc(T('Заменить')) + '</button>' : '') +
+      '<button class="tl-tool" data-tool="focus" data-day="' + i + '">' + esc(T('Фокус')) + '</button>' +
       '<button class="tl-tool" data-tool="toggle" data-day="' + i + '">' + esc(T('Скрыть')) + '</button></span>';
   }
   // Погодный чип дня: иконка + температура (клик-подсказка — условие)
@@ -564,7 +635,7 @@
       return '<article class="tl-day tl-day--free" data-day="' + i + '" style="--day:' + d.color + '">' +
         '<div class="tl-day-head"><span class="day-num">' + num + '</span>' +
         '<span class="tl-day-title free-title">' + esc(T('Свободный день')) + ' · ' + esc(T(d.zone.name)) + '</span>' +
-        wxChip(d) + dayTools(i) + '</div>' +
+        wxChip(d) + dayTools(i, false) + '</div>' +
         '<p class="free-intro">' + esc(T(d.zone.intro)) + '</p>' + recs + '</article>';
     }
     // Забор из отеля — первая строка расписания по времени
@@ -595,7 +666,7 @@
     return '<article class="tl-day" data-day="' + i + '" style="--day:' + d.color + '">' +
       '<div class="tl-day-head"><span class="day-num">' + num + '</span>' +
       '<span class="tl-day-title">' + esc(T(d.title)) + '</span>' + wxChip(d) +
-      dayTools(i) + '</div>' +
+      dayTools(i, true) + '</div>' +
       '<div class="tl-stops">' + stops + '</div>' + tour + '</article>';
   }
 
@@ -607,7 +678,7 @@
     dayHidden = {};
     // делегированные обработчики
     els.timeline.querySelectorAll('.tl-stop').forEach(function (node) {
-      node.addEventListener('click', function () { var l = LOC[node.getAttribute('data-loc')]; if (l) openPlace(l); });
+      node.addEventListener('click', function () { var l = LOC[node.getAttribute('data-loc')]; if (l) openPlace(l, false, dayTourOf(node)); });
     });
     els.timeline.querySelectorAll('.free-rec').forEach(function (node) {
       function openIt(e) {
@@ -625,7 +696,9 @@
       btn.addEventListener('click', function (e) {
         e.stopPropagation();
         var di = parseInt(btn.getAttribute('data-day'), 10);
-        if (btn.getAttribute('data-tool') === 'focus') focusDay(di);
+        var tool = btn.getAttribute('data-tool');
+        if (tool === 'focus') focusDay(di);
+        else if (tool === 'swap') swapDayTour(di);
         else toggleDay(di, btn);
       });
     });
@@ -667,6 +740,83 @@
     var card = els.timeline.querySelector('.tl-day[data-day="' + i + '"]');
     if (card) card.classList.toggle('is-hidden-day', hide);
     if (btn) { btn.textContent = hide ? T('Показать') : T('Скрыть'); btn.classList.toggle('is-on', hide); }
+  }
+
+  // Замена тура в конкретном дне: берём лучший ещё не занятый тур с учётом
+  // интересов, бюджета, состава группы и погоды этого дня.
+  function swapDayTour(i) {
+    if (!state.plan) return;
+    var d = state.plan.days[i];
+    if (state.building || state.phase !== 'done') return;  // не трогаем план во время сборки
+    if (!canSwap(d)) return;                         // Manta-день не заменяем
+    var used = {};
+    state.plan.days.forEach(function (x) { if (x.kind === 'tour' && x.tplId) used[x.tplId] = true; });
+    var vibes = activeVibes();
+    var isBaturDay = BATUR_IDS.indexOf(d.tplId) !== -1;
+    // помним, что уже показывали в этом дне, иначе «Заменить» ходит по кругу
+    // между двумя турами и остальной каталог человек не увидит
+    var seen = d.swapSeen || [d.tplId];
+    function pickable(skipSeen) {
+      return SB_DAY_TEMPLATES.filter(function (t) {
+        if (used[t.id]) return false;
+        if (skipSeen && seen.indexOf(t.id) !== -1) return false;
+        // Батур-день меняем только на другой формат восхода, а обычный день
+        // никогда не превращаем в Батур — иначе получим два Батура в поездке.
+        return isBaturDay ? BATUR_IDS.indexOf(t.id) !== -1 : BATUR_IDS.indexOf(t.id) === -1;
+      });
+    }
+    var cands = pickable(true);
+    if (!cands.length) { seen = [d.tplId]; cands = pickable(true); }  // круг пройден — начинаем заново
+    if (!cands.length) return;                       // менять не на что
+    var wet = d.wx && !d.wx.good;
+    cands = cands.map(function (t) {
+      var m = vibes.length ? t.vibes.filter(function (v) { return vibes.indexOf(v) !== -1; }).length : 1;
+      var s = m * 3 + budgetFit(t) + groupFit(t);
+      s += wet ? -sunNeed(t) : sunNeed(t);           // в дождь — не морской день
+      return { t: t, s: s };
+    }).sort(function (a, b) { return b.s - a.s || a.t.order - b.t.order; });
+    var next = cands[0].t;
+
+    state.plan.days[i] = {
+      kind: 'tour', tplId: next.id, title: next.title, tour: SB_TOURS[next.tour],
+      color: d.color, wx: d.wx, swapSeen: seen.concat([next.id]),
+      stops: next.stops.map(function (s) { return { loc: LOC[s.loc], time: s.time, note: s.note }; })
+    };
+    state.plan.stats = computeStats(state.plan.days, state.days);
+    redrawPlanInstant();
+    setFocusDay(i);
+    focusDay(i);
+  }
+
+  // Полная мгновенная перерисовка плана (карта + карточки) после ручной правки
+  function redrawPlanInstant() {
+    resetPins();
+    dayHidden = {};
+    renderTimelineShell();
+    state.plan.days.forEach(function (d, i) {
+      if (d.kind === 'tour') {
+        var latlngs = [];
+        d.stops.forEach(function (s) {
+          if (!locDays[s.loc.id]) locDays[s.loc.id] = [];
+          if (locDays[s.loc.id].indexOf(i) === -1) locDays[s.loc.id].push(i);
+          if (pins[s.loc.id] && pins[s.loc.id].dayIndex === null) colorPin(s.loc.id, d.color, i);
+          latlngs.push([s.loc.lat, s.loc.lng]);
+        });
+        var g = dayLayer[i] || (dayLayer[i] = L.layerGroup().addTo(map));
+        if (latlngs.length > 1) L.polyline(latlngs, { color: d.color, weight: 3, opacity: 0.95, lineJoin: 'round' }).addTo(g);
+        if (d.stops.length) markDayStart(d.stops[0].loc.id, i + 1, d.color);
+      } else if (d.zone && d.zone.recs) {
+        if (!map.hasLayer(quietLayer)) quietLayer.addTo(map);
+        d.zone.recs.forEach(function (r) {
+          var qicon = L.divIcon({ className: 'sb-pin-wrap', html: '<div class="sb-pin sb-pin--quiet"></div>', iconSize: [16, 16], iconAnchor: [8, 8] });
+          L.marker([r.lat, r.lng], { icon: qicon, keyboard: false }).addTo(quietLayer).bindTooltip(r.title, { className: 'sb-tip', direction: 'top' });
+        });
+      }
+      var card = els.timeline.querySelector('.tl-day[data-day="' + i + '"]');
+      if (card) card.classList.add('is-in');
+    });
+    fillSummary();
+    els.summary.hidden = false; els.summary.classList.add('is-in');
   }
 
   /* ============================================================
@@ -821,6 +971,7 @@
 
   /* ---------- Кнопка «весь план в WhatsApp» ---------- */
   var SB_WA_PHONE = '6285333685020';
+  var SITE_URL_BASE = 'https://www.sbexcursion.com';
   function dmy(iso) { if (!iso) return ''; var p = iso.split('-'); return p[2] + '.' + p[1] + '.' + p[0]; }
   function optText(sel) { return sel && sel.selectedIndex >= 0 ? sel.options[sel.selectedIndex].text.trim() : ''; }
   function buildWaMessage() {
@@ -915,13 +1066,24 @@
   }
 
   /* ---------- Пересобрать ---------- */
-  function rebuild() { map.fitBounds(SB_BALI_BOUNDS); build(); }
+  function rebuild() { state.variant = (state.variant || 0) + 1; map.fitBounds(SB_BALI_BOUNDS); build(); }
 
   /* ============================================================
      КАРТОЧКА МЕСТА
      ============================================================ */
-  function openPlace(loc, keepOpen) {
+  // Тур того дня плана, из которого открыли точку (у одного места может быть
+  // «свой» тур в data.js, но бронировать надо тот, что стоит в этом дне).
+  function dayTourOf(node) {
+    var card = node && node.closest ? node.closest('.tl-day') : null;
+    if (!card || !state.plan) return null;
+    var di = parseInt(card.getAttribute('data-day'), 10);
+    var d = state.plan.days[di];
+    return d && d.kind === 'tour' ? d.tour : null;
+  }
+  function openPlace(loc, keepOpen, dayTour) {
     state.currentLoc = loc;
+    state.currentTour = dayTour || SB_TOURS[loc.tour] || null;
+    state.currentRec = null;
     // восстановить элементы, которые прячет карточка свободного места
     els.pcRating.parentElement.style.display = '';
     els.pcBook.style.display = ''; els.pcAdd.style.display = '';
@@ -931,7 +1093,7 @@
     els.pcTitle.textContent = T(loc.name);
     els.pcRating.innerHTML = starRow(loc.rating);
     els.pcDesc.textContent = T(loc.desc);
-    var t = SB_TOURS[loc.tour];
+    var t = state.currentTour;               // тур ДНЯ, если точку открыли из плана
     if (t) {
       els.pcTour.style.display = '';
       els.pcTourName.textContent = t.name;
@@ -955,6 +1117,7 @@
   // Карточка места свободного дня — большое фото + описание + Google Maps
   function openFreeRec(rec) {
     state.currentLoc = null;
+    state.currentRec = rec;
     els.pcImg.src = rec.img; els.pcImg.alt = rec.title;
     els.pcBadge.hidden = !rec.topPick;
     els.pcCat.textContent = T('Место для свободного дня');
@@ -967,8 +1130,32 @@
     els.pcOverlay.hidden = false;
     requestAnimationFrame(function () { els.pcOverlay.classList.add('is-open'); });
   }
+  // Бронь = реальная заявка в WhatsApp по конкретному месту/туру (раньше кнопка
+  // только меняла надпись, и клиент думал, что заявка ушла).
   els.pcBook.addEventListener('click', function () {
-    els.pcBook.textContent = T('Заявка принята'); els.pcBook.classList.add('is-done'); els.pcBook.disabled = true;
+    var loc = state.currentLoc;
+    if (!loc) return;
+    var tour = state.currentTour || SB_TOURS[loc.tour];
+    var lines = [T('Здравствуйте! Пишу из AI-планировщика SB Excursions.')];
+    if (tour) {
+      lines.push('');
+      lines.push('🎟 ' + tour.name + (tour.price ? ' — ' + tour.price : ''));
+      lines.push('📍 ' + T('Интересует место') + ': ' + T(loc.name));
+      lines.push(SITE_URL_BASE + tour.link);
+    } else {
+      lines.push('');
+      lines.push('📍 ' + T('Интересует место') + ': ' + T(loc.name));
+    }
+    if (els.startDate.value) {
+      lines.push('');
+      lines.push('📅 ' + dmy(els.startDate.value) + (els.endDate.value ? ' – ' + dmy(els.endDate.value) : ''));
+      lines.push('👥 ' + optText(els.groupSelect));
+    }
+    lines.push('');
+    lines.push(T('Подскажите, пожалуйста, свободные даты и цену.'));
+    var w = window.open('https://wa.me/' + SB_WA_PHONE + '?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+    if (!w) return;                                  // блокировщик popup — кнопку не гасим
+    els.pcBook.textContent = T('Заявка отправлена'); els.pcBook.classList.add('is-done'); els.pcBook.disabled = true;
   });
   els.pcClose.addEventListener('click', closePlace);
   els.pcBackdrop.addEventListener('click', closePlace);
@@ -998,15 +1185,22 @@
       var fresh = tmp.firstChild; card.replaceWith(fresh); rebindDayCard(fresh, i); fresh.classList.add('is-in');
     }
     // обновить статистику
-    state.plan.stats.stops += 1;
-    els.sumStops.textContent = state.plan.stats.stops;
+    state.plan.stats = computeStats(state.plan.days, state.days);
+    fillSummary();
     els.pcAdd.textContent = T('Добавлено') + ' ✓';
     els.pcAdd.disabled = true;
   }
   function rebindDayCard(card, i) {
-    card.querySelectorAll('.tl-stop').forEach(function (node) { node.addEventListener('click', function () { var l = LOC[node.getAttribute('data-loc')]; if (l) openPlace(l); }); });
+    card.querySelectorAll('.tl-stop').forEach(function (node) { node.addEventListener('click', function () { var l = LOC[node.getAttribute('data-loc')]; if (l) openPlace(l, false, dayTourOf(node)); }); });
     card.querySelectorAll('.tl-tool').forEach(function (btn) {
-      btn.addEventListener('click', function (e) { e.stopPropagation(); var di = parseInt(btn.getAttribute('data-day'), 10); if (btn.getAttribute('data-tool') === 'focus') focusDay(di); else toggleDay(di, btn); });
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var di = parseInt(btn.getAttribute('data-day'), 10);
+        var tool = btn.getAttribute('data-tool');
+        if (tool === 'focus') focusDay(di);
+        else if (tool === 'swap') swapDayTour(di);
+        else toggleDay(di, btn);
+      });
     });
     card.addEventListener('click', function () { setFocusDay(i); });
     if (state.focusDay === i) card.classList.add('is-focus');
@@ -1048,7 +1242,7 @@
     });
   })();
 
-  els.build.addEventListener('click', build);
+  els.build.addEventListener('click', function () { state.variant = 0; build(); });
   els.skip.addEventListener('click', skip);
   els.rebuild.addEventListener('click', rebuild);
 
@@ -1064,7 +1258,9 @@
     document.querySelectorAll('.lang-item').forEach(function (b) { b.classList.toggle('is-active', b.getAttribute('data-lang') === lang); });
     applyStaticI18n();
     if (state.plan && state.phase === 'done') {
+      var hiddenSnapshot = dayHidden;          // renderTimelineShell обнуляет dayHidden
       renderTimelineShell();
+      dayHidden = hiddenSnapshot;              // — возвращаем, иначе скрытые дни «оживают»
       els.timeline.querySelectorAll('.tl-day').forEach(function (c) { c.classList.add('is-in'); });
       Object.keys(dayHidden).forEach(function (k) {
         if (!dayHidden[k]) return;
@@ -1076,7 +1272,10 @@
       setFocusDay(state.focusDay);
       fillSummary();
     }
-    if (!els.pcOverlay.hidden && state.currentLoc) openPlace(state.currentLoc, true);
+    if (!els.pcOverlay.hidden) {
+      if (state.currentLoc) openPlace(state.currentLoc, true, state.currentTour);
+      else if (state.currentRec) openFreeRec(state.currentRec);   // карточка свободного места тоже переводится
+    }
     closeLangMenu();
   }
   langBtn.addEventListener('click', function (e) {
