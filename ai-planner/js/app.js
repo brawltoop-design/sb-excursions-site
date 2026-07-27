@@ -484,6 +484,8 @@
     }
 
     // Собираем дни с цветами и координатами
+    var FREE_PER_DAY = 3;
+    var freeSeen = 0;
     var planDays = seq.slice(0, days).map(function (item, i) {
       var color = SB_DAY_COLORS[i % SB_DAY_COLORS.length];
       var w = wx && wx[i] ? wx[i] : null;
@@ -494,7 +496,20 @@
         });
         return { kind: 'tour', title: item.tpl.title, tour: SB_TOURS[item.tpl.tour], color: color, stops: stops, wx: w };
       }
-      return { kind: 'free', zone: item.zone, color: color, wx: w };
+      // Свободный день: каждый следующий показывает ДРУГИЕ места зоны (прокрутка),
+      // а в дождь вперёд выходят места, которые работают в непогоду (спа, музеи, кафе).
+      var zone = item.zone;
+      if (zone && zone.recs && zone.recs.length) {
+        var pool = zone.recs.slice();
+        if (w && !w.good) pool.sort(function (a, b) { return (b.indoor ? 1 : 0) - (a.indoor ? 1 : 0); });
+        var take = Math.min(FREE_PER_DAY, pool.length);
+        var off = pool.length ? (freeSeen * FREE_PER_DAY) % pool.length : 0;
+        var sel = [];
+        for (var q = 0; q < take; q++) sel.push(pool[(off + q) % pool.length]);
+        zone = Object.assign({}, zone, { recs: sel });
+      }
+      freeSeen++;
+      return { kind: 'free', zone: zone, color: color, wx: w };
     });
 
     // Статистика
