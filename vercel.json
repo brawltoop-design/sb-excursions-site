@@ -45,6 +45,14 @@
   ],
   "rewrites": [
     {
+      "source": "/bali/:lang/review",
+      "destination": "/bali-review.html"
+    },
+    {
+      "source": "/bali/en/review",
+      "destination": "/bali-review.html"
+    },
+    {
       "source": "/dubai/en",
       "destination": "/page63806411.html"
     },

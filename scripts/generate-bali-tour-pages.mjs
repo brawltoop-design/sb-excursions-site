@@ -5151,6 +5151,10 @@ function renderWestStylePage(tour) {
     html = replaceDoubleQuotedField(html, reviewDateFields[index], escapeHtml(review.date));
   });
 
+  // Форма «Оставьте отзыв» прямо под блоком Guest Reviews: отзыв улетает
+  // владельцу в WhatsApp, фото гость прикладывает там же в чате.
+  html = html.replace('<div id="rec2232083813"', `${renderReviewFormBlock(tour)}<div id="rec2232083813"`);
+
   html = html
     // The hero card's inline background. The template source keeps the west
     // tour's own photo here, so every other tour must swap it for its own —
@@ -13747,6 +13751,156 @@ function renderStructuredData(tour) {
     null,
     2,
   );
+}
+
+/* ------------------------------------------------------------------
+   Форма сбора отзывов под блоком Guest Reviews.
+   Статический сайт не принимает файлы, поэтому канал — WhatsApp:
+   форма собирает текст и открывает чат, фото гость прикладывает там же.
+   ------------------------------------------------------------------ */
+const REVIEW_FORM_I18N = {
+  en: {
+    title: "Been on this tour? Leave a review",
+    sub: "Your review goes straight to our WhatsApp — attach your photos right in the chat!",
+    rating: "Your rating",
+    name: "Your name",
+    country: "Country",
+    review: "Your review",
+    placeholder: "Tell us about your day…",
+    btn: "Send review via WhatsApp",
+    note: "📷 Got photos from the tour? Attach them in WhatsApp after sending.",
+    needText: "Please write a couple of words and your name first :)",
+  },
+  ru: {
+    title: "Были на этом туре? Оставьте отзыв",
+    sub: "Отзыв улетит прямо в наш WhatsApp — фото можно прикрепить там же в чате!",
+    rating: "Ваша оценка",
+    name: "Ваше имя",
+    country: "Страна",
+    review: "Ваш отзыв",
+    placeholder: "Расскажите, как прошёл день…",
+    btn: "Отправить отзыв в WhatsApp",
+    note: "📷 Есть фото с тура? Прикрепите их в WhatsApp после отправки.",
+    needText: "Сначала напишите пару слов и ваше имя :)",
+  },
+  es: {
+    title: "¿Hiciste este tour? Deja tu reseña",
+    sub: "Tu reseña llega directo a nuestro WhatsApp — ¡adjunta tus fotos en el chat!",
+    rating: "Tu puntuación",
+    name: "Tu nombre",
+    country: "País",
+    review: "Tu reseña",
+    placeholder: "Cuéntanos cómo fue tu día…",
+    btn: "Enviar reseña por WhatsApp",
+    note: "📷 ¿Tienes fotos del tour? Adjúntalas en WhatsApp después de enviar.",
+    needText: "Primero escribe unas palabras y tu nombre :)",
+  },
+  fr: {
+    title: "Vous avez fait cette excursion ? Laissez un avis",
+    sub: "Votre avis arrive directement sur notre WhatsApp — joignez vos photos dans la conversation !",
+    rating: "Votre note",
+    name: "Votre prénom",
+    country: "Pays",
+    review: "Votre avis",
+    placeholder: "Racontez-nous votre journée…",
+    btn: "Envoyer l’avis via WhatsApp",
+    note: "📷 Des photos de l’excursion ? Joignez-les dans WhatsApp après l’envoi.",
+    needText: "Écrivez d’abord quelques mots et votre prénom :)",
+  },
+  zh: {
+    title: "参加过这个团？留下您的评价",
+    sub: "评价会直接发送到我们的 WhatsApp——发送后可在聊天中附上照片！",
+    rating: "您的评分",
+    name: "您的名字",
+    country: "国家",
+    review: "您的评价",
+    placeholder: "分享您这一天的感受……",
+    btn: "通过 WhatsApp 发送评价",
+    note: "📷 有旅途照片？发送后直接在 WhatsApp 里附上即可。",
+    needText: "请先写几句话并填写名字 :)",
+  },
+};
+
+function renderReviewFormBlock(tour) {
+  const locale = REVIEW_FORM_I18N[tour.locale] ? tour.locale : "en";
+  const t = REVIEW_FORM_I18N[locale];
+  return `
+<div class="sb-review-cta-outer">
+  <style>
+    .sb-review-cta-outer { padding: 10px 20px 56px; background: #fff; }
+    .sb-review-cta { max-width: 760px; margin: 0 auto; border: 1px solid rgba(21,21,21,0.08); border-radius: 16px; box-shadow: 0 8px 18px rgba(17,17,17,0.05); padding: 30px 28px; font-family: inherit; }
+    .sb-review-cta h3 { font-size: 24px; font-weight: 500; margin: 0 0 6px; color: #191919; }
+    .sb-review-cta .srfrange { font-size: 14px; color: #6d6d6d; margin: 0 0 18px; }
+    .sb-review-cta .srf-label { display:block; font-size: 12.5px; font-weight: 600; color:#191919; margin: 14px 0 6px; }
+    .sb-review-cta .srf-stars { display:flex; gap: 6px; }
+    .sb-review-cta .srf-star { font-size: 30px; line-height: 1; background: none; border: none; cursor: pointer; color: #d9d9d9; padding: 2px; transition: transform .15s ease, color .15s ease; }
+    .sb-review-cta .srf-star.on { color: #E8B23A; }
+    .sb-review-cta .srf-star:hover { transform: scale(1.15); }
+    .sb-review-cta .srf-row { display: flex; gap: 12px; }
+    .sb-review-cta .srf-row > div { flex: 1; }
+    .sb-review-cta input, .sb-review-cta textarea { width: 100%; box-sizing: border-box; font-family: inherit; font-size: 14.5px; color: #191919; border: 1px solid rgba(21,21,21,0.16); border-radius: 12px; padding: 12px 15px; background: #fff; }
+    .sb-review-cta input:focus, .sb-review-cta textarea:focus { border-color: #2f6bff; outline: none; }
+    .sb-review-cta textarea { min-height: 110px; resize: vertical; }
+    .sb-review-cta .srf-send { display: inline-flex; align-items: center; gap: 9px; margin-top: 18px; border-radius: 999px; border: none; background: #191919; color: #fff; font-size: 15px; font-weight: 500; padding: 14px 28px; cursor: pointer; font-family: inherit; transition: background .25s ease, transform .25s ease; }
+    .sb-review-cta .srf-send:hover { background: #2f6bff; transform: translateY(-2px); }
+    .sb-review-cta .srf-note { font-size: 13px; color: #6d6d6d; margin-top: 12px; }
+    @media (max-width: 640px) { .sb-review-cta { padding: 22px 18px; } .sb-review-cta .srf-row { flex-direction: column; gap: 0; } }
+  </style>
+  <div class="sb-review-cta" data-tour-title="${escapeHtml(tour.title)}" data-tour-slug="${escapeHtml(tour.slug)}" id="sbReviewForm">
+    <h3>${escapeHtml(t.title)}</h3>
+    <p class="srfrange">${escapeHtml(t.sub)}</p>
+    <span class="srf-label">${escapeHtml(t.rating)}</span>
+    <div class="srf-stars" id="srfStars">
+      <button type="button" class="srf-star on" data-v="1">★</button>
+      <button type="button" class="srf-star on" data-v="2">★</button>
+      <button type="button" class="srf-star on" data-v="3">★</button>
+      <button type="button" class="srf-star on" data-v="4">★</button>
+      <button type="button" class="srf-star on" data-v="5">★</button>
+    </div>
+    <div class="srf-row">
+      <div>
+        <label class="srf-label" for="srfName">${escapeHtml(t.name)}</label>
+        <input id="srfName" type="text" autocomplete="name">
+      </div>
+      <div>
+        <label class="srf-label" for="srfCountry">${escapeHtml(t.country)}</label>
+        <input id="srfCountry" type="text" autocomplete="country-name">
+      </div>
+    </div>
+    <label class="srf-label" for="srfText">${escapeHtml(t.review)}</label>
+    <textarea id="srfText" placeholder="${escapeHtml(t.placeholder)}"></textarea>
+    <button type="button" class="srf-send" id="srfSend">${escapeHtml(t.btn)}</button>
+    <p class="srf-note">${escapeHtml(t.note)}</p>
+  </div>
+  <script>
+    (function () {
+      var root = document.getElementById('sbReviewForm');
+      if (!root) return;
+      var rating = 5;
+      var stars = Array.prototype.slice.call(root.querySelectorAll('.srf-star'));
+      stars.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          rating = parseInt(btn.getAttribute('data-v'), 10);
+          stars.forEach(function (b) { b.classList.toggle('on', parseInt(b.getAttribute('data-v'), 10) <= rating); });
+        });
+      });
+      document.getElementById('srfSend').addEventListener('click', function () {
+        var name = (document.getElementById('srfName').value || '').trim();
+        var country = (document.getElementById('srfCountry').value || '').trim();
+        var text = (document.getElementById('srfText').value || '').trim();
+        if (!name || !text) { alert(${JSON.stringify(t.needText)}); return; }
+        var lines = [
+          '\\u2B50 REVIEW \\u00B7 ' + root.getAttribute('data-tour-title') + ' #' + root.getAttribute('data-tour-slug'),
+          '\\u2605'.repeat(rating) + '\\u2606'.repeat(5 - rating) + ' (' + rating + '/5)',
+          name + (country ? ', ' + country : ''),
+          '\\u2014',
+          text
+        ];
+        window.open('https://wa.me/6285333685020?text=' + encodeURIComponent(lines.join('\\n')), '_blank', 'noopener');
+      });
+    })();
+  </script>
+</div>`;
 }
 
 function renderPage(tour, allTours) {
