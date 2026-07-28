@@ -3447,6 +3447,70 @@ function absoluteImageUrl(tour) {
   return `${SITE_URL}${publicImagePath(tour)}`;
 }
 
+/* Набор картинок для поисковой выдачи: Google охотнее показывает фото в сниппете,
+   когда в разметке несколько изображений места, а не одно. */
+function tourImageSet(tour) {
+  const urls = [absoluteImageUrl(tour)];
+  const push = (src) => {
+    const abs = absoluteJournalImageUrl(typeof src === "string" ? src : (src && (src.imagePath || src.src)));
+    if (abs && !urls.includes(abs) && /\.(jpe?g|png|webp)(\?|$)/i.test(abs)) urls.push(abs);
+  };
+  (Array.isArray(tour.collageImages) ? tour.collageImages : []).forEach(push);
+  try {
+    (buildWestCollageFallbackAssets(tour) || []).forEach((asset) => push(asset));
+  } catch (error) {
+    /* коллаж не обязателен для разметки */
+  }
+  return urls.slice(0, 6);
+}
+
+/* Набор картинок для статьи-гайда: обложка + фото упомянутых мест. */
+function guideImageSet(article) {
+  const urls = [];
+  const push = (src) => {
+    const abs = absoluteJournalImageUrl(src);
+    if (abs && !urls.includes(abs) && /\.(jpe?g|png|webp)(\?|$)/i.test(abs)) urls.push(abs);
+  };
+  push(article.heroImage);
+  (Array.isArray(article.rankings) ? article.rankings : []).forEach((item) => push(item && item.image));
+  return urls.slice(0, 6);
+}
+
+/* Рейтинг и отзывы для сниппета — берём ровно то, что уже показано на странице
+   (видимый рейтинг 4.9 и блок Guest Reviews), иначе разметка будет недостоверной. */
+const TOUR_VISIBLE_RATING = "4.9";
+function tourRatingNodes(tour) {
+  const reviews = (Array.isArray(tour.reviews) ? tour.reviews : []).filter((review) => review && review.text);
+  if (!reviews.length) return null;
+  return {
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: TOUR_VISIBLE_RATING,
+      bestRating: "5",
+      worstRating: "1",
+      reviewCount: String(reviews.length),
+    },
+    review: reviews.map((review) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: String(review.title || "").split(/\s+[-–]\s+/)[0].trim() || "Guest" },
+      datePublished: reviewIsoDate(review.date),
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
+      reviewBody: collapseWhitespace(review.text),
+    })),
+  };
+}
+function reviewIsoDate(value) {
+  const text = String(value || "");
+  const months = ["январ", "феврал", "март", "апрел", "ма", "июн", "июл", "август", "сентябр", "октябр", "ноябр", "декабр"];
+  const m = /(\d{1,2})\s+([А-Яа-яё]+)\s+(\d{4})/.exec(text);
+  if (m) {
+    const idx = months.findIndex((name) => m[2].toLowerCase().startsWith(name));
+    if (idx >= 0) return `${m[3]}-${String(idx + 1).padStart(2, "0")}-${String(m[1]).padStart(2, "0")}`;
+  }
+  const iso = /(\d{4})-(\d{2})-(\d{2})/.exec(text);
+  return iso ? iso[0] : undefined;
+}
+
 function tourBySlug(slug) {
   return tours.find((tour) => tour.slug === slug);
 }
@@ -3477,12 +3541,12 @@ function guidePlaceImage(title, fallbackTourSlug) {
 }
 
 function moneyOffer(tour) {
-  const match = /^From \$(\d+)/i.exec(tour.price);
+  const match = /\$\s?(\d+)|(\d+)\s?\$/.exec(tour.priceSource || tour.price || "");
   if (!match) return null;
   return {
     "@type": "Offer",
     priceCurrency: "USD",
-    price: match[1],
+    price: match[1] || match[2],
     url: absoluteTourUrl(tour),
     availability: "https://schema.org/InStock",
   };
@@ -12247,7 +12311,7 @@ function renderSeoGuidePage(article) {
       datePublished: JOURNAL_PUBLISHED_DATE,
       dateModified: JOURNAL_PUBLISHED_DATE,
       inLanguage: "en",
-      image: [absoluteJournalImageUrl(article.heroImage)],
+      image: guideImageSet(article),
       mainEntityOfPage: article.url,
       keywords: guideKeywords.join(", "),
       author: { "@type": "Organization", name: "SB Excursions" },
@@ -12493,7 +12557,7 @@ ${JOURNAL_FOOTER_ASSETS}
           datePublished: JOURNAL_PUBLISHED_DATE,
           dateModified: JOURNAL_PUBLISHED_DATE,
           inLanguage: "en",
-          image: [`${SITE_URL}${publicImagePath(article.tour)}`],
+          image: tourImageSet(article.tour),
           mainEntityOfPage: article.url,
           author: { "@type": "Organization", name: "SB Excursions" },
           publisher: {
@@ -13622,12 +13686,27 @@ function renderStructuredData(tour) {
         },
       ],
     },
+    /* Product даёт звёзды и цену в сниппете Google — TouristTrip их не показывает.
+       Рейтинг и отзывы те же, что видны на странице. */
+    Object.assign(
+      {
+        "@type": "Product",
+        "@id": `${absoluteTourUrl(tour)}#product`,
+        name: tour.title,
+        description: tour.summary,
+        image: tourImageSet(tour),
+        url: absoluteTourUrl(tour),
+        brand: { "@type": "Brand", name: "SB Excursions" },
+        category: tour.area,
+      },
+      moneyOffer(tour) ? { offers: moneyOffer(tour) } : {},
+    ),
     {
       "@type": "TouristTrip",
       "@id": `${absoluteTourUrl(tour)}#trip`,
       name: tour.title,
       description: tour.summary,
-      image: [absoluteImageUrl(tour)],
+      image: tourImageSet(tour),
       url: absoluteTourUrl(tour),
       touristType: tour.bestFor,
       itinerary: tour.itinerary.map(([title, description]) => ({
@@ -16804,6 +16883,7 @@ async function buildAutoLocalizedTour(baseTour, locale = "en") {
     breadcrumbHome: withTranslatedText(baseTour.breadcrumbHome, plainMap),
     breadcrumbTours: withTranslatedText(baseTour.breadcrumbTours, plainMap),
     price: withTranslatedText(baseTour.price, plainMap),
+    priceSource: baseTour.priceSource || baseTour.price,   // для разметки: цена не зависит от языка
     mainPagePrice: withTranslatedText(baseTour.mainPagePrice, plainMap),
     mainPagePriceNote: withTranslatedText(baseTour.mainPagePriceNote, plainMap),
     offerSectionHeading: withTranslatedText(baseTour.offerSectionHeading, plainMap),
