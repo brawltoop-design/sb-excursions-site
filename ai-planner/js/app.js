@@ -123,6 +123,8 @@
       el.textContent = T(src);
     });
     document.documentElement.lang = state.lang;
+    var ppl = document.getElementById('planPrivacyLink');
+    if (ppl) ppl.href = '/bali/' + state.lang + '/privacy-policy';
   }
 
   /* ============================================================

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — SB Excursions</title>
+  <meta name="description" content="How SB Excursions handles your data: WhatsApp bookings, consent-based analytics, no server-side storage.">
+  <link rel="stylesheet" href="/css/fonts-manrope.css">
+  <style>
+    :root { --ink:#191919; --soft:#6d6d6d; --blue:#2f6bff; --border:rgba(21,21,21,0.08); }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Manrope',-apple-system,'Segoe UI',Roboto,sans-serif; color:var(--ink); background:#fff; line-height:1.6; }
+    .head { display:flex; align-items:center; justify-content:space-between; padding:14px 24px; border-bottom:1px solid var(--border); }
+    .head img { height:38px; display:block; }
+    .head a.wa { border-radius:999px; background:var(--ink); color:#fff; text-decoration:none; font-size:14px; font-weight:500; padding:9px 20px; }
+    .wrap { max-width:760px; margin:0 auto; padding:44px 20px 80px; }
+    h1 { font-size:32px; font-weight:600; letter-spacing:-0.01em; margin-bottom:6px; }
+    .updated { font-size:13.5px; color:var(--soft); margin-bottom:30px; }
+    h2 { font-size:19px; font-weight:600; margin:30px 0 10px; }
+    p, li { font-size:15px; color:#333; margin-bottom:10px; }
+    ul { padding-left:22px; margin-bottom:12px; }
+    li { margin-bottom:6px; }
+    a { color:var(--blue); }
+    .card { border:1px solid var(--border); border-radius:14px; padding:18px 20px; margin:14px 0; background:#fafafa; }
+    @media (max-width:560px){ h1{font-size:26px;} }
+  </style>
+</head>
+<body>
+  <header class="head">
+    <a id="homeLink" href="/bali/en/main-page"><img src="/images/tild3334-6466-4436-b766-376338363935__sb_excursions_dubai_.png" alt="SB Excursions"></a>
+    <a class="wa" href="https://wa.me/6285333685020" target="_blank" rel="noopener">WhatsApp</a>
+  </header>
+  <main class="wrap">
+    <h1 id="tTitle"></h1>
+    <p class="updated" id="tUpdated"></p>
+    <div id="content"></div>
+  </main>
+
+  <script>
+  (function () {
+    var OPERATOR = {
+      en: "Self-employed individual Moskvin Aleksei Sergeevich (Russian Federation)",
+      ru: "Самозанятый Москвин Алексей Сергеевич (Российская Федерация)",
+      es: "Trabajador autónomo Moskvin Aleksei Sergeevich (Federación de Rusia)",
+      fr: "Travailleur indépendant Moskvin Aleksei Sergeevich (Fédération de Russie)",
+      zh: "个体经营者 Moskvin Aleksei Sergeevich（俄罗斯联邦）"
+    };
+    var CONTACT = '<ul><li>E-mail: <a href="mailto:info@sbexcursion.com">info@sbexcursion.com</a></li><li>WhatsApp: <a href="https://wa.me/6285333685020" target="_blank" rel="noopener">+62 853-3368-5020</a></li></ul>';
+
+    var I18N = {
+      en: {
+        title: "Privacy Policy",
+        updated: "Last updated: 29 July 2026",
+        sections: [
+          ["1. Who we are", [
+            "The website sbexcursion.com (“the Site”) is operated by:",
+            "<div class=\"card\"><b>" + OPERATOR.en + "</b>" + CONTACT + "</div>",
+            "We organize day tours and activities in Bali (Indonesia) together with licensed local partners. This policy explains what data we handle and why."
+          ]],
+          ["2. What data we process", [
+            "<b>Data you send us yourself.</b> Bookings, questions and reviews on this Site work through WhatsApp: when you tap a WhatsApp button, your message (name, travel dates, chosen tour, review text, anything else you write) is sent to our WhatsApp chat. The Site has no accounts, no databases and does not store this information on any server of ours — it exists only in the WhatsApp conversation between you and us.",
+            "<b>Analytics data (only with your consent).</b> If you press “Accept” in the cookie banner, anonymous usage statistics are collected by the tools listed in section 3. If you press “Decline”, none of these tools are loaded.",
+            "<b>Technical data.</b> Our hosting provider (Vercel Inc., USA) processes standard server logs (IP address, request time) as required to deliver the pages and protect the Site from abuse."
+          ]],
+          ["3. Cookies and analytics", [
+            "After your consent, the following services may set cookies and collect anonymized usage statistics:",
+            "<ul><li><b>Microsoft Clarity</b> (Microsoft Corporation, USA) — session replays and heatmaps to improve the Site;</li><li><b>Google Analytics / Google Tag Manager</b> (Google LLC, USA) — aggregated visit statistics by country and page;</li><li><b>Yandex Metrika</b> (YANDEX LLC, Russian Federation) — visit statistics, enabled only on the Russian-language version of the Site.</li></ul>",
+            "Your choice is stored in your browser (localStorage key “sb-consent”). You can change or withdraw your consent at any time via the 🍪 button in the bottom-left corner of any page. The map on our trip-planner uses CARTO basemap tiles and Open-Meteo weather data; these requests do not include any personal information beyond your IP address, which is technically required for any internet request."
+          ]],
+          ["4. Legal bases (for EU/EEA and UK visitors)", [
+            "We rely on: <b>your consent</b> (Art. 6(1)(a) GDPR) for analytics cookies; <b>steps prior to entering a contract</b> (Art. 6(1)(b)) when you contact us to book a tour; and <b>legitimate interest</b> (Art. 6(1)(f)) for keeping the Site secure."
+          ]],
+          ["5. International transfers", [
+            "We are based in the Russian Federation and operate tours in Indonesia; analytics providers process data in the USA. When you contact us via WhatsApp, your messages are processed by WhatsApp/Meta under <a href=\"https://www.whatsapp.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener\">Meta’s privacy policy</a>. We only receive what you send to our chat."
+          ]],
+          ["6. Retention", [
+            "WhatsApp conversations are kept as long as needed to arrange and support your trip, and can be deleted at your request. We keep no other copies of your personal data."
+          ]],
+          ["7. Your rights", [
+            "You may request access to, correction or deletion of your data, object to processing, or withdraw consent at any time — just write to us by e-mail or WhatsApp (contacts above). EU/EEA residents also have the right to lodge a complaint with their local supervisory authority. Residents of the Russian Federation have the rights provided by Federal Law No. 152-FZ “On Personal Data”."
+          ]],
+          ["8. Children", [
+            "The Site is intended for adults planning trips. We do not knowingly collect data from children under 16 without a parent or guardian involved."
+          ]],
+          ["9. Changes", [
+            "We may update this policy from time to time; the current version is always available on this page with the date above."
+          ]]
+        ]
+      },
+      ru: {
+        title: "Политика конфиденциальности",
+        updated: "Обновлено: 29 июля 2026",
+        sections: [
+          ["1. Кто мы", [
+            "Сайт sbexcursion.com («Сайт») администрирует:",
+            "<div class=\"card\"><b>" + OPERATOR.ru + "</b>" + CONTACT + "</div>",
+            "Мы организуем однодневные туры и активности на Бали (Индонезия) вместе с лицензированными местными партнёрами. Эта политика объясняет, какие данные мы обрабатываем и зачем."
+          ]],
+          ["2. Какие данные мы обрабатываем", [
+            "<b>Данные, которые вы отправляете сами.</b> Бронирования, вопросы и отзывы на Сайте работают через WhatsApp: при нажатии на кнопку WhatsApp ваше сообщение (имя, даты поездки, выбранный тур, текст отзыва — всё, что вы напишете) отправляется в наш WhatsApp-чат. На Сайте нет аккаунтов и баз данных, мы не храним эту информацию на своих серверах — она существует только в переписке между вами и нами.",
+            "<b>Аналитика (только с вашего согласия).</b> Если вы нажали «Принять» в баннере cookies, анонимная статистика собирается сервисами из раздела 3. Если нажали «Отклонить» — эти сервисы не загружаются вовсе.",
+            "<b>Технические данные.</b> Хостинг-провайдер (Vercel Inc., США) обрабатывает стандартные серверные логи (IP-адрес, время запроса) — это необходимо для показа страниц и защиты Сайта."
+          ]],
+          ["3. Cookies и аналитика", [
+            "После вашего согласия следующие сервисы могут устанавливать cookies и собирать обезличенную статистику:",
+            "<ul><li><b>Microsoft Clarity</b> (Microsoft Corporation, США) — записи сессий и тепловые карты для улучшения Сайта;</li><li><b>Google Analytics / Google Tag Manager</b> (Google LLC, США) — агрегированная статистика посещений по странам и страницам;</li><li><b>Яндекс.Метрика</b> (ООО «ЯНДЕКС», Российская Федерация) — статистика посещений, включается только на русскоязычной версии Сайта.</li></ul>",
+            "Ваш выбор хранится в браузере (ключ localStorage «sb-consent»). Изменить или отозвать согласие можно в любой момент через кнопку 🍪 в левом нижнем углу любой страницы. Карта в планировщике маршрутов использует тайлы CARTO и данные погоды Open-Meteo; эти запросы не содержат персональных данных, кроме IP-адреса, технически необходимого для любого запроса в интернете."
+          ]],
+          ["4. Правовые основания (для посетителей из ЕС/ЕЭЗ и Великобритании)", [
+            "Мы опираемся на: <b>ваше согласие</b> (ст. 6(1)(a) GDPR) — для аналитических cookies; <b>действия до заключения договора</b> (ст. 6(1)(b)) — когда вы пишете нам для бронирования; <b>законный интерес</b> (ст. 6(1)(f)) — для безопасности Сайта."
+          ]],
+          ["5. Трансграничная передача", [
+            "Мы находимся в Российской Федерации, туры проводятся в Индонезии; сервисы аналитики обрабатывают данные в США. При обращении через WhatsApp ваши сообщения обрабатывает WhatsApp/Meta согласно <a href=\"https://www.whatsapp.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener\">политике Meta</a>. Мы получаем только то, что вы отправили в наш чат."
+          ]],
+          ["6. Сроки хранения", [
+            "Переписка в WhatsApp хранится столько, сколько нужно для организации и сопровождения вашей поездки, и удаляется по вашему запросу. Других копий ваших персональных данных у нас нет."
+          ]],
+          ["7. Ваши права", [
+            "Вы можете запросить доступ, исправление или удаление данных, возразить против обработки или отозвать согласие в любой момент — напишите нам на e-mail или в WhatsApp (контакты выше). Жители ЕС/ЕЭЗ вправе подать жалобу в надзорный орган своей страны. Граждане РФ имеют права, предусмотренные Федеральным законом № 152-ФЗ «О персональных данных»."
+          ]],
+          ["8. Дети", [
+            "Сайт предназначен для взрослых, планирующих поездки. Мы сознательно не собираем данные детей младше 16 лет без участия родителей."
+          ]],
+          ["9. Изменения", [
+            "Мы можем время от времени обновлять эту политику; актуальная версия всегда доступна на этой странице, дата — выше."
+          ]]
+        ]
+      },
+      es: {
+        title: "Política de privacidad",
+        updated: "Última actualización: 29 de julio de 2026",
+        sections: [
+          ["1. Quiénes somos", [
+            "El sitio sbexcursion.com («el Sitio») es operado por:",
+            "<div class=\"card\"><b>" + OPERATOR.es + "</b>" + CONTACT + "</div>",
+            "Organizamos excursiones de un día en Bali (Indonesia) junto con socios locales autorizados. Esta política explica qué datos tratamos y por qué."
+          ]],
+          ["2. Qué datos tratamos", [
+            "<b>Datos que nos envías tú mismo.</b> Las reservas, preguntas y reseñas funcionan por WhatsApp: al pulsar un botón de WhatsApp, tu mensaje (nombre, fechas, tour elegido, texto de la reseña) se envía a nuestro chat. El Sitio no tiene cuentas ni bases de datos y no almacena esta información en ningún servidor nuestro — solo existe en la conversación de WhatsApp.",
+            "<b>Datos analíticos (solo con tu consentimiento).</b> Si pulsas «Aceptar» en el banner de cookies, las herramientas de la sección 3 recogen estadísticas anónimas. Si pulsas «Rechazar», no se cargan.",
+            "<b>Datos técnicos.</b> Nuestro proveedor de hosting (Vercel Inc., EE. UU.) procesa registros estándar del servidor (dirección IP, hora de la solicitud) para servir las páginas y proteger el Sitio."
+          ]],
+          ["3. Cookies y analítica", [
+            "Tras tu consentimiento, estos servicios pueden instalar cookies y recopilar estadísticas anonimizadas:",
+            "<ul><li><b>Microsoft Clarity</b> (Microsoft Corporation, EE. UU.) — grabaciones de sesión y mapas de calor;</li><li><b>Google Analytics / Google Tag Manager</b> (Google LLC, EE. UU.) — estadísticas agregadas por país y página;</li><li><b>Yandex Metrika</b> (YANDEX LLC, Federación de Rusia) — solo en la versión rusa del Sitio.</li></ul>",
+            "Tu elección se guarda en tu navegador (clave localStorage «sb-consent»). Puedes cambiar o retirar tu consentimiento en cualquier momento con el botón 🍪 en la esquina inferior izquierda. El mapa del planificador usa teselas de CARTO y datos meteorológicos de Open-Meteo; esas solicitudes no incluyen datos personales aparte de la dirección IP técnicamente necesaria."
+          ]],
+          ["4. Bases jurídicas (visitantes de la UE/EEE y Reino Unido)", [
+            "Nos basamos en: <b>tu consentimiento</b> (art. 6.1.a RGPD) para cookies analíticas; <b>medidas precontractuales</b> (art. 6.1.b) cuando nos escribes para reservar; e <b>interés legítimo</b> (art. 6.1.f) para la seguridad del Sitio."
+          ]],
+          ["5. Transferencias internacionales", [
+            "Estamos en la Federación de Rusia y las excursiones se realizan en Indonesia; los proveedores de analítica procesan datos en EE. UU. Al contactarnos por WhatsApp, tus mensajes los procesa WhatsApp/Meta según la <a href=\"https://www.whatsapp.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener\">política de Meta</a>."
+          ]],
+          ["6. Conservación", [
+            "Las conversaciones de WhatsApp se conservan mientras sea necesario para organizar tu viaje y se eliminan a petición tuya. No guardamos otras copias de tus datos."
+          ]],
+          ["7. Tus derechos", [
+            "Puedes solicitar acceso, rectificación o supresión de tus datos, oponerte al tratamiento o retirar el consentimiento en cualquier momento escribiéndonos por e-mail o WhatsApp. Los residentes de la UE/EEE pueden reclamar ante su autoridad de control."
+          ]],
+          ["8. Menores", [
+            "El Sitio está dirigido a adultos. No recopilamos conscientemente datos de menores de 16 años sin participación de sus padres."
+          ]],
+          ["9. Cambios", [
+            "Podemos actualizar esta política; la versión vigente siempre está en esta página con la fecha indicada arriba."
+          ]]
+        ]
+      },
+      fr: {
+        title: "Politique de confidentialité",
+        updated: "Dernière mise à jour : 29 juillet 2026",
+        sections: [
+          ["1. Qui sommes-nous", [
+            "Le site sbexcursion.com (« le Site ») est exploité par :",
+            "<div class=\"card\"><b>" + OPERATOR.fr + "</b>" + CONTACT + "</div>",
+            "Nous organisons des excursions à la journée à Bali (Indonésie) avec des partenaires locaux agréés. Cette politique explique quelles données nous traitons et pourquoi."
+          ]],
+          ["2. Quelles données traitons-nous", [
+            "<b>Données que vous nous envoyez.</b> Réservations, questions et avis passent par WhatsApp : en appuyant sur un bouton WhatsApp, votre message (nom, dates, excursion choisie, texte de l’avis) est envoyé dans notre conversation. Le Site n’a ni comptes ni bases de données et ne stocke rien sur nos serveurs — tout reste dans la conversation WhatsApp.",
+            "<b>Données analytiques (uniquement avec votre consentement).</b> Si vous cliquez « Accepter » dans le bandeau cookies, les outils de la section 3 collectent des statistiques anonymes. Si vous cliquez « Refuser », ils ne sont pas chargés.",
+            "<b>Données techniques.</b> Notre hébergeur (Vercel Inc., États-Unis) traite les journaux serveur standard (adresse IP, heure de la requête) pour servir les pages et protéger le Site."
+          ]],
+          ["3. Cookies et statistiques", [
+            "Après votre consentement, ces services peuvent déposer des cookies et collecter des statistiques anonymisées :",
+            "<ul><li><b>Microsoft Clarity</b> (Microsoft Corporation, États-Unis) — enregistrements de session et cartes de chaleur ;</li><li><b>Google Analytics / Google Tag Manager</b> (Google LLC, États-Unis) — statistiques agrégées par pays et par page ;</li><li><b>Yandex Metrika</b> (YANDEX LLC, Fédération de Russie) — uniquement sur la version russe du Site.</li></ul>",
+            "Votre choix est enregistré dans votre navigateur (clé localStorage « sb-consent »). Vous pouvez le modifier ou retirer votre consentement à tout moment via le bouton 🍪 en bas à gauche. La carte du planificateur utilise les tuiles CARTO et la météo Open-Meteo ; ces requêtes ne contiennent aucune donnée personnelle hormis l’adresse IP techniquement nécessaire."
+          ]],
+          ["4. Bases légales (visiteurs UE/EEE et Royaume-Uni)", [
+            "Nous nous appuyons sur : <b>votre consentement</b> (art. 6(1)(a) RGPD) pour les cookies analytiques ; <b>les mesures précontractuelles</b> (art. 6(1)(b)) lorsque vous nous écrivez pour réserver ; et <b>l’intérêt légitime</b> (art. 6(1)(f)) pour la sécurité du Site."
+          ]],
+          ["5. Transferts internationaux", [
+            "Nous sommes établis en Fédération de Russie, les excursions ont lieu en Indonésie ; les fournisseurs d’analytique traitent les données aux États-Unis. Via WhatsApp, vos messages sont traités par WhatsApp/Meta selon la <a href=\"https://www.whatsapp.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener\">politique de Meta</a>."
+          ]],
+          ["6. Conservation", [
+            "Les conversations WhatsApp sont conservées le temps d’organiser votre voyage et supprimées sur demande. Nous ne gardons aucune autre copie de vos données."
+          ]],
+          ["7. Vos droits", [
+            "Vous pouvez demander l’accès, la rectification ou la suppression de vos données, vous opposer au traitement ou retirer votre consentement à tout moment par e-mail ou WhatsApp. Les résidents de l’UE/EEE peuvent saisir leur autorité de contrôle."
+          ]],
+          ["8. Mineurs", [
+            "Le Site s’adresse aux adultes. Nous ne collectons pas sciemment de données d’enfants de moins de 16 ans sans l’implication d’un parent."
+          ]],
+          ["9. Modifications", [
+            "Cette politique peut être mise à jour ; la version en vigueur figure toujours sur cette page avec la date ci-dessus."
+          ]]
+        ]
+      },
+      zh: {
+        title: "隐私政策",
+        updated: "最近更新：2026年7月29日",
+        sections: [
+          ["1. 我们是谁", [
+            "网站 sbexcursion.com（下称“本网站”）的运营者为：",
+            "<div class=\"card\"><b>" + OPERATOR.zh + "</b>" + CONTACT + "</div>",
+            "我们与持牌本地合作伙伴共同组织巴厘岛（印度尼西亚）一日游及体验活动。本政策说明我们处理哪些数据以及原因。"
+          ]],
+          ["2. 我们处理哪些数据", [
+            "<b>您主动发送的数据。</b>预订、咨询和评价均通过 WhatsApp 进行：点击 WhatsApp 按钮后，您的消息（姓名、出行日期、所选行程、评价内容等）会发送到我们的 WhatsApp 聊天。本网站没有账户系统和数据库，不在我们的服务器上存储这些信息——它们只存在于您与我们的 WhatsApp 对话中。",
+            "<b>分析数据（仅在您同意后）。</b>如果您在 Cookie 横幅中点击“接受”，第 3 节所列工具会收集匿名统计数据；点击“拒绝”则完全不会加载这些工具。",
+            "<b>技术数据。</b>托管服务商（Vercel Inc.，美国）会处理标准服务器日志（IP 地址、请求时间），用于提供页面并保护网站安全。"
+          ]],
+          ["3. Cookies 与分析", [
+            "在您同意后，以下服务可能设置 Cookie 并收集匿名统计：",
+            "<ul><li><b>Microsoft Clarity</b>（Microsoft Corporation，美国）——会话录制与热图；</li><li><b>Google Analytics / Google Tag Manager</b>（Google LLC，美国）——按国家和页面的汇总访问统计；</li><li><b>Yandex Metrika</b>（YANDEX LLC，俄罗斯联邦）——仅在本网站俄语版启用。</li></ul>",
+            "您的选择保存在浏览器中（localStorage 键“sb-consent”）。您可以随时通过任意页面左下角的 🍪 按钮更改或撤回同意。行程规划器地图使用 CARTO 底图与 Open-Meteo 天气数据；这些请求除技术上必需的 IP 地址外不包含任何个人信息。"
+          ]],
+          ["4. 法律依据（欧盟/欧洲经济区及英国访客）", [
+            "我们依据：<b>您的同意</b>（GDPR 第6(1)(a)条）处理分析 Cookie；<b>合同前措施</b>（第6(1)(b)条）处理您的预订咨询；以及<b>正当利益</b>（第6(1)(f)条）保障网站安全。"
+          ]],
+          ["5. 跨境传输", [
+            "我们位于俄罗斯联邦，行程在印度尼西亚进行；分析服务商在美国处理数据。通过 WhatsApp 联系我们时，您的消息由 WhatsApp/Meta 根据 <a href=\"https://www.whatsapp.com/legal/privacy-policy\" target=\"_blank\" rel=\"noopener\">Meta 隐私政策</a>处理。"
+          ]],
+          ["6. 保存期限", [
+            "WhatsApp 对话仅在为您安排行程所需期间保存，可应您的要求删除。我们不保留您个人数据的其他副本。"
+          ]],
+          ["7. 您的权利", [
+            "您可以随时通过电子邮件或 WhatsApp 要求访问、更正或删除数据、反对处理或撤回同意。欧盟/欧洲经济区居民还有权向当地监管机构投诉。"
+          ]],
+          ["8. 未成年人", [
+            "本网站面向计划旅行的成年人。我们不会在无家长参与的情况下有意收集16岁以下儿童的数据。"
+          ]],
+          ["9. 变更", [
+            "我们可能不时更新本政策；最新版本始终发布在本页面，日期见上方。"
+          ]]
+        ]
+      }
+    };
+
+    var m = location.pathname.match(/\/bali\/(en|ru|es|fr|zh)\//) || [null, (new URLSearchParams(location.search).get('lang') || 'en')];
+    var lang = I18N[m[1]] ? m[1] : 'en';
+    var t = I18N[lang];
+    document.documentElement.lang = lang;
+    document.title = t.title + ' — SB Excursions';
+    document.getElementById('homeLink').href = '/bali/' + lang + '/main-page';
+    document.getElementById('tTitle').textContent = t.title;
+    document.getElementById('tUpdated').textContent = t.updated;
+    var html = '';
+    t.sections.forEach(function (s) {
+      html += '<h2>' + s[0] + '</h2>';
+      s[1].forEach(function (p) { html += (p.indexOf('<div') === 0 || p.indexOf('<ul') === 0) ? p : '<p>' + p + '</p>'; });
+    });
+    document.getElementById('content').innerHTML = html;
+  })();
+  </script>
+</body>
+</html>

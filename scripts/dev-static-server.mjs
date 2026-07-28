@@ -31,6 +31,9 @@ function rewrite(urlPath) {
   if ((m = urlPath.match(/^\/bali\/(ru|es|fr|zh)\/tours\/nusa-penida-manta-rays-point$/))) return `/page132181473-${m[1]}.html`;
   if ((m = urlPath.match(/^\/bali\/en\/tours\/mount-batur-sunrise-hike$/))) return "/page132812463.html";
   if ((m = urlPath.match(/^\/bali\/en\/tours\/mount-batur-sunrise-jeep-hot-spring$/))) return "/page133629743.html";
+  if ((m = urlPath.match(/^\/bali\/(en|ru|es|fr|zh)\/privacy-policy$/)) || urlPath === "/privacy-policy") return "/bali-privacy.html";
+  if ((m = urlPath.match(/^\/bali\/(en|ru|es|fr|zh)\/terms$/)) || urlPath === "/terms") return "/bali-terms.html";
+  if ((m = urlPath.match(/^\/bali\/(en|ru|es|fr|zh)\/review$/))) return "/bali-review.html";
   if (urlPath === "/bali/en/about") return "/bali-about.html";
   if (urlPath === "/bali/en/faq") return "/bali-faq.html";
   if ((m = urlPath.match(/^\/bali\/(ru|es|fr|zh)\/(about|faq|guides)$/))) return `/bali-${m[2]}-${m[1]}.html`;

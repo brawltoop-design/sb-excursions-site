@@ -6,9 +6,7 @@
   <title>Leave a review — SB Excursions</title>
   <meta name="description" content="Share your SB Excursions Bali tour experience — your review goes straight to our WhatsApp.">
   <meta name="robots" content="noindex, follow">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/fonts-manrope.css">
   <style>
     :root { --ink:#191919; --soft:#6d6d6d; --blue:#2f6bff; --gold:#E8B23A; --border:rgba(21,21,21,0.08); }
     * { margin:0; padding:0; box-sizing:border-box; }
@@ -64,17 +62,18 @@
 
     <button type="button" class="send" id="fSend"></button>
     <p class="note" id="tNote"></p>
+    <p class="note" id="tPrivacy"></p>
   </main>
 
   <script src="/ai-planner/js/data.js"></script>
   <script>
     (function () {
       var I18N = {
-        en: { title: "How was your Bali day with us?", sub: "Thank you for travelling with SB Excursions! Leave a short review — it goes straight to our WhatsApp, and you can attach your photos right in the chat.", tour: "Which tour did you join?", other: "Other / don’t remember", rating: "Your rating", name: "Your name", country: "Country", review: "Your review", placeholder: "Tell us about your day…", btn: "Send review via WhatsApp", note: "📷 Got photos from the tour? Attach them in WhatsApp after sending — we love seeing them!", needText: "Please write a couple of words and your name first :)" },
-        ru: { title: "Как прошёл ваш день на Бали с нами?", sub: "Спасибо, что путешествовали с SB Excursions! Оставьте короткий отзыв — он улетит прямо в наш WhatsApp, а фото можно прикрепить там же в чате.", tour: "На каком туре вы были?", other: "Другое / не помню", rating: "Ваша оценка", name: "Ваше имя", country: "Страна", review: "Ваш отзыв", placeholder: "Расскажите, как прошёл день…", btn: "Отправить отзыв в WhatsApp", note: "📷 Есть фото с тура? Прикрепите их в WhatsApp после отправки — мы их обожаем!", needText: "Сначала напишите пару слов и ваше имя :)" },
-        es: { title: "¿Qué tal tu día en Bali con nosotros?", sub: "¡Gracias por viajar con SB Excursions! Deja una breve reseña — llega directo a nuestro WhatsApp, y puedes adjuntar tus fotos en el chat.", tour: "¿En qué tour estuviste?", other: "Otro / no recuerdo", rating: "Tu puntuación", name: "Tu nombre", country: "País", review: "Tu reseña", placeholder: "Cuéntanos cómo fue tu día…", btn: "Enviar reseña por WhatsApp", note: "📷 ¿Tienes fotos del tour? Adjúntalas en WhatsApp después de enviar — ¡nos encantan!", needText: "Primero escribe unas palabras y tu nombre :)" },
-        fr: { title: "Comment s’est passée votre journée à Bali avec nous ?", sub: "Merci d’avoir voyagé avec SB Excursions ! Laissez un court avis — il arrive directement sur notre WhatsApp, et vous pouvez joindre vos photos dans la conversation.", tour: "Quelle excursion avez-vous faite ?", other: "Autre / je ne sais plus", rating: "Votre note", name: "Votre prénom", country: "Pays", review: "Votre avis", placeholder: "Racontez-nous votre journée…", btn: "Envoyer l’avis via WhatsApp", note: "📷 Des photos de l’excursion ? Joignez-les dans WhatsApp après l’envoi — on adore !", needText: "Écrivez d’abord quelques mots et votre prénom :)" },
-        zh: { title: "这次巴厘岛之行感觉如何？", sub: "感谢选择 SB Excursions！留下简短评价——它会直接发送到我们的 WhatsApp，照片可以在聊天中直接附上。", tour: "您参加了哪个行程？", other: "其他 / 不记得了", rating: "您的评分", name: "您的名字", country: "国家", review: "您的评价", placeholder: "分享您这一天的感受……", btn: "通过 WhatsApp 发送评价", note: "📷 有旅途照片？发送后直接在 WhatsApp 里附上——我们非常期待！", needText: "请先写几句话并填写名字 :)" }
+        en: { title: "How was your Bali day with us?", sub: "Thank you for travelling with SB Excursions! Leave a short review — it goes straight to our WhatsApp, and you can attach your photos right in the chat.", tour: "Which tour did you join?", other: "Other / don’t remember", rating: "Your rating", name: "Your name", country: "Country", review: "Your review", placeholder: "Tell us about your day…", btn: "Send review via WhatsApp", note: "📷 Got photos from the tour? Attach them in WhatsApp after sending — we love seeing them!", needText: "Please write a couple of words and your name first :)", privacy: "By sending, your review goes to our WhatsApp chat — details aren't shared anywhere else.", privacyLink: "Privacy Policy" },
+        ru: { title: "Как прошёл ваш день на Бали с нами?", sub: "Спасибо, что путешествовали с SB Excursions! Оставьте короткий отзыв — он улетит прямо в наш WhatsApp, а фото можно прикрепить там же в чате.", tour: "На каком туре вы были?", other: "Другое / не помню", rating: "Ваша оценка", name: "Ваше имя", country: "Страна", review: "Ваш отзыв", placeholder: "Расскажите, как прошёл день…", btn: "Отправить отзыв в WhatsApp", note: "📷 Есть фото с тура? Прикрепите их в WhatsApp после отправки — мы их обожаем!", needText: "Сначала напишите пару слов и ваше имя :)", privacy: "Отправляя отзыв, вы передаёте его в наш WhatsApp-чат — данные никуда больше не передаются.", privacyLink: "Политика конфиденциальности" },
+        es: { title: "¿Qué tal tu día en Bali con nosotros?", sub: "¡Gracias por viajar con SB Excursions! Deja una breve reseña — llega directo a nuestro WhatsApp, y puedes adjuntar tus fotos en el chat.", tour: "¿En qué tour estuviste?", other: "Otro / no recuerdo", rating: "Tu puntuación", name: "Tu nombre", country: "País", review: "Tu reseña", placeholder: "Cuéntanos cómo fue tu día…", btn: "Enviar reseña por WhatsApp", note: "📷 ¿Tienes fotos del tour? Adjúntalas en WhatsApp después de enviar — ¡nos encantan!", needText: "Primero escribe unas palabras y tu nombre :)", privacy: "Al enviar, tu reseña va a nuestro chat de WhatsApp — tus datos no se comparten con nadie más.", privacyLink: "Política de privacidad" },
+        fr: { title: "Comment s’est passée votre journée à Bali avec nous ?", sub: "Merci d’avoir voyagé avec SB Excursions ! Laissez un court avis — il arrive directement sur notre WhatsApp, et vous pouvez joindre vos photos dans la conversation.", tour: "Quelle excursion avez-vous faite ?", other: "Autre / je ne sais plus", rating: "Votre note", name: "Votre prénom", country: "Pays", review: "Votre avis", placeholder: "Racontez-nous votre journée…", btn: "Envoyer l’avis via WhatsApp", note: "📷 Des photos de l’excursion ? Joignez-les dans WhatsApp après l’envoi — on adore !", needText: "Écrivez d’abord quelques mots et votre prénom :)", privacy: "En envoyant, votre avis part dans notre discussion WhatsApp — vos données ne sont partagées nulle part ailleurs.", privacyLink: "Politique de confidentialité" },
+        zh: { title: "这次巴厘岛之行感觉如何？", sub: "感谢选择 SB Excursions！留下简短评价——它会直接发送到我们的 WhatsApp，照片可以在聊天中直接附上。", tour: "您参加了哪个行程？", other: "其他 / 不记得了", rating: "您的评分", name: "您的名字", country: "国家", review: "您的评价", placeholder: "分享您这一天的感受……", btn: "通过 WhatsApp 发送评价", note: "📷 有旅途照片？发送后直接在 WhatsApp 里附上——我们非常期待！", needText: "请先写几句话并填写名字 :)", privacy: "发送后，您的评价将进入我们的 WhatsApp 聊天——数据不会共享给任何第三方。", privacyLink: "隐私政策" }
       };
       var m = location.pathname.match(/\/bali\/(en|ru|es|fr|zh)\//) || [null, (new URLSearchParams(location.search).get('lang') || 'en')];
       var lang = I18N[m[1]] ? m[1] : 'en';
@@ -88,6 +87,14 @@
       document.getElementById('tSub').textContent = t.sub;
       document.getElementById('fText').placeholder = t.placeholder;
       document.getElementById('fSend').textContent = t.btn;
+      var priv = document.getElementById('tPrivacy');
+      priv.textContent = t.privacy + ' ';
+      var privA = document.createElement('a');
+      privA.href = '/bali/' + lang + '/privacy-policy';
+      privA.target = '_blank'; privA.rel = 'noopener';
+      privA.style.color = 'inherit';
+      privA.textContent = t.privacyLink;
+      priv.appendChild(privA);
 
       // список туров — из данных AI-планнера, всегда актуальный
       var sel = document.getElementById('fTour');

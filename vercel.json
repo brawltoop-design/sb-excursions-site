@@ -49,6 +49,22 @@
       "destination": "/bali-review.html"
     },
     {
+      "source": "/bali/:lang/privacy-policy",
+      "destination": "/bali-privacy.html"
+    },
+    {
+      "source": "/bali/:lang/terms",
+      "destination": "/bali-terms.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/bali-privacy.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/bali-terms.html"
+    },
+    {
       "source": "/bali/en/review",
       "destination": "/bali-review.html"
     },

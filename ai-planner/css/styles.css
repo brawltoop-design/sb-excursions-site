@@ -1110,3 +1110,8 @@ html.is-embed .app { height: 100vh; }
   .tl-day, .summary, .place-card, .pc-backdrop,
   .pill, .chip, .cta, .mini-btn, .map-zoom button { transition: none; }
 }
+
+/* Приватность под кнопкой WhatsApp-плана */
+.plan-wa-note { font-size: 12px; color: #8a8a8a; margin: 8px 2px 0; line-height: 1.45; }
+.plan-wa-note a { color: inherit; text-decoration: underline; }
+#planWaWrap[hidden] + .plan-wa-note { display: none; }

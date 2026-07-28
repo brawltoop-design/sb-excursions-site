@@ -14007,6 +14007,8 @@ const REVIEW_FORM_I18N = {
     btn: "Send review via WhatsApp",
     note: "📷 Got photos from the tour? Attach them in WhatsApp after sending.",
     needText: "Please write a couple of words and your name first :)",
+    privacy: "By sending, your review goes to our WhatsApp chat — details aren't shared anywhere else.",
+    privacyLink: "Privacy Policy",
   },
   ru: {
     title: "Были на этом туре? Оставьте отзыв",
@@ -14019,6 +14021,8 @@ const REVIEW_FORM_I18N = {
     btn: "Отправить отзыв в WhatsApp",
     note: "📷 Есть фото с тура? Прикрепите их в WhatsApp после отправки.",
     needText: "Сначала напишите пару слов и ваше имя :)",
+    privacy: "Отправляя отзыв, вы передаёте его в наш WhatsApp-чат — данные никуда больше не передаются.",
+    privacyLink: "Политика конфиденциальности",
   },
   es: {
     title: "¿Hiciste este tour? Deja tu reseña",
@@ -14031,6 +14035,8 @@ const REVIEW_FORM_I18N = {
     btn: "Enviar reseña por WhatsApp",
     note: "📷 ¿Tienes fotos del tour? Adjúntalas en WhatsApp después de enviar.",
     needText: "Primero escribe unas palabras y tu nombre :)",
+    privacy: "Al enviar, tu reseña va a nuestro chat de WhatsApp — tus datos no se comparten con nadie más.",
+    privacyLink: "Política de privacidad",
   },
   fr: {
     title: "Vous avez fait cette excursion ? Laissez un avis",
@@ -14043,6 +14049,8 @@ const REVIEW_FORM_I18N = {
     btn: "Envoyer l’avis via WhatsApp",
     note: "📷 Des photos de l’excursion ? Joignez-les dans WhatsApp après l’envoi.",
     needText: "Écrivez d’abord quelques mots et votre prénom :)",
+    privacy: "En envoyant, votre avis part dans notre discussion WhatsApp — vos données ne sont partagées nulle part ailleurs.",
+    privacyLink: "Politique de confidentialité",
   },
   zh: {
     title: "参加过这个团？留下您的评价",
@@ -14055,6 +14063,8 @@ const REVIEW_FORM_I18N = {
     btn: "通过 WhatsApp 发送评价",
     note: "📷 有旅途照片？发送后直接在 WhatsApp 里附上即可。",
     needText: "请先写几句话并填写名字 :)",
+    privacy: "发送后，您的评价将进入我们的 WhatsApp 聊天——数据不会共享给任何第三方。",
+    privacyLink: "隐私政策",
   },
 };
 
@@ -14063,8 +14073,7 @@ function renderReviewFormBlock(tour) {
   const t = REVIEW_FORM_I18N[locale];
   return `
 <div class="sb-review-cta-outer">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/fonts-manrope.css">
   <style>
     .sb-review-cta-outer { padding: 10px 20px 56px; background: #fff; }
     .sb-review-cta { box-sizing: border-box; max-width: 1200px; margin: 0 auto; border: 1px solid rgba(21,21,21,0.08); border-radius: 16px; box-shadow: 0 8px 18px rgba(17,17,17,0.05); padding: 34px 36px; font-family: 'Manrope', -apple-system, 'Segoe UI', Roboto, sans-serif; }
@@ -14111,6 +14120,7 @@ function renderReviewFormBlock(tour) {
     <textarea id="srfText" placeholder="${escapeHtml(t.placeholder)}"></textarea>
     <button type="button" class="srf-send" id="srfSend">${escapeHtml(t.btn)}</button>
     <p class="srf-note">${escapeHtml(t.note)}</p>
+    <p class="srf-note">${escapeHtml(t.privacy)} <a href="/bali/${locale}/privacy-policy" target="_blank" rel="noopener" style="color:inherit;">${escapeHtml(t.privacyLink)}</a></p>
   </div>
   <script>
     (function () {
@@ -18377,6 +18387,9 @@ function localizeUnescoShell(html, locale = "en", options = {}) {
       `href="/bali/${currentLocale}/faq"target="_blank"`,
     )
     .replaceAll('href="/bali/en/faq"', `href="/bali/${currentLocale}/faq"`)
+    .replaceAll('href="/bali/en/privacy-policy"', `href="/bali/${currentLocale}/privacy-policy"`)
+    .replaceAll('href="/bali/en/terms#refund"', `href="/bali/${currentLocale}/terms#refund"`)
+    .replaceAll('href="/bali/en/terms"', `href="/bali/${currentLocale}/terms"`)
     .replaceAll("/bali/en/main-page#about", `${localizedMainPageRoute(currentLocale)}#about`)
     .replaceAll("/bali/en/main-page#faq", `${localizedMainPageRoute(currentLocale)}#faq`)
     .replaceAll("/bali/en/main-page#tours", `${localizedMainPageRoute(currentLocale)}#tours`)
@@ -18842,7 +18855,10 @@ function buildBaliTildaFooter() {
     .replaceAll(`href="/" target="_blank"`, `href="/bali/en/main-page"`)
     .replaceAll("/dubai/en#tours", "/bali/en/main-page#tours")
     .replaceAll('href="/dubai/en/about"target="_blank"', 'href="/bali/en/main-page#about"target="_blank"')
+    .replaceAll('href="/dubai/en/faq#refund"', 'href="/bali/en/terms#refund"')
     .replaceAll('href="/dubai/en/faq"target="_blank"', 'href="/bali/en/main-page#faq"target="_blank"')
+    .replaceAll('href="/dubai/en/privacy-policy"', 'href="/bali/en/privacy-policy"')
+    .replaceAll('href="/dubai/en/terms"', 'href="/bali/en/terms"')
     .replaceAll('>FullDay Desert safari<', '>Nusa Penida West<')
     .replaceAll('href="/dubai/en/tours/full-day-dubai-desert-safari"', 'href="/bali/en/tours/nusa-penida-west-tour"')
     .replaceAll('>Abu Dhabi City tour<', '>Mount Batur Hike<')
@@ -18898,9 +18914,9 @@ function renderJournalBaliFooter() {
               <div class="sb-journal-footer__title">Company &amp; Trust</div>
               <a class="sb-journal-footer__link" href="/bali/en/about">About SB Excursions</a>
               <a class="sb-journal-footer__link" href="/bali/en/faq">FAQ</a>
-              <a class="sb-journal-footer__link" href="/dubai/en/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-              <a class="sb-journal-footer__link" href="/dubai/en/terms" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>
-              <a class="sb-journal-footer__link" href="/dubai/en/faq#refund" target="_blank" rel="noopener noreferrer">Refund Policy</a>
+              <a class="sb-journal-footer__link" href="/bali/en/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+              <a class="sb-journal-footer__link" href="/bali/en/terms" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>
+              <a class="sb-journal-footer__link" href="/bali/en/terms#refund" target="_blank" rel="noopener noreferrer">Refund Policy</a>
               <a class="sb-journal-footer__link" href="/sitemap.xml" target="_blank" rel="noopener noreferrer">SiteMap</a>
             </nav>
 

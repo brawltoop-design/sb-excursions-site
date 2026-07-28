@@ -6,13 +6,11 @@
   <title>AI-планировщик Бали — SB Excursions</title>
   <meta name="description" content="Интерактивный AI-планировщик путешествия по Бали от SB Excursions: выберите число дней и настроение — маршрут по дням соберётся прямо на карте острова с реальными турами, ценами и местами для свободных дней.">
 
-  <!-- Шрифт: Manrope -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Шрифт: Manrope (self-hosted) -->
+  <link rel="stylesheet" href="/css/fonts-manrope.css">
 
-  <!-- Leaflet 1.9 -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <!-- Leaflet 1.9 (self-hosted) -->
+  <link rel="stylesheet" href="/ai-planner/vendor/leaflet/leaflet.css">
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -149,6 +147,7 @@
           <span data-t>Отправить весь план в WhatsApp</span>
         </a>
       </span>
+      <p class="plan-wa-note"><span data-t>План отправится в наш WhatsApp-чат — данные никуда больше не передаются.</span> <a id="planPrivacyLink" href="/bali/ru/privacy-policy" target="_blank" rel="noopener" data-t>Политика конфиденциальности</a></p>
       <div class="timeline" id="timeline">
         <div class="tl-empty" id="tlEmpty">
           <p class="tl-empty-title" data-t>Карта уже ждёт</p>
@@ -189,7 +188,7 @@
     </aside>
   </div>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/ai-planner/vendor/leaflet/leaflet.js"></script>
   <script src="js/data.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
