@@ -1150,6 +1150,12 @@
   function showCardOnMap(lat, lng, keepOpen) {
     els.pcOverlay.hidden = true;                 // модалка больше не используется
     els.pcOverlay.classList.remove('is-open');
+    // Ширина поп-апа подстраивается под карту: в узком эмбеде карточка
+    // не должна вылезать за края фрейма
+    var mapW = els.map ? els.map.clientWidth : 600;
+    var mw = Math.max(280, Math.min(460, mapW - 64));
+    placePopup.options.maxWidth = mw;
+    placePopup.options.minWidth = Math.min(400, mw);
     scrollMapIntoView();
     // Открываем сразу — так карточка появляется всегда, не завися от события перелёта
     // карточка не должна быть ни шире экрана, ни выше самой карты

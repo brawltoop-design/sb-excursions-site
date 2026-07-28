@@ -332,7 +332,7 @@
       ".sb-newai-wrap{max-height:0;overflow:hidden;opacity:0;margin:14px auto 0;max-width:1780px;" +
       "transition:max-height .55s cubic-bezier(.16,1,.3,1),opacity .4s ease,margin .3s ease;}" +
       ".sb-newai-wrap.is-open{opacity:1;}" +
-      ".sb-newai-frame{width:100%;height:860px;border:0;border-radius:18px;display:block;background:#fff;" +
+      ".sb-newai-frame{width:100%;height:calc(100vh - 96px);min-height:600px;max-height:1100px;border:0;border-radius:18px;display:block;background:#fff;" +
       "box-shadow:0 20px 50px rgba(17,17,17,.10);}" +
       "@media (max-width:900px){.sb-newai-frame{height:1180px;}}";
     document.head.appendChild(style);
@@ -374,7 +374,7 @@
           w.classList.add("is-open");
           btn.classList.add("is-active");
           try { sbTrack("planner_open", { context: "inline", page_path: location.pathname }); } catch {}
-          setTimeout(() => { try { w.scrollIntoView({ behavior: "smooth", block: "center" }); } catch {} }, 120);
+          setTimeout(() => { try { w.scrollIntoView({ behavior: "smooth", block: "start" }); } catch {} }, 120);
         } else {
           w.style.maxHeight = "0";
           w.classList.remove("is-open");

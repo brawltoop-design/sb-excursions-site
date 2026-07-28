@@ -964,6 +964,12 @@ html.is-embed .app { height: 100vh; }
 .sb-place-popup .pc-desc { font-size: 14px; }
 .sb-place-popup .pc-close { top: 10px; right: 10px; width: 32px; height: 32px; }
 .sb-place-popup .pc-actions .pill { padding: 10px 14px; font-size: 13.5px; }
+/* Низкие экраны/эмбед: карточка компактнее, фото ниже — чтобы всё влезало в карту */
+@media (max-height: 820px) {
+  .sb-place-popup .place-card { max-height: min(62vh, 480px); }
+  .sb-place-popup .pc-photo { height: 180px; }
+  .sb-place-popup .pc-title { font-size: 19px; }
+}
 @media (max-width: 560px) {
   .sb-place-popup .place-card { width: calc(100vw - 52px); max-height: min(70vh, 520px); }
   .sb-place-popup .pc-photo { height: 158px; }
