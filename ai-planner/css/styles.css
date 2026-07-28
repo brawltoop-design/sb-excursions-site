@@ -927,6 +927,50 @@ html.is-embed .app { height: 100vh; }
 }
 .pc-overlay.is-open .place-card { transform: none; }
 
+/* ---------- Карточка места как поп-ап НАД точкой на карте ---------- */
+.sb-place-popup .leaflet-popup-content-wrapper {
+  padding: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 44px rgba(17, 17, 17, 0.24);
+  background: #fff;
+}
+.sb-place-popup .leaflet-popup-content { margin: 0; width: auto !important; }
+.sb-place-popup .leaflet-popup-tip { box-shadow: 0 6px 14px rgba(17, 17, 17, 0.14); }
+/* карточка внутри поп-апа: компактная, а не выезжающая панель на всю высоту */
+.sb-place-popup .place-card {
+  position: static;
+  width: 440px;
+  max-width: 100%;
+  transform: none;
+  box-shadow: none;
+  border-radius: 0;
+  max-height: min(84vh, 780px);
+  overflow-y: auto;
+  transition: none;
+}
+/* кнопка брони всегда на виду, даже если карточка прокручивается */
+.sb-place-popup .pc-actions {
+  position: sticky;
+  bottom: 0;
+  background: #fff;                 /* сплошной, иначе текст просвечивает под кнопками */
+  padding: 12px 0 6px;
+  margin-bottom: 0;
+  box-shadow: 0 -12px 16px -8px rgba(255, 255, 255, 1);
+}
+.sb-place-popup .pc-photo { height: 250px; }
+.sb-place-popup .pc-body { padding: 18px 20px 20px; }
+.sb-place-popup .pc-title { font-size: 22px; line-height: 1.2; }
+.sb-place-popup .pc-desc { font-size: 14px; }
+.sb-place-popup .pc-close { top: 10px; right: 10px; width: 32px; height: 32px; }
+.sb-place-popup .pc-actions .pill { padding: 10px 14px; font-size: 13.5px; }
+@media (max-width: 560px) {
+  .sb-place-popup .place-card { width: calc(100vw - 52px); max-height: min(70vh, 520px); }
+  .sb-place-popup .pc-photo { height: 158px; }
+  .sb-place-popup .pc-title { font-size: 19px; }
+  .sb-place-popup .pc-body { padding: 14px 16px 14px; }
+}
+
 .pc-close {
   position: absolute;
   top: 14px; right: 14px;
@@ -1017,6 +1061,7 @@ html.is-embed .app { height: 100vh; }
   .map-col { grid-column: 2; }
   .plan-col { grid-column: 2; overflow: visible; }
   .map-col .map-card { height: 460px; }
+  .map-col #map { height: 100%; }
 }
 
 @media (max-width: 900px) {
@@ -1031,7 +1076,7 @@ html.is-embed .app { height: 100vh; }
   .ctrl-row { gap: 16px; }
   .hero { padding: 36px 18px 28px; }
   .planner { padding: 0 14px; margin-top: 12px; }
-  #map { height: 420px; }
+  #map { height: 100%; min-height: 420px; }
   .summary { grid-template-columns: repeat(2, 1fr); }
   .map-counter { right: 16px; top: 64px; }
   .map-hint { display: none; }
