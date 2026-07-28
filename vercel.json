@@ -181,40 +181,12 @@
       "destination": "/bali-journal-:tour-:article-:lang.html"
     },
     {
-      "source": "/bali/en/tours/nusa-penida-manta-rays-point",
-      "destination": "/page132181473.html"
-    },
-    {
-      "source": "/bali/ru/tours/nusa-penida-manta-rays-point",
-      "destination": "/page132181473-ru.html"
-    },
-    {
-      "source": "/bali/es/tours/nusa-penida-manta-rays-point",
-      "destination": "/page132181473-es.html"
-    },
-    {
-      "source": "/bali/fr/tours/nusa-penida-manta-rays-point",
-      "destination": "/page132181473-fr.html"
-    },
-    {
-      "source": "/bali/zh/tours/nusa-penida-manta-rays-point",
-      "destination": "/page132181473-zh.html"
-    },
-    {
-      "source": "/bali/en/tours/mount-batur-sunrise-hike",
-      "destination": "/page132812463.html"
-    },
-    {
-      "source": "/bali/en/tours/mount-batur-sunrise-jeep-hot-spring",
-      "destination": "/page133629743.html"
-    },
-    {
       "source": "/beli/en/tours/mount-batur-sunrise-jeep-hot-spring",
-      "destination": "/page133629743.html"
+      "destination": "/bali-tour-mount-batur-sunrise-jeep-hot-spring.html"
     },
     {
       "source": "/mount-batur-sunrise-jeep-hot-spring",
-      "destination": "/page133629743.html"
+      "destination": "/bali-tour-mount-batur-sunrise-jeep-hot-spring.html"
     },
     {
       "source": "/bali/en/tours/:slug",

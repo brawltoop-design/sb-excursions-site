@@ -1881,6 +1881,82 @@ const tours = [
     ],
   },
   {
+    slug: "mount-batur-sunrise-jeep-hot-spring",
+    title: "Mount Batur Sunrise Jeep & Hot Spring",
+    mainPage: false,
+    eyebrow: "Sunrise jeep and hot spring combo",
+    duration: "6-8 hours",
+    pickup: "Pre-dawn pickup around 02:00-03:30",
+    bestFor: "Sunrise seekers who want to end with a soak",
+    format: "Private or small group jeep trip",
+    area: "Kintamani and Mount Batur",
+    price: "From $60",
+    image: sourceImage("tours-real/mount-batur-sunrise-jeep-hot-spring.jpg"),
+    imageAlt: "4WD jeep crossing Mount Batur black lava fields at sunrise",
+    lead:
+      "Watch sunrise over Mount Batur from a 4x4 viewpoint, cross the black lava fields, and finish the morning with a soak in the natural hot springs beside Lake Batur.",
+    summary:
+      "This combo adds the one thing most volcano mornings skip: a warm-water finish before the drive back. It suits couples and small groups who want the complete Batur sequence — sunrise viewpoint, lava fields, and hot spring — in a single pre-dawn outing with no summit hike.",
+    overview:
+      "The jeep-plus-hot-spring format works best when you want the full Batur morning — sunrise, black lava, caldera panorama, and a lakeside soak — with the 4x4 doing all the climbing instead of your legs.",
+    highlights: [
+      ["Sunrise without the summit hike", "The jeep takes you to the viewpoint before dawn, so you get the full volcano sunrise with no uphill trek."],
+      ["Black lava field crossing", "After sunrise the 4x4 moves through the black lava terrain, the most photogenic stretch of the Batur landscape."],
+      ["Natural hot spring soak", "The morning ends in warm pools beside Lake Batur, a genuine recovery stop rather than a quick photo pause."],
+      ["Complete Batur morning in one trip", "Viewpoint, lava fields, caldera panorama, and hot spring fit into a single route, and you are back in time to use the rest of the day."],
+    ],
+    itinerary: [
+      ["Pre-dawn pickup and transfer", "Leave your hotel between roughly 02:00 and 03:30 so you reach the Kintamani volcano zone before the sky starts to lighten."],
+      ["Jeep climb to the sunrise viewpoint", "Switch into the 4x4 at Toya Bungkah and ride up to the viewpoint for sunrise over Lake Batur, Mount Agung, and the caldera."],
+      ["Black lava and black sand crossing", "Cross the black lava terrain and the black sand stretch with photo stops, then take in the wide Kintamani caldera view in full daylight."],
+      ["Hot spring soak and return", "Come down to the lakeshore for a soak in the natural hot spring pools beside Lake Batur before the drive back to your hotel."],
+    ],
+    tags: ["hotelPickup","adventure","volcano","sunrise","jeep","hotspring"],
+    related: ["mount-batur-sunrise-jeep-tour","white-water-rafting","atv-quad-bikes"],
+    faqExtra: [
+      "What should I bring for the hot spring part of the tour?",
+      "Bring swimwear, a small towel, and a dry change of clothes. The pools sit right beside Lake Batur, so after the pre-dawn jeep ride and the lava fields the warm water is an easy way to close the morning before heading back.",
+    ],
+  },
+  {
+    slug: "mount-batur-sunrise-hike",
+    title: "Mount Batur Sunrise Hike",
+    mainPage: false,
+    eyebrow: "Classic volcano sunrise trek",
+    duration: "5-8 hours",
+    pickup: "Pre-dawn pickup, 01:30-03:00",
+    bestFor: "Active travelers and sunrise seekers",
+    format: "Private guided summit trek",
+    area: "Kintamani and Mount Batur",
+    price: "From $35",
+    image: sourceImage("tours-real/mount-batur-sunrise-hike.jpg"),
+    imageAlt: "Hikers watching sunrise from the Mount Batur summit",
+    lead:
+      "Climb Mount Batur in the dark with a local guide, reach the 1717 m summit before first light, and watch sunrise over Lake Batur and Mount Agung.",
+    summary:
+      "This is the classic Bali volcano morning: a real summit trek that stays within reach of most fitness levels, with the uphill section taking around 1.5 to 2 hours. It suits couples, friends, and solo travelers who would rather earn their sunrise than drive to it.",
+    overview:
+      "The hike works best when you want the full summit experience — the dark trail, the steady climb, and breakfast at the top — and are happy to trade a very early start for one of the strongest sunrise views in Bali.",
+    highlights: [
+      ["Summit sunrise at 1717 m", "Reach the top before first light and watch the sun come up over Lake Batur, Mount Agung, and the clouds below."],
+      ["Local trekking guide", "An experienced guide picks the safest route, sets a comfortable pace, and times the climb so you arrive before the sunrise window opens."],
+      ["Breakfast steamed by the volcano", "A simple summit breakfast cooked over natural volcanic steam is part of what makes this morning feel earned."],
+      ["Crater rim walk", "After sunrise you follow a section of the rim for a closer look at the crater and wide views back across the caldera."],
+    ],
+    itinerary: [
+      ["Pre-dawn pickup and transfer", "Depending on your hotel area, pickup runs between roughly 01:30 and 03:00 so you reach the trailhead near Toya Bungkah while it is still dark."],
+      ["Guided climb to the summit", "The ascent takes around 1.5 to 2 hours at a steady pace, with headlamps provided and short breaks along the way."],
+      ["Sunrise and summit breakfast", "Watch the sky change over Lake Batur and Mount Agung while breakfast is steamed over the volcano's natural vents."],
+      ["Crater rim and descent", "Walk part of the crater rim, then head down in daylight, with an optional Kintamani coffee stop or a soak at the Batur natural hot spring before the drive back."],
+    ],
+    tags: ["hotelPickup","adventure","volcano","sunrise","hike","trekking"],
+    related: ["mount-batur-sunrise-jeep-tour","white-water-rafting","atv-quad-bikes"],
+    faqExtra: [
+      "How fit do I need to be for the Mount Batur sunrise hike?",
+      "A moderate fitness level is enough. The uphill section takes around 1.5 to 2 hours at a steady pace, there is no technical climbing, and your guide adjusts the rhythm to the group. Closed shoes and a light jacket matter more than special training.",
+    ],
+  },
+  {
     slug: "atv-ride-adventure",
     title: "ATV Ride Adventure",
     mainPage: false,
@@ -3053,6 +3129,26 @@ const WEST_ROUTE_POINTS = {
       "Mount Batur Sunrise Point, Kintamani, Bali",
       "Black Lava, Kintamani, Bali",
       "Black Sand Batur, Kintamani, Bali",
+      "Batur Natural Hot Spring, Kintamani, Bali",
+    ],
+  },
+  "mount-batur-sunrise-hike": {
+    stops: ["Toya Bungkah","Batur Summit","Crater Rim","Kintamani Coffee","Hot Spring"],
+    routeStops: [
+      "Toya Bungkah, Kintamani, Bali",
+      "Mount Batur Summit, Kintamani, Bali",
+      "Mount Batur Crater Rim, Kintamani, Bali",
+      "Kintamani Coffee Plantation, Kintamani, Bali",
+      "Batur Natural Hot Spring, Kintamani, Bali",
+    ],
+  },
+  "mount-batur-sunrise-jeep-hot-spring": {
+    stops: ["Toya Bungkah","Sunrise Point","Black Lava","Black Sand","Hot Spring"],
+    routeStops: [
+      "Toya Bungkah, Kintamani, Bali",
+      "Mount Batur Sunrise Point, Kintamani, Bali",
+      "Black Lava, Kintamani, Bali",
+      "Black Sand, Kintamani, Bali",
       "Batur Natural Hot Spring, Kintamani, Bali",
     ],
   },
@@ -18257,6 +18353,10 @@ function localizeUnescoShell(html, locale = "en", options = {}) {
   shellReplacements.forEach(([source, target]) => {
     localizedHtml = replaceEverywhere(localizedHtml, source, target);
   });
+
+  // Санитайзер: двойное экранирование амперсанда (титулы с «&» проходят
+  // escapeHtml дважды на пути в meta keywords)
+  localizedHtml = localizedHtml.replace(/&amp;amp;/g, "&amp;");
 
   localizedHtml = localizedHtml
     .replaceAll(
