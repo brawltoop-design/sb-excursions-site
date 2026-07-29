@@ -201,16 +201,12 @@
     return PLAN_I18N[lang] ? lang : "en";
   };
 
-  const getWaNumber = () => {
-    const anchor =
-      document.querySelector('#sbAiResultsGrid a[href*="wa.me/"]') ||
-      document.querySelector('a[href*="wa.me/"]');
-    if (anchor) {
-      const m = (anchor.getAttribute("href") || "").match(/wa\.me\/(\d+)/);
-      if (m) return m[1];
-    }
-    return WA_FALLBACK_NUMBER;
-  };
+  // Номер берём только из константы. Раньше он вычитывался из первой ссылки
+  // wa.me на странице — любой посторонний скрипт (например, тег, добавленный
+  // в GTM) мог подставить свой номер и увести заявки. Кнопка плана рендерится
+  // только там, где есть #sbAiResultsGrid, то есть на балийских главных, где
+  // номер всегда один.
+  const getWaNumber = () => WA_FALLBACK_NUMBER;
 
   const selectText = (id) => {
     const el = document.getElementById(id);
