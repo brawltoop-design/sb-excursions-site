@@ -332,12 +332,36 @@
       ".sb-newai-wrap{max-height:0;overflow:hidden;opacity:0;margin:14px auto 0;max-width:1780px;" +
       "transition:max-height .55s cubic-bezier(.16,1,.3,1),opacity .4s ease,margin .3s ease;}" +
       ".sb-newai-wrap.is-open{opacity:1;}" +
-      ".sb-newai-frame{width:100%;height:calc(100vh - 96px);min-height:600px;max-height:1100px;border:0;border-radius:18px;display:block;background:#fff;" +
+      ".sb-newai-frame{width:100%;height:var(--sb-ai-frame-h,calc(100vh - 120px));min-height:600px;border:0;border-radius:18px;display:block;background:#fff;" +
       "box-shadow:0 20px 50px rgba(17,17,17,.10);}" +
       "@media (max-width:900px){.sb-newai-frame{height:1180px;}}";
     document.head.appendChild(style);
 
     let wrap = null, open = false;
+    const FRAME_GAP = 12;
+    // Реальная высота липкой шапки Tilda: смотрим, что лежит в верхней полосе экрана.
+    const stickyHeaderH = () => {
+      try {
+        let h = 0;
+        const stack = document.elementsFromPoint(Math.floor(window.innerWidth / 2), 8) || [];
+        for (const el of stack) {
+          const cs = getComputedStyle(el);
+          if (cs.position !== "fixed" && cs.position !== "sticky") continue;
+          const r = el.getBoundingClientRect();
+          if (r.top <= 2 && r.height > 30 && r.height < 300 && r.width > window.innerWidth * 0.5) {
+            h = Math.max(h, r.bottom);
+          }
+        }
+        return Math.round(h);
+      } catch { return 96; }
+    };
+    // Рамка планнера = всё видимое место под шапкой (низ не срезается)
+    const fitFrame = () => {
+      const h = Math.max(600, window.innerHeight - stickyHeaderH() - FRAME_GAP * 2);
+      document.documentElement.style.setProperty("--sb-ai-frame-h", h + "px");
+    };
+    fitFrame();
+    window.addEventListener("resize", fitFrame, { passive: true });
     const langFromPath = () => {
       const m = location.pathname.match(/\/bali\/(en|ru|zh|es|fr)(?=\/|$)/i);
       return m ? m[1].toLowerCase() : "ru";
@@ -370,11 +394,18 @@
         if (!w) return;
         open = !open;
         if (open) {
-          w.style.maxHeight = "2200px";
+          w.style.maxHeight = "3000px";
           w.classList.add("is-open");
           btn.classList.add("is-active");
           try { sbTrack("planner_open", { context: "inline", page_path: location.pathname }); } catch {}
-          setTimeout(() => { try { w.scrollIntoView({ behavior: "smooth", block: "start" }); } catch {} }, 120);
+          // Скроллим так, чтобы планнер встал ровно под шапку и целиком влез в экран
+          setTimeout(() => {
+            try {
+              fitFrame();
+              const y = w.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop || 0) - stickyHeaderH() - FRAME_GAP;
+              window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+            } catch {}
+          }, 160);
         } else {
           w.style.maxHeight = "0";
           w.classList.remove("is-open");

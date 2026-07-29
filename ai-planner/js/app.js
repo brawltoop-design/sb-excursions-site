@@ -58,7 +58,7 @@
     skip: $('skipBtn'), rebuild: $('rebuildBtn'), hint: $('mapHint'),
     summary: $('summary'), sumDays: $('sumDays'), sumStops: $('sumStops'),
     sumKm: $('sumKm'), sumBudget: $('sumBudget'), sumBudgetNote: $('sumBudgetNote'),
-    planWa: $('planWa'), planWaWrap: $('planWaWrap'),
+    planWa: $('planWa'), planWaWrap: $('planWaWrap'), planWaNote: $('planWaNote'),
     timeline: $('timeline'), tlEmpty: $('tlEmpty'),
     pcOverlay: $('pcOverlay'), pcBackdrop: $('pcBackdrop'), pcClose: $('pcClose'),
     pcImg: $('pcImg'), pcBadge: $('pcBadge'), pcCat: $('pcCat'), pcTitle: $('pcTitle'),
@@ -1013,6 +1013,7 @@
     if (!els.planWa) return;
     els.planWa.href = 'https://wa.me/' + SB_WA_PHONE + '?text=' + encodeURIComponent(buildWaMessage());
     if (els.planWaWrap) els.planWaWrap.hidden = false;
+    if (els.planWaNote) els.planWaNote.hidden = false;
   }
 
   /* ---------- Финал без анимации (reduced-motion) ---------- */
@@ -1070,6 +1071,7 @@
     els.counter.hidden = true;
     els.summary.hidden = true; els.summary.classList.remove('is-in');
     if (els.planWaWrap) els.planWaWrap.hidden = true;
+    if (els.planWaNote) els.planWaNote.hidden = true;
     state.building = false;
   }
 
