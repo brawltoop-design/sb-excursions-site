@@ -12,7 +12,7 @@
   <!-- Leaflet 1.9 (self-hosted) -->
   <link rel="stylesheet" href="/ai-planner/vendor/leaflet/leaflet.css">
 
-  <link rel="stylesheet" href="css/styles.css?v=20260729">
+  <link rel="stylesheet" href="css/styles.css?v=20260730">
 </head>
 <body>
 
@@ -59,13 +59,15 @@
       <h1 class="panel-title" data-t>Соберите план по Бали</h1>
       <p class="panel-sub" data-t>Укажите даты, район проживания и что вам интересно — и смотрите, как маршрут собирается по дням прямо на карте острова: с реальными турами SB Excursions, ценами и местами для свободных дней.</p>
 
-      <div class="field">
-        <label class="field-label" for="startDate" data-t>Начало поездки</label>
-        <input type="date" id="startDate" class="field-input">
-      </div>
-      <div class="field">
-        <label class="field-label" for="endDate" data-t>Конец поездки</label>
-        <input type="date" id="endDate" class="field-input">
+      <div class="field-row">
+        <div class="field">
+          <label class="field-label" for="startDate" data-t>Начало поездки</label>
+          <input type="date" id="startDate" class="field-input">
+        </div>
+        <div class="field">
+          <label class="field-label" for="endDate" data-t>Конец поездки</label>
+          <input type="date" id="endDate" class="field-input">
+        </div>
       </div>
       <div class="field">
         <label class="field-label" for="areaSelect" data-t>Где остановились</label>
@@ -80,22 +82,24 @@
           <option value="kuta_legian" data-t>Кута / Легиан</option>
         </select>
       </div>
-      <div class="field">
-        <label class="field-label" for="groupSelect" data-t>С кем едете</label>
-        <select id="groupSelect" class="field-input field-select">
-          <option value="couple" selected data-t>Пара</option>
-          <option value="family" data-t>Семья</option>
-          <option value="friends" data-t>Друзья</option>
-          <option value="solo" data-t>Соло</option>
-        </select>
-      </div>
-      <div class="field">
-        <label class="field-label" for="budgetSelect" data-t>Бюджет</label>
-        <select id="budgetSelect" class="field-input field-select">
-          <option value="low" data-t>До $50</option>
-          <option value="mid" selected>$50&ndash;120</option>
-          <option value="high">$120+</option>
-        </select>
+      <div class="field-row">
+        <div class="field">
+          <label class="field-label" for="groupSelect" data-t>С кем едете</label>
+          <select id="groupSelect" class="field-input field-select">
+            <option value="couple" selected data-t>Пара</option>
+            <option value="family" data-t>Семья</option>
+            <option value="friends" data-t>Друзья</option>
+            <option value="solo" data-t>Соло</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="field-label" for="budgetSelect" data-t>Бюджет</label>
+          <select id="budgetSelect" class="field-input field-select">
+            <option value="low" data-t>До $50</option>
+            <option value="mid" selected>$50&ndash;120</option>
+            <option value="high">$120+</option>
+          </select>
+        </div>
       </div>
       <div class="field">
         <span class="field-label" data-t>Что интересно</span>
