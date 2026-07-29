@@ -1117,77 +1117,69 @@
     els.pcAdd.disabled = state.phase !== 'done';
     els.pcAdd.textContent = T('Добавить в текущий день');
     els.pcAdd.onclick = function () { addToDay(loc); };
-    showCardOnMap(loc.lat, loc.lng, keepOpen);
+    showCard(keepOpen);
   }
 
-  /* ---------- Карточка места живёт поп-апом НАД точкой на карте ---------- */
+  /* ---------- Карточка места — модалка поверх планнера ---------- */
   var placeCard = document.getElementById('placeCard');
-  var placePopup = L.popup({
-    className: 'sb-place-popup',
-    maxWidth: 460, minWidth: 400, maxHeight: null,
-    closeButton: false, autoClose: true, closeOnClick: true,
-    autoPanPadding: [24, 28], offset: [0, -16], autoPan: true, keepInView: true
-  });
-  // На узких экранах карта лежит выше плана — подводим её в кадр,
-  // иначе поп-ап откроется за пределами видимой области.
-  function scrollMapIntoView() {
-    if (window.innerWidth > 1180) return;
-    var card = document.querySelector('.map-card');
-    if (card) card.scrollIntoView({ behavior: REDUCED ? 'auto' : 'smooth', block: 'center' });
-  }
-  // Двигает карту так, чтобы поп-ап с карточкой целиком попал в кадр карты
-  function fitPopupIntoMap() {
-    var pop = document.querySelector('.sb-place-popup');
-    var mapEl = els.map;
-    if (!pop || !mapEl) return;
-    var pr = pop.getBoundingClientRect(), mr = mapEl.getBoundingClientRect();
-    var pad = 14, dx = 0, dy = 0;
-    if (pr.height < mr.height) {
-      if (pr.top < mr.top + pad) dy = pr.top - (mr.top + pad);
-      else if (pr.bottom > mr.bottom - pad) dy = pr.bottom - (mr.bottom - pad);
-    } else dy = pr.top - (mr.top + pad);        // карточка выше карты — прижимаем верх
-    if (pr.left < mr.left + pad) dx = pr.left - (mr.left + pad);
-    else if (pr.right > mr.right - pad) dx = pr.right - (mr.right - pad);
-    if (dx || dy) map.panBy([dx, dy], { animate: !REDUCED, duration: 0.25 });
+
+  // Планнер обычно встроен во фрейм, который на телефоне выше экрана.
+  // position:fixed внутри такого фрейма растянулся бы на всю его высоту,
+  // и карточка уехала бы за пределы видимого. Поэтому вычисляем реально
+  // видимую полосу фрейма и кладём оверлей ровно в неё.
+  function visibleSlice() {
+    var fe = null;
+    try { fe = window.frameElement; } catch (e) { return null; }
+    if (!fe) return null;                        // не во фрейме — обычный fixed
+    var pvh = 0;
+    try { pvh = window.parent.innerHeight || 0; } catch (e) { return null; }
+    if (!pvh) return null;
+    var r = fe.getBoundingClientRect();
+    var top = Math.max(0, -r.top);
+    var bottom = Math.min(r.height, pvh - r.top);
+    var h = bottom - top;
+    if (h < 220) return null;                    // видно почти ничего — не мудрим
+    return { top: Math.round(top), height: Math.round(h) };
   }
 
-  function showCardOnMap(lat, lng, keepOpen) {
-    els.pcOverlay.hidden = true;                 // модалка больше не используется
-    els.pcOverlay.classList.remove('is-open');
-    // Ширина поп-апа подстраивается под карту: в узком эмбеде карточка
-    // не должна вылезать за края фрейма
-    var mapW = els.map ? els.map.clientWidth : 600;
-    var mw = Math.max(280, Math.min(460, mapW - 64));
-    placePopup.options.maxWidth = mw;
-    placePopup.options.minWidth = Math.min(400, mw);
-    scrollMapIntoView();
-    // Открываем сразу — так карточка появляется всегда, не завися от события перелёта
-    // карточка не должна быть ни шире экрана, ни выше самой карты
-    placePopup.options.maxWidth = Math.min(460, Math.max(260, window.innerWidth - 44));
-    var mapH = (els.map.getBoundingClientRect().height || 420);
-    placeCard.style.maxHeight = Math.max(240, Math.round(mapH - 52)) + 'px';
-    placePopup.setLatLng([lat, lng]).setContent(placeCard);
-    placePopup.openOn(map);
-    // высота карточки доезжает после отрисовки и загрузки фото — доводим несколько раз
-    fitPopupIntoMap();
-    requestAnimationFrame(fitPopupIntoMap);
-    later(fitPopupIntoMap, 160);
-    later(fitPopupIntoMap, 420);
-    if (els.pcImg && !els.pcImg.complete) els.pcImg.addEventListener('load', fitPopupIntoMap, { once: true });
-    if (keepOpen || REDUCED) return;
-    map.flyTo([lat, lng], Math.max(map.getZoom(), 11), { duration: 0.8 });
-    map.once('moveend', fitPopupIntoMap);        // после перелёта доводим карточку целиком в кадр
-    later(fitPopupIntoMap, 900);
-  }
-  // Leaflet при закрытии выдёргивает контент из DOM — возвращаем карточку домой,
-  // иначе document.getElementById её больше не находит.
-  map.on('popupclose', function (e) {
-    if (e.popup === placePopup && placeCard && placeCard.parentNode !== els.pcOverlay) {
-      els.pcOverlay.appendChild(placeCard);
+  function syncOverlayToSlice() {
+    if (!els.pcOverlay || els.pcOverlay.hidden) return;
+    var inFrame = false;
+    try { inFrame = !!window.frameElement; } catch (e) { inFrame = false; }
+    if (!inFrame) {                              // отдельная страница — обычный fixed
+      els.pcOverlay.classList.remove('is-slice');
+      els.pcOverlay.style.top = ''; els.pcOverlay.style.height = '';
+      return;
     }
-  });
-  function isCardOpen() { return !!(placePopup && placePopup.isOpen && placePopup.isOpen()); }
-  function closePlace() { map.closePopup(placePopup); }
+    var s = visibleSlice();
+    if (!s) return;                              // планнер почти ушёл с экрана — оставляем как было
+    els.pcOverlay.classList.add('is-slice');
+    els.pcOverlay.style.top = s.top + 'px';
+    els.pcOverlay.style.height = s.height + 'px';
+    // отдаём высоту в CSS: от неё считается максимум для фото
+    els.pcOverlay.style.setProperty('--sb-slice-h', s.height + 'px');
+  }
+
+  // Пока карточка открыта, следим за прокруткой и разворотом экрана
+  try {
+    if (window.parent && window.parent !== window) {
+      window.parent.addEventListener('scroll', syncOverlayToSlice, { passive: true });
+      window.parent.addEventListener('resize', syncOverlayToSlice, { passive: true });
+    }
+  } catch (e) { /* чужой origin — просто останемся на fixed */ }
+  window.addEventListener('resize', syncOverlayToSlice, { passive: true });
+
+  function showCard(keepOpen) {
+    els.pcOverlay.hidden = false;
+    syncOverlayToSlice();
+    if (!keepOpen) requestAnimationFrame(function () { els.pcOverlay.classList.add('is-open'); });
+  }
+  function isCardOpen() { return !els.pcOverlay.hidden; }
+  function closePlace() {
+    els.pcOverlay.classList.remove('is-open');
+    var d = REDUCED ? 0 : 420;
+    setTimeout(function () { els.pcOverlay.hidden = true; }, d);
+  }
   // Карточка места свободного дня — большое фото + описание + Google Maps
   function openFreeRec(rec) {
     state.currentLoc = null;
@@ -1201,7 +1193,7 @@
     els.pcTour.style.display = 'none';
     els.pcMaps.href = rec.maps;
     els.pcBook.style.display = 'none'; els.pcAdd.style.display = 'none';
-    showCardOnMap(rec.lat, rec.lng);
+    showCard(false);
   }
   // Бронь = реальная заявка в WhatsApp по конкретному месту/туру (раньше кнопка
   // только меняла надпись, и клиент думал, что заявка ушла).

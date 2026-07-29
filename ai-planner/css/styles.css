@@ -204,6 +204,18 @@ html.is-embed .app { height: 100vh; }
 /* Два поля в ряд (даты; с кем + бюджет) — чтобы форма влезала без прокрутки */
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: clamp(9px, 1.5vh, 15px); }
 .field-row .field { margin-bottom: 0; min-width: 0; }
+/* min-width:0 обязателен: у input[type=date] есть собственная минимальная
+   ширина по длине даты, иначе он распирает ячейку сетки и вылезает за рамку */
+.field-row .field-input { min-width: 0; }
+/* Узкие экраны: даты — в столбик. Текст в них рисует ОС по языку телефона
+   («29 июля 2026 г.»), длину мы не контролируем, поэтому в два столбца
+   гарантированно влезть нельзя. Строку «с кем + бюджет» не трогаем —
+   там наши собственные короткие подписи. */
+@media (max-width: 560px) {
+  .field-row--dates { grid-template-columns: 1fr; gap: 0; }
+  .field-row--dates .field:first-child { margin-bottom: clamp(9px, 1.5vh, 15px); }
+  .field-row--dates .field-input { padding-left: 12px; padding-right: 12px; }
+}
 .field-label {
   display: block;
   font-size: 12.5px; font-weight: 600;
@@ -905,8 +917,13 @@ html.is-embed .app { height: 100vh; }
 
 /* ---------- Карточка места ---------- */
 
+/* Оверлей: обычно на весь экран. Но во фрейме, который выше экрана телефона,
+   JS ставит .is-slice и задаёт top/height по реально видимой полосе,
+   чтобы карточка всегда открывалась ровно по экрану пользователя. */
 .pc-overlay { position: fixed; inset: 0; z-index: 4000; }
 .pc-overlay[hidden] { display: none; }
+/* left/right остаются 0 из inset выше; top и height задаёт JS, поэтому bottom снимаем */
+.pc-overlay.is-slice { position: absolute; bottom: auto; }
 
 .pc-backdrop {
   position: absolute;
@@ -917,67 +934,49 @@ html.is-embed .app { height: 100vh; }
 }
 .pc-overlay.is-open .pc-backdrop { opacity: 1; }
 
+/* Карточка — панель справа во всю высоту видимой области.
+   Колонкой: фото сверху, прокручивается только текст, кнопки всегда внизу. */
 .place-card {
   position: absolute;
   top: 0; right: 0; bottom: 0;
   width: min(430px, 100%);
+  display: flex;
+  flex-direction: column;
   background: #fff;
   box-shadow: -18px 0 44px rgba(17, 17, 17, 0.16);
   transform: translateX(103%);
   transition: transform 0.55s var(--ease);
-  overflow-y: auto;
+  overflow: hidden;
   border-radius: 16px 0 0 16px;
 }
 .pc-overlay.is-open .place-card { transform: none; }
 
-/* ---------- Карточка места как поп-ап НАД точкой на карте ---------- */
-.sb-place-popup .leaflet-popup-content-wrapper {
-  padding: 0;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 18px 44px rgba(17, 17, 17, 0.24);
-  background: #fff;
+/* Фото квадратное, но подрезается по высоте на низких экранах, чтобы
+   название, описание и «Забронировать» всегда влезали без прокрутки. */
+.place-card .pc-photo {
+  flex: 0 0 auto;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  max-height: min(42vh, 380px);
 }
-.sb-place-popup .leaflet-popup-content { margin: 0; width: auto !important; }
-.sb-place-popup .leaflet-popup-tip { box-shadow: 0 6px 14px rgba(17, 17, 17, 0.14); }
-/* карточка внутри поп-апа: компактная, а не выезжающая панель на всю высоту */
-.sb-place-popup .place-card {
-  position: static;
-  width: 440px;
-  max-width: 100%;
-  transform: none;
-  box-shadow: none;
-  border-radius: 0;
-  max-height: min(84vh, 780px);
+/* Во фрейме vh считается от высоты фрейма (на телефоне она больше экрана),
+   поэтому меряем от реально видимой полосы, которую передал JS. */
+.pc-overlay.is-slice .place-card .pc-photo { max-height: calc(var(--sb-slice-h, 60vh) * 0.42); }
+/* Прокручивается только текстовая часть */
+.place-card .pc-body {
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
-  transition: none;
 }
-/* кнопка брони всегда на виду, даже если карточка прокручивается */
-.sb-place-popup .pc-actions {
+/* Кнопка брони всегда на виду */
+.place-card .pc-actions {
   position: sticky;
   bottom: 0;
-  background: #fff;                 /* сплошной, иначе текст просвечивает под кнопками */
-  padding: 12px 0 6px;
-  margin-bottom: 0;
-  box-shadow: 0 -12px 16px -8px rgba(255, 255, 255, 1);
-}
-/* Квадратное фото на всю ширину карточки (height:auto обязателен — жёсткая
-   высота вместе с aspect-ratio дала бы фиксированную ширину и белую полосу) */
-.sb-place-popup .pc-photo { width: 100%; aspect-ratio: 1 / 1; height: auto; }
-.sb-place-popup .pc-body { padding: 18px 20px 20px; }
-.sb-place-popup .pc-title { font-size: 22px; line-height: 1.2; }
-.sb-place-popup .pc-desc { font-size: 14px; }
-.sb-place-popup .pc-close { top: 10px; right: 10px; width: 32px; height: 32px; }
-.sb-place-popup .pc-actions .pill { padding: 10px 14px; font-size: 13.5px; }
-/* Низкие экраны/эмбед: карточка компактнее, фото ниже — чтобы всё влезало в карту */
-@media (max-height: 820px) {
-  .sb-place-popup .place-card { max-height: min(72vh, 560px); }
-  .sb-place-popup .pc-title { font-size: 19px; }
-}
-@media (max-width: 560px) {
-  .sb-place-popup .place-card { width: calc(100vw - 52px); max-height: min(70vh, 520px); }
-  .sb-place-popup .pc-title { font-size: 19px; }
-  .sb-place-popup .pc-body { padding: 14px 16px 14px; }
+  background: #fff;
+  padding-top: 12px;
+  margin-bottom: 8px;
+  box-shadow: 0 -12px 16px -8px #fff;
 }
 
 .pc-close {
@@ -1090,15 +1089,21 @@ html.is-embed .app { height: 100vh; }
   .map-counter { right: 16px; top: 64px; }
   .map-hint { display: none; }
 
+  /* Телефон: карточка выезжает снизу на всю ширину и не выше видимой области */
   .place-card {
     top: auto;
     left: 0; right: 0; bottom: 0;
     width: 100%;
-    max-height: 86vh;
+    max-height: 100%;
     border-radius: 16px 16px 0 0;
     transform: translateY(103%);
   }
   .pc-overlay.is-open .place-card { transform: none; }
+  /* фото подрезаем сильнее — на телефоне место дороже */
+  .place-card .pc-photo { max-height: min(34vh, 280px); }
+  .pc-overlay.is-slice .place-card .pc-photo { max-height: calc(var(--sb-slice-h, 60vh) * 0.34); }
+  .place-card .pc-body { padding: 16px 18px 18px; }
+  .pc-title { font-size: 21px; }
 
   .site-foot { padding: 20px 18px 30px; }
 }
