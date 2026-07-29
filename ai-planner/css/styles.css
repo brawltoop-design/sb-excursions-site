@@ -202,7 +202,9 @@ html.is-embed .app { height: 100vh; }
 
 .field { margin-bottom: clamp(9px, 1.5vh, 15px); }
 /* Два поля в ряд (даты; с кем + бюджет) — чтобы форма влезала без прокрутки */
-.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: clamp(9px, 1.5vh, 15px); }
+/* minmax(0,1fr), а не 1fr: иначе колонка не может стать уже содержимого,
+   и поле даты с длинной локализованной датой распирает её наружу */
+.field-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; margin-bottom: clamp(9px, 1.5vh, 15px); }
 .field-row .field { margin-bottom: 0; min-width: 0; }
 /* min-width:0 обязателен: у input[type=date] есть собственная минимальная
    ширина по длине даты, иначе он распирает ячейку сетки и вылезает за рамку */
@@ -212,9 +214,22 @@ html.is-embed .app { height: 100vh; }
    гарантированно влезть нельзя. Строку «с кем + бюджет» не трогаем —
    там наши собственные короткие подписи. */
 @media (max-width: 560px) {
-  .field-row--dates { grid-template-columns: 1fr; gap: 0; }
+  .field-row--dates { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .field-row--dates .field:first-child { margin-bottom: clamp(9px, 1.5vh, 15px); }
-  .field-row--dates .field-input { padding-left: 12px; padding-right: 12px; }
+  /* iOS Safari задаёт полю даты собственную ширину по длине даты и
+     игнорирует width:100% — снимаем нативный вид и прижимаем к рамке */
+  .field-input[type="date"] {
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    text-align: left;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
 }
 .field-label {
   display: block;
@@ -223,6 +238,8 @@ html.is-embed .app { height: 100vh; }
 }
 .field-input {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   font-family: var(--font);
   font-size: 14px;
   color: var(--ink);

@@ -1127,52 +1127,59 @@
   // position:fixed внутри такого фрейма растянулся бы на всю его высоту,
   // и карточка уехала бы за пределы видимого. Поэтому вычисляем реально
   // видимую полосу фрейма и кладём оверлей ровно в неё.
-  function visibleSlice() {
-    var fe = null;
-    try { fe = window.frameElement; } catch (e) { return null; }
-    if (!fe) return null;                        // не во фрейме — обычный fixed
-    var pvh = 0;
-    try { pvh = window.parent.innerHeight || 0; } catch (e) { return null; }
-    if (!pvh) return null;
-    var r = fe.getBoundingClientRect();
-    var top = Math.max(0, -r.top);
-    var bottom = Math.min(r.height, pvh - r.top);
-    var h = bottom - top;
-    if (h < 220) return null;                    // видно почти ничего — не мудрим
-    return { top: Math.round(top), height: Math.round(h) };
+  // Высота экрана пользователя. Внутри фрейма своя высота обманчива: на
+  // телефоне фрейм выше экрана, поэтому спрашиваем родителя. Это просто
+  // число, без пересчёта координат между документами — на него можно
+  // положиться в любом браузере.
+  function screenHeight() {
+    try {
+      if (window.frameElement && window.parent && window.parent.innerHeight) return window.parent.innerHeight;
+    } catch (e) { /* чужой origin */ }
+    return 0;
   }
 
-  function syncOverlayToSlice() {
-    if (!els.pcOverlay || els.pcOverlay.hidden) return;
-    var inFrame = false;
-    try { inFrame = !!window.frameElement; } catch (e) { inFrame = false; }
-    if (!inFrame) {                              // отдельная страница — обычный fixed
+  // Кладём карточку в поток документа рядом с картой и ограничиваем высотой
+  // экрана. Подводить её в кадр будет сам браузер (scrollIntoView) — он умеет
+  // прокрутить родительскую страницу и не ошибается в координатах.
+  function positionOverlay() {
+    var vh = screenHeight();
+    if (!vh) {                                   // отдельная страница — обычный fixed на весь экран
       els.pcOverlay.classList.remove('is-slice');
       els.pcOverlay.style.top = ''; els.pcOverlay.style.height = '';
+      els.pcOverlay.style.removeProperty('--sb-slice-h');
       return;
     }
-    var s = visibleSlice();
-    if (!s) return;                              // планнер почти ушёл с экрана — оставляем как было
+    var docH = Math.max(document.documentElement.scrollHeight, document.documentElement.clientHeight);
+    var h = Math.max(320, Math.min(vh - 16, docH));
+    var mapEl = document.querySelector('.map-card');
+    var pageY = window.pageYOffset || document.documentElement.scrollTop || 0;
+    var anchor;
+    if (mapEl) {
+      var r = mapEl.getBoundingClientRect();
+      anchor = r.top + pageY + r.height / 2;     // центр карты в координатах документа
+    } else {
+      anchor = pageY + h / 2;
+    }
+    var top = Math.max(0, Math.min(Math.round(anchor - h / 2), Math.max(0, docH - h)));
     els.pcOverlay.classList.add('is-slice');
-    els.pcOverlay.style.top = s.top + 'px';
-    els.pcOverlay.style.height = s.height + 'px';
-    // отдаём высоту в CSS: от неё считается максимум для фото
-    els.pcOverlay.style.setProperty('--sb-slice-h', s.height + 'px');
+    els.pcOverlay.style.top = top + 'px';
+    els.pcOverlay.style.height = h + 'px';
+    els.pcOverlay.style.setProperty('--sb-slice-h', h + 'px');
   }
 
-  // Пока карточка открыта, следим за прокруткой и разворотом экрана
-  try {
-    if (window.parent && window.parent !== window) {
-      window.parent.addEventListener('scroll', syncOverlayToSlice, { passive: true });
-      window.parent.addEventListener('resize', syncOverlayToSlice, { passive: true });
-    }
-  } catch (e) { /* чужой origin — просто останемся на fixed */ }
-  window.addEventListener('resize', syncOverlayToSlice, { passive: true });
+  window.addEventListener('resize', function () {
+    if (els.pcOverlay && !els.pcOverlay.hidden) positionOverlay();
+  }, { passive: true });
 
   function showCard(keepOpen) {
     els.pcOverlay.hidden = false;
-    syncOverlayToSlice();
+    positionOverlay();
     if (!keepOpen) requestAnimationFrame(function () { els.pcOverlay.classList.add('is-open'); });
+    // Просим браузер показать карточку целиком — он сам прокрутит страницу,
+    // в том числе родительскую, если планнер встроен во фрейм.
+    later(function () {
+      try { els.pcOverlay.scrollIntoView({ block: 'center', behavior: REDUCED ? 'auto' : 'smooth' }); } catch (e) {}
+    }, 40);
   }
   function isCardOpen() { return !els.pcOverlay.hidden; }
   function closePlace() {
