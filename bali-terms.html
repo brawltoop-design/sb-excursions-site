@@ -200,8 +200,9 @@
       }
     };
 
+    var ALLOWED = { en: 1, ru: 1, es: 1, fr: 1, zh: 1 };
     var m = location.pathname.match(/\/bali\/(en|ru|es|fr|zh)\//) || [null, (new URLSearchParams(location.search).get('lang') || 'en')];
-    var lang = I18N[m[1]] ? m[1] : 'en';
+    var lang = ALLOWED[m[1]] === 1 ? m[1] : 'en';
     var t = I18N[lang];
     document.documentElement.lang = lang;
     document.title = t.title + ' — SB Excursions';

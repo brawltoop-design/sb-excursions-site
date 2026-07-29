@@ -1226,8 +1226,10 @@
     }
     lines.push('');
     lines.push(T('Подскажите, пожалуйста, свободные даты и цену.'));
-    var w = window.open('https://wa.me/' + SB_WA_PHONE + '?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
-    if (!w) return;                                  // блокировщик popup — кнопку не гасим
+    // 'noopener' в features заставляет window.open вернуть null даже при успехе,
+    // поэтому по результату судить нельзя — обнуляем opener вручную.
+    var w = window.open('https://wa.me/' + SB_WA_PHONE + '?text=' + encodeURIComponent(lines.join('\n')), '_blank');
+    if (w) w.opener = null;
     els.pcBook.textContent = T('Заявка отправлена'); els.pcBook.classList.add('is-done'); els.pcBook.disabled = true;
   });
   els.pcClose.addEventListener('click', closePlace);

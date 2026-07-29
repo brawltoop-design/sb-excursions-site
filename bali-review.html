@@ -75,8 +75,9 @@
         fr: { title: "Comment s’est passée votre journée à Bali avec nous ?", sub: "Merci d’avoir voyagé avec SB Excursions ! Laissez un court avis — il arrive directement sur notre WhatsApp, et vous pouvez joindre vos photos dans la conversation.", tour: "Quelle excursion avez-vous faite ?", other: "Autre / je ne sais plus", rating: "Votre note", name: "Votre prénom", country: "Pays", review: "Votre avis", placeholder: "Racontez-nous votre journée…", btn: "Envoyer l’avis via WhatsApp", note: "📷 Des photos de l’excursion ? Joignez-les dans WhatsApp après l’envoi — on adore !", needText: "Écrivez d’abord quelques mots et votre prénom :)", privacy: "En envoyant, votre avis part dans notre discussion WhatsApp — vos données ne sont partagées nulle part ailleurs.", privacyLink: "Politique de confidentialité" },
         zh: { title: "这次巴厘岛之行感觉如何？", sub: "感谢选择 SB Excursions！留下简短评价——它会直接发送到我们的 WhatsApp，照片可以在聊天中直接附上。", tour: "您参加了哪个行程？", other: "其他 / 不记得了", rating: "您的评分", name: "您的名字", country: "国家", review: "您的评价", placeholder: "分享您这一天的感受……", btn: "通过 WhatsApp 发送评价", note: "📷 有旅途照片？发送后直接在 WhatsApp 里附上——我们非常期待！", needText: "请先写几句话并填写名字 :)", privacy: "发送后，您的评价将进入我们的 WhatsApp 聊天——数据不会共享给任何第三方。", privacyLink: "隐私政策" }
       };
+      var ALLOWED = { en: 1, ru: 1, es: 1, fr: 1, zh: 1 };
       var m = location.pathname.match(/\/bali\/(en|ru|es|fr|zh)\//) || [null, (new URLSearchParams(location.search).get('lang') || 'en')];
-      var lang = I18N[m[1]] ? m[1] : 'en';
+      var lang = ALLOWED[m[1]] === 1 ? m[1] : 'en';
       var t = I18N[lang];
       document.documentElement.lang = lang;
       ['Title','Sub','Tour','Rating','Name','Country','Review','Note'].forEach(function (k) {
