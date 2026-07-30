@@ -3713,7 +3713,11 @@ function guideImageSet(article) {
    (видимый рейтинг 4.9 и блок Guest Reviews), иначе разметка будет недостоверной. */
 const TOUR_VISIBLE_RATING = "4.9";
 function tourRatingNodes(tour) {
-  const reviews = (Array.isArray(tour.reviews) ? tour.reviews : []).filter((review) => review && review.text);
+  // Размечаем ТОЛЬКО туры с реально собранными отзывами. У остальных
+  // (три Батура, Manta Point, UNESCO) в блоке пока стоит текст-заглушка —
+  // выдавать по нему рейтинг в Google нельзя.
+  if (!REAL_TOUR_REVIEWS[tour.slug]) return null;
+  const reviews = buildWestReviews(tour).filter((review) => review && review.text);
   if (!reviews.length) return null;
   return {
     aggregateRating: {
@@ -14409,6 +14413,7 @@ function renderStructuredData(tour) {
         category: tour.area,
       },
       moneyOffer(tour) ? { offers: moneyOffer(tour) } : {},
+      tourRatingNodes(tour) || {},
     ),
     {
       "@type": "TouristTrip",
