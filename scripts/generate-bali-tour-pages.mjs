@@ -4760,9 +4760,469 @@ function buildWestMiniPromoModel(tour) {
   };
 }
 
+// Отзывы гостей, собранные владельцем из переписок с клиентами.
+// Даты не проставляем: в исходнике их не было, а выдумывать нельзя.
+// Туры Mount Batur (все три) и Manta Point сюда сознательно не входят —
+// по ним отзывов пока нет, там остаётся блок-заглушка.
+const REAL_TOUR_REVIEWS = {
+  "atv-quad-bikes": [
+    {
+      text: "We booked the ATV ride on a whim and it turned out to be the highlight of our whole trip. The track goes through actual jungle, across a river, and even through a dark tunnel — way more intense than we expected for $20. Our guide Wayan made sure we felt safe the whole time. The lunch afterward was a nice touch too. If you're bored of temples and beaches, do this.",
+      title: "Jake & Emma - Australia",
+      date: "",
+    },
+    {
+      text: "I was worried it would be a tame tourist ride, but no — you genuinely get muddy. The rice field section was beautiful, and the river crossing got my heart pumping. The whole thing took about 5 hours including pickup from Seminyak. Great value, great fun.",
+      title: "Marcus - Germany",
+      date: "",
+    },
+    {
+      text: "Perfect activity for couples who want something different. We did the tandem ATV and laughed the entire 1.5 hours. The staff gave us a proper safety briefing before, and showers + lockers were clean. Highly recommend for anyone staying in Ubud or Canggu — the pickup was super easy.",
+      title: "Sofia & Luis - Brazil",
+      date: "",
+    },
+  ],
+  "atv-ride-adventure": [
+    {
+      text: "Booked this as a half-day thing between beach days and it was exactly what I needed. Proper off-road mud tracks, jungle trails, and you come back absolutely covered in dirt. The guide was patient with our group even though none of us had ridden before. Solid morning out.",
+      title: "Dan - UK",
+      date: "",
+    },
+    {
+      text: "We were looking for something active after three days of rice terraces and coffee plantations. This delivered. The tunnel section was genuinely exciting, and the views between the mud bits were gorgeous. Driver picked us up from Canggu right on time.",
+      title: "Priya & Rohan - India",
+      date: "",
+    },
+    {
+      text: "First time on an ATV and honestly didn't expect to enjoy it this much. The tracks are legit — mud, narrow paths through trees, river bits. Finished by lunchtime so I still had the whole afternoon free. Best $20-something I spent in Bali.",
+      title: "Tyler - Canada",
+      date: "",
+    },
+  ],
+  "bali-airport-transfer": [
+    {
+      text: "After 18 hours of flying, the last thing you want is to haggle with taxi drivers. Our driver was already waiting with a sign, helped with all four bags, and had cold water in the car. Smooth ride to Seminyak, no stress. Worth every rupiah.",
+      title: "Hannah - UK",
+      date: "",
+    },
+    {
+      text: "We used SB Excursion for both arrival and departure transfers. Both times the driver was early, the car was clean, and the price was fixed — no meter games. Especially helpful on the departure day when we had an early flight and needed someone reliable at 4am.",
+      title: "James & Olivia - USA",
+      date: "",
+    },
+    {
+      text: "First time in Bali and I was nervous about getting to my hotel in Ubud from the airport. The driver contacted me on WhatsApp before landing, met me right outside arrivals, and knew the fastest route. So much better than figuring out Grab or the airport taxis.",
+      title: "Yuki - Japan",
+      date: "",
+    },
+  ],
+  "bali-helicopter-scenic-tour": [
+    {
+      text: "My husband surprised me with this for our anniversary and I'm still thinking about it weeks later. Seeing the rice terraces, coastline, and Mount Agung from above was unreal. The whole flight was maybe 30 minutes but it felt like a lifetime of views. Once-in-a-lifetime experience.",
+      title: "Rachel & Tom - USA",
+      date: "",
+    },
+    {
+      text: "If you have the budget, do it. I've done helicopter tours in Dubai and Hawaii, and Bali from the air is something else — the contrast between the green interior and the blue coast is insane. Quick pickup, professional pilot, smooth from start to finish.",
+      title: "Oliver - Netherlands",
+      date: "",
+    },
+    {
+      text: "David proposed during the flight. The team somehow knew and had everything perfect — the timing, the route over the cliffs. I said yes somewhere above the rice fields. Best moment of my life. Thank you SB Excursion for making it happen.",
+      title: "Mei & David - Singapore",
+      date: "",
+    },
+  ],
+  "bali-instagram-highlights-tour": [
+    {
+      text: "I'm a content creator and this tour was genuinely designed for photos. The driver knew exactly where to stand for the best angles at every stop, and timed the day so we avoided the worst crowds. Got my best Bali content from this single day.",
+      title: "Chloe - Australia",
+      date: "",
+    },
+    {
+      text: "We wanted a honeymoon day that would give us beautiful photos and memories. This tour covered Lempuyang, Tirta Gangga, a waterfall, and Tegalalang — all in one day with private transport. Our driver even helped us take couple shots at every location. Photos turned out magazine-worthy.",
+      title: "Maria & Paolo - Italy",
+      date: "",
+    },
+    {
+      text: "10 hours, multiple regions, and every single stop was photogenic. The route felt curated, not random. My driver adjusted the schedule when one spot got crowded and took me to a less-known viewpoint nearby instead. Flexible and thoughtful — exactly what I needed.",
+      title: "Sarah - Canada",
+      date: "",
+    },
+  ],
+  "blue-lagoon-snorkeling": [
+    {
+      text: "Neither of us had snorkeled before and we were a bit nervous, but the guide at Padang Bai was so patient. The water at Blue Lagoon was crystal clear — we saw colorful fish within minutes. The second stop at Tanjung Jepun had even more reef life. Lunch included too. Brilliant day out.",
+      title: "Chris & Amy - UK",
+      date: "",
+    },
+    {
+      text: "I chose Blue Lagoon over Nusa Penida because I wanted something chill and beginner-friendly. Great call. The visibility was incredible, the boat ride was short, and I even got to visit Bias Tugel beach after. Perfect half-day activity.",
+      title: "Nina - Sweden",
+      date: "",
+    },
+    {
+      text: "We've snorkeled in Thailand and Mexico but Padang Bai surprised us. The coral was healthy, the water was warm, and the whole experience felt less touristy than expected. Our guide spotted things we never would have seen on our own. Highly recommend for families too — our kids (8 and 11) loved it.",
+      title: "Kevin & Lisa - USA",
+      date: "",
+    },
+  ],
+  "dolphin-sunrise-city-tour": [
+    {
+      text: "Yes, the 2am pickup is brutal. But watching dolphins jump in the sunrise light from a traditional wooden boat made it all worth it. After that we visited Gitgit Waterfall and Ulun Danu temple — both stunning. A full day of north Bali for $75 is a steal.",
+      title: "Emma - UK",
+      date: "",
+    },
+    {
+      text: "We saw about 30 dolphins that morning — some came right up to the boat. The drive up to Lovina through the mountains at night was actually beautiful with the stars out. Gitgit was powerful after recent rain, and the lake temple was exactly like the photos. Packed day but paced well.",
+      title: "Mike & Jen - Australia",
+      date: "",
+    },
+    {
+      text: "I wasn't sure if the dolphins would show up, but they did — dozens of them. The outrigger boat experience alone was worth it. The rest of the tour through north Bali felt like a completely different island from the south. Cooler, greener, quieter. Loved every minute.",
+      title: "Ana - Spain",
+      date: "",
+    },
+  ],
+  "east-bali-instagram-tour": [
+    {
+      text: "The Gates of Heaven at Lempuyang — I've seen it on Instagram a thousand times but standing there with Mount Agung behind me was something else entirely. Our driver got us there early to skip the queue. Tirta Gangga and Taman Ujung were beautiful and way less crowded.",
+      title: "Jessica - USA",
+      date: "",
+    },
+    {
+      text: "East Bali feels untouched compared to Seminyak. The water palaces were peaceful, the coastline views were dramatic, and our driver knew every photo spot. We spent about 10 hours and it never felt rushed. Best day tour we did in Bali.",
+      title: "Leo & Clara - France",
+      date: "",
+    },
+    {
+      text: "I specifically wanted the Lempuyang reflection shot and the driver timed it perfectly — short line, clear skies, Agung visible. The drive through east Bali was scenic on its own. Stopped at a local warung for lunch that was way better than any tourist restaurant.",
+      title: "Sam - New Zealand",
+      date: "",
+    },
+  ],
+  "fast-boat-transfer-bali": [
+    {
+      text: "Getting from Bali to Nusa Penida on your own is a nightmare of ports, tickets, and dodgy boats. SB Excursion handled everything — hotel pickup, the right harbor, the right boat, luggage sorted. Arrived stress-free. Used them again for the return and it was just as smooth.",
+      title: "Tom - Ireland",
+      date: "",
+    },
+    {
+      text: "We needed a fast boat to Gili for a 3-day side trip. They coordinated the pickup at 6am, got us to Padang Bai port, and made sure we were on the right vessel. Coming back they met us at the harbor too. So much better than trying to DIY it.",
+      title: "Anna & Mark - Germany",
+      date: "",
+    },
+    {
+      text: "Used this for Lembongan transfer. The boat was clean and on time, and having someone handle the harbor logistics honestly saved my sanity. Last time I tried booking direct it was chaos. This was smooth from door to island.",
+      title: "Rina - Malaysia",
+      date: "",
+    },
+  ],
+  "gili-island-tour": [
+    {
+      text: "The private snorkeling boat was the best decision. While the group boats were packed with 20+ people, we had our own guide pointing out turtles and coral. We saw five sea turtles! Then had free time on Gili T for lunch and walking around. $115 felt like great value for a private experience.",
+      title: "Laura & Ben - UK",
+      date: "",
+    },
+    {
+      text: "I've been dreaming about swimming with sea turtles and this tour delivered. The underwater sculptures were a bonus I didn't expect. Our guide was incredible — he knew exactly where to find the turtles. After snorkeling, relaxing on Gili Trawangan was the perfect cooldown.",
+      title: "Ricardo - Brazil",
+      date: "",
+    },
+    {
+      text: "Long day (left at 6am, back by 5pm) but absolutely packed with highlights. The snorkeling was the main event — crystal clear water, turtles everywhere, colorful reef. Then an hour on Gili T for cold beer and beach time. Would do it again tomorrow.",
+      title: "Sophie & Max - Australia",
+      date: "",
+    },
+  ],
+  "gili-islands-getaway": [
+    {
+      text: "Used SB Excursion for a 2-night Gili trip. They handled the fast boat both ways, the hotel pickup, and even gave advice on which Gili island to pick. Having someone coordinate it all made the whole side trip feel seamless instead of stressful.",
+      title: "Kate - USA",
+      date: "",
+    },
+    {
+      text: "We added Gili to our Bali trip last minute and weren't sure how to get there. One WhatsApp message to SB Excursion and they had the boat, pickup, and return all sorted within an hour. The islands themselves were incredible — no cars, just bikes and horses.",
+      title: "Daniel & Sophie - UK",
+      date: "",
+    },
+    {
+      text: "Perfect for anyone who wants to see the Gilis without planning every detail. I just told them my dates and preferred island, and they organized everything. The fast boat was comfortable, the port transfers smooth, and the support was just a message away the whole time.",
+      title: "Aisha - UAE",
+      date: "",
+    },
+  ],
+  "north-bali-lovina-dolphins-tour": [
+    {
+      text: "This was a full-day commitment (10+ hours) but covered so much of north Bali. The dolphin sunrise was magical — we counted at least 20. The mountain drive afterward was all misty green hills. Temple stops were peaceful and uncrowded. Like seeing a totally different Bali.",
+      title: "Jack & Sarah - UK",
+      date: "",
+    },
+    {
+      text: "North Bali is criminally underrated. The dolphins showed up in numbers, the mountain scenery was cooler and greener than the south, and the lake temple was stunning. Our driver was knowledgeable and adjusted the route when it started raining near one of the stops.",
+      title: "Martin - Germany",
+      date: "",
+    },
+    {
+      text: "If you only have time for one full-day tour, make it this one. You get the ocean (dolphins at dawn), the mountains (incredible views), the culture (temples), and the lakes — all in one day. It's long but our driver made it comfortable with good breaks and a proper lunch stop.",
+      title: "Celine & Antoine - France",
+      date: "",
+    },
+  ],
+  "nusa-lembongan-ceningan-day-trip": [
+    {
+      text: "If Nusa Penida is the intense one, Lembongan is the chill one. The mangroves were beautiful, the bridge between islands was fun, and the overall vibe was relaxed. Perfect for couples or anyone who doesn't want to rush around. The turquoise water was even bluer than the photos.",
+      title: "Beth - Australia",
+      date: "",
+    },
+    {
+      text: "We chose this over Penida because we have two small kids and wanted something calmer. Perfect choice. The boat was comfortable, the island driver was careful, and the spots were beautiful without being dangerous. Lunch was delicious too. Family-friendly island day done right.",
+      title: "Nick & Amy - USA",
+      date: "",
+    },
+    {
+      text: "I loved the softer feel of Lembongan. No insane cliff stairs, no hour-long waits. Just beautiful coastal scenery, the iconic yellow bridge to Ceningan, and plenty of time to enjoy each stop. The mangrove section was peaceful and the snorkeling option was a nice add-on.",
+      title: "Ingrid - Norway",
+      date: "",
+    },
+  ],
+  "nusa-penida-east-tour": [
+    {
+      text: "Diamond Beach from above was jaw-dropping — white sand, turquoise water, dramatic cliffs. We also hit Atuh Beach, the Treehouse viewpoint (Thousand Islands panorama was insane), and Teletubbies Hill. Long day at 11 hours but every stop was worth the drive. $75 including boat, lunch, and tickets.",
+      title: "David & Rachel - UK",
+      date: "",
+    },
+    {
+      text: "The east side of Penida is less crowded than the west and honestly just as beautiful. Diamond Beach looked like a screensaver. Our driver knew exactly where to park and which paths to take. He even helped with our photos at every stop. Great English too.",
+      title: "Carlos - Spain",
+      date: "",
+    },
+    {
+      text: "Teletubbies Hill was an unexpected favorite — rolling green hills with ocean in the background. Molenteng Treehouse gave us the best panoramic views of the trip. The whole east coast felt raw and less 'produced' than the west. If you have two days on Penida, don't skip this side.",
+      title: "Emily - New Zealand",
+      date: "",
+    },
+  ],
+  "nusa-penida-full-day-tour": [
+    {
+      text: "What I loved about this tour was the flexibility. Instead of a rigid itinerary, our driver adapted on the fly — Kelingking was mobbed so we did Angel's Billabong first and came back later when it cleared out. Smart routing. Saw everything we wanted without the stress.",
+      title: "Greg & Michelle - Australia",
+      date: "",
+    },
+    {
+      text: "One day, one island, and every major spot checked off. Kelingking (yes, it really looks like a T-Rex), Broken Beach, Angel's Billabong, Crystal Bay, Diamond Beach. The driver was brilliant — knew exactly when to go where. Lunch was included and the local food was delicious.",
+      title: "Lisa - Germany",
+      date: "",
+    },
+    {
+      text: "We only had one day for Penida and this tour made the most of it. The driver prioritized based on what we wanted to see and the current crowd levels. Ended at Crystal Bay just as the afternoon light hit the water. Perfect day, perfect planning.",
+      title: "Arun & Priya - India",
+      date: "",
+    },
+  ],
+  "nusa-penida-private-day-tour-manta-snorkeling": [
+    {
+      text: "This tour combines the best of both worlds — morning snorkeling with mantas at Manta Point, then a private car for the scenic west coast stops. We saw three mantas, then drove to Kelingking, Crystal Bay, and Banjar Nyuh. Two tours in one day for a great price.",
+      title: "Scott & Diana - Canada",
+      date: "",
+    },
+    {
+      text: "Having a private car made all the difference. After snorkeling we could take our time at each viewpoint instead of rushing with a group. Our driver waited while we explored Kelingking, then took us to a quiet lunch spot he recommended. Flexible and personal.",
+      title: "Kim - South Korea",
+      date: "",
+    },
+    {
+      text: "If you're only doing one day on Nusa Penida, this is the tour. Mantas in the morning, cliffs and beaches in the afternoon. Our guide timed it so we hit the scenic spots when most groups had already left. Felt like we had the island to ourselves by 3pm.",
+      title: "Luca & Francesca - Italy",
+      date: "",
+    },
+  ],
+  "nusa-penida-west-tour": [
+    {
+      text: "Kelingking Beach is even more dramatic in person than on Instagram. Standing on the cliff edge looking down at the T-Rex coastline with turquoise water — unreal. Angel's Billabong and Broken Beach were equally stunning. Our driver was great at finding the best photo angles.",
+      title: "Hannah & Jake - UK",
+      date: "",
+    },
+    {
+      text: "The west coast of Penida is all about the cliffs and views. Every stop was more dramatic than the last. Crystal Bay for the water color, Kelingking for the cliff, Broken Beach for the rock arch. It's a full day of coastal drama and our driver nailed the timing at every spot.",
+      title: "Megan - USA",
+      date: "",
+    },
+    {
+      text: "I chose west over east because Kelingking was my #1 Bali bucket list item, and it delivered. But honestly Banjar Nyuh viewpoint was a surprise hit — less crowded, equally dramatic. The whole west coast route felt curated for maximum wow. First-timer-friendly and well organized.",
+      title: "Thomas - Belgium",
+      date: "",
+    },
+  ],
+  "private-car-with-driver-bali": [
+    {
+      text: "We hired a driver for three days and it was the smartest thing we did. Day 1: temples and rice terraces. Day 2: beaches in the south. Day 3: shopping and a spa. Total freedom, no scooter stress, and our driver Putu had the best local restaurant tips.",
+      title: "Michelle - Australia",
+      date: "",
+    },
+    {
+      text: "With a toddler, a private driver was essential. We could go at our own pace, stop for naps, change plans when the little one got cranky. The driver was patient and flexible, even suggested a kid-friendly beach we wouldn't have found on our own. Worth every penny.",
+      title: "James & Anna - UK",
+      date: "",
+    },
+    {
+      text: "Much better than renting a scooter. Bali traffic is intense and the roads are confusing. Having a local driver who knows the shortcuts saved us hours. We covered Ubud, Tanah Lot, and Uluwatu in one day — impossible on our own. Clean car, good AC, very professional.",
+      title: "Chen Wei - China",
+      date: "",
+    },
+  ],
+  "sumbawa-whale-shark-snorkeling-trip": [
+    {
+      text: "This is not your average Bali snorkeling trip — it's an expedition. The boat ride to Sumbawa was an adventure in itself, and then we were in the water with a whale shark. An actual whale shark. The size of it took my breath away. Bucket list: checked.",
+      title: "Michael - USA",
+      date: "",
+    },
+    {
+      text: "We almost didn't book this because of the distance, but so glad we did. The whale shark was about 6 meters long and swam right past us. The whole experience felt wild and real — nothing touristy about it. Not for the faint-hearted but absolutely unforgettable.",
+      title: "Emma & Paul - UK",
+      date: "",
+    },
+    {
+      text: "If you've done all the standard Bali water stuff and want something next-level, this is it. Saleh Bay is stunning, the team was professional about safety, and we were lucky enough to see two whale sharks. The journey there is part of the adventure. Come with an open mind and low expectations — if the sharks show up, it's magic.",
+      title: "Tomás - Portugal",
+      date: "",
+    },
+  ],
+  "sunset-cruise-bali": [
+    {
+      text: "My boyfriend organized this for my birthday and it was perfect. Watching the sun drop into the ocean from the boat, with the Bali coastline behind us — pure magic. No crowds, no traffic, just water and golden light. Short and sweet but incredibly romantic.",
+      title: "Sophie & Matt - Australia",
+      date: "",
+    },
+    {
+      text: "Best 3 hours of our trip. The cruise left from Benoa and we had incredible views of the coastline at golden hour. The atmosphere was relaxed and celebratory. Way better than watching sunset from a crowded beach bar. Treat yourself — you won't regret it.",
+      title: "Karen - USA",
+      date: "",
+    },
+    {
+      text: "We were celebrating our anniversary and this was the highlight. The sunset from the water was breathtaking — colors you can't capture on a phone but you'll never forget. Easy pickup, no stress, and we were back in time for a late dinner. Romantic perfection.",
+      title: "Leo & Julia - Argentina",
+      date: "",
+    },
+  ],
+  "surf-lesson-experience": [
+    {
+      text: "Never surfed before, stood up on my third try. The instructor was incredibly patient, gave clear instructions, and picked the perfect beginner waves. Two hours in the water and I was hooked. Already thinking about when I can come back and try bigger waves.",
+      title: "Tom - UK",
+      date: "",
+    },
+    {
+      text: "My friend and I are complete beginners and we both stood up within the first hour! The coach was encouraging without being pushy, and the whole vibe was relaxed and fun. Such a quintessential Bali experience. Quick, easy, and left us buzzing for the rest of the day.",
+      title: "Anna & Sarah - USA",
+      date: "",
+    },
+    {
+      text: "Compact 2-hour session, perfect for fitting into a busy travel day. The instructor met us at Kuta beach, gave us a proper beach tutorial, then we hit the water. Stood up multiple times and caught real waves by the end. Great intro to surf culture without a full-day commitment.",
+      title: "Niklas - Sweden",
+      date: "",
+    },
+  ],
+  "tanah-lot-bedugul-tour": [
+    {
+      text: "Two iconic temples in one day. Bedugul up in the mountains was cool, misty, and peaceful — the lake temple looked like it was floating on water. Then Tanah Lot at sunset was dramatic and crowded but absolutely worth it. The drive between the two was scenic with rice fields everywhere.",
+      title: "Claire & John - Australia",
+      date: "",
+    },
+    {
+      text: "The highland section around Bedugul was a welcome break from the heat — genuinely cool air, beautiful lake views, and the Ulun Danu temple was Instagram-perfect. Tanah Lot at golden hour was the grand finale. Our driver timed the whole day perfectly. 9 hours, zero boring moments.",
+      title: "Patrick - Germany",
+      date: "",
+    },
+    {
+      text: "This tour gave us the culture fix we were craving. Tanah Lot sitting on its rock in the ocean was magical at sunset. Bedugul felt like a different climate entirely — misty mountains, cool breeze, tranquil lake. Our driver adjusted the route based on weather, which made everything flow naturally.",
+      title: "Isabel - Mexico",
+      date: "",
+    },
+  ],
+  "ubud-highlights-tour": [
+    {
+      text: "This is the ultimate first-timer Bali tour. Temples, rice terraces, volcano views, monkey forest, craft villages — all in 10 hours. The lunch overlooking Mount Batur was a highlight we didn't expect. Our driver was basically a personal guide and historian. $70 including everything — incredible value.",
+      title: "Mark & Jenny - USA",
+      date: "",
+    },
+    {
+      text: "Tegalalang rice terraces were beautiful, but honestly the Kintamani volcano lunch stop stole the show — eating Indonesian food while staring at an active volcano across the lake. The temples (especially Sebatu with its holy spring) were peaceful and not too crowded. A full, rich day.",
+      title: "Rebecca - UK",
+      date: "",
+    },
+    {
+      text: "We visited the silver village in Celuk, the wood carvers in Mas, three temples, the rice terraces, and the Monkey Forest — all in one day with a private driver. The itinerary was packed but never rushed. Entrance tickets, lunch, and transport all included. Best organized tour we've done anywhere.",
+      title: "Hiroshi & Yuki - Japan",
+      date: "",
+    },
+  ],
+  "ubud-instagram-tour": [
+    {
+      text: "Gates of Heaven, Tirta Gangga, Tukad Cepung waterfall, Tegalalang — four iconic spots in one day with a 7am start. The driver/guide helped with photo composition at every stop. Tukad Cepung was the star — the light beam through the cave onto the waterfall was ethereal. Got to swim there too.",
+      title: "Amelia - Australia",
+      date: "",
+    },
+    {
+      text: "$75 for a 10-hour private photo tour with all tickets, lunch, and a guide who doubles as a photographer? Yes please. The Gates of Heaven shot with Agung in the background is now my phone wallpaper. Every stop was curated for visuals and our timing was perfect.",
+      title: "Jordan & Casey - USA",
+      date: "",
+    },
+    {
+      text: "I'm not even a big Instagram person but this tour converted me. Tukad Cepung waterfall with the light streaming in was spiritual. Tirta Gangga water palace was serene. And Lempuyang at sunrise — the queue was short because we started early. Came home with 500+ photos and every one looks professional.",
+      title: "Linnea - Finland",
+      date: "",
+    },
+  ],
+  "volcano-coastline-helicopter-ride": [
+    {
+      text: "Flying over Mount Agung and then the southern coastline in the same flight was mind-blowing. The scale of the volcano from above is humbling, and the coast looks like a painting. Short flight but every second was packed with jaw-dropping scenery. The most premium thing we did in Bali.",
+      title: "Andrew & Lisa - USA",
+      date: "",
+    },
+    {
+      text: "I bought this as a 40th birthday present for myself and zero regrets. The volcano-to-ocean contrast is dramatic — black lava ridgelines dropping into turquoise water. The pilot pointed out landmarks and did a slow pass over the cliffs. Worth saving up for.",
+      title: "Sophie - UK",
+      date: "",
+    },
+    {
+      text: "We've done helicopter tours before but this route is unique — active volcano, rice terraces, and coastline all in one flight. The geological diversity of Bali is insane from above. Quick, professional, and gave us the most dramatic photos of our entire trip.",
+      title: "Rishi & Neha - India",
+      date: "",
+    },
+  ],
+  "white-water-rafting": [
+    {
+      text: "The Ayung River rafting was way more beautiful than we expected. Paddling through a gorge with 10-meter high rock walls, jungle on both sides, carved stone reliefs in the cliff face, and a waterfall you raft right under. Plus enough rapids to keep it exciting without being scary. Great for couples.",
+      title: "Josh & Katie - Australia",
+      date: "",
+    },
+    {
+      text: "I've rafted in Canada and Colorado, and Bali's Ayung River is a totally different experience — it's more scenic than extreme. The jungle canyon, the carved stone walls, the tropical birds overhead. The rapids are class 2-3 so it's accessible for everyone but still genuinely fun. Finished in about 2 hours.",
+      title: "Simon - Canada",
+      date: "",
+    },
+    {
+      text: "Perfect half-day activity. The rafting was scenic and exciting — loved the waterfall section where you go right through the spray. Our guide was hilarious and kept the energy up the whole time. Fit it in before lunch and had the rest of the day for a spa. Ideal combo.",
+      title: "Laura & David - UK",
+      date: "",
+    },
+  ],
+};
+
 function buildWestReviews(tour) {
+  // Сначала tour.reviews: у локализованных туров здесь уже лежит перевод.
+  // Если поставить REAL_TOUR_REVIEWS выше, русская страница получит английский оригинал.
   if (Array.isArray(tour.reviews) && tour.reviews.length) {
     return tour.reviews.map((review) => ({
+      text: collapseWhitespace(review.text),
+      title: collapseWhitespace(review.title),
+      date: collapseWhitespace(review.date),
+    }));
+  }
+
+  const collected = REAL_TOUR_REVIEWS[tour.slug];
+  if (Array.isArray(collected) && collected.length) {
+    return collected.map((review) => ({
       text: collapseWhitespace(review.text),
       title: collapseWhitespace(review.title),
       date: collapseWhitespace(review.date),
