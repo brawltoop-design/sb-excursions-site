@@ -1846,7 +1846,8 @@ const tours = [
   {
     slug: "mount-batur-sunrise-jeep-tour",
     title: "Mount Batur Sunrise Jeep Tour",
-    mainPage: false,
+    mainPage: true,
+    mainPageRank: 14,
     eyebrow: "Volcano sunrise adventure",
     duration: "6-8 hours",
     pickup: "Night or pre-dawn pickup",
@@ -1883,7 +1884,8 @@ const tours = [
   {
     slug: "mount-batur-sunrise-jeep-hot-spring",
     title: "Mount Batur Sunrise Jeep & Hot Spring",
-    mainPage: false,
+    mainPage: true,
+    mainPageRank: 13,
     eyebrow: "Sunrise jeep and hot spring combo",
     duration: "6-8 hours",
     pickup: "Pre-dawn pickup around 02:00-03:30",
@@ -1921,7 +1923,8 @@ const tours = [
   {
     slug: "mount-batur-sunrise-hike",
     title: "Mount Batur Sunrise Hike",
-    mainPage: false,
+    mainPage: true,
+    mainPageRank: 12,
     eyebrow: "Classic volcano sunrise trek",
     duration: "5-8 hours",
     pickup: "Pre-dawn pickup, 01:30-03:00",
@@ -14362,6 +14365,36 @@ function renderMainPageCard(tour) {
   return `<article class="sb-card sb-reveal" data-category="${escapeHtml(categoryAttr)}"><div class="sb-card-inner"><div class="sb-gallery"><div class="sb-img sb-img-main"><img loading="lazy" decoding="async" src="${escapeHtml(publicImagePath(tour))}" alt="${escapeHtml(tour.imageAlt || tour.title)}"></div></div><div class="sb-content"><h3 class="sb-title">${escapeHtml(tour.title)}</h3><ul class="sb-features">${featuresHtml}</ul><div class="sb-bottom">${renderMainPagePriceRow(tour, tour.price)}<a href="${tourRoute(tour)}" class="sb-btn">Details</a></div></div></div></article>`;
 }
 
+// patchBaliMainFile перезаписывает тот же файл, который читает, поэтому однажды
+// задвоившаяся карточка живёт вечно: маршрут уже «существует», новую копию не
+// добавят, но и старую никто не уберёт. Чистим дубли по ссылке, оставляя первую
+// (у неё, как правило, вручную написанные пункты, а не автогенерённые).
+function dedupeMainPageCards(html) {
+  const listRe = /(<div class="sb-list" id="sbList">)([\s\S]*?)(<\/div><div class="sb-empty" id="sbEmpty">)/;
+  const match = listRe.exec(html);
+  if (!match) return html;
+
+  const seenRoutes = new Set();
+  let removed = 0;
+  const deduped = match[2].replace(
+    /<article class="sb-card sb-reveal" data-category="[^"]*">[\s\S]*?<\/article>/g,
+    (article) => {
+      const linkMatch = article.match(/<a href="([^"]+)" class="sb-btn">Details<\/a>/);
+      if (!linkMatch) return article;
+      if (seenRoutes.has(linkMatch[1])) {
+        removed += 1;
+        return "";
+      }
+      seenRoutes.add(linkMatch[1]);
+      return article;
+    },
+  );
+
+  if (!removed) return html;
+  const merged = `${match[1]}${deduped}${match[3]}`;
+  return `${html.slice(0, match.index)}${merged}${html.slice(match.index + match[0].length)}`;
+}
+
 function ensureGeneratedCardsOnMainPage(html) {
   const listRe = /(<div class="sb-list" id="sbList">)([\s\S]*?)(<\/div><div class="sb-empty" id="sbEmpty">)/;
   const match = listRe.exec(html);
@@ -15248,6 +15281,7 @@ function patchBaliMainFile(filePath) {
   html = removeHiddenMainPageCards(html);
   html = patchPlannerLinks(html);
   html = ensureGeneratedCardsOnMainPage(html);
+  html = dedupeMainPageCards(html);
   html = syncMainPageCardCategories(html);
   html = reorderMainPageCards(html);
   html = injectMainPagePriceNotes(html);
@@ -15972,6 +16006,7 @@ const UNESCO_INTERNAL_TOUR_CHIPS = [
   ["1649846179102", "Ubud city tour", "/bali/en/tours/ubud-instagram-tour"],
   ["1649846182361", "Gili Islands", "/bali/en/tours/gili-island-tour"],
   ["1649846180733", "Batur Jeep & Spring", "/bali/en/tours/mount-batur-sunrise-jeep-hot-spring"],
+  [null, "Batur Jeep", "/bali/en/tours/mount-batur-sunrise-jeep-tour"],
   ["1649846185207", "Private Driver", "/bali/en/tours/private-car-with-driver-bali"],
   ["1649846182365", "Manta Point", "/bali/en/tours/nusa-penida-manta-rays-point"],
   ["1649846185211", "Nusa Penida tour", "/bali/en/tours/nusa-penida-east-tour"],
@@ -16014,6 +16049,7 @@ const UNESCO_THINGS_TO_DO_CHIPS = [
   [null, "Manta Point", "/bali/en/tours/nusa-penida-manta-rays-point"],
   [null, "Batur Hike", "/bali/en/tours/mount-batur-sunrise-hike"],
   [null, "Batur Jeep & Spring", "/bali/en/tours/mount-batur-sunrise-jeep-hot-spring"],
+  [null, "Batur Jeep", "/bali/en/tours/mount-batur-sunrise-jeep-tour"],
   [null, "Lavina dolphins", "/bali/en/tours/dolphin-sunrise-city-tour"],
   [null, "Gili Islands", "/bali/en/tours/gili-island-tour"],
   [null, "ATV Ubud", "/bali/en/tours/atv-quad-bikes"],
@@ -18418,12 +18454,33 @@ function localizeUnescoShell(html, locale = "en", options = {}) {
   return localizedHtml;
 }
 
+// Файл страницы тура -> его slug, чтобы страница не ссылалась сама на себя.
+// Легаси Tilda-страницы держат свой slug не в имени файла, поэтому заданы явно.
+const LEGACY_FILE_TOUR_SLUGS = {
+  "page132181473.html": "nusa-penida-manta-rays-point",
+  "page132181473body.html": "nusa-penida-manta-rays-point",
+  "page132812463.html": "mount-batur-sunrise-hike",
+  "page132812463body.html": "mount-batur-sunrise-hike",
+  "page133629743.html": "mount-batur-sunrise-jeep-hot-spring",
+  "page133629743body.html": "mount-batur-sunrise-jeep-hot-spring",
+};
+
+function currentTourRouteFromFile(filePath) {
+  const base = path.basename(filePath);
+  const legacy = LEGACY_FILE_TOUR_SLUGS[base] || LEGACY_FILE_TOUR_SLUGS[base.replace(/-(ru|es|fr|zh)\.html$/, ".html")];
+  if (legacy) return `/bali/en/tours/${legacy}`;
+  const match = base.match(/^bali-tour-(.+?)(?:-(?:ru|es|fr|zh))?\.html$/);
+  return match ? `/bali/en/tours/${match[1]}` : "";
+}
+
 function buildUnescoChipSectionBlock(recordId, title, chips, options = {}) {
   const {
     wideDesktop = false,
     locale = "en",
+    excludeRoute = "",
   } = options;
-  const chipsMarkup = chips.map(([, label, href]) => {
+  const visibleChips = excludeRoute ? chips.filter(([, , href]) => href !== excludeRoute) : chips;
+  const chipsMarkup = visibleChips.map(([, label, href]) => {
     const tag = href ? "a" : "span";
     const hrefAttr = href ? ` href="${localizedBaliInternalRoute(href, locale)}"` : "";
     return `<${tag} class="sb-unesco-chip"${hrefAttr}>${escapeHtml(label)}</${tag}>`;
@@ -18575,13 +18632,13 @@ ${desktopWideStyles}
 </div>`;
 }
 
-function buildUnescoInternalTourChipsBlock(locale = "en") {
+function buildUnescoInternalTourChipsBlock(locale = "en", excludeRoute = "") {
   const ui = unescoUiLabels(locale);
   return buildUnescoChipSectionBlock(
     "rec2121105683",
     ui.bestAttractionsHeading,
     UNESCO_INTERNAL_TOUR_CHIPS,
-    { wideDesktop: true, locale },
+    { wideDesktop: true, locale, excludeRoute },
   );
 }
 
@@ -18636,13 +18693,13 @@ function ensureTourJournalChips(filePath, tour, locale = "en") {
   writeGeneratedFile(filePath, ensureBaliGlobalUiFix(html));
 }
 
-function buildUnescoThingsToDoChipsBlock(locale = "en") {
+function buildUnescoThingsToDoChipsBlock(locale = "en", excludeRoute = "") {
   const ui = unescoUiLabels(locale);
   return buildUnescoChipSectionBlock(
     "rec2121105183",
     ui.thingsToDoHeading,
     UNESCO_THINGS_TO_DO_CHIPS,
-    { wideDesktop: true, locale },
+    { wideDesktop: true, locale, excludeRoute },
   );
 }
 
@@ -18679,7 +18736,7 @@ function ensureUnescoInternalTourChips(filePath, locale = "en") {
     return;
   }
 
-  html = `${html.slice(0, recordStart)}${buildUnescoInternalTourChipsBlock(locale)}${html.slice(recordEnd)}`;
+  html = `${html.slice(0, recordStart)}${buildUnescoInternalTourChipsBlock(locale, currentTourRouteFromFile(filePath))}${html.slice(recordEnd)}`;
   writeGeneratedFile(filePath, ensureBaliGlobalUiFix(html));
 }
 
@@ -18727,7 +18784,7 @@ function ensureUnescoThingsToDoChips(filePath, locale = "en") {
     return;
   }
 
-  html = `${html.slice(0, recordStart)}${buildUnescoThingsToDoChipsBlock(locale)}${html.slice(recordEnd)}`;
+  html = `${html.slice(0, recordStart)}${buildUnescoThingsToDoChipsBlock(locale, currentTourRouteFromFile(filePath))}${html.slice(recordEnd)}`;
   writeGeneratedFile(filePath, ensureBaliGlobalUiFix(html));
 }
 
