@@ -4972,13 +4972,18 @@ function buildWestCollageFallbackAssets(tour) {
       P.nusaDuaBeach,
       P.sanurWaterActivity,
     ],
+    // Kelingking Beach сюда специально не входит: это эксклюзивный кадр
+    // West/Full-day/Manta-snorkeling туров (их маршрут его реально включает,
+    // они получают это фото через прямое совпадение по названию остановки).
+    // East и Lembongan-Ceningan туры Kelingking в маршрут не включают —
+    // подставлять его сюда как «общее фото острова» вводит в заблуждение.
     island: [
-      plannerLocalImage("images/bali-tours/west-collage/nusa-penida-west-kelingking-wide.webp"),
+      plannerLocalImage("images/bali-tours/blue-lagoon-snorkeling.webp"),
+      plannerLocalImage("images/bali-tours/gili-island-tour.jpg"),
       plannerLocalImage("images/bali-tours/nusa-penida-east-tour.jpg"),
       plannerLocalImage("images/bali-tours/nusa-lembongan-ceningan-day-trip.webp"),
       P.eastBaliNusaPenida,
-      plannerLocalImage("images/bali-tours/gili-island-tour.jpg"),
-      plannerLocalImage("images/bali-tours/blue-lagoon-snorkeling.webp"),
+      plannerLocalImage("images/bali-tours/gili-islands-getaway.jpg"),
     ],
     culture: [
       plannerLocalImage("images/bali-tours/tanah-lot-bedugul-tour.jpg"),
