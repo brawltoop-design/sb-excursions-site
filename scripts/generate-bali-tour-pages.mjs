@@ -7190,6 +7190,17 @@ const BALI_UNESCO_DESKTOP_HERO_SHIFT_CSS = `
 }
 `;
 
+/* Владелец попросил приподнять рамку фото в шапке этого тура на 5px.
+   На мобильном она стоит на top:-22px, значит -27px. Пока только этот тур —
+   остальные оставляем как есть. */
+const BATUR_JEEP_HERO_PHOTO_LIFT_CSS = `
+@media screen and (max-width: 639px) {
+  #rec2121233163 .tn-elem[data-elem-id="1721240739929"] {
+    top: -27px !important;
+  }
+}
+`;
+
 const TOUR_LOCALIZED_TEXT_SAFETY_CSS = `
 #rec2121233163 .tn-atom,
 #rec2121221993 .tn-atom,
@@ -8209,6 +8220,10 @@ function westTourPageSpecificCss(tour = null) {
 
   if (tour?.slug === "bali-unesco") {
     pageSpecificCss.push(BALI_UNESCO_DESKTOP_HERO_SHIFT_CSS);
+  }
+
+  if (tour?.slug === "mount-batur-sunrise-jeep-hot-spring") {
+    pageSpecificCss.push(BATUR_JEEP_HERO_PHOTO_LIFT_CSS);
   }
 
   return pageSpecificCss;
