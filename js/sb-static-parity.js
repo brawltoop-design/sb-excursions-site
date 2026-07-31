@@ -358,6 +358,55 @@
     };
     fitFrame();
     window.addEventListener("resize", fitFrame, { passive: true });
+
+    // До 1180px планнер раскладывается в столбик и его содержимое выше рамки —
+    // получалась прокрутка внутри прокрутки. Тянем саму рамку под содержимое,
+    // чтобы страница скроллилась одна. На широких экранах поведение прежнее:
+    // планнер ровно в один экран со своими внутренними колонками.
+    const STACKED_MAX_WIDTH = 1180;
+    let contentObserver = null;
+    const fitFrameToContent = () => {
+      if (!wrap) return;
+      const frame = wrap.querySelector(".sb-newai-frame");
+      if (!frame) return;
+      if (window.innerWidth > STACKED_MAX_WIDTH) {
+        frame.style.height = "";
+        if (open) wrap.style.maxHeight = "3000px";
+        return;
+      }
+      let inner = 0;
+      try {
+        const doc = frame.contentDocument;
+        if (!doc || !doc.documentElement) return;
+        inner = Math.max(
+          doc.documentElement.scrollHeight,
+          doc.body ? doc.body.scrollHeight : 0,
+        );
+      } catch { return; }
+      if (!inner) return;
+      const next = Math.ceil(inner);
+      if (Math.abs(parseFloat(frame.style.height) || 0) !== next) {
+        frame.style.height = next + "px";
+      }
+      // wrap обрезает по max-height — поднимаем его вместе с рамкой
+      if (open) wrap.style.maxHeight = next + 200 + "px";
+    };
+    const watchFrameContent = (frame) => {
+      const attach = () => {
+        fitFrameToContent();
+        try {
+          const doc = frame.contentDocument;
+          if (!doc || !window.ResizeObserver) return;
+          if (contentObserver) contentObserver.disconnect();
+          contentObserver = new ResizeObserver(() => fitFrameToContent());
+          contentObserver.observe(doc.documentElement);
+          if (doc.body) contentObserver.observe(doc.body);
+        } catch { /* ничего страшного — останется базовая высота */ }
+      };
+      frame.addEventListener("load", attach);
+      attach();
+    };
+    window.addEventListener("resize", fitFrameToContent, { passive: true });
     const langFromPath = () => {
       const m = location.pathname.match(/\/bali\/(en|ru|zh|es|fr)(?=\/|$)/i);
       return m ? m[1].toLowerCase() : "ru";
@@ -374,6 +423,7 @@
       frame.src = "/ai-planner/index.html?embed=1&lang=" + langFromPath();
       wrap.appendChild(frame);
       anchor.parentNode.insertBefore(wrap, anchor.nextSibling);
+      watchFrameContent(frame);
       return wrap;
     };
 
@@ -398,6 +448,7 @@
           setTimeout(() => {
             try {
               fitFrame();
+              fitFrameToContent();
               const y = w.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop || 0) - stickyHeaderH() - FRAME_GAP;
               window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
             } catch {}
