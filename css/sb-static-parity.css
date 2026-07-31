@@ -51,6 +51,20 @@ html #sb-excursions-page .sb-title {
   font-weight: 500 !important;
 }
 
+/* Заголовки карточек туров и кнопки категорий — medium везде,
+   не только внутри каталога. */
+html .sb-title,
+html .sb-filter-btn {
+  font-weight: 500 !important;
+}
+
+/* Заголовки обложек и слайдеров (t734) — medium вместо 600. */
+html .t734__title,
+html .t734__title.t-title,
+html .t-cover__wrapper .t-title {
+  font-weight: 500 !important;
+}
+
 /* ==================================================================== */
 /* ЕДИНЫЙ ШРИФТ САЙТА — Manrope.                                        */
 /* Tilda задаёт стек через переменные --t-headline-font/--t-text-font   */
