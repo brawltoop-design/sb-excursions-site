@@ -37,13 +37,10 @@ html .sb-price-note {
   font-weight: 400 !important;
 }
 
-/* Меню в шапке — medium: пункты и выпадающий подсписок. */
+/* Тонкие ссылки в шапке. */
 html .t228__list .t-menu__link-item,
-html .t228__list .t-menusub__link-item,
-html .t228__list .t-menusub__target-link,
-html .t-menu__link-item,
-html .t-menusub__link-item {
-  font-weight: 500 !important;
+html .t228__list .t-menusub__link-item {
+  font-weight: 400 !important;
 }
 
 /* Каталог: кнопки фильтров и заголовки — medium. */
