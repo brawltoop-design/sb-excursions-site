@@ -152,8 +152,8 @@ html[lang]:not([lang="en"]) #rec1803718291 .tn-elem .tn-atom:has(> a){
 }
 </style>`;
 const JOURNAL_FOOTER_ASSETS = `
-    <link rel="stylesheet" href="/css/fonts-manrope.css?v=20260731">
-    <link rel="stylesheet" href="/css/sb-static-parity.css?v=20260731">`;
+    <link rel="stylesheet" href="/css/fonts-manrope.css?v=202607312">
+    <link rel="stylesheet" href="/css/sb-static-parity.css?v=202607312">`;
 const WEATHER_COMPACT_OVERRIDE_STYLE = `
 <style id="sb-weather-compact-override">
 #bwCta {
@@ -14573,7 +14573,7 @@ function renderReviewFormBlock(tour) {
   const t = REVIEW_FORM_I18N[locale];
   return `
 <div class="sb-review-cta-outer">
-  <link rel="stylesheet" href="/css/fonts-manrope.css?v=20260731">
+  <link rel="stylesheet" href="/css/fonts-manrope.css?v=202607312">
   <style>
     .sb-review-cta-outer { padding: 10px 20px 56px; background: #fff; }
     .sb-review-cta { box-sizing: border-box; max-width: 1200px; margin: 0 auto; border: 1px solid rgba(21,21,21,0.08); border-radius: 16px; box-shadow: 0 8px 18px rgba(17,17,17,0.05); padding: 34px 36px; font-family: 'Manrope', -apple-system, 'Segoe UI', Roboto, sans-serif; }
