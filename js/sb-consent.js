@@ -52,8 +52,6 @@
     for (var i = 0; i < gated.length; i++) {
       var src = gated[i];
       if (src.getAttribute('data-sb-activated')) continue;
-      // Yandex Metrika stays dormant outside Russian pages
-      if (src.getAttribute('data-sb-name') === 'metrika' && lang !== 'ru') continue;
       var s = document.createElement('script');
       s.type = 'text/javascript';
       if (src.src) { s.src = src.src; } else { s.text = src.text; }
@@ -146,11 +144,37 @@
     document.body.appendChild(b);
   }
 
+  /* Предварительное согласие обязательно в ЕЭЗ и Великобритании (GDPR/PECR).
+     Для остальных стран действует модель «уведомили + можно отказаться»:
+     счётчики работают сразу, кнопка 🍪 всегда под рукой.
+     Регион определяем по часовому поясу — это не pasport, но единственный
+     доступный признак на статическом сайте. Если определить не удалось,
+     считаем визит европейским и спрашиваем: ошибка в эту сторону безопаснее. */
+  var EEA_TZ = /^Europe\//i;
+  // страны, попадающие в Europe/*, но не входящие в ЕЭЗ и не под UK GDPR
+  var NON_EEA_EUROPE = /^Europe\/(Moscow|Kaliningrad|Samara|Volgograd|Saratov|Astrakhan|Ulyanovsk|Kirov|Minsk|Kyiv|Kiev|Simferopol|Istanbul|Chisinau)$/i;
+  // территории ЕЭЗ за пределами Europe/*
+  var EEA_OUTLYING = /^Atlantic\/(Azores|Madeira|Canary|Reykjavik|Faroe)$|^Indian\/(Reunion|Mayotte)$|^America\/(Cayenne|Guadeloupe|Martinique)$/i;
+
+  function needsExplicitConsent() {
+    try {
+      var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || '');
+      if (!tz) return true;
+      if (EEA_TZ.test(tz)) return !NON_EEA_EUROPE.test(tz);
+      return EEA_OUTLYING.test(tz);
+    } catch (e) {
+      return true;
+    }
+  }
+
   function init() {
     var choice = getChoice();
-    if (choice === 'granted') { activateTrackers(); showCookieBtn(); }
-    else if (choice === 'denied') { showCookieBtn(); }
-    else { showBanner(); }
+    if (choice === 'granted') { activateTrackers(); showCookieBtn(); return; }
+    if (choice === 'denied') { showCookieBtn(); return; }
+    if (needsExplicitConsent()) { showBanner(); return; }
+    // вне ЕЭЗ/UK — считаем сразу, отказаться можно кнопкой 🍪
+    activateTrackers();
+    showCookieBtn();
   }
 
   if (document.readyState === 'loading') {

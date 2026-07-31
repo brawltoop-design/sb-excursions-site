@@ -2,11 +2,11 @@
  * Cina GEO (Test) — Public Type / Michael Cina.
  * Test build covers only A-Z, a-z, 0-9 and , - . — the unicode-range below
  * limits it to those codepoints so every other character (Cyrillic, CJK,
- * accents, punctuation) falls back to TildaSans seamlessly.
+ * accents, punctuation) falls back to Manrope seamlessly.
  * For the full character set license the family at https://www.publictype.us/fonts/cina-geo
  */
 @font-face {
-  font-family: 'Cina GEO';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 100;
   font-display: swap;
@@ -14,7 +14,7 @@
   unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
 }
 @font-face {
-  font-family: 'Cina GEO';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 200;
   font-display: swap;
@@ -22,7 +22,7 @@
   unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
 }
 @font-face {
-  font-family: 'Cina GEO';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -30,7 +30,7 @@
   unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
 }
 @font-face {
-  font-family: 'Cina GEO';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -38,7 +38,7 @@
   unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
 }
 @font-face {
-  font-family: 'Cina GEO';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -46,7 +46,7 @@
   unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
 }
 @font-face {
-  font-family: 'Cina GEO';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -54,7 +54,7 @@
   unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
 }
 @font-face {
-  font-family: 'Cina GEO';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -62,7 +62,7 @@
   unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
 }
 @font-face {
-  font-family: 'Cina GEO';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 800;
   font-display: swap;
@@ -70,7 +70,7 @@
   unicode-range: U+002C-002E, U+0030-0039, U+0041-005A, U+0061-007A;
 }
 @font-face {
-  font-family: 'Cina GEO';
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 900;
   font-display: swap;

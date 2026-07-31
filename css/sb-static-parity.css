@@ -1,3 +1,90 @@
+/* ==================================================================== */
+/* ПОКАЗ СТРАНИЦЫ. Не удалять и не переносить.                          */
+/* Каждая страница стартует со скрытым body (<style>body{opacity:0}</  */
+/* style> в самом начале head). Видимость возвращает правило ниже.      */
+/* Раньше оно лежало в файле шрифта — удаление шрифта делало сайт       */
+/* белым. Теперь живёт здесь, потому что этот файл грузят все страницы. */
+/* ==================================================================== */
+html body {
+  opacity: 1 !important;
+}
+
+/* ==================================================================== */
+/* Общие правила оформления, переехавшие сюда из удалённого             */
+/* fonts-cinageo.css — они не про шрифт как файл, а про вид сайта.      */
+/* ==================================================================== */
+html,
+html body {
+  overflow-x: hidden !important;
+}
+
+html body {
+  letter-spacing: -0.03em !important;
+  background-color: #ffffff !important;
+}
+
+/* Тонкие заголовки по всему сайту, включая журнал и гайды. */
+html h1,
+html h2,
+html h3,
+html h4 {
+  font-weight: 400 !important;
+}
+
+/* Цены в карточках туров — в тон остальному тексту карточки. */
+html .sb-price,
+html .sb-price-note {
+  font-weight: 400 !important;
+}
+
+/* Тонкие ссылки в шапке. */
+html .t228__list .t-menu__link-item,
+html .t228__list .t-menusub__link-item {
+  font-weight: 400 !important;
+}
+
+/* Каталог: кнопки фильтров и заголовки — medium. */
+html #sb-excursions-page .sb-filter-btn,
+html #sb-excursions-page h2,
+html #sb-excursions-page h3,
+html #sb-excursions-page .sb-title {
+  font-weight: 500 !important;
+}
+
+/* ==================================================================== */
+/* ЕДИНЫЙ ШРИФТ САЙТА — Manrope.                                        */
+/* Tilda задаёт стек через переменные --t-headline-font/--t-text-font   */
+/* в своих собранных css (21 файл), плюс сотни мест с прямым            */
+/* font-family. Перебиваем в одной точке, с приоритетом по html.        */
+/* Кириллица у Manrope есть; иероглифы берёт системный шрифт, как и     */
+/* раньше — ни Cina GEO, ни Manrope их не содержали.                  */
+/* ==================================================================== */
+html body,
+html #allrecords,
+html #allrecords .r,
+html .t-body {
+  --t-headline-font: 'Manrope', Arial, Helvetica, sans-serif !important;
+  --t-text-font: 'Manrope', Arial, Helvetica, sans-serif !important;
+}
+
+html body,
+html body .t-text,
+html body .t-title,
+html body .t-descr,
+html body .t-name,
+html body .t-heading,
+html body .t-uptitle,
+html body .tn-atom,
+html body .t-btn,
+html body .t-btntext,
+html body .t-submit,
+html body input,
+html body textarea,
+html body select,
+html body button {
+  font-family: 'Manrope', Arial, Helvetica, sans-serif !important;
+}
+
 #tildacopy,
 .t-tildalabel,
 .t-tildalabel-free {
