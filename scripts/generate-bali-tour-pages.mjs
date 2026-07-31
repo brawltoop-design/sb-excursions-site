@@ -6300,7 +6300,7 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
   white-space: normal !important;
   overflow-wrap: break-word !important;
   word-break: normal !important;
-  hyphens: auto !important;
+  hyphens: manual !important;
   line-height: 1.15 !important;
   text-align: center !important;
 }
@@ -6801,7 +6801,7 @@ const TOUR_ABOUT_ACTIVITY_ALIGNMENT_CSS = `
   display: block !important;
   overflow: visible !important;
   white-space: normal !important;
-  overflow-wrap: anywhere !important;
+  overflow-wrap: break-word !important;
   font-size: 12.5px !important;
   line-height: 1.45 !important;
 }
@@ -7196,9 +7196,9 @@ const TOUR_LOCALIZED_TEXT_SAFETY_CSS = `
 #rec2121222043 .tn-atom,
 #rec2121222013 .tn-atom {
   white-space: normal !important;
-  overflow-wrap: anywhere !important;
+  overflow-wrap: break-word !important;
   word-break: normal !important;
-  hyphens: auto !important;
+  hyphens: manual !important;
 }
 
 #rec2121221993 .tn-elem[data-elem-id="1721244135153"] .tn-atom,
@@ -7213,9 +7213,9 @@ const TOUR_LOCALIZED_TEXT_SAFETY_CSS = `
 #rec2121222013 .sb-private-card-pill,
 #rec2122133073 .sb-route-map-title,
 #rec2122133073 .sb-route-map-text {
-  overflow-wrap: anywhere !important;
+  overflow-wrap: break-word !important;
   word-break: normal !important;
-  hyphens: auto !important;
+  hyphens: manual !important;
 }
 
 html[lang]:not([lang="en"]) #rec2121233163 .tn-atom,
@@ -7226,9 +7226,9 @@ html[lang]:not([lang="en"]) #rec2122133073 .sb-route-map-title,
 html[lang]:not([lang="en"]) #rec2122133073 .sb-route-map-text,
 html[lang]:not([lang="en"]) #rec2121222053 .t585__title,
 html[lang]:not([lang="en"]) #rec2121222053 .t585__text {
-  overflow-wrap: anywhere !important;
+  overflow-wrap: break-word !important;
   word-break: normal !important;
-  hyphens: auto !important;
+  hyphens: manual !important;
 }
 
 html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-pill {
@@ -7456,9 +7456,9 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     var minFont = options.minFont || 10;
     var ratio = options.lineHeightRatio || 1.2;
     setImportant(target, 'white-space', options.whiteSpace || 'normal');
-    setImportant(target, 'overflow-wrap', 'anywhere');
+    setImportant(target, 'overflow-wrap', 'break-word');
     setImportant(target, 'word-break', 'normal');
-    setImportant(target, 'hyphens', 'auto');
+    setImportant(target, 'hyphens', 'manual');
     if (options.textAlign) setImportant(target, 'text-align', options.textAlign);
     var font = maxFont;
     while (font >= minFont) {
@@ -7476,9 +7476,9 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
     var target = atom(node) || node;
     if (!target) return;
     setImportant(target, 'white-space', 'normal');
-    setImportant(target, 'overflow-wrap', 'anywhere');
+    setImportant(target, 'overflow-wrap', 'break-word');
     setImportant(target, 'word-break', 'normal');
-    setImportant(target, 'hyphens', 'auto');
+    setImportant(target, 'hyphens', 'manual');
     if (align) setImportant(target, 'text-align', align);
   }
 
@@ -16345,13 +16345,13 @@ function buildJeepHotSpringRouteRecord() {
     font-size: 28px;
     line-height: 1.08;
     word-break: normal;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
 
   #rec2122133073 .sb-route-map-text {
     font-size: 14px;
     max-width: 100%;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
 
   #rec2122133073 .sb-route-map-frame {
