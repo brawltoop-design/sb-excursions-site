@@ -3,6 +3,26 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/bali/en/tours/unesco-heritage-sites-tour",
+      "destination": "/bali/en/tours/bali-unesco",
+      "permanent": true
+    },
+    {
+      "source": "/bali/en/journal/unesco-heritage-sites-tour/tour-schedule",
+      "destination": "/bali/en/journal/bali-unesco/tour-schedule",
+      "permanent": true
+    },
+    {
+      "source": "/bali/en/journal/unesco-heritage-sites-tour/travel-guide",
+      "destination": "/bali/en/journal/bali-unesco/travel-guide",
+      "permanent": true
+    },
+    {
+      "source": "/bali/en/journal/unesco-heritage-sites-tour/why-book",
+      "destination": "/bali/en/journal/bali-unesco/why-book",
+      "permanent": true
+    },
+    {
       "source": "/",
       "destination": "/bali/en/main-page",
       "permanent": true
