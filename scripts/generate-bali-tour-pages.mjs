@@ -152,8 +152,8 @@ html[lang]:not([lang="en"]) #rec1803718291 .tn-elem .tn-atom:has(> a){
 }
 </style>`;
 const JOURNAL_FOOTER_ASSETS = `
-    <link rel="stylesheet" href="/css/fonts-manrope.css?v=20260731">
-    <link rel="stylesheet" href="/css/sb-static-parity.css?v=20260731">`;
+    <link rel="stylesheet" href="/css/fonts-tildasans.css">
+    <link rel="stylesheet" href="/css/fonts-cinageo.css">`;
 const WEATHER_COMPACT_OVERRIDE_STYLE = `
 <style id="sb-weather-compact-override">
 #bwCta {
@@ -12822,7 +12822,7 @@ function renderJournalNewsBlock() {
   const totalArticles = totalJournalArticleCount();
 
   return `<div id="rec2054910081" class="r t-rec t-rec_pt_135 t-rec_pb_135" style="padding-top:135px;padding-bottom:135px;" data-animationappear="off" data-record-type="131"><div class="t123"><div class="t-container"><div class="t-col t-col_12"><div id="sb-journal-news"><style>
-#sb-journal-news{font-family:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#151515;}
+#sb-journal-news{font-family:"Cina GEO", "TildaSans","Tilda Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#151515;}
 #sb-journal-news .sb-journal-news__shell{background:#fff;border:1px solid rgba(21,21,21,0.08);border-radius:36px;padding:36px;box-shadow:0 18px 52px rgba(17,17,17,0.05);}
 #sb-journal-news .sb-journal-news__top{display:flex;gap:20px;align-items:flex-end;justify-content:space-between;margin-bottom:28px;}
 #sb-journal-news .sb-journal-news__eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(47,107,255,0.08);color:#2f6bff;font-size:13px;font-weight:700;letter-spacing:-0.2px;margin-bottom:14px;}
@@ -13453,7 +13453,7 @@ function renderJournalSharedStyles() {
     --sbj-radius-md:20px;
   }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--sbj-bg);color:var(--sbj-text);font-family:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+  body{margin:0;background:var(--sbj-bg);color:var(--sbj-text);font-family:"Cina GEO", "TildaSans","Tilda Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
   img{max-width:100%;display:block}
   a{text-decoration:none;color:inherit}
   .sb-journal-page{min-height:100vh;overflow-x:hidden}
@@ -13463,7 +13463,7 @@ function renderJournalSharedStyles() {
   .sb-journal-tour-header__logo-link{display:inline-flex;align-items:center}
   .sb-journal-tour-header__logo{width:135px;max-width:135px;height:auto}
   .sb-journal-tour-header__nav{display:flex;align-items:center;justify-content:center;gap:0}
-  .sb-journal-tour-header__nav-link,.sb-journal-tour-header__dropdown-trigger{appearance:none;border:0;background:transparent;padding:0 30px;color:#000;font-family:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:16px;font-weight:600;letter-spacing:-1px;line-height:1;cursor:pointer;transition:color .2s ease}
+  .sb-journal-tour-header__nav-link,.sb-journal-tour-header__dropdown-trigger{appearance:none;border:0;background:transparent;padding:0 30px;color:#000;font-family:"Cina GEO", "TildaSans","Tilda Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:16px;font-weight:600;letter-spacing:-1px;line-height:1;cursor:pointer;transition:color .2s ease}
   .sb-journal-tour-header__nav-link:last-child{padding-right:0}
   .sb-journal-tour-header__nav-link:hover,.sb-journal-tour-header__dropdown-trigger:hover,.sb-journal-tour-header__nav-link:focus-visible,.sb-journal-tour-header__dropdown-trigger:focus-visible{color:#fca347;outline:none}
   .sb-journal-tour-header__dropdown{position:relative}
@@ -13781,7 +13781,7 @@ function renderBaliWeatherBlock(primaryRoute = WEATHER_MAIN_PAGE_ROUTE) {
             padding: 15px;
             border-radius: 20px;
             color: #ffffff;
-            font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-family: "Cina GEO", "Tilda Sans", "TildaSans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             box-shadow: 0 24px 80px rgba(15, 23, 42, 0.18);
             isolation: isolate;
           }
@@ -14573,7 +14573,7 @@ function renderReviewFormBlock(tour) {
   const t = REVIEW_FORM_I18N[locale];
   return `
 <div class="sb-review-cta-outer">
-  <link rel="stylesheet" href="/css/fonts-manrope.css?v=20260731">
+  <link rel="stylesheet" href="/css/fonts-manrope.css">
   <style>
     .sb-review-cta-outer { padding: 10px 20px 56px; background: #fff; }
     .sb-review-cta { box-sizing: border-box; max-width: 1200px; margin: 0 auto; border: 1px solid rgba(21,21,21,0.08); border-radius: 16px; box-shadow: 0 8px 18px rgba(17,17,17,0.05); padding: 34px 36px; font-family: 'Manrope', -apple-system, 'Segoe UI', Roboto, sans-serif; }
@@ -16220,7 +16220,7 @@ function buildJeepHotSpringRouteRecord() {
   margin: 0 auto;
   padding: 18px 20px 24px;
   box-sizing: border-box;
-  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Cina GEO", "Tilda Sans", "TildaSans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 #rec2122133073 .sb-route-map-shell *,
@@ -16247,7 +16247,7 @@ function buildJeepHotSpringRouteRecord() {
 #rec2122133073 .sb-route-map-title {
   margin: 10px 0 10px;
   color: #111111;
-  font-family: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Cina GEO", "Tilda Sans", "TildaSans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: clamp(28px, 3.3vw, 40px);
   line-height: 1.08;
   font-weight: 700;
@@ -18125,7 +18125,7 @@ function buildJournalLanguageSwitcherAssets() {
 .sb-journal-lang-switcher__summary img{width:28px;height:28px;object-fit:contain;display:block}
 .sb-journal-lang-switcher__menu{position:absolute;top:calc(100% + 10px);right:0;display:none;min-width:190px;padding:10px;border-radius:18px;background:#fff;box-shadow:0 18px 46px rgba(17,24,39,0.18);z-index:1006}
 .sb-journal-lang-switcher[open] .sb-journal-lang-switcher__menu{display:grid;gap:6px}
-.sb-journal-lang-switcher__option{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:42px;padding:10px 14px;border-radius:14px;background:rgba(126,196,244,0.08);color:#111827;font-family:'Manrope',Arial,sans-serif;font-size:15px;line-height:1.2;font-weight:600;text-decoration:none}
+.sb-journal-lang-switcher__option{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:42px;padding:10px 14px;border-radius:14px;background:rgba(126,196,244,0.08);color:#111827;font-family:'Cina GEO', 'TildaSans',Arial,sans-serif;font-size:15px;line-height:1.2;font-weight:600;text-decoration:none}
 .sb-journal-lang-switcher__option:hover,.sb-journal-lang-switcher__option:focus-visible{background:rgba(126,196,244,0.16);outline:none}
 .sb-journal-lang-switcher__option[data-active="true"]{background:rgba(126,196,244,0.24);color:#0f172a}
 .sb-journal-lang-switcher__code{font-size:12px;line-height:1;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.6}
@@ -18503,7 +18503,7 @@ function buildUnescoLanguageSwitcherAssets(locale = "en", routeBuilder = (code) 
   min-height:42px;
   padding:10px 14px;
   border-radius:14px;
-  font-family:'Manrope',Arial,sans-serif;
+  font-family:'Cina GEO', 'TildaSans',Arial,sans-serif;
   font-size:15px;
   line-height:1.2;
   font-weight:600;
@@ -19035,7 +19035,7 @@ function buildUnescoChipSectionBlock(recordId, title, chips, options = {}) {
     #${recordId} .sb-unesco-attractions__title {
       margin: 0 0 22px;
       color: #000000;
-      font-family: 'Manrope', Arial, sans-serif;
+      font-family: 'Cina GEO', 'TildaSans', Arial, sans-serif;
       font-size: 34px;
       line-height: 1.12;
       font-weight: 400;
@@ -19063,7 +19063,7 @@ function buildUnescoChipSectionBlock(recordId, title, chips, options = {}) {
       border-radius: 999px;
       background: #e6e6e6;
       color: #636363;
-      font-family: 'Manrope', Arial, sans-serif;
+      font-family: 'Cina GEO', 'TildaSans', Arial, sans-serif;
       font-size: 15px;
       line-height: 1;
       font-weight: 400;
@@ -19857,7 +19857,7 @@ ${JOURNAL_FOOTER_ASSETS}${faqSchema}
     <style>${renderJournalSharedStyles()}
     .sb-faq-list { max-width: 800px; margin: 0 auto; }
     .sb-faq-item { border-bottom: 1px solid #e5e5e5; padding: 18px 0; }
-    .sb-faq-item summary { font-size: 18px; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-family: 'Manrope', Arial, sans-serif; }
+    .sb-faq-item summary { font-size: 18px; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; font-family: 'Cina GEO', 'TildaSans', Arial, sans-serif; }
     .sb-faq-item summary::after { content: '+'; font-size: 22px; color: #999; flex-shrink: 0; margin-left: 16px; transition: transform 0.2s; }
     .sb-faq-item[open] summary::after { content: '\\2212'; }
     .sb-faq-item summary::-webkit-details-marker { display: none; }
@@ -19865,7 +19865,7 @@ ${JOURNAL_FOOTER_ASSETS}${faqSchema}
     .sb-guides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
     .sb-guide-card { display: block; padding: 24px; border-radius: 16px; background: #f5f5f5; text-decoration: none; color: inherit; transition: box-shadow 0.2s, transform 0.2s; }
     .sb-guide-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); transform: translateY(-2px); }
-    .sb-guide-card h2 { font-family: 'Manrope', Arial, sans-serif; font-weight: 400; font-size: 18px; margin: 0 0 8px; line-height: 1.3; }
+    .sb-guide-card h2 { font-family: 'Cina GEO', 'TildaSans', Arial, sans-serif; font-weight: 400; font-size: 18px; margin: 0 0 8px; line-height: 1.3; }
     .sb-guide-card p { font-size: 14px; color: #666; line-height: 1.5; margin: 0; }
     </style>
   </head>
@@ -19879,7 +19879,7 @@ ${JOURNAL_FOOTER_ASSETS}${faqSchema}
           <span>${escapeHtml(content.heading)}</span>
         </nav>
         <article class="sb-journal-article" style="max-width:900px;margin:0 auto;">
-          <h1 style="font-family:'Manrope',Arial,sans-serif;font-weight:400;font-size:clamp(28px,5vw,48px);margin:24px 0 32px;">${escapeHtml(content.heading)}</h1>
+          <h1 style="font-family:'Cina GEO','TildaSans',Arial,sans-serif;font-weight:400;font-size:clamp(28px,5vw,48px);margin:24px 0 32px;">${escapeHtml(content.heading)}</h1>
           ${body}
         </article>
       </main>

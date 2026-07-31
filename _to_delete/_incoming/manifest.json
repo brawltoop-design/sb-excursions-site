@@ -1,0 +1,272 @@
+{
+ "slugs": [
+  "bali-canggu-beaches-guide",
+  "bali-tour-prices-2026-real-costs",
+  "gili-islands-day-trip-from-bali",
+  "mount-batur-sunrise-jeep-vs-hike",
+  "nusa-penida-tours-compared",
+  "swimming-with-whale-sharks-indonesia"
+ ],
+ "row": {
+  "bali-tour-prices-2026-real-costs": 0,
+  "mount-batur-sunrise-jeep-vs-hike": 0,
+  "bali-canggu-beaches-guide": 2,
+  "nusa-penida-tours-compared": 2,
+  "gili-islands-day-trip-from-bali": 2,
+  "swimming-with-whale-sharks-indonesia": 2
+ },
+ "cards": {
+  "bali-tour-prices-2026-real-costs": {
+   "en": {
+    "href": "/bali/en/journal/bali-tour-prices-2026-real-costs",
+    "img": "/images/places/money-exchange.jpg",
+    "alt": "Rupiah notes and a rate board at a Bali money changer counter",
+    "label": "Bali tour prices",
+    "title": "What Bali Tours and Excursions Actually Cost in 2026",
+    "desc": "What Bali tours actually cost in 2026: honest price ranges for Nusa Penida, Batur and manta trips, plus why street quotes run 2-3x the fair rate."
+   },
+   "ru": {
+    "href": "/bali/ru/journal/bali-tour-prices-2026-real-costs",
+    "img": "/images/places/money-exchange.jpg",
+    "alt": "Купюры рупий и табло с курсом в обменнике на Бали",
+    "label": "Цены на туры Бали",
+    "title": "Сколько на самом деле стоят экскурсии на Бали в 2026 году",
+    "desc": "Реальные цены экскурсий на Бали в 2026: Нуса-Пенида, Батур, манты, трансферы. Сколько стоит отдых на двоих и почему на улице просят в 2-3 раза больше."
+   },
+   "es": {
+    "href": "/bali/es/journal/bali-tour-prices-2026-real-costs",
+    "img": "/images/places/money-exchange.jpg",
+    "alt": "Billetes de rupia y un tablero de tipos de cambio en una casa de cambio de Bali",
+    "label": "Precios de tours",
+    "title": "Cuánto cuestan de verdad los tours y excursiones en Bali en 2026",
+    "desc": "Cuánto cuestan realmente los tours en Bali en 2026: rangos honestos para Nusa Penida, Batur y mantarrayas, y por qué en la calle te piden el triple."
+   },
+   "fr": {
+    "href": "/bali/fr/journal/bali-tour-prices-2026-real-costs",
+    "img": "/images/places/money-exchange.jpg",
+    "alt": "Billets de roupies et panneau de taux de change dans un bureau de change à Bali",
+    "label": "Prix des excursions",
+    "title": "Ce que coûtent vraiment les excursions à Bali en 2026",
+    "desc": "Ce que coûtent vraiment les excursions à Bali en 2026 : fourchettes honnêtes pour Nusa Penida, Batur et les raies manta, et pourquoi la rue triple ses prix."
+   },
+   "zh": {
+    "href": "/bali/zh/journal/bali-tour-prices-2026-real-costs",
+    "img": "/images/places/money-exchange.jpg",
+    "alt": "巴厘岛货币兑换点柜台上的印尼盾钞票和汇率牌",
+    "label": "一日游价格",
+    "title": "2026年巴厘岛一日游和包车到底要花多少钱",
+    "desc": "2026年巴厘岛各类一日游的真实价格：佩尼达岛、巴图尔火山日出、蝠鲼浮潜的合理区间，以及为什么街头报价常常是公道价的两到三倍，附五分钟验价方法。"
+   }
+  },
+  "bali-canggu-beaches-guide": {
+   "en": {
+    "href": "/bali/en/journal/bali-canggu-beaches-guide",
+    "img": "/images/places/surfing-in-canggu.jpg",
+    "alt": "Surfer carrying a board across dark volcanic sand at Batu Bolong beach in Canggu, Bali",
+    "label": "Canggu beaches",
+    "title": "Canggu Beaches: Black Sand, Real Surf, Honest Expectations",
+    "desc": "Canggu's sand is black, not turquoise. The honest guide to 7 beaches from Batu Bolong to Nyanyi: surf levels, rip currents, sunsets and real costs."
+   },
+   "ru": {
+    "href": "/bali/ru/journal/bali-canggu-beaches-guide",
+    "img": "/images/places/surfing-in-canggu.jpg",
+    "alt": "Сёрфер несёт доску по тёмному вулканическому песку пляжа Бату Болонг в Чангу, Бали",
+    "label": "Пляжи Чангу",
+    "title": "Пляжи Чангу: чёрный песок, настоящий сёрф и честные ожидания",
+    "desc": "Песок в Чангу чёрный, а не бирюзовый. Честный разбор 7 пляжей от Бату Болонг до Ньяньи: уровень волн, отбойные течения, закаты и реальные цены."
+   },
+   "es": {
+    "href": "/bali/es/journal/bali-canggu-beaches-guide",
+    "img": "/images/places/surfing-in-canggu.jpg",
+    "alt": "Surfista cruzando la arena volcánica oscura de la playa de Batu Bolong, en Canggu, Bali",
+    "label": "Playas de Canggu",
+    "title": "Playas de Canggu: arena negra, surf real y expectativas honestas",
+    "desc": "La arena de Canggu es negra, no turquesa. Guía honesta de 7 playas, de Batu Bolong a Nyanyi: nivel de surf, corrientes, atardeceres y precios reales."
+   },
+   "fr": {
+    "href": "/bali/fr/journal/bali-canggu-beaches-guide",
+    "img": "/images/places/surfing-in-canggu.jpg",
+    "alt": "Surfeur traversant le sable volcanique sombre de la plage de Batu Bolong à Canggu, Bali",
+    "label": "Plages de Canggu",
+    "title": "Plage de Canggu : sable noir, vraies vagues, attentes honnêtes",
+    "desc": "Le sable de Canggu est noir, pas turquoise. Guide honnête des 7 plages, de Batu Bolong à Nyanyi : niveau de surf, courants, couchers de soleil et prix réels."
+   },
+   "zh": {
+    "href": "/bali/zh/journal/bali-canggu-beaches-guide",
+    "img": "/images/places/surfing-in-canggu.jpg",
+    "alt": "冲浪者扛着板走过巴厘岛长谷巴图博隆海滩的深色火山沙",
+    "label": "长谷海滩",
+    "title": "长谷海滩：黑沙、真浪、诚实的期待值",
+    "desc": "长谷（Canggu）的沙是黑的，不是绿松石色。7 个海滩的诚实指南：从巴图博隆到尼亚尼，浪的难度、离岸流、日落时间和真实花费。"
+   }
+  },
+  "nusa-penida-tours-compared": {
+   "en": {
+    "href": "/bali/en/journal/nusa-penida-tours-compared",
+    "img": "/images/places/kelingking-beach-t-rex-cliff.jpg",
+    "alt": "The T-Rex shaped headland above Kelingking Beach on Nusa Penida",
+    "label": "Nusa Penida tours",
+    "title": "Which Nusa Penida Tour Should You Actually Book",
+    "desc": "Five Nusa Penida tours compared honestly: which loop reaches Kelingking, why a full day starts at 5am, and what $45-95 per person actually covers."
+   },
+   "ru": {
+    "href": "/bali/ru/journal/nusa-penida-tours-compared",
+    "img": "/images/places/kelingking-beach-t-rex-cliff.jpg",
+    "alt": "Мыс в форме тираннозавра над пляжем Келингкинг на Нуса Пенида",
+    "label": "Экскурсии на Нуса Пенида",
+    "title": "Какую экскурсию на Нуса Пенида из Бали выбрать",
+    "desc": "Шесть экскурсий на Нуса Пенида из Бали без прикрас: какая довезёт до пляжа Келингкинг раньше очереди, почему полный день — это подъём в 5 утра, и что входит в $55-170."
+   },
+   "es": {
+    "href": "/bali/es/journal/nusa-penida-tours-compared",
+    "img": "/images/places/kelingking-beach-t-rex-cliff.jpg",
+    "alt": "El promontorio con forma de T-Rex sobre la playa de Kelingking, en Nusa Penida",
+    "label": "Tours a Nusa Penida",
+    "title": "Qué excursión a Nusa Penida te conviene reservar de verdad",
+    "desc": "Comparamos seis excursiones a Nusa Penida: cuál llega a Kelingking sin fila, por qué el día completo empieza a las 5am y qué cubren $45-170 por persona."
+   },
+   "fr": {
+    "href": "/bali/fr/journal/nusa-penida-tours-compared",
+    "img": "/images/places/kelingking-beach-t-rex-cliff.jpg",
+    "alt": "Le promontoire en forme de T-Rex au-dessus de la plage de Kelingking, à Nusa Penida",
+    "label": "Excursions Nusa Penida",
+    "title": "Quelle excursion à Nusa Penida faut-il vraiment réserver",
+    "desc": "Six excursions à Nusa Penida comparées : laquelle atteint Kelingking avant la file, pourquoi la journée complète part à 5h et ce que couvrent 45-170 $/pers."
+   },
+   "zh": {
+    "href": "/bali/zh/journal/nusa-penida-tours-compared",
+    "img": "/images/places/kelingking-beach-t-rex-cliff.jpg",
+    "alt": "佩尼达岛精灵岛海滩上方形似霸王龙的海岬",
+    "label": "佩尼达岛行程",
+    "title": "佩尼达岛一日游，到底该订哪一条线",
+    "desc": "六条佩尼达岛一日游横向对比：哪条线能赶在人潮之前到精灵岛海滩、全天团为什么早上五点就来接、每人45至170美元究竟包含了什么。看完再下单。"
+   }
+  },
+  "mount-batur-sunrise-jeep-vs-hike": {
+   "en": {
+    "href": "/bali/en/journal/mount-batur-sunrise-jeep-vs-hike",
+    "img": "/images/places/mount-batur-sunrise-trek.jpg",
+    "alt": "Hikers on the rim of Mount Batur watching the sun come up over a sea of cloud",
+    "label": "Batur sunrise guide",
+    "title": "Mount Batur Sunrise: Should You Hike or Take the Jeep?",
+    "desc": "Hike or jeep for the Mount Batur sunrise? Real difficulty, the 2am pickup, cloud odds by month and what a fair 2026 price looks like at $45-95 pp."
+   },
+   "ru": {
+    "href": "/bali/ru/journal/mount-batur-sunrise-jeep-vs-hike",
+    "img": "/images/places/mount-batur-sunrise-trek.jpg",
+    "alt": "Люди на кромке кратера вулкана Батур встречают солнце над морем облаков",
+    "label": "Батур на рассвете",
+    "title": "Рассвет на вулкане Батур: идти пешком или ехать на джипе",
+    "desc": "Вулкан Батур на рассвете: чем восхождение отличается от джип-тура, во сколько забирают из отеля, шансы на облака по месяцам и честная цена $45-95."
+   },
+   "es": {
+    "href": "/bali/es/journal/mount-batur-sunrise-jeep-vs-hike",
+    "img": "/images/places/mount-batur-sunrise-trek.jpg",
+    "alt": "Caminantes en el borde del volcán Batur viendo salir el sol sobre un mar de nubes",
+    "label": "Guía amanecer Batur",
+    "title": "Amanecer en el volcán Batur: ¿subes caminando o vas en jeep?",
+    "desc": "¿Caminata o jeep para ver el amanecer en el volcán Batur? Dificultad real, la recogida a las 2 de la mañana, nubes según el mes y precios de $45-95 p/p."
+   },
+   "fr": {
+    "href": "/bali/fr/journal/mount-batur-sunrise-jeep-vs-hike",
+    "img": "/images/places/mount-batur-sunrise-trek.jpg",
+    "alt": "Randonneurs sur le bord du cratère du mont Batur devant le soleil qui se lève sur une mer de nuages",
+    "label": "Guide lever Batur",
+    "title": "Lever de soleil au mont Batur : randonnée ou jeep ?",
+    "desc": "Randonnée ou jeep pour le lever du soleil au mont Batur ? La vraie difficulté, le départ à 2h, le risque de nuages mois par mois et le juste prix 45-95 $."
+   },
+   "zh": {
+    "href": "/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike",
+    "img": "/images/places/mount-batur-sunrise-trek.jpg",
+    "alt": "徒步者站在巴图尔火山口边缘，看太阳从云海上方升起",
+    "label": "巴图尔日出指南",
+    "title": "巴图尔火山日出：自己爬上去，还是坐吉普车？",
+    "desc": "巴图尔火山日出，该徒步还是坐吉普车？真实难度、凌晨接送时间、各月云量风险，以及每人45-95美元的合理价位，一次讲清楚。"
+   }
+  },
+  "gili-islands-day-trip-from-bali": {
+   "en": {
+    "href": "/bali/en/journal/gili-islands-day-trip-from-bali",
+    "img": "/images/tours-real/gili-island-tour.jpg",
+    "alt": "Clear turquoise water and a wooden boat off the Gili Islands near Lombok",
+    "label": "Gili day trip",
+    "title": "Gili Islands Day Trip From Bali: What It Really Takes",
+    "desc": "Yes, you can do the Gilis in a day: a dawn start, a 90-minute fast boat from Padang Bai, about 4 hours ashore. Who it suits and who should stay over."
+   },
+   "ru": {
+    "href": "/bali/ru/journal/gili-islands-day-trip-from-bali",
+    "img": "/images/tours-real/gili-island-tour.jpg",
+    "alt": "Прозрачная бирюзовая вода и деревянная лодка у островов Гили рядом с Ломбоком",
+    "label": "День на Гили",
+    "title": "Острова Гили из Бали за день: чего это стоит на самом деле",
+    "desc": "Да, острова Гили реально успеть за день: подъём в 5 утра, 90 минут на катере из Паданг-Бая и около 4 часов на берегу. Кому это подходит, а кому нет."
+   },
+   "es": {
+    "href": "/bali/es/journal/gili-islands-day-trip-from-bali",
+    "img": "/images/tours-real/gili-island-tour.jpg",
+    "alt": "Agua turquesa transparente y un bote de madera frente a las islas Gili, cerca de Lombok",
+    "label": "Gili en un día",
+    "title": "Islas Gili desde Bali en un día: lo que cuesta de verdad",
+    "desc": "Sí, se puede hacer las islas Gili en un día: salida al amanecer, 90 minutos de lancha desde Padang Bai y unas 4 horas en tierra. A quién le conviene."
+   },
+   "fr": {
+    "href": "/bali/fr/journal/gili-islands-day-trip-from-bali",
+    "img": "/images/tours-real/gili-island-tour.jpg",
+    "alt": "Eau turquoise limpide et bateau en bois au large des îles Gili, près de Lombok",
+    "label": "Gili en 1 jour",
+    "title": "Îles Gili depuis Bali : ce que la journée demande vraiment",
+    "desc": "Oui, les Gili en une journée, c'est possible : départ à l'aube, 90 minutes de bateau rapide depuis Padang Bai, environ 4 heures sur place. Pour qui ?"
+   },
+   "zh": {
+    "href": "/bali/zh/journal/gili-islands-day-trip-from-bali",
+    "img": "/images/tours-real/gili-island-tour.jpg",
+    "alt": "龙目岛附近吉利群岛的清澈绿松石色海水与一艘木船",
+    "label": "吉利岛一日游",
+    "title": "巴厘岛出发去吉利岛一日游：这一天到底怎么过",
+    "desc": "一天确实能玩吉利岛：天没亮出发，帕当拜快艇 90 分钟，岛上约 4 小时。谁适合当天来回，谁该住一晚。"
+   }
+  },
+  "swimming-with-whale-sharks-indonesia": {
+   "en": {
+    "href": "/bali/en/journal/swimming-with-whale-sharks-indonesia",
+    "img": "/images/places/manta-ray-snorkeling.jpg",
+    "alt": "Snorkeller floating in deep blue water above a large marine animal in Indonesia",
+    "label": "Whale shark guide",
+    "title": "Swimming with whale sharks in Indonesia: the honest version",
+    "desc": "Snorkel with whale sharks at Sumbawa's bagan platforms in Saleh Bay. 4 Indonesian spots compared, plus ethics rules and the true cost from Bali."
+   },
+   "ru": {
+    "href": "/bali/ru/journal/swimming-with-whale-sharks-indonesia",
+    "img": "/images/places/manta-ray-snorkeling.jpg",
+    "alt": "Сноркелер в глубокой синей воде рядом с крупным морским животным в Индонезии",
+    "label": "Гид по китовым акулам",
+    "title": "Плавание с китовыми акулами в Индонезии: как это на самом деле",
+    "desc": "Снорклинг с китовыми акулами у рыбацких платформ-баганов в заливе Салех, Сумбава. Сравнили 4 точки Индонезии, правила этики и цену дороги с Бали."
+   },
+   "es": {
+    "href": "/bali/es/journal/swimming-with-whale-sharks-indonesia",
+    "img": "/images/places/manta-ray-snorkeling.jpg",
+    "alt": "Persona haciendo snorkel en agua azul profunda sobre un gran animal marino en Indonesia",
+    "label": "Guía tiburón ballena",
+    "title": "Nadar con tiburones ballena en Indonesia: la versión honesta",
+    "desc": "Snorkel con tiburones ballena en las plataformas bagan de la bahía de Saleh, Sumbawa. 4 puntos de Indonesia comparados, la ética y el costo real desde Bali."
+   },
+   "fr": {
+    "href": "/bali/fr/journal/swimming-with-whale-sharks-indonesia",
+    "img": "/images/places/manta-ray-snorkeling.jpg",
+    "alt": "Personne en snorkeling dans l’eau bleue profonde au-dessus d’un grand animal marin en Indonésie",
+    "label": "Guide requin baleine",
+    "title": "Nager avec les requins baleines en Indonésie : la version honnête",
+    "desc": "Snorkeling avec les requins baleines sur les bagans de la baie de Saleh, à Sumbawa. 4 sites indonésiens comparés, l'éthique et le vrai coût depuis Bali."
+   },
+   "zh": {
+    "href": "/bali/zh/journal/swimming-with-whale-sharks-indonesia",
+    "img": "/images/places/manta-ray-snorkeling.jpg",
+    "alt": "浮潜者漂浮在印尼深蓝海水中，下方是一条大型海洋动物",
+    "label": "鲸鲨浮潜指南",
+    "title": "在印尼与鲸鲨同游：没有滤镜的版本",
+    "desc": "在松巴哇萨勒湾的 bagan 渔排与鲸鲨同游。对比印尼 4 个鲸鲨地点，讲清楚喂食争议、从巴厘岛出发的真实花费和时间成本。"
+   }
+  }
+ }
+}
