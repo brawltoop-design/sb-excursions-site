@@ -5348,14 +5348,28 @@ function resolveWestCollageStopImage(stop, tour) {
     [/batuan/i, BALI_PLANNER_PLACE_IMAGES.ubudTemple],
     [/sebatu/i, exactPlaceImage("Gunung Kawi Sebatu") || BALI_PLANNER_PLACE_IMAGES.ubudTemple],
     [/gunung kawi/i, exactPlaceImage("Gunung Kawi Temple") || BALI_PLANNER_PLACE_IMAGES.ubudTemple],
+    // У Батура пять остановок, и раньше все они вели на одно фото джипа:
+    // дубли схлопывались, а пустые слоты добивались из общего запаса —
+    // туда попадали дельфины. Даём каждой точке свой настоящий кадр.
+    [/toya bungkah/i, plannerLocalImage("images/mount-batur-gallery-1.jpg")],
+    [/mount batur sunrise point|sunrise point/i, plannerLocalImage("images/mount-batur-gallery-2.jpg")],
+    [/black lava/i, plannerLocalImage("images/mount-batur-gallery-5.jpg")],
+    [/black sand batur/i, plannerLocalImage("images/mount-batur-gallery-3.jpg")],
+    [/batur natural hot spring|hot spring/i, plannerLocalImage("images/bali-tours/mount-batur-sunrise-jeep-hot-spring.jpg")],
+    [/mount batur|kintamani/i, plannerLocalImage("images/tild3963-6334-4438-b163-623862386363___batur_jeep.jpg")],
     [/kintamani/i, BALI_PLANNER_PLACE_IMAGES.mountBaturSunriseLocal],
     [/monkey forest/i, BALI_PLANNER_PLACE_IMAGES.ubudMonkeyForest],
     [/goa gajah/i, exactPlaceImage("Goa Gajah") || BALI_PLANNER_PLACE_IMAGES.ubudGoaGajah],
     [/tegenungan/i, commonsImage("Kanto lampo waterfall.jpg")],
-    [/lovina|dolphin/i, plannerLocalImage("images/bali-tours/dolphin-sunrise-city-tour.jpg")],
-    [/gitgit|banyumala|ulu petanu|waterfall/i, exactPlaceImage("Kanto Lampo Waterfall") || BALI_PLANNER_PLACE_IMAGES.ubudWaterfall],
+    // Северный Бали: разводим остановки по разным кадрам, иначе на дельфиньих
+    // турах оставались пустые слоты и их добивал чужой запас.
+    [/dolphin statue|dolphin point|dolphin/i, plannerLocalImage("images/bali-tours/dolphin-sunrise-city-tour.jpg")],
+    [/lovina/i, plannerLocalImage("images/bali-tours/north-bali-lovina-dolphins-tour.jpg")],
+    [/banyumala/i, BALI_PLANNER_PLACE_IMAGES.ubudTukadCepung],
+    [/gitgit|ulu petanu|waterfall/i, exactPlaceImage("Kanto Lampo Waterfall") || BALI_PLANNER_PLACE_IMAGES.ubudWaterfall],
     [/handara/i, plannerLocalImage("images/bali-tours/bali-instagram-highlights-tour.jpg")],
-    [/ulun danu|bedugul/i, exactPlaceImage("Ulun Danu Beratan Temple") || plannerLocalImage("images/bali-tours/tanah-lot-bedugul-tour.jpg")],
+    [/ulun danu/i, exactPlaceImage("Ulun Danu Beratan Temple") || plannerLocalImage("images/bali-tours/unesco-ulun-danu.jpg")],
+    [/bedugul/i, plannerLocalImage("images/bali-tours/tanah-lot-bedugul-tour.jpg")],
     [/candikuning/i, plannerLocalImage("images/bali-tours/tanah-lot-bedugul-tour.jpg")],
     [/taman ayun|batukaru/i, exactPlaceImage("Taman Ayun Temple") || plannerLocalImage("images/bali-tours/unesco-taman-ayun.jpg")],
     [/jatiluwih/i, exactPlaceImage("Jatiluwih Rice Terrace") || plannerLocalImage("images/bali-tours/unesco-jatiluwih-hero.jpg")],
@@ -5364,7 +5378,6 @@ function resolveWestCollageStopImage(stop, tour) {
     [/tirta gangga/i, exactPlaceImage("Tirta Gangga") || BALI_PLANNER_PLACE_IMAGES.eastBaliTirtaGangga],
     [/taman ujung/i, plannerLocalImage("images/bali-tours/east-bali-instagram-tour.jpg")],
     [/lahangan|virgin beach/i, plannerLocalImage("images/bali-tours/east-bali-instagram-tour.jpg")],
-    [/toya bungkah|mount batur sunrise point|black lava|black sand batur|batur natural hot spring|mount batur/i, plannerLocalImage("images/tild3963-6334-4438-b163-623862386363___batur_jeep.jpg")],
     [/gorilla atv|gorilla cave|keliki|bresela/i, plannerLocalImage("images/bali-tours/atv-quad-bikes.webp")],
     [/ayung river|kedewatan|sayan|payangan/i, plannerLocalImage("images/bali-tours/white-water-rafting.webp")],
     [/blue lagoon beach|tanjung jepun|bias tugel/i, plannerLocalImage("images/bali-tours/blue-lagoon-snorkeling.webp")],
@@ -5373,9 +5386,11 @@ function resolveWestCollageStopImage(stop, tour) {
     [/broken beach/i, plannerLocalImage("images/bali-tours/west-collage/nusa-penida-west-broken-beach-card.webp")],
     [/angel.?s billabong/i, plannerLocalImage("images/bali-tours/west-collage/nusa-penida-west-angels-billabong-card.webp")],
     [/crystal bay/i, plannerLocalImage("images/bali-tours/west-collage/nusa-penida-west-crystal-bay-wide.webp")],
-    [/diamond beach|atuh beach/i, plannerLocalImage("images/smile-nusa-penida-east-diamond-beach.jpg")],
+    [/diamond beach/i, plannerLocalImage("images/smile-nusa-penida-east-diamond-beach.jpg")],
+    [/atuh beach/i, BALI_PLANNER_PLACE_IMAGES.eastBaliNusaPenida],
     [/molenteng|thousand islands/i, plannerLocalImage("images/bali-tours/nusa-penida-east-tour.jpg")],
-    [/teletubbies/i, plannerLocalImage("images/bali-tours/nusa-penida-east-tour.webp")],
+    // .webp здесь нормализуется в тот же .jpg, что и у Molenteng, — получался дубль
+    [/teletubbies/i, plannerLocalImage("images/bali-tours/nusa-penida-full-day-tour.webp")],
     [/manta point|gamat bay|wall bay/i, plannerLocalImage("images/bali-tours/nusa-penida-manta-rays-point.webp")],
     [/banjar nyuh/i, plannerLocalImage("images/bali-tours/nusa-penida-full-day-tour.webp")],
     [/jungut batu|dream beach|devil.?s tear|yellow bridge|blue lagoon, nusa ceningan/i, plannerLocalImage("images/bali-tours/nusa-lembongan-ceningan-day-trip.webp")],
@@ -5421,14 +5436,26 @@ function buildWestCollageFallbackAssets(tour) {
   // По 6–8 РАЗНЫХ тематических фото мест на каждый тип тура, чтобы 6 слотов
   // коллажа заполнялись разными местами, а не повтором hero-картинки.
   const kindFallbackImages = {
+    // Запас для «рассветных» туров. Дельфиньи кадры отсюда убраны: под этот тип
+    // подпадают и Батур, и Ловина, и на вулканических страницах появлялись
+    // дельфины. Дельфиньи туры своё фото и так получают по названию остановки.
     sunrise: [
       P.mountBaturSunriseLocal,
+      plannerLocalImage("images/mount-batur-gallery-4.jpg"),
+      plannerLocalImage("images/mount-batur-gallery-1.jpg"),
       plannerLocalImage("images/tild3963-6334-4438-b163-623862386363___batur_jeep.jpg"),
-      plannerLocalImage("images/bali-tours/dolphin-sunrise-city-tour.jpg"),
-      plannerLocalImage("images/bali-tours/north-bali-lovina-dolphins-tour.jpg"),
       P.ubudTukadCepung,
       P.ubudRiceTerrace,
       P.ubudWaterfall,
+    ],
+    // Север Бали: дельфины, водопады Гитгит/Баньюмала, озёрные храмы Бедугула
+    dolphin: [
+      plannerLocalImage("images/bali-tours/north-bali-lovina-dolphins-tour.jpg"),
+      plannerLocalImage("images/bali-tours/dolphin-sunrise-city-tour.jpg"),
+      plannerLocalImage("images/bali-tours/unesco-ulun-danu.jpg"),
+      plannerLocalImage("images/bali-tours/tanah-lot-bedugul-tour.jpg"),
+      P.ubudWaterfall,
+      P.ubudTukadCepung,
     ],
     marine: [
       plannerLocalImage("images/bali-tours/nusa-penida-manta-rays-point.webp"),
@@ -14673,6 +14700,9 @@ function detectTourKind(tour) {
   const text = tourSearchText(tour);
 
   if (hasTourTag(tour, "helicopter") || text.includes("helicopter")) return "helicopter";
+  // Дельфиньи туры тоже «рассветные», но это север Бали, а не вулкан —
+  // им нужен свой запас фото, иначе в галерею попадает Батур.
+  if (text.includes("dolphin") || text.includes("lovina")) return "dolphin";
   if (text.includes("sunrise") || text.includes("mount batur") || text.includes("volcano") || hasTourTag(tour, "sunrise")) {
     return "sunrise";
   }
