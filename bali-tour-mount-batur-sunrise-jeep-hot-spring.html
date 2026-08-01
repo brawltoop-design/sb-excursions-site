@@ -3420,6 +3420,7 @@ hidden > <div class="t585__textwrapper"> <div class="t585__text t-descr t-descr_
 
 
 
+
 <style id="sb-weather-compact-override">
 #bwCta {
   display: none !important;
@@ -5665,15 +5666,39 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
     // пиксели тем же множителем. Иначе на широком телефоне фото становятся
     // крупнее, а колонка с текстом остаётся узкой — текст переносится чаще,
     // растёт вниз и наезжает на соседей.
-    var promoZoom = 0;
+    // Итоговый масштаб. Меряный по фото годится только ПОСЛЕ того, как скрипт
+    // Tilda с их CDN проставил zoom; до этого замер честно возвращает 1, мы
+    // раскладываем текст под нерастянутые фото, потом фото растягиваются и
+    // накрывают его. Поэтому доверяем замеру только когда zoom уже виден, а
+    // иначе считаем сами: холст 320 (моб.) / 640 (планшет) на ширину экрана —
+    // ровно та арифметика, к которой Tilda в итоге придёт.
+    var promoCanvas = isMobile ? 320 : 640;
+    var expectedZoom = window.innerWidth / promoCanvas;
+    var measuredZoom = 0;
     for (var zi = 0; zi < mediaNodes.length; zi++) {
       var zCss = parseFloat(window.getComputedStyle(mediaNodes[zi]).height);
       var zRect = mediaNodes[zi].getBoundingClientRect().height;
-      if (zCss > 0 && zRect > 0) { promoZoom = zRect / zCss; break; }
+      if (zCss > 0 && zRect > 0) { measuredZoom = zRect / zCss; break; }
     }
-    if (!(promoZoom > 0)) {
-      // скрипт Tilda ещё не приехал — повторяем его арифметику сами
-      promoZoom = isMobile ? Math.max(1, window.innerWidth / 320) : 1;
+    var promoZoom = (measuredZoom && Math.abs(measuredZoom - 1) > 0.01) ? measuredZoom : expectedZoom;
+
+    // Геометрия фото — из значений стилей (они всегда в координатах холста),
+    // умноженных на итоговый масштаб. Отрисованные рамки для этого не годятся:
+    // они меняются в зависимости от того, приехал ли уже zoom Tilda.
+    function mediaBox(node) {
+      var st = window.getComputedStyle(node);
+      var bTop = parseFloat(st.top); if (!Number.isFinite(bTop)) bTop = node.offsetTop || 0;
+      var bLeft = parseFloat(st.left); if (!Number.isFinite(bLeft)) bLeft = node.offsetLeft || 0;
+      var bW = parseFloat(st.width); if (!Number.isFinite(bW) || bW <= 0) bW = node.offsetWidth || 0;
+      var bH = parseFloat(st.height); if (!Number.isFinite(bH) || bH <= 0) bH = node.offsetHeight || 0;
+      return {
+        top: bTop * promoZoom,
+        left: bLeft * promoZoom,
+        right: (bLeft + bW) * promoZoom,
+        bottom: (bTop + bH) * promoZoom,
+        width: bW * promoZoom,
+        height: bH * promoZoom
+      };
     }
 
     var leftColLeft = (isMobile ? 12 : 18) * promoZoom;
@@ -5692,15 +5717,11 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
     var buttonHeight = buttonWrap.getBoundingClientRect().height || (isMobile ? 21 : 28);
 
     var titleTop = mediaNodes.reduce(function (maxValue, node) {
-      // Всё меряем прямо по отрисованной рамке. leftOf() отдаёт координату из
-      // computed style — она БЕЗ множителя zoom, а ширина и высота с ним;
-      // смешивать их нельзя, иначе фото из правой колонки считается лежащим
-      // в левой и уводит заголовок далеко вниз.
-      var nodeRect = node.getBoundingClientRect();
-      var nodeTop = nodeRect.top - artboardRect.top;
-      var nodeLeft = nodeRect.left - artboardRect.left;
-      var nodeRight = nodeRect.right - artboardRect.left;
-      var nodeBottom = nodeRect.bottom - artboardRect.top;
+      var nodeBoxT = mediaBox(node);
+      var nodeTop = nodeBoxT.top;
+      var nodeLeft = nodeBoxT.left;
+      var nodeRight = nodeBoxT.right;
+      var nodeBottom = nodeBoxT.bottom;
       var overlapsLeftCol = nodeRight > leftColLeft + edgeSlack && nodeLeft < leftColLeft + leftColWidth - edgeSlack;
       if (!overlapsLeftCol) return maxValue;
       if (nodeTop >= baseTitleTop + (isMobile ? 42 : 54) * promoZoom) return maxValue;
@@ -5723,10 +5744,10 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
     var titleBottom = titleTop + visualHeight(titleWrap, scale);
     var textTop = titleBottom + 10 * promoZoom;
     var leftBlockLimit = mediaNodes.reduce(function (minValue, node) {
-      var nodeRect = node.getBoundingClientRect();
-      var nodeTop = nodeRect.top - artboardRect.top;
-      var nodeLeft = nodeRect.left - artboardRect.left;
-      var nodeRight = nodeRect.right - artboardRect.left;
+      var nodeBoxL = mediaBox(node);
+      var nodeTop = nodeBoxL.top;
+      var nodeLeft = nodeBoxL.left;
+      var nodeRight = nodeBoxL.right;
       if (nodeRight <= leftColLeft + edgeSlack || nodeLeft >= leftColLeft + leftColWidth - edgeSlack) return minValue;
       if (nodeTop <= textTop) return minValue;
       return Math.min(minValue, nodeTop);
@@ -5752,20 +5773,20 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
     setImportant(buttonWrap, 'top', buttonTop + 'px');
 
     var mediaBottom = mediaNodes.reduce(function (maxValue, node) {
-      var rect = node.getBoundingClientRect();
-      return Math.max(maxValue, rect.bottom - artboardRect.top);
+      return Math.max(maxValue, mediaBox(node).bottom);
     }, buttonTop + buttonHeight);
     var lowerLeftMedia = byId(record, PROMO_LOWER_LEFT_MEDIA_ID);
     var lowerRightMedia = byId(record, PROMO_LOWER_RIGHT_MEDIA_ID);
     var sidePlacedInGap = false;
 
     if (isMobile && lowerLeftMedia && lowerRightMedia) {
-      var gapLeft = lowerRightMedia.getBoundingClientRect().left - artboardRect.left;
-      var gapTop = lowerLeftMedia.getBoundingClientRect().top - artboardRect.top;
-      var gapWidth = Math.max(110 * promoZoom, visualWidth(lowerRightMedia, scale));
+      var lowerRightBox = mediaBox(lowerRightMedia);
+      var gapLeft = lowerRightBox.left;
+      var gapTop = mediaBox(lowerLeftMedia).top;
+      var gapWidth = Math.max(110 * promoZoom, lowerRightBox.width);
       // Keep a clear breathing gap above the photo so the text never touches its frame.
       var photoClearance = 16 * promoZoom;
-      var gapBottom = (lowerRightMedia.getBoundingClientRect().top - artboardRect.top) - photoClearance;
+      var gapBottom = lowerRightBox.top - photoClearance;
       var gapHeight = gapBottom - gapTop;
 
       if (gapHeight >= 40 * promoZoom) {
@@ -5793,7 +5814,7 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
     if (!sidePlacedInGap) {
       var sideLeft = leftColLeft;
       var sideTop = mediaBottom + (isMobile ? 16 : 20) * promoZoom;
-      var sideWidth = artboardRect.width - sideLeft * 2;
+      var sideWidth = promoCanvas * promoZoom - sideLeft * 2;
       setImportant(sideWrap, 'left', sideLeft + 'px');
       setImportant(sideWrap, 'top', sideTop + 'px');
       setImportant(sideWrap, 'width', Math.max(200 * promoZoom, sideWidth) + 'px');
@@ -5988,6 +6009,17 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
         if (!applyingLayouts) schedule();
       });
       nodes.forEach(function (node) { observer.observe(node); });
+    }
+    // Zoom, который Tilda проставляет фотографиям, НЕ меняет их внутреннюю
+    // коробку — ResizeObserver на него не срабатывает. Это запись в атрибут
+    // style, её ловит MutationObserver.
+    if (typeof window.MutationObserver === 'function') {
+      var styleObserver = new window.MutationObserver(function () {
+        if (!applyingLayouts) schedule();
+      });
+      nodes.forEach(function (node) {
+        styleObserver.observe(node, { attributes: true, attributeFilter: ['style'] });
+      });
     }
     nodes.forEach(function (node) {
       Array.prototype.forEach.call(node.querySelectorAll('img'), function (img) {
