@@ -1498,10 +1498,13 @@ window.addEventListener('load', function () {
   }
 
   #rec2121233163 .tn-elem[data-elem-id="1721240739929"] {
-    top: -22px !important;
+    /* Фото ровно по карточке. Раньше было top:-22px при высоте 462 против
+       карточки в 440 — верхние 22px фото вместе со скруглёнными углами
+       всегда срезались overflow'ом артборда. */
+    top: 0 !important;
     left: calc(50% - 160px + 10px) !important;
     width: 301px !important;
-    height: 462px !important;
+    height: 440px !important;
     border-radius: 22px !important;
     overflow: hidden !important;
   }
@@ -3225,6 +3228,7 @@ hidden > <div class="t585__textwrapper"> <div class="t585__text t-descr t-descr_
   ]
 }
 </script> <!-- nominify end --> </div> </div> </div> </div>
+
 
 
 

@@ -6481,10 +6481,13 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
   }
 
   #rec2121233163 .tn-elem[data-elem-id="1721240739929"] {
-    top: -22px !important;
+    /* Фото ровно по карточке. Раньше было top:-22px при высоте 462 против
+       карточки в 440 — верхние 22px фото вместе со скруглёнными углами
+       всегда срезались overflow'ом артборда. */
+    top: 0 !important;
     left: calc(50% - 160px + 10px) !important;
     width: 301px !important;
-    height: 462px !important;
+    height: 440px !important;
     border-radius: 22px !important;
     overflow: hidden !important;
   }
@@ -7191,12 +7194,14 @@ const BALI_UNESCO_DESKTOP_HERO_SHIFT_CSS = `
 `;
 
 /* Владелец попросил приподнять рамку фото в шапке этого тура на 5px.
-   На мобильном она стоит на top:-22px, значит -27px. Пока только этот тур —
-   остальные оставляем как есть. */
+   База с тех пор изменилась (фото теперь ровно по карточке, top:0/440),
+   поэтому те же «5px вверх» здесь — это top:-5px; высоту добавляем, чтобы
+   низ фото остался вровень с карточкой и не открывалась белая полоса. */
 const BATUR_JEEP_HERO_PHOTO_LIFT_CSS = `
 @media screen and (max-width: 639px) {
   #rec2121233163 .tn-elem[data-elem-id="1721240739929"] {
-    top: -27px !important;
+    top: -5px !important;
+    height: 445px !important;
   }
 }
 `;
