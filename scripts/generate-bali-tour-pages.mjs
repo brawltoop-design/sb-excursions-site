@@ -6472,7 +6472,8 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
   #rec2121233163 .t396__artboard {
     height: 440px !important;
     overflow: hidden !important;
-    border-radius: 22px !important;
+    /* сверху прямые углы — карточка примыкает к шапке; скругление только снизу */
+    border-radius: 0 0 22px 22px !important;
   }
 
   #rec2121233163 .t396__filter,
@@ -6488,12 +6489,12 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
     left: calc(50% - 160px + 10px) !important;
     width: 301px !important;
     height: 440px !important;
-    border-radius: 22px !important;
+    border-radius: 0 0 22px 22px !important;
     overflow: hidden !important;
   }
 
   #rec2121233163 .tn-elem[data-elem-id="1721240739929"] .tn-atom {
-    border-radius: 22px !important;
+    border-radius: 0 0 22px 22px !important;
     overflow: hidden !important;
   }
 
