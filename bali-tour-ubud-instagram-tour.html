@@ -3528,6 +3528,7 @@ hidden > <div class="t585__textwrapper"> <div class="t585__text t-descr t-descr_
 
 
 
+
 <style id="sb-weather-compact-override">
 #bwCta {
   display: none !important;
@@ -5788,7 +5789,9 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
       if (!overlapsLeftCol) return maxValue;
       if (nodeTop >= baseTitleTop + (isMobile ? 42 : 54)) return maxValue;
       if (nodeBottom <= baseTitleTop - 2) return maxValue;
-      return Math.max(maxValue, nodeBottom + (isMobile ? 4 : 8));
+      // Зазор под фото. Было 4px — этого не хватало: любая мелочь (шрифт выше,
+      // фото догрузилось чуть крупнее) и заголовок оказывался на картинке.
+      return Math.max(maxValue, nodeBottom + (isMobile ? 12 : 14));
     }, baseTitleTop);
 
     setImportant(titleWrap, 'left', leftColLeft + 'px');
@@ -6027,6 +6030,35 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
     });
   }
 
+  var promoMediaWatched = false;
+  function watchPromoMedia() {
+    if (promoMediaWatched) return;
+    var record = document.getElementById(PROMO_ID);
+    if (!record) return;
+    var nodes = PROMO_MEDIA_IDS
+      .map(function (id) { return byId(record, id); })
+      .filter(Boolean);
+    if (!nodes.length) return;
+    promoMediaWatched = true;
+    // Tilda подгружает фото этого блока лениво — они приезжают уже после
+    // window.load, когда посетитель до них домотал. До этого их рамка ниже
+    // настоящей, layoutPromo ставит заголовок сразу под неё, а потом фото
+    // вырастает и накрывает текст. На быстром интернете незаметно, на
+    // мобильном — постоянно. Пересчитываем раскладку, как только любая
+    // картинка меняет размер.
+    if (typeof window.ResizeObserver === 'function') {
+      var observer = new window.ResizeObserver(function () {
+        if (!applyingLayouts) schedule();
+      });
+      nodes.forEach(function (node) { observer.observe(node); });
+    }
+    nodes.forEach(function (node) {
+      Array.prototype.forEach.call(node.querySelectorAll('img'), function (img) {
+        if (!img.complete) img.addEventListener('load', schedule, { once: true });
+      });
+    });
+  }
+
   function applyLayouts() {
     if (!window.innerWidth) return;
     applyingLayouts = true;
@@ -6035,6 +6067,7 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
       layoutAbout();
       layoutPrivateOffer();
       layoutPromo();
+      watchPromoMedia();
       if (initPromoSideLetterAnimation()) {
         layoutPromo();
       }
