@@ -5351,13 +5351,19 @@ function resolveWestCollageStopImage(stop, tour) {
     // У Батура пять остановок, и раньше все они вели на одно фото джипа:
     // дубли схлопывались, а пустые слоты добивались из общего запаса —
     // туда попадали дельфины. Даём каждой точке свой настоящий кадр.
-    [/toya bungkah/i, plannerLocalImage("images/mount-batur-gallery-1.jpg")],
+    [/toya bungkah/i, plannerLocalImage("images/remote/batur-toya-bungkah-ridge-view.jpg")],
     [/mount batur sunrise point|sunrise point/i, plannerLocalImage("images/mount-batur-gallery-2.jpg")],
-    [/black lava/i, plannerLocalImage("images/mount-batur-gallery-5.jpg")],
-    [/black sand batur/i, plannerLocalImage("images/mount-batur-gallery-3.jpg")],
-    [/batur natural hot spring|hot spring/i, plannerLocalImage("images/bali-tours/mount-batur-sunrise-jeep-hot-spring.jpg")],
-    [/mount batur|kintamani/i, plannerLocalImage("images/tild3963-6334-4438-b163-623862386363___batur_jeep.jpg")],
-    [/kintamani/i, BALI_PLANNER_PLACE_IMAGES.mountBaturSunriseLocal],
+    [/batur summit|crater rim/i, plannerLocalImage("images/mount-batur-gallery-5.jpg")],
+    [/black lava/i, plannerLocalImage("images/remote/batur-black-lava-field.jpg")],
+    [/black sand batur/i, plannerLocalImage("images/remote/batur-black-sand-lava-plain.jpg")],
+    // На самом хот-спринг туре фото бассейна уже стоит на обложке — в слот
+    // остановки даём другой кадр, иначе одна и та же картинка дважды на странице.
+    [/batur natural hot spring|hot spring/i, (tour?.slug === "mount-batur-sunrise-jeep-hot-spring")
+      ? plannerLocalImage("images/mount-batur-gallery-1.jpg")
+      : plannerLocalImage("images/bali-tours/mount-batur-sunrise-jeep-hot-spring.jpg")],
+    // Рекламный баннер с надписями отсюда убран — в коллаже он выглядел как
+    // криво обрезанный кусок макета, а не фотография.
+    [/mount batur|kintamani/i, plannerLocalImage("images/remote/batur-kintamani-caldera-lake.jpg")],
     [/monkey forest/i, BALI_PLANNER_PLACE_IMAGES.ubudMonkeyForest],
     [/goa gajah/i, exactPlaceImage("Goa Gajah") || BALI_PLANNER_PLACE_IMAGES.ubudGoaGajah],
     [/tegenungan/i, plannerLocalImage("images/remote/kanto-lampo-waterfall-5015eabf.jpg")],
@@ -5440,13 +5446,15 @@ function buildWestCollageFallbackAssets(tour) {
     // подпадают и Батур, и Ловина, и на вулканических страницах появлялись
     // дельфины. Дельфиньи туры своё фото и так получают по названию остановки.
     sunrise: [
+      // Только Батур и рассвет. Раньше здесь были баннер с надписями, водопад
+      // Тукад-Чепунг и рисовые террасы — на вулканических страницах они
+      // выглядели чужими.
       P.mountBaturSunriseLocal,
+      plannerLocalImage("images/mount-batur-gallery-3.jpg"),
       plannerLocalImage("images/mount-batur-gallery-4.jpg"),
+      plannerLocalImage("images/places/mount-batur-jeep.jpg"),
+      plannerLocalImage("images/places/mount-batur-sunrise-trek.jpg"),
       plannerLocalImage("images/mount-batur-gallery-1.jpg"),
-      plannerLocalImage("images/tild3963-6334-4438-b163-623862386363___batur_jeep.jpg"),
-      P.ubudTukadCepung,
-      P.ubudRiceTerrace,
-      P.ubudWaterfall,
     ],
     // Север Бали: дельфины, водопады Гитгит/Баньюмала, озёрные храмы Бедугула
     dolphin: [
@@ -5499,7 +5507,7 @@ function buildWestCollageFallbackAssets(tour) {
     ],
     adventure: [
       plannerLocalImage("images/bali-tours/atv-quad-bikes.webp"),
-      plannerLocalImage("images/tild3963-6334-4438-b163-623862386363___batur_jeep.jpg"),
+      plannerLocalImage("images/places/mount-batur-jeep.jpg"),
       plannerLocalImage("images/bali-tours/white-water-rafting.webp"),
       P.ubudTukadCepung,
       P.ubudWaterfall,
@@ -5527,8 +5535,14 @@ function buildWestCollageFallbackAssets(tour) {
 
   // Hero НЕ добавляем в коллаж — он и так на обложке и в приват-карточке;
   // в галерее хотим только разные места (иначе фото тура повторяется).
+  // Мало не добавлять его самим: запасной пул может содержать тот же кадр
+  // под другим путём (bali-tours/*.webp против tours-real/*.jpg) — сравниваем
+  // по имени файла без папки и расширения и выкидываем совпадение.
   void heroAsset;
+  const fileStem = (p) => String(p || "").split("/").pop().replace(/\.[a-z0-9]+$/i, "");
+  const heroStem = fileStem(publicImagePath(tour));
   return fallbackImages
+    .filter((imagePath) => !heroStem || fileStem(imagePath) !== heroStem)
     .map((imagePath) =>
       buildCollageAsset(imagePath, `${tour.title} photo stop in ${compactAreaLabel(tour)}`),
     )
