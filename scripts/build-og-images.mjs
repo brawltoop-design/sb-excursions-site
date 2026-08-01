@@ -81,6 +81,57 @@ function card({ title, meta }) {
 </svg>`);
 }
 
+/* Фирменные баннеры из images/banners. Если для тура есть нарисованный
+   баннер, берём его вместо карточки, которую скрипт собирает сам: у него
+   уже есть и название, и логотип, и подпись — рисовать поверх нечего.
+   Ключ — имя файла без расширения, приведённое к нижнему регистру без
+   лишних пробелов и знаков, чтобы переименование файла ничего не ломало. */
+const BANNER_DIR = path.join(ROOT, "images", "banners");
+const normalizeName = (s) =>
+  String(s).toLowerCase().replace(/\.[a-z0-9]+$/i, "").replace(/[^a-z0-9]+/g, " ").trim();
+const BANNER_TO_SLUG = new Map(Object.entries({
+  "atv ride adventure": "atv-ride-adventure",
+  "east private tour nusa penida": "nusa-penida-east-tour",
+  "gili trawangan snorkeling tour": "gili-island-tour",
+  "manta point snorkeling from bali": "nusa-penida-manta-rays-point",
+  "mount batur jeep hot springs": "mount-batur-sunrise-jeep-hot-spring",
+  "mount batur sunrise hike in bali": "mount-batur-sunrise-hike",
+  "north city tour lovina dolphins": "north-bali-lovina-dolphins-tour",
+  "nusa penida full 1 day tour": "nusa-penida-full-day-tour",
+  "sumbawa whale shark snorkeling": "sumbawa-whale-shark-snorkeling-trip",
+  "surf beginner lesson with instructor": "surf-lesson-experience",
+  "ubud instagram tour": "ubud-instagram-tour",
+  "west private tour nusa penida": "nusa-penida-west-tour",
+}));
+
+async function collectBanners() {
+  const bySlug = new Map();
+  const unmatched = [];
+  let files = [];
+  try {
+    files = (await fs.readdir(BANNER_DIR)).filter((f) => /\.(jpe?g|png|webp)$/i.test(f));
+  } catch {
+    return { bySlug, unmatched };
+  }
+  for (const file of files) {
+    const slug = BANNER_TO_SLUG.get(normalizeName(file));
+    if (slug) bySlug.set(slug, path.join(BANNER_DIR, file));
+    else unmatched.push(file);
+  }
+  return { bySlug, unmatched };
+}
+
+async function renderBanner(file) {
+  // У баннеров белое поле ~50px вокруг скруглённой карточки. Сначала срезаем
+  // его, потом подгоняем под 1.91:1 — так теряется около 2% высоты карточки
+  // вместо того, чтобы резать по самому тексту.
+  const trimmed = await sharp(file).trim({ threshold: 12 }).toBuffer();
+  return sharp(trimmed)
+    .resize(W, H, { fit: "cover", position: "centre" })
+    .jpeg({ quality: 86, mozjpeg: true, progressive: true })
+    .toBuffer();
+}
+
 async function collectTours() {
   const files = (await fs.readdir(ROOT))
     .filter((f) => /^bali-tour-[a-z0-9-]+\.html$/.test(f))
@@ -104,10 +155,18 @@ async function collectTours() {
 
 await fs.mkdir(OUT_DIR, { recursive: true });
 const tours = await collectTours();
-let made = 0;
+const { bySlug: banners, unmatched } = await collectBanners();
+let fromBanner = 0;
+let generated = 0;
 const missing = [];
 
 for (const tour of tours) {
+  const banner = banners.get(tour.slug);
+  if (banner) {
+    await fs.writeFile(path.join(OUT_DIR, `${tour.slug}.jpg`), await renderBanner(banner));
+    fromBanner++;
+    continue;
+  }
   try {
     await fs.access(tour.source);
   } catch {
@@ -122,7 +181,13 @@ for (const tour of tours) {
     .jpeg({ quality: 84, mozjpeg: true, progressive: true })
     .toBuffer();
   await fs.writeFile(path.join(OUT_DIR, `${tour.slug}.jpg`), out);
-  made++;
+  generated++;
 }
 
-console.log(JSON.stringify({ карточек: made, размер: `${W}x${H}`, "нет исходника": missing }, null, 2));
+console.log(JSON.stringify({
+  "фирменных баннеров": fromBanner,
+  "собрано скриптом": generated,
+  размер: `${W}x${H}`,
+  "нет исходника": missing,
+  "баннер не опознан": unmatched,
+}, null, 2));
