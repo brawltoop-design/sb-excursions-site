@@ -46,6 +46,52 @@ const ORGANIZATION_SCHEMA = {
   },
 };
 
+/* Иконка в кружке «Watch video» на обложке тура. В шаблоне там на всех
+   страницах стоял один и тот же балийский храм — на вертолётном туре и на
+   трансфере из аэропорта он смотрелся случайным. Здесь каждому туру
+   подобрана своя. Иконки лежат в images/bali-tours/icons, стиль тот же:
+   белая заливка, 64x64, крупные формы (на мобильном это всего 19px).
+   Туры одной темы делят иконку намеренно — два вертолётных тура и должны
+   быть с вертолётом. */
+const TOUR_ICON_BY_SLUG = {
+  "atv-quad-bikes": "quad",
+  "atv-ride-adventure": "quad",
+  "bali-airport-transfer": "plane",
+  "bali-helicopter-scenic-tour": "helicopter",
+  "bali-instagram-highlights-tour": "camera",
+  "bali-unesco": "temple",
+  "blue-lagoon-snorkeling": "snorkel-mask",
+  "dolphin-sunrise-city-tour": "sunrise",
+  "east-bali-instagram-tour": "gate",
+  "fast-boat-transfer-bali": "speedboat",
+  "gili-island-tour": "turtle",
+  "gili-islands-getaway": "island-palm",
+  "mount-batur-sunrise-hike": "volcano",
+  "mount-batur-sunrise-jeep-hot-spring": "hot-spring",
+  "mount-batur-sunrise-jeep-tour": "jeep",
+  "north-bali-lovina-dolphins-tour": "dolphin",
+  "nusa-lembongan-ceningan-day-trip": "bridge",
+  "nusa-penida-east-tour": "island-palm",
+  "nusa-penida-full-day-tour": "cliff",
+  "nusa-penida-manta-rays-point": "snorkel-mask",
+  "nusa-penida-private-day-tour-manta-snorkeling": "snorkel-mask",
+  "nusa-penida-west-tour": "cliff",
+  "private-car-with-driver-bali": "car",
+  "sumbawa-whale-shark-snorkeling-trip": "whale-shark",
+  "sunset-cruise-bali": "sunset-boat",
+  "surf-lesson-experience": "surfboard",
+  "tanah-lot-bedugul-tour": "temple",
+  "ubud-highlights-tour": "rice-terrace",
+  "ubud-instagram-tour": "camera",
+  "volcano-coastline-helicopter-ride": "helicopter",
+  "white-water-rafting": "raft",
+};
+const TEMPLATE_TOUR_ICON = "/images/bali-tours/icon-bali-temple.svg";
+const tourIconPath = (tour) => {
+  const name = TOUR_ICON_BY_SLUG[tour?.slug];
+  return name ? `/images/bali-tours/icons/${name}.svg` : TEMPLATE_TOUR_ICON;
+};
+
 const HERO_IMAGE_DIR = path.join(projectRoot, "images", "bali-tours");
 const WEST_TEMPLATE_SOURCE_FILE = path.join(projectRoot, "page128064616.html");
 const JOURNAL_HUB_ROUTE = "/bali/en/journal";
@@ -5860,6 +5906,12 @@ function renderWestStylePage(tour) {
     <meta name="twitter:image" content="${ogCard}" />`,
   );
   html = replaceCanonicalLink(html, absoluteRoute);
+
+  // Иконка в кружке на обложке — своя под каждый тур вместо шаблонного храма.
+  const iconPath = tourIconPath(tour);
+  if (iconPath !== TEMPLATE_TOUR_ICON) {
+    html = html.split(TEMPLATE_TOUR_ICON).join(iconPath);
+  }
 
   // Perf: предзагрузка LCP-hero и основного шрифта на каждой странице тура
   html = html.replace(
