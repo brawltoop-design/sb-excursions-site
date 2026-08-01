@@ -122,14 +122,23 @@ async function collectBanners() {
 }
 
 async function renderBanner(file) {
-  // У баннеров белое поле ~50px вокруг скруглённой карточки. Сначала срезаем
-  // его, потом подгоняем под 1.91:1 — так теряется около 2% высоты карточки
-  // вместо того, чтобы резать по самому тексту.
+  const meta = await sharp(file).metadata();
+  const target = W / H;
+  const ratio = meta.width / meta.height;
+  const encode = (pipeline) =>
+    pipeline.jpeg({ quality: 86, mozjpeg: true, progressive: true }).toBuffer();
+
+  // Баннер уже нужной пропорции — не трогаем композицию вообще. Срезать у
+  // него белое поле нельзя: без полей он становится 2.01:1, и подгонка назад
+  // под 1.91:1 отрезала бы края вместе с текстом.
+  if (Math.abs(ratio - target) < 0.02) {
+    return encode(sharp(file).resize(W, H, { fit: "fill" }));
+  }
+
+  // Пропорция другая. Тогда сначала снимаем белое поле вокруг скруглённой
+  // карточки — так кадрируем по полю, а не по надписям.
   const trimmed = await sharp(file).trim({ threshold: 12 }).toBuffer();
-  return sharp(trimmed)
-    .resize(W, H, { fit: "cover", position: "centre" })
-    .jpeg({ quality: 86, mozjpeg: true, progressive: true })
-    .toBuffer();
+  return encode(sharp(trimmed).resize(W, H, { fit: "cover", position: "centre" }));
 }
 
 async function collectTours() {
