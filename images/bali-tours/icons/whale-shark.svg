@@ -1,9 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <g fill="#ffffff">
-    <path d="M10 34c8-11 22-16 34-14 6 1 10 5 10 10s-4 10-11 12c-11 3-25-1-33-8Z"/>
-    <path d="M54 26l8-8v26l-8-8"/>
-    <circle cx="22" cy="30" r="2" fill="#000" fill-opacity=".3"/>
-    <circle cx="32" cy="27" r="2" fill="#000" fill-opacity=".3"/>
-    <circle cx="42" cy="30" r="2" fill="#000" fill-opacity=".3"/>
-  </g>
+<!--
+tags: [food, sea, animal, fishing, ocean, sushi, fish, creature, wildlife, nature]
+category: Animals
+version: "1.41"
+unicode: "ef2b"
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+ 
+  stroke="#ffffff"
+  stroke-width="2.6"
+  stroke-linecap="round"
+  stroke-linejoin="round" fill="#ffffff">
+  <path d="M16.69 7.44a6.973 6.973 0 0 0 -1.69 4.56c0 1.747 .64 3.345 1.699 4.571" />
+  <path d="M2 9.504c7.715 8.647 14.75 10.265 20 2.498c-5.25 -7.761 -12.285 -6.142 -20 2.504" />
+  <path d="M18 11v.01" />
+  <path d="M11.5 10.5c-.667 1 -.667 2 0 3" />
 </svg>

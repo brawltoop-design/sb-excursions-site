@@ -1,9 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <g fill="#ffffff">
-    <path d="M4 30c14-12 42-12 56 0v5C46 24 18 24 4 35v-5Z"/>
-    <rect x="4" y="42" width="56" height="6" rx="1"/>
-    <rect x="10" y="28" width="4" height="14" rx="1"/><rect x="22" y="24" width="4" height="18" rx="1"/>
-    <rect x="38" y="24" width="4" height="18" rx="1"/><rect x="50" y="28" width="4" height="14" rx="1"/>
-    <rect x="4" y="52" width="56" height="6" rx="1" fill="#000" fill-opacity=".2"/>
-  </g>
+<!--
+tags: [architecture, urban, river, overpass, city, countryside, building, bridge, structure, construction]
+category: Buildings
+version: "1.1"
+unicode: "ea4b"
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+ 
+  stroke="#ffffff"
+  stroke-width="2.6"
+  stroke-linecap="round"
+  stroke-linejoin="round" fill="#ffffff">
+  <path d="M6 5l0 14" />
+  <path d="M18 5l0 14" />
+  <path d="M2 15l20 0" />
+  <path d="M3 8a7.5 7.5 0 0 0 3 -2a6.5 6.5 0 0 0 12 0a7.5 7.5 0 0 0 3 2" />
+  <path d="M12 10l0 5" />
 </svg>
