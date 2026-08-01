@@ -3410,6 +3410,9 @@ hidden > <div class="t585__textwrapper"> <div class="t585__text t-descr t-descr_
 
 
 
+
+
+
 <style id="sb-weather-compact-override">
 #bwCta {
   display: none !important;
@@ -5648,10 +5651,28 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
     var mediaNodes = PROMO_MEDIA_IDS
       .map(function (id) { return byId(record, id); })
       .filter(Boolean);
-    var leftColLeft = isMobile ? 12 : 18;
-    var leftColWidth = isMobile ? 150 : 170;
-    var baseTitleTop = isMobile ? 112 : 114;
-    var buttonHeight = isMobile ? 21 : 28;
+    // Блок нарисован под экран 320px, а Tilda растягивает его css-свойством
+    // zoom: на 390px это 1.219, на 430px — 1.344. Фотографии растягиваются, а
+    // тексту мы zoom ниже сбрасываем, чтобы кеглем управлял fitText. Значит
+    // все отступы и размеры, придуманные под 320px, надо перевести в экранные
+    // пиксели тем же множителем. Иначе на широком телефоне фото становятся
+    // крупнее, а колонка с текстом остаётся узкой — текст переносится чаще,
+    // растёт вниз и наезжает на соседей.
+    var promoZoom = 0;
+    for (var zi = 0; zi < mediaNodes.length; zi++) {
+      var zCss = parseFloat(window.getComputedStyle(mediaNodes[zi]).height);
+      var zRect = mediaNodes[zi].getBoundingClientRect().height;
+      if (zCss > 0 && zRect > 0) { promoZoom = zRect / zCss; break; }
+    }
+    if (!(promoZoom > 0)) {
+      // скрипт Tilda ещё не приехал — повторяем его арифметику сами
+      promoZoom = isMobile ? Math.max(1, window.innerWidth / 320) : 1;
+    }
+
+    var leftColLeft = (isMobile ? 12 : 18) * promoZoom;
+    var leftColWidth = (isMobile ? 150 : 170) * promoZoom;
+    var baseTitleTop = (isMobile ? 112 : 114) * promoZoom;
+    var edgeSlack = 8 * promoZoom;
 
     relaxText(titleWrap, 'left');
     relaxText(textWrap, 'left');
@@ -5660,58 +5681,66 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
       clearImportant(node, 'zoom');
       setImportant(node, 'zoom', '1');
     });
+    // Кнопка живёт без zoom, как и текст, поэтому её высоту берём как есть.
+    var buttonHeight = buttonWrap.getBoundingClientRect().height || (isMobile ? 21 : 28);
 
     var titleTop = mediaNodes.reduce(function (maxValue, node) {
-      var nodeTop = node.getBoundingClientRect().top - artboardRect.top;
-      var nodeLeft = leftOf(node);
-      var nodeRight = nodeLeft + visualWidth(node, scale);
-      var nodeBottom = nodeTop + visualHeight(node, scale);
-      var overlapsLeftCol = nodeRight > leftColLeft + 8 && nodeLeft < leftColLeft + leftColWidth - 8;
+      // Всё меряем прямо по отрисованной рамке. leftOf() отдаёт координату из
+      // computed style — она БЕЗ множителя zoom, а ширина и высота с ним;
+      // смешивать их нельзя, иначе фото из правой колонки считается лежащим
+      // в левой и уводит заголовок далеко вниз.
+      var nodeRect = node.getBoundingClientRect();
+      var nodeTop = nodeRect.top - artboardRect.top;
+      var nodeLeft = nodeRect.left - artboardRect.left;
+      var nodeRight = nodeRect.right - artboardRect.left;
+      var nodeBottom = nodeRect.bottom - artboardRect.top;
+      var overlapsLeftCol = nodeRight > leftColLeft + edgeSlack && nodeLeft < leftColLeft + leftColWidth - edgeSlack;
       if (!overlapsLeftCol) return maxValue;
-      if (nodeTop >= baseTitleTop + (isMobile ? 42 : 54)) return maxValue;
-      if (nodeBottom <= baseTitleTop - 2) return maxValue;
+      if (nodeTop >= baseTitleTop + (isMobile ? 42 : 54) * promoZoom) return maxValue;
+      if (nodeBottom <= baseTitleTop - 2 * promoZoom) return maxValue;
       // Зазор под фото. Было 4px — этого не хватало: любая мелочь (шрифт выше,
       // фото догрузилось чуть крупнее) и заголовок оказывался на картинке.
-      return Math.max(maxValue, nodeBottom + (isMobile ? 12 : 14));
+      return Math.max(maxValue, nodeBottom + (isMobile ? 12 : 14) * promoZoom);
     }, baseTitleTop);
 
     setImportant(titleWrap, 'left', leftColLeft + 'px');
     setImportant(titleWrap, 'top', titleTop + 'px');
     setImportant(titleWrap, 'width', leftColWidth + 'px');
     fitText(titleWrap, {
-      maxFont: isMobile ? (isLocalizedPage ? 12.6 : 14.5) : (isLocalizedPage ? 15.5 : 17),
-      minFont: isMobile ? 9 : 11.4,
-      maxHeight: isMobile ? 96 : 110,
+      maxFont: (isMobile ? (isLocalizedPage ? 12.6 : 14.5) : (isLocalizedPage ? 15.5 : 17)) * promoZoom,
+      minFont: (isMobile ? 9 : 11.4) * promoZoom,
+      maxHeight: (isMobile ? 96 : 110) * promoZoom,
       lineHeightRatio: 1.1,
     });
 
     var titleBottom = titleTop + visualHeight(titleWrap, scale);
-    var textTop = titleBottom + 10;
+    var textTop = titleBottom + 10 * promoZoom;
     var leftBlockLimit = mediaNodes.reduce(function (minValue, node) {
-      var nodeTop = node.getBoundingClientRect().top - artboardRect.top;
-      var nodeLeft = leftOf(node);
-      var nodeRight = nodeLeft + visualWidth(node, scale);
-      if (nodeRight <= leftColLeft + 8 || nodeLeft >= leftColLeft + leftColWidth - 8) return minValue;
+      var nodeRect = node.getBoundingClientRect();
+      var nodeTop = nodeRect.top - artboardRect.top;
+      var nodeLeft = nodeRect.left - artboardRect.left;
+      var nodeRight = nodeRect.right - artboardRect.left;
+      if (nodeRight <= leftColLeft + edgeSlack || nodeLeft >= leftColLeft + leftColWidth - edgeSlack) return minValue;
       if (nodeTop <= textTop) return minValue;
       return Math.min(minValue, nodeTop);
     }, Infinity);
-    var textMaxHeight = isMobile ? 78 : 90;
+    var textMaxHeight = (isMobile ? 78 : 90) * promoZoom;
     if (Number.isFinite(leftBlockLimit)) {
-      var reservedHeight = (isMobile ? 8 : 10) + buttonHeight + (isMobile ? 4 : 8);
-      textMaxHeight = Math.max(isMobile ? 42 : 60, Math.min(textMaxHeight, leftBlockLimit - textTop - reservedHeight));
+      var reservedHeight = (isMobile ? 8 : 10) * promoZoom + buttonHeight + (isMobile ? 4 : 8) * promoZoom;
+      textMaxHeight = Math.max((isMobile ? 42 : 60) * promoZoom, Math.min(textMaxHeight, leftBlockLimit - textTop - reservedHeight));
     }
     setImportant(textWrap, 'left', leftColLeft + 'px');
     setImportant(textWrap, 'top', textTop + 'px');
     setImportant(textWrap, 'width', leftColWidth + 'px');
     fitText(textWrap, {
-      maxFont: isMobile ? (isLocalizedPage ? 9.6 : 10.5) : (isLocalizedPage ? 11 : 12),
-      minFont: isMobile ? 8.2 : 9.8,
+      maxFont: (isMobile ? (isLocalizedPage ? 9.6 : 10.5) : (isLocalizedPage ? 11 : 12)) * promoZoom,
+      minFont: (isMobile ? 8.2 : 9.8) * promoZoom,
       maxHeight: textMaxHeight,
       lineHeightRatio: 1.36,
     });
 
     var textBottom = textTop + visualHeight(textWrap, scale);
-    var buttonTop = textBottom + (isMobile ? 8 : 10);
+    var buttonTop = textBottom + (isMobile ? 8 : 10) * promoZoom;
     setImportant(buttonWrap, 'left', leftColLeft + 'px');
     setImportant(buttonWrap, 'top', buttonTop + 'px');
 
@@ -5726,14 +5755,14 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
     if (isMobile && lowerLeftMedia && lowerRightMedia) {
       var gapLeft = lowerRightMedia.getBoundingClientRect().left - artboardRect.left;
       var gapTop = lowerLeftMedia.getBoundingClientRect().top - artboardRect.top;
-      var gapWidth = Math.max(110, visualWidth(lowerRightMedia, scale));
+      var gapWidth = Math.max(110 * promoZoom, visualWidth(lowerRightMedia, scale));
       // Keep a clear breathing gap above the photo so the text never touches its frame.
-      var photoClearance = 16;
+      var photoClearance = 16 * promoZoom;
       var gapBottom = (lowerRightMedia.getBoundingClientRect().top - artboardRect.top) - photoClearance;
       var gapHeight = gapBottom - gapTop;
 
-      if (gapHeight >= 40) {
-        var sideMaxFont = isLocalizedPage ? 9.5 : 10.4;
+      if (gapHeight >= 40 * promoZoom) {
+        var sideMaxFont = (isLocalizedPage ? 9.5 : 10.4) * promoZoom;
         var sideLhRatio = 1.28;
         var sixLineMax = Math.ceil(6 * sideMaxFont * sideLhRatio);
         var sideMaxHeight = Math.min(gapHeight, sixLineMax);
@@ -5742,7 +5771,7 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
         setImportant(sideWrap, 'width', gapWidth + 'px');
         var sideFinalFont = fitText(sideWrap, {
           maxFont: sideMaxFont,
-          minFont: 7.6,
+          minFont: 7.6 * promoZoom,
           maxHeight: sideMaxHeight,
           lineHeightRatio: sideLhRatio,
         });
@@ -5756,15 +5785,15 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
 
     if (!sidePlacedInGap) {
       var sideLeft = leftColLeft;
-      var sideTop = mediaBottom + (isMobile ? 16 : 20);
-      var sideWidth = artboardWidth - sideLeft * 2;
+      var sideTop = mediaBottom + (isMobile ? 16 : 20) * promoZoom;
+      var sideWidth = artboardRect.width - sideLeft * 2;
       setImportant(sideWrap, 'left', sideLeft + 'px');
       setImportant(sideWrap, 'top', sideTop + 'px');
-      setImportant(sideWrap, 'width', Math.max(200, sideWidth) + 'px');
+      setImportant(sideWrap, 'width', Math.max(200 * promoZoom, sideWidth) + 'px');
       fitText(sideWrap, {
-        maxFont: isMobile ? (isLocalizedPage ? 9.6 : 10.5) : (isLocalizedPage ? 11.3 : 12.5),
-        minFont: isMobile ? 8.2 : 9.8,
-        maxHeight: isMobile ? 90 : 78,
+        maxFont: (isMobile ? (isLocalizedPage ? 9.6 : 10.5) : (isLocalizedPage ? 11.3 : 12.5)) * promoZoom,
+        minFont: (isMobile ? 8.2 : 9.8) * promoZoom,
+        maxHeight: (isMobile ? 90 : 78) * promoZoom,
         lineHeightRatio: 1.35,
       });
     }
@@ -5784,21 +5813,11 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
       artboard.getAttribute('data-artboard-height-res-320') ||
       artboard.getAttribute('data-artboard-height') || 0
     );
-    var mediaZoom = 0;
-    for (var zi = 0; zi < mediaNodes.length; zi++) {
-      var zCss = parseFloat(window.getComputedStyle(mediaNodes[zi]).height);
-      var zRect = mediaNodes[zi].getBoundingClientRect().height;
-      if (zCss > 0 && zRect > 0) { mediaZoom = zRect / zCss; break; }
-    }
-    if (!(mediaZoom > 0)) {
-      // фото ещё не разложены — повторяем ту же арифметику, что и Tilda
-      mediaZoom = isMobile ? Math.max(1, window.innerWidth / 320) : 1;
-    }
-    var floorHeight = declaredHeight > 0 ? declaredHeight * mediaZoom : 0;
+    var floorHeight = declaredHeight > 0 ? declaredHeight * promoZoom : 0;
 
     setRecordHeight(
       record,
-      Math.max(sideBottom, mediaBottom, floorHeight) + (isMobile ? 18 : 24),
+      Math.max(sideBottom, mediaBottom, floorHeight) + (isMobile ? 18 : 24) * promoZoom,
       scale
     );
   }
