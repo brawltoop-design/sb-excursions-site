@@ -3470,6 +3470,7 @@ hidden > <div class="t585__textwrapper"> <div class="t585__text t-descr t-descr_
 
 
 
+
 <style id="sb-weather-compact-override">
 #bwCta {
   display: none !important;
@@ -5830,7 +5831,37 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
     }
 
     var sideBottom = topOf(sideWrap) + visualHeight(sideWrap, scale);
-    setRecordHeight(record, Math.max(sideBottom, mediaBottom) + (isMobile ? 18 : 24), scale);
+
+    // Высота рамки блока. Считать её только по измеренным фото нельзя: Tilda
+    // растягивает макет, нарисованный под 320px, множителем zoom, и делает это
+    // внешним скриптом со своего CDN. Пока тот скрипт (или сами картинки) не
+    // приехали — а на мобильном интернете это заметно, — коробки фотографий
+    // схлопнуты, высота выходит вдвое меньше нужной, и следующий блок садится
+    // прямо на фотографии. Поэтому берём ещё и высоту, которую Tilda объявила
+    // для этой раскладки в разметке, и растягиваем тем же zoom. Она доступна
+    // сразу и ни от какой загрузки не зависит. Math.max — значит рамка может
+    // выйти только выше нужного, но никогда ниже.
+    var declaredHeight = parseFloat(
+      artboard.getAttribute('data-artboard-height-res-320') ||
+      artboard.getAttribute('data-artboard-height') || 0
+    );
+    var mediaZoom = 0;
+    for (var zi = 0; zi < mediaNodes.length; zi++) {
+      var zCss = parseFloat(window.getComputedStyle(mediaNodes[zi]).height);
+      var zRect = mediaNodes[zi].getBoundingClientRect().height;
+      if (zCss > 0 && zRect > 0) { mediaZoom = zRect / zCss; break; }
+    }
+    if (!(mediaZoom > 0)) {
+      // фото ещё не разложены — повторяем ту же арифметику, что и Tilda
+      mediaZoom = isMobile ? Math.max(1, window.innerWidth / 320) : 1;
+    }
+    var floorHeight = declaredHeight > 0 ? declaredHeight * mediaZoom : 0;
+
+    setRecordHeight(
+      record,
+      Math.max(sideBottom, mediaBottom, floorHeight) + (isMobile ? 18 : 24),
+      scale
+    );
   }
 
   function initPromoSideLetterAnimation() {
