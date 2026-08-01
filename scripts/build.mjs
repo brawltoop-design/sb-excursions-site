@@ -20,6 +20,7 @@ const STEPS = [
   ["generate-bali-tour-pages.mjs", "генерация страниц туров, журнала и гайдов"],
   ["fix-fouc.mjs", "защита от мигания при загрузке"],
   ["add-vercel-analytics.mjs", "счётчик посещаемости Vercel"],
+  ["build-llms-txt.mjs", "llms.txt — карта сайта для нейросетей"],
 ];
 
 for (const [script, label] of STEPS) {

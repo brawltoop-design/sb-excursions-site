@@ -15,6 +15,37 @@ const BALI_GENERIC_FOOTER_WA_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${GEN
 const DUBAI_GENERIC_FOOTER_WA_LINK = `https://wa.me/${DUBAI_WHATSAPP_NUMBER}?text=${GENERIC_FOOTER_WA_TEXT}`;
 const BALI_GENERIC_FOOTER_PHONE_LINK = `<a href="${BALI_GENERIC_FOOTER_WA_LINK}"target="_blank"style="color: inherit"><u>+62 853 3368 5020</u></a>`;
 const DUBAI_GENERIC_FOOTER_PHONE_LINK = `<a href="${DUBAI_GENERIC_FOOTER_WA_LINK}"target="_blank"style="color: inherit"><u>+971 50 604 8673</u></a>`;
+// Организация одним куском, чтобы во всех schema стояли одни и те же данные.
+// sameAs — то, чем поисковики и нейросети подтверждают, что за сайтом стоит
+// живая компания, а не одинокий лендинг: без внешних профилей подтвердить
+// нечем. Ссылки взяты те же, что стоят в подвале сайта.
+const ORGANIZATION_SCHEMA = {
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
+  name: "SB Excursions",
+  url: SITE_URL,
+  description:
+    "Private guided day tours across Bali and the Nusa islands, booked directly over WhatsApp.",
+  areaServed: { "@type": "Place", name: "Bali, Indonesia" },
+  telephone: "+62 853 3368 5020",
+  logo: {
+    "@type": "ImageObject",
+    url: `${SITE_URL}/images/tild6536-3637-4563-a362-633234333130__favikon_sb_excursion.png`,
+  },
+  sameAs: [
+    "https://www.instagram.com/dubai_sb_excursions",
+    "https://t.me/SurfBase",
+    `https://wa.me/${WHATSAPP_NUMBER}`,
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "reservations",
+    telephone: "+62 853 3368 5020",
+    url: `https://wa.me/${WHATSAPP_NUMBER}`,
+    availableLanguage: ["English", "Russian", "Spanish", "French", "Chinese"],
+  },
+};
+
 const HERO_IMAGE_DIR = path.join(projectRoot, "images", "bali-tours");
 const WEST_TEMPLATE_SOURCE_FILE = path.join(projectRoot, "page128064616.html");
 const JOURNAL_HUB_ROUTE = "/bali/en/journal";
@@ -8625,6 +8656,48 @@ const TOUR_LOCAL_CONTEXT = {
       ["What happens if it rains or is cloudy?", "The tour runs in all weather. Cloud cover can obscure the sunrise, but the experience above the clouds is often dramatic in its own way. Dry season (April–October) gives the best odds of clear skies."],
     ],
   },
+  "mount-batur-sunrise-hike": {
+    bestMonths: "April–October for the clearest sunrises; the trek runs year-round, but dry season mornings give the best odds of a cloud-free caldera view",
+    whatToBring: "Warm layers (the summit drops to 12–18 °C / 54–64 °F before sunrise), a headlamp or flashlight for the dark ascent, closed-toe shoes with grip, at least 1 L of water, sunscreen for the descent, and a rain jacket in wet season.",
+    insiderNote: "Guides cook the breakfast eggs in volcanic steam vents on the crater rim — it is the detail everyone photographs. The coffee plantation stop on the way down is where you can try kopi luwak without the Ubud tourist markup.",
+    practicalTips: [
+      "Pickup from south Bali (Kuta, Seminyak, Nusa Dua) is around 01:40–02:00 AM. From Ubud it is around 02:30–03:00 AM.",
+      "The climb takes about 2 hours up and 1.5 hours down over loose volcanic gravel. Normal fitness is enough — this is a steady walk, not a technical climb.",
+      "Mount Batur stands at 1,717 m (5,633 ft). Temperatures at the top feel 10–15 °C cooler than at sea level.",
+      "A certified local guide is mandatory for all Batur treks — enforced by the Kintamani trekking association (HPPGB).",
+      "Batur Natural Hot Spring entry costs around $15–20 and includes towel, welcome drink, and locker. The pools overlook Lake Batur.",
+    ],
+    comparison: "This is the classic version: you walk to the summit yourself and arrive before first light. Choose the jeep tour instead if you want the same caldera sunrise without the 2-hour climb — the view is comparable, the effort is not.",
+    faq: [
+      ["How hard is the Mount Batur sunrise hike?", "Moderate. It is roughly 2 hours up and 1.5 hours down on loose volcanic gravel, with no climbing or scrambling. Anyone who walks regularly can do it; the difficulty is the early start and the dark, not the terrain."],
+      ["How early is the pickup for the Mount Batur sunrise hike?", "Pickup is between 01:40 and 03:00 AM depending on your hotel. South Bali hotels (Kuta, Seminyak, Nusa Dua) leave earliest; Ubud hotels leave around 02:30–03:00 AM."],
+      ["How high is Mount Batur and how cold does it get?", "The summit is 1,717 m (5,633 ft). Expect 12–18 °C (54–64 °F) before sunrise, colder with wind chill, so bring a jacket even though Bali is hot at sea level."],
+      ["Do I need a guide to hike Mount Batur?", "Yes. A certified local guide is mandatory, enforced by the Kintamani trekking association (HPPGB). Guides also carry the breakfast and know the trail in the dark."],
+      ["What is included in the Mount Batur sunrise hike?", "The tour starts from $35 per person and runs 5–8 hours door to door, covering hotel pickup and drop-off, the certified guide, and breakfast at the summit. Hot spring entry is a separate add-on at around $15–20."],
+      ["What happens if it rains or the summit is cloudy?", "The hike runs in all weather. Cloud cover can hide the sun itself, but standing above the cloud layer is often the more dramatic view. April–October gives the best odds of clear skies."],
+    ],
+  },
+  "mount-batur-sunrise-jeep-hot-spring": {
+    bestMonths: "April–October for the clearest sunrises; the tour runs year-round, and the hot springs are pleasant in any season",
+    whatToBring: "Warm layers for the pre-dawn viewpoint (12–18 °C / 54–64 °F), swimwear and a towel for the hot springs, a change of clothes, sunscreen for the lava-field stops, and a rain jacket in wet season.",
+    insiderNote: "The hot springs are quietest before 9 AM, which is exactly when this tour arrives — later in the morning the same pools fill with day-trippers coming up from Ubud.",
+    practicalTips: [
+      "Pickup from south Bali (Kuta, Seminyak, Nusa Dua) is around 01:40–02:00 AM. From Ubud it is around 02:30–03:00 AM.",
+      "No hiking is involved. The 4WD climbs to the viewpoint and there is only a short 5–10 minute walk to the best sunrise spot.",
+      "After sunrise the jeep crosses the black lava field and the black sand stretch — the most photogenic part of the drive, with photo stops.",
+      "Mount Batur stands at 1,717 m (5,633 ft). Even in the jeep, the top feels 10–15 °C cooler than at sea level.",
+      "Bring swimwear in your day bag rather than your main luggage — the hot spring stop comes right after the lava fields.",
+    ],
+    comparison: "This is the full Batur morning without the climb: sunrise from a 4x4 viewpoint, the black lava crossing, and a lakeside soak to finish. Choose the plain sunrise hike if you specifically want to reach the summit on foot, and the jeep-only tour if you would rather skip the hot springs.",
+    faq: [
+      ["Is the hot spring included in this tour?", "Yes — the hot spring stop is part of this package, which is what separates it from the jeep-only tour. The pools sit on the shore of Lake Batur and include towel, welcome drink, and locker."],
+      ["Do I have to hike on the jeep and hot spring tour?", "No. The 4WD drives to the sunrise viewpoint, and there is only a short 5–10 minute walk to the best spot. This is the option for travelers who want the sunrise without the 2-hour climb."],
+      ["How early is the pickup?", "Between 01:40 and 03:00 AM depending on your hotel. South Bali hotels leave earliest; Ubud hotels leave around 02:30–03:00 AM. The tour runs 6–8 hours door to door."],
+      ["Is this tour suitable for children and older travelers?", "Yes. With no real hiking involved it suits families, older travelers, and anyone who prefers comfort over effort. Everyone should still dress warmly for the pre-dawn viewpoint."],
+      ["What should I wear and bring?", "Warm layers for the viewpoint, then swimwear and a towel for the springs. The summit is 12–18 °C (54–64 °F) before sunrise while the hot pools are around 37–38 °C, so pack for both."],
+      ["What does the tour cost and what does it cover?", "From $60 per person for 6–8 hours, covering hotel pickup and drop-off, the 4x4 sunrise run, the black lava and black sand stops, and the hot spring finish."],
+    ],
+  },
   "nusa-penida-manta-rays-point": {
     bestMonths: "Year-round, but April–November has calmer seas and 80%+ manta sighting rates; July–October is peak season",
     whatToBring: "Swimwear, reef-safe sunscreen, a towel, motion sickness tablets (the boat crossing can be rough), an underwater camera or GoPro, and a light jacket for the speedboat.",
@@ -13199,14 +13272,7 @@ function renderSeoGuidePage(article) {
       mainEntityOfPage: article.url,
       keywords: guideKeywords.join(", "),
       author: { "@type": "Organization", name: "SB Excursions" },
-      publisher: {
-        "@type": "Organization",
-        name: "SB Excursions",
-        logo: {
-          "@type": "ImageObject",
-          url: `${SITE_URL}/images/tild6536-3637-4563-a362-633234333130__favikon_sb_excursion.png`,
-        },
-      },
+      publisher: ORGANIZATION_SCHEMA,
     },
     {
       "@type": "BreadcrumbList",
@@ -13444,14 +13510,7 @@ ${JOURNAL_FOOTER_ASSETS}
           image: tourImageSet(article.tour),
           mainEntityOfPage: article.url,
           author: { "@type": "Organization", name: "SB Excursions" },
-          publisher: {
-            "@type": "Organization",
-            name: "SB Excursions",
-            logo: {
-              "@type": "ImageObject",
-              url: `${SITE_URL}/images/tild6536-3637-4563-a362-633234333130__favikon_sb_excursion.png`,
-            },
-          },
+          publisher: ORGANIZATION_SCHEMA,
           about: {
             "@type": "TouristTrip",
             name: article.tour.title,
@@ -14570,6 +14629,10 @@ function renderStructuredData(tour) {
         },
       ],
     },
+    /* Кто продаёт тур. Без этого узла на странице не было ни телефона, ни
+       ссылок на профили — нейросети и поисковики нечем подтвердить, что за
+       туром стоит живая компания. */
+    ORGANIZATION_SCHEMA,
     /* Product даёт звёзды и цену в сниппете Google — TouristTrip их не показывает.
        Рейтинг и отзывы те же, что видны на странице. */
     Object.assign(
@@ -14581,6 +14644,7 @@ function renderStructuredData(tour) {
         image: tourImageSet(tour),
         url: absoluteTourUrl(tour),
         brand: { "@type": "Brand", name: "SB Excursions" },
+        seller: { "@id": `${SITE_URL}/#organization` },
         category: tour.area,
       },
       moneyOffer(tour) ? { offers: moneyOffer(tour) } : {},
