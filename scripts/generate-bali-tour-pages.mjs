@@ -5839,7 +5839,26 @@ function renderWestStylePage(tour) {
   html = replacePropertyTag(html, "og:url", absoluteRoute);
   html = replacePropertyTag(html, "og:title", title);
   html = replacePropertyTag(html, "og:description", description);
-  html = replacePropertyTag(html, "og:image", absoluteImage);
+  // Превью ссылки. Мессенджеры рисуют карточку в пропорции 1.91:1, поэтому
+  // подсовываем им готовый кадр 1200x630 из images/og вместо исходного фото
+  // тура (оно 1.5:1, и Телеграм с WhatsApp обрезали его как придётся).
+  // Размеры указываем явно: по ним площадка рисует рамку ещё до загрузки
+  // самой картинки, иначе превью «прыгает» или не появляется вовсе.
+  const ogCard = `${SITE_URL}/images/og/${tour.slug}.jpg`;
+  html = replacePropertyTag(html, "og:image", ogCard);
+  html = html.replace(
+    /(<meta property="og:image" content="[^"]*"\s*\/?>)/,
+    `$1
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:alt" content="${escapeHtml(tour.imageAlt || tour.title)}" />
+    <meta property="og:site_name" content="SB Excursions" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="${escapeHtml(title)}" />
+    <meta name="twitter:description" content="${escapeHtml(description)}" />
+    <meta name="twitter:image" content="${ogCard}" />`,
+  );
   html = replaceCanonicalLink(html, absoluteRoute);
 
   // Perf: предзагрузка LCP-hero и основного шрифта на каждой странице тура

@@ -21,6 +21,7 @@ const STEPS = [
   ["fix-fouc.mjs", "защита от мигания при загрузке"],
   ["add-vercel-analytics.mjs", "счётчик посещаемости Vercel"],
   ["build-llms-txt.mjs", "llms.txt — карта сайта для нейросетей"],
+  ["build-og-images.mjs", "картинки 1200x630 для превью ссылок"],
 ];
 
 for (const [script, label] of STEPS) {
