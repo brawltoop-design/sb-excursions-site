@@ -981,7 +981,7 @@ window.addEventListener('load', function () {
     if (!record || record.dataset.sbRouteMapReady === 'y') return;
     var artboard = record.querySelector('.t396__artboard');
     if (!artboard) return;
-    var embedRoute = 'https://maps.google.com/maps?q=Sanur%20Port%2C%20Bali&z=10&output=embed';
+    var embedRoute = 'https://maps.google.com/maps?output=embed&f=d&saddr=Sanur%20Port%2C%20Bali&daddr=Padang%20Bai%20Port%2C%20Bali+to:Banjar%20Nyuh%20Harbour%2C%20Nusa%20Penida+to:Jungut%20Batu%20Harbour%2C%20Nusa%20Lembongan+to:Gili%20Trawangan%20Harbour';
     var openRoute = 'https://www.google.com/maps/dir/Sanur%20Port%2C%20Bali/Padang%20Bai%20Port%2C%20Bali/Banjar%20Nyuh%20Harbour%2C%20Nusa%20Penida/Jungut%20Batu%20Harbour%2C%20Nusa%20Lembongan/Gili%20Trawangan%20Harbour';
 
     artboard.innerHTML =
@@ -3326,6 +3326,7 @@ hidden > <div class="t585__textwrapper"> <div class="t585__text t-descr t-descr_
   ]
 }
 </script> <!-- nominify end --> </div> </div> </div> </div>
+
 
 
 

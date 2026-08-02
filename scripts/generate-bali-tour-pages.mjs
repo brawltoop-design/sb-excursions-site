@@ -4695,18 +4695,10 @@ function buildWestMapDirectionsLinks(routeStops) {
 
   const encodedPlaces = places.map((place) => encodeURIComponent(place).replaceAll("'", "%27"));
 
-  /* Встроенная карта — режим МЕСТА, а не маршрута.
-     Старый режим (output=embed&f=d&saddr=...&daddr=...) официально не
-     поддерживается и ведёт себя непредсказуемо: на сухопутных турах он
-     показывал регион без линии маршрута, а на морских — где остановки стоят
-     в открытой воде и дороги между ними нет — не строил ничего и отдавал
-     пустой серый прямоугольник или карту всего мира.
-     Режим q= отрисовывает нормальную карту всегда. Центрируем на первой
-     точке маршрута: это настоящее место, которое Google гарантированно
-     находит. Полноценный маршрут по-прежнему открывается кнопкой снизу —
-     та ссылка ведёт в сам Google Maps и работает. */
+  const [start, ...rest] = encodedPlaces;
+
   return {
-    embedRoute: `https://maps.google.com/maps?q=${encodedPlaces[0]}&z=10&output=embed`,
+    embedRoute: `https://maps.google.com/maps?output=embed&f=d&saddr=${start}&daddr=${rest.join("+to:")}`,
     openRoute: `https://www.google.com/maps/dir/${encodedPlaces.join("/")}`,
   };
 }
