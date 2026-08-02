@@ -128,17 +128,25 @@ async function renderBanner(file) {
   const encode = (pipeline) =>
     pipeline.jpeg({ quality: 86, mozjpeg: true, progressive: true }).toBuffer();
 
-  // Баннер уже нужной пропорции — не трогаем композицию вообще. Срезать у
-  // него белое поле нельзя: без полей он становится 2.01:1, и подгонка назад
-  // под 1.91:1 отрезала бы края вместе с текстом.
+  // Баннер уже нужной пропорции — отдаём как есть.
   if (Math.abs(ratio - target) < 0.02) {
     return encode(sharp(file).resize(W, H, { fit: "fill" }));
   }
 
-  // Пропорция другая. Тогда сначала снимаем белое поле вокруг скруглённой
-  // карточки — так кадрируем по полю, а не по надписям.
-  const trimmed = await sharp(file).trim({ threshold: 12 }).toBuffer();
-  return encode(sharp(trimmed).resize(W, H, { fit: "cover", position: "centre" }));
+  // Пропорция другая. Ничего не обрезаем и не срезаем поля: белая рамка
+  // вокруг скруглённой карточки — часть дизайна. Вписываем баннер целиком,
+  // а недостающее по краям добираем тем же цветом, что у него в углу, —
+  // стык не виден.
+  const corner = await sharp(file)
+    .extract({ left: 0, top: 0, width: 8, height: 8 })
+    .stats();
+  const background = {
+    r: Math.round(corner.channels[0].mean),
+    g: Math.round(corner.channels[1].mean),
+    b: Math.round(corner.channels[2].mean),
+    alpha: 1,
+  };
+  return encode(sharp(file).resize(W, H, { fit: "contain", background }));
 }
 
 async function collectTours() {
