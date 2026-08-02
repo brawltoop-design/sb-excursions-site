@@ -27,10 +27,12 @@ const MIME = {
 // Minimal mirror of the vercel.json rewrites needed for local checks.
 function rewrite(urlPath) {
   let m;
-  if ((m = urlPath.match(/^\/bali\/en\/tours\/nusa-penida-manta-rays-point$/))) return "/page132181473.html";
-  if ((m = urlPath.match(/^\/bali\/(ru|es|fr|zh)\/tours\/nusa-penida-manta-rays-point$/))) return `/page132181473-${m[1]}.html`;
-  if ((m = urlPath.match(/^\/bali\/en\/tours\/mount-batur-sunrise-hike$/))) return "/page132812463.html";
-  if ((m = urlPath.match(/^\/bali\/en\/tours\/mount-batur-sunrise-jeep-hot-spring$/))) return "/page133629743.html";
+  // Раньше здесь три тура уводились на старые Tilda-страницы (page132181473,
+  // page132812463, page133629743). В vercel.json таких правил нет — прод
+  // отдаёт по этим адресам сгенерированные bali-tour-*.html. Из-за расхождения
+  // локальная проверка показывала совсем другую страницу: без блока маршрута,
+  // с другими фото и другим текстом. Правила убраны, ниже работает то же
+  // общее правило, что и на проде.
   if ((m = urlPath.match(/^\/bali\/(en|ru|es|fr|zh)\/privacy-policy$/)) || urlPath === "/privacy-policy") return "/bali-privacy.html";
   if ((m = urlPath.match(/^\/bali\/(en|ru|es|fr|zh)\/terms$/)) || urlPath === "/terms") return "/bali-terms.html";
   if ((m = urlPath.match(/^\/bali\/(en|ru|es|fr|zh)\/review$/))) return "/bali-review.html";

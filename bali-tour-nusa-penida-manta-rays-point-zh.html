@@ -981,7 +981,7 @@ window.addEventListener('load', function () {
     if (!record || record.dataset.sbRouteMapReady === 'y') return;
     var artboard = record.querySelector('.t396__artboard');
     if (!artboard) return;
-    var embedRoute = 'https://maps.google.com/maps?output=embed&f=d&saddr=Sanur%20Port%2C%20Bali&daddr=Manta%20Point%2C%20Nusa%20Penida+to:Gamat%20Bay%2C%20Nusa%20Penida+to:Crystal%20Bay%2C%20Nusa%20Penida+to:Wall%20Bay%20Point%2C%20Nusa%20Penida';
+    var embedRoute = 'https://maps.google.com/maps?q=Sanur%20Port%2C%20Bali&z=10&output=embed';
     var openRoute = 'https://www.google.com/maps/dir/Sanur%20Port%2C%20Bali/Manta%20Point%2C%20Nusa%20Penida/Gamat%20Bay%2C%20Nusa%20Penida/Crystal%20Bay%2C%20Nusa%20Penida/Wall%20Bay%20Point%2C%20Nusa%20Penida';
 
     artboard.innerHTML =
@@ -989,7 +989,7 @@ window.addEventListener('load', function () {
       '<div class="sb-route-map-copy">' +
       '<div class="sb-route-map-label">Water route</div>' +
       '<h2 class="sb-route-map-title">努沙佩尼达 (Nusa Penida) 在曼塔角 (Manta Point) 浮潜 route on Google Maps</h2>' +
-      '<p class="sb-route-map-text">Preview the key map points for 努沙佩尼达 (Nusa Penida) 在曼塔角 (Manta Point) 浮潜. This route usually highlights Sanur Port, Manta Point, Gamat Bay, Wall Bay, Wall Bay. Final timing, pickup, and stop order are confirmed after booking.</p>' +
+      '<p class="sb-route-map-text">Preview the key map points for 努沙佩尼达 (Nusa Penida) 在曼塔角 (Manta Point) 浮潜. This route usually highlights Sanur Port, Manta Point, Gamat Bay, Crystal Bay, Wall Bay. Final timing, pickup, and stop order are confirmed after booking.</p>' +
       '</div>' +
       '<div class="sb-route-map-frame">' +
       '<iframe loading="eager" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="' + embedRoute + '"></iframe>' +
@@ -1001,7 +1001,7 @@ window.addEventListener('load', function () {
       '<span class="sb-route-map-stop">Sanur Port</span>' +
       '<span class="sb-route-map-stop">Manta Point</span>' +
       '<span class="sb-route-map-stop">Gamat Bay</span>' +
-      '<span class="sb-route-map-stop">Wall Bay</span>' +
+      '<span class="sb-route-map-stop">Crystal Bay</span>' +
       '<span class="sb-route-map-stop">Wall Bay</span>' +
       '</div>' +
       '</div>';
@@ -3288,6 +3288,8 @@ hidden > <div class="t585__textwrapper"> <div class="t585__text t-descr t-descr_
   ]
 }
 </script> <!-- nominify end --> </div> </div> </div> </div>
+
+
 
 
 

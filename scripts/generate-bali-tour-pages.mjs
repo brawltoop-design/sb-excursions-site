@@ -4694,10 +4694,19 @@ function buildWestMapDirectionsLinks(routeStops) {
   }
 
   const encodedPlaces = places.map((place) => encodeURIComponent(place).replaceAll("'", "%27"));
-  const [start, ...rest] = encodedPlaces;
 
+  /* Встроенная карта — режим МЕСТА, а не маршрута.
+     Старый режим (output=embed&f=d&saddr=...&daddr=...) официально не
+     поддерживается и ведёт себя непредсказуемо: на сухопутных турах он
+     показывал регион без линии маршрута, а на морских — где остановки стоят
+     в открытой воде и дороги между ними нет — не строил ничего и отдавал
+     пустой серый прямоугольник или карту всего мира.
+     Режим q= отрисовывает нормальную карту всегда. Центрируем на первой
+     точке маршрута: это настоящее место, которое Google гарантированно
+     находит. Полноценный маршрут по-прежнему открывается кнопкой снизу —
+     та ссылка ведёт в сам Google Maps и работает. */
   return {
-    embedRoute: `https://maps.google.com/maps?output=embed&f=d&saddr=${start}&daddr=${rest.join("+to:")}`,
+    embedRoute: `https://maps.google.com/maps?q=${encodedPlaces[0]}&z=10&output=embed`,
     openRoute: `https://www.google.com/maps/dir/${encodedPlaces.join("/")}`,
   };
 }
@@ -6073,9 +6082,12 @@ function renderWestStylePage(tour) {
     .replaceAll(">$45<", `>${escapeJsSingleQuoted(offer.priceValue)}<`)
     .replaceAll("Nusa Penida west route on Google Maps", escapeJsSingleQuoted(map.title))
     .replaceAll("Island route", escapeJsSingleQuoted(map.label))
+    /* Ставим метку вместо готового текста: ниже по цепочке названия остановок
+       шаблона меняются поштучно, и они бы прошлись по уже вставленному тексту
+       и переписали его во второй раз. Настоящий текст подставим последним. */
     .replaceAll(
       "See the classic west-side island route from Banjar Nyuh Harbor to Broken Beach, Angel\\'s Billabong, Kelingking Beach and Crystal Bay before returning for the boat back to Bali.",
-      escapeJsSingleQuoted(map.text),
+      "__SB_MAP_TEXT__",
     )
     .replaceAll(
       "https://maps.google.com/maps?output=embed&f=d&saddr=Banjar+Nyuh+Harbor,+Nusa+Penida&daddr=Broken+Beach,+Nusa+Penida+to:Angel%27s+Billabong,+Nusa+Penida+to:Kelingking+Beach,+Nusa+Penida+to:Crystal+Bay,+Nusa+Penida+to:Banjar+Nyuh+Harbor,+Nusa+Penida",
@@ -6098,11 +6110,23 @@ function renderWestStylePage(tour) {
       "A beautiful day for west Penida viewpoints, boat crossings and easy outdoor plans.",
       escapeJsSingleQuoted(`A beautiful day for ${weatherArea} sightseeing and easy outdoor plans.`),
     )
-    .replaceAll("Banjar Nyuh Harbor", escapeJsSingleQuoted(map.stops[0]))
-    .replaceAll("Broken Beach", escapeJsSingleQuoted(map.stops[1]))
-    .replaceAll("Angel\\'s Billabong", escapeJsSingleQuoted(map.stops[2]))
-    .replaceAll("Kelingking Beach", escapeJsSingleQuoted(map.stops[3]))
-    .replaceAll("Crystal Bay", escapeJsSingleQuoted(map.stops[4]))
+    /* Названия остановок шаблона меняем ОДНИМ проходом. Пятью отдельными
+       replaceAll подряд их менять нельзя: у манта-тура stops[3] сам равен
+       "Crystal Bay", замена Kelingking вписывала её в текст, а следующая
+       строка тут же затирала на "Wall Bay" — в итоге на странице стояло
+       "Wall Bay, Wall Bay", а Crystal Bay пропадала. */
+    .replace(
+      /Banjar Nyuh Harbor|Broken Beach|Angel\\'s Billabong|Kelingking Beach|Crystal Bay/g,
+      (matched) => escapeJsSingleQuoted({
+        "Banjar Nyuh Harbor": map.stops[0],
+        "Broken Beach": map.stops[1],
+        "Angel\\'s Billabong": map.stops[2],
+        "Kelingking Beach": map.stops[3],
+        "Crystal Bay": map.stops[4],
+      }[matched] ?? matched),
+    )
+    // Теперь, когда все подстановки названий отработали, кладём готовый текст.
+    .replaceAll("__SB_MAP_TEXT__", escapeJsSingleQuoted(map.text))
     .replaceAll("Most flexible", escapeJsSingleQuoted(miniPromo.eyebrow))
     .replaceAll(
       "<strong>Iconic</strong><br /><strong>West Penida Day</strong><br /><strong>from Bali</strong>",

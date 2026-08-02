@@ -981,7 +981,7 @@ window.addEventListener('load', function () {
     if (!record || record.dataset.sbRouteMapReady === 'y') return;
     var artboard = record.querySelector('.t396__artboard');
     if (!artboard) return;
-    var embedRoute = 'https://maps.google.com/maps?output=embed&f=d&saddr=Ngurah%20Rai%20International%20Airport%2C%20Bali&daddr=Kuta%2C%20Bali+to:Seminyak%2C%20Bali+to:Canggu%2C%20Bali+to:Ubud%2C%20Bali';
+    var embedRoute = 'https://maps.google.com/maps?q=Ngurah%20Rai%20International%20Airport%2C%20Bali&z=10&output=embed';
     var openRoute = 'https://www.google.com/maps/dir/Ngurah%20Rai%20International%20Airport%2C%20Bali/Kuta%2C%20Bali/Seminyak%2C%20Bali/Canggu%2C%20Bali/Ubud%2C%20Bali';
 
     artboard.innerHTML =
@@ -3262,6 +3262,8 @@ hidden > <div class="t585__textwrapper"> <div class="t585__text t-descr t-descr_
   ]
 }
 </script> <!-- nominify end --> </div> </div> </div> </div>
+
+
 
 
 
