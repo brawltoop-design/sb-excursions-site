@@ -4715,14 +4715,38 @@ function buildWestMapText(tour, stops) {
   return `Preview the key map points for ${tour.title}. This route usually highlights ${points.join(", ")}. Final timing, pickup, and stop order are confirmed after booking.`;
 }
 
+/* Туры, где между остановками нет дороги: точки стоят в открытой воде или
+   маршрут пересекает пролив. Google в режиме маршрута такое не строит — он
+   не рисует ничего и показывает пустую карту (или всю планету). Для них
+   берём карту места с приближением на район тура: выглядит так же
+   приближенно, как маршрут на сухопутных турах. Кнопка «Open google maps
+   route» у них по-прежнему открывает все точки в самих Картах.
+   Проверять надо глазами: параметры ll/z режим маршрута игнорирует. */
+const MAP_PLACE_INSTEAD_OF_ROUTE = {
+  "nusa-penida-manta-rays-point": { place: "Nusa Penida, Bali", zoom: 11 },
+  "nusa-penida-private-day-tour-manta-snorkeling": { place: "Nusa Penida, Bali", zoom: 11 },
+  "gili-island-tour": { place: "Gili Trawangan, Lombok", zoom: 12 },
+  "gili-islands-getaway": { place: "Gili Islands, Indonesia", zoom: 11 },
+  "fast-boat-transfer-bali": { place: "Padang Bai, Bali", zoom: 9 },
+  // «Saleh Bay» и «Benoa Harbour» геокодер не находит — берём соседние
+  // названия, которые точно есть на карте.
+  "sumbawa-whale-shark-snorkeling-trip": { place: "Labuan Jambu, Sumbawa", zoom: 10 },
+  "sunset-cruise-bali": { place: "Tanjung Benoa, Bali", zoom: 12 },
+};
+
 function buildWestMapModel(tour) {
   const configuredRoute = WEST_ROUTE_POINTS[tour.slug];
   const stops = configuredRoute?.stops?.length ? configuredRoute.stops : buildWestRouteStops(tour);
   const routeStops = configuredRoute?.routeStops?.length ? configuredRoute.routeStops : stops;
   const links = buildWestMapDirectionsLinks(routeStops);
 
+  const placeFallback = MAP_PLACE_INSTEAD_OF_ROUTE[tour.slug];
+  const embedRoute = placeFallback
+    ? `https://maps.google.com/maps?q=${encodeURIComponent(placeFallback.place)}&z=${placeFallback.zoom}&output=embed`
+    : links.embedRoute;
+
   return {
-    embedRoute: links.embedRoute,
+    embedRoute,
     openRoute: links.openRoute,
     label: collapseWhitespace(tour.mapLabel || westRouteLabel(tour)),
     title: collapseWhitespace(tour.mapTitle || `${tour.title} route on Google Maps`),
