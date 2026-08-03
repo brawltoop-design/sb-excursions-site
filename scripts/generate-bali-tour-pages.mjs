@@ -92,6 +92,46 @@ const tourIconPath = (tour) => {
   return name ? `/images/bali-tours/icons/${name}.svg` : TEMPLATE_TOUR_ICON;
 };
 
+/* <title> журнала. Суффикс « | SB Excursions» оставляем, только если весь
+   заголовок с ним влезает в 60 символов: бренд никто не ищет, а Google
+   обрезает title примерно на 600px — длинный суффикс съедает место у слов,
+   по которым реально кликают. */
+function journalDocumentTitle(title) {
+  const clean = collapseWhitespace(title);
+  const withBrand = `${clean} | SB Excursions`;
+  return withBrand.length <= 60 ? withBrand : clean;
+}
+
+/* Картинка превью для страниц журнала: фирменная карточка 1200x630 тура,
+   к которому привязана статья, — она уже есть в /images/og и правильно
+   выглядит в WhatsApp/Telegram. Фолбэк — переданное hero-фото. */
+function journalOgImage(tourSlug, fallbackUrl) {
+  if (tourSlug && fs.existsSync(path.join(projectRoot, "images", "og", `${tourSlug}.jpg`))) {
+    return `${SITE_URL}/images/og/${tourSlug}.jpg`;
+  }
+  return fallbackUrl;
+}
+
+function journalOgMetaBlock(docTitle, description, ogImage) {
+  // Размеры пишем только когда картинка — наша карточка 1200x630.
+  // Для произвольного hero-фото объявленные размеры были бы враньём.
+  const isOgCard = String(ogImage).includes("/images/og/");
+  return [
+    ...(isOgCard
+      ? [
+          `<meta property="og:image:width" content="1200">`,
+          `<meta property="og:image:height" content="630">`,
+          `<meta property="og:image:type" content="image/jpeg">`,
+        ]
+      : []),
+    `<meta property="og:site_name" content="SB Excursions">`,
+    `<meta name="twitter:card" content="summary_large_image">`,
+    `<meta name="twitter:title" content="${escapeHtml(docTitle)}">`,
+    `<meta name="twitter:description" content="${escapeHtml(description)}">`,
+    `<meta name="twitter:image" content="${ogImage}">`,
+  ].join("\n    ");
+}
+
 const HERO_IMAGE_DIR = path.join(projectRoot, "images", "bali-tours");
 const WEST_TEMPLATE_SOURCE_FILE = path.join(projectRoot, "page128064616.html");
 const JOURNAL_HUB_ROUTE = "/bali/en/journal";
@@ -13431,13 +13471,14 @@ function renderSeoGuidePage(article) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>${escapeHtml(article.title)} | SB Excursions</title>
+    <title>${escapeHtml(journalDocumentTitle(article.title))}</title>
     <meta name="description" content="${escapeHtml(article.description)}">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="${escapeHtml(article.title)} | SB Excursions">
+    <meta property="og:title" content="${escapeHtml(journalDocumentTitle(article.title))}">
     <meta property="og:description" content="${escapeHtml(article.description)}">
     <meta property="og:url" content="${article.url}">
-    <meta property="og:image" content="${absoluteJournalImageUrl(article.heroImage)}">
+    <meta property="og:image" content="${journalOgImage(article.guide?.heroTourSlug, absoluteJournalImageUrl(article.heroImage))}">
+    ${journalOgMetaBlock(journalDocumentTitle(article.title), article.description, journalOgImage(article.guide?.heroTourSlug, absoluteJournalImageUrl(article.heroImage)))}
     <link rel="preload" as="image" href="${article.heroImage}" fetchpriority="high">
     <link rel="preload" as="font" type="font/woff2" href="/css/fonts/cina-geo/CinaGEO-Regular.woff2" crossorigin>
     <link rel="canonical" href="${article.url}">
@@ -13594,13 +13635,14 @@ function renderJournalArticlePage(article) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>${escapeHtml(article.title)} | SB Excursions</title>
+    <title>${escapeHtml(journalDocumentTitle(article.title))}</title>
     <meta name="description" content="${escapeHtml(article.description)}">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="${escapeHtml(article.title)} | SB Excursions">
+    <meta property="og:title" content="${escapeHtml(journalDocumentTitle(article.title))}">
     <meta property="og:description" content="${escapeHtml(article.description)}">
     <meta property="og:url" content="${article.url}">
-    <meta property="og:image" content="${SITE_URL}${publicImagePath(article.tour)}">
+    <meta property="og:image" content="${journalOgImage(article.tour?.slug, `${SITE_URL}${publicImagePath(article.tour)}`)}">
+    ${journalOgMetaBlock(journalDocumentTitle(article.title), article.description, journalOgImage(article.tour?.slug, `${SITE_URL}${publicImagePath(article.tour)}`))}
     <link rel="preload" as="image" href="${publicImagePath(article.tour)}" fetchpriority="high">
     <link rel="preload" as="font" type="font/woff2" href="/css/fonts/cina-geo/CinaGEO-Regular.woff2" crossorigin>
     <link rel="canonical" href="${article.url}">
@@ -18116,12 +18158,26 @@ function translationLocaleCode(locale = "en") {
   return locale === "zh" ? "zh-CN" : locale;
 }
 
+/* Закреплённые переводы. Машинный перевод (Google) хорош для прозы, но
+   SEO-заголовки и meta description пишутся под запросы конкретного рынка —
+   их держим тут вручную. Ключ — точная английская строка ПОСЛЕ collapse,
+   значение — готовый текст. Эти записи всегда перекрывают кэш машинного
+   перевода. */
+const PINNED_TRANSLATIONS = {
+  ru: {},
+  es: {},
+  fr: {},
+  "zh-CN": {},
+};
+
 function translationCacheBucket(locale = "en") {
   const cache = ensureTranslationCache();
   const key = translationLocaleCode(locale);
   if (!cache[key] || typeof cache[key] !== "object") {
     cache[key] = {};
   }
+  const pinned = PINNED_TRANSLATIONS[key];
+  if (pinned) Object.assign(cache[key], pinned);
   return cache[key];
 }
 
