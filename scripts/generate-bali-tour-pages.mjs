@@ -9630,6 +9630,160 @@ const JOURNAL_FEATURED_GUIDE_SLUGS = [
 
 const JOURNAL_SEO_GUIDES = [
   {
+    slug: "best-snorkeling-spots-bali",
+    badge: "Evergreen SEO guide",
+    navLabel: "Snorkeling guide",
+    cardTourLabel: "Snorkeling and clear water",
+    heroTourSlug: "blue-lagoon-snorkeling",
+    relatedTourSlugs: ["blue-lagoon-snorkeling", "nusa-penida-manta-rays-point", "gili-island-tour"],
+    inlineStats: ["9 spots compared", "Clear-water focus", "Tours from $29"],
+    title: "9 Best Snorkeling Spots in Bali With Clear Water, Easy Access",
+    description:
+      "The 9 best snorkeling spots in Bali and its islands, compared by water clarity, marine life and how hard each one is to reach — with real 2026 tour prices.",
+    excerpt:
+      "Bali itself has decent snorkeling, but the water most people picture — bright, glassy, full of life — is concentrated in a few specific places: the Padang Bai coves, the Nusa Penida channel and the Gili Islands. This guide compares all nine spots we actually run tours to, so you can pick by water, marine life and travel time instead of guessing from photos.",
+    rankings: [
+      {
+        name: "Blue Lagoon, Padang Bai",
+        imageSrc: "/images/places/blue-lagoon-padang-bai.jpg",
+        area: "East Bali",
+        bestFor: "First-timers and families",
+        summary:
+          "A compact cove 90 minutes from south Bali with reliable clarity and an easy entry. Most of the reef sits shallow, which makes it the simplest place on this list to put a mask on for the first time.",
+      },
+      {
+        name: "Tanjung Jepun",
+        imageSrc: "/images/tours-real/blue-lagoon-snorkeling.jpg",
+        area: "Padang Bai",
+        bestFor: "Second stop on a Blue Lagoon day",
+        summary:
+          "A short boat hop from Blue Lagoon with a small artificial reef and calmer traffic. Pairing the two coves in one morning is the standard route and keeps you in the water while conditions are best.",
+      },
+      {
+        name: "Bias Tugel Beach",
+        imageSrc: "/images/places/bali-surf-beach.jpg",
+        area: "Padang Bai",
+        bestFor: "A swim between snorkel stops",
+        summary:
+          "A white-sand pocket beach next to Padang Bai harbor. The snorkeling is lighter here, but it is the best place on the east-coast route to swim and rest before the drive back.",
+      },
+      {
+        name: "Crystal Bay",
+        imageSrc: "/images/places/crystal-bay.jpg",
+        area: "Nusa Penida",
+        bestFor: "Visibility on a calm morning",
+        summary:
+          "Penida's most famous swimming bay, with white sand and a bright turquoise channel. Mornings are the honest window here — by midday the boats multiply and the calm-water look from photos fades.",
+      },
+      {
+        name: "Gamat Bay",
+        imageSrc: "/images/tours-real/nusa-penida-west-tour.jpg",
+        area: "Nusa Penida",
+        bestFor: "Coral density",
+        summary:
+          "A small, steep-sided bay between Crystal Bay and Toyapakeh that most day-trippers skip. The coral wall starts close to shore, so you spend your time over the reef instead of swimming to it.",
+      },
+      {
+        name: "Manta Point",
+        imageSrc: "/images/places/manta-ray-snorkeling.jpg",
+        area: "Nusa Penida",
+        bestFor: "Swimming with manta rays",
+        summary:
+          "The cleaning station where Penida's reef mantas circle in open water. It is a boat-only site with ocean swell, so treat it as the highlight of a guided day rather than a casual swim stop.",
+      },
+      {
+        name: "Wall Bay",
+        imageSrc: "/images/tours-real/nusa-penida-manta-rays-point.jpg",
+        area: "Nusa Penida",
+        bestFor: "Drift along a reef wall",
+        summary:
+          "A sheltered wall section on the Penida channel that boats add when conditions allow. The reef drops fast here, which brings bigger fish closer than the beach-entry spots ever do.",
+      },
+      {
+        name: "Turtle Point, Gili Trawangan",
+        imageSrc: "/images/tours-real/gili-island-tour.jpg",
+        area: "Gili Islands",
+        bestFor: "Sea turtles",
+        summary:
+          "The most consistent turtle encounters in the region. Green and hawksbill turtles feed on the seagrass in easy snorkeling depth, and sightings here are the norm rather than the exception.",
+      },
+      {
+        name: "Nest Statues, Gili Meno",
+        imageSrc: "/images/bali-tours/gili-island-tour.jpg",
+        area: "Gili Islands",
+        bestFor: "The underwater photo",
+        summary:
+          "The circle of underwater figures off Gili Meno sits shallow enough to reach on one breath. Go early — it is the most photographed snorkeling site in the Gilis and queues form by mid-morning.",
+      },
+    ],
+    sections: [
+      {
+        heading: "How the three snorkeling areas compare",
+        paragraphs: [
+          "Bali's snorkeling splits into three areas that behave differently. **Padang Bai** (Blue Lagoon, Tanjung Jepun, Bias Tugel) is the closest and calmest — 90 minutes from the southern hotels, shallow entries, the easiest water for children and nervous swimmers. **Nusa Penida** (Crystal Bay, Gamat Bay, Manta Point, Wall Bay) is a fast-boat trip across a real channel: the reward is bigger — mantas, walls, brighter water — and so is the swell. The **Gili Islands** sit furthest out, off Lombok, and trade convenience for the best turtle numbers and that underwater statue circle.",
+          "The practical rule: if you have half a day, snorkel Padang Bai on a [Blue Lagoon snorkeling tour](/bali/en/tours/blue-lagoon-snorkeling). If you have a full day and want the strongest marine life, cross to Penida for the [Manta Point route](/bali/en/tours/nusa-penida-manta-rays-point). If you can give it a long day or an overnight, the [Gili Islands day trip](/bali/en/tours/gili-island-tour) covers Turtle Point and the Meno statues in one run.",
+        ],
+      },
+      {
+        heading: "What each option costs in 2026",
+        paragraphs: [
+          "Real starting prices for the three tours behind this list, per person, booked direct over WhatsApp: Blue Lagoon snorkeling from $50 with gear, guide, lunch and hotel pickup; the Nusa Penida Manta Point day from $29 with gear and hotel pickup; the Gili Islands day trip from $115 with the fast boat, a private snorkeling boat, GoPro photos and free time on Gili Trawangan. Independent alternatives exist — public fast boats, renting a mask on the beach — but once you add transport from the south of Bali, the totals land close to the tour price without the timing help.",
+          "Wherever you book, two costs catch people out: the small-boat hop between coves at Padang Bai if you arrange it on the sand, and the harbor fees on island crossings. Both are already inside our tour prices; when comparing quotes, ask whether they are inside anyone else's.",
+        ],
+      },
+      {
+        heading: "When the water is actually clear",
+        paragraphs: [
+          "Visibility follows the dry season. From **April to October** the channel sites run at their best and mornings are dependably calm; from **November to March** rain runoff and wind chop shorten the good windows, though Padang Bai's protected coves keep working when open-water sites do not. Time of day matters as much as month: on every spot in this list the honest advice is the same — be in the water before 10:00, because boat traffic and afternoon wind cost you more clarity than the season does.",
+          "Manta sightings at Manta Point hold year-round, with local crews reporting the strongest runs in the drier months. Turtles at the Gilis are resident and do not follow a season at all.",
+        ],
+      },
+      {
+        heading: "Skill level, kids and safety",
+        paragraphs: [
+          "You do not need to be a strong swimmer for most of this list. Blue Lagoon, Tanjung Jepun, Crystal Bay's inner section and both Gili sites are comfortable for beginners with a life vest, and guides stay in the water with the group. The two exceptions are Manta Point and Wall Bay: both are open-ocean sites with swell and current, fine for a confident swimmer behind a guide, wrong for a first-ever snorkel. If you are planning a family day, say so when booking — the route order changes so children spend their energy in the calm coves first. Our [packing guide](/bali/en/journal/what-to-pack-for-bali) covers reef-safe sunscreen and what to bring on a boat day.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Which snorkeling spot in Bali has the clearest water?",
+        answer:
+          "On a calm dry-season morning, Crystal Bay and Gamat Bay on Nusa Penida usually beat anything on the Bali mainland. For easy access without a boat crossing, Blue Lagoon at Padang Bai is the most reliable choice.",
+      },
+      {
+        question: "Where can I snorkel with turtles in Bali?",
+        answer:
+          "Turtle Point off Gili Trawangan gives the most consistent encounters — green and hawksbill turtles feed there in 2-4 m of water. Sightings around Bali itself are occasional rather than dependable.",
+      },
+      {
+        question: "How much does a snorkeling tour in Bali cost?",
+        answer:
+          "Direct 2026 prices: Blue Lagoon from $50 per person including gear, guide, lunch and pickup; the Nusa Penida Manta Point day from $29; the full Gili Islands day trip from $115 including the fast boat and GoPro photos.",
+      },
+      {
+        question: "Is snorkeling in Bali safe for non-swimmers?",
+        answer:
+          "At the sheltered coves — Blue Lagoon, Tanjung Jepun, the Gili sites — yes, with a life vest and a guide in the water. Skip Manta Point and Wall Bay unless you swim confidently; both are open-ocean sites with swell.",
+      },
+      {
+        question: "Can you snorkel in Bali in the rainy season?",
+        answer:
+          "Yes, but choose protected spots. From November to March the Padang Bai coves keep decent visibility while open-channel sites get wind chop and runoff. Book morning starts — conditions fall away after 10:00.",
+      },
+      {
+        question: "Do I need to bring my own snorkeling gear?",
+        answer:
+          "No — mask, snorkel, fins and a life vest are included on all three tours behind this guide. Bring your own mask only if you wear prescription lenses, plus reef-safe sunscreen and a dry change of clothes.",
+      },
+      {
+        question: "Manta Point or the Gili Islands — which day trip is better?",
+        answer:
+          "Pick by animal. Manta Point is the stronger single encounter — reef mantas with several-metre wingspans — and the cheaper day at from $29. The Gilis give more variety: turtles, the statue circle and beach time, from $115.",
+      },
+    ],
+  },
+  {
     key: "firstTime",
     slug: "first-time-in-bali-complete-guide",
     badge: "Start here",
