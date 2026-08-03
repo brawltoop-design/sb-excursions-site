@@ -3,7 +3,7 @@ import { promises as fs } from "node:fs";
 const OUT = process.argv[2];
 const raw = await fs.readFile(OUT, "utf8");
 const data = JSON.parse(raw.slice(raw.indexOf("{")));
-const guides = data.guides || [];
+const guides = data.guides || data.result?.guides || [];
 const F = "scripts/generate-bali-tour-pages.mjs";
 let s = await fs.readFile(F, "utf8");
 
