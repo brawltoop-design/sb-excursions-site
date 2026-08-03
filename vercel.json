@@ -61,6 +61,36 @@
       "source": "/bali/en/tours/ubud-highlits-",
       "destination": "/bali/en/tours/ubud-highlights-tour",
       "permanent": false
+    },
+    {
+      "source": "/bali/:lang/tours/bali-helicopter-scenic-tour",
+      "destination": "/bali/:lang/main-page",
+      "permanent": true
+    },
+    {
+      "source": "/bali/:lang/tours/volcano-coastline-helicopter-ride",
+      "destination": "/bali/:lang/main-page",
+      "permanent": true
+    },
+    {
+      "source": "/bali/:lang/tours/nusa-lembongan-ceningan-day-trip",
+      "destination": "/bali/:lang/tours/nusa-penida-full-day-tour",
+      "permanent": true
+    },
+    {
+      "source": "/bali/:lang/journal/bali-helicopter-scenic-tour/:type",
+      "destination": "/bali/:lang/main-page",
+      "permanent": true
+    },
+    {
+      "source": "/bali/:lang/journal/volcano-coastline-helicopter-ride/:type",
+      "destination": "/bali/:lang/main-page",
+      "permanent": true
+    },
+    {
+      "source": "/bali/:lang/journal/nusa-lembongan-ceningan-day-trip/:type",
+      "destination": "/bali/:lang/tours/nusa-penida-full-day-tour",
+      "permanent": true
     }
   ],
   "rewrites": [

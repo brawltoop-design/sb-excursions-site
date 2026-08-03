@@ -1612,7 +1612,7 @@ const tours = [
     bestFor: "Travelers chasing a big full-day route",
     format: "Private day tour",
     area: "Lovina and north Bali",
-    price: "Ask price",
+    price: "From $80",
     image: sourceImage("tild3365-3333-4637-a663-636263353664__dika-pebriyanta-qqxc.jpg"),
     imageAlt: "North Bali temple and mountain landscape",
     lead:
@@ -1757,7 +1757,7 @@ const tours = [
     bestFor: "Photo-focused Bali itineraries",
     format: "Private day tour",
     area: "Lempuyang and east Bali",
-    price: "Ask price",
+    price: "From $65 per car",
     image: sourceImage("tild6662-3531-4435-b037-386262376635__leo_visions-ulj5djrj.jpg"),
     imageAlt: "East Bali Gates of Heaven style scenery",
     lead:
@@ -1795,7 +1795,7 @@ const tours = [
     bestFor: "Classic sightseeing days",
     format: "Private day tour",
     area: "West and central Bali",
-    price: "Ask price",
+    price: "From $65 per car",
     image: sourceImage("tild3365-3333-4637-a663-636263353664__dika-pebriyanta-qqxc.jpg"),
     imageAlt: "Temple and lake scenery in Bedugul Bali",
     lead:
@@ -1981,7 +1981,7 @@ const tours = [
     bestFor: "Adventure lovers and sunrise seekers",
     format: "Private or small group jeep trip",
     area: "Kintamani and Mount Batur",
-    price: "Ask price",
+    price: "From $75",
     image: sourceImage("tild6464-3137-4633-a638-383661353834__pexels-dnanoes-35399.webp"),
     imageAlt: "Jeep convoy on Mount Batur volcanic landscape",
     lead:
@@ -2099,7 +2099,7 @@ const tours = [
     bestFor: "Active couples and groups",
     format: "Adventure activity",
     area: "Bali off-road routes",
-    price: "Ask price",
+    price: "From $25",
     image: sourceImage("tild6464-3137-4633-a638-383661353834__pexels-dnanoes-35399.webp"),
     imageAlt: "Off-road adventure route in Bali",
     lead:
@@ -2242,7 +2242,7 @@ const tours = [
     bestFor: "Couples, creators, and honeymoon trips",
     format: "Private day tour",
     area: "Flexible scenic Bali route",
-    price: "Ask price",
+    price: "From $65 per car",
     image: sourceImage("tild6662-3531-4435-b037-386262376635__leo_visions-ulj5djrj.jpg"),
     imageAlt: "Scenic Bali viewpoint for Instagram tour",
     lead:
@@ -2383,7 +2383,7 @@ const tours = [
     bestFor: "Travelers wanting sea and sightseeing in one day",
     format: "Private island combo tour",
     area: "Nusa Penida",
-    price: "Ask price",
+    price: "From $60",
     image: sourceImage("tild3033-6437-4832-a231-366334396336__connor-2a_nva3oqoe-u.webp"),
     imageAlt: "Nusa Penida cliff views above blue ocean",
     lead:
@@ -2419,7 +2419,7 @@ const tours = [
     bestFor: "Cliff viewpoints and first-time Penida sightseeing",
     format: "Island day tour",
     area: "West Nusa Penida",
-    price: "Ask price",
+    price: "From $49 per car",
     mainPagePrice: "49$",
     mainPagePriceNote: "per car",
     mainPageFeatures: [
@@ -2580,7 +2580,7 @@ const tours = [
     bestFor: "Guests wanting a flexible Penida route",
     format: "Island day tour",
     area: "Nusa Penida",
-    price: "Ask price",
+    price: "From $75",
     image: sourceImage("tild3033-6437-4832-a231-366334396336__connor-2a_nva3oqoe-u.webp"),
     imageAlt: "Nusa Penida panoramic coast view",
     lead:
@@ -2646,48 +2646,10 @@ const tours = [
       ["Return crossing and hotel drop-off", "Head back across to Bali and finish with a transfer to your hotel."],
     ],
     tags: ["hotelPickup", "boat", "snorkeling", "island", "shared"],
-    related: ["blue-lagoon-snorkeling", "nusa-penida-private-day-tour-manta-snorkeling", "nusa-lembongan-ceningan-day-trip"],
+    related: ["blue-lagoon-snorkeling", "nusa-penida-private-day-tour-manta-snorkeling", "nusa-penida-full-day-tour"],
     faqExtra: [
       "Do I need to be an advanced swimmer for Manta Point snorkeling?",
       "Not necessarily, but you should be comfortable in open water and always follow the crew's safety guidance. Conditions can change, which is why operator support matters on this route.",
-    ],
-  },
-  {
-    slug: "nusa-lembongan-ceningan-day-trip",
-    metaTitle: "Nusa Lembongan & Ceningan Day Trip from Bali | Yellow Bridge",
-    metaDescription: "Full-day Nusa Lembongan and Ceningan tour — Devil's Tear, Yellow Bridge, Blue Lagoon and Dream Beach. Morning hotel pickup, harbor transfer and island driver.",
-    title: "Nusa Lembongan and Ceningan Day Trip",
-    eyebrow: "Easy island day beyond mainland Bali",
-    duration: "Full day",
-    pickup: "Morning hotel pickup and harbor transfer",
-    bestFor: "Relaxed island scenery with lighter pacing",
-    format: "Island day trip",
-    area: "Nusa Lembongan and Ceningan",
-    price: "Ask price",
-    image: sourceImage("tild6538-6266-4533-b762-633965646265__614518b47a177d0df9ce.webp"),
-    imageAlt: "Mangrove and boats around Nusa Lembongan",
-    lead:
-      "Swap mainland traffic for island bridges, mangrove views, turquoise water, and the softer island feel of Nusa Lembongan and Ceningan.",
-    summary:
-      "This is a great alternative when you want an island day that feels scenic and fresh but less intense than a packed Nusa Penida route. It works especially well for couples, families, and travelers who want sea views without a hard adventure profile.",
-    overview:
-      "The Lembongan and Ceningan area is often easier to enjoy at a slower pace, which makes it a smart product for guests who want a softer but still memorable island escape.",
-    highlights: [
-      ["Two islands in one route", "A more varied day than staying in a single harbor zone or beach strip."],
-      ["Mangroves and coastal bridges", "The visual identity feels distinct from mainland Bali and from Penida."],
-      ["Relaxed island rhythm", "A better fit when you want scenery and movement without aggressive pacing."],
-      ["Easy all-round appeal", "Works for couples, families, and mixed groups who want a softer island day."],
-    ],
-    itinerary: [
-      ["Pickup and island crossing", "Start with transfer support and move across from Bali to the islands in the morning."],
-      ["Lembongan and Ceningan sightseeing", "Follow a balanced route through viewpoints, beach zones, and signature local scenery."],
-      ["Return to mainland Bali", "Head back by boat and finish with the hotel transfer."],
-    ],
-    tags: ["hotelPickup", "boat", "island", "family"],
-    related: ["nusa-penida-west-tour", "fast-boat-transfer-bali", "sunset-cruise-bali"],
-    faqExtra: [
-      "Is this a better choice than Nusa Penida for a relaxed day?",
-      "For many travelers, yes. Lembongan and Ceningan usually feel softer and easier than a heavy Penida sightseeing day, especially if comfort and rhythm matter more than cliff-view checklists.",
     ],
   },
   {
@@ -2701,7 +2663,7 @@ const tours = [
     bestFor: "Travelers extending beyond Bali",
     format: "Fast boat island transfer route",
     area: "Gili Islands connection",
-    price: "Ask price",
+    price: "From $70",
     image: sourceImage("tild6335-6361-4739-a136-656338613061__nella-n-jghquhcxehy-.jpg"),
     imageAlt: "Bright turquoise boats and island water",
     lead:
@@ -2722,7 +2684,7 @@ const tours = [
       ["Arrival and island continuation", "Reach the Gilis and continue into your stay, hotel arrival, or next island step."],
     ],
     tags: ["boat", "transfer", "island"],
-    related: ["fast-boat-transfer-bali", "nusa-lembongan-ceningan-day-trip", "private-car-with-driver-bali"],
+    related: ["fast-boat-transfer-bali", "private-car-with-driver-bali", "nusa-penida-full-day-tour"],
     faqExtra: [
       "Is the Gili Islands Getaway a sightseeing tour or a transfer product?",
       "It is primarily a transfer-based island connection product. The value comes from making the Bali-to-Gili move smoother, faster to understand, and easier to book correctly.",
@@ -2761,7 +2723,7 @@ const tours = [
       ["Free time and return to Bali", "Use the island break for beach time, a quick cycle, or a cafe stop on Gili Trawangan before boarding the return fast boat back to Bali."],
     ],
     tags: ["hotelPickup", "boat", "snorkeling", "island", "private"],
-    related: ["fast-boat-transfer-bali", "nusa-lembongan-ceningan-day-trip", "blue-lagoon-snorkeling"],
+    related: ["fast-boat-transfer-bali", "blue-lagoon-snorkeling", "nusa-penida-full-day-tour"],
     includes: [
       "Roundtrip public fast boat tickets from Bali",
       "Private glass-bottom snorkeling boat with local guide",
@@ -2845,7 +2807,7 @@ const tours = [
     bestFor: "Advanced sea-day travelers",
     format: "Marine expedition",
     area: "Sumbawa waters",
-    price: "Ask price",
+    price: "From $150",
     image: sourceImage("tild3262-3963-4364-b336-373234663732__355c20b6d4bf24106345.webp"),
     imageAlt: "Large sea creature and snorkel-style underwater scene",
     lead:
@@ -2883,7 +2845,7 @@ const tours = [
     bestFor: "Beginners, couples, and mixed groups",
     format: "Snorkeling trip",
     area: "Padang Bai and Blue Lagoon",
-    price: "Ask price",
+    price: "From $50",
     image: sourceImage("tild6264-3738-4937-b664-376133376233__pexels-laylia-215506.webp"),
     imageAlt: "Colorful coral reef in Bali snorkeling water",
     lead:
@@ -2921,7 +2883,7 @@ const tours = [
     bestFor: "Families, couples, and active groups",
     format: "Adventure activity",
     area: "Bali river routes",
-    price: "Ask price",
+    price: "From $35",
     image: sourceImage("tild3165-6564-4638-b363-636366303266__rishi-lq2tr3apzi4-un.webp"),
     imageAlt: "Water adventure and river activity vibe in Bali",
     lead:
@@ -2959,7 +2921,7 @@ const tours = [
     bestFor: "Couples, groups, and celebration nights",
     format: "Boat experience",
     area: "Bali coastal waters",
-    price: "Ask price",
+    price: "From $150",
     image: sourceImage("tild6335-6361-4739-a136-656338613061__nella-n-jghquhcxehy-.jpg"),
     imageAlt: "Boats on bright blue water in Bali",
     lead:
@@ -2980,7 +2942,7 @@ const tours = [
       ["Evening return", "Dock after the best light window and return to your hotel or continue into dinner plans."],
     ],
     tags: ["boat", "sunset", "romantic"],
-    related: ["nusa-lembongan-ceningan-day-trip", "bali-helicopter-scenic-tour", "private-car-with-driver-bali"],
+    related: ["private-car-with-driver-bali", "nusa-penida-full-day-tour", "sunset-cruise-bali"],
     faqExtra: [
       "Is the sunset cruise private?",
       "That depends on the package. Some cruises are shared and social, while others can be booked in a more private or premium format depending on availability.",
@@ -2997,7 +2959,7 @@ const tours = [
     bestFor: "Beginners and casual active travelers",
     format: "Water activity",
     area: "Beginner-friendly Bali surf beaches",
-    price: "Ask price",
+    price: "From $35",
     image: sourceImage("tild3165-6564-4638-b363-636366303266__rishi-lq2tr3apzi4-un.webp"),
     imageAlt: "Blue tropical water for a Bali surf lesson",
     lead:
@@ -3035,7 +2997,7 @@ const tours = [
     bestFor: "New arrivals and stress-free departures",
     format: "Private transfer service",
     area: "Ngurah Rai Airport and Bali hotel areas",
-    price: "Ask price",
+    price: "From $15",
     image: sourceImage("tild6335-6361-4739-a136-656338613061__nella-n-jghquhcxehy-.jpg"),
     imageAlt: "Clean Bali transfer and travel day atmosphere",
     lead:
@@ -3073,7 +3035,7 @@ const tours = [
     bestFor: "Travelers who want total route flexibility",
     format: "Private transport service",
     area: "All major Bali regions",
-    price: "Ask price",
+    price: "From $65 per car",
     image: sourceImage("tild3365-3333-4637-a663-636263353664__dika-pebriyanta-qqxc.jpg"),
     imageAlt: "Private Bali touring atmosphere with scenic temples",
     lead:
@@ -3111,7 +3073,7 @@ const tours = [
     bestFor: "Island-bound travelers",
     format: "Transfer service",
     area: "Bali harbors and island routes",
-    price: "Ask price",
+    price: "From $15",
     image: sourceImage("tild6538-6266-4533-b762-633965646265__614518b47a177d0df9ce.webp"),
     imageAlt: "Fast boat style island transfer in Bali waters",
     lead:
@@ -3132,84 +3094,10 @@ const tours = [
       ["Check-in and departure", "Board your selected fast boat and continue the island journey."],
     ],
     tags: ["transfer", "boat", "island"],
-    related: ["gili-islands-getaway", "nusa-lembongan-ceningan-day-trip", "airport-transfer"],
+    related: ["gili-islands-getaway", "airport-transfer", "nusa-penida-full-day-tour"],
     faqExtra: [
       "Does the fast boat transfer include hotel pickup?",
       "That depends on the package and departure harbor, but hotel transfer coordination is one of the most important reasons travelers choose a professionally arranged fast boat product.",
-    ],
-  },
-  {
-    slug: "bali-helicopter-scenic-tour",
-    metaTitle: "Bali Helicopter Tour | Scenic Flight over Nusa Dua & Benoa",
-    metaDescription: "Bali helicopter scenic tour — a short premium flight over Serangan, Tanjung Benoa, GWK and Nusa Dua. Hotel pickup included. Check availability on WhatsApp.",
-    title: "Bali Helicopter Scenic Tour",
-    eyebrow: "Premium island views from the air",
-    duration: "Short flight experience",
-    pickup: "Scheduled departure window",
-    bestFor: "Premium travelers and special occasions",
-    format: "Helicopter experience",
-    area: "Bali aerial sightseeing",
-    price: "Ask price",
-    image: sourceImage("tild3536-3638-4435-a462-623534663935__pexels-thomas-balaba.jpg"),
-    imageAlt: "Sunrise and mountain atmosphere for scenic aerial Bali tour",
-    lead:
-      "See Bali from above with a scenic helicopter flight that turns the island's coastline, cliffs, rice fields, and volcanic lines into one premium visual sweep.",
-    summary:
-      "This is a short-format luxury product with very high perceived value. It is ideal for proposals, anniversaries, premium travelers, and anyone who wants a true hero experience instead of another standard sightseeing day.",
-    overview:
-      "Helicopter tours work because they compress Bali's visual variety into a much more dramatic experience than road-based sightseeing can deliver.",
-    highlights: [
-      ["Aerial island perspective", "One of the strongest visual upgrades available in Bali."],
-      ["Premium short-format experience", "High impact without needing a full-day schedule."],
-      ["Celebration and proposal friendly", "A natural fit for once-in-a-trip moments."],
-      ["Unique content value", "The photo and video angle is completely different from any land route."],
-    ],
-    itinerary: [
-      ["Arrival and safety briefing", "Check in, receive the pre-flight briefing, and prepare for departure."],
-      ["Scenic helicopter flight", "Follow the selected aerial route with panoramic views over Bali's strongest landscape lines."],
-      ["Landing and post-flight wrap-up", "Complete the experience and continue into the rest of your Bali day."],
-    ],
-    tags: ["helicopter", "premium", "romantic"],
-    related: ["volcano-coastline-helicopter-ride", "sunset-cruise-bali", "bali-instagram-highlights-tour"],
-    faqExtra: [
-      "Is the helicopter scenic tour private?",
-      "It depends on the aircraft and package setup. Many travelers ask for private or premium flight formats when the experience is tied to a celebration or proposal.",
-    ],
-  },
-  {
-    slug: "volcano-coastline-helicopter-ride",
-    title: "Volcano and Coastline Helicopter Ride",
-    eyebrow: "Bali volcanoes and shorelines from above",
-    duration: "Short flight experience",
-    pickup: "Scheduled departure window",
-    bestFor: "Premium travelers chasing the biggest views",
-    format: "Helicopter experience",
-    area: "Volcano and coastline aerial route",
-    price: "Ask price",
-    image: sourceImage("tild3435-3237-4362-a637-396663313561__ff430793-bcdb-4551-a.jpeg"),
-    imageAlt: "Volcanic sunrise style view for Bali helicopter route",
-    lead:
-      "Take the most dramatic version of an aerial Bali experience by combining volcanic geography, ridgelines, and coastline views in one premium helicopter route.",
-    summary:
-      "This is the stronger storytelling version of a scenic flight when you want Bali's natural contrasts to hit hard from the air. The route is ideal for premium travelers, milestone moments, and anyone who wants the island's biggest landforms in one visual arc.",
-    overview:
-      "Where a standard scenic flight sells beauty, this one sells scale. The volcano-and-coastline contrast makes the whole experience feel more cinematic and more distinctly Bali.",
-    highlights: [
-      ["Volcano-to-sea contrast", "A route built around the strongest geological drama Bali can offer from above."],
-      ["Premium memory piece", "Easy to remember, easy to sell, and visually more powerful than regular road touring."],
-      ["Short but intense", "High-impact premium product without taking over the whole day."],
-      ["Excellent for hero moments", "Perfect when the trip needs one experience that instantly feels special."],
-    ],
-    itinerary: [
-      ["Check-in and flight preparation", "Arrive at the departure point and complete the pre-flight process."],
-      ["Helicopter route over volcano and coast", "Follow the premium aerial path with the best contrasting Bali landforms prioritized."],
-      ["Landing and continuation of your day", "Finish the flight and move into the next Bali plan with minimal time lost."],
-    ],
-    tags: ["helicopter", "premium", "volcano"],
-    related: ["bali-helicopter-scenic-tour", "mount-batur-sunrise-jeep-tour", "sunset-cruise-bali"],
-    faqExtra: [
-      "How is this different from the standard Bali helicopter scenic tour?",
-      "This route leans more heavily into volcanic geography and coastline contrast, so the overall feel is more dramatic and terrain-focused rather than simply panoramic.",
     ],
   },
 ];
@@ -4172,6 +4060,8 @@ function normalizedWestTemplatePrice(price) {
   const text = collapseWhitespace(price || "Ask price");
   if (!text) return "Ask price";
   if (/^ask price$/i.test(text)) return "Ask price";
+  // Цена за машину, не за человека — «per person» дописывать нельзя.
+  if (/per car/i.test(text)) return text.replace(/^from /i, "From ");
   if (/per person/i.test(text)) return text.replace(/^from /i, "From ");
   if (/^from /i.test(text)) return `${text.replace(/^from /i, "From ")} per person`;
   return text;
@@ -6016,6 +5906,15 @@ function renderWestStylePage(tour) {
   const iconPath = tourIconPath(tour);
   if (iconPath !== TEMPLATE_TOUR_ICON) {
     html = html.split(TEMPLATE_TOUR_ICON).join(iconPath);
+  }
+
+  // Цена за машину: подпись под ценой в карточке private-оффера из шаблона
+  // говорит «per person» — для таких туров это неправда, меняем на «per car».
+  if (/per car/i.test(String(tour.price || ""))) {
+    html = html.replaceAll(
+      'sb-private-card-price-note">per person<',
+      'sb-private-card-price-note">per car<',
+    );
   }
 
   // Perf: предзагрузка LCP-hero и основного шрифта на каждой странице тура
@@ -15152,7 +15051,12 @@ function parsePriceNumber(price) {
 }
 
 function normalizedCardPrice(price) {
-  return String(price || "Ask Price").replace(/^Ask price$/i, "Ask Price").replace(/^From /i, "from ");
+  return String(price || "Ask Price")
+    .replace(/^Ask price$/i, "Ask Price")
+    .replace(/^From /i, "from ")
+    // подпись «за машину/за человека» на карточке живёт в price-note,
+    // в самой цене её не дублируем
+    .replace(/\s+per (car|person)$/i, "");
 }
 
 function mainPageCardPriceValue(tour, fallbackPrice = "Ask Price") {
@@ -15163,6 +15067,7 @@ function mainPageCardPriceNote(tour, fallbackPrice = "Ask Price") {
   if (tour?.mainPagePriceNote) return tour.mainPagePriceNote;
   const priceText = String(tour?.mainPagePrice || tour?.price || fallbackPrice || "").trim();
   if (!priceText) return "";
+  if (/per car/i.test(priceText)) return "per car";
   return "per person";
 }
 
@@ -16089,7 +15994,6 @@ function patchBaliMainFile(filePath) {
       ["Nusa Penida Private car Day Tour+Snorkeling Manta Point"],
     ],
     ["nusa-penida-full-day-tour", ["Nusa Penida Full Day Tour"]],
-    ["nusa-lembongan-ceningan-day-trip", ["Nusa Lembongan and Ceningan Day Trip"]],
     ["sumbawa-whale-shark-snorkeling-trip", ["Sumbawa Whale Shark Snorkeling Trip"]],
     ["blue-lagoon-snorkeling", ["Blue Lagoon Snorkeling"]],
     ["white-water-rafting", ["White Water Rafting"]],
@@ -16098,12 +16002,16 @@ function patchBaliMainFile(filePath) {
     ["bali-airport-transfer", ["Airport Transfer"]],
     ["private-car-with-driver-bali", ["Private Car with Driver"]],
     ["fast-boat-transfer-bali", ["Fast Boat Transfer"]],
-    ["bali-helicopter-scenic-tour", ["Bali Helicopter Scenic Tour"]],
-    ["volcano-coastline-helicopter-ride", ["Volcano and Coastline Helicopter Ride"]],
   ];
 
   for (const [slug, titles] of localMainPageCardReplacements) {
     html = replaceMainPageCardBySlug(html, slug, titles);
+  }
+
+  // Туры сняты с продажи — их карточки из шаблона убираем совсем,
+  // иначе на главной остались бы мёртвые ссылки.
+  for (const removedTitle of ["Bali Helicopter Scenic Tour", "Volcano and Coastline Helicopter Ride", "Nusa Lembongan and Ceningan Day Trip"]) {
+    html = replaceCardArticle(html, [removedTitle], "");
   }
 
   html = html

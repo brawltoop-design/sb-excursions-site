@@ -10,27 +10,27 @@
 schema Offer — во всех 5 языках).
 
 ```
-atv-ride-adventure                             |  from $____
-bali-airport-transfer                          |  from $____
+atv-ride-adventure                             |  from $25
+bali-airport-transfer                          |  from $15
 bali-helicopter-scenic-tour                    |  from $____
-bali-instagram-highlights-tour                 |  from $____
-blue-lagoon-snorkeling                         |  from $____
-east-bali-instagram-tour                       |  from $____
-fast-boat-transfer-bali                        |  from $____
-gili-islands-getaway                           |  from $____
-mount-batur-sunrise-jeep-tour                  |  from $____
-north-bali-lovina-dolphins-tour                |  from $____
+bali-instagram-highlights-tour                 |  from $65 per car
+blue-lagoon-snorkeling                         |  from $50
+east-bali-instagram-tour                       |  from $$65 per car
+fast-boat-transfer-bali                        |  from $15
+gili-islands-getaway                           |  from $70
+mount-batur-sunrise-jeep-tour                  |  from $75
+north-bali-lovina-dolphins-tour                |  from $80
 nusa-lembongan-ceningan-day-trip               |  from $____
-nusa-penida-full-day-tour                      |  from $____
-nusa-penida-private-day-tour-manta-snorkeling  |  from $____
-nusa-penida-west-tour                          |  from $____
-private-car-with-driver-bali                   |  from $____
-sumbawa-whale-shark-snorkeling-trip            |  from $____
-sunset-cruise-bali                             |  from $____
-surf-lesson-experience                         |  from $____
-tanah-lot-bedugul-tour                         |  from $____
+nusa-penida-full-day-tour                      |  from $75
+nusa-penida-private-day-tour-manta-snorkeling  |  from $60
+nusa-penida-west-tour                          |  from $49 per car
+private-car-with-driver-bali                   |  from $65 per car
+sumbawa-whale-shark-snorkeling-trip            |  from $150
+sunset-cruise-bali                             |  from $150
+surf-lesson-experience                         |  from $35
+tanah-lot-bedugul-tour                         |  from $65 per car
 volcano-coastline-helicopter-ride              |  from $____
-white-water-rafting                            |  from $____
+white-water-rafting                            |  from $35
 ```
 
 Для сравнения, цены уже стоят у: atv-quad-bikes $20, bali-unesco $70,
