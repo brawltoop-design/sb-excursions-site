@@ -1521,6 +1521,8 @@ function place(title, kind, maps, copy, vibe, interests){ return { title:title, 
 const tours = [
   {
     slug: "ubud-highlights-tour",
+    metaTitle: "Ubud Highlights Tour | Monkey Forest, Rice Terraces, Temples",
+    metaDescription: "Full-day private Ubud tour — Monkey Forest, Tegalalang rice terraces, temples and a Kintamani buffet lunch. Private car, tickets and hotel pickup included.",
     title: "Ubud Rice Terrace, Temple & Volcano Tour",
     eyebrow: "All-inclusive Ubud and Kintamani day",
     mapLabel: "Heritage route",
@@ -1639,6 +1641,8 @@ const tours = [
   },
   {
     slug: "dolphin-sunrise-city-tour",
+    metaTitle: "Lovina Dolphin Sunrise Tour | Wild Dolphins in North Bali",
+    metaDescription: "See wild dolphins at sunrise in Lovina, North Bali. Traditional outrigger boat around 06:00, Gitgit Waterfall and Ulun Danu Temple. Hotel pickup included.",
     title: "Lovina Dolphin Sunrise Tour",
     eyebrow: "Sunrise boat trip, waterfall and lake temple day",
     duration: "8 hours",
@@ -1782,6 +1786,8 @@ const tours = [
   },
   {
     slug: "tanah-lot-bedugul-tour",
+    metaTitle: "Tanah Lot & Bedugul Tour | Temples, Lake and Sunset, Bali",
+    metaDescription: "Private Bali day tour to the Ulun Danu lake temple, Handara, Candikuning and Jatiluwih, with sunset potential at Tanah Lot. Driver and hotel pickup included.",
     title: "Tanah Lot and Bedugul Tour",
     eyebrow: "Temples, lakes, and cooler highlands",
     duration: "9-11 hours",
@@ -1818,6 +1824,8 @@ const tours = [
   },
   {
     slug: "bali-unesco",
+    metaTitle: "Bali UNESCO Tour | Jatiluwih Rice Terraces & Tanah Lot",
+    metaDescription: "Bali UNESCO day tour: Taman Ayun, Ulun Danu Beratan, Jatiluwih rice terraces and Tanah Lot in 10 hours. Private car and entrance tickets included. From $70.",
     title: "Bali UNESCO Heritage Sites Tour",
     metaTitle: "Bali UNESCO Heritage Sites Tour | Taman Ayun, Ulun Danu, Jatiluwih & Tanah Lot",
     metaDescription:
@@ -1962,6 +1970,8 @@ const tours = [
   },
   {
     slug: "mount-batur-sunrise-jeep-tour",
+    metaTitle: "Mount Batur Sunrise Jeep Tour | No Hiking, Bali Volcano",
+    metaDescription: "Watch sunrise over Mount Batur from a 4x4 jeep — no summit hike required. Sunrise Point, black lava field and black sand stops, hotel pickup included.",
     title: "Mount Batur Sunrise Jeep Tour",
     mainPage: true,
     mainPageRank: 14,
@@ -2039,6 +2049,8 @@ const tours = [
   },
   {
     slug: "mount-batur-sunrise-hike",
+    metaTitle: "Mount Batur Sunrise Trek | Volcano Hike with Breakfast, Bali",
+    metaDescription: "Hike Mount Batur for sunrise — 1.5-2 hours up in the dark with a local guide, breakfast cooked over volcanic steam at 1,717 m. Hotel pickup from 01:30.",
     title: "Mount Batur Sunrise Hike",
     mainPage: true,
     mainPageRank: 12,
@@ -2116,6 +2128,8 @@ const tours = [
   },
   {
     slug: "atv-quad-bikes",
+    metaTitle: "Bali ATV Quad Bike Ride | Jungle, Rice Fields & Tunnels",
+    metaDescription: "Ride a quad bike through Bali's jungle, rice fields, river crossings and tunnels near Ubud. Single or tandem, safety gear, lunch and optional hotel pickup.",
     title: "Ubud ATV Quad Bike Adventure",
     eyebrow: "Jungle, rice fields, rivers, and tunnels",
     duration: "4-6 hours total with a 1.5-hour ATV ride",
@@ -2557,6 +2571,8 @@ const tours = [
   },
   {
     slug: "nusa-penida-full-day-tour",
+    metaTitle: "Nusa Penida Full Day Tour | Kelingking Beach, West & East",
+    metaDescription: "Full-day Nusa Penida tour built around Kelingking, Angel's Billabong and Diamond Beach. Hotel pickup from major Bali areas and a flexible, driver-led route.",
     title: "Nusa Penida Full Day Tour",
     eyebrow: "Flexible island sightseeing day",
     duration: "Full day",
@@ -2593,6 +2609,8 @@ const tours = [
   },
   {
     slug: "nusa-penida-manta-rays-point",
+    metaTitle: "Snorkel with Manta Rays in Bali | Manta Point, Nusa Penida",
+    metaDescription: "Snorkel with manta rays at Manta Point on a full-day Nusa Penida tour with Crystal Bay and Gamat Bay stops. Gear and hotel pickup included — from $29.",
     title: "Nusa Penida Snorkeling on Manta Point",
     eyebrow: "Classic Bali marine day",
     duration: "Full day",
@@ -2636,6 +2654,8 @@ const tours = [
   },
   {
     slug: "nusa-lembongan-ceningan-day-trip",
+    metaTitle: "Nusa Lembongan & Ceningan Day Trip from Bali | Yellow Bridge",
+    metaDescription: "Full-day Nusa Lembongan and Ceningan tour — Devil's Tear, Yellow Bridge, Blue Lagoon and Dream Beach. Morning hotel pickup, harbor transfer and island driver.",
     title: "Nusa Lembongan and Ceningan Day Trip",
     eyebrow: "Easy island day beyond mainland Bali",
     duration: "Full day",
@@ -2710,6 +2730,8 @@ const tours = [
   },
   {
     slug: "gili-island-tour",
+    metaTitle: "Gili Islands Day Trip from Bali | Snorkeling with Turtles",
+    metaDescription: "Gili Islands day trip from Bali: fast boat, private snorkeling boat, turtles and underwater statues, GoPro photos, free time on Gili Trawangan. From $115.",
     title: "Gili Islands Private Snorkeling Day Trip",
     eyebrow: "Private Gili snorkeling from Bali",
     duration: "7-9 hours",
@@ -2814,6 +2836,8 @@ const tours = [
   },
   {
     slug: "sumbawa-whale-shark-snorkeling-trip",
+    metaTitle: "Swim with Whale Sharks in Sumbawa | Trip from Bali",
+    metaDescription: "Snorkel with whale sharks in Saleh Bay, Sumbawa. Expedition-style marine day with very early departure — snorkeling gear and activity briefing included.",
     title: "Sumbawa Whale Shark Snorkeling Trip",
     eyebrow: "Big marine expedition",
     duration: "Long marine day or expedition-style route",
@@ -2850,6 +2874,8 @@ const tours = [
   },
   {
     slug: "blue-lagoon-snorkeling",
+    metaTitle: "Blue Lagoon Snorkeling Tour Bali | Padang Bai Day Trip",
+    metaDescription: "Snorkel Blue Lagoon and Tanjung Jepun at Padang Bai — clear water, ideal for beginners and families. Snorkeling gear, guide, lunch and hotel pickup included.",
     title: "Blue Lagoon Snorkeling",
     eyebrow: "Easy Bali snorkeling day",
     duration: "Half day to full day",
@@ -2886,6 +2912,8 @@ const tours = [
   },
   {
     slug: "white-water-rafting",
+    metaTitle: "Bali White Water Rafting on the Ayung River | Ubud Day Trip",
+    metaDescription: "Class II–III rafting on the Ayung River near Ubud — about 2 hours through a jungle gorge. Hotel pickup, safety briefing and gear included. Great for families.",
     title: "White Water Rafting",
     eyebrow: "River adventure in Bali",
     duration: "4-6 hours",
@@ -2922,6 +2950,8 @@ const tours = [
   },
   {
     slug: "sunset-cruise-bali",
+    metaTitle: "Bali Sunset Cruise from Benoa Harbour | Evening on the Water",
+    metaDescription: "Book a Bali sunset cruise from Benoa Harbour — 2-4 hours of golden-hour views along Serangan and Nusa Dua. Late afternoon hotel transfer support included.",
     title: "Sunset Cruise",
     eyebrow: "Easy evening on the water",
     duration: "2-4 hours",
@@ -2958,6 +2988,8 @@ const tours = [
   },
   {
     slug: "surf-lesson-experience",
+    metaTitle: "Bali Surf Lesson for Beginners | Canggu & Kuta Beach",
+    metaDescription: "Learn to surf in Bali — beginner-first coaching in a 2-4 hour session at Kuta Beach, Legian, Double Six or Batu Bolong. Basic safety equipment included.",
     title: "Surf Lesson Experience",
     eyebrow: "Bali's classic beach activity",
     duration: "2-4 hours",
@@ -2994,6 +3026,8 @@ const tours = [
   },
   {
     slug: "bali-airport-transfer",
+    metaTitle: "Bali Airport Transfer | Private Car from Ngurah Rai Airport",
+    metaDescription: "Private airport transfer from Bali's Ngurah Rai Airport to your hotel in Kuta, Seminyak, Canggu or Ubud. Pickup timing coordinated on WhatsApp.",
     title: "Airport Transfer",
     eyebrow: "Reliable Bali arrival support",
     duration: "Depends on hotel area",
@@ -3030,6 +3064,8 @@ const tours = [
   },
   {
     slug: "private-car-with-driver-bali",
+    metaTitle: "Private Car with Driver in Bali | Flexible Daily Hire",
+    metaDescription: "Book a private car with driver in Bali — build your own route, stop when you like. Hotel pickup from major Bali areas, flexible pacing and WhatsApp support.",
     title: "Private Car with Driver",
     eyebrow: "Flexible Bali transport by the day",
     duration: "Flexible daily use",
@@ -3066,6 +3102,8 @@ const tours = [
   },
   {
     slug: "fast-boat-transfer-bali",
+    metaTitle: "Bali Fast Boat Transfer | Nusa Penida, Lembongan & Gili T",
+    metaDescription: "Fast boat transfers from Bali to Nusa Penida, Lembongan and Gili T. Hotel pickup, harbor timing and boat logistics handled, from Sanur Port and Padang Bai.",
     title: "Fast Boat Transfer",
     eyebrow: "Harbor-to-island transfer support",
     duration: "Depends on destination",
@@ -3102,6 +3140,8 @@ const tours = [
   },
   {
     slug: "bali-helicopter-scenic-tour",
+    metaTitle: "Bali Helicopter Tour | Scenic Flight over Nusa Dua & Benoa",
+    metaDescription: "Bali helicopter scenic tour — a short premium flight over Serangan, Tanjung Benoa, GWK and Nusa Dua. Hotel pickup included. Check availability on WhatsApp.",
     title: "Bali Helicopter Scenic Tour",
     eyebrow: "Premium island views from the air",
     duration: "Short flight experience",
@@ -10116,7 +10156,7 @@ const JOURNAL_SEO_GUIDES = [
     heroTourSlug: "sunset-cruise-bali",
     relatedTourSlugs: ["sunset-cruise-bali", "private-car-with-driver-bali", "bali-airport-transfer"],
     inlineStats: ["7 venue picks", "Sunset to late-night", "Best for social trips"],
-    title: "7 Best Beach Clubs in Bali for Young Adults, Sunset Sessions and Big Nights",
+    title: "7 Best Beach Clubs in Bali | Vibe, Areas and Sunset Timing",
     description:
       "Searching for the best beach clubs in Bali for young adults? Start with these proven names in Seminyak, Canggu and Uluwatu, from Potato Head and Savaya to Atlas and La Brisa.",
     excerpt:
@@ -10366,7 +10406,7 @@ const JOURNAL_SEO_GUIDES = [
     inlineStats: ["8 photo spots", "Strong for couples and creators", "Built around visual payoff"],
     title: "8 Best Instagram Places in Bali for Photos That Still Look Good in Real Life",
     description:
-      "Looking for the best Instagram places in Bali? Start with these photogenic temples, rice terraces, cliffs and waterfalls instead of wasting time on weak stops.",
+      "Looking for the best Instagram places in Bali? Start with these photogenic temples, rice terraces, cliffs and waterfalls instead of wasting time on weak ones.",
     excerpt:
       "The best Instagram places in Bali are not just about viral familiarity. The strongest spots are the ones that still feel impressive on the ground, fit together well in a real route and give you more than one angle, texture or mood in the same day.",
     rankings: [
@@ -10492,7 +10532,7 @@ const JOURNAL_SEO_GUIDES = [
     heroTourSlug: "private-car-with-driver-bali",
     relatedTourSlugs: ["private-car-with-driver-bali", "bali-airport-transfer", "ubud-highlights-tour"],
     inlineStats: ["6 main areas", "First-trip friendly", "Matches planner zones"],
-    title: "Where to Stay in Bali for First-Time Visitors: Canggu vs Seminyak vs Ubud vs Uluwatu vs Nusa Dua vs Sanur",
+    title: "Where to Stay in Bali for First-Timers | 6 Areas Compared",
     description:
       "Not sure where to stay in Bali for a first trip? This guide compares Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua and Sanur by vibe, transport and travel fit.",
     excerpt:
@@ -10604,9 +10644,9 @@ const JOURNAL_SEO_GUIDES = [
     heroTourSlug: "sunset-cruise-bali",
     relatedTourSlugs: ["sunset-cruise-bali", "ubud-instagram-tour", "mount-batur-sunrise-jeep-tour"],
     inlineStats: ["7 romantic ideas", "Couples and honeymoons", "Sunrise to sunset"],
-    title: "7 Best Things to Do in Bali for Couples, Honeymoons and Romantic Trips",
+    title: "7 Best Things to Do in Bali for Couples and Honeymoons",
     description:
-      "Planning a romantic Bali trip? These are the best things to do in Bali for couples, from sunrise viewpoints and rice terraces to beach sunsets and premium day experiences.",
+      "Planning a romantic Bali trip? The best things to do in Bali for couples, from sunrise viewpoints and rice terraces to beach sunsets and premium day trips.",
     excerpt:
       "Bali works for couples because the island gives you several different versions of romance. Some travelers want soft green scenery and wellness, others want clifftop sunsets and beach clubs, and others want a high-payoff photo day that still feels intimate instead of overly public.",
     rankings: [
@@ -10724,7 +10764,7 @@ const JOURNAL_SEO_GUIDES = [
     heroTourSlug: "bali-unesco",
     relatedTourSlugs: ["bali-unesco", "tanah-lot-bedugul-tour", "ubud-highlights-tour"],
     inlineStats: ["7 temple picks", "Culture + scenery", "Strong for first-timers"],
-    title: "7 Best Temples in Bali for Culture, Scenery and First-Time Travelers",
+    title: "7 Best Temples in Bali | Dress Code, Routes and Best Times",
     description:
       "Looking for the best temples in Bali? Start with these seven cultural landmarks, from Tanah Lot and Ulun Danu to Tirta Empul, Lempuyang and Goa Gajah.",
     excerpt:
@@ -10845,7 +10885,7 @@ const JOURNAL_SEO_GUIDES = [
     heroTourSlug: "ubud-highlights-tour",
     relatedTourSlugs: ["ubud-highlights-tour", "ubud-instagram-tour", "dolphin-sunrise-city-tour"],
     inlineStats: ["5 waterfall picks", "Photo + swim value", "Day-trip friendly"],
-    title: "5 Best Waterfalls in Bali for Day Trips, Photos and Easy Jungle Stops",
+    title: "5 Best Waterfalls in Bali for Day Trips, Photos and Swims",
     description:
       "Searching for the best waterfalls in Bali? These five proven waterfall stops work well for day trips, photos, soft adventure and first-time travelers.",
     excerpt:
@@ -10949,7 +10989,7 @@ const JOURNAL_SEO_GUIDES = [
     heroTourSlug: "nusa-penida-west-tour",
     relatedTourSlugs: ["nusa-penida-west-tour", "bali-unesco", "mount-batur-sunrise-hike", "ubud-highlights-tour"],
     inlineStats: ["7 big-view stops", "Cliffs + volcano + terraces", "Sunrise to sunset"],
-    title: "7 Best Viewpoints in Bali for Cliffs, Volcano Sunrises and Rice Terrace Scenery",
+    title: "7 Best Viewpoints in Bali: Sunrise, Cliffs and Rice Terraces",
     description:
       "Looking for the best viewpoints in Bali? These seven stops cover volcano sunrise scenes, cliff-edge lookouts, rice terraces and broad coastline views.",
     excerpt:
@@ -12722,9 +12762,9 @@ const JOURNAL_SEO_GUIDES = [
     heroTourSlug: "private-car-with-driver-bali",
     relatedTourSlugs: ["private-car-with-driver-bali", "blue-lagoon-snorkeling", "bali-airport-transfer"],
     inlineStats: ["Common scams", "Real risks ranked", "Emergency numbers"],
-    title: "Bali Safety Guide: Scams, Health Risks and What Actually Goes Wrong",
+    title: "Is Bali Safe in 2026? 7 Common Scams and How to Avoid Them",
     description:
-      "An honest Bali safety guide — the scams travelers really meet, scooter and water risks, rabies and Bali belly, methanol in cheap spirits, medical costs and emergency numbers.",
+      "Money changers who palm notes, fake police fines, scooter damage claims. Here are the 7 scams that catch tourists in Bali in 2026, and how to spot each one.",
     excerpt:
       "Violent crime against tourists in Bali is rare. What actually hurts people is mundane: **scooter crashes, rip currents, stomach illness and cheap spirits**. Australia and the UK both rate Indonesia \"exercise a high degree of caution\" with no advisory against visiting Bali. Knowing the real risks — rather than the imagined ones — is most of the work.",
     rankings: [
@@ -18164,10 +18204,38 @@ function translationLocaleCode(locale = "en") {
    значение — готовый текст. Эти записи всегда перекрывают кэш машинного
    перевода. */
 const PINNED_TRANSLATIONS = {
-  ru: {},
-  es: {},
-  fr: {},
-  "zh-CN": {},
+  ru: {
+    "8 Best Instagram Places in Bali for Photos That Still Look Good in Real Life":
+      "8 самых фотогеничных мест Бали | Локации, время, как добраться",
+    "Is Bali Safe in 2026? 7 Common Scams and How to Avoid Them":
+      "Безопасно ли на Бали в 2026? 7 частых разводов туристов",
+    "Where to Stay in Bali for First-Timers | 6 Areas Compared":
+      "Где жить на Бали в первый раз | Сравнение 6 районов",
+    "7 Best Things to Do in Bali for Couples and Honeymoons":
+      "7 лучших идей для пары на Бали | Романтический гид",
+    "5 Best Waterfalls in Bali for Day Trips, Photos and Swims":
+      "5 лучших водопадов Бали | Как добраться и когда ехать",
+  },
+  es: {
+    "Where to Stay in Bali for First-Timers | 6 Areas Compared":
+      "Dónde Alojarse en Bali | 6 Zonas Comparadas para Primera Vez",
+    "7 Best Beach Clubs in Bali | Vibe, Areas and Sunset Timing":
+      "7 Mejores Beach Clubs de Bali | Zonas, Ambiente y Atardecer",
+    "7 Best Things to Do in Bali for Couples and Honeymoons":
+      "7 Cosas que Hacer en Bali en Pareja | Guía Romántica",
+    "5 Best Waterfalls in Bali for Day Trips, Photos and Swims":
+      "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
+  },
+  fr: {
+    "8 Best Beaches in Bali With Crystal Clear Water for Swimming, Snorkeling and Photos":
+      "8 Plus Belles Plages de Bali à l'Eau Cristalline",
+    "Is Bali Safe in 2026? 7 Common Scams and How to Avoid Them":
+      "Bali est-elle sûre en 2026 ? 7 arnaques courantes à éviter",
+  },
+  "zh-CN": {
+    "How Much Does a Bali Trip Cost? Real Prices for 2026":
+      "巴厘岛旅行要花多少钱？2026年真实物价与三档预算",
+  },
 };
 
 function translationCacheBucket(locale = "en") {
