@@ -43,7 +43,9 @@
      молча выключает position:sticky у сайдбара статьи; clip режет так же,
      но sticky продолжает работать. body получает hidden из общего
      bali-tour-pages.css — перекрываем и его. */
-  html,body{overflow-x:clip}
+  /* important — чтобы перекрыть и закэшированный у посетителей старый
+     fonts-cinageo.css c overflow-x:hidden !important (кэш живёт сутки). */
+  html,body{overflow-x:clip!important}
   .sb-journal-page{min-height:100vh;overflow-x:hidden;overflow-x:clip}
   .sb-journal-tour-header{position:fixed;top:0;left:0;right:0;z-index:80}
   .sb-journal-tour-header__desktop{display:block;background:rgba(255,255,255,0);border-bottom:0;transition:background-color .35s ease,box-shadow .35s ease}
