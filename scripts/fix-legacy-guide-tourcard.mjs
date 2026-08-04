@@ -28,7 +28,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
 const EXTRA_CSS = `<style id="sb-journal-tourcard-css">
-  html,body{overflow-x:clip!important}
+  html,html body{overflow-x:clip!important}
   .sb-journal-page{overflow-x:clip}
   .sb-journal-tourcard{padding:0;overflow:hidden}
   .sb-journal-tourcard__media{display:block;position:relative}
