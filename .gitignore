@@ -1,4 +1,6 @@
 
 # Dependencies
+# ключ IndexNow — секрет не критичный, но в репозитории ему не место
 .DS_Store
+.indexnow-key
 node_modules/
