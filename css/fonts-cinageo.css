@@ -100,9 +100,15 @@ html .sb-price-note {
 /* Tighter letter-spacing site-wide. Set on <body> so it INHERITS into all
    default text; elements with their own letter-spacing (uppercase eyebrows,
    badges, display headings) keep their intentional tracking. */
+/* clip, а не hidden: hidden делает body scroll-контейнером и молча ломает
+   position:sticky на всех страницах (например, закреплённую карточку тура
+   в статьях журнала). clip так же режет горизонтальный вылет, но sticky
+   продолжает работать. hidden остаётся строчкой выше как запасной вариант
+   для старых браузеров без поддержки clip. */
 html,
 html body {
   overflow-x: hidden !important;
+  overflow-x: clip !important;
 }
 
 html body {

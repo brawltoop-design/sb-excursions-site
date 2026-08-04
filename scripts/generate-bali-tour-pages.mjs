@@ -15392,6 +15392,34 @@ function renderGuideRelatedTourCard(tour) {
   `;
 }
 
+// Закреплённая карточка тура в правой колонке статьи: фото, цена, две кнопки.
+// Пока читатель скроллит статью, карточка остаётся на экране (sticky задан на
+// .sb-journal-sidebar) — с любого места текста один клик до страницы тура или
+// брони в WhatsApp. Тексты кнопок совпадают со строками из шапки статьи,
+// чтобы переводы на RU/ES/FR/ZH приехали из уже наполненного кэша.
+function renderJournalTourPinCard(tour) {
+  const bookingHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(buildWhatsAppMessage(tour))}`;
+  return `
+          <aside class="sb-journal-sidebar">
+            <div class="sb-journal-sidebar-card sb-journal-tourcard">
+              <a class="sb-journal-tourcard__media" href="${tourRoute(tour)}">
+                <img src="${publicImagePath(tour)}" alt="${escapeHtml(tour.imageAlt)}" loading="lazy" decoding="async">
+                <span class="sb-journal-tourcard__badge">★ ${TOUR_VISIBLE_RATING} Google Maps</span>
+              </a>
+              <h3 class="sb-journal-tourcard__title"><a href="${tourRoute(tour)}">${escapeHtml(tour.title)}</a></h3>
+              <div class="sb-journal-tourcard__meta">
+                <span>${escapeHtml(tour.duration)}</span>
+                <span>${escapeHtml(tour.area)}</span>
+              </div>
+              <div class="sb-journal-tourcard__price">${escapeHtml(tour.price)}</div>
+              <div class="sb-journal-tourcard__actions">
+                <a class="sb-journal-primary" href="${tourRoute(tour)}">Open the tour page</a>
+                <a class="sb-journal-secondary" href="${bookingHref}" target="_blank" rel="noopener noreferrer nofollow">Book in WhatsApp</a>
+              </div>
+            </div>
+          </aside>`;
+}
+
 function renderSeoGuidePage(article) {
   const siblingGuides = buildSeoGuideArticles()
     .filter((item) => item.guide.slug !== article.guide.slug)
@@ -15564,44 +15592,39 @@ ${JOURNAL_FOOTER_ASSETS}
             ` : ""}
           </article>
 
-          <aside class="sb-journal-sidebar">
-            <div class="sb-journal-sidebar-card">
-              <h3>Guide snapshot</h3>
-              <ul>
-                ${article.inlineStats.map((item) => `<li>${renderRichText(item)}</li>`).join("")}
-                <li>Recommended route anchor: ${escapeHtml(article.tour.title)}</li>
-              </ul>
-            </div>
-            <div class="sb-journal-sidebar-card">
-              <h3>Recommended tours</h3>
-              <div class="sb-journal-article-list">
-                ${article.relatedTours
-                  .map(
-                    (tour) => `
-                  <a class="sb-journal-card sb-journal-card_compact" href="${tourRoute(tour)}">
-                    <div class="sb-journal-card__body">
-                      <div class="sb-journal-card__meta">
-                        <span class="sb-journal-chip">Tour match</span>
-                        <span class="sb-journal-card__tour">${escapeHtml(tour.area)}</span>
-                      </div>
-                      <h3>${escapeHtml(tour.title)}</h3>
-                      <p>${escapeHtml(tour.summary)}</p>
-                      <span class="sb-journal-card__cta">Open tour page</span>
-                    </div>
-                  </a>
-                `,
-                  )
-                  .join("")}
-              </div>
-            </div>
-            <div class="sb-journal-sidebar-card">
-              <h3>More Bali guides</h3>
-              <div class="sb-journal-article-list">
-                ${siblingGuides.map((item) => renderJournalArticleCard(item, { compact: true })).join("")}
-              </div>
-            </div>
-          </aside>
+${renderJournalTourPinCard(article.tour)}
         </div>
+
+        <section class="sb-journal-bottomrow">
+          <div>
+            <h2>Recommended tours</h2>
+            <div class="sb-journal-bottom-grid">
+              ${article.relatedTours
+                .map(
+                  (tour) => `
+                <a class="sb-journal-card sb-journal-card_compact" href="${tourRoute(tour)}">
+                  <div class="sb-journal-card__body">
+                    <div class="sb-journal-card__meta">
+                      <span class="sb-journal-chip">Tour match</span>
+                      <span class="sb-journal-card__tour">${escapeHtml(tour.area)}</span>
+                    </div>
+                    <h3>${escapeHtml(tour.title)}</h3>
+                    <p>${escapeHtml(tour.summary)}</p>
+                    <span class="sb-journal-card__cta">Open tour page</span>
+                  </div>
+                </a>
+              `,
+                )
+                .join("")}
+            </div>
+          </div>
+          <div>
+            <h2>More Bali guides</h2>
+            <div class="sb-journal-bottom-grid">
+              ${siblingGuides.map((item) => renderJournalArticleCard(item, { compact: true })).join("")}
+            </div>
+          </div>
+        </section>
 
         ${renderBaliWeatherBlock(tourRoute(article.tour))}
       </main>
@@ -15752,25 +15775,17 @@ ${JOURNAL_FOOTER_ASSETS}
             ` : ""}
           </article>
 
-          <aside class="sb-journal-sidebar">
-            <div class="sb-journal-sidebar-card">
-              <h3>Tour snapshot</h3>
-              <ul>
-                <li>Duration: ${escapeHtml(article.tour.duration)}</li>
-                <li>Best for: ${escapeHtml(article.tour.bestFor)}</li>
-                <li>Pickup: ${escapeHtml(article.tour.pickup)}</li>
-                <li>Area: ${escapeHtml(article.tour.area)}</li>
-                <li>Price: ${escapeHtml(article.tour.price)}</li>
-              </ul>
-            </div>
-            <div class="sb-journal-sidebar-card">
-              <h3>More articles for this tour</h3>
-              <div class="sb-journal-article-list">
-                ${siblingArticles.map((item) => renderJournalArticleCard(item, { compact: true })).join("")}
-              </div>
-            </div>
-          </aside>
+${renderJournalTourPinCard(article.tour)}
         </div>
+
+        <section class="sb-journal-bottomrow">
+          <div>
+            <h2>More articles for this tour</h2>
+            <div class="sb-journal-bottom-grid">
+              ${siblingArticles.map((item) => renderJournalArticleCard(item, { compact: true })).join("")}
+            </div>
+          </div>
+        </section>
 
         ${renderBaliWeatherBlock(tourRoute(article.tour))}
       </main>
@@ -15799,7 +15814,12 @@ function renderJournalSharedStyles() {
   body{margin:0;background:var(--sbj-bg);color:var(--sbj-text);font-family:"Cina GEO", "TildaSans","Tilda Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
   img{max-width:100%;display:block}
   a{text-decoration:none;color:inherit}
-  .sb-journal-page{min-height:100vh;overflow-x:hidden}
+  /* clip вместо hidden: hidden превращает элемент в scroll-контейнер и
+     молча выключает position:sticky у сайдбара статьи; clip режет так же,
+     но sticky продолжает работать. body получает hidden из общего
+     bali-tour-pages.css — перекрываем и его. */
+  html,body{overflow-x:clip}
+  .sb-journal-page{min-height:100vh;overflow-x:hidden;overflow-x:clip}
   .sb-journal-tour-header{position:fixed;top:0;left:0;right:0;z-index:80}
   .sb-journal-tour-header__desktop{display:block;background:rgba(255,255,255,0);border-bottom:0;transition:background-color .35s ease,box-shadow .35s ease}
   .sb-journal-tour-header__desktop-inner{width:min(calc(100% - 32px),1240px);min-height:7vh;margin:0 auto;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:24px}
@@ -15990,6 +16010,21 @@ function renderJournalSharedStyles() {
   .sb-journal-article-section ul,.sb-journal-sidebar-card ul{margin:0;padding-left:18px}
   .sb-journal-article-section li,.sb-journal-sidebar-card li{color:#2f2f33;font-size:16px;line-height:1.72}
   .sb-journal-sidebar{display:grid;gap:18px;align-self:start;position:sticky;top:88px}
+  .sb-journal-tourcard{padding:0;overflow:hidden}
+  .sb-journal-tourcard__media{display:block;position:relative}
+  .sb-journal-tourcard__media img{width:100%;height:190px;object-fit:cover;display:block}
+  .sb-journal-tourcard__badge{position:absolute;left:14px;bottom:14px;background:rgba(17,17,17,0.78);color:#fff;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:0.2px}
+  .sb-journal-tourcard__title{margin:16px 18px 0;font-size:22px;line-height:1.25;letter-spacing:-0.6px}
+  .sb-journal-tourcard__title a{color:inherit;text-decoration:none}
+  .sb-journal-tourcard__title a:hover{text-decoration:underline}
+  .sb-journal-tourcard__meta{display:flex;flex-wrap:wrap;gap:8px;margin:12px 18px 0}
+  .sb-journal-tourcard__meta span{background:#f1f1ee;border-radius:999px;padding:6px 12px;font-size:13px;color:#4b4b50;font-weight:600}
+  .sb-journal-tourcard__price{margin:14px 18px 0;font-size:26px;font-weight:800;letter-spacing:-0.5px}
+  .sb-journal-tourcard__actions{display:grid;gap:10px;padding:16px 18px 20px}
+  .sb-journal-tourcard__actions .sb-journal-primary,.sb-journal-tourcard__actions .sb-journal-secondary{width:100%;box-sizing:border-box}
+  .sb-journal-bottomrow{margin-top:26px;display:grid;gap:26px}
+  .sb-journal-bottomrow h2{margin:0 0 14px;font-size:30px;letter-spacing:-1.2px}
+  .sb-journal-bottom-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
   .sb-journal-sidebar-card{background:var(--sbj-surface);border:1px solid var(--sbj-line);border-radius:var(--sbj-radius-xl);padding:22px;box-shadow:var(--sbj-shadow)}
   .sb-journal-sidebar-card h3{margin:0 0 14px;font-size:24px;line-height:1.08;letter-spacing:-0.9px}
   .sb-journal-inline-stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
@@ -16019,7 +16054,7 @@ function renderJournalSharedStyles() {
   .sb-journal-footer__social-link:hover,.sb-journal-footer__social-link:focus-visible{transform:translateY(-1px);opacity:.9;outline:none}
   .sb-journal-footer__social-link svg{width:22px;height:22px}
   .sb-journal-header-lock{overflow:hidden}
-  @media screen and (max-width:1100px){.sb-journal-featured-grid,.sb-journal-tour-grid,.sb-journal-article-layout,.sb-journal-hero,.sb-journal-article-hero,.sb-journal-ranking-grid,.sb-journal-guide-tour-grid{grid-template-columns:1fr}.sb-journal-sidebar{position:static}.sb-journal-hero h1,.sb-journal-article-hero h1{font-size:46px}.sb-journal-footer__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sb-journal-footer__brand,.sb-journal-footer__payments{grid-column:1/-1}}
+  @media screen and (max-width:1100px){.sb-journal-featured-grid,.sb-journal-tour-grid,.sb-journal-article-layout,.sb-journal-hero,.sb-journal-article-hero,.sb-journal-ranking-grid,.sb-journal-guide-tour-grid,.sb-journal-bottom-grid{grid-template-columns:1fr}.sb-journal-sidebar{position:static}.sb-journal-hero h1,.sb-journal-article-hero h1{font-size:46px}.sb-journal-footer__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sb-journal-footer__brand,.sb-journal-footer__payments{grid-column:1/-1}}
   @media screen and (max-width:980px){.sb-journal-tour-header__desktop-inner{grid-template-columns:auto 1fr;gap:18px;padding-top:14px;padding-bottom:14px}.sb-journal-tour-header__nav{justify-content:flex-end;flex-wrap:wrap}.sb-journal-tour-header__actions{grid-column:1/-1;justify-content:flex-start}}
   @media screen and (max-width:640px){.sb-journal-footer{padding:0 14px 26px}.sb-journal-footer__shell{margin-top:26px;padding:28px 20px 24px;border-radius:28px}.sb-journal-footer__grid{grid-template-columns:1fr;gap:22px}.sb-journal-footer__brand,.sb-journal-footer__payments{grid-column:auto}.sb-journal-footer__lead,.sb-journal-footer__text{font-size:16px}.sb-journal-footer__link{font-size:16px}.sb-journal-footer__bottom{flex-direction:column;align-items:flex-start}.sb-journal-footer__copyright,.sb-journal-footer__social-label{font-size:15px}.sb-journal-footer__social-link{width:42px;height:42px}}
   @media screen and (max-width:480px){.sb-journal-tour-header__desktop{display:none}.sb-journal-tour-header__mobile{display:block;background:transparent;transition:background-color .35s ease,box-shadow .35s ease}.sb-journal-tour-header__mobile-bar{background:transparent;transition:background-color .35s ease,box-shadow .35s ease}.sb-journal-tour-header_scrolled .sb-journal-tour-header__mobile,.sb-journal-tour-header_open .sb-journal-tour-header__mobile{background:#333}.sb-journal-tour-header_scrolled .sb-journal-tour-header__mobile-bar,.sb-journal-tour-header_open .sb-journal-tour-header__mobile-bar{background:#333;box-shadow:0 10px 30px rgba(17,24,39,0.18)}.sb-journal-tour-header_scrolled .sb-journal-tour-header__burger,.sb-journal-tour-header_open .sb-journal-tour-header__burger,.sb-journal-tour-header_scrolled .sb-journal-tour-header__socials a,.sb-journal-tour-header_open .sb-journal-tour-header__socials a{color:#fff}.sb-journal-tour-header_scrolled .sb-journal-tour-header__mobile-logo,.sb-journal-tour-header_open .sb-journal-tour-header__mobile-logo{filter:brightness(0) invert(1)}.sb-journal-main{padding:90px 14px 64px}.sb-journal-hero,.sb-journal-article-hero,.sb-journal-tour-card,.sb-journal-article,.sb-journal-sidebar-card,.sb-journal-ranking-card,.sb-journal-faq-card{border-radius:24px}.sb-journal-hero,.sb-journal-article-hero,.sb-journal-article{padding:20px}.sb-journal-featured-grid,.sb-journal-tour-grid,.sb-journal-ranking-grid,.sb-journal-guide-tour-grid,.sb-journal-faq-grid{gap:16px}.sb-journal-tour-card__copy{left:16px;right:16px;bottom:16px}.sb-journal-tour-card__copy h3{font-size:28px}.sb-journal-hero h1,.sb-journal-article-hero h1{font-size:34px;letter-spacing:-1.6px}.sb-journal-lead{font-size:17px}.sb-journal-section__head{align-items:flex-start;flex-direction:column}.sb-journal-section__head h2{font-size:28px}.sb-journal-card h3,.sb-journal-ranking-card h3,.sb-journal-faq-card h3{font-size:23px}.sb-journal-article-section h2{font-size:26px}.sb-journal-article-section p,.sb-journal-article-section li,.sb-journal-sidebar-card li,.sb-journal-ranking-card p,.sb-journal-faq-card p{font-size:15px}}
