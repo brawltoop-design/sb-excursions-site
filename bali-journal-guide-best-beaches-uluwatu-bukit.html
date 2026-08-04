@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -629,7 +632,7 @@ body {
             <h1>8 Best Uluwatu Beaches on the Bukit: Stairs, Surf, Sand</h1>
             <p class="sb-journal-lead">Almost every beach around Uluwatu hides at the bottom of a limestone cliff, and the stairs are the price of entry. Here are the eight worth the climb, ranked, with honest notes on tides, swimming windows, and how hard the walk back up really is.</p>
             <div class="sb-journal-inline-stats">
-              <span>8 beaches ranked</span><span>Stair-count reality</span><span>Private car from $65</span>
+              <span>8 beaches ranked</span><span>Stair-count reality</span><span>Private car from $59</span>
             </div>
             <div class="sb-journal-article-hero__actions">
               <a class="sb-journal-primary" href="/bali/en/tours/private-car-with-driver-bali">Open recommended tour</a>
@@ -790,7 +793,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Getting to Uluwatu&#39;s beaches without a headache</h2>
-                <p>The Bukit&#39;s roads are steep, and several beach car parks sit down rough tracks that rattle inexperienced scooter riders. If you&#39;re hopping between three or four beaches — say Melasti, Padang Padang, and Bingin, with sunset at the temple — a <a href="/bali/en/tours/private-car-with-driver-bali">private car with a driver</a> from $65 per car makes the day simple: the driver handles the clifftop parking while you handle the stairs. To fold the Bukit&#39;s coves into a wider photo day across the island, the <a href="/bali/en/tours/bali-instagram-highlights-tour">Bali Instagram highlights tour</a> from $65 per car covers the same ground with a route built around light and crowds.</p>
+                <p>The Bukit&#39;s roads are steep, and several beach car parks sit down rough tracks that rattle inexperienced scooter riders. If you&#39;re hopping between three or four beaches — say Melasti, Padang Padang, and Bingin, with sunset at the temple — a <a href="/bali/en/tours/private-car-with-driver-bali">private car with a driver</a> from $59 per car makes the day simple: the driver handles the clifftop parking while you handle the stairs. To fold the Bukit&#39;s coves into a wider photo day across the island, the <a href="/bali/en/tours/bali-instagram-highlights-tour">Bali Instagram highlights tour</a> from $69 covers the same ground with a route built around light and crowds.</p>
 
               </section>
 
@@ -919,7 +922,7 @@ body {
             <div class="sb-journal-sidebar-card">
               <h3>Guide snapshot</h3>
               <ul>
-                <li>8 beaches ranked</li><li>Stair-count reality</li><li>Private car from $65</li>
+                <li>8 beaches ranked</li><li>Stair-count reality</li><li>Private car from $59</li>
                 <li>Recommended route anchor: Private Car with Driver in Bali</li>
               </ul>
             </div>

@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,14 +657,14 @@ body {
                 <li>🚐 Pickup: <strong>Morning hotel pickup</strong></li>
                 <li>📍 Area: <strong>West and central Bali</strong></li>
                 <li>👥 Best for: <strong>Classic sightseeing days</strong></li>
-                <li>💰 Price: <strong>From $65 per car</strong></li>
+                <li>💰 Price: <strong>From $59</strong></li>
               </ul>
             </aside>
 
               <section class="sb-journal-article-section">
                 <h2>📌 Tour overview at a glance</h2>
                 <p>This is a strong all-round Bali day for guests who want culture, wide viewpoints, cooler mountain air, and a memorable coastal finish. It is easy to enjoy and easy to sell because the scenery stays varied all day.</p>
-                <ul><li>Duration: <strong>9-11 hours</strong></li><li>Format: <strong>Private day tour</strong></li><li>Area: <strong>West and central Bali</strong></li><li>Pickup: <strong>Morning hotel pickup</strong></li><li>Best for: <strong>Classic sightseeing days</strong></li><li>Starting from: <strong>From $65 per car</strong></li></ul>
+                <ul><li>Duration: <strong>9-11 hours</strong></li><li>Format: <strong>Private day tour</strong></li><li>Area: <strong>West and central Bali</strong></li><li>Pickup: <strong>Morning hotel pickup</strong></li><li>Best for: <strong>Classic sightseeing days</strong></li><li>Starting from: <strong>From $59</strong></li></ul>
               </section>
 
               <section class="sb-journal-article-section">
@@ -696,7 +699,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>✉️ Booking and confirmation — what you need to send</h2>
-                <p>To confirm the Tanah Lot and Bedugul Tour, you will need to share your preferred date, hotel name and area, and group size. This lets the operator match the right vehicle, guide, and timing window.</p><p>Pricing starts from From $65 per car. The exact quote depends on your group size, hotel distance, and any add-on options.</p>
+                <p>To confirm the Tanah Lot and Bedugul Tour, you will need to share your preferred date, hotel name and area, and group size. This lets the operator match the right vehicle, guide, and timing window.</p><p>Pricing starts from From $59. The exact quote depends on your group size, hotel distance, and any add-on options.</p>
                 <ul><li>Hotel pickup and return planning from major Bali areas</li><li>Private route flow and flexible pacing</li><li>Driver coordination for the core route and main sightseeing timing</li><li>WhatsApp support for confirmation, timing, and route questions</li></ul>
               </section>
 
@@ -738,7 +741,7 @@ body {
                 <li>Best for: Classic sightseeing days</li>
                 <li>Pickup: Morning hotel pickup</li>
                 <li>Area: West and central Bali</li>
-                <li>Price: From $65 per car</li>
+                <li>Price: From $59</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

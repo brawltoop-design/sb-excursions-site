@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,14 +657,14 @@ body {
                 <li>🚐 Recogida: <strong>03:00 am Recogida en el hotel desde las zonas sur y central de Bali.</strong></li>
                 <li>📍 Área: <strong>Lovina, cascada Gitgit y Ulun Danu Beratan</strong></li>
                 <li>👥 Ideal para: <strong>Viajeros que desean una ruta compacta al amanecer por el norte de Bali con aspectos destacados clásicos</strong></li>
-                <li>💰 Precio: <strong>Desde $75</strong></li>
+                <li>💰 Precio: <strong>Desde $69</strong></li>
               </ul>
             </aside>
 
               <section class="sb-journal-article-section">
                 <h2>📌 Descripción general del recorrido de un vistazo</h2>
-                <p>Este Lovina Dolphin Sunrise Tour es la forma más limpia de recorrer el norte de Bali en un día temprano cuando desea ver el mar, una cascada y un templo en el lago sin tener que unir la ruta usted mismo. Incluye recogida en el hotel, transporte privado con aire acondicionado, el tradicional bote con estabilizadores de Lovina, entradas, agua mineral y seguro, con un precio por página fijado en 75 dólares.</p>
-                <ul><li>Duración: <strong>8 horas</strong></li><li>Formato: <strong>Tour privado de un día al amanecer con delfines</strong></li><li>Área: <strong>Lovina, cascada Gitgit y Ulun Danu Beratan</strong></li><li>Recogida: <strong>03:00 am Recogida en el hotel desde las zonas sur y central de Bali.</strong></li><li>Lo mejor para: <strong>Viajeros que desean una ruta compacta al amanecer por el norte de Bali con aspectos destacados clásicos</strong></li><li>A partir de: <strong>Desde $75</strong></li></ul>
+                <p>Este Lovina Dolphin Sunrise Tour es la forma más limpia de recorrer el norte de Bali en un día temprano cuando desea ver el mar, una cascada y un templo en el lago sin tener que unir la ruta usted mismo. Incluye recogida en el hotel, transporte privado con aire acondicionado, el tradicional bote con estabilizadores de Lovina, entradas, agua mineral y seguro, con un precio por página fijado en 69 dólares.</p>
+                <ul><li>Duración: <strong>8 horas</strong></li><li>Formato: <strong>Tour privado de un día al amanecer con delfines</strong></li><li>Área: <strong>Lovina, cascada Gitgit y Ulun Danu Beratan</strong></li><li>Recogida: <strong>03:00 am Recogida en el hotel desde las zonas sur y central de Bali.</strong></li><li>Lo mejor para: <strong>Viajeros que desean una ruta compacta al amanecer por el norte de Bali con aspectos destacados clásicos</strong></li><li>A partir de: <strong>Desde $69</strong></li></ul>
               </section>
 
               <section class="sb-journal-article-section">
@@ -696,7 +699,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>✉️ Reserva y confirmación: lo que necesitas enviar</h2>
-                <p>Para confirmar el tour Lovina Dolphin Sunrise, deberá compartir su fecha preferida, el nombre y el área del hotel y el tamaño del grupo. Esto permite al operador hacer coincidir el vehículo, la guía y la ventana de sincronización correctos.</p><p>El precio comienza desde $75. La cotización exacta depende del tamaño de su grupo, la distancia del hotel y las opciones adicionales.</p>
+                <p>Para confirmar el tour Lovina Dolphin Sunrise, deberá compartir su fecha preferida, el nombre y el área del hotel y el tamaño del grupo. Esto permite al operador hacer coincidir el vehículo, la guía y la ventana de sincronización correctos.</p><p>El precio comienza desde $69. La cotización exacta depende del tamaño de su grupo, la distancia del hotel y las opciones adicionales.</p>
                 <ul><li>Entradas en todos los destinos turísticos de la ruta.</li><li>Billete para el tradicional barco con estabilizadores de Lovina.</li><li>Conductor de habla inglesa</li><li>Coche privado con aire acondicionado completo.</li><li>Una botella de agua mineral</li><li>Insurance</li></ul>
               </section>
 
@@ -728,7 +731,7 @@ body {
                 <li>Ideal para: Viajeros que desean una ruta compacta al amanecer en el norte de Bali con atracciones clásicas.</li>
                 <li>Recogida: 03:00 am Recogida en el hotel desde las zonas del sur y centro de Bali.</li>
                 <li>Área: Lovina, Cascada Gitgit y Ulun Danu Beratan</li>
-                <li>Precio: Desde $75</li>
+                <li>Precio: Desde $69</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

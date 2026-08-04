@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="手机导航">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">我们的旅行</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/zh/main-page#tours">我们的旅行</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">阿联酋迪拜</a>
                   <a href="/bali/zh/main-page#tours">印度尼西亚巴厘岛</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -824,7 +827,7 @@ body {
           <span class="sb-journal-card__tour">巴厘岛西部和中部联合国教科文组织路线</span>
         </div>
         <h3>巴厘岛联合国教科文组织遗产之旅</h3>
-        <p>这个巴厘岛联合国教科文组织遗产之旅专为那些想要寺庙庭院、山湖景观、联合国教科文组织水稻梯田和著名的沿海寺庙而无需将单独的一日游拼接在一起的游客而设计。私人交通、门票、寺庙纱笼和瓶装水的价格已从每人 70 美元起。</p>
+        <p>这个巴厘岛联合国教科文组织遗产之旅专为那些想要寺庙庭院、山湖景观、联合国教科文组织水稻梯田和著名的沿海寺庙而无需将单独的一日游拼接在一起的游客而设计。私人交通、门票、寺庙纱笼和瓶装水的价格已由每人 69 美元起。</p>
         <span class="sb-journal-card__cta">打开游览页面</span>
       </div>
     </a>
@@ -918,7 +921,7 @@ body {
                         <span class="sb-journal-card__tour">巴厘岛西部和中部联合国教科文组织路线</span>
                       </div>
                       <h3>巴厘岛联合国教科文组织遗产之旅</h3>
-                      <p>这个巴厘岛联合国教科文组织遗产之旅专为那些想要寺庙庭院、山湖景观、联合国教科文组织水稻梯田和著名的沿海寺庙而无需将单独的一日游拼接在一起的游客而设计。私人交通、门票、寺庙纱笼和瓶装水的价格已从每人 70 美元起。</p>
+                      <p>这个巴厘岛联合国教科文组织遗产之旅专为那些想要寺庙庭院、山湖景观、联合国教科文组织水稻梯田和著名的沿海寺庙而无需将单独的一日游拼接在一起的游客而设计。私人交通、门票、寺庙纱笼和瓶装水的价格已由每人 69 美元起。</p>
                       <span class="sb-journal-card__cta">打开游览页面</span>
                     </div>
                   </a>

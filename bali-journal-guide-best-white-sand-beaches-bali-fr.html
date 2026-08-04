@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navigation mobile">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nos circuits</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/fr/main-page#tours">Nos circuits</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubaï, Émirats Arabes Unis</a>
                   <a href="/bali/fr/main-page#tours">Bali, Indonésie</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -629,7 +632,7 @@ body {
             <h1>8 plages de sable blanc à Bali qui sont en réalité blanches</h1>
             <p class="sb-journal-lead">La majeure partie du littoral de Bali est constituée de sable volcanique gris, quoi qu'impliquent les listes. Ce guide classe les huit plages véritablement blanches – de la bande de Nusa Dua à Diamond Beach à Nusa Penida – et vous indique celles sur lesquelles vous pouvez réellement nager.</p>
             <div class="sb-journal-inline-stats">
-              <span>8 plages comparées</span><span>Du vrai sable blanc uniquement</span><span>Visites à partir de 65$</span>
+              <span>8 plages comparées</span><span>Du vrai sable blanc uniquement</span><span>Visites à partir de 59 $</span>
             </div>
             <div class="sb-journal-article-hero__actions">
               <a class="sb-journal-primary" href="/bali/fr/tours/nusa-penida-east-tour">Visite ouverte recommandée</a>
@@ -778,7 +781,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Le Bukit et Nusa Dua : du sable blanc accessible en voiture</h2>
-                <p>Melasti et Pandawa ont toutes deux des routes creusées dans le calcaire, vous vous garez donc près du sable – ce qui est rare sur une péninsule où la plupart des plages exigent un escalier. Nusa Dua et Geger sont encore plus faciles : accès plat, eaux calmes protégées par des récifs, installations partout. La baignade sur le Bukit dépend de la marée ; à l'intérieur du récif de Melasti et Pandawa, la marée moyenne est généralement la fenêtre. Le moyen efficace de les voir est d'utiliser une boucle avec un <a href="/bali/fr/tours/private-car-with-driver-bali">voiture privée avec chauffeur</a> à partir de 65 $ par voiture — Melasti, Pandawa et Geger sont assis l'un près de l'autre et votre chauffeur saura lequel est favorisé par la marée ce jour-là.</p>
+                <p>Melasti et Pandawa ont toutes deux des routes creusées dans le calcaire, vous vous garez donc près du sable – ce qui est rare sur une péninsule où la plupart des plages exigent un escalier. Nusa Dua et Geger sont encore plus faciles : accès plat, eaux calmes protégées par des récifs, installations partout. La baignade sur le Bukit dépend de la marée ; à l'intérieur du récif de Melasti et Pandawa, la marée moyenne est généralement la fenêtre. Le moyen efficace de les voir est d'utiliser une boucle avec un <a href="/bali/fr/tours/private-car-with-driver-bali">voiture privée avec chauffeur</a> à partir de 59 $ par voiture — Melasti, Pandawa et Geger sont assis l'un à côté de l'autre et votre chauffeur saura lequel est favorisé par la marée ce jour-là.</p>
 
               </section>
 
@@ -919,7 +922,7 @@ body {
             <div class="sb-journal-sidebar-card">
               <h3>Instantané du guide</h3>
               <ul>
-                <li>8 plages comparées</li><li>Du vrai sable blanc uniquement</li><li>Visites à partir de 65$</li>
+                <li>8 plages comparées</li><li>Du vrai sable blanc uniquement</li><li>Visites à partir de 59 $</li>
                 <li>Point d'ancrage de l'itinéraire recommandé : Nusa Penida East Tour</li>
               </ul>
             </div>

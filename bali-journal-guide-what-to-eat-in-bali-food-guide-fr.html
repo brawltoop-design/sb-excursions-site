@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navigation mobile">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nos circuits</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/fr/main-page#tours">Nos circuits</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubaï, Émirats Arabes Unis</a>
                   <a href="/bali/fr/main-page#tours">Bali, Indonésie</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -831,7 +834,7 @@ body {
           <span class="sb-journal-card__tour">Route UNESCO de l'ouest et du centre de Bali</span>
         </div>
         <h3>Visite des sites du patrimoine mondial de l'UNESCO à Bali</h3>
-        <p>Cette visite des sites du patrimoine mondial de l'UNESCO à Bali est conçue pour les voyageurs qui souhaitent des cours de temples, des vues sur les lacs de montagne, des rizières en terrasses de l'UNESCO et une célèbre finition de temple côtier sans combiner des excursions d'une journée séparées. Le transport privé, les billets d'entrée, un paréo de temple et de l'eau en bouteille sont déjà pris en charge à partir de 70 $ par personne.</p>
+        <p>Cette visite des sites du patrimoine mondial de l'UNESCO à Bali est conçue pour les voyageurs qui souhaitent des cours de temples, des vues sur les lacs de montagne, des rizières en terrasses de l'UNESCO et une célèbre finition de temple côtier sans combiner des excursions d'une journée distinctes. Le transport privé, les billets d'entrée, un paréo de temple et de l'eau en bouteille sont déjà pris en charge à partir de 69 $ par personne.</p>
         <span class="sb-journal-card__cta">Ouvrir la page de visite</span>
       </div>
     </a>
@@ -912,7 +915,7 @@ body {
                         <span class="sb-journal-card__tour">Route UNESCO de l'ouest et du centre de Bali</span>
                       </div>
                       <h3>Visite des sites du patrimoine mondial de l'UNESCO à Bali</h3>
-                      <p>Cette visite des sites du patrimoine mondial de l'UNESCO à Bali est conçue pour les voyageurs qui souhaitent des cours de temples, des vues sur les lacs de montagne, des rizières en terrasses de l'UNESCO et une célèbre finition de temple côtier sans combiner des excursions d'une journée séparées. Le transport privé, les billets d'entrée, un paréo de temple et de l'eau en bouteille sont déjà pris en charge à partir de 70 $ par personne.</p>
+                      <p>Cette visite des sites du patrimoine mondial de l'UNESCO à Bali est conçue pour les voyageurs qui souhaitent des cours de temples, des vues sur les lacs de montagne, des rizières en terrasses de l'UNESCO et une célèbre finition de temple côtier sans combiner des excursions d'une journée distinctes. Le transport privé, les billets d'entrée, un paréo de temple et de l'eau en bouteille sont déjà pris en charge à partir de 69 $ par personne.</p>
                       <span class="sb-journal-card__cta">Ouvrir la page de visite</span>
                     </div>
                   </a>

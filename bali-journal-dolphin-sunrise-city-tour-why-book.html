@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -629,7 +632,7 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">Selling article</div>
             <h1>Why Book the Lovina Dolphin Sunrise Tour in Bali — Is It Worth It?</h1>
-            <p class="sb-journal-lead">This Lovina Dolphin Sunrise Tour is the cleanest way to do north Bali in one early-start day when you want the sea, a waterfall, and a lake temple without stitching the route together yourself. It includes hotel pickup, private air-conditioned transport, the traditional Lovina outrigger boat, entrance fees, mineral water, and insurance, with the page price set from $75. This is the streamlined version of the Lovina dolphin experience — fewer stops than the full North Bali tour, designed for travelers who want the core dolphin encounter without a 12-hour day.</p>
+            <p class="sb-journal-lead">This Lovina Dolphin Sunrise Tour is the cleanest way to do north Bali in one early-start day when you want the sea, a waterfall, and a lake temple without stitching the route together yourself. It includes hotel pickup, private air-conditioned transport, the traditional Lovina outrigger boat, entrance fees, mineral water, and insurance, with the page price set from $69. This is the streamlined version of the Lovina dolphin experience — fewer stops than the full North Bali tour, designed for travelers who want the core dolphin encounter without a 12-hour day.</p>
             <div class="sb-journal-inline-stats">
               <span>8 hours</span>
               <span>Private dolphin sunrise day tour</span>
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Pickup: <strong>03:00 am hotel pickup from south and central Bali areas</strong></li>
                 <li>📍 Area: <strong>Lovina, Gitgit Waterfall and Ulun Danu Beratan</strong></li>
                 <li>👥 Best for: <strong>Travelers who want a compact north Bali sunrise route with classic highlights</strong></li>
-                <li>💰 Price: <strong>From $75</strong></li>
+                <li>💰 Price: <strong>From $69</strong></li>
               </ul>
             </aside>
 
@@ -684,7 +687,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>💰 What is included in the price</h2>
-                <p>Pricing for the Lovina Dolphin Sunrise Tour starts from From $75. Here is what a typical booking covers.</p>
+                <p>Pricing for the Lovina Dolphin Sunrise Tour starts from From $69. Here is what a typical booking covers.</p>
                 <ul><li>Entrance fees at all tourist destinations on the route</li><li>Traditional Lovina outrigger boat ticket</li><li>English-speaking driver</li><li>Private car with full air-conditioning</li><li>A bottle of mineral water</li><li>Insurance</li></ul>
               </section>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>✅ What to know before you book</h2>
                 <p>A few practical details that help set the right expectations for the Lovina Dolphin Sunrise Tour.</p>
-                <ul><li>Current pricing reference: From $75. Final availability is confirmed after you send the date, hotel area, and group size.</li><li>Breakfast and lunch are not included in the source package, so bring cash if you want to stop for food during or after the route.</li><li>Pickup starts around 03:00 am because dolphin timing in Lovina depends on reaching the beach before sunrise.</li><li>Covered pickup areas listed by the source include Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, and Jimbaran.</li><li>Bring a change of clothes, hat, camera, sunglasses, sunscreen, and extra cash for personal expenses.</li><li>This is a long road day even though the sightseeing itself is compact, so it suits travelers who are comfortable with an early start and time in the car.</li><li>The source cancellation policy says a full refund is available when you cancel at least 3 days before the experience start date.</li></ul>
+                <ul><li>Current pricing reference: From $69. Final availability is confirmed after you send the date, hotel area, and group size.</li><li>Breakfast and lunch are not included in the source package, so bring cash if you want to stop for food during or after the route.</li><li>Pickup starts around 03:00 am because dolphin timing in Lovina depends on reaching the beach before sunrise.</li><li>Covered pickup areas listed by the source include Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, and Jimbaran.</li><li>Bring a change of clothes, hat, camera, sunglasses, sunscreen, and extra cash for personal expenses.</li><li>This is a long road day even though the sightseeing itself is compact, so it suits travelers who are comfortable with an early start and time in the car.</li><li>The source cancellation policy says a full refund is available when you cancel at least 3 days before the experience start date.</li></ul>
               </section>
 
 
@@ -728,7 +731,7 @@ body {
                 <li>Best for: Travelers who want a compact north Bali sunrise route with classic highlights</li>
                 <li>Pickup: 03:00 am hotel pickup from south and central Bali areas</li>
                 <li>Area: Lovina, Gitgit Waterfall and Ulun Danu Beratan</li>
-                <li>Price: From $75</li>
+                <li>Price: From $69</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

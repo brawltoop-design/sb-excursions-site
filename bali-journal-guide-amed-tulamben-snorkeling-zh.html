@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="手机导航">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">我们的旅行</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/zh/main-page#tours">我们的旅行</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">阿联酋迪拜</a>
                   <a href="/bali/zh/main-page#tours">印度尼西亚巴厘岛</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -763,7 +766,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>诚实的成本是动力</h2>
-                <p>没有办法解决这个问题：艾湄湾距离苍古、水明漾或乌鲁瓦图大约三个小时，距离乌布大约两个小时。图兰奔 (Tulamben) 再沿着海岸公路行驶 20 分钟即可抵达。如果将其作为一日游，您在车上度过的时间将多于在水中度过的时间，这就是为什么我们会推动人们在艾湄湾过夜——这个海岸的黎明是平坦的、空旷的。一个 <a href="/bali/zh/tours/private-car-with-driver-bali">带司机的私家车</a> 每辆车 65 美元起，提供挨家挨户服务，司机会在您浮潜时等待。</p><p>如果三个小时听起来太多了， <a href="/bali/zh/tours/blue-lagoon-snorkeling">蓝色泻湖浮潜之旅</a> 50 美元起，您可以在巴东拜 (Padang Bai) 清澈的东海岸海水中畅游，费用包含大约一半的车程、船只和装备。对于那些只有一个上午时间的南方人来说，这是一个明智的后备方案——我们在我们的网站中诚实地比较了两者 <a href="/bali/zh/journal/blue-lagoon-padang-bai-guide">巴东拜蓝色泻湖指南</a>.</p>
+                <p>没有办法解决这个问题：艾湄湾距离苍古、水明漾或乌鲁瓦图大约三个小时，距离乌布大约两个小时。图兰奔 (Tulamben) 再沿着海岸公路行驶 20 分钟即可抵达。如果将其作为一日游，您在车上度过的时间将多于在水中度过的时间，这就是为什么我们会推动人们在艾湄湾过夜——这个海岸的黎明是平坦的、空旷的。一个 <a href="/bali/zh/tours/private-car-with-driver-bali">带司机的私家车</a> 每辆车 59 美元起，提供挨家挨户服务，司机会在您浮潜时等候。</p><p>如果三个小时听起来太多了， <a href="/bali/zh/tours/blue-lagoon-snorkeling">蓝色泻湖浮潜之旅</a> 50 美元起，您可以在巴东拜 (Padang Bai) 清澈的东海岸海水中畅游，费用包含大约一半的车程、船只和装备。对于那些只有一个上午时间的南方人来说，这是一个明智的后备方案——我们在我们的网站中诚实地比较了两者 <a href="/bali/zh/journal/blue-lagoon-padang-bai-guide">巴东拜蓝色泻湖指南</a>.</p>
 
               </section>
 

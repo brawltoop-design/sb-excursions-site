@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="手机导航">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">我们的旅行</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/zh/main-page#tours">我们的旅行</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">阿联酋迪拜</a>
                   <a href="/bali/zh/main-page#tours">印度尼西亚巴厘岛</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -629,7 +632,7 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">卖文章</div>
             <h1>为什么要预订巴厘岛乌布 Instagram 之旅——值得吗？</h1>
-            <p class="sb-journal-lead">当您想要标志性的停留点、完善的物流以及对您的内容进行真正的指导时，乌布 Instagram 之旅是最强大的全包式巴厘岛摄影日。它结合了巴厘岛东部最知名的地标和柔和的乌布风格稻田装饰，而酒店接送、门票、午餐和导游支持费用从 75 美元起。乌布 Instagram 路线重点关注巴厘岛中部走廊——水稻梯田、丛林秋千、咖啡种植园和寺庙大门形成一个上镜循环。</p>
+            <p class="sb-journal-lead">当您想要标志性的景点、精致的物流和内容的真实指导时，乌布 Instagram 之旅是最强大的全包式巴厘岛摄影日。它结合了巴厘岛东部最知名的地标和柔和的乌布风格稻田装饰，而酒店接送、门票、午餐和导游支持的费用从 89 美元起。乌布 Instagram 路线重点关注巴厘岛中部走廊——水稻梯田、丛林秋千、咖啡种植园和寺庙大门形成一个上镜环线。</p>
             <div class="sb-journal-inline-stats">
               <span>10小时</span>
               <span>全包导游一日游</span>
@@ -654,7 +657,7 @@ body {
                 <li>🚐 取货： <strong>7:00 AM 酒店或巴厘岛集合点接载</strong></li>
                 <li>📍面积： <strong>巴厘岛东部标志性建筑，带有德格拉朗水稻梯田</strong></li>
                 <li>👥 最适合： <strong>情侣、独行旅行者、创作者和首次巴厘岛游客</strong></li>
-                <li>💰价格： <strong>75 美元起</strong></li>
+                <li>💰价格： <strong>89 美元起</strong></li>
               </ul>
             </aside>
 
@@ -684,7 +687,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>💰 价格包含什么</h2>
-                <p>乌布 Instagram 之旅的价格从 75 美元起。以下是典型预订的内容。</p>
+                <p>乌布 Instagram 之旅的定价从 89 美元起。以下是典型预订的内容。</p>
                 <ul><li>酒店接送或巴厘岛集合点支持</li><li>英语司机兼导游并提供拍照帮助</li><li>伦普扬寺 (Lempuyang Temple)、提尔塔冈加 (Tirta Gangga)、图卡德切蓬瀑布 (Tukad Cepung Waterfall) 和德格拉朗梯田 (Tegalalang Rice Terrace) 门票</li><li>途中午餐</li><li>德格拉朗秋千门票</li><li>Insurance</li></ul>
               </section>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>✅ 预订前需要了解什么</h2>
                 <p>一些实用的细节有助于为乌布 Instagram 之旅设定正确的期望。</p>
-                <ul><li>当前定价参考：75 美元起。在您发送日期、酒店面积和团体人数后，将确认最终空房情况。</li><li>这一天开始得很早，因为 Lempuyang 时间很重要，而且巴厘岛东部道路比巴厘岛中部道路更长。</li><li>Lempuyang 拍照队列可能会根据季节和到达时间而变化，因此确切的等待时间永远无法完全预测。</li><li>Tukad Cepung 包括楼梯、潮湿的岩石和一小段水中步行道，因此强烈建议穿着舒适的鞋子。</li><li>供寺庙穿着的恭敬服装很重要。轻便的罩衫或适合纱笼的服装是第一站最安全的选择。</li><li>这条路线最适合游客，他们可以享受一整天的观光和几个风景优美的停留，而不是缓慢的度假村风格的节奏。</li><li>带上您的手机或相机、防晒霜、水和用于个人开支的额外现金或所列费用之外的任何可选额外费用。</li></ul>
+                <ul><li>当前定价参考：89 美元起。在您发送日期、酒店面积和团体人数后，将确认最终空房情况。</li><li>这一天开始得很早，因为 Lempuyang 时间很重要，而且巴厘岛东部道路比巴厘岛中部道路更长。</li><li>Lempuyang 拍照队列可能会根据季节和到达时间而变化，因此确切的等待时间永远无法完全预测。</li><li>Tukad Cepung 包括楼梯、潮湿的岩石和一小段水中步行道，因此强烈建议穿着舒适的鞋子。</li><li>供寺庙穿着的恭敬服装很重要。轻便的罩衫或适合纱笼的服装是第一站最安全的选择。</li><li>这条路线最适合游客，他们可以享受一整天的观光和几个风景优美的停留，而不是缓慢的度假村风格的节奏。</li><li>带上您的手机或相机、防晒霜、水和用于个人开支的额外现金或所列费用之外的任何可选额外费用。</li></ul>
               </section>
 
 
@@ -728,7 +731,7 @@ body {
                 <li>最适合：情侣、独行旅行者、创作者和首次巴厘岛游客</li>
                 <li>接载： 7:00 AM 酒店接载或巴厘岛集合点</li>
                 <li>区域：东巴厘岛标志性建筑，带有德格拉朗水稻梯田</li>
-                <li>价格：75 美元起</li>
+                <li>价格：89 美元起</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

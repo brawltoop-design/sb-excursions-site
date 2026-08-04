@@ -515,7 +515,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Мобильная навигация">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Наши туры</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/ru/main-page#tours">Наши туры</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Дубай, ОАЭ</a>
                   <a href="/bali/ru/main-page#tours">Бали, Индонезия</a>
@@ -572,7 +572,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -1095,14 +1098,14 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card" data-jhub-searchable data-search="lovina dolphin sunrise tour lovina, gitgit waterfall and ulun danu beratan this lovina dolphin sunrise tour is the cleanest way to do north bali in one early-start day when you want the sea, a waterfall, and a lake temple without stitching the route together yourself. it includes hotel pickup, private air-conditioned transport, the traditional lovina outrigger boat, entrance fees, mineral water, and insurance, with the page price set from $75.">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="lovina dolphin sunrise tour lovina, gitgit waterfall and ulun danu beratan this lovina dolphin sunrise tour is the cleanest way to do north bali in one early-start day when you want the sea, a waterfall, and a lake temple without stitching the route together yourself. it includes hotel pickup, private air-conditioned transport, the traditional lovina outrigger boat, entrance fees, mineral water, and insurance, with the page price set from $69.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/tours-real/dolphin-sunrise-city-tour.jpg" alt="Дельфины-спиннеры прыгают на рассвете у Ловины, север Бали" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
                   <div class="sb-journal-tour-card__copy">
                     <span>Ловина, водопад Гитгит и Улун Дану Бератан</span>
                     <h3>Ловина: тур на рассвете с дельфинами</h3>
-                    <p>Этот тур на рассвете с дельфинами в Ловине — это самый чистый способ добраться до северного Бали за один ранний день, когда вы хотите увидеть море, водопад и храм на озере, не прокладывая маршрут самостоятельно. В стоимость входит трансфер из отеля, частный транспорт с кондиционером, традиционная лодка с выносными опорами Ловина, входные билеты, минеральная вода и страховка, при этом цена страницы составляет от 75 долларов США.</p>
+                    <p>Этот тур на рассвете с дельфинами в Ловине — это самый чистый способ добраться до северного Бали за один ранний день, когда вы хотите увидеть море, водопад и храм на озере, не прокладывая маршрут самостоятельно. В стоимость входит трансфер из отеля, частный транспорт с кондиционером, традиционная лодка с выносными опорами Ловина, входные билеты, минеральная вода и страховка, цена страницы установлена ​​от 69 долларов.</p>
                   </div>
                 </div>
                 <div class="sb-journal-tour-card__body">
@@ -1278,14 +1281,14 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card" data-jhub-searchable data-search="bali unesco heritage sites tour west &amp; central bali unesco route this bali unesco heritage sites tour is built for travelers who want temple courtyards, mountain-lake views, unesco rice terraces, and a famous coastal temple finish without stitching separate day trips together. private transport, entrance tickets, a temple sarong, and bottled water are already handled from $70 per person.">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="bali unesco heritage sites tour west &amp; central bali unesco route this bali unesco heritage sites tour is built for travelers who want temple courtyards, mountain-lake views, unesco rice terraces, and a famous coastal temple finish without stitching separate day trips together. private transport, entrance tickets, a temple sarong, and bottled water are already handled from $69 per person.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/bali-unesco.jpg" alt="Рисовые террасы Джатилуви и горные пейзажи во время тура по объектам наследия ЮНЕСКО на Бали" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
                   <div class="sb-journal-tour-card__copy">
                     <span>Маршрут ЮНЕСКО по Западному и Центральному Бали</span>
                     <h3>Экскурсия по объектам наследия ЮНЕСКО на Бали</h3>
-                    <p>Этот тур по объектам наследия ЮНЕСКО на Бали создан для путешественников, которым нужны дворы храмов, виды на горные озера, рисовые террасы ЮНЕСКО и знаменитый прибрежный храм, не объединяя отдельные однодневные поездки. Частный транспорт, входные билеты, храмовый саронг и вода в бутылках уже оплачиваются от 70 долларов на человека.</p>
+                    <p>Этот тур по объектам наследия ЮНЕСКО на Бали создан для путешественников, которым нужны дворы храмов, виды на горные озера, рисовые террасы ЮНЕСКО и знаменитый прибрежный храм, не объединяя отдельные однодневные поездки. Частный транспорт, входные билеты, храмовый саронг и вода в бутылках уже оплачиваются по цене от 69 долларов на человека.</p>
                   </div>
                 </div>
                 <div class="sb-journal-tour-card__body">
@@ -1705,14 +1708,14 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card" data-jhub-searchable data-search="ubud instagram tour east bali icons with a tegalalang rice terrace finish this ubud instagram tour is the strongest all-inclusive bali photo day when you want iconic stops, polished logistics, and real guidance with your content. it combines east bali&#39;s most recognizable landmarks with a softer ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $75.">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="ubud instagram tour east bali icons with a tegalalang rice terrace finish this ubud instagram tour is the strongest all-inclusive bali photo day when you want iconic stops, polished logistics, and real guidance with your content. it combines east bali&#39;s most recognizable landmarks with a softer ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $89.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/tours-real/ubud-instagram-tour.jpg" alt="Качели в джунглях над рисовыми террасами недалеко от Убуда, Бали" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
                   <div class="sb-journal-tour-card__copy">
                     <span>Иконы Востока Бали с отделкой из рисовой террасы Тегалаланг</span>
                     <h3>Инстаграм-тур по Убуду</h3>
-                    <p>Этот Инстаграм-тур по Убуду — это самый насыщенный фотодень на Бали по системе «все включено», когда вам нужны знаковые остановки, отточенная логистика и настоящее руководство по вашему контенту. Он сочетает в себе самые узнаваемые достопримечательности восточного Бали с более мягкой отделкой рисовой террасы в стиле Убуда, а встреча в отеле, билеты, обед и поддержка гида обходятся от 75 долларов.</p>
+                    <p>Этот Инстаграм-тур по Убуду — это самый насыщенный фотодень на Бали по системе «все включено», когда вам нужны знаковые остановки, отточенная логистика и настоящее руководство по вашему контенту. Он сочетает в себе самые узнаваемые достопримечательности восточного Бали с более мягкой отделкой рисовой террасы в стиле Убуда, а встреча в отеле, билеты, обед и поддержка гида обходятся от 89 долларов.</p>
                   </div>
                 </div>
                 <div class="sb-journal-tour-card__body">

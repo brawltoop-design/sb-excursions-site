@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -629,7 +632,7 @@ body {
             <h1>Las 8 mejores playas de Uluwatu en Bukit: escaleras, surf, arena</h1>
             <p class="sb-journal-lead">Casi todas las playas alrededor de Uluwatu se esconden al pie de un acantilado de piedra caliza, y las escaleras son el precio de entrada. Aquí están los ocho que vale la pena escalar, clasificados, con notas honestas sobre las mareas, las ventanas para nadar y lo difícil que es realmente la caminata de regreso.</p>
             <div class="sb-journal-inline-stats">
-              <span>8 playas clasificadas</span><span>La realidad del recuento de escaleras</span><span>Coche privado desde $65</span>
+              <span>8 playas clasificadas</span><span>La realidad del recuento de escaleras</span><span>Coche privado desde $59</span>
             </div>
             <div class="sb-journal-article-hero__actions">
               <a class="sb-journal-primary" href="/bali/es/tours/private-car-with-driver-bali">Abierto tour recomendado</a>
@@ -790,7 +793,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Llegar a las playas de Uluwatu sin dolor de cabeza</h2>
-                <p>Las carreteras de Bukit son empinadas y varios aparcamientos en la playa se encuentran en caminos accidentados que inquietan a los conductores de scooters inexpertos. Si saltas entre tres o cuatro playas (por ejemplo, Melasti, Padang Padang y Bingin, con una puesta de sol en el templo), una <a href="/bali/es/tours/private-car-with-driver-bali">coche privado con conductor</a> desde $65 por automóvil hace que el día sea sencillo: el conductor se encarga del estacionamiento en lo alto del acantilado mientras usted maneja las escaleras. Para convertir las calas de Bukit en un día fotográfico más amplio en toda la isla, el <a href="/bali/es/tours/bali-instagram-highlights-tour">Tour de lo más destacado de Instagram de Bali</a> desde $65 por auto cubre el mismo terreno con una ruta construida alrededor de la luz y las multitudes.</p>
+                <p>Las carreteras de Bukit son empinadas y varios aparcamientos en la playa se encuentran en caminos accidentados que inquietan a los conductores de scooters inexpertos. Si saltas entre tres o cuatro playas (por ejemplo, Melasti, Padang Padang y Bingin, con una puesta de sol en el templo), una <a href="/bali/es/tours/private-car-with-driver-bali">coche privado con conductor</a> desde $59 por automóvil hace que el día sea sencillo: el conductor se encarga del estacionamiento en lo alto del acantilado mientras usted maneja las escaleras. Para convertir las calas de Bukit en un día fotográfico más amplio en toda la isla, el <a href="/bali/es/tours/bali-instagram-highlights-tour">Tour de lo más destacado de Instagram de Bali</a> desde $69 cubre el mismo terreno con una ruta construida alrededor de la luz y las multitudes.</p>
 
               </section>
 
@@ -919,7 +922,7 @@ body {
             <div class="sb-journal-sidebar-card">
               <h3>Instantánea de la guía</h3>
               <ul>
-                <li>8 playas clasificadas</li><li>La realidad del recuento de escaleras</li><li>Coche privado desde $65</li>
+                <li>8 playas clasificadas</li><li>La realidad del recuento de escaleras</li><li>Coche privado desde $59</li>
                 <li>Ancla de ruta recomendada: Coche privado con conductor en Bali</li>
               </ul>
             </div>

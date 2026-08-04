@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Recogida: <strong>Recogida en el hotel por la mañana.</strong></li>
                 <li>📍 Área: <strong>Ruta panorámica flexible de Bali</strong></li>
                 <li>👥 Ideal para: <strong>Parejas, creadores y viajes de luna de miel</strong></li>
-                <li>💰 Precio: <strong>Desde $65 por auto</strong></li>
+                <li>💰 Precio: <strong>Desde $69</strong></li>
               </ul>
             </aside>
 
@@ -684,7 +687,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>💰 Qué está incluido en el precio</h2>
-                <p>El precio del recorrido por lo más destacado de Instagram de Bali comienza desde $ 65 por automóvil. Esto es lo que cubre una reserva típica.</p>
+                <p>El precio del tour Bali Instagram Highlights comienza desde $ 69. Esto es lo que cubre una reserva típica.</p>
                 <ul><li>Planificación de recogida y regreso al hotel desde las principales zonas de Bali.</li><li>Flujo de ruta privada y ritmo flexible</li><li>Coordinación del conductor para la ruta principal y el horario principal de visitas turísticas.</li><li>Soporte de WhatsApp para preguntas de confirmación, horarios y ruta.</li></ul>
               </section>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>✅ Qué saber antes de reservar</h2>
                 <p>Algunos detalles prácticos que ayudan a establecer las expectativas adecuadas para el Bali Instagram Highlights Tour.</p>
-                <ul><li>Referencia de precios actual: Desde $65 por auto. La disponibilidad final se confirma después de enviar la fecha, el área del hotel y el tamaño del grupo.</li><li>Esta experiencia suele realizarse como un tour privado de un día.</li><li>Mejor opción: parejas, creadores y viajes de luna de miel.</li><li>Se recomienda ropa cómoda y vestimenta respetuosa preparada para el templo.</li><li>Envíe la zona de su hotel antes de reservar para que la ruta y el horario puedan coincidir correctamente.</li><li>Traer ropa ligera, cámara fotográfica y dinero en efectivo.</li></ul>
+                <ul><li>Referencia de precios actual: Desde $69. La disponibilidad final se confirma después de enviar la fecha, el área del hotel y el tamaño del grupo.</li><li>Esta experiencia suele realizarse como un tour privado de un día.</li><li>Mejor opción: parejas, creadores y viajes de luna de miel.</li><li>Se recomienda ropa cómoda y vestimenta respetuosa preparada para el templo.</li><li>Envíe la zona de su hotel antes de reservar para que la ruta y el horario puedan coincidir correctamente.</li><li>Traer ropa ligera, cámara fotográfica y dinero en efectivo.</li></ul>
               </section>
 
 
@@ -733,7 +736,7 @@ body {
                 <li>Ideal para: parejas, creadores y viajes de luna de miel</li>
                 <li>Recogida: recogida en el hotel por la mañana.</li>
                 <li>Área: Ruta panorámica flexible de Bali</li>
-                <li>Precio: Desde $65 por auto</li>
+                <li>Precio: Desde $69</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

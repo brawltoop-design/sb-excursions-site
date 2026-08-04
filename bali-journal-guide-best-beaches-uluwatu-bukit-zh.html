@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="手机导航">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">我们的旅行</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/zh/main-page#tours">我们的旅行</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">阿联酋迪拜</a>
                   <a href="/bali/zh/main-page#tours">印度尼西亚巴厘岛</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -629,7 +632,7 @@ body {
             <h1>武吉乌鲁瓦图 8 个最佳海滩：楼梯、冲浪、沙滩</h1>
             <p class="sb-journal-lead">乌鲁瓦图周围的几乎每个海滩都隐藏在石灰岩悬崖的底部，楼梯是入场费。这里有八个值得攀登的地方，按排名排列，并附有关于潮汐、游泳窗口以及返回的难度的诚实注释。</p>
             <div class="sb-journal-inline-stats">
-              <span>8个海滩排名</span><span>楼梯数现实</span><span>私家车 65 美元起</span>
+              <span>8个海滩排名</span><span>楼梯数现实</span><span>私家车 59 美元起</span>
             </div>
             <div class="sb-journal-article-hero__actions">
               <a class="sb-journal-primary" href="/bali/zh/tours/private-car-with-driver-bali">开启推荐之旅</a>
@@ -790,7 +793,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>轻松前往乌鲁瓦图的海滩</h2>
-                <p>武吉山的道路很陡，几个海滩停车场坐落在崎岖不平的小道上，这让没有经验的摩托车骑手感到不安。如果您在三四个海滩之间穿梭——比如 Melasti、Padang Padang 和 Bingin，并在寺庙欣赏日落—— <a href="/bali/zh/tours/private-car-with-driver-bali">带司机的私家车</a> 每辆车 65 美元起，让您的一天变得简单：司机负责悬崖顶停车，您则负责爬楼梯。为了将武吉的海湾纳入全岛更广阔的摄影日， <a href="/bali/zh/tours/bali-instagram-highlights-tour">巴厘岛 Instagram 亮点之旅</a> 每辆车 65 美元起，覆盖同一场地，路线围绕灯光和人群而建。</p>
+                <p>武吉山的道路很陡，几个海滩停车场坐落在崎岖不平的小道上，这让没有经验的摩托车骑手感到不安。如果您在三四个海滩之间穿梭——比如 Melasti、Padang Padang 和 Bingin，并在寺庙欣赏日落—— <a href="/bali/zh/tours/private-car-with-driver-bali">带司机的私家车</a> 每辆车 59 美元起，让您的一天变得简单：司机负责悬崖顶停车，您则负责爬楼梯。为了将武吉的海湾纳入全岛更广阔的摄影日， <a href="/bali/zh/tours/bali-instagram-highlights-tour">巴厘岛 Instagram 亮点之旅</a> 69 美元起，覆盖同一场地，但路线围绕光线和人群而建。</p>
 
               </section>
 
@@ -919,7 +922,7 @@ body {
             <div class="sb-journal-sidebar-card">
               <h3>指南快照</h3>
               <ul>
-                <li>8个海滩排名</li><li>楼梯数现实</li><li>私家车 65 美元起</li>
+                <li>8个海滩排名</li><li>楼梯数现实</li><li>私家车 59 美元起</li>
                 <li>推荐路线锚点：巴厘岛包车带司机</li>
               </ul>
             </div>

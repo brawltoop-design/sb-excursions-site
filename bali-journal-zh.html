@@ -515,7 +515,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="手机导航">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">我们的旅行</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/zh/main-page#tours">我们的旅行</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">阿联酋迪拜</a>
                   <a href="/bali/zh/main-page#tours">印度尼西亚巴厘岛</a>
@@ -572,7 +572,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -1095,14 +1098,14 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card" data-jhub-searchable data-search="lovina dolphin sunrise tour lovina, gitgit waterfall and ulun danu beratan this lovina dolphin sunrise tour is the cleanest way to do north bali in one early-start day when you want the sea, a waterfall, and a lake temple without stitching the route together yourself. it includes hotel pickup, private air-conditioned transport, the traditional lovina outrigger boat, entrance fees, mineral water, and insurance, with the page price set from $75.">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="lovina dolphin sunrise tour lovina, gitgit waterfall and ulun danu beratan this lovina dolphin sunrise tour is the cleanest way to do north bali in one early-start day when you want the sea, a waterfall, and a lake temple without stitching the route together yourself. it includes hotel pickup, private air-conditioned transport, the traditional lovina outrigger boat, entrance fees, mineral water, and insurance, with the page price set from $69.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/tours-real/dolphin-sunrise-city-tour.jpg" alt="巴厘岛北部罗维纳日出时飞旋海豚跳跃" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
                   <div class="sb-journal-tour-card__copy">
                     <span>罗威那、吉吉瀑布和乌伦达努贝拉坦</span>
                     <h3>罗威那海豚日出之旅</h3>
-                    <p>如果您想要欣赏大海、瀑布和湖神庙，而无需亲自缝合路线，那么罗威那海豚日出之旅是在早起的一天游览巴厘岛北部的最干净的方式。包含酒店接送、私人空调交通、传统罗威那支腿船、入场费、矿泉水和保险，页价从 75 美元起。</p>
+                    <p>如果您想要欣赏大海、瀑布和湖神庙，而无需亲自缝合路线，那么罗威那海豚日出之旅是在早起的一天游览巴厘岛北部的最干净的方式。包含酒店接送、私人空调交通、传统的罗威那支腿船、入场费、矿泉水和保险，页价从 69 美元起。</p>
                   </div>
                 </div>
                 <div class="sb-journal-tour-card__body">
@@ -1278,14 +1281,14 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card" data-jhub-searchable data-search="bali unesco heritage sites tour west &amp; central bali unesco route this bali unesco heritage sites tour is built for travelers who want temple courtyards, mountain-lake views, unesco rice terraces, and a famous coastal temple finish without stitching separate day trips together. private transport, entrance tickets, a temple sarong, and bottled water are already handled from $70 per person.">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="bali unesco heritage sites tour west &amp; central bali unesco route this bali unesco heritage sites tour is built for travelers who want temple courtyards, mountain-lake views, unesco rice terraces, and a famous coastal temple finish without stitching separate day trips together. private transport, entrance tickets, a temple sarong, and bottled water are already handled from $69 per person.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/bali-unesco.jpg" alt="巴厘岛联合国教科文组织遗产之旅中的 Jatiluwih 水稻梯田和山景" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
                   <div class="sb-journal-tour-card__copy">
                     <span>巴厘岛西部和中部联合国教科文组织路线</span>
                     <h3>巴厘岛联合国教科文组织遗产之旅</h3>
-                    <p>这个巴厘岛联合国教科文组织遗产之旅专为那些想要寺庙庭院、山湖景观、联合国教科文组织水稻梯田和著名的沿海寺庙而无需将单独的一日游拼接在一起的游客而设计。私人交通、门票、寺庙纱笼和瓶装水的价格已从每人 70 美元起。</p>
+                    <p>这个巴厘岛联合国教科文组织遗产之旅专为那些想要寺庙庭院、山湖景观、联合国教科文组织水稻梯田和著名的沿海寺庙而无需将单独的一日游拼接在一起的游客而设计。私人交通、门票、寺庙纱笼和瓶装水的价格已由每人 69 美元起。</p>
                   </div>
                 </div>
                 <div class="sb-journal-tour-card__body">
@@ -1705,14 +1708,14 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card" data-jhub-searchable data-search="ubud instagram tour east bali icons with a tegalalang rice terrace finish this ubud instagram tour is the strongest all-inclusive bali photo day when you want iconic stops, polished logistics, and real guidance with your content. it combines east bali&#39;s most recognizable landmarks with a softer ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $75.">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="ubud instagram tour east bali icons with a tegalalang rice terrace finish this ubud instagram tour is the strongest all-inclusive bali photo day when you want iconic stops, polished logistics, and real guidance with your content. it combines east bali&#39;s most recognizable landmarks with a softer ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $89.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/tours-real/ubud-instagram-tour.jpg" alt="巴厘岛乌布附近稻田上的丛林秋千" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
                   <div class="sb-journal-tour-card__copy">
                     <span>巴厘岛东部标志性建筑，带有德格拉朗水稻梯田</span>
                     <h3>乌布 Instagram 之旅</h3>
-                    <p>当您想要标志性的停留点、完善的物流以及对您的内容进行真正的指导时，乌布 Instagram 之旅是最强大的全包式巴厘岛摄影日。它结合了巴厘岛东部最知名的地标和柔和的乌布风格稻田装饰，而酒店接送、门票、午餐和导游支持费用从 75 美元起。</p>
+                    <p>当您想要标志性的景点、精致的物流和内容的真实指导时，乌布 Instagram 之旅是最强大的全包式巴厘岛摄影日。它结合了巴厘岛东部最知名的地标和柔和的乌布风格稻田装饰，而酒店接送、门票、午餐和导游支持的费用从 89 美元起。</p>
                   </div>
                 </div>
                 <div class="sb-journal-tour-card__body">

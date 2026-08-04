@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="手机导航">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">我们的旅行</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/zh/main-page#tours">我们的旅行</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">阿联酋迪拜</a>
                   <a href="/bali/zh/main-page#tours">印度尼西亚巴厘岛</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,7 +657,7 @@ body {
                 <li>🚐 取货： <strong>早上酒店接送</strong></li>
                 <li>📍面积： <strong>巴厘岛西部和中部</strong></li>
                 <li>👥 最适合： <strong>经典观光日</strong></li>
-                <li>💰价格： <strong>每辆车 65 美元起</strong></li>
+                <li>💰价格： <strong>59 美元起</strong></li>
               </ul>
             </aside>
 
@@ -684,7 +687,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>💰 价格包含什么</h2>
-                <p>海神庙和贝都古之旅的定价每辆车 65 美元起。以下是典型预订的内容。</p>
+                <p>海神庙和贝都古之旅的价格从 59 美元起。以下是典型预订的内容。</p>
                 <ul><li>巴厘岛主要地区的酒店接送计划</li><li>私家路线流量、灵活节奏</li><li>核心路线及主要游览时间的司机协调</li><li>WhatsApp 支持确认、时间和路线问题</li></ul>
               </section>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>✅ 预订前需要了解什么</h2>
                 <p>一些实用的细节有助于为海神庙和贝都古之旅设定正确的期望。</p>
-                <ul><li>当前定价参考：每辆车 65 美元起。在您发送日期、酒店面积和团体人数后，将确认最终空房情况。</li><li>这种体验通常作为私人一日游进行。</li><li>最适合：经典观光日。</li><li>建议穿着舒适的衣服和恭敬的寺庙服装。</li><li>在预订前发送您的酒店区域，以便正确匹配路线和时间。</li><li>带上轻便的衣服、相机、现金。</li></ul>
+                <ul><li>当前定价参考：59 美元起。在您发送日期、酒店面积和团体人数后，将确认最终空房情况。</li><li>这种体验通常作为私人一日游进行。</li><li>最适合：经典观光日。</li><li>建议穿着舒适的衣服和恭敬的寺庙服装。</li><li>在预订前发送您的酒店区域，以便正确匹配路线和时间。</li><li>带上轻便的衣服、相机、现金。</li></ul>
               </section>
 
 
@@ -738,7 +741,7 @@ body {
                 <li>最适合：经典观光日</li>
                 <li>接送：早上酒店接送</li>
                 <li>区域：巴厘岛西部和中部</li>
-                <li>价格：每辆车 65 美元起</li>
+                <li>价格：59 美元起</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

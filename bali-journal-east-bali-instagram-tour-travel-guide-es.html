@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Recogida: <strong>Recogida en el hotel por la mañana.</strong></li>
                 <li>📍 Área: <strong>Lempuyang y el este de Bali</strong></li>
                 <li>👥 Ideal para: <strong>Itinerarios fotográficos de Bali</strong></li>
-                <li>💰 Precio: <strong>Desde $65 por auto</strong></li>
+                <li>💰 Precio: <strong>Desde $69</strong></li>
               </ul>
             </aside>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>📋 Detalles prácticos y bueno saberlo</h2>
                 <p>Antes de reservar, aquí tienes la logística que da forma a la experiencia.</p>
-                <ul><li>Duración: <strong>8-10 horas</strong></li><li>Formato: <strong>Tour privado de un día</strong></li><li>Área: <strong>Lempuyang y el este de Bali</strong></li><li>Recogida: <strong>Recogida en el hotel por la mañana.</strong></li><li>Precios: <strong>Desde $65 por auto</strong></li><li>Esta experiencia suele realizarse como un tour privado de un día.</li><li>La mejor opción: itinerarios por Bali centrados en fotografías.</li><li>Se recomienda ropa cómoda y vestimenta respetuosa preparada para el templo.</li><li>Envíe la zona de su hotel antes de reservar para que la ruta y el horario puedan coincidir correctamente.</li><li>Traer ropa ligera, cámara fotográfica y dinero en efectivo.</li></ul>
+                <ul><li>Duración: <strong>8-10 horas</strong></li><li>Formato: <strong>Tour privado de un día</strong></li><li>Área: <strong>Lempuyang y el este de Bali</strong></li><li>Recogida: <strong>Recogida en el hotel por la mañana.</strong></li><li>Precios: <strong>Desde $69</strong></li><li>Esta experiencia suele realizarse como un tour privado de un día.</li><li>La mejor opción: itinerarios por Bali centrados en fotografías.</li><li>Se recomienda ropa cómoda y vestimenta respetuosa preparada para el templo.</li><li>Envíe la zona de su hotel antes de reservar para que la ruta y el horario puedan coincidir correctamente.</li><li>Traer ropa ligera, cámara fotográfica y dinero en efectivo.</li></ul>
               </section>
 
 
@@ -728,7 +731,7 @@ body {
                 <li>Ideal para: itinerarios fotográficos de Bali</li>
                 <li>Recogida: recogida en el hotel por la mañana.</li>
                 <li>Zona: Lempuyang y este de Bali</li>
-                <li>Precio: Desde $65 por auto</li>
+                <li>Precio: Desde $69</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

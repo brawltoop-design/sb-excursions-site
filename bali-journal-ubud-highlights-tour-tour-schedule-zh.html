@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="手机导航">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">我们的旅行</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/zh/main-page#tours">我们的旅行</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">阿联酋迪拜</a>
                   <a href="/bali/zh/main-page#tours">印度尼西亚巴厘岛</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,14 +657,14 @@ body {
                 <li>🚐 取货： <strong>08:00 巴厘岛覆盖范围内的酒店接载</strong></li>
                 <li>📍面积： <strong>金塔马尼、乌布和巴厘岛中部</strong></li>
                 <li>👥 最适合： <strong>第一次来巴厘岛的游客</strong></li>
-                <li>💰价格： <strong>70 美元起</strong></li>
+                <li>💰价格： <strong>69 美元起</strong></li>
               </ul>
             </aside>
 
               <section class="sb-journal-article-section">
                 <h2>📌 旅游概览一目了然</h2>
                 <p>这个乌布和金塔马尼全包一日游专为想要巴厘岛文化、风景和软探险而无需单独管理门票、交通或午餐的游客而设计。它特别适合第一次来的游客，因为这条路线从手工艺村和寺庙到火山景观、水稻梯田和乌布中心，是一个有组织的流程。</p>
-                <ul><li>持续时间： <strong>10小时</strong></li><li>格式： <strong>全包私人一日游</strong></li><li>面积： <strong>金塔马尼、乌布和巴厘岛中部</strong></li><li>取货： <strong>08:00 巴厘岛覆盖范围内的酒店接载</strong></li><li>最适合： <strong>第一次来巴厘岛的游客</strong></li><li>开始于： <strong>70 美元起</strong></li></ul>
+                <ul><li>持续时间： <strong>10小时</strong></li><li>格式： <strong>全包私人一日游</strong></li><li>面积： <strong>金塔马尼、乌布和巴厘岛中部</strong></li><li>取货： <strong>08:00 巴厘岛覆盖范围内的酒店接载</strong></li><li>最适合： <strong>第一次来巴厘岛的游客</strong></li><li>开始于： <strong>69 美元起</strong></li></ul>
               </section>
 
               <section class="sb-journal-article-section">
@@ -696,7 +699,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>✉️ 预订和确认——您需要发送的内容</h2>
-                <p>要确认乌布梯田、寺庙和火山之旅，您需要提供您的首选日期、酒店名称和区域以及团体人数。这使得操作员可以匹配正确的车辆、指南和时间窗口。</p><p>定价从 70 美元起。确切的报价取决于您的团体规模、酒店距离以及任何附加选项。</p>
+                <p>要确认乌布梯田、寺庙和火山之旅，您需要提供您的首选日期、酒店名称和区域以及团体人数。这使得操作员可以匹配正确的车辆、指南和时间窗口。</p><p>定价从 69 美元起。确切的报价取决于您的团体规模、酒店距离以及任何附加选项。</p>
                 <ul><li>巴厘岛覆盖区域的酒店接送服务</li><li>私人空调交通</li><li>所有门票和当地路线费用</li><li>瓶装矿泉水</li><li>金塔马尼印尼自助午餐</li><li>咖啡和茶品尝站</li></ul>
               </section>
 
@@ -748,7 +751,7 @@ body {
                 <li>最适合：第一次来巴厘岛的游客</li>
                 <li>接载： 08:00 巴厘岛覆盖区域的酒店接载</li>
                 <li>区域：金塔马尼、乌布和巴厘岛中部</li>
-                <li>价格：70 美元起</li>
+                <li>价格：69 美元起</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

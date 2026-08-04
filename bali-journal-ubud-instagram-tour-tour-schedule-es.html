@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,14 +657,14 @@ body {
                 <li>🚐 Recogida: <strong>7:00 am recogida en el hotel o punto de encuentro en Bali.</strong></li>
                 <li>📍 Área: <strong>Iconos del este de Bali con un acabado en terraza de arroz de Tegalalang</strong></li>
                 <li>👥 Ideal para: <strong>Parejas, viajeros solitarios, creadores y visitantes primerizos de Bali</strong></li>
-                <li>💰 Precio: <strong>Desde $75</strong></li>
+                <li>💰 Precio: <strong>Desde $89</strong></li>
               </ul>
             </aside>
 
               <section class="sb-journal-article-section">
                 <h2>📌 Descripción general del recorrido de un vistazo</h2>
-                <p>Este Ubud Instagram Tour es el mejor día fotográfico de Bali con todo incluido en el que desea paradas icónicas, logística refinada y orientación real con su contenido. Combina los puntos de referencia más reconocibles del este de Bali con un acabado de terraza de arroz más suave al estilo de Ubud, mientras que la recogida en el hotel, las entradas, el almuerzo y la asistencia del guía se gestionan desde 75 dólares.</p>
-                <ul><li>Duración: <strong>10 horas</strong></li><li>Formato: <strong>Visita guiada de un día con todo incluido.</strong></li><li>Área: <strong>Iconos del este de Bali con un acabado en terraza de arroz de Tegalalang</strong></li><li>Recogida: <strong>7:00 am recogida en el hotel o punto de encuentro en Bali.</strong></li><li>Lo mejor para: <strong>Parejas, viajeros solitarios, creadores y visitantes primerizos de Bali</strong></li><li>A partir de: <strong>Desde $75</strong></li></ul>
+                <p>Este Ubud Instagram Tour es el mejor día fotográfico de Bali con todo incluido en el que desea paradas icónicas, logística refinada y orientación real con su contenido. Combina los puntos de referencia más reconocibles del este de Bali con un acabado de terraza de arroz más suave al estilo de Ubud, mientras que la recogida en el hotel, las entradas, el almuerzo y la asistencia del guía se gestionan desde 89 dólares.</p>
+                <ul><li>Duración: <strong>10 horas</strong></li><li>Formato: <strong>Visita guiada de un día con todo incluido.</strong></li><li>Área: <strong>Iconos del este de Bali con un acabado en terraza de arroz de Tegalalang</strong></li><li>Recogida: <strong>7:00 am recogida en el hotel o punto de encuentro en Bali.</strong></li><li>Lo mejor para: <strong>Parejas, viajeros solitarios, creadores y visitantes primerizos de Bali</strong></li><li>A partir de: <strong>Desde $89</strong></li></ul>
               </section>
 
               <section class="sb-journal-article-section">
@@ -696,7 +699,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>✉️ Reserva y confirmación: lo que necesitas enviar</h2>
-                <p>Para confirmar el Ubud Instagram Tour, deberá compartir su fecha preferida, el nombre y el área del hotel y el tamaño del grupo. Esto permite al operador hacer coincidir el vehículo, la guía y la ventana de sincronización correctos.</p><p>El precio comienza desde $75. La cotización exacta depende del tamaño de su grupo, la distancia del hotel y las opciones adicionales.</p>
+                <p>Para confirmar el Ubud Instagram Tour, deberá compartir su fecha preferida, el nombre y el área del hotel y el tamaño del grupo. Esto permite al operador hacer coincidir el vehículo, la guía y la ventana de sincronización correctos.</p><p>El precio comienza desde $ 89. La cotización exacta depende del tamaño de su grupo, la distancia del hotel y las opciones adicionales.</p>
                 <ul><li>Recogida y regreso al hotel o soporte en el punto de encuentro de Bali.</li><li>Conductor-guía de habla inglesa con asistencia fotográfica.</li><li>Boletos de entrada para el templo de Lempuyang, Tirta Gangga, la cascada Tukad Cepung y la terraza de arroz de Tegalalang</li><li>Almuerzo durante la ruta</li><li>Boleto de swing de Tegalalang</li><li>Insurance</li></ul>
               </section>
 
@@ -728,7 +731,7 @@ body {
                 <li>Ideal para: parejas, viajeros solitarios, creadores y visitantes primerizos de Bali.</li>
                 <li>Recogida: recogida en el hotel a las 7:00 a. m. o punto de encuentro en Bali.</li>
                 <li>Área: Iconos del este de Bali con un acabado en terraza de arroz de Tegalalang</li>
-                <li>Precio: Desde $75</li>
+                <li>Precio: Desde $89</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

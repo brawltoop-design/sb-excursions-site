@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Pickup: <strong>Morning hotel pickup</strong></li>
                 <li>📍 Area: <strong>West and central Bali</strong></li>
                 <li>👥 Best for: <strong>Classic sightseeing days</strong></li>
-                <li>💰 Price: <strong>From $65 per car</strong></li>
+                <li>💰 Price: <strong>From $59</strong></li>
               </ul>
             </aside>
 
@@ -684,7 +687,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>💰 What is included in the price</h2>
-                <p>Pricing for the Tanah Lot and Bedugul Tour starts from From $65 per car. Here is what a typical booking covers.</p>
+                <p>Pricing for the Tanah Lot and Bedugul Tour starts from From $59. Here is what a typical booking covers.</p>
                 <ul><li>Hotel pickup and return planning from major Bali areas</li><li>Private route flow and flexible pacing</li><li>Driver coordination for the core route and main sightseeing timing</li><li>WhatsApp support for confirmation, timing, and route questions</li></ul>
               </section>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>✅ What to know before you book</h2>
                 <p>A few practical details that help set the right expectations for the Tanah Lot and Bedugul Tour.</p>
-                <ul><li>Current pricing reference: From $65 per car. Final availability is confirmed after you send the date, hotel area, and group size.</li><li>This experience usually runs as a private day tour.</li><li>Best fit: classic sightseeing days.</li><li>Comfortable clothing and respectful temple-ready outfits are recommended.</li><li>Send your hotel area before booking so the route and timing can be matched properly.</li><li>Bring Light clothes, camera, cash.</li></ul>
+                <ul><li>Current pricing reference: From $59. Final availability is confirmed after you send the date, hotel area, and group size.</li><li>This experience usually runs as a private day tour.</li><li>Best fit: classic sightseeing days.</li><li>Comfortable clothing and respectful temple-ready outfits are recommended.</li><li>Send your hotel area before booking so the route and timing can be matched properly.</li><li>Bring Light clothes, camera, cash.</li></ul>
               </section>
 
 
@@ -738,7 +741,7 @@ body {
                 <li>Best for: Classic sightseeing days</li>
                 <li>Pickup: Morning hotel pickup</li>
                 <li>Area: West and central Bali</li>
-                <li>Price: From $65 per car</li>
+                <li>Price: From $59</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

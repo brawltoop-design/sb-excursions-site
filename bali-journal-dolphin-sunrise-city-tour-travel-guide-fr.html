@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navigation mobile">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nos circuits</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/fr/main-page#tours">Nos circuits</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubaï, Émirats Arabes Unis</a>
                   <a href="/bali/fr/main-page#tours">Bali, Indonésie</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Ramassage : <strong>03h00, prise en charge à l'hôtel depuis les régions du sud et du centre de Bali</strong></li>
                 <li>📍Zone : <strong>Lovina, la cascade Gitgit et Ulun Danu Beratan</strong></li>
                 <li>👥 Idéal pour : <strong>Les voyageurs qui souhaitent un itinéraire compact au lever du soleil au nord de Bali avec des points forts classiques</strong></li>
-                <li>💰 Prix : <strong>À partir de 75$</strong></li>
+                <li>💰 Prix : <strong>À partir de 69$</strong></li>
               </ul>
             </aside>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>📋 Détails pratiques et bon à savoir</h2>
                 <p>Avant de réserver, voici la logistique qui façonne l'expérience.</p>
-                <ul><li>Durée : <strong>8 heures</strong></li><li>Format : <strong>Excursion privée d'une journée au lever du soleil avec les dauphins</strong></li><li>Zone : <strong>Lovina, la cascade Gitgit et Ulun Danu Beratan</strong></li><li>Ramassage : <strong>03h00, prise en charge à l'hôtel depuis les régions du sud et du centre de Bali</strong></li><li>Tarif : <strong>À partir de 75$</strong></li><li>Le petit-déjeuner et le déjeuner ne sont pas inclus dans le forfait source, alors apportez de l'argent liquide si vous souhaitez vous arrêter pour manger pendant ou après l'itinéraire.</li><li>La prise en charge commence vers 3h00 car le timing des dauphins à Lovina dépend de l'arrivée à la plage avant le lever du soleil.</li><li>Les zones de prise en charge couvertes répertoriées par la source comprennent Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua et Jimbaran.</li><li>Apportez des vêtements de rechange, un chapeau, un appareil photo, des lunettes de soleil, de la crème solaire et de l'argent supplémentaire pour vos dépenses personnelles.</li><li>Il s'agit d'une longue journée de route même si les visites touristiques elles-mêmes sont compactes, elles conviennent donc aux voyageurs qui sont à l'aise avec un départ matinal et du temps en voiture.</li><li>La politique d'annulation de la source indique qu'un remboursement complet est disponible lorsque vous annulez au moins 3 jours avant la date de début de l'expérience.</li></ul>
+                <ul><li>Durée : <strong>8 heures</strong></li><li>Format : <strong>Excursion privée d'une journée au lever du soleil avec les dauphins</strong></li><li>Zone : <strong>Lovina, la cascade Gitgit et Ulun Danu Beratan</strong></li><li>Ramassage : <strong>03h00, prise en charge à l'hôtel depuis les régions du sud et du centre de Bali</strong></li><li>Tarif : <strong>À partir de 69$</strong></li><li>Le petit-déjeuner et le déjeuner ne sont pas inclus dans le forfait source, alors apportez de l'argent liquide si vous souhaitez vous arrêter pour manger pendant ou après l'itinéraire.</li><li>La prise en charge commence vers 3h00 car le timing des dauphins à Lovina dépend de l'arrivée à la plage avant le lever du soleil.</li><li>Les zones de prise en charge couvertes répertoriées par la source comprennent Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua et Jimbaran.</li><li>Apportez des vêtements de rechange, un chapeau, un appareil photo, des lunettes de soleil, de la crème solaire et de l'argent supplémentaire pour vos dépenses personnelles.</li><li>Il s'agit d'une longue journée de route même si les visites touristiques elles-mêmes sont compactes, elles conviennent donc aux voyageurs qui sont à l'aise avec un départ matinal et du temps en voiture.</li><li>La politique d'annulation de la source indique qu'un remboursement complet est disponible lorsque vous annulez au moins 3 jours avant la date de début de l'expérience.</li></ul>
               </section>
 
 
@@ -728,7 +731,7 @@ body {
                 <li>Idéal pour : Les voyageurs qui souhaitent un itinéraire compact au lever du soleil au nord de Bali avec des points forts classiques</li>
                 <li>Prise en charge : prise en charge à l'hôtel à 03h00 depuis les régions du sud et du centre de Bali</li>
                 <li>Zone : Lovina, cascade Gitgit et Ulun Danu Beratan</li>
-                <li>Prix : À partir de 75$</li>
+                <li>Prix : À partir de 69$</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

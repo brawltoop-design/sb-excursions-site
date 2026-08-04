@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Pickup: <strong>7:00 am hotel pickup or Bali meeting point</strong></li>
                 <li>📍 Area: <strong>East Bali icons with a Tegalalang rice terrace finish</strong></li>
                 <li>👥 Best for: <strong>Couples, solo travelers, creators, and first-time Bali visitors</strong></li>
-                <li>💰 Price: <strong>From $75</strong></li>
+                <li>💰 Price: <strong>From $89</strong></li>
               </ul>
             </aside>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>📋 Practical details and good to know</h2>
                 <p>Before you book, here are the logistics that shape the experience.</p>
-                <ul><li>Duration: <strong>10 hours</strong></li><li>Format: <strong>All-inclusive guided day tour</strong></li><li>Area: <strong>East Bali icons with a Tegalalang rice terrace finish</strong></li><li>Pickup: <strong>7:00 am hotel pickup or Bali meeting point</strong></li><li>Pricing: <strong>From $75</strong></li><li>The day starts early because Lempuyang timing matters and east Bali roads are longer than central Bali routes.</li><li>Lempuyang photo queues can change depending on the season and arrival time, so the exact waiting time is never fully predictable.</li><li>Tukad Cepung includes stairs, damp rocks, and a short walk through water, so comfortable footwear is strongly recommended.</li><li>Respectful temple-ready clothing is important. A light cover-up or sarong-friendly outfit is the safest choice for the first stop.</li><li>The route is best for travelers comfortable with a full sightseeing day and several scenic stops rather than a slow resort-style pace.</li><li>Bring your phone or camera, sunscreen, water, and extra cash for personal expenses or any optional extras outside the listed inclusions.</li></ul>
+                <ul><li>Duration: <strong>10 hours</strong></li><li>Format: <strong>All-inclusive guided day tour</strong></li><li>Area: <strong>East Bali icons with a Tegalalang rice terrace finish</strong></li><li>Pickup: <strong>7:00 am hotel pickup or Bali meeting point</strong></li><li>Pricing: <strong>From $89</strong></li><li>The day starts early because Lempuyang timing matters and east Bali roads are longer than central Bali routes.</li><li>Lempuyang photo queues can change depending on the season and arrival time, so the exact waiting time is never fully predictable.</li><li>Tukad Cepung includes stairs, damp rocks, and a short walk through water, so comfortable footwear is strongly recommended.</li><li>Respectful temple-ready clothing is important. A light cover-up or sarong-friendly outfit is the safest choice for the first stop.</li><li>The route is best for travelers comfortable with a full sightseeing day and several scenic stops rather than a slow resort-style pace.</li><li>Bring your phone or camera, sunscreen, water, and extra cash for personal expenses or any optional extras outside the listed inclusions.</li></ul>
               </section>
 
 
@@ -728,7 +731,7 @@ body {
                 <li>Best for: Couples, solo travelers, creators, and first-time Bali visitors</li>
                 <li>Pickup: 7:00 am hotel pickup or Bali meeting point</li>
                 <li>Area: East Bali icons with a Tegalalang rice terrace finish</li>
-                <li>Price: From $75</li>
+                <li>Price: From $89</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

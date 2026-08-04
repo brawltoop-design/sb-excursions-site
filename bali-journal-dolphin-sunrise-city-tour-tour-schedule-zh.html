@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="手机导航">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">我们的旅行</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/zh/main-page#tours">我们的旅行</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">阿联酋迪拜</a>
                   <a href="/bali/zh/main-page#tours">印度尼西亚巴厘岛</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,14 +657,14 @@ body {
                 <li>🚐 取货： <strong>03:00 AM 从巴厘岛南部和中部地区酒店接载</strong></li>
                 <li>📍面积： <strong>罗威那、吉吉瀑布和乌伦达努贝拉坦</strong></li>
                 <li>👥 最适合： <strong>想要一条紧凑的巴厘岛北部日出路线和经典亮点的旅行者</strong></li>
-                <li>💰价格： <strong>75 美元起</strong></li>
+                <li>💰价格： <strong>69 美元起</strong></li>
               </ul>
             </aside>
 
               <section class="sb-journal-article-section">
                 <h2>📌 旅游概览一目了然</h2>
-                <p>如果您想要欣赏大海、瀑布和湖神庙，而无需亲自缝合路线，那么罗威那海豚日出之旅是在早起的一天游览巴厘岛北部的最干净的方式。包含酒店接送、私人空调交通、传统罗威那支腿船、入场费、矿泉水和保险，页价从 75 美元起。</p>
-                <ul><li>持续时间： <strong>8小时</strong></li><li>格式： <strong>私人海豚日出一日游</strong></li><li>面积： <strong>罗威那、吉吉瀑布和乌伦达努贝拉坦</strong></li><li>取货： <strong>03:00 AM 从巴厘岛南部和中部地区酒店接载</strong></li><li>最适合： <strong>想要一条紧凑的巴厘岛北部日出路线和经典亮点的旅行者</strong></li><li>开始于： <strong>75 美元起</strong></li></ul>
+                <p>如果您想要欣赏大海、瀑布和湖神庙，而无需亲自缝合路线，那么罗威那海豚日出之旅是在早起的一天游览巴厘岛北部的最干净的方式。包含酒店接送、私人空调交通、传统的罗威那支腿船、入场费、矿泉水和保险，页价从 69 美元起。</p>
+                <ul><li>持续时间： <strong>8小时</strong></li><li>格式： <strong>私人海豚日出一日游</strong></li><li>面积： <strong>罗威那、吉吉瀑布和乌伦达努贝拉坦</strong></li><li>取货： <strong>03:00 AM 从巴厘岛南部和中部地区酒店接载</strong></li><li>最适合： <strong>想要一条紧凑的巴厘岛北部日出路线和经典亮点的旅行者</strong></li><li>开始于： <strong>69 美元起</strong></li></ul>
               </section>
 
               <section class="sb-journal-article-section">
@@ -696,7 +699,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>✉️ 预订和确认——您需要发送的内容</h2>
-                <p>要确认罗威那海豚日出之旅，您需要告知您的首选日期、酒店名称和区域以及团体人数。这使得操作员可以匹配正确的车辆、指南和时间窗口。</p><p>定价从 75 美元起。确切的报价取决于您的团体规模、酒店距离以及任何附加选项。</p>
+                <p>要确认罗威那海豚日出之旅，您需要告知您的首选日期、酒店名称和区域以及团体人数。这使得操作员可以匹配正确的车辆、指南和时间窗口。</p><p>定价从 69 美元起。确切的报价取决于您的团体规模、酒店距离以及任何附加选项。</p>
                 <ul><li>路线上所有旅游目的地的入场费</li><li>传统罗威那支腿船票</li><li>会说英语的司机</li><li>配备全套空调的私家车</li><li>矿泉水一瓶</li><li>Insurance</li></ul>
               </section>
 
@@ -728,7 +731,7 @@ body {
                 <li>最适合：想要紧凑的巴厘岛北部日出路线和经典亮点的旅行者</li>
                 <li>接载： 03:00 AM 从巴厘岛南部和中部地区酒店接载</li>
                 <li>区域：罗威那、吉吉瀑布和乌伦达努贝拉坦</li>
-                <li>价格：75 美元起</li>
+                <li>价格：69 美元起</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

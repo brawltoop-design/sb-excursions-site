@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,14 +657,14 @@ body {
                 <li>🚐 Recogida: <strong>08:00 recogida en el hotel desde las zonas cubiertas de Bali.</strong></li>
                 <li>📍 Área: <strong>Kintamani, Ubud y el centro de Bali</strong></li>
                 <li>👥 Ideal para: <strong>Visitantes por primera vez a Bali</strong></li>
-                <li>💰 Precio: <strong>Desde $70</strong></li>
+                <li>💰 Precio: <strong>Desde $69</strong></li>
               </ul>
             </aside>
 
               <section class="sb-journal-article-section">
                 <h2>📌 Descripción general del recorrido de un vistazo</h2>
                 <p>Esta excursión de un día con todo incluido a Ubud y Kintamani está diseñada para viajeros que desean la cultura, el paisaje y la suave aventura de Bali sin tener que gestionar los billetes, el transporte o el almuerzo por separado. Funciona especialmente bien para quienes visitan por primera vez porque la ruta pasa de pueblos y templos artesanales a vistas de volcanes, terrazas de arroz y el centro de Ubud en un flujo organizado.</p>
-                <ul><li>Duración: <strong>10 horas</strong></li><li>Formato: <strong>Tour privado de un día con todo incluido.</strong></li><li>Área: <strong>Kintamani, Ubud y el centro de Bali</strong></li><li>Recogida: <strong>08:00 recogida en el hotel desde las zonas cubiertas de Bali.</strong></li><li>Lo mejor para: <strong>Visitantes por primera vez a Bali</strong></li><li>A partir de: <strong>Desde $70</strong></li></ul>
+                <ul><li>Duración: <strong>10 horas</strong></li><li>Formato: <strong>Tour privado de un día con todo incluido.</strong></li><li>Área: <strong>Kintamani, Ubud y el centro de Bali</strong></li><li>Recogida: <strong>08:00 recogida en el hotel desde las zonas cubiertas de Bali.</strong></li><li>Lo mejor para: <strong>Visitantes por primera vez a Bali</strong></li><li>A partir de: <strong>Desde $69</strong></li></ul>
               </section>
 
               <section class="sb-journal-article-section">
@@ -696,7 +699,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>✉️ Reserva y confirmación: lo que necesitas enviar</h2>
-                <p>Para confirmar el recorrido por la terraza de arroz, el templo y el volcán de Ubud, deberá compartir su fecha preferida, el nombre y el área del hotel y el tamaño del grupo. Esto permite al operador hacer coincidir el vehículo, la guía y la ventana de sincronización correctos.</p><p>El precio comienza desde $70. La cotización exacta depende del tamaño de su grupo, la distancia del hotel y las opciones adicionales.</p>
+                <p>Para confirmar el recorrido por la terraza de arroz, el templo y el volcán de Ubud, deberá compartir su fecha preferida, el nombre y el área del hotel y el tamaño del grupo. Esto permite al operador hacer coincidir el vehículo, la guía y la ventana de sincronización correctos.</p><p>El precio comienza desde $69. La cotización exacta depende del tamaño de su grupo, la distancia del hotel y las opciones adicionales.</p>
                 <ul><li>Recogida en el hotel y regreso desde las zonas cubiertas de Bali.</li><li>Transporte privado con aire acondicionado.</li><li>Todos los boletos de entrada y tarifas de ruta local.</li><li>agua mineral embotellada</li><li>Almuerzo buffet indonesio en Kintamani</li><li>Parada de degustación de café y té.</li></ul>
               </section>
 
@@ -748,7 +751,7 @@ body {
                 <li>Ideal para: quienes visitan Bali por primera vez</li>
                 <li>Recogida: 08:00 recogida en el hotel desde las zonas cubiertas de Bali.</li>
                 <li>Área: Kintamani, Ubud y centro de Bali</li>
-                <li>Precio: Desde $70</li>
+                <li>Precio: Desde $69</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

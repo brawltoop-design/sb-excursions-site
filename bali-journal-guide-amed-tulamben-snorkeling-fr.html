@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navigation mobile">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nos circuits</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/fr/main-page#tours">Nos circuits</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubaï, Émirats Arabes Unis</a>
                   <a href="/bali/fr/main-page#tours">Bali, Indonésie</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -763,7 +766,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Le coût honnête est le moteur</h2>
-                <p>Il n'y a aucun moyen de contourner ce problème : Amed est à environ trois heures de Canggu, Seminyak ou Uluwatu, et à environ deux heures d'Ubud. Tulamben ajoute encore vingt minutes sur la route côtière. Faites-le en excursion d'une journée et vous passerez plus de temps dans la voiture que dans l'eau, c'est pourquoi nous encourageons les gens à passer une nuit à Amed - l'aube sur cette côte est plate et vide. Un <a href="/bali/fr/tours/private-car-with-driver-bali">voiture privée avec chauffeur</a> à partir de 65 $ par voiture, vous faites le trajet de porte à porte et le chauffeur attend pendant que vous faites de la plongée avec tuba.</p><p>Si trois heures vous semblent trop, le <a href="/bali/fr/tours/blue-lagoon-snorkeling">Excursion de plongée en apnée au Lagon Bleu</a> à partir de 50 $, vous pourrez accéder aux eaux claires de la côte est à Padang Bai en environ la moitié du trajet, bateau et équipement inclus. C'est une solution de rechange raisonnable pour quiconque basé dans le sud et qui n'a qu'une matinée à perdre - nous comparons honnêtement les deux dans notre <a href="/bali/fr/journal/blue-lagoon-padang-bai-guide">Guide du Lagon Bleu à Padang Bai</a>.</p>
+                <p>Il n'y a aucun moyen de contourner ce problème : Amed est à environ trois heures de Canggu, Seminyak ou Uluwatu, et à environ deux heures d'Ubud. Tulamben ajoute encore vingt minutes sur la route côtière. Faites-le en excursion d'une journée et vous passerez plus de temps dans la voiture que dans l'eau, c'est pourquoi nous encourageons les gens à passer une nuit à Amed - l'aube sur cette côte est plate et vide. Un <a href="/bali/fr/tours/private-car-with-driver-bali">voiture privée avec chauffeur</a> à partir de 59 $ par voiture, vous faites le porte-à-porte et le chauffeur attend pendant que vous faites de la plongée avec tuba.</p><p>Si trois heures vous semblent trop, le <a href="/bali/fr/tours/blue-lagoon-snorkeling">Excursion de plongée en apnée au Lagon Bleu</a> à partir de 50 $, vous pourrez accéder aux eaux claires de la côte est à Padang Bai en environ la moitié du trajet, bateau et équipement inclus. C'est une solution de rechange raisonnable pour quiconque basé dans le sud et qui n'a qu'une matinée à perdre - nous comparons honnêtement les deux dans notre <a href="/bali/fr/journal/blue-lagoon-padang-bai-guide">Guide du Lagon Bleu à Padang Bai</a>.</p>
 
               </section>
 

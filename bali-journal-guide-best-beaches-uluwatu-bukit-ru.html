@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Мобильная навигация">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Наши туры</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/ru/main-page#tours">Наши туры</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Дубай, ОАЭ</a>
                   <a href="/bali/ru/main-page#tours">Бали, Индонезия</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -629,7 +632,7 @@ body {
             <h1>8 лучших пляжей Улувату на Буките: лестница, серфинг, песок</h1>
             <p class="sb-journal-lead">Почти каждый пляж вокруг Улувату скрывается у подножия известняковой скалы, и цена входа — лестница. Вот восемь, на которые стоит подняться, в порядке ранжирования, с честными заметками о приливах, плавающих окнах и о том, насколько на самом деле труден обратный путь.</p>
             <div class="sb-journal-inline-stats">
-              <span>8 пляжей в рейтинге</span><span>Реальность с количеством ступенек</span><span>Личный автомобиль от $65</span>
+              <span>8 пляжей в рейтинге</span><span>Реальность с количеством ступенек</span><span>Личный автомобиль от $59</span>
             </div>
             <div class="sb-journal-article-hero__actions">
               <a class="sb-journal-primary" href="/bali/ru/tours/private-car-with-driver-bali">Открыть рекомендуемый тур</a>
@@ -790,7 +793,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Как добраться до пляжей Улувату без головной боли</h2>
-                <p>Дороги Букита крутые, а несколько пляжных парковок расположены по неровным тропам, которые пугают неопытных водителей скутеров. Если вы прыгаете между тремя или четырьмя пляжами — скажем, Меласти, Паданг-Паданг и Бингин, с закатом в храме — <a href="/bali/ru/tours/private-car-with-driver-bali">личный автомобиль с водителем</a> от 65 долларов за машину упрощает день: водитель занимается парковкой на вершине скалы, а вы поднимаетесь по лестнице. Чтобы объединить бухты Букита в более широкий фотодень по всему острову, <a href="/bali/ru/tours/bali-instagram-highlights-tour">Тур по Бали в Instagram</a> от 65 долларов за машину проходит по той же территории с маршрутом, построенным вокруг света и толпы.</p>
+                <p>Дороги Букита крутые, а несколько пляжных парковок расположены по неровным тропам, которые пугают неопытных водителей скутеров. Если вы прыгаете между тремя или четырьмя пляжами — скажем, Меласти, Паданг-Паданг и Бингин, с закатом в храме — <a href="/bali/ru/tours/private-car-with-driver-bali">личный автомобиль с водителем</a> Цена от 59 долларов за машину упрощает день: водитель занимается парковкой на вершине скалы, а вы поднимаетесь по лестнице. Чтобы объединить бухты Букита в более широкий фотодень по всему острову, <a href="/bali/ru/tours/bali-instagram-highlights-tour">Тур по Бали в Instagram</a> от 69 долларов проходит по той же территории, маршрут построен вокруг света и толпы.</p>
 
               </section>
 
@@ -919,7 +922,7 @@ body {
             <div class="sb-journal-sidebar-card">
               <h3>Снимок руководства</h3>
               <ul>
-                <li>8 пляжей в рейтинге</li><li>Реальность с количеством ступенек</li><li>Личный автомобиль от $65</li>
+                <li>8 пляжей в рейтинге</li><li>Реальность с количеством ступенек</li><li>Личный автомобиль от $59</li>
                 <li>Рекомендуемый якорь маршрута: Частный автомобиль с водителем на Бали.</li>
               </ul>
             </div>

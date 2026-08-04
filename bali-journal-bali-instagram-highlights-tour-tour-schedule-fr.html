@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navigation mobile">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nos circuits</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/fr/main-page#tours">Nos circuits</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubaï, Émirats Arabes Unis</a>
                   <a href="/bali/fr/main-page#tours">Bali, Indonésie</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,14 +657,14 @@ body {
                 <li>🚐 Ramassage : <strong>Prise en charge à l'hôtel le matin</strong></li>
                 <li>📍Zone : <strong>Itinéraire panoramique flexible de Bali</strong></li>
                 <li>👥 Idéal pour : <strong>Couples, créateurs et voyages de noces</strong></li>
-                <li>💰 Prix : <strong>À partir de 65 $ par voiture</strong></li>
+                <li>💰 Prix : <strong>À partir de 69$</strong></li>
               </ul>
             </aside>
 
               <section class="sb-journal-article-section">
                 <h2>📌 Aperçu de la visite en un coup d'œil</h2>
                 <p>Choisissez cette visite lorsque vous souhaitez passer une journée raffinée à Bali, visuelle du début à la fin. Il est plus flexible qu'un itinéraire monorégional et fonctionne bien lorsque vous souhaitez façonner la journée en fonction de vos propres priorités de contenu.</p>
-                <ul><li>Durée : <strong>8-10 heures</strong></li><li>Format : <strong>Visite privée d'une journée</strong></li><li>Zone : <strong>Itinéraire panoramique flexible de Bali</strong></li><li>Ramassage : <strong>Prise en charge à l'hôtel le matin</strong></li><li>Idéal pour : <strong>Couples, créateurs et voyages de noces</strong></li><li>À partir de : <strong>À partir de 65 $ par voiture</strong></li></ul>
+                <ul><li>Durée : <strong>8-10 heures</strong></li><li>Format : <strong>Visite privée d'une journée</strong></li><li>Zone : <strong>Itinéraire panoramique flexible de Bali</strong></li><li>Ramassage : <strong>Prise en charge à l'hôtel le matin</strong></li><li>Idéal pour : <strong>Couples, créateurs et voyages de noces</strong></li><li>À partir de : <strong>À partir de 69$</strong></li></ul>
               </section>
 
               <section class="sb-journal-article-section">
@@ -696,7 +699,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>✉️ Réservation et confirmation — ce que vous devez envoyer</h2>
-                <p>Pour confirmer la visite des points forts d'Instagram de Bali, vous devrez partager votre date préférée, le nom et la zone de votre hôtel, ainsi que la taille du groupe. Cela permet à l'opérateur de choisir le bon véhicule, le bon guide et la bonne fenêtre de synchronisation.</p><p>Le prix commence à partir de 65 $ par voiture. Le devis exact dépend de la taille de votre groupe, de la distance de l'hôtel et des éventuelles options complémentaires.</p>
+                <p>Pour confirmer la visite des points forts d'Instagram de Bali, vous devrez partager votre date préférée, le nom et la zone de votre hôtel, ainsi que la taille du groupe. Cela permet à l'opérateur de choisir le bon véhicule, le bon guide et la bonne fenêtre de synchronisation.</p><p>Le prix commence à partir de 69 $. Le devis exact dépend de la taille de votre groupe, de la distance de l'hôtel et des éventuelles options complémentaires.</p>
                 <ul><li>Prise en charge à l'hôtel et planification du retour depuis les principales régions de Bali</li><li>Flux d'itinéraires privés et rythme flexible</li><li>Coordination des chauffeurs pour l'itinéraire principal et les horaires des principales visites touristiques</li><li>Prise en charge de WhatsApp pour les questions de confirmation, de timing et d'itinéraire</li></ul>
               </section>
 
@@ -733,7 +736,7 @@ body {
                 <li>Idéal pour : les couples, les créateurs et les voyages de noces</li>
                 <li>Prise en charge : prise en charge à l'hôtel le matin</li>
                 <li>Zone : Route panoramique flexible de Bali</li>
-                <li>Prix : À partir de 65$ par voiture</li>
+                <li>Prix : À partir de 69$</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

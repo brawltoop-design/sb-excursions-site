@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -794,7 +797,7 @@ body {
           <span class="sb-journal-card__tour">Iconos del este de Bali con un acabado en terraza de arroz de Tegalalang</span>
         </div>
         <h3>Tour de Instagram de Ubud</h3>
-        <p>Este Ubud Instagram Tour es el mejor día fotográfico de Bali con todo incluido en el que desea paradas icónicas, logística refinada y orientación real con su contenido. Combina los puntos de referencia más reconocibles del este de Bali con un acabado de terraza de arroz más suave al estilo de Ubud, mientras que la recogida en el hotel, las entradas, el almuerzo y la asistencia del guía se gestionan desde 75 dólares.</p>
+        <p>Este Ubud Instagram Tour es el mejor día fotográfico de Bali con todo incluido en el que desea paradas icónicas, logística refinada y orientación real con su contenido. Combina los puntos de referencia más reconocibles del este de Bali con un acabado de terraza de arroz más suave al estilo de Ubud, mientras que la recogida en el hotel, las entradas, el almuerzo y la asistencia del guía se gestionan desde 89 dólares.</p>
         <span class="sb-journal-card__cta">Abrir página de recorrido</span>
       </div>
     </a>
@@ -807,7 +810,7 @@ body {
           <span class="sb-journal-card__tour">Lovina, cascada Gitgit y Ulun Danu Beratan</span>
         </div>
         <h3>Excursión al amanecer con delfines en Lovina</h3>
-        <p>Este Lovina Dolphin Sunrise Tour es la forma más limpia de recorrer el norte de Bali en un día temprano cuando desea ver el mar, una cascada y un templo en el lago sin tener que unir la ruta usted mismo. Incluye recogida en el hotel, transporte privado con aire acondicionado, el tradicional bote con estabilizadores de Lovina, entradas, agua mineral y seguro, con un precio por página fijado en 75 dólares.</p>
+        <p>Este Lovina Dolphin Sunrise Tour es la forma más limpia de recorrer el norte de Bali en un día temprano cuando desea ver el mar, una cascada y un templo en el lago sin tener que unir la ruta usted mismo. Incluye recogida en el hotel, transporte privado con aire acondicionado, el tradicional bote con estabilizadores de Lovina, entradas, agua mineral y seguro, con un precio por página fijado en 69 dólares.</p>
         <span class="sb-journal-card__cta">Abrir página de recorrido</span>
       </div>
     </a>
@@ -875,7 +878,7 @@ body {
                         <span class="sb-journal-card__tour">Iconos del este de Bali con un acabado en terraza de arroz de Tegalalang</span>
                       </div>
                       <h3>Tour de Instagram de Ubud</h3>
-                      <p>Este Ubud Instagram Tour es el mejor día fotográfico de Bali con todo incluido en el que desea paradas icónicas, logística refinada y orientación real con su contenido. Combina los puntos de referencia más reconocibles del este de Bali con un acabado de terraza de arroz más suave al estilo de Ubud, mientras que la recogida en el hotel, las entradas, el almuerzo y la asistencia del guía se gestionan desde 75 dólares.</p>
+                      <p>Este Ubud Instagram Tour es el mejor día fotográfico de Bali con todo incluido en el que desea paradas icónicas, logística refinada y orientación real con su contenido. Combina los puntos de referencia más reconocibles del este de Bali con un acabado de terraza de arroz más suave al estilo de Ubud, mientras que la recogida en el hotel, las entradas, el almuerzo y la asistencia del guía se gestionan desde 89 dólares.</p>
                       <span class="sb-journal-card__cta">Abrir página de recorrido</span>
                     </div>
                   </a>
@@ -887,7 +890,7 @@ body {
                         <span class="sb-journal-card__tour">Lovina, cascada Gitgit y Ulun Danu Beratan</span>
                       </div>
                       <h3>Excursión al amanecer con delfines en Lovina</h3>
-                      <p>Este Lovina Dolphin Sunrise Tour es la forma más limpia de recorrer el norte de Bali en un día temprano cuando desea ver el mar, una cascada y un templo en el lago sin tener que unir la ruta usted mismo. Incluye recogida en el hotel, transporte privado con aire acondicionado, el tradicional bote con estabilizadores de Lovina, entradas, agua mineral y seguro, con un precio por página fijado en 75 dólares.</p>
+                      <p>Este Lovina Dolphin Sunrise Tour es la forma más limpia de recorrer el norte de Bali en un día temprano cuando desea ver el mar, una cascada y un templo en el lago sin tener que unir la ruta usted mismo. Incluye recogida en el hotel, transporte privado con aire acondicionado, el tradicional bote con estabilizadores de Lovina, entradas, agua mineral y seguro, con un precio por página fijado en 69 dólares.</p>
                       <span class="sb-journal-card__cta">Abrir página de recorrido</span>
                     </div>
                   </a>

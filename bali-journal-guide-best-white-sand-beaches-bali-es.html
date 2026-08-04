@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -629,7 +632,7 @@ body {
             <h1>8 playas de arena blanca en Bali que en realidad son blancas</h1>
             <p class="sb-journal-lead">La mayor parte de la costa de Bali es arena volcánica gris, independientemente de lo que impliquen los listados. Esta guía clasifica las ocho playas genuinamente blancas, desde la franja de Nusa Dua hasta Diamond Beach en Nusa Penida, y le indica en cuáles se puede nadar.</p>
             <div class="sb-journal-inline-stats">
-              <span>8 playas comparadas</span><span>Sólo arena blanca verdadera</span><span>Tours desde $65</span>
+              <span>8 playas comparadas</span><span>Sólo arena blanca verdadera</span><span>Tours desde $59</span>
             </div>
             <div class="sb-journal-article-hero__actions">
               <a class="sb-journal-primary" href="/bali/es/tours/nusa-penida-east-tour">Abierto tour recomendado</a>
@@ -778,7 +781,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Bukit y Nusa Dua: arena blanca a la que puedes conducir</h2>
-                <p>Tanto Melasti como Pandawa tienen caminos cortados a través de la piedra caliza, por lo que se estaciona cerca de la arena, algo poco común en una península donde la mayoría de las playas exigen subir escaleras. Nusa Dua y Geger son aún más fáciles: acceso llano, aguas tranquilas protegidas por arrecifes, instalaciones por todas partes. Nadar en el Bukit depende de la marea; Dentro del arrecife de Melasti y Pandawa, la marea media suele ser la ventana. La forma eficiente de verlos es un bucle con un <a href="/bali/es/tours/private-car-with-driver-bali">coche privado con conductor</a> desde $ 65 por automóvil: Melasti, Pandawa y Geger se sientan juntos y su conductor sabrá cuál favorece la marea ese día.</p>
+                <p>Tanto Melasti como Pandawa tienen caminos cortados a través de la piedra caliza, por lo que se estaciona cerca de la arena, algo poco común en una península donde la mayoría de las playas exigen subir escaleras. Nusa Dua y Geger son aún más fáciles: acceso llano, aguas tranquilas protegidas por arrecifes, instalaciones por todas partes. Nadar en el Bukit depende de la marea; Dentro del arrecife de Melasti y Pandawa, la marea media suele ser la ventana. La forma eficiente de verlos es un bucle con un <a href="/bali/es/tours/private-car-with-driver-bali">coche privado con conductor</a> desde $ 59 por automóvil: Melasti, Pandawa y Geger se sientan juntos y su conductor sabrá cuál favorece la marea ese día.</p>
 
               </section>
 
@@ -919,7 +922,7 @@ body {
             <div class="sb-journal-sidebar-card">
               <h3>Instantánea de la guía</h3>
               <ul>
-                <li>8 playas comparadas</li><li>Sólo arena blanca verdadera</li><li>Tours desde $65</li>
+                <li>8 playas comparadas</li><li>Sólo arena blanca verdadera</li><li>Tours desde $59</li>
                 <li>Ancla de ruta recomendada: Nusa Penida East Tour</li>
               </ul>
             </div>

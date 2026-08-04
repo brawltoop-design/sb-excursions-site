@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="手机导航">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">我们的旅行</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/zh/main-page#tours">我们的旅行</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">阿联酋迪拜</a>
                   <a href="/bali/zh/main-page#tours">印度尼西亚巴厘岛</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -790,7 +793,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>穿梭于这些海滩之间，不耽误您的一天</h2>
-                <p>坎古和塞米亚克之间的沿海捷径很狭窄，而当您想要移动时（日落前两小时），交通就会达到高峰。如果您自信地骑行，那么骑踏板车去海滩跳跃是可行的；如果你不这样做， <a href="/bali/zh/tours/private-car-with-driver-bali">带司机的私家车</a> 每辆车一天 65 美元起，完全解决了停车问题，而且司机会在您漫步每个海滩时等待。如果您想将海岸变成更大的一天的拍照地点， <a href="/bali/zh/tours/bali-instagram-highlights-tour">巴厘岛 Instagram 亮点之旅</a> 每辆车 65 美元起，运行方式相同：一辆车，一名司机，除了您的时间表外没有时间表。</p>
+                <p>坎古和塞米亚克之间的沿海捷径很狭窄，而当您想要移动时（日落前两小时），交通就会达到高峰。如果您自信地骑行，那么骑踏板车去海滩跳跃是可行的；如果你不这样做， <a href="/bali/zh/tours/private-car-with-driver-bali">带司机的私家车</a> 当天每辆车 59 美元起，完全解决了停车问题，而且司机会在您漫步每个海滩时等待。如果您想将海岸变成更大的一天的拍照地点， <a href="/bali/zh/tours/bali-instagram-highlights-tour">巴厘岛 Instagram 亮点之旅</a> 69 美元起的运行方式相同：一辆车，一名司机，除了您的时间表外没有时间表。</p>
 
               </section>
 

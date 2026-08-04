@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navigation mobile">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nos circuits</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/fr/main-page#tours">Nos circuits</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubaï, Émirats Arabes Unis</a>
                   <a href="/bali/fr/main-page#tours">Bali, Indonésie</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,14 +657,14 @@ body {
                 <li>🚐 Ramassage : <strong>03h00, prise en charge à l'hôtel depuis les régions du sud et du centre de Bali</strong></li>
                 <li>📍Zone : <strong>Lovina, la cascade Gitgit et Ulun Danu Beratan</strong></li>
                 <li>👥 Idéal pour : <strong>Les voyageurs qui souhaitent un itinéraire compact au lever du soleil au nord de Bali avec des points forts classiques</strong></li>
-                <li>💰 Prix : <strong>À partir de 75$</strong></li>
+                <li>💰 Prix : <strong>À partir de 69$</strong></li>
               </ul>
             </aside>
 
               <section class="sb-journal-article-section">
                 <h2>📌 Aperçu de la visite en un coup d'œil</h2>
-                <p>Ce Lovina Dolphin Sunrise Tour est le moyen le plus propre de visiter le nord de Bali en une journée matinale lorsque vous voulez la mer, une cascade et un temple du lac sans assembler vous-même l'itinéraire. Il comprend la prise en charge à l'hôtel, le transport privé climatisé, le bateau à balancier traditionnel Lovina, les frais d'entrée, l'eau minérale et l'assurance, le prix de la page étant fixé à 75 $.</p>
-                <ul><li>Durée : <strong>8 heures</strong></li><li>Format : <strong>Excursion privée d'une journée au lever du soleil avec les dauphins</strong></li><li>Zone : <strong>Lovina, la cascade Gitgit et Ulun Danu Beratan</strong></li><li>Ramassage : <strong>03h00, prise en charge à l'hôtel depuis les régions du sud et du centre de Bali</strong></li><li>Idéal pour : <strong>Les voyageurs qui souhaitent un itinéraire compact au lever du soleil au nord de Bali avec des points forts classiques</strong></li><li>À partir de : <strong>À partir de 75$</strong></li></ul>
+                <p>Ce Lovina Dolphin Sunrise Tour est le moyen le plus propre de visiter le nord de Bali en une journée matinale lorsque vous voulez la mer, une cascade et un temple du lac sans assembler vous-même l'itinéraire. Il comprend la prise en charge à l'hôtel, le transport privé climatisé, le bateau à balancier traditionnel Lovina, les frais d'entrée, l'eau minérale et l'assurance, le prix de la page étant fixé à 69 $.</p>
+                <ul><li>Durée : <strong>8 heures</strong></li><li>Format : <strong>Excursion privée d'une journée au lever du soleil avec les dauphins</strong></li><li>Zone : <strong>Lovina, la cascade Gitgit et Ulun Danu Beratan</strong></li><li>Ramassage : <strong>03h00, prise en charge à l'hôtel depuis les régions du sud et du centre de Bali</strong></li><li>Idéal pour : <strong>Les voyageurs qui souhaitent un itinéraire compact au lever du soleil au nord de Bali avec des points forts classiques</strong></li><li>À partir de : <strong>À partir de 69$</strong></li></ul>
               </section>
 
               <section class="sb-journal-article-section">
@@ -696,7 +699,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>✉️ Réservation et confirmation — ce que vous devez envoyer</h2>
-                <p>Pour confirmer le Lovina Dolphin Sunrise Tour, vous devrez partager votre date préférée, le nom et la zone de l'hôtel, ainsi que la taille du groupe. Cela permet à l'opérateur de choisir le bon véhicule, le bon guide et la bonne fenêtre de synchronisation.</p><p>Le prix commence à partir de 75 $. Le devis exact dépend de la taille de votre groupe, de la distance de l'hôtel et des éventuelles options complémentaires.</p>
+                <p>Pour confirmer le Lovina Dolphin Sunrise Tour, vous devrez partager votre date préférée, le nom et la zone de l'hôtel, ainsi que la taille du groupe. Cela permet à l'opérateur de choisir le bon véhicule, le bon guide et la bonne fenêtre de synchronisation.</p><p>Le prix commence à partir de 69 $. Le devis exact dépend de la taille de votre groupe, de la distance de l'hôtel et des éventuelles options complémentaires.</p>
                 <ul><li>Frais d'entrée dans toutes les destinations touristiques de l'itinéraire</li><li>Billet de bateau à balancier traditionnel Lovina</li><li>Chauffeur anglophone</li><li>Voiture privée entièrement climatisée</li><li>Une bouteille d'eau minérale</li><li>Insurance</li></ul>
               </section>
 
@@ -728,7 +731,7 @@ body {
                 <li>Idéal pour : Les voyageurs qui souhaitent un itinéraire compact au lever du soleil au nord de Bali avec des points forts classiques</li>
                 <li>Prise en charge : prise en charge à l'hôtel à 03h00 depuis les régions du sud et du centre de Bali</li>
                 <li>Zone : Lovina, cascade Gitgit et Ulun Danu Beratan</li>
-                <li>Prix : À partir de 75$</li>
+                <li>Prix : À partir de 69$</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

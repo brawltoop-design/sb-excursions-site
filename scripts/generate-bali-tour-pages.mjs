@@ -521,11 +521,44 @@ html[data-sb-destination="bali"] #rec2128776473 .t-menusub__list .t-menusub__lin
     });
   }
 
+  // «Туры» в мобильном меню (бургер) — это пункт с пустым href: он только
+  // разворачивает подменю «Дубай / Бали», а сам никуда не ведёт, и Tilda
+  // вдобавок гасит клик своим preventDefault. Поэтому мало проставить href —
+  // нужен свой обработчик на стадии перехвата, до тильдовского.
+  // Ведём на список туров того же языка, на котором открыта страница.
+  function baliToursHref() {
+    var parts = window.location.pathname.split("/");
+    var lang = parts[1] === "bali" && parts[2] ? parts[2] : "en";
+    return "/bali/" + lang + "/main-page#tours";
+  }
+
+  function linkMobileToursItem() {
+    if (window.location.pathname.indexOf("/bali/") !== 0) return;
+    var items = document.querySelectorAll(".t451 a.t451__link-item_submenu, .t451 a.t-menu__link-item_submenu");
+    Array.prototype.forEach.call(items, function (item) {
+      var href = baliToursHref();
+      if (item.getAttribute("href") !== href) item.setAttribute("href", href);
+      if (item.getAttribute("data-sb-tours-link") === "1") return;
+      item.setAttribute("data-sb-tours-link", "1");
+      item.addEventListener("click", function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        window.location.href = baliToursHref();
+      }, true);
+    });
+  }
+
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", queueDestinationMenuState);
+    document.addEventListener("DOMContentLoaded", linkMobileToursItem);
   } else {
     queueDestinationMenuState();
+    linkMobileToursItem();
   }
+  window.addEventListener("load", linkMobileToursItem);
+  setTimeout(linkMobileToursItem, 500);
+  setTimeout(linkMobileToursItem, 1500);
+  setTimeout(linkMobileToursItem, 3000);
   window.addEventListener("load", queueDestinationMenuState);
   window.addEventListener("hashchange", queueDestinationMenuState);
   setTimeout(queueDestinationMenuState, 500);
@@ -1541,7 +1574,7 @@ const tours = [
     bestFor: "First-time Bali visitors",
     format: "All-inclusive private day tour",
     area: "Kintamani, Ubud, and central Bali",
-    price: "From $70",
+    price: "From $69",
     image: sourceImage("tild3365-3333-4637-a663-636263353664__dika-pebriyanta-qqxc.jpg"),
     imageAlt: "Rice terraces, temple stops, and Mount Batur viewpoint scenery in Bali",
     lead:
@@ -1621,7 +1654,7 @@ const tours = [
     bestFor: "Travelers chasing a big full-day route",
     format: "Private day tour",
     area: "Lovina and north Bali",
-    price: "From $80",
+    price: "From $79",
     image: sourceImage("tild3365-3333-4637-a663-636263353664__dika-pebriyanta-qqxc.jpg"),
     imageAlt: "North Bali temple and mountain landscape",
     lead:
@@ -1659,13 +1692,13 @@ const tours = [
     bestFor: "Travelers who want a compact north Bali sunrise route with classic highlights",
     format: "Private dolphin sunrise day tour",
     area: "Lovina, Gitgit Waterfall and Ulun Danu Beratan",
-    price: "From $75",
+    price: "From $69",
     image: sourceImage("bali-tours/north-bali-lovina-dolphins-tour.jpg"),
     imageAlt: "Traditional Lovina dolphin boat at sunrise in north Bali",
     lead:
       "Start before dawn for a classic Lovina dolphin sunrise, then continue through north Bali with a stop at Gitgit Waterfall and the iconic Ulun Danu Beratan Temple.",
     summary:
-      "This Lovina Dolphin Sunrise Tour is the cleanest way to do north Bali in one early-start day when you want the sea, a waterfall, and a lake temple without stitching the route together yourself. It includes hotel pickup, private air-conditioned transport, the traditional Lovina outrigger boat, entrance fees, mineral water, and insurance, with the page price set from $75.",
+      "This Lovina Dolphin Sunrise Tour is the cleanest way to do north Bali in one early-start day when you want the sea, a waterfall, and a lake temple without stitching the route together yourself. It includes hotel pickup, private air-conditioned transport, the traditional Lovina outrigger boat, entrance fees, mineral water, and insurance, with the page price set from $69.",
     overview:
       "The route is built around one very specific morning payoff: catching the dolphin boat from Lovina at sunrise before north Bali wakes up fully. After the sea section, the day moves inland to Gitgit Waterfall for a softer nature stop and then to Ulun Danu Beratan Temple for one of Bali's most recognizable cultural landscapes, all with a private English-speaking driver handling the long transfer logistics.",
     highlights: [
@@ -1755,7 +1788,7 @@ const tours = [
       "Hello! I want to book the Lovina Dolphin Sunrise Tour. Please send availability, pickup options, and full details.",
     metaTitle: "Lovina Dolphin Sunrise Tour in Bali | Gitgit Waterfall & Ulun Danu",
     metaDescription:
-      "Book the Lovina Dolphin Sunrise Tour in Bali with early hotel pickup, traditional boat, Gitgit Waterfall, Ulun Danu Beratan Temple, tickets and private transport from $75.",
+      "Book the Lovina Dolphin Sunrise Tour in Bali with early hotel pickup, traditional boat, Gitgit Waterfall, Ulun Danu Beratan Temple, tickets and private transport from $69.",
   },
   {
     slug: "east-bali-instagram-tour",
@@ -1766,7 +1799,7 @@ const tours = [
     bestFor: "Photo-focused Bali itineraries",
     format: "Private day tour",
     area: "Lempuyang and east Bali",
-    price: "From $65 per car",
+    price: "From $69",
     image: sourceImage("tild6662-3531-4435-b037-386262376635__leo_visions-ulj5djrj.jpg"),
     imageAlt: "East Bali Gates of Heaven style scenery",
     lead:
@@ -1804,7 +1837,7 @@ const tours = [
     bestFor: "Classic sightseeing days",
     format: "Private day tour",
     area: "West and central Bali",
-    price: "From $65 per car",
+    price: "From $59",
     image: sourceImage("tild3365-3333-4637-a663-636263353664__dika-pebriyanta-qqxc.jpg"),
     imageAlt: "Temple and lake scenery in Bedugul Bali",
     lead:
@@ -1834,24 +1867,24 @@ const tours = [
   {
     slug: "bali-unesco",
     metaTitle: "Bali UNESCO Tour | Jatiluwih Rice Terraces & Tanah Lot",
-    metaDescription: "Bali UNESCO day tour: Taman Ayun, Ulun Danu Beratan, Jatiluwih rice terraces and Tanah Lot in 10 hours. Private car and entrance tickets included. From $70.",
+    metaDescription: "Bali UNESCO day tour: Taman Ayun, Ulun Danu Beratan, Jatiluwih rice terraces and Tanah Lot in 10 hours. Private car and entrance tickets included. From $69.",
     title: "Bali UNESCO Heritage Sites Tour",
     metaTitle: "Bali UNESCO Heritage Sites Tour | Taman Ayun, Ulun Danu, Jatiluwih & Tanah Lot",
     metaDescription:
-      "Book the Bali UNESCO Heritage Sites Tour with Taman Ayun Temple, Ulun Danu Beratan, Jatiluwih Rice Terraces and Tanah Lot, plus private transport and all entrance tickets from $70 per person.",
+      "Book the Bali UNESCO Heritage Sites Tour with Taman Ayun Temple, Ulun Danu Beratan, Jatiluwih Rice Terraces and Tanah Lot, plus private transport and all entrance tickets from $69 per person.",
     eyebrow: "UNESCO temples, rice terraces, and Tanah Lot",
     duration: "10 hours",
     pickup: "Morning hotel pickup from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, or Jimbaran",
     bestFor: "culture lovers, couples, families, and first-time Bali sightseeing days",
     format: "Private heritage sightseeing route",
     area: "West & Central Bali UNESCO route",
-    price: "From $70",
+    price: "From $69",
     image: sourceImage("bali-tours/unesco-jatiluwih-hero.jpg"),
     imageAlt: "Jatiluwih rice terraces and mountain scenery on the Bali UNESCO Heritage Sites Tour",
     lead:
       "See Bali's best-known heritage scenery in one polished private day with Taman Ayun Temple, Ulun Danu Beratan, Jatiluwih Rice Terraces, and Tanah Lot connected in one smooth all-inclusive route.",
     summary:
-      "This Bali UNESCO Heritage Sites Tour is built for travelers who want temple courtyards, mountain-lake views, UNESCO rice terraces, and a famous coastal temple finish without stitching separate day trips together. Private transport, entrance tickets, a temple sarong, and bottled water are already handled from $70 per person.",
+      "This Bali UNESCO Heritage Sites Tour is built for travelers who want temple courtyards, mountain-lake views, UNESCO rice terraces, and a famous coastal temple finish without stitching separate day trips together. Private transport, entrance tickets, a temple sarong, and bottled water are already handled from $69 per person.",
     overview:
       "The route works well because it stays scenic and varied without turning physically heavy. You begin with royal-temple architecture at Taman Ayun, continue into the cooler Bedugul highlands for Ulun Danu Beratan, open into the wide UNESCO-listed Jatiluwih terraces, and finish at Tanah Lot for one of Bali's most recognizable oceanfront temple settings.",
     highlights: [
@@ -1938,7 +1971,7 @@ const tours = [
     plannerPriority: 24,
     related: ["tanah-lot-bedugul-tour", "ubud-highlights-tour", "private-car-with-driver-bali"],
     whatsappText:
-      "Hello! I want to book the Bali UNESCO Heritage Sites Tour for $70 per person. Please send availability, pickup areas, and full details.",
+      "Hello! I want to book the Bali UNESCO Heritage Sites Tour for $69 per person. Please send availability, pickup areas, and full details.",
     mainPageFeatures: [
       ["⏰", "10 hours private route"],
       ["🚐", "Hotel pickup from major Bali areas"],
@@ -2251,7 +2284,7 @@ const tours = [
     bestFor: "Couples, creators, and honeymoon trips",
     format: "Private day tour",
     area: "Flexible scenic Bali route",
-    price: "From $65 per car",
+    price: "From $69",
     image: sourceImage("tild6662-3531-4435-b037-386262376635__leo_visions-ulj5djrj.jpg"),
     imageAlt: "Scenic Bali viewpoint for Instagram tour",
     lead:
@@ -2287,13 +2320,13 @@ const tours = [
     bestFor: "Couples, solo travelers, creators, and first-time Bali visitors",
     format: "All-inclusive guided day tour",
     area: "East Bali icons with a Tegalalang rice terrace finish",
-    price: "From $75",
+    price: "From $89",
     image: sourceImage("tild6662-3531-4435-b037-386262376635__leo_visions-ulj5djrj.jpg"),
     imageAlt: "Gates of Heaven style Bali scenery for the Ubud Instagram Tour",
     lead:
       "Capture Bali's most famous photo route in one smooth day with the Gates of Heaven at Lempuyang, Tirta Gangga Water Palace, Tukad Cepung Waterfall, and the green terraces of Tegalalang.",
     summary:
-      "This Ubud Instagram Tour is the strongest all-inclusive Bali photo day when you want iconic stops, polished logistics, and real guidance with your content. It combines east Bali's most recognizable landmarks with a softer Ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $75.",
+      "This Ubud Instagram Tour is the strongest all-inclusive Bali photo day when you want iconic stops, polished logistics, and real guidance with your content. It combines east Bali's most recognizable landmarks with a softer Ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $89.",
     overview:
       "The route is built for travelers who want Bali's headline visuals without stitching together a long road day on their own. Expect an early start, photo help from an English-speaking driver-guide, temple and palace scenery, a waterfall stop where you can swim, and a final rice terrace section that gives the day a more complete Bali look than an east-only itinerary.",
     highlights: [
@@ -2381,7 +2414,7 @@ const tours = [
       "Hello! I want to book the Ubud Instagram Tour. Please send availability, pickup areas, and full details.",
     metaTitle: "Ubud Instagram Tour in Bali | Gates of Heaven, Waterfall & Rice Terrace",
     metaDescription:
-      "Book the Ubud Instagram Tour in Bali with Lempuyang Gates of Heaven, Tirta Gangga, Tukad Cepung Waterfall, Tegalalang Rice Terrace, lunch, tickets and hotel pickup from $75.",
+      "Book the Ubud Instagram Tour in Bali with Lempuyang Gates of Heaven, Tirta Gangga, Tukad Cepung Waterfall, Tegalalang Rice Terrace, lunch, tickets and hotel pickup from $89.",
   },
   {
     slug: "nusa-penida-private-day-tour-manta-snorkeling",
@@ -3044,7 +3077,7 @@ const tours = [
     bestFor: "Travelers who want total route flexibility",
     format: "Private transport service",
     area: "All major Bali regions",
-    price: "From $65 per car",
+    price: "From $59 per car",
     image: sourceImage("tild3365-3333-4637-a663-636263353664__dika-pebriyanta-qqxc.jpg"),
     imageAlt: "Private Bali touring atmosphere with scenic temples",
     lead:
@@ -8616,7 +8649,7 @@ function renderJournalHeader(tour) {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
@@ -8673,7 +8706,10 @@ function renderJournalHeader(tour) {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -9730,7 +9766,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Make it a full east-coast day",
         "paragraphs": [
-          "Blue Lagoon on its own is a two-hour stop, so build around it. Swim first, then walk or ride over to Bias Tugel for beach time, and eat at a harbor warung before the drive back. If you are heading onward, Padang Bai is Bali's main jump-off for the islands — [fast boat transfers](/bali/en/tours/fast-boat-transfer-bali) run from $15, which is why plenty of people snorkel the lagoon the morning before a Gili crossing. Staying in Bali? Pair the cove with the east side's temples, palms and viewpoints on an [East Bali day trip](/bali/en/tours/east-bali-instagram-tour) from $65 per car.",
+          "Blue Lagoon on its own is a two-hour stop, so build around it. Swim first, then walk or ride over to Bias Tugel for beach time, and eat at a harbor warung before the drive back. If you are heading onward, Padang Bai is Bali's main jump-off for the islands — [fast boat transfers](/bali/en/tours/fast-boat-transfer-bali) run from $15, which is why plenty of people snorkel the lagoon the morning before a Gili crossing. Staying in Bali? Pair the cove with the east side's temples, palms and viewpoints on an [East Bali day trip](/bali/en/tours/east-bali-instagram-tour) from $69.",
           "If snorkeling is the main event of your Bali trip, keep perspective: Blue Lagoon is the convenient option, not the ceiling. The wall at Amed and the wreck at Tulamben are about an hour further up the coast, and the really clear water lives across the channel. Start with our island-wide list of [the best snorkeling spots in Bali](/bali/en/journal/best-snorkeling-spots-bali), then see [which beaches actually have crystal-clear water](/bali/en/journal/best-beaches-bali-crystal-clear-water) before you lock the itinerary."
         ]
       }
@@ -9758,7 +9794,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How do you get to Padang Bai from Canggu or Seminyak?",
-        "answer": "Padang Bai sits on Bali's east coast. From Canggu or Seminyak plan on roughly two hours by car depending on traffic, and about half that from Sanur. There is no useful public transport for a morning arrival, so it is either your own scooter, a ride-hailing app willing to go that far, or a private car with driver from $65 per car for the day."
+        "answer": "Padang Bai sits on Bali's east coast. From Canggu or Seminyak plan on roughly two hours by car depending on traffic, and about half that from Sanur. There is no useful public transport for a morning arrival, so it is either your own scooter, a ride-hailing app willing to go that far, or a private car with driver from $59 per car for the day."
       },
       {
         "question": "What fish can you see at Blue Lagoon?",
@@ -10781,7 +10817,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Shade, food, toilets — and getting there without meltdowns",
         "paragraphs": [
-          "Nusa Dua, Mengiat and Geger have trees behind the sand and sunbed shade; Sanur adds a paved beachfront path that works for strollers, with cafes and toilets every few hundred meters. Blue Lagoon is the most basic of the seven — shade, a couple of warungs, and that's it, so bring what you need. For the driving, the honest advice is to skip taxis: a [private car with driver in Bali](/bali/en/tours/private-car-with-driver-bali) from $65 per car means the car seat stays put, the driver waits while someone naps, and you can bail to the villa the moment the mood turns. If the family argument is calm water versus pretty sand, [the best white sand beaches in Bali](/bali/en/journal/best-white-sand-beaches-bali) settles it — several beaches sit on both lists."
+          "Nusa Dua, Mengiat and Geger have trees behind the sand and sunbed shade; Sanur adds a paved beachfront path that works for strollers, with cafes and toilets every few hundred meters. Blue Lagoon is the most basic of the seven — shade, a couple of warungs, and that's it, so bring what you need. For the driving, the honest advice is to skip taxis: a [private car with driver in Bali](/bali/en/tours/private-car-with-driver-bali) from $59 per car means the car seat stays put, the driver waits while someone naps, and you can bail to the villa the moment the mood turns. If the family argument is calm water versus pretty sand, [the best white sand beaches in Bali](/bali/en/journal/best-white-sand-beaches-bali) settles it — several beaches sit on both lists."
         ]
       }
     ],
@@ -10816,7 +10852,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How do we get between these beaches with a car seat?",
-        "answer": "Hire one car for the day rather than chaining taxis. A private car with an English-speaking driver runs from $65 per car for a full day, the car seat stays installed, and the driver waits while you swim or a child sleeps. Nusa Dua, Mengiat, Geger and Tanjung Benoa are minutes apart, so one relaxed day covers four of the seven beaches on this list."
+        "answer": "Hire one car for the day rather than chaining taxis. A private car with an English-speaking driver runs from $59 per car for a full day, the car seat stays installed, and the driver waits while you swim or a child sleeps. Nusa Dua, Mengiat, Geger and Tanjung Benoa are minutes apart, so one relaxed day covers four of the seven beaches on this list."
       }
     ]
   },
@@ -10834,7 +10870,7 @@ const JOURNAL_SEO_GUIDES = [
     "inlineStats": [
       "8 beaches compared",
       "True white sand only",
-      "Tours from $65"
+      "Tours from $59"
     ],
     "title": "8 White Sand Beaches in Bali That Are Actually White",
     "description": "The white sand beaches Bali actually has — Nusa Dua, Melasti, Diamond Beach and more — plus an honest note on why the west coast sand is grey.",
@@ -10908,7 +10944,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "The Bukit and Nusa Dua: white sand you can drive to",
         "paragraphs": [
-          "Melasti and Pandawa both have roads cut down through the limestone, so you park close to the sand — rare on a peninsula where most beaches demand a stair climb. Nusa Dua and Geger are even easier: flat access, calm reef-protected water, facilities everywhere. Swimming on the Bukit depends on the tide; inside the reef at Melasti and Pandawa, mid tide is usually the window. The efficient way to see them is one loop with a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $65 per car — Melasti, Pandawa and Geger sit close together, and your driver will know which one the tide favours that day."
+          "Melasti and Pandawa both have roads cut down through the limestone, so you park close to the sand — rare on a peninsula where most beaches demand a stair climb. Nusa Dua and Geger are even easier: flat access, calm reef-protected water, facilities everywhere. Swimming on the Bukit depends on the tide; inside the reef at Melasti and Pandawa, mid tide is usually the window. The efficient way to see them is one loop with a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car — Melasti, Pandawa and Geger sit close together, and your driver will know which one the tide favours that day."
         ]
       },
       {
@@ -11039,7 +11075,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "The honest cost is the drive",
         "paragraphs": [
-          "There is no way around it: Amed is roughly three hours from Canggu, Seminyak or Uluwatu, and around two from Ubud. Tulamben adds another twenty minutes up the coast road. Do it as a day trip and you will spend more time in the car than in the water, which is why we push people toward one night in Amed — dawn on this coast is glass-flat and empty. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $65 per car makes the run door to door, and the driver waits while you snorkel.",
+          "There is no way around it: Amed is roughly three hours from Canggu, Seminyak or Uluwatu, and around two from Ubud. Tulamben adds another twenty minutes up the coast road. Do it as a day trip and you will spend more time in the car than in the water, which is why we push people toward one night in Amed — dawn on this coast is glass-flat and empty. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car makes the run door to door, and the driver waits while you snorkel.",
           "If three hours sounds like too much, the [Blue Lagoon snorkeling trip](/bali/en/tours/blue-lagoon-snorkeling) from $50 gets you into clear east-coast water at Padang Bai in about half the drive, boat and gear included. It is the sensible fallback for anyone based south with only a morning to spare — we compare the two honestly in our [Blue Lagoon Padang Bai guide](/bali/en/journal/blue-lagoon-padang-bai-guide)."
         ]
       },
@@ -11167,7 +11203,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "The distance is the whole decision",
         "paragraphs": [
-          "From Canggu or Seminyak, count on around four hours each way to the jetty at Labuhan Lalang, and more from Uluwatu. Add a boat crossing of roughly half an hour and you are looking at a very long day for perhaps three hours in the water. That math is why we tell most people to either leave before dawn or sleep in Pemuteran the night before. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $65 per car is the sane way to do it — one driver for the whole loop, no scooter marathon, and you sleep on the way back.",
+          "From Canggu or Seminyak, count on around four hours each way to the jetty at Labuhan Lalang, and more from Uluwatu. Add a boat crossing of roughly half an hour and you are looking at a very long day for perhaps three hours in the water. That math is why we tell most people to either leave before dawn or sleep in Pemuteran the night before. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car is the sane way to do it — one driver for the whole loop, no scooter marathon, and you sleep on the way back.",
           "At the jetty you arrange the boat, a guide and the national-park permits. Fees apply and they shift with nationality, group size and the kind of boat, so confirm the full total before you step aboard rather than discovering it on the water. There is no independent option here — the park requires you to go with a licensed boat, which in practice keeps the reef in the condition you drove all this way for."
         ]
       },
@@ -11195,7 +11231,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How much does a Menjangan trip cost?",
-        "answer": "The variable parts are the national-park permit, the boat and the guide, and those change with nationality, group size and season — so we will not quote a figure that may be wrong by the time you read this. Confirm the full total at the jetty before boarding. The fixed part we can price is transport: a private car with driver from $65 per car for the day."
+        "answer": "The variable parts are the national-park permit, the boat and the guide, and those change with nationality, group size and season — so we will not quote a figure that may be wrong by the time you read this. Confirm the full total at the jetty before boarding. The fixed part we can price is transport: a private car with driver from $59 per car for the day."
       },
       {
         "question": "Are there mantas or sharks at Menjangan?",
@@ -11314,7 +11350,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Getting between these beaches without losing your day",
         "paragraphs": [
-          "The coastal shortcuts between Canggu and Seminyak are narrow, and traffic peaks exactly when you want to move — the two hours before sunset. Beach-hopping by scooter works if you ride confidently; if you don't, a [private car with a driver](/bali/en/tours/private-car-with-driver-bali) from $65 per car for the day removes the parking problem entirely, and the driver waits while you walk each beach. If you'd rather fold the coast into a bigger day of photo stops, the [Bali Instagram highlights tour](/bali/en/tours/bali-instagram-highlights-tour) from $65 per car runs the same way: one car, one driver, and no timetable but yours."
+          "The coastal shortcuts between Canggu and Seminyak are narrow, and traffic peaks exactly when you want to move — the two hours before sunset. Beach-hopping by scooter works if you ride confidently; if you don't, a [private car with a driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car for the day removes the parking problem entirely, and the driver waits while you walk each beach. If you'd rather fold the coast into a bigger day of photo stops, the [Bali Instagram highlights tour](/bali/en/tours/bali-instagram-highlights-tour) from $69 runs the same way: one car, one driver, and no timetable but yours."
         ]
       }
     ],
@@ -11363,7 +11399,7 @@ const JOURNAL_SEO_GUIDES = [
     "inlineStats": [
       "8 beaches ranked",
       "Stair-count reality",
-      "Private car from $65"
+      "Private car from $59"
     ],
     "title": "8 Best Uluwatu Beaches on the Bukit: Stairs, Surf, Sand",
     "description": "Uluwatu beaches ranked honestly: Melasti, Padang Padang, Bingin and five more, with the truth about cliff stairs, tides, and where you can actually swim.",
@@ -11448,7 +11484,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Getting to Uluwatu's beaches without a headache",
         "paragraphs": [
-          "The Bukit's roads are steep, and several beach car parks sit down rough tracks that rattle inexperienced scooter riders. If you're hopping between three or four beaches — say Melasti, Padang Padang, and Bingin, with sunset at the temple — a [private car with a driver](/bali/en/tours/private-car-with-driver-bali) from $65 per car makes the day simple: the driver handles the clifftop parking while you handle the stairs. To fold the Bukit's coves into a wider photo day across the island, the [Bali Instagram highlights tour](/bali/en/tours/bali-instagram-highlights-tour) from $65 per car covers the same ground with a route built around light and crowds."
+          "The Bukit's roads are steep, and several beach car parks sit down rough tracks that rattle inexperienced scooter riders. If you're hopping between three or four beaches — say Melasti, Padang Padang, and Bingin, with sunset at the temple — a [private car with a driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car makes the day simple: the driver handles the clifftop parking while you handle the stairs. To fold the Bukit's coves into a wider photo day across the island, the [Bali Instagram highlights tour](/bali/en/tours/bali-instagram-highlights-tour) from $69 covers the same ground with a route built around light and crowds."
         ]
       }
     ],
@@ -17962,11 +17998,11 @@ function patchBaliMainFile(filePath) {
     .split(">Perfect for Nature Lovers</span>")
     .join(">Best for sunrise lovers and scenic day trips</span>")
     .split(">Ask Price</div></div><a href=\"/bali/en/tours/dolphin-sunrise-city-tour\" class=\"sb-btn\">Details</a>")
-    .join(">from $75</div></div><a href=\"/bali/en/tours/dolphin-sunrise-city-tour\" class=\"sb-btn\">Details</a>")
+    .join(">from $69</div></div><a href=\"/bali/en/tours/dolphin-sunrise-city-tour\" class=\"sb-btn\">Details</a>")
     .split('field="li_title__7301316445702">Bali Instagram Tour: Gates of Heaven &amp; Royal Palaces </div>')
     .join('field="li_title__7301316445702">Ubud Instagram Tour: Gates of Heaven, Waterfall &amp; Rice Terrace</div>')
     .split("The ultimate East Bali experience. Visit Lempuyang Temple (Gates of Heaven), Tirta Gangga Water Palace, and Virgin Beach. Professional photos, private transfers, and zero stress. Book your Bali Instagram tour via WhatsApp!")
-    .join("All-inclusive Bali photo route with Lempuyang Temple, Tirta Gangga, Tukad Cepung Waterfall, and Tegalalang Rice Terrace. Tickets, lunch, and hotel pickup included from $75.")
+    .join("All-inclusive Bali photo route with Lempuyang Temple, Tirta Gangga, Tukad Cepung Waterfall, and Tegalalang Rice Terrace. Tickets, lunch, and hotel pickup included from $89.")
     .split('href="/bali/en/tours/east-bali-instagram-tour" data-lid="7301316445702"')
     .join('href="/bali/en/tours/ubud-instagram-tour" data-lid="7301316445702"')
     .split("alt=\"Bali Instagram Highlights Tour\"")
@@ -17982,7 +18018,7 @@ function patchBaliMainFile(filePath) {
     .split(">Beautiful and Easy Full Day Route</span>")
     .join(">Perfect for couples, solo travelers and creators</span>")
     .split(">Ask Price</div></div><a href=\"/bali/en/tours/ubud-instagram-tour\" class=\"sb-btn\">Details</a>")
-    .join(">from $75</div></div><a href=\"/bali/en/tours/ubud-instagram-tour\" class=\"sb-btn\">Details</a>");
+    .join(">from $89</div></div><a href=\"/bali/en/tours/ubud-instagram-tour\" class=\"sb-btn\">Details</a>");
 
   html = html.replace(/\/bali\/en\/tours\/(?:bali\/en\/tours\/)+/g, "/bali/en/tours/");
 
@@ -18879,7 +18915,7 @@ const UNESCO_PAGE_TRANSLATIONS = {
     title: "Тур по объектам ЮНЕСКО на Бали",
     metaTitle: "Тур по объектам ЮНЕСКО на Бали | Taman Ayun, Ulun Danu, Jatiluwih и Tanah Lot",
     metaDescription:
-      "Забронируйте тур по объектам ЮНЕСКО на Бали: Taman Ayun, Ulun Danu Beratan, рисовые террасы Jatiluwih и Tanah Lot, частный трансфер и все входные билеты от $70 за человека.",
+      "Забронируйте тур по объектам ЮНЕСКО на Бали: Taman Ayun, Ulun Danu Beratan, рисовые террасы Jatiluwih и Tanah Lot, частный трансфер и все входные билеты от $69 за человека.",
     eyebrow: "Храмы ЮНЕСКО, рисовые террасы и Tanah Lot",
     duration: "10 часов",
     pickup: "Утренний трансфер из Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua или Jimbaran",
@@ -18891,7 +18927,7 @@ const UNESCO_PAGE_TRANSLATIONS = {
     lead:
       "Посмотрите самые известные объекты наследия Бали за один аккуратно собранный частный день: Taman Ayun, Ulun Danu Beratan, рисовые террасы Jatiluwih и Tanah Lot в одном цельном all-inclusive маршруте.",
     summary:
-      "Этот тур по объектам ЮНЕСКО на Бали создан для гостей, которые хотят храмы, горно-озёрные виды, знаменитые рисовые террасы ЮНЕСКО и эффектный финал у океанского храма Tanah Lot без необходимости собирать несколько разных экскурсий. Частный транспорт, входные билеты, храмовый саронг и вода уже включены от $70 за человека.",
+      "Этот тур по объектам ЮНЕСКО на Бали создан для гостей, которые хотят храмы, горно-озёрные виды, знаменитые рисовые террасы ЮНЕСКО и эффектный финал у океанского храма Tanah Lot без необходимости собирать несколько разных экскурсий. Частный транспорт, входные билеты, храмовый саронг и вода уже включены от $69 за человека.",
     overview:
       "Маршрут хорошо работает потому, что остаётся очень красивым и разнообразным, но не утомляет физически. Вы начинаете с королевской храмовой архитектуры Taman Ayun, поднимаетесь в более прохладный Bedugul к Ulun Danu Beratan, выходите к широким зелёным террасам Jatiluwih и завершаете день в Tanah Lot у одного из самых узнаваемых храмов Бали у океана.",
     aboutSubtitle: "Тур по объектам ЮНЕСКО на Бали",
@@ -18938,7 +18974,7 @@ const UNESCO_PAGE_TRANSLATIONS = {
       ["Почему этот маршрут бронируют вместо нескольких разных экскурсий?", "Потому что он собирает храмы, озёрные виды, террасы ЮНЕСКО и Tanah Lot в один понятный и визуально сильный день."],
     ],
     whatsappText:
-      "Здравствуйте! Хочу забронировать тур по объектам ЮНЕСКО на Бали за $70 с человека. Пришлите, пожалуйста, доступные даты, районы трансфера и полные детали.",
+      "Здравствуйте! Хочу забронировать тур по объектам ЮНЕСКО на Бали за $69 с человека. Пришлите, пожалуйста, доступные даты, районы трансфера и полные детали.",
     privateOfferEyebrow: "Маршрут ЮНЕСКО",
     privateOfferTopline: "Лучший выбор для храмов и пейзажей Бали",
     mapLabel: "Маршрут ЮНЕСКО",
@@ -19179,7 +19215,7 @@ const UNESCO_PAGE_TRANSLATIONS = {
     title: "巴厘岛联合国教科文组织遗产之旅",
     metaTitle: "巴厘岛联合国教科文组织遗产之旅 | Taman Ayun、Ulun Danu、Jatiluwih 与 Tanah Lot",
     metaDescription:
-      "预订巴厘岛联合国教科文组织遗产之旅：Taman Ayun、Ulun Danu Beratan、Jatiluwih 梯田和 Tanah Lot，含私人接送与所有门票，$70/人起。",
+      "预订巴厘岛联合国教科文组织遗产之旅：Taman Ayun、Ulun Danu Beratan、Jatiluwih 梯田和 Tanah Lot，含私人接送与所有门票，$69/人起。",
     eyebrow: "联合国教科文组织寺庙、梯田与 Tanah Lot",
     duration: "10小时",
     pickup: "早晨可从 Ubud、Sanur、Seminyak、Canggu、Legian、Kuta、Nusa Dua 或 Jimbaran 接送",
@@ -19191,7 +19227,7 @@ const UNESCO_PAGE_TRANSLATIONS = {
     lead:
       "在一天顺畅的私人行程里看遍巴厘岛最有代表性的遗产风景：Taman Ayun、Ulun Danu Beratan、Jatiluwih 梯田和 Tanah Lot 一次走完。",
     summary:
-      "这条巴厘岛联合国教科文组织遗产之旅适合想在一天内看到寺庙庭院、山湖风景、著名梯田和海边神庙收尾的旅行者，而不用把几条一日游拼在一起。私人用车、门票、寺庙纱笼和饮用水都已包含，$70/人起。",
+      "这条巴厘岛联合国教科文组织遗产之旅适合想在一天内看到寺庙庭院、山湖风景、著名梯田和海边神庙收尾的旅行者，而不用把几条一日游拼在一起。私人用车、门票、寺庙纱笼和饮用水都已包含，$69/人起。",
     overview:
       "这条路线的优点是景观层次丰富，但体力负担并不重。你会先到优雅的 Taman Ayun，再进入更凉爽的 Bedugul 看 Ulun Danu Beratan，随后前往世界遗产 Jatiluwih 梯田，最后以 Tanah Lot 海边神庙作为收尾。",
     aboutSubtitle: "来自巴厘岛的 UNESCO 遗产之旅",
@@ -19237,7 +19273,7 @@ const UNESCO_PAGE_TRANSLATIONS = {
       ["为什么很多人会选择这条路线，而不是拆成几条一日游？", "因为它把寺庙、山湖、梯田和 Tanah Lot 海岸景观整合成一天，节奏清晰，画面也更丰富。"],
     ],
     whatsappText:
-      "你好！我想预订巴厘岛联合国教科文组织遗产之旅，价格为每人 $70。请发送可订日期、接送区域和完整详情。",
+      "你好！我想预订巴厘岛联合国教科文组织遗产之旅，价格为每人 $69。请发送可订日期、接送区域和完整详情。",
     privateOfferEyebrow: "UNESCO 文化路线",
     privateOfferTopline: "适合想一次看尽巴厘岛经典文化景观的人",
     mapLabel: "UNESCO 路线",
@@ -19478,7 +19514,7 @@ const UNESCO_PAGE_TRANSLATIONS = {
     title: "Tour por los sitios Patrimonio de la UNESCO en Bali",
     metaTitle: "Tour UNESCO en Bali | Taman Ayun, Ulun Danu, Jatiluwih y Tanah Lot",
     metaDescription:
-      "Reserva el tour por los sitios Patrimonio de la UNESCO en Bali con Taman Ayun, Ulun Danu Beratan, terrazas de arroz de Jatiluwih y Tanah Lot, transporte privado y entradas incluidas desde $70 por persona.",
+      "Reserva el tour por los sitios Patrimonio de la UNESCO en Bali con Taman Ayun, Ulun Danu Beratan, terrazas de arroz de Jatiluwih y Tanah Lot, transporte privado y entradas incluidas desde $69 por persona.",
     eyebrow: "Templos UNESCO, arrozales y Tanah Lot",
     duration: "10 horas",
     pickup: "Recogida por la mañana desde Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua o Jimbaran",
@@ -19490,7 +19526,7 @@ const UNESCO_PAGE_TRANSLATIONS = {
     lead:
       "Descubre algunos de los paisajes patrimoniales más conocidos de Bali en un solo día privado y bien armado con Taman Ayun, Ulun Danu Beratan, Jatiluwih y Tanah Lot dentro de una ruta fluida todo incluido.",
     summary:
-      "Este tour UNESCO de Bali está pensado para viajeros que quieren templos, vistas de lago y montaña, arrozales UNESCO y un final potente en Tanah Lot sin tener que unir varias excursiones separadas. El transporte privado, las entradas, el sarong para templos y el agua ya están resueltos desde $70 por persona.",
+      "Este tour UNESCO de Bali está pensado para viajeros que quieren templos, vistas de lago y montaña, arrozales UNESCO y un final potente en Tanah Lot sin tener que unir varias excursiones separadas. El transporte privado, las entradas, el sarong para templos y el agua ya están resueltos desde $69 por persona.",
     overview:
       "La ruta funciona muy bien porque mantiene variedad escénica sin volverse pesada físicamente. Empieza con la arquitectura real de Taman Ayun, sube a las tierras frescas de Bedugul para ver Ulun Danu Beratan, abre el paisaje en Jatiluwih y termina en Tanah Lot con uno de los templos costeros más icónicos de Bali.",
     aboutSubtitle: "Tour UNESCO de Bali desde Bali",
@@ -19536,7 +19572,7 @@ const UNESCO_PAGE_TRANSLATIONS = {
       ["¿Por qué la gente reserva esta ruta en vez de varias excursiones separadas?", "Porque reúne templos, lago de montaña, arrozales UNESCO y Tanah Lot en un solo día bien construido."],
     ],
     whatsappText:
-      "¡Hola! Quiero reservar el tour UNESCO de Bali por $70 por persona. Por favor envíen disponibilidad, zonas de recogida y todos los detalles.",
+      "¡Hola! Quiero reservar el tour UNESCO de Bali por $69 por persona. Por favor envíen disponibilidad, zonas de recogida y todos los detalles.",
     privateOfferEyebrow: "Ruta patrimonial UNESCO",
     privateOfferTopline: "Ideal para templos y grandes paisajes de Bali",
     mapLabel: "Ruta UNESCO",

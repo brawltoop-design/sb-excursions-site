@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Recogida: <strong>08:00 recogida en el hotel desde las zonas cubiertas de Bali.</strong></li>
                 <li>📍 Área: <strong>Kintamani, Ubud y el centro de Bali</strong></li>
                 <li>👥 Ideal para: <strong>Visitantes por primera vez a Bali</strong></li>
-                <li>💰 Precio: <strong>Desde $70</strong></li>
+                <li>💰 Precio: <strong>Desde $69</strong></li>
               </ul>
             </aside>
 
@@ -684,7 +687,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>💰 Qué está incluido en el precio</h2>
-                <p>El precio del tour a la terraza de arroz, el templo y el volcán de Ubud comienza desde $70. Esto es lo que cubre una reserva típica.</p>
+                <p>El precio del tour a las terrazas de arroz, el templo y el volcán de Ubud comienza desde $69. Esto es lo que cubre una reserva típica.</p>
                 <ul><li>Recogida en el hotel y regreso desde las zonas cubiertas de Bali.</li><li>Transporte privado con aire acondicionado.</li><li>Todos los boletos de entrada y tarifas de ruta local.</li><li>agua mineral embotellada</li><li>Almuerzo buffet indonesio en Kintamani</li><li>Parada de degustación de café y té.</li></ul>
               </section>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>✅ Qué saber antes de reservar</h2>
                 <p>Algunos detalles prácticos que ayudan a establecer las expectativas correctas para el tour de terrazas de arroz, templos y volcanes de Ubud.</p>
-                <ul><li>Referencia de precios actual: Desde $70. La disponibilidad final se confirma después de enviar la fecha, el área del hotel y el tamaño del grupo.</li><li>Las bebidas personales, los souvenirs y las propinas generalmente no están incluidas.</li><li>Lleva bloqueador solar, gorra, calzado deportivo o sandalias con tiras, dinero extra y cámara.</li><li>El servicio de recogida suele cubrir Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua y Jimbaran.</li><li>Las vistas del volcán en Kintamani siempre dependen de la ventana climática del día.</li><li>El orden de parada final puede variar un poco según el tráfico, las ceremonias y el área del hotel.</li></ul>
+                <ul><li>Referencia de precios actual: Desde $69. La disponibilidad final se confirma después de enviar la fecha, el área del hotel y el tamaño del grupo.</li><li>Las bebidas personales, los souvenirs y las propinas generalmente no están incluidas.</li><li>Lleva bloqueador solar, gorra, calzado deportivo o sandalias con tiras, dinero extra y cámara.</li><li>El servicio de recogida suele cubrir Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua y Jimbaran.</li><li>Las vistas del volcán en Kintamani siempre dependen de la ventana climática del día.</li><li>El orden de parada final puede variar un poco según el tráfico, las ceremonias y el área del hotel.</li></ul>
               </section>
 
 
@@ -748,7 +751,7 @@ body {
                 <li>Ideal para: quienes visitan Bali por primera vez</li>
                 <li>Recogida: 08:00 recogida en el hotel desde las zonas cubiertas de Bali.</li>
                 <li>Área: Kintamani, Ubud y centro de Bali</li>
-                <li>Precio: Desde $70</li>
+                <li>Precio: Desde $69</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Recogida: <strong>Recogida muy temprano en el hotel.</strong></li>
                 <li>📍 Área: <strong>Lovina y el norte de Bali</strong></li>
                 <li>👥 Ideal para: <strong>Viajeros que buscan una gran ruta de día completo</strong></li>
-                <li>💰 Precio: <strong>Desde $80</strong></li>
+                <li>💰 Precio: <strong>Desde $79</strong></li>
               </ul>
             </aside>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>📋 Detalles prácticos y bueno saberlo</h2>
                 <p>Antes de reservar, aquí tienes la logística que da forma a la experiencia.</p>
-                <ul><li>Duración: <strong>10-12 horas</strong></li><li>Formato: <strong>Tour privado de un día</strong></li><li>Área: <strong>Lovina y el norte de Bali</strong></li><li>Recogida: <strong>Recogida muy temprano en el hotel.</strong></li><li>Precios: <strong>Desde $80</strong></li><li>Esta experiencia suele realizarse como un tour privado de un día.</li><li>La mejor opción: viajeros que buscan una gran ruta de día completo.</li><li>La salida muy temprana es parte del valor de esta ruta.</li><li>Las condiciones del mar y el horario del puerto pueden afectar el flujo exacto del día.</li><li>Envíe la zona de su hotel antes de reservar para que la ruta y el horario puedan coincidir correctamente.</li><li>Traer traje de baño, toalla, bloqueador solar, cambio de ropa.</li></ul>
+                <ul><li>Duración: <strong>10-12 horas</strong></li><li>Formato: <strong>Tour privado de un día</strong></li><li>Área: <strong>Lovina y el norte de Bali</strong></li><li>Recogida: <strong>Recogida muy temprano en el hotel.</strong></li><li>Precios: <strong>Desde $79</strong></li><li>Esta experiencia suele realizarse como un tour privado de un día.</li><li>La mejor opción: viajeros que buscan una gran ruta de día completo.</li><li>La salida muy temprana es parte del valor de esta ruta.</li><li>Las condiciones del mar y el horario del puerto pueden afectar el flujo exacto del día.</li><li>Envíe la zona de su hotel antes de reservar para que la ruta y el horario puedan coincidir correctamente.</li><li>Traer traje de baño, toalla, bloqueador solar, cambio de ropa.</li></ul>
               </section>
 
 
@@ -733,7 +736,7 @@ body {
                 <li>Ideal para: viajeros que buscan una gran ruta de día completo</li>
                 <li>Recogida: recogida muy temprano en el hotel.</li>
                 <li>Zona: Lovina y norte de Bali</li>
-                <li>Precio: Desde $80</li>
+                <li>Precio: Desde $79</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

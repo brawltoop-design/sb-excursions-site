@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -831,7 +834,7 @@ body {
           <span class="sb-journal-card__tour">Ruta de la UNESCO por Bali occidental y central</span>
         </div>
         <h3>Visita a los sitios declarados Patrimonio de la Humanidad por la UNESCO en Bali</h3>
-        <p>Este recorrido por los sitios declarados Patrimonio de la Humanidad por la UNESCO en Bali está diseñado para viajeros que desean patios de templos, vistas al lago de montaña, terrazas de arroz de la UNESCO y un famoso final de templo costero sin unir excursiones de un día por separado. Transporte privado, entradas, pareo del templo y agua embotellada ya se manejan desde $70 por persona.</p>
+        <p>Este recorrido por los sitios declarados Patrimonio de la Humanidad por la UNESCO en Bali está diseñado para viajeros que desean patios de templos, vistas al lago de montaña, terrazas de arroz de la UNESCO y un famoso final de templo costero sin unir excursiones de un día por separado. Transporte privado, entradas, pareo del templo y agua embotellada ya se manejan desde $69 por persona.</p>
         <span class="sb-journal-card__cta">Abrir página de recorrido</span>
       </div>
     </a>
@@ -912,7 +915,7 @@ body {
                         <span class="sb-journal-card__tour">Ruta de la UNESCO por Bali occidental y central</span>
                       </div>
                       <h3>Visita a los sitios declarados Patrimonio de la Humanidad por la UNESCO en Bali</h3>
-                      <p>Este recorrido por los sitios declarados Patrimonio de la Humanidad por la UNESCO en Bali está diseñado para viajeros que desean patios de templos, vistas al lago de montaña, terrazas de arroz de la UNESCO y un famoso final de templo costero sin unir excursiones de un día por separado. Transporte privado, entradas, pareo del templo y agua embotellada ya se manejan desde $70 por persona.</p>
+                      <p>Este recorrido por los sitios declarados Patrimonio de la Humanidad por la UNESCO en Bali está diseñado para viajeros que desean patios de templos, vistas al lago de montaña, terrazas de arroz de la UNESCO y un famoso final de templo costero sin unir excursiones de un día por separado. Transporte privado, entradas, pareo del templo y agua embotellada ya se manejan desde $69 por persona.</p>
                       <span class="sb-journal-card__cta">Abrir página de recorrido</span>
                     </div>
                   </a>

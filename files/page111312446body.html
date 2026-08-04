@@ -556,3 +556,36 @@ class="t-form__errorbox-text t-text t-text_md"> <li class="t-form__errorbox-item
     }
 }
 </style> <!-- nominify end --> </div> </div> </div> </div> </footer> <!--/footer--> </div> <!--/allrecords-->
+<script id="sb-mobile-tours-link">
+(function () {
+  function toursHref() {
+    var parts = window.location.pathname.split("/");
+    var lang = parts[1] === "bali" && parts[2] ? parts[2] : "en";
+    return "/bali/" + lang + "/main-page#tours";
+  }
+  function apply() {
+    if (window.location.pathname.indexOf("/bali/") !== 0) return;
+    var items = document.querySelectorAll(".t451 a.t451__link-item_submenu, .t451 a.t-menu__link-item_submenu");
+    Array.prototype.forEach.call(items, function (item) {
+      var href = toursHref();
+      if (item.getAttribute("href") !== href) item.setAttribute("href", href);
+      if (item.getAttribute("data-sb-tours-link") === "1") return;
+      item.setAttribute("data-sb-tours-link", "1");
+      item.addEventListener("click", function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        window.location.href = toursHref();
+      }, true);
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", apply);
+  } else {
+    apply();
+  }
+  window.addEventListener("load", apply);
+  setTimeout(apply, 500);
+  setTimeout(apply, 1500);
+  setTimeout(apply, 3000);
+})();
+</script>

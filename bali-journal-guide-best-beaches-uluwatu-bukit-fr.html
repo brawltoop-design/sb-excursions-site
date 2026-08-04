@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navigation mobile">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nos circuits</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/fr/main-page#tours">Nos circuits</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubaï, Émirats Arabes Unis</a>
                   <a href="/bali/fr/main-page#tours">Bali, Indonésie</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -629,7 +632,7 @@ body {
             <h1>8 meilleures plages d'Uluwatu sur le Bukit : escaliers, surf, sable</h1>
             <p class="sb-journal-lead">Presque toutes les plages autour d'Uluwatu se cachent au pied d'une falaise calcaire et les escaliers constituent le prix d'entrée. Voici les huit qui valent le détour, classés, avec des notes honnêtes sur les marées, les fenêtres de baignade et la difficulté réelle de la remontée.</p>
             <div class="sb-journal-inline-stats">
-              <span>8 plages classées</span><span>La réalité du nombre d'escaliers</span><span>Voiture privée à partir de 65 $</span>
+              <span>8 plages classées</span><span>La réalité du nombre d'escaliers</span><span>Voiture privée à partir de 59$</span>
             </div>
             <div class="sb-journal-article-hero__actions">
               <a class="sb-journal-primary" href="/bali/fr/tours/private-car-with-driver-bali">Visite ouverte recommandée</a>
@@ -790,7 +793,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Se rendre sur les plages d'Uluwatu sans prise de tête</h2>
-                <p>Les routes de Bukit sont escarpées et plusieurs parkings de plage empruntent des pistes accidentées qui déstabilisent les scooters inexpérimentés. Si vous sautez entre trois ou quatre plages — disons Melasti, Padang Padang et Bingin, avec coucher de soleil sur le temple — un <a href="/bali/fr/tours/private-car-with-driver-bali">voiture privée avec chauffeur</a> à partir de 65 $ par voiture simplifie la journée : le chauffeur s'occupe du stationnement au sommet de la falaise pendant que vous montez les escaliers. Pour intégrer les criques de Bukit dans une journée photo plus large à travers l'île, le <a href="/bali/fr/tours/bali-instagram-highlights-tour">Visite des points forts d'Instagram à Bali</a> à partir de 65 $ par voiture couvre le même terrain avec un itinéraire construit autour de la lumière et des foules.</p>
+                <p>Les routes de Bukit sont escarpées et plusieurs parkings de plage empruntent des pistes accidentées qui déstabilisent les scooters inexpérimentés. Si vous sautez entre trois ou quatre plages — disons Melasti, Padang Padang et Bingin, avec coucher de soleil sur le temple — un <a href="/bali/fr/tours/private-car-with-driver-bali">voiture privée avec chauffeur</a> à partir de 59 $ par voiture simplifie la journée : le chauffeur s'occupe du stationnement au sommet de la falaise pendant que vous montez les escaliers. Pour intégrer les criques de Bukit dans une journée photo plus large à travers l'île, le <a href="/bali/fr/tours/bali-instagram-highlights-tour">Visite des points forts d'Instagram à Bali</a> à partir de 69 $ couvre le même terrain avec un parcours construit autour de la lumière et de la foule.</p>
 
               </section>
 
@@ -919,7 +922,7 @@ body {
             <div class="sb-journal-sidebar-card">
               <h3>Instantané du guide</h3>
               <ul>
-                <li>8 plages classées</li><li>La réalité du nombre d'escaliers</li><li>Voiture privée à partir de 65 $</li>
+                <li>8 plages classées</li><li>La réalité du nombre d'escaliers</li><li>Voiture privée à partir de 59$</li>
                 <li>Ancre d'itinéraire recommandée : Voiture privée avec chauffeur à Bali</li>
               </ul>
             </div>

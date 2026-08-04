@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -629,7 +632,7 @@ body {
             <h1>8 White Sand Beaches in Bali That Are Actually White</h1>
             <p class="sb-journal-lead">Most of Bali&#39;s coastline is grey volcanic sand, whatever the listings imply. This guide ranks the eight genuinely white beaches — from the Nusa Dua strip to Diamond Beach on Nusa Penida — and tells you which ones you can actually swim at.</p>
             <div class="sb-journal-inline-stats">
-              <span>8 beaches compared</span><span>True white sand only</span><span>Tours from $65</span>
+              <span>8 beaches compared</span><span>True white sand only</span><span>Tours from $59</span>
             </div>
             <div class="sb-journal-article-hero__actions">
               <a class="sb-journal-primary" href="/bali/en/tours/nusa-penida-east-tour">Open recommended tour</a>
@@ -778,7 +781,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>The Bukit and Nusa Dua: white sand you can drive to</h2>
-                <p>Melasti and Pandawa both have roads cut down through the limestone, so you park close to the sand — rare on a peninsula where most beaches demand a stair climb. Nusa Dua and Geger are even easier: flat access, calm reef-protected water, facilities everywhere. Swimming on the Bukit depends on the tide; inside the reef at Melasti and Pandawa, mid tide is usually the window. The efficient way to see them is one loop with a <a href="/bali/en/tours/private-car-with-driver-bali">private car with driver</a> from $65 per car — Melasti, Pandawa and Geger sit close together, and your driver will know which one the tide favours that day.</p>
+                <p>Melasti and Pandawa both have roads cut down through the limestone, so you park close to the sand — rare on a peninsula where most beaches demand a stair climb. Nusa Dua and Geger are even easier: flat access, calm reef-protected water, facilities everywhere. Swimming on the Bukit depends on the tide; inside the reef at Melasti and Pandawa, mid tide is usually the window. The efficient way to see them is one loop with a <a href="/bali/en/tours/private-car-with-driver-bali">private car with driver</a> from $59 per car — Melasti, Pandawa and Geger sit close together, and your driver will know which one the tide favours that day.</p>
 
               </section>
 
@@ -919,7 +922,7 @@ body {
             <div class="sb-journal-sidebar-card">
               <h3>Guide snapshot</h3>
               <ul>
-                <li>8 beaches compared</li><li>True white sand only</li><li>Tours from $65</li>
+                <li>8 beaches compared</li><li>True white sand only</li><li>Tours from $59</li>
                 <li>Recommended route anchor: Nusa Penida East Tour</li>
               </ul>
             </div>

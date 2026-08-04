@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -794,7 +797,7 @@ body {
           <span class="sb-journal-card__tour">East Bali icons with a Tegalalang rice terrace finish</span>
         </div>
         <h3>Ubud Instagram Tour</h3>
-        <p>This Ubud Instagram Tour is the strongest all-inclusive Bali photo day when you want iconic stops, polished logistics, and real guidance with your content. It combines east Bali&#39;s most recognizable landmarks with a softer Ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $75.</p>
+        <p>This Ubud Instagram Tour is the strongest all-inclusive Bali photo day when you want iconic stops, polished logistics, and real guidance with your content. It combines east Bali&#39;s most recognizable landmarks with a softer Ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $89.</p>
         <span class="sb-journal-card__cta">Open tour page</span>
       </div>
     </a>
@@ -807,7 +810,7 @@ body {
           <span class="sb-journal-card__tour">Lovina, Gitgit Waterfall and Ulun Danu Beratan</span>
         </div>
         <h3>Lovina Dolphin Sunrise Tour</h3>
-        <p>This Lovina Dolphin Sunrise Tour is the cleanest way to do north Bali in one early-start day when you want the sea, a waterfall, and a lake temple without stitching the route together yourself. It includes hotel pickup, private air-conditioned transport, the traditional Lovina outrigger boat, entrance fees, mineral water, and insurance, with the page price set from $75.</p>
+        <p>This Lovina Dolphin Sunrise Tour is the cleanest way to do north Bali in one early-start day when you want the sea, a waterfall, and a lake temple without stitching the route together yourself. It includes hotel pickup, private air-conditioned transport, the traditional Lovina outrigger boat, entrance fees, mineral water, and insurance, with the page price set from $69.</p>
         <span class="sb-journal-card__cta">Open tour page</span>
       </div>
     </a>
@@ -875,7 +878,7 @@ body {
                         <span class="sb-journal-card__tour">East Bali icons with a Tegalalang rice terrace finish</span>
                       </div>
                       <h3>Ubud Instagram Tour</h3>
-                      <p>This Ubud Instagram Tour is the strongest all-inclusive Bali photo day when you want iconic stops, polished logistics, and real guidance with your content. It combines east Bali&#39;s most recognizable landmarks with a softer Ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $75.</p>
+                      <p>This Ubud Instagram Tour is the strongest all-inclusive Bali photo day when you want iconic stops, polished logistics, and real guidance with your content. It combines east Bali&#39;s most recognizable landmarks with a softer Ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $89.</p>
                       <span class="sb-journal-card__cta">Open tour page</span>
                     </div>
                   </a>
@@ -887,7 +890,7 @@ body {
                         <span class="sb-journal-card__tour">Lovina, Gitgit Waterfall and Ulun Danu Beratan</span>
                       </div>
                       <h3>Lovina Dolphin Sunrise Tour</h3>
-                      <p>This Lovina Dolphin Sunrise Tour is the cleanest way to do north Bali in one early-start day when you want the sea, a waterfall, and a lake temple without stitching the route together yourself. It includes hotel pickup, private air-conditioned transport, the traditional Lovina outrigger boat, entrance fees, mineral water, and insurance, with the page price set from $75.</p>
+                      <p>This Lovina Dolphin Sunrise Tour is the cleanest way to do north Bali in one early-start day when you want the sea, a waterfall, and a lake temple without stitching the route together yourself. It includes hotel pickup, private air-conditioned transport, the traditional Lovina outrigger boat, entrance fees, mineral water, and insurance, with the page price set from $69.</p>
                       <span class="sb-journal-card__cta">Open tour page</span>
                     </div>
                   </a>

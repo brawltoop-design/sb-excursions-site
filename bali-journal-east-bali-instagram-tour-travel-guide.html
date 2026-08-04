@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Pickup: <strong>Morning hotel pickup</strong></li>
                 <li>📍 Area: <strong>Lempuyang and east Bali</strong></li>
                 <li>👥 Best for: <strong>Photo-focused Bali itineraries</strong></li>
-                <li>💰 Price: <strong>From $65 per car</strong></li>
+                <li>💰 Price: <strong>From $69</strong></li>
               </ul>
             </aside>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>📋 Practical details and good to know</h2>
                 <p>Before you book, here are the logistics that shape the experience.</p>
-                <ul><li>Duration: <strong>8-10 hours</strong></li><li>Format: <strong>Private day tour</strong></li><li>Area: <strong>Lempuyang and east Bali</strong></li><li>Pickup: <strong>Morning hotel pickup</strong></li><li>Pricing: <strong>From $65 per car</strong></li><li>This experience usually runs as a private day tour.</li><li>Best fit: photo-focused bali itineraries.</li><li>Comfortable clothing and respectful temple-ready outfits are recommended.</li><li>Send your hotel area before booking so the route and timing can be matched properly.</li><li>Bring Light clothes, camera, cash.</li></ul>
+                <ul><li>Duration: <strong>8-10 hours</strong></li><li>Format: <strong>Private day tour</strong></li><li>Area: <strong>Lempuyang and east Bali</strong></li><li>Pickup: <strong>Morning hotel pickup</strong></li><li>Pricing: <strong>From $69</strong></li><li>This experience usually runs as a private day tour.</li><li>Best fit: photo-focused bali itineraries.</li><li>Comfortable clothing and respectful temple-ready outfits are recommended.</li><li>Send your hotel area before booking so the route and timing can be matched properly.</li><li>Bring Light clothes, camera, cash.</li></ul>
               </section>
 
 
@@ -728,7 +731,7 @@ body {
                 <li>Best for: Photo-focused Bali itineraries</li>
                 <li>Pickup: Morning hotel pickup</li>
                 <li>Area: Lempuyang and east Bali</li>
-                <li>Price: From $65 per car</li>
+                <li>Price: From $69</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Pickup: <strong>Very early hotel pickup</strong></li>
                 <li>📍 Area: <strong>Lovina and north Bali</strong></li>
                 <li>👥 Best for: <strong>Travelers chasing a big full-day route</strong></li>
-                <li>💰 Price: <strong>From $80</strong></li>
+                <li>💰 Price: <strong>From $79</strong></li>
               </ul>
             </aside>
 
@@ -684,7 +687,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>💰 What is included in the price</h2>
-                <p>Pricing for the North Bali Tour and Lovina Dolphins starts from From $80. Here is what a typical booking covers.</p>
+                <p>Pricing for the North Bali Tour and Lovina Dolphins starts from From $79. Here is what a typical booking covers.</p>
                 <ul><li>Hotel pickup and return planning from major Bali areas</li><li>Private route flow and flexible pacing</li><li>Boat or harbor logistics based on the selected package</li><li>Driver coordination for the core route and main sightseeing timing</li><li>WhatsApp support for confirmation, timing, and route questions</li></ul>
               </section>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>✅ What to know before you book</h2>
                 <p>A few practical details that help set the right expectations for the North Bali Tour and Lovina Dolphins.</p>
-                <ul><li>Current pricing reference: From $80. Final availability is confirmed after you send the date, hotel area, and group size.</li><li>This experience usually runs as a private day tour.</li><li>Best fit: travelers chasing a big full-day route.</li><li>Very early departure is part of the value of this route.</li><li>Sea conditions and harbor timing can affect the exact flow of the day.</li><li>Send your hotel area before booking so the route and timing can be matched properly.</li><li>Bring Swimsuit, towel, sunscreen, change of clothes.</li></ul>
+                <ul><li>Current pricing reference: From $79. Final availability is confirmed after you send the date, hotel area, and group size.</li><li>This experience usually runs as a private day tour.</li><li>Best fit: travelers chasing a big full-day route.</li><li>Very early departure is part of the value of this route.</li><li>Sea conditions and harbor timing can affect the exact flow of the day.</li><li>Send your hotel area before booking so the route and timing can be matched properly.</li><li>Bring Swimsuit, towel, sunscreen, change of clothes.</li></ul>
               </section>
 
 
@@ -733,7 +736,7 @@ body {
                 <li>Best for: Travelers chasing a big full-day route</li>
                 <li>Pickup: Very early hotel pickup</li>
                 <li>Area: Lovina and north Bali</li>
-                <li>Price: From $80</li>
+                <li>Price: From $79</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

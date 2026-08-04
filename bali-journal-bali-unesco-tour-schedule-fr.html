@@ -444,11 +444,11 @@ body {
                 </div>
               </div>
               <a class="sb-journal-tour-header__nav-link" href="/bali/fr/about">À propos de nous</a>
-              <a class="sb-journal-tour-header__nav-link" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Booking</a>
+              <a class="sb-journal-tour-header__nav-link" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Booking</a>
               <a class="sb-journal-tour-header__nav-link" href="/bali/fr/faq">FAQ</a>
             </nav>
             <div class="sb-journal-tour-header__actions" aria-label="Actions rapides">
-              <a class="sb-journal-tour-header__button" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
+              <a class="sb-journal-tour-header__button" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
               <div class="sb-journal-tour-header__langs"><details class="sb-journal-lang-switcher sb-journal-lang-switcher--desktop">
     <summary class="sb-journal-lang-switcher__summary" aria-label="Choisir la langue">
       <img src="/images/ui/language-black.png" alt="Choisir la langue">
@@ -523,19 +523,19 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navigation mobile">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nos circuits</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/fr/main-page#tours">Nos circuits</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubaï, Émirats Arabes Unis</a>
                   <a href="/bali/fr/main-page#tours">Bali, Indonésie</a>
                 </div>
               </div>
               <a class="sb-journal-tour-header__drawer-link" href="/bali/fr/about">À propos de nous</a>
-              <a class="sb-journal-tour-header__drawer-link" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Booking</a>
+              <a class="sb-journal-tour-header__drawer-link" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Booking</a>
               <a class="sb-journal-tour-header__drawer-link" href="/bali/fr/faq">FAQ</a>
               <a class="sb-journal-tour-header__drawer-link" href="/bali/fr/journal">Nos guides</a>
             </nav>
             <div class="sb-journal-tour-header__drawer-socials">
-              <a href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
+              <a href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
               <a href="https://www.instagram.com/dubai_sb_excursions?igsh=cTFtcnB0ZTFta2Nq&amp;utm_source=qr" target="_blank" rel="noopener noreferrer nofollow">Instagram</a>
             </div>
           </aside>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -637,7 +640,7 @@ body {
             </div>
             <div class="sb-journal-article-hero__actions">
               <a class="sb-journal-primary" href="/bali/fr/tours/bali-unesco">Ouvrir la page de la visite</a>
-              <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Réservez sur WhatsApp</a>
+              <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Réservez sur WhatsApp</a>
             </div>
           </div>
           <div class="sb-journal-article-hero__media">
@@ -654,14 +657,14 @@ body {
                 <li>🚐 Ramassage : <strong>Prise en charge matinale à l'hôtel depuis Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua ou Jimbaran</strong></li>
                 <li>📍Zone : <strong>Route UNESCO de l'ouest et du centre de Bali</strong></li>
                 <li>👥 Idéal pour : <strong>amateurs de culture, couples, familles et premières journées touristiques à Bali</strong></li>
-                <li>💰 Prix : <strong>À partir de 70$</strong></li>
+                <li>💰 Prix : <strong>À partir de 69$</strong></li>
               </ul>
             </aside>
 
               <section class="sb-journal-article-section">
                 <h2>📌 Aperçu de la visite en un coup d'œil</h2>
-                <p>Cette visite des sites du patrimoine mondial de l'UNESCO à Bali est conçue pour les voyageurs qui souhaitent des cours de temples, des vues sur les lacs de montagne, des rizières en terrasses de l'UNESCO et une célèbre finition de temple côtier sans combiner des excursions d'une journée séparées. Le transport privé, les billets d'entrée, un paréo de temple et de l'eau en bouteille sont déjà pris en charge à partir de 70 $ par personne.</p>
-                <ul><li>Durée : <strong>10 heures</strong></li><li>Format : <strong>Itinéraire touristique privé du patrimoine</strong></li><li>Zone : <strong>Route UNESCO de l'ouest et du centre de Bali</strong></li><li>Ramassage : <strong>Prise en charge matinale à l'hôtel depuis Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua ou Jimbaran</strong></li><li>Idéal pour : <strong>amateurs de culture, couples, familles et premières journées touristiques à Bali</strong></li><li>À partir de : <strong>À partir de 70$</strong></li></ul>
+                <p>Cette visite des sites du patrimoine mondial de l'UNESCO à Bali est conçue pour les voyageurs qui souhaitent des cours de temples, des vues sur les lacs de montagne, des rizières en terrasses de l'UNESCO et une célèbre finition de temple côtier sans combiner des excursions d'une journée distinctes. Le transport privé, les billets d'entrée, un paréo de temple et de l'eau en bouteille sont déjà pris en charge à partir de 69 $ par personne.</p>
+                <ul><li>Durée : <strong>10 heures</strong></li><li>Format : <strong>Itinéraire touristique privé du patrimoine</strong></li><li>Zone : <strong>Route UNESCO de l'ouest et du centre de Bali</strong></li><li>Ramassage : <strong>Prise en charge matinale à l'hôtel depuis Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua ou Jimbaran</strong></li><li>Idéal pour : <strong>amateurs de culture, couples, familles et premières journées touristiques à Bali</strong></li><li>À partir de : <strong>À partir de 69$</strong></li></ul>
               </section>
 
               <section class="sb-journal-article-section">
@@ -696,7 +699,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>✉️ Réservation et confirmation — ce que vous devez envoyer</h2>
-                <p>Pour confirmer la visite des sites du patrimoine mondial de l'UNESCO à Bali, vous devrez partager votre date préférée, le nom et la zone de l'hôtel, ainsi que la taille du groupe. Cela permet à l'opérateur de choisir le bon véhicule, le bon guide et la bonne fenêtre de synchronisation.</p><p>Le prix commence à partir de 70 $. Le devis exact dépend de la taille de votre groupe, de la distance de l'hôtel et des éventuelles options complémentaires.</p>
+                <p>Pour confirmer la visite des sites du patrimoine mondial de l'UNESCO à Bali, vous devrez partager votre date préférée, le nom et la zone de l'hôtel, ainsi que la taille du groupe. Cela permet à l'opérateur de choisir le bon véhicule, le bon guide et la bonne fenêtre de synchronisation.</p><p>Le prix commence à partir de 69 $. Le devis exact dépend de la taille de votre groupe, de la distance de l'hôtel et des éventuelles options complémentaires.</p>
                 <ul><li>Véhicule privé climatisé</li><li>Tous les billets d'entrée pour l'itinéraire indiqué</li><li>Paréo pour les visites de temples</li><li>Eau en bouteille</li></ul>
               </section>
 
@@ -738,7 +741,7 @@ body {
                 <li>Idéal pour : les amateurs de culture, les couples, les familles et les premières journées touristiques à Bali</li>
                 <li>Prise en charge : prise en charge le matin à l'hôtel d'Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua ou Jimbaran</li>
                 <li>Zone : Route UNESCO de l'ouest et du centre de Bali</li>
-                <li>Prix : À partir de 70 $</li>
+                <li>Prix : À partir de 69$</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

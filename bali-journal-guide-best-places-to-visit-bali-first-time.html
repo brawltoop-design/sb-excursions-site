@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -839,7 +842,7 @@ body {
           <span class="sb-journal-card__tour">West &amp; Central Bali UNESCO route</span>
         </div>
         <h3>Bali UNESCO Heritage Sites Tour</h3>
-        <p>This Bali UNESCO Heritage Sites Tour is built for travelers who want temple courtyards, mountain-lake views, UNESCO rice terraces, and a famous coastal temple finish without stitching separate day trips together. Private transport, entrance tickets, a temple sarong, and bottled water are already handled from $70 per person.</p>
+        <p>This Bali UNESCO Heritage Sites Tour is built for travelers who want temple courtyards, mountain-lake views, UNESCO rice terraces, and a famous coastal temple finish without stitching separate day trips together. Private transport, entrance tickets, a temple sarong, and bottled water are already handled from $69 per person.</p>
         <span class="sb-journal-card__cta">Open tour page</span>
       </div>
     </a>
@@ -920,7 +923,7 @@ body {
                         <span class="sb-journal-card__tour">West &amp; Central Bali UNESCO route</span>
                       </div>
                       <h3>Bali UNESCO Heritage Sites Tour</h3>
-                      <p>This Bali UNESCO Heritage Sites Tour is built for travelers who want temple courtyards, mountain-lake views, UNESCO rice terraces, and a famous coastal temple finish without stitching separate day trips together. Private transport, entrance tickets, a temple sarong, and bottled water are already handled from $70 per person.</p>
+                      <p>This Bali UNESCO Heritage Sites Tour is built for travelers who want temple courtyards, mountain-lake views, UNESCO rice terraces, and a famous coastal temple finish without stitching separate day trips together. Private transport, entrance tickets, a temple sarong, and bottled water are already handled from $69 per person.</p>
                       <span class="sb-journal-card__cta">Open tour page</span>
                     </div>
                   </a>

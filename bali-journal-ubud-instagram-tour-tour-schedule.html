@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,14 +657,14 @@ body {
                 <li>🚐 Pickup: <strong>7:00 am hotel pickup or Bali meeting point</strong></li>
                 <li>📍 Area: <strong>East Bali icons with a Tegalalang rice terrace finish</strong></li>
                 <li>👥 Best for: <strong>Couples, solo travelers, creators, and first-time Bali visitors</strong></li>
-                <li>💰 Price: <strong>From $75</strong></li>
+                <li>💰 Price: <strong>From $89</strong></li>
               </ul>
             </aside>
 
               <section class="sb-journal-article-section">
                 <h2>📌 Tour overview at a glance</h2>
-                <p>This Ubud Instagram Tour is the strongest all-inclusive Bali photo day when you want iconic stops, polished logistics, and real guidance with your content. It combines east Bali&#39;s most recognizable landmarks with a softer Ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $75.</p>
-                <ul><li>Duration: <strong>10 hours</strong></li><li>Format: <strong>All-inclusive guided day tour</strong></li><li>Area: <strong>East Bali icons with a Tegalalang rice terrace finish</strong></li><li>Pickup: <strong>7:00 am hotel pickup or Bali meeting point</strong></li><li>Best for: <strong>Couples, solo travelers, creators, and first-time Bali visitors</strong></li><li>Starting from: <strong>From $75</strong></li></ul>
+                <p>This Ubud Instagram Tour is the strongest all-inclusive Bali photo day when you want iconic stops, polished logistics, and real guidance with your content. It combines east Bali&#39;s most recognizable landmarks with a softer Ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $89.</p>
+                <ul><li>Duration: <strong>10 hours</strong></li><li>Format: <strong>All-inclusive guided day tour</strong></li><li>Area: <strong>East Bali icons with a Tegalalang rice terrace finish</strong></li><li>Pickup: <strong>7:00 am hotel pickup or Bali meeting point</strong></li><li>Best for: <strong>Couples, solo travelers, creators, and first-time Bali visitors</strong></li><li>Starting from: <strong>From $89</strong></li></ul>
               </section>
 
               <section class="sb-journal-article-section">
@@ -696,7 +699,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>✉️ Booking and confirmation — what you need to send</h2>
-                <p>To confirm the Ubud Instagram Tour, you will need to share your preferred date, hotel name and area, and group size. This lets the operator match the right vehicle, guide, and timing window.</p><p>Pricing starts from From $75. The exact quote depends on your group size, hotel distance, and any add-on options.</p>
+                <p>To confirm the Ubud Instagram Tour, you will need to share your preferred date, hotel name and area, and group size. This lets the operator match the right vehicle, guide, and timing window.</p><p>Pricing starts from From $89. The exact quote depends on your group size, hotel distance, and any add-on options.</p>
                 <ul><li>Hotel pickup and drop-off or Bali meeting point support</li><li>English-speaking driver-guide with photo assistance</li><li>Entrance tickets for Lempuyang Temple, Tirta Gangga, Tukad Cepung Waterfall, and Tegalalang Rice Terrace</li><li>Lunch during the route</li><li>Tegalalang swing ticket</li><li>Insurance</li></ul>
               </section>
 
@@ -728,7 +731,7 @@ body {
                 <li>Best for: Couples, solo travelers, creators, and first-time Bali visitors</li>
                 <li>Pickup: 7:00 am hotel pickup or Bali meeting point</li>
                 <li>Area: East Bali icons with a Tegalalang rice terrace finish</li>
-                <li>Price: From $75</li>
+                <li>Price: From $89</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

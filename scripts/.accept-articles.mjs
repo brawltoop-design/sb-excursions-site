@@ -10,7 +10,8 @@ let s = await fs.readFile(F, "utf8");
 const LIVE_TOURS = new Set(["blue-lagoon-snorkeling","nusa-penida-manta-rays-point","nusa-penida-private-day-tour-manta-snorkeling","nusa-penida-full-day-tour","nusa-penida-west-tour","nusa-penida-east-tour","gili-island-tour","gili-islands-getaway","fast-boat-transfer-bali","private-car-with-driver-bali","surf-lesson-experience","east-bali-instagram-tour","bali-instagram-highlights-tour","sunset-cruise-bali","atv-quad-bikes","atv-ride-adventure","bali-airport-transfer","bali-unesco","dolphin-sunrise-city-tour","mount-batur-sunrise-hike","mount-batur-sunrise-jeep-hot-spring","mount-batur-sunrise-jeep-tour","north-bali-lovina-dolphins-tour","sumbawa-whale-shark-snorkeling-trip","tanah-lot-bedugul-tour","ubud-highlights-tour","ubud-instagram-tour","white-water-rafting"]);
 const CLUSTER = new Set(["best-snorkeling-spots-bali","blue-lagoon-padang-bai-guide","best-beaches-nusa-penida","manta-point-bali-guide","crystal-bay-nusa-penida","can-you-swim-in-bali","snorkeling-with-turtles-bali","best-time-clear-water-bali","gili-islands-vs-nusa-penida","calm-beaches-bali-kids","best-white-sand-beaches-bali","amed-tulamben-snorkeling","menjangan-island-bali","best-beaches-canggu-seminyak","best-beaches-uluwatu-bukit","best-beaches-bali-crystal-clear-water","what-to-pack-for-bali","best-time-to-visit-bali-month-by-month","nusa-penida-complete-guide"]);
 const FORBIDDEN = /nestled|hidden gem|breathtaking|must-visit|paradise|!/i;
-const ALLOWED_PRICES = new Set(["$50","$29","$60","$75","$49","$115","$70","$15","$65","$35","$150","$20","$25","$80"]);
+// Актуальные цены туров после переценки августа-2026.
+const ALLOWED_PRICES = new Set(["$50","$29","$60","$75","$49","$115","$70","$15","$35","$150","$20","$25","$59","$69","$79","$89"]);
 
 const ok = [], rejected = [];
 for (const g of guides) {

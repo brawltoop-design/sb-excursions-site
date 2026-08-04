@@ -444,11 +444,11 @@ body {
                 </div>
               </div>
               <a class="sb-journal-tour-header__nav-link" href="/bali/es/about">Sobre nosotros</a>
-              <a class="sb-journal-tour-header__nav-link" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Booking</a>
+              <a class="sb-journal-tour-header__nav-link" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Booking</a>
               <a class="sb-journal-tour-header__nav-link" href="/bali/es/faq">FAQ</a>
             </nav>
             <div class="sb-journal-tour-header__actions" aria-label="Acciones rápidas">
-              <a class="sb-journal-tour-header__button" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
+              <a class="sb-journal-tour-header__button" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
               <div class="sb-journal-tour-header__langs"><details class="sb-journal-lang-switcher sb-journal-lang-switcher--desktop">
     <summary class="sb-journal-lang-switcher__summary" aria-label="Elegir idioma">
       <img src="/images/ui/language-black.png" alt="Elegir idioma">
@@ -523,19 +523,19 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
                 </div>
               </div>
               <a class="sb-journal-tour-header__drawer-link" href="/bali/es/about">Sobre nosotros</a>
-              <a class="sb-journal-tour-header__drawer-link" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Booking</a>
+              <a class="sb-journal-tour-header__drawer-link" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Booking</a>
               <a class="sb-journal-tour-header__drawer-link" href="/bali/es/faq">FAQ</a>
               <a class="sb-journal-tour-header__drawer-link" href="/bali/es/journal">Nuestras guías</a>
             </nav>
             <div class="sb-journal-tour-header__drawer-socials">
-              <a href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
+              <a href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
               <a href="https://www.instagram.com/dubai_sb_excursions?igsh=cTFtcnB0ZTFta2Nq&amp;utm_source=qr" target="_blank" rel="noopener noreferrer nofollow">Instagram</a>
             </div>
           </aside>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -811,7 +814,7 @@ body {
           <span class="sb-journal-card__tour">Ruta de la UNESCO por Bali occidental y central</span>
         </div>
         <h3>Visita a los sitios declarados Patrimonio de la Humanidad por la UNESCO en Bali</h3>
-        <p>Este recorrido por los sitios declarados Patrimonio de la Humanidad por la UNESCO en Bali está diseñado para viajeros que desean patios de templos, vistas al lago de montaña, terrazas de arroz de la UNESCO y un famoso final de templo costero sin unir excursiones de un día por separado. Transporte privado, entradas, pareo del templo y agua embotellada ya se manejan desde $70 por persona.</p>
+        <p>Este recorrido por los sitios declarados Patrimonio de la Humanidad por la UNESCO en Bali está diseñado para viajeros que desean patios de templos, vistas al lago de montaña, terrazas de arroz de la UNESCO y un famoso final de templo costero sin unir excursiones de un día por separado. Transporte privado, entradas, pareo del templo y agua embotellada ya se manejan desde $69 por persona.</p>
         <span class="sb-journal-card__cta">Abrir página de recorrido</span>
       </div>
     </a>
@@ -893,7 +896,7 @@ body {
                         <span class="sb-journal-card__tour">Ruta de la UNESCO por Bali occidental y central</span>
                       </div>
                       <h3>Visita a los sitios declarados Patrimonio de la Humanidad por la UNESCO en Bali</h3>
-                      <p>Este recorrido por los sitios declarados Patrimonio de la Humanidad por la UNESCO en Bali está diseñado para viajeros que desean patios de templos, vistas al lago de montaña, terrazas de arroz de la UNESCO y un famoso final de templo costero sin unir excursiones de un día por separado. Transporte privado, entradas, pareo del templo y agua embotellada ya se manejan desde $70 por persona.</p>
+                      <p>Este recorrido por los sitios declarados Patrimonio de la Humanidad por la UNESCO en Bali está diseñado para viajeros que desean patios de templos, vistas al lago de montaña, terrazas de arroz de la UNESCO y un famoso final de templo costero sin unir excursiones de un día por separado. Transporte privado, entradas, pareo del templo y agua embotellada ya se manejan desde $69 por persona.</p>
                       <span class="sb-journal-card__cta">Abrir página de recorrido</span>
                     </div>
                   </a>

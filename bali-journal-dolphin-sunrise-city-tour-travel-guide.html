@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Pickup: <strong>03:00 am hotel pickup from south and central Bali areas</strong></li>
                 <li>📍 Area: <strong>Lovina, Gitgit Waterfall and Ulun Danu Beratan</strong></li>
                 <li>👥 Best for: <strong>Travelers who want a compact north Bali sunrise route with classic highlights</strong></li>
-                <li>💰 Price: <strong>From $75</strong></li>
+                <li>💰 Price: <strong>From $69</strong></li>
               </ul>
             </aside>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>📋 Practical details and good to know</h2>
                 <p>Before you book, here are the logistics that shape the experience.</p>
-                <ul><li>Duration: <strong>8 hours</strong></li><li>Format: <strong>Private dolphin sunrise day tour</strong></li><li>Area: <strong>Lovina, Gitgit Waterfall and Ulun Danu Beratan</strong></li><li>Pickup: <strong>03:00 am hotel pickup from south and central Bali areas</strong></li><li>Pricing: <strong>From $75</strong></li><li>Breakfast and lunch are not included in the source package, so bring cash if you want to stop for food during or after the route.</li><li>Pickup starts around 03:00 am because dolphin timing in Lovina depends on reaching the beach before sunrise.</li><li>Covered pickup areas listed by the source include Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, and Jimbaran.</li><li>Bring a change of clothes, hat, camera, sunglasses, sunscreen, and extra cash for personal expenses.</li><li>This is a long road day even though the sightseeing itself is compact, so it suits travelers who are comfortable with an early start and time in the car.</li><li>The source cancellation policy says a full refund is available when you cancel at least 3 days before the experience start date.</li></ul>
+                <ul><li>Duration: <strong>8 hours</strong></li><li>Format: <strong>Private dolphin sunrise day tour</strong></li><li>Area: <strong>Lovina, Gitgit Waterfall and Ulun Danu Beratan</strong></li><li>Pickup: <strong>03:00 am hotel pickup from south and central Bali areas</strong></li><li>Pricing: <strong>From $69</strong></li><li>Breakfast and lunch are not included in the source package, so bring cash if you want to stop for food during or after the route.</li><li>Pickup starts around 03:00 am because dolphin timing in Lovina depends on reaching the beach before sunrise.</li><li>Covered pickup areas listed by the source include Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, and Jimbaran.</li><li>Bring a change of clothes, hat, camera, sunglasses, sunscreen, and extra cash for personal expenses.</li><li>This is a long road day even though the sightseeing itself is compact, so it suits travelers who are comfortable with an early start and time in the car.</li><li>The source cancellation policy says a full refund is available when you cancel at least 3 days before the experience start date.</li></ul>
               </section>
 
 
@@ -728,7 +731,7 @@ body {
                 <li>Best for: Travelers who want a compact north Bali sunrise route with classic highlights</li>
                 <li>Pickup: 03:00 am hotel pickup from south and central Bali areas</li>
                 <li>Area: Lovina, Gitgit Waterfall and Ulun Danu Beratan</li>
-                <li>Price: From $75</li>
+                <li>Price: From $69</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

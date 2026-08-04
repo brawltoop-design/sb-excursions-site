@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Мобильная навигация">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Наши туры</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/ru/main-page#tours">Наши туры</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Дубай, ОАЭ</a>
                   <a href="/bali/ru/main-page#tours">Бали, Индонезия</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -790,7 +793,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Перемещайтесь между этими пляжами, не теряя ни дня.</h2>
-                <p>Прибрежные пути между Чангу и Семиньяком узкие, а пик трафика приходится именно тогда, когда вы хотите двинуться с места — за два часа до захода солнца. Прогулки по пляжу на самокате работают, если вы едете уверенно; если вы этого не сделаете, <a href="/bali/ru/tours/private-car-with-driver-bali">личный автомобиль с водителем</a> от 65 долларов за машину в день полностью устраняет проблему с парковкой, и водитель ждет, пока вы идете по каждому пляжу. Если вы предпочитаете превратить побережье в более насыщенный день для фотостопов, <a href="/bali/ru/tours/bali-instagram-highlights-tour">Тур по Бали в Instagram</a> от 65 долларов за машину действует одинаково: одна машина, один водитель, и никакого расписания, кроме вашего.</p>
+                <p>Прибрежные пути между Чангу и Семиньяком узкие, а пик трафика приходится именно тогда, когда вы хотите двинуться с места — за два часа до захода солнца. Прогулки по пляжу на самокате работают, если вы едете уверенно; если вы этого не сделаете, <a href="/bali/ru/tours/private-car-with-driver-bali">личный автомобиль с водителем</a> от 59 долларов за машину в день полностью устраняет проблему с парковкой, и водитель ждет, пока вы идете по каждому пляжу. Если вы предпочитаете превратить побережье в более насыщенный день для фотостопов, <a href="/bali/ru/tours/bali-instagram-highlights-tour">Тур по Бали в Instagram</a> от 69 долларов работает по той же схеме: одна машина, один водитель, и никакого расписания, кроме вашего.</p>
 
               </section>
 

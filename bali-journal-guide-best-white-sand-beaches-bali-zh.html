@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="手机导航">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">我们的旅行</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/zh/main-page#tours">我们的旅行</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">阿联酋迪拜</a>
                   <a href="/bali/zh/main-page#tours">印度尼西亚巴厘岛</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -629,7 +632,7 @@ body {
             <h1>巴厘岛 8 个实际上是白色的白沙滩</h1>
             <p class="sb-journal-lead">巴厘岛的大部分海岸线都是灰色的火山沙，无论清单上暗示了什么。本指南对八个真正的白色海滩（从努沙杜瓦地带到珀尼达岛的钻石海滩）进行了排名，并告诉您哪些海滩实际上可以游泳。</p>
             <div class="sb-journal-inline-stats">
-              <span>8个海滩比较</span><span>只有真正的白沙</span><span>旅游 65 美元起</span>
+              <span>8个海滩比较</span><span>只有真正的白沙</span><span>旅游 59 美元起</span>
             </div>
             <div class="sb-journal-article-hero__actions">
               <a class="sb-journal-primary" href="/bali/zh/tours/nusa-penida-east-tour">开启推荐之旅</a>
@@ -778,7 +781,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>武吉和努沙杜瓦：可以开车前往的白色沙滩</h2>
-                <p>美拉斯蒂 (Melasti) 和潘达瓦 (Pandawa) 都有穿过石灰岩的道路，因此您可以将车停在靠近沙滩的地方，这在大多数海滩都需要爬楼梯的半岛上很少见。努沙杜瓦和盖格尔更加容易：平坦的通道、平静的珊瑚礁保护水域、随处可见的设施。在武吉游泳取决于潮汐；在Melasti 和Pandawa 的礁石内，中潮通常是窗口。查看它们的有效方法是使用一个循环 <a href="/bali/zh/tours/private-car-with-driver-bali">带司机的私家车</a> 每辆车 65 美元起——Melasti、Pandawa 和 Geger 坐得很近，您的司机会知道当天的潮水有利于哪一个。</p>
+                <p>美拉斯蒂 (Melasti) 和潘达瓦 (Pandawa) 都有穿过石灰岩的道路，因此您可以将车停在靠近沙滩的地方，这在大多数海滩都需要爬楼梯的半岛上很少见。努沙杜瓦和盖格尔更加容易：平坦的通道、平静的珊瑚礁保护水域、随处可见的设施。在武吉游泳取决于潮汐；在Melasti 和Pandawa 的礁石内，中潮通常是窗口。查看它们的有效方法是使用一个循环 <a href="/bali/zh/tours/private-car-with-driver-bali">带司机的私家车</a> 每辆车 59 美元起——Melasti、Pandawa 和 Geger 坐得很近，您的司机会知道当天的潮水有利于哪一个。</p>
 
               </section>
 
@@ -919,7 +922,7 @@ body {
             <div class="sb-journal-sidebar-card">
               <h3>指南快照</h3>
               <ul>
-                <li>8个海滩比较</li><li>只有真正的白沙</li><li>旅游 65 美元起</li>
+                <li>8个海滩比较</li><li>只有真正的白沙</li><li>旅游 59 美元起</li>
                 <li>推荐路线锚点：Nusa Penida East Tour</li>
               </ul>
             </div>

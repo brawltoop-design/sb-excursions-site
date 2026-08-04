@@ -448,11 +448,11 @@ body {
                 </div>
               </div>
               <a class="sb-journal-tour-header__nav-link" href="/bali/en/about">About Us</a>
-              <a class="sb-journal-tour-header__nav-link" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Booking</a>
+              <a class="sb-journal-tour-header__nav-link" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Booking</a>
               <a class="sb-journal-tour-header__nav-link" href="/bali/en/faq">FAQ</a>
             </nav>
             <div class="sb-journal-tour-header__actions" aria-label="Quick actions">
-              <a class="sb-journal-tour-header__button" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
+              <a class="sb-journal-tour-header__button" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
               <div class="sb-journal-tour-header__langs"><details class="sb-journal-lang-switcher sb-journal-lang-switcher--desktop">
     <summary class="sb-journal-lang-switcher__summary" aria-label="Choose language">
       <img src="/images/ui/language-black.png" alt="Choose language">
@@ -523,19 +523,19 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
                 </div>
               </div>
               <a class="sb-journal-tour-header__drawer-link" href="/bali/en/about">About Us</a>
-              <a class="sb-journal-tour-header__drawer-link" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Booking</a>
+              <a class="sb-journal-tour-header__drawer-link" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Booking</a>
               <a class="sb-journal-tour-header__drawer-link" href="/bali/en/faq">FAQ</a>
               <a class="sb-journal-tour-header__drawer-link" href="/bali/en/journal">Our guides</a>
             </nav>
             <div class="sb-journal-tour-header__drawer-socials">
-              <a href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
+              <a href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
               <a href="https://www.instagram.com/dubai_sb_excursions?igsh=cTFtcnB0ZTFta2Nq&amp;utm_source=qr" target="_blank" rel="noopener noreferrer nofollow">Instagram</a>
             </div>
           </aside>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -637,7 +640,7 @@ body {
             </div>
             <div class="sb-journal-article-hero__actions">
               <a class="sb-journal-primary" href="/bali/en/tours/bali-unesco">Open the tour page</a>
-              <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Book in WhatsApp</a>
+              <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Book in WhatsApp</a>
             </div>
           </div>
           <div class="sb-journal-article-hero__media">
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Pickup: <strong>Morning hotel pickup from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, or Jimbaran</strong></li>
                 <li>📍 Area: <strong>West &amp; Central Bali UNESCO route</strong></li>
                 <li>👥 Best for: <strong>culture lovers, couples, families, and first-time Bali sightseeing days</strong></li>
-                <li>💰 Price: <strong>From $70</strong></li>
+                <li>💰 Price: <strong>From $69</strong></li>
               </ul>
             </aside>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>📋 Practical details and good to know</h2>
                 <p>Before you book, here are the logistics that shape the experience.</p>
-                <ul><li>Duration: <strong>10 hours</strong></li><li>Format: <strong>Private heritage sightseeing route</strong></li><li>Area: <strong>West &amp; Central Bali UNESCO route</strong></li><li>Pickup: <strong>Morning hotel pickup from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, or Jimbaran</strong></li><li>Pricing: <strong>From $70</strong></li><li>Lunch, personal expenses, and additional services are not included in the standard price.</li><li>The covered pickup areas listed by the source are Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, and Jimbaran.</li><li>Bring a camera, cash money, sunglasses, comfortable footwear for temple and terrace walks, and an optional light layer for the cooler Bedugul section.</li><li>This is presented as a private sightseeing route rather than a shared group format because the source lists a private air-conditioned vehicle.</li><li>The day is comfortable for most travelers, but like any Bali sightseeing route, exact timing can shift with traffic and weather.</li><li>For a full refund, the source says cancellation should be made at least 3 days before the experience start date.</li></ul>
+                <ul><li>Duration: <strong>10 hours</strong></li><li>Format: <strong>Private heritage sightseeing route</strong></li><li>Area: <strong>West &amp; Central Bali UNESCO route</strong></li><li>Pickup: <strong>Morning hotel pickup from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, or Jimbaran</strong></li><li>Pricing: <strong>From $69</strong></li><li>Lunch, personal expenses, and additional services are not included in the standard price.</li><li>The covered pickup areas listed by the source are Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, and Jimbaran.</li><li>Bring a camera, cash money, sunglasses, comfortable footwear for temple and terrace walks, and an optional light layer for the cooler Bedugul section.</li><li>This is presented as a private sightseeing route rather than a shared group format because the source lists a private air-conditioned vehicle.</li><li>The day is comfortable for most travelers, but like any Bali sightseeing route, exact timing can shift with traffic and weather.</li><li>For a full refund, the source says cancellation should be made at least 3 days before the experience start date.</li></ul>
               </section>
 
 
@@ -738,7 +741,7 @@ body {
                 <li>Best for: culture lovers, couples, families, and first-time Bali sightseeing days</li>
                 <li>Pickup: Morning hotel pickup from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, or Jimbaran</li>
                 <li>Area: West &amp; Central Bali UNESCO route</li>
-                <li>Price: From $70</li>
+                <li>Price: From $69</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

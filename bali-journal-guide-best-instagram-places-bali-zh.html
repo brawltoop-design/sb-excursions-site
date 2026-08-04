@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="手机导航">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">我们的旅行</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/zh/main-page#tours">我们的旅行</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">阿联酋迪拜</a>
                   <a href="/bali/zh/main-page#tours">印度尼西亚巴厘岛</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -826,7 +829,7 @@ body {
           <span class="sb-journal-card__tour">巴厘岛东部标志性建筑，带有德格拉朗水稻梯田</span>
         </div>
         <h3>乌布 Instagram 之旅</h3>
-        <p>当您想要标志性的停留点、完善的物流以及对您的内容进行真正的指导时，乌布 Instagram 之旅是最强大的全包式巴厘岛摄影日。它结合了巴厘岛东部最知名的地标和柔和的乌布风格稻田装饰，而酒店接送、门票、午餐和导游支持费用从 75 美元起。</p>
+        <p>当您想要标志性的景点、精致的物流和内容的真实指导时，乌布 Instagram 之旅是最强大的全包式巴厘岛摄影日。它结合了巴厘岛东部最知名的地标和柔和的乌布风格稻田装饰，而酒店接送、门票、午餐和导游支持的费用从 89 美元起。</p>
         <span class="sb-journal-card__cta">打开游览页面</span>
       </div>
     </a>
@@ -908,7 +911,7 @@ body {
                         <span class="sb-journal-card__tour">巴厘岛东部标志性建筑，带有德格拉朗水稻梯田</span>
                       </div>
                       <h3>乌布 Instagram 之旅</h3>
-                      <p>当您想要标志性的停留点、完善的物流以及对您的内容进行真正的指导时，乌布 Instagram 之旅是最强大的全包式巴厘岛摄影日。它结合了巴厘岛东部最知名的地标和柔和的乌布风格稻田装饰，而酒店接送、门票、午餐和导游支持费用从 75 美元起。</p>
+                      <p>当您想要标志性的景点、精致的物流和内容的真实指导时，乌布 Instagram 之旅是最强大的全包式巴厘岛摄影日。它结合了巴厘岛东部最知名的地标和柔和的乌布风格稻田装饰，而酒店接送、门票、午餐和导游支持的费用从 89 美元起。</p>
                       <span class="sb-journal-card__cta">打开游览页面</span>
                     </div>
                   </a>

@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -790,7 +793,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Moverse entre estas playas sin perder el día</h2>
-                <p>Los atajos costeros entre Canggu y Seminyak son estrechos y el tráfico alcanza su punto máximo exactamente cuando desea moverse: dos horas antes del atardecer. Saltar de playa en scooter funciona si conduces con confianza; si no lo haces, un <a href="/bali/es/tours/private-car-with-driver-bali">coche privado con conductor</a> desde $ 65 por automóvil por día elimina por completo el problema de estacionamiento y el conductor espera mientras camina por cada playa. Si prefieres incluir la costa en un día más grande de paradas para tomar fotografías, el <a href="/bali/es/tours/bali-instagram-highlights-tour">Tour de lo más destacado de Instagram de Bali</a> desde $ 65 por automóvil funciona de la misma manera: un automóvil, un conductor y ningún horario excepto el suyo.</p>
+                <p>Los atajos costeros entre Canggu y Seminyak son estrechos y el tráfico alcanza su punto máximo exactamente cuando desea moverse: dos horas antes del atardecer. Saltar de playa en scooter funciona si conduces con confianza; si no lo haces, un <a href="/bali/es/tours/private-car-with-driver-bali">coche privado con conductor</a> desde $ 59 por automóvil por día elimina por completo el problema de estacionamiento y el conductor espera mientras camina por cada playa. Si prefieres incluir la costa en un día más grande de paradas para tomar fotografías, el <a href="/bali/es/tours/bali-instagram-highlights-tour">Tour de lo más destacado de Instagram de Bali</a> desde $ 69 funciona de la misma manera: un automóvil, un conductor y ningún horario excepto el suyo.</p>
 
               </section>
 

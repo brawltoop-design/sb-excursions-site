@@ -444,11 +444,11 @@ body {
                 </div>
               </div>
               <a class="sb-journal-tour-header__nav-link" href="/bali/ru/about">О нас</a>
-              <a class="sb-journal-tour-header__nav-link" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Booking</a>
+              <a class="sb-journal-tour-header__nav-link" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Booking</a>
               <a class="sb-journal-tour-header__nav-link" href="/bali/ru/faq">FAQ</a>
             </nav>
             <div class="sb-journal-tour-header__actions" aria-label="Быстрые действия">
-              <a class="sb-journal-tour-header__button" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
+              <a class="sb-journal-tour-header__button" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
               <div class="sb-journal-tour-header__langs"><details class="sb-journal-lang-switcher sb-journal-lang-switcher--desktop">
     <summary class="sb-journal-lang-switcher__summary" aria-label="Выбрать язык">
       <img src="/images/ui/language-black.png" alt="Выбрать язык">
@@ -523,19 +523,19 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Мобильная навигация">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Наши туры</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/ru/main-page#tours">Наши туры</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Дубай, ОАЭ</a>
                   <a href="/bali/ru/main-page#tours">Бали, Индонезия</a>
                 </div>
               </div>
               <a class="sb-journal-tour-header__drawer-link" href="/bali/ru/about">О нас</a>
-              <a class="sb-journal-tour-header__drawer-link" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Booking</a>
+              <a class="sb-journal-tour-header__drawer-link" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Booking</a>
               <a class="sb-journal-tour-header__drawer-link" href="/bali/ru/faq">FAQ</a>
               <a class="sb-journal-tour-header__drawer-link" href="/bali/ru/journal">Наши гиды</a>
             </nav>
             <div class="sb-journal-tour-header__drawer-socials">
-              <a href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
+              <a href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">WhatsApp</a>
               <a href="https://www.instagram.com/dubai_sb_excursions?igsh=cTFtcnB0ZTFta2Nq&amp;utm_source=qr" target="_blank" rel="noopener noreferrer nofollow">Instagram</a>
             </div>
           </aside>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -629,7 +632,7 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">Продающая статья</div>
             <h1>Зачем заказывать тур по объектам наследия ЮНЕСКО на Бали — стоит ли оно того?</h1>
-            <p class="sb-journal-lead">Этот тур по объектам наследия ЮНЕСКО на Бали создан для путешественников, которым нужны дворы храмов, виды на горные озера, рисовые террасы ЮНЕСКО и знаменитый прибрежный храм, не объединяя отдельные однодневные поездки. Частный транспорт, входные билеты, храмовый саронг и вода в бутылках уже оплачиваются от 70 долларов на человека. Культурный ландшафт Бали, включенный в список ЮНЕСКО в 2012 году, защищает ирригационную систему Субак — 1000-летнюю традицию совместного управления водными ресурсами, которая формирует рисовые террасы острова. Понимание Субака превращает посещение храма из фотоопераций в культурные встречи.</p>
+            <p class="sb-journal-lead">Этот тур по объектам наследия ЮНЕСКО на Бали создан для путешественников, которым нужны дворы храмов, виды на горные озера, рисовые террасы ЮНЕСКО и знаменитый прибрежный храм, не объединяя отдельные однодневные поездки. Частный транспорт, входные билеты, храмовый саронг и вода в бутылках уже оплачиваются по цене от 69 долларов на человека. Культурный ландшафт Бали, включенный в список ЮНЕСКО в 2012 году, защищает ирригационную систему Субак — 1000-летнюю традицию совместного управления водными ресурсами, которая формирует рисовые террасы острова. Понимание Субака превращает посещение храма из фотоопераций в культурные встречи.</p>
             <div class="sb-journal-inline-stats">
               <span>10 часов</span>
               <span>Экскурсионный маршрут частного наследия</span>
@@ -637,7 +640,7 @@ body {
             </div>
             <div class="sb-journal-article-hero__actions">
               <a class="sb-journal-primary" href="/bali/ru/tours/bali-unesco">Открыть страницу тура</a>
-              <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2470%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Забронируйте в WhatsApp</a>
+              <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Bali%20UNESCO%20Heritage%20Sites%20Tour%20for%20%2469%20per%20person.%20Please%20send%20availability%2C%20pickup%20areas%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">Забронируйте в WhatsApp</a>
             </div>
           </div>
           <div class="sb-journal-article-hero__media">
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Самовывоз: <strong>Утренний трансфер из отеля из Убуда, Санура, Семиньяка, Чангу, Легиана, Куты, Нуса Дуа или Джимбарана.</strong></li>
                 <li>📍Район: <strong>Маршрут ЮНЕСКО по Западному и Центральному Бали</strong></li>
                 <li>👥 Лучше всего подходит для: <strong>любители культуры, пары, семьи и дни, впервые посещающие Бали</strong></li>
-                <li>💰Цена: <strong>От $70</strong></li>
+                <li>💰Цена: <strong>От $69</strong></li>
               </ul>
             </aside>
 
@@ -684,7 +687,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>💰 Что входит в стоимость</h2>
-                <p>Стоимость тура по объектам наследия ЮНЕСКО на Бали начинается от 70 долларов. Вот что включает в себя типичное бронирование.</p>
+                <p>Стоимость тура по объектам наследия ЮНЕСКО на Бали начинается от 69 долларов. Вот что включает в себя типичное бронирование.</p>
                 <ul><li>Частный автомобиль с кондиционером</li><li>Все входные билеты по указанному маршруту</li><li>Саронг для посещения храмов</li><li>Бутилированная вода</li></ul>
               </section>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>✅ Что нужно знать перед бронированием</h2>
                 <p>Несколько практических деталей, которые помогут сформулировать правильные ожидания от тура по объектам наследия ЮНЕСКО на Бали.</p>
-                <ul><li>Текущая цена: от 70 долларов США. Окончательное наличие мест подтверждается после того, как вы отправите дату, территорию отеля и размер группы.</li><li>Обед, личные расходы и дополнительные услуги не включены в стандартную стоимость.</li><li>Крытые зоны выдачи, перечисленные источником, — это Убуд, Санур, Семиньяк, Чангу, Легиан, Кута, Нуса-Дуа и Джимбаран.</li><li>Возьмите с собой фотоаппарат, наличные деньги, солнцезащитные очки, удобную обувь для прогулок по храмам и террасам, а также дополнительную легкую одежду для более прохладной секции Бедугул.</li><li>Это представлено как частный экскурсионный маршрут, а не как групповой формат, поскольку в источнике указан частный автомобиль с кондиционером.</li><li>День удобен для большинства путешественников, но, как и в любом туристическом маршруте Бали, точное время может меняться в зависимости от пробок и погоды.</li><li>Источник сообщает, что для полного возврата средств аннулирование должно быть произведено как минимум за 3 дня до даты начала мероприятия.</li></ul>
+                <ul><li>Текущая цена: от 69 долларов. Окончательное наличие мест подтверждается после того, как вы отправите дату, территорию отеля и размер группы.</li><li>Обед, личные расходы и дополнительные услуги не включены в стандартную стоимость.</li><li>Крытые зоны выдачи, перечисленные источником, — это Убуд, Санур, Семиньяк, Чангу, Легиан, Кута, Нуса-Дуа и Джимбаран.</li><li>Возьмите с собой фотоаппарат, наличные деньги, солнцезащитные очки, удобную обувь для прогулок по храмам и террасам, а также дополнительную легкую одежду для более прохладной секции Бедугул.</li><li>Это представлено как частный экскурсионный маршрут, а не как групповой формат, поскольку в источнике указан частный автомобиль с кондиционером.</li><li>День удобен для большинства путешественников, но, как и в любом туристическом маршруте Бали, точное время может меняться в зависимости от пробок и погоды.</li><li>Источник сообщает, что для полного возврата средств аннулирование должно быть произведено как минимум за 3 дня до даты начала мероприятия.</li></ul>
               </section>
 
 
@@ -738,7 +741,7 @@ body {
                 <li>Подходит для: любителей культуры, пар, семей и тех, кто впервые осматривает достопримечательности Бали.</li>
                 <li>Встреча: утренний трансфер из отеля из Убуда, Санура, Семиньяка, Чангу, Легиана, Куты, Нуса Дуа или Джимбарана.</li>
                 <li>Район: Западный и Центральный Бали, маршрут ЮНЕСКО</li>
-                <li>Цена: От $70</li>
+                <li>Цена: От $69</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Recogida: <strong>7:00 am recogida en el hotel o punto de encuentro en Bali.</strong></li>
                 <li>📍 Área: <strong>Iconos del este de Bali con un acabado en terraza de arroz de Tegalalang</strong></li>
                 <li>👥 Ideal para: <strong>Parejas, viajeros solitarios, creadores y visitantes primerizos de Bali</strong></li>
-                <li>💰 Precio: <strong>Desde $75</strong></li>
+                <li>💰 Precio: <strong>Desde $89</strong></li>
               </ul>
             </aside>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>📋 Detalles prácticos y bueno saberlo</h2>
                 <p>Antes de reservar, aquí tienes la logística que da forma a la experiencia.</p>
-                <ul><li>Duración: <strong>10 horas</strong></li><li>Formato: <strong>Visita guiada de un día con todo incluido.</strong></li><li>Área: <strong>Iconos del este de Bali con un acabado en terraza de arroz de Tegalalang</strong></li><li>Recogida: <strong>7:00 am recogida en el hotel o punto de encuentro en Bali.</strong></li><li>Precios: <strong>Desde $75</strong></li><li>El día comienza temprano porque el horario de Lempuyang es importante y las carreteras del este de Bali son más largas que las rutas del centro de Bali.</li><li>Las colas para tomar fotografías de Lempuyang pueden cambiar según la temporada y la hora de llegada, por lo que el tiempo de espera exacto nunca es completamente predecible.</li><li>Tukad Cepung incluye escaleras, rocas húmedas y una corta caminata por el agua, por lo que se recomienda encarecidamente calzado cómodo.</li><li>Es importante usar ropa respetuosa y lista para ir al templo. Un pareo ligero o un traje que se adapte a ti es la opción más segura para la primera parada.</li><li>La ruta es mejor para los viajeros que se sienten cómodos con un día completo de turismo y varias paradas panorámicas en lugar de un ritmo lento al estilo de un centro turístico.</li><li>Traiga su teléfono o cámara, protector solar, agua y dinero extra para gastos personales o cualquier extra opcional fuera de lo incluido en la lista.</li></ul>
+                <ul><li>Duración: <strong>10 horas</strong></li><li>Formato: <strong>Visita guiada de un día con todo incluido.</strong></li><li>Área: <strong>Iconos del este de Bali con un acabado en terraza de arroz de Tegalalang</strong></li><li>Recogida: <strong>7:00 am recogida en el hotel o punto de encuentro en Bali.</strong></li><li>Precios: <strong>Desde $89</strong></li><li>El día comienza temprano porque el horario de Lempuyang es importante y las carreteras del este de Bali son más largas que las rutas del centro de Bali.</li><li>Las colas para tomar fotografías de Lempuyang pueden cambiar según la temporada y la hora de llegada, por lo que el tiempo de espera exacto nunca es completamente predecible.</li><li>Tukad Cepung incluye escaleras, rocas húmedas y una corta caminata por el agua, por lo que se recomienda encarecidamente calzado cómodo.</li><li>Es importante usar ropa respetuosa y lista para ir al templo. Un pareo ligero o un traje que se adapte a ti es la opción más segura para la primera parada.</li><li>La ruta es mejor para los viajeros que se sienten cómodos con un día completo de turismo y varias paradas panorámicas en lugar de un ritmo lento al estilo de un centro turístico.</li><li>Traiga su teléfono o cámara, protector solar, agua y dinero extra para gastos personales o cualquier extra opcional fuera de lo incluido en la lista.</li></ul>
               </section>
 
 
@@ -728,7 +731,7 @@ body {
                 <li>Ideal para: parejas, viajeros solitarios, creadores y visitantes primerizos de Bali.</li>
                 <li>Recogida: recogida en el hotel a las 7:00 a. m. o punto de encuentro en Bali.</li>
                 <li>Área: Iconos del este de Bali con un acabado en terraza de arroz de Tegalalang</li>
-                <li>Precio: Desde $75</li>
+                <li>Precio: Desde $89</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,14 +657,14 @@ body {
                 <li>🚐 Pickup: <strong>Hotel pickup on your schedule</strong></li>
                 <li>📍 Area: <strong>All major Bali regions</strong></li>
                 <li>👥 Best for: <strong>Travelers who want total route flexibility</strong></li>
-                <li>💰 Price: <strong>From $65 per car</strong></li>
+                <li>💰 Price: <strong>From $59 per car</strong></li>
               </ul>
             </aside>
 
               <section class="sb-journal-article-section">
                 <h2>📌 Tour overview at a glance</h2>
                 <p>This is one of the most useful products in Bali because so many plans become easier once transport is flexible. It is perfect for custom sightseeing, shopping days, family pacing, and travelers who already know roughly where they want to go.</p>
-                <ul><li>Duration: <strong>Flexible daily use</strong></li><li>Format: <strong>Private transport service</strong></li><li>Area: <strong>All major Bali regions</strong></li><li>Pickup: <strong>Hotel pickup on your schedule</strong></li><li>Best for: <strong>Travelers who want total route flexibility</strong></li><li>Starting from: <strong>From $65 per car</strong></li></ul>
+                <ul><li>Duration: <strong>Flexible daily use</strong></li><li>Format: <strong>Private transport service</strong></li><li>Area: <strong>All major Bali regions</strong></li><li>Pickup: <strong>Hotel pickup on your schedule</strong></li><li>Best for: <strong>Travelers who want total route flexibility</strong></li><li>Starting from: <strong>From $59 per car</strong></li></ul>
               </section>
 
               <section class="sb-journal-article-section">
@@ -696,7 +699,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>✉️ Booking and confirmation — what you need to send</h2>
-                <p>To confirm the Private Car with Driver in Bali, you will need to share your preferred date, hotel name and area, and group size. This lets the operator match the right vehicle, guide, and timing window.</p><p>Pricing starts from From $65 per car. The exact quote depends on your group size, hotel distance, and any add-on options.</p>
+                <p>To confirm the Private Car with Driver in Bali, you will need to share your preferred date, hotel name and area, and group size. This lets the operator match the right vehicle, guide, and timing window.</p><p>Pricing starts from From $59 per car. The exact quote depends on your group size, hotel distance, and any add-on options.</p>
                 <ul><li>Hotel pickup and return planning from major Bali areas</li><li>Private route flow and flexible pacing</li><li>Pickup timing coordination and direct transfer flow</li><li>WhatsApp support for confirmation, timing, and route questions</li></ul>
               </section>
 
@@ -733,7 +736,7 @@ body {
                 <li>Best for: Travelers who want total route flexibility</li>
                 <li>Pickup: Hotel pickup on your schedule</li>
                 <li>Area: All major Bali regions</li>
-                <li>Price: From $65 per car</li>
+                <li>Price: From $59 per car</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

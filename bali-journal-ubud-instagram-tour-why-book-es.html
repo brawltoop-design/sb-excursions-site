@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -629,7 +632,7 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">Vendiendo artículo</div>
             <h1>¿Por qué reservar el Ubud Instagram Tour en Bali? ¿Vale la pena?</h1>
-            <p class="sb-journal-lead">Este Ubud Instagram Tour es el mejor día fotográfico de Bali con todo incluido en el que desea paradas icónicas, logística refinada y orientación real con su contenido. Combina los puntos de referencia más reconocibles del este de Bali con un acabado de terraza de arroz más suave al estilo de Ubud, mientras que la recogida en el hotel, las entradas, el almuerzo y la asistencia del guía se gestionan desde 75 dólares. La ruta de Instagram de Ubud se centra en el corredor central de Bali: terrazas de arroz, columpios en la jungla, plantaciones de café y puertas de templos en un circuito fotogénico.</p>
+            <p class="sb-journal-lead">Este Ubud Instagram Tour es el mejor día fotográfico de Bali con todo incluido en el que desea paradas icónicas, logística refinada y orientación real con su contenido. Combina los puntos de referencia más reconocibles del este de Bali con un acabado de terraza de arroz más suave al estilo de Ubud, mientras que la recogida en el hotel, las entradas, el almuerzo y la asistencia del guía se gestionan desde 89 dólares. La ruta de Instagram de Ubud se centra en el corredor central de Bali: terrazas de arroz, columpios en la jungla, plantaciones de café y puertas de templos en un circuito fotogénico.</p>
             <div class="sb-journal-inline-stats">
               <span>10 horas</span>
               <span>Visita guiada de un día con todo incluido.</span>
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Recogida: <strong>7:00 am recogida en el hotel o punto de encuentro en Bali.</strong></li>
                 <li>📍 Área: <strong>Iconos del este de Bali con un acabado en terraza de arroz de Tegalalang</strong></li>
                 <li>👥 Ideal para: <strong>Parejas, viajeros solitarios, creadores y visitantes primerizos de Bali</strong></li>
-                <li>💰 Precio: <strong>Desde $75</strong></li>
+                <li>💰 Precio: <strong>Desde $89</strong></li>
               </ul>
             </aside>
 
@@ -684,7 +687,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>💰 Qué está incluido en el precio</h2>
-                <p>El precio del Ubud Instagram Tour comienza desde $ 75. Esto es lo que cubre una reserva típica.</p>
+                <p>El precio del Ubud Instagram Tour comienza desde $ 89. Esto es lo que cubre una reserva típica.</p>
                 <ul><li>Recogida y regreso al hotel o soporte en el punto de encuentro de Bali.</li><li>Conductor-guía de habla inglesa con asistencia fotográfica.</li><li>Boletos de entrada para el templo de Lempuyang, Tirta Gangga, la cascada Tukad Cepung y la terraza de arroz de Tegalalang</li><li>Almuerzo durante la ruta</li><li>Boleto de swing de Tegalalang</li><li>Insurance</li></ul>
               </section>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>✅ Qué saber antes de reservar</h2>
                 <p>Algunos detalles prácticos que ayudan a establecer las expectativas adecuadas para el Ubud Instagram Tour.</p>
-                <ul><li>Referencia de precios actual: Desde $75. La disponibilidad final se confirma después de enviar la fecha, el área del hotel y el tamaño del grupo.</li><li>El día comienza temprano porque el horario de Lempuyang es importante y las carreteras del este de Bali son más largas que las rutas del centro de Bali.</li><li>Las colas para tomar fotografías de Lempuyang pueden cambiar según la temporada y la hora de llegada, por lo que el tiempo de espera exacto nunca es completamente predecible.</li><li>Tukad Cepung incluye escaleras, rocas húmedas y una corta caminata por el agua, por lo que se recomienda encarecidamente calzado cómodo.</li><li>Es importante usar ropa respetuosa y lista para ir al templo. Un pareo ligero o un traje que se adapte a ti es la opción más segura para la primera parada.</li><li>La ruta es mejor para los viajeros que se sienten cómodos con un día completo de turismo y varias paradas panorámicas en lugar de un ritmo lento al estilo de un centro turístico.</li><li>Traiga su teléfono o cámara, protector solar, agua y dinero extra para gastos personales o cualquier extra opcional fuera de lo incluido en la lista.</li></ul>
+                <ul><li>Referencia de precios actual: Desde $89. La disponibilidad final se confirma después de enviar la fecha, el área del hotel y el tamaño del grupo.</li><li>El día comienza temprano porque el horario de Lempuyang es importante y las carreteras del este de Bali son más largas que las rutas del centro de Bali.</li><li>Las colas para tomar fotografías de Lempuyang pueden cambiar según la temporada y la hora de llegada, por lo que el tiempo de espera exacto nunca es completamente predecible.</li><li>Tukad Cepung incluye escaleras, rocas húmedas y una corta caminata por el agua, por lo que se recomienda encarecidamente calzado cómodo.</li><li>Es importante usar ropa respetuosa y lista para ir al templo. Un pareo ligero o un traje que se adapte a ti es la opción más segura para la primera parada.</li><li>La ruta es mejor para los viajeros que se sienten cómodos con un día completo de turismo y varias paradas panorámicas en lugar de un ritmo lento al estilo de un centro turístico.</li><li>Traiga su teléfono o cámara, protector solar, agua y dinero extra para gastos personales o cualquier extra opcional fuera de lo incluido en la lista.</li></ul>
               </section>
 
 
@@ -728,7 +731,7 @@ body {
                 <li>Ideal para: parejas, viajeros solitarios, creadores y visitantes primerizos de Bali.</li>
                 <li>Recogida: recogida en el hotel a las 7:00 a. m. o punto de encuentro en Bali.</li>
                 <li>Área: Iconos del este de Bali con un acabado en terraza de arroz de Tegalalang</li>
-                <li>Precio: Desde $75</li>
+                <li>Precio: Desde $89</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

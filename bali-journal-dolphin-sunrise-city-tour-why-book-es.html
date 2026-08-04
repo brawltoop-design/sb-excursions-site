@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -629,7 +632,7 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">Vendiendo artículo</div>
             <h1>¿Por qué reservar el tour Lovina Dolphin Sunrise en Bali? ¿Vale la pena?</h1>
-            <p class="sb-journal-lead">Este Lovina Dolphin Sunrise Tour es la forma más limpia de recorrer el norte de Bali en un día temprano cuando desea ver el mar, una cascada y un templo en el lago sin tener que unir la ruta usted mismo. Incluye recogida en el hotel, transporte privado con aire acondicionado, el tradicional bote con estabilizadores de Lovina, entradas, agua mineral y seguro, con un precio por página fijado en 75 dólares. Esta es la versión simplificada de la experiencia con delfines de Lovina: menos paradas que el recorrido completo por el norte de Bali, diseñada para viajeros que desean el encuentro principal con delfines sin un día de 12 horas.</p>
+            <p class="sb-journal-lead">Este Lovina Dolphin Sunrise Tour es la forma más limpia de recorrer el norte de Bali en un día temprano cuando desea ver el mar, una cascada y un templo en el lago sin tener que unir la ruta usted mismo. Incluye recogida en el hotel, transporte privado con aire acondicionado, el tradicional bote con estabilizadores de Lovina, entradas, agua mineral y seguro, con un precio por página fijado en 69 dólares. Esta es la versión simplificada de la experiencia con delfines de Lovina: menos paradas que el recorrido completo por el norte de Bali, diseñada para viajeros que desean el encuentro principal con delfines sin un día de 12 horas.</p>
             <div class="sb-journal-inline-stats">
               <span>8 horas</span>
               <span>Tour privado de un día al amanecer con delfines</span>
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Recogida: <strong>03:00 am Recogida en el hotel desde las zonas sur y central de Bali.</strong></li>
                 <li>📍 Área: <strong>Lovina, cascada Gitgit y Ulun Danu Beratan</strong></li>
                 <li>👥 Ideal para: <strong>Viajeros que desean una ruta compacta al amanecer por el norte de Bali con aspectos destacados clásicos</strong></li>
-                <li>💰 Precio: <strong>Desde $75</strong></li>
+                <li>💰 Precio: <strong>Desde $69</strong></li>
               </ul>
             </aside>
 
@@ -684,7 +687,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>💰 Qué está incluido en el precio</h2>
-                <p>El precio del tour Lovina Dolphin Sunrise comienza desde $ 75. Esto es lo que cubre una reserva típica.</p>
+                <p>El precio del tour Lovina Dolphin Sunrise comienza desde $ 69. Esto es lo que cubre una reserva típica.</p>
                 <ul><li>Entradas en todos los destinos turísticos de la ruta.</li><li>Billete para el tradicional barco con estabilizadores de Lovina.</li><li>Conductor de habla inglesa</li><li>Coche privado con aire acondicionado completo.</li><li>Una botella de agua mineral</li><li>Insurance</li></ul>
               </section>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>✅ Qué saber antes de reservar</h2>
                 <p>Algunos detalles prácticos que ayudan a establecer las expectativas correctas para el Lovina Dolphin Sunrise Tour.</p>
-                <ul><li>Referencia de precios actual: Desde $75. La disponibilidad final se confirma después de enviar la fecha, el área del hotel y el tamaño del grupo.</li><li>El desayuno y el almuerzo no están incluidos en el paquete de origen, así que traiga dinero en efectivo si desea hacer una parada para comer durante o después de la ruta.</li><li>La recogida comienza alrededor de las 03:00 a. m. porque la sincronización con los delfines en Lovina depende de llegar a la playa antes del amanecer.</li><li>Las áreas de recogida cubiertas enumeradas por la fuente incluyen Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua y Jimbaran.</li><li>Llevar muda de ropa, sombrero, cámara, lentes de sol, bloqueador solar y dinero extra para gastos personales.</li><li>Este es un largo día de viaje a pesar de que el recorrido turístico en sí es compacto, por lo que es adecuado para los viajeros que se sienten cómodos con un comienzo temprano y tiempo en el automóvil.</li><li>La política de cancelación de la fuente dice que hay un reembolso completo disponible cuando cancelas al menos 3 días antes de la fecha de inicio de la experiencia.</li></ul>
+                <ul><li>Referencia de precios actual: Desde $69. La disponibilidad final se confirma después de enviar la fecha, el área del hotel y el tamaño del grupo.</li><li>El desayuno y el almuerzo no están incluidos en el paquete de origen, así que traiga dinero en efectivo si desea hacer una parada para comer durante o después de la ruta.</li><li>La recogida comienza alrededor de las 03:00 a. m. porque la sincronización con los delfines en Lovina depende de llegar a la playa antes del amanecer.</li><li>Las áreas de recogida cubiertas enumeradas por la fuente incluyen Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua y Jimbaran.</li><li>Llevar muda de ropa, sombrero, cámara, lentes de sol, bloqueador solar y dinero extra para gastos personales.</li><li>Este es un largo día de viaje a pesar de que el recorrido turístico en sí es compacto, por lo que es adecuado para los viajeros que se sienten cómodos con un comienzo temprano y tiempo en el automóvil.</li><li>La política de cancelación de la fuente dice que hay un reembolso completo disponible cuando cancelas al menos 3 días antes de la fecha de inicio de la experiencia.</li></ul>
               </section>
 
 
@@ -728,7 +731,7 @@ body {
                 <li>Ideal para: Viajeros que desean una ruta compacta al amanecer en el norte de Bali con atracciones clásicas.</li>
                 <li>Recogida: 03:00 am Recogida en el hotel desde las zonas del sur y centro de Bali.</li>
                 <li>Área: Lovina, Cascada Gitgit y Ulun Danu Beratan</li>
-                <li>Precio: Desde $75</li>
+                <li>Precio: Desde $69</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

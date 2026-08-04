@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navigation mobile">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nos circuits</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/fr/main-page#tours">Nos circuits</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubaï, Émirats Arabes Unis</a>
                   <a href="/bali/fr/main-page#tours">Bali, Indonésie</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -654,7 +657,7 @@ body {
                 <li>🚐 Ramassage : <strong>Prise en charge très tôt à l'hôtel</strong></li>
                 <li>📍Zone : <strong>Lovina et le nord de Bali</strong></li>
                 <li>👥 Idéal pour : <strong>Voyageurs à la recherche d'un grand itinéraire d'une journée complète</strong></li>
-                <li>💰 Prix : <strong>À partir de 80$</strong></li>
+                <li>💰 Prix : <strong>À partir de 79$</strong></li>
               </ul>
             </aside>
 
@@ -697,7 +700,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>📋 Détails pratiques et bon à savoir</h2>
                 <p>Avant de réserver, voici la logistique qui façonne l'expérience.</p>
-                <ul><li>Durée : <strong>10-12 heures</strong></li><li>Format : <strong>Visite privée d'une journée</strong></li><li>Zone : <strong>Lovina et le nord de Bali</strong></li><li>Ramassage : <strong>Prise en charge très tôt à l'hôtel</strong></li><li>Tarif : <strong>À partir de 80$</strong></li><li>Cette expérience se déroule généralement sous la forme d'une excursion privée d'une journée.</li><li>Meilleur choix : les voyageurs qui recherchent un grand itinéraire d'une journée complète.</li><li>Un départ très matinal fait partie de l’intérêt de cet itinéraire.</li><li>Les conditions de la mer et l'horaire du port peuvent affecter le flux exact de la journée.</li><li>Envoyez la zone de votre hôtel avant de réserver afin que l'itinéraire et le calendrier puissent correspondre correctement.</li><li>Apportez un maillot de bain, une serviette, de la crème solaire et des vêtements de rechange.</li></ul>
+                <ul><li>Durée : <strong>10-12 heures</strong></li><li>Format : <strong>Visite privée d'une journée</strong></li><li>Zone : <strong>Lovina et le nord de Bali</strong></li><li>Ramassage : <strong>Prise en charge très tôt à l'hôtel</strong></li><li>Tarif : <strong>À partir de 79$</strong></li><li>Cette expérience se déroule généralement sous la forme d'une excursion privée d'une journée.</li><li>Meilleur choix : les voyageurs qui recherchent un grand itinéraire d'une journée complète.</li><li>Un départ très matinal fait partie de l’intérêt de cet itinéraire.</li><li>Les conditions de la mer et l'horaire du port peuvent affecter le flux exact de la journée.</li><li>Envoyez la zone de votre hôtel avant de réserver afin que l'itinéraire et le calendrier puissent correspondre correctement.</li><li>Apportez un maillot de bain, une serviette, de la crème solaire et des vêtements de rechange.</li></ul>
               </section>
 
 
@@ -733,7 +736,7 @@ body {
                 <li>Idéal pour : les voyageurs qui recherchent un grand itinéraire d'une journée complète</li>
                 <li>Prise en charge : prise en charge très tôt à l'hôtel</li>
                 <li>Zone : Lovina et nord de Bali</li>
-                <li>Prix : À partir de 80$</li>
+                <li>Prix : À partir de 79$</li>
               </ul>
             </div>
             <div class="sb-journal-sidebar-card">

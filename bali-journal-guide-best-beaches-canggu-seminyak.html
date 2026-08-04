@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -790,7 +793,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Getting between these beaches without losing your day</h2>
-                <p>The coastal shortcuts between Canggu and Seminyak are narrow, and traffic peaks exactly when you want to move — the two hours before sunset. Beach-hopping by scooter works if you ride confidently; if you don&#39;t, a <a href="/bali/en/tours/private-car-with-driver-bali">private car with a driver</a> from $65 per car for the day removes the parking problem entirely, and the driver waits while you walk each beach. If you&#39;d rather fold the coast into a bigger day of photo stops, the <a href="/bali/en/tours/bali-instagram-highlights-tour">Bali Instagram highlights tour</a> from $65 per car runs the same way: one car, one driver, and no timetable but yours.</p>
+                <p>The coastal shortcuts between Canggu and Seminyak are narrow, and traffic peaks exactly when you want to move — the two hours before sunset. Beach-hopping by scooter works if you ride confidently; if you don&#39;t, a <a href="/bali/en/tours/private-car-with-driver-bali">private car with a driver</a> from $59 per car for the day removes the parking problem entirely, and the driver waits while you walk each beach. If you&#39;d rather fold the coast into a bigger day of photo stops, the <a href="/bali/en/tours/bali-instagram-highlights-tour">Bali Instagram highlights tour</a> from $69 runs the same way: one car, one driver, and no timetable but yours.</p>
 
               </section>
 

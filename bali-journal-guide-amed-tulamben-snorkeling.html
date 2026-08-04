@@ -523,7 +523,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Mobile navigation">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Our Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
@@ -580,7 +580,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -763,7 +766,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>The honest cost is the drive</h2>
-                <p>There is no way around it: Amed is roughly three hours from Canggu, Seminyak or Uluwatu, and around two from Ubud. Tulamben adds another twenty minutes up the coast road. Do it as a day trip and you will spend more time in the car than in the water, which is why we push people toward one night in Amed — dawn on this coast is glass-flat and empty. A <a href="/bali/en/tours/private-car-with-driver-bali">private car with driver</a> from $65 per car makes the run door to door, and the driver waits while you snorkel.</p><p>If three hours sounds like too much, the <a href="/bali/en/tours/blue-lagoon-snorkeling">Blue Lagoon snorkeling trip</a> from $50 gets you into clear east-coast water at Padang Bai in about half the drive, boat and gear included. It is the sensible fallback for anyone based south with only a morning to spare — we compare the two honestly in our <a href="/bali/en/journal/blue-lagoon-padang-bai-guide">Blue Lagoon Padang Bai guide</a>.</p>
+                <p>There is no way around it: Amed is roughly three hours from Canggu, Seminyak or Uluwatu, and around two from Ubud. Tulamben adds another twenty minutes up the coast road. Do it as a day trip and you will spend more time in the car than in the water, which is why we push people toward one night in Amed — dawn on this coast is glass-flat and empty. A <a href="/bali/en/tours/private-car-with-driver-bali">private car with driver</a> from $59 per car makes the run door to door, and the driver waits while you snorkel.</p><p>If three hours sounds like too much, the <a href="/bali/en/tours/blue-lagoon-snorkeling">Blue Lagoon snorkeling trip</a> from $50 gets you into clear east-coast water at Padang Bai in about half the drive, boat and gear included. It is the sensible fallback for anyone based south with only a morning to spare — we compare the two honestly in our <a href="/bali/en/journal/blue-lagoon-padang-bai-guide">Blue Lagoon Padang Bai guide</a>.</p>
 
               </section>
 

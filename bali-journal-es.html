@@ -515,7 +515,7 @@ body {
             </button>
             <nav class="sb-journal-tour-header__drawer-nav" aria-label="Navegación móvil">
               <div class="sb-journal-tour-header__drawer-group">
-                <button class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" type="button" aria-expanded="false">Nuestros Tours</button>
+                <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/es/main-page#tours">Nuestros Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
                   <a href="/dubai/en#tours">Dubái, Emiratos Árabes Unidos</a>
                   <a href="/bali/es/main-page#tours">Bali, Indonesia</a>
@@ -572,7 +572,10 @@ body {
             if (closeButton) closeButton.addEventListener("click", closeDrawer);
             if (overlay) overlay.addEventListener("click", closeDrawer);
 
-            if (drawerToggle) {
+            // «Our Tours» в мобильном меню теперь обычная ссылка на список
+            // туров, а не раскрывашка: раньше по ней нельзя было никуда попасть.
+            // Раскрытие подменю оставляем только если ссылки на пункте нет.
+            if (drawerToggle && !drawerToggle.getAttribute("href")) {
               drawerToggle.addEventListener("click", function () {
                 const group = drawerToggle.closest(".sb-journal-tour-header__drawer-group");
                 const expanded = drawerToggle.getAttribute("aria-expanded") === "true";
@@ -1095,14 +1098,14 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card" data-jhub-searchable data-search="lovina dolphin sunrise tour lovina, gitgit waterfall and ulun danu beratan this lovina dolphin sunrise tour is the cleanest way to do north bali in one early-start day when you want the sea, a waterfall, and a lake temple without stitching the route together yourself. it includes hotel pickup, private air-conditioned transport, the traditional lovina outrigger boat, entrance fees, mineral water, and insurance, with the page price set from $75.">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="lovina dolphin sunrise tour lovina, gitgit waterfall and ulun danu beratan this lovina dolphin sunrise tour is the cleanest way to do north bali in one early-start day when you want the sea, a waterfall, and a lake temple without stitching the route together yourself. it includes hotel pickup, private air-conditioned transport, the traditional lovina outrigger boat, entrance fees, mineral water, and insurance, with the page price set from $69.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/tours-real/dolphin-sunrise-city-tour.jpg" alt="Delfines giradores saltando al amanecer frente a Lovina, al norte de Bali" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
                   <div class="sb-journal-tour-card__copy">
                     <span>Lovina, cascada Gitgit y Ulun Danu Beratan</span>
                     <h3>Excursión al amanecer con delfines en Lovina</h3>
-                    <p>Este Lovina Dolphin Sunrise Tour es la forma más limpia de recorrer el norte de Bali en un día temprano cuando desea ver el mar, una cascada y un templo en el lago sin tener que unir la ruta usted mismo. Incluye recogida en el hotel, transporte privado con aire acondicionado, el tradicional bote con estabilizadores de Lovina, entradas, agua mineral y seguro, con un precio por página fijado en 75 dólares.</p>
+                    <p>Este Lovina Dolphin Sunrise Tour es la forma más limpia de recorrer el norte de Bali en un día temprano cuando desea ver el mar, una cascada y un templo en el lago sin tener que unir la ruta usted mismo. Incluye recogida en el hotel, transporte privado con aire acondicionado, el tradicional bote con estabilizadores de Lovina, entradas, agua mineral y seguro, con un precio por página fijado en 69 dólares.</p>
                   </div>
                 </div>
                 <div class="sb-journal-tour-card__body">
@@ -1278,14 +1281,14 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card" data-jhub-searchable data-search="bali unesco heritage sites tour west &amp; central bali unesco route this bali unesco heritage sites tour is built for travelers who want temple courtyards, mountain-lake views, unesco rice terraces, and a famous coastal temple finish without stitching separate day trips together. private transport, entrance tickets, a temple sarong, and bottled water are already handled from $70 per person.">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="bali unesco heritage sites tour west &amp; central bali unesco route this bali unesco heritage sites tour is built for travelers who want temple courtyards, mountain-lake views, unesco rice terraces, and a famous coastal temple finish without stitching separate day trips together. private transport, entrance tickets, a temple sarong, and bottled water are already handled from $69 per person.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/bali-tours/bali-unesco.jpg" alt="Terrazas de arroz de Jatiluwih y paisajes montañosos en el recorrido por los sitios declarados Patrimonio de la Humanidad por la UNESCO en Bali" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
                   <div class="sb-journal-tour-card__copy">
                     <span>Ruta de la UNESCO por Bali occidental y central</span>
                     <h3>Visita a los sitios declarados Patrimonio de la Humanidad por la UNESCO en Bali</h3>
-                    <p>Este recorrido por los sitios declarados Patrimonio de la Humanidad por la UNESCO en Bali está diseñado para viajeros que desean patios de templos, vistas al lago de montaña, terrazas de arroz de la UNESCO y un famoso final de templo costero sin unir excursiones de un día por separado. Transporte privado, entradas, pareo del templo y agua embotellada ya se manejan desde $70 por persona.</p>
+                    <p>Este recorrido por los sitios declarados Patrimonio de la Humanidad por la UNESCO en Bali está diseñado para viajeros que desean patios de templos, vistas al lago de montaña, terrazas de arroz de la UNESCO y un famoso final de templo costero sin unir excursiones de un día por separado. Transporte privado, entradas, pareo del templo y agua embotellada ya se manejan desde $69 por persona.</p>
                   </div>
                 </div>
                 <div class="sb-journal-tour-card__body">
@@ -1705,14 +1708,14 @@ body {
                 </div>
               </article>
 
-              <article class="sb-journal-tour-card" data-jhub-searchable data-search="ubud instagram tour east bali icons with a tegalalang rice terrace finish this ubud instagram tour is the strongest all-inclusive bali photo day when you want iconic stops, polished logistics, and real guidance with your content. it combines east bali&#39;s most recognizable landmarks with a softer ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $75.">
+              <article class="sb-journal-tour-card" data-jhub-searchable data-search="ubud instagram tour east bali icons with a tegalalang rice terrace finish this ubud instagram tour is the strongest all-inclusive bali photo day when you want iconic stops, polished logistics, and real guidance with your content. it combines east bali&#39;s most recognizable landmarks with a softer ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $89.">
                 <div class="sb-journal-tour-card__hero">
                   <img src="/images/tours-real/ubud-instagram-tour.jpg" alt="Columpio en la jungla sobre las terrazas de arroz cerca de Ubud, Bali" loading="lazy" decoding="async">
                   <div class="sb-journal-tour-card__overlay"></div>
                   <div class="sb-journal-tour-card__copy">
                     <span>Iconos del este de Bali con un acabado en terraza de arroz de Tegalalang</span>
                     <h3>Tour de Instagram de Ubud</h3>
-                    <p>Este Ubud Instagram Tour es el mejor día fotográfico de Bali con todo incluido en el que desea paradas icónicas, logística refinada y orientación real con su contenido. Combina los puntos de referencia más reconocibles del este de Bali con un acabado de terraza de arroz más suave al estilo de Ubud, mientras que la recogida en el hotel, las entradas, el almuerzo y la asistencia del guía se gestionan desde 75 dólares.</p>
+                    <p>Este Ubud Instagram Tour es el mejor día fotográfico de Bali con todo incluido en el que desea paradas icónicas, logística refinada y orientación real con su contenido. Combina los puntos de referencia más reconocibles del este de Bali con un acabado de terraza de arroz más suave al estilo de Ubud, mientras que la recogida en el hotel, las entradas, el almuerzo y la asistencia del guía se gestionan desde 89 dólares.</p>
                   </div>
                 </div>
                 <div class="sb-journal-tour-card__body">
