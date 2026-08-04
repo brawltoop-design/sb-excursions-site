@@ -15,7 +15,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const SITE = "https://sbexcursion.com";
+// С www — как в canonical и sitemap: голый домен отдаёт 308-редирект.
+const SITE = "https://www.sbexcursion.com";
 
 // Названия и цены читаем прямо из готовых страниц туров — так llms.txt
 // не может разойтись с сайтом.

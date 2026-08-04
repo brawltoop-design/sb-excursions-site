@@ -20,7 +20,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const HOST = "sbexcursion.com";
+// С www: голый домен 308-редиректит сюда, а IndexNow требует, чтобы host
+// совпадал с адресами в urlList и с местом, где реально лежит файл ключа.
+const HOST = "www.sbexcursion.com";
 const SITE = `https://${HOST}`;
 
 const key = (await fs.readFile(path.join(ROOT, ".indexnow-key"), "utf8")).trim();

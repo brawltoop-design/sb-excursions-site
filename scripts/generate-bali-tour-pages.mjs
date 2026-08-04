@@ -6,7 +6,16 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, "..");
 
-const SITE_URL = "https://sbexcursion.com";
+// Обязательно с www: сервер отдаёт 308-редирект с sbexcursion.com на
+// www.sbexcursion.com, и ресурс в Search Console заведён тоже на www.
+// Если ставить сюда голый домен, то canonical, og:url, hreflang и sitemap
+// начинают указывать на адрес, который сам себя перенаправляет: Google
+// перезаписывает canonical, а в sitemap видит чужие URL и пишет по каждой
+// странице «Нет ссылающихся файлов Sitemap».
+const SITE_URL = "https://www.sbexcursion.com";
+// Тот же адрес, экранированный для подстановки в регулярки, — чтобы при смене
+// домена не пришлось искать по файлу второй, зашитый руками, вариант.
+const SITE_URL_RE = SITE_URL.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const WHATSAPP_NUMBER = "6285333685020";
 const DUBAI_WHATSAPP_NUMBER = "971506048673";
 const GENERIC_FOOTER_WA_TEXT =
@@ -20553,8 +20562,8 @@ async function buildLocalizedStaticHtmlPage(html, locale = "en", options = {}) {
   }
 
   localizedHtml = localizedHtml.replace(/<html lang="[^"]+"/i, `<html lang="${locale}"`);
-  localizedHtml = localizedHtml.replace(/(<link rel="canonical" href=")https:\/\/sbexcursion\.com\/bali\/en/gi, `$1https://sbexcursion.com/bali/${locale}`);
-  localizedHtml = localizedHtml.replace(/(<meta property="og:url" content=")https:\/\/sbexcursion\.com\/bali\/en/gi, `$1https://sbexcursion.com/bali/${locale}`);
+  localizedHtml = localizedHtml.replace(new RegExp(`(<link rel="canonical" href=")${SITE_URL_RE}/bali/en`, "gi"), `$1${SITE_URL}/bali/${locale}`);
+  localizedHtml = localizedHtml.replace(new RegExp(`(<meta property="og:url" content=")${SITE_URL_RE}/bali/en`, "gi"), `$1${SITE_URL}/bali/${locale}`);
   localizedHtml = localizedHtml.replace(/("inLanguage"\s*:\s*")en(")/g, `$1${locale}$2`);
   return localizedHtml;
 }

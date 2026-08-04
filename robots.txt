@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sbexcursion.com/sitemap.xml
+Sitemap: https://www.sbexcursion.com/sitemap.xml
