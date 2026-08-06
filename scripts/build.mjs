@@ -24,6 +24,7 @@ const STEPS = [
   ["normalize-site-host.mjs", "единый домен www во всех адресах"],
   ["fix-mobile-tours-link.mjs", "живая ссылка «Туры» в мобильном меню"],
   ["fix-legacy-guide-tourcard.mjs", "карточка тура в сайдбаре шести старых гайдов"],
+  ["add-hreflang.mjs", "hreflang-теги пяти языковых версий"],
   ["build-llms-txt.mjs", "llms.txt — карта сайта для нейросетей"],
   ["build-og-images.mjs", "картинки 1200x630 для превью ссылок"],
 ];

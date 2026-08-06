@@ -29,22 +29,34 @@ const DUBAI_GENERIC_FOOTER_PHONE_LINK = `<a href="${DUBAI_GENERIC_FOOTER_WA_LINK
 // живая компания, а не одинокий лендинг: без внешних профилей подтвердить
 // нечем. Ссылки взяты те же, что стоят в подвале сайта.
 const ORGANIZATION_SCHEMA = {
-  "@type": "Organization",
+  // TravelAgency — подтип LocalBusiness: для локальных туристических
+  // запросов и AI-ответов «tour operator in Bali» это сильнее голого
+  // Organization. Адрес и диапазон цен — из подвала сайта и прайса.
+  "@type": "TravelAgency",
   "@id": `${SITE_URL}/#organization`,
   name: "SB Excursions",
   url: SITE_URL,
   description:
     "Private guided day tours across Bali and the Nusa islands, booked directly over WhatsApp.",
   areaServed: { "@type": "Place", name: "Bali, Indonesia" },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Jl. Petitenget",
+    addressLocality: "Seminyak",
+    addressRegion: "Bali",
+    addressCountry: "ID",
+  },
+  priceRange: "$15-$150",
   telephone: "+62 853 3368 5020",
   logo: {
     "@type": "ImageObject",
     url: `${SITE_URL}/images/tild6536-3637-4563-a362-633234333130__favikon_sb_excursion.png`,
   },
+  // wa.me здесь не место: sameAs — только профили-подтверждения сущности,
+  // контакт для брони уже лежит в contactPoint.
   sameAs: [
     "https://www.instagram.com/dubai_sb_excursions",
     "https://t.me/SurfBase",
-    `https://wa.me/${WHATSAPP_NUMBER}`,
   ],
   contactPoint: {
     "@type": "ContactPoint",
@@ -153,6 +165,16 @@ const BALI_LANGUAGE_OPTIONS = [
 ];
 const TRANSLATION_CACHE_PATH = path.join(projectRoot, ".generated", "bali-translation-cache.json");
 const JOURNAL_PUBLISHED_DATE = "2026-05-21";
+// Дата последней содержательной правки статей (переценка туров, переписанные
+// блоки). Обновлять руками при реальных правках контента — не при каждой
+// сборке, иначе сигнал свежести превращается в шум.
+const JOURNAL_MODIFIED_DATE = "2026-08-07";
+// speakable — подсказка голосовым и генеративным движкам, какой фрагмент
+// страницы читать как ответ: заголовок и лид.
+const JOURNAL_SPEAKABLE = {
+  "@type": "SpeakableSpecification",
+  cssSelector: ["h1", ".sb-journal-lead"],
+};
 const WEATHER_MAIN_PAGE_ROUTE = "/bali/en/main-page#tours";
 const JOURNAL_FEATURED_ARTICLES = [
   ["ubud-highlights-tour", "selling"],
@@ -2473,21 +2495,23 @@ const tours = [
     ],
     image: sourceImage("tild3033-6437-4832-a231-366334396336__connor-2a_nva3oqoe-u.webp"),
     imageAlt: "West Nusa Penida cliffs and ocean views",
+    metaDescription:
+      "Nusa Penida West Tour from Bali: Kelingking, Broken Beach, Angel's Billabong and Crystal Bay in one 10-12 hour private day from $49 per car. Book via WhatsApp.",
     lead:
-      "Focus on the classic west Nusa Penida route with the island's most recognizable cliff views, scenic coastal stops, and the dramatic landscapes people usually imagine first.",
+      "The Nusa Penida West Tour is a full-day, 10-12 hour private trip to the island's four west-coast icons — Kelingking viewpoint, Broken Beach, Angel's Billabong and the Crystal Bay swim stop — from $49 per car for up to 6 people, with the fast boat crossing available from $15.",
     summary:
-      "If your priority is bold scenery over snorkeling, the west route is the cleanest and most iconic Penida choice. It is especially strong for couples and first-time visitors who want the headline views with transport handled professionally.",
+      "If your priority is bold scenery over snorkeling, the west route is the cleanest and most iconic Penida choice: one car, one driver and the island's four most photographed stops in a single day. It is especially strong for couples and first-time visitors who want the headline views with transport handled professionally.",
     overview:
-      "West Penida is visually spectacular but road conditions and timing matter. A pre-planned day tour removes the hardest part of making the island feel easy to enjoy.",
+      "West Penida is visually spectacular, but island roads are slow and the midday queue at Kelingking is real, so timing matters. A pre-planned day tour — early crossing, driver waiting at Banjar Nyuh harbor, stops sequenced around the crowds — removes the hardest part of making the island feel easy to enjoy.",
     highlights: [
-      ["Kelingking style scenery", "The strongest west Penida visual and one of the most famous viewpoints in Bali province."],
-      ["Coastal drama all day", "A route built around cliffs, blue water, and big open landscapes instead of soft inland stops."],
-      ["First-time friendly", "An easy choice when you want the Penida name-value without overthinking the island plan."],
-      ["Transport coordination included", "Mainland transfer, harbor flow, and island movement matter a lot here."],
+      ["Kelingking viewpoint", "The T-Rex cliff: the most famous viewpoint in Bali province and the reason most visitors cross to Penida at all."],
+      ["Broken Beach and Angel's Billabong", "A collapsed sea arch and a natural rock pool a few minutes apart on the same west-coast loop."],
+      ["Crystal Bay swim stop", "The island's calmest swimming beach — the place to cool off before the boat back."],
+      ["Transport coordination included", "Hotel pickup, harbor flow and an island driver for up to 6 people: the parts that make Penida hard are handled."],
     ],
     itinerary: [
-      ["Bali pickup and fast boat departure", "Start early and move through harbor logistics before crossing to Nusa Penida."],
-      ["West Penida cliff route", "Follow the island's best-known west-side stops with time for photos and short walks."],
+      ["Bali pickup and fast boat departure", "Early hotel pickup, harbor check-in and the morning crossing to Nusa Penida's Banjar Nyuh harbor."],
+      ["West Penida cliff route", "Kelingking viewpoint, Broken Beach, Angel's Billabong and the Crystal Bay swim stop, with time for photos and short walks."],
       ["Boat back to Bali", "Return to the harbor after the main sightseeing loop and transfer back to your hotel."],
     ],
     tags: ["hotelPickup", "boat", "island", "instagram"],
@@ -5756,27 +5780,6 @@ function applyWestCollageImageOverrides(html, tour) {
   );
 }
 
-function renderStandaloneFaqSchema(tour) {
-  const faq = buildWestFaqs(tour);
-
-  return JSON.stringify(
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faq.map(([question, answer]) => ({
-        "@type": "Question",
-        name: question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: answer,
-        },
-      })),
-    },
-    null,
-    2,
-  );
-}
-
 function replaceLdJsonBlocks(html, tour) {
   const blocks = html.match(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g) || [];
 
@@ -5784,8 +5787,12 @@ function replaceLdJsonBlocks(html, tour) {
     html = html.replace(blocks[0], `<script type="application/ld+json">\n${renderStructuredData(tour)}\n</script>`);
   }
 
+  // Раньше вторым блоком шёл отдельный FAQPage — и на странице оказывалось
+  // два FAQPage сразу (второй, короткий, лежит внутри @graph). Google и
+  // AI-парсеры учитывают один FAQPage на страницу, дубль может обнулить оба.
+  // Теперь полный видимый FAQ живёт внутри @graph, а второй блок убираем.
   if (blocks[1]) {
-    html = html.replace(blocks[1], `<script type="application/ld+json">\n${renderStandaloneFaqSchema(tour)}\n</script>`);
+    html = html.replace(blocks[1], "");
   }
 
   return html;
@@ -9676,7 +9683,7 @@ const JOURNAL_FEATURED_GUIDE_SLUGS = [
 const JOURNAL_SEO_GUIDES = [
   {
     "slug": "blue-lagoon-padang-bai-guide",
-    "badge": "Evergreen SEO guide",
+    "badge": "Travel guide",
     "navLabel": "Blue Lagoon guide",
     "cardTourLabel": "Snorkel Blue Lagoon",
     "heroTourSlug": "blue-lagoon-snorkeling",
@@ -9808,7 +9815,7 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "best-beaches-nusa-penida",
-    "badge": "Evergreen SEO guide",
+    "badge": "Travel guide",
     "navLabel": "Penida beaches",
     "cardTourLabel": "Explore Penida beaches",
     "heroTourSlug": "nusa-penida-full-day-tour",
@@ -9940,7 +9947,7 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "manta-point-bali-guide",
-    "badge": "Evergreen SEO guide",
+    "badge": "Travel guide",
     "navLabel": "Manta Point",
     "cardTourLabel": "Manta tours",
     "heroTourSlug": "nusa-penida-manta-rays-point",
@@ -10073,7 +10080,7 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "crystal-bay-nusa-penida",
-    "badge": "Evergreen SEO guide",
+    "badge": "Travel guide",
     "navLabel": "Crystal Bay",
     "cardTourLabel": "Penida tours",
     "heroTourSlug": "nusa-penida-west-tour",
@@ -10201,7 +10208,7 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "can-you-swim-in-bali",
-    "badge": "Evergreen SEO guide",
+    "badge": "Travel guide",
     "navLabel": "Swimming in Bali",
     "cardTourLabel": "Calm-water beaches and tours",
     "heroTourSlug": "blue-lagoon-snorkeling",
@@ -10339,7 +10346,7 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "snorkeling-with-turtles-bali",
-    "badge": "Evergreen SEO guide",
+    "badge": "Travel guide",
     "navLabel": "Turtle snorkeling",
     "cardTourLabel": "Turtle snorkel trips",
     "heroTourSlug": "gili-island-tour",
@@ -10470,7 +10477,7 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "best-time-clear-water-bali",
-    "badge": "Evergreen SEO guide",
+    "badge": "Travel guide",
     "navLabel": "Clear water season",
     "cardTourLabel": "Timing and clear water",
     "heroTourSlug": "blue-lagoon-snorkeling",
@@ -10599,7 +10606,7 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "gili-islands-vs-nusa-penida",
-    "badge": "Evergreen SEO guide",
+    "badge": "Travel guide",
     "navLabel": "Gili vs Penida",
     "cardTourLabel": "Island day trips",
     "heroTourSlug": "gili-island-tour",
@@ -10726,7 +10733,7 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "calm-beaches-bali-kids",
-    "badge": "Evergreen SEO guide",
+    "badge": "Travel guide",
     "navLabel": "Calm beaches for kids",
     "cardTourLabel": "Calm water for families",
     "heroTourSlug": "blue-lagoon-snorkeling",
@@ -10858,7 +10865,7 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "best-white-sand-beaches-bali",
-    "badge": "Evergreen SEO guide",
+    "badge": "Travel guide",
     "navLabel": "White sand guide",
     "cardTourLabel": "White sand and swimming",
     "heroTourSlug": "nusa-penida-east-tour",
@@ -10997,7 +11004,7 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "amed-tulamben-snorkeling",
-    "badge": "Evergreen SEO guide",
+    "badge": "Travel guide",
     "navLabel": "Amed & Tulamben",
     "cardTourLabel": "East-coast snorkeling",
     "heroTourSlug": "blue-lagoon-snorkeling",
@@ -11125,7 +11132,7 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "menjangan-island-bali",
-    "badge": "Evergreen SEO guide",
+    "badge": "Travel guide",
     "navLabel": "Menjangan Island",
     "cardTourLabel": "West Bali snorkeling",
     "heroTourSlug": "gili-island-tour",
@@ -11253,7 +11260,7 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "best-beaches-canggu-seminyak",
-    "badge": "Evergreen SEO guide",
+    "badge": "Travel guide",
     "navLabel": "Canggu & Seminyak",
     "cardTourLabel": "West-coast beaches",
     "heroTourSlug": "surf-lesson-experience",
@@ -11387,7 +11394,7 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "best-beaches-uluwatu-bukit",
-    "badge": "Evergreen SEO guide",
+    "badge": "Travel guide",
     "navLabel": "Uluwatu beaches",
     "cardTourLabel": "Bukit beach days",
     "heroTourSlug": "private-car-with-driver-bali",
@@ -11525,7 +11532,7 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     slug: "best-snorkeling-spots-bali",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Snorkeling guide",
     cardTourLabel: "Snorkeling and clear water",
     heroTourSlug: "blue-lagoon-snorkeling",
@@ -11535,7 +11542,7 @@ const JOURNAL_SEO_GUIDES = [
     description:
       "The 9 best snorkeling spots in Bali and its islands, compared by water clarity, marine life and how hard each one is to reach — with real 2026 tour prices.",
     excerpt:
-      "Bali itself has decent snorkeling, but the water most people picture — bright, glassy, full of life — is concentrated in a few specific places: the Padang Bai coves, the Nusa Penida channel and the Gili Islands. This guide compares all nine spots we actually run tours to, so you can pick by water, marine life and travel time instead of guessing from photos.",
+      "The best snorkeling in Bali is concentrated in three areas: the Padang Bai coves 90 minutes from the southern hotels, the Nusa Penida channel with its manta rays, and the Gili Islands off Lombok. Bali itself has decent snorkeling, but the water most people picture — bright, glassy, full of life — lives in those specific places. This guide compares all nine spots we actually run tours to, with 2026 prices from $29 to $115 per person, so you can pick by water, marine life and travel time instead of guessing from photos.",
     rankings: [
       {
         name: "Blue Lagoon, Padang Bai",
@@ -11621,7 +11628,15 @@ const JOURNAL_SEO_GUIDES = [
       {
         heading: "What each option costs in 2026",
         paragraphs: [
-          "Real starting prices for the three tours behind this list, per person, booked direct over WhatsApp: Blue Lagoon snorkeling from $50 with gear, guide, lunch and hotel pickup; the Nusa Penida Manta Point day from $29 with gear and hotel pickup; the Gili Islands day trip from $115 with the fast boat, a private snorkeling boat, GoPro photos and free time on Gili Trawangan. Independent alternatives exist — public fast boats, renting a mask on the beach — but once you add transport from the south of Bali, the totals land close to the tour price without the timing help.",
+          "Snorkeling in Bali in 2026 costs between $29 and $115 per person on a guided tour, booked direct over WhatsApp. Real starting prices for the three tours behind this list:",
+        ],
+        bullets: [
+          "**Blue Lagoon snorkeling — from $50** per person: gear, guide, lunch and hotel pickup included",
+          "**Nusa Penida Manta Point day — from $29** per person: gear and hotel pickup included",
+          "**Gili Islands day trip — from $115** per person: fast boat, private snorkeling boat, GoPro photos and free time on Gili Trawangan",
+        ],
+        paragraphsAfter: [
+          "Independent alternatives exist — public fast boats run from $15, and a mask rents on the beach for a few dollars — but once transport from the south of Bali is added, the totals land close to the tour price without the timing help.",
           "Wherever you book, two costs catch people out: the small-boat hop between coves at Padang Bai if you arrange it on the sand, and the harbor fees on island crossings. Both are already inside our tour prices; when comparing quotes, ask whether they are inside anyone else's.",
         ],
       },
@@ -11834,7 +11849,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "beaches",
     slug: "best-beaches-bali-crystal-clear-water",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Beaches guide",
     cardTourLabel: "Beaches and swimming",
     heroTourSlug: "nusa-penida-east-tour",
@@ -11968,7 +11983,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "places",
     slug: "best-places-to-visit-bali-first-time",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Top places guide",
     cardTourLabel: "First-time Bali highlights",
     heroTourSlug: "ubud-highlights-tour",
@@ -12097,7 +12112,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "clubs",
     slug: "best-beach-clubs-bali-young-adults",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Beach clubs guide",
     cardTourLabel: "Youth and nightlife",
     heroTourSlug: "sunset-cruise-bali",
@@ -12217,7 +12232,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "budget-food",
     slug: "best-budget-restaurants-bali-warungs",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Budget food guide",
     cardTourLabel: "Affordable food in Bali",
     heroTourSlug: "ubud-highlights-tour",
@@ -12345,7 +12360,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "instagram",
     slug: "best-instagram-places-bali",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Instagram guide",
     cardTourLabel: "Photo and content guide",
     heroTourSlug: "ubud-instagram-tour",
@@ -12473,7 +12488,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "where-to-stay",
     slug: "where-to-stay-bali-first-time",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Area guide",
     cardTourLabel: "Where to stay",
     heroTourSlug: "private-car-with-driver-bali",
@@ -12585,7 +12600,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "couples",
     slug: "best-things-to-do-bali-for-couples",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Couples guide",
     cardTourLabel: "Couples and romance",
     heroTourSlug: "sunset-cruise-bali",
@@ -12705,7 +12720,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "temples",
     slug: "best-temples-bali-cultural-sites",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Temples guide",
     cardTourLabel: "Temples and heritage",
     heroTourSlug: "bali-unesco",
@@ -12826,7 +12841,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "waterfalls",
     slug: "best-waterfalls-bali-day-trips",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Waterfalls guide",
     cardTourLabel: "Waterfalls and jungle stops",
     heroTourSlug: "ubud-highlights-tour",
@@ -12930,7 +12945,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "viewpoints",
     slug: "best-viewpoints-bali-sunrise-cliffs-rice-terraces",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Viewpoints guide",
     cardTourLabel: "Viewpoints and big scenery",
     heroTourSlug: "nusa-penida-west-tour",
@@ -13050,7 +13065,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "itinerary7",
     slug: "bali-itinerary-7-days-first-time",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "7-day itinerary",
     cardTourLabel: "Trip planning",
     heroTourSlug: "ubud-highlights-tour",
@@ -13188,7 +13203,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "ubudArea",
     slug: "things-to-do-ubud-bali-complete-guide",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Ubud guide",
     cardTourLabel: "Ubud area",
     heroTourSlug: "ubud-highlights-tour",
@@ -13314,7 +13329,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "tripCost",
     slug: "how-much-does-a-bali-trip-cost",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Bali trip cost",
     cardTourLabel: "Budget planning",
     heroTourSlug: "private-car-with-driver-bali",
@@ -13456,7 +13471,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "visaEntry",
     slug: "bali-visa-entry-requirements",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Visa and entry",
     cardTourLabel: "Trip admin",
     heroTourSlug: "bali-airport-transfer",
@@ -13592,7 +13607,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "gettingAround",
     slug: "how-to-get-around-bali-transport-guide",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Getting around",
     cardTourLabel: "Transport",
     heroTourSlug: "private-car-with-driver-bali",
@@ -13730,7 +13745,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "bestTime",
     slug: "best-time-to-visit-bali-month-by-month",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Best time to visit",
     cardTourLabel: "When to go",
     heroTourSlug: "nusa-penida-manta-rays-point",
@@ -13853,7 +13868,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "nusaPenida",
     slug: "nusa-penida-complete-guide",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Nusa Penida guide",
     cardTourLabel: "Nusa Penida",
     heroTourSlug: "nusa-penida-west-tour",
@@ -13989,7 +14004,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "cangguArea",
     slug: "things-to-do-canggu-bali-guide",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Canggu guide",
     cardTourLabel: "Canggu area",
     heroTourSlug: "surf-lesson-experience",
@@ -14085,7 +14100,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "uluwatuArea",
     slug: "things-to-do-uluwatu-bali-guide",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Uluwatu guide",
     cardTourLabel: "Uluwatu area",
     heroTourSlug: "sunset-cruise-bali",
@@ -14197,7 +14212,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "seminyakArea",
     slug: "things-to-do-seminyak-bali-guide",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Seminyak guide",
     cardTourLabel: "Seminyak area",
     heroTourSlug: "sunset-cruise-bali",
@@ -14294,7 +14309,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "withKids",
     slug: "bali-with-kids-family-guide",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Bali with kids",
     cardTourLabel: "Family travel",
     heroTourSlug: "blue-lagoon-snorkeling",
@@ -14417,7 +14432,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "packing",
     slug: "what-to-pack-for-bali",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Packing list",
     cardTourLabel: "Trip prep",
     heroTourSlug: "mount-batur-sunrise-jeep-tour",
@@ -14548,7 +14563,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "foodGuide",
     slug: "what-to-eat-in-bali-food-guide",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Food guide",
     cardTourLabel: "Balinese food",
     heroTourSlug: "ubud-highlights-tour",
@@ -14703,7 +14718,7 @@ const JOURNAL_SEO_GUIDES = [
   {
     key: "safety",
     slug: "bali-safety-scams-and-health",
-    badge: "Evergreen SEO guide",
+    badge: "Travel guide",
     navLabel: "Safety and scams",
     cardTourLabel: "Staying safe",
     heroTourSlug: "private-car-with-driver-bali",
@@ -14789,8 +14804,8 @@ const JOURNAL_SEO_GUIDES = [
       {
         heading: "🍹 Methanol — the one drink risk that kills",
         paragraphs: [
-          "This deserves its own section because it is lethal and invisible. Methanol has no taste or smell. **Around 10 ml can cause blindness and about 30 ml — less than a shot — can kill.** Symptoms are typically delayed **12 to 24 hours**: vision disturbance often described as a snowstorm, severe headache, abdominal pain, breathlessness.",
-          "**Delayed presentation is what kills people.** If you suspect methanol, go to hospital immediately rather than sleeping it off.",
+          "Methanol poisoning from bootleg alcohol is the one drink risk in Bali that kills, and both Australia's Smartraveller and the UK FCDO carry standing methanol warnings for Indonesia. Methanol has no taste or smell. **Around 10 ml can cause blindness and about 30 ml — less than a shot — can kill.** Symptoms are typically delayed **12 to 24 hours**: vision disturbance often described as a snowstorm, severe headache, abdominal pain, breathlessness.",
+          "**Delayed presentation is what kills people.** Anyone who suspects methanol after drinking arak or cheap cocktails in Bali should go straight to hospital rather than sleeping it off.",
           "The source is bootleg **arak** and counterfeit brand-name spirits — real bottles refilled and resold, sometimes to licensed venues. Highest risk: free welcome shots, arak cocktails, unbranded spirits, bottomless-brunch deals, mixed jugs and cheap cocktails at beach shacks. **Sealed beer, or canned and bottled drinks opened in front of you, are the safest choice.**",
         ],
       },
@@ -14848,6 +14863,12 @@ const JOURNAL_SEO_GUIDES = [
         paragraphs: [
           "Bali is generally one of Asia's more comfortable destinations for solo women, with low street harassment and rare violent crime. Both the UK and Australian advisories do, however, flag **sexual assault reports in Bali, Lombok and the Gilis**, frequently linked to **drink spiking** and to unregistered taxis or scooter taxis hailed off the street.",
           "The practical measures are straightforward: book transport through **Grab or Gojek** rather than street taxis at night, keep to the drink rules above, choose accommodation with 24-hour reception over remote villas when travelling alone, share your live location, and avoid unlit stretches in Canggu and Kuta after dark — which are also the bag-snatching hours.",
+        ],
+      },
+      {
+        heading: "📚 Official sources",
+        paragraphs: [
+          "This guide follows the two government advisories that most Bali travelers are covered by, and both are worth a read before the flight: [Australia's Smartraveller advice for Indonesia](https://www.smartraveller.gov.au/destinations/asia/indonesia) and the [UK FCDO travel advice for Indonesia](https://www.gov.uk/foreign-travel-advice/indonesia). Both pages carry the current alert level, the methanol warning, and entry rules, and both are updated whenever the situation changes.",
         ],
       },
     ],
@@ -15432,7 +15453,8 @@ function renderSeoGuidePage(article) {
       headline: article.title,
       description: article.description,
       datePublished: JOURNAL_PUBLISHED_DATE,
-      dateModified: JOURNAL_PUBLISHED_DATE,
+      dateModified: JOURNAL_MODIFIED_DATE,
+      speakable: JOURNAL_SPEAKABLE,
       inLanguage: "en",
       image: guideImageSet(article),
       mainEntityOfPage: article.url,
@@ -15494,6 +15516,8 @@ function renderSeoGuidePage(article) {
     <meta property="og:url" content="${article.url}">
     <meta property="og:image" content="${journalOgImage(article.guide?.heroTourSlug, absoluteJournalImageUrl(article.heroImage))}">
     ${journalOgMetaBlock(journalDocumentTitle(article.title), article.description, journalOgImage(article.guide?.heroTourSlug, absoluteJournalImageUrl(article.heroImage)))}
+    <meta property="article:published_time" content="${JOURNAL_PUBLISHED_DATE}">
+    <meta property="article:modified_time" content="${JOURNAL_MODIFIED_DATE}">
     <link rel="preload" as="image" href="${article.heroImage}" fetchpriority="high">
     <link rel="preload" as="font" type="font/woff2" href="/css/fonts/cina-geo/CinaGEO-Regular.woff2" crossorigin>
     <link rel="canonical" href="${article.url}">
@@ -15520,6 +15544,7 @@ ${JOURNAL_FOOTER_ASSETS}
             <div class="sb-journal-kicker">${escapeHtml(article.articleType.badge)}</div>
             <h1>${escapeHtml(article.title)}</h1>
             <p class="sb-journal-lead">${renderRichText(article.excerpt)}</p>
+            <p class="sb-journal-dates">Published 21 May 2026 · Updated 7 August 2026</p>
             <div class="sb-journal-inline-stats">
               ${article.inlineStats.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
             </div>
@@ -15548,6 +15573,7 @@ ${JOURNAL_FOOTER_ASSETS}
                 <h2>${escapeHtml(section.heading)}</h2>
                 ${(section.paragraphs || []).map((paragraph) => `<p>${renderRichText(paragraph)}</p>`).join("")}
                 ${section.bullets?.length ? `<ul>${section.bullets.map((item) => `<li>${renderRichText(item)}</li>`).join("")}</ul>` : ""}
+                ${(section.paragraphsAfter || []).map((paragraph) => `<p>${renderRichText(paragraph)}</p>`).join("")}
               </section>
             `,
               )
@@ -15595,37 +15621,6 @@ ${JOURNAL_FOOTER_ASSETS}
 ${renderJournalTourPinCard(article.tour)}
         </div>
 
-        <section class="sb-journal-bottomrow">
-          <div>
-            <h2>Recommended tours</h2>
-            <div class="sb-journal-bottom-grid">
-              ${article.relatedTours
-                .map(
-                  (tour) => `
-                <a class="sb-journal-card sb-journal-card_compact" href="${tourRoute(tour)}">
-                  <div class="sb-journal-card__body">
-                    <div class="sb-journal-card__meta">
-                      <span class="sb-journal-chip">Tour match</span>
-                      <span class="sb-journal-card__tour">${escapeHtml(tour.area)}</span>
-                    </div>
-                    <h3>${escapeHtml(tour.title)}</h3>
-                    <p>${escapeHtml(tour.summary)}</p>
-                    <span class="sb-journal-card__cta">Open tour page</span>
-                  </div>
-                </a>
-              `,
-                )
-                .join("")}
-            </div>
-          </div>
-          <div>
-            <h2>More Bali guides</h2>
-            <div class="sb-journal-bottom-grid">
-              ${siblingGuides.map((item) => renderJournalArticleCard(item, { compact: true })).join("")}
-            </div>
-          </div>
-        </section>
-
         ${renderBaliWeatherBlock(tourRoute(article.tour))}
       </main>
       ${renderJournalBaliFooter()}
@@ -15653,6 +15648,8 @@ function renderJournalArticlePage(article) {
     <meta property="og:url" content="${article.url}">
     <meta property="og:image" content="${journalOgImage(article.tour?.slug, `${SITE_URL}${publicImagePath(article.tour)}`)}">
     ${journalOgMetaBlock(journalDocumentTitle(article.title), article.description, journalOgImage(article.tour?.slug, `${SITE_URL}${publicImagePath(article.tour)}`))}
+    <meta property="article:published_time" content="${JOURNAL_PUBLISHED_DATE}">
+    <meta property="article:modified_time" content="${JOURNAL_MODIFIED_DATE}">
     <link rel="preload" as="image" href="${publicImagePath(article.tour)}" fetchpriority="high">
     <link rel="preload" as="font" type="font/woff2" href="/css/fonts/cina-geo/CinaGEO-Regular.woff2" crossorigin>
     <link rel="canonical" href="${article.url}">
@@ -15668,7 +15665,8 @@ ${JOURNAL_FOOTER_ASSETS}
           headline: article.title,
           description: article.description,
           datePublished: JOURNAL_PUBLISHED_DATE,
-          dateModified: JOURNAL_PUBLISHED_DATE,
+          dateModified: JOURNAL_MODIFIED_DATE,
+          speakable: JOURNAL_SPEAKABLE,
           inLanguage: "en",
           image: tourImageSet(article.tour),
           mainEntityOfPage: article.url,
@@ -15722,6 +15720,7 @@ ${JOURNAL_FOOTER_ASSETS}
             <div class="sb-journal-kicker">${escapeHtml(article.articleType.badge)}</div>
             <h1>${escapeHtml(article.title)}</h1>
             <p class="sb-journal-lead">${renderRichText(article.excerpt)}</p>
+            <p class="sb-journal-dates">Published 21 May 2026 · Updated 7 August 2026</p>
             <div class="sb-journal-inline-stats">
               <span>${escapeHtml(article.tour.duration)}</span>
               <span>${escapeHtml(article.tour.format)}</span>
@@ -15756,6 +15755,7 @@ ${JOURNAL_FOOTER_ASSETS}
                 <h2>${escapeHtml(section.heading)}</h2>
                 ${(section.paragraphs || []).map((paragraph) => `<p>${renderRichText(paragraph)}</p>`).join("")}
                 ${section.bullets?.length ? `<ul>${section.bullets.map((item) => `<li>${renderRichText(item)}</li>`).join("")}</ul>` : ""}
+                ${(section.paragraphsAfter || []).map((paragraph) => `<p>${renderRichText(paragraph)}</p>`).join("")}
               </section>
             `,
               )
@@ -16011,6 +16011,7 @@ function renderJournalSharedStyles() {
   .sb-journal-article-section p{margin:0 0 14px;color:#2f2f33;font-size:17px;line-height:1.78}
   .sb-journal-article-section ul,.sb-journal-sidebar-card ul{margin:0;padding-left:18px}
   .sb-journal-article-section li,.sb-journal-sidebar-card li{color:#2f2f33;font-size:16px;line-height:1.72}
+  .sb-journal-dates{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;letter-spacing:0}
   .sb-journal-sidebar{display:grid;gap:18px;align-self:start;position:sticky;top:88px}
   .sb-journal-tourcard{padding:0;overflow:hidden}
   .sb-journal-tourcard__media{display:block;position:relative}
@@ -16767,7 +16768,10 @@ function renderRelatedCards(tour, allTours) {
 }
 
 function renderStructuredData(tour) {
-  const faq = buildFaqs(tour);
+  // В FAQPage кладём полный видимый FAQ страницы (buildWestFaqs), а не
+  // короткую четвёрку buildFaqs: schema должна совпадать с тем, что
+  // видит читатель, и это единственный FAQPage на странице.
+  const faq = buildWestFaqs(tour);
   const locale = tourLocale(tour);
   const graph = [
     {
@@ -18340,8 +18344,36 @@ return '<div class="sb-place-card' + (placeObj.topPick ? ' is-top-pick' : '') + 
   html = ensureBaliMainStabilityFix(html);
   html = ensureAiButtonBeamStyle(html);
   html = ensureBaliGlobalUiFix(html);
+  html = ensureBaliMainSchema(html, "en");
 
   writeGeneratedFile(filePath, html);
+}
+
+// Главная — точка входа для AI-краулеров, а в экспорте Tilda на ней не было
+// ни одного JSON-LD блока: организация существовала только на внутренних
+// страницах. Ставим сюда тот же узел #organization (тот же @id, чтобы все
+// страницы склеивались в одну сущность) плюс WebSite.
+function ensureBaliMainSchema(html, locale = "en") {
+  const graph = {
+    "@context": "https://schema.org",
+    "@graph": [
+      ORGANIZATION_SCHEMA,
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_URL}/#website`,
+        name: "SB Excursions",
+        url: SITE_URL,
+        inLanguage: locale,
+        publisher: { "@id": `${SITE_URL}/#organization` },
+      },
+    ],
+  };
+  const tag = `<script type="application/ld+json" id="sb-main-schema">${JSON.stringify(graph)}</script>`;
+  const clean = html.replace(/<script type="application\/ld\+json" id="sb-main-schema">[\s\S]*?<\/script>\s*/g, "");
+  if (clean.includes("</head>")) {
+    return clean.replace("</head>", `${tag}\n</head>`);
+  }
+  return `${tag}${clean}`;
 }
 
 // ─── Bali static info pages (About / FAQ) built 1:1 from the Dubai design ─────
@@ -18394,6 +18426,29 @@ const BALI_INFO_IMAGE_REPLACEMENTS = [
 ];
 
 const BALI_ABOUT_CONTENT_REPLACEMENTS = [
+  // Сырой markdown в H2 экспорта Tilda — на витрине были видны звёздочки.
+  [
+    "A travel-led agency built on passion, where **expertise meets adventure**, and every tour turns into a lifelong memory.",
+    "A travel-led agency built on passion, where expertise meets adventure, and every tour turns into a lifelong memory.",
+  ],
+  // На about не было ни одного JSON-LD: страница «кто мы» — главный носитель
+  // авторитетности, добавляем Organization + AboutPage тем же @id, что везде.
+  [
+    "</head>",
+    `<script type="application/ld+json">${JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        ORGANIZATION_SCHEMA,
+        {
+          "@type": "AboutPage",
+          "@id": `${SITE_URL}/bali/en/about#webpage`,
+          url: `${SITE_URL}/bali/en/about`,
+          name: "About SB Excursions",
+          about: { "@id": `${SITE_URL}/#organization` },
+        },
+      ],
+    })}</script></head>`,
+  ],
   [
     "<title>About SB Excursions | Global Travel Expertise in Dubai</title>",
     "<title>About SB Excursions | Bali Tours &amp; Local Travel Expertise</title>",
@@ -22637,7 +22692,21 @@ ${body}
 
   fs.writeFileSync(path.join(projectRoot, "sitemap.xml"), xml);
 
-  const robots = `User-agent: *
+  // AI-краулеры перечислены явно, хотя wildcard их и так пускает: явные
+  // Allow-блоки страхуют от будущих точечных запретов и документируют,
+  // что доступ для AI-поиска — осознанное решение, а не случайность.
+  const robots = `User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: CCBot
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: *
 Allow: /
 
 Sitemap: ${SITE_URL}/sitemap.xml
