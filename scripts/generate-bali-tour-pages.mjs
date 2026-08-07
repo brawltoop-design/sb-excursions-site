@@ -165,6 +165,17 @@ const BALI_LANGUAGE_OPTIONS = [
 ];
 const TRANSLATION_CACHE_PATH = path.join(projectRoot, ".generated", "bali-translation-cache.json");
 const JOURNAL_PUBLISHED_DATE = "2026-05-21";
+// Автор статей журнала. Фото добавится отдельным полем image, когда владелец
+// пришлёт файл (положить в images/ и вписать путь) — байлайн и schema уже
+// готовы к этому. sameAs дополняется личными профилями по мере появления.
+const JOURNAL_AUTHOR = {
+  "@type": "Person",
+  "@id": `${SITE_URL}/#author-alex-moskvin`,
+  name: "Alex Moskvin",
+  jobTitle: "Founder of SB Excursions",
+  worksFor: { "@id": `${SITE_URL}/#organization` },
+  url: `${SITE_URL}/bali/en/about`,
+};
 // Дата последней содержательной правки статей (переценка туров, переписанные
 // блоки). Обновлять руками при реальных правках контента — не при каждой
 // сборке, иначе сигнал свежести превращается в шум.
@@ -15459,7 +15470,7 @@ function renderSeoGuidePage(article) {
       image: guideImageSet(article),
       mainEntityOfPage: article.url,
       keywords: guideKeywords.join(", "),
-      author: { "@type": "Organization", name: "SB Excursions" },
+      author: JOURNAL_AUTHOR,
       publisher: ORGANIZATION_SCHEMA,
     },
     {
@@ -15544,7 +15555,7 @@ ${JOURNAL_FOOTER_ASSETS}
             <div class="sb-journal-kicker">${escapeHtml(article.articleType.badge)}</div>
             <h1>${escapeHtml(article.title)}</h1>
             <p class="sb-journal-lead">${renderRichText(article.excerpt)}</p>
-            <p class="sb-journal-dates">Published 21 May 2026 · Updated 7 August 2026</p>
+            <p class="sb-journal-dates">By Alex Moskvin, Founder of SB Excursions · Published 21 May 2026 · Updated 7 August 2026</p>
             <div class="sb-journal-inline-stats">
               ${article.inlineStats.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
             </div>
@@ -15670,7 +15681,7 @@ ${JOURNAL_FOOTER_ASSETS}
           inLanguage: "en",
           image: tourImageSet(article.tour),
           mainEntityOfPage: article.url,
-          author: { "@type": "Organization", name: "SB Excursions" },
+          author: JOURNAL_AUTHOR,
           publisher: ORGANIZATION_SCHEMA,
           about: {
             "@type": "TouristTrip",
@@ -15720,7 +15731,7 @@ ${JOURNAL_FOOTER_ASSETS}
             <div class="sb-journal-kicker">${escapeHtml(article.articleType.badge)}</div>
             <h1>${escapeHtml(article.title)}</h1>
             <p class="sb-journal-lead">${renderRichText(article.excerpt)}</p>
-            <p class="sb-journal-dates">Published 21 May 2026 · Updated 7 August 2026</p>
+            <p class="sb-journal-dates">By Alex Moskvin, Founder of SB Excursions · Published 21 May 2026 · Updated 7 August 2026</p>
             <div class="sb-journal-inline-stats">
               <span>${escapeHtml(article.tour.duration)}</span>
               <span>${escapeHtml(article.tour.format)}</span>
