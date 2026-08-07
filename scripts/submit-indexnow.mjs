@@ -30,6 +30,10 @@ const key = (await fs.readFile(path.join(ROOT, ".indexnow-key"), "utf8")).trim()
 // Приоритет: новый кластер «вода и пляжи» + страницы, у которых менялись
 // заголовки и цены. Именно их нужно переобойти в первую очередь.
 const CLUSTER = [
+  "nusa-penida-day-trip-from-ubud", "nusa-penida-day-trip-from-uluwatu",
+  "nusa-penida-day-trip-from-canggu", "nusa-penida-day-trip-from-seminyak",
+  "bali-private-driver-cost", "bali-snorkeling-for-beginners", "bali-7-day-itinerary",
+  "how-to-get-around-bali", "gili-t-day-trip-from-seminyak",
   "best-snorkeling-spots-bali", "blue-lagoon-padang-bai-guide", "best-beaches-nusa-penida",
   "manta-point-bali-guide", "crystal-bay-nusa-penida", "can-you-swim-in-bali",
   "snorkeling-with-turtles-bali", "best-time-clear-water-bali", "gili-islands-vs-nusa-penida",
