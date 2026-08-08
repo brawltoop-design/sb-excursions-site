@@ -59,16 +59,38 @@ SUBREDDITS = [
     "SoloFemaleTravelers",
 ]
 
+# Из этих сабреддитов присылать ВСЕ новые посты, без фильтра по ключевым
+# словам: в r/bali любой пост про Бали по определению, включая «need a driver»
+# без единого названия места. Если станет слишком шумно — убери "bali" отсюда,
+# и он вернётся к фильтру по словам, как остальные.
+NOTIFY_ALL_SUBREDDITS = [
+    "bali",
+]
+
 KEYWORDS = [
-    # Английский — французский и испанский тоже сюда попадают: названия
-    # мест на Бали пишутся латиницей одинаково на всех трёх языках.
-    "bali", "nusa penida", "nusa lembongan", "ubud", "canggu", "uluwatu",
-    "seminyak", "gili ", "lempuyang", "tegalalang", "kuta", "sanur",
-    "jimbaran", "amed", "munduk", "bedugul", "denpasar",
-    # Русский — кириллица, отдельная строка не матчится латиницей
-    "бали", "нуса-пенида", "нуса пенида", "нуса-лембонган", "убуд", "чангу",
-    "улувату", "семиньяк", "гили", "лемпуянг", "тегалаланг", "кута", "санур",
-    "джимбаран", "амед", "мундук", "бедугул", "денпасар",
+    # --- География, латиница (EN/FR/ES пишут названия одинаково) ---
+    "bali", "penida", "lembongan", "ubud", "canggu", "uluwatu",
+    "seminyak", "gili", "lempuyang", "tegalalang", "tegallalang", "kuta",
+    "sanur", "jimbaran", "amed", "munduk", "bedugul", "denpasar",
+    "nusa dua", "lovina", "kintamani", "jatiluwih", "sidemen", "batur",
+    # --- Уникальные достопримечательности: сами по себе означают Бали,
+    # ловят посты, где слово Bali вообще не написано ---
+    "kelingking", "manta point", "broken beach", "angel billabong",
+    "angel's billabong", "crystal bay", "diamond beach",
+    "gates of heaven", "gate of heaven", "tanah lot", "tirta gangga",
+    "tirtagangga", "ulun danu", "besakih", "handara", "taman ayun",
+    "monkey forest", "campuhan", "sekumpul", "tegenungan", "tibumana",
+    "padang padang", "bingin",
+    # ВАЖНО: общие активности (atv, snorkeling, waterfall, swing) сюда НЕ
+    # добавлять — в r/travel и r/solotravel они матчат Дубай и Таиланд.
+    # Примечание: "diamond beach" есть ещё в Исландии — изредка может
+    # прилететь исландский пост, это осознанный компромисс, можно удалить.
+    # --- Русский, кириллица. Ключи обрезаны до основы слова, потому что
+    # русские названия склоняются: "в Ловину", "на Пениде", "в Куте" ---
+    "бали", "нуса-пенид", "нуса пенид", "пенид", "лембонган", "убуд",
+    "чангу", "улувату", "семиньяк", "гили", "лемпуянг", "тегалаланг",
+    "кут", "санур", "джимбаран", "амед", "мундук", "бедугул", "денпасар",
+    "ловин", "кинтамани", "келингкинг", "тана лот", "тана-лот",
     # Китайский сознательно не добавлен — Reddit заблокирован в материковом
     # Китае, китаеязычных тредов на этих сабреддитах практически нет.
 ]
@@ -81,6 +103,7 @@ CHECK_EVERY_SECONDS = 300  # раз в 5 минут — вежливая час�
 
 SEEN_FILE = Path(__file__).parent / "reddit_seen_posts.json"
 MAX_SEEN_STORED = 3000
+_NOTIFY_ALL_LOWER = {s.lower() for s in NOTIFY_ALL_SUBREDDITS}
 ATOM_NS = "{http://www.w3.org/2005/Atom}"
 # Честный User-Agent вместо притворства браузером — по факту так безопаснее:
 # запрос через requests не повторяет остальные сигналы настоящего Chrome
@@ -109,9 +132,26 @@ def save_seen(seen):
         print(f"[Внимание] Не смог сохранить reddit_seen_posts.json: {e}")
 
 
+_KEYWORD_RE = None
+
+
+def _keyword_regex():
+    """Собирает один regex из всех ключевых слов, с привязкой к началу слова.
+
+    Раньше поиск шёл по подстроке, и "amed" срабатывал внутри "named",
+    "renamed", "dreamed". Теперь ключ должен стоять в начале слова:
+    "Amed", "amed's" — да, "named" — нет. Продолжения слова разрешены
+    намеренно: "bali" ловит "Balinese", "гили" ловит "Гилис".
+    """
+    global _KEYWORD_RE
+    if _KEYWORD_RE is None:
+        parts = [r"\b" + re.escape(kw.strip()) for kw in KEYWORDS if kw.strip()]
+        _KEYWORD_RE = re.compile("|".join(parts), re.IGNORECASE)
+    return _KEYWORD_RE
+
+
 def matches_keywords(text):
-    text_lower = text.lower()
-    return any(kw in text_lower for kw in KEYWORDS)
+    return bool(_keyword_regex().search(text))
 
 
 def send_telegram(message):
@@ -221,7 +261,8 @@ def poll_once(seen, notify=True):
             found += 1
 
             full_text = f"{post['title']} {post['content_raw'] or ''}"
-            if notify and matches_keywords(full_text):
+            is_notify_all_sub = post["subreddit"].lower() in _NOTIFY_ALL_LOWER
+            if notify and (is_notify_all_sub or matches_keywords(full_text)):
                 print(f"[Найдено] r/{post['subreddit']}: {post['title']}")
                 send_telegram(format_message(post))
         save_seen(seen)
