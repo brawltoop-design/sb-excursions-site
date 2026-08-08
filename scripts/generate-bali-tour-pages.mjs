@@ -9693,6 +9693,158 @@ const JOURNAL_FEATURED_GUIDE_SLUGS = [
 
 const JOURNAL_SEO_GUIDES = [
   {
+    "slug": "best-sunset-spots-bali",
+    "badge": "Travel guide",
+    "navLabel": "Best sunset spots",
+    "cardTourLabel": "Sunset cruise",
+    "heroTourSlug": "sunset-cruise-bali",
+    "relatedTourSlugs": [
+      "sunset-cruise-bali",
+      "tanah-lot-bedugul-tour",
+      "private-car-with-driver-bali"
+    ],
+    "inlineStats": [
+      "8 sunset spots",
+      "Sunset 18:00-18:45 year-round",
+      "Cruise from $150"
+    ],
+    "title": "8 Best Sunset Spots in Bali, Sorted by Where You Sleep",
+    "description": "The 8 best sunset spots in Bali, from the Uluwatu cliffs to a boat off Benoa, sorted by area so you pick by drive time instead of by photo.",
+    "excerpt": "The best sunset spots in Bali are almost all on the west coast, and the honest way to choose between them is by where you are staying rather than by which photo looks best. Bali sits close to the equator, so the sun drops fast and lands between roughly 18:00 and 18:45 all year — you get about 30 usable minutes, not the long golden hour of higher latitudes. That makes drive time the deciding factor: a spot 90 minutes away costs you the whole evening. This guide covers eight places worth the trip, from free clifftops and beach bars to the water itself on a private cruise from $150, and tells you which one fits your neighborhood.",
+    "rankings": [
+      {
+        "name": "Uluwatu cliffs",
+        "imageSrc": "/images/places/uluwatu-cliffs-at-sunset.jpg",
+        "area": "Bukit peninsula",
+        "bestFor": "The biggest view, no drink minimum",
+        "summary": "The limestone cliffs south of Uluwatu take the sunset head-on from high above the surf, and the view costs nothing if you stay outside the temple grounds. Arrive at least an hour early: parking fills, and the walk along the cliff path is the point. Monkeys here are practiced thieves — sunglasses and phones go in a zipped bag."
+      },
+      {
+        "name": "Tanah Lot temple",
+        "imageSrc": "/images/tours-real/tanah-lot-bedugul-tour.jpg",
+        "area": "West coast, near Tabanan",
+        "bestFor": "The temple-silhouette photo",
+        "summary": "The only spot on this list where the sunset comes with a subject in front of it: a sea temple on a rock, backlit as the sun drops behind it. There is a small entrance fee and a real crowd on the viewing terraces. It works best as the closing stop of a day trip rather than a dedicated two-hour evening drive."
+      },
+      {
+        "name": "A private boat off Benoa",
+        "imageSrc": "/images/tours-real/sunset-cruise-bali.jpg",
+        "area": "Benoa harbor, south Bali",
+        "bestFor": "Anniversaries and proposals",
+        "summary": "From the water there is no crowd, no parking and no scooter traffic on the way home — just an open horizon in every direction. Our [sunset cruise](/bali/en/tours/sunset-cruise-bali) runs 2-4 hours from Benoa with late-afternoon transfer support, from $150. It is the most expensive option here and the only one nobody else is standing in."
+      },
+      {
+        "name": "Seminyak beach bars",
+        "imageSrc": "/images/places/seminyak-sunset.jpg",
+        "area": "Seminyak",
+        "bestFor": "Sunset with a drink and no plan",
+        "summary": "A straight west-facing beach lined with bars where the cost of entry is one drink and a beanbag. Double Six and the stretch north toward Petitenget give you the same sky as the famous cliffs with none of the driving. Come at least 45 minutes early on weekends if you want a front-row bag."
+      },
+      {
+        "name": "Canggu and Echo Beach",
+        "imageSrc": "/images/places/canggu-beach-club.jpg",
+        "area": "Canggu",
+        "bestFor": "Surf silhouettes and a younger crowd",
+        "summary": "Black volcanic sand, surfers still in the water at last light and a row of low-key warungs and beach clubs behind them. The lineup in the foreground is what makes the photo here. Batu Bolong is the busiest; walk fifteen minutes north to Echo Beach for the same sun with more space around you."
+      },
+      {
+        "name": "Jimbaran Bay",
+        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "area": "Jimbaran",
+        "bestFor": "Dinner with your feet in the sand",
+        "summary": "A curved, sheltered bay on the west side of the airport peninsula, lined with seafood grills that put tables directly on the sand for the evening. The water here is calm enough to stand in while the sky changes, which makes it the easiest sunset on this list to enjoy with small children."
+      },
+      {
+        "name": "Kuta and Legian beach",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "Kuta, Legian",
+        "bestFor": "Walking distance from most hotels",
+        "summary": "Underrated because of its reputation: the sand is wide, the horizon is unobstructed, and half of south Bali is already staying within walking distance. There is no entrance fee, no minimum spend and no drive. If you are in Kuta and someone tells you to drive 90 minutes for a better sky, they are wrong about tonight."
+      },
+      {
+        "name": "Canggu rice fields",
+        "imageSrc": "/images/places/canggu-rice-fields.jpg",
+        "area": "Inland Canggu, Ubud fringes",
+        "bestFor": "Sunset without the coast crowd",
+        "summary": "The often-forgotten option: the light over green terraces at the end of the day is softer than anything on the beach, and there is nobody there. It works inland from Canggu and around Ubud, where the sun sets behind ridgelines rather than the sea. Bring mosquito repellent — this is the one place on the list where it matters."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What time is sunset in Bali, and how long you actually get",
+        "paragraphs": [
+          "Sunset in Bali falls between roughly **18:00 and 18:45 all year round**, and the whole show is short. The island sits about 8 degrees south of the equator, so the sun drops at a steep angle instead of sliding sideways along the horizon — you get roughly **30 usable minutes** from the first good colour to full dark, not the long, forgiving golden hour of northern Europe or California. Plan to be standing at your spot 45-60 minutes early, not five minutes early.",
+          "That short window is why drive time matters more than the view itself. A spot 90 minutes away in evening traffic costs you the entire evening and gets you there stressed; the beach three minutes from your hotel gets you there relaxed with a drink in hand. The sky is the same sky. Unless you are specifically after a temple silhouette or a boat deck, the honest answer for most evenings is: go to the nearest west-facing coast."
+        ]
+      },
+      {
+        "heading": "Pick by where you sleep, not by the photo",
+        "paragraphs": [
+          "Almost every sunset shortlist online is sorted by how dramatic the picture looks, which is useless when you are already tired at 17:00 and deciding what to do tonight. Sorted by neighborhood, the choice gets simple:"
+        ],
+        "bullets": [
+          "**Staying in Seminyak, Legian or Kuta**: walk to the beach in front of you. Same sun, zero driving. Our guide to the [beaches of Canggu and Seminyak](/bali/en/journal/best-beaches-canggu-seminyak) covers which stretch suits which evening.",
+          "**Staying in Canggu**: Batu Bolong or Echo Beach on foot, or the rice fields inland if the coast feels too busy.",
+          "**Staying in Uluwatu or on the Bukit**: the cliffs are on your doorstep — see [the beaches of Uluwatu and the Bukit](/bali/en/journal/best-beaches-uluwatu-bukit) for the surrounding coves.",
+          "**Staying in Jimbaran or Nusa Dua**: Jimbaran Bay for dinner on the sand; the Bukit cliffs are 20-40 minutes away depending on traffic.",
+          "**Staying in Sanur**: your coast faces east, so sunset means crossing the island — treat it as an outing, not a nightly habit, or watch sunrise instead.",
+          "**Staying in Ubud**: no coast at all. Rice-field light inland, or fold Tanah Lot into a day trip that ends there."
+        ],
+        "paragraphsAfter": [
+          "That last case is the one people get wrong most often. Ubud to the west coast is a genuinely long evening drive, and doing it purely for a sunset usually disappoints. The better move is to make the sunset the last stop of a day you were already spending in the car — which is exactly how our [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) is built, from $59 over 9-11 hours with a morning hotel pickup."
+        ]
+      },
+      {
+        "heading": "When the sky is actually good, and when it is grey",
+        "paragraphs": [
+          "The most reliable sunsets come in the **dry season from April to October**, when the horizon stays clear and the sun sets into open sea rather than into cloud. From **November to March** the afternoons build cloud, and evenings split into two kinds: flat grey nothing, or the dramatic broken-cloud sky that produces the best colour of the whole year. Wet-season sunsets are a gamble that occasionally pays out much bigger than a dry-season one.",
+          "Two practical notes for either season. First, do not leave when the sun touches the horizon — the strongest colour usually arrives **10-20 minutes after** the sun has gone, and half the crowd misses it walking back to the parking lot. Second, check the month you are travelling in against our [month-by-month guide to visiting Bali](/bali/en/journal/best-time-to-visit-bali-month-by-month), because the same spot behaves very differently in February and in August."
+        ]
+      },
+      {
+        "heading": "Making the sunset the end of a full day",
+        "paragraphs": [
+          "The best evenings on this list are the ones you did not drive out for specially. A day that ends at the coast costs you nothing extra in time, and it removes the worst part of a Bali sunset plan: sitting in westbound traffic at 17:30 watching the light get better through a car window.",
+          "Three ways we build that into a day. The [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) from $59 works its way through the highlands and lands at the temple for the evening. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car lets you set your own route and simply tell the driver where you want to be at 18:00. And the [sunset cruise](/bali/en/tours/sunset-cruise-bali) from $150 skips the land question entirely. If you want the temple comparison in detail before choosing, we put the two icons head to head in [Tanah Lot vs Uluwatu at sunset](/bali/en/journal/tanah-lot-vs-uluwatu-sunset)."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What time is sunset in Bali?",
+        "answer": "Between roughly 18:00 and 18:45 year-round. Bali sits close to the equator, so the time barely shifts between seasons — unlike Europe, there is no late summer evening. Arrive 45-60 minutes early, because the usable light lasts about 30 minutes in total."
+      },
+      {
+        "question": "Where is the best sunset in Bali?",
+        "answer": "The Uluwatu cliffs give the biggest open view and cost nothing outside the temple grounds. For a sunset with a subject in it, Tanah Lot puts a sea temple in the frame. For no crowd at all, a private boat off Benoa from $150 is the only spot on this list nobody else is standing in."
+      },
+      {
+        "question": "Can you watch the sunset in Sanur?",
+        "answer": "No — Sanur faces east, so the sun sets behind the island rather than over the sea. Sanur is Bali's sunrise coast instead. For sunset you cross to the west coast, roughly 30-60 minutes depending on traffic, or plan an early morning on your own beach."
+      },
+      {
+        "question": "Is Tanah Lot worth it for sunset?",
+        "answer": "Yes if you want the temple silhouette photo and arrive as part of a day trip. No if it means a dedicated two-hour evening drive from Ubud or the south, because the viewing terraces get genuinely crowded and the light lasts half an hour."
+      },
+      {
+        "question": "Do you need to pay to watch the sunset in Bali?",
+        "answer": "Not usually. Kuta, Legian, Seminyak, Canggu, Jimbaran and the Uluwatu cliff paths are all free. Tanah Lot and Uluwatu temple charge a small entrance fee, beach clubs expect you to buy a drink, and a private cruise starts from $150."
+      },
+      {
+        "question": "What is the best month for sunsets in Bali?",
+        "answer": "April to October, the dry season, gives the most consistently clear horizons. November to March is a gamble: many flat grey evenings, but the broken-cloud nights in the wet season produce the strongest colour of the year."
+      },
+      {
+        "question": "Where can I watch sunset in Bali with kids?",
+        "answer": "Jimbaran Bay is the easiest — calm shallow water, seafood grills with tables on the sand, and no cliffs or steps. Seminyak and Kuta beaches also work if your hotel is walking distance, which keeps the evening short."
+      },
+      {
+        "question": "Is a sunset cruise in Bali worth the money?",
+        "answer": "It is worth it for an occasion rather than an ordinary evening: no crowd, no parking, no drive home in the dark. Our cruise runs 2-4 hours from Benoa from $150. For an ordinary Tuesday, the free beach in front of your hotel gives you the same sky."
+      }
+    ]
+  },
+  {
     "slug": "nusa-penida-day-trip-from-sanur",
     "badge": "Travel guide",
     "navLabel": "Penida from Sanur",
@@ -22102,6 +22254,8 @@ const REVIEW_FORM_I18N = {
     privacyLink: "Privacy Policy",
   },
   ru: {
+    "8 Best Sunset Spots in Bali, Sorted by Where You Sleep":
+      "8 лучших мест для заката на Бали | Выбор по району",
     title: "Были на этом туре? Оставьте отзыв",
     sub: "Отзыв улетит прямо в наш WhatsApp — фото можно прикрепить там же в чате!",
     rating: "Ваша оценка",
@@ -22116,6 +22270,8 @@ const REVIEW_FORM_I18N = {
     privacyLink: "Политика конфиденциальности",
   },
   es: {
+    "8 Best Sunset Spots in Bali, Sorted by Where You Sleep":
+      "8 Mejores Lugares para Ver el Atardecer en Bali | Por Zona",
     title: "¿Hiciste este tour? Deja tu reseña",
     sub: "Tu reseña llega directo a nuestro WhatsApp — ¡adjunta tus fotos en el chat!",
     rating: "Tu puntuación",
@@ -22130,6 +22286,8 @@ const REVIEW_FORM_I18N = {
     privacyLink: "Política de privacidad",
   },
   fr: {
+    "8 Best Sunset Spots in Bali, Sorted by Where You Sleep":
+      "8 meilleurs spots de coucher de soleil à Bali | Par quartier",
     title: "Vous avez fait cette excursion ? Laissez un avis",
     sub: "Votre avis arrive directement sur notre WhatsApp — joignez vos photos dans la conversation !",
     rating: "Votre note",
@@ -25495,6 +25653,8 @@ const PINNED_TRANSLATIONS = {
       "Bali est-elle sûre en 2026 ? 7 arnaques courantes à éviter",
   },
   "zh-CN": {
+    "8 Best Sunset Spots in Bali, Sorted by Where You Sleep":
+      "巴厘岛8大日落观赏地 | 按住宿区域挑选",
     "How Much Does a Bali Trip Cost? Real Prices for 2026":
       "巴厘岛旅行要花多少钱？2026年真实物价与三档预算",
   },
