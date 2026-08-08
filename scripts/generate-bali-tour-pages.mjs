@@ -22254,8 +22254,6 @@ const REVIEW_FORM_I18N = {
     privacyLink: "Privacy Policy",
   },
   ru: {
-    "8 Best Sunset Spots in Bali, Sorted by Where You Sleep":
-      "8 лучших мест для заката на Бали | Выбор по району",
     title: "Были на этом туре? Оставьте отзыв",
     sub: "Отзыв улетит прямо в наш WhatsApp — фото можно прикрепить там же в чате!",
     rating: "Ваша оценка",
@@ -22270,8 +22268,6 @@ const REVIEW_FORM_I18N = {
     privacyLink: "Политика конфиденциальности",
   },
   es: {
-    "8 Best Sunset Spots in Bali, Sorted by Where You Sleep":
-      "8 Mejores Lugares para Ver el Atardecer en Bali | Por Zona",
     title: "¿Hiciste este tour? Deja tu reseña",
     sub: "Tu reseña llega directo a nuestro WhatsApp — ¡adjunta tus fotos en el chat!",
     rating: "Tu puntuación",
@@ -22286,8 +22282,6 @@ const REVIEW_FORM_I18N = {
     privacyLink: "Política de privacidad",
   },
   fr: {
-    "8 Best Sunset Spots in Bali, Sorted by Where You Sleep":
-      "8 meilleurs spots de coucher de soleil à Bali | Par quartier",
     title: "Vous avez fait cette excursion ? Laissez un avis",
     sub: "Votre avis arrive directement sur notre WhatsApp — joignez vos photos dans la conversation !",
     rating: "Votre note",
@@ -25613,6 +25607,8 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "8 Best Sunset Spots in Bali, Sorted by Where You Sleep":
+      "8 лучших мест для заката на Бали | Выбор по району",
     "8 Best Instagram Places in Bali for Photos That Still Look Good in Real Life":
       "8 самых фотогеничных мест Бали | Локации, время, как добраться",
     "Is Bali Safe in 2026? 7 Common Scams and How to Avoid Them":
@@ -25637,6 +25633,8 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "8 Best Sunset Spots in Bali, Sorted by Where You Sleep":
+      "8 Mejores Lugares para Ver el Atardecer en Bali | Por Zona",
     "Where to Stay in Bali for First-Timers | 6 Areas Compared":
       "Dónde Alojarse en Bali | 6 Zonas Comparadas para Primera Vez",
     "7 Best Beach Clubs in Bali | Vibe, Areas and Sunset Timing":
@@ -25647,6 +25645,8 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "8 Best Sunset Spots in Bali, Sorted by Where You Sleep":
+      "8 meilleurs spots de coucher de soleil à Bali | Par quartier",
     "8 Best Beaches in Bali With Crystal Clear Water for Swimming, Snorkeling and Photos":
       "8 Plus Belles Plages de Bali à l'Eau Cristalline",
     "Is Bali Safe in 2026? 7 Common Scams and How to Avoid Them":
@@ -28012,6 +28012,31 @@ function writeSitemap() {
 
   const localizedPath = (code, enPath) => (code === "en" ? enPath : enPath.replace("/bali/en/", `/bali/${code}/`));
 
+  // Картинки страницы прямо в карте сайта. Обычный обход находит далеко не все
+  // фотографии (часть грузится лениво, часть лежит глубоко в разметке), а поиск
+  // по картинкам — живой источник трафика для туризма: человек ищет «kelingking
+  // beach», видит наше фото и приходит на страницу тура. Тянем те же URL, что
+  // уже перечислены в schema страницы, чтобы список не разъезжался с контентом.
+  const sitemapImages = new Map();
+  const rememberImages = (enPath, urls) => {
+    const clean = [...new Set((urls || []).filter(Boolean))].slice(0, 12);
+    if (clean.length) sitemapImages.set(enPath, clean);
+  };
+  for (const tour of tours) {
+    rememberImages(`/bali/en/tours/${tour.slug}`, [absoluteImageUrl(tour)]);
+  }
+  for (const article of buildSeoGuideArticles()) {
+    rememberImages(`/bali/en/journal/${article.guide.slug}`, guideImageSet(article));
+  }
+  for (const article of buildJournalArticles()) {
+    rememberImages(article.route, [`${SITE_URL}${publicImagePath(article.tour)}`]);
+  }
+
+  const imageTags = (enPath) =>
+    (sitemapImages.get(enPath) || [])
+      .map((url) => `\n    <image:image><image:loc>${escapeHtml(url)}</image:loc></image:image>`)
+      .join("");
+
   const groupEntries = (enPath) => {
     const alternates = langs
       .map((code) => `\n    <xhtml:link rel="alternate" hreflang="${code}" href="${SITE_URL}${localizedPath(code, enPath)}"/>`)
@@ -28020,7 +28045,7 @@ function writeSitemap() {
     return langs
       .map(
         (code) => `  <url>
-    <loc>${SITE_URL}${localizedPath(code, enPath)}</loc>${alternates}${xDefault}
+    <loc>${SITE_URL}${localizedPath(code, enPath)}</loc>${alternates}${xDefault}${imageTags(enPath)}
     <lastmod>${lastmod}</lastmod>
   </url>`,
       )
@@ -28059,7 +28084,7 @@ function writeSitemap() {
   const body = [...dubaiSingles.map(simpleEntry), ...baliGroups.map(groupEntries)].join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${body}
 </urlset>
 `;
