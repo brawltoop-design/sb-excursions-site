@@ -95,6 +95,14 @@
   ],
   "rewrites": [
     {
+      "source": "/bali/en/tour-prices",
+      "destination": "/bali-prices-index.html"
+    },
+    {
+      "source": "/work-with-us",
+      "destination": "/work-with-us.html"
+    },
+    {
       "source": "/bali/:lang/review",
       "destination": "/bali-review.html"
     },

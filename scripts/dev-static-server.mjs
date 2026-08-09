@@ -33,6 +33,8 @@ function rewrite(urlPath) {
   // локальная проверка показывала совсем другую страницу: без блока маршрута,
   // с другими фото и другим текстом. Правила убраны, ниже работает то же
   // общее правило, что и на проде.
+  if (urlPath === "/bali/en/tour-prices") return "/bali-prices-index.html";
+  if (urlPath === "/work-with-us") return "/work-with-us.html";
   if ((m = urlPath.match(/^\/bali\/(en|ru|es|fr|zh)\/privacy-policy$/)) || urlPath === "/privacy-policy") return "/bali-privacy.html";
   if ((m = urlPath.match(/^\/bali\/(en|ru|es|fr|zh)\/terms$/)) || urlPath === "/terms") return "/bali-terms.html";
   if ((m = urlPath.match(/^\/bali\/(en|ru|es|fr|zh)\/review$/))) return "/bali-review.html";

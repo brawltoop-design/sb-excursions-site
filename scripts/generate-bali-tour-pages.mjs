@@ -28510,7 +28510,12 @@ function writeSitemap() {
     "/dubai/en/tours/dubai-marina-1-hour-shared-yacht-tour",
   ];
 
-  const body = [...dubaiSingles.map(simpleEntry), ...baliGroups.map(groupEntries)].join("\n");
+  // Одноязычные страницы вне генератора: прайс-индекс (собирает
+  // scripts/build-prices-page.mjs) и партнёрская Work With Us. Языковых
+  // версий у них нет, поэтому идут без hreflang-группы.
+  const baliSingles = ["/bali/en/tour-prices", "/work-with-us"];
+
+  const body = [...dubaiSingles.map(simpleEntry), ...baliSingles.map(simpleEntry), ...baliGroups.map(groupEntries)].join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">

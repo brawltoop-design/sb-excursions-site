@@ -1,0 +1,86 @@
+/*
+ * Родной «хром» сайта для кастомных страниц (work-with-us, прайс-индекс).
+ *
+ * Владелец попросил, чтобы на этих страницах стояли ЕГО хедер и футер —
+ * ровно те, что на страницах туров. Скопировать их разметку руками нельзя:
+ * хедер (t228 + мобильный t451) и футер (t396) живут вместе с тильдовским
+ * CSS/JS-стеком, скриптом прилипающей шапки и согласием на куки, и при
+ * любой правке генератора разъехались бы с сайтом.
+ *
+ * Поэтому кастомная страница собирается ИЗ донорской страницы тура:
+ *   • префикс — всё до первого контентного блока: <head> со стеком Тильды,
+ *     защитой от мигания, стилями шапки + сами блоки хедера;
+ *   • суффикс — от блока футера до конца: футер, аналитика, согласие,
+ *     скрипт «Туры» в мобильном меню;
+ *   • между ними вставляется контент кастомной страницы.
+ * Мета-теги, schema и WhatsApp-тексты донора заменяются на свои.
+ *
+ * Так хедер и футер обновляются сами при каждой пересборке сайта.
+ */
+import { promises as fs } from "node:fs";
+import path from "node:path";
+
+const DONOR = "bali-tour-ubud-highlights-tour.html";
+// Границы: первый контентный блок тура и блок футера. Если генератор
+// когда-нибудь сменит id блоков — упадём с понятной ошибкой, а не соберём
+// страницу с чужим контентом.
+const FIRST_CONTENT_REC = '<div id="rec2121233163"';
+const FOOTER_REC = '<div id="rec1803718291"';
+// Тяжёлый скрипт раскладки туровой страницы: целится в блоки, которых на
+// кастомной странице нет, — 39 КБ мёртвого кода, вырезаем.
+const TOUR_LAYOUT_SCRIPT = /<script id="sb-west-page-layout-autofit">[\s\S]*?<\/script>/;
+
+export async function buildChromedPage(root, page) {
+  const donor = await fs.readFile(path.join(root, DONOR), "utf8");
+  const iContent = donor.indexOf(FIRST_CONTENT_REC);
+  const iFooter = donor.indexOf(FOOTER_REC);
+  if (iContent < 0 || iFooter < 0 || iFooter < iContent) {
+    throw new Error(`донор ${DONOR} изменился: не нашёл граничные блоки хедера/футера`);
+  }
+
+  let prefix = donor.slice(0, iContent);
+  let suffix = donor.slice(iFooter);
+
+  const waHref = `https://wa.me/6285333685020?text=${encodeURIComponent(page.waText)}`;
+  const swapWa = (s) => s.replace(/https:\/\/wa\.me\/6285333685020\?text=[^"']*/g, waHref);
+
+  // --- префикс: голова страницы ---
+  prefix = prefix
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${page.title}</title>`)
+    .replace(/(<meta name="description" content=")[^"]*(")/, `$1${page.description}$2`)
+    .replace(/(<link rel="canonical" href=")[^"]*(")/, `$1${page.canonical}$2`)
+    // языковых версий у кастомных страниц нет — hreflang турового донора убираем
+    .replace(/\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*"\s*\/?>/g, "")
+    .replace(/(<meta property="og:url" content=")[^"]*(")/, `$1${page.canonical}$2`)
+    .replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${page.title}$2`)
+    .replace(/(<meta property="og:description" content=")[^"]*(")/, `$1${page.description}$2`)
+    .replace(/(<meta property="og:image" content=")[^"]*(")/, `$1${page.ogImage}$2`)
+    .replace(/(<meta name="twitter:title" content=")[^"]*(")/, `$1${page.title}$2`)
+    .replace(/(<meta name="twitter:description" content=")[^"]*(")/, `$1${page.description}$2`)
+    .replace(/(<meta name="twitter:image" content=")[^"]*(")/, `$1${page.ogImage}$2`)
+    // schema тура (Product, TouristTrip, FAQ…) на кастомной странице — обман поиска
+    .replace(/\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/g, "");
+
+  // preload героя тура: либо меняем на картинку этой страницы, либо убираем
+  prefix = page.heroPreload
+    ? prefix.replace(/(<link rel="preload" as="image" href=")[^"]*(")/, `$1${page.heroPreload}$2`)
+    : prefix.replace(/\s*<link rel="preload" as="image"[^>]*>/, "");
+
+  // мёртвые языковые ссылки Ru/Fr в хедере ведут в никуда — ведём на главные
+  prefix = swapWa(prefix)
+    .replace(/href="">Ru</g, 'href="/bali/ru/main-page">Ru<')
+    .replace(/href="">Fr</g, 'href="/bali/fr/main-page">Fr<');
+
+  // свои schema, стили и класс .js для reveal-анимаций — в конец головы
+  prefix = prefix.replace(
+    "</head>",
+    `<script type="application/ld+json">${JSON.stringify(page.schema)}</script>\n` +
+      `<script>document.documentElement.classList.add("js");</script>\n${page.styleBlock}\n</head>`,
+  );
+
+  // --- суффикс: футер и служебные скрипты ---
+  suffix = swapWa(suffix).replace(TOUR_LAYOUT_SCRIPT, "");
+  if (page.bodyEndScript) suffix = suffix.replace("</body>", `${page.bodyEndScript}\n</body>`);
+
+  return prefix + page.bodyContent + suffix;
+}

@@ -18,6 +18,8 @@ const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
 const STEPS = [
   ["generate-bali-tour-pages.mjs", "генерация страниц туров, журнала и гайдов"],
+  ["build-prices-page.mjs", "прайс-индекс всех туров из живых данных"],
+  ["build-work-with-us.mjs", "партнёрская страница Work With Us"],
   ["fix-fouc.mjs", "защита от мигания при загрузке"],
   ["add-vercel-analytics.mjs", "счётчик посещаемости Vercel"],
   ["add-robots-meta.mjs", "разрешение на крупные картинки в выдаче Google"],
