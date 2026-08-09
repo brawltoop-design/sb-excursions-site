@@ -246,6 +246,15 @@
   .sb-journal-article-section ul,.sb-journal-sidebar-card ul{margin:0;padding-left:18px}
   .sb-journal-article-section li,.sb-journal-sidebar-card li{color:#2f2f33;font-size:16px;line-height:1.72}
   .sb-journal-dates{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;letter-spacing:0}
+  .sb-journal-deck{margin:10px 0 0;font-size:17px;line-height:1.6}
+  .sb-journal-tablewrap{margin:18px 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .sb-journal-table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5;min-width:520px}
+  .sb-journal-table th,.sb-journal-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--sbj-line);vertical-align:top}
+  .sb-journal-table thead th{font-weight:700;font-size:13px;letter-spacing:0.03em;text-transform:uppercase;color:var(--sbj-muted);border-bottom-width:2px}
+  .sb-journal-table tbody th{font-weight:600;color:#151515}
+  .sb-journal-table tbody tr:last-child th,.sb-journal-table tbody tr:last-child td{border-bottom:0}
+  .sb-journal-tablenote{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;line-height:1.6}
+  .sb-journal-deck a{color:inherit;text-decoration:underline;text-underline-offset:3px}
   .sb-journal-sidebar{display:grid;gap:18px;align-self:start;position:sticky;top:88px}
   .sb-journal-tourcard{padding:0;overflow:hidden}
   .sb-journal-tourcard__media{display:block;position:relative}
@@ -665,11 +674,12 @@ body {
             <h1>El mejor momento para disfrutar de agua clara en Bali: guía honesta mes a mes</h1>
             <p class="sb-journal-lead">El agua de Bali pasa de un vaso a una sopa dependiendo del mes, la costa y la hora en la que entras. Esta guía te ofrece la versión honesta: cuándo alcanza su punto máximo la visibilidad, qué hace realmente la temporada de lluvias y dónde ir cuando el clima se niega a cooperar.</p>
             <p class="sb-journal-dates">Por Alex Moskvin, fundador de SB Excursions · Publicado el 21 de mayo de 2026 · Actualizado el 7 de agosto de 2026</p>
+            <p class="sb-journal-deck">Recorrido en esta ruta: <a href="/bali/es/tours/blue-lagoon-snorkeling">Snorkel en la Laguna Azul, Padang Bai</a> — Desde $50, medio día hasta día completo.</p>
             <div class="sb-journal-inline-stats">
               <span>7 ventanas comparadas</span><span>Temporada seca versus húmeda</span><span>Snorkel desde $29</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/es/tours/blue-lagoon-snorkeling">Abierto tour recomendado</a>
+              <a class="sb-journal-primary" href="/bali/es/tours/blue-lagoon-snorkeling">Snorkel en la Laguna Azul, Padang Bai — Desde $50</a>
               <a class="sb-journal-secondary" href="/bali/es/journal">Explorar todas las guías</a>
             </div>
           </div>
@@ -797,11 +807,13 @@ body {
                 <p>Bali tiene dos estaciones, no cuatro. La estación seca se extiende aproximadamente de abril a octubre: vientos constantes del sureste, poca lluvia, ríos bajos. La temporada de lluvias va de noviembre a marzo: húmeda, con tormentas que generalmente se acumulan durante la tarde. La claridad del agua sigue a los ríos más que a la lluvia misma: un aguacero sobre las montañas envía agua marrón fuera de las desembocaduras de los ríos, y las bahías más cercanas visten esa mancha durante uno o dos días. Las costas sin grandes ríos se recuperan casi de inmediato, razón por la cual el este de Bali y las islas costeras siguen funcionando casi todo el año, mientras que tramos de la costa oeste atraviesan períodos turbios.</p><p>Por eso los lugareños responden a la pregunta "cuándo está clara el agua" con otra pregunta: ¿clara dónde? Una playa de la costa oeste en febrero puede ser un planeta diferente a un <a href="/bali/es/tours/blue-lagoon-snorkeling">Mañana de snorkel en la Laguna Azul en Padang Bai</a> el mismo día. Si solo recuerdas una cosa de esta guía, hazlo así: en Bali, la geografía supera al calendario. Elija la costa adecuada para la temporada en la que se encuentre y, sinceramente, no hay ningún mal mes para ponerse una máscara; elija la costa equivocada e incluso julio puede decepcionarlo.</p>
 
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>La regla de la mañana supera a la regla del mes</h2>
                 <p>En toda la isla, la brisa del mar sigue el mismo guión diario: casi en calma al amanecer, un viento en tierra que va en aumento desde última hora de la mañana, aguas poco profundas agitadas y agitadas a primera hora de la tarde, y luego a menudo vuelve a calmarse hacia el atardecer. Ese ciclo afecta lo que ves bajo el agua más que el mes del calendario. También es la razón por la que nuestras salidas para hacer snorkel salen temprano: no porque a los operadores les gusten los despertadores, sino porque la diferencia entre las 7 a. m. y la 1 p. m. El agua en el mismo lugar puede ser dramático. Si das un paso práctico después de leer esto, haz de tu barco o plan de playa un plan matutino, en cualquier estación.</p>
+
 
 
               </section>
@@ -811,11 +823,13 @@ body {
                 <p>Cuando tus dátiles caen en la temporada de lluvias, o acaba de llegar una tormenta, este es el orden jerárquico que realmente utilizamos: <strong>Padangbai</strong> — protegido, cercano y sin ríos; la llamada predeterminada por mal tiempo y un medio día fácil. <strong>Amed y Tulamben</strong> — la costa noreste no recibe la mayor parte del oleaje del sur; nuestro <a href="/bali/es/journal/amed-tulamben-snorkeling">Guía de snorkel en Amed y Tulamben.</a> lo cubre en detalle. <strong>El canal de Nusa Penida</strong> — lleno de marea y confiablemente despejado, pero propenso a las corrientes, así que vaya con una tripulación que lea las condiciones diariamente. <strong>Las Islas Gili</strong> — la opción más alejada y resistente a la intemperie; comparamos las compensaciones honestamente en <a href="/bali/es/journal/gili-islands-vs-nusa-penida">Islas Gili vs Nusa Penida</a>.</p><p>Para días tranquilos en tierra firme entre viajes en barco, comience con nuestra lista de <a href="/bali/es/journal/best-beaches-bali-crystal-clear-water">Las mejores playas de Bali con aguas cristalinas.</a> — clasifica los puntos de entrada a la costa según su resistencia cuando las condiciones son mixtas. La versión corta: las bahías protegidas orientadas al este son tus amigas de noviembre a marzo, y casi todo funciona de mayo a septiembre. Si la razón por la que viniste es una playa específica, verifica en qué costa se encuentra antes de bloquear tus fechas y no después.</p>
 
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>Temporada de mantas, sinceramente.</h2>
                 <p>Las mantas son el único animal de marquesina que la gente intenta cronometrar, así que aquí está la versión honesta. Las mantas de arrecife en los puntos del sur de Nusa Penida son residentes: se las ve todos los meses del año, no solo durante un período breve. Lo que cambia con la temporada es el acceso: las grandes olas del sur, más comunes en los meses húmedos, a veces cierran Manta Point durante el día y los barcos se desvían o regresan. en un <a href="/bali/es/tours/nusa-penida-manta-rays-point">Viaje de snorkel en Manta Point</a> desde $29 estás apostando tanto por las condiciones como por los animales, así que crea tu día de Penida temprano en tu viaje. De esa manera, si el océano dice que no, todavía te quedan días para volver a intentarlo: reservar a través de WhatsApp sin pago por adelantado hace que la reorganización sea sencilla.</p>
+
 
 
               </section>
@@ -950,7 +964,7 @@ body {
               </div>
               <div class="sb-journal-tourcard__price">Desde $50</div>
               <div class="sb-journal-tourcard__actions">
-                <a class="sb-journal-primary" href="/bali/es/tours/blue-lagoon-snorkeling">Abrir la página del recorrido</a>
+                <a class="sb-journal-primary" href="/bali/es/tours/blue-lagoon-snorkeling">Snorkel en la Laguna Azul, Padang Bai — Desde $50</a>
                 <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20Blue%20Lagoon%20Snorkeling%2C%20Padang%20Bai.%20Please%20send%20details." target="_blank" rel="noopener noreferrer nofollow">Reserva en WhatsApp</a>
               </div>
             </div>

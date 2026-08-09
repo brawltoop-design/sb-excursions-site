@@ -246,6 +246,15 @@
   .sb-journal-article-section ul,.sb-journal-sidebar-card ul{margin:0;padding-left:18px}
   .sb-journal-article-section li,.sb-journal-sidebar-card li{color:#2f2f33;font-size:16px;line-height:1.72}
   .sb-journal-dates{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;letter-spacing:0}
+  .sb-journal-deck{margin:10px 0 0;font-size:17px;line-height:1.6}
+  .sb-journal-tablewrap{margin:18px 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .sb-journal-table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5;min-width:520px}
+  .sb-journal-table th,.sb-journal-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--sbj-line);vertical-align:top}
+  .sb-journal-table thead th{font-weight:700;font-size:13px;letter-spacing:0.03em;text-transform:uppercase;color:var(--sbj-muted);border-bottom-width:2px}
+  .sb-journal-table tbody th{font-weight:600;color:#151515}
+  .sb-journal-table tbody tr:last-child th,.sb-journal-table tbody tr:last-child td{border-bottom:0}
+  .sb-journal-tablenote{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;line-height:1.6}
+  .sb-journal-deck a{color:inherit;text-decoration:underline;text-underline-offset:3px}
   .sb-journal-sidebar{display:grid;gap:18px;align-self:start;position:sticky;top:88px}
   .sb-journal-tourcard{padding:0;overflow:hidden}
   .sb-journal-tourcard__media{display:block;position:relative}
@@ -663,13 +672,14 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">旅游指南</div>
             <h1>巴厘岛 7 个最佳观景点：日出、悬崖和梯田</h1>
-            <p class="sb-journal-lead">巴厘岛最强烈的观点看起来并不都是一样的。有些获胜是因为日出规模，有些是因为悬崖戏剧，有些是因为景观感觉广阔而平静，而不是拥挤。最好的行程是融合这些情绪，而不是重复一种停留。</p>
+            <p class="sb-journal-lead">巴厘岛最强的观景点分布在四个区域，而不是在一个环线上：金塔马尼 (Kintamani) 的巴杜尔火山口边缘，距南部酒店 2-2.5 小时车程；巴厘岛东部的 Lempuyang 门，2.5-3.5 小时路程，视交通情况而定；乌布-塔巴南带的 Tegallalang 和 Jatiluwih 水稻梯田；从沙努尔乘快艇 30-45 分钟即可到达努沙佩尼达悬崖。全年日出时间为 06:00-06:30，日落时间为 18:00-18:30，所以观景日实际上是两个短光窗加上驾驶——这就是为什么最好的路线混合了一次日出、一次悬崖和一次露台，而不是重复单一的心情。四月至十月，火山口空气最为清澈。截至 2026 年 8 月，带导游的巴杜尔山日出徒步路线每辆车起价为 35 美元，西努沙佩尼达悬崖路线每辆车起价为 49 美元。</p>
             <p class="sb-journal-dates">作者：Alex Moskvin，SB Excursions 创始人 · 发布于 2026 年 5 月 21 日 · 更新于 2026 年 8 月 7 日</p>
+            <p class="sb-journal-deck">此路线游览： <a href="/bali/zh/tours/nusa-penida-west-tour">努沙佩尼达西游</a> — 每辆车 49 美元起，全天。</p>
             <div class="sb-journal-inline-stats">
               <span>7 个观景点</span><span>悬崖+火山+梯田</span><span>日出到日落</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/zh/tours/nusa-penida-west-tour">开启推荐之旅</a>
+              <a class="sb-journal-primary" href="/bali/zh/tours/nusa-penida-west-tour">努沙佩尼达西部之旅 — 每辆车 49 美元起</a>
               <a class="sb-journal-secondary" href="/bali/zh/journal">浏览所有指南</a>
             </div>
           </div>
@@ -793,9 +803,18 @@ body {
             </section>
 
               <section class="sb-journal-article-section">
+                <h2>巴厘岛观景一览：区域、采光窗、入口</h2>
+                <p>九个值得驾车游览的观景台，每个观景台都有采光窗，以及是否需要在门口付费。时间是视图的工作时间，而不是登机时间，反映 2026 年的情况：</p>
+
+                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">Viewpoint</th><th scope="col">Area</th><th scope="col">最佳时间窗口</th><th scope="col">付费入场？</th></tr></thead><tbody><tr><th scope="row">巴杜尔火山口边缘（Penelokan）</th><td>金塔马尼，中央高地</td><td>05:30-08:00，日出</td><td>路边停车处免费</td></tr><tr><th scope="row">巴杜尔山山顶</th><td>金塔马尼，中央高地</td><td>05:00-06:30 山顶日出</td><td>需要付费、有导游的徒步旅行</td></tr><tr><th scope="row">伦普央天堂之门</th><td>卡朗阿森，巴厘岛东部</td><td>06:00-08:00</td><td>付费，小额入场费+纱笼</td></tr><tr><th scope="row">坎普汉山脊步道</th><td>巴厘岛中部乌布</td><td>06:00-08:00</td><td>Free</td></tr><tr><th scope="row">德戈拉朗梯田</th><td>巴厘岛中部乌布</td><td>07:00-09:00</td><td>付费，小额入场费</td></tr><tr><th scope="row">贾蒂卢维梯田</th><td>巴厘岛中西部塔巴南</td><td>08:00-11:00</td><td>付费，小额入场费</td></tr><tr><th scope="row">Kelingking海滩悬崖</th><td>西努沙佩尼达</td><td>08:00-10:00</td><td>付费，小额入场费</td></tr><tr><th scope="row">钻石海滩悬崖</th><td>东努沙佩尼达</td><td>07:00-10:00</td><td>付费，小额入场费</td></tr><tr><th scope="row">乌鲁瓦图寺悬崖顶</th><td>巴厘岛南部武吉半岛</td><td>17:00-18:30，日落</td><td>付费，小额入场费+纱笼</td></tr></tbody></table></div><p class="sb-journal-tablenote">两个努沙佩尼达悬崖需要从沙努尔乘坐 30-45 分钟的快船，再加上 45-70 分钟的岛上驾驶时间，因此请将它们视为自己的一天，而不是大陆路线上的停留。</p>
+
+              </section>
+
+              <section class="sb-journal-article-section">
                 <h2>巴厘岛观景点为何值得添加到您的路线中</h2>
                 <p>一个好的巴厘岛视角不仅仅只是在一张照片中看起来很漂亮。最好的路线可以让一天中真正停顿下来，与路线的其他路线形成鲜明对比，并且感觉足够强烈，让旅行者在事后记住它们。</p>
                 <ul><li>选择一个日出观景点、一个绿色景观站和一个沿海观景点以获得最强的平衡 - 并检查 <a href="/bali/zh/journal/best-time-to-visit-bali-month-by-month">季节</a>，因为某些月份清晰的日出比其他月份可靠得多。</li><li>当天晚些时候，当光线和气氛改善时，可以使用悬崖瞭望台。</li><li>当路线感觉更清新、更清晰时，请尽早使用水稻梯田或火山观景台。</li></ul>
+
 
               </section>
 
@@ -804,11 +823,13 @@ body {
                 <p>最强观点日按地区聚集。乌布和金塔马尼自然配对，联合国教科文组织高地停留自然配对，岛屿悬崖值得专门一天，而不是挤在大陆计划之间。</p>
 
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>谁从以观点为主导的巴厘岛日中受益最多</h2>
                 <p>观景路线对于初次旅行者、情侣、以内容为导向的旅行以及希望在巴厘岛感受风景而又不想每天进行体力消耗大的冒险的旅行者来说尤其强大。</p>
+
 
 
               </section>
@@ -941,7 +962,7 @@ body {
               </div>
               <div class="sb-journal-tourcard__price">每辆车 49 美元起</div>
               <div class="sb-journal-tourcard__actions">
-                <a class="sb-journal-primary" href="/bali/zh/tours/nusa-penida-west-tour">打开游览页面</a>
+                <a class="sb-journal-primary" href="/bali/zh/tours/nusa-penida-west-tour">努沙佩尼达西部之旅 — 每辆车 49 美元起</a>
                 <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20Nusa%20Penida%20West%20Tour.%20Please%20send%20details." target="_blank" rel="noopener noreferrer nofollow">通过 WhatsApp 预订</a>
               </div>
             </div>

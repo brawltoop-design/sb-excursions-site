@@ -246,6 +246,15 @@
   .sb-journal-article-section ul,.sb-journal-sidebar-card ul{margin:0;padding-left:18px}
   .sb-journal-article-section li,.sb-journal-sidebar-card li{color:#2f2f33;font-size:16px;line-height:1.72}
   .sb-journal-dates{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;letter-spacing:0}
+  .sb-journal-deck{margin:10px 0 0;font-size:17px;line-height:1.6}
+  .sb-journal-tablewrap{margin:18px 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .sb-journal-table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5;min-width:520px}
+  .sb-journal-table th,.sb-journal-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--sbj-line);vertical-align:top}
+  .sb-journal-table thead th{font-weight:700;font-size:13px;letter-spacing:0.03em;text-transform:uppercase;color:var(--sbj-muted);border-bottom-width:2px}
+  .sb-journal-table tbody th{font-weight:600;color:#151515}
+  .sb-journal-table tbody tr:last-child th,.sb-journal-table tbody tr:last-child td{border-bottom:0}
+  .sb-journal-tablenote{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;line-height:1.6}
+  .sb-journal-deck a{color:inherit;text-decoration:underline;text-underline-offset:3px}
   .sb-journal-sidebar{display:grid;gap:18px;align-self:start;position:sticky;top:88px}
   .sb-journal-tourcard{padding:0;overflow:hidden}
   .sb-journal-tourcard__media{display:block;position:relative}
@@ -665,11 +674,12 @@ body {
             <h1>巴厘岛五日游：南海岸、乌布、佩尼达、巴杜尔</h1>
             <p class="sb-journal-lead">如果您将每一天都视为一个地区，那么在巴厘岛的五天时间就足以获得岛上的基本体验：第一天在南部登陆并定居，第二天在乌布度过，第三天穿越到珀尼达岛，第四天观看巴杜尔山日出或吉利群岛，第五天在您的航班周围建造一座寺庙。这是我们 7 天计划的压缩版本 - 相同的固定日，但取消了缓冲。其背后的一日游起价为珀尼达岛 (Nusa Penida) 每辆车 49 美元，乌布环线 (Ubud Loop) 69 美元，全部提供酒店接送服务，通过 WhatsApp 预订，无需预付款。下面：按顺序排列的五天，该计划相对于一整周放弃了什么，以及在不破坏顺序的情况下交换日期的规则。</p>
             <p class="sb-journal-dates">作者：Alex Moskvin，SB Excursions 创始人 · 发布于 2026 年 5 月 21 日 · 更新于 2026 年 8 月 7 日</p>
+            <p class="sb-journal-deck">此路线游览： <a href="/bali/zh/tours/ubud-highlights-tour">乌布梯田、寺庙和火山之旅</a> — 69 美元起，10 小时。</p>
             <div class="sb-journal-inline-stats">
               <span>5天，4个地区</span><span>一日游 35 美元起</span><span>无需预付款</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/zh/tours/ubud-highlights-tour">开启推荐之旅</a>
+              <a class="sb-journal-primary" href="/bali/zh/tours/ubud-highlights-tour">乌布梯田、寺庙和火山之旅 — 69 美元起</a>
               <a class="sb-journal-secondary" href="/bali/zh/journal">浏览所有指南</a>
             </div>
           </div>
@@ -767,12 +777,14 @@ body {
                 <p>将巴厘岛从 7 天缩短为 5 天，您将付出三项具体的代价： <strong>缓冲日、第二大海日、巴厘岛北部</strong>。在我们的 <a href="/bali/zh/journal/bali-7-day-itinerary">巴厘岛7天行程</a>，作为天气保险，有一天可以自由浮动——如果佩尼达渡口看起来很崎岖，或者巴杜尔日出被云层覆盖，该计划就会吸收它。五天没有这样的松弛：当事情发生变化时，另一天就会压缩。这周也适合巴杜尔山日和吉利群岛日；他们在这里分享第四天，你可以选择一天。而北部——罗维纳海豚跑道、瀑布、湖神庙——完全消失了，因为白天工作 10 到 12 小时，必须更换更中心的东西。</p><p>不被削减的：锚定日。的 <a href="/bali/zh/tours/ubud-highlights-tour">乌布环路</a> 努沙佩尼达岛日在这个计划的每个版本中都存在，因为它们涵盖了巴厘岛实际上闻名的两件事——水稻梯田内部和石灰岩海岸。抵达当天也特意保持轻松。经过长途飞行后降落，然后直接开车开始 10 小时的旅行，这种计划在纸面上看起来很高效，但实际感觉却很糟糕。</p>
 
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>如何在不破坏计划的情况下重新安排日子</h2>
                 <p><strong>第 1 天和第 5 天根据您的航班确定；第2、3、4天自由活动</strong> ——有三个规则。上面的顺序是默认的，因为它预先加载了更容易的物流：乌布是全天最温和的，佩尼达位于行程中间，仍然可以吸收汹涌的大海推迟，一旦你的生物钟调整好，黎明前火山就会开始。</p>
                 <ul><li><strong>给佩尼达最平静的一天。</strong> 这是唯一依赖船的一天。如果预测发生变化，可将第 3 天和第 4 天互换 — 通过 WhatsApp 直接预订，无需预付款，无需支付任何费用。</li><li><strong>切勿叠加两次黎明前的出发。</strong> The <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出</a> 根据选项，我们会在 01:30 到 03:30 之间来接您。保持前一天晚上的空旷和安静。</li><li><strong>时差反应是巴杜尔的一项资产。</strong> 从欧洲或美洲飞来的航班，您无论如何都会在第 2 天 03:00 起床 — 有些客人会将火山移到那里，并在旅途中收到最简单的警报。</li></ul>
+
                 <p>如果您在火山早晨的吉普车和徒步旅行之间左右为难，那么价格差距是真实存在的——从 75 美元到 35 美元——而且努力程度的差距也是如此。我们的 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行的比较</a> 详细地解决它，所以第四天只需要一个决定，而不是两个。</p>
               </section>
 
@@ -781,11 +793,13 @@ body {
                 <p>您无需为此行程租用摩托车或汽车 — <strong>每个重要的日子都包含酒店接送服务</strong>，而它们之间的一切都是围绕您的基地的短途出租车或叫车服务。距离很重要，因为道路时间：机场到水明漾-苍古地带 <strong>30-60 分钟，视交通情况而定</strong>;前往乌布的南部酒店是 <strong>60-90分钟</strong>;早上前往沙努尔港乘坐佩尼达船的时间是 <strong>30-60分钟</strong>，一旦通勤交通在 07:30 后增加，时间就会更长。这些范围很宽，因为巴厘岛的交通确实难以预测——围绕每个范围的顶部进行计划，并将任何更快的事情视为奖励。</p><p>对于第 5 天或任何免费的半天， <a href="/bali/zh/tours/private-car-with-driver-bali">带司机的私家车</a> 每辆车 59 美元起，将交通转为观光——参观寺庙，享用一顿丰盛的午餐，然后前往航站楼。有关司机、叫车应用程序、踏板车以及每种方式真正花费您时间的完整信息，请参阅 <a href="/bali/zh/journal/how-to-get-around-bali">如何游览巴厘岛</a>.</p>
 
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>在哪里呆五天</h2>
                 <p>一家酒店住五晚是正确的选择 — <strong>在南部选择一个基地，让皮卡完成工作</strong>。水明漾、苍古、勒吉安、库塔、努沙杜瓦、金巴兰和沙努尔都位于此计划中一日游的标准接送区域内，因此行程与其中任何一个都相同。沙努尔缩短了佩尼达的早晨时间，因为船只从其港口出发；坎古（Canggu）和水明漾（Seminyak）在餐厅和日落方面获胜；努沙杜瓦适合想要在天气晴朗时享受平静海滩的家庭。分开住宿——在乌布住两晚，在南部住三晚——听起来很吸引人，但要花半天时间收拾行李和办理登机手续，五天的旅行根本无法抽出时间。如果您还没有选择区域， <a href="/bali/zh/journal/where-to-stay-bali-first-time">巴厘岛 住在哪里</a> 为初学者逐一分解。</p>
+
 
 
               </section>
@@ -925,7 +939,7 @@ body {
               </div>
               <div class="sb-journal-tourcard__price">69 美元起</div>
               <div class="sb-journal-tourcard__actions">
-                <a class="sb-journal-primary" href="/bali/zh/tours/ubud-highlights-tour">打开游览页面</a>
+                <a class="sb-journal-primary" href="/bali/zh/tours/ubud-highlights-tour">乌布梯田、寺庙和火山之旅 — 69 美元起</a>
                 <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20Ubud%20Rice%20Terrace%2C%20Temple%20%26%20Volcano%20Tour.%20Please%20send%20details." target="_blank" rel="noopener noreferrer nofollow">通过 WhatsApp 预订</a>
               </div>
             </div>

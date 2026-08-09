@@ -246,6 +246,15 @@
   .sb-journal-article-section ul,.sb-journal-sidebar-card ul{margin:0;padding-left:18px}
   .sb-journal-article-section li,.sb-journal-sidebar-card li{color:#2f2f33;font-size:16px;line-height:1.72}
   .sb-journal-dates{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;letter-spacing:0}
+  .sb-journal-deck{margin:10px 0 0;font-size:17px;line-height:1.6}
+  .sb-journal-tablewrap{margin:18px 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .sb-journal-table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5;min-width:520px}
+  .sb-journal-table th,.sb-journal-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--sbj-line);vertical-align:top}
+  .sb-journal-table thead th{font-weight:700;font-size:13px;letter-spacing:0.03em;text-transform:uppercase;color:var(--sbj-muted);border-bottom-width:2px}
+  .sb-journal-table tbody th{font-weight:600;color:#151515}
+  .sb-journal-table tbody tr:last-child th,.sb-journal-table tbody tr:last-child td{border-bottom:0}
+  .sb-journal-tablenote{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;line-height:1.6}
+  .sb-journal-deck a{color:inherit;text-decoration:underline;text-underline-offset:3px}
   .sb-journal-sidebar{display:grid;gap:18px;align-self:start;position:sticky;top:88px}
   .sb-journal-tourcard{padding:0;overflow:hidden}
   .sb-journal-tourcard__media{display:block;position:relative}
@@ -665,11 +674,12 @@ body {
             <h1>Guide des transferts de l'aéroport de Bali : horaires vers 6 zones, à partir de 15 $</h1>
             <p class="sb-journal-lead">Un transfert aéroport de Bali pré-réservé coûte à partir de 15 $, le prix exact dépendant de la zone de votre hôtel, et c'est le moyen le plus simple de commencer un voyage : votre chauffeur attend aux arrivées avec une pancarte nominative, et il n'y a pas de file d'attente au comptoir ni de négociation après un long vol. Les temps de trajet depuis l'aéroport Ngurah Rai varient d'environ 25 à 40 minutes jusqu'à Nusa Dua jusqu'à 1,5 à 2 heures jusqu'à Ubud, et le trafic - et non la distance - décide de l'endroit où vous atterrissez dans cette plage. Ce guide compare les six principales zones hôtelières en fonction du temps de transfert, explique pourquoi réserver via WhatsApp avant de prendre l'avion est préférable à trier un taxi au terminal, et couvre les deux situations les plus demandées : les arrivées tard dans la nuit et les vols retardés.</p>
             <p class="sb-journal-dates">Par Alex Moskvin, fondateur de SB Excursions · Publié le 21 mai 2026 · Mis à jour le 7 août 2026</p>
+            <p class="sb-journal-deck">Circuit sur cet itinéraire : <a href="/bali/fr/tours/bali-airport-transfer">Transfert de l'aéroport de Bali</a> — À partir de 15$, dépend de la zone de l'hôtel.</p>
             <div class="sb-journal-inline-stats">
               <span>6 zones hôtelières chronométrées</span><span>Transferts à partir de 15$</span><span>Pas de prépaiement</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/fr/tours/bali-airport-transfer">Visite ouverte recommandée</a>
+              <a class="sb-journal-primary" href="/bali/fr/tours/bali-airport-transfer">Transfert aéroport de Bali — À partir de 15 $</a>
               <a class="sb-journal-secondary" href="/bali/fr/journal">Parcourez tous les guides</a>
             </div>
           </div>
@@ -781,12 +791,14 @@ body {
                 <h2>Pourquoi la pré-réservation est préférable à un taxi à l'arrivée</h2>
                 <p>La pré-réservation est gagnante car la partie la plus difficile pour arriver à Bali n'est pas le trajet en voiture, mais la demi-heure après la douane. Vous sortez du hall des arrivées de Ngurah Rai, généralement après sept heures ou plus de vol, dans un couloir rempli de comptoirs, d'offres de chauffeurs et de pancartes nominatives, et chaque décision que vous y prenez est prise avec fatigue. Un pré-réservé <a href="/bali/fr/tours/bali-airport-transfer">Transfert aéroport de Bali</a> déplace cette décision avant votre vol : le prix est <strong>à partir de 15$</strong> et dépend de la zone de votre hôtel, c'est convenu dans le fil WhatsApp avant d'embarquer, et il y a <strong>pas de prépaiement</strong> — vous payez le chauffeur le jour même.</p><p>Réserver à l’avance élimine quatre petites frictions qui s’accumulent mal après un vol long-courrier :</p>
                 <ul><li><strong>Un prix fixe par écrit</strong> — le tarif de votre zone hôtelière figure dans le fil WhatsApp avant votre embarquement, donc rien n'est renégocié en bordure de rue</li><li><strong>Un chauffeur attend déjà</strong> — vous passez la douane, trouvez votre nom sur un panneau et marchez jusqu'à la voiture, au lieu de rejoindre une file d'attente au comptoir</li><li><strong>Aucun itinéraire expliquant</strong> — le chauffeur obtient le nom de votre hôtel lors de la réservation, ce qui est important pour les villas situées sur des voies sans nom à Canggu ou Ubud</li><li><strong>Pas de voyage avec bagages</strong> — les prises en charge à l'aéroport ont lieu dans des zones désignées, une véritable promenade lorsque vous poussez deux valises</li></ul>
+
                 <p>Si vous n'avez pas encore choisi de base, le tableau des temps de transfert ci-dessus est un outil utile : notre <a href="/bali/fr/journal/where-to-stay-bali-first-time">où séjourner à Bali guide</a> compare les six mêmes domaines par caractère, budget et à qui ils conviennent.</p>
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>Comment fonctionne la réunion à l'aéroport, étape par étape</h2>
                 <p>La réservation nécessite trois informations dans un seul message WhatsApp : le nom de votre hôtel, votre numéro de vol et votre date d'arrivée. Vous obtenez un prix confirmé pour votre région, et c'est tout le processus : pas de formulaire, pas de dépôt, pas d'application à installer.</p><p>Le jour de l'atterrissage, la prise en charge suit votre numéro de vol et non l'heure prévue. Après l'immigration, les bagages et les douanes, vous sortez dans la zone des arrivées publiques, où le chauffeur attend avec un <strong>signe de nom</strong>. Du panneau à la voiture, il faut quelques minutes, et la voiture est privée et climatisée – pas d'attente pour que d'autres passagers occupent les sièges, ce qui ralentit les options de navette partagée.</p><p>Parce que la voiture est privée, un court arrêt sur le chemin – un guichet automatique, un comptoir de carte SIM, un supermarché ouvert tard – est une demande normale plutôt qu'un arrangement spécial ; il suffit de demander dans le même fil. Pour le retour, les prises en charge au départ sont <strong>confirmé sur WhatsApp la veille</strong>, programmé en fonction de votre vol et du trafic de votre région.</p>
+
 
 
               </section>
@@ -796,11 +808,13 @@ body {
                 <p>Le transfert lui-même fonctionne de la même manière à 02h00 qu'à 14h00 : le chauffeur vous attend toujours à l'arrivée avec une pancarte nominative. Ce qui change, c'est tout ce qui l'entoure, et surtout en votre faveur. Les routes se vident après environ 22h00, donc les trajets de nuit se terminent au bas de chaque fourchette de ce guide : Canggu cesse d'être une question de 90 minutes, et Ubud peut perdre 30 minutes ou plus par rapport à une course de jour.</p><p>Les retards se gèrent en grande partie d’eux-mêmes. Étant donné que la réservation est liée à votre numéro de vol, un atterrissage tardif décale la prise en charge avec l'avion — vous n'avez pas besoin d'envoyer des mises à jour après une escale. Si le vol lui-même change, envoyez le nouveau numéro de vol dans le même fil WhatsApp et la réservation évolue avec.</p><p>Les véritables risques d’une arrivée de nuit se situent à l’extérieur de la voiture : une villa sans personnel de nuit, un téléphone hors service contenant les détails de votre réservation, aucune donnée locale pour ouvrir WhatsApp à l’atterrissage. Confirmez que votre hébergement a <strong>Réception 24h/24</strong> ou un code d'auto-enregistrement, gardez la confirmation accessible hors ligne et triez une eSIM avant de voler - notre <a href="/bali/fr/journal/what-to-pack-for-bali">quoi emporter pour Bali</a> Le guide couvre en détail le kit du jour d'arrivée.</p>
 
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>Après l'aéroport : comment se déroule le reste du voyage</h2>
                 <p>Bali n'a pas de métro, pas de train et seulement un réseau de bus squelettique, de sorte que le transfert aéroportuaire est généralement le premier de plusieurs trajets privés plutôt que ponctuels. Pour les excursions d'une journée et les visites touristiques, la configuration standard est un <a href="/bali/fr/tours/private-car-with-driver-bali">voiture privée avec chauffeur</a> <strong>à partir de 59$ par voiture</strong> — un prix unique pour le véhicule, et non par personne, c'est pourquoi les couples, les groupes et les familles l'utilisent tous par défaut. Le calcul complet de ce que couvre une journée de conducteur se trouve dans notre <a href="/bali/fr/journal/bali-private-driver-cost">guide des coûts des chauffeurs privés</a>.</p><p>En route vers les îles, le même schéma se répète sur l'eau : un <a href="/bali/fr/tours/fast-boat-transfer-bali">transfert rapide en bateau</a> <strong>à partir de 15$</strong> relie les ports de Bali à Nusa Penida, Lembongan et Gilis. Les bateaux circulent de jour, alors associez un débarquement en fin de soirée à une première nuit près du port et traversez le matin. Pour le tableau complet des conducteurs, scooters et bateaux, voir <a href="/bali/fr/journal/how-to-get-around-bali">comment se déplacer à Bali</a>.</p>
+
 
 
               </section>
@@ -940,7 +954,7 @@ body {
               </div>
               <div class="sb-journal-tourcard__price">À partir de 15 $</div>
               <div class="sb-journal-tourcard__actions">
-                <a class="sb-journal-primary" href="/bali/fr/tours/bali-airport-transfer">Ouvrir la page de la visite</a>
+                <a class="sb-journal-primary" href="/bali/fr/tours/bali-airport-transfer">Transfert aéroport de Bali — À partir de 15 $</a>
                 <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20Bali%20Airport%20Transfer.%20Please%20send%20details." target="_blank" rel="noopener noreferrer nofollow">Réservez sur WhatsApp</a>
               </div>
             </div>

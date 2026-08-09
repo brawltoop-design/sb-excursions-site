@@ -246,6 +246,15 @@
   .sb-journal-article-section ul,.sb-journal-sidebar-card ul{margin:0;padding-left:18px}
   .sb-journal-article-section li,.sb-journal-sidebar-card li{color:#2f2f33;font-size:16px;line-height:1.72}
   .sb-journal-dates{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;letter-spacing:0}
+  .sb-journal-deck{margin:10px 0 0;font-size:17px;line-height:1.6}
+  .sb-journal-tablewrap{margin:18px 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .sb-journal-table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5;min-width:520px}
+  .sb-journal-table th,.sb-journal-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--sbj-line);vertical-align:top}
+  .sb-journal-table thead th{font-weight:700;font-size:13px;letter-spacing:0.03em;text-transform:uppercase;color:var(--sbj-muted);border-bottom-width:2px}
+  .sb-journal-table tbody th{font-weight:600;color:#151515}
+  .sb-journal-table tbody tr:last-child th,.sb-journal-table tbody tr:last-child td{border-bottom:0}
+  .sb-journal-tablenote{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;line-height:1.6}
+  .sb-journal-deck a{color:inherit;text-decoration:underline;text-underline-offset:3px}
   .sb-journal-sidebar{display:grid;gap:18px;align-self:start;position:sticky;top:88px}
   .sb-journal-tourcard{padding:0;overflow:hidden}
   .sb-journal-tourcard__media{display:block;position:relative}
@@ -665,11 +674,12 @@ body {
             <h1>Виза на Бали и въездные требования: что вам на самом деле нужно</h1>
             <p class="sb-journal-lead">Три вещи теперь привлекают путешественников по прибытии на Бали: виза по прибытии <strong>больше не расширяется онлайн</strong>, таможенная форма была свернута в <strong>обязательная карта прибытия</strong> подается в течение 72 часов после приземления, а туристический сбор имеет множество похожих мошеннических сайтов. Ни одно из них не является сложным — их просто нужно выполнить перед полетом.</p>
             <p class="sb-journal-dates">Алекс Москвин, основатель SB Excursions · Опубликовано 21 мая 2026 г. · Обновлено 7 августа 2026 г.</p>
+            <p class="sb-journal-deck">Экскурсия по этому маршруту: <a href="/bali/ru/tours/bali-airport-transfer">Трансфер из аэропорта Бали</a> — От $15, зависит от района отеля.</p>
             <div class="sb-journal-inline-stats">
               <span>Виза по прибытии</span><span>Карта прибытия</span><span>Туристический сбор</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/ru/tours/bali-airport-transfer">Открыть рекомендуемый тур</a>
+              <a class="sb-journal-primary" href="/bali/ru/tours/bali-airport-transfer">Трансфер из аэропорта Бали — от $15.</a>
               <a class="sb-journal-secondary" href="/bali/ru/journal">Просмотреть все руководства</a>
             </div>
           </div>
@@ -767,11 +777,13 @@ body {
 
                 <ul><li>Паспорт действителен <strong>минимум 6 месяцев</strong> с момента прибытия, с <strong>2 пустые страницы</strong>, неповрежденный</li><li>A <strong>обратный или дальнейший билет</strong> — авиакомпании проверят это при посадке и без этого вам откажут</li><li>The <strong>All Indonesia arrival card</strong>, filed inside the 72-hour window</li><li>The <strong>туристический сбор</strong> ваучер или будьте готовы заплатить на стойке аэропорта</li><li>одобрение электронного VOA, если вы подали заявку онлайн, чтобы вы могли использовать автоматические шлюзы.</li><li>Officers may ask for proof of funds; travelers commonly cite around <strong>$1,000</strong> эквивалент, хотя это скорее рекомендация, чем опубликованное правило — см. <a href="/bali/ru/journal/how-much-does-a-bali-trip-cost">разбивка стоимости поездки</a> для чего на самом деле продлится неделя</li></ul>
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>⏳ Продление пребывания — правило, которое изменилось</h2>
                 <p>Это самая устаревшая вещь в старых руководствах. The visa on arrival extension <strong>can no longer be completed entirely online</strong>. Since mid-2025 it requires an <strong>личный визит</strong> в иммиграционную службу по вашему зарегистрированному адресу, где снимут отпечатки пальцев, фотографию и подпись.</p><p>Поток гибридный: зарегистрируйтесь онлайн, получите QR-код по электронной почте, посетите офис для биометрии, а затем примерно подождите. <strong>5–7 рабочих дней</strong>. Поэтому запустите процесс <strong>За 10–14 дней до истечения срока действия визы</strong>, not in the final days. День вашего приезда считается первым.</p><p>Безвизовый въезд работает по-другому: те 30 дней <strong>не может быть расширен или преобразован</strong> вообще. Если вам хочется дольше, получите визу по прибытии, даже если вы имеете право на безвизовый режим.</p>
+
 
 
               </section>
@@ -781,6 +793,7 @@ body {
                 <p>The fine is <strong>IDR 1,000,000 per day</strong>, считая с первого дня до двух недель, составляет 14 000 000 индонезийских рупий. Штрафом можно урегулировать на срок до 59 дней. <strong>Через 60 дней это становится депортацией и черным списком.</strong>, с запретом на повторный въезд сроком от шести месяцев до десяти лет.</p><p>Биометрические проверки при выезде означают, что просрочка всегда обнаруживается. Если ваши планы меняются, продлите договор правильно, а не надейтесь спокойно заплатить на выходе.</p>
 
 
+
               </section>
 
               <section class="sb-journal-article-section">
@@ -788,11 +801,13 @@ body {
 
                 <ul><li>Бронирование <strong>one-way ticket</strong> — вас остановят при регистрации еще до того, как сотрудники иммиграционной службы вас увидят</li><li>Предположим, что западный паспорт обеспечивает безвизовый въезд. Это не</li><li>Если предположить, что безвизовый режим 30 дней может быть продлен. It cannot</li><li>Планируем расширить возможности голосового управления с вашего телефона — биометрия теперь доступна лично</li><li>Оформление карты прибытия <strong>more than 72 hours</strong> ahead, so it is rejected</li><li>Оплата сбора на похожем сайте. Только <strong>.go.id</strong> является официальным</li><li>Остановиться на частной вилле и не зарегистрироваться в местной полиции — за вас это делают отели, частные хозяева — нет, и штраф — <strong>5 000 000 индонезийских рупий</strong></li><li>Работа или заработок по туристической визе, включая создание платного контента — в последнее время ужесточены меры по обеспечению соблюдения требований, как описано в <a href="/bali/ru/journal/bali-safety-scams-and-health">руководство по безопасности и правилам</a></li></ul>
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>💉 Требования к здоровью</h2>
                 <p>Есть <strong>нет требований к плановой вакцинации</strong> и никаких правил эпохи COVID не осталось. Сертификат о желтой лихорадке требуется только в том случае, если вы прибываете из страны, входящей в список риска передачи. Декларация о состоянии здоровья, которая раньше была отдельной, теперь является частью карты прибытия по всей Индонезии.</p>
+
 
 
               </section>
@@ -922,7 +937,7 @@ body {
               </div>
               <div class="sb-journal-tourcard__price">От 15 долларов США</div>
               <div class="sb-journal-tourcard__actions">
-                <a class="sb-journal-primary" href="/bali/ru/tours/bali-airport-transfer">Открыть страницу тура</a>
+                <a class="sb-journal-primary" href="/bali/ru/tours/bali-airport-transfer">Трансфер из аэропорта Бали — от $15.</a>
                 <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20Bali%20Airport%20Transfer.%20Please%20send%20details." target="_blank" rel="noopener noreferrer nofollow">Забронируйте в WhatsApp</a>
               </div>
             </div>

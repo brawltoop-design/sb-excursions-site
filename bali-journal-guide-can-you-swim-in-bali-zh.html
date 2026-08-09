@@ -246,6 +246,15 @@
   .sb-journal-article-section ul,.sb-journal-sidebar-card ul{margin:0;padding-left:18px}
   .sb-journal-article-section li,.sb-journal-sidebar-card li{color:#2f2f33;font-size:16px;line-height:1.72}
   .sb-journal-dates{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;letter-spacing:0}
+  .sb-journal-deck{margin:10px 0 0;font-size:17px;line-height:1.6}
+  .sb-journal-tablewrap{margin:18px 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .sb-journal-table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5;min-width:520px}
+  .sb-journal-table th,.sb-journal-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--sbj-line);vertical-align:top}
+  .sb-journal-table thead th{font-weight:700;font-size:13px;letter-spacing:0.03em;text-transform:uppercase;color:var(--sbj-muted);border-bottom-width:2px}
+  .sb-journal-table tbody th{font-weight:600;color:#151515}
+  .sb-journal-table tbody tr:last-child th,.sb-journal-table tbody tr:last-child td{border-bottom:0}
+  .sb-journal-tablenote{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;line-height:1.6}
+  .sb-journal-deck a{color:inherit;text-decoration:underline;text-underline-offset:3px}
   .sb-journal-sidebar{display:grid;gap:18px;align-self:start;position:sticky;top:88px}
   .sb-journal-tourcard{padding:0;overflow:hidden}
   .sb-journal-tourcard__media{display:block;position:relative}
@@ -665,11 +674,12 @@ body {
             <h1>巴厘岛可以游泳吗？ 8 个海滩，水质平静、安全</h1>
             <p class="sb-journal-lead">是的，您可以在巴厘岛游泳——在正确的海岸。库塔、坎古和乌鲁瓦图等著名的西海岸海滩是冲浪区，有海岸断裂和裂流；平静、清澈的海水位于东部和东南部。这八个海滩是重点关注的地方。</p>
             <p class="sb-journal-dates">作者：Alex Moskvin，SB Excursions 创始人 · 发布于 2026 年 5 月 21 日 · 更新于 2026 年 8 月 7 日</p>
+            <p class="sb-journal-deck">此路线游览： <a href="/bali/zh/tours/blue-lagoon-snorkeling">巴东拜蓝色泻湖浮潜</a> — 50 美元起，半天到全天。</p>
             <div class="sb-journal-inline-stats">
               <span>8个海滩比较</span><span>两岸解释</span><span>游泳之旅 50 美元起</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/zh/tours/blue-lagoon-snorkeling">开启推荐之旅</a>
+              <a class="sb-journal-primary" href="/bali/zh/tours/blue-lagoon-snorkeling">巴东拜蓝色泻湖浮潜 — 50 美元起</a>
               <a class="sb-journal-secondary" href="/bali/zh/journal">浏览所有指南</a>
             </div>
           </div>
@@ -812,11 +822,13 @@ body {
                 <p>巴厘岛游泳的混乱归根结底是地理原因。西海岸——库塔、勒吉安、塞米亚克、苍古——面朝开阔的印度洋，一年中几乎每天都有海浪。这些海滩奠定了巴厘岛冲浪的声誉，它们确实是冲浪的好地方 <a href="/bali/zh/tours/surf-lesson-experience">冲浪课</a> 35 美元起。这些地方不太适合游泳：岸边、离岸流，你和下一组人之间没有任何障碍。东部和东南海岸坐落在岸礁后面的海浪阴影中。那是平静的海水所在的地方，也是这份名单上的每个海滩所在的地方。</p>
 
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>平静的水面所在，海岸接海岸</h2>
                 <p><strong>努沙杜瓦和盖格尔</strong> — 一个受珊瑚礁保护的泻湖，一年中大部分时间都是平坦的，最好是在中潮到高潮时。 <strong>Sanur</strong> ——漫长、浅浅、平静的湖面早晨；经典的轻松游泳。 <strong>Melasti</strong> — Bukit 唯一一个诚实的游泳海滩，严重依赖潮汐。 <strong>Jimbaran</strong> ——西侧受庇护的例外，早餐时间最温和。 <strong>巴东拜的蓝色泻湖</strong> — 在同一次训练中游泳和浮潜。 <strong>Offshore</strong> — 珀尼达岛 (Nusa Penida) 和美诺岛 (Gili Meno) 上的水晶湾 (Crystal Bay) 将清晰度完全提升到另一个层次。工作规则：如果海滩不是面向东或东南或在礁石后面，则假设它是冲浪海滩，除非另有证明。</p>
+
 
 
               </section>
@@ -826,11 +838,13 @@ body {
                 <p>首先是旗帜：红色意味着禁止游泳，红黄相间标志着巡逻区，库塔-水明漾主要地带以外的大多数海滩根本没有救生员。留意一条较暗、较平坦的水道穿过海浪——这就是离岸流，这就是为什么看似平静的间隙是冲浪海滩上最危险的部分。大雨过后，请避开河口一两天，因为径流会降低能见度和水质。还要检查潮汐：此列表中的一半海滩在涨潮时处于最佳状态，而在退潮时则变成礁石步道。带孩子旅行再次改变了计算方式——我们专门为此对海滩进行了排名 <a href="/bali/zh/journal/calm-beaches-bali-kids">巴厘岛平静的海滩适合孩子们</a>.</p>
 
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>将游泳变成一日游</h2>
                 <p>如果您想要的不仅仅是酒店附近的畅游，两次旅行即可涵盖此列表中最好的水源。 <a href="/bali/zh/tours/blue-lagoon-snorkeling">蓝色泻湖浮潜</a> 50 美元起，您可以带着装备和导游进入巴东拜最清澈的海湾，从巴厘岛南部和东部的大部分地区出发只需半天时间。的 <a href="/bali/zh/tours/gili-island-tour">吉利岛之旅</a> 115 美元起为全套服务：乘快艇穿越三个岛屿，享受该地区最平静的游泳水域。哪几个月的海水状况最好，请参阅 <a href="/bali/zh/journal/best-time-clear-water-bali">巴厘岛水质清澈的最佳时间</a>，对于完整的净度排名，从 <a href="/bali/zh/journal/best-beaches-bali-crystal-clear-water">巴厘岛最好的海滩和清澈的海水</a>.</p>
+
 
 
               </section>
@@ -970,7 +984,7 @@ body {
               </div>
               <div class="sb-journal-tourcard__price">50 美元起</div>
               <div class="sb-journal-tourcard__actions">
-                <a class="sb-journal-primary" href="/bali/zh/tours/blue-lagoon-snorkeling">打开游览页面</a>
+                <a class="sb-journal-primary" href="/bali/zh/tours/blue-lagoon-snorkeling">巴东拜蓝色泻湖浮潜 — 50 美元起</a>
                 <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20Blue%20Lagoon%20Snorkeling%2C%20Padang%20Bai.%20Please%20send%20details." target="_blank" rel="noopener noreferrer nofollow">通过 WhatsApp 预订</a>
               </div>
             </div>

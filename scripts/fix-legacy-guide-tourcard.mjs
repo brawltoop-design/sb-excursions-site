@@ -44,8 +44,32 @@ const EXTRA_CSS = `<style id="sb-journal-tourcard-css">
   .sb-journal-tourcard__actions .sb-journal-primary,.sb-journal-tourcard__actions .sb-journal-secondary{width:100%;box-sizing:border-box}
 </style>`;
 
-const stats = { вставлено: 0, "уже есть": 0, "нет якорного тура": 0, "нет донора": 0 };
+const stats = { вставлено: 0, "уже есть": 0, "нет якорного тура": 0, "нет донора": 0, "строка с туром": 0 };
 const problems = [];
+
+// Ссылка на тур в первых абзацах. У свежих статей эту строку рисует шаблон
+// генератора, а эти шесть гайдов он не перезаписывает — берём готовую, уже
+// переведённую строку из статьи-донора и ставим под датой публикации.
+function withTourDeck(html, donorHtml) {
+  if (html.includes("sb-journal-deck")) return html;
+  const deck = donorHtml.match(/<p class="sb-journal-deck">[\s\S]*?<\/p>/);
+  if (!deck) return html;
+  // Цепляемся за строку с датой, а если её нет (эти гайды старше байлайна) —
+  // за лид: в обоих случаях ссылка оказывается в первом экране.
+  const anchor =
+    html.match(/<p class="sb-journal-dates">[\s\S]*?<\/p>/) ||
+    html.match(/<p class="sb-journal-lead">[\s\S]*?<\/p>/);
+  if (!anchor) return html;
+  return html.replace(anchor[0], `${anchor[0]}\n            ${deck[0]}`);
+}
+
+// Куда ведёт главная кнопка в шапке — это и есть якорный тур гайда.
+function donorNameFor(name, html) {
+  const anchor = html.match(/class="sb-journal-primary" href="\/bali\/[a-z]{2}\/tours\/([a-z0-9-]+)"/);
+  if (!anchor) return null;
+  const lang = (name.match(/-(ru|es|fr|zh)\.html$/) || [])[1] || "en";
+  return `bali-journal-${anchor[1]}-travel-guide${lang === "en" ? "" : `-${lang}`}.html`;
+}
 
 const files = (await fs.readdir(ROOT)).filter(
   (name) => name.startsWith("bali-journal-guide-") && name.endsWith(".html"),
@@ -58,7 +82,15 @@ for (const name of files) {
   // Карточка уже стоит — освежаем только CSS-блок (он мог измениться)
   // и идём дальше.
   if (html.includes("sb-journal-tourcard")) {
-    const refreshed = html.replace(/<style id="sb-journal-tourcard-css">[\s\S]*?<\/style>/, EXTRA_CSS);
+    let refreshed = html.replace(/<style id="sb-journal-tourcard-css">[\s\S]*?<\/style>/, EXTRA_CSS);
+    const donor = donorNameFor(name, html);
+    if (donor && !refreshed.includes("sb-journal-deck")) {
+      try {
+        const donorHtml = await fs.readFile(path.join(ROOT, donor), "utf8");
+        const linked = withTourDeck(refreshed, donorHtml);
+        if (linked !== refreshed) { refreshed = linked; stats["строка с туром"]++; }
+      } catch { /* донора нет — строку не ставим, это не повод падать */ }
+    }
     if (refreshed !== html) await fs.writeFile(file, refreshed);
     stats["уже есть"]++;
     continue;
@@ -88,6 +120,9 @@ for (const name of files) {
     '<aside class="sb-journal-sidebar">',
     `<aside class="sb-journal-sidebar">\n            ${cardHtml}`,
   );
+
+  const withDeck = withTourDeck(out, donorHtml);
+  if (withDeck !== out) { out = withDeck; stats["строка с туром"]++; }
   if (!out.includes('id="sb-journal-tourcard-css"')) {
     out = out.replace("</head>", `${EXTRA_CSS}\n</head>`);
   }

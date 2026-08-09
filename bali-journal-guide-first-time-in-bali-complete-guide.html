@@ -247,6 +247,15 @@
   .sb-journal-article-section ul,.sb-journal-sidebar-card ul{margin:0;padding-left:18px}
   .sb-journal-article-section li,.sb-journal-sidebar-card li{color:#2f2f33;font-size:16px;line-height:1.72}
   .sb-journal-dates{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;letter-spacing:0}
+  .sb-journal-deck{margin:10px 0 0;font-size:17px;line-height:1.6}
+  .sb-journal-tablewrap{margin:18px 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .sb-journal-table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5;min-width:520px}
+  .sb-journal-table th,.sb-journal-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--sbj-line);vertical-align:top}
+  .sb-journal-table thead th{font-weight:700;font-size:13px;letter-spacing:0.03em;text-transform:uppercase;color:var(--sbj-muted);border-bottom-width:2px}
+  .sb-journal-table tbody th{font-weight:600;color:#151515}
+  .sb-journal-table tbody tr:last-child th,.sb-journal-table tbody tr:last-child td{border-bottom:0}
+  .sb-journal-tablenote{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;line-height:1.6}
+  .sb-journal-deck a{color:inherit;text-decoration:underline;text-underline-offset:3px}
   .sb-journal-sidebar{display:grid;gap:18px;align-self:start;position:sticky;top:88px}
   .sb-journal-tourcard{padding:0;overflow:hidden}
   .sb-journal-tourcard__media{display:block;position:relative}
@@ -665,11 +674,12 @@ body {
             <h1>First Time Flying to Bali? The Complete Setup Guide</h1>
             <p class="sb-journal-lead">This is the guide we wish every first-timer read on the plane. Not what to see — the tours cover that — but how to <strong>set yourself up</strong> in the first 48 hours: a place to stay, a working phone, a way to get around, and the paperwork that keeps you out of trouble. Do these four things right and the rest of Bali is easy.</p>
             <p class="sb-journal-dates">By Alex Moskvin, Founder of SB Excursions · Published 21 May 2026 · Updated 7 August 2026</p>
+            <p class="sb-journal-deck">Tour on this route: <a href="/bali/en/tours/ubud-highlights-tour">Ubud Rice Terrace, Temple &amp; Volcano Tour</a> — From $69, 10 hours.</p>
             <div class="sb-journal-inline-stats">
               <span>Villa, SIM, scooter</span><span>Licences by nationality</span><span>First-week checklist</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/en/tours/ubud-highlights-tour">Open recommended tour</a>
+              <a class="sb-journal-primary" href="/bali/en/tours/ubud-highlights-tour">Ubud Rice Terrace, Temple &amp; Volcano Tour — From $69</a>
               <a class="sb-journal-secondary" href="/bali/en/journal">Browse all guides</a>
             </div>
           </div>
@@ -752,11 +762,13 @@ body {
                 <p>The single biggest money mistake first-timers make is booking a whole trip on nightly booking-site rates. Those sites are perfect for your <strong>first three or four nights</strong> — arrive with a guaranteed bed and no stress. For anything longer, they are the most expensive way to stay in Bali.</p><p>The moment you want a <strong>month or more</strong>, renting direct is dramatically cheaper — commonly <strong>40–60% below</strong> the equivalent nightly rate. A room or small villa that costs $60 a night on a platform is often <strong>$500–900 a month</strong> direct. The trade is that you take on a little verification work yourself.</p><p><strong>Facebook groups and Marketplace</strong> are where most of this happens. Search groups like &quot;Bali Long Term Rentals&quot;, &quot;Canggu Community&quot; and area-specific villa groups, or Marketplace filtered to the area you want. Message a few listings, ask for a video walkthrough, and negotiate the monthly rate — the first price is rarely the real one.</p>
                 <ul><li><strong>Never pay a full deposit before seeing the place</strong> — video call or, better, arrive first and view in person</li><li>Pay the deposit only once you have seen it, ideally with a simple written agreement</li><li>Be wary of listings far below market price, urgency (&quot;another person is interested, pay now&quot;), or a refusal to video call — these are the classic scam signals</li><li>Prefer hosts with history — a real profile, reviews in the group, or a personal recommendation</li><li>Check what is included: is it <strong>electricity, water, wifi, pool cleaning, staff</strong>? Power especially can add up</li><li>Agents (a small finder&#39;s fee) are a reasonable middle ground if you would rather not deal direct</li></ul>
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>📶 Where and how to buy a SIM</h2>
                 <p>Get connected on day one — a working phone makes everything else easier, from Grab rides to messaging villa hosts. <strong>Telkomsel</strong> has the best coverage across the island, including Nusa Penida and the north; <strong>XL</strong> and <strong>Indosat</strong> are cheaper and fine if you are staying in the south.</p><p>A 30-day tourist package with generous data runs about <strong>$10</strong> in town. The catch: <strong>airport kiosks charge noticeably more</strong> than shops in Kuta, Seminyak, Ubud or Canggu, so unless you need it the moment you land, wait until you are in town. Bring an <strong>unlocked phone</strong>, and staff will set it up for you.</p><p>If your phone supports <strong>eSIM</strong>, buying one before you fly is the smoothest option — you land already connected and skip the shop entirely. A 30-day data eSIM runs roughly <strong>$14–23</strong> depending on the allowance.</p>
+
 
 
               </section>
@@ -766,12 +778,14 @@ body {
                 <p>A scooter is how most people get around Bali, and it is cheap — <strong>$4–6.50</strong> a day for a 110cc Scoopy, a little more for a 125–155cc. The problem is not the bike; it is the paperwork, because this is where travelers get fined and, far more expensively, lose their insurance cover.</p><p>Here is the rule, stated plainly. You legally need <strong>your home driving licence AND an International Driving Permit (IDP)</strong> — the IDP is only a translation of your licence, so you need both. Crucially, the IDP must carry a <strong>motorcycle category (A)</strong>, which means you need a <strong>motorcycle entitlement at home</strong>. A <strong>car-only IDP does not cover a scooter</strong> — that is the single most common trap, because almost every Bali rental bike counts as a motorcycle under Indonesian law regardless of its small engine.</p><p><strong>You must get the IDP in your home country before you travel.</strong> You cannot legitimately obtain one after arriving — the old 30-day tourist licence at the Denpasar police office was discontinued, and online &quot;get your IDP in Bali&quot; offers are not genuine documents. Only residents on a KITAS can apply for a local Indonesian licence.</p>
                 <ul><li>Rental shops usually rent on <strong>just a passport and deposit</strong> and do not check documents — this is not a legal defence and does not restore your insurance</li><li><strong>Never leave your passport</strong> as a deposit; a photocopy is enough, and being without your passport is itself an offence</li><li><strong>Helmets are mandatory</strong> for rider and passenger — the fine is about <strong>IDR 250,000 each</strong></li><li>Photograph the bike from every angle in daylight before riding off, to head off later &quot;damage&quot; claims</li><li>Checkpoint fines for missing or wrong-category documents run roughly <strong>IDR 250,000–1,000,000</strong></li></ul>
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>🌍 What licence do I need? By nationality</h2>
                 <p>One myth to clear up first: you will read that &quot;Indonesia follows the 1949 Geneva Convention, so you need a Geneva IDP.&quot; <strong>Indonesia has actually ratified neither the Geneva nor the Vienna convention</strong> — it recognises foreign IDPs through its own national law, and in practice Bali police and rental shops <strong>accept an IDP of either format</strong>. So the format debate is a distraction. What matters is that your country can issue you a real IDP at all, and that it carries the motorcycle category.</p><p>For almost every nationality the answer is the same and simple. <strong>China is the one genuine exception</strong> — and it is a big one.</p>
                 <ul><li>🇺🇸 <strong>United States</strong> — get an IDP from <strong>AAA</strong> (or AATA) before you fly, plus a motorcycle endorsement on your state licence. Fine in Bali</li><li>🇫🇷 <strong>France</strong> — France issues the *permis international*; French licence plus IDP with an *A* category. No special issue</li><li>🇪🇸 <strong>Spain</strong> — the *permiso internacional de conducción* from the DGT, plus your licence. No special issue</li><li>🇷🇺 <strong>Russia</strong> — a Russian-issued IDP plus your domestic licence (category <strong>A</strong> for scooters) is accepted in practice. Carry the physical booklet, not a photo</li><li>🇨🇳 <strong>China (mainland) — the hard case.</strong> Mainland China belongs to neither convention, so Chinese licences are not internationally recognised and <strong>China does not issue a valid IDP</strong>. Any &quot;international licence&quot; sold online to a mainland holder is not genuine. The realistic options are a licence from another country you have lived in, or, if you hold a KITAS, an Indonesian licence — otherwise you cannot legally ride</li><li>🇬🇧 🇦🇺 🇨🇦 🇩🇪 <strong>UK, Australia, Canada, Germany</strong> — all can issue a recognised IDP (Post Office, auto clubs, or the German *Internationaler Führerschein*). Licence plus IDP, category A for scooters</li></ul>
+
 
               </section>
 
@@ -780,12 +794,14 @@ body {
                 <p>Two items are mandatory for every visitor, and both are easiest done before you land. The <strong>tourist levy</strong> is IDR 150,000 (about $10) per person, paid once through the official <strong>lovebali.baliprov.go.id</strong> site — ignore the lookalike sites that charge double. The <strong>All Indonesia arrival card</strong> replaced the old customs and health forms and must be filed at <strong>allindonesia.imigrasi.go.id within 72 hours</strong> of arrival; the system rejects it if you try earlier.</p><p>Most travelers also need a <strong>visa on arrival</strong> (IDR 500,000 for 30 days, extendable once). Our separate visa guide covers the details, including the extension, which now needs an in-person office visit rather than being fully online.</p>
 
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>✅ Your first 48 hours, in order</h2>
 
                 <ul><li><strong>Before you fly:</strong> pay the tourist levy, file the arrival card within 72 hours, and — if driving — get your IDP with a motorcycle category</li><li><strong>At the airport:</strong> use a fixed-price transfer counter or a pre-booked driver, not a tout</li><li><strong>Day one:</strong> buy a SIM in town, settle into your first booked nights, and do nothing ambitious</li><li><strong>Days two to three:</strong> view any monthly villa in person before paying a deposit; sort out a scooter or a regular driver</li><li><strong>Then:</strong> start booking the experiences — and read the <a href="/bali/en/journal/bali-itinerary-7-days-first-time">7-day itinerary</a> so you group them by area instead of sitting in traffic</li></ul>
+
 
               </section>
 
@@ -914,7 +930,7 @@ body {
               </div>
               <div class="sb-journal-tourcard__price">From $69</div>
               <div class="sb-journal-tourcard__actions">
-                <a class="sb-journal-primary" href="/bali/en/tours/ubud-highlights-tour">Open the tour page</a>
+                <a class="sb-journal-primary" href="/bali/en/tours/ubud-highlights-tour">Ubud Rice Terrace, Temple &amp; Volcano Tour — From $69</a>
                 <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20Ubud%20Rice%20Terrace%2C%20Temple%20%26%20Volcano%20Tour.%20Please%20send%20details." target="_blank" rel="noopener noreferrer nofollow">Book in WhatsApp</a>
               </div>
             </div>

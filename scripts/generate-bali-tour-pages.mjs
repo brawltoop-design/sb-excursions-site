@@ -1596,8 +1596,8 @@ function place(title, kind, maps, copy, vibe, interests){ return { title:title, 
 const tours = [
   {
     slug: "ubud-highlights-tour",
-    metaTitle: "Ubud Highlights Tour | Monkey Forest, Rice Terraces, Temples",
-    metaDescription: "Full-day private Ubud tour — Monkey Forest, Tegalalang rice terraces, temples and a Kintamani buffet lunch. Private car, tickets and hotel pickup included.",
+    metaTitle: "Ubud Day Tour in Bali | Monkey Forest, Rice Terraces from $69",
+    metaDescription: "Full-day private Ubud tour: Monkey Forest, Tegalalang rice terraces, temples and Kintamani lunch. From $69 with car, tickets and pickup. Book via WhatsApp.",
     title: "Ubud Rice Terrace, Temple & Volcano Tour",
     eyebrow: "All-inclusive Ubud and Kintamani day",
     mapLabel: "Heritage route",
@@ -1678,6 +1678,8 @@ const tours = [
   },
   {
     slug: "north-bali-lovina-dolphins-tour",
+    metaTitle: "North Bali Tour | Lovina Dolphins & Waterfalls from $79",
+    metaDescription: "Sunrise dolphin boat in Lovina, north Bali waterfalls and a lake temple in one 10-12 hour day. Private car, driver and pickup from $79. Book via WhatsApp.",
     title: "North Bali Tour and Lovina Dolphins",
     mainPage: false,
     aiPlanner: false,
@@ -1716,8 +1718,8 @@ const tours = [
   },
   {
     slug: "dolphin-sunrise-city-tour",
-    metaTitle: "Lovina Dolphin Sunrise Tour | Wild Dolphins in North Bali",
-    metaDescription: "See wild dolphins at sunrise in Lovina, North Bali. Traditional outrigger boat around 06:00, Gitgit Waterfall and Ulun Danu Temple. Hotel pickup included.",
+    metaTitle: "Lovina Dolphin Sunrise Tour, Bali | Gitgit Waterfall from $69",
+    metaDescription: "See wild dolphins at sunrise from a Lovina outrigger boat, then Gitgit Waterfall and Ulun Danu temple. 8 hours from $69, hotel pickup. Book on WhatsApp.",
     title: "Lovina Dolphin Sunrise Tour",
     eyebrow: "Sunrise boat trip, waterfall and lake temple day",
     duration: "8 hours",
@@ -1819,12 +1821,11 @@ const tours = [
     related: ["north-bali-lovina-dolphins-tour", "tanah-lot-bedugul-tour", "ubud-highlights-tour"],
     whatsappText:
       "Hello! I want to book the Lovina Dolphin Sunrise Tour. Please send availability, pickup options, and full details.",
-    metaTitle: "Lovina Dolphin Sunrise Tour in Bali | Gitgit Waterfall & Ulun Danu",
-    metaDescription:
-      "Book the Lovina Dolphin Sunrise Tour in Bali with early hotel pickup, traditional boat, Gitgit Waterfall, Ulun Danu Beratan Temple, tickets and private transport from $69.",
   },
   {
     slug: "east-bali-instagram-tour",
+    metaTitle: "East Bali Instagram Tour | Gates of Heaven & Palaces from $69",
+    metaDescription: "Photo route through east Bali: Lempuyang Gates of Heaven, royal water palaces and cliff views, 8-10 hours. From $69 with driver and tickets. Book on WhatsApp.",
     title: "East Bali Instagram Tour",
     eyebrow: "Gates of Heaven and royal palaces",
     duration: "8-10 hours",
@@ -1861,8 +1862,8 @@ const tours = [
   },
   {
     slug: "tanah-lot-bedugul-tour",
-    metaTitle: "Tanah Lot & Bedugul Tour | Temples, Lake and Sunset, Bali",
-    metaDescription: "Private Bali day tour to the Ulun Danu lake temple, Handara, Candikuning and Jatiluwih, with sunset potential at Tanah Lot. Driver and hotel pickup included.",
+    metaTitle: "Tanah Lot & Bedugul Tour, Bali | Lake Temple & Sunset from $59",
+    metaDescription: "Private Bali day tour to Ulun Danu Beratan, Handara Gate, Candikuning and Jatiluwih, ending with sunset at Tanah Lot. 9-11 hours from $59. Book on WhatsApp.",
     title: "Tanah Lot and Bedugul Tour",
     eyebrow: "Temples, lakes, and cooler highlands",
     duration: "9-11 hours",
@@ -1899,12 +1900,9 @@ const tours = [
   },
   {
     slug: "bali-unesco",
-    metaTitle: "Bali UNESCO Tour | Jatiluwih Rice Terraces & Tanah Lot",
-    metaDescription: "Bali UNESCO day tour: Taman Ayun, Ulun Danu Beratan, Jatiluwih rice terraces and Tanah Lot in 10 hours. Private car and entrance tickets included. From $69.",
+    metaTitle: "Bali UNESCO Heritage Tour | Jatiluwih & Tanah Lot from $69",
+    metaDescription: "Bali UNESCO day tour: Taman Ayun, Ulun Danu Beratan, Jatiluwih rice terraces and Tanah Lot in 10 hours. Private car and tickets from $69. Book via WhatsApp.",
     title: "Bali UNESCO Heritage Sites Tour",
-    metaTitle: "Bali UNESCO Heritage Sites Tour | Taman Ayun, Ulun Danu, Jatiluwih & Tanah Lot",
-    metaDescription:
-      "Book the Bali UNESCO Heritage Sites Tour with Taman Ayun Temple, Ulun Danu Beratan, Jatiluwih Rice Terraces and Tanah Lot, plus private transport and all entrance tickets from $69 per person.",
     eyebrow: "UNESCO temples, rice terraces, and Tanah Lot",
     duration: "10 hours",
     pickup: "Morning hotel pickup from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, or Jimbaran",
@@ -2045,8 +2043,8 @@ const tours = [
   },
   {
     slug: "mount-batur-sunrise-jeep-tour",
-    metaTitle: "Mount Batur Sunrise Jeep Tour | No Hiking, Bali Volcano",
-    metaDescription: "Watch sunrise over Mount Batur from a 4x4 jeep — no summit hike required. Sunrise Point, black lava field and black sand stops, hotel pickup included.",
+    metaTitle: "Mount Batur Sunrise Jeep Tour in Bali | No Hiking, from $75",
+    metaDescription: "Watch sunrise from Mount Batur in a 4x4 jeep, no hiking needed, then the black lava field and black sand. 6-8 hours from $75, hotel pickup. Book via WhatsApp.",
     title: "Mount Batur Sunrise Jeep Tour",
     mainPage: true,
     mainPageRank: 14,
@@ -2085,6 +2083,8 @@ const tours = [
   },
   {
     slug: "mount-batur-sunrise-jeep-hot-spring",
+    metaTitle: "Mount Batur Sunrise Jeep and Hot Spring, Bali | from $60",
+    metaDescription: "Jeep to Batur's Sunrise Point, no hiking, then a soak in a Kintamani hot spring. 6-8 hours from $60, hotel pickup included. Book via WhatsApp, no prepayment.",
     title: "Mount Batur Sunrise Jeep & Hot Spring",
     mainPage: true,
     mainPageRank: 13,
@@ -2124,8 +2124,8 @@ const tours = [
   },
   {
     slug: "mount-batur-sunrise-hike",
-    metaTitle: "Mount Batur Sunrise Trek | Volcano Hike with Breakfast, Bali",
-    metaDescription: "Hike Mount Batur for sunrise — 1.5-2 hours up in the dark with a local guide, breakfast cooked over volcanic steam at 1,717 m. Hotel pickup from 01:30.",
+    metaTitle: "Mount Batur Sunrise Hike, Bali | Summit Breakfast from $35",
+    metaDescription: "Sunrise hike up Mount Batur with a local guide: 1.5-2 hours up in the dark, breakfast in volcanic steam at 1,717 m. From $35, pickup 01:30. Book on WhatsApp.",
     title: "Mount Batur Sunrise Hike",
     mainPage: true,
     mainPageRank: 12,
@@ -2165,6 +2165,8 @@ const tours = [
   },
   {
     slug: "atv-ride-adventure",
+    metaTitle: "ATV Ride Adventure in Bali | Off-Road Jungle Tracks from $25",
+    metaDescription: "Off-road ATV ride through Bali jungle trails, mud tracks and rice-field paths on a 4-6 hour half-day. From $25 with gear and guide. Book via WhatsApp.",
     title: "ATV Ride Adventure",
     mainPage: false,
     aiPlanner: false,
@@ -2203,8 +2205,8 @@ const tours = [
   },
   {
     slug: "atv-quad-bikes",
-    metaTitle: "Bali ATV Quad Bike Ride | Jungle, Rice Fields & Tunnels",
-    metaDescription: "Ride a quad bike through Bali's jungle, rice fields, river crossings and tunnels near Ubud. Single or tandem, safety gear, lunch and optional hotel pickup.",
+    metaTitle: "Ubud ATV Quad Bike Tour in Bali | Jungle Ride from $20",
+    metaDescription: "Ride quad bikes through Ubud jungle, rice fields, river crossings and tunnels on a 1.5-hour track. From $20 with gear, lunch and showers. Book via WhatsApp.",
     title: "Ubud ATV Quad Bike Adventure",
     eyebrow: "Jungle, rice fields, rivers, and tunnels",
     duration: "4-6 hours total with a 1.5-hour ATV ride",
@@ -2302,12 +2304,11 @@ const tours = [
     related: ["white-water-rafting", "mount-batur-sunrise-jeep-tour", "surf-lesson-experience"],
     whatsappText:
       "Hello! I want to book the Ubud ATV Quad Bike Adventure. Please send availability, single or tandem options, pickup areas, and full details.",
-    metaTitle: "Ubud ATV Quad Bike Adventure with Lunch | Bali Jungle ATV Tour",
-    metaDescription:
-      "Book the Ubud ATV Quad Bike Adventure with jungle, rice field, river and tunnel tracks, lunch, safety gear, showers, and optional hotel pickup from $20.",
   },
   {
     slug: "bali-instagram-highlights-tour",
+    metaTitle: "Bali Instagram Photo Tour | Custom Scenic Route from $69",
+    metaDescription: "Flexible Bali photo day: pick your scenic stops — waterfalls, gates and rice terraces — in 8-10 hours. From $69 with private car. Book via WhatsApp.",
     title: "Bali Instagram Highlights Tour",
     mainPage: false,
     aiPlanner: false,
@@ -2346,6 +2347,8 @@ const tours = [
   },
   {
     slug: "ubud-instagram-tour",
+    metaTitle: "Ubud Instagram Tour, Bali | Gates of Heaven & Waterfall from $89",
+    metaDescription: "Photo-first Ubud day: Gates of Heaven, Tirta Gangga, Tukad Cepung waterfall, Tegalalang. From $89 with lunch, tickets and hotel pickup. Book via WhatsApp.",
     title: "Ubud Instagram Tour",
     eyebrow: "Gates of Heaven, waterfall and rice terrace day",
     duration: "10 hours",
@@ -2445,12 +2448,11 @@ const tours = [
     related: ["east-bali-instagram-tour", "ubud-highlights-tour", "tanah-lot-bedugul-tour"],
     whatsappText:
       "Hello! I want to book the Ubud Instagram Tour. Please send availability, pickup areas, and full details.",
-    metaTitle: "Ubud Instagram Tour in Bali | Gates of Heaven, Waterfall & Rice Terrace",
-    metaDescription:
-      "Book the Ubud Instagram Tour in Bali with Lempuyang Gates of Heaven, Tirta Gangga, Tukad Cepung Waterfall, Tegalalang Rice Terrace, lunch, tickets and hotel pickup from $89.",
   },
   {
     slug: "nusa-penida-private-day-tour-manta-snorkeling",
+    metaTitle: "Nusa Penida Private Tour + Manta Snorkeling, Bali | from $60",
+    metaDescription: "Nusa Penida in one day: snorkeling with mantas at Manta Point plus Kelingking and the west coast viewpoints by private car. From $60. Book via WhatsApp.",
     title: "Nusa Penida Private car Day Tour+Snorkeling Manta Point",
     eyebrow: "The most complete Nusa Penida combo",
     duration: "Full day",
@@ -2487,6 +2489,8 @@ const tours = [
   },
   {
     slug: "nusa-penida-west-tour",
+    metaTitle: "Nusa Penida West Tour from Bali | Kelingking, from $49 per car",
+    metaDescription: "West Nusa Penida in a 10-12 hour private day: Kelingking, Broken Beach, Angel's Billabong and Crystal Bay. From $49 per car. Book via WhatsApp, no prepayment.",
     title: "Nusa Penida West Tour",
     eyebrow: "Kelingking and west Penida icons",
     duration: "Full day",
@@ -2506,8 +2510,6 @@ const tours = [
     ],
     image: sourceImage("tild3033-6437-4832-a231-366334396336__connor-2a_nva3oqoe-u.webp"),
     imageAlt: "West Nusa Penida cliffs and ocean views",
-    metaDescription:
-      "Nusa Penida West Tour from Bali: Kelingking, Broken Beach, Angel's Billabong and Crystal Bay in one 10-12 hour private day from $49 per car. Book via WhatsApp.",
     lead:
       "The Nusa Penida West Tour is a full-day, 10-12 hour private trip to the island's four west-coast icons — Kelingking viewpoint, Broken Beach, Angel's Billabong and the Crystal Bay swim stop — from $49 per car for up to 6 people, with the fast boat crossing available from $15.",
     summary:
@@ -2534,6 +2536,8 @@ const tours = [
   },
   {
     slug: "nusa-penida-east-tour",
+    metaTitle: "Nusa Penida East Tour, Bali | Diamond & Atuh Beach from $75",
+    metaDescription: "East Nusa Penida day trip from Bali: Diamond Beach, Atuh Beach and Tree House in 10-12 hours. Fast boat, lunch and tickets from $75. Book via WhatsApp.",
     title: "Nusa Penida East Tour",
     eyebrow: "Diamond Beach, Atuh Beach, Tree House, and Raja Lima",
     duration: "10-12 hours",
@@ -2642,14 +2646,11 @@ const tours = [
     related: ["nusa-penida-full-day-tour", "nusa-penida-private-day-tour-manta-snorkeling", "nusa-penida-manta-rays-point"],
     whatsappText:
       "Hello! I want to book the Nusa Penida East Tour. Please send availability, pickup options, and full details.",
-    metaTitle: "Nusa Penida East Tour from Bali | Diamond Beach & Atuh Beach",
-    metaDescription:
-      "Book a Nusa Penida East Tour from Bali with Diamond Beach, Atuh Beach, Tree House, Thousand Islands Viewpoint, fast boat, lunch and tickets from $75.",
   },
   {
     slug: "nusa-penida-full-day-tour",
-    metaTitle: "Nusa Penida Full Day Tour | Kelingking Beach, West & East",
-    metaDescription: "Full-day Nusa Penida tour built around Kelingking, Angel's Billabong and Diamond Beach. Hotel pickup from major Bali areas and a flexible, driver-led route.",
+    metaTitle: "Nusa Penida Full Day Tour from Bali | Kelingking from $75",
+    metaDescription: "Full-day Nusa Penida tour from Bali: Kelingking, Angel's Billabong and Diamond Beach on a flexible route. From $75 with hotel pickup, book on WhatsApp.",
     title: "Nusa Penida Full Day Tour",
     eyebrow: "Flexible island sightseeing day",
     duration: "Full day",
@@ -2686,8 +2687,8 @@ const tours = [
   },
   {
     slug: "nusa-penida-manta-rays-point",
-    metaTitle: "Snorkel with Manta Rays in Bali | Manta Point, Nusa Penida",
-    metaDescription: "Snorkel with manta rays at Manta Point on a full-day Nusa Penida tour with Crystal Bay and Gamat Bay stops. Gear and hotel pickup included — from $29.",
+    metaTitle: "Snorkel with Manta Rays in Bali | Nusa Penida Day Trip from $29",
+    metaDescription: "Full-day Nusa Penida boat trip to Manta Point plus Crystal Bay and Gamat Bay snorkeling stops. Gear and hotel pickup included, from $29. Book via WhatsApp.",
     title: "Snorkel with Manta Rays, Nusa Penida",
     eyebrow: "Classic Bali marine day",
     duration: "Full day",
@@ -2731,6 +2732,8 @@ const tours = [
   },
   {
     slug: "gili-islands-getaway",
+    metaTitle: "Gili Islands Getaway from Bali | Fast Boat Trip from $70",
+    metaDescription: "Gili Trawangan, Meno and Air by fast boat from Bali — one full day on the islands or a multi-day stay. From $70. Book via WhatsApp, no prepayment.",
     mainPage: false,
     aiPlanner: false,
     title: "Gili Islands Getaway from Bali",
@@ -2769,8 +2772,8 @@ const tours = [
   },
   {
     slug: "gili-island-tour",
-    metaTitle: "Gili Islands Day Trip from Bali | Snorkeling with Turtles",
-    metaDescription: "Gili Islands day trip from Bali: fast boat, private snorkeling boat, turtles and underwater statues, GoPro photos, free time on Gili Trawangan. From $115.",
+    metaTitle: "Gili Islands Day Trip from Bali | Private Snorkeling from $115",
+    metaDescription: "Gili Islands day trip from Bali: fast boat to Gili Trawangan and Meno, private snorkeling boat, turtles and underwater statues. From $115, book on WhatsApp.",
     title: "Gili Islands Private Snorkeling Day Trip",
     eyebrow: "Private Gili snorkeling from Bali",
     duration: "7-9 hours",
@@ -2869,14 +2872,11 @@ const tours = [
     ],
     whatsappText:
       "Hello! I want to book the Gili Islands Private Snorkeling Day Trip from Bali. Please send availability, pickup options, and full details.",
-    metaTitle: "Gili Islands Private Snorkeling Day Trip from Bali | SB Excursions",
-    metaDescription:
-      "Private Gili Islands snorkeling day trip from Bali with fast boat, turtles, underwater statues, GoPro, free time on Gili Trawangan, and hotel transfer options. From $115.",
   },
   {
     slug: "sumbawa-whale-shark-snorkeling-trip",
-    metaTitle: "Swim with Whale Sharks in Sumbawa | Trip from Bali",
-    metaDescription: "Snorkel with whale sharks in Saleh Bay, Sumbawa. Expedition-style marine day with very early departure — snorkeling gear and activity briefing included.",
+    metaTitle: "Swim with Whale Sharks in Sumbawa | Bali Trip from $150",
+    metaDescription: "Snorkel with whale sharks in Saleh Bay, Sumbawa — an expedition day from Bali with a very early start. From $150 with gear and briefing. Book via WhatsApp.",
     title: "Sumbawa Whale Shark Snorkeling Trip",
     eyebrow: "Big marine expedition",
     duration: "Long marine day or expedition-style route",
@@ -2913,8 +2913,8 @@ const tours = [
   },
   {
     slug: "blue-lagoon-snorkeling",
-    metaTitle: "Blue Lagoon Snorkeling Tour Bali | Padang Bai Day Trip",
-    metaDescription: "Snorkel Blue Lagoon and Tanjung Jepun at Padang Bai — clear water, ideal for beginners and families. Snorkeling gear, guide, lunch and hotel pickup included.",
+    metaTitle: "Blue Lagoon Snorkeling in Bali | Padang Bai Day Trip from $50",
+    metaDescription: "Snorkel Blue Lagoon and Tanjung Jepun at Padang Bai — calm, clear water suited to beginners. From $50 with gear, guide, lunch and pickup. Book on WhatsApp.",
     title: "Blue Lagoon Snorkeling, Padang Bai",
     eyebrow: "Easy Bali snorkeling day",
     duration: "Half day to full day",
@@ -2951,8 +2951,8 @@ const tours = [
   },
   {
     slug: "white-water-rafting",
-    metaTitle: "Bali White Water Rafting on the Ayung River | Ubud Day Trip",
-    metaDescription: "Class II–III rafting on the Ayung River near Ubud — about 2 hours through a jungle gorge. Hotel pickup, safety briefing and gear included. Great for families.",
+    metaTitle: "Bali White Water Rafting | Ayung River, Ubud from $35",
+    metaDescription: "Class II-III rafting on the Ayung River near Ubud — about 2 hours through a jungle gorge, gear and hotel pickup included. From $35. Book via WhatsApp.",
     title: "Bali White Water Rafting, Ayung River",
     eyebrow: "River adventure in Bali",
     duration: "4-6 hours",
@@ -2989,8 +2989,8 @@ const tours = [
   },
   {
     slug: "sunset-cruise-bali",
-    metaTitle: "Bali Sunset Cruise from Benoa Harbour | Evening on the Water",
-    metaDescription: "Book a Bali sunset cruise from Benoa Harbour — 2-4 hours of golden-hour views along Serangan and Nusa Dua. Late afternoon hotel transfer support included.",
+    metaTitle: "Bali Sunset Cruise, Benoa Harbour | 2-4 hours from $150",
+    metaDescription: "Evening cruise from Benoa Harbour with golden-hour views over Serangan and Nusa Dua, 2-4 hours on the water. From $150. Book via WhatsApp, no prepayment.",
     title: "Bali Sunset Cruise from Benoa",
     eyebrow: "Easy evening on the water",
     duration: "2-4 hours",
@@ -3027,8 +3027,8 @@ const tours = [
   },
   {
     slug: "surf-lesson-experience",
-    metaTitle: "Bali Surf Lesson for Beginners | Canggu & Kuta Beach",
-    metaDescription: "Learn to surf in Bali — beginner-first coaching in a 2-4 hour session at Kuta Beach, Legian, Double Six or Batu Bolong. Basic safety equipment included.",
+    metaTitle: "Surf Lessons in Bali for Beginners | Kuta, Canggu from $35",
+    metaDescription: "Learn to surf in Bali with a 2-4 hour beginner lesson at Kuta, Legian, Double Six or Batu Bolong. From $35 with board, coach and safety gear. Book on WhatsApp.",
     title: "Bali Surf Lesson for Beginners",
     eyebrow: "Bali's classic beach activity",
     duration: "2-4 hours",
@@ -3065,8 +3065,8 @@ const tours = [
   },
   {
     slug: "bali-airport-transfer",
-    metaTitle: "Bali Airport Transfer | Private Car from Ngurah Rai Airport",
-    metaDescription: "Private airport transfer from Bali's Ngurah Rai Airport to your hotel in Kuta, Seminyak, Canggu or Ubud. Pickup timing coordinated on WhatsApp.",
+    metaTitle: "Bali Airport Transfer | Ngurah Rai to Your Hotel from $15",
+    metaDescription: "Private car from Ngurah Rai Airport to your hotel in Kuta, Seminyak, Canggu, Ubud or Uluwatu. From $15, pickup timing agreed on WhatsApp, no prepayment.",
     title: "Bali Airport Transfer",
     eyebrow: "Reliable Bali arrival support",
     duration: "Depends on hotel area",
@@ -3103,8 +3103,8 @@ const tours = [
   },
   {
     slug: "private-car-with-driver-bali",
-    metaTitle: "Private Car with Driver in Bali | Flexible Daily Hire",
-    metaDescription: "Book a private car with driver in Bali — build your own route, stop when you like. Hotel pickup from major Bali areas, flexible pacing and WhatsApp support.",
+    metaTitle: "Private Car with Driver in Bali | Full Day from $59 per car",
+    metaDescription: "Hire a private car with driver in Bali — build your own route across Ubud, Canggu and the south, stop when you like. From $59 per car. Book via WhatsApp.",
     title: "Private Car with Driver in Bali",
     eyebrow: "Flexible Bali transport by the day",
     duration: "Flexible daily use",
@@ -3141,8 +3141,8 @@ const tours = [
   },
   {
     slug: "fast-boat-transfer-bali",
-    metaTitle: "Bali Fast Boat Transfer | Nusa Penida, Lembongan & Gili T",
-    metaDescription: "Fast boat transfers from Bali to Nusa Penida, Lembongan and Gili T. Hotel pickup, harbor timing and boat logistics handled, from Sanur Port and Padang Bai.",
+    metaTitle: "Bali Fast Boat Transfer | Nusa Penida, Gili, Lembongan from $15",
+    metaDescription: "Fast boat from Sanur Port or Padang Bai to Nusa Penida, Lembongan and Gili T. Hotel pickup and harbor timing handled from $15. Book via WhatsApp.",
     title: "Bali Fast Boat Transfer",
     eyebrow: "Harbor-to-island transfer support",
     duration: "Depends on destination",
@@ -3899,6 +3899,12 @@ function guidePlaceImage(title, fallbackTourSlug) {
   return publicImagePath(tours[0]);
 }
 
+// Дата, до которой цена в разметке считается действительной. Без неё Google
+// считает цену протухшей и не показывает товарный сниппет: за три недели
+// товарная разметка дала 11 показов при 140 страницах с Product — это и была
+// причина. Держим на конец года и продлеваем вместе с пересмотром прайса.
+const PRICE_VALID_UNTIL = "2026-12-31";
+
 function moneyOffer(tour) {
   const match = /\$\s?(\d+)|(\d+)\s?\$/.exec(tour.priceSource || tour.price || "");
   if (!match) return null;
@@ -3908,6 +3914,7 @@ function moneyOffer(tour) {
     price: match[1] || match[2],
     url: absoluteTourUrl(tour),
     availability: "https://schema.org/InStock",
+    priceValidUntil: PRICE_VALID_UNTIL,
   };
 }
 
@@ -15038,7 +15045,7 @@ const JOURNAL_SEO_GUIDES = [
     ],
     "title": "Blue Lagoon Padang Bai: Full Guide (Best Time, What to Bring)",
     "description": "Blue Lagoon Bali, explained straight: how the Padang Bai cove really works, the morning clear-water window, what to bring, and what a boat trip costs.",
-    "excerpt": "Blue Lagoon is a small cove five minutes north of Padang Bai harbor — and whether you love it or shrug depends almost entirely on when you show up and how you get in the water. Here is the morning window, the two neighboring spots most visitors miss, and what to pack.",
+    "excerpt": "Blue Lagoon is a sheltered cove on Bali's east coast, about 5 minutes north of Padang Bai harbor and a 90-120 minute drive from Seminyak or Kuta, traffic depending; from Ubud it is closer to 60-90 minutes. Water is clearest between 07:00 and 10:00, before wind and boat traffic stir the sand, and the dry season from April to October holds visibility best. Entry is either straight off the beach into 1-3 m of water or by a 5-minute jukung boat out to the reef edge. Two neighboring spots most visitors skip, Tanjung Jepun and Bias Tugel, sit within a 10-15 minute walk or short boat ride. Guided snorkeling trips from Padang Bai start from $50 as of August 2026, half day to full day with morning hotel pickup; a private car with driver for a self-planned east-coast day is from $59 per car.",
     "rankings": [
       {
         "name": "Blue Lagoon (the cove itself)",
@@ -15091,6 +15098,65 @@ const JOURNAL_SEO_GUIDES = [
       }
     ],
     "sections": [
+      {
+        "heading": "Padang Bai snorkeling spots: depth, difficulty and access",
+        "paragraphs": [
+          "The bay has more than one entry point and they are not interchangeable: depth and current decide who each spot suits. Depths, difficulty and access times as of August 2026:"
+        ],
+        "table": {
+          "headers": [
+            "Spot near Padang Bai",
+            "Depth and conditions",
+            "Best for",
+            "How to get there"
+          ],
+          "rows": [
+            [
+              "Blue Lagoon cove (main beach)",
+              "1-3 m, calm until about 10:00",
+              "Beginners, families, first snorkel",
+              "10-min walk over the headland from the harbor"
+            ],
+            [
+              "Blue Lagoon reef edge",
+              "5-10 m, mild current after midday",
+              "Confident swimmers, freedivers",
+              "5-min jukung boat from the cove"
+            ],
+            [
+              "Tanjung Jepun",
+              "8-14 m, sloping wall",
+              "Strong snorkelers with a guide, divers",
+              "5-10 min boat south of the harbor"
+            ],
+            [
+              "Bias Tugel beach",
+              "Shore break, no reef",
+              "Swimming and sunbathing, not snorkeling",
+              "10-15 min walk south of the harbor"
+            ],
+            [
+              "Padang Bai jetty / Tanjung Sari",
+              "5-12 m, ferry and boat traffic",
+              "Guided divers only",
+              "5-min boat from the harbor"
+            ],
+            [
+              "Gili Tepekong and Mimpang",
+              "15-25 m, strong drift, cold patches",
+              "Certified divers only",
+              "20-30 min boat, weather permitting"
+            ],
+            [
+              "Jemeluk Bay, Amed",
+              "2-12 m, very calm",
+              "A quieter second stop on an east-coast day",
+              "60-75 min drive north, traffic depending"
+            ]
+          ],
+          "note": "Depths are the usual snorkeling range at each spot rather than the maximum, and conditions shift with tide, wind and boat traffic, so the 07:00-10:00 window is the one that holds up across the year."
+        }
+      },
       {
         "heading": "What Blue Lagoon actually is",
         "paragraphs": [
@@ -17198,7 +17264,7 @@ const JOURNAL_SEO_GUIDES = [
     description:
       "Looking for crystal clear water in Bali? This guide covers the best Bali beaches for swimming, snorkeling, photos and easy access, from Melasti and Nusa Dua to Padang Padang and Pandawa.",
     excerpt:
-      "If your mental picture of Bali includes bright blue water, easy swims and clean-looking beaches in photos, you need to be selective. The west coast is famous, but the clearest water usually shows up on the south and east side of the island where the beach shape, reef protection and morning light all work in your favor.",
+      "Bali's clearest water sits on the east coast and the offshore islands, not on the famous west-coast surf beaches: Blue Lagoon at Padang Bai, a 90-120 minute drive from the southern hotels, Jemeluk Bay at Amed 2.5-3.5 hours northeast, and Crystal Bay on Nusa Penida, reached by a 30-45 minute fast boat from Sanur. Visibility tracks the dry season — April to October is reliably clear, June to September strongest — while December to February rain washes runoff and debris into even the good bays. Swim before 11:00, when wind and boat traffic start lifting sediment. As of August 2026, a guided Blue Lagoon snorkeling day starts from $50 and a west Nusa Penida day trip from $49 per car, so a clear-water beach day rarely means changing hotels.",
     rankings: [
       {
         name: "Melasti Beach",
@@ -17266,6 +17332,77 @@ const JOURNAL_SEO_GUIDES = [
       },
     ],
     sections: [
+      {
+        "heading": "Bali's clearest-water beaches at a glance",
+        "paragraphs": [
+          "Travel times below are one-way from the southern hotel areas (Kuta, Seminyak, Canggu) and assume normal daytime traffic. The clarity window is when each spot is usually calmest and least stirred up, based on the 2026 dry-season pattern:"
+        ],
+        "table": {
+          "headers": [
+            "Beach",
+            "Area",
+            "How to get there (time)",
+            "Clearest water"
+          ],
+          "rows": [
+            [
+              "Blue Lagoon",
+              "Padang Bai, east Bali",
+              "90-120 min drive, traffic depending",
+              "Apr-Oct, before 11:00"
+            ],
+            [
+              "Bias Tugel",
+              "Padang Bai, east Bali",
+              "95-125 min drive plus 10 min walk",
+              "May-Sep, early morning"
+            ],
+            [
+              "Virgin Beach (Pasir Putih)",
+              "Karangasem, east Bali",
+              "2-2.5 hr drive, traffic depending",
+              "Apr-Oct, morning"
+            ],
+            [
+              "Jemeluk Bay",
+              "Amed, northeast Bali",
+              "2.5-3.5 hr drive, traffic depending",
+              "Apr-Nov, sunrise to 10:00"
+            ],
+            [
+              "Crystal Bay",
+              "West Nusa Penida",
+              "30-45 min fast boat plus 45-60 min drive",
+              "May-Sep, before midday"
+            ],
+            [
+              "Atuh and Diamond Beach",
+              "East Nusa Penida",
+              "30-45 min fast boat plus 60-80 min drive",
+              "Apr-Oct, morning"
+            ],
+            [
+              "Nusa Dua Beach",
+              "South Bali",
+              "25-45 min drive, traffic depending",
+              "May-Oct, rising tide"
+            ],
+            [
+              "Gili Meno",
+              "Gili Islands",
+              "1.5-2.5 hr fast boat from Padang Bai",
+              "Apr-Oct, all morning"
+            ],
+            [
+              "Menjangan Island",
+              "Northwest Bali",
+              "3.5-4.5 hr drive plus 30 min boat",
+              "Apr-Nov, first boats out"
+            ]
+          ],
+          "note": "Clarity drops sharply after heavy rain at any of these beaches, so allow 24-48 hours after a downpour and take the earliest slot the tide allows."
+        }
+      },
       {
         heading: "How to choose a clear-water beach in Bali",
         paragraphs: [
@@ -17837,7 +17974,7 @@ const JOURNAL_SEO_GUIDES = [
     description:
       "Not sure where to stay in Bali for a first trip? This guide compares Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua and Sanur by vibe, transport and travel fit.",
     excerpt:
-      "Where you stay in Bali changes the whole trip. The island feels much easier when your hotel area matches your travel style instead of fighting it. Choosing the right base is often more important than adding one more attraction to the itinerary.",
+      "For a first trip, base yourself in Seminyak, Sanur or Ubud: Seminyak sits 25-50 minutes from Ngurah Rai airport and has walkable restaurants and beach clubs, Sanur is 30-60 minutes away with the calmest swimming water in the south, and Ubud is 75-120 minutes inland for rice terraces and temples. Traffic decides the upper end of every one of those numbers. Our tours pick up from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua and Jimbaran, so any of those bases works for day trips: the Ubud Rice Terrace, Temple and Volcano Tour starts at 08:00, runs 10 hours and costs from $69 as of August 2026, and an airport transfer is from $15. Most first-timers split two areas over 7-10 days, and picking the right base matters more than squeezing in one more attraction.",
     rankings: [
       {
         name: "Canggu",
@@ -17889,6 +18026,71 @@ const JOURNAL_SEO_GUIDES = [
       },
     ],
     sections: [
+      {
+        "heading": "Bali areas for first-timers compared",
+        "paragraphs": [
+          "Every area below is on our hotel pickup list, so the choice comes down to airport distance and the kind of day you want, not tour access. Road times are one-way estimates from Ngurah Rai airport:"
+        ],
+        "table": {
+          "headers": [
+            "Area",
+            "Best for",
+            "Airport transfer time",
+            "Vibe"
+          ],
+          "rows": [
+            [
+              "Kuta / Legian",
+              "First night, last night, short stopovers",
+              "10-25 min, traffic depending",
+              "Busy, cheap, closest to the terminal"
+            ],
+            [
+              "Jimbaran",
+              "Seafood dinners, quiet resort nights",
+              "15-30 min, traffic depending",
+              "Bay beach, calm swimming, low-key"
+            ],
+            [
+              "Nusa Dua",
+              "Resort holidays, families with small kids",
+              "25-45 min, traffic depending",
+              "Gated resort strip, groomed beaches"
+            ],
+            [
+              "Seminyak",
+              "Couples and first-timers who want to walk to dinner",
+              "25-50 min, traffic depending",
+              "Polished beach town, sunset bars"
+            ],
+            [
+              "Sanur",
+              "Families, slower travel, Nusa Penida day trips",
+              "30-60 min, traffic depending",
+              "Flat beach path, calm lagoon water"
+            ],
+            [
+              "Canggu",
+              "Surfers, remote workers, younger travellers",
+              "45-90 min, traffic depending",
+              "Rice-field lanes, cafes, beginner surf"
+            ],
+            [
+              "Uluwatu",
+              "Honeymooners, surfers, cliff views",
+              "45-75 min, traffic depending",
+              "Limestone cliffs, steep beach stairs"
+            ],
+            [
+              "Ubud",
+              "Culture, rice terraces, spa and yoga days",
+              "75-120 min, traffic depending",
+              "Inland and green, no swimming beach"
+            ]
+          ],
+          "note": "Times stretch to the upper end in evening traffic and on Bali public holidays; an airport transfer is from $15 and a full flexible day of driving is from $59 per car, both 2026 prices."
+        }
+      },
       {
         heading: "The easiest way to choose your Bali base",
         paragraphs: [
@@ -18294,7 +18496,7 @@ const JOURNAL_SEO_GUIDES = [
     description:
       "Looking for the best viewpoints in Bali? These seven stops cover volcano sunrise scenes, cliff-edge lookouts, rice terraces and broad coastline views.",
     excerpt:
-      "The strongest Bali viewpoints do not all look the same. Some win because of sunrise scale, some because of cliff drama, and some because the landscape feels wide and calm instead of crowded. The best itineraries mix those moods rather than repeating one kind of stop.",
+      "Bali's strongest viewpoints sit in four clusters rather than on one loop: the Mount Batur caldera rim in Kintamani, 2-2.5 hours from the southern hotels; the Lempuyang gates in east Bali, 2.5-3.5 hours away, traffic depending; the Tegallalang and Jatiluwih rice terraces in the Ubud-Tabanan belt; and the Nusa Penida cliffs, reached by a 30-45 minute fast boat from Sanur. Sunrise runs 06:00-06:30 and sunset 18:00-18:30 all year, so a viewpoint day is really two short light windows plus driving — which is why the best routes mix one sunrise, one cliff and one terrace instead of repeating a single mood. April to October brings the clearest air over the caldera. As of August 2026, a guided Mount Batur sunrise hike starts from $35 and a west Nusa Penida cliff route from $49 per car.",
     rankings: [
       {
         name: "Mount Batur sunrise",
@@ -18354,6 +18556,77 @@ const JOURNAL_SEO_GUIDES = [
       },
     ],
     sections: [
+      {
+        "heading": "Bali viewpoints at a glance: area, light window, entry",
+        "paragraphs": [
+          "Nine viewpoints that justify the drive, with the light window each one is built for and whether you pay at the gate. Times are the hours the view works, not gate hours, and reflect 2026 conditions:"
+        ],
+        "table": {
+          "headers": [
+            "Viewpoint",
+            "Area",
+            "Best time window",
+            "Paid entry?"
+          ],
+          "rows": [
+            [
+              "Batur caldera rim (Penelokan)",
+              "Kintamani, central highlands",
+              "05:30-08:00, sunrise",
+              "Free at roadside pullouts"
+            ],
+            [
+              "Mount Batur summit",
+              "Kintamani, central highlands",
+              "05:00-06:30, summit sunrise",
+              "Paid, guided trek required"
+            ],
+            [
+              "Lempuyang Gates of Heaven",
+              "Karangasem, east Bali",
+              "06:00-08:00",
+              "Paid, small entrance fee + sarong"
+            ],
+            [
+              "Campuhan Ridge Walk",
+              "Ubud, central Bali",
+              "06:00-08:00",
+              "Free"
+            ],
+            [
+              "Tegallalang Rice Terrace",
+              "Ubud, central Bali",
+              "07:00-09:00",
+              "Paid, small entrance fee"
+            ],
+            [
+              "Jatiluwih Rice Terraces",
+              "Tabanan, central-west Bali",
+              "08:00-11:00",
+              "Paid, small entrance fee"
+            ],
+            [
+              "Kelingking Beach cliff",
+              "West Nusa Penida",
+              "08:00-10:00",
+              "Paid, small entrance fee"
+            ],
+            [
+              "Diamond Beach cliff",
+              "East Nusa Penida",
+              "07:00-10:00",
+              "Paid, small entrance fee"
+            ],
+            [
+              "Uluwatu Temple clifftop",
+              "Bukit peninsula, south Bali",
+              "17:00-18:30, sunset",
+              "Paid, small entrance fee + sarong"
+            ]
+          ],
+          "note": "The two Nusa Penida cliffs need the 30-45 minute fast boat from Sanur plus 45-70 minutes of island driving, so treat them as their own day rather than a stop on a mainland route."
+        }
+      },
       {
         heading: "What makes a Bali viewpoint worth adding to your route",
         paragraphs: [
@@ -19796,7 +20069,7 @@ const JOURNAL_SEO_GUIDES = [
     description:
       "A Bali packing list that accounts for temple dress codes, a 12°C volcano sunrise, wet season downpours and what you can simply buy cheaply once you arrive.",
     excerpt:
-      "Bali packing goes wrong in two predictable ways: people bring far too many clothes, and nobody brings a warm layer. It is **27–30°C** at sea level all year, but the Mount Batur sunrise sits at **12–18°C**, and temples have a dress code that beachwear does not meet.",
+      "Pack for Bali as two climates in one bag: **27-30°C** at sea level all year, and **12-18°C** on the Mount Batur crater rim, where sunrise groups wait in the dark after a 1.5-2 hour climb. As of August 2026, the four things travellers most often arrive without are a warm windproof layer for the volcano, a sarong and shoulder cover for temple dress codes, reef-safe sunscreen, and a dry bag for the 30-45 minute fast-boat crossing to Nusa Penida. Everything else is simple. Laundry is cheap and usually same-day, so five days of clothing covers a two-week trip, and wet season (November-March) adds a light rain shell rather than an umbrella. The table below gives the full list, what each item is actually for on this island, and what you can safely leave at home.",
     rankings: [
       {
         name: "A warm layer",
@@ -19840,6 +20113,67 @@ const JOURNAL_SEO_GUIDES = [
       },
     ],
     sections: [
+      {
+        "heading": "Bali packing list: what each item is actually for",
+        "paragraphs": [
+          "Nine items decide whether a Bali day runs smoothly; the rest is ordinary holiday clothing you can buy or wash on the island. What each one solves here, and whether it is worth the luggage space:"
+        ],
+        "table": {
+          "headers": [
+            "Item",
+            "Why it matters in Bali specifically",
+            "Essential or optional"
+          ],
+          "rows": [
+            [
+              "Sarong + shoulder cover",
+              "Temple dress code at Besakih, Lempuyang, Tirta Empul and Ulun Danu Beratan; sarongs are lent or rented at the gate for a small fee",
+              "Essential"
+            ],
+            [
+              "Fleece or windproof jacket",
+              "Crater rim is 12-18°C before sunrise vs 27-30°C at the coast; wind makes it feel colder (Mount Batur Sunrise Hike, from $35)",
+              "Essential if you do a sunrise tour"
+            ],
+            [
+              "Closed trainers with grip",
+              "Loose volcanic scree on Batur and dust on off-road tracks (ATV Ride Adventure, from $25); sandals are not allowed on quad bikes",
+              "Essential for hikes and ATV"
+            ],
+            [
+              "Reef-safe sunscreen SPF 50",
+              "8 degrees south of the equator; midday burn time is under 20 minutes, and reef-safe formulas are harder to find locally",
+              "Essential"
+            ],
+            [
+              "Dry bag, 10-20 L",
+              "Spray on the 30-45 minute fast boat to Nusa Penida and wet-landing beach stops soak deck luggage",
+              "Essential for island days"
+            ],
+            [
+              "Motion-sickness tablets",
+              "Penida and Gili crossings run in open water; take them 45-60 minutes before boarding, not on the boat",
+              "Recommended"
+            ],
+            [
+              "Light rain shell",
+              "Wet-season downpours (November-March) last 30-90 minutes then clear; umbrellas are useless on a scooter or boat",
+              "Essential Nov-March, skip Apr-Oct"
+            ],
+            [
+              "Refillable bottle + electrolyte sachets",
+              "Tap water is not drinkable and most hotels and tour cars carry refills; heat plus humidity dehydrates faster than expected",
+              "Essential"
+            ],
+            [
+              "Type C/F plug adapter (230 V)",
+              "Indonesia uses two round pins at 230 V, so UK, US and Australian plugs will not fit",
+              "Essential"
+            ]
+          ],
+          "note": "Prices shown are 2026 tour prices from our own booking pages and are listed only to show which activities each item is needed for; laundry is cheap across the island, so pack about five days of clothing regardless of trip length."
+        }
+      },
       {
         heading: "🧳 The core list",
         bullets: [
@@ -20082,7 +20416,7 @@ const JOURNAL_SEO_GUIDES = [
     description:
       "Money changers who palm notes, fake police fines, scooter damage claims. Here are the 7 scams that catch tourists in Bali in 2026, and how to spot each one.",
     excerpt:
-      "Violent crime against tourists in Bali is rare. What actually hurts people is mundane: **scooter crashes, rip currents, stomach illness and cheap spirits**. Australia and the UK both rate Indonesia \"exercise a high degree of caution\" with no advisory against visiting Bali. Knowing the real risks — rather than the imagined ones — is most of the work.",
+      "Yes, Bali is safe for most visitors, with four specific caveats. As of August 2026 Australia and the UK both rate Indonesia at \"exercise a high degree of caution\", with no advisory against travelling to Bali, and violent crime against tourists stays rare. What actually ends trips early is mundane: scooter crashes, rip currents on the west-coast surf beaches, methanol in cheap spirits, and rabies from dog or monkey bites. Three habits cover most of it — wear a helmet and carry a licence with a motorcycle class, or skip two wheels entirely (2026 prices: a private car with driver from $59 per car, an airport transfer from $15); swim only between the red-and-yellow flags; drink only sealed, branded bottles. Save 112 before you land, and note that international-standard hospitals sit in Denpasar and Kuta, 30-60 min from most south Bali hotels, traffic depending.",
     rankings: [
       {
         name: "Scooter crashes",
@@ -20134,6 +20468,71 @@ const JOURNAL_SEO_GUIDES = [
       },
     ],
     sections: [
+      {
+        "heading": "Bali risks at a glance: how common, how to avoid, what to do",
+        "paragraphs": [
+          "The realistic risk list for a Bali trip is short, and every item on it has a known prevention and a known first response. Read each row prevention first, response second:"
+        ],
+        "table": {
+          "headers": [
+            "Risk",
+            "How common",
+            "How to avoid it",
+            "If it happens"
+          ],
+          "rows": [
+            [
+              "Scooter crash",
+              "Most common tourist injury",
+              "Helmet, licence with motorcycle class, no night or rain rides",
+              "Photograph the scene, private clinic same day, call your insurer"
+            ],
+            [
+              "Rip current",
+              "Leading cause of beach drownings",
+              "Swim between red-and-yellow flags; west-coast surf beaches are the risky ones",
+              "Do not fight it: float, swim parallel to shore, raise one arm"
+            ],
+            [
+              "Methanol in spirits",
+              "Rare, but can be fatal",
+              "Sealed branded bottles only; skip free-pour arak cocktails",
+              "Blurred vision or vomiting 6-24 h after drinking: hospital immediately"
+            ],
+            [
+              "Dog or monkey bite (rabies)",
+              "Ongoing island-wide risk",
+              "Do not feed or touch monkeys; keep food and bags closed at temples",
+              "Wash the wound 15 min with soap, then post-exposure vaccine the same day"
+            ],
+            [
+              "Money-changer scam",
+              "Common in Kuta, Legian, Seminyak",
+              "Authorised counters inside banks and hotels; refuse booths with rates far above the norm",
+              "Count the notes yourself before handing anything over; walk away if rushed"
+            ],
+            [
+              "Bag snatch or pickpocketing",
+              "Occasional, often from a passing scooter",
+              "Bag on the shoulder away from the road; no phone in hand while walking",
+              "Report at the nearest police station: no report, no insurance claim"
+            ],
+            [
+              "Stomach illness (Bali belly)",
+              "Affects many visitors in week 1",
+              "Bottled water, no street-cart ice, hot freshly cooked food",
+              "Oral rehydration salts; see a doctor past 48 h, or with fever or blood"
+            ],
+            [
+              "ATM card skimming",
+              "Occasional at standalone street ATMs",
+              "Use machines inside banks or malls; cover the keypad",
+              "Freeze the card in your banking app, then report the transactions"
+            ]
+          ],
+          "note": "Frequency labels are relative, not official statistics; check your own government's travel advisory before departure, since ratings and local conditions change."
+        }
+      },
       {
         heading: "🛵 Scooters: the risk people underestimate",
         paragraphs: [
@@ -20767,6 +21166,19 @@ function renderGuideRelatedTourCard(tour) {
   `;
 }
 
+// Таблица внутри секции статьи. Обёртка со скроллом обязательна: на телефоне
+// таблица из четырёх колонок иначе растягивает всю страницу по горизонтали.
+function renderJournalTable(table) {
+  if (!table || !Array.isArray(table.headers) || !Array.isArray(table.rows)) return "";
+  const head = table.headers.map((h) => `<th scope="col">${renderRichText(h)}</th>`).join("");
+  const body = table.rows
+    .map((row) => `<tr>${row.map((cell, i) => (i === 0 ? `<th scope="row">${renderRichText(cell)}</th>` : `<td>${renderRichText(cell)}</td>`)).join("")}</tr>`)
+    .join("");
+  return `<div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>${
+    table.note ? `<p class="sb-journal-tablenote">${renderRichText(table.note)}</p>` : ""
+  }`;
+}
+
 // Закреплённая карточка тура в правой колонке статьи: фото, цена, две кнопки.
 // Пока читатель скроллит статью, карточка остаётся на экране (sticky задан на
 // .sb-journal-sidebar) — с любого места текста один клик до страницы тура или
@@ -20788,7 +21200,7 @@ function renderJournalTourPinCard(tour) {
               </div>
               <div class="sb-journal-tourcard__price">${escapeHtml(tour.price)}</div>
               <div class="sb-journal-tourcard__actions">
-                <a class="sb-journal-primary" href="${tourRoute(tour)}">Open the tour page</a>
+                <a class="sb-journal-primary" href="${tourRoute(tour)}">${escapeHtml(tour.title)} — ${escapeHtml(tour.price)}</a>
                 <a class="sb-journal-secondary" href="${bookingHref}" target="_blank" rel="noopener noreferrer nofollow">Book in WhatsApp</a>
               </div>
             </div>
@@ -20899,11 +21311,12 @@ ${JOURNAL_FOOTER_ASSETS}
             <h1>${escapeHtml(article.title)}</h1>
             <p class="sb-journal-lead">${renderRichText(article.excerpt)}</p>
             <p class="sb-journal-dates">By Alex Moskvin, Founder of SB Excursions · Published 21 May 2026 · Updated 7 August 2026</p>
+            <p class="sb-journal-deck">Tour on this route: <a href="${tourRoute(article.tour)}">${escapeHtml(article.tour.title)}</a> — ${escapeHtml(article.tour.price)}, ${escapeHtml(article.tour.duration.toLowerCase())}.</p>
             <div class="sb-journal-inline-stats">
               ${article.inlineStats.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="${tourRoute(article.tour)}">Open recommended tour</a>
+              <a class="sb-journal-primary" href="${tourRoute(article.tour)}">${escapeHtml(article.tour.title)} — ${escapeHtml(article.tour.price)}</a>
               <a class="sb-journal-secondary" href="${JOURNAL_HUB_ROUTE}">Browse all guides</a>
             </div>
           </div>
@@ -20927,6 +21340,7 @@ ${JOURNAL_FOOTER_ASSETS}
                 <h2>${escapeHtml(section.heading)}</h2>
                 ${(section.paragraphs || []).map((paragraph) => `<p>${renderRichText(paragraph)}</p>`).join("")}
                 ${section.bullets?.length ? `<ul>${section.bullets.map((item) => `<li>${renderRichText(item)}</li>`).join("")}</ul>` : ""}
+                ${section.table ? renderJournalTable(section.table) : ""}
                 ${(section.paragraphsAfter || []).map((paragraph) => `<p>${renderRichText(paragraph)}</p>`).join("")}
               </section>
             `,
@@ -21075,13 +21489,14 @@ ${JOURNAL_FOOTER_ASSETS}
             <h1>${escapeHtml(article.title)}</h1>
             <p class="sb-journal-lead">${renderRichText(article.excerpt)}</p>
             <p class="sb-journal-dates">By Alex Moskvin, Founder of SB Excursions · Published 21 May 2026 · Updated 7 August 2026</p>
+            <p class="sb-journal-deck">Tour on this route: <a href="${tourRoute(article.tour)}">${escapeHtml(article.tour.title)}</a> — ${escapeHtml(article.tour.price)}, ${escapeHtml(article.tour.duration.toLowerCase())}.</p>
             <div class="sb-journal-inline-stats">
               <span>${escapeHtml(article.tour.duration)}</span>
               <span>${escapeHtml(article.tour.format)}</span>
               <span>${escapeHtml(article.tour.area)}</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="${tourRoute(article.tour)}">Open the tour page</a>
+              <a class="sb-journal-primary" href="${tourRoute(article.tour)}">${escapeHtml(article.tour.title)} — ${escapeHtml(article.tour.price)}</a>
               <a class="sb-journal-secondary" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(buildWhatsAppMessage(article.tour))}" target="_blank" rel="noopener noreferrer nofollow">Book in WhatsApp</a>
             </div>
           </div>
@@ -21109,6 +21524,7 @@ ${JOURNAL_FOOTER_ASSETS}
                 <h2>${escapeHtml(section.heading)}</h2>
                 ${(section.paragraphs || []).map((paragraph) => `<p>${renderRichText(paragraph)}</p>`).join("")}
                 ${section.bullets?.length ? `<ul>${section.bullets.map((item) => `<li>${renderRichText(item)}</li>`).join("")}</ul>` : ""}
+                ${section.table ? renderJournalTable(section.table) : ""}
                 ${(section.paragraphsAfter || []).map((paragraph) => `<p>${renderRichText(paragraph)}</p>`).join("")}
               </section>
             `,
@@ -21366,6 +21782,15 @@ function renderJournalSharedStyles() {
   .sb-journal-article-section ul,.sb-journal-sidebar-card ul{margin:0;padding-left:18px}
   .sb-journal-article-section li,.sb-journal-sidebar-card li{color:#2f2f33;font-size:16px;line-height:1.72}
   .sb-journal-dates{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;letter-spacing:0}
+  .sb-journal-deck{margin:10px 0 0;font-size:17px;line-height:1.6}
+  .sb-journal-tablewrap{margin:18px 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .sb-journal-table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5;min-width:520px}
+  .sb-journal-table th,.sb-journal-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--sbj-line);vertical-align:top}
+  .sb-journal-table thead th{font-weight:700;font-size:13px;letter-spacing:0.03em;text-transform:uppercase;color:var(--sbj-muted);border-bottom-width:2px}
+  .sb-journal-table tbody th{font-weight:600;color:#151515}
+  .sb-journal-table tbody tr:last-child th,.sb-journal-table tbody tr:last-child td{border-bottom:0}
+  .sb-journal-tablenote{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;line-height:1.6}
+  .sb-journal-deck a{color:inherit;text-decoration:underline;text-underline-offset:3px}
   .sb-journal-sidebar{display:grid;gap:18px;align-self:start;position:sticky;top:88px}
   .sb-journal-tourcard{padding:0;overflow:hidden}
   .sb-journal-tourcard__media{display:block;position:relative}
@@ -22174,8 +22599,12 @@ function renderStructuredData(tour) {
       {
         "@type": "Product",
         "@id": `${absoluteTourUrl(tour)}#product`,
+        // name — название товара, а не SEO-заголовок: в сниппете Google
+        // показывает именно его, и цена там была бы лишней.
+        // description держим тот же, что в meta и og, чтобы Google не видел
+        // расхождения и не подставлял свой текст.
         name: tour.title,
-        description: tour.summary,
+        description: tour.metaDescription || tour.summary,
         image: tourImageSet(tour),
         url: absoluteTourUrl(tour),
         brand: { "@type": "Brand", name: "SB Excursions" },
@@ -28094,7 +28523,17 @@ ${body}
   // AI-краулеры перечислены явно, хотя wildcard их и так пускает: явные
   // Allow-блоки страхуют от будущих точечных запретов и документируют,
   // что доступ для AI-поиска — осознанное решение, а не случайность.
-  const robots = `User-agent: GPTBot
+  // PetalBot (Huawei) и Amazonbot вместе съедали ~700 запросов за 12 часов —
+  // пятую часть всего краулингового трафика — и не могут привести ни одного
+  // клиента: аудитория владельца это США, Британия, Испания, Франция.
+  // ИИ-краулеры ниже не трогаем, они как раз приносят пользу.
+  const robots = `User-agent: PetalBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: GPTBot
 User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
 User-agent: ClaudeBot

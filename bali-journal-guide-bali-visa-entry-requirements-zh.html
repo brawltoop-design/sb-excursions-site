@@ -246,6 +246,15 @@
   .sb-journal-article-section ul,.sb-journal-sidebar-card ul{margin:0;padding-left:18px}
   .sb-journal-article-section li,.sb-journal-sidebar-card li{color:#2f2f33;font-size:16px;line-height:1.72}
   .sb-journal-dates{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;letter-spacing:0}
+  .sb-journal-deck{margin:10px 0 0;font-size:17px;line-height:1.6}
+  .sb-journal-tablewrap{margin:18px 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .sb-journal-table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5;min-width:520px}
+  .sb-journal-table th,.sb-journal-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--sbj-line);vertical-align:top}
+  .sb-journal-table thead th{font-weight:700;font-size:13px;letter-spacing:0.03em;text-transform:uppercase;color:var(--sbj-muted);border-bottom-width:2px}
+  .sb-journal-table tbody th{font-weight:600;color:#151515}
+  .sb-journal-table tbody tr:last-child th,.sb-journal-table tbody tr:last-child td{border-bottom:0}
+  .sb-journal-tablenote{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;line-height:1.6}
+  .sb-journal-deck a{color:inherit;text-decoration:underline;text-underline-offset:3px}
   .sb-journal-sidebar{display:grid;gap:18px;align-self:start;position:sticky;top:88px}
   .sb-journal-tourcard{padding:0;overflow:hidden}
   .sb-journal-tourcard__media{display:block;position:relative}
@@ -665,11 +674,12 @@ body {
             <h1>巴厘岛签证和入境要求：您实际需要什么</h1>
             <p class="sb-journal-lead">现在，旅客在抵达巴厘岛时会遇到三件事：落地签证 <strong>不再可在线扩展</strong>，海关表格已折叠成 <strong>强制抵达卡</strong> 落地后 72 小时内提交申请，旅游税中存在大量相似的诈骗网站。没有什么是困难的——它们只是需要在飞行前完成。</p>
             <p class="sb-journal-dates">作者：Alex Moskvin，SB Excursions 创始人 · 发布于 2026 年 5 月 21 日 · 更新于 2026 年 8 月 7 日</p>
+            <p class="sb-journal-deck">此路线游览： <a href="/bali/zh/tours/bali-airport-transfer">巴厘岛机场接送</a> — 15 美元起，取决于酒店区域。</p>
             <div class="sb-journal-inline-stats">
               <span>落地签证</span><span>入境卡</span><span>旅游税</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/zh/tours/bali-airport-transfer">开启推荐之旅</a>
+              <a class="sb-journal-primary" href="/bali/zh/tours/bali-airport-transfer">巴厘岛机场接送 — 15 美元起</a>
               <a class="sb-journal-secondary" href="/bali/zh/journal">浏览所有指南</a>
             </div>
           </div>
@@ -767,11 +777,13 @@ body {
 
                 <ul><li>护照有效 <strong>至少6个月</strong> 从抵达开始，与 <strong>2 个空白页</strong>, 未损坏</li><li>A <strong>回程或续程机票</strong> — 航空公司在登机时检查此信息，如果没有，将拒绝您</li><li>The <strong>所有印度尼西亚入境卡</strong>，在 72 小时内提交</li><li>The <strong>旅游税</strong> 凭证，或准备在机场柜台付款</li><li>如果您在线申请，则 e-VOA 批准，因此您可以使用自动门</li><li>官员可能会要求提供资金证明；旅行者经常引用周围 <strong>$1,000</strong> 等效的，尽管这是指导而不是发布的规则 - 请参阅 <a href="/bali/zh/journal/how-much-does-a-bali-trip-cost">旅行费用明细</a> 一周实际运行时间</li></ul>
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>⏳ 延长您的停留时间——规则已改变</h2>
                 <p>这是旧指南中最过时的内容。落地签证延期 <strong>无法再完全在线完成</strong>。自 2025 年中期起，需要 <strong>亲自拜访</strong> 到您注册地址的移民局，他们会采集指纹、照片和签名。</p><p>流程是混合的：在线注册，通过电子邮件接收二维码，去办公室进行生物识别，然后大致等待 <strong>5-7 个工作日</strong>。因此，启动该过程 <strong>签证到期前 10-14 天</strong>，不是在最后几天。您的抵达日算作第一天。</p><p>免签证入境的运作方式有所不同：那 30 天 <strong>不能扩展或转换</strong> 根本不。如果您想要更长时间，即使您有资格获得免签证，也可以在落地时办理签证。</p>
+
 
 
               </section>
@@ -781,6 +793,7 @@ body {
                 <p>罚款是 <strong>每天 1,000,000 印尼盾</strong>，从第一天算起，两周后就是 14,000,000 印尼盾。最多可罚款 59 天。 <strong>60天后就变成驱逐出境和黑名单</strong>，重新入境禁令的期限为六个月至十年。</p><p>生物识别退出检查意味着总能检测到逾期居留。如果您的计划发生变化，请适当延长期限，而不是希望在退出时悄悄付款。</p>
 
 
+
               </section>
 
               <section class="sb-journal-article-section">
@@ -788,11 +801,13 @@ body {
 
                 <ul><li>预订 <strong>单程票</strong> — 在移民局看到您之前，您在办理登机手续时被拦住</li><li>假设西方护照可以免签证入境。它不</li><li>假设免签30天可以延长。它不能</li><li>希望通过手机扩展 VOA——生物识别技术现在已成为现实</li><li>提交入境卡 <strong>超过72小时</strong> 超前，所以被拒绝</li><li>在相似的网站上缴纳征费。仅 <strong>.go.id</strong> 是正式的</li><li>住在私人别墅而不向当地警方登记——酒店会为你做这件事，私人房东可能不会，罚款是 <strong>5,000,000 印尼盾</strong></li><li>持旅游签证工作或赚钱，包括付费内容创作——最近执法力度加大，如 <a href="/bali/zh/journal/bali-safety-scams-and-health">安全和规则指南</a></li></ul>
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>💉健康要求</h2>
                 <p>有 <strong>无常规疫苗接种要求</strong> 新冠疫情时代的规则已经荡然无存。仅当您来自传播风险名单上的国家/地区时，才需要黄热病证明。以前单独的健康声明现在是全印度尼西亚入境卡的一部分。</p>
+
 
 
               </section>
@@ -922,7 +937,7 @@ body {
               </div>
               <div class="sb-journal-tourcard__price">15 美元起</div>
               <div class="sb-journal-tourcard__actions">
-                <a class="sb-journal-primary" href="/bali/zh/tours/bali-airport-transfer">打开游览页面</a>
+                <a class="sb-journal-primary" href="/bali/zh/tours/bali-airport-transfer">巴厘岛机场接送 — 15 美元起</a>
                 <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20Bali%20Airport%20Transfer.%20Please%20send%20details." target="_blank" rel="noopener noreferrer nofollow">通过 WhatsApp 预订</a>
               </div>
             </div>

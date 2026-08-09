@@ -246,6 +246,15 @@
   .sb-journal-article-section ul,.sb-journal-sidebar-card ul{margin:0;padding-left:18px}
   .sb-journal-article-section li,.sb-journal-sidebar-card li{color:#2f2f33;font-size:16px;line-height:1.72}
   .sb-journal-dates{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;letter-spacing:0}
+  .sb-journal-deck{margin:10px 0 0;font-size:17px;line-height:1.6}
+  .sb-journal-tablewrap{margin:18px 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .sb-journal-table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5;min-width:520px}
+  .sb-journal-table th,.sb-journal-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--sbj-line);vertical-align:top}
+  .sb-journal-table thead th{font-weight:700;font-size:13px;letter-spacing:0.03em;text-transform:uppercase;color:var(--sbj-muted);border-bottom-width:2px}
+  .sb-journal-table tbody th{font-weight:600;color:#151515}
+  .sb-journal-table tbody tr:last-child th,.sb-journal-table tbody tr:last-child td{border-bottom:0}
+  .sb-journal-tablenote{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;line-height:1.6}
+  .sb-journal-deck a{color:inherit;text-decoration:underline;text-underline-offset:3px}
   .sb-journal-sidebar{display:grid;gap:18px;align-self:start;position:sticky;top:88px}
   .sb-journal-tourcard{padding:0;overflow:hidden}
   .sb-journal-tourcard__media{display:block;position:relative}
@@ -665,11 +674,12 @@ body {
             <h1>Visa de Bali y requisitos de entrada: lo que realmente necesita</h1>
             <p class="sb-journal-lead">Tres cosas llaman ahora la atención de los viajeros al llegar a Bali: el visado a la llegada es <strong>ya no se puede ampliar en línea</strong>, el formulario de aduanas se ha doblado en un <strong>tarjeta de llegada obligatoria</strong> presentado dentro de las 72 horas posteriores al aterrizaje, y el impuesto turístico tiene un enjambre de sitios fraudulentos similares. Ninguno es difícil; solo es necesario hacerlo antes de volar.</p>
             <p class="sb-journal-dates">Por Alex Moskvin, fundador de SB Excursions · Publicado el 21 de mayo de 2026 · Actualizado el 7 de agosto de 2026</p>
+            <p class="sb-journal-deck">Recorrido en esta ruta: <a href="/bali/es/tours/bali-airport-transfer">Traslado al aeropuerto de Bali</a> — Desde $15, depende de la zona del hotel.</p>
             <div class="sb-journal-inline-stats">
               <span>Visa a la llegada</span><span>Tarjeta de llegada</span><span>Tasa turística</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/es/tours/bali-airport-transfer">Abierto tour recomendado</a>
+              <a class="sb-journal-primary" href="/bali/es/tours/bali-airport-transfer">Traslado al aeropuerto de Bali: desde $15</a>
               <a class="sb-journal-secondary" href="/bali/es/journal">Explorar todas las guías</a>
             </div>
           </div>
@@ -767,11 +777,13 @@ body {
 
                 <ul><li>Pasaporte válido <strong>al menos 6 meses</strong> desde la llegada, con <strong>2 páginas en blanco</strong>, sin daños</li><li>A <strong>billete de ida y vuelta</strong> — las compañías aéreas comprueban esto en el embarque y lo rechazarán sin él</li><li>The <strong>Toda la tarjeta de llegada a Indonesia</strong>, archivado dentro de la ventana de 72 horas</li><li>The <strong>tasa turística</strong> vale, o prepárese para pagar en el mostrador del aeropuerto</li><li>Aprobación e-VOA si presentó su solicitud en línea, para que pueda usar las puertas automáticas</li><li>Los funcionarios pueden solicitar prueba de fondos; los viajeros comúnmente citan alrededor <strong>$1,000</strong> equivalente, aunque esto es una guía más que una regla publicada; consulte la <a href="/bali/es/journal/how-much-does-a-bali-trip-cost">desglose del costo del viaje</a> para lo que realmente dura una semana</li></ul>
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>⏳ Ampliar tu estancia: la regla que cambió</h2>
                 <p>Esto es lo más desactualizado de las guías más antiguas. La extensión del visado a la llegada <strong>ya no se puede completar completamente en línea</strong>. Desde mediados de 2025 requiere una <strong>visita en persona</strong> a la oficina de inmigración que corresponde a su domicilio registrado, donde le toman huellas dactilares, una fotografía y una firma.</p><p>El flujo es híbrido: registrarse en línea, recibir un código QR por correo electrónico, acudir a la oficina para obtener datos biométricos y luego esperar aproximadamente <strong>5 a 7 días laborables</strong>. Por eso, inicia el proceso. <strong>10 a 14 días antes de que expire su visa</strong>, no en los últimos días. El día de tu llegada cuenta como el día uno.</p><p>La entrada sin visa funciona de otra manera: esos 30 días <strong>no se puede ampliar ni convertir</strong> en absoluto. Si desea más tiempo, obtenga la visa a su llegada, incluso si califica para estar libre de visa.</p>
+
 
 
               </section>
@@ -781,6 +793,7 @@ body {
                 <p>la multa es <strong>1.000.000 IDR por día</strong>, contado desde el primer día: dos semanas después son 14.000.000 de IDR. Con la multa se pueden liquidar hasta 59 días. <strong>A partir de 60 días pasa a ser deportación y lista negra</strong>, con prohibiciones de reingreso que van de seis meses a diez años.</p><p>Los controles de salida biométricos significan que siempre se detecta una estadía excesiva. Si sus planes cambian, extienda adecuadamente en lugar de esperar pagar tranquilamente al salir.</p>
 
 
+
               </section>
 
               <section class="sb-journal-article-section">
@@ -788,11 +801,13 @@ body {
 
                 <ul><li>Reservando un <strong>billete de ida</strong> — te detienen en el check-in, antes de que inmigración te vea</li><li>Suponiendo que un pasaporte occidental obtenga entrada sin visa. no lo hace</li><li>Suponiendo que se puedan extender los 30 días sin visa. no puede</li><li>Esperando extender la VOA desde su teléfono: la biometría ahora está en persona</li><li>Presentar la tarjeta de llegada <strong>más de 72 horas</strong> adelante, por lo que se rechaza</li><li>Pagar el impuesto en un sitio similar. Sólo <strong>.go.id</strong> es oficial</li><li>Alojarse en una villa privada y no registrarse en la policía local: los hoteles hacen esto por usted, los anfitriones privados no, y la multa es <strong>5.000.000 IDR</strong></li><li>Trabajar o ganar dinero con una visa de turista, incluida la creación de contenido pago; la aplicación de la ley se hizo más estricta recientemente, como se establece en la <a href="/bali/es/journal/bali-safety-scams-and-health">guía de seguridad y reglas</a></li></ul>
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>💉 Requisitos de salud</h2>
                 <p>hay <strong>sin requisitos de vacunación de rutina</strong> y ya no quedan reglas de la era COVID. Sólo se requiere un certificado de fiebre amarilla si llega de un país que figura en la lista de riesgo de transmisión. La declaración de salud que solía estar separada ahora forma parte de la tarjeta de llegada a toda Indonesia.</p>
+
 
 
               </section>
@@ -922,7 +937,7 @@ body {
               </div>
               <div class="sb-journal-tourcard__price">Desde $15</div>
               <div class="sb-journal-tourcard__actions">
-                <a class="sb-journal-primary" href="/bali/es/tours/bali-airport-transfer">Abrir la página del recorrido</a>
+                <a class="sb-journal-primary" href="/bali/es/tours/bali-airport-transfer">Traslado al aeropuerto de Bali: desde $15</a>
                 <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20Bali%20Airport%20Transfer.%20Please%20send%20details." target="_blank" rel="noopener noreferrer nofollow">Reserva en WhatsApp</a>
               </div>
             </div>

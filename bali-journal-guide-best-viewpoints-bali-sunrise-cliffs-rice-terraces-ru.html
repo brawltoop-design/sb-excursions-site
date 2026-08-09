@@ -246,6 +246,15 @@
   .sb-journal-article-section ul,.sb-journal-sidebar-card ul{margin:0;padding-left:18px}
   .sb-journal-article-section li,.sb-journal-sidebar-card li{color:#2f2f33;font-size:16px;line-height:1.72}
   .sb-journal-dates{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;letter-spacing:0}
+  .sb-journal-deck{margin:10px 0 0;font-size:17px;line-height:1.6}
+  .sb-journal-tablewrap{margin:18px 0 0;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .sb-journal-table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.5;min-width:520px}
+  .sb-journal-table th,.sb-journal-table td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--sbj-line);vertical-align:top}
+  .sb-journal-table thead th{font-weight:700;font-size:13px;letter-spacing:0.03em;text-transform:uppercase;color:var(--sbj-muted);border-bottom-width:2px}
+  .sb-journal-table tbody th{font-weight:600;color:#151515}
+  .sb-journal-table tbody tr:last-child th,.sb-journal-table tbody tr:last-child td{border-bottom:0}
+  .sb-journal-tablenote{margin:10px 0 0;color:var(--sbj-muted);font-size:14px;line-height:1.6}
+  .sb-journal-deck a{color:inherit;text-decoration:underline;text-underline-offset:3px}
   .sb-journal-sidebar{display:grid;gap:18px;align-self:start;position:sticky;top:88px}
   .sb-journal-tourcard{padding:0;overflow:hidden}
   .sb-journal-tourcard__media{display:block;position:relative}
@@ -663,13 +672,14 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">Путеводитель</div>
             <h1>7 лучших смотровых площадок на Бали: восход солнца, скалы и рисовые террасы</h1>
-            <p class="sb-journal-lead">Самые сильные точки зрения на Бали не все одинаковы. Некоторые выигрывают из-за масштаба восхода солнца, некоторые из-за драматизма скал, а некоторые потому, что пейзаж кажется широким и спокойным, а не многолюдным. Лучшие маршруты смешивают эти настроения, а не повторяют одну остановку.</p>
+            <p class="sb-journal-lead">Самые сильные смотровые площадки Бали расположены в четырех группах, а не в одной петле: край кальдеры горы Батур в Кинтамани, в 2-2,5 часах езды от южных отелей; ворота Лемпуянг на востоке Бали, 2,5-3,5 часа езды, в зависимости от пробок; рисовые террасы Тегаллаланг и Джатилувих в поясе Убуд-Табанан; и скалы Нуса Пенида, до которых можно добраться на скоростном катере из Санура за 30-45 минут. Восход солнца происходит с 06:00 до 06:30, а закат — с 18:00 до 18:30 в течение всего года, поэтому день со смотровой площадкой — это на самом деле два коротких световых окна плюс вождение — поэтому лучшие маршруты сочетают в себе один восход солнца, одну скалу и одну террасу, а не повторяют одно настроение. С апреля по октябрь над кальдерой воздух самый чистый. По состоянию на август 2026 года поход на восход солнца на гору Батур с гидом начинается от 35 долларов, а маршрут по скалам на западе Нуса-Пениды — от 49 долларов за автомобиль.</p>
             <p class="sb-journal-dates">Алекс Москвин, основатель SB Excursions · Опубликовано 21 мая 2026 г. · Обновлено 7 августа 2026 г.</p>
+            <p class="sb-journal-deck">Экскурсия по этому маршруту: <a href="/bali/ru/tours/nusa-penida-west-tour">Нуса Пенида Западный тур</a> — От $49 за машину, полный день.</p>
             <div class="sb-journal-inline-stats">
               <span>7 остановок с панорамным видом</span><span>Скалы + вулкан + террасы</span><span>Восход и закат</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/ru/tours/nusa-penida-west-tour">Открыть рекомендуемый тур</a>
+              <a class="sb-journal-primary" href="/bali/ru/tours/nusa-penida-west-tour">Западный тур по Нуса-Пениде — от 49 долларов за машину.</a>
               <a class="sb-journal-secondary" href="/bali/ru/journal">Просмотреть все руководства</a>
             </div>
           </div>
@@ -793,9 +803,18 @@ body {
             </section>
 
               <section class="sb-journal-article-section">
+                <h2>Обзорные площадки Бали: территория, световое окно, вход</h2>
+                <p>Девять смотровых площадок, которые оправдывают поездку, со световым окном, для которого каждая из них построена, и с тем, платите ли вы у ворот. Время — это часы работы представления, а не часы работы ворот, и отражают условия 2026 года:</p>
+
+                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">Viewpoint</th><th scope="col">Area</th><th scope="col">Лучшее временное окно</th><th scope="col">Платный вход?</th></tr></thead><tbody><tr><th scope="row">Обод кальдеры Батур (Пенелокан)</th><td>Кинтамани, центральное нагорье</td><td>05:30-08:00, восход солнца</td><td>Бесплатно на съездах у дороги</td></tr><tr><th scope="row">Вершина горы Батур</th><td>Кинтамани, центральное нагорье</td><td>05:00-06:30, восход солнца на вершине</td><td>Требуется платный поход с гидом</td></tr><tr><th scope="row">Лемпуянгские врата рая</th><td>Карангасем, восток Бали</td><td>06:00-08:00</td><td>Платно, небольшая плата за вход + саронг</td></tr><tr><th scope="row">Кампухан-Ридж-Уок</th><td>Убуд, центр Бали</td><td>06:00-08:00</td><td>Free</td></tr><tr><th scope="row">Рисовая терраса Тегаллаланг</th><td>Убуд, центр Бали</td><td>07:00-09:00</td><td>Платно, небольшая плата за вход</td></tr><tr><th scope="row">Рисовые террасы Джатилувих</th><td>Табанан, центрально-западный Бали</td><td>08:00-11:00</td><td>Платно, небольшая плата за вход</td></tr><tr><th scope="row">Скала пляжа Келингкинг</th><td>Западная Нуса Пенида</td><td>08:00-10:00</td><td>Платно, небольшая плата за вход</td></tr><tr><th scope="row">Утес Даймонд-Бич</th><td>Восточная Нуса Пенида</td><td>07:00-10:00</td><td>Платно, небольшая плата за вход</td></tr><tr><th scope="row">Вершина скалы храма Улувату</th><td>Полуостров Букит, юг Бали.</td><td>17:00-18:30, закат</td><td>Платно, небольшая плата за вход + саронг</td></tr></tbody></table></div><p class="sb-journal-tablenote">Чтобы добраться до двух скал Нуса Пенида, потребуется 30–45 минут скоростного катера из Санура плюс 45–70 минут езды по острову, поэтому относитесь к ним как к своему собственному дню, а не как к остановке на материковом маршруте.</p>
+
+              </section>
+
+              <section class="sb-journal-article-section">
                 <h2>Почему смотровую площадку Бали стоит добавить в свой маршрут</h2>
                 <p>Хорошая смотровая площадка Бали должна делать больше, чем просто красиво выглядеть на одной фотографии. Лучшие из них создают настоящую паузу в течение дня, контрастируют с остальной частью маршрута и кажутся достаточно сильными, чтобы путешественники запоминали их впоследствии.</p>
                 <ul><li>Выберите одну точку обзора восхода солнца, одну остановку зеленого пейзажа и одну точку обзора побережья для достижения наилучшего баланса — и проверьте <a href="/bali/ru/journal/best-time-to-visit-bali-month-by-month">сезон</a>, поскольку в некоторые месяцы ясные восходы солнца гораздо более надежны, чем в другие.</li><li>Используйте смотровые площадки на скалах позже в тот же день, когда свет и атмосфера улучшатся.</li><li>Используйте рисовые террасы или смотровые площадки на вулкан раньше, когда маршрут станет свежее и понятнее.</li></ul>
+
 
               </section>
 
@@ -804,11 +823,13 @@ body {
                 <p>Дни с самыми сильными точками зрения сгруппированы по регионам. Убуд и Кинтамани естественным образом соединяются, горные остановки ЮНЕСКО естественным образом соединяются, а островные скалы заслуживают отдельного дня, вместо того, чтобы быть зажатыми между планами материка.</p>
 
 
+
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>Кому больше всего выгодны дни на Бали, проведенные под руководством смотровых площадок</h2>
                 <p>Маршруты со смотровыми площадками особенно эффективны для путешественников-новичков, пар, путешественников, ориентированных на контент, и путешественников, которые хотят, чтобы Бали ощущался живописным, не совершая при этом физически тяжелых приключений каждый день.</p>
+
 
 
               </section>
@@ -941,7 +962,7 @@ body {
               </div>
               <div class="sb-journal-tourcard__price">От $49 за машину</div>
               <div class="sb-journal-tourcard__actions">
-                <a class="sb-journal-primary" href="/bali/ru/tours/nusa-penida-west-tour">Открыть страницу тура</a>
+                <a class="sb-journal-primary" href="/bali/ru/tours/nusa-penida-west-tour">Западный тур по Нуса-Пениде — от 49 долларов за машину.</a>
                 <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20Nusa%20Penida%20West%20Tour.%20Please%20send%20details." target="_blank" rel="noopener noreferrer nofollow">Забронируйте в WhatsApp</a>
               </div>
             </div>
