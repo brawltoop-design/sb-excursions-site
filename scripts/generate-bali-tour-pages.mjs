@@ -13764,9 +13764,9 @@ const JOURNAL_SEO_GUIDES = [
       "45-70 min Ubud to Sanur",
       "Tours from $49 per car"
     ],
-    "title": "Nusa Penida Day Trip from Ubud: Route, Cost and Timing",
-    "description": "A Nusa Penida day trip from Ubud, step by step: the 45-70 minute drive to Sanur (traffic depending), the crossing, route choice and prices from $49 per car.",
-    "excerpt": "A Nusa Penida day trip from Ubud is a standard full-day private tour: a 45-70 minute drive down to Sanur harbor (traffic depending), a fast-boat crossing of about 30-45 minutes, a car-and-guide loop of the west-coast icons — Kelingking, Broken Beach, Angel's Billabong, Crystal Bay — and the same route home in the evening. It works well; it simply runs longer than the same trip from a beach hotel, so pickup comes earlier and planning matters more. Private tours with Ubud pickup start from $49 per car for the west route, from $60 with Manta Point snorkeling added, and from $75 for the east or flexible full-day versions. This guide walks through the seven real stages of the day and tells you exactly when to leave.",
+    "title": "Ubud to Nusa Penida: Drive Time, Boat and Day Trips",
+    "description": "Ubud to Nusa Penida in 2026: the 45-70 minute drive to Sanur (traffic depending), the fast boat crossing, route choice and prices from $49 per car.",
+    "excerpt": "Ubud to Nusa Penida is a standard full-day private tour: a 45-70 minute drive down to Sanur harbor (traffic depending), a fast-boat crossing of about 30-45 minutes, a car-and-guide loop of the west-coast icons — Kelingking, Broken Beach, Angel's Billabong, Crystal Bay — and the same route home in the evening. It works well; it simply runs longer than the same trip from a beach hotel, so pickup comes earlier and planning matters more. Private tours with Ubud pickup start from $49 per car for the west route, from $60 with Manta Point snorkeling added, and from $75 for the east or flexible full-day versions. This guide walks through the seven real stages of the day and tells you exactly when to leave.",
     "rankings": [
       {
         "name": "Stage 1: Early pickup in Ubud",
@@ -13916,9 +13916,9 @@ const JOURNAL_SEO_GUIDES = [
       "60-90 min to the boat",
       "Penida from $29"
     ],
-    "title": "Nusa Penida Day Trip From Uluwatu: Route, Times, Prices",
-    "description": "How to do a Nusa Penida day trip from Uluwatu: 60-90 minute drive to Sanur, boat times, west vs east routes and real 2026 prices from $29.",
-    "excerpt": "A Nusa Penida day trip from Uluwatu is a three-leg day: a drive of roughly 60-90 minutes from the Bukit to Sanur harbor, a fast boat across the strait, and a private-car loop around the island's cliffs and bays. Uluwatu is the farthest common pickup zone from the harbor, so it gets the earliest starts — the East tour, for example, offers a 06:15-06:30 hotel pickup — and an evening return. Prices in 2026 run from $29 per person for the Manta Point snorkeling day, from $49 per car for the West tour, and from $75 for the East or Full Day routes, booked direct on WhatsApp with no prepayment. This guide maps the day stage by stage, compares the four routes and shows how to fit Penida into a surf-focused Uluwatu stay.",
+    "title": "Uluwatu to Nusa Penida: Boat Times, Drive and Day Trips",
+    "description": "Uluwatu to Nusa Penida in 2026: the 60-90 minute drive to Sanur, fast boat times, west vs east routes and real day trip prices from $29.",
+    "excerpt": "Uluwatu to Nusa Penida is a three-leg trip: a drive of roughly 60-90 minutes from the Bukit to Sanur harbor, a fast boat across the strait, and a private-car loop around the island's cliffs and bays. Uluwatu is the farthest common pickup zone from the harbor, so it gets the earliest starts — the East tour, for example, offers a 06:15-06:30 hotel pickup — and an evening return. Prices in 2026 run from $29 per person for the Manta Point snorkeling day, from $49 per car for the West tour, and from $75 for the East or Full Day routes, booked direct on WhatsApp with no prepayment. This guide maps the day stage by stage, compares the four routes and shows how to fit Penida into a surf-focused Uluwatu stay.",
     "rankings": [
       {
         "name": "Pre-dawn pickup on the Bukit",
@@ -14069,9 +14069,9 @@ const JOURNAL_SEO_GUIDES = [
       "60-90 min Canggu to Sanur",
       "Tours from $29"
     ],
-    "title": "Nusa Penida Day Trip from Canggu: Timings, Route, Real Prices",
-    "description": "How to do a Nusa Penida day trip from Canggu: leave-by times, the 60-90 minute drive to Sanur, snorkeling vs land routes, and real 2026 tour prices from $29.",
-    "excerpt": "A Nusa Penida day trip from Canggu is a full-day route: early hotel pickup, a drive of about 60-90 minutes to Sanur harbor depending on traffic, a fast-boat crossing, then snorkeling or cliff viewpoints before an evening return. The distance puts Canggu at the far edge of the pickup zone, so the day succeeds or fails on the departure time — leave early and everything else follows. This guide walks through the eight stages of the day in order, from the alarm going off to the boat home, and compares the two routes that make sense from Canggu: the snorkeling day built around Manta Point from $29 per person, and the sightseeing West Tour from $49 per car. Both are private, booked direct on WhatsApp, with no prepayment.",
+    "title": "Canggu to Nusa Penida: Distance, Boat Times and Day Trips",
+    "description": "Canggu to Nusa Penida in 2026: the 60-90 minute drive to Sanur port, leave-by times, snorkeling vs land routes and real day trip prices from $29.",
+    "excerpt": "Canggu to Nusa Penida takes a full day: early hotel pickup, a drive of about 60-90 minutes to Sanur harbor depending on traffic, a fast-boat crossing, then snorkeling or cliff viewpoints before an evening return. The distance puts Canggu at the far edge of the pickup zone, so the day succeeds or fails on the departure time — leave early and everything else follows. This guide walks through the eight stages of the day in order, from the alarm going off to the boat home, and compares the two routes that make sense from Canggu: the snorkeling day built around Manta Point from $29 per person, and the sightseeing West Tour from $49 per car. Both are private, booked direct on WhatsApp, with no prepayment.",
     "rankings": [
       {
         "name": "Early pickup in Canggu",
@@ -14219,9 +14219,9 @@ const JOURNAL_SEO_GUIDES = [
       "Tours from $49 per car",
       "Full-day sea route"
     ],
-    "title": "Nusa Penida Day Trip from Seminyak: Full Route and 2026 Prices",
-    "description": "How a Nusa Penida day trip from Seminyak actually works: pickup timing, the Sanur fast boat, every stop on the west route and real 2026 prices.",
-    "excerpt": "A Nusa Penida day trip from Seminyak is a full-day round trip: early hotel pickup, a 30-50 minute drive to Sanur harbor depending on traffic, a fast boat across the strait, and a driver-led loop of the island before the evening return. The classic first-timer version is the west route — Kelingking, Angel's Billabong, Broken Beach and Crystal Bay — which we run as a private tour from $49 per car. Sightseeing-plus-snorkeling combinations start from $60, and the east route runs from $75 with a 07:00 Sanur port meeting or optional 06:15-06:30 hotel pickup. This guide maps the day stage by stage from your Seminyak villa and back, compares all four Penida routes we operate, and answers the question every guest asks: Penida or Gili Trawangan for your one spare sea day.",
+    "title": "Seminyak to Nusa Penida: Route, Boat Times and Day Trips",
+    "description": "Seminyak to Nusa Penida in 2026: pickup timing, the drive to Sanur, the fast boat crossing, every stop on the west route and real day trip prices.",
+    "excerpt": "Seminyak to Nusa Penida is a full-day round trip: early hotel pickup, a 30-50 minute drive to Sanur harbor depending on traffic, a fast boat across the strait, and a driver-led loop of the island before the evening return. The classic first-timer version is the west route — Kelingking, Angel's Billabong, Broken Beach and Crystal Bay — which we run as a private tour from $49 per car. Sightseeing-plus-snorkeling combinations start from $60, and the east route runs from $75 with a 07:00 Sanur port meeting or optional 06:15-06:30 hotel pickup. This guide maps the day stage by stage from your Seminyak villa and back, compares all four Penida routes we operate, and answers the question every guest asks: Penida or Gili Trawangan for your one spare sea day.",
     "rankings": [
       {
         "name": "Early pickup from your Seminyak hotel",
@@ -14909,7 +14909,7 @@ const JOURNAL_SEO_GUIDES = [
       "7-9 hours door to door",
       "From $115 per person"
     ],
-    "title": "Gili Trawangan Day Trip from Seminyak: The Real Timeline",
+    "title": "Seminyak to Gili Trawangan: Boat Times and Day Trips",
     "description": "How a Gili Trawangan day trip from Seminyak actually works in 2026: 7-9 hour timeline, fast boat crossing, Turtle Point, Meno statues — from $115 per person.",
     "excerpt": "A Gili Trawangan day trip from Seminyak is a 7-9 hour private loop: early road transfer to Padang Bai harbor, fast boat across the Lombok Strait, snorkeling at Turtle Point and the Gili Meno statues, free time on Trawangan, and a return crossing that lands you back around sunset. Booked direct, the day costs from $115 per person including the fast boat, a private snorkeling boat and GoPro photos. It is a long day — the road leg alone runs about 90 minutes to 2 hours each way depending on traffic — but it is the only realistic way to see the Gilis from Bali without changing hotels. This guide walks through the six steps of the timeline and covers when the overnight Gili Islands Getaway from $70 is the smarter call.",
     "rankings": [
