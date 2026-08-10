@@ -103,6 +103,10 @@
       "destination": "/work-with-us.html"
     },
     {
+      "source": "/:lang(ru|es|fr|zh)/work-with-us",
+      "destination": "/work-with-us-:lang.html"
+    },
+    {
       "source": "/bali/:lang/review",
       "destination": "/bali-review.html"
     },

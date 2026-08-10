@@ -67,14 +67,22 @@ export async function buildChromedPage(root, page) {
     : prefix.replace(/\s*<link rel="preload" as="image"[^>]*>/, "");
 
   // мёртвые языковые ссылки Ru/Fr в хедере ведут в никуда — ведём на главные
+  // (или на языковые версии самой страницы, если они у неё есть)
+  const langLinks = page.langLinks || { ru: "/bali/ru/main-page", fr: "/bali/fr/main-page" };
   prefix = swapWa(prefix)
-    .replace(/href="">Ru</g, 'href="/bali/ru/main-page">Ru<')
-    .replace(/href="">Fr</g, 'href="/bali/fr/main-page">Fr<');
+    .replace(/href="">Ru</g, `href="${langLinks.ru}">Ru<`)
+    .replace(/href="">Fr</g, `href="${langLinks.fr}">Fr<`);
 
-  // свои schema, стили и класс .js для reveal-анимаций — в конец головы
+  // язык документа: донор всегда английский, кастомная страница — какая угодно
+  if (page.lang && page.lang !== "en") {
+    prefix = prefix.replace(/<html([^>]*?)lang="en"/, `<html$1lang="${page.lang}"`);
+  }
+
+  // свои schema, hreflang, стили и класс .js для reveal-анимаций — в конец головы
   prefix = prefix.replace(
     "</head>",
     `<script type="application/ld+json">${JSON.stringify(page.schema)}</script>\n` +
+      `${page.headExtra || ""}` +
       `<script>document.documentElement.classList.add("js");</script>\n${page.styleBlock}\n</head>`,
   );
 

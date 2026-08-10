@@ -28511,11 +28511,24 @@ function writeSitemap() {
   ];
 
   // Одноязычные страницы вне генератора: прайс-индекс (собирает
-  // scripts/build-prices-page.mjs) и партнёрская Work With Us. Языковых
-  // версий у них нет, поэтому идут без hreflang-группы.
-  const baliSingles = ["/bali/en/tour-prices", "/work-with-us"];
+  // scripts/build-prices-page.mjs) — языковых версий нет, без hreflang-группы.
+  const baliSingles = ["/bali/en/tour-prices"];
 
-  const body = [...dubaiSingles.map(simpleEntry), ...baliSingles.map(simpleEntry), ...baliGroups.map(groupEntries)].join("\n");
+  // Партнёрская Work With Us живёт на пяти языках по собственной схеме URL
+  // (/work-with-us и /{ru,es,fr,zh}/work-with-us — собирает
+  // scripts/build-work-with-us.mjs), поэтому hreflang-группа для неё своя.
+  const wwuPath = (code) => (code === "en" ? "/work-with-us" : `/${code}/work-with-us`);
+  const wwuAlternates =
+    langs.map((code) => `\n    <xhtml:link rel="alternate" hreflang="${code}" href="${SITE_URL}${wwuPath(code)}"/>`).join("") +
+    `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}${wwuPath("en")}"/>`;
+  const wwuEntries = langs.map(
+    (code) => `  <url>
+    <loc>${SITE_URL}${wwuPath(code)}</loc>${wwuAlternates}
+    <lastmod>${lastmod}</lastmod>
+  </url>`,
+  );
+
+  const body = [...dubaiSingles.map(simpleEntry), ...baliSingles.map(simpleEntry), ...wwuEntries, ...baliGroups.map(groupEntries)].join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
