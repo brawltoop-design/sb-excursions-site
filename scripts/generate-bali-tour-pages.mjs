@@ -16692,8 +16692,8 @@ const JOURNAL_SEO_GUIDES = [
       "Honest swim ratings",
       "Surf lessons from $35"
     ],
-    "title": "Canggu and Seminyak Beaches: Which to Pick and Where to Swim",
-    "description": "All 8 Canggu and Seminyak beaches compared: which has beginner surf, which is safe to swim, where the beach clubs are, and what time sunset hits.",
+    "title": "Canggu and Seminyak Beaches: Surf, Sunsets and Which to Pick",
+    "description": "All 8 Canggu and Seminyak beaches compared: where the beginner surf is, which stretch has the beach clubs, and what time sunset lands on this coast.",
     "excerpt": "Canggu and Seminyak share one long grey-sand coast, from Double Six up to Seseh: built for surfing, beach bars and sunsets, not for floating in flat turquoise water. Here's an honest ranking of all eight beaches, what each one genuinely does best, and where to go instead when you want to swim.",
     "rankings": [
       {
@@ -24373,13 +24373,13 @@ const GUIDE_CLUSTERS = {
     "best-beach-clubs-bali-young-adults",
     "best-things-to-do-bali-for-couples",
     "bali-honeymoon-day-trips",
+    "bali-tours-for-seniors",
   ],
   families: [
     "bali-with-kids-family-guide",
     "bali-day-trips-with-kids",
     "nusa-penida-with-kids",
     "calm-beaches-bali-kids",
-    "bali-tours-for-seniors",
   ],
   nusaPenida: [
     "nusa-penida-complete-guide",
@@ -24463,9 +24463,24 @@ function relatedGuidesFor(guide, limit = 4) {
     }
   };
 
+  // Ротация вместо чтения с начала массива. Раньше take() всегда начинал с
+  // первого слага кластера и добирал limit=4 штуки, поэтому в кластере из
+  // шести и больше последние статьи не выбирались НИ РАЗУ — например
+  // grab-gojek-or-private-driver-bali и bali-layover-day-tour имели ровно по
+  // одной входящей ссылке на весь сайт. Начинаем со следующего за собой и
+  // идём по кругу: тогда каждая статья кластера получает примерно поровну.
+  const rotate = (slugs, from) => {
+    const at = slugs.indexOf(from);
+    return at < 0 ? slugs : [...slugs.slice(at + 1), ...slugs.slice(0, at)];
+  };
+
   if (cluster) {
-    take(GUIDE_CLUSTERS[cluster]);
-    take(GUIDE_CLUSTERS[GUIDE_CLUSTER_PARTNERS[cluster]] || []);
+    take(rotate(GUIDE_CLUSTERS[cluster], guide.slug));
+    const partner = GUIDE_CLUSTERS[GUIDE_CLUSTER_PARTNERS[cluster]] || [];
+    // партнёрский кластер сдвигаем на позицию статьи в своём, чтобы соседи
+    // не тянули из партнёра одни и те же первые записи
+    const offset = Math.max(0, GUIDE_CLUSTERS[cluster].indexOf(guide.slug));
+    take(partner.length ? [...partner.slice(offset % partner.length), ...partner.slice(0, offset % partner.length)] : []);
   }
   take(JOURNAL_SEO_GUIDES.map((item) => item.slug));
   return picked.slice(0, limit);
