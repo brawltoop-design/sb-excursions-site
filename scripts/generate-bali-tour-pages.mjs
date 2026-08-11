@@ -29847,6 +29847,10 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "Nusa Penida Day Trip from Sanur: Routes, Cost and Stops":
+      "Nusa Penida desde Sanur: rutas, precios y paradas",
+    "Snorkeling in Bali for Non-Swimmers: Life Vests, 6 Calm Spots":
+      "Snorkel en Bali para no nadadores: 6 lugares tranquilos",
     "once per entry":
       "una sola vez por entrada al país",
     "One time per entry":
@@ -29863,6 +29867,12 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "Swimming With Turtles in Bali: Where to Snorkel and When":
+      "Nager avec les tortues à Bali : où et quand les voir",
+    "Mount Batur Sunrise from Ubud: Jeep or Hike, and Prices":
+      "Lever de soleil au mont Batur depuis Ubud : jeep ou marche",
+    "Bali Private Driver Cost Per Day: From $59 a Car in 2026":
+      "Prix d'un chauffeur privé à Bali : à partir de 59 $ par jour",
     "once per entry":
       "une seule fois par entrée sur le territoire",
     "One time per entry":
