@@ -9867,8 +9867,8 @@ const JOURNAL_SEO_GUIDES = [
       "Boats from Sanur port",
       "Tours from $49 per car"
     ],
-    "title": "Nusa Penida Day Trip from Sanur: How the Day Works",
-    "description": "How a Nusa Penida day trip from Sanur works, stage by stage: the 07:00 port meeting, four private routes with 2026 prices from $49 per car, and timing advice.",
+    "title": "Nusa Penida Day Trip from Sanur: Routes, Cost and Stops",
+    "description": "Sanur port meeting at 07:00, four private Nusa Penida routes from $49 per car, every stop on the west and east loops, and a late boat back.",
     "excerpt": "Sanur is the easiest place in Bali to start a Nusa Penida day trip, because the fast boats leave from Sanur port itself — most guests staying here reach the boat in minutes instead of crossing the island before dawn. Tours meet at the port around 07:00, the crossing takes roughly 30-45 minutes depending on sea conditions, and you are back in your own neighborhood in time for dinner. We run four private Penida routes from Sanur: the West Tour from $49 per car, the East and Full Day tours from $75, and a sightseeing-plus-manta-snorkeling day from $60, all booked over WhatsApp with no prepayment. This guide walks through the day stage by stage, from the port meeting to the last swim at Crystal Bay.",
     "rankings": [
       {
@@ -10285,9 +10285,9 @@ const JOURNAL_SEO_GUIDES = [
       "60-90 min from Ubud",
       "Tours from $35"
     ],
-    "title": "Mount Batur Sunrise from Ubud: Jeep, Hike and Timings",
-    "description": "How to see the Mount Batur sunrise from Ubud: exact pickup times, jeep tour from $75, guided hike from $35, and what to wear at 1,700 m before dawn.",
-    "excerpt": "Ubud is the closest base for a Mount Batur sunrise: the pre-dawn drive to Kintamani takes roughly 60-90 minutes, against two hours or more from the southern beach towns. That means the latest pickups on the island — the guided hike collects from 01:30, the jeeps from around 02:00 — and a return to your hotel by late morning with most of the day intact. This guide compares the three ways we run the sunrise from Ubud: a 4x4 jeep to the crater rim from $75, a jeep day that ends in the hot springs from $60, and the classic guided hike from $35. It also covers exact departure timings and what to wear at 1,700 m before dawn.",
+    "title": "Mount Batur Sunrise from Ubud: Jeep or Hike, and Prices",
+    "description": "Pickups from Ubud run 01:30-03:30 and you are back by late morning. Jeep from $75, guided hike from $35, and which one suits you.",
+    "excerpt": "Mount Batur sunrise tours leave Ubud between 01:30 and 03:30 — the latest pickups on the island, because the pre-dawn drive to Kintamani takes only 60-90 minutes. That means the latest pickups on the island — the guided hike collects from 01:30, the jeeps from around 02:00 — and a return to your hotel by late morning with most of the day intact. This guide compares the three ways we run the sunrise from Ubud: a 4x4 jeep to the crater rim from $75, a jeep day that ends in the hot springs from $60, and the classic guided hike from $35. It also covers exact departure timings and what to wear at 1,700 m before dawn.",
     "rankings": [
       {
         "name": "Mount Batur Sunrise Jeep Tour",
@@ -13328,8 +13328,8 @@ const JOURNAL_SEO_GUIDES = [
       "Tours from $69",
       "10-11 hour day plan"
     ],
-    "title": "Ubud in One Day: The 7-Stop Itinerary That Works",
-    "description": "A one-day Ubud itinerary with 7 stops in the right order — Monkey Forest, Tegalalang, Kintamani and Tirta Empul — plus time budgets and 2026 tour prices.",
+    "title": "Ubud in One Day: 7 Stops in Order, Times and Fees",
+    "description": "One day covers Ubud's core in this order: Campuhan Ridge, Monkey Forest at 09:00, Tegalalang, Tukad Cepung, Kintamani lunch, Tirta Empul. Plan 10-11 hours.",
     "excerpt": "One day is enough for the core of Ubud if you run the stops in the right order: Campuhan Ridge before 08:00, the Monkey Forest at its 09:00 opening, Tegalalang late morning, the Tukad Cepung light beams around midday, lunch on the Kintamani crater rim and Tirta Empul on the way down. This guide lays out that loop as 7 stops with honest time budgets — plan 10-11 hours door to door. You can drive it yourself, hire a private car from $59 per car, or book the core route as our private Ubud highlights day from $69 with an 08:00 hotel pickup, arranged on WhatsApp with no prepayment.",
     "rankings": [
       {
@@ -14362,8 +14362,8 @@ const JOURNAL_SEO_GUIDES = [
       "From $59 per car",
       "No prepayment"
     ],
-    "title": "Private Driver in Bali: Cost Per Day and How It Works",
-    "description": "What a private driver in Bali costs in 2026 — from $59 per car per day — what the price includes, how a 10-12 hour day works, and when Grab is cheaper.",
+    "title": "Bali Private Driver Cost Per Day: From $59 a Car in 2026",
+    "description": "A private driver in Bali costs from $59 per car per day, not per person. What a 10-12 hour day covers, when Grab is cheaper, and how to book with no deposit.",
     "excerpt": "A private driver in Bali costs from $59 per car per day, and the price covers the whole vehicle — a couple pays the same as a small group sharing the car. For that you get a car with its own driver for a full flexible day, typically 10-12 hours, with hotel pickup on your schedule and a route you can change as you go. This guide breaks down what the day rate covers, when a driver beats Grab and metered taxis, the six ways travelers actually use one — from waterfall loops to an airport transfer from $15 — and how booking works over WhatsApp with no prepayment. Everything here comes from the routes we drive every week, not from aggregator listings.",
     "rankings": [
       {
@@ -14498,8 +14498,8 @@ const JOURNAL_SEO_GUIDES = [
       "Non-swimmer friendly",
       "Tours from $29"
     ],
-    "title": "Snorkeling in Bali for Beginners and Non-Swimmers",
-    "description": "How to snorkel in Bali as a beginner or non-swimmer: 6 calm spots with life vests and in-water guides, places to avoid, and real 2026 tours from $29 to $115.",
+    "title": "Snorkeling in Bali for Non-Swimmers: Life Vests, 6 Calm Spots",
+    "description": "Yes, you can snorkel in Bali without swimming. 6 calm spots with life vests and a guide in the water, the famous sites to skip, and 2026 tours from $29.",
     "excerpt": "Yes, you can snorkel in Bali even if you cannot swim. The formula is a sheltered cove, a life vest, and a guide who stays in the water beside you — the standard setup on our beginner tours. The calmest first-timer water sits in three places: the Blue Lagoon coves at Padang Bai, the inner section of Crystal Bay on Nusa Penida, and the shallow turtle and statue sites off the Gili Islands. Guided days there cost from $29 to $115 per person in 2026, with the classic beginner day — Blue Lagoon from $50 including lunch — reachable as a half-day trip from the southern hotels. This guide ranks six calm spots and flags the famous sites beginners should skip.",
     "rankings": [
       {
@@ -15043,9 +15043,9 @@ const JOURNAL_SEO_GUIDES = [
       "Morning-window focus",
       "Boat trip from $50"
     ],
-    "title": "Blue Lagoon Padang Bai: Full Guide (Best Time, What to Bring)",
-    "description": "Blue Lagoon Bali, explained straight: how the Padang Bai cove really works, the morning clear-water window, what to bring, and what a boat trip costs.",
-    "excerpt": "Blue Lagoon is a sheltered cove on Bali's east coast, about 5 minutes north of Padang Bai harbor and a 90-120 minute drive from Seminyak or Kuta, traffic depending; from Ubud it is closer to 60-90 minutes. Water is clearest between 07:00 and 10:00, before wind and boat traffic stir the sand, and the dry season from April to October holds visibility best. Entry is either straight off the beach into 1-3 m of water or by a 5-minute jukung boat out to the reef edge. Two neighboring spots most visitors skip, Tanjung Jepun and Bias Tugel, sit within a 10-15 minute walk or short boat ride. Guided snorkeling trips from Padang Bai start from $50 as of August 2026, half day to full day with morning hotel pickup; a private car with driver for a self-planned east-coast day is from $59 per car.",
+    "title": "Blue Lagoon Bali Snorkeling: Padang Bai Times, Cost, Boats",
+    "description": "Blue Lagoon is a cove 5 minutes north of Padang Bai harbor in east Bali. Water is clearest 07:00-10:00. Snorkel from the beach or by boat; trips from $50.",
+    "excerpt": "Blue Lagoon is a sheltered snorkeling cove on Bali's east coast, about 5 minutes north of Padang Bai harbor and a 90-120 minute drive from Seminyak or Kuta, traffic depending; from Ubud it is closer to 60-90 minutes. Water is clearest between 07:00 and 10:00, before wind and boat traffic stir the sand, and the dry season from April to October holds visibility best. Entry is either straight off the beach into 1-3 m of water or by a 5-minute jukung boat out to the reef edge. Two neighboring spots most visitors skip, Tanjung Jepun and Bias Tugel, sit within a 10-15 minute walk or short boat ride. Guided snorkeling trips from Padang Bai start from $50 as of August 2026, half day to full day with morning hotel pickup; a private car with driver for a self-planned east-coast day is from $59 per car.",
     "rankings": [
       {
         "name": "Blue Lagoon (the cove itself)",
@@ -15765,9 +15765,9 @@ const JOURNAL_SEO_GUIDES = [
       "7 spots and rules",
       "Gili day from $115"
     ],
-    "title": "Snorkeling With Turtles in Bali: Where They Actually Are",
-    "description": "Where snorkeling with turtles in Bali actually works: Turtle Point off Gili Trawangan, Gili Meno's seagrass, the statue garden, season and etiquette.",
-    "excerpt": "If you want to swim with wild turtles, stop circling Bali's mainland reefs and get on a boat to the Gilis. Green and hawksbill turtles graze the seagrass off Gili Trawangan and Gili Meno all year. Here is exactly where to drop in — and how not to ruin it for the turtle.",
+    "title": "Swimming With Turtles in Bali: Where to Snorkel and When",
+    "description": "To swim with turtles in Bali you go to the Gilis, not the mainland reefs. The exact spots off Trawangan and Meno, the season and what a day trip costs.",
+    "excerpt": "Swimming with turtles in Bali means getting on a boat to the Gilis: green and hawksbill turtles graze the seagrass off Gili Trawangan and Gili Meno all year. Green and hawksbill turtles graze the seagrass off Gili Trawangan and Gili Meno all year. Here is exactly where to drop in — and how not to ruin it for the turtle.",
     "rankings": [
       {
         "name": "Turtle Point, Gili Trawangan",
@@ -16284,9 +16284,9 @@ const JOURNAL_SEO_GUIDES = [
       "True white sand only",
       "Tours from $59"
     ],
-    "title": "8 White Sand Beaches in Bali That Are Actually White",
-    "description": "The white sand beaches Bali actually has — Nusa Dua, Melasti, Diamond Beach and more — plus an honest note on why the west coast sand is grey.",
-    "excerpt": "Most of Bali's coastline is grey volcanic sand, whatever the listings imply. This guide ranks the eight genuinely white beaches — from the Nusa Dua strip to Diamond Beach on Nusa Penida — and tells you which ones you can actually swim at.",
+    "title": "White Sand Beaches in Bali: Nusa Dua, Melasti, Nusa Penida",
+    "description": "Eight Bali beaches with genuinely white sand: Nusa Dua and the Bukit by car, Diamond and Atuh on Nusa Penida. Plus why the west coast sand is grey.",
+    "excerpt": "Bali has eight beaches with genuinely white sand — the Nusa Dua strip and the Bukit on the mainland, Diamond and Atuh on Nusa Penida — and the rest of the coastline is grey volcanic sand, whatever the listings imply. This guide ranks the eight genuinely white beaches — from the Nusa Dua strip to Diamond Beach on Nusa Penida — and tells you which ones you can actually swim at.",
     "rankings": [
       {
         "name": "Nusa Dua",
@@ -16679,9 +16679,9 @@ const JOURNAL_SEO_GUIDES = [
       "Honest swim ratings",
       "Surf lessons from $35"
     ],
-    "title": "8 Best Beaches Near Canggu and Seminyak: An Honest Guide",
-    "description": "Beaches near Canggu and Seminyak compared honestly: dark sand, real surf, world-class sunsets — and the truth about swimming on Bali's west coast.",
-    "excerpt": "The west coast from Double Six to Seseh is built for surfing, beach bars, and sunsets — not for floating in flat turquoise water. Here's an honest ranking of all eight beaches, what each one genuinely does best, and where to go instead when you want to swim.",
+    "title": "Canggu and Seminyak Beaches: Which to Pick and Where to Swim",
+    "description": "All 8 Canggu and Seminyak beaches compared: which has beginner surf, which is safe to swim, where the beach clubs are, and what time sunset hits.",
+    "excerpt": "Canggu and Seminyak share one long grey-sand coast, from Double Six up to Seseh: built for surfing, beach bars and sunsets, not for floating in flat turquoise water. Here's an honest ranking of all eight beaches, what each one genuinely does best, and where to go instead when you want to swim.",
     "rankings": [
       {
         "name": "Batu Bolong",
@@ -24602,6 +24602,15 @@ function renderJournalIndexPage() {
     articles: row.slugs.map((slug) => guideArticleBySlug(slug)).filter(Boolean),
   })).filter((row) => row.articles.length);
 
+  // Полный указатель статей. Ряды выше собраны вручную и охватывают меньше
+  // четверти журнала — всё остальное не получало ни одной ссылки с хаба, хотя
+  // хаб стоит в хлебных крошках каждой статьи и потому самый сильный внутренний
+  // узел сайта. Здесь перечисляем всё, что в ряды не попало.
+  const hubRowSlugs = new Set(hubRows.flatMap((row) => row.articles.map((item) => item.guide.slug)));
+  const hubIndexArticles = buildSeoGuideArticles()
+    .filter((item) => !hubRowSlugs.has(item.guide.slug))
+    .sort((a, b) => a.title.localeCompare(b.title));
+
   return `<!DOCTYPE html>
 <html lang="en">
   <head><style>body{opacity:0!important}</style>
@@ -24694,6 +24703,24 @@ ${JOURNAL_FOOTER_ASSETS}
         `,
           )
           .join("")}
+
+        ${hubIndexArticles.length ? `
+        <section class="sb-jhub-row">
+          <div class="sb-jhub-row__head">
+            <div>
+              <h2>Every guide, A to Z</h2>
+              <span>${hubIndexArticles.length} more guides — the full journal in one list</span>
+            </div>
+          </div>
+          <ul class="sb-jhub-index">
+            ${hubIndexArticles
+              .map(
+                (item) => `<li data-jhub-searchable data-search="${escapeHtml(item.title.toLowerCase())}"><a href="${item.route}">${escapeHtml(item.title)}</a></li>`,
+              )
+              .join("")}
+          </ul>
+        </section>
+        ` : ""}
 
         <section class="sb-jhub-row" data-jhub-row>
           <div class="sb-jhub-row__head">
@@ -25342,6 +25369,10 @@ function renderJournalSharedStyles() {
   .sb-jhub-search__field input{flex:1;border:none;outline:none;background:transparent;font-size:16px;color:#151515}
   .sb-jhub-search__empty{margin:14px 4px 0;color:var(--sbj-muted);font-size:15px}
   .sb-jhub-row{margin:0 0 34px}
+  .sb-jhub-index{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2px 24px}
+  .sb-jhub-index li{margin:0;padding:9px 0;border-bottom:1px solid rgba(21,21,21,0.08)}
+  .sb-jhub-index a{color:#151515;text-decoration:none;font-size:15.5px;line-height:1.35;display:block}
+  .sb-jhub-index a:hover{text-decoration:underline;text-underline-offset:3px}
   .sb-jhub-row__head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 0 16px}
   .sb-jhub-row__head h2{margin:0 0 4px;font-size:26px;line-height:1.1;letter-spacing:-0.8px}
   .sb-jhub-row__head span{color:var(--sbj-muted);font-size:15px}
