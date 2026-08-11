@@ -159,7 +159,14 @@ async function collectTours() {
     const slug = file.replace(/^bali-tour-/, "").replace(/\.html$/, "");
     const title = decode((html.match(/<meta property="og:title" content="([^"]+)"/) || [, ""])[1])
       .replace(/\s*\|\s*SB Excursions\s*$/, "").trim();
-    const source = (html.match(/<meta property="og:image" content="https:\/\/sbexcursion\.com(\/images\/[^"]+)"/) || [, ""])[1];
+    // Исходное фото берём из preload-ссылки на герой страницы, а НЕ из
+    // og:image: генератор давно пишет туда наш же файл /images/og/<slug>.jpg,
+    // то есть скрипт читал бы собственный вывод. Плюс старое выражение искало
+    // домен без www, а сайт переехал на www — совпадений не было вовсе, и
+    // сборка молча выдавала ноль картинок при живых, но протухших файлах.
+    const source =
+      (html.match(/<link rel="preload" as="image" href="(\/images\/[^"]+)"/) || [, ""])[1] ||
+      (html.match(/<meta property="og:image" content="https:\/\/(?:www\.)?sbexcursion\.com(\/images\/(?!og\/)[^"]+)"/) || [, ""])[1];
     if (!title || !source) continue;
     const price = (html.match(/From \$(\d+)/) || [])[1];
     const duration = (html.match(/>(\d+[–-]\d+ hours)</) || [])[1];

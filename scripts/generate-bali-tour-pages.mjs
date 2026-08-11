@@ -126,10 +126,18 @@ function journalDocumentTitle(title) {
 /* Картинка превью для страниц журнала: фирменная карточка 1200x630 тура,
    к которому привязана статья, — она уже есть в /images/og и правильно
    выглядит в WhatsApp/Telegram. Фолбэк — переданное hero-фото. */
+// Статье журнала — её собственное фото, а не карточка тура.
+//
+// Раньше здесь подставлялся баннер опорного тура из images/og, и получалось
+// сразу две беды. Во-первых, враньё по смыслу: гайд «8 мест для заката»
+// превьюшился карточкой «Bali Sunset Cruise from Benoa | From $150». Во-вторых
+// и главное — Google берёт og:image как основного кандидата в миниатюру
+// выдачи, а карточка с набитым текстом при квадратной обрезке выглядит плохо,
+// и поиск чаще не показывает миниатюру вовсе. Чистая фотография работает и
+// как миниатюра в выдаче, и как превью в мессенджере.
+//
+// Карточки с ценой остаются там, где они и продают, — на страницах туров.
 function journalOgImage(tourSlug, fallbackUrl) {
-  if (tourSlug && fs.existsSync(path.join(projectRoot, "images", "og", `${tourSlug}.jpg`))) {
-    return `${SITE_URL}/images/og/${tourSlug}.jpg`;
-  }
   return fallbackUrl;
 }
 
@@ -25014,6 +25022,22 @@ function renderSeoGuidePage(article) {
       author: JOURNAL_AUTHOR,
       publisher: ORGANIZATION_SCHEMA,
     },
+    // primaryImageOfPage — прямое указание Google, какую из картинок брать в
+    // миниатюру выдачи. В BlogPosting.image мы отдаём до шести фото, и без
+    // этого узла поиск выбирает сам либо не показывает миниатюру вовсе.
+    // На страницах туров такой узел есть давно, у журнала его не было.
+    {
+      "@type": "WebPage",
+      "@id": `${article.url}#webpage`,
+      url: article.url,
+      name: article.title,
+      description: article.description,
+      inLanguage: "en",
+      primaryImageOfPage: {
+        "@type": "ImageObject",
+        url: absoluteJournalImageUrl(article.heroImage),
+      },
+    },
     {
       "@type": "BreadcrumbList",
       "@id": `${article.url}#breadcrumb`,
@@ -25236,6 +25260,20 @@ ${JOURNAL_FOOTER_ASSETS}
             "@type": "TouristTrip",
             name: article.tour.title,
             url: absoluteTourUrl(article.tour),
+          },
+        },
+        // см. пояснение у гайдов: без primaryImageOfPage поиск сам гадает,
+        // какую из картинок ставить миниатюрой, и часто не ставит никакой
+        {
+          "@type": "WebPage",
+          "@id": `${article.url}#webpage`,
+          url: article.url,
+          name: article.title,
+          description: article.description,
+          inLanguage: "en",
+          primaryImageOfPage: {
+            "@type": "ImageObject",
+            url: `${SITE_URL}${publicImagePath(article.tour)}`,
           },
         },
         {
