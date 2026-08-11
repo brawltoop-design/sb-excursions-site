@@ -156,6 +156,19 @@ function journalOgMetaBlock(docTitle, description, ogImage) {
 const HERO_IMAGE_DIR = path.join(projectRoot, "images", "bali-tours");
 const WEST_TEMPLATE_SOURCE_FILE = path.join(projectRoot, "page128064616.html");
 const JOURNAL_HUB_ROUTE = "/bali/en/journal";
+
+// Гайды прошлых поколений: генератор их не перезаписывает, они лежат готовыми
+// файлами bali-journal-guide-<слаг>[-язык].html со всеми пятью языками. Список
+// нужен карте сайта — иначе эти страницы в ней отсутствуют и Google находит их
+// только по внутренним ссылкам.
+const LEGACY_GUIDE_SLUGS = [
+  "bali-canggu-beaches-guide",
+  "bali-tour-prices-2026-real-costs",
+  "gili-islands-day-trip-from-bali",
+  "mount-batur-sunrise-jeep-vs-hike",
+  "nusa-penida-tours-compared",
+  "swimming-with-whale-sharks-indonesia",
+];
 const BALI_LANGUAGE_OPTIONS = [
   { code: "en", label: "English" },
   { code: "zh", label: "中文" },
@@ -14004,7 +14017,7 @@ const JOURNAL_SEO_GUIDES = [
           "**[Snorkel with Manta Rays](/bali/en/tours/nusa-penida-manta-rays-point) — from $29** per person: the sea-day version — boat snorkeling at Manta Point and the channel reefs instead of a land loop."
         ],
         "paragraphsAfter": [
-          "The short version: first visit with one day, take the west loop. Second visit, or allergic to crowds, the east side rewards the longer day. Water-first travelers should go straight to the manta route — reef mantas at the cleaning station are the strongest single marine encounter this close to Bali. For a deeper side-by-side of all the routes, see our [Nusa Penida tours compared](/bali/en/journal/nusa-penida-tours-compared) breakdown."
+          "The short version: first visit with one day, take the west loop. Second visit, or allergic to crowds, the east side rewards the longer day. Water-first travelers should go straight to the manta route — reef mantas at the cleaning station are the strongest single marine encounter this close to Bali. For a deeper side-by-side of all the routes, see our [Nusa Penida tours compared](/bali/en/journal/nusa-penida-tours-compared) breakdown. The east side is also where the sand turns properly white — Diamond Beach and Atuh both make our roundup of [Bali's genuinely white sand beaches](/bali/en/journal/best-white-sand-beaches-bali)."
         ]
       },
       {
@@ -14428,7 +14441,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "How a driver day actually runs",
         "paragraphs": [
           "A typical full driver day runs **10-12 hours** door to door, and the route stays yours the whole way. Most guests send a rough list the evening before — three to five stops makes a comfortable day — and the driver sequences them around traffic and opening hours. Distances are the real constraint: the southern hotel areas sit about 45-90 minutes from Ubud depending on traffic, and the far east or the north coast runs roughly 2-3 hours each way, so one far region per day is the sensible ceiling.",
-          "The difference from a fixed tour is control. Our [Ubud highlights tour](/bali/en/tours/ubud-highlights-tour) from $69 runs a proven 10-hour route that already works; a driver day starts from a blank map. Take the fixed tour when you want the greatest hits handled for you, and the driver day when you have your own list — a specific warung, a beach club at sunset, or a slow morning that fixed departures do not allow."
+          "The difference from a fixed tour is control. Our [Ubud highlights tour](/bali/en/tours/ubud-highlights-tour) from $69 runs a proven 10-hour route that already works; a driver day starts from a blank map. Take the fixed tour when you want the greatest hits handled for you, and the driver day when you have your own list — a specific warung, a beach club at sunset, or a slow morning that fixed departures do not allow. When the list you send is an Ubud list, the order matters as much as the stops, and [a seven-stop Ubud day sequenced from the ridge walk to the Kintamani rim](/bali/en/journal/ubud-in-one-day) is the version that fits inside those hours."
         ]
       },
       {
@@ -14557,7 +14570,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Where beginners should not snorkel",
         "paragraphs": [
           "Skip **Manta Point** and **Wall Bay** on a first trip — both are open-ocean sites off Nusa Penida with swell, current and no beach entry. They are boat-only stops where you enter deep blue water from a ladder, and while a life vest still keeps you afloat, the surface chop is genuinely stressful when you are new. These sites reward confident swimmers: the [Manta Point snorkeling day](/bali/en/tours/nusa-penida-manta-rays-point) runs **from $29** per person and is a fair step two once a calm-cove morning has gone well. Our separate [Manta Point guide](/bali/en/journal/manta-point-bali-guide) describes the conditions honestly before you commit.",
-          "Two more traps are worth naming. First, the outer half of Crystal Bay: the inner section near the beach is beginner water, but the channel at the mouth of the bay carries real current — stay inside the bay and behind your guide. Second, timing: even the calm coves pick up wind chop after midday, so a first session belongs in the water **before 10:00**. Factor in drive time too — Padang Bai sits about **60-100 minutes** from the southern hotel areas depending on traffic, which is exactly why beginner tours start with a morning pickup."
+          "Two more traps are worth naming. First, the outer half of Crystal Bay: the inner section near the beach is beginner water, but the channel at the mouth of the bay carries real current — stay inside the bay and behind your guide. Second, timing: even the calm coves pick up wind chop after midday, so a first session belongs in the water **before 10:00**. Factor in drive time too — Padang Bai sits about **60-100 minutes** from the southern hotel areas depending on traffic, which is exactly why beginner tours start with a morning pickup. The rest of that morning — shore entry versus the boat hop, and what to have in the bag — is laid out in our [full guide to Blue Lagoon at Padang Bai](/bali/en/journal/blue-lagoon-padang-bai-guide)."
         ]
       },
       {
@@ -14961,7 +14974,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Can you do Gili Trawangan in one day from Seminyak?",
         "paragraphs": [
           "Yes — Gili Trawangan works as a one-day trip from Seminyak. The [Gili Islands private snorkeling day trip](/bali/en/tours/gili-island-tour) runs **7-9 hours door to door** at **from $115 per person** and covers both Gili Trawangan and Gili Meno in one loop: road transfer to Padang Bai, fast boat across the strait, snorkeling at Turtle Point and the Meno statue circle, free time on Trawangan, then the return crossing. The price includes the fast boat, a private snorkeling boat at the islands and GoPro photos of the day. You can take hotel pickup from Seminyak or meet the boat at Padang Bai; **exact pickup time is confirmed on WhatsApp the day before**.",
-          "The honest math behind the early start: Seminyak sits on Bali's southwest coast and the boats leave from Padang Bai in the east, so the road leg alone runs **about 90 minutes to 2 hours each way depending on traffic**. That is also why the private format matters — one car, straight to the harbor, no hotel-loop pickups eating your morning. Treat the whole day as spoken for and plan nothing for the evening beyond dinner."
+          "The honest math behind the early start: Seminyak sits on Bali's southwest coast and the boats leave from Padang Bai in the east, so the road leg alone runs **about 90 minutes to 2 hours each way depending on traffic**. That is also why the private format matters — one car, straight to the harbor, no hotel-loop pickups eating your morning. Treat the whole day as spoken for and plan nothing for the evening beyond dinner. Meeting the boat at Padang Bai instead of taking hotel pickup also puts you a few minutes from Blue Lagoon, the sheltered cove covered in our [Blue Lagoon Padang Bai snorkeling guide](/bali/en/journal/blue-lagoon-padang-bai-guide)."
         ]
       },
       {
@@ -14981,7 +14994,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Gili or Nusa Penida if you only have one day",
         "paragraphs": [
           "Pick by animal: Nusa Penida for manta rays, the Gili Islands for turtles. From Seminyak, Penida is also the lighter logistics day — its boats leave from Sanur, a shorter drive than Padang Bai, and the [manta snorkeling day](/bali/en/tours/nusa-penida-manta-rays-point) runs **from $29 per person** against **from $115** for the Gilis. If budget, small children or an early flight the next morning is the constraint, Penida is the easier call.",
-          "The Gilis justify the longer haul with variety rather than one big encounter: dependable turtles at snorkeling depth, the underwater statue circle off Gili Meno, and a car-free island for lunch. Penida counters with reef mantas and the biggest cliff scenery in the region. We compare the two head-to-head in [Gili Islands vs Nusa Penida](/bali/en/journal/gili-islands-vs-nusa-penida), and if Penida wins your vote, the [Nusa Penida day trip from Seminyak](/bali/en/journal/nusa-penida-day-trip-from-seminyak) guide walks that route's timeline the same way this one does."
+          "The Gilis justify the longer haul with variety rather than one big encounter: dependable turtles at snorkeling depth, the underwater statue circle off Gili Meno, and a car-free island for lunch. Penida counters with reef mantas and the biggest cliff scenery in the region. We compare the two head-to-head in [Gili Islands vs Nusa Penida](/bali/en/journal/gili-islands-vs-nusa-penida), and if Penida wins your vote, the [Nusa Penida day trip from Seminyak](/bali/en/journal/nusa-penida-day-trip-from-seminyak) guide walks that route's timeline the same way this one does. And if it is specifically the turtles pulling you east, [where the turtles actually are around Bali and the Gilis](/bali/en/journal/snorkeling-with-turtles-bali) sets out which sites are dependable and which come down to luck."
         ]
       },
       {
@@ -15172,14 +15185,14 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Shore entry or boat trip",
         "paragraphs": [
-          "**Shore entry** — walk in from the beach over rock and rubble, snorkel the near reef, pay nothing for a boat. You will want reef shoes, your own mask, and a realistic eye on conditions, because nobody is watching you. **Boat trip** — a local jukung picks you up at the harbor, covers Blue Lagoon plus Tanjung Jepun, and the captain reads the current so you don't have to. Our private trip from $50 per person is the second option, with gear, water and photos handled. First-time snorkelers, families, and anyone who wants the second reef should take the boat; confident swimmers with their own kit can happily do the shore."
+          "**Shore entry** — walk in from the beach over rock and rubble, snorkel the near reef, pay nothing for a boat. You will want reef shoes, your own mask, and a realistic eye on conditions, because nobody is watching you. **Boat trip** — a local jukung picks you up at the harbor, covers Blue Lagoon plus Tanjung Jepun, and the captain reads the current so you don't have to. Our private trip from $50 per person is the second option, with gear, water and photos handled. First-time snorkelers, families, and anyone who wants the second reef should take the boat; confident swimmers with their own kit can happily do the shore. That includes people who cannot swim at all — the vest-and-guide routine that makes the boat option work for them is the whole subject of our guide to [snorkeling in Bali for beginners and non-swimmers](/bali/en/journal/bali-snorkeling-for-beginners)."
         ]
       },
       {
         "heading": "Make it a full east-coast day",
         "paragraphs": [
           "Blue Lagoon on its own is a two-hour stop, so build around it. Swim first, then walk or ride over to Bias Tugel for beach time, and eat at a harbor warung before the drive back. If you are heading onward, Padang Bai is Bali's main jump-off for the islands — [fast boat transfers](/bali/en/tours/fast-boat-transfer-bali) run from $15, which is why plenty of people snorkel the lagoon the morning before a Gili crossing. Staying in Bali? Pair the cove with the east side's temples, palms and viewpoints on an [East Bali day trip](/bali/en/tours/east-bali-instagram-tour) from $69.",
-          "If snorkeling is the main event of your Bali trip, keep perspective: Blue Lagoon is the convenient option, not the ceiling. The wall at Amed and the wreck at Tulamben are about an hour further up the coast, and the really clear water lives across the channel. Start with our island-wide list of [the best snorkeling spots in Bali](/bali/en/journal/best-snorkeling-spots-bali), then see [which beaches actually have crystal-clear water](/bali/en/journal/best-beaches-bali-crystal-clear-water) before you lock the itinerary."
+          "If snorkeling is the main event of your Bali trip, keep perspective: Blue Lagoon is the convenient option, not the ceiling. The wall at Amed and the wreck at Tulamben are about an hour further up the coast, and the really clear water lives across the channel. Start with our island-wide list of [the best snorkeling spots in Bali](/bali/en/journal/best-snorkeling-spots-bali), then see [which beaches actually have crystal-clear water](/bali/en/journal/best-beaches-bali-crystal-clear-water) before you lock the itinerary. Bias Tugel is one of the few coves on this coast with genuinely pale sand, which is why it makes our list of [Bali's real white sand beaches](/bali/en/journal/best-white-sand-beaches-bali)."
         ]
       }
     ],
@@ -16350,7 +16363,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "The honest part first: most of Bali's sand is grey",
         "paragraphs": [
           "Start with what the brochures skip: the sand along most of the west coast is volcanic — grey at Seminyak, darker at Canggu and Seseh, closer to black the further north you go. It photographs moodily and surfs beautifully, but it isn't white, and no villa listing can change that. The genuinely white sand sits where the geology changes: the limestone Bukit peninsula in the south, the Nusa Dua strip, a few coves in east Bali, and the offshore islands — Nusa Penida and the Gilis — where crushed coral does the work. This list sticks to beaches where the sand is actually white when you're standing on it, not just in an edited photo.",
-          "None of this makes the grey coasts a mistake — the surf, the sunsets and most of the island's food scene live there. It just means a white-sand day is a deliberate trip, not a stroll from the villa: a drive south to the Bukit, east to Padang Bai, or a boat across to the islands. The good news is that every beach on this list rewards the effort, and half of them can be strung together in a single day with a driver."
+          "None of this makes the grey coasts a mistake — the surf, the sunsets and most of the island's food scene live there. It just means a white-sand day is a deliberate trip, not a stroll from the villa: a drive south to the Bukit, east to Padang Bai, or a boat across to the islands. The good news is that every beach on this list rewards the effort, and half of them can be strung together in a single day with a driver. The grey coast keeps a ranking of its own, and the eight [beaches between Canggu and Seminyak](/bali/en/journal/best-beaches-canggu-seminyak) are sorted there by what each one genuinely does best — surf, sunset drinks or an empty walk at low tide."
         ]
       },
       {
@@ -16368,7 +16381,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Which white sand beach fits your day",
         "paragraphs": [
-          "**For actual swimming:** Nusa Dua, Geger or Melasti — reef protection plus facilities, best around mid to high tide. **For the photo:** Diamond Beach and Atuh, no contest; go early before the light flattens and the stairs get busy. **For kids:** stay on the Nusa Dua strip, where flat water and toilets matter more than drama — the full breakdown is in [calm beaches in Bali for kids](/bali/en/journal/calm-beaches-bali-kids). **For a whole day on white sand:** Gili Meno on a [Gili island tour](/bali/en/tours/gili-island-tour) from $115, the finest sand of the lot. **For water clarity above all:** cross-check this list against [the best beaches in Bali with crystal-clear water](/bali/en/journal/best-beaches-bali-crystal-clear-water) — the overlap is where you want to be."
+          "**For actual swimming:** Nusa Dua, Geger or Melasti — reef protection plus facilities, best around mid to high tide. **For the photo:** Diamond Beach and Atuh, no contest; go early before the light flattens and the stairs get busy. **For kids:** stay on the Nusa Dua strip, where flat water and toilets matter more than drama — the full breakdown is in [calm beaches in Bali for kids](/bali/en/journal/calm-beaches-bali-kids). **For a whole day on white sand:** Gili Meno on a [Gili island tour](/bali/en/tours/gili-island-tour) from $115, the finest sand of the lot. **For water clarity above all:** cross-check this list against [the best beaches in Bali with crystal-clear water](/bali/en/journal/best-beaches-bali-crystal-clear-water) — the overlap is where you want to be. If the turtles grazing off Meno's west side are the part that stuck with you, [where to actually snorkel with turtles in Bali](/bali/en/journal/snorkeling-with-turtles-bali) covers which Gili sites deliver them reliably."
         ]
       }
     ],
@@ -18094,13 +18107,13 @@ const JOURNAL_SEO_GUIDES = [
       {
         heading: "The easiest way to choose your Bali base",
         paragraphs: [
-          "Do not start with price alone. Start with the kind of days you want. If you want sunset clubs and social momentum, beach areas win. If you want culture, waterfalls and a greener pace, Ubud wins. If you want the lowest-stress resort rhythm, Nusa Dua and Sanur become far more attractive.",
+          "Do not start with price alone. Start with the kind of days you want. If you want sunset clubs and social momentum, beach areas win. If you want culture, waterfalls and a greener pace, Ubud wins. If you want the lowest-stress resort rhythm, Nusa Dua and Sanur become far more attractive. If the beach areas win, it pays to know what that coast actually offers before you book — the [beaches from Canggu to Seminyak](/bali/en/journal/best-beaches-canggu-seminyak) are built for surf, sunsets and beach bars rather than for swimming.",
         ],
       },
       {
         heading: "The smartest first-time Bali combinations",
         paragraphs: [
-          "For many first trips, the strongest structure is two bases instead of one. [Ubud](/bali/en/journal/things-to-do-ubud-bali-complete-guide) plus [Seminyak](/bali/en/journal/things-to-do-seminyak-bali-guide), or Ubud plus [Uluwatu](/bali/en/journal/things-to-do-uluwatu-bali-guide), often gives better balance than committing the whole trip to one travel mood.",
+          "For many first trips, the strongest structure is two bases instead of one. [Ubud](/bali/en/journal/things-to-do-ubud-bali-complete-guide) plus [Seminyak](/bali/en/journal/things-to-do-seminyak-bali-guide), or Ubud plus [Uluwatu](/bali/en/journal/things-to-do-uluwatu-bali-guide), often gives better balance than committing the whole trip to one travel mood. Sanur earns its place on that list partly because the Nusa Penida fast boats leave from its own port, so [a Nusa Penida day trip from Sanur](/bali/en/journal/nusa-penida-day-trip-from-sanur) starts a short ride from the hotel instead of with a pre-dawn drive across the island.",
         ],
         bullets: [
           "Choose Ubud + Seminyak for culture plus dining.",
@@ -18111,7 +18124,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         heading: "Why hotel area matters for tours",
         paragraphs: [
-          "The moment you start adding day trips, your base affects pickup windows, [traffic exposure](/bali/en/journal/how-to-get-around-bali-transport-guide) and how much energy you lose between experiences. That is why the right hotel area improves not only sleep and restaurants, but also tour quality.",
+          "The moment you start adding day trips, your base affects pickup windows, [traffic exposure](/bali/en/journal/how-to-get-around-bali-transport-guide) and how much energy you lose between experiences. That is why the right hotel area improves not only sleep and restaurants, but also tour quality. When the base you like sits far from the stops you want, [hiring a private car with driver for the day](/bali/en/journal/bali-private-driver-cost) is what absorbs that distance, because the pickup time then bends around you instead of a fixed departure.",
         ],
       },
     ],
@@ -18641,7 +18654,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         heading: "How to group viewpoints without wasting the day",
         paragraphs: [
-          "The strongest viewpoint days are clustered by area. Ubud and Kintamani pair naturally, UNESCO highland stops pair naturally, and island cliffs deserve their own dedicated day instead of being squeezed between mainland plans.",
+          "The strongest viewpoint days are clustered by area. Ubud and Kintamani pair naturally, UNESCO highland stops pair naturally, and island cliffs deserve their own dedicated day instead of being squeezed between mainland plans. The rim pairs with Ubud precisely because the pre-dawn drive is short, which is why most travelers take [the Mount Batur sunrise as a morning out of Ubud](/bali/en/journal/mount-batur-sunrise-from-ubud) and keep the rest of the day for the terraces below it.",
         ],
       },
       {
@@ -18881,7 +18894,7 @@ const JOURNAL_SEO_GUIDES = [
         heading: "📍 Why Ubud is the best inland base",
         paragraphs: [
           "Ubud sits roughly in the middle of everything worth driving to, which is why the [7-day itinerary](/bali/en/journal/bali-itinerary-7-days-first-time) uses it as the inland base. Mount Batur is about **90 minutes** away, the main waterfalls **30–50 minutes**, and the Ayung River gorge is on the doorstep. From the south coast, every one of those becomes a much longer day.",
-          "The town also solves evenings. You can walk to dinner, a market and a dance performance without arranging transport, which is not true of most Bali areas.",
+          "The town also solves evenings. You can walk to dinner, a market and a dance performance without arranging transport, which is not true of most Bali areas. That ninety minutes is also what makes the volcano viable before dawn, since [a Mount Batur sunrise morning from Ubud](/bali/en/journal/mount-batur-sunrise-from-ubud) starts later than the same trip from anywhere on the coast.",
         ],
       },
       {
@@ -19545,7 +19558,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         heading: "🚤 Getting there and what it costs",
         paragraphs: [
-          "Fast boats leave **Sanur Harbour** and take about **30–45 minutes**. Departures start around **07:00–07:30** and the last return is typically **15:30**, which is why day trips feel tight. Take the earliest boat you can — seas are calmest in the morning and you beat the tour groups to Kelingking.",
+          "Fast boats leave **Sanur Harbour** and take about **30–45 minutes**. Departures start around **07:00–07:30** and the last return is typically **15:30**, which is why day trips feel tight. Take the earliest boat you can — seas are calmest in the morning and you beat the tour groups to Kelingking. Sleeping in Sanur is the simplest way to make that first departure, which is why [a Nusa Penida day trip that starts in Sanur](/bali/en/journal/nusa-penida-day-trip-from-sanur) begins with a short ride to the harbour rather than an hour of pre-dawn driving.",
         ],
         bullets: [
           "Fast boat one way: **IDR 117,000–250,000** depending on operator",
@@ -24271,47 +24284,166 @@ const JOURNAL_SEO_GUIDES = [
 // Topical clusters for internal linking. A guide links to its siblings first,
 // then borrows from a complementary cluster, so related links stay on-topic
 // instead of pointing at whatever happens to be next in the array.
+// Тематические кластеры для внутренней перелинковки. Раньше здесь были
+// расписаны 25 статей из 101, а для остальных relatedGuidesFor брал первые
+// попавшиеся по порядку массива — ссылки уходили не по смыслу и копились
+// на нескольких страницах. Теперь покрыт весь журнал.
 const GUIDE_CLUSTERS = {
   planning: [
     "first-time-in-bali-complete-guide",
-    "bali-itinerary-7-days-first-time",
-    "best-time-to-visit-bali-month-by-month",
-    "how-much-does-a-bali-trip-cost",
-    "bali-visa-entry-requirements",
-    "how-to-get-around-bali-transport-guide",
+    "best-places-to-visit-bali-first-time",
     "what-to-pack-for-bali",
+    "bali-visa-entry-requirements",
+    "how-much-does-a-bali-trip-cost",
   ],
   areas: [
     "things-to-do-ubud-bali-complete-guide",
     "things-to-do-canggu-bali-guide",
     "things-to-do-seminyak-bali-guide",
     "things-to-do-uluwatu-bali-guide",
-    "nusa-penida-complete-guide",
     "where-to-stay-bali-first-time",
   ],
-  experiences: [
-    "best-beaches-bali-crystal-clear-water",
-    "best-waterfalls-bali-day-trips",
-    "best-temples-bali-cultural-sites",
-    "best-viewpoints-bali-sunrise-cliffs-rice-terraces",
-    "best-instagram-places-bali",
-    "best-places-to-visit-bali-first-time",
+  itineraries: [
+    "bali-itinerary-7-days-first-time",
+    "bali-7-day-itinerary",
+    "bali-itinerary-5-days",
+    "bali-itinerary-10-days",
+    "ubud-in-one-day",
+    "bali-layover-day-tour",
+  ],
+  transport: [
+    "how-to-get-around-bali-transport-guide",
+    "how-to-get-around-bali",
+    "bali-airport-transfer-guide",
+    "airport-to-ubud-transfer",
+    "bali-private-driver-cost",
+    "grab-gojek-or-private-driver-bali",
   ],
   practical: [
     "bali-safety-scams-and-health",
+    "bali-tourist-tax-levy-guide",
+    "bali-entrance-fees-2026",
     "what-to-eat-in-bali-food-guide",
-    "bali-with-kids-family-guide",
     "best-budget-restaurants-bali-warungs",
+  ],
+  seasons: [
+    "best-time-to-visit-bali-month-by-month",
+    "bali-tours-in-rainy-season",
+    "best-time-clear-water-bali",
+    "manta-ray-season-bali",
+    "whale-shark-season-sumbawa",
+  ],
+  beaches: [
+    "best-beaches-bali-crystal-clear-water",
+    "best-white-sand-beaches-bali",
+    "best-beaches-canggu-seminyak",
+    "best-beaches-uluwatu-bukit",
+    "can-you-swim-in-bali",
+  ],
+  snorkeling: [
+    "best-snorkeling-spots-bali",
+    "bali-snorkeling-for-beginners",
+    "bali-snorkeling-cost",
+    "snorkeling-near-seminyak-and-canggu",
+    "amed-tulamben-snorkeling",
+    "menjangan-island-bali",
+    "blue-lagoon-padang-bai-guide",
+    "manta-point-bali-guide",
+    "snorkeling-with-turtles-bali",
+    "lovina-dolphin-tour-worth-it",
+  ],
+  sunsets: [
+    "best-sunset-spots-bali",
+    "tanah-lot-vs-uluwatu-sunset",
+    "bali-sunset-cruise-worth-it",
+    "best-viewpoints-bali-sunrise-cliffs-rice-terraces",
+    "best-instagram-places-bali",
+  ],
+  templesWaterfalls: [
+    "best-temples-bali-cultural-sites",
+    "tirta-empul-guide",
+    "best-waterfalls-bali-day-trips",
+    "tukad-cepung-waterfall-guide",
+    "jatiluwih-vs-tegalalang",
+  ],
+  activities: [
+    "white-water-rafting-bali-guide",
+    "bali-atv-tours-guide",
+    "surf-lessons-bali-beginners",
     "best-beach-clubs-bali-young-adults",
     "best-things-to-do-bali-for-couples",
+    "bali-honeymoon-day-trips",
+  ],
+  families: [
+    "bali-with-kids-family-guide",
+    "bali-day-trips-with-kids",
+    "nusa-penida-with-kids",
+    "calm-beaches-bali-kids",
+    "bali-tours-for-seniors",
+  ],
+  nusaPenida: [
+    "nusa-penida-complete-guide",
+    "is-nusa-penida-worth-it",
+    "is-nusa-penida-safe",
+    "nusa-penida-one-day-itinerary",
+    "nusa-penida-without-a-tour",
+    "nusa-penida-vs-nusa-lembongan",
+    "gili-islands-vs-nusa-penida",
+  ],
+  penidaSpots: [
+    "kelingking-beach-guide",
+    "broken-beach-angels-billabong",
+    "diamond-beach-nusa-penida-guide",
+    "crystal-bay-nusa-penida",
+    "best-beaches-nusa-penida",
+  ],
+  penidaDayTrips: [
+    "how-to-get-to-nusa-penida",
+    "sanur-to-nusa-penida-fast-boat",
+    "nusa-penida-day-trip-from-sanur",
+    "nusa-penida-day-trip-from-ubud",
+    "nusa-penida-day-trip-from-uluwatu",
+    "nusa-penida-day-trip-from-canggu",
+    "nusa-penida-day-trip-from-seminyak",
+  ],
+  mountBatur: [
+    "mount-batur-sunrise-from-ubud",
+    "mount-batur-sunrise-from-south-bali",
+    "mount-batur-sunrise-vs-sunset",
+    "is-mount-batur-worth-it",
+    "is-mount-batur-safe",
+    "can-you-hike-mount-batur-without-a-guide",
+    "mount-batur-vs-mount-agung",
+    "ubud-to-mount-batur",
+  ],
+  giliIslands: [
+    "how-to-get-to-gili-trawangan-from-bali",
+    "gili-t-day-trip-from-seminyak",
+    "gili-air-vs-gili-trawangan",
+    "gili-trawangan-vs-air-vs-meno",
+    "are-gili-islands-worth-it",
+    "are-gili-islands-safe",
   ],
 };
 
 const GUIDE_CLUSTER_PARTNERS = {
-  planning: "areas",
-  areas: "experiences",
-  experiences: "areas",
+  planning: "itineraries",
+  itineraries: "areas",
+  areas: "beaches",
+  transport: "penidaDayTrips",
   practical: "planning",
+  seasons: "snorkeling",
+  beaches: "areas",
+  snorkeling: "penidaSpots",
+  sunsets: "areas",
+  templesWaterfalls: "areas",
+  activities: "mountBatur",
+  families: "beaches",
+  nusaPenida: "penidaDayTrips",
+  penidaSpots: "nusaPenida",
+  penidaDayTrips: "nusaPenida",
+  mountBatur: "activities",
+  giliIslands: "snorkeling",
 };
 
 function guideClusterOf(slug) {
@@ -32161,6 +32293,10 @@ function writeSitemap() {
       JOURNAL_ARTICLE_TYPES.map((articleType) => `/bali/en/journal/${tour.slug}/${articleType.slug}`),
     ),
     ...JOURNAL_SEO_GUIDES.map((guide) => `/bali/en/journal/${guide.slug}`),
+    // Шесть гайдов прошлых поколений живут отдельными файлами и в
+    // JOURNAL_SEO_GUIDES их нет — значит, в карту сайта они не попадали,
+    // хотя все пять языковых версий каждого лежат на диске и открываются.
+    ...LEGACY_GUIDE_SLUGS.map((slug) => `/bali/en/journal/${slug}`),
   ];
 
   const dubaiSingles = [
