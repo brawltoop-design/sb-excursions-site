@@ -22,6 +22,7 @@ const STEPS = [
   ["build-work-with-us.mjs", "партнёрская страница Work With Us"],
   ["fix-fouc.mjs", "защита от мигания при загрузке"],
   ["add-vercel-analytics.mjs", "счётчик посещаемости Vercel"],
+  ["add-partner-ref.mjs", "партнёрская метка в ссылках WhatsApp"],
   ["add-robots-meta.mjs", "разрешение на крупные картинки в выдаче Google"],
   ["normalize-site-host.mjs", "единый домен www во всех адресах"],
   ["fix-mobile-tours-link.mjs", "живая ссылка «Туры» в мобильном меню"],

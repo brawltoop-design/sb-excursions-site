@@ -26919,6 +26919,11 @@ function renderJournalTourPinCard(tour) {
                 <span class="sbtc-plate__rating sbtc-caps">${SBTC_STAR}<b>${TOUR_VISIBLE_RATING}</b><span class="sbtc-plate__src">Google Maps</span></span>
               </a>
               <h3 class="sbtc-rail__title"><a class="sbtc-rail__titlelink" href="${tourRoute(tour)}">${escapeHtml(tour.title)}</a></h3>
+              ${renderTourPriceBlock(tour, "sbtc-rail__price")}
+              <div class="sbtc-rail__actions">
+                <a class="sbtc-btn sbtc-btn_ink" href="${tourRoute(tour)}">View tour — from ${escapeHtml(price.amount)}${SBTC_ARROW}</a>
+                <a class="sbtc-btn sbtc-btn_line" href="${bookingHref}" target="_blank" rel="noopener noreferrer nofollow">Book in WhatsApp</a>
+              </div>
               <dl class="sbtc-ledger sbtc-rail__ledger">
                 <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">Duration</dt><dd class="sbtc-ledger__val">${escapeHtml(tour.duration)}</dd></div>
                 <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">Area</dt><dd class="sbtc-ledger__val">${escapeHtml(tour.area)}</dd></div>
@@ -26926,11 +26931,6 @@ function renderJournalTourPinCard(tour) {
                 <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">Best for</dt><dd class="sbtc-ledger__val">${escapeHtml(tour.bestFor)}</dd></div>
                 <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">Pickup</dt><dd class="sbtc-ledger__val">${escapeHtml(tour.pickup)}</dd></div>
               </dl>
-              ${renderTourPriceBlock(tour, "sbtc-rail__price")}
-              <div class="sbtc-rail__actions">
-                <a class="sbtc-btn sbtc-btn_ink" href="${tourRoute(tour)}">View tour — from ${escapeHtml(price.amount)}${SBTC_ARROW}</a>
-                <a class="sbtc-btn sbtc-btn_line" href="${bookingHref}" target="_blank" rel="noopener noreferrer nofollow">Book in WhatsApp</a>
-              </div>
             </div>
           </aside>`;
 }
@@ -27898,6 +27898,40 @@ html .sbtc h3.sbtc-rail__title{
   transition:background-size .5s var(--sbtc-ease);
 }
 .sbtc .sbtc-rail__ledger{margin:18px 0 0}
+
+/* Колонка обязана помещаться в экран целиком: sticky прибивает ВЕРХ, поэтому
+   всё, что вылезло за нижнюю кромку, читатель не увидит никогда — именно так
+   и пропадали кнопки на ноутбуках. Карточка становится колонкой flex, реестр
+   получает право сжиматься и прокручиваться, а цена и кнопки помечены
+   flex:none — они на экране при любой высоте окна.
+   Ограничение только на широких экранах: ниже 1100px колонка уже не sticky,
+   а обычный блок под текстом, и резать её там незачем. */
+@media (min-width:1101px){
+  .sbtc.sbtc-rail{
+    display:flex;flex-direction:column;
+    max-height:calc(100vh - 88px - 28px);
+  }
+  .sbtc.sbtc-rail .sbtc-rail__rule,
+  .sbtc.sbtc-rail .sbtc-rail__title,
+  .sbtc.sbtc-rail .sbtc-rail__price,
+  .sbtc.sbtc-rail .sbtc-rail__actions{flex:none}
+  /* фото ужимается первым: оно приятно, но не решает */
+  .sbtc.sbtc-rail .sbtc-rail__plate{flex:0 1 auto;min-height:0}
+  .sbtc.sbtc-rail .sbtc-rail__ledger{
+    flex:1 1 auto;min-height:0;
+    overflow-y:auto;overscroll-behavior:contain;
+    scrollbar-width:thin;
+  }
+  /* подсказка, что реестр прокручивается: волосяная линия у нижней кромки */
+  .sbtc.sbtc-rail .sbtc-rail__ledger{
+    background:linear-gradient(var(--sbtc-paper,#fff) 30%,rgba(255,255,255,0)) top/100% 24px no-repeat,
+               linear-gradient(rgba(255,255,255,0),var(--sbtc-paper,#fff) 70%) bottom/100% 24px no-repeat;
+    background-attachment:local,local;
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .sbtc.sbtc-rail .sbtc-rail__ledger{scroll-behavior:auto}
+}
 .sbtc .sbtc-rail__price{margin:20px 0 0}
 .sbtc .sbtc-rail__actions{display:grid;gap:10px;margin:20px 0 0}
 

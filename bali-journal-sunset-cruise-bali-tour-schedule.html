@@ -596,6 +596,40 @@ html .sbtc h3.sbtc-rail__title{
   transition:background-size .5s var(--sbtc-ease);
 }
 .sbtc .sbtc-rail__ledger{margin:18px 0 0}
+
+/* Колонка обязана помещаться в экран целиком: sticky прибивает ВЕРХ, поэтому
+   всё, что вылезло за нижнюю кромку, читатель не увидит никогда — именно так
+   и пропадали кнопки на ноутбуках. Карточка становится колонкой flex, реестр
+   получает право сжиматься и прокручиваться, а цена и кнопки помечены
+   flex:none — они на экране при любой высоте окна.
+   Ограничение только на широких экранах: ниже 1100px колонка уже не sticky,
+   а обычный блок под текстом, и резать её там незачем. */
+@media (min-width:1101px){
+  .sbtc.sbtc-rail{
+    display:flex;flex-direction:column;
+    max-height:calc(100vh - 88px - 28px);
+  }
+  .sbtc.sbtc-rail .sbtc-rail__rule,
+  .sbtc.sbtc-rail .sbtc-rail__title,
+  .sbtc.sbtc-rail .sbtc-rail__price,
+  .sbtc.sbtc-rail .sbtc-rail__actions{flex:none}
+  /* фото ужимается первым: оно приятно, но не решает */
+  .sbtc.sbtc-rail .sbtc-rail__plate{flex:0 1 auto;min-height:0}
+  .sbtc.sbtc-rail .sbtc-rail__ledger{
+    flex:1 1 auto;min-height:0;
+    overflow-y:auto;overscroll-behavior:contain;
+    scrollbar-width:thin;
+  }
+  /* подсказка, что реестр прокручивается: волосяная линия у нижней кромки */
+  .sbtc.sbtc-rail .sbtc-rail__ledger{
+    background:linear-gradient(var(--sbtc-paper,#fff) 30%,rgba(255,255,255,0)) top/100% 24px no-repeat,
+               linear-gradient(rgba(255,255,255,0),var(--sbtc-paper,#fff) 70%) bottom/100% 24px no-repeat;
+    background-attachment:local,local;
+  }
+}
+@media (prefers-reduced-motion:reduce){
+  .sbtc.sbtc-rail .sbtc-rail__ledger{scroll-behavior:auto}
+}
 .sbtc .sbtc-rail__price{margin:20px 0 0}
 .sbtc .sbtc-rail__actions{display:grid;gap:10px;margin:20px 0 0}
 
@@ -1291,13 +1325,6 @@ body {
                 <span class="sbtc-plate__rating sbtc-caps"><svg class="sbtc-star" viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M6 0l1.55 4.02L11.8 4.3 8.5 7.02l1.06 4.13L6 8.86l-3.56 2.29L3.5 7.02.2 4.3l4.25-.28z"/></svg><b>4.9</b><span class="sbtc-plate__src">Google Maps</span></span>
               </a>
               <h3 class="sbtc-rail__title"><a class="sbtc-rail__titlelink" href="/bali/en/tours/sunset-cruise-bali">Bali Sunset Cruise from Benoa</a></h3>
-              <dl class="sbtc-ledger sbtc-rail__ledger">
-                <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">Duration</dt><dd class="sbtc-ledger__val">2-4 hours</dd></div>
-                <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">Area</dt><dd class="sbtc-ledger__val">Bali coastal waters</dd></div>
-                <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">Format</dt><dd class="sbtc-ledger__val">Boat experience</dd></div>
-                <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">Best for</dt><dd class="sbtc-ledger__val">Couples, groups, and celebration nights</dd></div>
-                <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">Pickup</dt><dd class="sbtc-ledger__val">Late afternoon transfer support</dd></div>
-              </dl>
               <p class="sbtc-price sbtc-rail__price">
           <span class="sbtc-price__lead sbtc-caps">From</span>
           <span class="sbtc-price__fig">$150</span>
@@ -1308,6 +1335,13 @@ body {
                 <a class="sbtc-btn sbtc-btn_ink" href="/bali/en/tours/sunset-cruise-bali">View tour — from $150<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
                 <a class="sbtc-btn sbtc-btn_line" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20Bali%20Sunset%20Cruise%20from%20Benoa.%20Please%20send%20details." target="_blank" rel="noopener noreferrer nofollow">Book in WhatsApp</a>
               </div>
+              <dl class="sbtc-ledger sbtc-rail__ledger">
+                <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">Duration</dt><dd class="sbtc-ledger__val">2-4 hours</dd></div>
+                <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">Area</dt><dd class="sbtc-ledger__val">Bali coastal waters</dd></div>
+                <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">Format</dt><dd class="sbtc-ledger__val">Boat experience</dd></div>
+                <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">Best for</dt><dd class="sbtc-ledger__val">Couples, groups, and celebration nights</dd></div>
+                <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">Pickup</dt><dd class="sbtc-ledger__val">Late afternoon transfer support</dd></div>
+              </dl>
             </div>
           </aside>
         </div>
@@ -2105,5 +2139,6 @@ body {
       </footer>
     </div>
   <script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/js/sb-partner-ref.js"></script>
 </body>
 </html>
