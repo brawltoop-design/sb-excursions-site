@@ -33687,6 +33687,10 @@ function localizeUnescoShell(html, locale = "en", options = {}) {
     ["Included:", ui.includedLabel + ":"],
     ["Dubai, UAE", ui.destinationDubai],
     [">from<", ">" + ui.priceFrom + "<"],
+    /* Цена в шапке набрана одной строкой «From $69 per person»: переводчик
+       снимал только хвост, а «From» оставался английским на всех четырёх
+       языках. Здесь подпись начинает предложение, поэтому с большой буквы. */
+    [">From $", ">" + ui.priceFrom.charAt(0).toUpperCase() + ui.priceFrom.slice(1) + " $"],
     [">Ask<", ">" + ui.priceAsk + "<"],
     ["Why travelers choose SB Excursions", ui.whyChooseHeading],
     [">Nusa Penida West<", ">" + ui.chipNusaPenidaWest + "<"],
