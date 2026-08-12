@@ -31,6 +31,7 @@ const STEPS = [
   ["dubai-noindex.mjs", "дубайский блог — вон из индекса Google"],
   ["build-llms-txt.mjs", "llms.txt — карта сайта для нейросетей"],
   ["build-og-images.mjs", "картинки 1200x630 для превью ссылок"],
+  ["check-inline-js.mjs", "проверка: инлайновый JS парсится на всех страницах"],
 ];
 
 for (const [script, label] of STEPS) {

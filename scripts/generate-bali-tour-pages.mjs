@@ -4146,6 +4146,18 @@ function escapeJsSingleQuoted(value) {
   return collapseWhitespace(value).replaceAll("\\", "\\\\").replaceAll("'", "\\'");
 }
 
+/* Текст сообщения для ссылки wa.me.
+ *
+ * encodeURIComponent апостроф не трогает — он законен в URL. Но французское
+ * «Merci de m'envoyer» дальше по конвейеру попадает в строковый литерал JS в
+ * одинарных кавычках и рвёт его вместе со всем блоком скрипта. %27 понимают
+ * одинаково и WhatsApp, и любой парсер, так что кодируем на входе.
+ * Для названий мест в Google Maps это уже сделано — см. buildRouteEmbedUrl.
+ */
+function encodeWhatsAppText(message) {
+  return encodeURIComponent(String(message ?? "")).replaceAll("'", "%27");
+}
+
 function compactWestHeroDuration(value) {
   const text = collapseWhitespace(String(value || ""));
   const match =
@@ -5866,7 +5878,7 @@ function renderWestStylePage(tour) {
   const route = tourRoute(tour);
   const absoluteRoute = absoluteTourUrl(tour);
   const absoluteImage = absoluteImageUrl(tour);
-  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(buildWhatsAppMessage(tour))}`;
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeWhatsAppText(buildWhatsAppMessage(tour))}`;
   const highlights = normalizedWestHighlights(tour);
   const aboutHighlights = highlights.map(([heading, text]) => [
     compactWestAboutHeading(heading),
@@ -8615,7 +8627,7 @@ function journalHeaderWhatsAppHref(tour) {
   const message = tour
     ? buildWhatsAppMessage(tour)
     : "Hello! I want to book a Bali tour. Please send availability, the best options, and full details.";
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeWhatsAppText(message)}`;
 }
 
 function renderJournalHeader(tour) {
@@ -26906,7 +26918,7 @@ function renderJournalTable(table) {
 // брони в WhatsApp. Тексты кнопок совпадают со строками из шапки статьи,
 // чтобы переводы на RU/ES/FR/ZH приехали из уже наполненного кэша.
 function renderJournalTourPinCard(tour) {
-  const bookingHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(buildWhatsAppMessage(tour))}`;
+  const bookingHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeWhatsAppText(buildWhatsAppMessage(tour))}`;
   const price = tourPriceParts(tour);
   return `
           <aside class="sb-journal-sidebar">
@@ -27261,7 +27273,7 @@ ${JOURNAL_FOOTER_ASSETS}
             </div>
             <div class="sb-journal-article-hero__actions">
               <a class="sb-journal-primary" href="${tourRoute(article.tour)}">${escapeHtml(article.tour.title)} — ${escapeHtml(article.tour.price)}</a>
-              <a class="sb-journal-secondary" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(buildWhatsAppMessage(article.tour))}" target="_blank" rel="noopener noreferrer nofollow">Book in WhatsApp</a>
+              <a class="sb-journal-secondary" href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeWhatsAppText(buildWhatsAppMessage(article.tour))}" target="_blank" rel="noopener noreferrer nofollow">Book in WhatsApp</a>
             </div>
           </div>
           <div class="sb-journal-article-hero__media">
@@ -31001,7 +31013,10 @@ function ensureCompactWeatherWidget(filePath) {
   html = replaceWeatherTourLinksConfig(html, primaryRoute);
   html = normalizeBaliWeatherOuterCss(html);
 
-  const existingStylePattern = /<style id="sb-weather-compact-override">[\s\S]*?<\/style>\s*/;
+  /* Ведущий \s* обязателен. Сам шаблон начинается с перевода строки, а без
+     него пробел перед старым тегом не съедался — каждая сборка добавляла
+     пустую строку, и к этому моменту их накопилось больше трёхсот на страницу. */
+  const existingStylePattern = /\s*<style id="sb-weather-compact-override">[\s\S]*?<\/style>\s*/;
   if (existingStylePattern.test(html)) {
     html = html.replace(existingStylePattern, WEATHER_COMPACT_OVERRIDE_STYLE);
   } else {
@@ -33441,9 +33456,41 @@ function localizedUnescoFileName(locale = "en") {
   return locale === "en" ? "bali-tour-bali-unesco.html" : `bali-tour-bali-unesco-${locale}.html`;
 }
 
+/* Подстановка перевода по всей странице — с оглядкой на контекст.
+ *
+ * Английские подписи попадаются не только в тексте, но и внутри инлайновых
+ * <script>, где лежат строковыми литералами в одинарных кавычках. Французский
+ * перевод сплошь и рядом с апострофом («Ouvrir l'itinéraire»), и вставленный
+ * как есть он закрывает литерал — весь блок скрипта падает с SyntaxError.
+ * Так на 28 страницах разом умирали карта маршрута, карточка частного тура и
+ * состояние шапки: браузер молча не выполнял ни строки после ошибки.
+ *
+ * Поэтому режем документ на скрипты и всё остальное: в скриптах подставляем
+ * экранированный вариант, снаружи — обычный. JSON-LD не трогаем: там \' —
+ * невалидный JSON, а апостроф и без экранирования законен.
+ */
 function replaceEverywhere(html, source, target) {
   if (!source || source === target) return html;
-  return html.split(source).join(target);
+  const plain = String(target ?? "");
+  if (!html.includes(source)) return html;
+  if (!/['\\]/.test(plain)) return html.split(source).join(plain);
+
+  const escaped = escapeJsSingleQuoted(plain);
+  const scriptRe = /<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi;
+  let out = "";
+  let last = 0;
+  let match;
+  while ((match = scriptRe.exec(html))) {
+    out += html.slice(last, match.index).split(source).join(plain);
+    const isJson = /type\s*=\s*["'][^"']*json/i.test(match[1] || "");
+    const openEnd = match.index + match[0].indexOf(">") + 1;
+    const bodyEnd = match.index + match[0].lastIndexOf("</script");
+    out += html.slice(match.index, openEnd);
+    out += html.slice(openEnd, bodyEnd).split(source).join(isJson ? plain : escaped);
+    out += html.slice(bodyEnd, match.index + match[0].length);
+    last = match.index + match[0].length;
+  }
+  return out + html.slice(last).split(source).join(plain);
 }
 
 function localizeUnescoShell(html, locale = "en", options = {}) {
