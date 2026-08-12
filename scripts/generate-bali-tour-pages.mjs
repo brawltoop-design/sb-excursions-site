@@ -2064,8 +2064,8 @@ const tours = [
   },
   {
     slug: "mount-batur-sunrise-jeep-tour",
-    metaTitle: "Mount Batur Sunrise Jeep Tour in Bali | No Hiking, from $75",
-    metaDescription: "Watch sunrise from Mount Batur in a 4x4 jeep, no hiking needed, then the black lava field and black sand. 6-8 hours from $75, hotel pickup. Book via WhatsApp.",
+    metaTitle: "Mount Batur Sunrise Jeep Tour in Bali | No Hiking, from $60",
+    metaDescription: "Watch sunrise from Mount Batur in a 4x4 jeep, no hiking needed, then the black lava field and black sand. 6-8 hours from $60, hotel pickup. Book via WhatsApp.",
     title: "Mount Batur Sunrise Jeep Tour",
     mainPage: true,
     mainPageRank: 14,
@@ -2075,7 +2075,7 @@ const tours = [
     bestFor: "Adventure lovers and sunrise seekers",
     format: "Private or small group jeep trip",
     area: "Kintamani and Mount Batur",
-    price: "From $75",
+    price: "From $60",
     image: sourceImage("tild6464-3137-4633-a638-383661353834__pexels-dnanoes-35399.webp"),
     imageAlt: "Jeep convoy on Mount Batur volcanic landscape",
     lead:
@@ -2104,8 +2104,8 @@ const tours = [
   },
   {
     slug: "mount-batur-sunrise-jeep-hot-spring",
-    metaTitle: "Mount Batur Sunrise Jeep and Hot Spring, Bali | from $60",
-    metaDescription: "Jeep to Batur's Sunrise Point, no hiking, then a soak in a Kintamani hot spring. 6-8 hours from $60, hotel pickup included. Book via WhatsApp, no prepayment.",
+    metaTitle: "Mount Batur Sunrise Jeep and Hot Spring, Bali | from $75",
+    metaDescription: "Jeep to Batur's Sunrise Point, no hiking, then a soak in a Kintamani hot spring. 6-8 hours from $75, hotel pickup included. Book via WhatsApp, no prepayment.",
     title: "Mount Batur Sunrise Jeep & Hot Spring",
     mainPage: true,
     mainPageRank: 13,
@@ -2115,7 +2115,7 @@ const tours = [
     bestFor: "Sunrise seekers who want to end with a soak",
     format: "Private or small group jeep trip",
     area: "Kintamani and Mount Batur",
-    price: "From $60",
+    price: "From $75",
     image: sourceImage("tours-real/mount-batur-sunrise-jeep-hot-spring.jpg"),
     imageAlt: "4WD jeep crossing Mount Batur black lava fields at sunrise",
     lead:
@@ -8888,7 +8888,7 @@ const TOUR_LOCAL_CONTEXT = {
       ["How early is the pickup?", "Between 01:40 and 03:00 AM depending on your hotel. South Bali hotels leave earliest; Ubud hotels leave around 02:30–03:00 AM. The tour runs 6–8 hours door to door."],
       ["Is this tour suitable for children and older travelers?", "Yes. With no real hiking involved it suits families, older travelers, and anyone who prefers comfort over effort. Everyone should still dress warmly for the pre-dawn viewpoint."],
       ["What should I wear and bring?", "Warm layers for the viewpoint, then swimwear and a towel for the springs. The summit is 12–18 °C (54–64 °F) before sunrise while the hot pools are around 37–38 °C, so pack for both."],
-      ["What does the tour cost and what does it cover?", "From $60 per person for 6–8 hours, covering hotel pickup and drop-off, the 4x4 sunrise run, the black lava and black sand stops, and the hot spring finish."],
+      ["What does the tour cost and what does it cover?", "From $75 per person for 6–8 hours, covering hotel pickup and drop-off, the 4x4 sunrise run, the black lava and black sand stops, and the hot spring finish."],
     ],
   },
   "nusa-penida-manta-rays-point": {
@@ -10319,22 +10319,22 @@ const JOURNAL_SEO_GUIDES = [
       "Tours from $35"
     ],
     "title": "Mount Batur Sunrise from Ubud: Jeep or Hike, and Prices",
-    "description": "Pickups from Ubud run 01:30-03:30 and you are back by late morning. Jeep from $75, guided hike from $35, and which one suits you.",
-    "excerpt": "Mount Batur sunrise tours leave Ubud between 01:30 and 03:30 — the latest pickups on the island, because the pre-dawn drive to Kintamani takes only 60-90 minutes. That means the latest pickups on the island — the guided hike collects from 01:30, the jeeps from around 02:00 — and a return to your hotel by late morning with most of the day intact. This guide compares the three ways we run the sunrise from Ubud: a 4x4 jeep to the crater rim from $75, a jeep day that ends in the hot springs from $60, and the classic guided hike from $35. It also covers exact departure timings and what to wear at 1,700 m before dawn.",
+    "description": "Pickups from Ubud run 01:30-03:30 and you are back by late morning. Jeep from $60, guided hike from $35, and which one suits you.",
+    "excerpt": "Mount Batur sunrise tours leave Ubud between 01:30 and 03:30 — the latest pickups on the island, because the pre-dawn drive to Kintamani takes only 60-90 minutes. That means the latest pickups on the island — the guided hike collects from 01:30, the jeeps from around 02:00 — and a return to your hotel by late morning with most of the day intact. This guide compares the three ways we run the sunrise from Ubud: a 4x4 jeep to the crater rim from $60, a jeep day that ends in the hot springs from $75, and the classic guided hike from $35. It also covers exact departure timings and what to wear at 1,700 m before dawn.",
     "rankings": [
       {
         "name": "Mount Batur Sunrise Jeep Tour",
         "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
         "area": "Kintamani",
         "bestFor": "Sunrise without the climb",
-        "summary": "A 4x4 collects you in Ubud in the small hours and drives to a viewpoint on the volcano for first light, with the black lava fields after. From $75 for 6-8 hours door to door, it is the format we book most often from Ubud."
+        "summary": "A 4x4 collects you in Ubud in the small hours and drives to a viewpoint on the volcano for first light, with the black lava fields after. From $60 for 6-8 hours door to door, it is the format we book most often from Ubud."
       },
       {
         "name": "Mount Batur Sunrise Jeep & Hot Spring",
         "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg",
         "area": "Kintamani",
         "bestFor": "Ending the cold start warm",
-        "summary": "The same jeep sunrise with a different ending: a soak in the natural hot springs beside Lake Batur before the drive home. From $60 with pickup around 02:00-03:30, it fixes the one flaw of every sunrise trip — the cold."
+        "summary": "The same jeep sunrise with a different ending: a soak in the natural hot springs beside Lake Batur before the drive home. From $75 with pickup around 02:00-03:30, it fixes the one flaw of every sunrise trip — the cold."
       },
       {
         "name": "Mount Batur Sunrise Hike",
@@ -10386,8 +10386,8 @@ const JOURNAL_SEO_GUIDES = [
           "From Ubud you can meet the Batur sunrise three ways: by 4x4 jeep, by jeep with a hot-spring finish, or on foot with a guide. All three watch the same sunrise from the same volcano — what changes is the effort, the price and how the morning ends:"
         ],
         "bullets": [
-          "[Mount Batur Sunrise Jeep Tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) — **from $75**: a 4x4 drives you to a viewpoint for first light, then across the black lava fields. **6-8 hours** door to door, no real walking involved.",
-          "[Mount Batur Sunrise Jeep & Hot Spring](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) — **from $60**: the same jeep sunrise, ending with a soak in the natural hot springs by Lake Batur. Pickup around **02:00-03:30**, 6-8 hours.",
+          "[Mount Batur Sunrise Jeep Tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) — **from $60**: a 4x4 drives you to a viewpoint for first light, then across the black lava fields. **6-8 hours** door to door, no real walking involved.",
+          "[Mount Batur Sunrise Jeep & Hot Spring](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) — **from $75**: the same jeep sunrise, ending with a soak in the natural hot springs by Lake Batur. Pickup around **02:00-03:30**, 6-8 hours.",
           "[Mount Batur Sunrise Hike](/bali/en/tours/mount-batur-sunrise-hike) — **from $35**: the classic guided climb, roughly two hours up by torchlight. Pickup between **01:30 and 03:00**, 5-8 hours total."
         ],
         "paragraphsAfter": [
@@ -10420,7 +10420,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "Can you see the Mount Batur sunrise without hiking?",
-        "answer": "Yes. A 4x4 jeep drives to a viewpoint on the volcano, so you watch the same sunrise with no climb — the jeep tour starts from $75, and the jeep and hot spring version from $60 adds a soak in the lakeside springs afterwards. Both run 6-8 hours from Ubud."
+        "answer": "Yes. A 4x4 jeep drives to a viewpoint on the volcano, so you watch the same sunrise with no climb — the jeep tour starts from $60, and the jeep and hot spring version from $75 adds a soak in the lakeside springs afterwards. Both run 6-8 hours from Ubud."
       },
       {
         "question": "How hard is the Mount Batur sunrise hike?",
@@ -10462,7 +10462,7 @@ const JOURNAL_SEO_GUIDES = [
     ],
     "title": "Mount Batur Sunrise From Seminyak, Canggu and Nusa Dua",
     "description": "How the Mount Batur sunrise works from Seminyak, Canggu and Nusa Dua: night pickup times, the 1.5-2.5 hour drive, and 2026 tours from $35 per person.",
-    "excerpt": "Yes — the Mount Batur sunrise works from Seminyak, Canggu and Nusa Dua without changing hotels; the trade is a pickup in the middle of the night and a 1.5-2.5 hour drive each way. All three tour formats collect guests from the southern hotel areas: the sunrise hike from $35, the jeep with hot springs from $60, and the sunrise jeep from $75, with your exact pickup time confirmed on WhatsApp the day before. This guide breaks the night into stages — what the pickup actually feels like from the south coast, which format survives the drive best, how to plan sleep so the following day is not written off, and the two cases where spending the previous night in Ubud genuinely makes sense.",
+    "excerpt": "Yes — the Mount Batur sunrise works from Seminyak, Canggu and Nusa Dua without changing hotels; the trade is a pickup in the middle of the night and a 1.5-2.5 hour drive each way. All three tour formats collect guests from the southern hotel areas: the sunrise hike from $35, the jeep with hot springs from $75, and the sunrise jeep from $60, with your exact pickup time confirmed on WhatsApp the day before. This guide breaks the night into stages — what the pickup actually feels like from the south coast, which format survives the drive best, how to plan sleep so the following day is not written off, and the two cases where spending the previous night in Ubud genuinely makes sense.",
     "rankings": [
       {
         "name": "Sleep first: the evening before",
@@ -10495,14 +10495,14 @@ const JOURNAL_SEO_GUIDES = [
       {
         "name": "Option 1: Mount Batur Sunrise Jeep Tour",
         "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
-        "area": "From $75 · 6-8 hours",
+        "area": "From $60 · 6-8 hours",
         "bestFor": "The least brutal night",
         "summary": "A 4x4 carries you up to the sunrise point, so the only work you do is staying awake for the view. From the south this is the format most people should default to: you sleep both drive legs, skip the climb entirely and see the same sunrise."
       },
       {
         "name": "Option 2: Sunrise Jeep and Hot Spring",
         "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg",
-        "area": "From $60 · 6-8 hours",
+        "area": "From $75 · 6-8 hours",
         "bestFor": "Recovery built into the day",
         "summary": "The same jeep sunrise with a soak in the lakeside hot springs afterwards, on a pre-dawn pickup around 02:00-03:30. The hot water does more for the sleep debt than another coffee would, and it is the cheaper of the two jeep formats."
       },
@@ -10532,7 +10532,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Which format survives the night best from the south",
         "paragraphs": [
-          "From the southern areas, the jeep formats suit most travelers better than the hike, because the night is already long before the volcano starts. On the **jeep tour from $75** you sleep both drive legs, ride to the sunrise point and spend your energy on nothing but the view. The **jeep with hot springs from $60** adds a soak in the lakeside springs afterwards, which resets you better than anything else on the menu before the drive home. The **hike from $35** is the cheapest way up and the most rewarding summit, but it stacks roughly two hours of climbing in the dark on top of the earliest pickup window — from Nusa Dua or Uluwatu, that is a serious night.",
+          "From the southern areas, the jeep formats suit most travelers better than the hike, because the night is already long before the volcano starts. On the **jeep tour from $60** you sleep both drive legs, ride to the sunrise point and spend your energy on nothing but the view. The **jeep with hot springs from $75** adds a soak in the lakeside springs afterwards, which resets you better than anything else on the menu before the drive home. The **hike from $35** is the cheapest way up and the most rewarding summit, but it stacks roughly two hours of climbing in the dark on top of the earliest pickup window — from Nusa Dua or Uluwatu, that is a serious night.",
           "If you are choosing between climbing and riding on fitness and preference rather than logistics, our [jeep vs hike comparison](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike) covers the trail itself in detail. This guide's angle is the southern night, and on that measure the rule is simple: if you cannot nap in a moving car, take the jeep."
         ]
       },
@@ -10575,7 +10575,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How much does a Mount Batur sunrise tour cost in 2026?",
-        "answer": "Direct 2026 prices booked over WhatsApp: the Mount Batur sunrise hike from $35, the sunrise jeep with hot springs from $60, and the sunrise jeep tour from $75. All three include hotel pickup, and there is no prepayment — you confirm the plan in chat and pay on the day."
+        "answer": "Direct 2026 prices booked over WhatsApp: the Mount Batur sunrise hike from $35, the sunrise jeep with hot springs from $75, and the sunrise jeep tour from $60. All three include hotel pickup, and there is no prepayment — you confirm the plan in chat and pay on the day."
       },
       {
         "question": "Is the jeep or the hike better after a long night drive?",
@@ -11178,11 +11178,11 @@ const JOURNAL_SEO_GUIDES = [
     "inlineStats": [
       "7 safety factors assessed",
       "Hike from $35",
-      "Jeep option from $75"
+      "Jeep option from $60"
     ],
     "title": "Is Mount Batur Safe? Difficulty, Risks and the Jeep Option",
-    "description": "Is Mount Batur safe? Honest answers on trail difficulty, the dark ascent, weather and common mistakes — plus the sunrise jeep alternative from $75.",
-    "excerpt": "Yes — Mount Batur is safe for most reasonably fit travelers when climbed with a local guide, and hundreds of people summit it every morning in high season. The ascent takes 1.5-2 hours, pickups run at 01:30-03:00, and the descent happens in daylight, which removes the scenario most people worry about. The honest hazards are specific rather than dramatic: loose volcanic scree on the way down, cold wind at the summit, and slippery sections in the November-March rains. This guide breaks the climb into seven factors, from the dark trail to fitness and crowds, so you can judge it against your own condition — and covers the sunrise jeep alternative from $75 for anyone the hike does not suit.",
+    "description": "Is Mount Batur safe? Honest answers on trail difficulty, the dark ascent, weather and common mistakes — plus the sunrise jeep alternative from $60.",
+    "excerpt": "Yes — Mount Batur is safe for most reasonably fit travelers when climbed with a local guide, and hundreds of people summit it every morning in high season. The ascent takes 1.5-2 hours, pickups run at 01:30-03:00, and the descent happens in daylight, which removes the scenario most people worry about. The honest hazards are specific rather than dramatic: loose volcanic scree on the way down, cold wind at the summit, and slippery sections in the November-March rains. This guide breaks the climb into seven factors, from the dark trail to fitness and crowds, so you can judge it against your own condition — and covers the sunrise jeep alternative from $60 for anyone the hike does not suit.",
     "rankings": [
       {
         "name": "Hiking in the dark",
@@ -11231,7 +11231,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/places/mount-batur-jeep.jpg",
         "area": "Zero-climb option",
         "bestFor": "Knees, kids and short nights",
-        "summary": "A 4x4 drives the volcano track to a sunrise viewpoint, replacing the entire hike — from $75, with a jeep and hot spring version from $60. Same sunrise, same black-lava landscape, no scree. For travelers with joint issues or young children this is not a compromise, it is the correct choice."
+        "summary": "A 4x4 drives the volcano track to a sunrise viewpoint, replacing the entire hike — from $60, with a jeep and hot spring version from $75. Same sunrise, same black-lava landscape, no scree. For travelers with joint issues or young children this is not a compromise, it is the correct choice."
       }
     ],
     "sections": [
@@ -11246,7 +11246,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Who the hike suits — and who should take the jeep instead",
         "paragraphs": [
           "The hike suits anyone who can walk uphill for **1.5-2 hours** with regular breaks. That is the entire physical requirement: no scrambling, no exposed ledges, no technical ground — just a steady incline that finishes on loose volcanic sand. Teenagers, active parents and ordinary travelers who manage long walks or gym sessions at home finish it comfortably every morning. You do not need hiking experience; you need functioning knees and honesty about your stair tolerance.",
-          "The jeep is the right call for bad knees, small children, anyone short on sleep, and travelers who simply want the sunrise without earning it. The [Mount Batur sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) — **from $75** — drives a 4x4 track to a viewpoint for the same sunrise, and the [jeep with hot spring](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) version — **from $60**, with pickup at **02:00-03:30** — adds a soak in the lakeside hot springs afterwards. Both run **6-8 hours** door to door. For a stop-by-stop comparison of the two formats, our [jeep vs hike breakdown](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike) goes deeper. The short version: choosing the jeep is a format decision, not a failure."
+          "The jeep is the right call for bad knees, small children, anyone short on sleep, and travelers who simply want the sunrise without earning it. The [Mount Batur sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) — **from $60** — drives a 4x4 track to a viewpoint for the same sunrise, and the [jeep with hot spring](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) version — **from $75**, with pickup at **02:00-03:30** — adds a soak in the lakeside hot springs afterwards. Both run **6-8 hours** door to door. For a stop-by-stop comparison of the two formats, our [jeep vs hike breakdown](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike) goes deeper. The short version: choosing the jeep is a format decision, not a failure."
         ]
       },
       {
@@ -11276,7 +11276,7 @@ const JOURNAL_SEO_GUIDES = [
           "**Skipping the warm layer.** The single most common regret at the summit. A packed fleece weighs nothing and changes the whole sunrise wait.",
           "**Wrong footwear.** Smooth-soled sneakers and sandals are the top cause of slips on both the ascent and the way down.",
           "**Zero sleep the night before.** Pickup at 01:30-03:00 means an early night, not a late dinner. If you stay in the far south, staging a night closer to the volcano shortens the drive — our guide to [Batur sunrise from south Bali](/bali/en/journal/mount-batur-sunrise-from-south-bali) covers the logistics.",
-          "**Booking the hike when the jeep fits better.** Pushing a reluctant partner or a bad knee up scree in the dark helps nobody; the jeep from $75 watches the same sunrise.",
+          "**Booking the hike when the jeep fits better.** Pushing a reluctant partner or a bad knee up scree in the dark helps nobody; the jeep from $60 watches the same sunrise.",
           "**Wet-season denial.** From November to March, plan for a slippery upper trail and a possible cloudy sunrise instead of being surprised by both."
         ],
         "paragraphsAfter": [
@@ -11295,7 +11295,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "Can beginners climb Mount Batur?",
-        "answer": "Yes. Guides pace the group off the slowest walker, and the route needs no technical skill or gear beyond decent shoes and a warm layer. First-time hikers finish it every morning. If you have knee problems, very low fitness or small children, take the jeep instead — from $75 it reaches a sunrise viewpoint with no climbing."
+        "answer": "Yes. Guides pace the group off the slowest walker, and the route needs no technical skill or gear beyond decent shoes and a warm layer. First-time hikers finish it every morning. If you have knee problems, very low fitness or small children, take the jeep instead — from $60 it reaches a sunrise viewpoint with no climbing."
       },
       {
         "question": "Can you climb Mount Batur without a guide?",
@@ -11411,8 +11411,8 @@ const JOURNAL_SEO_GUIDES = [
         ],
         "bullets": [
           "**Mount Batur Sunrise Hike — from $35**: pre-dawn pickup at 01:30-03:00, about 2 hours of guided climbing, 5-8 hours door to door. The classic version and the cheapest way up.",
-          "**[Mount Batur Sunrise Jeep & Hot Spring](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) — from $60**: pickup around 02:00-03:30, a 4x4 ride to the sunrise point instead of a climb, then a soak in the natural hot springs by Lake Batur. 6-8 hours.",
-          "**[Mount Batur Sunrise Jeep Tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) — from $75**: night or pre-dawn pickup, the full jeep route across the black-lava fields and viewpoints, no hiking at all. 6-8 hours."
+          "**[Mount Batur Sunrise Jeep & Hot Spring](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) — from $75**: pickup around 02:00-03:30, a 4x4 ride to the sunrise point instead of a climb, then a soak in the natural hot springs by Lake Batur. 6-8 hours.",
+          "**[Mount Batur Sunrise Jeep Tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) — from $60**: night or pre-dawn pickup, the full jeep route across the black-lava fields and viewpoints, no hiking at all. 6-8 hours."
         ],
         "paragraphsAfter": [
           "The jeep formats exist because the Batur decision is rarely unanimous inside one travel group — someone always wants the summit on foot, someone wants sleep and a view. Since every tour is private, the format bends: hikers and riders can meet at the top for the same sunrise. If you are torn between the two, [jeep vs hike](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike) breaks the decision down in detail."
@@ -11449,7 +11449,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How much does a Mount Batur sunrise tour cost in 2026?",
-        "answer": "Direct 2026 prices, booked over WhatsApp with no prepayment: the guided sunrise hike from $35, the sunrise jeep with a hot spring soak from $60, and the full sunrise jeep tour from $75. All three are private, include hotel pickup and run 5-8 hours door to door."
+        "answer": "Direct 2026 prices, booked over WhatsApp with no prepayment: the guided sunrise hike from $35, the sunrise jeep with a hot spring soak from $75, and the full sunrise jeep tour from $60. All three are private, include hotel pickup and run 5-8 hours door to door."
       },
       {
         "question": "How high are Mount Batur and Mount Agung?",
@@ -12387,7 +12387,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
         "area": "Kintamani",
         "bestFor": "Volcano sunrise without the hike",
-        "summary": "Sunrise over the volcano without asking a child to climb in the dark: the jeep drives up while kids doze after the pre-dawn pickup. From $75 for a 6-8 hour day — the early start is the real cost, so plan a quiet afternoon around it."
+        "summary": "Sunrise over the volcano without asking a child to climb in the dark: the jeep drives up while kids doze after the pre-dawn pickup. From $60 for a 6-8 hour day — the early start is the real cost, so plan a quiet afternoon around it."
       },
       {
         "name": "Tanah Lot and Bedugul Tour",
@@ -12462,7 +12462,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "Is the Mount Batur sunrise jeep tour suitable for children?",
-        "answer": "Yes — the jeep replaces the volcano hike entirely, so children only need to handle the pre-dawn pickup and a chilly viewpoint. The tour runs 6-8 hours from $75, and most kids sleep through the drive up. Pack a warm layer, because the crater rim before sunrise is genuinely cold."
+        "answer": "Yes — the jeep replaces the volcano hike entirely, so children only need to handle the pre-dawn pickup and a chilly viewpoint. The tour runs 6-8 hours from $60, and most kids sleep through the drive up. Pack a warm layer, because the crater rim before sunrise is genuinely cold."
       },
       {
         "question": "Can you take kids to Nusa Penida for a day?",
@@ -12518,7 +12518,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
         "area": "Kintamani and Mount Batur",
         "bestFor": "Sunrise without the hike",
-        "summary": "A pre-dawn pickup, a 4x4 up to the caldera and sunrise with coffee instead of a two-hour climb, from $75 for a 6-8 hour day. The hot-spring version, from $60, ends the morning in warm water — the more honeymoon-shaped of the two."
+        "summary": "A pre-dawn pickup, a 4x4 up to the caldera and sunrise with coffee instead of a two-hour climb, from $75 for a 6-8 hour day. The hot-spring version, from $75, ends the morning in warm water — the more honeymoon-shaped of the two."
       },
       {
         "name": "Bali UNESCO Heritage Sites Tour",
@@ -12573,7 +12573,7 @@ const JOURNAL_SEO_GUIDES = [
           "**Day 1 — arrive and do nothing.** Airport transfer, pool, early dinner. Jet lag is not a honeymoon activity.",
           "**Day 2 — Ubud day, from $69.** The 10-hour classic loop with an 08:00 pickup: rice terraces, temples, volcano viewpoint.",
           "**Day 3 — rest day.** Spa morning, beach afternoon, early night — your Batur pickup time is confirmed on WhatsApp the day before.",
-          "**Day 4 — [Mount Batur sunrise by jeep](/bali/en/tours/mount-batur-sunrise-jeep-tour), from $75.** Pre-dawn pickup, sunrise over the caldera, back by early afternoon for a nap.",
+          "**Day 4 — [Mount Batur sunrise by jeep](/bali/en/tours/mount-batur-sunrise-jeep-tour), from $60.** Pre-dawn pickup, sunrise over the caldera, back by early afternoon for a nap.",
           "**Day 5 — rest day or photo day.** Recover by the pool, or swap in the East Bali Instagram route, from $69, for the Lempuyang gates.",
           "**Day 6 — sea day.** Nusa Penida with Manta Point snorkeling, from $60, or the [Gili Islands private snorkeling day](/bali/en/tours/gili-island-tour), from $115.",
           "**Day 7 — sunset cruise finale, from $150.** Late-afternoon transfer to Benoa, 2-4 hours on the water, and no alarm the next morning."
@@ -12597,7 +12597,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How much do private honeymoon day trips in Bali cost?",
-        "answer": "Real 2026 direct prices: the Ubud day from $69, the Mount Batur sunrise jeep from $75, the UNESCO heritage route from $69, a Nusa Penida day with Manta Point snorkeling from $60, the Gili Islands private snorkeling day from $115, and the Benoa sunset cruise from $150."
+        "answer": "Real 2026 direct prices: the Ubud day from $69, the Mount Batur sunrise jeep from $60, the UNESCO heritage route from $69, a Nusa Penida day with Manta Point snorkeling from $60, the Gili Islands private snorkeling day from $115, and the Benoa sunset cruise from $150."
       },
       {
         "question": "Do we have to share Bali tours with other travelers?",
@@ -12671,7 +12671,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
         "area": "Kintamani or the Gilis",
         "bestFor": "Sunrise or sea — your pick",
-        "summary": "The choice slot. The Mount Batur sunrise runs from $75 by jeep or from $35 on foot, both with pre-dawn pickup and a return by early afternoon. The alternative is a full Gili Islands snorkeling day from $115 — turtles, two islands, more hours on the water."
+        "summary": "The choice slot. The Mount Batur sunrise runs from $60 by jeep or from $35 on foot, both with pre-dawn pickup and a return by early afternoon. The alternative is a full Gili Islands snorkeling day from $115 — turtles, two islands, more hours on the water."
       },
       {
         "name": "Day 5 — One temple, then the airport",
@@ -12700,7 +12700,7 @@ const JOURNAL_SEO_GUIDES = [
           "**Jet lag is a Batur asset.** Flying in from Europe or the Americas, you will be awake at 03:00 anyway on day 2 — some guests move the volcano there and get the easiest alarm of the trip."
         ],
         "paragraphsAfter": [
-          "If you are torn between the jeep and the hike on the volcano morning, the price gap is real — from $75 against from $35 — and so is the effort gap. Our [jeep vs hike comparison](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike) settles it in detail, so day 4 only needs one decision, not two."
+          "If you are torn between the jeep and the hike on the volcano morning, the price gap is real — from $60 against from $35 — and so is the effort gap. Our [jeep vs hike comparison](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike) settles it in detail, so day 4 only needs one decision, not two."
         ]
       },
       {
@@ -12728,7 +12728,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "Should I do Mount Batur or the Gili Islands on a short trip?",
-        "answer": "Pick Mount Batur if a sunrise and a shorter day appeal — the jeep runs from $75, the hike from $35, and you are back by early afternoon. Pick the Gilis if you want turtles and beach time and accept a longer day on the water, from $115."
+        "answer": "Pick Mount Batur if a sunrise and a shorter day appeal — the jeep runs from $60, the hike from $35, and you are back by early afternoon. Pick the Gilis if you want turtles and beach time and accept a longer day on the water, from $115."
       },
       {
         "question": "How much do the day tours on a 5-day Bali itinerary cost?",
@@ -12798,7 +12798,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/places/mount-batur-jeep.jpg",
         "area": "Kintamani",
         "bestFor": "Sunrise, then an afternoon off",
-        "summary": "Pick your format: the sunrise jeep from $75, the jeep with a hot-spring finish from $60, or the hike from $35 — all with a pre-dawn pickup between roughly 01:30 and 03:30. You are back by early afternoon with the day's main event already done. Plan nothing after; the afternoon exists for sleep."
+        "summary": "Pick your format: the sunrise jeep from $60, the jeep with a hot-spring finish from $75, or the hike from $35 — all with a pre-dawn pickup between roughly 01:30 and 03:30. You are back by early afternoon with the day's main event already done. Plan nothing after; the afternoon exists for sleep."
       },
       {
         "name": "Day 5: First rest day",
@@ -12888,7 +12888,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How much do day tours cost for a 10-day Bali itinerary?",
-        "answer": "Direct 2026 prices for the five booked days in this plan: Ubud from $69, Mount Batur sunrise from $35 as a hike or from $75 by jeep, Nusa Penida from $75, east Bali from $69 and the Lovina day from $79. Airport transfers run from $15."
+        "answer": "Direct 2026 prices for the five booked days in this plan: Ubud from $69, Mount Batur sunrise from $35 as a hike or from $60 by jeep, Nusa Penida from $75, east Bali from $69 and the Lovina day from $79. Airport transfers run from $15."
       },
       {
         "question": "Should I stay in one place or move hotels during 10 days in Bali?",
@@ -14698,7 +14698,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/places/mount-batur-jeep.jpg",
         "area": "Kintamani",
         "bestFor": "Sunrise above the clouds",
-        "summary": "Choose the [Mount Batur sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) from $75 or the [sunrise hike](/bali/en/tours/mount-batur-sunrise-hike) from $35 — the jeep runs **6-8 hours**, the hike **5-8**, both from a pre-dawn pickup. The jeep reaches the crater rim without the climb; the hike earns the same sunrise with your legs."
+        "summary": "Choose the [Mount Batur sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) from $60 or the [sunrise hike](/bali/en/tours/mount-batur-sunrise-hike) from $35 — the jeep runs **6-8 hours**, the hike **5-8**, both from a pre-dawn pickup. The jeep reaches the crater rim without the climb; the hike earns the same sunrise with your legs."
       },
       {
         "name": "Day 6: Gili Islands or Blue Lagoon sea day",
@@ -14739,7 +14739,7 @@ const JOURNAL_SEO_GUIDES = [
           "**Day 1 — airport transfer from $15**: private car from Ngurah Rai to your hotel",
           "**Day 2 — Ubud highlights from $69**: 10 hours, 08:00 hotel pickup",
           "**Day 3 — Nusa Penida West from $49 per car**: full day, early pickup and harbor transfer included",
-          "**Day 5 — Mount Batur from $35 (hike) or from $75 (jeep)**: pre-dawn pickup",
+          "**Day 5 — Mount Batur from $35 (hike) or from $60 (jeep)**: pre-dawn pickup",
           "**Day 6 — Blue Lagoon from $50 or the Gili Islands day from $115**",
           "**Day 7 — Tanah Lot and Bedugul from $59**: 9-11 hours, morning hotel pickup"
         ],
@@ -14756,7 +14756,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How much does a 7-day Bali itinerary cost in tours?",
-        "answer": "Every bookable day starts between $15 and $115: the airport transfer from $15, Ubud from $69, Nusa Penida from $49 per car, Mount Batur from $35 (hike) or from $75 (jeep), the sea day from $50 or from $115, and Tanah Lot from $59. Totals depend on group size, since some prices are per car."
+        "answer": "Every bookable day starts between $15 and $115: the airport transfer from $15, Ubud from $69, Nusa Penida from $49 per car, Mount Batur from $35 (hike) or from $60 (jeep), the sea day from $50 or from $115, and Tanah Lot from $59. Totals depend on group size, since some prices are per car."
       },
       {
         "question": "Where should I stay for a one-week Bali itinerary?",
@@ -14768,7 +14768,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "Is Mount Batur sunrise worth it on a one-week trip?",
-        "answer": "Yes, and Day 5 is the right slot: the free beach day before it lets you sleep early ahead of the pre-dawn pickup. Choose the jeep from $75 if you want the crater-rim view without the climb, or the hike from $35 if you would rather earn the sunrise on foot."
+        "answer": "Yes, and Day 5 is the right slot: the free beach day before it lets you sleep early ahead of the pre-dawn pickup. Choose the jeep from $60 if you want the crater-rim view without the climb, or the hike from $35 if you would rather earn the sunrise on foot."
       },
       {
         "question": "Gili Islands or Blue Lagoon — which is better for Day 6?",
@@ -20708,7 +20708,7 @@ const JOURNAL_SEO_GUIDES = [
     ],
     "title": "Can You Hike Mount Batur Without a Guide? The Rules in 2026",
     "description": "In practice, no — the trail to Mount Batur's summit is controlled by the local guide association. Here is what is allowed in 2026, and the jeep alternative.",
-    "excerpt": "In practice, no — you cannot hike Mount Batur without a guide. No Indonesian law bans solo hiking, but the trail out of the lakeside villages is controlled by the local guide association, and travelers who arrive at 03:00 planning to walk up alone are turned back at the trailhead. That is the situation on the ground in 2026, whatever older blog posts suggest. Two options actually work: the guided sunrise hike from $35, which includes the guide you are required to have, or the jeep, from $75, which climbs a separate road to a sunrise viewpoint with no walking. This guide covers who controls the trail, what happens if you try it alone, and when the mountain is open to walk freely.",
+    "excerpt": "In practice, no — you cannot hike Mount Batur without a guide. No Indonesian law bans solo hiking, but the trail out of the lakeside villages is controlled by the local guide association, and travelers who arrive at 03:00 planning to walk up alone are turned back at the trailhead. That is the situation on the ground in 2026, whatever older blog posts suggest. Two options actually work: the guided sunrise hike from $35, which includes the guide you are required to have, or the jeep, from $60, which climbs a separate road to a sunrise viewpoint with no walking. This guide covers who controls the trail, what happens if you try it alone, and when the mountain is open to walk freely.",
     "rankings": [
       {
         "name": "The guided sunrise hike",
@@ -20767,7 +20767,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Can you drive up Mount Batur instead?",
         "paragraphs": [
-          "Yes, and this is the part most people miss. The jeeps do not use the hiking trail at all — they climb a separate track up the volcano's black lava flank, which is why riding up sidesteps the guide argument entirely and is a perfectly legal way to be on the mountain at dawn. The [Mount Batur sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) runs **from $75** over **6-8 hours** with a night or pre-dawn pickup, and the [jeep with hot spring](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) version — **from $60**, pickup **02:00-03:30** — ends the morning soaking beside the lake.",
+          "Yes, and this is the part most people miss. The jeeps do not use the hiking trail at all — they climb a separate track up the volcano's black lava flank, which is why riding up sidesteps the guide argument entirely and is a perfectly legal way to be on the mountain at dawn. The [Mount Batur sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) runs **from $60** over **6-8 hours** with a night or pre-dawn pickup, and the [jeep with hot spring](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) version — **from $75**, pickup **02:00-03:30** — ends the morning soaking beside the lake.",
           "Two honest caveats. The jeep drops you at a sunrise viewpoint, not on the summit you would reach on foot, so if the point of the morning is standing on top of a volcano, it does not deliver that. And this is not a road for your rental scooter or a standard car — it is a rough 4x4 track driven by locals who run it every morning. If you are weighing the two formats properly rather than by price alone, our [jeep vs hike comparison](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike) goes through it stop by stop."
         ]
       },
@@ -20786,7 +20786,7 @@ const JOURNAL_SEO_GUIDES = [
         "bullets": [
           "**You wanted to go solo to save money**: the guided hike is **from $35** including pickup, which a solo attempt plus transport rarely beats once the trailhead conversation goes against you.",
           "**You wanted solitude**: you will not find it on the summit trail in July or August either way. Go in the shoulder months, or take the jeep to a quieter viewpoint.",
-          "**You have bad knees or small children**: the jeep, **from $75**, or **from $60** with the hot spring. That is a format choice, not a compromise.",
+          "**You have bad knees or small children**: the jeep, **from $60**, or **from $75** with the hot spring. That is a format choice, not a compromise.",
           "**You are staying in Ubud**: you have the shortest night drive on the island — [Batur sunrise from Ubud](/bali/en/journal/mount-batur-sunrise-from-ubud) has the timings.",
           "**You are staying in Seminyak, Canggu or Uluwatu**: the drive is the real cost of this morning, not the guide — see [Batur sunrise from south Bali](/bali/en/journal/mount-batur-sunrise-from-south-bali).",
           "**You want a bigger, harder mountain**: Batur is the easy one, and [Batur vs Agung](/bali/en/journal/mount-batur-vs-mount-agung) compares them before you commit to either."
@@ -20807,7 +20807,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "Can you drive up Mount Batur?",
-        "answer": "Yes, but only in a 4x4 on the separate jeep track — not on the hiking trail, and not in a rental car or on a scooter. The jeeps climb the black lava flank to a sunrise viewpoint, so you get the same sunrise with no walking. From $75, or from $60 with a hot spring soak afterwards, both 6-8 hours."
+        "answer": "Yes, but only in a 4x4 on the separate jeep track — not on the hiking trail, and not in a rental car or on a scooter. The jeeps climb the black lava flank to a sunrise viewpoint, so you get the same sunrise with no walking. From $60, or from $75 with a hot spring soak afterwards, both 6-8 hours."
       },
       {
         "question": "Is it illegal to hike Mount Batur without a guide?",
@@ -20989,11 +20989,11 @@ const JOURNAL_SEO_GUIDES = [
     "inlineStats": [
       "02:00 wake-up, 2 hours up",
       "Hike from $35",
-      "Jeep from $75, no climb"
+      "Jeep from $60, no climb"
     ],
     "title": "Is Mount Batur Worth It? An Honest Answer Before You Book",
-    "description": "Is Mount Batur worth it? An honest answer: the 02:00 start, two hours uphill in the dark, the cold summit wait, and the jeep option from $75.",
-    "excerpt": "Mount Batur is worth it if you can walk uphill for two hours in the dark and you are genuinely fine with a 02:00 alarm. If either of those is a stretch, it is not — and there is a jeep that gets you the same sunrise without the climb. The honest morning: pickup at 01:30-03:00, about two hours of steady climbing by headlamp, then standing in cold wind waiting for the light. From April to October the view is dependable; from November to March cloud can close it completely and you see nothing. The hike runs from $35 over 5-8 hours; the sunrise jeep from $75 skips the walking entirely.",
+    "description": "Is Mount Batur worth it? An honest answer: the 02:00 start, two hours uphill in the dark, the cold summit wait, and the jeep option from $60.",
+    "excerpt": "Mount Batur is worth it if you can walk uphill for two hours in the dark and you are genuinely fine with a 02:00 alarm. If either of those is a stretch, it is not — and there is a jeep that gets you the same sunrise without the climb. The honest morning: pickup at 01:30-03:00, about two hours of steady climbing by headlamp, then standing in cold wind waiting for the light. From April to October the view is dependable; from November to March cloud can close it completely and you see nothing. The hike runs from $35 over 5-8 hours; the sunrise jeep from $60 skips the walking entirely.",
     "rankings": [
       {
         "name": "Worth it: you walk fine and want to earn it",
@@ -21042,7 +21042,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg",
         "area": "Verdict: yes",
         "bestFor": "Cold mornings and families",
-        "summary": "The same jeep sunrise with a hot spring at the end, from $60 over 6-8 hours, pickup at 02:00-03:30. After standing in wind at first light, warm water is a better finish than a silent drive home. It is the version most guests pick once they hear it exists."
+        "summary": "The same jeep sunrise with a hot spring at the end, from $75 over 6-8 hours, pickup at 02:00-03:30. After standing in wind at first light, warm water is a better finish than a silent drive home. It is the version most guests pick once they hear it exists."
       }
     ],
     "sections": [
@@ -21056,7 +21056,7 @@ const JOURNAL_SEO_GUIDES = [
           "**Worth it** if you want the caldera view and the black-lava landscape more than you want the story to tell afterwards",
           "**Skip it** if stairs leave you breathless or your knees complain going downhill — the descent is loose volcanic sand",
           "**Skip it** if you cannot function on no sleep; the alarm goes off around 02:00 and the afternoon is written off",
-          "**Take the jeep instead** if you want the sunrise without the climb — from $75, or from $60 with a hot spring afterwards",
+          "**Take the jeep instead** if you want the sunrise without the climb — from $60, or from $75 with a hot spring afterwards",
           "**Wait for a better morning** in the wet season rather than climbing into cloud on your only free day"
         ],
         "paragraphsAfter": [
@@ -21090,7 +21090,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Is the Mount Batur jeep tour worth it?",
         "paragraphs": [
-          "**Yes, if you want the sunrise and not the effort.** A 4x4 drives the volcanic track to a viewpoint, so you get the same hour, the same light and the same black-lava landscape without the two-hour climb. The [Mount Batur sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) is **from $75** over **6-8 hours** with a night or pre-dawn pickup, and the [jeep with hot spring](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) version is **from $60** with pickup at **02:00-03:30**, finishing with a soak by the lake once the sun is up.",
+          "**Yes, if you want the sunrise and not the effort.** A 4x4 drives the volcanic track to a viewpoint, so you get the same hour, the same light and the same black-lava landscape without the two-hour climb. The [Mount Batur sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) is **from $60** over **6-8 hours** with a night or pre-dawn pickup, and the [jeep with hot spring](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) version is **from $75** with pickup at **02:00-03:30**, finishing with a soak by the lake once the sun is up.",
           "What the jeep does not solve: you still get up in the middle of the night, and you still lose the view if cloud sits low. It is also a vehicle morning rather than a walk, so if the physical achievement was the reason Batur appealed to you at all, the jeep will feel thin. For a stop-by-stop comparison of the two formats, our [jeep vs hike breakdown](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike) goes deeper than this page does."
         ]
       },
@@ -21112,7 +21112,7 @@ const JOURNAL_SEO_GUIDES = [
     "faq": [
       {
         "question": "Is Mount Batur worth it?",
-        "answer": "Worth it if you can walk uphill for about two hours and you are genuinely fine with a 02:00 start. For reasonably fit travelers in the dry season it is one of the best mornings in Bali. If stairs are hard work, your knees hurt going downhill, or a broken night ruins your day, it is not — take the jeep from $75 instead."
+        "answer": "Worth it if you can walk uphill for about two hours and you are genuinely fine with a 02:00 start. For reasonably fit travelers in the dry season it is one of the best mornings in Bali. If stairs are hard work, your knees hurt going downhill, or a broken night ruins your day, it is not — take the jeep from $60 instead."
       },
       {
         "question": "Is the Mount Batur sunrise worth it?",
@@ -21120,7 +21120,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "Is the Mount Batur jeep tour worth it?",
-        "answer": "Yes, if you want the sunrise without the climb. A 4x4 drives the volcanic track to a viewpoint for the same hour of light — from $75 over 6-8 hours, or from $60 with a hot spring soak afterwards and pickup at 02:00-03:30. It does not remove the night wake-up or the weather gamble, but it removes two hours of walking in the dark."
+        "answer": "Yes, if you want the sunrise without the climb. A 4x4 drives the volcanic track to a viewpoint for the same hour of light — from $60 over 6-8 hours, or from $75 with a hot spring soak afterwards and pickup at 02:00-03:30. It does not remove the night wake-up or the weather gamble, but it removes two hours of walking in the dark."
       },
       {
         "question": "Is Mount Batur worth visiting?",
@@ -21519,7 +21519,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
         "area": "Sunrise",
         "bestFor": "Mixed groups",
-        "summary": "The guided hike starts from $35, the jeep and hot spring version from $60 and the jeep tour from $75, all 5-8 hours door to door. The price you pay is sleep: pickups fall between 01:30 and 03:30. There is no evening equivalent to compare it against."
+        "summary": "The guided hike starts from $35, the jeep and hot spring version from $75 and the jeep tour from $60, all 5-8 hours door to door. The price you pay is sleep: pickups fall between 01:30 and 03:30. There is no evening equivalent to compare it against."
       },
       {
         "name": "When sunset wins",
@@ -21561,8 +21561,8 @@ const JOURNAL_SEO_GUIDES = [
         ],
         "bullets": [
           "[Mount Batur Sunrise Hike](/bali/en/tours/mount-batur-sunrise-hike) — **from $35**: the classic guided climb, roughly two hours up by torchlight. Pickup **01:30-03:00**, 5-8 hours door to door.",
-          "[Mount Batur Sunrise Jeep & Hot Spring](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) — **from $60**: a 4x4 to the viewpoint, then a soak in the hot springs beside Lake Batur. Pickup **02:00-03:30**, 6-8 hours.",
-          "[Mount Batur Sunrise Jeep Tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) — **from $75**: 4x4 to a viewpoint for first light, then the black lava fields. Night or pre-dawn pickup, **6-8 hours**, no real walking."
+          "[Mount Batur Sunrise Jeep & Hot Spring](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) — **from $75**: a 4x4 to the viewpoint, then a soak in the hot springs beside Lake Batur. Pickup **02:00-03:30**, 6-8 hours.",
+          "[Mount Batur Sunrise Jeep Tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) — **from $60**: 4x4 to a viewpoint for first light, then the black lava fields. Night or pre-dawn pickup, **6-8 hours**, no real walking."
         ],
         "paragraphsAfter": [
           "Choosing between them is a knees-and-sleep question more than a fitness one, and we break it down in [jeep vs hike](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike). Where you sleep sets the alarm: from Ubud the pre-dawn drive is **60-90 minutes** and pickups fall at the late end of those windows, covered in [Mount Batur sunrise from Ubud](/bali/en/journal/mount-batur-sunrise-from-ubud), while from Canggu, Seminyak or Uluwatu you add an hour or more each way — see [the same morning from south Bali](/bali/en/journal/mount-batur-sunrise-from-south-bali). Every tour is private, booked over WhatsApp, with no prepayment."
@@ -22452,7 +22452,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg",
         "area": "Kintamani",
         "bestFor": "Sunrise gamblers who want a backup",
-        "summary": "The sunrise itself is a coin flip in the wet months, because cloud sits in the caldera and some mornings you see nothing at all. What makes it survivable is the ending: [the jeep tour with hot springs](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) from $60 finishes in warm water regardless of the view, on a pre-dawn pickup around 02:00-03:30."
+        "summary": "The sunrise itself is a coin flip in the wet months, because cloud sits in the caldera and some mornings you see nothing at all. What makes it survivable is the ending: [the jeep tour with hot springs](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) from $75 finishes in warm water regardless of the view, on a pre-dawn pickup around 02:00-03:30."
       },
       {
         "name": "Temples and holy springs",
@@ -22519,7 +22519,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Front-load the day, and the rain stops mattering",
         "paragraphs": [
           "The single most useful habit in the wet season is to start early. Our [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) has an **08:00 hotel pickup** and runs about **10 hours**, from $69. By the time the afternoon cloud builds you are already three or four stops in, and the last part of the route is the drive home anyway. The same logic applies to the [UNESCO heritage route](/bali/en/tours/bali-unesco) from $69 and to the [Tanah Lot and Bedugul day](/bali/en/tours/tanah-lot-bedugul-tour) from $59 over 9-11 hours, though that one ends at the coast, which is where a wet-season sunset is least reliable.",
-          "Sunrise trips sit outside the rain window entirely, which is the good news, and inside the cloud window, which is the bad. A [Mount Batur sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) from $75 leaves in the dark and is finished before the rain starts, but whether you see the sun depends on what is sitting in the caldera at 06:00. Some mornings it is clear above the cloud layer and better than anything in August; some mornings it is grey. If you want the odds and the differences between the versions, [jeep vs hike](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike) lays them out."
+          "Sunrise trips sit outside the rain window entirely, which is the good news, and inside the cloud window, which is the bad. A [Mount Batur sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) from $60 leaves in the dark and is finished before the rain starts, but whether you see the sun depends on what is sitting in the caldera at 06:00. Some mornings it is clear above the cloud layer and better than anything in August; some mornings it is grey. If you want the odds and the differences between the versions, [jeep vs hike](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike) lays them out."
         ]
       },
       {
@@ -23870,7 +23870,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/places/mount-batur-jeep.jpg",
         "area": "Batur lava field",
         "bestFor": "Anyone not walking up",
-        "summary": "Same alarm, no climb. The [jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) drives to a viewpoint on the volcano's flank and crosses the old lava field afterwards, from $75 over 6-8 hours. The [hot spring version](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) from $60 finishes in the water by the lake."
+        "summary": "Same alarm, no climb. The [jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) drives to a viewpoint on the volcano's flank and crosses the old lava field afterwards, from $60 over 6-8 hours. The [hot spring version](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) from $75 finishes in the water by the lake."
       },
       {
         "name": "Back in Ubud by mid-morning",
@@ -23897,8 +23897,8 @@ const JOURNAL_SEO_GUIDES = [
         ],
         "bullets": [
           "**[Mount Batur Sunrise Hike](/bali/en/tours/mount-batur-sunrise-hike)** — from $35, 5-8 hours, pre-dawn pickup 01:30-03:00. Ubud sits at the late end of that window because you are already halfway there.",
-          "**[Mount Batur Sunrise Jeep & Hot Spring](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring)** — from $60, 6-8 hours, pickup around 02:00-03:30, ending in the water instead of on a long walk down.",
-          "**[Mount Batur Sunrise Jeep Tour](/bali/en/tours/mount-batur-sunrise-jeep-tour)** — from $75, 6-8 hours, night or pre-dawn pickup, no climbing involved at all.",
+          "**[Mount Batur Sunrise Jeep & Hot Spring](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring)** — from $75, 6-8 hours, pickup around 02:00-03:30, ending in the water instead of on a long walk down.",
+          "**[Mount Batur Sunrise Jeep Tour](/bali/en/tours/mount-batur-sunrise-jeep-tour)** — from $60, 6-8 hours, night or pre-dawn pickup, no climbing involved at all.",
           "**From Canggu, Seminyak, Kuta or Nusa Dua** — add an hour to whatever an Ubud guest is doing, so roughly 01:30 rather than 02:30.",
           "**Staying north of Ubud** in Tegalalang or Payangan — you are already partway up the hill, and the pickup usually slides fifteen minutes later.",
           "**Daytime instead** — the [Ubud Rice Terrace, Temple & Volcano tour](/bali/en/tours/ubud-highlights-tour) from $69 leaves at 08:00 and reaches the Kintamani rim in full daylight."
@@ -23955,7 +23955,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How much does a Mount Batur trip from Ubud cost?",
-        "answer": "Our sunrise hike starts from $35 and runs 5-8 hours door to door. The jeep and hot spring route is from $60 over 6-8 hours, and the jeep sunrise tour from $75. A daytime Kintamani visit as part of a full Ubud day tour starts from $69. Booking is over WhatsApp with no prepayment."
+        "answer": "Our sunrise hike starts from $35 and runs 5-8 hours door to door. The jeep and hot spring route is from $75 over 6-8 hours, and the jeep sunrise tour from $60. A daytime Kintamani visit as part of a full Ubud day tour starts from $69. Booking is over WhatsApp with no prepayment."
       }
     ]
   },
@@ -23998,14 +23998,14 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
         "area": "Kintamani and Mount Batur",
         "bestFor": "Volcano sunrise with zero climbing",
-        "summary": "The jeep drives up to the sunrise viewpoint, so the famous hard part simply does not apply. From $75 for 6-8 hours with a night or pre-dawn pickup. The real cost is the start time and the cold on the rim, not your legs. Most guests doze through the drive up."
+        "summary": "The jeep drives up to the sunrise viewpoint, so the famous hard part simply does not apply. From $60 for 6-8 hours with a night or pre-dawn pickup. The real cost is the start time and the cold on the rim, not your legs. Most guests doze through the drive up."
       },
       {
         "name": "Mount Batur Sunrise Jeep & Hot Spring",
         "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg",
         "area": "Kintamani and Mount Batur",
         "bestFor": "Sunrise plus warm water for stiff joints",
-        "summary": "The same jeep and the same absence of climbing, from $60 across 6-8 hours with a 02:00-03:30 pickup, finishing in a hot spring. Warm water after a cold dawn does genuine good for stiff knees. The only real steps of the day are the ones into the pool."
+        "summary": "The same jeep and the same absence of climbing, from $75 across 6-8 hours with a 02:00-03:30 pickup, finishing in a hot spring. Warm water after a cold dawn does genuine good for stiff knees. The only real steps of the day are the ones into the pool."
       },
       {
         "name": "Ubud Rice Terrace, Temple & Volcano Tour",
@@ -24045,7 +24045,7 @@ const JOURNAL_SEO_GUIDES = [
         ],
         "bullets": [
           "**No walking at all**: the sunset cruise from Benoa, from $150 — seated the whole evening once you are aboard",
-          "**Almost none**: Mount Batur by jeep from $75 — the vehicle reaches the viewpoint, you step out and look",
+          "**Almost none**: Mount Batur by jeep from $60 — the vehicle reaches the viewpoint, you step out and look",
           "**Flat, with steps at the gate**: Tanah Lot, the Bedugul lake temple, the heritage-route temples",
           "**Short slopes, your choice how far**: Tegalalang rice terraces and the Kintamani viewpoints",
           "**Real stairs, entirely optional**: the Nusa Penida clifftop platforms — the views are from the top, the descents are not compulsory",
@@ -24058,8 +24058,8 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Mount Batur without the hike",
         "paragraphs": [
-          "The volcano sunrise is the trip most people assume is off the table at 70, and it is not. **The jeep drives up to the sunrise viewpoint** — no walking section, no headlamp, no two-hour climb in the dark. You are driven to a ridge above the crater, you get out, you watch the sun come up, you get back in. The [Mount Batur Sunrise Jeep Tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) runs **from $75** over 6-8 hours with a night or pre-dawn pickup, and the drive up is the part most guests sleep through.",
-          "Two honest caveats. The start time is the real difficulty: this is a 6-8 hour day that begins in the middle of the night, and the version that ends in warm water, [jeep plus hot spring from $60](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring), picks up between 02:00 and 03:30. Plan nothing for the afternoon that follows. And the crater rim before dawn is genuinely cold by Bali standards — a fleece and long trousers matter more here than anywhere else on the island, which our [Bali packing guide](/bali/en/journal/what-to-pack-for-bali) covers in more detail.",
+          "The volcano sunrise is the trip most people assume is off the table at 70, and it is not. **The jeep drives up to the sunrise viewpoint** — no walking section, no headlamp, no two-hour climb in the dark. You are driven to a ridge above the crater, you get out, you watch the sun come up, you get back in. The [Mount Batur Sunrise Jeep Tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) runs **from $60** over 6-8 hours with a night or pre-dawn pickup, and the drive up is the part most guests sleep through.",
+          "Two honest caveats. The start time is the real difficulty: this is a 6-8 hour day that begins in the middle of the night, and the version that ends in warm water, [jeep plus hot spring from $75](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring), picks up between 02:00 and 03:30. Plan nothing for the afternoon that follows. And the crater rim before dawn is genuinely cold by Bali standards — a fleece and long trousers matter more here than anywhere else on the island, which our [Bali packing guide](/bali/en/journal/what-to-pack-for-bali) covers in more detail.",
           "The walking version of Batur costs less and we still do not recommend it to anyone with knee, hip or breathing problems. It is a steep pre-dawn climb on loose volcanic gravel, and the descent in daylight is where most injuries happen, not the ascent."
         ]
       },
@@ -24111,7 +24111,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "What are the easiest Bali day trips?",
-        "answer": "The Tanah Lot and Bedugul route from $59 is the gentlest full day — lakeside temple gardens and flat viewing terraces across 9-11 hours. The Mount Batur sunrise jeep from $75 involves no climbing at all, since the vehicle reaches the viewpoint. A sunset cruise from Benoa from $150 keeps you seated the whole evening. All three start with hotel pickup."
+        "answer": "The Tanah Lot and Bedugul route from $59 is the gentlest full day — lakeside temple gardens and flat viewing terraces across 9-11 hours. The Mount Batur sunrise jeep from $60 involves no climbing at all, since the vehicle reaches the viewpoint. A sunset cruise from Benoa from $150 keeps you seated the whole evening. All three start with hotel pickup."
       },
       {
         "question": "Can you visit Bali with elderly parents?",
@@ -24119,7 +24119,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "Can seniors do the Mount Batur sunrise?",
-        "answer": "Yes, by jeep. The vehicle drives up to the sunrise viewpoint, so no hiking is involved — the Mount Batur Sunrise Jeep Tour runs from $75 over 6-8 hours with a night or pre-dawn pickup. The foot hike is a different proposition and we do not recommend it with knee, hip or breathing problems. Bring a warm layer either way; the rim is cold before dawn."
+        "answer": "Yes, by jeep. The vehicle drives up to the sunrise viewpoint, so no hiking is involved — the Mount Batur Sunrise Jeep Tour runs from $60 over 6-8 hours with a night or pre-dawn pickup. The foot hike is a different proposition and we do not recommend it with knee, hip or breathing problems. Bring a warm layer either way; the rim is cold before dawn."
       },
       {
         "question": "Is Nusa Penida suitable for elderly travelers?",
@@ -24398,7 +24398,7 @@ const JOURNAL_SEO_GUIDES = [
         ],
         "paragraphsAfter": [
           "The crossing itself is 30–45 minutes by fast boat whichever base you start from, so the whole difference is on land. From Canggu a Penida day is the same day, one hour shorter, with an extra hour spent in a car — which is why we tell people whose trip is built around island days to sleep on the east side. How that morning actually runs is in our [Nusa Penida day trip from Sanur](/bali/en/journal/nusa-penida-day-trip-from-sanur) guide, and the routes start from $49 per car for the [west coast tour](/bali/en/tours/nusa-penida-west-tour) and from $75 per person for the east and full-day versions.",
-          "Inland days do not reverse any of this — they just make the two areas equal and both of them early. A Batur sunrise from the south starts roughly an hour before the same trip from Ubud, with pickups between 01:30 and 03:30 depending on where you sleep; the timings are in [Mount Batur sunrise from south Bali](/bali/en/journal/mount-batur-sunrise-from-south-bali), and the [jeep version](/bali/en/tours/mount-batur-sunrise-jeep-tour) from $75 per person removes the climb. For a day on your own route, with the stops you choose, a [private car with driver](/bali/en/tours/private-car-with-driver-bali) is from $59 per car."
+          "Inland days do not reverse any of this — they just make the two areas equal and both of them early. A Batur sunrise from the south starts roughly an hour before the same trip from Ubud, with pickups between 01:30 and 03:30 depending on where you sleep; the timings are in [Mount Batur sunrise from south Bali](/bali/en/journal/mount-batur-sunrise-from-south-bali), and the [jeep version](/bali/en/tours/mount-batur-sunrise-jeep-tour) from $60 per person removes the climb. For a day on your own route, with the stops you choose, a [private car with driver](/bali/en/tours/private-car-with-driver-bali) is from $59 per car."
         ]
       },
       {
@@ -25965,7 +25965,7 @@ const JOURNAL_SEO_GUIDES = [
         "paragraphs": [
           "This is the part the blog comparisons skip and the part we live with. Almost everything worth a day out of the south starts with a drive, and where you sleep decides how much of the day that drive eats.",
           "**Nusa Penida.** Every crossing leaves from the port at **Sanur**, and the fast boat itself is only **30-45 minutes** — the variable is reaching the port. From **Seminyak that run is 30-50 minutes**, which makes it one of the easier southern bases for an island day. **Jimbaran sits on the Bukit side of the airport**, and the band we publish for Uluwatu and the Bukit is **60-90 minutes**, with Jimbaran at the near end of it. Same boat, earlier pickup. For scale, Canggu is also **60-90 minutes** and Ubud **45-70**. Our [Nusa Penida west route](/bali/en/tours/nusa-penida-west-tour) is **from $49 per car**, and the [Seminyak to Penida guide](/bali/en/journal/nusa-penida-day-trip-from-seminyak) walks through the morning hour by hour.",
-          "**Mount Batur sunrise.** Here the two areas are level, and both lose to Ubud. Pickups run **01:30-03:30** depending on where you sleep, and **southern areas leave about an hour earlier than Ubud** for the same sunrise, because Ubud is already halfway up the island — it sits roughly **1.5 hours** from the foot of the volcano. If a two-in-the-morning alarm is a dealbreaker, that argues for a different base entirely, not a different southern district. The [Mount Batur sunrise from south Bali](/bali/en/journal/mount-batur-sunrise-from-south-bali) guide has the timings, and the [jeep version](/bali/en/tours/mount-batur-sunrise-jeep-tour) is **from $75** if you would rather not hike in the dark.",
+          "**Mount Batur sunrise.** Here the two areas are level, and both lose to Ubud. Pickups run **01:30-03:30** depending on where you sleep, and **southern areas leave about an hour earlier than Ubud** for the same sunrise, because Ubud is already halfway up the island — it sits roughly **1.5 hours** from the foot of the volcano. If a two-in-the-morning alarm is a dealbreaker, that argues for a different base entirely, not a different southern district. The [Mount Batur sunrise from south Bali](/bali/en/journal/mount-batur-sunrise-from-south-bali) guide has the timings, and the [jeep version](/bali/en/tours/mount-batur-sunrise-jeep-tour) is **from $60** if you would rather not hike in the dark.",
           "The rule underneath all of it, in one sentence: the further your area sits from Sanur and from Kintamani, the earlier you get up and the more of the day goes to the road. It is the same day, just shorter."
         ]
       },
