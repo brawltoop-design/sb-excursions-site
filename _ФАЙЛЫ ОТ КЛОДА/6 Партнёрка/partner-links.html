@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SB Excursions — партнёрские ссылки</title>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#fff; --ink:#14161a; --muted:#6b7280; --line:#e3e6ea;
+    --accent:#0f766e; --accent-soft:#e6f4f1; --danger:#b42318; --warn:#b54708; --warn-bg:#fffaeb;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 20px 80px}
+  h1{font-size:24px;margin:0 0 4px}
+  .sub{color:var(--muted);margin:0 0 22px;font-size:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:18px}
+  .card h2{font-size:15px;margin:0 0 16px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+  label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:5px}
+  input,select,textarea{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:8px;
+       font:inherit;font-size:14px;background:#fff;color:var(--ink)}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+  .hint{font-size:12px;color:var(--muted);margin-top:5px}
+  button{font:inherit;font-size:14px;padding:9px 16px;border-radius:8px;border:1px solid var(--line);
+       background:#fff;color:var(--ink);cursor:pointer}
+  button:hover{background:#f0f2f4}
+  button.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+  button.primary:hover{filter:brightness(1.08)}
+  button.mini{padding:5px 10px;font-size:12.5px}
+  button.danger{color:var(--danger);border-color:#f3c3bd}
+  button.danger:hover{background:#fdf3f2}
+  .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .mt{margin-top:16px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);
+     padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+  td{padding:11px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  .name{font-weight:600}
+  .code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;
+        background:var(--accent-soft);color:var(--accent);padding:2px 7px;border-radius:5px;display:inline-block}
+  .link{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;color:var(--muted);
+        word-break:break-all;line-height:1.4;display:block;margin-top:4px;max-width:430px}
+  .tag{font-size:11px;background:#eef1f4;color:#4b5563;padding:2px 8px;border-radius:20px;white-space:nowrap}
+  .empty{text-align:center;color:var(--muted);padding:36px 10px;font-size:14px}
+  .banner{background:var(--warn-bg);border:1px solid #fedf89;color:var(--warn);
+          padding:12px 14px;border-radius:10px;font-size:13px;margin-bottom:18px}
+  .banner b{color:#93370d}
+  .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%);background:var(--ink);color:#fff;
+         padding:11px 20px;border-radius:9px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:99}
+  .toast.on{opacity:1}
+  dialog{border:none;border-radius:14px;padding:0;max-width:340px;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+  dialog::backdrop{background:rgba(0,0,0,.45)}
+  .qbox{padding:22px;text-align:center}
+  .qbox h3{margin:0 0 4px;font-size:16px}
+  .qbox .who{color:var(--muted);font-size:13px;margin-bottom:16px}
+  #qtarget{display:flex;justify-content:center;min-height:200px;align-items:center}
+  #qtarget img,#qtarget canvas{border:10px solid #fff;border-radius:6px}
+  .stat{display:flex;gap:26px;flex-wrap:wrap;margin-bottom:6px}
+  .stat div span{display:block;font-size:22px;font-weight:700}
+  .stat div small{color:var(--muted);font-size:12px}
+  @media(max-width:720px){ .link{max-width:100%} th:nth-child(3),td:nth-child(3){display:none} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Партнёрские ссылки</h1>
+  <p class="sub">Создаёшь ссылку под каждого, кто тебя пиарит. Код партнёра сам приезжает
+     в WhatsApp-сообщение от гостя — видно, кому платить.</p>
+
+  <div class="banner">
+    <b>Где лежат данные.</b> Всё хранится в этом браузере, на этом компьютере. Другой браузер
+    или другой комп их не увидит. Поэтому раз в неделю жми «Скачать бэкап» — это твоя
+    единственная защита от потери списка.
+  </div>
+
+  <div class="card">
+    <h2>Добавить партнёра</h2>
+    <div class="grid">
+      <div>
+        <label for="f-name">Название / имя *</label>
+        <input id="f-name" placeholder="Villa Mango" autocomplete="off">
+      </div>
+      <div>
+        <label for="f-type">Кто это</label>
+        <select id="f-type">
+          <option value="villa">Вилла / отель</option>
+          <option value="cafe">Кафе / ресторан</option>
+          <option value="driver">Водитель</option>
+          <option value="guide">Гид</option>
+          <option value="surf">Сёрф-школа</option>
+          <option value="blogger">Блогер / контент</option>
+          <option value="other">Другое</option>
+        </select>
+      </div>
+      <div>
+        <label for="f-code">Код (латиница) *</label>
+        <input id="f-code" placeholder="villa-mango" autocomplete="off">
+        <div class="hint">Подставляется сам из названия. Можно править.</div>
+      </div>
+      <div>
+        <label for="f-lang">Язык страницы</label>
+        <select id="f-lang">
+          <option value="en">English</option>
+          <option value="ru">Русский</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="zh">中文</option>
+        </select>
+      </div>
+      <div>
+        <label for="f-target">Куда ведёт</label>
+        <select id="f-target">
+          <option value="">Главная страница</option>
+          <option value="tours/nusa-penida-full-day-tour">Тур — Nusa Penida full day</option>
+          <option value="tours/nusa-penida-east-tour">Тур — Nusa Penida east</option>
+          <option value="tours/nusa-lembongan-ceningan-day-trip">Тур — Lembongan &amp; Ceningan</option>
+          <option value="tours/blue-lagoon-snorkeling">Тур — Blue Lagoon snorkeling</option>
+          <option value="tours/white-water-rafting">Тур — White water rafting</option>
+          <option value="tours/bali-unesco">Тур — Bali UNESCO</option>
+          <option value="tours/ubud-highlights-tour">Тур — Ubud highlights</option>
+          <option value="tours/gili-island-tour">Тур — Gili islands</option>
+          <option value="tours/sunset-cruise-bali">Тур — Sunset cruise</option>
+          <option value="tours/bali-helicopter-scenic-tour">Тур — Helicopter</option>
+          <option value="tours/sumbawa-whale-shark-snorkeling-trip">Тур — Whale sharks</option>
+          <option value="tours/private-car-with-driver-bali">Тур — Private car with driver</option>
+          <option value="__custom">Свой путь…</option>
+        </select>
+      </div>
+      <div id="wrap-custom" style="display:none">
+        <label for="f-custom">Свой путь</label>
+        <input id="f-custom" placeholder="/work-with-us" autocomplete="off">
+        <div class="hint">Начинай со слэша.</div>
+      </div>
+      <div>
+        <label for="f-contact">Контакт</label>
+        <input id="f-contact" placeholder="+62 812… или @instagram" autocomplete="off">
+      </div>
+      <div>
+        <label for="f-note">Заметка</label>
+        <input id="f-note" placeholder="стойка ресепшн, 20 номеров" autocomplete="off">
+      </div>
+    </div>
+    <div class="row mt">
+      <button class="primary" id="btn-add">Добавить</button>
+      <button id="btn-reset">Очистить форму</button>
+      <span id="preview" class="hint" style="flex:1"></span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="row" style="justify-content:space-between;margin-bottom:14px">
+      <div class="stat">
+        <div><span id="s-count">0</span><small>партнёров</small></div>
+        <div><span id="s-types">0</span><small>категорий</small></div>
+      </div>
+      <div class="row">
+        <input id="search" placeholder="Поиск…" style="width:190px">
+        <button class="mini" id="btn-export">Скачать бэкап</button>
+        <button class="mini" id="btn-csv">CSV</button>
+        <button class="mini" id="btn-import">Загрузить бэкап</button>
+        <input type="file" id="file-import" accept=".json,application/json" style="display:none">
+      </div>
+    </div>
+    <div id="list"></div>
+  </div>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<dialog id="qr-dialog">
+  <div class="qbox">
+    <h3>QR-код</h3>
+    <div class="who" id="q-who"></div>
+    <div id="qtarget"></div>
+    <div class="row mt" style="justify-content:center">
+      <button class="mini" id="btn-qr-save">Скачать PNG</button>
+      <button class="mini" id="btn-qr-close">Закрыть</button>
+    </div>
+  </div>
+</dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  "use strict";
+
+  var SITE = "https://www.sbexcursion.com";
+  var KEY  = "sb_partners_v1";
+  var data = [];
+
+  /* ---------- хранилище (с деградацией, если localStorage недоступен) ---------- */
+  var storageOk = true;
+  function loadData(){
+    try{
+      var raw = localStorage.getItem(KEY);
+      return raw ? (JSON.parse(raw) || []) : [];
+    }catch(e){ storageOk = false; return []; }
+  }
+  function saveData(){
+    try{ localStorage.setItem(KEY, JSON.stringify(data)); }
+    catch(e){
+      if(storageOk){
+        storageOk = false;
+        toast("Браузер не даёт сохранить — обязательно скачай бэкап!");
+      }
+    }
+  }
+
+  /* ---------- утилиты ---------- */
+  var TRANSLIT = {а:'a',б:'b',в:'v',г:'g',д:'d',е:'e',ё:'e',ж:'zh',з:'z',и:'i',й:'y',к:'k',
+    л:'l',м:'m',н:'n',о:'o',п:'p',р:'r',с:'s',т:'t',у:'u',ф:'f',х:'h',ц:'c',ч:'ch',ш:'sh',
+    щ:'sch',ъ:'',ы:'y',ь:'',э:'e',ю:'yu',я:'ya'};
+
+  function slugify(s){
+    s = String(s == null ? "" : s).toLowerCase().trim();
+    var out = "";
+    for(var i=0;i<s.length;i++){
+      var ch = s[i];
+      out += Object.prototype.hasOwnProperty.call(TRANSLIT, ch) ? TRANSLIT[ch] : ch;
+    }
+    return out.replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"").slice(0,32);
+  }
+
+  function buildUrl(p){
+    var path;
+    if(!p.target)                      path = "/";
+    else if(p.target.charAt(0) === "/") path = p.target;
+    else                                path = "/bali/" + p.lang + "/" + p.target;
+    return SITE + path +
+      "?utm_source=partner&utm_medium=qr&utm_campaign=" + encodeURIComponent(p.code);
+  }
+
+  function esc(s){
+    return String(s == null ? "" : s)
+      .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+      .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+  }
+
+  var TYPES = {villa:"Вилла",cafe:"Кафе",driver:"Водитель",guide:"Гид",
+               surf:"Сёрф-школа",blogger:"Блогер",other:"Другое"};
+
+  var toastTimer;
+  function toast(msg){
+    var t = document.getElementById("toast");
+    t.textContent = msg; t.classList.add("on");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ t.classList.remove("on"); }, 2600);
+  }
+
+  function download(filename, content, mime){
+    var blob = new Blob([content], {type: mime || "application/json;charset=utf-8"});
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 0);
+  }
+
+  /* ---------- элементы ---------- */
+  var $ = function(id){ return document.getElementById(id); };
+  var fName=$("f-name"), fType=$("f-type"), fCode=$("f-code"), fLang=$("f-lang"),
+      fTarget=$("f-target"), fCustom=$("f-custom"), fContact=$("f-contact"), fNote=$("f-note"),
+      wrapCustom=$("wrap-custom"), preview=$("preview"), list=$("list"), search=$("search");
+
+  var codeTouched = false;
+  fCode.addEventListener("input", function(){ codeTouched = true; updatePreview(); });
+  fName.addEventListener("input", function(){
+    if(!codeTouched) fCode.value = slugify(fName.value);
+    updatePreview();
+  });
+  fTarget.addEventListener("change", function(){
+    wrapCustom.style.display = fTarget.value === "__custom" ? "" : "none";
+    updatePreview();
+  });
+  [fLang, fCustom].forEach(function(el){ el.addEventListener("input", updatePreview); });
+  fLang.addEventListener("change", updatePreview);
+
+  function currentDraft(){
+    var target = fTarget.value === "__custom" ? fCustom.value.trim() : fTarget.value;
+    if(target && target.charAt(0) !== "/" && target.indexOf("tours/") !== 0) target = "/" + target;
+    return {code: slugify(fCode.value), lang: fLang.value, target: target};
+  }
+  function updatePreview(){
+    var d = currentDraft();
+    preview.textContent = d.code ? buildUrl(d) : "";
+  }
+
+  /* ---------- добавление ---------- */
+  $("btn-add").addEventListener("click", function(){
+    var name = fName.value.trim();
+    var code = slugify(fCode.value || fName.value);
+    if(!name){ toast("Впиши название"); fName.focus(); return; }
+    if(!code){ toast("Код пустой — впиши латиницей"); fCode.focus(); return; }
+    for(var i=0;i<data.length;i++){
+      if(data[i].code === code){ toast("Код «"+code+"» уже занят: "+data[i].name); fCode.focus(); return; }
+    }
+    var d = currentDraft();
+    data.unshift({
+      id: String(Date.now()) + Math.random().toString(36).slice(2,7),
+      name: name, type: fType.value, code: code, lang: d.lang, target: d.target,
+      contact: fContact.value.trim(), note: fNote.value.trim(),
+      created: new Date().toISOString().slice(0,10)
+    });
+    saveData(); render(); resetForm();
+    toast("Добавлен: " + name);
+  });
+
+  function resetForm(){
+    fName.value=""; fCode.value=""; fContact.value=""; fNote.value=""; fCustom.value="";
+    fTarget.value=""; wrapCustom.style.display="none"; codeTouched=false;
+    updatePreview(); fName.focus();
+  }
+  $("btn-reset").addEventListener("click", resetForm);
+
+  /* ---------- таблица ---------- */
+  function render(){
+    var q = search.value.trim().toLowerCase();
+    var rows = data.filter(function(p){
+      if(!q) return true;
+      return (p.name+" "+p.code+" "+(p.note||"")+" "+(p.contact||"")).toLowerCase().indexOf(q) !== -1;
+    });
+
+    $("s-count").textContent = data.length;
+    var seen = {}, n = 0;
+    data.forEach(function(p){ if(!seen[p.type]){ seen[p.type]=1; n++; } });
+    $("s-types").textContent = n;
+
+    if(!data.length){
+      list.innerHTML = '<div class="empty">Пока пусто. Добавь первого партнёра сверху.</div>';
+      return;
+    }
+    if(!rows.length){
+      list.innerHTML = '<div class="empty">Ничего не найдено по запросу «'+esc(q)+'».</div>';
+      return;
+    }
+
+    var html = '<table><thead><tr><th>Партнёр</th><th>Код и ссылка</th><th>Контакт</th>'
+             + '<th>Добавлен</th><th></th></tr></thead><tbody>';
+    rows.forEach(function(p){
+      var url = buildUrl(p);
+      html += '<tr>'
+        + '<td><div class="name">'+esc(p.name)+'</div>'
+        +   '<span class="tag">'+esc(TYPES[p.type]||p.type)+'</span>'
+        +   (p.note ? '<div class="hint">'+esc(p.note)+'</div>' : '')
+        + '</td>'
+        + '<td><span class="code">'+esc(p.code)+'</span>'
+        +   '<span class="link">'+esc(url)+'</span></td>'
+        + '<td>'+esc(p.contact||"—")+'</td>'
+        + '<td class="hint">'+esc(p.created||"")+'</td>'
+        + '<td><div class="row" style="gap:6px;flex-wrap:nowrap">'
+        +   '<button class="mini" data-copy="'+esc(url)+'">Копировать</button>'
+        +   '<button class="mini" data-qr="'+esc(p.id)+'">QR</button>'
+        +   '<button class="mini danger" data-del="'+esc(p.id)+'">×</button>'
+        + '</div></td>'
+        + '</tr>';
+    });
+    list.innerHTML = html + '</tbody></table>';
+  }
+
+  search.addEventListener("input", render);
+
+  list.addEventListener("click", function(e){
+    var b = e.target.closest ? e.target.closest("button") : null;
+    if(!b) return;
+
+    if(b.dataset.copy){
+      var text = b.dataset.copy;
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text)
+          .then(function(){ toast("Ссылка скопирована"); })
+          .catch(function(){ fallbackCopy(text); });
+      } else fallbackCopy(text);
+      return;
+    }
+    if(b.dataset.del){
+      var p = findById(b.dataset.del);
+      if(p && confirm("Удалить «"+p.name+"»?\n\nСсылка перестанет отслеживаться.")){
+        data = data.filter(function(x){ return x.id !== b.dataset.del; });
+        saveData(); render(); toast("Удалён");
+      }
+      return;
+    }
+    if(b.dataset.qr) showQr(b.dataset.qr);
+  });
+
+  function findById(id){
+    for(var i=0;i<data.length;i++) if(data[i].id === id) return data[i];
+    return null;
+  }
+
+  function fallbackCopy(text){
+    var ta = document.createElement("textarea");
+    ta.value = text; ta.style.position="fixed"; ta.style.opacity="0";
+    document.body.appendChild(ta); ta.select();
+    try{ document.execCommand("copy"); toast("Ссылка скопирована"); }
+    catch(err){ prompt("Скопируй вручную:", text); }
+    ta.remove();
+  }
+
+  /* ---------- QR ---------- */
+  var qrDialog = $("qr-dialog"), qTarget = $("qtarget"), currentQrName = "";
+  function showQr(id){
+    var p = findById(id); if(!p) return;
+    var url = buildUrl(p);
+    currentQrName = p.code;
+    $("q-who").textContent = p.name;
+    qTarget.innerHTML = "";
+    if(typeof QRCode === "undefined"){
+      qTarget.innerHTML = '<div class="hint" style="padding:16px">Библиотека QR не загрузилась '
+        + '(нет интернета или заблокирован CDN).<br><br>Скопируй ссылку кнопкой «Копировать» '
+        + 'и сделай QR на любом генераторе.</div>';
+    } else {
+      try{ new QRCode(qTarget, {text:url, width:220, height:220, correctLevel: QRCode.CorrectLevel.M}); }
+      catch(err){ qTarget.innerHTML = '<div class="hint">Не смог построить QR: '+esc(err.message)+'</div>'; }
+    }
+    if(typeof qrDialog.showModal === "function") qrDialog.showModal();
+    else qrDialog.setAttribute("open","");
+  }
+  $("btn-qr-close").addEventListener("click", function(){
+    if(typeof qrDialog.close === "function") qrDialog.close(); else qrDialog.removeAttribute("open");
+  });
+  $("btn-qr-save").addEventListener("click", function(){
+    var cvs = qTarget.querySelector("canvas");
+    var img = qTarget.querySelector("img");
+    var url = cvs ? cvs.toDataURL("image/png") : (img ? img.src : null);
+    if(!url){ toast("Нечего сохранять"); return; }
+    var a = document.createElement("a");
+    a.href = url; a.download = "qr-" + currentQrName + ".png";
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+
+  /* ---------- бэкап ---------- */
+  $("btn-export").addEventListener("click", function(){
+    if(!data.length){ toast("Список пуст"); return; }
+    download("sb-partners-" + new Date().toISOString().slice(0,10) + ".json",
+             JSON.stringify(data, null, 2));
+    toast("Бэкап скачан");
+  });
+
+  $("btn-csv").addEventListener("click", function(){
+    if(!data.length){ toast("Список пуст"); return; }
+    function cell(v){ return '"' + String(v == null ? "" : v).replace(/"/g,'""') + '"'; }
+    var lines = [["Название","Тип","Код","Ссылка","Контакт","Заметка","Добавлен"].map(cell).join(",")];
+    data.forEach(function(p){
+      lines.push([p.name, TYPES[p.type]||p.type, p.code, buildUrl(p),
+                  p.contact, p.note, p.created].map(cell).join(","));
+    });
+    download("sb-partners-" + new Date().toISOString().slice(0,10) + ".csv",
+             "﻿" + lines.join("\r\n"), "text/csv;charset=utf-8");
+    toast("CSV скачан");
+  });
+
+  $("btn-import").addEventListener("click", function(){ $("file-import").click(); });
+  $("file-import").addEventListener("change", function(e){
+    var file = e.target.files && e.target.files[0];
+    if(!file) return;
+    var reader = new FileReader();
+    reader.onload = function(){
+      try{
+        var incoming = JSON.parse(reader.result);
+        if(!Array.isArray(incoming)) throw new Error("это не список партнёров");
+        var have = {}, added = 0, skipped = 0;
+        data.forEach(function(p){ have[p.code] = 1; });
+        incoming.forEach(function(p){
+          if(!p || !p.code || !p.name){ skipped++; return; }
+          if(have[p.code]){ skipped++; return; }
+          have[p.code] = 1; added++;
+          data.push({
+            id: p.id || String(Date.now())+Math.random().toString(36).slice(2,7),
+            name: p.name, type: p.type || "other", code: p.code, lang: p.lang || "en",
+            target: p.target || "", contact: p.contact || "", note: p.note || "",
+            created: p.created || new Date().toISOString().slice(0,10)
+          });
+        });
+        saveData(); render();
+        toast("Добавлено " + added + (skipped ? ", пропущено " + skipped : ""));
+      }catch(err){
+        alert("Не смог прочитать файл: " + err.message);
+      }
+      e.target.value = "";
+    };
+    reader.readAsText(file);
+  });
+
+  /* ---------- старт ---------- */
+  data = loadData();
+  if(!storageOk){
+    var b = document.querySelector(".banner");
+    b.innerHTML = "<b>Внимание:</b> этот браузер не даёт сохранять данные "
+      + "(режим инкогнито или открыт файл напрямую). Список будет жить только до закрытия вкладки — "
+      + "обязательно нажми «Скачать бэкап» перед закрытием.";
+  }
+  render(); updatePreview();
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
