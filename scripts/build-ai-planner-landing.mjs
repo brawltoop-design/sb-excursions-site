@@ -22,6 +22,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import crypto from "node:crypto";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const INDEX = path.join(ROOT, "ai-planner/index.html");
@@ -274,11 +275,14 @@ for (const [lang, pairs] of Object.entries(TRANSLATIONS)) {
   }
 }
 
-if (added) {
-  await fs.writeFile(
-    I18N,
-    `/* SB Excursions — AI-планировщик Бали · js/i18n.js (переводы, автосборка) */\nvar SB_I18N = ${JSON.stringify(dict)};\n`,
-  );
-}
+const i18nOut = `/* SB Excursions — AI-планировщик Бали · js/i18n.js (переводы, автосборка) */\nvar SB_I18N = ${JSON.stringify(dict)};\n`;
+if (added) await fs.writeFile(I18N, i18nOut);
+
+/* Версия в ?v= привязана к содержимому словаря. Раньше она была вбита
+   руками, и после правки переводов браузер продолжал отдавать старый файл
+   из кэша: на проде шапка оставалась русской при ?lang=en. */
+const stamp = crypto.createHash("sha1").update(i18nOut).digest("hex").slice(0, 8);
+html = (await fs.readFile(INDEX, "utf8")).replace(/js\/i18n\.js\?v=[0-9a-z]+/g, `js/i18n.js?v=${stamp}`);
+await fs.writeFile(INDEX, html);
 
 console.log(JSON.stringify({ "шапка вставлена": true, "фото в шапке": PHOTOS.length, "строк перевода добавлено": added }, null, 2));
