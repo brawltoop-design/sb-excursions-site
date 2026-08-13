@@ -219,6 +219,57 @@
   .sb-journal-related-guide__label{font-size:12px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--sbj-blue)}
   .sb-journal-related-guide__title{font-size:15px;line-height:1.45;color:#151515;font-weight:500}
 
+  /* ── Переход к AI-планировщику в конце статьи ──────────────────────────
+     Статья закрывает один вопрос, планировщик собирает из него неделю.
+     Тот же язык, что у карточек тура: чёрное по бумаге, волосяная линейка,
+     ни одной тени. Единственное движение — бегущий пунктир маршрута, и он
+     гаснет при prefers-reduced-motion.                                    */
+  .sbplan{
+    position:relative;display:grid;grid-template-columns:minmax(0,1fr) 224px;
+    gap:28px;align-items:center;margin:0;padding:30px 32px;
+    border:1px solid rgba(21,21,21,0.14);border-radius:26px;
+    background:linear-gradient(180deg,#fff 0%,#fbfaf7 100%);overflow:clip
+  }
+  .sbplan__eyebrow{
+    margin:0 0 10px;font-size:11px;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:#b0741f
+  }
+  .sbplan__title{
+    margin:0 0 10px;font-size:26px;line-height:1.18;color:#151515;
+    font-weight:600 !important;letter-spacing:-0.01em
+  }
+  .sbplan__text{margin:0;font-size:15px;line-height:1.6;color:#5d5d62;max-width:52ch}
+  .sbplan__actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:20px}
+  .sbplan__cta{
+    display:inline-flex;align-items:center;gap:10px;padding:13px 24px;
+    border-radius:999px;background:#151515;color:#fff !important;
+    font-size:15px;font-weight:600;text-decoration:none !important;
+    transition:transform .2s ease,background-color .2s ease
+  }
+  .sbplan__cta:hover{background:#000;transform:translateX(2px)}
+  .sbplan__cta svg{flex:none}
+  .sbplan__note{font-size:13px;color:#8a8a90}
+  .sbplan__map{align-self:stretch;display:flex;align-items:center;justify-content:center}
+  .sbplan__map svg{width:100%;height:auto;max-width:224px}
+  .sbplan__route{
+    fill:none;stroke:#151515;stroke-width:1.6;stroke-linecap:round;
+    stroke-dasharray:5 7;animation:sbplan-run 7s linear infinite
+  }
+  .sbplan__pin{fill:#151515}
+  .sbplan__pin--accent{fill:#b0741f}
+  @keyframes sbplan-run{to{stroke-dashoffset:-96}}
+  @media (max-width:900px){
+    .sbplan{grid-template-columns:minmax(0,1fr);gap:22px;padding:26px 22px}
+    .sbplan__title{font-size:22px}
+    .sbplan__map{order:-1;justify-content:flex-start}
+    .sbplan__map svg{max-width:170px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .sbplan__route{animation:none}
+    .sbplan__cta{transition:none}
+    .sbplan__cta:hover{transform:none}
+  }
+
 /* ═══════════════════════════════════════════════════════════════════════════
    SB EXCURSIONS · КАРТОЧКИ ТУРА В ЖУРНАЛЕ
    .sbtc-grid — сетка рекомендованных туров в конце статьи
@@ -1519,6 +1570,21 @@ body {
               </div>
             </section>
 
+
+            <section class="sb-journal-article-section">
+              <aside class="sbplan">
+                <div class="sbplan__copy">
+                  <p class="sbplan__eyebrow">Вся ваша поездка, день за днём</p>
+                  <h2 class="sbplan__title">Вы запланировали один день. Теперь планируйте всю неделю.</h2>
+                  <p class="sbplan__text">Укажите даты, район, в котором вы остановились, и чем вы занимаетесь. Планировщик отображает дни на карте острова — настоящие туры SB Excursions, реальные цены и количество свободных мест на те дни, которые вы хотите оставить свободными.</p>
+                  <div class="sbplan__actions">
+                    <a class="sbplan__cta" href="/ai-planner?lang=ru">Откройте планировщик поездок <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    <span class="sbplan__note">Бесплатно, без регистрации, не нужно платить</span>
+                  </div>
+                </div>
+                <div class="sbplan__map"><svg viewBox="0 0 224 148" fill="none" role="img" aria-hidden="true"><path class="sbplan__route" d="M22 118C46 118 44 74 70 68s38 34 64 24 30-52 56-52"/><circle class="sbplan__pin" cx="22" cy="118" r="5.5"/><circle class="sbplan__pin" cx="70" cy="68" r="4.5"/><circle class="sbplan__pin" cx="134" cy="92" r="4.5"/><circle class="sbplan__pin sbplan__pin--accent" cx="190" cy="40" r="7"/><circle cx="190" cy="40" r="12.5" fill="none" stroke="#b0741f" stroke-width="1.2" opacity=".35"/></svg></div>
+              </aside>
+            </section>
           </article>
 
 
