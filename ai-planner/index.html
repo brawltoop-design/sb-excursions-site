@@ -116,6 +116,32 @@
 .sbp-hero__chip.c5{width:min(10vw,124px);aspect-ratio:1/1;top:13%;left:-1%;rotate:7deg;animation-delay:-5s}
 
 
+/* ── Футер: содержимое родного подвала сайта, своей вёрсткой ──────────
+   Тильдовский футер требует её CSS/JS-стек с чужого CDN — сотни килобайт
+   на самодостаточную страницу ради подвала. Шапку планировщик тоже рисует
+   сам, так что футер собран в том же ключе.                            */
+.sbp-foot{
+  --ink:#141412; --muted:#75716a; --line:rgba(20,20,18,.12);
+  border-top:1px solid var(--line);background:#fbfaf8;color:var(--ink);
+  padding:clamp(40px,5vw,64px) 0 28px;
+  font-family:'Manrope','Cina GEO','TildaSans',-apple-system,BlinkMacSystemFont,Arial,sans-serif
+}
+.sbp-foot__wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.sbp-foot__cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+.sbp-foot__col h3{margin:0 0 14px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.sbp-foot__col ul{margin:0;padding:0;list-style:none;display:grid;gap:9px}
+.sbp-foot__col a{color:var(--ink);text-decoration:none;font-size:14.5px;line-height:1.45}
+.sbp-foot__col a:hover{text-decoration:underline}
+.sbp-foot__col p{margin:0 0 9px;font-size:14.5px;line-height:1.45;color:var(--muted)}
+.sbp-foot__col p b{display:block;color:var(--ink);font-weight:600;margin-bottom:2px}
+.sbp-foot__bottom{
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;
+  margin-top:clamp(32px,4vw,48px);padding-top:20px;border-top:1px solid var(--line);
+  font-size:13px;color:var(--muted)
+}
+@media (max-width:900px){.sbp-foot__cols{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}}
+@media (max-width:560px){.sbp-foot__cols{grid-template-columns:1fr}}
+
 @keyframes sbp-float{0%,100%{translate:0 0}50%{translate:0 -12px}}
 @keyframes sbp-shift{to{background-position:300% 0}}
 
@@ -303,9 +329,71 @@
     </aside>
   </div>
 
-  <script src="/ai-planner/vendor/leaflet/leaflet.js"></script>
+
+
+
+<footer class="sbp-foot">
+  <div class="sbp-foot__wrap">
+    <div class="sbp-foot__cols">
+      <div class="sbp-foot__col">
+        <h3 data-t>Компания и доверие</h3>
+        <ul>
+        <li><a href="/bali/{L}/privacy-policy" data-t>Политика конфиденциальности</a></li>
+        <li><a href="/sitemap.xml" data-t>Карта сайта</a></li>
+        <li><a href="/bali/{L}/terms#refund" data-t>Условия возврата</a></li>
+        <li><a href="/bali/{L}/terms" data-t>Пользовательское соглашение</a></li>
+        <li><a href="/bali/{L}/about" data-t>О SB Excursions</a></li>
+        <li><a href="/bali/{L}/faq" data-t>Вопросы и ответы</a></li>
+        </ul>
+      </div>
+      <div class="sbp-foot__col">
+        <h3 data-t>Контакты</h3>
+        <p><b data-t>Офис на Бали</b>Jl. Petitenget, Seminyak, Bali, Indonesia</p>
+        <p data-t>Поддержка ежедневно 7:00–22:00</p>
+        <ul>
+          <li><a href="mailto:info@sbexcursion.com">info@sbexcursion.com</a></li>
+          <li><a href="tel:+6285333685020">+62 853 3368 5020</a></li>
+        </ul>
+      </div>
+      <div class="sbp-foot__col">
+        <h3 data-t>Популярные туры</h3>
+        <ul>
+          <li><a href="/bali/{L}/tours/nusa-penida-manta-rays-point">Manta Rays Tour</a></li>
+          <li><a href="/bali/{L}/tours/ubud-highlights-tour">Ubud Highlights</a></li>
+          <li><a href="/bali/{L}/tours/mount-batur-sunrise-hike">Mount Batur Hike</a></li>
+          <li><a href="/bali/{L}/tours/nusa-penida-west-tour">Nusa Penida West</a></li>
+        </ul>
+      </div>
+      <div class="sbp-foot__col">
+        <h3 data-t>Написать нам</h3>
+        <ul>
+          <li><a href="https://wa.me/6285333685020?text=Hello!%20I%27m%20interested%20in%20your%20excursions.%20Could%20you%20help%20me%20with%20the%20booking%20details%3F" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://t.me/SurfBase" target="_blank" rel="noopener">Telegram</a></li>
+          <li><a href="https://www.instagram.com/dubai_sb_excursions" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sbp-foot__bottom">
+      <span data-t>© 2021–2026 SB Excursions. Сделано для приключений на Бали</span>
+      <span>Jl. Petitenget, Seminyak, Bali</span>
+    </div>
+  </div>
+</footer>
+<script>
+  /* Подставляем язык в шаблонные пути футера. Значение берём из адреса —
+     тем же способом, что и сам планировщик. */
+  (function () {
+    var m = location.search.match(/[?&]lang=(en|ru|zh|es|fr)(?:&|$)/);
+    var lang = m ? m[1] : "ru";
+    document.querySelectorAll('.sbp-foot a[href*="{L}"]').forEach(function (a) {
+      a.setAttribute("href", a.getAttribute("href").replace("{L}", lang));
+    });
+  })();
+</script>
+
+<script src="/ai-planner/vendor/leaflet/leaflet.js"></script>
   <script src="/ai-planner/js/data.js?v=20260729"></script>
-  <script src="/ai-planner/js/i18n.js?v=a1d2496b"></script>
+  <script src="/ai-planner/js/i18n.js?v=1a1fceda"></script>
   <script src="/ai-planner/js/app.js?v=20260730e"></script>
 </body>
 </html>
