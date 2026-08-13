@@ -10374,6 +10374,44 @@ const JOURNAL_SEO_GUIDES = [
     ],
     "sections": [
       {
+        "heading": "The three Ubud formats at a glance",
+        "paragraphs": [
+          "All three collect from Ubud hotels and put you back by late morning. The difference is what you do once you get there, and how early the driver knocks:"
+        ],
+        "table": {
+          "headers": [
+            "Format",
+            "Price",
+            "Pickup",
+            "Physical effort",
+            "How the morning finishes"
+          ],
+          "rows": [
+          [
+            "Sunrise Jeep Tour",
+            "From $60",
+            "Night or pre-dawn",
+            "None — the 4x4 reaches the viewpoint",
+            "Across the black lava fields, then home"
+          ],
+          [
+            "Jeep and Hot Spring",
+            "From $75",
+            "Around 02:00-03:30",
+            "None",
+            "A soak in the natural springs beside Lake Batur"
+          ],
+          [
+            "Guided Sunrise Hike",
+            "From $35",
+            "01:30-03:00",
+            "1.5-2 hours uphill in the dark, around 700 m of ascent",
+            "The summit itself, then down on foot in daylight"
+          ]
+          ]
+        }
+      },
+      {
         "heading": "What time you leave Ubud for the sunrise",
         "paragraphs": [
           "**Sunrise tours pick up in Ubud between 01:30 and 03:30**, and the exact slot depends on how you go up. The guided hike collects guests between **01:30 and 03:00**, because you need roughly two hours on the trail before first light. The jeep formats pick up later, around **02:00-03:30**, since the 4x4 covers most of the distance for you. Your exact time is confirmed on WhatsApp the day before, calculated from that week's sunrise and where in Ubud you stay. The drive to Kintamani takes **60-90 minutes** at that hour — the roads are empty, so the spread comes from hotel location rather than traffic. Sunrise itself lands between roughly **06:00 and 06:30 all year**, and the light show usually starts 20-30 minutes before the sun clears the horizon.",
@@ -10522,6 +10560,41 @@ const JOURNAL_SEO_GUIDES = [
       }
     ],
     "sections": [
+      {
+        "heading": "Mount Batur from the south at a glance: the night, format by format",
+        "paragraphs": [
+          "From Seminyak, Canggu, Kuta or Nusa Dua the drive north runs 1.5-2.5 hours each way, and the pickup lands a full hour earlier than it does for guests in Ubud. That extra hour is what should decide your format:"
+        ],
+        "table": {
+          "headers": [
+            "Format",
+            "Price",
+            "Pickup time",
+            "What this night demands"
+          ],
+          "rows": [
+          [
+            "Mount Batur Sunrise Jeep Tour",
+            "From $60, 6-8 hours",
+            "Night or pre-dawn",
+            "The least brutal option: you sleep both drive legs and spend your energy on nothing but the view"
+          ],
+          [
+            "Sunrise Jeep and Hot Spring",
+            "From $75, 6-8 hours",
+            "Around 02:00-03:30",
+            "The same jeep sunrise, ending in the lakeside springs — the best reset before the drive home"
+          ],
+          [
+            "Mount Batur Sunrise Hike",
+            "From $35, 5-8 hours",
+            "01:30-03:00, the earliest window of the three",
+            "Roughly two hours of climbing in the dark stacked on top of the longest drive on the menu"
+          ]
+          ],
+          "note": "Whichever you pick, plan nothing for that afternoon except the pool, and cap any nap at about 90 minutes so the next night's sleep survives."
+        }
+      },
       {
         "heading": "Is Mount Batur realistic from Seminyak, Canggu or Nusa Dua?",
         "paragraphs": [
@@ -11236,6 +11309,58 @@ const JOURNAL_SEO_GUIDES = [
     ],
     "sections": [
       {
+        "heading": "Mount Batur risks at a glance: how real, how to avoid, what to do",
+        "paragraphs": [
+          "Every risk below is specific rather than dramatic, and each one has a known answer. Times refer to the guided sunrise hike, which is where all of them apply:"
+        ],
+        "table": {
+          "headers": [
+            "Risk",
+            "When you meet it",
+            "How to avoid it",
+            "What to do if it happens"
+          ],
+          "rows": [
+          [
+            "Loose volcanic scree",
+            "The final stretch up, then the whole descent in daylight",
+            "Shoes with real tread; short, slow steps on the way down",
+            "The surface behaves like ball bearings — shorten your stride rather than brace against it"
+          ],
+          [
+            "Cold and wind at the top",
+            "The 30-60 minute wait at 1,717 m after you arrive sweating",
+            "Fleece plus a windproof shell, and a hat",
+            "The most common complaint guides hear, and the easiest to prevent — it fades once the sun is up"
+          ],
+          [
+            "A slippery trail in the wet season",
+            "November to March, on the upper section after overnight rain",
+            "Book April to October, or take the jeep instead",
+            "Guides still climb most mornings and cancel only in genuinely bad weather — that call is theirs"
+          ],
+          [
+            "Climbing in the dark",
+            "Pickup 01:30-03:00; the entire climb happens before first light",
+            "A headlamp, and staying behind the guide",
+            "In practice the least dangerous part: the pace is slow and guides know every fork"
+          ],
+          [
+            "Being less fit than you thought",
+            "1.5-2 hours of steady uphill, around 700 m of ascent",
+            "Judge it as a long stair session, not a mountaineering day",
+            "If stairs leave you winded or your knees complain downhill, book the jeep from $60"
+          ],
+          [
+            "Crowds on the trail",
+            "July, August and around New Year, at the narrow upper section",
+            "Ask for the earlier end of the 01:30-03:00 pickup window",
+            "Crowds make the climb slower, not more dangerous — the danger is overtaking on scree"
+          ]
+          ]
+        }
+      },
+      {
         "heading": "Is Mount Batur actually dangerous?",
         "paragraphs": [
           "No — climbed with a local guide, Mount Batur is one of the most forgiving volcano hikes in Indonesia, and the injuries that do happen are almost all minor: **rolled ankles and scraped palms on the loose descent**. The mountain is an active volcano, which sounds alarming, but activity is monitored continuously and tours simply stop running if the status changes. Terrain and weather, not the volcano itself, are what deserve your attention. The pattern behind most bad mornings is predictable — wrong shoes, no warm layer, rushing the descent — which is why this guide spends more time on scree and jackets than on eruption talk. For how Batur compares with its taller, harder neighbour, see our [Mount Batur vs Mount Agung](/bali/en/journal/mount-batur-vs-mount-agung) comparison.",
@@ -11315,7 +11440,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "Is the Mount Batur jeep tour safe?",
-        "answer": "Yes. The 4x4s are driven by locals who run the volcano track daily, and the ride replaces the entire climb — you step out at a sunrise viewpoint with no walking on scree. From $75, it is the sensible choice for bad knees, young children, or anyone who wants the view without the pre-dawn hike."
+        "answer": "Yes. The 4x4s are driven by locals who run the volcano track daily, and the ride replaces the entire climb — you step out at a sunrise viewpoint with no walking on scree. From $60, it is the sensible choice for bad knees, young children, or anyone who wants the view without the pre-dawn hike."
       }
     ]
   },
@@ -11390,6 +11515,61 @@ const JOURNAL_SEO_GUIDES = [
       }
     ],
     "sections": [
+      {
+        "heading": "Batur and Agung side by side: the numbers that decide it",
+        "paragraphs": [
+          "The two volcanoes are not variations of the same morning. The gap in height, effort and access is what makes Batur the right choice for almost everyone:"
+        ],
+        "table": {
+          "headers": [
+            "",
+            "Mount Batur",
+            "Mount Agung"
+          ],
+          "rows": [
+          [
+            "Summit height",
+            "1,717 m",
+            "3,031 m — Bali's highest and most sacred"
+          ],
+          [
+            "Height you climb",
+            "Around 700 m",
+            "Close to 2,000 m"
+          ],
+          [
+            "How long the climb takes",
+            "About 2 hours up, 1.5 down",
+            "5-7 hours up via Besakih"
+          ],
+          [
+            "Total time on your feet",
+            "5-8 hours door to door",
+            "10-12 hours"
+          ],
+          [
+            "Is there a road to the top",
+            "A 4x4 track reaches a sunrise viewpoint",
+            "None — the only way up is on foot"
+          ],
+          [
+            "If someone in the group cannot hike",
+            "Can ride up while others climb",
+            "No option at all"
+          ],
+          [
+            "Trail closures",
+            "Rarely",
+            "Around temple ceremonies"
+          ],
+          [
+            "Do we offer it",
+            "Yes — hike from $35, jeep from $60, jeep with hot spring from $75",
+            "No"
+          ]
+          ]
+        }
+      },
       {
         "heading": "Mount Batur is the right volcano for 95% of travelers",
         "paragraphs": [
@@ -20741,6 +20921,46 @@ const JOURNAL_SEO_GUIDES = [
     ],
     "sections": [
       {
+        "heading": "Your options on Mount Batur at a glance",
+        "paragraphs": [
+          "The trailhead is managed by the local guide association, and solo hikers are regularly turned around. That leaves five realistic ways to see the volcano, and only one of them is a problem:"
+        ],
+        "table": {
+          "headers": [
+            "Option",
+            "Is a guide required",
+            "Price",
+            "What you get"
+          ],
+          "rows": [
+          [
+            "Guided sunrise hike",
+            "Included in the price",
+            "From $35, 5-8 hours",
+            "The summit before first light, 1.5-2 hours up, guide who knows the safe lines on the scree"
+          ],
+          [
+            "Sunrise jeep to the viewpoint",
+            "No climbing at all — a driver, not a guide",
+            "From $60, 6-8 hours",
+            "The same caldera sunrise from a 4x4 viewpoint, no scree"
+          ],
+          [
+            "Jeep with hot spring",
+            "No climbing at all",
+            "From $75, 6-8 hours",
+            "The jeep sunrise plus a soak beside Lake Batur"
+          ],
+          [
+            "Setting off up the trail alone",
+            "This is the option that fails",
+            "—",
+            "The path forks repeatedly in the dark and the association turns solo walkers around"
+          ]
+          ]
+        }
+      },
+      {
         "heading": "The rule on Mount Batur in 2026",
         "paragraphs": [
           "There is no national park gate on Mount Batur, no permit desk and no ranger checking tickets, which is why so many older blog posts tell you to just walk up. On the ground it works differently. The trails out of the lakeside villages below the crater are run by the local guide association, and its members are at the trailheads through the entire pre-dawn window. Turn up at 03:00 with a headlamp and no guide and you will be stopped, talked to, and sent back down the road. A few people argue their way through. Most end up hiring a guide anyway, an hour late and in a worse mood.",
@@ -21046,6 +21266,58 @@ const JOURNAL_SEO_GUIDES = [
       }
     ],
     "sections": [
+      {
+        "heading": "Worth it or not, by who is asking",
+        "paragraphs": [
+          "The honest answer depends less on the volcano than on you. Find the row that matches your situation:"
+        ],
+        "table": {
+          "headers": [
+            "Your situation",
+            "Our answer",
+            "The better option",
+            "Why"
+          ],
+          "rows": [
+          [
+            "You walk regularly and sleep early the night before",
+            "Worth it",
+            "The hike, from $35",
+            "Two hours uphill is a long stair session, and the summit is the payoff you came for"
+          ],
+          [
+            "Your knees complain on descents",
+            "Not the hike",
+            "The jeep, from $60",
+            "The descent on scree is where people struggle, and the jeep removes it entirely"
+          ],
+          [
+            "You are travelling with small children",
+            "Not the hike",
+            "The jeep, from $60",
+            "Kids doze through the drive and step out at the viewpoint"
+          ],
+          [
+            "A broken night would ruin the next day",
+            "Think again",
+            "A daytime Kintamani route",
+            "Pickup falls between 01:30 and 03:30 whichever format you choose"
+          ],
+          [
+            "You want the volcano and a warm finish",
+            "Worth it",
+            "Jeep with hot spring, from $75",
+            "After standing in wind at first light, warm water beats anything else on the menu"
+          ],
+          [
+            "Your dates fall November to March",
+            "Worth it with a backup",
+            "Any format, plus a spare morning",
+            "Cloud can swallow the view; guides still run on most mornings"
+          ]
+          ]
+        }
+      },
       {
         "heading": "The honest answer: worth it for some people, genuinely not for others",
         "paragraphs": [
@@ -21530,6 +21802,41 @@ const JOURNAL_SEO_GUIDES = [
       }
     ],
     "sections": [
+      {
+        "heading": "Sunrise or sunset on Mount Batur, factor by factor",
+        "paragraphs": [
+          "We run three sunrise formats and no sunset trips at all. This is the reasoning laid out rather than asserted:"
+        ],
+        "table": {
+          "headers": [
+            "Factor",
+            "At sunrise",
+            "At sunset"
+          ],
+          "rows": [
+          [
+            "The direction the crater rim faces",
+            "East, across Lake Batur toward Mount Agung — the sun comes up behind the cone",
+            "The light is behind you, and the caldera falls into shadow"
+          ],
+          [
+            "The descent",
+            "In full daylight, after the sun is up",
+            "In darkness on loose scree, which is the part nobody pictures"
+          ],
+          [
+            "Cloud cover",
+            "Cleared overnight; April to October is dependable",
+            "Builds through the afternoon over the highlands"
+          ],
+          [
+            "Tours we offer",
+            "Hike from $35, jeep from $60, jeep with hot spring from $75",
+            "Nothing — we send sunset guests to the coast instead"
+          ]
+          ]
+        }
+      },
       {
         "heading": "Why Mount Batur works at sunrise and not at sunset",
         "paragraphs": [
@@ -23881,6 +24188,58 @@ const JOURNAL_SEO_GUIDES = [
       }
     ],
     "sections": [
+      {
+        "heading": "Ubud to Mount Batur: the night hour by hour",
+        "paragraphs": [
+          "Ubud to the foot of the volcano is about 90 minutes, and at half past two the road is empty enough that the drive runs close to the mark. Here is where each hour goes on the guided hike:"
+        ],
+        "table": {
+          "headers": [
+            "Stage",
+            "Clock",
+            "What is happening",
+            "Why the timing is what it is"
+          ],
+          "rows": [
+          [
+            "Pickup in Ubud",
+            "Around 02:30",
+            "Driver collects you at the hotel gate",
+            "Ubud is the closest base — Canggu, Seminyak and Kuta start a full hour earlier"
+          ],
+          [
+            "The drive north",
+            "02:30-04:00",
+            "About 90 minutes on empty road",
+            "The same drive in daytime traffic takes noticeably longer"
+          ],
+          [
+            "Trailhead",
+            "Around 04:00",
+            "Head torches, shoes and a head count with your guide",
+            "Leaves enough margin to climb slowly rather than in a hurry"
+          ],
+          [
+            "The ascent",
+            "04:00-06:00",
+            "1.5-2 hours of steady uphill in the dark",
+            "Guides pace the group off the slowest walker"
+          ],
+          [
+            "Summit",
+            "Roughly 06:00-06:30",
+            "Sunrise over the caldera",
+            "Sunrise lands in that window all year this close to the equator"
+          ],
+          [
+            "Descent and home",
+            "From 06:30",
+            "Down in full daylight, back in Ubud by mid-morning",
+            "The whole day is 5-8 hours door to door, so the afternoon survives"
+          ]
+          ]
+        }
+      },
       {
         "heading": "How long Ubud to Mount Batur really takes",
         "paragraphs": [
