@@ -28628,6 +28628,1275 @@ const JOURNAL_SEO_GUIDES = [
       }
     ]
   },
+  {
+    "slug": "where-is-mount-batur",
+    "badge": "Travel guide",
+    "navLabel": "Where is Mount Batur",
+    "cardTourLabel": "Sunrise jeep to the caldera rim",
+    "heroTourSlug": "mount-batur-sunrise-jeep-tour",
+    "relatedTourSlugs": [
+      "mount-batur-sunrise-hike",
+      "mount-batur-sunrise-jeep-hot-spring",
+      "private-car-with-driver-bali"
+    ],
+    "inlineStats": [
+      "Summit at 1,717 m",
+      "About 90 min from Ubud",
+      "Sunrise at 06:00-06:30 all year"
+    ],
+    "title": "Where Is Mount Batur? Location, Nearest Town and Airport",
+    "description": "Mount Batur is in Kintamani, northeast Bali — about 90 min from Ubud, 1.5-2.5 h from the south coast. Nearest airport is DPS; everyone drives.",
+    "excerpt": "Mount Batur is in the Kintamani area, in the highlands of northeast Bali, about 90 minutes' drive from Ubud and 1.5 to 2.5 hours from the southern beach resorts. The volcano stands inside a vast caldera that also holds Lake Batur, and the public rim road on the Penelokan side gives the classic daytime view for free. There is no airport near the volcano: Bali's only airport is DPS, Ngurah Rai, in the far south near Kuta and Jimbaran, so every visitor arrives by road. That geography shapes the whole sunrise routine — pickups run between roughly 01:30 and 02:30 depending on your hotel area, the outbound drive happens on empty roads, and the return comes back in daytime traffic. This guide puts the mountain on the map, gives the drive time from every major hotel area, and names the pickup time that goes with each.",
+    "rankings": [
+      {
+        "name": "Ubud — the closest common base",
+        "imageSrc": "/images/places/mount-batur-sunrise-trek.jpg",
+        "area": "About 90 minutes one way",
+        "bestFor": "The latest sunrise pickup on the island",
+        "summary": "Ubud sits between the southern coast and the highlands, which makes it the shortest run to the volcano: about 90 minutes one way, with sunrise pickups around 02:30 — the latest on the island. If Mount Batur is the main reason for your trip, basing yourself in Ubud buys you a full extra hour of sleep compared with the beach areas."
+      },
+      {
+        "name": "Sanur — the middle option",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-hike.jpg",
+        "area": "Roughly 1.5 to 2 hours one way",
+        "bestFor": "A beach base without the longest drive",
+        "summary": "Sanur sits between Ubud and the other beach areas in driving terms: roughly 1.5 to 2 hours each way, with sunrise pickups between 01:30 and 02:00. It is the compromise — you keep the coast and the calm seafront, and pay for it with an alarm that rings earlier than in Ubud but later than in Canggu or Uluwatu."
+      },
+      {
+        "name": "Seminyak, Canggu and Kuta",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
+        "area": "1.5 to 2.5 hours one way",
+        "bestFor": "One volcano morning inside a beach holiday",
+        "summary": "Seminyak, Canggu and Kuta are 1.5 to 2.5 hours from the volcano one way, and sunrise pickup runs around 01:30 — a full hour earlier than from Ubud. In practice most guests sleep through the outbound drive on empty roads. If your holiday is based on this coast, one early night buys the volcano morning without moving hotels."
+      },
+      {
+        "name": "Nusa Dua, Jimbaran and Uluwatu",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg",
+        "area": "Top of the 1.5 to 2.5 hour range",
+        "bestFor": "Travellers who accept the longest night drive",
+        "summary": "Nusa Dua, Jimbaran and Uluwatu sit at the top of the 1.5 to 2.5 hour range, with pickup around 01:30 or slightly earlier — the longest night on the menu. The upside is that nothing else changes: the trip stays private, the car comes to your hotel door, and the return delivers you back in time for an afternoon by the pool."
+      },
+      {
+        "name": "Kintamani — the rim itself",
+        "imageSrc": "/images/places/mount-batur-jeep.jpg",
+        "area": "Caldera rim, northeast highlands",
+        "bestFor": "Seeing the volcano with no night drive at all",
+        "summary": "Kintamani is the highland area on the caldera rim, so it is less a base than the destination itself. The public rim road on the Penelokan side has the classic daytime view across Lake Batur for free. With a private car and driver from $59 per car, you can visit the rim in daylight with no alarm clock involved at all."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "How far is Mount Batur from every hotel area",
+        "paragraphs": [
+          "Mount Batur is in the Kintamani area of northeast Bali, and there is no shortcut through the geography: whichever coast you stay on, the volcano is reached by road. The table below gives the one-way drive time and the matching sunrise pickup time for each major hotel area. Every figure is a time on the road, because on Bali's mountain roads minutes matter far more than distance."
+        ],
+        "table": {
+          "headers": [
+            "Hotel area",
+            "Time on the road, one way",
+            "Sunrise pickup time",
+            "Practical note"
+          ],
+          "rows": [
+            [
+              "Ubud",
+              "About 90 minutes",
+              "Around 02:30",
+              "The closest common base; the latest pickup on the island"
+            ],
+            [
+              "Sanur",
+              "Roughly 1.5 to 2 hours",
+              "01:30 to 02:00",
+              "Sits between Ubud and the beach areas in driving terms"
+            ],
+            [
+              "Seminyak, Canggu, Kuta",
+              "1.5 to 2.5 hours",
+              "Around 01:30",
+              "Pickup a full hour earlier than from Ubud"
+            ],
+            [
+              "Nusa Dua, Jimbaran, Uluwatu",
+              "Top of the 1.5 to 2.5 hour range",
+              "Around 01:30 or slightly earlier",
+              "The longest night drive of any hotel area"
+            ],
+            [
+              "Ngurah Rai Airport (DPS) area",
+              "1.5 to 2.5 hours",
+              "Around 01:30",
+              "Bali's only airport, in the far south near Kuta and Jimbaran"
+            ]
+          ],
+          "note": "At around 02:00 the roads are empty, so the outbound leg is the fastest drive of the whole trip. The return runs in daytime traffic and takes longer."
+        }
+      },
+      {
+        "heading": "Where Mount Batur sits on the Bali map",
+        "paragraphs": [
+          "Find Kintamani on a Bali map and you have found the volcano: Mount Batur rises in the highlands of the island's northeast, inside a vast caldera left by ancient eruptions. The caldera floor holds Lake Batur, and the crater rim faces east across the water toward Mount Agung, Bali's highest volcano; on clear mornings Mount Rinjani on Lombok shows on the horizon behind it. The summit stands at **1,717 m**, and mist often sits over the lake at first light. Our [Kintamani viewpoint and Lake Batur](/bali/en/journal/kintamani-viewpoint-and-lake-batur) guide covers the daytime side of the caldera in detail.",
+          "Mount Batur is an active volcano. The last eruption was in **2000**, and the major eruptions of **1917** and **1926** destroyed the old village at its foot, which was rebuilt up on the caldera rim. Since **2012** the caldera has been a UNESCO Global Geopark — Indonesia's first — and the mountain is monitored continuously. The black lava fields from those eruptions still cover the lower slopes; the sunrise jeep route crosses them, and you can step out and walk on the solidified flows.",
+          "For the daytime view you do not need a tour at all: the public rim road on the Penelokan side has the classic panorama for free. Sunrise is the reason people come up in the dark — it falls between **06:00 and 06:30** all year, watched either from the summit after a guided walk of **1.5 to 2 hours** up about **700 m** of ascent, or from a crater-rim viewpoint reached by 4x4 with no climbing."
+        ]
+      },
+      {
+        "heading": "The nearest airport is DPS — and everyone drives",
+        "paragraphs": [
+          "Bali has exactly one airport: DPS, Ngurah Rai International, in the far south of the island near Kuta and Jimbaran. There is no airport near the volcano, so every visitor reaches Mount Batur by road. If you land at DPS and head straight for the highlands, the one-way drive sits in the same **1.5 to 2.5 hour** band as the southern resorts.",
+          "The night timing works in your favour. At around **02:00** the roads are empty and the outbound leg is the fastest drive of the whole trip; the return runs in daytime traffic and takes longer. We have route-by-route breakdowns for the three most common bases: [Ubud to Mount Batur](/bali/en/journal/ubud-to-mount-batur), [Canggu to Mount Batur](/bali/en/journal/canggu-to-mount-batur) and [Seminyak to Mount Batur](/bali/en/journal/seminyak-to-mount-batur).",
+          "All of our Mount Batur trips are private and include hotel pickup and return from any of the areas in the table: the sunrise hike from **$35**, the sunrise jeep from **$60** and the jeep with a hot-spring finish from **$75**. There is no prepayment — you confirm on WhatsApp and pay on the day. For a daytime Kintamani visit, a private car with driver runs from **$59** per car."
+        ]
+      },
+      {
+        "heading": "Choosing a base when the volcano is the priority",
+        "paragraphs": [
+          "If Mount Batur anchors your itinerary, Ubud is the practical choice: **about 90 minutes** one way and a pickup around **02:30**, the latest on the island. Ubud is also the closest major base to the rest of the highlands, so pairing the volcano with a daytime Kintamani or rice-terrace day is straightforward.",
+          "From the beach areas the trip needs nothing more than an early alarm: pickup around **01:30** from Seminyak, Canggu and Kuta, and around 01:30 or slightly earlier from Nusa Dua, Jimbaran and Uluwatu. Because sunrise falls between **06:00 and 06:30** all year round, these pickup times barely move with the seasons — the full timing logic is in [what time to leave for Mount Batur sunrise](/bali/en/journal/what-time-to-leave-for-mount-batur-sunrise).",
+          "There is no wrong answer here, only more or less sleep. Whichever area you choose, the car comes to your hotel door, and the mountain stays exactly where it has always been: above Kintamani, in the northeast, one night drive away."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Where is Mount Batur located in Bali?",
+        "answer": "Mount Batur is in the Kintamani area, in the highlands of northeast Bali. The volcano stands inside a large caldera that also holds Lake Batur, and the summit reaches 1,717 m. In driving terms it is about 90 minutes from Ubud and 1.5 to 2.5 hours from southern beach areas such as Seminyak, Kuta and Uluwatu."
+      },
+      {
+        "question": "What is the nearest town to Mount Batur?",
+        "answer": "The nearest town area is Kintamani, spread along the caldera rim above the volcano. The public rim road on the Penelokan side gives the classic daytime view across Lake Batur for free. The nearest major tourist base is Ubud, about 90 minutes away by road, which is why Ubud gets the latest sunrise pickups, around 02:30."
+      },
+      {
+        "question": "What is the nearest airport to Mount Batur?",
+        "answer": "Bali's only airport is DPS, Ngurah Rai International, in the far south of the island near Kuta and Jimbaran. There is no airport near the volcano, so every visitor reaches Mount Batur by road. From the airport area the one-way drive sits in the same 1.5 to 2.5 hour band as the southern beach resorts."
+      },
+      {
+        "question": "How far is Mount Batur from Ubud?",
+        "answer": "About 90 minutes one way, which makes Ubud the closest common base for the volcano. Sunrise pickups from Ubud run around 02:30, the latest on the island. Our private sunrise trips collect from any Ubud hotel: the hike from $35, the 4x4 jeep from $60 and the jeep with hot springs from $75, all with no prepayment."
+      },
+      {
+        "question": "How far is Mount Batur from Seminyak and Canggu?",
+        "answer": "Between 1.5 and 2.5 hours one way, with sunrise pickup around 01:30 — a full hour earlier than from Ubud. At that hour the roads are empty, so the outbound leg is the fastest drive of the trip, while the return runs in daytime traffic and takes longer. Most guests simply sleep through the outbound drive."
+      },
+      {
+        "question": "Can you see Mount Batur without hiking?",
+        "answer": "Yes. The public rim road on the Penelokan side of the caldera has the classic daytime view across Lake Batur for free. At sunrise, the 4x4 jeep tour from $60 drives a separate track to a crater-rim viewpoint with no climbing, then crosses the old black lava fields. A private car with driver from $59 per car covers a daytime Kintamani visit."
+      }
+    ]
+  },
+  {
+    "slug": "nusa-dua-to-mount-batur",
+    "badge": "Travel guide",
+    "navLabel": "Nusa Dua to Batur",
+    "cardTourLabel": "Sunrise from Nusa Dua",
+    "heroTourSlug": "mount-batur-sunrise-jeep-tour",
+    "relatedTourSlugs": [
+      "mount-batur-sunrise-jeep-hot-spring",
+      "mount-batur-sunrise-hike",
+      "private-car-with-driver-bali"
+    ],
+    "inlineStats": [
+      "Collection at about 01:30",
+      "Top of the 1.5-2.5 h range",
+      "Jeep from $60, springs from $75"
+    ],
+    "title": "Nusa Dua to Mount Batur: Distance, Drive Time, Pickup Time",
+    "description": "Nusa Dua to Mount Batur sits at the top of the 1.5-2.5 hour range, with pickup about 01:30. The jeep from $60 lets you sleep both drive legs.",
+    "excerpt": "Nusa Dua to Mount Batur sits at the top of the 1.5-2.5 hour range — the longest transfer of any pickup area we serve — so the sunrise trip collects you at about 01:30, sometimes slightly earlier. We will be honest about what that means: for guests on a relaxed resort schedule, the alarm is the single hardest part of the trip, harder than anything that happens on the volcano. The rest of this guide is about making that number survivable. The jeep tour from $60 converts both drive legs into sleep and replaces the climb with a 4x4 track to the crater rim; the hot spring version from $75 adds a soak in natural lakeside springs as recovery; and at 02:00 the roads out of the south are empty, so the outbound drive is the fastest of the whole trip. Sunrise lands between 06:00 and 06:30 all year. Here is the night, hour by hour.",
+    "rankings": [
+      {
+        "name": "Mount Batur Sunrise Jeep Tour",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
+        "area": "No climbing, from $60",
+        "bestFor": "Turning the longest transfer into two sleeps",
+        "summary": "From Nusa Dua the jeep is less a preference than a strategy. Up to 2.5 hours on the road each way becomes usable sleep in both directions, and the part in between asks nothing of you: the 4x4 climbs its own track to the crater-rim viewpoint, waits through sunrise at 06:00-06:30, then crosses the old black lava fields. It runs 6-8 hours door to door, with a return in the middle of the morning."
+      },
+      {
+        "name": "Mount Batur Sunrise Jeep & Hot Spring",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg",
+        "area": "Jeep and springs, from $75",
+        "bestFor": "Recovery after the shortest night of the holiday",
+        "summary": "The version we point Nusa Dua guests toward most often. Everything the jeep tour does, plus a finish in natural hot springs on the shore of Lake Batur — the difference between arriving back at the resort tired and arriving back feeling that the early start happened to someone else. On the longest transfer on the menu, the recovery step stops being a luxury. It runs 6-8 hours door to door."
+      },
+      {
+        "name": "Mount Batur Sunrise Hike",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-hike.jpg",
+        "area": "On foot, from $35",
+        "bestFor": "Guests who specifically want the summit on foot",
+        "summary": "The full climb still collects from Nusa Dua at about 01:30: around 700 m of ascent over 1.5-2 hours on loose volcanic sand, the 1,717 m summit for a sunrise between 06:00 and 06:30, and roughly 1.5 hours back down in daylight. It is the cheapest format and the most demanding pairing with a resort schedule — choose it because you want the climb itself, not to save the difference in price."
+      },
+      {
+        "name": "Daytime Kintamani by private car",
+        "imageSrc": "/images/places/mount-batur-jeep.jpg",
+        "area": "Daytime alternative, from $59 per car",
+        "bestFor": "Seeing the volcano with no alarm at all",
+        "summary": "The honest fallback for anyone the 01:30 collection genuinely does not fit. A private car with driver, from $59 per car, leaves after breakfast and reaches the public rim road on the Penelokan side, where the classic daytime view over the caldera and Lake Batur is free. No sunrise and no lava fields, but the volcano itself, seen at resort hours."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The night hour by hour from Nusa Dua",
+        "paragraphs": [
+          "Nusa Dua, together with Jimbaran and Uluwatu, sits at the top of the **1.5-2.5 hour** range to the Kintamani area — the longest transfer of any starting point we collect from, which is why the driver arrives at about **01:30** and sometimes slightly earlier. The table below deliberately follows the jeep formats: from this far south, the version where a 4x4 does the climbing and you do the sleeping is the one most resort guests should be looking at. How the southern areas compare with each other is covered in [Mount Batur sunrise from south Bali](/bali/en/journal/mount-batur-sunrise-from-south-bali)."
+        ],
+        "table": {
+          "headers": [
+            "Time of night",
+            "Stage of the trip",
+            "What happens at this stage",
+            "Whether sleep is possible"
+          ],
+          "rows": [
+            [
+              "01:15-01:30",
+              "Collection at your Nusa Dua resort",
+              "The driver messages you on WhatsApp when the vehicle reaches the lobby; Nusa Dua, Jimbaran and Uluwatu are the earliest collections on the island",
+              "Yes — you can sleep from the first minute of the drive"
+            ],
+            [
+              "01:30 to about 04:00",
+              "Time on the road, heading northeast",
+              "Nusa Dua sits at the top of the 1.5-2.5 hour range, but at 02:00 the roads are empty, so this is the fastest driving of the entire trip",
+              "Yes — this is the first of the two drive legs we plan for you to sleep through"
+            ],
+            [
+              "Around 04:00",
+              "Arrival in the Kintamani area",
+              "The 4x4 turns onto its own separate track toward the crater rim, so nobody walks uphill at any point of the night",
+              "No — the track is short but bumpy, and worth being awake for"
+            ],
+            [
+              "04:30-06:30",
+              "Crater-rim viewpoint and sunrise",
+              "The viewpoint faces east across Lake Batur toward Mount Agung; mist often sits over the lake at first light, Rinjani on Lombok shows on clear mornings, and sunrise lands between 06:00 and 06:30 all year",
+              "No — this is the moment the whole schedule was built to reach"
+            ],
+            [
+              "06:30 to about 07:30",
+              "Old black lava fields",
+              "The jeep crosses solidified flows from past eruptions and you step out to walk on the black rock — against the green caldera, this is the visual signature of the trip",
+              "No — this is the part guests photograph most"
+            ],
+            [
+              "From about 07:30, on the $75 version",
+              "Hot springs on the lake shore",
+              "The jeep and hot spring tour ends with a soak in natural lakeside hot springs before the drive south — the recovery step after the shortest night of your holiday",
+              "No, but the warm water does part of what sleep would have done"
+            ],
+            [
+              "Mid-morning",
+              "Return drive and arrival at your resort",
+              "The return runs in normal daytime traffic and is slower than the night drive out; the jeep formats total 6-8 hours door to door, so most guests are back while breakfast is still being served",
+              "Yes — the second planned sleep of the trip"
+            ]
+          ],
+          "note": "This timeline follows the sunrise jeep tour with a collection at about 01:30. The jeep with hot springs collects between 02:00 and 03:30 island-wide, with Nusa Dua at the early end of that window. The sunrise hike uses the same road and adds 1.5-2 hours of climbing from about 04:00, with roughly 1.5 hours back down in daylight."
+        }
+      },
+      {
+        "heading": "The 01:30 driver and the resort schedule, honestly",
+        "paragraphs": [
+          "Nusa Dua runs on the most relaxed schedule on the island: breakfast until late morning, pool, spa, dinner without a clock. The sunrise trip cuts straight across that rhythm, and we would rather say so than let the alarm surprise you. Collection at about **01:30** means the hardest part of the whole excursion happens in your hotel room, before the trip has technically started — on the jeep, nothing that follows is physically demanding, because there is no climbing at any point.",
+          "The way to beat it is to treat the transfer as the second half of the night. Eat early, be in bed by **21:00-22:00**, and you have three to four hours of sleep before the driver messages — then up to **2.5 hours** more on the road, because at 02:00 the roads out of the south are empty and there is nothing to see from the window anyway. Guests who plan the evening this way consistently find the night shorter than it sounded on paper. What the morning itself looks like once you arrive is in [Mount Batur sunrise: what to expect](/bali/en/journal/mount-batur-sunrise-what-to-expect).",
+          "One resort habit to override: packing for the coast. The crater rim before dawn is cold in the way wind is cold — the fix is a fleece and a windproof shell, both of which will feel absurd in the Nusa Dua lobby at 01:30 and correct at the rim while you wait for first light."
+        ]
+      },
+      {
+        "heading": "Jeep from $60, hot spring from $75: the format question",
+        "paragraphs": [
+          "From the closest bases the format is a matter of taste; from Nusa Dua it is a matter of arithmetic. Up to **2.5 hours** of driving each way means the jeep tour from **$60** is the only version where both transfers convert into sleep — the 4x4 climbs a separate track to the crater-rim viewpoint, you watch the sunrise between **06:00 and 06:30**, and afterwards the jeep crosses the old black lava fields, where you can step out and walk on the solidified flows. The full comparison with the climb is in [Mount Batur sunrise: jeep vs hike](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike).",
+          "The strongest case for the **$75** jeep and hot spring version is exactly this route. It is the recovery plan: after the shortest night of your holiday, the morning ends with a soak in natural hot springs on the shore of Lake Batur, and the slow daytime drive south becomes something you doze through rather than endure. How the springs work and what to bring is in the [Mount Batur hot springs guide](/bali/en/journal/mount-batur-hot-springs-guide).",
+          "The hike from **$35** still collects from Nusa Dua, and the summit at **1,717 m** is the same summit. But be honest about the stack: the island's earliest collection, then about **700 m** of ascent on loose volcanic sand starting around 04:00, then roughly **1.5 hours** back down in daylight. It suits guests who want the climb itself; it does not suit guests who mostly want the view and quietly hope the climbing part will take care of itself."
+        ]
+      },
+      {
+        "heading": "The return leg and how booking works",
+        "paragraphs": [
+          "The jeep formats run **6-8 hours** door to door, so a collection at about **01:30** puts you back in Nusa Dua in the middle of the morning — at many resorts, while breakfast is still being served. The return is the slower of the two drives because it runs in normal daytime traffic, and it is also the second planned sleep of the trip: a large share of our guests wake up at their own lobby.",
+          "Every format is private, with hotel pickup and return from any Nusa Dua, Jimbaran or Uluwatu resort included, and there is **no prepayment** — you confirm the details on WhatsApp and pay on the day. If you are deciding between versions, start from the [sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour): from this far south it is the version we would book for ourselves, with the hot spring finish as the upgrade that makes the most sense on the longest transfer on the menu."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What is the distance from Nusa Dua to Mount Batur?",
+        "answer": "We quote the distance in hours, because on Bali's roads time is the honest unit: Nusa Dua sits at the top of the 1.5-2.5 hour range, the longest transfer of any area we collect from. The route crosses the island from the southern peninsula to the Kintamani highlands in the northeast, and the direction matters — the empty night roads out are fast, the daytime return is slower."
+      },
+      {
+        "question": "What time is pickup from Nusa Dua for the Mount Batur sunrise?",
+        "answer": "About 01:30, and sometimes slightly earlier — the earliest collections on the island, shared with Jimbaran and Uluwatu. Sunrise at the crater lands between 06:00 and 06:30 all year, so every schedule works backwards from that fixed point and cannot slip later. Your exact time is confirmed on WhatsApp the day before, and the driver messages when the car is at the lobby."
+      },
+      {
+        "question": "Is Nusa Dua too far for a Mount Batur sunrise trip?",
+        "answer": "No, but it is the starting point where the choice of format matters most. The drive sits at the top of the 1.5-2.5 hour range, so the trip works best in the versions that turn the transfer into sleep: the jeep from $60 with no climbing at all, or the jeep with a hot spring finish from $75. On those, the only demanding moment is the alarm itself."
+      },
+      {
+        "question": "Which Mount Batur tour is best from Nusa Dua?",
+        "answer": "For most resort guests, the jeep with hot springs from $75. The 4x4 removes the climb, both drive legs become sleep, and the soak in natural lakeside springs at the end resets the morning before the slow daytime drive back. The plain jeep tour from $60 is the same trip without the springs; the hike from $35 suits guests who specifically want the summit on foot."
+      },
+      {
+        "question": "What time do you get back to Nusa Dua from Mount Batur?",
+        "answer": "In the middle of the morning. The jeep formats run 6-8 hours door to door, so a collection at about 01:30 returns you between roughly 07:30 and 09:30 — at many resorts, before breakfast service has ended. The hike runs 5-8 hours on the same logic. The return drive is the slow half of the trip because it runs in normal daytime traffic."
+      },
+      {
+        "question": "Is there an airport closer to Mount Batur than the one in south Bali?",
+        "answer": "No. Bali has one airport — DPS, Ngurah Rai, near Kuta and Jimbaran in the south — and there is no airport near the volcano, so every visitor reaches the Kintamani area by road. From Nusa Dua that means accepting the top of the 1.5-2.5 hour range and choosing a format that lets you sleep through as much of it as possible."
+      }
+    ]
+  },
+  {
+    "badge": "Travel guide",
+    "slug": "uluwatu-to-mount-batur",
+    "navLabel": "From Uluwatu",
+    "cardTourLabel": "Batur from Uluwatu",
+    "heroTourSlug": "mount-batur-sunrise-jeep-tour",
+    "relatedTourSlugs": [
+      "mount-batur-sunrise-hike",
+      "mount-batur-sunrise-jeep-hot-spring",
+      "private-car-with-driver-bali"
+    ],
+    "inlineStats": [
+      "1.5-2.5 h drive each way",
+      "Pickup around 01:30",
+      "Sunrise at 06:00-06:30"
+    ],
+    "title": "Uluwatu to Mount Batur: Drive Time and Pickup Times",
+    "description": "Uluwatu to Mount Batur is 1.5-2.5 hours each way, pickup around 01:30. Why we suggest the jeep from $60 or an Ubud overnight — the honest arithmetic.",
+    "excerpt": "The drive from Uluwatu to Mount Batur takes 1.5 to 2.5 hours each way, and sunrise pickup on the Bukit is around 01:30 or slightly earlier — the longest night on our menu. Uluwatu and the wider Bukit peninsula are the farthest common base for the volcano, which stands in the Kintamani highlands of northeast Bali. The consolation: at 02:00 the roads are empty, the outbound leg is the fastest drive of the whole trip, and most guests sleep through it. This is also the one area where we most often suggest either the sunrise jeep, which involves no climbing so you can sleep both drive legs, or spending the previous night in Ubud, where pickup relaxes to about 02:30. Surfers on a dawn-patrol schedule tend to shrug at the alarm; everyone else should read the hour-by-hour table below before deciding.",
+    "rankings": [
+      {
+        "name": "Sunrise Jeep Tour straight from Uluwatu",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
+        "area": "Kintamani, from $60",
+        "bestFor": "Sleeping through both drive legs",
+        "summary": "Our default suggestion from the Bukit. There is no climbing: the 4x4 drives a separate track to a crater-rim viewpoint, then crosses the old black lava fields. Because your legs are not needed at the top, you can sleep on the way up and again on the way home — and the two drives are exactly where an Uluwatu start hurts most. From $60, 6-8 hours."
+      },
+      {
+        "name": "Overnight in Ubud, then the hike",
+        "imageSrc": "/images/places/mount-batur-sunrise-trek.jpg",
+        "area": "Ubud, about 90 minutes from Batur",
+        "bestFor": "The most sleep before a climb",
+        "summary": "Move to Ubud the evening before and the transfer shrinks to about 90 minutes, with pickup around 02:30 — the latest on the island. Compared with a 01:30 start from the Bukit that is close to an extra hour in bed, which matters when about 700 m of ascent is waiting. A sensible plan if Ubud was on your itinerary anyway."
+      },
+      {
+        "name": "Sunrise Hike straight from Uluwatu",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-hike.jpg",
+        "area": "Kintamani, from $35",
+        "bestFor": "Surfers already keeping dawn hours",
+        "summary": "The full version: pickup around 01:30, a night drive, then 1.5-2 hours up loose volcanic sand to the 1,717 m summit. Dawn-patrol surfers already wake in the dark, so the alarm is a difference of degree rather than kind. From $35; the tour runs 5-8 hours door to door and Uluwatu sits at the very top of that range."
+      },
+      {
+        "name": "Jeep and Hot Spring for the recovery",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg",
+        "area": "Kintamani and Lake Batur, from $75",
+        "bestFor": "Ending the long day gently",
+        "summary": "The jeep morning plus a soak in natural hot springs on the lakeshore before the drive south. After the shortest night of your holiday, warm water ahead of a 1.5-2.5 hour return leg is an easy sell. Pickup runs 02:00-03:30 across the island, so from Uluwatu plan for the early end of any window. From $75, 6-8 hours."
+      },
+      {
+        "name": "Daytime Kintamani by private car instead",
+        "imageSrc": "/images/places/mount-batur-jeep.jpg",
+        "area": "Penelokan rim road, Kintamani",
+        "bestFor": "Seeing the volcano without a night start",
+        "summary": "If the alarm is a dealbreaker, skip sunrise entirely: the public rim road on the Penelokan side has the classic daytime view across the caldera and Lake Batur for free. A private car with driver, from $59 per car, turns it into an unhurried day trip from Uluwatu with lunch at normal hours and no night driving at all."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The night hour by hour from Uluwatu",
+        "paragraphs": [
+          "The Bukit peninsula is the southern tip of Bali and Mount Batur stands in the highlands of the northeast, so this trip crosses most of the island in the dark. The timeline below follows the sunrise hike, which has the earliest start; the jeep versions keep a similar night but replace the climb with a drive up a separate 4x4 track to the crater rim."
+        ],
+        "table": {
+          "headers": [
+            "Time of night",
+            "What happens at this hour",
+            "Where you are"
+          ],
+          "rows": [
+            [
+              "01:15",
+              "Alarm, warm layer on, shoes and water checked",
+              "Your hotel on the Bukit"
+            ],
+            [
+              "01:30",
+              "Driver arrives; pickup from Uluwatu runs around 01:30 or slightly earlier",
+              "Your hotel on the Bukit"
+            ],
+            [
+              "01:30-03:45",
+              "Night drive across the island on empty roads, 1.5-2.5 hours; most guests sleep",
+              "The road northeast to Kintamani"
+            ],
+            [
+              "03:45-04:15",
+              "Arrival at the trailhead, meeting the guide from the local association, headlamps on",
+              "Trailhead in the Kintamani area"
+            ],
+            [
+              "04:15-06:00",
+              "Ascent of about 700 m at a guided pace, 1.5-2 hours, upper section on loose volcanic sand",
+              "The summit trail"
+            ],
+            [
+              "06:00-06:30",
+              "Sunrise across Lake Batur towards Mount Agung, with Rinjani on the horizon on clear mornings; 30-60 minutes at the top, cold in the wind",
+              "The summit, 1,717 m"
+            ],
+            [
+              "06:30-08:00",
+              "Descent in daylight, about 1.5 hours",
+              "The summit trail, downhill"
+            ],
+            [
+              "08:00 onwards",
+              "Return drive in daytime traffic, slower than the night run; back on the Bukit late morning",
+              "The road south to Uluwatu"
+            ]
+          ],
+          "note": "Times are indicative and assume the sunrise hike. Exact pickup is confirmed the evening before and depends on where you stay — Uluwatu, Jimbaran and Nusa Dua all sit in the same 1.5-2.5 hour band."
+        }
+      },
+      {
+        "heading": "Why we usually point Uluwatu guests to the jeep",
+        "paragraphs": [
+          "From the Bukit the drive is the same **1.5-2.5 hours** each way whichever format you pick, so the real question is what happens in between. On the hike, you climb about **700 m** on loose volcanic sand after two or three hours in a car and before two or three more. On the [sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) there is no climbing at all: the 4x4 takes a separate track to a crater-rim viewpoint, then crosses the old black lava fields left by past eruptions, and you can step out and walk on them.",
+          "That difference decides how the night feels. Hikers need to be awake and moving by roughly 04:00; jeep guests can sleep on the drive up, watch the sunrise, wander the lava fields, and sleep again on the drive home. When guests message us from the Bukit, the jeep from **$60** is the option we suggest first — not because the hike is bad, but because the freedom to sleep both legs is worth more the farther south you start. The full comparison lives in [jeep vs hike](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike)."
+        ]
+      },
+      {
+        "heading": "The Ubud overnight, and the surfer exception",
+        "paragraphs": [
+          "The other fix is to move the night rather than change the format. Sleep in Ubud the evening before and the transfer shrinks to about **90 minutes**, with pickup around **02:30** — the latest on the island. Against a **01:30** start from the Bukit, that is close to an extra hour of sleep before the same mountain. We set out the full overnight logic in [sunrise from South Bali](/bali/en/journal/mount-batur-sunrise-from-south-bali), and the Ubud-side details in [Ubud to Mount Batur](/bali/en/journal/ubud-to-mount-batur).",
+          "The exception is the surf crowd, which in Uluwatu is most people. If your holiday already runs on dawn patrol, a 01:15 alarm is a difference of degree, not kind: you keep early hours, you nap at midday, and the forecast dictates your schedule anyway. Plenty of surfers simply slot the volcano into a small-swell day, take the hike straight from the Bukit, and treat the pre-dawn drive north as a lie-in on wheels."
+        ]
+      },
+      {
+        "heading": "Prices, booking and the slower drive home",
+        "paragraphs": [
+          "Budget extra patience for the way home. Outbound at **02:00** the island is empty and the drive is the fastest of the whole trip; the return runs in daytime traffic and is slower, so write off the early afternoon for a shower, food and a nap rather than plans. Sunrise itself is reliable at **06:00-06:30** all year, and the 30-60 minute summit wait is windy and cold even though you booked from a beach — pack the warm layer, and see [what to wear](/bali/en/journal/what-to-wear-mount-batur-sunrise) for the full list.",
+          "All three formats include hotel pickup and return from Uluwatu and the rest of the Bukit at no extra charge: the hike from **$35**, the jeep from **$60**, the jeep with hot springs from **$75**, all private. Booking runs over WhatsApp with no prepayment — you confirm in chat and pay on the day. Tell us where you are staying and we confirm your exact pickup time the evening before, since Uluwatu, Jimbaran and Nusa Dua each sit at slightly different points on the road north."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How long is the drive from Uluwatu to Mount Batur?",
+        "answer": "Between 1.5 and 2.5 hours each way — Uluwatu and the Bukit peninsula sit at the top of Bali's range, because the volcano stands in the Kintamani highlands in the northeast. The outbound leg at around 02:00 runs on empty roads and is the fastest drive of the trip; the daytime return is noticeably slower."
+      },
+      {
+        "question": "What time is pickup in Uluwatu for the Mount Batur sunrise hike?",
+        "answer": "Around 01:30, sometimes slightly earlier, depending on where exactly you stay on the Bukit. That is the earliest pickup on the island — a full hour before Ubud's roughly 02:30 — because the drive takes 1.5-2.5 hours and the climb needs 1.5-2 hours to reach the summit before the 06:00-06:30 sunrise."
+      },
+      {
+        "question": "Is it worth doing Mount Batur from Uluwatu, or is it too far?",
+        "answer": "It is done from Uluwatu constantly — it is simply the longest night on the menu. The two honest fixes are the jeep tour, which involves no climbing so you can sleep both drive legs, or moving to Ubud the evening before, which cuts the transfer to about 90 minutes and moves pickup to about 02:30."
+      },
+      {
+        "question": "Can I sleep in the car on the way to Mount Batur?",
+        "answer": "Yes, and from Uluwatu you should plan to. Our tours are private, so the vehicle is yours: recline and sleep the full 1.5-2.5 hours north. On the jeep tour nobody needs working legs at the other end, so guests routinely sleep in both directions and are properly awake only for the 06:00-06:30 sunrise itself."
+      },
+      {
+        "question": "How much does a Mount Batur tour cost from Uluwatu?",
+        "answer": "The same as from anywhere on the island: the sunrise hike from $35, the jeep tour from $60, the jeep with hot springs from $75 — all private, with hotel pickup and return from Uluwatu, Jimbaran or Nusa Dua included in the price. There is no prepayment; you confirm on WhatsApp and pay on the day."
+      },
+      {
+        "question": "Should I stay in Ubud the night before climbing Mount Batur?",
+        "answer": "If sleep matters more than convenience, yes. Ubud is about 90 minutes from the volcano with pickup around 02:30, the latest on the island, against roughly 01:30 from the Bukit. Surfers who already wake for dawn patrol often skip the hotel move and go direct; everyone else tends to appreciate the extra hour in bed."
+      }
+    ]
+  },
+  {
+    "slug": "sanur-to-mount-batur",
+    "badge": "Travel guide",
+    "navLabel": "Sanur to Batur",
+    "cardTourLabel": "Sunrise from Sanur",
+    "heroTourSlug": "mount-batur-sunrise-jeep-tour",
+    "relatedTourSlugs": [
+      "mount-batur-sunrise-hike",
+      "mount-batur-sunrise-jeep-hot-spring",
+      "private-car-with-driver-bali"
+    ],
+    "inlineStats": [
+      "1.5-2 h from Sanur",
+      "Pickup 01:30-02:00",
+      "Jeep tour from $60"
+    ],
+    "title": "Sanur to Mount Batur: Drive Time and Sunrise Pickup Hours",
+    "description": "Sanur to Mount Batur takes roughly 1.5-2 hours, pickup 01:30-02:00. The night hour by hour, plus private hike ($35) and jeep ($60) options.",
+    "excerpt": "The drive from Sanur to Mount Batur takes roughly 1.5-2 hours, and sunrise pickup runs at 01:30-02:00 — noticeably kinder than the far south of the island. Sanur sits between Ubud and the beach towns in driving terms, so you get most of Ubud's short transfer without staying inland. At 02:00 the roads are empty, which makes the outbound leg the fastest drive of the whole trip; the return runs in daytime traffic and is slower. Sunrise on the crater rim arrives between 06:00 and 06:30 all year, looking east across Lake Batur toward Mount Agung. Because Sanur is also the ferry gateway to Nusa Penida, many guests pair a Batur morning with a Penida day — the honest advice is to keep a rest day between them. We run three private formats from Sanur: the hike from $35, the jeep from $60 and the jeep with hot springs from $75, all with hotel pickup and return included, booked on WhatsApp with no prepayment.",
+    "rankings": [
+      {
+        "name": "Mount Batur Sunrise Jeep Tour",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
+        "area": "Kintamani crater rim",
+        "bestFor": "Guests saving their legs for a Nusa Penida day",
+        "summary": "From $60 for 6-8 hours with a night or pre-dawn pickup from Sanur. There is no climbing: the 4x4 drives a separate track up to a crater-rim viewpoint for the 06:00-06:30 sunrise, then crosses the old black lava fields, where you can step out and walk on the solidified flows. The obvious pick if a boat day is on the plan."
+      },
+      {
+        "name": "Mount Batur Sunrise Hike",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-hike.jpg",
+        "area": "Kintamani summit trail",
+        "bestFor": "The classic climb at the lowest price",
+        "summary": "From $35 and 5-8 hours door to door, with Sanur pickup at 01:30-02:00. The trail gains about 700 m over 1.5-2 hours at a guided pace, with loose black volcanic sand on the upper section and a trailhead managed by the local guide association. Sunrise from the 1,717 m summit, then roughly 1.5 hours back down in daylight."
+      },
+      {
+        "name": "Mount Batur Sunrise Jeep & Hot Spring",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg",
+        "area": "Kintamani and the lakeshore",
+        "bestFor": "A gentle end to the earliest morning of your trip",
+        "summary": "From $75 for 6-8 hours, with pickup between 02:00 and 03:30. The morning follows the jeep route — crater-rim sunrise, then the black lava fields — and ends with a soak in natural hot springs on the shore of Lake Batur before the drive back to Sanur. The warm water does a lot for a body that woke at two."
+      },
+      {
+        "name": "Private Car with Driver",
+        "imageSrc": "/images/places/mount-batur-jeep.jpg",
+        "area": "All major Bali regions",
+        "bestFor": "Seeing the caldera in daylight without the night alarm",
+        "summary": "From $59 per car for flexible daily use. If the 01:30 start is a hard no, your driver can take the public rim road on the Penelokan side, where the classic daytime view across the caldera and Lake Batur is free, and fold it into a wider highlands day that runs at your own pace."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The night hour by hour from Sanur",
+        "paragraphs": [
+          "Sanur sits between Ubud and the southern beach towns in driving terms, so the sunrise timetable is kinder than most guests expect. Pickup runs at **01:30-02:00**, the drive to the Kintamani highlands takes roughly **1.5-2 hours**, and sunrise arrives between **06:00 and 06:30** all year. Here is how the whole night unfolds."
+        ],
+        "table": {
+          "headers": [
+            "Approximate clock time",
+            "Stage of the journey",
+            "What happens at this stage"
+          ],
+          "rows": [
+            [
+              "01:30-02:00",
+              "Hotel pickup in Sanur",
+              "Your driver meets you at reception. Sanur goes to bed early, so the streets are already silent when the car arrives."
+            ],
+            [
+              "02:00-03:30",
+              "Time on the road to Kintamani",
+              "Roughly 1.5-2 hours of driving. At 02:00 the roads are empty, so this is the fastest drive of the whole trip — most guests sleep through it."
+            ],
+            [
+              "03:30-04:00",
+              "Arrival in the Kintamani highlands",
+              "Hikers meet their guide at the trailhead managed by the local guide association; jeep guests board the 4x4, which uses a separate track with no climbing."
+            ],
+            [
+              "04:00-06:00",
+              "Ascent to the crater rim",
+              "On foot it is about 700 m of ascent over 1.5-2 hours at a guided pace, with loose black volcanic sand near the top. Jeep guests ride up while hikers walk."
+            ],
+            [
+              "06:00-06:30",
+              "Sunrise over Lake Batur",
+              "The rim faces east across the lake toward Mount Agung, with Rinjani on Lombok on the horizon on clear mornings and mist often sitting over the water at first light."
+            ],
+            [
+              "06:30-07:30",
+              "Time at the viewpoint",
+              "Plan for 30-60 minutes at the top. The cold up there is wind chill, so a warm layer matters more than the season does."
+            ],
+            [
+              "07:30-09:00",
+              "Descent and the black lava fields",
+              "The walk down takes about 1.5 hours in daylight. Jeep guests cross the old black lava fields and can step out and walk on the solidified flows."
+            ],
+            [
+              "09:00 onwards",
+              "Return drive to Sanur",
+              "The way back runs in daytime traffic and is slower than the outbound leg. Most guests are back at their hotel by mid or late morning."
+            ]
+          ],
+          "note": "Times shown assume the on-foot sunrise hike. Jeep guests are collected slightly later in the pre-dawn window because there is no climbing time to allow for."
+        }
+      },
+      {
+        "heading": "Why the pickup from Sanur is kinder than the far south",
+        "paragraphs": [
+          "Ubud is the closest common base to the volcano at about **90 minutes**, which is why its pickups run around **02:30** — the latest on the island. At the other end, Nusa Dua, Jimbaran and Uluwatu sit at the top of the **1.5-2.5 hour** range and are collected at **01:30** or slightly earlier, the longest night on the menu. Sanur lands between the two: **1.5-2 hours** on the road and a **01:30-02:00** pickup. The island-wide timetable is laid out in [what time to leave for a Mount Batur sunrise](/bali/en/journal/what-time-to-leave-for-mount-batur-sunrise).",
+          "The clock is friendlier than it looks on paper. At **02:00** Bali's roads are empty, so the outbound leg is the fastest drive of the whole trip; the return is the slower half, running in ordinary daytime traffic. Sanur also helps in a way the party towns cannot: it is an early-to-bed place, so falling asleep by nine or ten the evening before is realistic rather than theoretical. Compare that with the schedule in [Seminyak to Mount Batur](/bali/en/journal/seminyak-to-mount-batur), where pickup comes a full hour earlier than Ubud's."
+        ]
+      },
+      {
+        "heading": "Sequencing Mount Batur with a Nusa Penida day",
+        "paragraphs": [
+          "Sanur is the ferry gateway to Nusa Penida, and most guests staying there have a boat day somewhere on the plan. Both trips claim a morning and both start early, so the honest sequencing advice is simple: do not stack them back to back. A Batur sunrise means a **01:30-02:00** alarm and a return in the second half of the morning; a Penida day means an early harbour start and a full day out. Put a rest day between the two and both stay enjoyable.",
+          "The order matters less than the buffer. Batur first works well — the volcano morning is done early, the afternoon belongs to the pool, and the rest day lets your legs recover before the boat. Penida first is just as workable. If you want the volcano morning to end softly, the jeep with hot springs, from **$75**, closes with a soak in natural lakeside pools before the drive home — our [Mount Batur hot springs guide](/bali/en/journal/mount-batur-hot-springs-guide) explains how the soak fits into the morning.",
+          "All three Batur formats run as private trips with Sanur hotel pickup and return included, confirmed over WhatsApp with **no prepayment**. If a boat reshuffles your week, moving the volcano morning is a message in a chat, not a refund claim."
+        ]
+      },
+      {
+        "heading": "Hike or jeep from Sanur",
+        "paragraphs": [
+          "The hike, from **$35**, is the classic version: about **700 m** of ascent over **1.5-2 hours** at a guided pace, loose volcanic sand near the top, sunrise from the **1,717 m** summit and roughly **1.5 hours** back down in daylight. The tour runs **5-8 hours** door to door.",
+          "The jeep, from **$60**, removes the climb entirely. The 4x4 drives a separate track to a crater-rim viewpoint for the same **06:00-06:30** sunrise, then crosses the old black lava fields — solidified flows from past eruptions that you can step out of the car and walk on. The two formats are compared properly in [Mount Batur sunrise jeep vs hike](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike).",
+          "Either way, dress for the rim, not for Sanur. The cold at the top is wind chill rather than deep cold, and the guests who suffer are the ones who arrived in beachwear. A warm layer and shoes with grip solve most of it — [what to wear for a Mount Batur sunrise](/bali/en/journal/what-to-wear-mount-batur-sunrise) has the short list."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How long is the drive from Sanur to Mount Batur?",
+        "answer": "Roughly 1.5-2 hours each way. The outbound leg at around 02:00 is the fastest drive of the whole trip because the roads are empty; the return runs in daytime traffic and takes longer. Sanur sits between Ubud and the southern beach towns in driving terms, which is why its transfer is shorter than Seminyak's or Uluwatu's."
+      },
+      {
+        "question": "What time is pickup in Sanur for the Mount Batur sunrise?",
+        "answer": "Between 01:30 and 02:00 for the sunrise hike. Jeep guests are collected slightly later in the pre-dawn window because there is no climbing time to allow for — the jeep and hot spring tour, for example, runs pickups at 02:00-03:30. Sunrise itself falls between 06:00 and 06:30 all year, so the timetable barely moves with the seasons."
+      },
+      {
+        "question": "Can I combine Mount Batur and Nusa Penida from Sanur?",
+        "answer": "Yes, and Sanur is the natural base for it — the Penida boats leave from Sanur itself. Just do not stack the two mornings back to back: a Batur sunrise means a 01:30-02:00 alarm, and a Penida day is long in its own right. Most guests put a rest day between them, in either order."
+      },
+      {
+        "question": "Is Mount Batur pickup earlier from Sanur than from Ubud?",
+        "answer": "Yes, by roughly half an hour to an hour. Ubud is the closest common base at about 90 minutes from the volcano, so its pickups run around 02:30 — the latest on the island. Sanur pickups run at 01:30-02:00. The far south — Nusa Dua, Jimbaran, Uluwatu — is collected at 01:30 or slightly earlier."
+      },
+      {
+        "question": "Can I see Mount Batur from Sanur without hiking?",
+        "answer": "Yes, two ways. The sunrise jeep tour, from $60, drives a separate 4x4 track to a crater-rim viewpoint and crosses the old black lava fields — no climbing at all. Or take a private car with driver, from $59 per car, to the public rim road on the Penelokan side, where the classic daytime view over Lake Batur is free."
+      },
+      {
+        "question": "How much does a Mount Batur trip from Sanur cost?",
+        "answer": "The private sunrise hike is from $35, the sunrise jeep tour from $60, and the jeep with lakeside hot springs from $75. All three include hotel pickup and return in Sanur and run as private trips, not pooled buses. Booking is over WhatsApp with no prepayment — you confirm in chat and pay on the day."
+      }
+    ]
+  },
+  {
+    "slug": "mount-batur-black-lava-fields",
+    "badge": "Travel guide",
+    "navLabel": "Black lava fields",
+    "cardTourLabel": "Lava fields by jeep",
+    "heroTourSlug": "mount-batur-sunrise-jeep-tour",
+    "relatedTourSlugs": [
+      "mount-batur-sunrise-jeep-hot-spring",
+      "mount-batur-sunrise-hike",
+      "private-car-with-driver-bali"
+    ],
+    "inlineStats": [
+      "Private jeep tour from $60",
+      "Last eruption in 2000",
+      "Sunrise at 06:00-06:30"
+    ],
+    "title": "Mount Batur Black Lava Fields: What They Are & How to See Them",
+    "description": "The black lava fields of Mount Batur are solidified flows from the 1917, 1926 and 2000 eruptions. The private sunrise jeep from $60 drives you onto them.",
+    "excerpt": "The black lava fields of Mount Batur are solidified lava flows left by the volcano's past eruptions — the major ones in 1917 and 1926, and the most recent in 2000. They spread across the caldera floor in the Kintamani highlands of northeast Bali, and the black sand and rock set against the green caldera walls is the visual signature of the trip. The easiest way to stand on them is the private sunrise jeep tour from $60: a 4x4 drives a separate track to a crater-rim viewpoint for sunrise between 06:00 and 06:30, then crosses the old flows, where you can step out and walk on them. Hikers on the sunrise hike from $35 get the 1,717 m summit instead — the trail does not cross the main fields. This guide covers what the fields are, every way to see them, and what each option costs — with no prepayment on any of our private tours.",
+    "rankings": [
+      {
+        "name": "The lava-field crossing by 4x4",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
+        "area": "Caldera floor, Kintamani",
+        "bestFor": "Standing on the lava itself",
+        "summary": "After sunrise the jeep leaves the viewpoint and drives across the solidified flows on the caldera floor. The driver stops, you step out and walk on the black sand and rock left by the 1917, 1926 and 2000 eruptions. This is the part of the morning the jeep format from $60 is built around — none of our other tours puts you on the lava itself."
+      },
+      {
+        "name": "The crater-rim viewpoint at sunrise",
+        "imageSrc": "/images/places/mount-batur-jeep.jpg",
+        "area": "Crater rim, jeep track",
+        "bestFor": "Black lava at first light",
+        "summary": "Before the crossing, the 4x4 climbs a separate track to a viewpoint on the crater rim. Sunrise arrives between 06:00 and 06:30 all year, the rim faces east across Lake Batur toward Mount Agung, and mist often sits over the lake at first light. The black flows below turn from shadow to texture as the light comes up."
+      },
+      {
+        "name": "The hot springs finish",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg",
+        "area": "Lake Batur shoreline",
+        "bestFor": "Warming up after the rim",
+        "summary": "The jeep and hot spring version, from $75, finishes the morning with a soak in natural hot springs beside the lake. After a cold, windy sunrise on the rim and a walk on the lava fields, warm water on the shoreline is a practical ending rather than a gimmick. The whole trip still runs 6-8 hours door to door."
+      },
+      {
+        "name": "The summit hike's volcanic sand",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-hike.jpg",
+        "area": "Upper trail to 1,717 m",
+        "bestFor": "Hikers who want the crater",
+        "summary": "The sunrise hike from $35 does not cross the main lava fields — it climbs to the summit in 1.5-2 hours, and the upper trail itself is loose black volcanic sand underfoot. Hikers trade the fields for the crater and the view from the top; the two formats see different sides of the same volcano."
+      },
+      {
+        "name": "The free view from the rim road",
+        "imageSrc": "/images/places/mount-batur-sunrise-trek.jpg",
+        "area": "Penelokan, public rim road",
+        "bestFor": "Daytime visits on a budget",
+        "summary": "The public rim road on the Penelokan side has the classic daytime view of the caldera for free: Lake Batur, the cone, and the dark flows spread across the green floor below. You cannot walk on the lava from up here, but as a no-cost look at the sheer scale of the fields it is hard to beat."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Every way to experience the black lava fields",
+        "paragraphs": [
+          "The lava fields sit on the caldera floor, below the crater-rim viewpoints and away from the hiking trail — which is why the format you choose decides whether you stand on them or only see them from a distance. The table below sets out each option as we actually run it: every tour is private, includes hotel pickup and return, and takes no prepayment."
+        ],
+        "table": {
+          "headers": [
+            "Way to experience the lava fields",
+            "What you see",
+            "Physical effort required",
+            "Cost"
+          ],
+          "rows": [
+            [
+              "Private sunrise jeep tour",
+              "Sunrise from a crater-rim viewpoint, then the 4x4 crosses the black lava fields and you step out and walk on them",
+              "None — no climbing at any point",
+              "From $60"
+            ],
+            [
+              "Private jeep tour with hot springs",
+              "The same viewpoint and lava-field crossing, finished with a soak in natural hot springs on the shore of Lake Batur",
+              "None — no climbing at any point",
+              "From $75"
+            ],
+            [
+              "Guided sunrise hike to the summit",
+              "Sunrise from the 1,717 m summit; the upper trail is loose black volcanic sand, but the route does not cross the main lava fields",
+              "1.5-2 hours of climbing with about 700 m of ascent",
+              "From $35"
+            ],
+            [
+              "Public rim road on the Penelokan side",
+              "A free daytime view over the caldera, with the dark flows visible against the green slopes below",
+              "None — the view is beside the road",
+              "Free"
+            ],
+            [
+              "Private car with driver for a daytime visit",
+              "A flexible day that can include the Penelokan viewpoint and Lake Batur, without the pre-dawn start",
+              "None — sightseeing from the car with short stops",
+              "From $59 per car"
+            ]
+          ],
+          "note": "The private car is priced per car, not per person. All bookings are confirmed over WhatsApp and paid on the day — we take no prepayment."
+        }
+      },
+      {
+        "heading": "What the black lava fields actually are",
+        "paragraphs": [
+          "The fields are solidified lava flows from Mount Batur's past eruptions. The major ones came in **1917** and **1926** — the 1926 flow destroyed the old village of Batur, which was rebuilt up on the caldera rim — and the most recent eruption was in **2000**. Batur is still an active volcano under continuous monitoring; we cover what that means in practice in [is Mount Batur an active volcano](/bali/en/journal/is-mount-batur-an-active-volcano).",
+          "What makes the fields worth the detour is the contrast. Black sand and rough black rock spread across the caldera floor, with the green caldera walls rising behind them and Lake Batur alongside — that colour clash is the visual signature of the whole trip. The landscape has been part of a UNESCO Global Geopark since **2012**, Indonesia's first.",
+          "Geographically you are in the Kintamani area, in the highlands of northeast Bali. The cone itself rises to **1,717 m**; the fields sit low on the floor of the older, much larger caldera, crossed by the jeep track rather than by the hiking trail."
+        ]
+      },
+      {
+        "heading": "How the jeep morning works, step by step",
+        "paragraphs": [
+          "Pickup is at night or pre-dawn. From Ubud the drive takes about **90 minutes** — the full logistics are in [Ubud to Mount Batur](/bali/en/journal/ubud-to-mount-batur) — and at that hour the roads are empty, so the outbound leg is the fastest drive of the trip. The 4x4 then climbs a separate track, not the hiking trail, to a viewpoint on the crater rim.",
+          "Sunrise lands between **06:00 and 06:30** all year. The rim faces east across Lake Batur toward Mount Agung, mist often sits on the lake at first light, and the wind chill is real, so bring a warm layer. After sunrise the jeep drops down and crosses the old lava fields; the driver stops, and you step out and walk on the black sand and rock in proper daylight — the best conditions of the morning for photographs.",
+          "The whole trip runs **6-8 hours** door to door and starts at **$60**, with no climbing at any point; the version that ends in the lakeside hot springs is from **$75**. If you are torn between formats, [jeep vs hike](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike) compares them honestly."
+        ]
+      },
+      {
+        "heading": "Seeing the lava fields without a pre-dawn start",
+        "paragraphs": [
+          "You do not have to get up in the middle of the night to see black lava. The public rim road on the Penelokan side has the classic daytime view for free, with the dark flows laid out across the caldera floor below — our guide to the [Kintamani viewpoint and Lake Batur](/bali/en/journal/kintamani-viewpoint-and-lake-batur) covers the practical side. What the roadside cannot give you is the walk on the rock itself; for that, the jeep track is the only way in that we offer.",
+          "A [private car with driver](/bali/en/tours/private-car-with-driver-bali) from **$59 per car** builds a relaxed day around it — Kintamani at midday, lunch above the lake, no alarm clock. And if your priority is the climb rather than the fields, the sunrise hike from **$35** puts you on the summit at first light instead; the two formats simply see different sides of the same volcano."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What are the black lava fields at Mount Batur?",
+        "answer": "They are solidified lava flows left on the caldera floor by past eruptions of Mount Batur — the major ones in 1917 and 1926 and the most recent in 2000. The black sand and rock sit in sharp contrast to the green caldera walls, and the area has been part of a UNESCO Global Geopark, Indonesia's first, since 2012."
+      },
+      {
+        "question": "Can you walk on the Mount Batur lava fields?",
+        "answer": "Yes. The private sunrise jeep tour, from $60, crosses the old lava fields after the crater-rim viewpoint, and the driver stops so you can step out and walk on the black sand and rock. There is no climbing at any point — the 4x4 does all the work on a track separate from the hiking trail."
+      },
+      {
+        "question": "Does the Mount Batur sunrise hike go through the lava fields?",
+        "answer": "No. The hike climbs to the 1,717 m summit — about 700 m of ascent in 1.5-2 hours — and its upper trail is loose black volcanic sand, but the route does not cross the main lava fields. Those sit on the caldera floor along the jeep track, so hikers get the summit and jeep guests get the fields."
+      },
+      {
+        "question": "How much does it cost to see the Mount Batur black lava?",
+        "answer": "The private sunrise jeep tour that crosses the fields starts at $60; adding the lakeside hot springs takes it to $75. The daytime view of the flows from the public rim road at Penelokan is free, and a private car with driver from $59 per car can build a flexible day around it. We take no prepayment on any tour."
+      },
+      {
+        "question": "When did lava last flow at Mount Batur?",
+        "answer": "Mount Batur last erupted in 2000, with major eruptions in 1917 and 1926 — the 1926 flow destroyed the old village, which was rebuilt up on the caldera rim. The volcano is still classed as active and is monitored continuously, which is part of why the black fields below the cone look so fresh."
+      },
+      {
+        "question": "Is the lava field jeep tour suitable if I cannot hike?",
+        "answer": "Yes — it involves no climbing at all. The 4x4 collects you from your hotel at night or pre-dawn, drives a separate track to the crater-rim viewpoint for sunrise, then crosses the lava fields, where you walk as little or as much as you like. The whole trip takes 6-8 hours door to door."
+      }
+    ]
+  },
+  {
+    "slug": "mount-batur-atv-quad-or-jeep",
+    "badge": "Travel guide",
+    "navLabel": "ATV, quad or jeep",
+    "cardTourLabel": "Off-road at Batur",
+    "heroTourSlug": "mount-batur-sunrise-jeep-tour",
+    "relatedTourSlugs": [
+      "atv-quad-bikes",
+      "mount-batur-sunrise-jeep-hot-spring",
+      "mount-batur-sunrise-hike"
+    ],
+    "inlineStats": [
+      "4x4 jeep on Batur from $60",
+      "Ubud ATV from $20",
+      "1.5 hours of quad riding"
+    ],
+    "title": "Mount Batur ATV, Quad Bike or Jeep: What Actually Exists",
+    "description": "Mount Batur ATV, honestly: the off-road ride on the volcano is the 4x4 sunrise jeep from $60; our quad bikes run in Ubud from $20 as a separate day.",
+    "excerpt": "There is no ATV or quad bike track on Mount Batur in our programme — on the volcano itself, the off-road ride is the 4x4 sunrise jeep from $60. The jeep drives a separate track up to a crater-rim viewpoint for the 06:00-06:30 sunrise, then crosses the old black lava fields, where you can step out and walk on the solidified flows. If you want to drive the machine yourself, our ATV quad bikes run in the Ubud area from $20: a 4-6 hour door-to-door day built around a 1.5-hour ride through jungle, rice fields, a river and a tunnel track. The two pair naturally as separate days — Batur is about 90 minutes from Ubud, and the jeep morning starts with a night pickup. Everything is private, with hotel pickup and return included, and there is no prepayment: you confirm on WhatsApp and pay on the day.",
+    "rankings": [
+      {
+        "name": "Mount Batur Sunrise Jeep Tour",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
+        "area": "Kintamani, Mount Batur",
+        "bestFor": "Off-road driving on the volcano itself",
+        "summary": "This is where the search for 'mount batur atv' usually ends in practice. A 4x4 drives a separate track to a crater-rim viewpoint for the 06:00-06:30 sunrise, then crosses the old black lava fields — solidified flows you can step out and walk on. From $60, 6-8 hours door to door, no climbing involved, private, with hotel pickup and return included."
+      },
+      {
+        "name": "ATV Quad Bikes in Ubud",
+        "imageSrc": "/images/tours-real/atv-quad-bikes.jpg",
+        "area": "Ubud area",
+        "bestFor": "Driving a quad bike yourself",
+        "summary": "Our only ATV product, and it runs in the Ubud area, not on Mount Batur. The day is 4-6 hours door to door with a 1.5-hour ride through jungle, rice fields, a river and a tunnel track. From $20, private, with hotel pickup and return included. It pairs with a Batur jeep morning as a separate day of the same trip."
+      },
+      {
+        "name": "Mount Batur Sunrise Jeep & Hot Spring",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg",
+        "area": "Kintamani, Lake Batur shore",
+        "bestFor": "Off-road morning with a warm ending",
+        "summary": "The same 4x4 sunrise drive and lava fields, followed by a soak in natural hot springs on the shore of Lake Batur. From $75, 6-8 hours door to door, with pickup between 02:00 and 03:30. After a cold, windy wait for first light on the rim, warm water is a strong argument."
+      },
+      {
+        "name": "Mount Batur Sunrise Hike",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-hike.jpg",
+        "area": "Kintamani, summit trail",
+        "bestFor": "Reaching the summit on foot",
+        "summary": "No engine at all: around 700 m of ascent on loose black volcanic sand, 1.5-2 hours up at a guided pace, and sunrise at 06:00-06:30 from the 1,717 m summit. From $35, 5-8 hours door to door, with pickup between 01:30 and 03:00. The opposite answer to the ATV question, and the cheapest way onto the mountain itself."
+      },
+      {
+        "name": "Jeep Morning Plus ATV Day",
+        "imageSrc": "/images/places/mount-batur-jeep.jpg",
+        "area": "Kintamani and Ubud, two days",
+        "bestFor": "Getting both rides in one trip",
+        "summary": "The combination we recommend to anyone searching for 'mount batur quad bike': the 4x4 jeep across the lava fields one morning from $60, and the Ubud ATV track on another day from $20. Two separate private bookings, both confirmed on WhatsApp with no prepayment, both with hotel pickup and return included."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What exists and what each option costs",
+        "paragraphs": [
+          "Type 'mount batur atv' or 'mount batur quad bike' into a search bar and the results imply a quad track on the volcano. We should be straight about our own line-up: we do not run ATV on Mount Batur. On the mountain itself, the off-road ride is the private [4x4 sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) from **$60**, which drives a separate track to a crater-rim viewpoint and then crosses the old black lava fields. Our quad bikes exist — from **$20** — but they run in the Ubud area, on a jungle, rice field, river and tunnel track.",
+          "The table below matches each thing people actually want to the ride that delivers it, with the area and the price."
+        ],
+        "table": {
+          "headers": [
+            "What you want from the ride",
+            "The tour that delivers it",
+            "Area where it runs",
+            "Starting price"
+          ],
+          "rows": [
+            [
+              "Off-road driving on Mount Batur itself",
+              "Sunrise jeep tour in a 4x4 across the black lava fields",
+              "Kintamani, on the volcano",
+              "From $60"
+            ],
+            [
+              "Driving a quad bike yourself",
+              "ATV quad bikes with a 1.5-hour ride inside a 4-6 hour day",
+              "Ubud area, not on the volcano",
+              "From $20"
+            ],
+            [
+              "Off-road morning that ends in warm water",
+              "Sunrise jeep tour plus natural lakeside hot springs",
+              "Kintamani, Lake Batur shore",
+              "From $75"
+            ],
+            [
+              "Reaching the 1,717 m summit on foot",
+              "Sunrise hike with a local guide, around 700 m of ascent",
+              "Kintamani, summit trail",
+              "From $35"
+            ],
+            [
+              "Both the jeep and the quad bike in one trip",
+              "Jeep sunrise one morning, Ubud ATV ride on a separate day",
+              "Kintamani plus Ubud, two days",
+              "From $60 plus from $20"
+            ],
+            [
+              "Flexible transport between regions for the rest of the trip",
+              "Private car with driver for the whole day",
+              "All major Bali regions",
+              "From $59 per car"
+            ]
+          ],
+          "note": "All tours are private with hotel pickup and return included. Booking is confirmed on WhatsApp with no prepayment — you pay on the day."
+        }
+      },
+      {
+        "heading": "On the volcano itself, the jeep is the off-road ride",
+        "paragraphs": [
+          "The sunrise jeep is not a shuttle with a viewpoint at the end. The 4x4 leaves the sealed road and climbs its own track to the crater rim in time for the **06:00-06:30** sunrise, which holds all year. The rim faces east across Lake Batur toward Mount Agung, mist often lies over the lake at first light, and on clear mornings Rinjani on Lombok sits on the horizon.",
+          "After sunrise comes the part that answers the ATV itch: the drive across the old black lava fields. These are solidified flows from past eruptions — the major ones in **1917 and 1926**, the most recent in **2000** — and you can step out and walk on them. The black sand and rock against the green caldera is the visual signature of the trip. Batur is [an active, continuously monitored volcano](/bali/en/journal/is-mount-batur-an-active-volcano), and the area has been a UNESCO Global Geopark since **2012**, Indonesia's first.",
+          "We can only speak for what we run. If you find a listing elsewhere that advertises an ATV on Batur, the useful question to ask that operator is the same one we would ask: where exactly does the track run, and who drives which section. For a fuller comparison of the two ways to meet sunrise on the mountain, see our [jeep versus hike guide](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike)."
+        ]
+      },
+      {
+        "heading": "The Ubud ATV day, in detail",
+        "paragraphs": [
+          "[Our ATV quad bike tour](/bali/en/tours/atv-quad-bikes) is a **4-6 hour** door-to-door day built around a **1.5-hour** ride: jungle, rice fields, a river and a tunnel section. It starts from **$20**, it is private, and hotel pickup and return are included — the same booking rules as every tour we run.",
+          "It is a daytime trip with a civilised start, which is exactly why it pairs well with a Batur morning as a separate day. From Ubud, [the drive to the volcano](/bali/en/journal/ubud-to-mount-batur) is about **90 minutes** — the closest common base on the island, with the latest pickup time at around **02:30**. Volcano before dawn one day, quad bike in the daylight another day, and neither ride is compromised by the other."
+        ]
+      },
+      {
+        "heading": "How to plan the two rides across one trip",
+        "paragraphs": [
+          "Do the jeep first. It starts with a night or pre-dawn pickup and runs **6-8 hours** door to door, so you are back around midday having slept very little. The outbound drive at 02:00 is the fastest of the whole trip because the roads are empty; the return runs in daytime traffic and is slower. Keep the rest of that day unplanned.",
+          "Put the ATV on another day entirely. A **4-6 hour** daytime outing after a full night of sleep feels like a different holiday from anything that starts before 03:00. If you are staying in the south, the jeep pickup comes at around **01:30**, roughly an hour earlier than from Ubud, with **1.5-2.5 hours** on the road each way.",
+          "Booking works the same for both rides: message us on WhatsApp, we confirm the date and the pickup time in chat, and there is no prepayment — you pay on the day. If you want the volcano morning to end warmer, the jeep and hot spring combination from **$75** finishes with a soak in natural hot springs beside Lake Batur."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is there an ATV or quad bike tour on Mount Batur?",
+        "answer": "We do not run one on the volcano itself. On Mount Batur, our off-road ride is the private 4x4 sunrise jeep from $60: a separate track to a crater-rim viewpoint, then a crossing of the old black lava fields. Our ATV quad bikes run in the Ubud area from $20, and the two work well as separate days of one trip."
+      },
+      {
+        "question": "How much does the Mount Batur jeep tour cost?",
+        "answer": "The private sunrise jeep tour starts at $60 and takes 6-8 hours door to door, with a night or pre-dawn hotel pickup. A 4x4 drives a separate track to a crater-rim viewpoint for the 06:00-06:30 sunrise, then crosses the black lava fields. No climbing is involved, and there is no prepayment — you confirm on WhatsApp and pay on the day."
+      },
+      {
+        "question": "Where does the SB Excursions ATV ride actually run?",
+        "answer": "Our ATV track is in the Ubud area, not on Mount Batur. The route is off-road through jungle, rice fields, a river and a tunnel section, with about 1.5 hours of riding inside a 4-6 hour door-to-door day. It starts at $20, it is private, and hotel pickup and return are included. Mount Batur is about 90 minutes from Ubud by car."
+      },
+      {
+        "question": "Can I do the Mount Batur jeep and the ATV on the same day?",
+        "answer": "We run them as separate days, and that is our advice too. The jeep morning starts with a night pickup and takes 6-8 hours, so you are back around midday after very little sleep. The ATV day takes 4-6 hours and works far better with a normal daytime start. With Ubud as a base, the drive to Batur is about 90 minutes."
+      },
+      {
+        "question": "Is the Mount Batur jeep tour a real off-road drive?",
+        "answer": "Yes. The 4x4 leaves the public road for a separate track up to a crater-rim viewpoint, and after sunrise it crosses the old black lava fields — solidified flows from past eruptions, the most recent in 2000. You can step out and walk on the black rock. The area has been a UNESCO Global Geopark since 2012, Indonesia's first."
+      },
+      {
+        "question": "Do I have to pay in advance to book the jeep or the ATV?",
+        "answer": "No. Both tours are booked over WhatsApp with no prepayment: you confirm the date and pickup time in chat and pay on the day. Both are private and include hotel pickup and return — the jeep from $60 in the Kintamani area, the ATV from $20 in the Ubud area."
+      }
+    ]
+  },
+  {
+    "slug": "how-to-book-mount-batur-tour",
+    "badge": "Travel guide",
+    "navLabel": "How to book Batur",
+    "cardTourLabel": "Book direct, from $35",
+    "heroTourSlug": "mount-batur-sunrise-hike",
+    "relatedTourSlugs": [
+      "mount-batur-sunrise-jeep-tour",
+      "mount-batur-sunrise-jeep-hot-spring"
+    ],
+    "inlineStats": [
+      "Private hike from $35",
+      "Pickup 01:30–03:00",
+      "Sunrise 06:00–06:30"
+    ],
+    "title": "How to Book a Mount Batur Sunrise Tour: Platforms vs Direct",
+    "description": "Platforms, group buses or direct WhatsApp — how Mount Batur booking works, the four questions to ask any operator, and private tours from $35.",
+    "excerpt": "The most direct way to book a Mount Batur sunrise tour is to message a local operator on WhatsApp; the alternatives are booking platforms such as GetYourGuide, Klook and Viator, which resell the same local operators with a commission inside the listed price, and group bus tours that pool guests from many hotels for a cheaper seat. All three routes reach the same 1,717 m summit for the same 06:00–06:30 sunrise — what changes is who you talk to, what the price contains and how flexible the night is. Full disclosure before we go further: we are SB Excursions, one of the direct operators, running private trips from $35 with no prepayment. This guide lays out how each route works, the four questions any legitimate operator can answer in writing, and a table comparing what your money buys — so you can book with anyone, including us, with your eyes open.",
+    "rankings": [
+      {
+        "name": "Direct WhatsApp booking with a local operator",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-hike.jpg",
+        "area": "Booking route",
+        "bestFor": "Talking to the operator before any money moves",
+        "summary": "You message the people who actually run the trip, ask the four questions from this guide, and get answers in writing from someone who was on the mountain this week. No commission layer sits inside the price. Payment terms are the operator's own — with us there is no prepayment: confirm in chat, pay on the day of the tour."
+      },
+      {
+        "name": "Booking platforms: GetYourGuide, Klook and Viator",
+        "imageSrc": "/images/places/mount-batur-sunrise-trek.jpg",
+        "area": "Booking route",
+        "bestFor": "Card payment and everything in one app",
+        "summary": "Platforms resell local operators and add a commission inside the listed price. In exchange you get card payment, an app record and platform-managed cancellation. The operator who actually drives to your hotel is usually revealed on the day, so the four questions in this guide still apply — ask them through the listing's chat before you book."
+      },
+      {
+        "name": "Group bus tour pooled from many hotels",
+        "imageSrc": "/images/places/warm-layer-for-sunrise.jpg",
+        "area": "Booking route",
+        "bestFor": "The lowest price per seat",
+        "summary": "One vehicle collects guests from many hotels, which is why the seat costs less than a private car. The cost is time and flexibility: the pickup window stretches while the bus collects everyone, the schedule is fixed, and the summit wait, the descent and any stops run to the group's clock rather than yours."
+      },
+      {
+        "name": "Private sunrise jeep, booked direct",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
+        "area": "Tour format",
+        "bestFor": "The sunrise without the 700 m climb",
+        "summary": "From $60 for 6–8 hours, with no climbing: the 4x4 drives a separate track to a crater-rim viewpoint for the same 06:00–06:30 sunrise, then crosses the old black lava fields, where you can step out and walk on the solidified flows. It books the same three ways as the hike; a direct confirmation takes one WhatsApp chat."
+      },
+      {
+        "name": "Private jeep and hot spring combination",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg",
+        "area": "Tour format",
+        "bestFor": "A warm ending to a cold morning",
+        "summary": "From $75, pickup between 02:00 and 03:30, and 6–8 hours door to door. The jeep morning runs as usual — crater-rim sunrise, then the black lava fields — and finishes with a soak in natural lakeside hot springs before the daytime drive back. As a private direct booking, the soak lasts as long as your group wants."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Three booking routes, one mountain",
+        "paragraphs": [
+          "Every Mount Batur sunrise trip, however it is packaged, is run on the ground by a local operator working with the guide association that manages the trailhead. The booking route decides what wraps around that core: a platform adds a commission and an app interface, a group bus adds other people's hotels to your night, and direct WhatsApp booking adds nothing except a conversation. The table below shows what each route means in practice.",
+          "One thing no booking route changes is the hour. Pickup runs between **01:30 and 03:00** depending on where you stay: from Ubud the drive is about **90 minutes** and pickup is around **02:30**, while Seminyak, Canggu and the Bukit sit at **1.5–2.5 hours** on the road with pickup near **01:30**. At that hour the roads are empty, so the outbound leg is the fastest drive of the whole trip."
+        ],
+        "table": {
+          "headers": [
+            "Booking route",
+            "What the money includes",
+            "What to double-check before you confirm",
+            "Who this route suits"
+          ],
+          "rows": [
+            [
+              "Booking platform (GetYourGuide, Klook, Viator)",
+              "The local operator's trip plus the platform's commission inside the listed price",
+              "Which operator actually runs the trip, and whether pickup is from your hotel or a meeting point",
+              "Travellers who want card payment and platform-managed cancellation in one app"
+            ],
+            [
+              "Group bus tour pooled from many hotels",
+              "A seat in a shared vehicle, a fixed schedule and a shared trailhead group",
+              "How wide the pickup window stretches while the bus collects other hotels before driving north",
+              "Solo travellers on a tight budget who accept a fixed schedule"
+            ],
+            [
+              "Direct WhatsApp booking with a local operator",
+              "The operator's own price with no platform commission on top",
+              "That the trailhead guide, hotel pickup and return are all confirmed in writing in the chat",
+              "Travellers who want their questions answered by the people who run the trip"
+            ],
+            [
+              "SB Excursions private hike, booked direct",
+              "Private trailhead guide, hotel pickup and return, from $35 per person, no prepayment",
+              "Your own pickup time — between 01:30 and 03:00 depending on your area, Ubud around 02:30",
+              "Couples and small groups who want their own guide, car and pace"
+            ],
+            [
+              "SB Excursions private jeep, booked direct",
+              "A 4x4 to a crater-rim viewpoint plus the black lava fields, from $60, no climbing, no prepayment",
+              "That you want the viewpoint morning rather than the summit hike",
+              "Anyone skipping the 700 m ascent while keeping the sunrise"
+            ]
+          ],
+          "note": "We are one of the direct operators in this table. The dollar prices shown are ours; platform and group prices vary by listing, so we quote none of them."
+        }
+      },
+      {
+        "heading": "How each route works in practice",
+        "paragraphs": [
+          "Platforms such as GetYourGuide, Klook and Viator do not run tours; they resell local operators and add a commission inside the listed price. That is not a scam — it pays for card processing, the app and platform-managed cancellation — but it means the person answering the listing's chat is not the person driving to your hotel at 02:00. You usually meet the actual operator for the first time on the day itself.",
+          "Group tours keep the seat price down by pooling guests from many hotels into one vehicle. The trade is time: the pickup window stretches while the bus collects everyone, and the schedule at the summit and on the descent is fixed for the whole group. On a morning where pickup from the beach areas already starts around **01:30**, every extra hotel on the loop is felt.",
+          "Booking direct over WhatsApp means the person quoting the price is the person responsible for the trip. There is no commission layer, questions are answered by someone who was on the mountain this week, and payment terms are whatever the operator sets — with us there is no prepayment: you confirm in chat and pay on the day. For a breakdown of what a fair price should contain, see [what a Mount Batur sunrise costs](/bali/en/journal/mount-batur-sunrise-cost)."
+        ]
+      },
+      {
+        "heading": "The four questions to ask any operator",
+        "paragraphs": [
+          "First: is the trailhead guide included? The upper trail is loose black volcanic sand and the trailhead is managed by the local guide association, so a guide is part of every legitimate trip — the only question is whether he is inside the quoted price or a surprise at the mountain. The background is in [can you hike Mount Batur without a guide](/bali/en/journal/can-you-hike-mount-batur-without-a-guide).",
+          "Second: is pickup from your hotel included — your hotel by name, not a meeting point? Pickups run between **01:30 and 03:00**, and at that hour a meeting point means organising your own driver in the middle of the night. Timings per area are in [what time to leave for the sunrise](/bali/en/journal/what-time-to-leave-for-mount-batur-sunrise).",
+          "Third: is the tour private or pooled? The word private on a listing should mean your own car and your own guide, not a private seat on a shared bus. Fourth: what happens if weather cancels the morning — refund, reschedule or nothing? An operator who answers all four in writing before any payment is an operator you can book with confidence, on any route."
+        ]
+      },
+      {
+        "heading": "Where we stand, declared openly",
+        "paragraphs": [
+          "Said plainly: we are SB Excursions, one of the direct operators this article describes, and we benefit when you book direct with us. The facts above stand either way. Our [private sunrise hike](/bali/en/tours/mount-batur-sunrise-hike) is from **$35** per person, the private jeep from **$60**, and the jeep with hot springs from **$75** — all private, all with hotel pickup and return included, all confirmed on WhatsApp with no prepayment.",
+          "The trip itself is the same whoever takes your booking: **5–8 hours** door to door, roughly **1.5–2 hours** climbing about **700 m** to the **1,717 m** summit, a **30–60 minute** wait at the top for the **06:00–06:30** sunrise, and about **1.5 hours** back down in daylight. If your open question is the climb itself rather than the booking route, [the jeep versus hike comparison](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike) settles it.",
+          "Whichever route you choose, apply the four questions. If a platform listing, a group tour desk or our own WhatsApp chat cannot confirm in writing that the trailhead guide is included, your hotel is on the pickup list, the format is genuinely private or honestly pooled, and the weather policy is clear — book somewhere else. Holding every operator to that standard, including us, is the whole point of this guide."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is it better to book Mount Batur on GetYourGuide or directly with a local operator?",
+        "answer": "Both routes end on the same mountain, often with the same operators. Platforms add a commission inside the listed price and you meet the actual operator on the day. Booking direct on WhatsApp means you talk to the people who run the trip before paying — with us there is no prepayment at all. Neither route is wrong; direct simply removes the middle layer."
+      },
+      {
+        "question": "How much does a Mount Batur sunrise tour cost?",
+        "answer": "Our private sunrise hike is from $35 per person with the trailhead guide, hotel pickup and return included and no prepayment. The private jeep is from $60 and the jeep with hot springs from $75. Group bus seats are generally the cheapest way up, but the vehicle and schedule are shared, and platform prices carry the operator's rate plus commission."
+      },
+      {
+        "question": "Do I have to pay in advance for a Mount Batur tour?",
+        "answer": "It depends on the route. Booking platforms take payment when you book. Direct operators set their own rules: with SB Excursions there is no prepayment — you confirm the pickup time in WhatsApp and pay on the day of the tour. Whichever route you choose, ask in advance what happens to your money if weather cancels the morning."
+      },
+      {
+        "question": "What is the difference between a group and a private Mount Batur tour?",
+        "answer": "A group tour pools guests from many hotels into one vehicle, so the seat is cheaper, but the pickup window stretches while the bus collects everyone and the schedule is fixed for the whole group. A private tour sends one car for your party: pickup is a single agreed time between 01:30 and 03:00, and the pace on the trail is yours."
+      },
+      {
+        "question": "What should I check before booking any Mount Batur tour?",
+        "answer": "Four things: whether the trailhead guide is included in the price, whether pickup covers your hotel specifically rather than a meeting point, whether the tour is private or pooled, and what happens if weather cancels the morning. Any legitimate operator — on a platform, on a group desk or on WhatsApp — can answer all four in writing before you pay."
+      },
+      {
+        "question": "Can I book a Mount Batur jeep tour instead of the hike?",
+        "answer": "Yes. The sunrise jeep is from $60, takes 6–8 hours and involves no climbing: the 4x4 drives a separate track to a crater-rim viewpoint for the 06:00–06:30 sunrise, then crosses the old black lava fields. It books the same way as the hike — platforms list it, and direct operators confirm it over WhatsApp with a night or pre-dawn pickup."
+      }
+    ]
+  },
+  {
+    "slug": "mount-batur-photo-guide",
+    "badge": "Travel guide",
+    "navLabel": "Photo guide",
+    "cardTourLabel": "Sunrise photo tours",
+    "heroTourSlug": "mount-batur-sunrise-hike",
+    "relatedTourSlugs": [
+      "mount-batur-sunrise-jeep-tour",
+      "mount-batur-sunrise-jeep-hot-spring"
+    ],
+    "inlineStats": [
+      "Sunrise 06:00-06:30 all year",
+      "Summit rim at 1,717 m",
+      "Private formats from $35"
+    ],
+    "title": "Mount Batur Photo Guide: Sunrise Shots and the Proposal",
+    "description": "Where Mount Batur photos happen: sunrise 06:00-06:30 behind Agung, lake mist, black lava fields — and how a private sunrise proposal works, from $35.",
+    "excerpt": "The best Mount Batur photos come from geography, not luck: the crater rim faces east across Lake Batur, the sun rises behind Mount Agung between 06:00 and 06:30 all year, and mist often sits on the lake at first light. That is the classic frame, and it waits at the top of a 1.5-2 hour guided climb or at the crater-rim viewpoint the 4x4 jeep reaches on its own track. After sunrise the light turns and lands on the crowd at the rim, so the best portraits happen once the sun is up, not in the dark. On clear mornings Rinjani on Lombok appears on the horizon, and the jeep route crosses old black lava fields you can step out and walk on. This guide maps each shot, where and when it happens, which format puts you in front of it, and how a sunrise proposal works when the trip is private.",
+    "rankings": [
+      {
+        "name": "Sunrise behind Mount Agung",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-hike.jpg",
+        "area": "Summit rim, east side",
+        "bestFor": "The classic wide frame",
+        "summary": "The rim faces east across Lake Batur, and between 06:00 and 06:30 the sun climbs out from behind Mount Agung's cone. This is the shot every camera at the top is pointed at: layered silhouettes, the lake below, the sky doing the colour work. Arrive with the standard 30-60 minutes to spare — the pre-sunrise glow often beats the sunrise itself."
+      },
+      {
+        "name": "Mist over Lake Batur",
+        "imageSrc": "/images/places/mount-batur-sunrise-trek.jpg",
+        "area": "Crater rim above the lake",
+        "bestFor": "First-light landscape shots",
+        "summary": "At first light a sheet of mist regularly sits on the surface of Lake Batur, and from the rim you shoot down onto it. It thins as the sun gains height, so this frame belongs to the first minutes of the morning. No filter or long exposure required — a phone braced on the crater edge gets it."
+      },
+      {
+        "name": "Portraits in the first warm light",
+        "imageSrc": "/images/places/warm-layer-for-sunrise.jpg",
+        "area": "Summit rim, after sunrise",
+        "bestFor": "People shots and proposal photos",
+        "summary": "Before the sun clears Agung, everyone at the rim is a silhouette; the moment it does, warm low-angle light lands directly on faces. This is the window for portraits, couple shots and the proposal photo — roughly the 30-60 minutes the summit wait is built around. Face the sun for lit faces, or keep it behind you for silhouettes."
+      },
+      {
+        "name": "The black lava fields",
+        "imageSrc": "/images/places/mount-batur-jeep.jpg",
+        "area": "Caldera floor, jeep route",
+        "bestFor": "Texture and contrast after sunrise",
+        "summary": "After sunrise the jeep route crosses solidified lava flows from past eruptions — black sand and rock against the green caldera walls. You can step out and walk on them, which is what makes the frames work: one person small against a black field reads instantly as a volcano photo. The hiking trail does not cross them; this is a jeep-format shot."
+      },
+      {
+        "name": "The crater-rim jeep viewpoint",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
+        "area": "4x4 track, crater rim",
+        "bestFor": "Sunrise without the climb",
+        "summary": "The 4x4 drives a separate track to a crater-rim viewpoint, so the same east-facing sunrise geometry — Agung, the lake, the mist — is available with no climbing at all. For photography that means fresh legs at 06:00 and room in the vehicle for whatever gear you want along. From $60, 6-8 hours door to door."
+      },
+      {
+        "name": "Hot springs on the lake shore",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg",
+        "area": "Lake Batur shoreline",
+        "bestFor": "The relaxed end-of-morning shot",
+        "summary": "The jeep and hot spring format ends with a soak in natural lakeside springs, with the volcano you just watched sunrise from standing across the water. It is the one location on this list shot at water level rather than from above, and by then the daylight is easy to work with. From $75, pickup 02:00-03:30."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Every Mount Batur shot, mapped to a time and a place",
+        "paragraphs": [
+          "Mount Batur photography is a timing problem before it is a skill problem. The rim faces east, the sun appears behind Mount Agung between **06:00 and 06:30** every day of the year, and each of the famous frames — the mist, the silhouettes, the black lava — belongs to a specific point in the morning. The table below is the whole plan: what the photograph is, where and when it happens, and which of our private formats puts you in front of it.",
+          "Two rows deserve a flag. The lava fields are a jeep-only frame — the hiking trail climbs the cone and never crosses the caldera floor. And the proposal row is a logistics fact, not a sales line: on a pooled bus tour the schedule and the crowd belong to everyone on board; on a private trip the timing belongs to you."
+        ],
+        "table": {
+          "headers": [
+            "The photograph",
+            "Where and when it happens",
+            "Tour format that reaches it"
+          ],
+          "rows": [
+            [
+              "Sunrise behind Mount Agung",
+              "Summit rim facing east, 06:00-06:30 all year",
+              "Sunrise hike from $35 or jeep tour from $60"
+            ],
+            [
+              "Mist lying over Lake Batur",
+              "From the crater rim at first light, before the sun gains height",
+              "Any sunrise format; the mist thins as the morning warms"
+            ],
+            [
+              "Mount Rinjani on the horizon",
+              "East beyond Mount Agung, on clear mornings only",
+              "Same viewpoints; it depends on weather, not on the format"
+            ],
+            [
+              "Portraits in warm morning light",
+              "Summit rim, during the 30-60 minute wait after the sun appears",
+              "Hike or jeep; the light reaches both viewpoints"
+            ],
+            [
+              "Black lava fields",
+              "Caldera floor after sunrise, along the 4x4 track",
+              "Jeep tour from $60 or jeep with hot spring from $75"
+            ],
+            [
+              "Proposal photographs at sunrise",
+              "Setup in pre-dawn darkness, the moment at 06:00-06:30",
+              "Private format; details arranged on WhatsApp"
+            ]
+          ],
+          "note": "All our formats are private with hotel pickup and return included, and there is no prepayment — you confirm in chat and pay on the day."
+        }
+      },
+      {
+        "heading": "The geography does the composing",
+        "paragraphs": [
+          "Stand on the summit rim at **1,717 m** and the composition is already built. You face east across Lake Batur, Mount Agung stands behind the rising sun, and on clear mornings Rinjani on Lombok adds a third silhouette on the horizon. Mist usually lies over the lake at first light and thins as the sun gains height, which is why the first minutes at the rim out-photograph the rest of the morning — the full sequence is in [what a Batur sunrise actually looks like](/bali/en/journal/mount-batur-sunrise-what-to-expect).",
+          "The under-rated window comes after the sun clears Agung. Until then everyone at the rim is a silhouette; the moment it happens, warm low light lands directly on the crowd. Portraits, couple shots, group photos — they all live in the **30-60 minute** summit wait after sunrise, not in the blue-dark before it.",
+          "If your only goal is a daytime lake panorama, you do not need a tour at all — the public rim road on the Penelokan side has the classic caldera view for free, covered in our [Kintamani viewpoint guide](/bali/en/journal/kintamani-viewpoint-and-lake-batur). The sunrise angle, the mist and the lava fields are what the pre-dawn formats exist for."
+        ]
+      },
+      {
+        "heading": "Phones beat tripods on this mountain",
+        "paragraphs": [
+          "The climb gains about **700 m**, takes **1.5-2 hours** at guided pace, and the upper trail is loose black volcanic sand walked in the dark. Every item you carry competes with your hands, and your hands are your balance. A phone in a zipped pocket wins that trade against a tripod on a strap every time — the same carry-less logic that runs through our [what to wear guide](/bali/en/journal/what-to-wear-mount-batur-sunrise).",
+          "Sunrise itself needs no long exposure: by **06:00** there is enough light for a handheld phone, and the crater edge offers rocks to brace against for the earlier glow. The one honest argument for heavier gear is the jeep — a vehicle carries what your back otherwise would, which is one of the quieter points in the [jeep versus hike comparison](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike)."
+        ]
+      },
+      {
+        "heading": "The sunrise proposal, planned like logistics",
+        "paragraphs": [
+          "A Batur proposal works because the schedule does the hiding for you. Pickup is deep in the night, the approach happens in darkness, and nobody — including the person beside you — can read a bag's contents by headlamp. The setup belongs to the pre-dawn dark; the moment belongs to the sunrise at **06:00-06:30**.",
+          "The format choice is practical, not romantic. Our trips are private, so the pickup time, the pace and the spot at the rim are decided by two people instead of a busload — that is a logistics fact about private tours, not a promise that the summit will be empty. The hike (from **$35**) earns the moment with a climb; the jeep (from **$60**) protects good clothes and shaking legs.",
+          "Timing the night is the part worth getting exactly right — pickup windows by area are in [what time to leave for sunrise](/bali/en/journal/what-time-to-leave-for-mount-batur-sunrise). Tell us on WhatsApp that the morning is a proposal and we will plan the details with you; there is no prepayment, so nothing about the plan sits in a booking form."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What time is sunrise at Mount Batur for photos?",
+        "answer": "Between 06:00 and 06:30 all year round — Bali sits close to the equator, so the window barely moves with the seasons. The sun comes up behind Mount Agung to the east, and the strongest colour often arrives in the minutes before it clears the cone. Plan to be at the rim with 30-60 minutes to spare."
+      },
+      {
+        "question": "Do I need a tripod for Mount Batur sunrise photos?",
+        "answer": "No. The climb gains around 700 m on loose volcanic sand in the dark, so both hands are better spent on balance than on gear. Sunrise itself is bright enough for a handheld phone, and for the dimmer pre-dawn glow the crater edge offers plenty of rock to brace a phone against."
+      },
+      {
+        "question": "Where are the black lava fields at Mount Batur?",
+        "answer": "On the caldera floor, crossed by the 4x4 jeep route after sunrise. They are solidified flows from past eruptions — the most recent in 2000 — and you can step out and walk on them. The hiking trail climbs the cone and never touches them, so this shot belongs to the jeep formats, from $60."
+      },
+      {
+        "question": "Can you propose at Mount Batur at sunrise?",
+        "answer": "Yes, and the timing works in your favour: the setup happens in pre-dawn darkness when nobody can see details, and the sunrise at 06:00-06:30 is the moment itself. A private format keeps the pickup time, viewpoint and pace yours to decide. Message us on WhatsApp and we will arrange the details together."
+      },
+      {
+        "question": "Can you see Mount Rinjani from Mount Batur?",
+        "answer": "On clear mornings, yes — Rinjani on Lombok sits on the horizon beyond Mount Agung and appears in wide sunrise frames as a third layer of silhouette. It is a weather bonus rather than a guarantee: some mornings the horizon is clean, others it is not, and no tour format changes that."
+      },
+      {
+        "question": "Is the Mount Batur jeep tour good for photography?",
+        "answer": "Yes — the 4x4 drives its own track to a crater-rim viewpoint, so you get the same east-facing sunrise over Lake Batur without climbing, plus the black lava fields afterwards, which the hiking trail never reaches. A vehicle also carries more gear than a pocket does. From $60, 6-8 hours door to door."
+      }
+    ]
+  },
 ];
 
 // Topical clusters for internal linking. A guide links to its siblings first,
@@ -28791,6 +30060,14 @@ const GUIDE_CLUSTERS = {
     "kintamani-viewpoint-and-lake-batur",
     "mount-batur-vs-bromo-rinjani-ijen",
     "mount-batur-sunrise-what-to-expect",
+      "where-is-mount-batur",
+    "nusa-dua-to-mount-batur",
+    "uluwatu-to-mount-batur",
+    "sanur-to-mount-batur",
+    "mount-batur-black-lava-fields",
+    "mount-batur-atv-quad-or-jeep",
+    "how-to-book-mount-batur-tour",
+    "mount-batur-photo-guide",
   ],
   giliIslands: [
     "how-to-get-to-gili-trawangan-from-bali",
