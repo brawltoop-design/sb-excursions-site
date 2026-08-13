@@ -20,6 +20,7 @@ const STEPS = [
   ["generate-bali-tour-pages.mjs", "генерация страниц туров, журнала и гайдов"],
   ["build-prices-page.mjs", "прайс-индекс всех туров из живых данных"],
   ["build-work-with-us.mjs", "партнёрская страница Work With Us"],
+  ["build-ai-planner-landing.mjs", "посадочная шапка AI-планировщика"],
   ["fix-fouc.mjs", "защита от мигания при загрузке"],
   ["add-vercel-analytics.mjs", "счётчик посещаемости Vercel"],
   ["add-partner-ref.mjs", "партнёрская метка в ссылках WhatsApp"],

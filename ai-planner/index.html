@@ -53,10 +53,121 @@
     </div>
   </header>
 
-  <main class="app">
+  <!-- sbp-hero -->
+
+<style id="sbp-hero-style">
+.sbp-hero{
+  --ink:#141412; --sand:#fff; --muted:#75716a; --line:rgba(20,20,18,.12);
+  position:relative;isolation:isolate;overflow:clip;
+  padding:clamp(56px,8vw,104px) 0 clamp(48px,6vw,80px);
+  background:var(--sand);color:var(--ink);
+  font-family:'Manrope','Cina GEO','TildaSans',-apple-system,BlinkMacSystemFont,Arial,sans-serif
+}
+.sbp-hero__wrap{max-width:1200px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.sbp-hero__kicker{
+  margin:0 0 22px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);font-weight:600
+}
+.sbp-hero h1.sbp-hero__title{
+  margin:0;font-weight:300 !important;letter-spacing:-.035em;line-height:.98;
+  font-size:clamp(38px,6.2vw,86px)
+}
+.sbp-hero__title span{display:block}
+.sbp-hero__accent{
+  font-weight:600;
+  background-image:linear-gradient(100deg,#0284c7 0%,#38bdf8 22%,#1d4ed8 48%,#22d3ee 74%,#0284c7 100%);
+  background-size:300% 100%;-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:#0ea5e9;animation:sbp-shift 7s linear infinite
+}
+@media (min-width:1101px){
+  .sbp-hero__kicker,.sbp-hero__title,.sbp-hero__sub,.sbp-hero__cta{max-width:63%}
+}
+.sbp-hero__sub{max-width:54ch;margin:30px 0 0;font-size:clamp(16px,1.6vw,20px);line-height:1.6;color:#3c3a35}
+.sbp-hero__cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.sbp-hero__btn{
+  display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:999px;
+  font-size:16px;font-weight:600;text-decoration:none;cursor:pointer;border:0;
+  transition:transform .25s ease,box-shadow .25s ease,background .25s ease
+}
+.sbp-hero__btn--dark{background:#161512;color:#fff}
+.sbp-hero__btn--dark:hover{transform:translateY(-2px);box-shadow:0 18px 34px -18px rgba(20,20,18,.6)}
+.sbp-hero__btn--ghost{border:1.5px solid var(--line);color:var(--ink);background:transparent}
+.sbp-hero__btn--ghost:hover{border-color:rgba(20,20,18,.32)}
+
+.sbp-hero__facts{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;
+  margin:clamp(48px,6vw,76px) 0 0;padding-top:30px;border-top:1px solid var(--line)
+}
+.sbp-hero__fact b{display:block;font-size:17px;font-weight:600;margin-bottom:7px;letter-spacing:-.01em}
+.sbp-hero__fact span{display:block;font-size:14px;line-height:1.55;color:var(--muted)}
+
+.sbp-hero__chips{position:absolute;inset:0;pointer-events:none;z-index:0}
+.sbp-hero__chip{
+  position:absolute;border-radius:18px;overflow:hidden;
+  box-shadow:0 24px 60px -24px rgba(20,20,18,.45);
+  animation:sbp-float 9s ease-in-out infinite
+}
+.sbp-hero__chip img{width:100%;height:100%;object-fit:cover;display:block}
+.sbp-hero__chip::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.sbp-hero__chip.c1{width:min(20vw,236px);aspect-ratio:3/4;top:9%;right:5%;rotate:5deg;animation-delay:-1s}
+.sbp-hero__chip.c2{width:min(16vw,190px);aspect-ratio:4/3;top:47%;right:20%;rotate:-6deg;animation-delay:-3.5s}
+.sbp-hero__chip.c3{width:min(14vw,170px);aspect-ratio:1/1;bottom:16%;right:4%;rotate:3deg;animation-delay:-6s}
+.sbp-hero__chip.c4{width:min(12vw,142px);aspect-ratio:3/4;bottom:20%;left:1%;rotate:-8deg;animation-delay:-2s}
+.sbp-hero__chip.c5{width:min(10vw,124px);aspect-ratio:1/1;top:13%;left:-1%;rotate:7deg;animation-delay:-5s}
+
+
+@keyframes sbp-float{0%,100%{translate:0 0}50%{translate:0 -12px}}
+@keyframes sbp-shift{to{background-position:300% 0}}
+
+@media (max-width:1100px){
+  .sbp-hero__chip.c2,.sbp-hero__chip.c5{display:none}
+}
+@media (max-width:820px){
+  .sbp-hero{padding-bottom:clamp(240px,52vw,340px)}
+  .sbp-hero__facts{grid-template-columns:1fr;gap:20px}
+  .sbp-hero__chip.c1{width:36vw;top:auto;bottom:4%;right:4%}
+  .sbp-hero__chip.c3{width:28vw;bottom:7%;right:44%}
+  .sbp-hero__chip.c4{width:26vw;bottom:3%;left:3%}
+  .sbp-hero__btn{flex:1 1 100%;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){
+  .sbp-hero__chip,.sbp-hero__accent{animation:none !important}
+  .sbp-hero__btn{transition:none}
+  .sbp-hero__btn--dark:hover{transform:none}
+}
+</style>
+<section class="sbp-hero">
+  <div class="sbp-hero__chips" aria-hidden="true">
+      <div class="sbp-hero__chip c1"><img src="/images/places/kelingking-beach-t-rex-cliff.jpg" alt="" loading="eager" decoding="async"></div>
+      <div class="sbp-hero__chip c2"><img src="/images/places/manta-ray-snorkeling.jpg" alt="" loading="lazy" decoding="async"></div>
+      <div class="sbp-hero__chip c3"><img src="/images/places/mount-batur-sunrise-trek.jpg" alt="" loading="lazy" decoding="async"></div>
+      <div class="sbp-hero__chip c4"><img src="/images/places/ayung-river-rafting.jpg" alt="" loading="lazy" decoding="async"></div>
+      <div class="sbp-hero__chip c5"><img src="/images/places/tegalalang-rice-terraces.jpg" alt="" loading="lazy" decoding="async"></div>
+  </div>
+  <div class="sbp-hero__wrap">
+    <p class="sbp-hero__kicker" data-t>SB Excursions · Бали · Планировщик поездки</p>
+    <h1 class="sbp-hero__title">
+      <span data-t>Ваша неделя на Бали.</span>
+      <span class="sbp-hero__accent" data-t>Собирается за минуту.</span>
+    </h1>
+    <p class="sbp-hero__sub" data-t>Укажите даты, район проживания и что вам интересно. Маршрут выстроится по дням прямо на карте острова — с реальными турами, ценами напрямую и свободными днями там, где вы захотите отдохнуть.</p>
+    <div class="sbp-hero__cta">
+      <a class="sbp-hero__btn sbp-hero__btn--dark" href="#sbp-start" data-t>Собрать мою неделю</a>
+      <a class="sbp-hero__btn sbp-hero__btn--ghost" href="#sbp-facts" data-t>Как это работает</a>
+    </div>
+    <div class="sbp-hero__facts" id="sbp-facts">
+      <div class="sbp-hero__fact"><b data-t>28 туров в подборе</b><span data-t>Всё, что мы возим сами — от трансфера за $15 до китовых акул</span></div>
+      <div class="sbp-hero__fact"><b data-t>Цены напрямую</b><span data-t>Без комиссии площадок и без предоплаты: бронь подтверждается в WhatsApp</span></div>
+      <div class="sbp-hero__fact"><b data-t>Свободные дни остаются свободными</b><span data-t>Планировщик не забивает каждое утро — он оставляет место на ничего</span></div>
+    </div>
+  </div>
+</section>
+<!-- /sbp-hero -->
+
+  <main class="app" id="sbp-start">
     <!-- ЛЕВО: панель формы -->
     <aside class="panel">
-      <h1 class="panel-title" data-t>Соберите план по Бали</h1>
+      <h2 class="panel-title" data-t>Соберите план по Бали</h2>
       <p class="panel-sub" data-t>Укажите даты, район проживания и что вам интересно — и смотрите, как маршрут собирается по дням прямо на карте острова: с реальными турами SB Excursions, ценами и местами для свободных дней.</p>
 
       <div class="field-row field-row--dates">
