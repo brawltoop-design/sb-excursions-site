@@ -59,6 +59,9 @@ const COPY = {
   ftTours: "Популярные туры",
   ftWrite: "Написать нам",
   ftRights: "© 2021–2026 SB Excursions. Сделано для приключений на Бали",
+
+  pageTitle: "Планировщик поездки на Бали: маршрут по дням бесплатно — SB Excursions",
+  pageDesc: "Бесплатный планировщик поездки на Бали: даты, район и интересы — и маршрут по дням на карте острова, с реальными турами и ценами напрямую. Без регистрации.",
 };
 
 const TRANSLATIONS = {
@@ -89,6 +92,8 @@ const TRANSLATIONS = {
     [COPY.ftTours]: "Our Top Tours",
     [COPY.ftWrite]: "Message us",
     [COPY.ftRights]: "© 2021–2026 SB Excursions. Crafted for Bali adventures",
+    [COPY.pageTitle]: "Bali Trip Planner — Free Day-by-Day Itinerary | SB Excursions",
+    [COPY.pageDesc]: "Free Bali trip planner: set your dates, area and interests to get a day-by-day itinerary on the island map — 28 real tours, direct prices, no signup.",
   },
   es: {
     [COPY.kicker]: "SB Excursions · Bali · Planificador de viaje",
@@ -117,6 +122,8 @@ const TRANSLATIONS = {
     [COPY.ftTours]: "Tours más populares",
     [COPY.ftWrite]: "Escríbenos",
     [COPY.ftRights]: "© 2021–2026 SB Excursions. Hecho para aventuras en Bali",
+    [COPY.pageTitle]: "Planificador de viaje a Bali gratis — SB Excursions",
+    [COPY.pageDesc]: "Planificador de viaje a Bali gratis: fechas, zona e intereses — itinerario día a día en el mapa de la isla con tours reales y precios directos. Sin registro.",
   },
   fr: {
     [COPY.kicker]: "SB Excursions · Bali · Planificateur de voyage",
@@ -145,6 +152,8 @@ const TRANSLATIONS = {
     [COPY.ftTours]: "Circuits les plus demandés",
     [COPY.ftWrite]: "Écrivez-nous",
     [COPY.ftRights]: "© 2021–2026 SB Excursions. Conçu pour les aventures à Bali",
+    [COPY.pageTitle]: "Planificateur de voyage à Bali gratuit — SB Excursions",
+    [COPY.pageDesc]: "Planificateur de voyage à Bali gratuit : dates, quartier et envies — un itinéraire jour par jour sur la carte de l'île, vrais circuits et prix directs. Sans inscription.",
   },
   zh: {
     [COPY.kicker]: "SB Excursions · 巴厘岛 · 行程规划器",
@@ -173,6 +182,8 @@ const TRANSLATIONS = {
     [COPY.ftTours]: "热门路线",
     [COPY.ftWrite]: "联系我们",
     [COPY.ftRights]: "© 2021–2026 SB Excursions. 为巴厘岛的旅程而做",
+    [COPY.pageTitle]: "巴厘岛行程规划器：免费逐日行程 — SB Excursions",
+    [COPY.pageDesc]: "免费巴厘岛行程规划器：填写日期、住宿区域和兴趣，即可在岛屿地图上生成逐日行程——真实路线，直接价格，无需注册。",
   },
 };
 
@@ -426,6 +437,48 @@ const scriptsAt = html.search(/[ \t]*<script src="\/ai-planner\/vendor/);
 if (scriptsAt < 0) throw new Error("не нашёл блок скриптов планировщика");
 html = html.slice(0, scriptsAt) + renderFooter() + "\n\n" + html.slice(scriptsAt);
 
+/* ─── SEO-шапка ────────────────────────────────────────────────────────
+   Статический title был русским для всех: для человека, гуглящего
+   «bali trip planner», страница называлась набором кириллицы. Google
+   читает статику, поэтому здесь английский под целевой запрос; язык
+   пользователя подменяет заголовок уже на клиенте через T(). */
+const SEO_TITLE = "Bali Trip Planner — Free Day-by-Day Itinerary | SB Excursions";
+const SEO_DESC =
+  "Free Bali trip planner: set your dates, area and interests to get a day-by-day itinerary on the island map — 28 real tours, direct prices, no signup.";
+const SEO_URL = "https://www.sbexcursion.com/ai-planner";
+const SEO_IMG = "https://www.sbexcursion.com/images/places/kelingking-beach-t-rex-cliff.jpg";
+
+html = html
+  .replace(/<title>[\s\S]*?<\/title>/, `<title>${SEO_TITLE}</title>`)
+  .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${SEO_DESC}">`)
+  .replace(/\n?<!-- sbp-seo -->[\s\S]*?<!-- \/sbp-seo -->/g, "");
+
+const seoBlock = `
+<!-- sbp-seo -->
+  <link rel="canonical" href="${SEO_URL}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="${SEO_URL}">
+  <meta property="og:title" content="${SEO_TITLE}">
+  <meta property="og:description" content="${SEO_DESC}">
+  <meta property="og:image" content="${SEO_IMG}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${SEO_TITLE}">
+  <meta name="twitter:description" content="${SEO_DESC}">
+  <meta name="twitter:image" content="${SEO_IMG}">
+  <script type="application/ld+json">${JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: "Bali Trip Planner",
+    url: SEO_URL,
+    applicationCategory: "TravelApplication",
+    operatingSystem: "Web",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    provider: { "@type": "TravelAgency", name: "SB Excursions", url: "https://www.sbexcursion.com" },
+  })}</scr` + `ipt>
+<!-- /sbp-seo -->`;
+
+html = html.replace(/(<meta name="description"[^>]*>)/, `$1${seoBlock}`);
+
 await fs.writeFile(INDEX, html);
 
 /* ─── i18n.js ────────────────────────────────────────────────────────── */
@@ -454,7 +507,13 @@ if (added) await fs.writeFile(I18N, i18nOut);
    руками, и после правки переводов браузер продолжал отдавать старый файл
    из кэша: на проде шапка оставалась русской при ?lang=en. */
 const stamp = crypto.createHash("sha1").update(i18nOut).digest("hex").slice(0, 8);
-html = (await fs.readFile(INDEX, "utf8")).replace(/js\/i18n\.js\?v=[0-9a-z]+/g, `js/i18n.js?v=${stamp}`);
+/* app.js стережём той же схемой: его ?v= тоже был вбит руками, и правка
+   логики (заголовок по языку) иначе не доехала бы до старых браузеров. */
+const appOut = await fs.readFile(path.join(ROOT, "ai-planner/js/app.js"), "utf8");
+const appStamp = crypto.createHash("sha1").update(appOut).digest("hex").slice(0, 8);
+html = (await fs.readFile(INDEX, "utf8"))
+  .replace(/js\/i18n\.js\?v=[0-9a-z]+/g, `js/i18n.js?v=${stamp}`)
+  .replace(/js\/app\.js\?v=[0-9a-z]+/g, `js/app.js?v=${appStamp}`);
 await fs.writeFile(INDEX, html);
 
 console.log(JSON.stringify({ "шапка вставлена": true, "фото в шапке": PHOTOS.length, "строк перевода добавлено": added }, null, 2));

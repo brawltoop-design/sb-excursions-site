@@ -123,6 +123,15 @@
       el.textContent = T(src);
     });
     document.documentElement.lang = state.lang;
+    /* Заголовок вкладки и description — на языке пользователя, но ТОЛЬКО
+       если язык явно задан в адресе. Googlebot выполняет JS и заходит без
+       ?lang: без этой защиты русский заголовок по умолчанию затирал бы
+       английский статический прямо в отрендеренном снапшоте. */
+    if (/[?&]lang=/.test(location.search)) {
+      document.title = T('Планировщик поездки на Бали: маршрут по дням бесплатно — SB Excursions');
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', T('Бесплатный планировщик поездки на Бали: даты, район и интересы — и маршрут по дням на карте острова, с реальными турами и ценами напрямую. Без регистрации.'));
+    }
     var ppl = document.getElementById('planPrivacyLink');
     if (ppl) ppl.href = '/bali/' + state.lang + '/privacy-policy';
   }
