@@ -39189,6 +39189,9 @@ function writeSitemap() {
     "/bali/en/about",
     "/bali/en/faq",
     "/bali/en/journal",
+    // Хаб гайдов: пять языковых версий на диске, индексируется, внутренние
+    // ссылки на него есть — а в карте сайта его не было.
+    "/bali/en/guides",
     ...tours.map((tour) => `/bali/en/tours/${tour.slug}`),
     ...tours.flatMap((tour) =>
       JOURNAL_ARTICLE_TYPES.map((articleType) => `/bali/en/journal/${tour.slug}/${articleType.slug}`),
@@ -39201,7 +39204,9 @@ function writeSitemap() {
   ];
 
   const dubaiSingles = [
-    "/",
+    // Корень сюда не входит: "/" отдаёт 308 на /bali/en/main-page, а карта
+    // сайта обязана перечислять конечные 200. Сама главная в карте есть
+    // отдельной записью в baliGroups.
     "/dubai/en",
     "/dubai/en/about",
     "/dubai/en/faq",
@@ -39214,7 +39219,12 @@ function writeSitemap() {
 
   // Одноязычные страницы вне генератора: прайс-индекс (собирает
   // scripts/build-prices-page.mjs) — языковых версий нет, без hreflang-группы.
-  const baliSingles = ["/bali/en/tour-prices"];
+  const baliSingles = [
+    "/bali/en/tour-prices",
+    // AI-планировщик: один адрес, язык берётся из ?lang=, поэтому языковых
+    // версий как отдельных URL нет и hreflang-группе взяться неоткуда.
+    "/ai-planner",
+  ];
 
   // Партнёрская Work With Us живёт на пяти языках по собственной схеме URL
   // (/work-with-us и /{ru,es,fr,zh}/work-with-us — собирает

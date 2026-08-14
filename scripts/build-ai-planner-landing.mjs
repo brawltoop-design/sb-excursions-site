@@ -442,6 +442,16 @@ html = html.slice(0, scriptsAt) + renderFooter() + "\n\n" + html.slice(scriptsAt
    «bali trip planner», страница называлась набором кириллицы. Google
    читает статику, поэтому здесь английский под целевой запрос; язык
    пользователя подменяет заголовок уже на клиенте через T(). */
+/* Статический язык документа — английский, как у остального сайта.
+   Раньше здесь стояло lang="ru" и активной была русская кнопка: Google и
+   AI-краулеры заходят без ?lang и индексировали русскую версию единственного
+   адреса планировщика на англоязычном сайте. Русский теперь через ?lang=ru,
+   как и остальные четыре языка. */
+html = html
+  .replace(/<html lang="[a-z-]+"/i, '<html lang="en"')
+  .replace(/class="lang-item is-active" data-lang="ru"/, 'class="lang-item" data-lang="ru"')
+  .replace(/class="lang-item" data-lang="en"/, 'class="lang-item is-active" data-lang="en"');
+
 const SEO_TITLE = "Bali Trip Planner — Free Day-by-Day Itinerary | SB Excursions";
 const SEO_DESC =
   "Free Bali trip planner: set your dates, area and interests to get a day-by-day itinerary on the island map — 28 real tours, direct prices, no signup.";

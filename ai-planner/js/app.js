@@ -127,11 +127,9 @@
        если язык явно задан в адресе. Googlebot выполняет JS и заходит без
        ?lang: без этой защиты русский заголовок по умолчанию затирал бы
        английский статический прямо в отрендеренном снапшоте. */
-    if (/[?&]lang=/.test(location.search)) {
-      document.title = T('Планировщик поездки на Бали: маршрут по дням бесплатно — SB Excursions');
-      var metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) metaDesc.setAttribute('content', T('Бесплатный планировщик поездки на Бали: даты, район и интересы — и маршрут по дням на карте острова, с реальными турами и ценами напрямую. Без регистрации.'));
-    }
+    document.title = T('Планировщик поездки на Бали: маршрут по дням бесплатно — SB Excursions');
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', T('Бесплатный планировщик поездки на Бали: даты, район и интересы — и маршрут по дням на карте острова, с реальными турами и ценами напрямую. Без регистрации.'));
     var ppl = document.getElementById('planPrivacyLink');
     if (ppl) ppl.href = '/bali/' + state.lang + '/privacy-policy';
   }
@@ -1373,7 +1371,16 @@
 
   /* ---------- Инициализация ---------- */
   makePins();
+  /* Язык по умолчанию — английский, как у остального сайта. Разметка
+     написана по-русски, потому что русский здесь язык КЛЮЧЕЙ словаря, а не
+     язык по умолчанию: без ?lang страница переводится на английский, и
+     статический <html lang="en"> с ней совпадает. Русский приходит через
+     ?lang=ru наравне с остальными четырьмя.
+
+     state.lang сбрасываем перед вызовом: relang выходит вхолостую, если
+     запрошенный язык равен текущему, и при ?lang=ru не переключал ни
+     <html lang>, ни заголовок вкладки, ни активную кнопку. */
   var urlLang = (location.search.match(/[?&]lang=(en|ru|zh|es|fr)(?:&|$)/) || [])[1];
-  if (urlLang && urlLang !== 'ru') relang(urlLang);
-  else applyStaticI18n();
+  state.lang = null;
+  relang(urlLang || 'en');
 })();

@@ -26,6 +26,7 @@ const STEPS = [
   ["add-partner-ref.mjs", "партнёрская метка в ссылках WhatsApp"],
   ["add-robots-meta.mjs", "разрешение на крупные картинки в выдаче Google"],
   ["build-favicons.mjs", "иконки сайта: тёмная тема и единый набор тегов"],
+  ["fix-canonicals.mjs", "канониклы политик и служебные страницы вне индекса"],
   ["normalize-site-host.mjs", "единый домен www во всех адресах"],
   ["fix-mobile-tours-link.mjs", "живая ссылка «Туры» в мобильном меню"],
   ["fix-legacy-guide-tourcard.mjs", "карточка тура в сайдбаре шести старых гайдов"],

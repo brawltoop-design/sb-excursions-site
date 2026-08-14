@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://www.sbexcursion.com/</loc>
-    <lastmod>2026-08-14</lastmod>
-  </url>
-  <url>
     <loc>https://www.sbexcursion.com/dubai/en</loc>
     <lastmod>2026-08-14</lastmod>
   </url>
@@ -38,6 +34,10 @@
   </url>
   <url>
     <loc>https://www.sbexcursion.com/bali/en/tour-prices</loc>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.sbexcursion.com/ai-planner</loc>
     <lastmod>2026-08-14</lastmod>
   </url>
   <url>
@@ -288,6 +288,56 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.sbexcursion.com/bali/es/journal"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.sbexcursion.com/bali/fr/journal"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sbexcursion.com/bali/en/journal"/>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.sbexcursion.com/bali/en/guides</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sbexcursion.com/bali/en/guides"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.sbexcursion.com/bali/zh/guides"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.sbexcursion.com/bali/ru/guides"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.sbexcursion.com/bali/es/guides"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sbexcursion.com/bali/fr/guides"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sbexcursion.com/bali/en/guides"/>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.sbexcursion.com/bali/zh/guides</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sbexcursion.com/bali/en/guides"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.sbexcursion.com/bali/zh/guides"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.sbexcursion.com/bali/ru/guides"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.sbexcursion.com/bali/es/guides"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sbexcursion.com/bali/fr/guides"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sbexcursion.com/bali/en/guides"/>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.sbexcursion.com/bali/ru/guides</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sbexcursion.com/bali/en/guides"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.sbexcursion.com/bali/zh/guides"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.sbexcursion.com/bali/ru/guides"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.sbexcursion.com/bali/es/guides"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sbexcursion.com/bali/fr/guides"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sbexcursion.com/bali/en/guides"/>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.sbexcursion.com/bali/es/guides</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sbexcursion.com/bali/en/guides"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.sbexcursion.com/bali/zh/guides"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.sbexcursion.com/bali/ru/guides"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.sbexcursion.com/bali/es/guides"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sbexcursion.com/bali/fr/guides"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sbexcursion.com/bali/en/guides"/>
+    <lastmod>2026-08-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.sbexcursion.com/bali/fr/guides</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sbexcursion.com/bali/en/guides"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.sbexcursion.com/bali/zh/guides"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://www.sbexcursion.com/bali/ru/guides"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.sbexcursion.com/bali/es/guides"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sbexcursion.com/bali/fr/guides"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sbexcursion.com/bali/en/guides"/>
     <lastmod>2026-08-14</lastmod>
   </url>
   <url>
