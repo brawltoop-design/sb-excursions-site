@@ -735,6 +735,9 @@ for (const lang of LANGS) {
     heroPreload: "/images/places/kelingking-beach-t-rex-cliff.jpg",
     waText: t.wa,
     langLinks: { ru: routeOf("ru"), fr: routeOf("fr") },
+    // У страницы есть все пять версий — переключатель ведёт на них,
+    // а не на тур донора.
+    localeRoute: routeOf,
     headExtra: hreflangBlock,
     schema,
     styleBlock,

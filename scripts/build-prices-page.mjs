@@ -201,6 +201,9 @@ const html = await buildChromedPage(ROOT, {
   ogImage: `${SITE}/images/places/kelingking-beach-t-rex-cliff.jpg`,
   heroPreload: null,
   waText: "Hello! I have a question about tour prices.",
+  // Прайс-индекс существует только по-английски: с других языков
+  // переключатель уводит на соответствующую главную, а не на тур донора.
+  localeRoute: (code) => (code === "en" ? "/bali/en/tour-prices" : `/bali/${code}/main-page`),
   schema,
   styleBlock,
   bodyContent,

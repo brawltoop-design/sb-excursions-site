@@ -37,6 +37,11 @@ let html = await buildChromedPage(ROOT, {
   ogImage: `${SITE}/images/places/kelingking-beach-t-rex-cliff.jpg`,
   waText: "Hello! I'm interested in your excursions. Could you help me with the booking details?",
   heroPreload: null,
+  // Языковых версий у 404 нет и быть не может — она одна на все адреса.
+  // Поэтому переключатель в шапке уводит на главную нужного языка, а не
+  // на тур донора, как было.
+  localeRoute: (code) => `/bali/${code}/main-page`,
+  langLinks: { ru: "/bali/ru/main-page", fr: "/bali/fr/main-page" },
   schema: { "@context": "https://schema.org", "@type": "WebPage", name: "404 — Page not found", isPartOf: { "@type": "WebSite", name: "SB Excursions", url: SITE } },
   styleBlock: STYLE_BLOCK,
   bodyContent: BODY_CONTENT,

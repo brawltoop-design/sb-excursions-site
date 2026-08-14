@@ -21,6 +21,16 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 
 const DONOR = "bali-tour-ubud-highlights-tour.html";
+
+/* Пять языков сайта в том же порядке и с теми же подписями, что в шапке. */
+const LOCALES = [
+  { code: "en", label: "English" },
+  { code: "zh", label: "\u4e2d\u6587" },
+  { code: "ru", label: "\u0420\u0443\u0441\u0441\u043a\u0438\u0439" },
+  { code: "es", label: "Espa\u00f1ol" },
+  { code: "fr", label: "Fran\u00e7ais" },
+];
+const localizedMainPage = (code) => `/bali/${code}/main-page`;
 // Границы: первый контентный блок тура и блок футера. Если генератор
 // когда-нибудь сменит id блоков — упадём с понятной ошибкой, а не соберём
 // страницу с чужим контентом.
@@ -75,6 +85,21 @@ export async function buildChromedPage(root, page) {
   prefix = swapWa(prefix)
     .replace(/href="">Ru</g, `href="${langLinks.ru}">Ru<`)
     .replace(/href="">Fr</g, `href="${langLinks.fr}">Fr<`);
+
+  /* Переключатель языков (иконка глобуса) строит меню из config.locales в
+     инлайновом скрипте. Скрипт приезжает из донора — то есть со страницы
+     тура по Убуду, — и на каждой кастомной странице предлагал уйти НА ЭТОТ
+     ТУР: с work-with-us «Русский» вёл на /bali/ru/tours/ubud-highlights-tour.
+     Подменяем маршруты на языковые версии самой страницы; если их нет,
+     показываем главные, а не чужой тур. */
+  const localeRoute = page.localeRoute || ((code) => localizedMainPage(code));
+  const switcherConfig = /"locales":\s*\[[\s\S]*?\],"currentLocale":"[a-z-]*"/;
+  const current = page.lang || "en";
+  const locales = LOCALES.map(
+    ({ code, label }) =>
+      `{"code":"${code}","label":"${label}","href":"${localeRoute(code)}","active":${code === current}}`,
+  ).join(",");
+  prefix = prefix.replace(switcherConfig, `"locales":[${locales}],"currentLocale":"${current}"`);
 
   // язык документа: донор всегда английский, кастомная страница — какая угодно
   if (page.lang && page.lang !== "en") {
