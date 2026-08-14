@@ -41,7 +41,10 @@ export async function buildChromedPage(root, page) {
   let prefix = donor.slice(0, iContent);
   let suffix = donor.slice(iFooter);
 
-  const waHref = `https://wa.me/6285333685020?text=${encodeURIComponent(page.waText)}`;
+  // Апостроф кодируем руками: encodeURIComponent его не трогает, а готовая
+  // ссылка попадает в том числе внутрь одинарных строк в скриптах донора —
+  // «I'm interested» ломал их с SyntaxError.
+  const waHref = `https://wa.me/6285333685020?text=${encodeURIComponent(page.waText).replace(/'/g, "%27")}`;
   const swapWa = (s) => s.replace(/https:\/\/wa\.me\/6285333685020\?text=[^"']*/g, waHref);
 
   // --- префикс: голова страницы ---

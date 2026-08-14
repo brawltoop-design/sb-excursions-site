@@ -21,6 +21,7 @@ const STEPS = [
   ["build-prices-page.mjs", "прайс-индекс всех туров из живых данных"],
   ["build-work-with-us.mjs", "партнёрская страница Work With Us"],
   ["build-ai-planner-landing.mjs", "посадочная шапка AI-планировщика"],
+  ["build-404.mjs", "страница 404: ворота Лемпуянг в родном хроме"],
   ["fix-fouc.mjs", "защита от мигания при загрузке"],
   ["add-vercel-analytics.mjs", "счётчик посещаемости Vercel"],
   ["add-partner-ref.mjs", "партнёрская метка в ссылках WhatsApp"],
