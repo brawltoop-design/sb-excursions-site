@@ -106,6 +106,20 @@ export async function buildChromedPage(root, page) {
     prefix = prefix.replace(/<html([^>]*?)lang="en"/, `<html$1lang="${page.lang}"`);
   }
 
+  /* Шапка и подвал приходят из английского донора со своими ссылками, и на
+     языковой версии страницы каждый пункт уводил на английскую: с
+     /ru/work-with-us логотип, «Bali, Indonesia», «About Us» и «FAQ» вели на
+     /bali/en/…, а подвал — на английские политики и туры. Человек выбирал
+     язык и первым же кликом из него выпадал.
+
+     Переписываем все /bali/en/ на язык страницы. Дубай не трогаем: у него
+     языковых версий нет, /dubai/ru просто не существует. */
+  if (page.lang && page.lang !== "en") {
+    const toLocale = (s) => s.replace(/\/bali\/en(?=\/|#|"|'|$)/g, `/bali/${page.lang}`);
+    prefix = toLocale(prefix);
+    suffix = toLocale(suffix);
+  }
+
   // свои schema, hreflang, стили и класс .js для reveal-анимаций — в конец головы
   prefix = prefix.replace(
     "</head>",
