@@ -29897,6 +29897,334 @@ const JOURNAL_SEO_GUIDES = [
       }
     ]
   },
+  {
+    "slug": "sidemen-to-mount-batur",
+    "badge": "Travel guide",
+    "navLabel": "Sidemen to Batur",
+    "cardTourLabel": "Mount Batur sunrise",
+    "heroTourSlug": "mount-batur-sunrise-hike",
+    "relatedTourSlugs": [
+      "mount-batur-sunrise-hike",
+      "mount-batur-sunrise-jeep-tour",
+      "east-bali-instagram-tour"
+    ],
+    "inlineStats": [
+      "1.5 hours each way",
+      "Pickup around 02:30",
+      "Sunrise hike from $35"
+    ],
+    "title": "Mount Batur from Sidemen: Drive Time and Sunrise Pickups",
+    "description": "Mount Batur from Sidemen is 1.5 hours each way, the same band as Ubud, so the sunrise hike pickup lands around 02:30. Hike from $35.",
+    "excerpt": "Mount Batur from Sidemen is 1.5 hours one way, which puts the sunrise-hike pickup at around 02:30 — the latest departure we run from anywhere on the island, alongside Ubud. That is the headline for anyone worried that an east Bali base costs them sleep: it does not. Sidemen sits in the same drive-time band as Ubud, so staying in the rice valley rather than the tourist centre adds nothing to the road time, and it takes away the temptation to be out late the night before. The schedule works backwards from sunrise at 06:00-06:30 and a trailhead arrival around 04:00. The guided hike runs 5-8 hours door to door from $35; the jeep formats leave 30-60 minutes later because there is no climb to fit in. This guide covers the night hour by hour, how to pair the volcano with east Bali sightseeing on a separate day, and what the day after looks like.",
+    "rankings": [
+      {
+        "name": "Pickup in Sidemen at around 02:30",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-hike.jpg",
+        "area": "Sidemen",
+        "bestFor": "The latest departure we run",
+        "summary": "Sidemen shares the latest pickup window on our list with Ubud, at roughly 02:30 for the guided hike. Pack the bag and unlock the gate before you go to bed. A driver who has to hunt for the right driveway in the dark loses minutes that come straight out of the schedule."
+      },
+      {
+        "name": "The trailhead at around 04:00",
+        "imageSrc": "/images/places/hiking-shoes.jpg",
+        "area": "Foot of Mount Batur",
+        "bestFor": "Footwear that grips",
+        "summary": "Ninety minutes after leaving Sidemen you are at the base with your guide, sorting head torches in the dark. The trailhead is managed by the local guide association and this is where shoes become obvious: trainers with grip are fine, flip-flops are not. Whatever you carry up, you carry back down, so travel light."
+      },
+      {
+        "name": "The layer nobody packs in the valley",
+        "imageSrc": "/images/places/warm-layer-for-sunrise.jpg",
+        "area": "On the way up",
+        "bestFor": "Standing still at the summit",
+        "summary": "Sidemen is warm at two in the morning, so people leave in a t-shirt and regret it within the hour. The cold on Batur is wind chill, and it bites hardest during the 30-60 minutes you stand in one place waiting for light. A windbreaker or fleece, long trousers and something for your hands cost nothing to carry."
+      },
+      {
+        "name": "Sunrise between 06:00 and 06:30",
+        "imageSrc": "/images/places/mount-batur-sunrise-trek.jpg",
+        "area": "Summit, 1,717 m",
+        "bestFor": "Why the early start is worth it",
+        "summary": "The rim faces east across Lake Batur toward Mount Agung, with mist often sitting over the water at first light. On genuinely clear mornings Rinjani appears on Lombok. Sunrise falls in the same window every month of the year, and the light comes up faster than most people expect this close to the equator."
+      },
+      {
+        "name": "The jeep version of the same morning",
+        "imageSrc": "/images/places/mount-batur-jeep.jpg",
+        "area": "Crater rim and lava fields",
+        "bestFor": "Anyone not climbing",
+        "summary": "Same night, no ascent. A 4x4 drives a separate track to a viewpoint on the crater rim, then crosses the old black lava fields after the light arrives. From $60 over 6-8 hours, and the departure from Sidemen sits 30-60 minutes later than the hike, so roughly 03:00 to 03:30."
+      },
+      {
+        "name": "The hot spring finish by the lake",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg",
+        "area": "Lake Batur shore",
+        "bestFor": "A soft landing after a short night",
+        "summary": "The same jeep morning from $75 over 6-8 hours, ending in natural lakeside hot springs instead of a long walk down. For a base 1.5 hours away it is the gentlest version of the trip: no climb, a later departure than the hike, and a soak before the daytime drive home."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Sidemen to Mount Batur: the night hour by hour",
+        "paragraphs": [
+          "Sidemen to the foot of the volcano is **1.5 hours**, and at half past two that is a realistic figure rather than an optimistic one. The roads are empty, and the outbound leg is the fastest drive of the whole trip. Here is where each hour of the guided hike goes."
+        ],
+        "table": {
+          "headers": [
+            "Stage of the journey",
+            "Time on the clock",
+            "What happens",
+            "Why the time is set this way"
+          ],
+          "rows": [
+            [
+              "Departure from Sidemen",
+              "Around 02:30",
+              "The driver collects you at the hotel or villa gate",
+              "Sidemen is 1.5 hours from the mountain, the same band as Ubud, so this is the latest departure we run"
+            ],
+            [
+              "Time on the road",
+              "02:30 to 04:00",
+              "About 1.5 hours of driving on empty night roads",
+              "At this hour there is no traffic, so the outbound leg is the fastest drive of the trip"
+            ],
+            [
+              "Arrival at the trailhead",
+              "Around 04:00",
+              "Head torches, footwear check and a head count with your guide",
+              "The climb takes 1.5 to 2 hours, so a 04:00 arrival leaves margin before the light"
+            ],
+            [
+              "The climb to the summit",
+              "04:00 to 06:00",
+              "Around 700 m of ascent to the summit at 1,717 m, ending on loose black volcanic sand",
+              "Guides set the pace off the slowest walker in the group rather than the fastest"
+            ],
+            [
+              "Sunrise at the summit",
+              "06:00 to 06:30",
+              "A wait of 30 to 60 minutes on the rim, looking east across Lake Batur toward Mount Agung",
+              "Sunrise falls inside this window in every month of the year at this latitude"
+            ],
+            [
+              "Descent to the trailhead",
+              "From 06:30",
+              "About 1.5 hours down, this time in full daylight",
+              "Coming down in the light is faster and safer than the loose upper section in the dark"
+            ],
+            [
+              "Return to Sidemen",
+              "Early to mid-morning",
+              "The same 1.5 hours of road, in daytime traffic this time",
+              "The whole trip is 5 to 8 hours door to door, which is why the afternoon needs to stay empty"
+            ]
+          ],
+          "note": "Times are approximate and confirmed over WhatsApp the evening before, once we know the property and how a car reaches it. The jeep formats leave 30 to 60 minutes later than the hike from the same base, because there is no two-hour climb to fit into the schedule."
+        }
+      },
+      {
+        "heading": "Why 1.5 hours from Sidemen changes the plan",
+        "paragraphs": [
+          "Sidemen to the foot of Mount Batur is **1.5 hours** one way, and that single figure is the point of this page. It puts an east Bali rice valley in the same drive-time band as Ubud, and Ubud is the base people specifically choose to shorten the night. Staying east costs you nothing in road time for a Batur morning. Every departure time here is calculated backwards from it.",
+          "The arithmetic is fixed. Sunrise lands between **06:00 and 06:30** in every month of the year, the climb takes **1.5 to 2 hours** at guided pace, and you want to reach the trailhead by around **04:00** rather than racing the light up the slope. Subtract 1.5 hours of road and you arrive at a Sidemen pickup of around **02:30** — the latest window we run, shared only with Ubud. Guests based elsewhere on the island leave earlier for the same sunrise. The island-wide version of this sum is in [what time to leave for the Mount Batur sunrise](/bali/en/journal/what-time-to-leave-for-mount-batur-sunrise), and the direct comparison is in [Ubud to Mount Batur](/bali/en/journal/ubud-to-mount-batur).",
+          "Sidemen has a second advantage that has nothing to do with distance. It is a quiet area chosen by travellers who want calm rather than nightlife, which means the evening before is already an early one. A 02:30 alarm is survivable after going to bed at nine and punishing after a late night out, and that difference decides how the summit feels more than fitness does. If the walk itself is your question rather than the hour, [how hard is the Mount Batur hike](/bali/en/journal/how-hard-is-the-mount-batur-hike) is honest about the loose upper section, and [what to wear for the Mount Batur sunrise](/bali/en/journal/what-to-wear-mount-batur-sunrise) covers the wind chill at the top. The full trip is **5 to 8 hours** door to door on the [sunrise hike](/bali/en/tours/mount-batur-sunrise-hike) from **$35**."
+        ]
+      },
+      {
+        "heading": "Pairing a Batur morning with east Bali sightseeing",
+        "paragraphs": [
+          "Guests staying in Sidemen are usually combining volcano, coast and east Bali sightseeing in one stretch of the trip, so the real question is the order rather than the shortlist. Our rule is one pre-dawn day, then one normal day. The [East Bali Instagram Tour](/bali/en/tours/east-bali-instagram-tour) runs **8 to 10 hours from $69** with a morning hotel pickup and takes in Lempuyang and east Bali. It is a full day in its own right and does not fit onto the back of a night that started at 02:30.",
+          "The same applies on the water. [Blue Lagoon Snorkeling](/bali/en/tours/blue-lagoon-snorkeling) at Padang Bai is **from $50**, half day to full day, again with a morning pickup, and further up the coast our [Amed and Tulamben snorkelling guide](/bali/en/journal/amed-tulamben-snorkeling) sets out what is there. Both are daytime trips with early starts of their own, and both are wasted on a body that has been awake since two in the morning.",
+          "If you would rather not fix an itinerary in advance, a [private car with driver](/bali/en/tours/private-car-with-driver-bali) is **from $59 per car** for flexible daily use across all major regions. That also covers the daylight version of the volcano: the public rim road on the Penelokan side gives you the caldera and the lake for free, in full light, with no alarm at all. We describe it in [Kintamani viewpoint and Lake Batur](/bali/en/journal/kintamani-viewpoint-and-lake-batur). It is not the summit, and we do not pretend it is."
+        ]
+      },
+      {
+        "heading": "The rest day after a broken night",
+        "paragraphs": [
+          "The honest cost of the sunrise trip is the following day rather than the price. The hike is **5 to 8 hours** door to door, so a 02:30 departure puts you back in Sidemen between early and mid-morning, and most guests sleep after that. Treat the rest of the day as gone. Sequence the week deliberately: arrive, one easy day, the volcano, then a quiet day, then the long sightseeing day.",
+          "A rest day in a rice valley is easier to spend than a rest day in a busy town, which is one more argument for doing Batur from here rather than moving base for a single night. If your window is genuinely tight, the [jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) from **$60** removes the climb but not the hour — the departure is only 30 to 60 minutes later and you still lose the night. [Jeep versus hike](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike) puts the two side by side, and the [hot spring version](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) from **$75** at least finishes in warm water by the lake.",
+          "From November to March the upper trail is slippery and cloud can hide the view. Guides still run most mornings and cancel only in genuinely bad weather, which is covered properly in [Mount Batur in the rainy season](/bali/en/journal/mount-batur-in-rainy-season). Nothing is prepaid on our side, so a decision the evening before is still a decision, and [how to book a Mount Batur tour](/bali/en/journal/how-to-book-mount-batur-tour) explains how the WhatsApp thread works."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How far is Mount Batur from Sidemen?",
+        "answer": "The drive is about 1.5 hours one way, which places Sidemen in the same band as Ubud rather than out on a limb. At night the road is empty and the outbound leg is the fastest drive of the trip. The return runs in daytime traffic and takes longer, so plan 1.5 hours in each direction."
+      },
+      {
+        "question": "What time is the pickup for the Mount Batur sunrise hike from Sidemen?",
+        "answer": "Around 02:30, and that is the latest departure we run from anywhere. It works backwards from sunrise at 06:00 to 06:30 and a trailhead arrival near 04:00, with 1.5 hours of road before that. We confirm the exact minute over WhatsApp the evening before, once we know the property and its access lane."
+      },
+      {
+        "question": "Can I do the Mount Batur jeep tour from Sidemen instead of the hike?",
+        "answer": "Yes. The jeep formats leave 30 to 60 minutes later than the hike from the same base, so roughly 03:00 to 03:30 from Sidemen, because there is no two-hour climb to schedule. The Sunrise Jeep Tour is from $60 over 6 to 8 hours, and the version ending at the lakeside hot springs is from $75."
+      },
+      {
+        "question": "Is Sidemen too far from Mount Batur to be worth staying there?",
+        "answer": "No. At 1.5 hours it matches the shortest common transfer band on the island, so an east Bali base adds nothing to the road time for a Batur morning. It also helps in a quieter way: people staying in a rice valley are already going to bed early, which suits a pre-dawn start better than a nightlife town."
+      },
+      {
+        "question": "Can I combine Mount Batur with east Bali sightseeing on the same day?",
+        "answer": "We would not advise it. The sunrise hike is 5 to 8 hours door to door and ends with most guests asleep by early afternoon. Put the East Bali Instagram Tour, 8 to 10 hours from $69 with a morning hotel pickup, on a separate day. Two proper days beat one long day that neither trip survives."
+      },
+      {
+        "question": "What is the drive back to Sidemen like after the sunrise hike?",
+        "answer": "Slower than the drive out. The same 1.5 hours becomes a daytime run in real traffic, and most people sleep through it. You are usually back at the property between early and mid-morning, inside the 5 to 8 hour window. Plan nothing demanding afterwards; a pool and a late lunch is the realistic version."
+      }
+    ]
+  },
+  {
+    "slug": "amed-to-mount-batur",
+    "badge": "Travel guide",
+    "navLabel": "Amed to Mount Batur",
+    "cardTourLabel": "Batur from Amed",
+    "heroTourSlug": "mount-batur-sunrise-jeep-tour",
+    "relatedTourSlugs": [
+      "mount-batur-sunrise-hike",
+      "mount-batur-sunrise-jeep-hot-spring",
+      "blue-lagoon-snorkeling"
+    ],
+    "inlineStats": [
+      "2 hours from Amed to the trailhead",
+      "Hike pickup around 02:00",
+      "Private tours from $35"
+    ],
+    "title": "Mount Batur Sunrise Hike from Amed: Drive and Pickup Times",
+    "description": "Amed to Mount Batur is about 2 hours one way, so the sunrise hike pickup lands around 02:00 and the jeep 30-60 minutes later. Private tours from $35.",
+    "excerpt": "Amed to Mount Batur takes about 2 hours of driving one way, so the pickup for the sunrise hike lands around 02:00, and the jeep formats collect you 30 to 60 minutes later. That is roughly half an hour earlier than our pickups in Sidemen or Ubud, and still far kinder than the schedule from the far south of the island. Amed is a snorkelling and diving base, and most people staying there already keep early hours, so a pre-dawn start is a smaller shock here than almost anywhere else on Bali. The whole plan works backwards from a 06:00-06:30 sunrise: about 2 hours on empty roads, a trailhead arrival around 04:00, then 1.5-2 hours of climbing to the 1,717 m summit. All our Batur tours are private, include hotel pickup and return in Amed, and are booked on WhatsApp with no prepayment — the hike from $35, the jeep from $60, and the jeep with hot springs from $75.",
+    "rankings": [
+      {
+        "name": "Mount Batur Sunrise Jeep Tour",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
+        "area": "Kintamani, from $60",
+        "bestFor": "Divers who want the sunrise without the climb",
+        "summary": "A 4x4 collects you in Amed roughly 30 to 60 minutes after the hikers leave, drives a separate track to a viewpoint on the crater rim for the 06:00-06:30 sunrise, then crosses the old black lava fields. There is no climbing at all, which matters when your legs are already doing daily work underwater. Private, 6-8 hours door to door."
+      },
+      {
+        "name": "Mount Batur Sunrise Hike",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-hike.jpg",
+        "area": "Kintamani, from $35",
+        "bestFor": "Fit travellers who want the summit itself",
+        "summary": "The full version: pickup in Amed around 02:00, trailhead around 04:00, then 1.5-2 hours up loose black volcanic sand to the 1,717 m summit with a local guide. You watch sunrise from the top, looking east over Lake Batur toward Mount Agung, and walk back down in daylight in about 1.5 hours. 5-8 hours door to door."
+      },
+      {
+        "name": "Mount Batur Sunrise Jeep & Hot Spring",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg",
+        "area": "Kintamani, from $75",
+        "bestFor": "Ending a cold summit morning in warm water",
+        "summary": "The same jeep sunrise and lava-field crossing, finished with a soak in natural hot springs beside Lake Batur. After a start from Amed around 02:30-03:00 and a 30-60 minute wait in wind chill on the rim, warm water before the 2-hour drive back to the coast is the most comfortable way to end the morning. From $75, 6-8 hours."
+      },
+      {
+        "name": "A warm layer and closed shoes",
+        "imageSrc": "/images/places/warm-layer-for-sunrise.jpg",
+        "area": "Packing",
+        "bestFor": "Guests who packed only for the coast",
+        "summary": "Amed luggage tends to be swimwear and sandals, and neither works at 1,717 m before dawn. The summit wait is 30-60 minutes in wind chill, and the upper trail is loose black volcanic sand, so bring a warm layer and closed shoes with real grip. Everything you need for the morning fits in one small backpack."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The night hour by hour from Amed",
+        "paragraphs": [
+          "Every Mount Batur schedule is the same sum worked backwards: sunrise at **06:00-06:30** all year round, a trailhead arrival around **04:00** for the guided hike, and however long the road takes from your bed. From Amed the road takes about **2 hours** one way, so the hike pickup lands around **02:00** and the jeep formats follow 30 to 60 minutes later. Here is what the night actually looks like."
+        ],
+        "table": {
+          "headers": [
+            "Time (approximate)",
+            "Stage of the journey",
+            "What is happening"
+          ],
+          "rows": [
+            [
+              "02:00",
+              "Departure from Amed for the sunrise hike",
+              "The driver collects you at your hotel. At this hour the roads are empty, and the outbound leg is the fastest drive of the whole trip."
+            ],
+            [
+              "02:30-03:00",
+              "Departure from Amed for the jeep formats",
+              "Jeep guests leave 30 to 60 minutes after the hikers, because there is no two-hour climb to fit into the schedule before sunrise."
+            ],
+            [
+              "04:00",
+              "Arrival at the trailhead",
+              "Hikers meet the local guide at the trailhead managed by the guide association in the Kintamani area, and the walk begins in the dark."
+            ],
+            [
+              "04:00-06:00",
+              "Ascent to the summit",
+              "About 700 m of height gain at a guided pace, taking 1.5-2 hours. The upper section is loose black volcanic sand, so closed shoes matter."
+            ],
+            [
+              "06:00-06:30",
+              "Sunrise at the summit",
+              "From 1,717 m you look east across Lake Batur toward Mount Agung, with Rinjani on Lombok visible on clear mornings. Expect a 30-60 minute wait in wind chill."
+            ],
+            [
+              "06:30-08:00",
+              "Descent in daylight",
+              "The walk down takes about 1.5 hours, and this time you can see the caldera, the lake and the black lava fields you passed in the dark."
+            ],
+            [
+              "08:00 onwards",
+              "Return drive to Amed",
+              "The return leg runs in normal daytime traffic and is slower than the outbound drive. The hike format runs 5-8 hours door to door, the jeep formats 6-8 hours."
+            ]
+          ],
+          "note": "All times are approximate; we confirm your exact pickup on WhatsApp the day before. Jeep guests do not climb at any point — the 4x4 uses its own track to a viewpoint on the crater rim for the same 06:00-06:30 sunrise."
+        }
+      },
+      {
+        "heading": "Why a 02:00 pickup suits Amed better than most places",
+        "paragraphs": [
+          "On paper, **02:00** is the sort of number that makes people book from somewhere else. In practice, Amed handles it better than almost any base on the island. It is a snorkelling and diving village, and its guests already keep early hours for morning sessions in the water, so a one-off pre-dawn start is a smaller shock here than in a nightlife town. The arithmetic behind the timing is laid out in full in [what time to leave for the Mount Batur sunrise](/bali/en/journal/what-time-to-leave-for-mount-batur-sunrise).",
+          "The **2-hour** drive puts Amed about half an hour behind Sidemen and Ubud, which both sit at **1.5 hours** and share the latest pickup window we run, around **02:30** — the details are in [Ubud to Mount Batur](/bali/en/journal/ubud-to-mount-batur). It is still a far kinder night than the one guests face from the far south of the island, where the road alone reshapes the whole morning; [Mount Batur sunrise from south Bali](/bali/en/journal/mount-batur-sunrise-from-south-bali) explains that trade-off.",
+          "There is one genuine consolation built into the hour: at **02:00** the roads are empty, and the outbound leg is the fastest drive of the trip — the slow half is coming home in daytime traffic. Dress for the top, not the coast: the summit wait is **30-60 minutes** in wind chill at **1,717 m**, and [what to wear for the Mount Batur sunrise](/bali/en/journal/what-to-wear-mount-batur-sunrise) covers the short packing list. And if the alarm clock is the dealbreaker, the caldera is still worth seeing in daylight — the public rim road on the Penelokan side gives the view over Lake Batur for free, covered in our [Kintamani viewpoint and Lake Batur guide](/bali/en/journal/kintamani-viewpoint-and-lake-batur)."
+        ]
+      },
+      {
+        "heading": "Diving, snorkelling and the volcano: plan the order of your days",
+        "paragraphs": [
+          "This is the one piece of planning that matters more in Amed than anywhere else. A Batur hike morning starts around **02:00** and involves **1.5-2 hours** of climbing plus about **1.5 hours** back down — a genuinely demanding day built on a short night of sleep. Do not stack it directly against your most ambitious day in the water. Give the volcano its own slot, keep the day around it easy where you can, and decide the exact order together with your dive operator. The summit stands at 1,717 m, and dive operators have their own rules about going to altitude after diving — we are a tour operator, not dive professionals, so ask yours before you fix the order of your days.",
+          "If your legs are the concern rather than the alarm, the jeep removes the problem entirely. The [jeep versus hike comparison](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike) explains how the 4x4 reaches a crater-rim viewpoint with no climbing at all, and [how hard the Mount Batur hike is](/bali/en/journal/how-hard-is-the-mount-batur-hike) gives an honest picture of the ascent so you can judge where it fits inside a diving week.",
+          "Snorkellers have it simpler, because snorkelling is flexible about timing: a volcano morning followed by an easy afternoon in the water is a normal combination. Our [Amed and Tulamben snorkelling guide](/bali/en/journal/amed-tulamben-snorkeling) covers the coast you are already staying on, and the [Blue Lagoon snorkelling tour](/bali/en/tours/blue-lagoon-snorkeling) from **$50** runs from Padang Bai further down the east coast, with a normal morning hotel pickup rather than a pre-dawn one."
+        ]
+      },
+      {
+        "heading": "Formats, prices and how booking works from Amed",
+        "paragraphs": [
+          "Three Batur formats run from Amed, all private, all with hotel pickup and return included. The [Mount Batur sunrise hike](/bali/en/tours/mount-batur-sunrise-hike) from **$35** is the full climb, **5-8 hours** door to door — expect the upper end of that range from Amed because of the 2-hour drive each way. The sunrise jeep tour from **$60** takes **6-8 hours**, swaps the climb for a 4x4 track to the crater rim and crosses the old black lava fields after sunrise. The [jeep with hot springs](/bali/en/tours/mount-batur-sunrise-jeep-hot-spring) from **$75** adds a soak in natural hot springs beside the lake before the drive back to the coast.",
+          "Booking is deliberately simple: message us on WhatsApp, agree the day, and we confirm your Amed pickup time the evening before. There is **no prepayment** — you pay on the day. [How to book a Mount Batur tour](/bali/en/journal/how-to-book-mount-batur-tour) walks through the whole process, and if you are comparing quotes, [what a Mount Batur sunrise costs](/bali/en/journal/mount-batur-sunrise-cost) breaks down what is and is not included at each price level.",
+          "Because Amed sits on the east side of the island, most guests here are already combining coast, volcano and east-Bali sightseeing in one stretch of the trip. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) from **$59** per car handles the flexible days — a daytime run past the Kintamani rim, a transfer to your next base, or an east-Bali loop at whatever pace you want."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How long is the drive from Amed to Mount Batur?",
+        "answer": "About 2 hours each way by car. The trailhead sits in the Kintamani area in the highlands of northeast Bali. The pre-dawn outbound drive is the quickest part of the trip because the roads are empty at that hour; the return to Amed runs in daytime traffic and takes longer."
+      },
+      {
+        "question": "What time is pickup in Amed for the Mount Batur sunrise hike?",
+        "answer": "Around 02:00. The schedule works backwards from sunrise at 06:00-06:30: hikers need to reach the trailhead around 04:00 to fit in the 1.5-2 hour climb, and the drive from Amed takes about 2 hours. We confirm your exact pickup time on WhatsApp the day before the tour."
+      },
+      {
+        "question": "Is there a Mount Batur jeep tour from Amed?",
+        "answer": "Yes. The private sunrise jeep tour, from $60, collects you in Amed roughly 30 to 60 minutes after the hikers leave, because there is no climb to fit in before sunrise. A 4x4 drives a separate track to a crater-rim viewpoint, then crosses the old black lava fields. The trip takes 6-8 hours."
+      },
+      {
+        "question": "Can I combine diving in Amed with a Mount Batur sunrise hike?",
+        "answer": "Yes, many guests do — but plan the order of your days. The hike means a start around 02:00 plus 1.5-2 hours of climbing and about 1.5 hours back down, so do not schedule it against your most demanding day in the water. Agree the sequence with your dive operator; we will fit the volcano morning around it."
+      },
+      {
+        "question": "How long does the whole Mount Batur trip from Amed take?",
+        "answer": "The sunrise hike runs 5-8 hours door to door, and from Amed you should expect the upper end of that range because the drive is about 2 hours each way. The jeep formats take 6-8 hours. Either way you are back on the coast with the afternoon free."
+      },
+      {
+        "question": "Do I need to pay in advance for a Mount Batur tour from Amed?",
+        "answer": "No. All our Batur tours are private, include hotel pickup and return in Amed, and are booked on WhatsApp with no prepayment — you pay on the day. Prices start at $35 for the sunrise hike, $60 for the sunrise jeep tour and $75 for the jeep with hot springs."
+      }
+    ]
+  },
 ];
 
 // Topical clusters for internal linking. A guide links to its siblings first,
@@ -30068,6 +30396,8 @@ const GUIDE_CLUSTERS = {
     "mount-batur-atv-quad-or-jeep",
     "how-to-book-mount-batur-tour",
     "mount-batur-photo-guide",
+      "sidemen-to-mount-batur",
+    "amed-to-mount-batur",
   ],
   giliIslands: [
     "how-to-get-to-gili-trawangan-from-bali",
