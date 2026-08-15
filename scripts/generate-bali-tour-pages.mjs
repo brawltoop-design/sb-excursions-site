@@ -9748,8 +9748,8 @@ const JOURNAL_SEO_GUIDES = [
       "Sunset 18:00-18:45 year-round",
       "Cruise from $150"
     ],
-    "title": "8 Best Sunset Spots in Bali, Sorted by Where You Sleep",
-    "description": "The 8 best sunset spots in Bali, from the Uluwatu cliffs to a boat off Benoa, sorted by area so you pick by drive time instead of by photo.",
+    "title": "8 Best Sunset Spots in Bali, Sorted by Drive Time",
+    "description": "From the Uluwatu cliffs to a boat off Benoa, eight sunset spots sorted by where you sleep — so you choose by drive time instead of by photograph.",
     "excerpt": "The best sunset spots in Bali are almost all on the west coast, and the honest way to choose between them is by where you are staying rather than by which photo looks best. Bali sits close to the equator, so the sun drops fast and lands between roughly 18:00 and 18:45 all year — you get about 30 usable minutes, not the long golden hour of higher latitudes. That makes drive time the deciding factor: a spot 90 minutes away costs you the whole evening. This guide covers eight places worth the trip, from free clifftops and beach bars to the water itself on a private cruise from $150, and tells you which one fits your neighborhood.",
     "rankings": [
       {
@@ -9900,8 +9900,8 @@ const JOURNAL_SEO_GUIDES = [
       "Boats from Sanur port",
       "Tours from $49 per car"
     ],
-    "title": "Nusa Penida Day Trip from Sanur: Routes, Cost and Stops",
-    "description": "Sanur port meeting at 07:00, four private Nusa Penida routes from $49 per car, every stop on the west and east loops, and a late boat back.",
+    "title": "Nusa Penida From Sanur: 07:00 Boat, Routes From $49 a Car",
+    "description": "Meet at Sanur port at 07:00 for the crossing. Four private Nusa Penida routes from $49 per car, every stop on the west and east loops, and a late boat back.",
     "excerpt": "Sanur is the easiest place in Bali to start a Nusa Penida day trip, because the fast boats leave from Sanur port itself — most guests staying here reach the boat in minutes instead of crossing the island before dawn. Tours meet at the port around 07:00, the crossing takes roughly 30-45 minutes depending on sea conditions, and you are back in your own neighborhood in time for dinner. We run four private Penida routes from Sanur: the West Tour from $49 per car, the East and Full Day tours from $75, and a sightseeing-plus-manta-snorkeling day from $60, all booked over WhatsApp with no prepayment. This guide walks through the day stage by stage, from the port meeting to the last swim at Crystal Bay.",
     "rankings": [
       {
@@ -10498,8 +10498,8 @@ const JOURNAL_SEO_GUIDES = [
       "1.5-2.5 h night drive",
       "WhatsApp booking, no prepayment"
     ],
-    "title": "Mount Batur Sunrise From Seminyak, Canggu and Nusa Dua",
-    "description": "How the Mount Batur sunrise works from Seminyak, Canggu and Nusa Dua: night pickup times, the 1.5-2.5 hour drive, and 2026 tours from $35 per person.",
+    "title": "Mount Batur From Seminyak or Canggu: 01:30 Pickup, From $35",
+    "description": "From the south coast the drive runs 1.5-2.5 hours and pickup lands around 01:30 — a full hour before Ubud. Which format survives that night, from $35.",
     "excerpt": "Yes — the Mount Batur sunrise works from Seminyak, Canggu and Nusa Dua without changing hotels; the trade is a pickup in the middle of the night and a 1.5-2.5 hour drive each way. All three tour formats collect guests from the southern hotel areas: the sunrise hike from $35, the jeep with hot springs from $75, and the sunrise jeep from $60, with your exact pickup time confirmed on WhatsApp the day before. This guide breaks the night into stages — what the pickup actually feels like from the south coast, which format survives the drive best, how to plan sleep so the following day is not written off, and the two cases where spending the previous night in Ubud genuinely makes sense.",
     "rankings": [
       {
@@ -12386,8 +12386,8 @@ const JOURNAL_SEO_GUIDES = [
       "West route from $49 per car",
       "Crossing 30-45 minutes"
     ],
-    "title": "Nusa Penida With Kids: Which Stops Work and Which to Skip",
-    "description": "A parent's guide to Nusa Penida with kids: which stops are safe, where to hold hands, why the west route with Crystal Bay works, and calmer alternatives.",
+    "title": "Nusa Penida With Kids: Which Stops to Do and Which to Skip",
+    "description": "Not every Nusa Penida stop works with children. Which ones are safe, where to hold hands, why the west route with Crystal Bay works, and calmer alternatives.",
     "excerpt": "Yes, you can take kids to Nusa Penida — if you build the day around the west route and its Crystal Bay finish rather than the cliff stairs the island is famous for. The honest split: viewpoints like Kelingking and Broken Beach work for children with a hand held, the descents do not, and Crystal Bay's shallow inner section is the one place the kids will properly swim. The crossing from Sanur takes 30-45 minutes depending on sea state, and a private west-side day starts from $49 per car — priced per vehicle, not per seat, which is exactly what a family needs. This guide rates seven Penida stops through a parent's eyes: where children are fine, where you hold hands, and when a calmer day on Bali or the Gilis is the better call.",
     "rankings": [
       {
@@ -14129,8 +14129,8 @@ const JOURNAL_SEO_GUIDES = [
       "60-90 min to the boat",
       "Penida from $29"
     ],
-    "title": "Uluwatu to Nusa Penida: Boat Times, Drive and Day Trips",
-    "description": "Uluwatu to Nusa Penida in 2026: the 60-90 minute drive to Sanur, fast boat times, west vs east routes and real day trip prices from $29.",
+    "title": "Uluwatu to Nusa Penida: How Long It Takes and the Cost",
+    "description": "The drive from Uluwatu to Sanur port takes 60-90 minutes, then a fast boat across. West and east island routes compared, with 2026 day trips from $29.",
     "excerpt": "Uluwatu to Nusa Penida is a three-leg trip: a drive of roughly 60-90 minutes from the Bukit to Sanur harbor, a fast boat across the strait, and a private-car loop around the island's cliffs and bays. Uluwatu is the farthest common pickup zone from the harbor, so it gets the earliest starts — the East tour, for example, offers a 06:15-06:30 hotel pickup — and an evening return. Prices in 2026 run from $29 per person for the Manta Point snorkeling day, from $49 per car for the West tour, and from $75 for the East or Full Day routes, booked direct on WhatsApp with no prepayment. This guide maps the day stage by stage, compares the four routes and shows how to fit Penida into a surf-focused Uluwatu stay.",
     "rankings": [
       {
@@ -14282,8 +14282,8 @@ const JOURNAL_SEO_GUIDES = [
       "60-90 min Canggu to Sanur",
       "Tours from $29"
     ],
-    "title": "Canggu to Nusa Penida: Distance, Boat Times and Day Trips",
-    "description": "Canggu to Nusa Penida in 2026: the 60-90 minute drive to Sanur port, leave-by times, snorkeling vs land routes and real day trip prices from $29.",
+    "title": "Canggu to Nusa Penida: When to Leave and What It Costs",
+    "description": "Canggu to Sanur port takes 60-90 minutes, so your departure time decides the whole day. Snorkelling versus land routes, with 2026 day trips from $29.",
     "excerpt": "Canggu to Nusa Penida takes a full day: early hotel pickup, a drive of about 60-90 minutes to Sanur harbor depending on traffic, a fast-boat crossing, then snorkeling or cliff viewpoints before an evening return. The distance puts Canggu at the far edge of the pickup zone, so the day succeeds or fails on the departure time — leave early and everything else follows. This guide walks through the eight stages of the day in order, from the alarm going off to the boat home, and compares the two routes that make sense from Canggu: the snorkeling day built around Manta Point from $29 per person, and the sightseeing West Tour from $49 per car. Both are private, booked direct on WhatsApp, with no prepayment.",
     "rankings": [
       {
@@ -14575,8 +14575,8 @@ const JOURNAL_SEO_GUIDES = [
       "From $59 per car",
       "No prepayment"
     ],
-    "title": "Bali Private Driver Cost Per Day: From $59 a Car in 2026",
-    "description": "A private driver in Bali costs from $59 per car per day, not per person. What a 10-12 hour day covers, when Grab is cheaper, and how to book with no deposit.",
+    "title": "Bali Private Driver Cost: $59 a Car per Day, Not per Person",
+    "description": "A private driver in Bali costs from $59 per car per day — the same price for one traveller or four. What a 10-12 hour day covers, and when Grab is cheaper.",
     "excerpt": "A private driver in Bali costs from $59 per car per day, and the price covers the whole vehicle — a couple pays the same as a small group sharing the car. For that you get a car with its own driver for a full flexible day, typically 10-12 hours, with hotel pickup on your schedule and a route you can change as you go. This guide breaks down what the day rate covers, when a driver beats Grab and metered taxis, the six ways travelers actually use one — from waterfall loops to an airport transfer from $15 — and how booking works over WhatsApp with no prepayment. Everything here comes from the routes we drive every week, not from aggregator listings.",
     "rankings": [
       {
@@ -14711,8 +14711,8 @@ const JOURNAL_SEO_GUIDES = [
       "Non-swimmer friendly",
       "Tours from $29"
     ],
-    "title": "Snorkeling in Bali for Non-Swimmers: Life Vests, 6 Calm Spots",
-    "description": "Yes, you can snorkel in Bali without swimming. 6 calm spots with life vests and a guide in the water, the famous sites to skip, and 2026 tours from $29.",
+    "title": "Snorkeling in Bali If You Cannot Swim: 6 Calm Spots",
+    "description": "You can snorkel in Bali without swimming: six calm spots with life vests and a guide in the water, the famous sites to skip, and 2026 tours from $29.",
     "excerpt": "Yes, you can snorkel in Bali even if you cannot swim. The formula is a sheltered cove, a life vest, and a guide who stays in the water beside you — the standard setup on our beginner tours. The calmest first-timer water sits in three places: the Blue Lagoon coves at Padang Bai, the inner section of Crystal Bay on Nusa Penida, and the shallow turtle and statue sites off the Gili Islands. Guided days there cost from $29 to $115 per person in 2026, with the classic beginner day — Blue Lagoon from $50 including lunch — reachable as a half-day trip from the southern hotels. This guide ranks six calm spots and flags the famous sites beginners should skip.",
     "rankings": [
       {
@@ -15122,8 +15122,8 @@ const JOURNAL_SEO_GUIDES = [
       "7-9 hours door to door",
       "From $115 per person"
     ],
-    "title": "Seminyak to Gili Trawangan: Boat Times and Day Trips",
-    "description": "How a Gili Trawangan day trip from Seminyak actually works in 2026: 7-9 hour timeline, fast boat crossing, Turtle Point, Meno statues — from $115 per person.",
+    "title": "Seminyak to Gili Trawangan in a Day: 7-9 Hours, From $115",
+    "description": "A Gili Trawangan day trip from Seminyak runs 7-9 hours door to door, with the fast boat crossing, Turtle Point and the Meno statues. From $115 per person.",
     "excerpt": "A Gili Trawangan day trip from Seminyak is a 7-9 hour private loop: early road transfer to Padang Bai harbor, fast boat across the Lombok Strait, snorkeling at Turtle Point and the Gili Meno statues, free time on Trawangan, and a return crossing that lands you back around sunset. Booked direct, the day costs from $115 per person including the fast boat, a private snorkeling boat and GoPro photos. It is a long day — the road leg alone runs about 90 minutes to 2 hours each way depending on traffic — but it is the only realistic way to see the Gilis from Bali without changing hotels. This guide walks through the six steps of the timeline and covers when the overnight Gili Islands Getaway from $70 is the smarter call.",
     "rankings": [
       {
@@ -15256,8 +15256,8 @@ const JOURNAL_SEO_GUIDES = [
       "Morning-window focus",
       "Boat trip from $50"
     ],
-    "title": "Blue Lagoon Bali Snorkeling: Padang Bai Times, Cost, Boats",
-    "description": "Blue Lagoon is a cove 5 minutes north of Padang Bai harbor in east Bali. Water is clearest 07:00-10:00. Snorkel from the beach or by boat; trips from $50.",
+    "title": "Blue Lagoon Bali: Clearest Water 07:00-10:00, Trips From $50",
+    "description": "Blue Lagoon is a cove five minutes north of Padang Bai harbour. The water is clearest between 07:00 and 10:00. Snorkel from the beach or by boat, from $50.",
     "excerpt": "Blue Lagoon is a sheltered snorkeling cove on Bali's east coast, about 5 minutes north of Padang Bai harbor and a 90-120 minute drive from Seminyak or Kuta, traffic depending; from Ubud it is closer to 60-90 minutes. Water is clearest between 07:00 and 10:00, before wind and boat traffic stir the sand, and the dry season from April to October holds visibility best. Entry is either straight off the beach into 1-3 m of water or by a 5-minute jukung boat out to the reef edge. Two neighboring spots most visitors skip, Tanjung Jepun and Bias Tugel, sit within a 10-15 minute walk or short boat ride. Guided snorkeling trips from Padang Bai start from $50 as of August 2026, half day to full day with morning hotel pickup; a private car with driver for a self-planned east-coast day is from $59 per car.",
     "rankings": [
       {
@@ -15447,8 +15447,8 @@ const JOURNAL_SEO_GUIDES = [
       "West vs east routes",
       "West tour from $49"
     ],
-    "title": "7 Best Nusa Penida Beaches, Ranked (West & East Route)",
-    "description": "Nusa Penida beaches ranked honestly: Kelingking, Diamond, Crystal Bay and more — where you can actually swim, what the roads are like, how to plan one day.",
+    "title": "7 Nusa Penida Beaches Ranked: Where You Can Swim",
+    "description": "Kelingking, Diamond, Crystal Bay and four more, ranked honestly — where the water is safe for swimming, what the roads are like, and how to fit them in a day.",
     "excerpt": "Nusa Penida will hand you the best coastline photos of your trip and some of its worst planning traps. Here is how the seven beaches actually rank, which ones you can swim at, and how to route a day that doesn't die in the midday queue at Kelingking.",
     "rankings": [
       {
@@ -15978,8 +15978,8 @@ const JOURNAL_SEO_GUIDES = [
       "7 spots and rules",
       "Gili day from $115"
     ],
-    "title": "Swimming With Turtles in Bali: Where to Snorkel and When",
-    "description": "To swim with turtles in Bali you go to the Gilis, not the mainland reefs. The exact spots off Trawangan and Meno, the season and what a day trip costs.",
+    "title": "Swim With Turtles in Bali: The Gilis, Not the Mainland",
+    "description": "To swim with turtles in Bali you go to the Gili Islands, not the mainland reefs. The exact spots off Trawangan and Meno, the season, and what a day costs.",
     "excerpt": "Swimming with turtles in Bali means getting on a boat to the Gilis: green and hawksbill turtles graze the seagrass off Gili Trawangan and Gili Meno all year. Green and hawksbill turtles graze the seagrass off Gili Trawangan and Gili Meno all year. Here is exactly where to drop in — and how not to ruin it for the turtle.",
     "rankings": [
       {
@@ -16365,8 +16365,8 @@ const JOURNAL_SEO_GUIDES = [
       "Shade and toilets noted",
       "Tours from $50"
     ],
-    "title": "Bali Beaches Without Waves: 7 Calm Spots for Kids & Toddlers",
-    "description": "The calm beaches in Bali kids can actually swim at: Nusa Dua, Sanur, Geger and more — wave conditions, shade, food and toilets, checked honestly.",
+    "title": "7 Bali Beaches Without Waves, Safe for Small Children",
+    "description": "Nusa Dua, Sanur, Geger and four more calm beaches where children can actually swim — wave conditions, shade, food and toilets, all checked honestly.",
     "excerpt": "You don't need luck to find flat water in Bali — you need the right coast. This guide ranks seven beaches where kids can actually swim, with honest notes on shade, food, toilets and tides. All of them stay calm when the surf beaches are closing out.",
     "rankings": [
       {
@@ -16497,8 +16497,8 @@ const JOURNAL_SEO_GUIDES = [
       "True white sand only",
       "Tours from $59"
     ],
-    "title": "White Sand Beaches in Bali: Nusa Dua, Melasti, Nusa Penida",
-    "description": "Eight Bali beaches with genuinely white sand: Nusa Dua and the Bukit by car, Diamond and Atuh on Nusa Penida. Plus why the west coast sand is grey.",
+    "title": "8 White Sand Beaches in Bali, and Why the West Is Grey",
+    "description": "Eight Bali beaches with genuinely white sand: Nusa Dua and the Bukit by car, Diamond and Atuh on Nusa Penida — plus why the west coast sand is grey.",
     "excerpt": "Bali has eight beaches with genuinely white sand — the Nusa Dua strip and the Bukit on the mainland, Diamond and Atuh on Nusa Penida — and the rest of the coastline is grey volcanic sand, whatever the listings imply. This guide ranks the eight genuinely white beaches — from the Nusa Dua strip to Diamond Beach on Nusa Penida — and tells you which ones you can actually swim at.",
     "rankings": [
       {
@@ -16636,8 +16636,8 @@ const JOURNAL_SEO_GUIDES = [
       "All shore-entry spots",
       "About 3 h from Canggu"
     ],
-    "title": "Amed and Tulamben Snorkeling: 7 Spots Worth the Drive East",
-    "description": "Amed and Tulamben snorkeling, ranked honestly: Jemeluk Bay, the Japanese wreck, the USAT Liberty, plus real drive times from south Bali and when to go.",
+    "title": "Amed and Tulamben Snorkeling: 7 Spots and the USAT Liberty",
+    "description": "Jemeluk Bay, the Japanese wreck and the USAT Liberty, ranked honestly — with real drive times from south Bali and the hours when the water is clearest.",
     "excerpt": "Amed and Tulamben are the best shore snorkeling on mainland Bali — two wrecks, calm black-sand bays and reef that starts a few fin kicks from shore. The catch is the drive from the south. Here is what each bay actually offers, so you can decide whether the east coast beats a boat trip.",
     "rankings": [
       {
@@ -17026,8 +17026,8 @@ const JOURNAL_SEO_GUIDES = [
       "Stair-count reality",
       "Private car from $59"
     ],
-    "title": "8 Best Uluwatu Beaches on the Bukit: Stairs, Surf, Sand",
-    "description": "Uluwatu beaches ranked honestly: Melasti, Padang Padang, Bingin and five more, with the truth about cliff stairs, tides, and where you can actually swim.",
+    "title": "8 Uluwatu Beaches: Where You Can Actually Swim",
+    "description": "Melasti, Padang Padang, Bingin and five more, ranked honestly — the cliff stairs, the tides, and which Bukit beaches you can actually swim at.",
     "excerpt": "Almost every beach around Uluwatu hides at the bottom of a limestone cliff, and the stairs are the price of entry. Here are the eight worth the climb, ranked, with honest notes on tides, swimming windows, and how hard the walk back up really is.",
     "rankings": [
       {
@@ -18183,9 +18183,9 @@ const JOURNAL_SEO_GUIDES = [
     heroTourSlug: "private-car-with-driver-bali",
     relatedTourSlugs: ["private-car-with-driver-bali", "bali-airport-transfer", "ubud-highlights-tour"],
     inlineStats: ["6 main areas", "First-trip friendly", "Matches planner zones"],
-    title: "Where to Stay in Bali for First-Timers | 6 Areas Compared",
+    title: "Where to Stay in Bali First Time: 6 Areas Compared Honestly",
     description:
-      "Not sure where to stay in Bali for a first trip? This guide compares Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua and Sanur by vibe, transport and travel fit.",
+      "Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua and Sanur compared by atmosphere, drive times and who each one suits — so you choose by fit, not by photograph.",
     excerpt:
       "For a first trip, base yourself in Seminyak, Sanur or Ubud: Seminyak sits 25-50 minutes from Ngurah Rai airport and has walkable restaurants and beach clubs, Sanur is 30-60 minutes away with the calmest swimming water in the south, and Ubud is 75-120 minutes inland for rice terraces and temples. Traffic decides the upper end of every one of those numbers. Our tours pick up from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua and Jimbaran, so any of those bases works for day trips: the Ubud Rice Terrace, Temple and Volcano Tour starts at 08:00, runs 10 hours and costs from $69 as of August 2026, and an airport transfer is from $15. Most first-timers split two areas over 7-10 days, and picking the right base matters more than squeezing in one more attraction.",
     rankings: [
@@ -18705,9 +18705,9 @@ const JOURNAL_SEO_GUIDES = [
     heroTourSlug: "nusa-penida-west-tour",
     relatedTourSlugs: ["nusa-penida-west-tour", "bali-unesco", "mount-batur-sunrise-hike", "ubud-highlights-tour"],
     inlineStats: ["7 big-view stops", "Cliffs + volcano + terraces", "Sunrise to sunset"],
-    title: "7 Best Viewpoints in Bali: Sunrise, Cliffs and Rice Terraces",
+    title: "7 Best Viewpoints in Bali: Volcano, Cliffs, Rice Terraces",
     description:
-      "Looking for the best viewpoints in Bali? These seven stops cover volcano sunrise scenes, cliff-edge lookouts, rice terraces and broad coastline views.",
+      "Seven viewpoints worth the drive: volcano sunrise scenes, cliff-edge lookouts and rice terraces — with the best light window and entry situation for each.",
     excerpt:
       "Bali's strongest viewpoints sit in four clusters rather than on one loop: the Mount Batur caldera rim in Kintamani, 2-2.5 hours from the southern hotels; the Lempuyang gates in east Bali, 2.5-3.5 hours away, traffic depending; the Tegallalang and Jatiluwih rice terraces in the Ubud-Tabanan belt; and the Nusa Penida cliffs, reached by a 30-45 minute fast boat from Sanur. Sunrise runs 06:00-06:30 and sunset 18:00-18:30 all year, so a viewpoint day is really two short light windows plus driving — which is why the best routes mix one sunrise, one cliff and one terrace instead of repeating a single mood. April to October brings the clearest air over the caldera. As of August 2026, a guided Mount Batur sunrise hike starts from $35 and a west Nusa Penida cliff route from $49 per car.",
     rankings: [
@@ -22887,8 +22887,8 @@ const JOURNAL_SEO_GUIDES = [
       "Viewpoint costs nothing",
       "West tour from $49 per car"
     ],
-    "title": "Kelingking Beach: The Climb Down, the View and the Reality",
-    "description": "The Kelingking Beach viewpoint is free and takes minutes. The climb down is about 45 minutes, up to an hour back up, and swimming below is unsafe.",
+    "title": "Kelingking Beach: The Viewpoint Is Free, the Climb Is 45 Min",
+    "description": "The Kelingking viewpoint costs nothing and takes minutes to reach. Climbing down is about 45 minutes and up to an hour back up, and the water below is unsafe.",
     "excerpt": "Kelingking Beach is a viewpoint first and a beach second: the T-Rex-shaped headland is visible from the clifftop for free, a short walk from where the cars park. Going down is a separate decision. The staircase is steep and rough, roughly **45 minutes down and up to an hour back up**, with sections where you hold a rope instead of a handrail. At the bottom the current is strong and swimming is genuinely unsafe. Most visitors look from the top, take their photograph and move on to the next stop, and for a lot of people that is the right call rather than a failure of nerve.",
     "rankings": [
       {
@@ -23824,8 +23824,8 @@ const JOURNAL_SEO_GUIDES = [
       "Boat seats from $15",
       "Penida days from $29"
     ],
-    "title": "Sanur to Nusa Penida Fast Boat: Times, Prices and Tips",
-    "description": "The Sanur to Nusa Penida fast boat takes 30-40 minutes. First boats leave early, last returns run in the afternoon, seats from $15 — times, costs and tips.",
+    "title": "Sanur to Nusa Penida Fast Boat: 30-40 Min, Seats From $15",
+    "description": "The Sanur to Nusa Penida fast boat takes 30-40 minutes. First boats leave early, last returns run in the afternoon, and seats start at $15 one way.",
     "excerpt": "The Sanur to Nusa Penida fast boat crosses the Badung Strait in roughly 30-40 minutes, and Sanur is the main port for it — nearly every Penida-bound boat leaves from there. Departures start early in the morning and the last boats back run in the afternoon, which is what shapes the whole day: you take one of the first crossings out and you plan the return before lunch, not after it. A seat on its own starts from $15, and an organized Penida day that already includes the boat starts from $29. When the swell builds the boats are cancelled outright, and that is the one part of the plan nobody controls.",
     "rankings": [
       {
@@ -36516,6 +36516,18 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "Blue Lagoon Bali: Clearest Water 07:00-10:00, Trips From $50":
+      "Голубая лагуна Бали: вода чище всего 07:00–10:00, от $50",
+    "Bali Private Driver Cost: $59 a Car per Day, Not per Person":
+      "Водитель на Бали: $59 за машину в день, а не с человека",
+    "Sanur to Nusa Penida Fast Boat: 30-40 Min, Seats From $15":
+      "Катер Санур — Нуса-Пенида: 30–40 минут, места от $15",
+    "Nusa Penida From Sanur: 07:00 Boat, Routes From $49 a Car":
+      "Нуса-Пенида из Санура: катер в 07:00, маршруты от $49",
+    "8 Best Sunset Spots in Bali, Sorted by Drive Time":
+      "8 лучших закатов Бали — по времени в дороге",
+    "Mount Batur From Seminyak or Canggu: 01:30 Pickup, From $35":
+      "Батур из Семиньяка и Чангу: выезд в 01:30, от $35",
     "Duration":
       "Длительность",
     "Area":
@@ -36586,6 +36598,16 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "Sanur to Nusa Penida Fast Boat: 30-40 Min, Seats From $15":
+      "Lancha Sanur — Nusa Penida: 30-40 min, plazas desde $15",
+    "Mount Batur From Seminyak or Canggu: 01:30 Pickup, From $35":
+      "Monte Batur desde Seminyak: recogida a la 01:30, desde $35",
+    "Blue Lagoon Bali: Clearest Water 07:00-10:00, Trips From $50":
+      "Blue Lagoon Bali: agua clara de 07:00 a 10:00, desde $50",
+    "Bali Private Driver Cost: $59 a Car per Day, Not per Person":
+      "Conductor privado en Bali: $59 por coche al día, no por persona",
+    "8 Best Sunset Spots in Bali, Sorted by Drive Time":
+      "8 mejores atardeceres de Bali, por tiempo de viaje",
     "Duration":
       "Duración",
     "Area":
@@ -36646,6 +36668,20 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "Bali Private Driver Cost: $59 a Car per Day, Not per Person":
+      "Chauffeur privé à Bali : 59 $ la voiture, pas par personne",
+    "Nusa Penida From Sanur: 07:00 Boat, Routes From $49 a Car":
+      "Nusa Penida depuis Sanur : bateau 07h00, dès 49 $ la voiture",
+    "Sanur to Nusa Penida Fast Boat: 30-40 Min, Seats From $15":
+      "Bateau Sanur — Nusa Penida : 30 à 40 min, dès 15 $",
+    "Mount Batur From Seminyak or Canggu: 01:30 Pickup, From $35":
+      "Mont Batur depuis Seminyak : départ 01h30, dès 35 $",
+    "8 Best Sunset Spots in Bali, Sorted by Drive Time":
+      "8 plus beaux couchers de soleil de Bali, par trajet",
+    "Blue Lagoon Bali: Clearest Water 07:00-10:00, Trips From $50":
+      "Blue Lagoon Bali : eau claire 7h-10h, sorties dès 50 $",
+    "Seminyak to Gili Trawangan in a Day: 7-9 Hours, From $115":
+      "Seminyak — Gili Trawangan en 1 jour : 7-9 h, dès 115 $",
     "Duration":
       "Durée",
     "Area":
