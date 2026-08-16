@@ -220,6 +220,56 @@
      Тот же язык, что у карточек тура: чёрное по бумаге, волосяная линейка,
      ни одной тени. Единственное движение — бегущий пунктир маршрута, и он
      гаснет при prefers-reduced-motion.                                    */
+  /* Блок бронирования в статье. Тот же язык, что у карточки тура и у
+     .sbplan: чёрное по бумаге, волосяная линейка, ни одной тени. */
+  .sboffer{
+    margin:0;padding:26px 28px;border:1px solid rgba(21,21,21,0.14);
+    border-radius:26px;background:linear-gradient(180deg,#fff 0%,#fbfaf7 100%)
+  }
+  .sboffer__eyebrow{
+    margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:#b0741f
+  }
+  .sboffer__title{
+    margin:0 0 14px;font-size:24px;line-height:1.2;color:#151515;
+    font-weight:600 !important;letter-spacing:-0.01em
+  }
+  .sboffer__decision{margin:0 0 16px;font-size:15px;line-height:1.6;color:#5d5d62;max-width:62ch}
+  .sboffer__list{margin:0;padding:0;list-style:none}
+  .sboffer__row{
+    display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:16px;
+    align-items:center;padding:14px 0;border-top:1px solid rgba(21,21,21,0.10)
+  }
+  .sboffer__row:first-child{border-top:0;padding-top:4px}
+  .sboffer__main{display:flex;flex-direction:column;gap:3px;min-width:0}
+  .sboffer__name{
+    font-size:16px;font-weight:600;color:#151515 !important;
+    text-decoration:none !important;line-height:1.3
+  }
+  .sboffer__name:hover{text-decoration:underline !important}
+  .sboffer__for{font-size:13.5px;line-height:1.45;color:#8a8a90}
+  .sboffer__price{font-size:15px;font-weight:600;color:#151515;white-space:nowrap}
+  .sboffer__cta{
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:10px 20px;border-radius:999px;background:#151515;
+    color:#fff !important;font-size:14px;font-weight:600;
+    text-decoration:none !important;white-space:nowrap;
+    transition:background-color .2s ease
+  }
+  .sboffer__cta:hover{background:#000}
+  .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
+  /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
+     вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
+     колонке уезжала за край экрана. Цена — главный элемент блока, поэтому
+     ставим её в одну колонку под названием, где её видно при любой ширине
+     контейнера. */
+  @media (max-width:640px){
+    .sboffer{padding:22px 20px}
+    .sboffer__title{font-size:21px}
+    .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
+    .sboffer__price{grid-column:1;font-size:17px}
+    .sboffer__cta{grid-column:1;width:100%}
+  }
   .sbplan{
     position:relative;display:grid;grid-template-columns:minmax(0,1fr) 224px;
     gap:28px;align-items:center;margin:0;padding:30px 32px;
@@ -874,7 +924,17 @@ html .sbtc h3.sbtc-rail__title{
   .sb-journal-footer__social-link:hover,.sb-journal-footer__social-link:focus-visible{transform:translateY(-1px);opacity:.9;outline:none}
   .sb-journal-footer__social-link svg{width:22px;height:22px}
   .sb-journal-header-lock{overflow:hidden}
-  @media screen and (max-width:1100px){.sb-journal-featured-grid,.sb-journal-tour-grid,.sb-journal-article-layout,.sb-journal-hero,.sb-journal-article-hero,.sb-journal-ranking-grid,.sb-journal-guide-tour-grid,.sb-journal-bottom-grid{grid-template-columns:1fr}.sb-journal-sidebar{position:static}.sb-journal-hero h1,.sb-journal-article-hero h1{font-size:46px}.sb-journal-footer__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sb-journal-footer__brand,.sb-journal-footer__payments{grid-column:1/-1}}
+  @media screen and (max-width:1100px){.sb-journal-featured-grid,.sb-journal-tour-grid,.sb-journal-article-layout,.sb-journal-hero,.sb-journal-article-hero,.sb-journal-ranking-grid,.sb-journal-guide-tour-grid,.sb-journal-bottom-grid{grid-template-columns:minmax(0,1fr)}
+    /* Сетка схлопывалась в одну колонку, но трек 1fr раздувался до 562px:
+       у грид-элементов min-width по умолчанию auto, и колонка растягивалась
+       под min-content самого широкого из них. При вьюпорте 375px статья
+       рендерилась шириной 562px, а .sb-journal-page с overflow-x:clip
+       срезал правую треть — без горизонтальной прокрутки, то есть контент
+       был просто недостижим. Под нож попадали таблицы гайдов, карточки
+       и блоки CTA на всех 1398 страницах журнала.
+       minmax(0,1fr) выше плюс min-width:0 здесь снимают оба ограничения. */
+    .sb-journal-article,.sb-journal-sidebar{min-width:0}
+    .sb-journal-sidebar{position:static}.sb-journal-hero h1,.sb-journal-article-hero h1{font-size:46px}.sb-journal-footer__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sb-journal-footer__brand,.sb-journal-footer__payments{grid-column:1/-1}}
   @media screen and (max-width:980px){.sb-journal-tour-header__desktop-inner{grid-template-columns:auto 1fr;gap:18px;padding-top:14px;padding-bottom:14px}.sb-journal-tour-header__nav{justify-content:flex-end;flex-wrap:wrap}.sb-journal-tour-header__actions{grid-column:1/-1;justify-content:flex-start}}
   @media screen and (max-width:640px){.sb-journal-footer{padding:0 14px 26px}.sb-journal-footer__shell{margin-top:26px;padding:28px 20px 24px;border-radius:28px}.sb-journal-footer__grid{grid-template-columns:1fr;gap:22px}.sb-journal-footer__brand,.sb-journal-footer__payments{grid-column:auto}.sb-journal-footer__lead,.sb-journal-footer__text{font-size:16px}.sb-journal-footer__link{font-size:16px}.sb-journal-footer__bottom{flex-direction:column;align-items:flex-start}.sb-journal-footer__copyright,.sb-journal-footer__social-label{font-size:15px}.sb-journal-footer__social-link{width:42px;height:42px}}
   @media screen and (max-width:480px){.sb-journal-tour-header__desktop{display:none}.sb-journal-tour-header__mobile{display:block;background:transparent;transition:background-color .35s ease,box-shadow .35s ease}.sb-journal-tour-header__mobile-bar{background:transparent;transition:background-color .35s ease,box-shadow .35s ease}.sb-journal-tour-header_scrolled .sb-journal-tour-header__mobile,.sb-journal-tour-header_open .sb-journal-tour-header__mobile{background:#333}.sb-journal-tour-header_scrolled .sb-journal-tour-header__mobile-bar,.sb-journal-tour-header_open .sb-journal-tour-header__mobile-bar{background:#333;box-shadow:0 10px 30px rgba(17,24,39,0.18)}.sb-journal-tour-header_scrolled .sb-journal-tour-header__burger,.sb-journal-tour-header_open .sb-journal-tour-header__burger,.sb-journal-tour-header_scrolled .sb-journal-tour-header__socials a,.sb-journal-tour-header_open .sb-journal-tour-header__socials a{color:#fff}.sb-journal-tour-header_scrolled .sb-journal-tour-header__mobile-logo,.sb-journal-tour-header_open .sb-journal-tour-header__mobile-logo{filter:brightness(0) invert(1)}.sb-journal-main{padding:90px 14px 64px}.sb-journal-hero,.sb-journal-article-hero,.sb-journal-tour-card,.sb-journal-article,.sb-journal-sidebar-card,.sb-journal-ranking-card,.sb-journal-faq-card{border-radius:24px}.sb-journal-hero,.sb-journal-article-hero,.sb-journal-article{padding:20px}.sb-journal-featured-grid,.sb-journal-tour-grid,.sb-journal-ranking-grid,.sb-journal-faq-grid{gap:16px}.sb-journal-tour-card__copy{left:16px;right:16px;bottom:16px}.sb-journal-tour-card__copy h3{font-size:28px}.sb-journal-hero h1,.sb-journal-article-hero h1{font-size:34px;letter-spacing:-1.6px}.sb-journal-lead{font-size:17px}.sb-journal-section__head{align-items:flex-start;flex-direction:column}.sb-journal-section__head h2{font-size:28px}.sb-journal-card h3,.sb-journal-ranking-card h3,.sb-journal-faq-card h3{font-size:23px}.sb-journal-article-section h2{font-size:26px}.sb-journal-article-section p,.sb-journal-article-section li,.sb-journal-sidebar-card li,.sb-journal-ranking-card p,.sb-journal-faq-card p{font-size:15px}}
@@ -1094,8 +1154,8 @@ html .sbtc h3.sbtc-rail__title{
                 <p>Every way to get from Bali to Gili Trawangan and Gili Air in 2026 — fast boats from $15, a private day trip from $115, a...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/mount-batur-sunrise-from-ubud">
-                <h2>Mount Batur Sunrise from Ubud: Jeep or Hike, and Prices</h2>
-                <p>Pickups from Ubud run 01:30-03:30 and you are back by late morning. Jeep from $60, guided hike from $35, and which one s...</p>
+                <h2>Mount Batur Sunrise From Ubud: Hike $35, Jeep $60</h2>
+                <p>Ubud is the shortest transfer to Mount Batur — about 90 minutes. The guided hike is $35 and the 4x4 jeep $60, both with ...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/mount-batur-sunrise-from-south-bali">
                 <h2>Mount Batur From Seminyak or Canggu: 01:30 Pickup, From $35</h2>
@@ -1118,12 +1178,12 @@ html .sbtc h3.sbtc-rail__title{
                 <p>An honest look at whether Nusa Penida is safe: unfenced cliffs, the Kelingking stairs, boat crossings and island roads —...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/is-mount-batur-safe">
-                <h2>Is Mount Batur Safe? Difficulty, Risks and the Jeep Option</h2>
-                <p>Is Mount Batur safe? Honest answers on trail difficulty, the dark ascent, weather and common mistakes — plus the sunrise...</p>
+                <h2>Is Mount Batur Safe? Yes With a Guide, Descent in Daylight</h2>
+                <p>Mount Batur is safe with a local guide: 1.5-2 hours up, pickups at 01:30-03:00, and the descent happens in daylight. The...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/mount-batur-vs-mount-agung">
-                <h2>Mount Batur vs Mount Agung: Which Bali Volcano to Climb</h2>
-                <p>Mount Batur vs Mount Agung compared honestly — height, hike time, difficulty, sacred status, safety — and why sunrise hi...</p>
+                <h2>Mount Batur vs Agung: Batur Suits 95% of Travellers</h2>
+                <p>Batur is 1,717 m and about 2 hours up, from $35. Agung is 3,031 m, sacred and far harder. Why Batur is the right sunrise...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/nusa-penida-vs-nusa-lembongan">
                 <h2>Nusa Penida vs Nusa Lembongan: Which Island Day Trip Wins</h2>
@@ -1386,16 +1446,16 @@ html .sbtc h3.sbtc-rail__title{
                 <p>Money changers who palm notes, fake police fines, scooter damage claims. Here are the 7 scams that catch tourists in Bal...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/can-you-hike-mount-batur-without-a-guide">
-                <h2>Can You Hike Mount Batur Without a Guide? The Rules in 2026</h2>
-                <p>In practice, no — the trail to Mount Batur&#39;s summit is controlled by the local guide association. Here is what is allowe...</p>
+                <h2>Can You Hike Mount Batur Without a Guide? In Practice, No</h2>
+                <p>No Indonesian law bans it, but the trail is controlled by the local guide association and solo walkers are turned back a...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/bali-tourist-tax-levy-guide">
                 <h2>Bali Tourist Tax 2026: What It Costs and How to Pay It</h2>
                 <p>The Bali tourist levy is Rp 150,000 per person, paid once. How to pay it online before you fly, what happens at the airp...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/is-mount-batur-worth-it">
-                <h2>Is Mount Batur Worth It? An Honest Answer Before You Book</h2>
-                <p>Is Mount Batur worth it? An honest answer: the 02:00 start, two hours uphill in the dark, the cold summit wait, and the ...</p>
+                <h2>Is Mount Batur Worth It? Only If a 02:00 Alarm Is Fine</h2>
+                <p>Worth it if you can walk uphill for two hours in the dark and a 02:00 alarm suits you. If either one is too much, the je...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/are-gili-islands-worth-it">
                 <h2>Are the Gili Islands Worth It as a Day Trip from Bali?</h2>
@@ -1406,8 +1466,8 @@ html .sbtc h3.sbtc-rail__title{
                 <p>What Bali temple, waterfall and viewpoint entrance fees cost in 2026: realistic rupiah ranges, why gates take cash only,...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/mount-batur-sunrise-vs-sunset">
-                <h2>Mount Batur Sunrise or Sunset: Which One to Book</h2>
-                <p>Mount Batur is a sunrise mountain: the cloud sea and the Mount Agung view only work at dawn. Why we run sunrise tours fr...</p>
+                <h2>Mount Batur: Book the Sunrise, Not the Sunset</h2>
+                <p>At dawn the sun rises behind the cone with cloud filling the caldera below you. At sunset it is behind your back and you...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/gili-trawangan-vs-air-vs-meno">
                 <h2>Gili Trawangan vs Air vs Meno: Which Island Is Best</h2>
@@ -1470,8 +1530,8 @@ html .sbtc h3.sbtc-rail__title{
                 <p>Bali airport to Ubud takes 1.5-2.5 hours depending on traffic. Compare taxi, Grab and a pre-booked private transfer from...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/ubud-to-mount-batur">
-                <h2>Ubud to Mount Batur: Drive Time and Pickup Times That Work</h2>
-                <p>Ubud to Mount Batur takes about 90 minutes each way. Real pickup times for the sunrise trip, what the night drive is lik...</p>
+                <h2>Ubud to Mount Batur: 90 Minutes by Car, Pickup at 02:30</h2>
+                <p>Ubud to Mount Batur is about 90 minutes on a narrow road north through Tegalalang. Sunrise pickups land around 02:30 — t...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/bali-tours-for-seniors">
                 <h2>Bali Tours for Seniors: 8 Low-Walking Day Trips</h2>
@@ -1534,48 +1594,48 @@ html .sbtc h3.sbtc-rail__title{
                 <p>What to wear on Mount Batur at 4 a.m.: shoes with tread, a warm layer for the 30-60 minute summit wait, and what to leav...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/mount-batur-sunrise-cost">
-                <h2>How Much Does the Mount Batur Sunrise Cost in 2026?</h2>
-                <p>Mount Batur sunrise prices in 2026: guided hike from $35, jeep from $60, jeep with hot spring from $75. What each price ...</p>
+                <h2>Mount Batur Sunrise Cost: $35 on Foot, $60 by Jeep</h2>
+                <p>The guided sunrise hike costs from $35, the 4x4 jeep from $60, and the jeep with hot springs from $75. All per person, w...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/what-time-to-leave-for-mount-batur-sunrise">
                 <h2>What Time to Leave for the Mount Batur Sunrise, by Hotel Area</h2>
                 <p>Mount Batur pickup times from Ubud, Seminyak, Canggu, Kuta, Nusa Dua and Sanur. Sunrise lands 06:00-06:30 all year — her...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/how-hard-is-the-mount-batur-hike">
-                <h2>How Hard Is the Mount Batur Hike? Distance, Ascent and Who Can Do It</h2>
-                <p>Mount Batur hike difficulty in plain numbers: around 700 m of ascent, 1.5-2 hours up, 1.5 down, no technical skill neede...</p>
+                <h2>How Hard Is Mount Batur? 700 m of Ascent in 1.5-2 Hours</h2>
+                <p>About 700 m of ascent in 1.5-2 hours, in the dark, on loose volcanic sand near the top. Who manages it comfortably, and ...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/mount-batur-hot-springs-guide">
                 <h2>Mount Batur Hot Springs: When the Soak Is Worth It, and When It Is Not</h2>
                 <p>The natural hot springs beside Lake Batur, and why they belong at the end of a sunrise morning rather than as a trip of ...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/mount-batur-with-kids">
-                <h2>Mount Batur with Kids: Jeep or Hike for a Family Sunrise</h2>
-                <p>Mount Batur with kids: the private sunrise jeep from $60 skips the climb entirely, and the hike suits steady teens. Hone...</p>
+                <h2>Mount Batur With Kids: Take the Jeep, Nobody Climbs</h2>
+                <p>For most families the answer is the sunrise jeep from $60: a 4x4 reaches the crater rim, so nobody climbs anything. Chil...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/mount-batur-in-rainy-season">
-                <h2>Mount Batur in the Rainy Season: What Really Happens (Nov–Mar)</h2>
-                <p>Guides run Mount Batur most mornings Nov–Mar. Honest odds on cloud and the wet trail, and why the hot-spring jeep from $...</p>
+                <h2>Mount Batur in the Rainy Season: Guides Run Most Mornings</h2>
+                <p>From November to March guides still run most mornings and cancel only in genuinely bad weather. What changes is the trai...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/is-mount-batur-an-active-volcano">
                 <h2>Is Mount Batur an Active Volcano? Facts and Eruption History</h2>
                 <p>Yes — Mount Batur is active; it last erupted in 2000. Eruption history, UNESCO Geopark status and why the trail runs dai...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/canggu-to-mount-batur">
-                <h2>Canggu to Mount Batur: Distance, Drive Time and Pickup Times</h2>
-                <p>Canggu to Mount Batur is 1.5-2.5 hours one way, with sunrise pickups from 01:30. Hour-by-hour night timeline and private...</p>
+                <h2>Canggu to Mount Batur: 1.5-2.5 Hours, Pickup at 01:30</h2>
+                <p>Canggu to Mount Batur is 1.5-2.5 hours each way, so sunrise pickup starts around 01:30 — a full hour earlier than Ubud. ...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/seminyak-to-mount-batur">
-                <h2>Seminyak to Mount Batur: Distance, Drive Time, Pickup Times</h2>
-                <p>Seminyak to Mount Batur is a 1.5-2.5 hour drive one way. The sunrise trip collects you around 01:30 — the night hour by ...</p>
+                <h2>Seminyak to Mount Batur: 1.5-2.5 Hours, Pickup at 01:30</h2>
+                <p>Seminyak to Mount Batur takes 1.5-2.5 hours each way, which puts a driver at your gate around 01:30. What that does to y...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/kintamani-viewpoint-and-lake-batur">
                 <h2>Kintamani Viewpoint and Lake Batur by Day: No Alarm Required</h2>
                 <p>The Kintamani rim view of Lake Batur is free by day. A private car with driver from $59 per car makes it an easy half da...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/mount-batur-vs-bromo-rinjani-ijen">
-                <h2>Mount Batur vs Bromo vs Rinjani vs Ijen: Honest Comparison</h2>
-                <p>Batur is the only one of the four doable in a single Bali morning (from $35). Bromo and Ijen need a Java trip; Rinjani i...</p>
+                <h2>Batur vs Bromo vs Rinjani vs Ijen: Only Batur Fits a Morning</h2>
+                <p>Only Batur fits into a single Bali morning. Bromo and Ijen are in East Java and need a flight; Rinjani on Lombok is a tw...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/mount-batur-sunrise-what-to-expect">
                 <h2>Mount Batur Sunrise: What to Expect, Hour by Hour</h2>
@@ -1586,40 +1646,64 @@ html .sbtc h3.sbtc-rail__title{
                 <p>Mount Batur is in Kintamani, northeast Bali — about 90 min from Ubud, 1.5-2.5 h from the south coast. Nearest airport is...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/nusa-dua-to-mount-batur">
-                <h2>Nusa Dua to Mount Batur: Distance, Drive Time, Pickup Time</h2>
-                <p>Nusa Dua to Mount Batur sits at the top of the 1.5-2.5 hour range, with pickup about 01:30. The jeep from $60 lets you s...</p>
+                <h2>Nusa Dua to Mount Batur: Up to 2.5 Hours, Pickup at 01:30</h2>
+                <p>Nusa Dua sits at the top of the 1.5-2.5 hour range — the longest transfer we run — so pickup is about 01:30. Whether the...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/uluwatu-to-mount-batur">
-                <h2>Uluwatu to Mount Batur: Drive Time and Pickup Times</h2>
-                <p>Uluwatu to Mount Batur is 1.5-2.5 hours each way, pickup around 01:30. Why we suggest the jeep from $60 or an Ubud overn...</p>
+                <h2>Uluwatu to Mount Batur: 1.5-2.5 Hours, Pickup by 01:30</h2>
+                <p>Uluwatu to Mount Batur is 1.5-2.5 hours each way and pickup on the Bukit runs by 01:30, the longest night we operate. Wh...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/sanur-to-mount-batur">
-                <h2>Sanur to Mount Batur: Drive Time and Sunrise Pickup Hours</h2>
-                <p>Sanur to Mount Batur takes roughly 1.5-2 hours, pickup 01:30-02:00. The night hour by hour, plus private hike ($35) and ...</p>
+                <h2>Sanur to Mount Batur: 1.5-2 Hours, Pickup 01:30-02:00</h2>
+                <p>Sanur to Mount Batur takes roughly 1.5-2 hours with pickup at 01:30-02:00 — kinder than the far south. Why Sanur is the ...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/mount-batur-black-lava-fields">
                 <h2>Mount Batur Black Lava Fields: What They Are &amp; How to See Them</h2>
                 <p>The black lava fields of Mount Batur are solidified flows from the 1917, 1926 and 2000 eruptions. The private sunrise je...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/mount-batur-atv-quad-or-jeep">
-                <h2>Mount Batur ATV, Quad Bike or Jeep: What Actually Exists</h2>
-                <p>Mount Batur ATV, honestly: the off-road ride on the volcano is the 4x4 sunrise jeep from $60; our quad bikes run in Ubud...</p>
+                <h2>Mount Batur ATV or Quad? There Is None — the Jeep From $60</h2>
+                <p>There is no ATV or quad track on Mount Batur itself. The off-road ride on the volcano is the 4x4 sunrise jeep from $60, ...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/how-to-book-mount-batur-tour">
-                <h2>How to Book a Mount Batur Sunrise Tour: Platforms vs Direct</h2>
-                <p>Platforms, group buses or direct WhatsApp — how Mount Batur booking works, the four questions to ask any operator, and p...</p>
+                <h2>How to Book Mount Batur: Direct on WhatsApp, No Prepayment</h2>
+                <p>Booking direct on WhatsApp costs less than the platforms and takes no prepayment — you agree the date and pay on the day...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/mount-batur-photo-guide">
                 <h2>Mount Batur Photo Guide: Sunrise Shots and the Proposal</h2>
                 <p>Where Mount Batur photos happen: sunrise 06:00-06:30 behind Agung, lake mist, black lava fields — and how a private sunr...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/sidemen-to-mount-batur">
-                <h2>Mount Batur from Sidemen: Drive Time and Sunrise Pickups</h2>
-                <p>Mount Batur from Sidemen is 1.5 hours each way, the same band as Ubud, so the sunrise hike pickup lands around 02:30. Hi...</p>
+                <h2>Sidemen to Mount Batur: 90 Minutes, Pickup Around 02:30</h2>
+                <p>Sidemen to Mount Batur is 90 minutes one way, so sunrise pickup is around 02:30 — the latest we run anywhere. An east Ba...</p>
               </a>
               <a class="sb-guide-card" href="/bali/zh/journal/amed-to-mount-batur">
-                <h2>Mount Batur Sunrise Hike from Amed: Drive and Pickup Times</h2>
-                <p>Amed to Mount Batur is about 2 hours one way, so the sunrise hike pickup lands around 02:00 and the jeep 30-60 minutes l...</p>
+                <h2>Amed to Mount Batur: 2 Hours by Car, Pickup Around 02:00</h2>
+                <p>Amed to Mount Batur is about 2 hours of driving, so the hike pickup lands near 02:00 and the jeep formats 30-60 minutes ...</p>
+              </a>
+              <a class="sb-guide-card" href="/bali/zh/journal/nusa-penida-snorkeling-spots">
+                <h2>Nusa Penida Snorkeling: The 4 Stops and What Each Is Like</h2>
+                <p>A Nusa Penida snorkeling day is four boat stops: Manta Point, Gamat Bay, Crystal Bay and Toyapakeh. What you see at each...</p>
+              </a>
+              <a class="sb-guide-card" href="/bali/zh/journal/manta-bay-vs-manta-point">
+                <h2>Manta Bay or Manta Point? Two Different Stops, One Trip</h2>
+                <p>Manta Bay and Manta Point are two separate moorings on Nusa Penida, sold under one name. Where each is, why captains swa...</p>
+              </a>
+              <a class="sb-guide-card" href="/bali/zh/journal/manta-point-depth-and-diving">
+                <h2>How Deep Is Manta Point? Depth, Currents and the Dive</h2>
+                <p>Manta Point&#39;s cleaning station sits at roughly 8-12 metres, shallow enough to watch the mantas from the surface without ...</p>
+              </a>
+              <a class="sb-guide-card" href="/bali/zh/journal/where-to-see-manta-rays-in-bali">
+                <h2>Where to See Manta Rays in Bali: One Place, Not Six</h2>
+                <p>Manta rays in Bali means Nusa Penida and nowhere else. Why Amed, Tulamben and Nusa Dua have none, what people confuse th...</p>
+              </a>
+              <a class="sb-guide-card" href="/bali/zh/journal/how-many-days-in-nusa-penida">
+                <h2>How Many Days in Nusa Penida: One Day Covers Half the Island</h2>
+                <p>One day on Nusa Penida covers the west or the east, not both. When two nights are worth it, where to stay if you do, and...</p>
+              </a>
+              <a class="sb-guide-card" href="/bali/zh/journal/nusa-penida-snorkeling-non-swimmers">
+                <h2>Nusa Penida Snorkeling If You Cannot Swim: What to Know</h2>
+                <p>You can do the Nusa Penida snorkeling day without being a swimmer, but at three of the four stops you enter deep water s...</p>
               </a>
             </div>
         </article>

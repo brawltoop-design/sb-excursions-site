@@ -18,6 +18,24 @@
   var TTL_DAYS = 30;                  // сколько помним партнёра после перехода
   var STORAGE_KEY = "sb_partner_ref";
   var LABEL = "Recommended by";       // как подпись выглядит в сообщении гостю
+  var PAGE_LABEL = "Page";            // подпись страницы-источника
+
+  /* Адрес страницы, с которой человек написал.
+     Без него нельзя ответить на вопрос «какая из 31 батурной статьи
+     приносит брони, а какая просто собирает показы»: в WhatsApp приходит
+     один и тот же текст со всего сайта. Отдаём короткую форму — снимаем
+     префикс /bali/, чтобы строка в сообщении гостя не разрасталась:
+     /bali/en/journal/mount-batur-sunrise-cost → en/journal/mount-batur-sunrise-cost
+
+     Это адрес страницы, а не человек: персональных данных здесь нет,
+     поэтому метка живёт вне consent-гейта, как и партнёрская. */
+  function pageTag() {
+    try {
+      var p = String(window.location.pathname || "").replace(/^\/bali\//, "").replace(/^\/+|\/+$/g, "");
+      if (!p || p.length > 80) return null;
+      return p;
+    } catch (e) { return null; }
+  }
 
   function sanitizeRef(v) {
     if (!v) return null;
@@ -46,14 +64,22 @@
     } catch (e) { return null; }
   }
 
-  function buildWaHref(href, ref) {
+  function buildWaHref(href, ref, page) {
     var u;
     try { u = new URL(href, window.location.href); } catch (e) { return href; }
     var host = u.hostname.replace(/^www\./, "");
     if (host !== "wa.me" && host !== "api.whatsapp.com") return href;
     var text = u.searchParams.get("text") || "";
-    if (text.indexOf("(" + LABEL + ":") !== -1) return href;   // уже стоит
-    var suffix = "(" + LABEL + ": " + ref + ")";
+
+    /* Две независимые подписи: партнёр есть не всегда, страница есть всегда.
+       Каждая проверяется отдельно, иначе повторный проход (клик по уже
+       пропатченной ссылке) продублирует одну из них. */
+    var lines = [];
+    if (ref && text.indexOf("(" + LABEL + ":") === -1) lines.push("(" + LABEL + ": " + ref + ")");
+    if (page && text.indexOf("(" + PAGE_LABEL + ":") === -1) lines.push("(" + PAGE_LABEL + ": " + page + ")");
+    if (!lines.length) return href;
+
+    var suffix = lines.join("\n");
     var newText = text ? text + "\n\n" + suffix : suffix;
     u.searchParams.delete("text");
     var rest = [];
@@ -67,12 +93,15 @@
 
   var ref = readFromUrl();
   if (ref) save(ref); else ref = load();
-  if (!ref) return;
+  var page = pageTag();
+  /* Раньше здесь стоял выход, когда партнёра нет. Теперь скрипт нужен на
+     каждой странице: партнёрская метка опциональна, страница-источник — нет. */
+  if (!ref && !page) return;
 
   function patchAll() {
     var links = document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
     for (var i = 0; i < links.length; i++) {
-      links[i].href = buildWaHref(links[i].getAttribute("href"), ref);
+      links[i].href = buildWaHref(links[i].getAttribute("href"), ref, page);
     }
   }
 
@@ -87,6 +116,6 @@
     var a = e.target && e.target.closest ? e.target.closest("a") : null;
     if (!a || !a.href) return;
     if (a.href.indexOf("wa.me") === -1 && a.href.indexOf("api.whatsapp.com") === -1) return;
-    a.href = buildWaHref(a.getAttribute("href"), ref);
+    a.href = buildWaHref(a.getAttribute("href"), ref, page);
   }, true);
 })();

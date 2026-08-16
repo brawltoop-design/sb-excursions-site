@@ -10304,6 +10304,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "mount-batur-sunrise-from-ubud",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "From here the drive decides your pickup time more than the format does. If you want the summit on foot, take the hike. If you want the same sunrise without the climb, take the jeep. If you feel the cold before dawn, add the hot spring."
+    },
     "badge": "Travel guide",
     "navLabel": "Batur from Ubud",
     "cardTourLabel": "Mount Batur sunrise tours",
@@ -10318,8 +10340,8 @@ const JOURNAL_SEO_GUIDES = [
       "60-90 min from Ubud",
       "Tours from $35"
     ],
-    "title": "Mount Batur Sunrise from Ubud: Jeep or Hike, and Prices",
-    "description": "Pickups from Ubud run 01:30-03:30 and you are back by late morning. Jeep from $60, guided hike from $35, and which one suits you.",
+    "title": "Mount Batur Sunrise From Ubud: Hike $35, Jeep $60",
+    "description": "Ubud is the shortest transfer to Mount Batur — about 90 minutes. The guided hike is $35 and the 4x4 jeep $60, both with hotel pickup and no prepayment.",
     "excerpt": "Mount Batur sunrise tours leave Ubud between 01:30 and 03:30 — the latest pickups on the island, because the pre-dawn drive to Kintamani takes only 60-90 minutes. That means the latest pickups on the island — the guided hike collects from 01:30, the jeeps from around 02:00 — and a return to your hotel by late morning with most of the day intact. This guide compares the three ways we run the sunrise from Ubud: a 4x4 jeep to the crater rim from $60, a jeep day that ends in the hot springs from $75, and the classic guided hike from $35. It also covers exact departure timings and what to wear at 1,700 m before dawn.",
     "rankings": [
       {
@@ -10484,6 +10506,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "mount-batur-sunrise-from-south-bali",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "From here the drive decides your pickup time more than the format does. If you want the summit on foot, take the hike. If you want the same sunrise without the climb, take the jeep. If you feel the cold before dawn, add the hot spring."
+    },
     "badge": "Travel guide",
     "navLabel": "Batur from the south",
     "cardTourLabel": "Mount Batur sunrise tours",
@@ -11253,8 +11297,8 @@ const JOURNAL_SEO_GUIDES = [
       "Hike from $35",
       "Jeep option from $60"
     ],
-    "title": "Is Mount Batur Safe? Difficulty, Risks and the Jeep Option",
-    "description": "Is Mount Batur safe? Honest answers on trail difficulty, the dark ascent, weather and common mistakes — plus the sunrise jeep alternative from $60.",
+    "title": "Is Mount Batur Safe? Yes With a Guide, Descent in Daylight",
+    "description": "Mount Batur is safe with a local guide: 1.5-2 hours up, pickups at 01:30-03:00, and the descent happens in daylight. The real risks, and the jeep option.",
     "excerpt": "Yes — Mount Batur is safe for most reasonably fit travelers when climbed with a local guide, and hundreds of people summit it every morning in high season. The ascent takes 1.5-2 hours, pickups run at 01:30-03:00, and the descent happens in daylight, which removes the scenario most people worry about. The honest hazards are specific rather than dramatic: loose volcanic scree on the way down, cold wind at the summit, and slippery sections in the November-March rains. This guide breaks the climb into seven factors, from the dark trail to fitness and crowds, so you can judge it against your own condition — and covers the sunrise jeep alternative from $60 for anyone the hike does not suit.",
     "rankings": [
       {
@@ -11446,6 +11490,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "mount-batur-vs-mount-agung",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "If you have settled on Batur, the only choice left is how you get up: on foot with the hike, or by 4x4 with the jeep. Agung is a far longer night and not a first climb."
+    },
     "badge": "Travel guide",
     "navLabel": "Batur vs Agung",
     "cardTourLabel": "Sunrise volcano mornings",
@@ -11460,8 +11526,8 @@ const JOURNAL_SEO_GUIDES = [
       "Batur from $35",
       "Agung 3,031 m"
     ],
-    "title": "Mount Batur vs Mount Agung: Which Bali Volcano to Climb",
-    "description": "Mount Batur vs Mount Agung compared honestly — height, hike time, difficulty, sacred status, safety — and why sunrise hikers pick Batur from $35.",
+    "title": "Mount Batur vs Agung: Batur Suits 95% of Travellers",
+    "description": "Batur is 1,717 m and about 2 hours up, from $35. Agung is 3,031 m, sacred and far harder. Why Batur is the right sunrise volcano for almost everyone.",
     "excerpt": "Mount Batur is the right sunrise volcano for about 95% of Bali travelers: the climb takes around 2 hours to a 1,717 m summit, guided mornings start from $35, and a 4x4 track means you can skip the hike entirely. Mount Agung is a different animal — Bali's highest and most sacred mountain at 3,031 m, a 5-7 hour night ascent with close to 2,000 m of climbing, no vehicle access, and closures around temple ceremonies. We run three Batur sunrise options and none on Agung, and this guide explains that choice honestly: what each mountain actually demands, when Agung is genuinely worth it, and why the famous Bali sunrise photo you have seen was almost certainly taken on Batur — looking at Agung.",
     "rankings": [
       {
@@ -20886,8 +20952,8 @@ const JOURNAL_SEO_GUIDES = [
       "Pickup 01:30-03:00",
       "Guided hike from $35"
     ],
-    "title": "Can You Hike Mount Batur Without a Guide? The Rules in 2026",
-    "description": "In practice, no — the trail to Mount Batur's summit is controlled by the local guide association. Here is what is allowed in 2026, and the jeep alternative.",
+    "title": "Can You Hike Mount Batur Without a Guide? In Practice, No",
+    "description": "No Indonesian law bans it, but the trail is controlled by the local guide association and solo walkers are turned back at 03:00. What that means for you.",
     "excerpt": "In practice, no — you cannot hike Mount Batur without a guide. No Indonesian law bans solo hiking, but the trail out of the lakeside villages is controlled by the local guide association, and travelers who arrive at 03:00 planning to walk up alone are turned back at the trailhead. That is the situation on the ground in 2026, whatever older blog posts suggest. Two options actually work: the guided sunrise hike from $35, which includes the guide you are required to have, or the jeep, from $60, which climbs a separate road to a sunrise viewpoint with no walking. This guide covers who controls the trail, what happens if you try it alone, and when the mountain is open to walk freely.",
     "rankings": [
       {
@@ -21197,6 +21263,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "is-mount-batur-worth-it",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "If you decide it is worth it, the choice is the format. The summit on foot is the hike; the same sunrise without the climb is the jeep; the version people are gladdest they booked is the one with the hot springs."
+    },
     "badge": "Honest verdict",
     "navLabel": "Is Batur worth it",
     "cardTourLabel": "Mount Batur sunrise",
@@ -21211,8 +21299,8 @@ const JOURNAL_SEO_GUIDES = [
       "Hike from $35",
       "Jeep from $60, no climb"
     ],
-    "title": "Is Mount Batur Worth It? An Honest Answer Before You Book",
-    "description": "Is Mount Batur worth it? An honest answer: the 02:00 start, two hours uphill in the dark, the cold summit wait, and the jeep option from $60.",
+    "title": "Is Mount Batur Worth It? Only If a 02:00 Alarm Is Fine",
+    "description": "Worth it if you can walk uphill for two hours in the dark and a 02:00 alarm suits you. If either one is too much, the jeep gets you the same sunrise from $60.",
     "excerpt": "Mount Batur is worth it if you can walk uphill for two hours in the dark and you are genuinely fine with a 02:00 alarm. If either of those is a stretch, it is not — and there is a jeep that gets you the same sunrise without the climb. The honest morning: pickup at 01:30-03:00, about two hours of steady climbing by headlamp, then standing in cold wind waiting for the light. From April to October the view is dependable; from November to March cloud can close it completely and you see nothing. The hike runs from $35 over 5-8 hours; the sunrise jeep from $60 skips the walking entirely.",
     "rankings": [
       {
@@ -21733,6 +21821,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "mount-batur-sunrise-vs-sunset",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "All three formats below are sunrise, because that is the trip worth the early alarm. If you want the summit on foot, take the hike; if you want the view without the climb, take the jeep."
+    },
     "badge": "Comparison",
     "navLabel": "Sunrise vs sunset",
     "cardTourLabel": "Batur sunrise tours",
@@ -21747,8 +21857,8 @@ const JOURNAL_SEO_GUIDES = [
       "1,717 m summit",
       "Tours from $35"
     ],
-    "title": "Mount Batur Sunrise or Sunset: Which One to Book",
-    "description": "Mount Batur is a sunrise mountain: the cloud sea and the Mount Agung view only work at dawn. Why we run sunrise tours from $35 and no sunset climbs.",
+    "title": "Mount Batur: Book the Sunrise, Not the Sunset",
+    "description": "At dawn the sun rises behind the cone with cloud filling the caldera below you. At sunset it is behind your back and you walk down in the dark. From $35.",
     "excerpt": "Mount Batur is better at sunrise, and it is not close. The rim faces east across Lake Batur toward Mount Agung, so at dawn the sun comes up behind the cone with a sea of cloud sitting in the caldera below you. At sunset the sun is behind your back, the caldera falls into shadow, and you walk down in full darkness. Afternoon cloud also sits higher than the 1,717 m summit, so the odds of standing inside grey rather than above it go up. We run three sunrise formats — a guided hike from $35, jeeps from $60 and $75 — and no sunset trips at all. Here is the honest reasoning.",
     "rankings": [
       {
@@ -24119,6 +24229,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "ubud-to-mount-batur",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "From here the drive decides your pickup time more than the format does. If you want the summit on foot, take the hike. If you want the same sunrise without the climb, take the jeep. If you feel the cold before dawn, add the hot spring."
+    },
     "badge": "Planning",
     "navLabel": "Ubud to Mount Batur",
     "cardTourLabel": "Mount Batur sunrise",
@@ -24133,8 +24265,8 @@ const JOURNAL_SEO_GUIDES = [
       "Ubud pickup around 02:30",
       "Sunrise hike from $35"
     ],
-    "title": "Ubud to Mount Batur: Drive Time and Pickup Times That Work",
-    "description": "Ubud to Mount Batur takes about 90 minutes each way. Real pickup times for the sunrise trip, what the night drive is like, and daytime Kintamani options.",
+    "title": "Ubud to Mount Batur: 90 Minutes by Car, Pickup at 02:30",
+    "description": "Ubud to Mount Batur is about 90 minutes on a narrow road north through Tegalalang. Sunrise pickups land around 02:30 — the latest on the island. From $35.",
     "excerpt": "Ubud to Mount Batur takes about 90 minutes by car, and the road matters more than the distance: it climbs north through Tegalalang and Tampaksiring and stays narrow the whole way. For sunrise that means leaving in the middle of the night — our Ubud pickups usually land around 02:30, while guests in Canggu, Seminyak or Kuta start a full hour earlier. Kintamani's rim viewpoints sit on the same road, slightly before the trailhead, so a daytime visit costs the same drive. The sunrise hike runs 5-8 hours door to door from $35. This guide covers the pickup times we actually use, what the drive feels like in the dark, and when the trip is not worth doing.",
     "rankings": [
       {
@@ -26731,6 +26863,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "mount-batur-sunrise-cost",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "The hike is the cheapest at $35, and it is cheapest because you do the climbing yourself. The jeep costs more because a 4x4 and a driver do it for you. The hot spring version adds the soak by the lake afterwards."
+    },
     "badge": "Travel guide",
     "navLabel": "Mount Batur cost",
     "cardTourLabel": "Mount Batur sunrise",
@@ -26745,8 +26899,8 @@ const JOURNAL_SEO_GUIDES = [
       "From $35",
       "No prepayment"
     ],
-    "title": "How Much Does the Mount Batur Sunrise Cost in 2026?",
-    "description": "Mount Batur sunrise prices in 2026: guided hike from $35, jeep from $60, jeep with hot spring from $75. What each price includes, what it does not, and what actually changes it.",
+    "title": "Mount Batur Sunrise Cost: $35 on Foot, $60 by Jeep",
+    "description": "The guided sunrise hike costs from $35, the 4x4 jeep from $60, and the jeep with hot springs from $75. All per person, with hotel pickup and no prepayment.",
     "excerpt": "Three prices, and the gap between them buys effort rather than scenery. The guided hike runs from $35 over 5-8 hours, the sunrise jeep from $60 over 6-8 hours, and the jeep with a hot spring finish from $75 over the same 6-8 hours. All three are private, all three include hotel pickup and return, and none of them takes a prepayment — you confirm the plan on WhatsApp and pay on the day. The cheapest option is the one that asks the most of you, which is the opposite of how most tour menus work and the single most useful thing to understand before booking. This guide breaks down what each price covers, what it does not, and which variables genuinely move the number.",
     "rankings": [
       {
@@ -26869,6 +27023,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "what-time-to-leave-for-mount-batur-sunrise",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "Your pickup time follows the format you choose: the hike collects earliest because you need two hours on the trail, the jeep formats later. Both are confirmed on WhatsApp the day before."
+    },
     "badge": "Travel guide",
     "navLabel": "Batur departure times",
     "cardTourLabel": "Mount Batur sunrise",
@@ -27026,6 +27202,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "how-hard-is-the-mount-batur-hike",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "If two hours uphill in the dark sounds like the point of the trip, take the hike. If it sounds like the price you pay for the view, take the jeep — it reaches the same sunrise without the climb."
+    },
     "badge": "Travel guide",
     "navLabel": "Batur hike difficulty",
     "cardTourLabel": "Mount Batur sunrise",
@@ -27040,8 +27238,8 @@ const JOURNAL_SEO_GUIDES = [
       "1.5-2 hours up",
       "No technical skill"
     ],
-    "title": "How Hard Is the Mount Batur Hike? Distance, Ascent and Who Can Do It",
-    "description": "Mount Batur hike difficulty in plain numbers: around 700 m of ascent, 1.5-2 hours up, 1.5 down, no technical skill needed. Who manages it comfortably and who should take the jeep.",
+    "title": "How Hard Is Mount Batur? 700 m of Ascent in 1.5-2 Hours",
+    "description": "About 700 m of ascent in 1.5-2 hours, in the dark, on loose volcanic sand near the top. Who manages it comfortably, and the jeep that skips the climb.",
     "excerpt": "Moderate, and the numbers are small enough to judge honestly against your own week. The summit sits at 1,717 m, you climb around 700 m of it, and the ascent takes 1.5-2 hours at a guided pace with regular breaks — comparable to a long stair session rather than a mountaineering objective. No technical skill or gear is required beyond shoes with tread and a warm layer, and guides pace the group off the slowest walker. The descent is where people actually struggle: the same loose volcanic sand that slows you down on the way up behaves like ball bearings coming down in daylight. This guide puts the physical demand in terms you can test at home, and is honest about who should take the jeep instead.",
     "rankings": [
       {
@@ -27349,6 +27547,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "mount-batur-with-kids",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "With children under about ten, take the jeep: it reaches the viewpoint without a night climb. Older children who walk happily manage the hike. The hot springs afterwards are what most families remember."
+    },
     "badge": "Travel guide",
     "navLabel": "Batur with kids",
     "cardTourLabel": "Family sunrise format",
@@ -27363,8 +27583,8 @@ const JOURNAL_SEO_GUIDES = [
       "Sunrise lands 06:00–06:30 all year",
       "Ubud to Batur in about 90 minutes"
     ],
-    "title": "Mount Batur with Kids: Jeep or Hike for a Family Sunrise",
-    "description": "Mount Batur with kids: the private sunrise jeep from $60 skips the climb entirely, and the hike suits steady teens. Honest notes on timing and pregnancy.",
+    "title": "Mount Batur With Kids: Take the Jeep, Nobody Climbs",
+    "description": "For most families the answer is the sunrise jeep from $60: a 4x4 reaches the crater rim, so nobody climbs anything. Children sleep through the night drive.",
     "excerpt": "Yes — Mount Batur works with kids, and the format decides how the morning feels. For most families the answer is the private sunrise jeep tour from $60: a 4x4 drives you to a crater-rim viewpoint, so nobody climbs anything. Children doze through the night drive — about 90 minutes from Ubud, 1.5–2.5 hours from the south coast — and step out shortly before sunrise, which lands between 06:00 and 06:30 all year. The sunrise hike from $35 is a different commitment: around 700 m of ascent over 1.5–2 hours at a guided pace, then roughly 1.5 hours back down loose volcanic sand. It suits teenagers who can climb stairs steadily for about 90 minutes; we frame it by ability, not age, because stamina decides the morning, not a birthday. Every tour is private, with hotel pickup and return included and no prepayment — you book and adjust details on WhatsApp.",
     "rankings": [
       {
@@ -27504,6 +27724,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "mount-batur-in-rainy-season",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "In the wet months take the jeep: it reaches the viewpoint on the road and does not depend on a wet trail in the dark. The hot springs are worth more in December than in July."
+    },
     "badge": "Travel guide",
     "navLabel": "Batur in rainy season",
     "cardTourLabel": "Wet-season format",
@@ -27518,8 +27760,8 @@ const JOURNAL_SEO_GUIDES = [
       "Hot-spring jeep from $75",
       "Ascent 1.5–2 h at guided pace"
     ],
-    "title": "Mount Batur in the Rainy Season: What Really Happens (Nov–Mar)",
-    "description": "Guides run Mount Batur most mornings Nov–Mar. Honest odds on cloud and the wet trail, and why the hot-spring jeep from $75 hedges the whole morning.",
+    "title": "Mount Batur in the Rainy Season: Guides Run Most Mornings",
+    "description": "From November to March guides still run most mornings and cancel only in genuinely bad weather. What changes is the trail underfoot, not the schedule.",
     "excerpt": "You can climb Mount Batur in the rainy season: from November to March our guides still run most mornings and cancel only in genuinely bad weather. What changes is the texture of the morning, not the schedule. The upper section of loose volcanic sand turns slippery after rain, the 30–60 minute wait at the top is colder, and cloud can swallow the sunrise entirely — that last one is the real risk, because nobody can promise a view in the wet months. The honest play has two parts. First, keep a backup morning: booking carries no prepayment, so shifting to the next day costs nothing. Second, consider the format where weather cannot spoil the whole outing — the Sunrise Jeep & Hot Spring tour from $75, which ends with a soak in the natural lakeside springs whether the horizon cooperated or not. Below is a risk-by-risk breakdown of what actually happens up there between November and March.",
     "rankings": [
       {
@@ -27816,6 +28058,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "canggu-to-mount-batur",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "From here the drive decides your pickup time more than the format does. If you want the summit on foot, take the hike. If you want the same sunrise without the climb, take the jeep. If you feel the cold before dawn, add the hot spring."
+    },
     "badge": "Travel guide",
     "navLabel": "Canggu to Batur",
     "cardTourLabel": "Batur from Canggu",
@@ -27830,8 +28094,8 @@ const JOURNAL_SEO_GUIDES = [
       "Pickup from 01:30",
       "Jeep from $60"
     ],
-    "title": "Canggu to Mount Batur: Distance, Drive Time and Pickup Times",
-    "description": "Canggu to Mount Batur is 1.5-2.5 hours one way, with sunrise pickups from 01:30. Hour-by-hour night timeline and private tour formats from $35.",
+    "title": "Canggu to Mount Batur: 1.5-2.5 Hours, Pickup at 01:30",
+    "description": "Canggu to Mount Batur is 1.5-2.5 hours each way, so sunrise pickup starts around 01:30 — a full hour earlier than Ubud. How to plan the night. From $35.",
     "excerpt": "The drive from Canggu to Mount Batur takes 1.5 to 2.5 hours one way, which is why sunrise pickups in Canggu start around 01:30 — a full hour earlier than in Ubud. The consolation is that at 02:00 the roads through Bali's interior are empty, so the outbound leg is usually the fastest drive of the whole trip; the return in daytime traffic is noticeably slower. Sunrise lands between 06:00 and 06:30 all year, and every departure time works backwards from that fixed point. From Canggu there are three private formats. The jeep, from $60, lets you sleep through both drive legs. The hike, from $35, adds 1.5-2 hours of climbing to what is already the longest night of any pickup zone. The jeep with hot springs, from $75, ends with a soak before the slow drive home. All include hotel pickup and return, booked on WhatsApp with no prepayment.",
     "rankings": [
       {
@@ -27983,6 +28247,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "seminyak-to-mount-batur",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "From here the drive decides your pickup time more than the format does. If you want the summit on foot, take the hike. If you want the same sunrise without the climb, take the jeep. If you feel the cold before dawn, add the hot spring."
+    },
     "badge": "Travel guide",
     "navLabel": "Seminyak to Batur",
     "cardTourLabel": "Mount Batur sunrise",
@@ -27997,8 +28283,8 @@ const JOURNAL_SEO_GUIDES = [
       "Seminyak pickup about 01:30",
       "Sunrise jeep from $60"
     ],
-    "title": "Seminyak to Mount Batur: Distance, Drive Time, Pickup Times",
-    "description": "Seminyak to Mount Batur is a 1.5-2.5 hour drive one way. The sunrise trip collects you around 01:30 — the night hour by hour and private tours from $35.",
+    "title": "Seminyak to Mount Batur: 1.5-2.5 Hours, Pickup at 01:30",
+    "description": "Seminyak to Mount Batur takes 1.5-2.5 hours each way, which puts a driver at your gate around 01:30. What that does to your evening, and which format fits.",
     "excerpt": "Seminyak to Mount Batur takes 1.5-2.5 hours by car each way, and for the sunrise trip that means a driver at your gate around 01:30 — a full hour before guests staying in Ubud. That single number reorganises your whole evening. Seminyak is a dinner-and-drinks town, and the sunrise and the night out do not fit into the same night: dinner ends early, the second round gets skipped, and you sleep before the alarm rather than after it. The reward is the fastest drive you will have on the island — at 02:00 the roads are empty — and first light over Lake Batur from 1,717 m. Three private formats collect from Seminyak: the sunrise hike from $35, the jeep tour from $60 with no climbing at all, and the jeep with lakeside hot springs from $75. This guide lays the night out hour by hour and helps you pick the format that fits.",
     "rankings": [
       {
@@ -28299,6 +28585,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "mount-batur-vs-bromo-rinjani-ijen",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "If Batur is the one that fits your trip, the choice left is the format: the hike for the summit on foot, the jeep for the same sunrise without the climb."
+    },
     "badge": "Travel guide",
     "navLabel": "Batur vs other peaks",
     "cardTourLabel": "Batur sunrise from $35",
@@ -28313,8 +28621,8 @@ const JOURNAL_SEO_GUIDES = [
       "Rinjani trek: minimum 2 days, 1 night",
       "Batur morning from $35"
     ],
-    "title": "Mount Batur vs Bromo vs Rinjani vs Ijen: Honest Comparison",
-    "description": "Batur is the only one of the four doable in a single Bali morning (from $35). Bromo and Ijen need a Java trip; Rinjani is a multi-day trek on Lombok.",
+    "title": "Batur vs Bromo vs Rinjani vs Ijen: Only Batur Fits a Morning",
+    "description": "Only Batur fits into a single Bali morning. Bromo and Ijen are in East Java and need a flight; Rinjani on Lombok is a two-day trek. Batur starts from $35.",
     "excerpt": "Mount Batur is the only one of the four you can do in a single Bali morning — Bromo and Ijen are in East Java and need a separate trip with a flight, while Rinjani on Lombok is a multi-day trek with a minimum of 2 days and 1 night. Batur stands 1,717 m, you climb about 700 m of it in 1.5-2 hours at a guided pace, and sunrise lands between 06:00 and 06:30 all year. From Ubud the drive is about 90 minutes, and the outing takes 5-8 hours door to door for the guided hike from $35, or 6-8 hours for the 4x4 jeep tour from $60 and the jeep with a hot spring soak from $75. We run Mount Batur only — this comparison exists so you can decide honestly whether a Java or Lombok volcano belongs in your itinerary too.",
     "rankings": [
       {
@@ -28786,6 +29094,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "nusa-dua-to-mount-batur",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "From here the drive decides your pickup time more than the format does. If you want the summit on foot, take the hike. If you want the same sunrise without the climb, take the jeep. If you feel the cold before dawn, add the hot spring."
+    },
     "badge": "Travel guide",
     "navLabel": "Nusa Dua to Batur",
     "cardTourLabel": "Sunrise from Nusa Dua",
@@ -28800,8 +29130,8 @@ const JOURNAL_SEO_GUIDES = [
       "Top of the 1.5-2.5 h range",
       "Jeep from $60, springs from $75"
     ],
-    "title": "Nusa Dua to Mount Batur: Distance, Drive Time, Pickup Time",
-    "description": "Nusa Dua to Mount Batur sits at the top of the 1.5-2.5 hour range, with pickup about 01:30. The jeep from $60 lets you sleep both drive legs.",
+    "title": "Nusa Dua to Mount Batur: Up to 2.5 Hours, Pickup at 01:30",
+    "description": "Nusa Dua sits at the top of the 1.5-2.5 hour range — the longest transfer we run — so pickup is about 01:30. Whether the night is worth it from a resort.",
     "excerpt": "Nusa Dua to Mount Batur sits at the top of the 1.5-2.5 hour range — the longest transfer of any pickup area we serve — so the sunrise trip collects you at about 01:30, sometimes slightly earlier. We will be honest about what that means: for guests on a relaxed resort schedule, the alarm is the single hardest part of the trip, harder than anything that happens on the volcano. The rest of this guide is about making that number survivable. The jeep tour from $60 converts both drive legs into sleep and replaces the climb with a 4x4 track to the crater rim; the hot spring version from $75 adds a soak in natural lakeside springs as recovery; and at 02:00 the roads out of the south are empty, so the outbound drive is the fastest of the whole trip. Sunrise lands between 06:00 and 06:30 all year. Here is the night, hour by hour.",
     "rankings": [
       {
@@ -28947,6 +29277,28 @@ const JOURNAL_SEO_GUIDES = [
   {
     "badge": "Travel guide",
     "slug": "uluwatu-to-mount-batur",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "From here the drive decides your pickup time more than the format does. If you want the summit on foot, take the hike. If you want the same sunrise without the climb, take the jeep. If you feel the cold before dawn, add the hot spring."
+    },
     "navLabel": "From Uluwatu",
     "cardTourLabel": "Batur from Uluwatu",
     "heroTourSlug": "mount-batur-sunrise-jeep-tour",
@@ -28960,8 +29312,8 @@ const JOURNAL_SEO_GUIDES = [
       "Pickup around 01:30",
       "Sunrise at 06:00-06:30"
     ],
-    "title": "Uluwatu to Mount Batur: Drive Time and Pickup Times",
-    "description": "Uluwatu to Mount Batur is 1.5-2.5 hours each way, pickup around 01:30. Why we suggest the jeep from $60 or an Ubud overnight — the honest arithmetic.",
+    "title": "Uluwatu to Mount Batur: 1.5-2.5 Hours, Pickup by 01:30",
+    "description": "Uluwatu to Mount Batur is 1.5-2.5 hours each way and pickup on the Bukit runs by 01:30, the longest night we operate. What that means, and the jeep option.",
     "excerpt": "The drive from Uluwatu to Mount Batur takes 1.5 to 2.5 hours each way, and sunrise pickup on the Bukit is around 01:30 or slightly earlier — the longest night on our menu. Uluwatu and the wider Bukit peninsula are the farthest common base for the volcano, which stands in the Kintamani highlands of northeast Bali. The consolation: at 02:00 the roads are empty, the outbound leg is the fastest drive of the whole trip, and most guests sleep through it. This is also the one area where we most often suggest either the sunrise jeep, which involves no climbing so you can sleep both drive legs, or spending the previous night in Ubud, where pickup relaxes to about 02:30. Surfers on a dawn-patrol schedule tend to shrug at the alarm; everyone else should read the hour-by-hour table below before deciding.",
     "rankings": [
       {
@@ -29108,6 +29460,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "sanur-to-mount-batur",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "From here the drive decides your pickup time more than the format does. If you want the summit on foot, take the hike. If you want the same sunrise without the climb, take the jeep. If you feel the cold before dawn, add the hot spring."
+    },
     "badge": "Travel guide",
     "navLabel": "Sanur to Batur",
     "cardTourLabel": "Sunrise from Sanur",
@@ -29122,8 +29496,8 @@ const JOURNAL_SEO_GUIDES = [
       "Pickup 01:30-02:00",
       "Jeep tour from $60"
     ],
-    "title": "Sanur to Mount Batur: Drive Time and Sunrise Pickup Hours",
-    "description": "Sanur to Mount Batur takes roughly 1.5-2 hours, pickup 01:30-02:00. The night hour by hour, plus private hike ($35) and jeep ($60) options.",
+    "title": "Sanur to Mount Batur: 1.5-2 Hours, Pickup 01:30-02:00",
+    "description": "Sanur to Mount Batur takes roughly 1.5-2 hours with pickup at 01:30-02:00 — kinder than the far south. Why Sanur is the easiest beach base for the volcano.",
     "excerpt": "The drive from Sanur to Mount Batur takes roughly 1.5-2 hours, and sunrise pickup runs at 01:30-02:00 — noticeably kinder than the far south of the island. Sanur sits between Ubud and the beach towns in driving terms, so you get most of Ubud's short transfer without staying inland. At 02:00 the roads are empty, which makes the outbound leg the fastest drive of the whole trip; the return runs in daytime traffic and is slower. Sunrise on the crater rim arrives between 06:00 and 06:30 all year, looking east across Lake Batur toward Mount Agung. Because Sanur is also the ferry gateway to Nusa Penida, many guests pair a Batur morning with a Penida day — the honest advice is to keep a rest day between them. We run three private formats from Sanur: the hike from $35, the jeep from $60 and the jeep with hot springs from $75, all with hotel pickup and return included, booked on WhatsApp with no prepayment.",
     "rankings": [
       {
@@ -29420,6 +29794,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "mount-batur-atv-quad-or-jeep",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "The quad is an activity in its own right and it does not reach the sunrise viewpoint. If the sunrise is the point, take the jeep. If you want the summit on foot, take the hike."
+    },
     "badge": "Travel guide",
     "navLabel": "ATV, quad or jeep",
     "cardTourLabel": "Off-road at Batur",
@@ -29434,8 +29830,8 @@ const JOURNAL_SEO_GUIDES = [
       "Ubud ATV from $20",
       "1.5 hours of quad riding"
     ],
-    "title": "Mount Batur ATV, Quad Bike or Jeep: What Actually Exists",
-    "description": "Mount Batur ATV, honestly: the off-road ride on the volcano is the 4x4 sunrise jeep from $60; our quad bikes run in Ubud from $20 as a separate day.",
+    "title": "Mount Batur ATV or Quad? There Is None — the Jeep From $60",
+    "description": "There is no ATV or quad track on Mount Batur itself. The off-road ride on the volcano is the 4x4 sunrise jeep from $60, which crosses the black lava fields.",
     "excerpt": "There is no ATV or quad bike track on Mount Batur in our programme — on the volcano itself, the off-road ride is the 4x4 sunrise jeep from $60. The jeep drives a separate track up to a crater-rim viewpoint for the 06:00-06:30 sunrise, then crosses the old black lava fields, where you can step out and walk on the solidified flows. If you want to drive the machine yourself, our ATV quad bikes run in the Ubud area from $20: a 4-6 hour door-to-door day built around a 1.5-hour ride through jungle, rice fields, a river and a tunnel track. The two pair naturally as separate days — Batur is about 90 minutes from Ubud, and the jeep morning starts with a night pickup. Everything is private, with hotel pickup and return included, and there is no prepayment: you confirm on WhatsApp and pay on the day.",
     "rankings": [
       {
@@ -29582,6 +29978,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "how-to-book-mount-batur-tour",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "Pick the format first, then send the date. If you want the summit on foot, take the hike. If you want the sunrise without the climb, take the jeep. Add the hot springs if you feel the cold before dawn."
+    },
     "badge": "Travel guide",
     "navLabel": "How to book Batur",
     "cardTourLabel": "Book direct, from $35",
@@ -29595,8 +30013,8 @@ const JOURNAL_SEO_GUIDES = [
       "Pickup 01:30–03:00",
       "Sunrise 06:00–06:30"
     ],
-    "title": "How to Book a Mount Batur Sunrise Tour: Platforms vs Direct",
-    "description": "Platforms, group buses or direct WhatsApp — how Mount Batur booking works, the four questions to ask any operator, and private tours from $35.",
+    "title": "How to Book Mount Batur: Direct on WhatsApp, No Prepayment",
+    "description": "Booking direct on WhatsApp costs less than the platforms and takes no prepayment — you agree the date and pay on the day. The three formats, from $35.",
     "excerpt": "The most direct way to book a Mount Batur sunrise tour is to message a local operator on WhatsApp; the alternatives are booking platforms such as GetYourGuide, Klook and Viator, which resell the same local operators with a commission inside the listed price, and group bus tours that pool guests from many hotels for a cheaper seat. All three routes reach the same 1,717 m summit for the same 06:00–06:30 sunrise — what changes is who you talk to, what the price contains and how flexible the night is. Full disclosure before we go further: we are SB Excursions, one of the direct operators, running private trips from $35 with no prepayment. This guide lays out how each route works, the four questions any legitimate operator can answer in writing, and a table comparing what your money buys — so you can book with anyone, including us, with your eyes open.",
     "rankings": [
       {
@@ -29899,6 +30317,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "sidemen-to-mount-batur",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "From here the drive decides your pickup time more than the format does. If you want the summit on foot, take the hike. If you want the same sunrise without the climb, take the jeep. If you feel the cold before dawn, add the hot spring."
+    },
     "badge": "Travel guide",
     "navLabel": "Sidemen to Batur",
     "cardTourLabel": "Mount Batur sunrise",
@@ -29913,8 +30353,8 @@ const JOURNAL_SEO_GUIDES = [
       "Pickup around 02:30",
       "Sunrise hike from $35"
     ],
-    "title": "Mount Batur from Sidemen: Drive Time and Sunrise Pickups",
-    "description": "Mount Batur from Sidemen is 1.5 hours each way, the same band as Ubud, so the sunrise hike pickup lands around 02:30. Hike from $35.",
+    "title": "Sidemen to Mount Batur: 90 Minutes, Pickup Around 02:30",
+    "description": "Sidemen to Mount Batur is 90 minutes one way, so sunrise pickup is around 02:30 — the latest we run anywhere. An east Bali base does not cost you sleep.",
     "excerpt": "Mount Batur from Sidemen is 1.5 hours one way, which puts the sunrise-hike pickup at around 02:30 — the latest departure we run from anywhere on the island, alongside Ubud. That is the headline for anyone worried that an east Bali base costs them sleep: it does not. Sidemen sits in the same drive-time band as Ubud, so staying in the rice valley rather than the tourist centre adds nothing to the road time, and it takes away the temptation to be out late the night before. The schedule works backwards from sunrise at 06:00-06:30 and a trailhead arrival around 04:00. The guided hike runs 5-8 hours door to door from $35; the jeep formats leave 30-60 minutes later because there is no climb to fit in. This guide covers the night hour by hour, how to pair the volcano with east Bali sightseeing on a separate day, and what the day after looks like.",
     "rankings": [
       {
@@ -30074,6 +30514,28 @@ const JOURNAL_SEO_GUIDES = [
   },
   {
     "slug": "amed-to-mount-batur",
+    "offer": {
+      "eyebrow": "Book Mount Batur",
+      "title": "Three ways up Mount Batur",
+      "closeTitle": "Which one to book",
+      "buttonLabel": "Book now",
+      "note": "Prices are per person and include hotel pickup. No prepayment — you agree the date on WhatsApp and pay on the day of the tour.",
+      "options": [
+        {
+          "tourSlug": "mount-batur-sunrise-hike",
+          "forWho": "You want the summit itself, and two hours uphill in the dark is part of the appeal."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-tour",
+          "forWho": "You want the same sunrise without the climb — with children, or after a late flight."
+        },
+        {
+          "tourSlug": "mount-batur-sunrise-jeep-hot-spring",
+          "forWho": "The sunrise, then a soak in the natural hot springs beside Lake Batur."
+        }
+      ],
+      "decision": "From here the drive decides your pickup time more than the format does. If you want the summit on foot, take the hike. If you want the same sunrise without the climb, take the jeep. If you feel the cold before dawn, add the hot spring."
+    },
     "badge": "Travel guide",
     "navLabel": "Amed to Mount Batur",
     "cardTourLabel": "Batur from Amed",
@@ -30088,8 +30550,8 @@ const JOURNAL_SEO_GUIDES = [
       "Hike pickup around 02:00",
       "Private tours from $35"
     ],
-    "title": "Mount Batur Sunrise Hike from Amed: Drive and Pickup Times",
-    "description": "Amed to Mount Batur is about 2 hours one way, so the sunrise hike pickup lands around 02:00 and the jeep 30-60 minutes later. Private tours from $35.",
+    "title": "Amed to Mount Batur: 2 Hours by Car, Pickup Around 02:00",
+    "description": "Amed to Mount Batur is about 2 hours of driving, so the hike pickup lands near 02:00 and the jeep formats 30-60 minutes later. Both with hotel pickup.",
     "excerpt": "Amed to Mount Batur takes about 2 hours of driving one way, so the pickup for the sunrise hike lands around 02:00, and the jeep formats collect you 30 to 60 minutes later. That is roughly half an hour earlier than our pickups in Sidemen or Ubud, and still far kinder than the schedule from the far south of the island. Amed is a snorkelling and diving base, and most people staying there already keep early hours, so a pre-dawn start is a smaller shock here than almost anywhere else on Bali. The whole plan works backwards from a 06:00-06:30 sunrise: about 2 hours on empty roads, a trailhead arrival around 04:00, then 1.5-2 hours of climbing to the 1,717 m summit. All our Batur tours are private, include hotel pickup and return in Amed, and are booked on WhatsApp with no prepayment — the hike from $35, the jeep from $60, and the jeep with hot springs from $75.",
     "rankings": [
       {
@@ -30225,6 +30687,1039 @@ const JOURNAL_SEO_GUIDES = [
       }
     ]
   },
+  {
+    "slug": "nusa-penida-snorkeling-spots",
+    "badge": "Snorkeling guide",
+    "navLabel": "Penida snorkeling stops",
+    "cardTourLabel": "Nusa Penida snorkeling trips",
+    "heroTourSlug": "nusa-penida-manta-rays-point",
+    "relatedTourSlugs": [
+      "nusa-penida-manta-rays-point",
+      "nusa-penida-private-day-tour-manta-snorkeling",
+      "nusa-penida-west-tour"
+    ],
+    "inlineStats": [
+      "4 stops in a standard day",
+      "Only 1 has a beach entry",
+      "Trips from $29"
+    ],
+    "title": "Nusa Penida Snorkeling: The 4 Stops and What Each Is Like",
+    "description": "A Nusa Penida snorkeling day is four boat stops: Manta Point, Gamat Bay, Crystal Bay and Toyapakeh. What you see at each one, and which ones are only for strong swimmers.",
+    "excerpt": "Almost every Nusa Penida snorkeling trip sold from Bali is the same shape: a small boat, four stops, back at the harbour by early afternoon. The stops are Manta Point on the exposed south-west corner, Gamat Bay, Crystal Bay and the reef at Toyapakeh in the strait. What nobody tells you before you book is that three of those four have no beach at all. You go in off a ladder into open water, float, and get back on the same ladder. Only Crystal Bay has sand behind it. That single fact decides whether the day is wonderful or frightening, far more than the price does. Shared trips start from $29.",
+    "rankings": [
+      {
+        "name": "Manta Point",
+        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "area": "South-west corner of Nusa Penida",
+        "bestFor": "The reason most people cross the strait",
+        "summary": "A cleaning station where reef mantas come in to have parasites picked off by small fish, so they circle the same patch of reef in every month of the year. You enter from the boat into open water with nothing beneath you, and there is usually surface movement even on a calm day because the corner faces the open ocean. Sessions run twenty to forty minutes. This is the most rewarding stop and the least forgiving one."
+      },
+      {
+        "name": "Manta Bay",
+        "imageSrc": "/images/places/kelingking-beach-t-rex-cliff.jpg",
+        "area": "West coast, below the Kelingking cliffs",
+        "bestFor": "Mantas when the south corner is closed",
+        "summary": "A second manta mooring, closer to the harbour and tucked under the west cliffs, so it is shallower and better sheltered than the point. Captains use it when the southern swell is running. Many operators print only the words Manta Point on the itinerary and take you here instead, which is not a swap in quality but is worth knowing before the boat turns north instead of south."
+      },
+      {
+        "name": "Gamat Bay",
+        "imageSrc": "/images/places/crystal-bay.jpg",
+        "area": "Narrow cove north of Crystal Bay",
+        "bestFor": "The best coral of the day",
+        "summary": "A small cove with a coral wall running along one side and the healthiest hard coral on the standard route. It is also the stop where the current is felt most often: water squeezes past the headland, and you can find yourself moving along the wall without swimming. Guides usually put swimmers in at one end and let the boat follow. No beach, boat entry only."
+      },
+      {
+        "name": "Crystal Bay",
+        "imageSrc": "/images/places/crystal-bay.jpg",
+        "area": "West coast, sheltered bay with sand",
+        "bestFor": "Nervous swimmers and a proper break",
+        "summary": "The only stop on the route with a beach behind it, which makes it the easiest stop of the whole day. Inside the bay the water is calm and shallow enough to stand in, with coral starting a short swim out. Toward the headland at the mouth of the bay the current picks up sharply, which is where the trouble on this beach usually happens. Stay inside the bay and it is the easiest water on Nusa Penida."
+      },
+      {
+        "name": "Toyapakeh and the wall",
+        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "area": "The strait between Penida and Ceningan",
+        "bestFor": "Fish life and easy floating on the right tide",
+        "summary": "A shallow reef in the channel, close to the harbour, with more small fish than anywhere else on the route and a coral edge that drops away into the strait. When the tide is still it is the gentlest snorkeling of the day. When the tide is running it carries you along, and you cover a lot of reef without moving your arms. Which one you get is decided by the hour, not the season."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The four stops at a glance",
+        "paragraphs": [
+          "A standard shared day visits four of these five moorings, with the manta stop first because the animals are most reliable in the early hours. Here is what each one actually asks of you:"
+        ],
+        "table": {
+          "headers": [
+            "Stop",
+            "How you get in",
+            "Water under you",
+            "What you see",
+            "Who it suits"
+          ],
+          "rows": [
+            [
+              "Manta Point",
+              "Ladder into open water",
+              "Deep, no bottom to stand on",
+              "Reef mantas circling a cleaning station",
+              "Anyone comfortable floating in a vest away from land"
+            ],
+            [
+              "Manta Bay",
+              "Ladder into open water",
+              "Shallower, more sheltered",
+              "The same mantas, closer to the cliffs",
+              "The same, on days when the south is closed"
+            ],
+            [
+              "Gamat Bay",
+              "Ladder into open water",
+              "Coral wall dropping away",
+              "The healthiest hard coral of the day",
+              "Confident swimmers, because of the current"
+            ],
+            [
+              "Crystal Bay",
+              "Ladder, or walk in from the sand",
+              "Shallow inside the bay",
+              "Coral and reef fish, easy visibility",
+              "Everyone, including children and nervous adults"
+            ],
+            [
+              "Toyapakeh",
+              "Ladder into open water",
+              "Shallow reef, then a drop",
+              "The largest amount of small fish life",
+              "Everyone when the tide is still, swimmers when it is running"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Why three of the four have no beach",
+        "paragraphs": [
+          "Nusa Penida is a raised limestone island with cliffs almost all the way round. There is no shallow shelf and very little sand, which is exactly why the water is clear and the marine life is good: the deep, cold Lombok Strait runs right up against the rock. The same geography means the snorkeling stops are boat moorings rather than beaches. You put on a vest, sit on the side, and step down a short ladder into water that is many metres deep from the first second.",
+          "For a lot of people that step is the whole trip. Nobody warns them, because the photographs sold online are all taken from underwater looking up. If you have only ever snorkeled by wading in from a beach in Thailand or the Red Sea, a Penida boat entry is a different experience, and it is worth deciding in advance whether you want it. Our [guide to snorkeling in Bali if you cannot swim](/bali/en/journal/bali-snorkeling-for-beginners) covers the calm alternatives on the mainland, and [snorkeling on Nusa Penida without swimming](/bali/en/journal/nusa-penida-snorkeling-non-swimmers) covers how to do this specific day anyway."
+        ]
+      },
+      {
+        "heading": "What the day actually looks like",
+        "paragraphs": [
+          "Hotel pickup in south Bali is early, usually between 05:30 and 06:30 depending on where you sleep, because the boat from Sanur leaves the harbour in the first hour of the day. The crossing takes **30 to 40 minutes**, and there is a second transfer at the Penida side onto the small snorkeling boat. Details of the crossing itself are in our [Sanur to Nusa Penida fast boat guide](/bali/en/journal/sanur-to-nusa-penida-fast-boat).",
+          "The manta stop comes first, while the wind is lightest and the mooring is emptiest. Then the boat works north, doing the other three stops with roughly twenty to thirty minutes in the water at each. Lunch is on the island, and most trips are back at Sanur in the middle of the afternoon. Trips that add land stops afterwards run much longer — the [Nusa Penida East Tour](/bali/en/tours/nusa-penida-east-tour) is a 10-12 hour day.",
+          "The single biggest quality difference between two trips at the same price is the departure hour. First boats get flat water, an empty mooring and mantas that have not yet been circled by twelve other groups. Third boats get the crowded end of the same window."
+        ]
+      },
+      {
+        "heading": "What is included and what to bring",
+        "bullets": [
+          "**Mask, snorkel, fins and a life vest** come with every trip. The vest is not optional on shared boats and you should not want it to be.",
+          "**A guide in the water.** On a proper trip somebody is in with you at each stop, not watching from the boat. Ask before booking if you are unsure of yourself.",
+          "**Reef-safe sun cream, or a rash guard instead.** You float face down for half an hour at a time and your back takes the full sun. A long-sleeved top is better than any cream.",
+          "**A towel and a dry bag.** The small boat is open and everything on it gets wet.",
+          "**Motion sickness tablets, taken an hour before.** The strait is choppy, the small boat is light, and half an hour of floating on the surface at the manta stop is what tips most people over.",
+          "**Not a phone in your hand.** Phones go into the water at the ladder more often than anything else. If you want photographs, bring something with a strap."
+        ]
+      },
+      {
+        "heading": "When a stop gets swapped",
+        "paragraphs": [
+          "The manta stop is the one that moves. The point sits on an exposed corner, and when a large southern swell is running the captain either shifts to Manta Bay under the west cliffs or drops the manta stop entirely and does an extra reef instead. That call is made on the water, on the morning, and it is made the same way for every boat in the area — it is not an operator cutting corners.",
+          "Crystal Bay and Gamat Bay are the usual substitutes, which is why they show up on itineraries as both scheduled stops and replacements. Because trips here are booked over WhatsApp with **no prepayment**, moving your day to another morning costs nothing. The one mistake worth avoiding is putting the sea day on the last free morning of your holiday, because then there is nothing left to move it into. More on the weather pattern in [manta ray season in Bali](/bali/en/journal/manta-ray-season-bali)."
+        ]
+      },
+      {
+        "heading": "Which trip to book",
+        "paragraphs": [
+          "**Shared snorkeling day, from $29** — the [Manta Point snorkeling trip](/bali/en/tours/nusa-penida-manta-rays-point) is the standard four-stop day with early hotel pickup and the harbour transfer. Fixed schedule, shared boat, and the price is why most people take it. On a calm morning it puts you in exactly the same water as everyone else at the mooring.",
+          "**Private day, from $60** — the [private Nusa Penida day tour with manta snorkeling](/bali/en/tours/nusa-penida-private-day-tour-manta-snorkeling) runs on your own timing. That matters more than it sounds: leaving thirty minutes before the fleet is the difference between an empty mooring and six boats, and being able to stay in the water while the mantas are still on the station is not something a shared schedule allows.",
+          "**Land instead, from $49 per car** — if the boat entries do not appeal, the [Nusa Penida West Tour](/bali/en/tours/nusa-penida-west-tour) covers Kelingking, Angel's Billabong, Broken Beach and Crystal Bay from the road, and does not depend on the swell at one exposed corner. Our [one-day Nusa Penida itinerary](/bali/en/journal/nusa-penida-one-day-itinerary) shows how sea and land fit into a single crossing."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Where is the best snorkeling on Nusa Penida?",
+        "answer": "For the animals, Manta Point on the south-west corner, because the cleaning station there brings reef mantas in all year. For coral, Gamat Bay. For fish life, the reef at Toyapakeh in the strait. For an easy, calm swim you can walk into from sand, Crystal Bay — it is the only stop on the standard route with a beach behind it."
+      },
+      {
+        "question": "How many snorkeling spots does a Nusa Penida trip visit?",
+        "answer": "Four is the standard. The usual set is a manta stop first, then Gamat Bay, Crystal Bay and Toyapakeh, with roughly twenty to thirty minutes in the water at each and a lunch stop on the island. Trips advertised as three-spot or four-spot days are drawing from the same short list of moorings."
+      },
+      {
+        "question": "How much does snorkeling at Nusa Penida cost?",
+        "answer": "Shared four-stop days start from $29 with hotel pickup in south Bali, the fast boat crossing, gear and a guide in the water. A private version with the same snorkeling plus the island's land stops starts from $60. Everything is booked over WhatsApp with no prepayment. The full picture across the island is in our guide to snorkeling costs in Bali."
+      },
+      {
+        "question": "Can you snorkel on Nusa Penida from the beach?",
+        "answer": "Only really at Crystal Bay, which is the one stop on the route with sand behind it and shallow water you can stand in. Everywhere else on the standard trip is a boat mooring with deep water directly below, because Nusa Penida is a limestone island ringed by cliffs and has almost no shallow shelf."
+      },
+      {
+        "question": "Is snorkeling at Nusa Penida safe?",
+        "answer": "It is safe with the normal precautions and genuinely unforgiving without them. Everyone wears a life vest, a guide goes in the water at each stop, and the boat stays alongside. The real hazard is current rather than depth — at Gamat Bay, at the mouth of Crystal Bay and at Toyapakeh when the tide is running. Stay with the guide, do not swim toward the headlands, and tell the crew before you get in if you are not a strong swimmer."
+      },
+      {
+        "question": "Is Gamat Bay or Crystal Bay better for snorkeling?",
+        "answer": "Gamat Bay has better coral and Crystal Bay has easier water. Gamat is a narrow cove where the current squeezes past the headland, so it suits confident swimmers; Crystal is a sheltered bay with a beach, calm inside and only difficult if you swim out toward the point at the mouth. Most trips visit both, so you rarely have to choose."
+      },
+      {
+        "question": "What is the best time of day to snorkel at Nusa Penida?",
+        "answer": "The first departure of the day, every time. Wind is lightest at dawn, the surface is flattest, the manta mooring is empty, and visibility has not yet been stirred up by other boats. The gap between a 07:00 session and an 11:00 session at the same stop is larger than the gap between two months of the year."
+      },
+      {
+        "question": "Do you need to be able to swim to snorkel at Nusa Penida?",
+        "answer": "You do not need to swim well, but you do need to be willing to float in a vest in deep water away from land, because three of the four stops have no beach. People who are uncomfortable with that are better served by Crystal Bay alone, or by a mainland trip such as Blue Lagoon at Padang Bai from $50, where you wade in from a beach."
+      }
+    ]
+  },
+  {
+    "slug": "manta-bay-vs-manta-point",
+    "badge": "Two moorings compared",
+    "navLabel": "Manta Bay or Manta Point",
+    "cardTourLabel": "Manta snorkeling trips",
+    "heroTourSlug": "nusa-penida-manta-rays-point",
+    "relatedTourSlugs": [
+      "nusa-penida-manta-rays-point",
+      "nusa-penida-private-day-tour-manta-snorkeling",
+      "nusa-penida-full-day-tour"
+    ],
+    "inlineStats": [
+      "Two different moorings",
+      "Same species of manta",
+      "Swell decides which one"
+    ],
+    "title": "Manta Bay or Manta Point? Two Different Stops, One Trip",
+    "description": "Manta Bay and Manta Point are two separate moorings on Nusa Penida, sold under one name. Where each is, why captains swap them, and which one you want.",
+    "excerpt": "Manta Bay and Manta Point are not two names for the same place. They are two moorings on different coasts of Nusa Penida, roughly twenty minutes apart by boat, and almost every operator prints one name on the itinerary and takes you to whichever the sea allows that morning. Manta Point is the famous one: a cleaning station on the exposed south-west corner where mantas come in to be groomed by small fish. Manta Bay sits under the west cliffs near Kelingking, is shallower and much better sheltered, and is where the fleet goes when a southern swell shuts the point. Same species, same trip price, different day in the water. Snorkeling from $29.",
+    "rankings": [
+      {
+        "name": "Manta Point — the cleaning station",
+        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "area": "South-west corner, facing the open ocean",
+        "bestFor": "The most reliable sightings of the two",
+        "summary": "Mantas come here for a service rather than for food: small wrasse pick parasites off their skin and gills while the animals hold position over the reef. That gives them a reason to return in every month of the year, and it is why sightings here are unusually consistent for a wild animal. The cost of that reliability is exposure — the corner takes the full southern swell and closes on more mornings than people expect."
+      },
+      {
+        "name": "Manta Bay — the sheltered one",
+        "imageSrc": "/images/places/kelingking-beach-t-rex-cliff.jpg",
+        "area": "West coast, below the Kelingking cliffs",
+        "bestFor": "Calmer water and a shorter boat ride",
+        "summary": "A bay on the lee side of the island where mantas come in to feed rather than to be cleaned. It is shallower, the water moves less, and the cliffs above it are the same ones you look down from at Kelingking. Because it is closer to the harbour and out of the swell, it is the default substitute — and on a rough morning, a good session here beats a cancelled one at the point."
+      },
+      {
+        "name": "What is identical at both",
+        "imageSrc": "/images/places/crystal-bay.jpg",
+        "area": "Either mooring",
+        "bestFor": "Setting your expectations",
+        "summary": "Reef mantas, not the giant oceanic species. Wingspans commonly around three metres, occasionally larger. Boat entry down a ladder into open water at both, life vests at both, twenty to forty minutes floating at both. Neither mooring guarantees anything: these are wild animals, and any operator promising a sighting is selling certainty they do not have."
+      },
+      {
+        "name": "What actually differs",
+        "imageSrc": "/images/places/bali-in-peak-season.jpg",
+        "area": "Either mooring",
+        "bestFor": "Deciding whether the swap matters to you",
+        "summary": "Depth, shelter and behaviour. At the point the animals hover over a fixed patch of reef and you watch them work a circuit, which usually gives longer, steadier encounters. In the bay they are moving and feeding, so sightings can be briefer but the water is easier and the surface is flatter. If you get seasick or you are new to open water, the bay is the better day."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Side by side",
+        "paragraphs": [
+          "Both stops appear on the same trips at the same price. This is what changes between them:"
+        ],
+        "table": {
+          "headers": [
+            "",
+            "Manta Point",
+            "Manta Bay"
+          ],
+          "rows": [
+            [
+              "Where",
+              "South-west corner, open ocean side",
+              "West coast, below the Kelingking cliffs"
+            ],
+            [
+              "Why mantas are there",
+              "A cleaning station — they come to be groomed",
+              "Feeding — they come to eat and move on"
+            ],
+            [
+              "Shelter",
+              "Exposed; closes on swell",
+              "Sheltered by the island"
+            ],
+            [
+              "Water under you",
+              "Deeper, with surface movement",
+              "Shallower and flatter"
+            ],
+            [
+              "Encounter",
+              "Longer, animals hold position",
+              "Often briefer, animals are moving"
+            ],
+            [
+              "Boat time from the harbour",
+              "Longer, around the south",
+              "Shorter, straight down the west coast"
+            ]
+          ]
+        },
+        "paragraphsAfter": [
+          "Neither is a downgrade. If your priority is the longest, calmest look at an animal holding still above the reef, you want the point. If your priority is actually getting in the water on a rough morning without being thrown around, you want the bay. Most people booking a single day get whichever the captain judges safe, and that is the right way round."
+        ]
+      },
+      {
+        "heading": "Why your itinerary says one thing and the boat does another",
+        "paragraphs": [
+          "Operators print **Manta Point** because that is what people search for. The name is now used for the manta stop in general, in the same way that every waterfall tour in the north gets sold as Sekumpul. When the crew turns north instead of south on the morning, nothing has gone wrong with your booking — the swell call has simply been made, and it is made identically for every boat leaving the harbour that day.",
+          "What you can do is ask before you get on. A straight question over WhatsApp the evening before — which mooring is the plan, and what is the alternative — gets a straight answer, and it takes the surprise out of the morning. There is no prepayment on any of these trips, so if the honest answer is that the forecast is poor, moving to another day costs you nothing."
+        ]
+      },
+      {
+        "heading": "Which one gives you a better chance of seeing anything",
+        "paragraphs": [
+          "Over a year, the point. A cleaning station is a service the animals need repeatedly, so they come back to the same square of reef on a routine, and that is a stronger reason to be somewhere than food that drifts. This is also why there is no manta season at Nusa Penida in the way people expect — the full month-by-month picture is in [manta ray season in Bali](/bali/en/journal/manta-ray-season-bali).",
+          "On any single morning, though, the honest answer is whichever one is open. A perfect day at the point beats a good day at the bay; a good day at the bay beats a cancelled trip, and cancellations are common enough between November and March that this is a real comparison, not a theoretical one. If the mantas are the reason you are crossing the strait at all, book the sea day early in your holiday so there is a spare morning behind it."
+        ]
+      },
+      {
+        "heading": "The rest of the day is the same either way",
+        "paragraphs": [
+          "Whichever manta mooring you get, the boat then works the same short list: Gamat Bay for coral, Crystal Bay for a calm swim off the sand, and the reef at Toyapakeh in the strait for fish. What each of those is like is in our guide to [the four Nusa Penida snorkeling stops](/bali/en/journal/nusa-penida-snorkeling-spots).",
+          "If you would rather not spend the whole day on the water, the manta stop pairs naturally with the island's land route. The [Nusa Penida West Tour](/bali/en/tours/nusa-penida-west-tour) from $49 per car covers Kelingking, Angel's Billabong and Broken Beach — the cliffs directly above Manta Bay, which is a strange and good thing to see from both sides in one day."
+        ]
+      },
+      {
+        "heading": "Which trip to book",
+        "paragraphs": [
+          "**Shared snorkeling day, from $29** — the [Manta Point snorkeling trip](/bali/en/tours/nusa-penida-manta-rays-point) is the standard version with early hotel pickup, the fast boat crossing, gear and a guide in the water. The mooring is chosen on the morning by the crew.",
+          "**Private day, from $60** — the [private Nusa Penida day tour with manta snorkeling](/bali/en/tours/nusa-penida-private-day-tour-manta-snorkeling) lets you leave before the fleet and stay in the water while the animals are still on the station. It also means the choice of mooring is discussed with you rather than announced to you, which is the part regular snorkellers care about most.",
+          "**Sea and land in one crossing, from $75** — the [Nusa Penida full day tour](/bali/en/tours/nusa-penida-full-day-tour) puts the manta stop and the west-coast viewpoints into a single day with hotel pickup. Everything is booked on WhatsApp with no prepayment, so a bad forecast is a rescheduling problem rather than a money problem."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is Manta Bay the same as Manta Point?",
+        "answer": "No. They are two separate moorings on Nusa Penida about twenty minutes apart by boat. Manta Point is a cleaning station on the exposed south-west corner; Manta Bay is a sheltered feeding spot on the west coast below the Kelingking cliffs. Most operators advertise Manta Point and go to whichever the sea allows on the day."
+      },
+      {
+        "question": "Which is better, Manta Bay or Manta Point?",
+        "answer": "Manta Point gives longer and steadier encounters, because the animals hold position over the reef while they are being cleaned. Manta Bay gives calmer, shallower water and a shorter boat ride, which matters a great deal if you get seasick or you are new to open water. Over a year the point is the more reliable place; on any given morning the better one is whichever is not closed by swell."
+      },
+      {
+        "question": "Why did my boat go to Manta Bay instead of Manta Point?",
+        "answer": "Almost always the southern swell. Manta Point faces the open ocean and shuts on rougher mornings, so the captain moves to the sheltered bay under the west cliffs. The call is made on the water and applies to every boat in the area that day. It is a safety decision, not an operator substituting something cheaper."
+      },
+      {
+        "question": "Where exactly is Manta Bay in Nusa Penida?",
+        "answer": "On the west coast, in the bay beneath the Kelingking cliffs, north of Manta Point and closer to the harbour at Toyapakeh. If you have stood at the Kelingking viewpoint and looked down at the water, you have looked straight at it. Boats reach it in a shorter run than the point, without going round the exposed southern corner."
+      },
+      {
+        "question": "Are there mantas at Manta Bay all year?",
+        "answer": "Reef mantas are around Nusa Penida in all twelve months, and both moorings see them year-round. The bay is a feeding area rather than a cleaning station, so the animals there are passing through and moving rather than holding still, which makes sightings a little less predictable but not seasonal."
+      },
+      {
+        "question": "Can you snorkel at both Manta Bay and Manta Point in one trip?",
+        "answer": "Usually not, and not because anyone is short-changing you. A standard day has four stops and one of them is the manta stop; visiting both moorings would replace a reef stop and add a long transit. On a private trip you can ask for it if the sea is calm at the point, but the honest answer from most crews is that one good session beats two rushed ones."
+      },
+      {
+        "question": "How big are the manta rays at Nusa Penida?",
+        "answer": "These are reef mantas rather than the giant oceanic species, with wingspans commonly around three metres and occasionally larger. From the surface, floating a few metres above one, that is more than enough to be genuinely startling the first time. They are filter feeders with no sting and no interest in you."
+      },
+      {
+        "question": "How much does a manta snorkeling trip from Bali cost?",
+        "answer": "Shared days start from $29 with hotel pickup in south Bali, the fast boat crossing, gear and a guide in the water. A private version starts from $60, and a full day combining the manta stop with the island's land viewpoints starts from $75. Booking is over WhatsApp with no prepayment, so a weather change costs nothing."
+      }
+    ]
+  },
+  {
+    "slug": "manta-point-depth-and-diving",
+    "badge": "Depth and conditions",
+    "navLabel": "Manta Point depth",
+    "cardTourLabel": "Manta Point trips",
+    "heroTourSlug": "nusa-penida-manta-rays-point",
+    "relatedTourSlugs": [
+      "nusa-penida-manta-rays-point",
+      "nusa-penida-private-day-tour-manta-snorkeling",
+      "nusa-penida-west-tour"
+    ],
+    "inlineStats": [
+      "Cleaning station at 8-12 m",
+      "Mantas come to the surface",
+      "Snorkeling from $29"
+    ],
+    "title": "How Deep Is Manta Point? Depth, Currents and the Dive",
+    "description": "Manta Point's cleaning station sits at roughly 8-12 metres, shallow enough to watch the mantas from the surface without scuba gear. Depth, currents, and who should dive instead.",
+    "excerpt": "Manta Point is shallow by diving standards. The cleaning station where the mantas hold position sits at roughly eight to twelve metres, the sandy patches around it run to about fifteen, and the moorings are in water shallower than most people imagine when they hear the words open ocean. That shallowness is the single most useful fact about the place, because it means a snorkeller floating on the surface and a diver kneeling on the bottom are watching the same animals at the same time — and the mantas frequently rise to within a metre or two of the surface. Very few places in the world let you watch mantas from the surface like this. Snorkeling trips from $29.",
+    "rankings": [
+      {
+        "name": "The cleaning station: 8-12 metres",
+        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "area": "Over the reef at the south-west corner",
+        "bestFor": "Understanding why snorkeling works here",
+        "summary": "Mantas hold position above a patch of coral heads while small wrasse work over their skin and gills. That patch is shallow, which is unusual — many manta cleaning stations elsewhere sit well beyond snorkelling depth. Here you float on the surface and look down onto animals that are often only a few metres below you, and regularly much closer than that when one rises through the column."
+      },
+      {
+        "name": "The sand and the drop",
+        "imageSrc": "/images/places/crystal-bay.jpg",
+        "area": "Around the station",
+        "bestFor": "Divers planning the profile",
+        "summary": "Around the coral heads the bottom is sand at roughly twelve to fifteen metres, and it steps down from there toward the wall as you move away from the station. Most dives here are shallow, long and undemanding on air precisely because there is no reason to go deep — the animals are above you, not below. Depth is not what makes this dive demanding."
+      },
+      {
+        "name": "The swell against the corner",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "The exposed corner",
+        "bestFor": "Knowing what actually catches people out",
+        "summary": "The corner faces the open ocean, and swell rolling in against the rock pushes the water back and forth in place rather than carrying you along. Close to the reef in shallow water that movement is strongest, and it is the reason briefings here spend more time on staying off the coral than on depth. On a rough morning the mooring closes entirely."
+      },
+      {
+        "name": "Cold water, and why",
+        "imageSrc": "/images/places/bali-in-rainy-season.jpg",
+        "area": "The whole of the Nusa Penida coast",
+        "bestFor": "Deciding what to wear",
+        "summary": "The Lombok Strait pushes cold deep water up past the island, so Penida is noticeably colder than the mainland reefs — a surprise for anyone expecting bathwater. Snorkellers on the surface are usually fine in a rash guard, but divers feel it, and the same cold water is what brings mola mola, the ocean sunfish, up into diver range later in the year."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The numbers, in one place",
+        "paragraphs": [
+          "Everything a snorkeller or a diver asks before booking:"
+        ],
+        "table": {
+          "headers": [
+            "Question",
+            "Answer"
+          ],
+          "rows": [
+            [
+              "Depth of the cleaning station",
+              "Roughly 8-12 metres"
+            ],
+            [
+              "Bottom around the station",
+              "Sand at about 12-15 metres"
+            ],
+            [
+              "How close the mantas come",
+              "Often within a few metres of the surface"
+            ],
+            [
+              "Typical time in the water",
+              "20-40 minutes per session"
+            ],
+            [
+              "Main hazard",
+              "Swell pushing you against the reef, not depth"
+            ],
+            [
+              "Water temperature",
+              "Colder than mainland Bali, all year"
+            ],
+            [
+              "Certification needed to see mantas",
+              "None — snorkelling is enough"
+            ],
+            [
+              "Boat time from the harbour",
+              "Around the southern corner, longest run of the day"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Do you need to dive to see the mantas?",
+        "paragraphs": [
+          "No, and this is the part worth being clear about, because plenty of people book an expensive certification course on the assumption that they do. The station is shallow and the animals use the whole water column above it. Snorkellers on the surface routinely have the closest encounters of anyone there, partly because there is no exhaled bubble noise to make an animal turn away.",
+          "What diving gives you is time and stillness. A diver can settle at the edge of the station and watch a queue of animals come and go for forty minutes without being pushed around by the surface. A snorkeller gets a series of passes rather than a continuous show. If you already dive, this is a very good dive. If you do not, learning to dive specifically for this is solving a problem you do not have — book the [Manta Point snorkeling trip](/bali/en/tours/nusa-penida-manta-rays-point) from $29 instead."
+        ]
+      },
+      {
+        "heading": "What the mooring asks of a snorkeller",
+        "paragraphs": [
+          "Entry is off a ladder into open water with the boat alongside and no land within reach. You wear a life vest, a guide is in the water with you, and you float and wait. There is nothing physically hard about it, and nothing about the depth affects you at all — under a floating body, eight metres and eighty metres feel identical.",
+          "What does affect you is the surface. On the exposed corner there is almost always some movement, and half an hour of floating face-down on a moving surface is what makes people seasick, not the crossing. Take a tablet an hour before you leave the hotel. If open water in a vest is not something you have done, read [snorkeling on Nusa Penida without swimming](/bali/en/journal/nusa-penida-snorkeling-non-swimmers) before you book — three of the four stops on the standard day have no beach."
+        ]
+      },
+      {
+        "heading": "What the mooring asks of a diver",
+        "paragraphs": [
+          "An entry-level certification is enough on paper, and most operators will take a newly certified diver here on a calm day. In practice the place rewards buoyancy control more than experience with depth, because you are hovering in shallow water beside a reef with the swell pushing through it, and the way to damage both the coral and yourself is to be moved into it. Divers who are still using their hands are the ones who have a difficult time.",
+          "Bring a thicker wetsuit than Bali's mainland reefs suggest. The cold water coming up the strait is the same mechanism that produces the mola mola sightings between roughly July and October, and those are deep, cold, current-heavy dives that have very little in common with a manta session. Do not book one expecting the other."
+        ]
+      },
+      {
+        "heading": "Where Manta Point is, and how you reach it",
+        "paragraphs": [
+          "Manta Point is on the south-west corner of Nusa Penida, past the Kelingking cliffs and round onto the ocean-facing side. There is no road access worth the name and no beach — it is reached only by boat, which is why every trip runs from the harbour at Toyapakeh or Sanur rather than from anywhere on land. The crossing from Sanur takes 30 to 40 minutes; details are in our [Sanur to Nusa Penida fast boat guide](/bali/en/journal/sanur-to-nusa-penida-fast-boat).",
+          "Because the mooring is exposed, the boat trip round the corner is the longest of the day and the first thing dropped when the swell is up. The sheltered alternative under the west cliffs is a different mooring with different behaviour — we compare them in [Manta Bay or Manta Point](/bali/en/journal/manta-bay-vs-manta-point)."
+        ]
+      },
+      {
+        "heading": "Booking it",
+        "paragraphs": [
+          "**From $29** — the [Manta Point snorkeling trip](/bali/en/tours/nusa-penida-manta-rays-point) is a full day with early hotel pickup, the crossing, gear, a guide in the water and three more reef stops after the mantas.",
+          "**From $60** — the [private Nusa Penida day tour with manta snorkeling](/bali/en/tours/nusa-penida-private-day-tour-manta-snorkeling) runs on your timing, which at this particular mooring is worth real money: the first boat at the mooring gets flat water and animals that have not been circled by anyone yet.",
+          "Both are booked over WhatsApp with **no prepayment**. If the corner is closed on your morning, moving the day costs nothing — and given how often that happens between November and March, put the sea day early in the trip rather than at the end."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How deep is Manta Point in Nusa Penida?",
+        "answer": "The cleaning station where the mantas hold position sits at roughly 8 to 12 metres, with sand around it at about 12 to 15 metres. It is shallow by diving standards, which is exactly why snorkellers see the same animals as divers do — the mantas use the whole water column above the reef and frequently come within a couple of metres of the surface."
+      },
+      {
+        "question": "Can you snorkel at Manta Point, or do you have to dive?",
+        "answer": "Snorkelling is enough, and it is how most people see the mantas here. The station is shallow and the animals rise through the column, so from the surface in a life vest you are often looking at one from a few metres away. Diving buys you stillness and a longer continuous view, not access — nobody needs a certification to see these animals."
+      },
+      {
+        "question": "Is Manta Point a good dive for beginners?",
+        "answer": "An entry-level certification is technically enough and the depths are shallow, but the place rewards buoyancy control because you hover close to a reef with the swell pushing through it. A newly certified diver who is still using their hands will have a harder time than the depth profile suggests. On a calm morning with a good guide it is a fine early dive; on a swell day it should not be anyone's fourth dive ever."
+      },
+      {
+        "question": "Where is Manta Point on the map of Nusa Penida?",
+        "answer": "On the south-west corner of the island, past the Kelingking cliffs and round onto the side facing the open ocean. There is no road to it and no beach, so it is reached only by boat, and it is the longest run of the day from the harbour. The sheltered alternative, Manta Bay, sits further north under the west cliffs."
+      },
+      {
+        "question": "What is the water temperature at Manta Point?",
+        "answer": "Colder than mainland Bali all year round, because the Lombok Strait pushes deep water up past the island. Snorkellers on the surface are usually comfortable in a rash guard, while divers notice it and often want a thicker wetsuit than they expected. The same cold water is what brings mola mola into diver range later in the year."
+      },
+      {
+        "question": "Are there strong currents at Manta Point?",
+        "answer": "The characteristic problem here is the swell rather than a running current: waves against the exposed corner move you back and forth in place, and the movement is strongest close to the reef. It is why briefings focus on staying off the coral. Genuine ripping current is more of a Gamat Bay and Toyapakeh issue. When the swell is too big, the mooring simply closes for the day."
+      },
+      {
+        "question": "How long do you spend in the water at Manta Point?",
+        "answer": "Twenty to forty minutes for a snorkelling session, and a normal dive length for divers. The limit is rarely the animals and usually the surface: floating face-down on moving water is tiring and makes people seasick. Groups that get in early, when the mooring is still empty, generally stay longer than groups arriving with the fleet."
+      },
+      {
+        "question": "Can you see manta rays and mola mola on the same trip?",
+        "answer": "Not on a snorkelling day. Mola mola come up from deep cold water between roughly July and October and are a demanding, deep, current-heavy dive for experienced divers — a completely different trip from a shallow manta session, in different water. Booking one expecting the other is the most common mistake divers make on this coast."
+      }
+    ]
+  },
+  {
+    "slug": "where-to-see-manta-rays-in-bali",
+    "badge": "Where to go",
+    "navLabel": "Where to see mantas",
+    "cardTourLabel": "Manta trips from Bali",
+    "heroTourSlug": "nusa-penida-manta-rays-point",
+    "relatedTourSlugs": [
+      "nusa-penida-manta-rays-point",
+      "nusa-penida-private-day-tour-manta-snorkeling",
+      "blue-lagoon-snorkeling"
+    ],
+    "inlineStats": [
+      "One reliable place: Nusa Penida",
+      "No mantas at Amed or Nusa Dua",
+      "Day trips from $29"
+    ],
+    "title": "Where to See Manta Rays in Bali: One Place, Not Six",
+    "description": "Manta rays in Bali means Nusa Penida and nowhere else. Why Amed, Tulamben and Nusa Dua have none, what people confuse them with, and how the day works.",
+    "excerpt": "There is exactly one place in Bali where you can reliably swim with manta rays, and it is not on Bali. It is Nusa Penida, the limestone island across the strait, reached by a 30 to 40 minute fast boat from Sanur. Not Amed. Not Tulamben. Not Nusa Dua, Sanur reef, Padang Bai or anywhere on the mainland coast. This matters because a lot of people book a hotel in Amed on the strength of a search result and then discover the mantas are a five-hour drive and a boat away. The good news is that the one place is a very good one: a cleaning station where reef mantas turn up in all twelve months. Day trips from Bali start at $29.",
+    "rankings": [
+      {
+        "name": "Nusa Penida — the only real answer",
+        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "area": "Across the strait, 30-40 min by boat from Sanur",
+        "bestFor": "Actually seeing mantas",
+        "summary": "Two moorings on the island's west and south-west coasts bring reef mantas in year-round, because one of them is a cleaning station where small fish groom the animals. It is shallow enough to snorkel, it runs as a day trip from anywhere in south Bali with an early pickup, and it is where every manta photograph taken in Bali comes from. Everything below is a place people mistakenly go instead."
+      },
+      {
+        "name": "Amed and Tulamben — no mantas",
+        "imageSrc": "/images/places/blue-lagoon-padang-bai.jpg",
+        "area": "East coast of mainland Bali",
+        "bestFor": "Wrecks and coral, which is a different holiday",
+        "summary": "Amed and Tulamben are genuinely excellent for snorkelling and diving — the USAT Liberty wreck at Tulamben is one of the most accessible wrecks anywhere, and Jemeluk Bay has good coral straight off the beach. What they do not have is a manta cleaning station. Searches pairing the two exist because both words appear in Bali marine content, not because the animals are there."
+      },
+      {
+        "name": "Nusa Dua and the southern beaches — no mantas",
+        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "area": "South Bali resort coast",
+        "bestFor": "Calm swimming, watersports, children",
+        "summary": "The shallow lagoon behind the reef at Nusa Dua is a fine place to teach a child to snorkel and a poor place to look for large open-water animals. Boat trips sold from the beach here go to shallow reef, not to mantas. If your hotel is in Nusa Dua, the manta trip is a pickup at dawn and a transfer to Sanur harbour — perfectly normal, just not local."
+      },
+      {
+        "name": "What people actually saw",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "Anywhere on the mainland",
+        "bestFor": "Explaining the reports",
+        "summary": "Mainland sightings are almost always something else: a spotted eagle ray, a blue-spotted stingray on the sand, or a large batfish seen at an angle. Eagle rays are common on Bali's reefs, have a similar outline seen from above and are perfectly worth seeing. The confusion is honest, which is why it keeps producing search results that send people to the wrong coast."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Every place people ask about, answered",
+        "paragraphs": [
+          "Sorted by how often the question comes up rather than by geography:"
+        ],
+        "table": {
+          "headers": [
+            "Place",
+            "Mantas?",
+            "What is actually there",
+            "Getting to mantas from here"
+          ],
+          "rows": [
+            [
+              "Nusa Penida",
+              "Yes, all year",
+              "Cleaning station and a feeding bay",
+              "You are there"
+            ],
+            [
+              "Amed",
+              "No",
+              "Jemeluk Bay coral, the Japanese wreck",
+              "Long drive south, then the boat from Sanur"
+            ],
+            [
+              "Tulamben",
+              "No",
+              "The USAT Liberty wreck",
+              "Same — a full day, better done from the south"
+            ],
+            [
+              "Nusa Dua",
+              "No",
+              "Shallow lagoon, watersports",
+              "Dawn pickup, 30-45 min to Sanur harbour"
+            ],
+            [
+              "Sanur",
+              "No",
+              "The harbour the manta boats leave from",
+              "Closest starting point on the mainland"
+            ],
+            [
+              "Padang Bai",
+              "No",
+              "Blue Lagoon, calm beach snorkelling",
+              "Drive to Sanur, then the boat"
+            ],
+            [
+              "Nusa Lembongan",
+              "Rarely",
+              "Mangroves, easy reef, surf",
+              "Short boat hop across to Penida"
+            ],
+            [
+              "Gili Islands",
+              "No",
+              "Green turtles, in numbers",
+              "A separate trip in the other direction"
+            ]
+          ]
+        },
+        "paragraphsAfter": [
+          "The pattern is simple: mantas need the deep, cold, nutrient-heavy water of the Lombok Strait pushing past a reef, and only Nusa Penida sits in it. Bali's mainland coasts are shallower and warmer, which is why they are better for coral, turtles and wrecks and worse for anything with a three-metre wingspan."
+        ]
+      },
+      {
+        "heading": "Why Amed keeps coming up",
+        "paragraphs": [
+          "Amed is where a lot of people who care about the sea choose to stay, so it accumulates every marine search in Bali whether or not the answer is there. The reality: Jemeluk Bay is good coral you walk into from a black sand beach, the sunken Japanese vessel is a five-minute swim out, and Tulamben's Liberty wreck is twenty minutes up the road. That is a genuinely excellent snorkelling base, and none of it involves mantas. Our [guide to Amed and Tulamben snorkeling](/bali/en/journal/amed-tulamben-snorkeling) covers what is actually there.",
+          "If you are already staying in Amed and you want the mantas, be honest about the day: it is a long drive back down to Sanur before dawn, a boat, the trip, and the same drive back in the dark. Most people who do it end up moving south for a night instead. If you are still choosing where to stay, that is a reason to put the Penida day at the start or end of the east-coast leg rather than in the middle of it."
+        ]
+      },
+      {
+        "heading": "What you can see instead, on the mainland",
+        "paragraphs": [
+          "**Turtles** — reliably, but at the Gili Islands rather than in Bali. Green turtles feed on the seagrass off Trawangan and Meno in numbers you do not get on the mainland reefs; see [swimming with turtles in Bali](/bali/en/journal/snorkeling-with-turtles-bali).",
+          "**Coral and reef fish** — Blue Lagoon at Padang Bai is the easiest good snorkelling within reach of south Bali, walk-in from a small cove and clearest between 07:00 and 10:00. The [Blue Lagoon snorkeling trip](/bali/en/tours/blue-lagoon-snorkeling) runs from $50 with gear, guide, lunch and pickup.",
+          "**A wreck** — the USAT Liberty at Tulamben lies close enough to shore that snorkellers see the top of it, which is unusual anywhere in the world.",
+          "**Eagle rays** — the thing most often mistaken for a manta, and common enough on Bali's reefs that you have a fair chance without planning for it."
+        ]
+      },
+      {
+        "heading": "How the manta day works from anywhere in Bali",
+        "paragraphs": [
+          "Pickup is early — roughly 05:30 to 06:30 depending on where you sleep, because the boats leave Sanur in the first hour of the day and the manta mooring is best before the fleet arrives. The crossing is 30 to 40 minutes. On the Penida side you transfer onto a small snorkelling boat, do the manta stop first and three reef stops after it, and are usually back in Sanur in the middle of the afternoon.",
+          "From Canggu, Seminyak or Uluwatu the drive to Sanur adds 60 to 90 minutes at the front of that, which is why the pickup is so early — the detail is in our [Nusa Penida from Sanur](/bali/en/journal/nusa-penida-day-trip-from-sanur) and [how to get to Nusa Penida](/bali/en/journal/how-to-get-to-nusa-penida) guides. Nothing about the day changes by season; what changes is whether the exposed corner is open, and that is covered in [manta ray season in Bali](/bali/en/journal/manta-ray-season-bali)."
+        ]
+      },
+      {
+        "heading": "Booking it",
+        "paragraphs": [
+          "**From $29** — the [Manta Point snorkeling trip](/bali/en/tours/nusa-penida-manta-rays-point), a full day with hotel pickup anywhere in south Bali, the crossing, gear and a guide in the water.",
+          "**From $60** — the [private Nusa Penida day tour with manta snorkeling](/bali/en/tours/nusa-penida-private-day-tour-manta-snorkeling), which leaves before the fleet and pairs the sea with the island's cliff viewpoints.",
+          "Both go over WhatsApp with **no prepayment**. Nobody can guarantee a sighting — these are wild animals on an exposed coast, and any operator promising one is selling certainty they do not have. What you can do is take the first boat of the day and book the trip early in your holiday so a second morning exists behind it."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Where can you swim with manta rays in Bali?",
+        "answer": "At Nusa Penida, the island across the strait, reached by a 30 to 40 minute fast boat from Sanur. Two moorings there — the cleaning station on the south-west corner and a sheltered bay under the west cliffs — bring reef mantas in all twelve months. There is no reliable manta mooring anywhere on mainland Bali."
+      },
+      {
+        "question": "Are there manta rays in Amed, Bali?",
+        "answer": "No. Amed has excellent coral at Jemeluk Bay, a sunken Japanese vessel a short swim from the beach, and the USAT Liberty wreck twenty minutes up the road at Tulamben — but no manta cleaning station. Sightings reported there are almost always spotted eagle rays, which have a similar outline seen from above and are common on Bali's reefs."
+      },
+      {
+        "question": "Can you see manta rays at Nusa Dua?",
+        "answer": "No. Nusa Dua sits behind a shallow reef lagoon, which is why the swimming is so calm there and why large open-water animals do not come in. Boat trips sold on the beach go to shallow reef. From a Nusa Dua hotel the manta trip is a dawn pickup and a 30 to 45 minute transfer to Sanur harbour."
+      },
+      {
+        "question": "Do you need to go to Nusa Penida to see manta rays?",
+        "answer": "Yes, if you want a real chance of seeing them. The mantas are there because the deep, cold water of the Lombok Strait runs past the island and feeds a cleaning station on the reef, and no mainland Bali coast has that combination. Every manta photograph you have seen labelled Bali was taken at Nusa Penida."
+      },
+      {
+        "question": "Is it worth going to Nusa Penida just for the manta rays?",
+        "answer": "For most people yes, because the trip is a single day from anywhere in south Bali, it starts at $29, and the same boat visits three more reef stops afterwards. If the sea is rough the manta mooring can close, so book the day early in your holiday rather than on your last free morning, and treat a good session as something you gave yourself the best chance of having."
+      },
+      {
+        "question": "What is the difference between a manta ray and an eagle ray?",
+        "answer": "Size and head. Reef mantas at Nusa Penida commonly have wingspans around three metres and two distinct lobes at the front of the head that they use to funnel plankton; spotted eagle rays are much smaller, with a pointed snout and pale spots across the back. From a boat, at an angle, an eagle ray genuinely can look like a small manta — which is where most mainland reports come from."
+      },
+      {
+        "question": "Are manta rays in Bali dangerous?",
+        "answer": "No. They are filter feeders with no barb, no sting and no teeth of any consequence, and they have no interest in people. The rules at the mooring exist to protect the animals rather than you: do not touch, do not swim directly at one, do not chase, and stay above rather than dropping into the space between the manta and the reef where it is being cleaned."
+      },
+      {
+        "question": "What else can you see in the water in Bali if not mantas?",
+        "answer": "Green turtles in numbers at the Gili Islands, the USAT Liberty wreck at Tulamben, walk-in coral at Blue Lagoon near Padang Bai from $50, and the reef stops around Nusa Penida itself. Mainland Bali is better for coral, wrecks and turtles than for large open-water animals, which is a fair trade for how easy those are to reach."
+      }
+    ]
+  },
+  {
+    "slug": "how-many-days-in-nusa-penida",
+    "badge": "Trip planning",
+    "navLabel": "How many days on Penida",
+    "cardTourLabel": "Nusa Penida tours",
+    "heroTourSlug": "nusa-penida-west-tour",
+    "relatedTourSlugs": [
+      "nusa-penida-west-tour",
+      "nusa-penida-east-tour",
+      "nusa-penida-manta-rays-point"
+    ],
+    "inlineStats": [
+      "One day covers one half",
+      "Two days covers the island",
+      "West tour from $49 per car"
+    ],
+    "title": "How Many Days in Nusa Penida: One Day Covers Half the Island",
+    "description": "One day on Nusa Penida covers the west or the east, not both. When two nights are worth it, where to stay if you do, and why the roads decide everything.",
+    "excerpt": "The honest way to measure Nusa Penida is half an island per day. One day trip from Bali comfortably covers the west — Kelingking, Angel's Billabong, Broken Beach, Crystal Bay — or the east, with Diamond Beach and Atuh, but not both, and anyone selling you both in one crossing is selling you a day in a car. The reason is the roads: the island is only about twenty kilometres across, and crossing it can still take well over an hour on broken single-lane concrete. Two days, staying a night on the island, changes the trip completely: you get sunrise at Diamond Beach, empty viewpoints before the day boats land, and no ferry clock. Land tours from $49 per car.",
+    "rankings": [
+      {
+        "name": "One day, west side",
+        "imageSrc": "/images/places/kelingking-beach-viewpoint.jpg",
+        "area": "Kelingking, Angel's Billabong, Broken Beach, Crystal Bay",
+        "bestFor": "First visit, limited time, best-known views",
+        "summary": "The default and the right choice for most people. Everything is within a reasonable drive of the harbour, the four stops are the ones you have seen photographs of, and the day ends with a swim at Crystal Bay before the boat back. It is a long day — early pickup, late return — but it is not a punishing one, and it does not require a night on the island."
+      },
+      {
+        "name": "One day, east side",
+        "imageSrc": "/images/places/diamond-beach-cliffs.jpg",
+        "area": "Diamond Beach, Atuh, Thousand Islands viewpoint",
+        "bestFor": "Second visit, or wanting fewer people",
+        "summary": "Quieter, further and harder driving. Diamond Beach has the staircase down the cliff face, Atuh sits in a bay beside it, and the Thousand Islands viewpoint looks back along the coast. The east is a 10-12 hour day from Bali because the drive across the island takes up the middle of it, which is exactly why doing east and west together does not work."
+      },
+      {
+        "name": "Two days, one night",
+        "imageSrc": "/images/places/mid-range-hotel-in-bali.jpg",
+        "area": "Both halves, plus sunrise and sunset",
+        "bestFor": "Photographers and anyone who hates rushing",
+        "summary": "The version that makes the island make sense. You do one half on each day, and the night in between buys you the two hours that day trippers never get: the viewpoints before the first boats land, and the light at either end of the day. The roads stop being a problem when you are not racing a ferry back to Sanur."
+      },
+      {
+        "name": "Three days or more",
+        "imageSrc": "/images/places/crystal-bay.jpg",
+        "area": "Both halves plus the water",
+        "bestFor": "Divers and snorkellers",
+        "summary": "Only worth it if the sea is the point. Three days lets you put a full snorkelling or diving day in without losing a land half, and gives you a spare morning if the manta mooring is closed by swell. For anyone whose Penida plan is viewpoints and beaches, the third day is one more day of the same roads."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What fits in how long",
+        "paragraphs": [
+          "Measured against what people usually try to fit in:"
+        ],
+        "table": {
+          "headers": [
+            "Time",
+            "What genuinely fits",
+            "What does not",
+            "Where you sleep"
+          ],
+          "rows": [
+            [
+              "One day trip",
+              "West or east, four to five stops, plus a swim",
+              "Both halves; a manta stop plus a full land route",
+              "Bali"
+            ],
+            [
+              "One day + snorkeling",
+              "Manta stop and three reefs, or two or three land stops",
+              "A full land route on the same day",
+              "Bali"
+            ],
+            [
+              "Two days, one night",
+              "West and east properly, sunrise, sunset",
+              "A relaxed diving schedule",
+              "Nusa Penida"
+            ],
+            [
+              "Three days",
+              "Both halves plus a full water day, with a spare morning",
+              "Very little — this is comfortable",
+              "Nusa Penida"
+            ]
+          ]
+        },
+        "paragraphsAfter": [
+          "The most common planning mistake is treating twenty kilometres as twenty minutes. Sections of the island road are steep, narrow and broken, single vehicles have to reverse to pass, and the cliff descents are on foot. Our [one-day Nusa Penida itinerary](/bali/en/journal/nusa-penida-one-day-itinerary) shows what that looks like hour by hour."
+        ]
+      },
+      {
+        "heading": "Can you stay on Nusa Penida?",
+        "paragraphs": [
+          "Yes, and more comfortably than the island's reputation suggests. Most accommodation is clustered in the north-west around Toyapakeh and Ped, within a short drive of the harbour where the boats land, and it runs from simple guesthouses to a handful of proper resorts with pools on the cliff edge. There is a second, much smaller cluster out east near Atuh and Diamond Beach.",
+          "The trade to understand is not comfort, it is position. Staying north-west keeps you near the harbour and the restaurants and makes the west-side sights easy; it also means an early start on your east day, because that drive is the long one. Staying east reverses both. If you are only there one night and want a sunrise at Diamond Beach, sleep east; otherwise sleep north-west. Water, power and internet are more variable than on the mainland everywhere on the island."
+        ]
+      },
+      {
+        "heading": "One day is enough if this is you",
+        "bullets": [
+          "**You want the photographs of Kelingking.** The viewpoint is a short walk from the car park and free; the climb down is a separate, serious 45 minutes each way.",
+          "**You have two weeks in Bali and one free day.** Take the west, go early, swim at Crystal Bay, come back. Nothing about that day feels rushed.",
+          "**You are travelling with children.** A single day out and back is far easier than a night on an island with variable roads. Our [Nusa Penida with kids](/bali/en/journal/nusa-penida-with-kids) guide covers which stops actually work.",
+          "**The sea is the point.** A snorkelling day is a day; there is no reason to sleep on the island for it."
+        ]
+      },
+      {
+        "heading": "Two days is worth it if this is you",
+        "bullets": [
+          "**You want Diamond Beach without the crowd.** The east coast at sunrise, before the first boats land, is a different place from the east coast at noon.",
+          "**You want both halves.** This is the only honest way to have them without spending the day in a car.",
+          "**You are photographing it.** Day trips arrive and leave in the worst light of the day, by design — the boat schedule decides it.",
+          "**You dive.** Two dives plus the crossing does not leave room for the island, and flying home the next day means you need a day between your last dive and the flight anyway."
+        ]
+      },
+      {
+        "heading": "How the day is put together either way",
+        "paragraphs": [
+          "**West, from $49 per car** — the [Nusa Penida West Tour](/bali/en/tours/nusa-penida-west-tour) covers Kelingking, Angel's Billabong, Broken Beach and Crystal Bay. The price is per car rather than per person, which is why it is the cheapest way to do the island properly with two or four people.",
+          "**East, from $75** — the [Nusa Penida East Tour](/bali/en/tours/nusa-penida-east-tour) is a 10-12 hour day with a 07:00 meeting at Sanur port or an optional 06:15-06:30 hotel pickup, covering Diamond Beach, Atuh and the Thousand Islands viewpoint.",
+          "**Sea and land, from $75** — the [Nusa Penida full day tour](/bali/en/tours/nusa-penida-full-day-tour) combines the manta stop with west-coast viewpoints in one crossing. If you would rather split them, our [four snorkeling stops guide](/bali/en/journal/nusa-penida-snorkeling-spots) explains what the water day involves.",
+          "Everything is booked over WhatsApp with **no prepayment**, so if you decide two days into your holiday that one Penida day was not enough, adding the other half is a message rather than a new booking."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How many days do you need in Nusa Penida?",
+        "answer": "One day covers one half of the island — the west with Kelingking and Crystal Bay, or the east with Diamond Beach and Atuh. Two days, with a night on the island, covers both properly and buys you the early and late light that day trippers never see. Three days only makes sense if you are diving or snorkelling as well as sightseeing."
+      },
+      {
+        "question": "Is one day enough for Nusa Penida?",
+        "answer": "Yes, for one half of it. A day trip from Bali comfortably fits four or five stops on the west side plus a swim at Crystal Bay, and that is the version most first-time visitors want. What one day cannot do is west and east together — the cross-island drive takes well over an hour on rough road and would consume the middle of the day."
+      },
+      {
+        "question": "Can you stay overnight on Nusa Penida?",
+        "answer": "Yes. Most accommodation is around Toyapakeh and Ped in the north-west, near the harbour, ranging from simple guesthouses to cliff-edge resorts with pools, and there is a smaller cluster out east near Atuh and Diamond Beach. Power, water and internet are more variable than on the mainland, but the island is a straightforward place to spend a night or two."
+      },
+      {
+        "question": "Where is the best area to stay in Nusa Penida?",
+        "answer": "North-west, around Toyapakeh and Ped, for most people: it is close to the harbour and the restaurants, and it makes the west-side sights easy. Stay east near Atuh only if you specifically want sunrise at Diamond Beach without the crowd, and accept a long drive at the other end of your trip. Whichever you pick, the roads decide your days more than the hotel does."
+      },
+      {
+        "question": "Is two days in Nusa Penida too much?",
+        "answer": "Not if you want both halves of the island or you care about light. The second day removes the ferry clock, which is what makes the standard day trip feel rushed, and lets you be at a viewpoint before the first boats land. It is too much only if your Penida plan is a single famous photograph, in which case one day does it."
+      },
+      {
+        "question": "Can you do Nusa Penida east and west in one day?",
+        "answer": "You can be driven to both and see very little of either. The island is only about twenty kilometres across, but the road between the two sides is steep, narrow and broken, and the descents to the beaches are on foot. Operators who sell it fit it by cutting time at every stop. Pick a half, or take two days."
+      },
+      {
+        "question": "How long is the boat from Bali to Nusa Penida?",
+        "answer": "Thirty to forty minutes on the fast boat from Sanur, with seats from about $15 one way. The first boats leave early in the morning and the last returns run in the afternoon, which is the real constraint on a day trip — the return time, not the distance. Details are in our Sanur to Nusa Penida fast boat guide."
+      },
+      {
+        "question": "Should I add Nusa Lembongan to a Nusa Penida trip?",
+        "answer": "Only with two or more days. Lembongan is a short hop across the channel and a genuinely different island — flatter, smaller, more relaxed, with mangroves and easy reef — but adding it to a single Penida day means three boat movements and no time anywhere. Our Nusa Penida versus Nusa Lembongan guide compares them properly."
+      }
+    ]
+  },
+  {
+    "slug": "nusa-penida-snorkeling-non-swimmers",
+    "badge": "Before you book",
+    "navLabel": "If you cannot swim",
+    "cardTourLabel": "Calm snorkeling trips",
+    "heroTourSlug": "nusa-penida-manta-rays-point",
+    "relatedTourSlugs": [
+      "nusa-penida-manta-rays-point",
+      "blue-lagoon-snorkeling",
+      "nusa-penida-west-tour"
+    ],
+    "inlineStats": [
+      "Life vest on every boat",
+      "3 of 4 stops have no beach",
+      "Blue Lagoon from $50"
+    ],
+    "title": "Nusa Penida Snorkeling If You Cannot Swim: What to Know",
+    "description": "You can do the Nusa Penida snorkeling day without being a swimmer, but at three of the four stops you enter deep water straight from the boat. What that is like and how to prepare.",
+    "excerpt": "People book the Nusa Penida snorkeling day assuming it works like snorkelling on a resort beach, and it does not. Three of the four stops have no beach at all: you step off a ladder into open water with the boat alongside and nothing under your feet. That does not mean a non-swimmer cannot do it — every boat provides a life vest, a guide goes in the water with you, and plenty of people who cannot swim 25 metres have floated above a manta perfectly happily. But it does mean the decision has to be made before you are sitting on the side of the boat with six strangers waiting behind you. Here is exactly what the day asks of you, and what to book instead if the answer is no. Calmer alternatives from $50.",
+    "rankings": [
+      {
+        "name": "What actually keeps you up",
+        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "area": "Every stop",
+        "bestFor": "The thing most people do not know",
+        "summary": "A life vest, and it is not optional on shared boats. With one on you float whether or not you do anything, and with a mask and snorkel you breathe with your face in the water while doing nothing at all. Swimming ability is not what keeps you at the surface here — the vest is. What swimming ability buys you is calm, which is a different thing and matters more."
+      },
+      {
+        "name": "The boat entry",
+        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "area": "Manta Point, Gamat Bay, Toyapakeh",
+        "bestFor": "Knowing what the hard moment is",
+        "summary": "You sit on the side, put your fins on, and step down a short ladder into deep water. The first three seconds are the whole difficulty for most people: no bottom, some movement on the surface, and a boat you now have to turn round and find. Once you are floating it stops being frightening almost immediately. Tell the crew beforehand and you go first, with the guide already in the water."
+      },
+      {
+        "name": "Crystal Bay, the easy one",
+        "imageSrc": "/images/places/crystal-bay.jpg",
+        "area": "Sheltered west-coast bay with sand",
+        "bestFor": "Anyone who wants a floor under them",
+        "summary": "The one stop on the standard route with a beach. Inside the bay you can stand up, walk in from the sand, and stay in water that is shallow and calm with coral a short way out. If you do only one stop on the whole day, do this one. The rule at Crystal Bay is simple: stay inside the bay, and do not swim toward the headland at the mouth where the current runs."
+      },
+      {
+        "name": "Blue Lagoon, if the answer is no",
+        "imageSrc": "/images/places/blue-lagoon-padang-bai.jpg",
+        "area": "Padang Bai, mainland east coast",
+        "bestFor": "A first snorkel with sand under you",
+        "summary": "A small sheltered cove five minutes north of Padang Bai harbour, on the mainland, where you walk in from a beach into shallow water with good coral and no crossing to make. Clearest between 07:00 and 10:00. It is the honest recommendation for a genuinely nervous first-timer, and it costs less to get to than the Penida day."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Stop by stop, for a non-swimmer",
+        "paragraphs": [
+          "The same four stops everyone does, rated by what they ask of you rather than by what you see:"
+        ],
+        "table": {
+          "headers": [
+            "Stop",
+            "Entry",
+            "Can you stand?",
+            "Verdict for a non-swimmer"
+          ],
+          "rows": [
+            [
+              "Manta Point",
+              "Ladder, deep water",
+              "No",
+              "Doable in a vest with a guide — but this is the demanding one"
+            ],
+            [
+              "Manta Bay",
+              "Ladder, deep water",
+              "No",
+              "Easier than the point: shallower and flatter"
+            ],
+            [
+              "Gamat Bay",
+              "Ladder, deep water",
+              "No",
+              "Skip it — the current here is the strongest of the day"
+            ],
+            [
+              "Crystal Bay",
+              "Ladder or walk in from sand",
+              "Yes, inside the bay",
+              "Comfortable. Do this one"
+            ],
+            [
+              "Toyapakeh",
+              "Ladder, shallow reef",
+              "No",
+              "Fine when the tide is still, skip it when it is running"
+            ]
+          ]
+        },
+        "paragraphsAfter": [
+          "Nobody makes you get in. Staying on the boat for one stop is completely normal and the crew will not mind — on most trips somebody does. What is not normal, and what causes the incidents that do happen on this coast, is getting in at a current stop to keep up with a group and then being too tired or too far from the boat to be comfortable."
+        ]
+      },
+      {
+        "heading": "Six things to do before the boat",
+        "bullets": [
+          "**Tell the crew when you book, not when you arrive.** One line on WhatsApp — one of us is not a strong swimmer — changes who goes in first and who the guide stays next to.",
+          "**Try the mask in the pool at your hotel.** Breathing through a snorkel with your face down is the genuinely unfamiliar part, and learning it in deep water beside a boat is the worst place to learn it.",
+          "**Keep the vest inflated and do not let anyone talk you out of it.** Confident snorkellers sometimes skip it. You are not one of them today, and nobody is giving out marks for it.",
+          "**Take a seasickness tablet an hour before leaving the hotel.** Floating face-down on a moving surface at the manta stop is what makes people seasick, more than the crossing does.",
+          "**Ask which stop has a beach and plan to be in the water there.** That is Crystal Bay, and it is the stop worth saving your energy for.",
+          "**Agree a signal with the guide.** Arm straight up means come and get me. Use it early rather than late."
+        ]
+      },
+      {
+        "heading": "What the actual risks are, honestly",
+        "paragraphs": [
+          "The hazard around Nusa Penida is current, not depth. Under a floating body wearing a vest, eight metres and eighty metres feel identical, and nobody drowns because the water was deep. What causes trouble is water that moves faster than you can swim — at Gamat Bay where it squeezes past the headland, at the mouth of Crystal Bay toward the point, and at Toyapakeh when the tide is running. Every serious incident on this coast follows the same pattern: somebody swims away from the boat, toward a headland, and cannot get back.",
+          "Which is why the rules are simple and worth following exactly. Keep the guide between yourself and open water. Do not swim toward the ends of a bay. If you feel yourself moving without swimming, do not fight it — signal, float, and let the boat come to you, because the boat is faster than you are. And at the manta mooring specifically, stay above the animals rather than dropping into the water between a manta and the reef.",
+          "For the wider picture on the island, including the roads and the cliff stairs, see [is Nusa Penida safe](/bali/en/journal/is-nusa-penida-safe)."
+        ]
+      },
+      {
+        "heading": "Should you do it at all?",
+        "paragraphs": [
+          "If the idea of floating in a vest in open water sounds exciting-but-nervous, do it. That is the normal feeling and it usually disappears about ninety seconds after your face goes in the water. Take the [Manta Point snorkeling trip](/bali/en/tours/nusa-penida-manta-rays-point) from $29, tell the crew, go in first, and treat Gamat Bay as optional.",
+          "If the idea sounds genuinely frightening, do not spend your holiday proving something. Start at [Blue Lagoon](/bali/en/tours/blue-lagoon-snorkeling) from $50, where you walk in from a beach on the mainland with gear, a guide, lunch and pickup included, and where standing up is always an option. Our [guide to snorkeling in Bali if you cannot swim](/bali/en/journal/bali-snorkeling-for-beginners) lists five more calm spots. The mantas will still be there next trip — they are there in all twelve months.",
+          "And if the water is not for you at all, the island still is. The [Nusa Penida West Tour](/bali/en/tours/nusa-penida-west-tour) from $49 per car covers Kelingking, Angel's Billabong, Broken Beach and Crystal Bay from the road, and you can swim in the shallow end of the bay at the last stop with your feet on the sand."
+        ]
+      },
+      {
+        "heading": "Children and older travellers",
+        "paragraphs": [
+          "There is no fixed age limit on shared snorkelling boats, and the practical question is not age but whether a person is comfortable floating in a vest away from land while somebody else is running the day. Confident children of eight or nine often do better at the manta stop than nervous adults, because they have fewer ideas about what could go wrong. Younger than that, a private boat is worth the money purely because you can leave a stop the moment it stops being fun.",
+          "For older travellers the limiting factor is usually the ladder and the swell rather than the swim — getting back onto a small boat that is moving takes more upper-body strength than getting off it. Crews are practised at helping, and asking in advance is normal. Families should also read [Nusa Penida with kids](/bali/en/journal/nusa-penida-with-kids), which covers which land stops are safe and which involve unfenced cliff edges."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can you snorkel in Nusa Penida if you cannot swim?",
+        "answer": "Yes, with a life vest and a guide, and plenty of people do. Every shared boat provides vests and somebody is in the water at each stop. What you cannot avoid is that three of the four stops are deep-water entries off a boat ladder with no beach — so the honest requirement is a willingness to float in open water, not an ability to swim 25 metres."
+      },
+      {
+        "question": "Is Nusa Penida snorkeling suitable for beginners?",
+        "answer": "Partly. Crystal Bay is genuinely beginner-friendly, with sand behind it and shallow water you can stand in. Manta Point is not a place for beginners in any weather: it is an open-water entry on an exposed corner with surface movement. A complete beginner is better off starting at Blue Lagoon on the mainland from $50 and doing Penida on a later trip."
+      },
+      {
+        "question": "Do they give you a life jacket for snorkeling in Nusa Penida?",
+        "answer": "Yes, on every shared trip, and you should keep it on. The vest is what holds you at the surface, not your swimming, and it means a tired swimmer can simply stop and float. Experienced snorkellers sometimes go without one; if you are asking this question, you are not in that group today."
+      },
+      {
+        "question": "Is there an age limit for snorkeling in Nusa Penida?",
+        "answer": "No fixed limit on shared boats, and the real test is temperament rather than age. Confident children of eight or nine often manage the manta stop better than nervous adults. Below that, a private boat is worth the extra cost because you can end a stop the moment it stops being enjoyable rather than waiting for a group."
+      },
+      {
+        "question": "Are there sharks at Nusa Penida?",
+        "answer": "Reef sharks are present around the island but are shy, usually deeper than snorkellers go, and are not a hazard. Divers occasionally see whitetips resting on the sand. The animals you will actually be in the water with at the manta stop are filter feeders with no barb and no teeth of consequence. Current is the risk here, not wildlife."
+      },
+      {
+        "question": "Has anyone drowned snorkeling at Nusa Penida?",
+        "answer": "There have been incidents on this coast, as on any exposed coast with strong currents, and they follow a consistent pattern: somebody swims away from the boat toward a headland and cannot get back against the water. That is what the guide, the vest and the rule about staying near the boat exist to prevent. Stay with the group, do not swim toward the ends of a bay, and signal early rather than late."
+      },
+      {
+        "question": "Can you skip a snorkeling stop and stay on the boat?",
+        "answer": "Yes, and it is completely routine — on most trips somebody sits one out. Skipping Gamat Bay is the sensible choice for a weak swimmer, since it has the strongest current of the day. Nobody on the crew will mind, and it is far better than getting in to keep up with a group and then struggling."
+      },
+      {
+        "question": "What is the calmest snorkeling near Bali for a nervous swimmer?",
+        "answer": "Blue Lagoon at Padang Bai on the mainland: a small sheltered cove where you walk in from the beach into shallow water with good coral, clearest between 07:00 and 10:00, from $50 with gear, guide, lunch and pickup. On Nusa Penida itself the answer is Crystal Bay, inside the bay, where you can stand on sand."
+      }
+    ]
+  }
 ];
 
 // Topical clusters for internal linking. A guide links to its siblings first,
@@ -30399,6 +31894,14 @@ const GUIDE_CLUSTERS = {
       "sidemen-to-mount-batur",
     "amed-to-mount-batur",
   ],
+  mantaRays: [
+    "manta-point-bali-guide",
+    "where-to-see-manta-rays-in-bali",
+    "manta-bay-vs-manta-point",
+    "manta-point-depth-and-diving",
+    "nusa-penida-snorkeling-spots",
+    "nusa-penida-snorkeling-non-swimmers",
+  ],
   giliIslands: [
     "how-to-get-to-gili-trawangan-from-bali",
     "gili-t-day-trip-from-seminyak",
@@ -30416,7 +31919,7 @@ const GUIDE_CLUSTER_PARTNERS = {
   areas: "areaComparisons",
   transport: "penidaDayTrips",
   practical: "planning",
-  seasons: "snorkeling",
+  seasons: "mantaRays",
   beaches: "areas",
   snorkeling: "penidaSpots",
   sunsets: "areas",
@@ -30428,6 +31931,7 @@ const GUIDE_CLUSTER_PARTNERS = {
   penidaDayTrips: "nusaPenida",
   mountBatur: "activities",
   giliIslands: "snorkeling",
+  mantaRays: "snorkeling",
 };
 
 function guideClusterOf(slug) {
@@ -30997,6 +32501,62 @@ function renderJournalTable(table) {
  * Рисунок справа — не иллюстрация ради иллюстрации: это тот самый пунктирный
  * маршрут между точками, который планировщик и рисует на карте.
  */
+
+/* Блок бронирования в статье. Появляется дважды: компактно сразу под героем
+   и с формулировкой решения перед FAQ. Есть только у статей с полем offer —
+   у справочных («действующий ли вулкан Батур») его нет и быть не должно.
+
+   Цену берём из данных тура и обрезаем до первой фразы: в прайсе лежит
+   «From $35, pickup 01:30. Book on WhatsApp.», а в строке таблицы нужна
+   только сумма. */
+function offerPriceOf(tour) {
+  // Запятая допускается только как разделитель тысяч: у «From $35, pickup
+  // 01:30…» класс [0-9,]+ цеплял запятую предложения и давал «From $35,».
+  const match = String(tour.price || "").match(/From\s+\$[0-9]+(?:,[0-9]{3})*(?:\s+per\s+[a-z]+)?/i);
+  return match ? match[0] : String(tour.price || "");
+}
+
+function renderGuideOfferBlock(article, variant = "top") {
+  const offer = article.guide && article.guide.offer;
+  if (!offer || !Array.isArray(offer.options)) return "";
+
+  const rows = offer.options
+    .map(({ tourSlug, forWho }) => {
+      const tour = tourBySlug(tourSlug);
+      if (!tour) return "";
+      const wa = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeWhatsAppText(buildWhatsAppMessage(tour))}`;
+      return `
+                <li class="sboffer__row">
+                  <span class="sboffer__main">
+                    <a class="sboffer__name" href="${tourRoute(tour)}">${escapeHtml(tour.title)}</a>
+                    <span class="sboffer__for">${escapeHtml(forWho || "")}</span>
+                  </span>
+                  <span class="sboffer__price">${escapeHtml(offerPriceOf(tour))}</span>
+                  <a class="sboffer__cta" href="${wa}" target="_blank" rel="noopener noreferrer nofollow">${escapeHtml(offer.buttonLabel || "Book")}</a>
+                </li>`;
+    })
+    .filter(Boolean)
+    .join("");
+
+  if (!rows) return "";
+
+  const isClose = variant === "close";
+  const heading = isClose ? offer.closeTitle || offer.title : offer.title;
+  const lead = isClose && offer.decision ? `<p class="sboffer__decision">${renderRichText(offer.decision)}</p>` : "";
+
+  return `
+            <section class="sb-journal-article-section">
+              <aside class="sboffer${isClose ? " sboffer--close" : ""}">
+                <p class="sboffer__eyebrow">${escapeHtml(offer.eyebrow || "Book it")}</p>
+                <h2 class="sboffer__title">${escapeHtml(heading || "")}</h2>
+                ${lead}
+                <ul class="sboffer__list">${rows}
+                </ul>
+                ${offer.note ? `<p class="sboffer__note">${renderRichText(offer.note)}</p>` : ""}
+              </aside>
+            </section>`;
+}
+
 function renderTripPlannerCta() {
   const arrow =
     '<svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">' +
@@ -31206,6 +32766,7 @@ ${JOURNAL_FOOTER_ASSETS}
 
         <div class="sb-journal-article-layout">
           <article class="sb-journal-article">
+${renderGuideOfferBlock(article, "top")}
             <section class="sb-journal-article-section">
               <h2>Top picks from this guide</h2>
               <div class="sb-journal-ranking-grid">
@@ -31225,6 +32786,7 @@ ${JOURNAL_FOOTER_ASSETS}
             `,
               )
               .join("")}
+${renderGuideOfferBlock(article, "close")}
             <section class="sb-journal-article-section">
               <h2>FAQ</h2>
               <div class="sb-journal-faq-grid">
@@ -31659,6 +33221,56 @@ function renderJournalSharedStyles() {
      Тот же язык, что у карточек тура: чёрное по бумаге, волосяная линейка,
      ни одной тени. Единственное движение — бегущий пунктир маршрута, и он
      гаснет при prefers-reduced-motion.                                    */
+  /* Блок бронирования в статье. Тот же язык, что у карточки тура и у
+     .sbplan: чёрное по бумаге, волосяная линейка, ни одной тени. */
+  .sboffer{
+    margin:0;padding:26px 28px;border:1px solid rgba(21,21,21,0.14);
+    border-radius:26px;background:linear-gradient(180deg,#fff 0%,#fbfaf7 100%)
+  }
+  .sboffer__eyebrow{
+    margin:0 0 8px;font-size:11px;font-weight:700;letter-spacing:.16em;
+    text-transform:uppercase;color:#b0741f
+  }
+  .sboffer__title{
+    margin:0 0 14px;font-size:24px;line-height:1.2;color:#151515;
+    font-weight:600 !important;letter-spacing:-0.01em
+  }
+  .sboffer__decision{margin:0 0 16px;font-size:15px;line-height:1.6;color:#5d5d62;max-width:62ch}
+  .sboffer__list{margin:0;padding:0;list-style:none}
+  .sboffer__row{
+    display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:16px;
+    align-items:center;padding:14px 0;border-top:1px solid rgba(21,21,21,0.10)
+  }
+  .sboffer__row:first-child{border-top:0;padding-top:4px}
+  .sboffer__main{display:flex;flex-direction:column;gap:3px;min-width:0}
+  .sboffer__name{
+    font-size:16px;font-weight:600;color:#151515 !important;
+    text-decoration:none !important;line-height:1.3
+  }
+  .sboffer__name:hover{text-decoration:underline !important}
+  .sboffer__for{font-size:13.5px;line-height:1.45;color:#8a8a90}
+  .sboffer__price{font-size:15px;font-weight:600;color:#151515;white-space:nowrap}
+  .sboffer__cta{
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:10px 20px;border-radius:999px;background:#151515;
+    color:#fff !important;font-size:14px;font-weight:600;
+    text-decoration:none !important;white-space:nowrap;
+    transition:background-color .2s ease
+  }
+  .sboffer__cta:hover{background:#000}
+  .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
+  /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
+     вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
+     колонке уезжала за край экрана. Цена — главный элемент блока, поэтому
+     ставим её в одну колонку под названием, где её видно при любой ширине
+     контейнера. */
+  @media (max-width:640px){
+    .sboffer{padding:22px 20px}
+    .sboffer__title{font-size:21px}
+    .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
+    .sboffer__price{grid-column:1;font-size:17px}
+    .sboffer__cta{grid-column:1;width:100%}
+  }
   .sbplan{
     position:relative;display:grid;grid-template-columns:minmax(0,1fr) 224px;
     gap:28px;align-items:center;margin:0;padding:30px 32px;
@@ -32313,7 +33925,17 @@ html .sbtc h3.sbtc-rail__title{
   .sb-journal-footer__social-link:hover,.sb-journal-footer__social-link:focus-visible{transform:translateY(-1px);opacity:.9;outline:none}
   .sb-journal-footer__social-link svg{width:22px;height:22px}
   .sb-journal-header-lock{overflow:hidden}
-  @media screen and (max-width:1100px){.sb-journal-featured-grid,.sb-journal-tour-grid,.sb-journal-article-layout,.sb-journal-hero,.sb-journal-article-hero,.sb-journal-ranking-grid,.sb-journal-guide-tour-grid,.sb-journal-bottom-grid{grid-template-columns:1fr}.sb-journal-sidebar{position:static}.sb-journal-hero h1,.sb-journal-article-hero h1{font-size:46px}.sb-journal-footer__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sb-journal-footer__brand,.sb-journal-footer__payments{grid-column:1/-1}}
+  @media screen and (max-width:1100px){.sb-journal-featured-grid,.sb-journal-tour-grid,.sb-journal-article-layout,.sb-journal-hero,.sb-journal-article-hero,.sb-journal-ranking-grid,.sb-journal-guide-tour-grid,.sb-journal-bottom-grid{grid-template-columns:minmax(0,1fr)}
+    /* Сетка схлопывалась в одну колонку, но трек 1fr раздувался до 562px:
+       у грид-элементов min-width по умолчанию auto, и колонка растягивалась
+       под min-content самого широкого из них. При вьюпорте 375px статья
+       рендерилась шириной 562px, а .sb-journal-page с overflow-x:clip
+       срезал правую треть — без горизонтальной прокрутки, то есть контент
+       был просто недостижим. Под нож попадали таблицы гайдов, карточки
+       и блоки CTA на всех 1398 страницах журнала.
+       minmax(0,1fr) выше плюс min-width:0 здесь снимают оба ограничения. */
+    .sb-journal-article,.sb-journal-sidebar{min-width:0}
+    .sb-journal-sidebar{position:static}.sb-journal-hero h1,.sb-journal-article-hero h1{font-size:46px}.sb-journal-footer__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sb-journal-footer__brand,.sb-journal-footer__payments{grid-column:1/-1}}
   @media screen and (max-width:980px){.sb-journal-tour-header__desktop-inner{grid-template-columns:auto 1fr;gap:18px;padding-top:14px;padding-bottom:14px}.sb-journal-tour-header__nav{justify-content:flex-end;flex-wrap:wrap}.sb-journal-tour-header__actions{grid-column:1/-1;justify-content:flex-start}}
   @media screen and (max-width:640px){.sb-journal-footer{padding:0 14px 26px}.sb-journal-footer__shell{margin-top:26px;padding:28px 20px 24px;border-radius:28px}.sb-journal-footer__grid{grid-template-columns:1fr;gap:22px}.sb-journal-footer__brand,.sb-journal-footer__payments{grid-column:auto}.sb-journal-footer__lead,.sb-journal-footer__text{font-size:16px}.sb-journal-footer__link{font-size:16px}.sb-journal-footer__bottom{flex-direction:column;align-items:flex-start}.sb-journal-footer__copyright,.sb-journal-footer__social-label{font-size:15px}.sb-journal-footer__social-link{width:42px;height:42px}}
   @media screen and (max-width:480px){.sb-journal-tour-header__desktop{display:none}.sb-journal-tour-header__mobile{display:block;background:transparent;transition:background-color .35s ease,box-shadow .35s ease}.sb-journal-tour-header__mobile-bar{background:transparent;transition:background-color .35s ease,box-shadow .35s ease}.sb-journal-tour-header_scrolled .sb-journal-tour-header__mobile,.sb-journal-tour-header_open .sb-journal-tour-header__mobile{background:#333}.sb-journal-tour-header_scrolled .sb-journal-tour-header__mobile-bar,.sb-journal-tour-header_open .sb-journal-tour-header__mobile-bar{background:#333;box-shadow:0 10px 30px rgba(17,24,39,0.18)}.sb-journal-tour-header_scrolled .sb-journal-tour-header__burger,.sb-journal-tour-header_open .sb-journal-tour-header__burger,.sb-journal-tour-header_scrolled .sb-journal-tour-header__socials a,.sb-journal-tour-header_open .sb-journal-tour-header__socials a{color:#fff}.sb-journal-tour-header_scrolled .sb-journal-tour-header__mobile-logo,.sb-journal-tour-header_open .sb-journal-tour-header__mobile-logo{filter:brightness(0) invert(1)}.sb-journal-main{padding:90px 14px 64px}.sb-journal-hero,.sb-journal-article-hero,.sb-journal-tour-card,.sb-journal-article,.sb-journal-sidebar-card,.sb-journal-ranking-card,.sb-journal-faq-card{border-radius:24px}.sb-journal-hero,.sb-journal-article-hero,.sb-journal-article{padding:20px}.sb-journal-featured-grid,.sb-journal-tour-grid,.sb-journal-ranking-grid,.sb-journal-faq-grid{gap:16px}.sb-journal-tour-card__copy{left:16px;right:16px;bottom:16px}.sb-journal-tour-card__copy h3{font-size:28px}.sb-journal-hero h1,.sb-journal-article-hero h1{font-size:34px;letter-spacing:-1.6px}.sb-journal-lead{font-size:17px}.sb-journal-section__head{align-items:flex-start;flex-direction:column}.sb-journal-section__head h2{font-size:28px}.sb-journal-card h3,.sb-journal-ranking-card h3,.sb-journal-faq-card h3{font-size:23px}.sb-journal-article-section h2{font-size:26px}.sb-journal-article-section p,.sb-journal-article-section li,.sb-journal-sidebar-card li,.sb-journal-ranking-card p,.sb-journal-faq-card p{font-size:15px}}
@@ -36516,6 +38138,64 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "Mount Batur Sunrise From Ubud: Hike $35, Jeep $60":
+      "Батур из Убуда: поход $35, джип $60",
+    "Is Mount Batur Safe? Yes With a Guide, Descent in Daylight":
+      "Безопасен ли Батур? Да, с гидом — спуск уже засветло",
+    "Mount Batur vs Agung: Batur Suits 95% of Travellers":
+      "Батур или Агунг: Батур подходит 95% туристов",
+    "Can You Hike Mount Batur Without a Guide? In Practice, No":
+      "Можно ли подняться на Батур без гида? На практике нет",
+    "Is Mount Batur Worth It? Only If a 02:00 Alarm Is Fine":
+      "Стоит ли ехать на Батур? Только если готовы встать в 02:00",
+    "Mount Batur: Book the Sunrise, Not the Sunset":
+      "Батур: берите рассвет, а не закат",
+    "Ubud to Mount Batur: 90 Minutes by Car, Pickup at 02:30":
+      "Убуд — Батур: 90 минут, выезд около 02:30",
+    "Mount Batur Sunrise Cost: $35 on Foot, $60 by Jeep":
+      "Сколько стоит рассвет на Батуре: $35 пешком, $60 на джипе",
+    "How Hard Is Mount Batur? 700 m of Ascent in 1.5-2 Hours":
+      "Насколько сложен подъём на Батур: 700 м за 1,5–2 часа",
+    "Mount Batur With Kids: Take the Jeep, Nobody Climbs":
+      "Батур с детьми: берите джип — подниматься не придётся",
+    "Mount Batur in the Rainy Season: Guides Run Most Mornings":
+      "Батур в сезон дождей: гиды выезжают почти каждое утро",
+    "Canggu to Mount Batur: 1.5-2.5 Hours, Pickup at 01:30":
+      "Чангу — Батур: 1,5–2,5 часа, выезд в 01:30",
+    "Seminyak to Mount Batur: 1.5-2.5 Hours, Pickup at 01:30":
+      "Семиньяк — Батур: 1,5–2,5 часа, выезд в 01:30",
+    "Batur vs Bromo vs Rinjani vs Ijen: Only Batur Fits a Morning":
+      "Батур, Бромо, Ринджани, Иджен: за одно утро только Батур",
+    "Nusa Dua to Mount Batur: Up to 2.5 Hours, Pickup at 01:30":
+      "Нуса-Дуа — Батур: до 2,5 часов, выезд в 01:30",
+    "Uluwatu to Mount Batur: 1.5-2.5 Hours, Pickup by 01:30":
+      "Улувату — Батур: 1,5–2,5 часа, выезд к 01:30",
+    "Sanur to Mount Batur: 1.5-2 Hours, Pickup 01:30-02:00":
+      "Санур — Батур: 1,5–2 часа, выезд 01:30–02:00",
+    "Mount Batur ATV or Quad? There Is None — the Jeep From $60":
+      "Квадроциклов на Батуре нет — есть джип от $60",
+    "How to Book Mount Batur: Direct on WhatsApp, No Prepayment":
+      "Как забронировать Батур: напрямую в WhatsApp, без предоплаты",
+    "Sidemen to Mount Batur: 90 Minutes, Pickup Around 02:30":
+      "Сидемен — Батур: 90 минут, выезд около 02:30",
+    "Amed to Mount Batur: 2 Hours by Car, Pickup Around 02:00":
+      "Амед — Батур: 2 часа на машине, выезд около 02:00",
+    "A Nusa Penida snorkeling day is four boat stops: Manta Point, Gamat Bay, Crystal Bay and Toyapakeh. What you see at each one, and which ones are only for strong swimmers.":
+      "Снорклинг на Нуса-Пениде — четыре остановки на лодке: Манта-Пойнт, Гамат-Бэй, Кристал-Бэй и Тояпаке. Что вы увидите на каждой и какие только для сильных пловцов.",
+    "You can do the Nusa Penida snorkeling day without being a swimmer, but at three of the four stops you enter deep water straight from the boat. What that is like and how to prepare.":
+      "Снорклинг на Нуса-Пениде возможен и без умения плавать, но на трёх остановках из четырёх вы входите в глубокую воду прямо с лодки. Что вас ждёт и как подготовиться.",
+    "Nusa Penida Snorkeling: The 4 Stops and What Each Is Like":
+      "Снорклинг на Нуса-Пениде: 4 остановки и что на каждой",
+    "Manta Bay or Manta Point? Two Different Stops, One Trip":
+      "Манта Бэй или Манта Пойнт: две разные точки, одна поездка",
+    "How Deep Is Manta Point? Depth, Currents and the Dive":
+      "Глубина Манта Пойнт: сколько метров, течения и погружение",
+    "Where to See Manta Rays in Bali: One Place, Not Six":
+      "Где увидеть скатов манта на Бали: одно место, а не шесть",
+    "How Many Days in Nusa Penida: One Day Covers Half the Island":
+      "Сколько дней на Нуса-Пениде: один день — половина острова",
+    "Nusa Penida Snorkeling If You Cannot Swim: What to Know":
+      "Снорклинг на Нуса-Пениде, если вы не умеете плавать",
     "Blue Lagoon Bali: Clearest Water 07:00-10:00, Trips From $50":
       "Голубая лагуна Бали: вода чище всего 07:00–10:00, от $50",
     "Bali Private Driver Cost: $59 a Car per Day, Not per Person":
@@ -36598,6 +38278,18 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "Mount Batur in the Rainy Season: Guides Run Most Mornings":
+      "Batur en temporada de lluvias: salidas casi cada mañana",
+    "Batur vs Bromo vs Rinjani vs Ijen: Only Batur Fits a Morning":
+      "Batur, Bromo, Rinjani o Ijen: solo Batur cabe en una mañana",
+    "Is Mount Batur Worth It? Only If a 02:00 Alarm Is Fine":
+      "¿Vale la pena el monte Batur? Solo si te va bien a las 02:00",
+    "How Hard Is Mount Batur? 700 m of Ascent in 1.5-2 Hours":
+      "Dificultad del monte Batur: 700 m de ascenso en 1,5-2 horas",
+    "How Deep Is Manta Point? Depth, Currents and the Dive":
+      "¿Qué profundidad tiene Manta Point? Profundidad, corrientes y buceo",
+    "Nusa Penida Snorkeling If You Cannot Swim: What to Know":
+      "Snorkel en Nusa Penida si no sabes nadar: lo que debes saber",
     "Sanur to Nusa Penida Fast Boat: 30-40 Min, Seats From $15":
       "Lancha Sanur — Nusa Penida: 30-40 min, plazas desde $15",
     "Mount Batur From Seminyak or Canggu: 01:30 Pickup, From $35":
@@ -36668,6 +38360,30 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "Mount Batur in the Rainy Season: Guides Run Most Mornings":
+      "Mont Batur en saison des pluies : départs presque tous les matins",
+    "Batur vs Bromo vs Rinjani vs Ijen: Only Batur Fits a Morning":
+      "Batur, Bromo, Rinjani, Ijen : seul Batur tient en une matinée",
+    "Is Mount Batur Worth It? Only If a 02:00 Alarm Is Fine":
+      "Le mont Batur en vaut-il la peine ? Oui, si 02h00 vous convient",
+    "How Hard Is Mount Batur? 700 m of Ascent in 1.5-2 Hours":
+      "Difficulté du mont Batur : 700 m de dénivelé en 1,5 à 2 heures",
+    "Mount Batur Sunrise Cost: $35 on Foot, $60 by Jeep":
+      "Lever de soleil au mont Batur : 35 $ à pied, 60 $ en jeep",
+    "Mount Batur ATV or Quad? There Is None — the Jeep From $60":
+      "Pas de quad au mont Batur — la jeep à partir de 60 $",
+    "Three ways up Mount Batur":
+      "Trois façons de monter au mont Batur",
+    "A Nusa Penida snorkeling day is four boat stops: Manta Point, Gamat Bay, Crystal Bay and Toyapakeh. What you see at each one, and which ones are only for strong swimmers.":
+      "Une journée de snorkeling à Nusa Penida, c’est quatre arrêts en bateau : Manta Point, Gamat Bay, Crystal Bay et Toyapakeh. Ce que vous verrez à chacun et lesquels sont réservés aux bons nageurs.",
+    "You can do the Nusa Penida snorkeling day without being a swimmer, but at three of the four stops you enter deep water straight from the boat. What that is like and how to prepare.":
+      "La journée de snorkeling à Nusa Penida est possible sans savoir nager, mais à trois arrêts sur quatre vous entrez dans l’eau profonde directement depuis le bateau. À quoi s’attendre.",
+    "Nusa Penida Snorkeling: The 4 Stops and What Each Is Like":
+      "Snorkeling à Nusa Penida : les 4 spots et ce qui vous attend",
+    "Manta Bay or Manta Point? Two Different Stops, One Trip":
+      "Manta Bay ou Manta Point : deux spots différents, une seule sortie",
+    "Nusa Penida Snorkeling If You Cannot Swim: What to Know":
+      "Snorkeling à Nusa Penida si vous ne savez pas nager : à quoi vous attendre",
     "Bali Private Driver Cost: $59 a Car per Day, Not per Person":
       "Chauffeur privé à Bali : 59 $ la voiture, pas par personne",
     "Nusa Penida From Sanur: 07:00 Boat, Routes From $49 a Car":
@@ -36740,6 +38456,14 @@ const PINNED_TRANSLATIONS = {
       "Bali est-elle sûre en 2026 ? 7 arnaques courantes à éviter",
   },
   "zh-CN": {
+    "Nusa Penida Snorkeling: The 4 Stops and What Each Is Like":
+      "努沙佩尼达浮潜：4 个浮潜点，每个都什么样",
+    "Manta Bay or Manta Point? Two Different Stops, One Trip":
+      "蝠鲼湾还是蝠鲼点：两个不同的浮潜点，同一趟行程",
+    "How Many Days in Nusa Penida: One Day Covers Half the Island":
+      "努沙佩尼达需要几天：一天只够半个岛",
+    "Nusa Penida Snorkeling If You Cannot Swim: What to Know":
+      "不会游泳能在努沙佩尼达浮潜吗：出发前须知",
     "Duration":
       "时长",
     "Area":
