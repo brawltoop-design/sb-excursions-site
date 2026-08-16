@@ -11,12 +11,32 @@
  * Запуск после генератора: node scripts/add-partner-ref.mjs
  */
 import { promises as fs } from "node:fs";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const TAG = '<script defer src="/js/sb-partner-ref.js"></script>';
-const MARKER = "/js/sb-partner-ref.js";
+
+/* Версия по содержимому файла.
+ *
+ * vercel.json отдаёт js с max-age=86400, а тег стоял без версии — правка
+ * скрипта доезжала до вернувшегося посетителя только через сутки. Проверять
+ * такое вручную бесполезно: на сервере уже новый файл, а в браузере ещё
+ * старый, и выглядит это как «не задеплоилось».
+ *
+ * Хеш от содержимого, а не дата: пересборка без правок скрипта не сбрасывает
+ * кэш у людей на ровном месте. Тот же приём, что в stamp-css-version.mjs,
+ * только считается сам и входит в конвейер сборки. */
+const SCRIPT_PATH = "/js/sb-partner-ref.js";
+const version = createHash("sha256")
+  .update(await fs.readFile(path.join(ROOT, "js", "sb-partner-ref.js")))
+  .digest("hex")
+  .slice(0, 8);
+
+const TAG = `<script defer src="${SCRIPT_PATH}?v=${version}"></script>`;
+const MARKER = TAG;
+// Тег предыдущей версии (или вовсе без неё) — чтобы заменить, а не продублировать.
+const ANY_TAG = /<script defer src="\/js\/sb-partner-ref\.js(?:\?v=[a-f0-9]+)?"><\/script>\n?/g;
 
 const DUBAI = new Set([
   "page116517176.html", "page114154666.html", "page112638996.html",
@@ -48,8 +68,16 @@ for await (const file of walk(ROOT)) {
   const rel = path.relative(ROOT, file);
   if (!includeDubai && DUBAI.has(rel)) { stats["дубай пропущен"]++; continue; }
 
-  const html = await fs.readFile(file, "utf8");
+  let html = await fs.readFile(file, "utf8");
   if (html.includes(MARKER)) { stats["уже стоит"]++; continue; }
+
+  /* Тег прошлой версии убираем: иначе на странице окажется два скрипта. */
+  if (ANY_TAG.test(html)) {
+    ANY_TAG.lastIndex = 0;
+    html = html.replace(ANY_TAG, "");
+    stats["версия обновлена"] = (stats["версия обновлена"] || 0) + 1;
+  }
+  ANY_TAG.lastIndex = 0;
 
   // Фрагменты files/*body.html не самостоятельные документы — </body> в них
   // может не быть; такие пропускаем, скрипт приедет со страницы-владельца.
