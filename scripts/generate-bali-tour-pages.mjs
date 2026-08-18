@@ -5987,9 +5987,20 @@ function renderWestStylePage(tour) {
   // самой картинки, иначе превью «прыгает» или не появляется вовсе.
   const ogCard = `${SITE_URL}/images/og/${tour.slug}.jpg`;
   html = replacePropertyTag(html, "og:image", ogCard);
+  /* Замена ФУНКЦИЕЙ, а не строкой.
+
+     Строка замены пропускается через разбор спецсимволов: `$1` в ней — это
+     подстановка первой группы. Цена в заголовке даёт ровно такую же
+     последовательность, и `2-4 hours from $150` превращалось в
+     `2-4 hours from <meta property="og:image" …/>50`. Тег обрывался прямо
+     внутри content, парсер терял голову и сваливал остаток мета-тегов в
+     <body> — на странице сверху висел мусор `50" /> 50. Book now…`.
+     Ломались все туры с трёхзначной ценой.
+
+     Внутри функции-заменителя `$` не имеет особого значения. */
   html = html.replace(
     /(<meta property="og:image" content="[^"]*"\s*\/?>)/,
-    `$1
+    (ogImageTag) => `${ogImageTag}
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:type" content="image/jpeg" />
@@ -7645,10 +7656,10 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
 
   /* Увеличенный текст героя на мобильном.
      Владелец: «шрифт очень маленький» — на телефоне описание рендерилось
-     в 10px, заголовок в 25px. Пока включено ТОЛЬКО на странице похода на
-     Батур, по его просьбе; список расширяется добавлением регулярки.
+     в 10px, заголовок в 25px. Обкатано на странице похода на Батур, затем
+     раскатано на ВСЕ туровые страницы и все пять языков.
      Множитель применяется и к заголовку, и к описанию. */
-  var MOBILE_TEXT_BOOST_PAGES = /\\/bali\\/(?:en|ru|es|fr|zh)\\/tours\\/mount-batur-sunrise-hike$/;
+  var MOBILE_TEXT_BOOST_PAGES = /\\/bali\\/(?:en|ru|es|fr|zh)\\/tours\\/[a-z0-9-]+$/;
   var mobileTextBoost = MOBILE_TEXT_BOOST_PAGES.test(window.location.pathname) ? 1.3 : 1;
   /* Отступ кнопки от низа кадра на мобильном, экранные пиксели. */
   var BOTTOM_INSET_PX = 13;
@@ -8031,8 +8042,15 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
        rec2121233163, а не поле карточки: её собственный top уже 0, и верхние
        углы не скруглены, то есть вёрстка изначально задумана впритык.
        Снимаем padding, кадр встаёт под самую шапку. Боковые поля остаются:
-       они заданы шириной карточки, а не этим отступом. */
-    setImportant(record, 'padding-top', '0px');
+       они заданы шириной карточки, а не этим отступом.
+
+       Не просто ноль: у части туров карточка имеет собственный
+       отрицательный top (у jeep-hot-spring это -5px), и раньше его прятал
+       как раз этот padding. При жёстком нуле фотография вылезала выше
+       блока. Поэтому компенсируем ровно настолько, чтобы верх карточки
+       совпал с верхом блока. */
+    var cardTopCss = px(window.getComputedStyle(cardEl).top);
+    setImportant(record, 'padding-top', Math.max(0, -cardTopCss).toFixed(2) + 'px');
 
     var heroBg = atom(cardEl);
     if (heroBg) {

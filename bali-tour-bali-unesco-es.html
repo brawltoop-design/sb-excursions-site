@@ -4969,10 +4969,10 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
 
   /* Увеличенный текст героя на мобильном.
      Владелец: «шрифт очень маленький» — на телефоне описание рендерилось
-     в 10px, заголовок в 25px. Пока включено ТОЛЬКО на странице похода на
-     Батур, по его просьбе; список расширяется добавлением регулярки.
+     в 10px, заголовок в 25px. Обкатано на странице похода на Батур, затем
+     раскатано на ВСЕ туровые страницы и все пять языков.
      Множитель применяется и к заголовку, и к описанию. */
-  var MOBILE_TEXT_BOOST_PAGES = /\/bali\/(?:en|ru|es|fr|zh)\/tours\/mount-batur-sunrise-hike$/;
+  var MOBILE_TEXT_BOOST_PAGES = /\/bali\/(?:en|ru|es|fr|zh)\/tours\/[a-z0-9-]+$/;
   var mobileTextBoost = MOBILE_TEXT_BOOST_PAGES.test(window.location.pathname) ? 1.3 : 1;
   /* Отступ кнопки от низа кадра на мобильном, экранные пиксели. */
   var BOTTOM_INSET_PX = 13;
@@ -5355,8 +5355,15 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
        rec2121233163, а не поле карточки: её собственный top уже 0, и верхние
        углы не скруглены, то есть вёрстка изначально задумана впритык.
        Снимаем padding, кадр встаёт под самую шапку. Боковые поля остаются:
-       они заданы шириной карточки, а не этим отступом. */
-    setImportant(record, 'padding-top', '0px');
+       они заданы шириной карточки, а не этим отступом.
+
+       Не просто ноль: у части туров карточка имеет собственный
+       отрицательный top (у jeep-hot-spring это -5px), и раньше его прятал
+       как раз этот padding. При жёстком нуле фотография вылезала выше
+       блока. Поэтому компенсируем ровно настолько, чтобы верх карточки
+       совпал с верхом блока. */
+    var cardTopCss = px(window.getComputedStyle(cardEl).top);
+    setImportant(record, 'padding-top', Math.max(0, -cardTopCss).toFixed(2) + 'px');
 
     var heroBg = atom(cardEl);
     if (heroBg) {
