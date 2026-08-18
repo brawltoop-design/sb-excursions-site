@@ -3715,6 +3715,14 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
   var isLocalizedPage = (document.documentElement.getAttribute('lang') || 'en').toLowerCase() !== 'en';
   var isUnescoHeroPage = /\/bali\/(?:en|ru|es|fr|zh)\/tours\/bali-unesco$/.test(window.location.pathname);
 
+  /* Увеличенный текст героя на мобильном.
+     Владелец: «шрифт очень маленький» — на телефоне описание рендерилось
+     в 10px, заголовок в 25px. Пока включено ТОЛЬКО на странице похода на
+     Батур, по его просьбе; список расширяется добавлением регулярки.
+     Множитель применяется и к заголовку, и к описанию. */
+  var MOBILE_TEXT_BOOST_PAGES = /\/bali\/(?:en|ru|es|fr|zh)\/tours\/mount-batur-sunrise-hike$/;
+  var mobileTextBoost = MOBILE_TEXT_BOOST_PAGES.test(window.location.pathname) ? 1.3 : 1;
+
   function byId(record, id) {
     return record ? record.querySelector('[data-elem-id="' + id + '"]') : null;
   }
@@ -3930,6 +3938,155 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
     }
   }
 
+
+  /* Пересборка вертикального стека геройского блока на мобильном.
+
+     Зачем. Все элементы героя — абсолютно позиционированные .t396__elem с
+     координатами, подобранными вручную под ИСХОДНЫЙ размер шрифта. Стоит
+     увеличить текст, и блоки наезжают друг на друга: заголовок съедает
+     36 единиц зазора до описания, а описание при +30% перевёрстывается с
+     трёх строк на семь и уходит в строку с ценой.
+
+     Поэтому позицию каждого блока считаем от ИЗМЕРЕННОГО низа предыдущего,
+     а не берём из вёрстки. Наезд при таком порядке невозможен по
+     построению, какой бы длины ни оказался текст после перевода.
+
+     Единицы. Координаты .t396__elem заданы в системе артборда, а на экран
+     он выводится с масштабом scaleFor() — на 485px это 1.515. Меряем в
+     экранных пикселях, делим на масштаб, кладём обратно в CSS.
+
+     Зазоры взяты из исходной вёрстки, чтобы ритм остался прежним:
+     заголовок→описание 36, описание→цена 29, цена→рейтинг 19,
+     рейтинг→кнопка 15, кнопка→низ карточки 19. */
+  function restackMobileHero(record, artboard) {
+    var scale = scaleFor(artboard) || 1;
+    var toCss = function (px) { return px / scale; };
+
+    var title = byId(record, TITLE_ID);
+    var desc = byId(record, DESC_ID);
+    if (!title || !desc) return;
+
+    /* Описание скрипт на мобильном не трогает — размер приходит из CSS
+       Тильды. Читаем текущий и множим, иначе увеличится только заголовок. */
+    var dAtom = atom(desc);
+    if (dAtom) {
+      /* Запоминаем ИСХОДНЫЙ размер, а не факт применения: layoutHero на
+         каждом прогоне зовёт resetInlineText и стирает наш font-size, а
+         флаг «уже увеличено» пережил бы сброс и описание осталось бы
+         десятипиксельным. */
+      if (!dAtom.dataset.sbBaseFont) {
+        var cs0 = window.getComputedStyle(dAtom);
+        dAtom.dataset.sbBaseFont = String(px(cs0.fontSize) || 10);
+        dAtom.dataset.sbBaseLh = String(px(cs0.lineHeight) || px(cs0.fontSize) * 1.4 || 14);
+      }
+      var bf = parseFloat(dAtom.dataset.sbBaseFont);
+      var bl = parseFloat(dAtom.dataset.sbBaseLh);
+      setImportant(dAtom, 'font-size', (bf * mobileTextBoost).toFixed(2) + 'px');
+      setImportant(dAtom, 'line-height', (bl * mobileTextBoost).toFixed(2) + 'px');
+      setImportant(dAtom, 'white-space', 'normal');
+      setImportant(dAtom, 'overflow-wrap', 'break-word');
+    }
+
+    /* Группы, которые двигаются как одно целое: у строки с ценой и у
+       рейтинга несколько элементов на одной высоте. */
+    var metaGroup = [PRICE_ID, DURATION_ICON_ID, DURATION_TEXT_ID, LOCATION_ICON_ID, LOCATION_TEXT_ID]
+      .map(function (id) { return byId(record, id); }).filter(Boolean);
+    var rateGroup = [RATING_VALUE_ID, MAPS_LABEL_ID]
+      .map(function (id) { return byId(record, id); }).filter(Boolean)
+      .concat(Array.prototype.slice.call(record.querySelectorAll(RATING_ICON_SELECTOR)));
+    var btnGroup = [CTA_BG_ID, CTA_TEXT_ID]
+      .map(function (id) { return byId(record, id); }).filter(Boolean);
+
+    var placeGroup = function (nodes, topCss) {
+      nodes.forEach(function (n) { setImportant(n, 'top', topCss.toFixed(2) + 'px'); });
+    };
+
+    /* Считаем от ИСХОДНОГО top заголовка — единственной величины, которую
+       мы никогда не меняем. Первая версия мерила от текущего положения
+       элементов, а оно уже включало сдвиг предыдущего прогона: скрипт
+       вызывается на каждый resize, и герой за несколько проходов вырос с
+       677 до 2594 пикселей. Высоты брать по факту можно — они от позиции
+       не зависят.
+
+       Константы зазоров подобраны так, чтобы экранный ритм совпал с
+       исходным (24/74/28/23/29 px). Они меньше расстояний из вёрстки и
+       местами отрицательные, потому что коробка .t396__elem заметно выше
+       своего текста и сама даёт часть воздуха. */
+    var hCss = function (node) { return toCss(node.getBoundingClientRect().height); };
+    var gCss = function (nodes) {
+      var top = Infinity, bottom = -Infinity;
+      nodes.forEach(function (n) {
+        var r = n.getBoundingClientRect();
+        if (r.top < top) top = r.top;
+        if (r.bottom > bottom) bottom = r.bottom;
+      });
+      return bottom > top ? toCss(bottom - top) : 0;
+    };
+
+    var cursor = px(window.getComputedStyle(title).top) + hCss(title);
+
+    cursor += 0;
+    setImportant(desc, 'top', cursor.toFixed(2) + 'px');
+    cursor += hCss(desc);
+
+    if (metaGroup.length) {
+      cursor -= 14;
+      placeGroup(metaGroup, cursor);
+      cursor += gCss(metaGroup);
+    }
+    if (rateGroup.length) {
+      cursor += 12;
+      placeGroup(rateGroup, cursor);
+      cursor += gCss(rateGroup);
+    }
+    if (btnGroup.length) {
+      cursor += 6;
+      placeGroup(btnGroup, cursor);
+      cursor += gCss(btnGroup);
+    }
+    /* Корректирующий проход.
+
+       Константы зазоров подобраны на одной ширине, а коробка .t396__elem
+       растёт по-разному: на 375px заголовок переносится иначе и наезжал на
+       описание на 9 пикселей. Поэтому после расстановки меряем ФАКТИЧЕСКИЕ
+       экранные зазоры и дожимаем вниз те блоки, где не хватило, вместе со
+       всем, что под ними. Проход один и детерминированный: сдвигаем только
+       вниз и только на недостачу. */
+    var MIN_GAP_PX = 10;
+    var chain = [[desc], metaGroup, rateGroup, btnGroup].filter(function (g) { return g.length; });
+    var prevBottom = title.getBoundingClientRect().bottom;
+    var extra = 0;
+    chain.forEach(function (group) {
+      var top = Math.min.apply(null, group.map(function (n) { return n.getBoundingClientRect().top; }));
+      var deficit = MIN_GAP_PX - (top - prevBottom);
+      if (deficit > 0) {
+        extra += deficit;
+        group.forEach(function (n) {
+          setImportant(n, 'top', (px(window.getComputedStyle(n).top) + toCss(deficit)).toFixed(2) + 'px');
+        });
+      } else if (extra > 0) {
+        group.forEach(function (n) {
+          setImportant(n, 'top', (px(window.getComputedStyle(n).top) + toCss(extra)).toFixed(2) + 'px');
+        });
+      }
+      prevBottom = Math.max.apply(null, group.map(function (n) { return n.getBoundingClientRect().bottom; }));
+    });
+
+    var cursorEnd = cursor + toCss(extra);
+
+    /* Карточка и сам блок должны вырасти под новый стек, иначе кнопка
+       вылезет за фон. Высоту ставим в экранных пикселях: карточка и
+       .t396__artboard живут уже в них. */
+    var neededCss = cursorEnd + 19;
+    var neededPx = Math.ceil(neededCss * scale);
+    var card = byId(record, HERO_CARD_ID);
+    var cardTopPx = card ? card.getBoundingClientRect().top - record.getBoundingClientRect().top : 0;
+    if (card) setImportant(card, 'height', neededPx + 'px');
+    [artboard, record.querySelector('.t396__carrier'), record.querySelector('.t396__filter')].forEach(function (n) {
+      if (n) setImportant(n, 'height', Math.ceil(neededPx + cardTopPx * 2) + 'px');
+    });
+  }
+
   function layoutHero() {
     var record = findHeroRecord();
     if (!record) return;
@@ -3971,12 +4128,12 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
       [titleWrap, descWrap, priceWrap, durationText, locationText, mapsLabel, ratingValue, buttonText].forEach(resetInlineText);
       var heroAtom = atom(titleWrap);
       if (heroAtom) heroAtom.innerHTML = heroAtom.innerHTML.replace(/<br\s*\/?>/gi, ' ');
-      var heroMaxFont = isLocalizedPage ? 24 : 25;
+      var heroMaxFont = (isLocalizedPage ? 24 : 25) * mobileTextBoost;
       var heroLhRatio = isLocalizedPage ? 1.05 : 1.08;
       var heroTwoLine = Math.ceil(2 * heroMaxFont * heroLhRatio);
       var heroFont = fitText(titleWrap, {
         maxFont: heroMaxFont,
-        minFont: 14,
+        minFont: 14 * mobileTextBoost,
         maxHeight: heroTwoLine,
         lineHeightRatio: heroLhRatio,
       });
@@ -3984,6 +4141,7 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
       setImportant(atom(titleWrap), 'max-height', heroClip + 'px');
       setImportant(atom(titleWrap), 'overflow', 'hidden');
       layoutHeroMetaRow(record);
+      if (mobileTextBoost > 1) restackMobileHero(record, artboard);
       return;
     }
 
