@@ -46,20 +46,6 @@ const COPY = {
   f3: "Свободные дни остаются свободными",
   f3s: "Планировщик не забивает каждое утро — он оставляет место на ничего",
 
-  ftTrust: "Компания и доверие",
-  ftPrivacy: "Политика конфиденциальности",
-  ftSitemap: "Карта сайта",
-  ftRefund: "Условия возврата",
-  ftTerms: "Пользовательское соглашение",
-  ftAbout: "О SB Excursions",
-  ftFaq: "Вопросы и ответы",
-  ftContacts: "Контакты",
-  ftOffice: "Офис на Бали",
-  ftHours: "Поддержка ежедневно 7:00–22:00",
-  ftTours: "Популярные туры",
-  ftWrite: "Написать нам",
-  ftRights: "© 2021–2026 SB Excursions. Сделано для приключений на Бали",
-
   pageTitle: "Планировщик поездки на Бали: маршрут по дням бесплатно — SB Excursions",
   pageDesc: "Бесплатный планировщик поездки на Бали: даты, район и интересы — и маршрут по дням на карте острова, с реальными турами и ценами напрямую. Без регистрации.",
 };
@@ -79,19 +65,6 @@ const TRANSLATIONS = {
     [COPY.f2s]: "No platform commission and no prepayment: bookings are confirmed on WhatsApp",
     [COPY.f3]: "Free days stay free",
     [COPY.f3s]: "The planner does not fill every morning — it leaves room for nothing at all",
-    [COPY.ftTrust]: "Company & Trust",
-    [COPY.ftPrivacy]: "Privacy Policy",
-    [COPY.ftSitemap]: "SiteMap",
-    [COPY.ftRefund]: "Refund Policy",
-    [COPY.ftTerms]: "Terms & Conditions",
-    [COPY.ftAbout]: "About SB Excursions",
-    [COPY.ftFaq]: "FAQ",
-    [COPY.ftContacts]: "Contacts & Location",
-    [COPY.ftOffice]: "Bali Office",
-    [COPY.ftHours]: "Daily support 7:00–22:00",
-    [COPY.ftTours]: "Our Top Tours",
-    [COPY.ftWrite]: "Message us",
-    [COPY.ftRights]: "© 2021–2026 SB Excursions. Crafted for Bali adventures",
     [COPY.pageTitle]: "Bali Trip Planner — Free Day-by-Day Itinerary | SB Excursions",
     [COPY.pageDesc]: "Free Bali trip planner: set your dates, area and interests to get a day-by-day itinerary on the island map — 28 real tours, direct prices, no signup.",
   },
@@ -109,19 +82,6 @@ const TRANSLATIONS = {
     [COPY.f2s]: "Sin comisión de plataformas y sin pago por adelantado: se confirma por WhatsApp",
     [COPY.f3]: "Los días libres siguen libres",
     [COPY.f3s]: "El planificador no llena todas las mañanas: deja sitio para no hacer nada",
-    [COPY.ftTrust]: "Empresa y confianza",
-    [COPY.ftPrivacy]: "Política de privacidad",
-    [COPY.ftSitemap]: "Mapa del sitio",
-    [COPY.ftRefund]: "Política de reembolso",
-    [COPY.ftTerms]: "Términos y condiciones",
-    [COPY.ftAbout]: "Sobre SB Excursions",
-    [COPY.ftFaq]: "Preguntas frecuentes",
-    [COPY.ftContacts]: "Contacto y ubicación",
-    [COPY.ftOffice]: "Oficina en Bali",
-    [COPY.ftHours]: "Atención todos los días 7:00–22:00",
-    [COPY.ftTours]: "Tours más populares",
-    [COPY.ftWrite]: "Escríbenos",
-    [COPY.ftRights]: "© 2021–2026 SB Excursions. Hecho para aventuras en Bali",
     [COPY.pageTitle]: "Planificador de viaje a Bali gratis — SB Excursions",
     [COPY.pageDesc]: "Planificador de viaje a Bali gratis: fechas, zona e intereses — itinerario día a día en el mapa de la isla con tours reales y precios directos. Sin registro.",
   },
@@ -139,19 +99,6 @@ const TRANSLATIONS = {
     [COPY.f2s]: "Sans commission de plateforme ni acompte : la réservation se confirme sur WhatsApp",
     [COPY.f3]: "Les journées libres restent libres",
     [COPY.f3s]: "Le planificateur ne remplit pas chaque matin : il laisse de la place pour rien",
-    [COPY.ftTrust]: "Société et confiance",
-    [COPY.ftPrivacy]: "Politique de confidentialité",
-    [COPY.ftSitemap]: "Plan du site",
-    [COPY.ftRefund]: "Politique de remboursement",
-    [COPY.ftTerms]: "Conditions générales",
-    [COPY.ftAbout]: "À propos de SB Excursions",
-    [COPY.ftFaq]: "Questions fréquentes",
-    [COPY.ftContacts]: "Contact et adresse",
-    [COPY.ftOffice]: "Bureau à Bali",
-    [COPY.ftHours]: "Assistance tous les jours 7h00–22h00",
-    [COPY.ftTours]: "Circuits les plus demandés",
-    [COPY.ftWrite]: "Écrivez-nous",
-    [COPY.ftRights]: "© 2021–2026 SB Excursions. Conçu pour les aventures à Bali",
     [COPY.pageTitle]: "Planificateur de voyage à Bali gratuit — SB Excursions",
     [COPY.pageDesc]: "Planificateur de voyage à Bali gratuit : dates, quartier et envies — un itinéraire jour par jour sur la carte de l'île, vrais circuits et prix directs. Sans inscription.",
   },
@@ -169,19 +116,6 @@ const TRANSLATIONS = {
     [COPY.f2s]: "没有平台佣金，也无需预付：预订在 WhatsApp 上确认",
     [COPY.f3]: "空闲日就留作空闲",
     [COPY.f3s]: "规划器不会占满每个早晨，它会留出什么都不做的时间",
-    [COPY.ftTrust]: "公司与信任",
-    [COPY.ftPrivacy]: "隐私政策",
-    [COPY.ftSitemap]: "网站地图",
-    [COPY.ftRefund]: "退款政策",
-    [COPY.ftTerms]: "条款与条件",
-    [COPY.ftAbout]: "关于 SB Excursions",
-    [COPY.ftFaq]: "常见问题",
-    [COPY.ftContacts]: "联系方式与地址",
-    [COPY.ftOffice]: "巴厘岛办公室",
-    [COPY.ftHours]: "每日客服 7:00–22:00",
-    [COPY.ftTours]: "热门路线",
-    [COPY.ftWrite]: "联系我们",
-    [COPY.ftRights]: "© 2021–2026 SB Excursions. 为巴厘岛的旅程而做",
     [COPY.pageTitle]: "巴厘岛行程规划器：免费逐日行程 — SB Excursions",
     [COPY.pageDesc]: "免费巴厘岛行程规划器：填写日期、住宿区域和兴趣，即可在岛屿地图上生成逐日行程——真实路线，直接价格，无需注册。",
   },
@@ -258,32 +192,6 @@ const CSS = `
 .sbp-hero__chip.c5{width:min(10vw,124px);aspect-ratio:1/1;top:13%;left:-1%;rotate:7deg;animation-delay:-5s}
 
 
-/* ── Футер: содержимое родного подвала сайта, своей вёрсткой ──────────
-   Тильдовский футер требует её CSS/JS-стек с чужого CDN — сотни килобайт
-   на самодостаточную страницу ради подвала. Шапку планировщик тоже рисует
-   сам, так что футер собран в том же ключе.                            */
-.sbp-foot{
-  --ink:#141412; --muted:#75716a; --line:rgba(20,20,18,.12);
-  border-top:1px solid var(--line);background:#fbfaf8;color:var(--ink);
-  padding:clamp(40px,5vw,64px) 0 28px;
-  font-family:'Manrope','Cina GEO','TildaSans',-apple-system,BlinkMacSystemFont,Arial,sans-serif
-}
-.sbp-foot__wrap{max-width:1200px;margin:0 auto;padding:0 24px}
-.sbp-foot__cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
-.sbp-foot__col h3{margin:0 0 14px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.sbp-foot__col ul{margin:0;padding:0;list-style:none;display:grid;gap:9px}
-.sbp-foot__col a{color:var(--ink);text-decoration:none;font-size:14.5px;line-height:1.45}
-.sbp-foot__col a:hover{text-decoration:underline}
-.sbp-foot__col p{margin:0 0 9px;font-size:14.5px;line-height:1.45;color:var(--muted)}
-.sbp-foot__col p b{display:block;color:var(--ink);font-weight:600;margin-bottom:2px}
-.sbp-foot__bottom{
-  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;
-  margin-top:clamp(32px,4vw,48px);padding-top:20px;border-top:1px solid var(--line);
-  font-size:13px;color:var(--muted)
-}
-@media (max-width:900px){.sbp-foot__cols{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}}
-@media (max-width:560px){.sbp-foot__cols{grid-template-columns:1fr}}
-
 @keyframes sbp-float{0%,100%{translate:0 0}50%{translate:0 -12px}}
 @keyframes sbp-shift{to{background-position:300% 0}}
 
@@ -342,71 +250,6 @@ ${MARK_CLOSE}
 /* Ссылки внутри сайта уходят с языком страницы. Пути шаблонные: {L}
    подменяется на лету инлайновым скриптом, потому что язык планировщик
    узнаёт только из адреса. */
-function renderFooter() {
-  const li = (href, key) => `        <li><a href="${href}" data-t>${COPY[key]}</a></li>`;
-  const wa = "https://wa.me/6285333685020?text=" +
-    encodeURIComponent("Hello! I'm interested in your excursions. Could you help me with the booking details?").replace(/'/g, "%27");
-
-  return `
-<footer class="sbp-foot">
-  <div class="sbp-foot__wrap">
-    <div class="sbp-foot__cols">
-      <div class="sbp-foot__col">
-        <h3 data-t>${COPY.ftTrust}</h3>
-        <ul>
-${li("/bali/{L}/privacy-policy", "ftPrivacy")}
-${li("/sitemap.xml", "ftSitemap")}
-${li("/bali/{L}/terms#refund", "ftRefund")}
-${li("/bali/{L}/terms", "ftTerms")}
-${li("/bali/{L}/about", "ftAbout")}
-${li("/bali/{L}/faq", "ftFaq")}
-        </ul>
-      </div>
-      <div class="sbp-foot__col">
-        <h3 data-t>${COPY.ftContacts}</h3>
-        <p><b data-t>${COPY.ftOffice}</b>Jl. Petitenget, Seminyak, Bali, Indonesia</p>
-        <p data-t>${COPY.ftHours}</p>
-        <ul>
-          <li><a href="mailto:info@sbexcursion.com">info@sbexcursion.com</a></li>
-          <li><a href="tel:+6285333685020">+62 853 3368 5020</a></li>
-        </ul>
-      </div>
-      <div class="sbp-foot__col">
-        <h3 data-t>${COPY.ftTours}</h3>
-        <ul>
-          <li><a href="/bali/{L}/tours/nusa-penida-manta-rays-point">Manta Rays Tour</a></li>
-          <li><a href="/bali/{L}/tours/ubud-highlights-tour">Ubud Highlights</a></li>
-          <li><a href="/bali/{L}/tours/mount-batur-sunrise-hike">Mount Batur Hike</a></li>
-          <li><a href="/bali/{L}/tours/nusa-penida-west-tour">Nusa Penida West</a></li>
-        </ul>
-      </div>
-      <div class="sbp-foot__col">
-        <h3 data-t>${COPY.ftWrite}</h3>
-        <ul>
-          <li><a href="${wa}" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li><a href="https://t.me/SurfBase" target="_blank" rel="noopener">Telegram</a></li>
-          <li><a href="https://www.instagram.com/dubai_sb_excursions" target="_blank" rel="noopener">Instagram</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="sbp-foot__bottom">
-      <span data-t>${COPY.ftRights}</span>
-      <span>Jl. Petitenget, Seminyak, Bali</span>
-    </div>
-  </div>
-</footer>
-<script>
-  /* Подставляем язык в шаблонные пути футера. Значение берём из адреса —
-     тем же способом, что и сам планировщик. */
-  (function () {
-    var m = location.search.match(/[?&]lang=(en|ru|zh|es|fr)(?:&|$)/);
-    var lang = m ? m[1] : "ru";
-    document.querySelectorAll('.sbp-foot a[href*="{L}"]').forEach(function (a) {
-      a.setAttribute("href", a.getAttribute("href").replace("{L}", lang));
-    });
-  })();
-</script>`;
-}
 
 /* ─── index.html ─────────────────────────────────────────────────────── */
 
@@ -426,16 +269,20 @@ const anchor = /<main class="app"[^>]*>/;
 if (!anchor.test(html)) throw new Error('не нашёл <main class="app"> в ai-planner/index.html');
 html = html.replace(anchor, `${renderHero()}\n  <main class="app" id="sbp-start">`);
 
-/* Границей служит собственный инлайновый скрипт футера. Ловить до
-   </body> нельзя: футер стоит ВЫШЕ скриптов планировщика, и жадный
-   хвост сносил их вместе с ним на втором прогоне. */
+/* Снос самодельного футера планировщика.
+
+   Футер убран по просьбе владельца: подвал на сайте уже есть, а этот был
+   собран отдельной вёрсткой, потому что тильдовский тянет за собой чужой
+   CSS/JS-стек. Владелец предпочёл вовсе без подвала, чем со вторым.
+
+   Строку оставляем, хотя рендер уже удалён: ai-planner/index.html лежит в
+   репозитории с прошлой сборки и футер в нём есть. Без этой замены он
+   пережил бы пересборку.
+
+   Границей служит инлайновый скрипт футера. Ловить до </body> нельзя:
+   футер стоял ВЫШЕ скриптов планировщика, и жадный хвост сносил их
+   вместе с ним. */
 html = html.replace(/<footer class="sbp-foot">[\s\S]*?<\/footer>\s*<script>[\s\S]*?<\/script>\s*/, "");
-/* Футер идёт ПЕРЕД скриптами планировщика, а не перед </body>: они
-   выполняются синхронно, и разметки после них в DOM ещё нет — перевод
-   по data-t просто не находил футер. */
-const scriptsAt = html.search(/[ \t]*<script src="\/ai-planner\/vendor/);
-if (scriptsAt < 0) throw new Error("не нашёл блок скриптов планировщика");
-html = html.slice(0, scriptsAt) + renderFooter() + "\n\n" + html.slice(scriptsAt);
 
 /* ─── SEO-шапка ────────────────────────────────────────────────────────
    Статический title был русским для всех: для человека, гуглящего
