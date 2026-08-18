@@ -5017,6 +5017,10 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
      Множитель применяется и к заголовку, и к описанию. */
   var MOBILE_TEXT_BOOST_PAGES = /\/bali\/(?:en|ru|es|fr|zh)\/tours\/mount-batur-sunrise-hike$/;
   var mobileTextBoost = MOBILE_TEXT_BOOST_PAGES.test(window.location.pathname) ? 1.3 : 1;
+  /* Отступ кнопки от низа кадра на мобильном, экранные пиксели. */
+  var BOTTOM_INSET_PX = 13;
+  /* Вертикальное кадрирование фотографии героя на мобильном. */
+  var HERO_BG_Y = '42%';
 
   function byId(record, id) {
     return record ? record.querySelector('[data-elem-id="' + id + '"]') : null;
@@ -5369,17 +5373,82 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
 
     var cursorEnd = cursor + toCss(extra);
 
-    /* Карточка и сам блок должны вырасти под новый стек, иначе кнопка
-       вылезет за фон. Высоту ставим в экранных пикселях: карточка и
-       .t396__artboard живут уже в них. */
-    var neededCss = cursorEnd + 19;
-    var neededPx = Math.ceil(neededCss * scale);
-    var card = byId(record, HERO_CARD_ID);
-    var cardTopPx = card ? card.getBoundingClientRect().top - record.getBoundingClientRect().top : 0;
-    if (card) setImportant(card, 'height', neededPx + 'px');
-    [artboard, record.querySelector('.t396__carrier'), record.querySelector('.t396__filter')].forEach(function (n) {
-      if (n) setImportant(n, 'height', Math.ceil(neededPx + cardTopPx * 2) + 'px');
-    });
+    /* Кнопка прижимается к низу кадра.
+
+       Владелец: «унеси всё вниз, отступ снизу 13 пикселей». До этого снизу
+       оставалось 110 — стек висел в верхней половине кадра, а под кнопкой
+       зияла пустая фотография.
+
+       Высоту карточки НЕ трогаем: фотография должна остаться прежней.
+       Вместо этого опускаем весь стек целиком на разницу. Если же стек
+       наоборот не влезает, карточку приходится растить — иначе кнопка
+       уйдёт за пределы фона. */
+    var cardEl = byId(record, HERO_CARD_ID);
+    /* Кадрирование фотографии героя.
+
+       Владелец: «у фотографии сверху белое пространство, можно убрать?».
+       Полей там нет — сверху 10px, по бокам 11-12, то есть рамка ровная.
+       Бледной была сама фотография: Тильда увеличивает фон втрое
+       (background-size 309%) и прижимает его к ВЕРХНЕМУ краю (позиция 0%),
+       поэтому в кадр попадало одно предрассветное небо.
+
+       Сдвигаем кадр вниз, на склон. Горизонталь не трогаем — она задана
+       фокусной точкой снимка. */
+    /* Белая полоса над фотографией — это padding-top: 10px у самого блока
+       rec2121233163, а не поле карточки: её собственный top уже 0, и верхние
+       углы не скруглены, то есть вёрстка изначально задумана впритык.
+       Снимаем padding, кадр встаёт под самую шапку. Боковые поля остаются:
+       они заданы шириной карточки, а не этим отступом. */
+    setImportant(record, 'padding-top', '0px');
+
+    var heroBg = atom(cardEl);
+    if (heroBg) {
+      var bgPos = window.getComputedStyle(heroBg).backgroundPosition.split(' ');
+      if (bgPos.length === 2) setImportant(heroBg, 'background-position', bgPos[0] + ' ' + HERO_BG_Y);
+    }
+
+    if (cardEl && btnGroup.length) {
+      var stack = [[title], [desc], metaGroup, rateGroup, btnGroup];
+      var moveStack = function (cssDelta) {
+        stack.forEach(function (group) {
+          group.forEach(function (n) {
+            if (n) setImportant(n, 'top', (px(window.getComputedStyle(n).top) + cssDelta).toFixed(2) + 'px');
+          });
+        });
+      };
+      var bottomGapPx = function () {
+        return cardEl.getBoundingClientRect().bottom - btnGroup[0].getBoundingClientRect().bottom;
+      };
+
+      /* Двигаем стек в ОБЕ стороны до схождения.
+
+         Первая версия умела только опускать, а промах компенсировала
+         ростом карточки — и на следующем прогоне всё повторялось: цикл и
+         рост карточки гоняли друг друга, отступ застревал на 103px вместо
+         13. Знаковый шаг убирает перелёт за один-два прохода. */
+      for (var pass = 0; pass < 6; pass++) {
+        var diff = bottomGapPx() - BOTTOM_INSET_PX;
+        if (Math.abs(diff) <= 1) break;
+        moveStack(toCss(diff));
+      }
+
+      /* Если стек после этого упёрся в верх кадра — значит текста больше,
+         чем помещается, и карточку всё-таки надо растить. Растим один раз
+         и досаживаем кнопку на место. */
+      var headroomPx = title.getBoundingClientRect().top - cardEl.getBoundingClientRect().top;
+      if (headroomPx < BOTTOM_INSET_PX) {
+        var deficit = BOTTOM_INSET_PX - headroomPx;
+        setImportant(cardEl, 'height', Math.ceil(cardEl.getBoundingClientRect().height + deficit) + 'px');
+        [artboard, record.querySelector('.t396__carrier'), record.querySelector('.t396__filter')].forEach(function (n) {
+          if (n) setImportant(n, 'height', Math.ceil(n.getBoundingClientRect().height + deficit) + 'px');
+        });
+        for (var pass2 = 0; pass2 < 4; pass2++) {
+          var d2 = bottomGapPx() - BOTTOM_INSET_PX;
+          if (Math.abs(d2) <= 1) break;
+          moveStack(toCss(d2));
+        }
+      }
+    }
   }
 
   function layoutHero() {
