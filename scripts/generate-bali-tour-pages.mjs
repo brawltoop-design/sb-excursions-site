@@ -39050,6 +39050,9 @@ function normalizeBrandName(text) {
   return String(text)
     .replace(/(?:СБ|SB)\s*[-–—]?\s*Экскурси[а-яё]*/giu, BRAND_NAME)
     .replace(/SB\s*[-–—]?\s*(?:Excursiones|Excursões|Escursioni)/giu, BRAND_NAME)
+    /* Немецкий переводит и само слово, и дефис приклеивает: «SB-Ausflüge»
+       встретилось 500 раз на первой же волне. Бренд не переводится. */
+    .replace(/SB\s*[-–—]?\s*(?:Ausflüge|Ausfluege|Exkursionen|Touren|Reisen)/giu, BRAND_NAME)
     .replace(/(?:Excursiones|Excursões|Escursioni|Excursions)\s+(?:de|del|di)\s+SB/giu, BRAND_NAME)
     .replace(/SB\s*(?:短途旅行|游览|旅游|远足|观光)/gu, BRAND_NAME);
 }
