@@ -36,9 +36,9 @@ function rewrite(urlPath) {
   if (urlPath === "/bali/en/tour-prices") return "/bali-prices-index.html";
   if (urlPath === "/work-with-us") return "/work-with-us.html";
   if ((m = urlPath.match(/^\/(ru|es|fr|zh)\/work-with-us$/))) return `/work-with-us-${m[1]}.html`;
-  if ((m = urlPath.match(/^\/bali\/(en|ru|es|fr|zh)\/privacy-policy$/)) || urlPath === "/privacy-policy") return "/bali-privacy.html";
-  if ((m = urlPath.match(/^\/bali\/(en|ru|es|fr|zh)\/terms$/)) || urlPath === "/terms") return "/bali-terms.html";
-  if ((m = urlPath.match(/^\/bali\/(en|ru|es|fr|zh)\/review$/))) return "/bali-review.html";
+  if ((m = urlPath.match(/^\/bali\/(en|ru|es|fr|zh|de)\/privacy-policy$/)) || urlPath === "/privacy-policy") return "/bali-privacy.html";
+  if ((m = urlPath.match(/^\/bali\/(en|ru|es|fr|zh|de)\/terms$/)) || urlPath === "/terms") return "/bali-terms.html";
+  if ((m = urlPath.match(/^\/bali\/(en|ru|es|fr|zh|de)\/review$/))) return "/bali-review.html";
   if (urlPath === "/bali/en/about") return "/bali-about.html";
   if (urlPath === "/bali/en/faq") return "/bali-faq.html";
   if ((m = urlPath.match(/^\/bali\/(ru|es|fr|zh)\/(about|faq|guides)$/))) return `/bali-${m[2]}-${m[1]}.html`;

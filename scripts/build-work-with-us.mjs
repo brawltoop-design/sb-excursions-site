@@ -25,6 +25,9 @@ import { buildChromedPage } from "./sb-tilda-chrome.mjs";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const SITE = "https://www.sbexcursion.com";
+/* Немецкого здесь нет намеренно: тексты этой страницы написаны руками,
+   а не переведены машиной, и в первую немецкую волну она не входит.
+   Добавлять код языка сюда можно только вместе с блоком COPY.de. */
 const LANGS = ["en", "ru", "es", "fr", "zh"];
 const routeOf = (l) => (l === "en" ? "/work-with-us" : `/${l}/work-with-us`);
 const fileOf = (l) => (l === "en" ? "work-with-us.html" : `work-with-us-${l}.html`);

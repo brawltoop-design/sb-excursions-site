@@ -170,12 +170,9 @@ const JOURNAL_HUB_ROUTE = "/bali/en/journal";
 // нужен карте сайта — иначе эти страницы в ней отсутствуют и Google находит их
 // только по внутренним ссылкам.
 const LEGACY_GUIDE_SLUGS = [
-  "bali-canggu-beaches-guide",
   "bali-tour-prices-2026-real-costs",
-  "gili-islands-day-trip-from-bali",
   "mount-batur-sunrise-jeep-vs-hike",
   "nusa-penida-tours-compared",
-  "swimming-with-whale-sharks-indonesia",
 ];
 const BALI_LANGUAGE_OPTIONS = [
   { code: "en", label: "English" },
@@ -183,7 +180,157 @@ const BALI_LANGUAGE_OPTIONS = [
   { code: "ru", label: "Русский" },
   { code: "es", label: "Español" },
   { code: "fr", label: "Français" },
+  { code: "de", label: "Deutsch" },
 ];
+
+/* Немецкий раскатывается волной, а не сразу на весь сайт.
+ *
+ * Основание — цифры GSC за неделю: Германия 181 показ, Швейцария 87,
+ * Австрия 14, итого 282. Причём позиции там уже 7,8-7,9, то есть первая
+ * страница выдачи: ранжирование есть, мешает только английский заголовок
+ * в сниппете. CTR там 1,10 процента против французских 1,77 на позиции
+ * вдвое худшей.
+ *
+ * Почему не всё сразу: на 14 августа из 1399 страниц 26 «обнаружена, не
+ * проиндексирована» и 22 «просканирована, не проиндексирована». Бэклинков
+ * у домена нет, бюджет обхода конечен. Полный немецкий это плюс 268
+ * страниц, рост на пятую часть; вываливать столько на непереваренный сайт
+ * значит размножить непроиндексированные, а не показы.
+ *
+ * Состав волны отобран по данным, а не на глаз: все 28 туров, где деньги,
+ * плюс 72 гайда по показам GSC и цитированиям Copilot. Статьи-спутники
+ * туров сюда НЕ входят — их три на тур, и между собой они пересекаются на
+ * две пятых по шестисловным фразам; плодить эти дубли ещё в одном языке
+ * значит тратить бюджет обхода на то, что Google и так берёт неохотно.
+ *
+ * Вторая волна — после трёх недель наблюдения: индексируются ли эти сто и
+ * растёт ли CTR в Германии. Расширять список здесь.
+ */
+const DE_WAVE_TOURS = new Set([
+  /* bali-unesco сюда не входит: её тексты переведены руками через
+     UNESCO_PAGE_TRANSLATIONS, где есть только русский, и генератор для
+     остальных языков возвращает null. Немецкий появится вместе с ручным
+     переводом, не раньше. */
+  "atv-quad-bikes",
+  "atv-ride-adventure",
+  "bali-airport-transfer",
+  "bali-instagram-highlights-tour",
+  "blue-lagoon-snorkeling",
+  "dolphin-sunrise-city-tour",
+  "east-bali-instagram-tour",
+  "fast-boat-transfer-bali",
+  "gili-island-tour",
+  "gili-islands-getaway",
+  "mount-batur-sunrise-hike",
+  "mount-batur-sunrise-jeep-hot-spring",
+  "mount-batur-sunrise-jeep-tour",
+  "north-bali-lovina-dolphins-tour",
+  "nusa-penida-east-tour",
+  "nusa-penida-full-day-tour",
+  "nusa-penida-manta-rays-point",
+  "nusa-penida-private-day-tour-manta-snorkeling",
+  "nusa-penida-west-tour",
+  "private-car-with-driver-bali",
+  "sumbawa-whale-shark-snorkeling-trip",
+  "sunset-cruise-bali",
+  "surf-lesson-experience",
+  "tanah-lot-bedugul-tour",
+  "ubud-highlights-tour",
+  "ubud-instagram-tour",
+  "white-water-rafting",
+]);
+
+const DE_WAVE_GUIDES = new Set([
+  /* Трёх легаси-гайдов здесь нет намеренно: bali-canggu-beaches-guide,
+     gili-islands-day-trip-from-bali и swimming-with-whale-sharks-indonesia
+     живут отдельными HTML вне генератора (LEGACY_GUIDE_SLUGS), и языковые
+     версии для них он не собирает. Оставь их в списке — карта сайта позовёт
+     Google на четыре несуществующих адреса. */
+  "best-time-to-visit-bali-month-by-month",
+  "bali-safety-scams-and-health",
+  "how-much-does-a-bali-trip-cost",
+  "nusa-penida-with-kids",
+  "bali-canggu-beaches-guide",
+  "is-mount-batur-safe",
+  "bali-tours-for-seniors",
+  "sanur-to-nusa-penida-fast-boat",
+  "bali-private-driver-cost",
+  "kelingking-beach-guide",
+  "nusa-penida-day-trip-from-uluwatu",
+  "gili-islands-day-trip-from-bali",
+  "best-beaches-uluwatu-bukit",
+  "best-white-sand-beaches-bali",
+  "ubud-vs-uluwatu",
+  "blue-lagoon-padang-bai-guide",
+  "nusa-dua-vs-seminyak",
+  "mount-batur-vs-mount-agung",
+  "where-to-stay-bali-first-time",
+  "bali-tourist-tax-levy-guide",
+  "best-beaches-bali-crystal-clear-water",
+  "best-sunset-spots-bali",
+  "best-beaches-canggu-seminyak",
+  "how-to-get-to-nusa-penida",
+  "white-water-rafting-bali-guide",
+  "kuta-vs-seminyak",
+  "tanah-lot-vs-uluwatu-sunset",
+  "airport-to-ubud-transfer",
+  "canggu-vs-kuta",
+  "sanur-vs-seminyak",
+  "sanur-vs-uluwatu",
+  "nusa-penida-day-trip-from-sanur",
+  "seminyak-vs-uluwatu",
+  "canggu-vs-uluwatu",
+  "is-nusa-penida-worth-it",
+  "whale-shark-season-sumbawa",
+  "things-to-do-seminyak-bali-guide",
+  "diamond-beach-nusa-penida-guide",
+  "calm-beaches-bali-kids",
+  "bali-snorkeling-for-beginners",
+  "mount-batur-hot-springs-guide",
+  "are-gili-islands-safe",
+  "bali-airport-transfer-guide",
+  "can-you-hike-mount-batur-without-a-guide",
+  "grab-gojek-or-private-driver-bali",
+  "canggu-vs-seminyak",
+  "tirta-empul-guide",
+  "bali-atv-tours-guide",
+  "tukad-cepung-waterfall-guide",
+  "lovina-dolphin-tour-worth-it",
+  "amed-tulamben-snorkeling",
+  "surf-lessons-bali-beginners",
+  "is-mount-batur-an-active-volcano",
+  "mount-batur-sunrise-from-ubud",
+  "is-nusa-penida-safe",
+  "are-gili-islands-worth-it",
+  "mount-batur-vs-bromo-rinjani-ijen",
+  "nusa-penida-vs-nusa-lembongan",
+  "mount-batur-sunrise-from-south-bali",
+  "swimming-with-whale-sharks-indonesia",
+  "ubud-in-one-day",
+  "bali-7-day-itinerary",
+  "bali-day-trips-with-kids",
+  "snorkeling-with-turtles-bali",
+  "how-to-get-around-bali",
+  "seminyak-vs-ubud",
+  "broken-beach-angels-billabong",
+  "best-beaches-nusa-penida",
+  "nusa-penida-without-a-tour",
+  "bali-itinerary-10-days",
+  "gili-air-vs-gili-trawangan",
+  "nusa-penida-one-day-itinerary",
+]);
+
+/* Покрыт ли слаг этим языком. Для всех языков кроме немецкого — всегда да. */
+function localeCoversTour(locale, slug) {
+  return locale !== "de" || DE_WAVE_TOURS.has(slug);
+}
+function localeCoversGuide(locale, slug) {
+  return locale !== "de" || DE_WAVE_GUIDES.has(slug);
+}
+/* Статьи-спутники туров немецкий не получает вовсе — см. комментарий выше. */
+function localeCoversJournalArticle(locale) {
+  return locale !== "de";
+}
 const TRANSLATION_CACHE_PATH = path.join(projectRoot, ".generated", "bali-translation-cache.json");
 const JOURNAL_PUBLISHED_DATE = "2026-05-21";
 // Автор статей журнала. Фото добавится отдельным полем image, когда владелец
@@ -7652,14 +7799,14 @@ const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
   var PROMO_MEDIA_IDS = ['1721248463091', '1721248463134', '1721248463127', '1721248463131', '1721248463123', '1721248463137'];
   var RATING_ICON_SELECTOR = '[data-elem-id^="172124074006"]';
   var isLocalizedPage = (document.documentElement.getAttribute('lang') || 'en').toLowerCase() !== 'en';
-  var isUnescoHeroPage = /\\/bali\\/(?:en|ru|es|fr|zh)\\/tours\\/bali-unesco$/.test(window.location.pathname);
+  var isUnescoHeroPage = /\\/bali\\/(?:en|ru|es|fr|zh|de)\\/tours\\/bali-unesco$/.test(window.location.pathname);
 
   /* Увеличенный текст героя на мобильном.
      Владелец: «шрифт очень маленький» — на телефоне описание рендерилось
      в 10px, заголовок в 25px. Обкатано на странице похода на Батур, затем
      раскатано на ВСЕ туровые страницы и все пять языков.
      Множитель применяется и к заголовку, и к описанию. */
-  var MOBILE_TEXT_BOOST_PAGES = /\\/bali\\/(?:en|ru|es|fr|zh)\\/tours\\/[a-z0-9-]+$/;
+  var MOBILE_TEXT_BOOST_PAGES = /\\/bali\\/(?:en|ru|es|fr|zh|de)\\/tours\\/[a-z0-9-]+$/;
   var mobileTextBoost = MOBILE_TEXT_BOOST_PAGES.test(window.location.pathname) ? 1.3 : 1;
   /* Отступ кнопки от низа кадра на мобильном, экранные пиксели. */
   var BOTTOM_INSET_PX = 13;
@@ -38907,6 +39054,25 @@ function normalizeBrandName(text) {
     .replace(/SB\s*(?:短途旅行|游览|旅游|远足|观光)/gu, BRAND_NAME);
 }
 
+/* Покрыт ли конкретный АДРЕС этим языком.
+
+   Нужен там, где мы не знаем тип страницы заранее: переключатель языков,
+   hreflang и карта сайта строятся из маршрута. Без него немецкий предлагался
+   бы на всех 1400 страницах, а ссылки вели бы в 404 — и в переключателе, и,
+   что хуже, в hreflang, где Google такое считает ошибкой разметки. */
+function localeCoversRoute(route, locale) {
+  if (locale !== "de") return true;
+  const text = String(route || "");
+  let match = text.match(/\/bali\/[a-z-]+\/tours\/([a-z0-9-]+)$/);
+  if (match) return DE_WAVE_TOURS.has(match[1]);
+  // статья-спутник тура: /bali/xx/journal/<тур>/<тип> — немецкий их не получает
+  if (/\/bali\/[a-z-]+\/journal\/[a-z0-9-]+\/[a-z0-9-]+$/.test(text)) return false;
+  match = text.match(/\/bali\/[a-z-]+\/journal\/([a-z0-9-]+)$/);
+  if (match) return DE_WAVE_GUIDES.has(match[1]);
+  // главная, хаб журнала, about, faq, guides — немецкие версии есть у всех
+  return true;
+}
+
 function localizedMainPageRoute(locale = "en") {
   return `/bali/${locale}/main-page`;
 }
@@ -39049,7 +39215,7 @@ async function translateStandaloneHtmlVisibleText(html, locale = "en") {
 }
 
 function renderJournalLanguageSwitcherMarkup(locale = "en", currentRoute = localizedJournalHubRoute(locale), variant = "desktop") {
-  const routes = BALI_LANGUAGE_OPTIONS.map((item) => ({
+  const routes = BALI_LANGUAGE_OPTIONS.filter((item) => localeCoversRoute(currentRoute, item.code)).map((item) => ({
     ...item,
     href: switchBaliRouteLocale(currentRoute, item.code),
     active: item.code === locale,
@@ -39383,7 +39549,7 @@ async function buildAutoLocalizedTour(baseTour, locale = "en") {
 function buildUnescoLanguageSwitcherAssets(locale = "en", routeBuilder = (code) => `/bali/${code}/tours/bali-unesco`) {
   const currentLocale = BALI_LANGUAGE_OPTIONS.find((item) => item.code === locale)?.code || "en";
   const currentUi = sharedBaliUiLabels(currentLocale);
-  const localeRoutes = BALI_LANGUAGE_OPTIONS.map((item) => ({
+  const localeRoutes = BALI_LANGUAGE_OPTIONS.filter((item) => localeCoversRoute(routeBuilder(item.code), item.code)).map((item) => ({
     ...item,
     href: routeBuilder(item.code),
     active: item.code === currentLocale,
@@ -40901,6 +41067,7 @@ async function generatePages() {
 
   for (const locale of BALI_LANGUAGE_OPTIONS.map((item) => item.code).filter((code) => code !== "en")) {
     for (const tour of tours) {
+      if (!localeCoversTour(locale, tour.slug)) continue;
       const localizedTour = await buildAutoLocalizedTour(tour, locale);
       if (!localizedTour) continue;
       const localizedHtml = renderPage(localizedTour, allTours);
@@ -41083,6 +41250,7 @@ async function main() {
   for (const target of journalTargets) {
     const englishJournalHtml = fs.readFileSync(target.filePath, "utf8");
     for (const locale of localizedStaticLocales) {
+      if (!localeCoversJournalArticle(locale)) continue;
       const localizedRoute = localizedBaliInternalRoute(target.article.route, locale);
       const localizedJournalHtml = await buildLocalizedStaticHtmlPage(englishJournalHtml, locale, {
         shell: "journal",
@@ -41098,6 +41266,7 @@ async function main() {
   for (const target of guideTargets) {
     const englishGuideHtml = fs.readFileSync(target.filePath, "utf8");
     for (const locale of localizedStaticLocales) {
+      if (!localeCoversGuide(locale, target.article.guide.slug)) continue;
       const localizedRoute = localizedBaliInternalRoute(target.article.route, locale);
       const localizedGuideHtml = await buildLocalizedStaticHtmlPage(englishGuideHtml, locale, {
         shell: "journal",
@@ -41170,11 +41339,17 @@ function writeSitemap() {
       .join("");
 
   const groupEntries = (enPath) => {
-    const alternates = langs
+    /* Немецкий раскатан не на весь сайт, поэтому список языков считается для
+       КАЖДОГО адреса отдельно. Иначе карта сайта звала бы Google на 1300
+       несуществующих /bali/de/, а hreflang ссылался бы на 404 — для Google
+       это ошибка разметки, и страдают от неё все языки страницы, не только
+       немецкий. */
+    const pageLangs = langs.filter((code) => localeCoversRoute(localizedPath(code, enPath), code));
+    const alternates = pageLangs
       .map((code) => `\n    <xhtml:link rel="alternate" hreflang="${code}" href="${SITE_URL}${localizedPath(code, enPath)}"/>`)
       .join("");
     const xDefault = `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}${enPath}"/>`;
-    return langs
+    return pageLangs
       .map(
         (code) => `  <url>
     <loc>${SITE_URL}${localizedPath(code, enPath)}</loc>${alternates}${xDefault}${imageTags(enPath)}

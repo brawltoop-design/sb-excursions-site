@@ -31,7 +31,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const SITE = "https://www.sbexcursion.com";
-const LANGS = ["en", "ru", "es", "fr", "zh"];
+const LANGS = ["en", "ru", "es", "fr", "zh", "de"];
 const MARK_START = "<!-- sb-hreflang -->";
 const MARK_END = "<!-- /sb-hreflang -->";
 
@@ -41,19 +41,19 @@ const ARTICLE_TYPES = ["travel-guide", "tour-schedule", "why-book"];
 function classify(name) {
   const m = (re) => name.match(re);
   let x;
-  if (name === "page128073236.html" || (x = m(/^bali-main-page-(ru|es|fr|zh)\.html$/))) {
+  if (name === "page128073236.html" || (x = m(/^bali-main-page-(ru|es|fr|zh|de)\.html$/))) {
     return {
       routeOf: (l) => `/bali/${l}/main-page`,
       fileOf: (l) => (l === "en" ? "page128073236.html" : `bali-main-page-${l}.html`),
     };
   }
-  if (name === "bali-journal.html" || (x = m(/^bali-journal-(ru|es|fr|zh)\.html$/))) {
+  if (name === "bali-journal.html" || (x = m(/^bali-journal-(ru|es|fr|zh|de)\.html$/))) {
     return {
       routeOf: (l) => `/bali/${l}/journal`,
       fileOf: (l) => (l === "en" ? "bali-journal.html" : `bali-journal-${l}.html`),
     };
   }
-  if ((x = m(/^bali-journal-guide-(.+?)(?:-(ru|es|fr|zh))?\.html$/))) {
+  if ((x = m(/^bali-journal-guide-(.+?)(?:-(ru|es|fr|zh|de))?\.html$/))) {
     const slug = x[1];
     return {
       routeOf: (l) => `/bali/${l}/journal/${slug}`,
@@ -61,7 +61,7 @@ function classify(name) {
     };
   }
   for (const type of ARTICLE_TYPES) {
-    const re = new RegExp(`^bali-journal-(.+?)-${type}(?:-(ru|es|fr|zh))?\\.html$`);
+    const re = new RegExp(`^bali-journal-(.+?)-${type}(?:-(ru|es|fr|zh|de))?\\.html$`);
     if ((x = name.match(re))) {
       const tour = x[1];
       return {
@@ -70,7 +70,7 @@ function classify(name) {
       };
     }
   }
-  if ((x = m(/^bali-tour-(.+?)(?:-(ru|es|fr|zh))?\.html$/))) {
+  if ((x = m(/^bali-tour-(.+?)(?:-(ru|es|fr|zh|de))?\.html$/))) {
     const slug = x[1];
     return {
       routeOf: (l) => `/bali/${l}/tours/${slug}`,
@@ -78,7 +78,7 @@ function classify(name) {
     };
   }
   for (const page of ["faq", "about", "privacy", "terms"]) {
-    const re = new RegExp(`^bali-${page}(?:-(ru|es|fr|zh))?\\.html$`);
+    const re = new RegExp(`^bali-${page}(?:-(ru|es|fr|zh|de))?\\.html$`);
     if (name.match(re)) {
       const route = page === "privacy" ? "privacy-policy" : page;
       return {
@@ -99,10 +99,16 @@ for (const name of names) {
   const spec = classify(name);
   if (!spec) { stats["не наша схема"]++; continue; }
 
-  if (!LANGS.every((l) => nameSet.has(spec.fileOf(l)))) { stats["нет всех языков"]++; continue; }
+  /* Раньше требовалось наличие ВСЕХ языков, иначе страница пропускалась.
+     С немецким, который раскатан волной на сотню страниц, это оставило бы
+     остальные 1240 вообще без hreflang. Теперь перечисляем те языки, файлы
+     которых реально лежат на диске: проверка по факту, а не по списку, и
+     вторая волна подхватится сама. */
+  const present = LANGS.filter((l) => nameSet.has(spec.fileOf(l)));
+  if (present.length < 2) { stats["меньше двух языков"] = (stats["меньше двух языков"] || 0) + 1; continue; }
 
   const links = [
-    ...LANGS.map((l) => `<link rel="alternate" hreflang="${l}" href="${SITE}${spec.routeOf(l)}">`),
+    ...present.map((l) => `<link rel="alternate" hreflang="${l}" href="${SITE}${spec.routeOf(l)}">`),
     `<link rel="alternate" hreflang="x-default" href="${SITE}${spec.routeOf("en")}">`,
   ].join("\n    ");
   const block = `${MARK_START}\n    ${links}\n    ${MARK_END}`;
