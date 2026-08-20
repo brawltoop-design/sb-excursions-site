@@ -108,6 +108,18 @@ html #rec2121233163 {
   padding-top: 10px !important;
 }
 
+/* ...but not on mobile. Below 640px the artboard is given
+   `border-radius: 0 0 22px 22px` — square top corners, because there the
+   hero card is meant to butt up against the header. The 10px nudge above
+   left a white strip along that square edge on all 28 tour pages (x6
+   locales). The desktop card is rounded on all four corners, so the nudge
+   still makes sense there and is kept. */
+@media screen and (max-width: 639px) {
+  html #rec2121233163 {
+    padding-top: 0 !important;
+  }
+}
+
 /* Promo block — mobile overrides. */
 @media screen and (max-width: 640px) {
   html #rec2121222043 .tn-elem[data-elem-id="1721398681171"] {
