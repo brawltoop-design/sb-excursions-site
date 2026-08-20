@@ -32481,6 +32481,106 @@ function guideArticleFileName(guide) {
   return `bali-journal-guide-${guide.slug}.html`;
 }
 
+
+/* Одна строка «кому подходит» на каждый тур.
+
+   Пишется здесь ОДИН раз и переиспользуется всеми статьями: 28 строк вместо
+   121. Формулировки взяты из описаний самих туров, не выдуманы, и написаны
+   переводобезопасно — полными предложениями, без идиом.
+*/
+const TOUR_PITCH = {
+  "atv-quad-bikes":
+    "A 1.5-hour quad track through Ubud jungle, rice fields and river crossings. Gear, lunch and showers included.",
+  "atv-ride-adventure":
+    "A longer half-day off-road route: 4 to 6 hours on mud tracks and rice-field paths.",
+  "bali-airport-transfer":
+    "A private car from the airport to your hotel, with the pickup time agreed on WhatsApp.",
+  "bali-instagram-highlights-tour":
+    "A photo day where you choose the stops yourself: waterfalls, gates and rice terraces.",
+  "bali-unesco":
+    "Four UNESCO sites in one day: Taman Ayun, Ulun Danu Beratan, Jatiluwih and Tanah Lot.",
+  "blue-lagoon-snorkeling":
+    "Calm, clear water at Padang Bai, shallow enough for a first time snorkelling.",
+  "dolphin-sunrise-city-tour":
+    "Wild dolphins at sunrise from a small local boat, then a waterfall and a lake temple.",
+  "east-bali-instagram-tour":
+    "The east-coast photo route: the Lempuyang gates, water palaces and cliff views.",
+  "fast-boat-transfer-bali":
+    "Just the crossing: fast boat to Nusa Penida, Lembongan or Gili, with the harbour timing handled.",
+  "gili-island-tour":
+    "One day on Gili Trawangan and Meno with a private snorkelling boat, turtles and the underwater statues.",
+  "gili-islands-getaway":
+    "All three Gili islands, either as a full day or as a base for several nights.",
+  "mount-batur-sunrise-hike":
+    "The summit on foot: two hours up in the dark, breakfast in volcanic steam at the top.",
+  "mount-batur-sunrise-jeep-hot-spring":
+    "The same sunrise by 4x4 with no climbing, followed by a soak in a Kintamani hot spring.",
+  "mount-batur-sunrise-jeep-tour":
+    "Sunrise from a 4x4 with no climbing, then across the black lava field.",
+  "north-bali-lovina-dolphins-tour":
+    "The north in one long day: dolphins at sunrise, waterfalls and a lake temple.",
+  "nusa-penida-east-tour":
+    "The east side of Nusa Penida: Diamond Beach, Atuh and the Tree House.",
+  "nusa-penida-full-day-tour":
+    "The island's best-known stops in one flexible day, Kelingking included.",
+  "nusa-penida-manta-rays-point":
+    "A boat day to Manta Point with two more snorkelling stops. The cheapest way to see mantas.",
+  "nusa-penida-private-day-tour-manta-snorkeling":
+    "Mantas in the morning and the west-coast viewpoints after, on your own schedule.",
+  "nusa-penida-west-tour":
+    "The west side by private car: Kelingking, Broken Beach, Angel's Billabong and Crystal Bay.",
+  "private-car-with-driver-bali":
+    "A car and driver for the day, with the route built by you and stops wherever you like.",
+  "sumbawa-whale-shark-snorkeling-trip":
+    "Whale sharks in Saleh Bay. An expedition day with a very early start.",
+  "sunset-cruise-bali":
+    "Two to four hours on the water from Benoa, in the last light of the day.",
+  "surf-lesson-experience":
+    "A first surf lesson on a beginner beach, with a board, a coach and safety gear.",
+  "tanah-lot-bedugul-tour":
+    "The lake temple, the Handara gate and Jatiluwih, finishing at Tanah Lot for sunset.",
+  "ubud-highlights-tour":
+    "The classic Ubud day: Monkey Forest, the Tegalalang terraces, temples and lunch at Kintamani.",
+  "ubud-instagram-tour":
+    "A photo-first Ubud route: the Gates of Heaven, Tirta Gangga and Tukad Cepung.",
+  "white-water-rafting":
+    "Two hours of rafting on the Ayung river, through a jungle gorge.",
+};
+
+/* Блок бронирования для статей, у которых он не задан руками.
+
+   Из 142 гайдов журнала блок был у 21 — тех, что мы делали под Батур. При
+   этом на страницы БЕЗ блока приходит 12 852 показа в неделю против 946 на
+   страницы с блоком: девять из десяти читателей попадали на текст, где
+   нечего нажать.
+
+   Сопоставление статья-тур не выдумываем: у каждого гайда уже есть
+   relatedTourSlugs, подобранный вручную по теме. Берём оттуда до трёх туров,
+   первым идёт heroTourSlug — тот, вокруг которого статья написана.
+
+   Собираем на рендере, а не вписываем в 121 объект: диффа меньше, данные не
+   дублируются, и новые статьи получают блок сами. Если у гайда есть своё
+   поле offer — оно всегда главнее. */
+function buildGuideOfferFromRelated(guide) {
+  if (!guide || guide.offer) return guide && guide.offer;
+  const slugs = [];
+  for (const slug of [guide.heroTourSlug, ...(guide.relatedTourSlugs || [])]) {
+    if (slug && TOUR_PITCH[slug] && !slugs.includes(slug)) slugs.push(slug);
+    if (slugs.length >= 3) break;
+  }
+  if (!slugs.length) return null;
+  return {
+    eyebrow: "Book direct",
+    title: "Tours that fit this guide",
+    closeTitle: "Which one to book",
+    buttonLabel: "Book now",
+    decision:
+      "The first option is the trip this guide is written around. The other two cover the same area, or the same day, from a different angle.",
+    note: "No prepayment — you agree the date on WhatsApp and pay on the day.",
+    options: slugs.map((tourSlug) => ({ tourSlug, forWho: TOUR_PITCH[tourSlug] })),
+  };
+}
+
 function buildSeoGuideArticle(guide) {
   const heroTour = tourBySlug(guide.heroTourSlug) || tours[0];
   // Список мест есть не у всякого гайда: разбор пошлины или ответ «можно ли
@@ -32494,9 +32594,11 @@ function buildSeoGuideArticle(guide) {
   }));
   const leadPlace = rankings[0]?.name || heroTour.title;
 
+  const resolvedOffer = guide.offer || buildGuideOfferFromRelated(guide);
+
   return {
     kind: "guide",
-    guide,
+    guide: resolvedOffer && !guide.offer ? { ...guide, offer: resolvedOffer } : guide,
     tour: heroTour,
     articleType: { badge: guide.badge, navLabel: guide.navLabel, key: guide.key },
     cardTourLabel: guide.cardTourLabel,
@@ -38633,6 +38735,8 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "Tours that fit this guide":
+      "Туры по теме этой статьи",
     "Mount Batur Sunrise From Ubud: Hike $35, Jeep $60":
       "Батур из Убуда: поход $35, джип $60",
     "Is Mount Batur Safe? Yes With a Guide, Descent in Daylight":
@@ -38855,6 +38959,8 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "Tours that fit this guide":
+      "Nos excursions sur ce sujet",
     "Mount Batur in the Rainy Season: Guides Run Most Mornings":
       "Mont Batur en saison des pluies : départs presque tous les matins",
     "Batur vs Bromo vs Rinjani vs Ijen: Only Batur Fits a Morning":
@@ -38979,6 +39085,10 @@ const PINNED_TRANSLATIONS = {
       "巴厘岛8大日落观赏地 | 按住宿区域挑选",
     "How Much Does a Bali Trip Cost? Real Prices for 2026":
       "巴厘岛旅行要花多少钱？2026年真实物价与三档预算",
+  },
+  de: {
+    "Tours that fit this guide":
+      "Passende Touren zu diesem Thema",
   },
 };
 
