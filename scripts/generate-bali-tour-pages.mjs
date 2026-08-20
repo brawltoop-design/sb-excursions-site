@@ -6153,7 +6153,11 @@ function renderWestStylePage(tour) {
 
   html = html.split(brokenBaliDestinationsMenu).join(fixedBaliDestinationsMenu);
 
-  html = replaceMetaTag(html, "description", description);
+  /* Английские туровые описания через путь локализации не проходят —
+     подгоняем здесь. Локаль берём у самого тура: для языковых версий
+     описание уже подрезано в buildAutoLocalizedTour, повторный вызов
+     ничего не меняет. */
+  html = replaceMetaTag(html, "description", fitMetaDescription(description, tour.locale || "en"));
   html = replaceMetaTag(html, "keywords", collapseWhitespace(buildWestKeywords(tour)));
   html = replacePropertyTag(html, "og:url", absoluteRoute);
   html = replacePropertyTag(html, "og:title", title);
@@ -33311,7 +33315,7 @@ function renderSeoGuidePage(article) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${escapeHtml(journalDocumentTitle(article.title))}</title>
-    <meta name="description" content="${escapeHtml(article.description)}">
+    <meta name="description" content="${escapeHtml(fitMetaDescription(article.description, "en"))}">
     <meta property="og:type" content="article">
     <meta property="og:title" content="${escapeHtml(journalDocumentTitle(article.title))}">
     <meta property="og:description" content="${escapeHtml(article.description)}">
@@ -33448,7 +33452,7 @@ function renderJournalArticlePage(article) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${escapeHtml(journalDocumentTitle(article.title))}</title>
-    <meta name="description" content="${escapeHtml(article.description)}">
+    <meta name="description" content="${escapeHtml(fitMetaDescription(article.description, "en"))}">
     <meta property="og:type" content="article">
     <meta property="og:title" content="${escapeHtml(journalDocumentTitle(article.title))}">
     <meta property="og:description" content="${escapeHtml(article.description)}">
@@ -39111,6 +39115,13 @@ const NEVER_TRANSLATE = new Set([
   "PayPal", "Stripe", "Visa", "Mastercard", "Amex", "Klarna", "Bitcoin",
   "Ethereum", "BitPay", "Google", "FAQ", "SiteMap", "SB",
   "English", "Русский", "Español", "Français", "中文",
+  /* Имена типов schema.org. На китайской легаси-странице манты «FAQPage»
+     перевелось в «常见问题Page» — такого типа не существует, и Google
+     молча выбрасывает всю разметку страницы. Ошибка тихая: JSON остаётся
+     валидным, ломается только смысл. */
+  "FAQPage", "Question", "Answer", "WebPage", "BlogPosting", "Product",
+  "BreadcrumbList", "ItemList", "TouristTrip", "TravelAgency", "Organization",
+  "Person", "VideoObject", "AboutPage", "Blog",
 ]);
 
 function shouldTranslateTextValue(value) {
@@ -39289,6 +39300,49 @@ function localeCoversRoute(route, locale) {
   return true;
 }
 
+/* Подгонка meta description под длину выдачи.
+
+   Английские описания пишутся под ~155 знаков, но машинный перевод
+   раздувает строку на треть и больше: французские доходили до 301 знака,
+   русские до 279. Google обрезает такое посреди слова многоточием — и
+   ответ, ради которого описание и писалось, до читателя не доходит.
+
+   Режем по смысловой границе, а не по буквам: сначала пробуем конец
+   предложения, потом тире или двоеточие, потом запятую. Короткое, но
+   целое описание читается как задуманное, а обрубок — как поломка.
+
+   Заголовки сознательно НЕ трогаем: они короткие, и любая обрезка
+   выносит из них смысл — «Sources chaudes du mont Batur : quand le bain
+   en vaut la peine» схлопывалось до «Sources chaudes du mont Batur».
+   Для них — ручные пины. */
+const META_DESCRIPTION_LIMITS = { zh: 80, ru: 140, ja: 80, ko: 80 };
+
+function metaDescriptionLimit(locale) {
+  return META_DESCRIPTION_LIMITS[locale] || 155;
+}
+
+function fitMetaDescription(text, locale) {
+  const collapsed = String(text || "").replace(/\s+/g, " ").trim();
+  const limit = metaDescriptionLimit(locale);
+  if (!collapsed || collapsed.length <= limit) return collapsed;
+
+  const boundaries = [/(?<=[.!?…])\s/g, /\s[—–:]\s/g, /,\s/g];
+  for (const pattern of boundaries) {
+    let best = null;
+    for (const match of collapsed.matchAll(pattern)) {
+      const end = match[0].startsWith(" ") ? match.index : match.index + 1;
+      const candidate = collapsed.slice(0, end).replace(/[\s,;:—–]+$/, "");
+      if (candidate.length <= limit && (!best || candidate.length > best.length)) best = candidate;
+    }
+    /* Слишком короткий кусок хуже длинного: если граница отрезала больше
+       половины, пробуем следующую, более мелкую. */
+    if (best && best.length >= limit * 0.55) return best;
+  }
+  const hard = collapsed.slice(0, limit + 1);
+  const lastSpace = hard.lastIndexOf(" ");
+  return (lastSpace > 0 ? hard.slice(0, lastSpace) : hard.slice(0, limit)).replace(/[\s,;:—–]+$/, "");
+}
+
 function localizedMainPageRoute(locale = "en") {
   return `/bali/${locale}/main-page`;
 }
@@ -39417,7 +39471,11 @@ async function translateStandaloneHtmlVisibleText(html, locale = "en") {
     .replace(/<(?:title)>([^<]+)<\/title>/gi, (match, rawText) => `<title>${translatePreservingWhitespace(rawText).trim()}</title>`)
     .replace(
       /(<meta\b[^>]*\b(?:name|property)=["'](?:description|og:title|og:description|twitter:title|twitter:description)["'][^>]*\bcontent=["'])([^"']+)(["'][^>]*>)/gi,
-      (match, prefix, rawText, suffix) => `${prefix}${translatePreservingWhitespace(rawText).trim()}${suffix}`,
+      (match, prefix, rawText, suffix) => {
+        const translated = translatePreservingWhitespace(rawText).trim();
+        const isDescription = /(?:name|property)=["'](?:description|og:description|twitter:description)["']/i.test(match);
+        return `${prefix}${isDescription ? fitMetaDescription(translated, locale) : translated}${suffix}`;
+      },
     )
     .replace(
       /(\s(?:alt|title|placeholder|aria-label)=["'])([^"']+)(["'])/gi,
@@ -39700,7 +39758,9 @@ async function buildAutoLocalizedTour(baseTour, locale = "en") {
     aiPlanner: false,
     title: withTranslatedText(baseTour.title, plainMap),
     metaTitle: withTranslatedText(baseTour.metaTitle, plainMap),
-    metaDescription: withTranslatedText(baseTour.metaDescription, plainMap),
+    /* Описание тура тоже подгоняем: путь у туровых страниц свой, через
+       общий фильтр мета-тегов они не проходят. */
+    metaDescription: fitMetaDescription(withTranslatedText(baseTour.metaDescription, plainMap), locale),
     eyebrow: withTranslatedText(baseTour.eyebrow, plainMap),
     duration: withTranslatedText(baseTour.duration, plainMap),
     pickup: withTranslatedText(baseTour.pickup, plainMap),
@@ -41223,7 +41283,7 @@ function renderStandalonePage(type, locale) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${escapeHtml(content.title)} | SB Excursions</title>
     <link rel="preload" as="font" type="font/woff2" href="/css/fonts/cina-geo/CinaGEO-Regular.woff2" crossorigin>
-    <meta name="description" content="${escapeHtml(content.metaDescription)}">
+    <meta name="description" content="${escapeHtml(fitMetaDescription(content.metaDescription, "en"))}">
     <meta property="og:type" content="website">
     <meta property="og:title" content="${escapeHtml(content.title)} | SB Excursions">
     <meta property="og:description" content="${escapeHtml(content.metaDescription)}">
