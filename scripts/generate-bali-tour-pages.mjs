@@ -3736,8 +3736,21 @@ function tourHeroVideo(tour) {
   if (!fs.existsSync(path.join(projectRoot, "videos", "tours", `${slug}.mp4`))) return null;
   const posterRel = `/videos/tours/${slug}-poster.jpg`;
   const hasPoster = fs.existsSync(path.join(projectRoot, "videos", "tours", `${slug}-poster.jpg`));
-  return { src: rel, poster: hasPoster ? posterRel : null };
+  return { src: rel, poster: hasPoster ? posterRel : null, position: HERO_VIDEO_POSITION[slug] || null };
 }
+
+/* Вертикальное положение видимой полосы видео.
+
+   На десктопе рамка героя широкая (соотношение 2,02), и вертикальное видео
+   показывается узким горизонтальным срезом — у ролика с китовой акулой
+   видно всего 28% высоты кадра, и сама акула в этот срез не попадала:
+   зритель видел пустую воду. Сдвигаем полосу вниз, на сюжет.
+
+   Значение подбирается глазами под конкретный ролик. Горизонтальным видео
+   это не нужно — они и так закрывают широкую рамку почти целиком. */
+const HERO_VIDEO_POSITION = {
+  "sumbawa-whale-shark-snorkeling-trip": "50% 62%",
+};
 
 function renderHeroVideoMarkup(video, altText) {
   if (!video) return "";
@@ -3745,7 +3758,8 @@ function renderHeroVideoMarkup(video, altText) {
      Иначе полтора мегабайта конкурируют с LCP на мобильном, где у нас три
      четверти кликов. Запуск, отказ по экономии трафика и по «уменьшить
      движение» — в скрипте ниже. */
-  return `<video class="sb-hero-video" muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"` +
+  const position = video.position ? ` style="object-position:${escapeHtml(video.position)}"` : "";
+  return `<video class="sb-hero-video" muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"${position}` +
     (video.poster ? ` poster="${escapeHtml(video.poster)}"` : "") +
     ` data-src="${escapeHtml(video.src)}"></video>`;
 }
