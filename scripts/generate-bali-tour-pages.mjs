@@ -3750,6 +3750,11 @@ function tourHeroVideo(tour) {
    это не нужно — они и так закрывают широкую рамку почти целиком. */
 const HERO_VIDEO_POSITION = {
   "sumbawa-whale-shark-snorkeling-trip": "50% 62%",
+  /* Манта по ходу ролика поднимается к поверхности: её центр смещается с
+     53 процентов высоты кадра в начале до 27 в конце, в среднем около 36.
+     При центровке по умолчанию она видна на десктопе только первые пару
+     секунд, дальше уплывает из полосы. */
+  "nusa-penida-manta-rays-point": "50% 36%",
 };
 
 function renderHeroVideoMarkup(video, altText) {
