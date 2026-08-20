@@ -1098,6 +1098,35 @@ window.addEventListener('load', function () {
   background-clip: padding-box !important;
 }
 
+/* Видео на герое тура. Лежит поверх фоновой фотографии и проявляется, когда
+   сможет играть; затемняющий ::after карточки остаётся выше него, поэтому
+   контраст текста не меняется. */
+#rec2121233163 .tn-elem[data-elem-id="1721240739929"] .sb-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .7s ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+#rec2121233163 .tn-elem[data-elem-id="1721240739929"] .sb-hero-video.is-playing {
+  opacity: 1;
+}
+/* Затемнение под текстом. Фотографии героя тёмные снизу, а вода на видео
+   светлая, и белый заголовок на ней читается на грани. Добавляем градиент
+   ТОЛЬКО когда видео реально играет: на страницах с фото ничего не меняется.
+   Через :has, потому что затемнение живёт на родителе, а класс — на видео. */
+#rec2121233163 .tn-elem[data-elem-id="1721240739929"] .tn-atom:has(.sb-hero-video.is-playing)::after {
+  background: linear-gradient(180deg, rgba(0,0,0,0.34) 0%, rgba(0,0,0,0.20) 45%, rgba(0,0,0,0.42) 100%);
+}
+/* Человек просил меньше движения — оставляем фотографию. */
+@media (prefers-reduced-motion: reduce) {
+  #rec2121233163 .tn-elem[data-elem-id="1721240739929"] .sb-hero-video { display: none; }
+}
+
 #rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] {
   top: 110px !important;
   left: calc(50% - 600px + 67px) !important;
@@ -4981,6 +5010,37 @@ window.tildastatcookie='no';setTimeout(function(){(function(d,w,k,o,g) {var n=d.
 <script defer src="/_vercel/insights/script.js"></script>
 <script defer src="/js/sb-partner-ref.js?v=a73b2b6b"></script>
 <script id="sb-west-page-layout-autofit">
+
+(function () {
+  /* Запуск геройского видео.
+
+     Грузим ТОЛЬКО после window.load: полтора мегабайта, начатые раньше,
+     отбирают полосу у LCP, а на мобильном у нас три четверти кликов.
+     Поэтому в разметке стоит data-src, а не src.
+
+     Не грузим вовсе, если человек включил экономию трафика или системное
+     «уменьшить движение» — во втором случае видео ещё и скрыто стилями.
+
+     Класс is-playing вешаем по событию playing, а не canplay: бывает, что
+     браузер готов, но автозапуск отклонён политикой — тогда лучше оставить
+     фотографию, чем показать застывший первый кадр. */
+  function startHeroVideo() {
+    var node = document.querySelector('.sb-hero-video[data-src]');
+    if (!node) return;
+    try {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var conn = navigator.connection;
+      if (conn && conn.saveData) return;
+    } catch (e) {}
+    node.addEventListener('playing', function () { node.classList.add('is-playing'); }, { once: true });
+    node.src = node.getAttribute('data-src');
+    node.removeAttribute('data-src');
+    var attempt = node.play();
+    if (attempt && typeof attempt.catch === 'function') attempt.catch(function () {});
+  }
+  if (document.readyState === 'complete') startHeroVideo();
+  else window.addEventListener('load', startHeroVideo);
+})();
 
 (function () {
   var HERO_ID = 'rec2121233163';

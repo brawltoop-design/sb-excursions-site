@@ -3719,6 +3719,37 @@ const TOUR_REAL_IMAGES = (() => {
   }
 })();
 
+/* Видео вместо фотографии на герое тура.
+
+   Кладётся руками в videos/tours/<слуг>.mp4 плюс постер -poster.jpg рядом.
+   Есть файл — герой становится видео, нет — остаётся фото. Никаких правок
+   кода на каждый тур.
+
+   Фон-картинка при этом НЕ убирается: она рисуется мгновенно и служит
+   подложкой, поверх которой видео проявляется, когда сможет играть. Так нет
+   ни пустого кадра, ни скачка вёрстки, а у кого видео не запустится —
+   увидит ровно то же, что и раньше. */
+function tourHeroVideo(tour) {
+  const slug = tour && tour.slug;
+  if (!slug) return null;
+  const rel = `/videos/tours/${slug}.mp4`;
+  if (!fs.existsSync(path.join(projectRoot, "videos", "tours", `${slug}.mp4`))) return null;
+  const posterRel = `/videos/tours/${slug}-poster.jpg`;
+  const hasPoster = fs.existsSync(path.join(projectRoot, "videos", "tours", `${slug}-poster.jpg`));
+  return { src: rel, poster: hasPoster ? posterRel : null };
+}
+
+function renderHeroVideoMarkup(video, altText) {
+  if (!video) return "";
+  /* src через data-: браузер не трогает файл, пока страница не догрузилась.
+     Иначе полтора мегабайта конкурируют с LCP на мобильном, где у нас три
+     четверти кликов. Запуск, отказ по экономии трафика и по «уменьшить
+     движение» — в скрипте ниже. */
+  return `<video class="sb-hero-video" muted loop playsinline preload="none" tabindex="-1" aria-hidden="true"` +
+    (video.poster ? ` poster="${escapeHtml(video.poster)}"` : "") +
+    ` data-src="${escapeHtml(video.src)}"></video>`;
+}
+
 function publicImagePath(tour) {
   const real = TOUR_REAL_IMAGES[tour.slug];
   if (real?.file) return `/images/tours-real/${real.file}`;
@@ -6278,6 +6309,18 @@ function renderWestStylePage(tour) {
       "background-image:url('/images/tours-real/nusa-penida-west-tour.jpg');",
       `background-image:url('${imagePath}');`,
     )
+    /* Видео поверх фона карточки, если файл для этого тура положен.
+       Целимся в тот самый атом, которому только что подменили фон: у него
+       единственного в разметке стоит background-image с путём этого тура. */
+    .replace(
+      new RegExp(
+        `(<div class='tn-atom' style="background-image:url\\('${escapeRegExp(imagePath)}'\\);"[^>]*>)\\s*(</div>)`,
+      ),
+      (whole, open, close) => {
+        const markup = renderHeroVideoMarkup(tourHeroVideo(tour), tour.imageAlt || tour.title);
+        return markup ? `${open}${markup}${close}` : whole;
+      },
+    )
     // The private-offer card's <img>. Same story as the hero: the template keeps
     // the west tour's own photo, so swap it for this tour's image. This src=""
     // attribute is unique to that card (og:image/collage use content=/data-original=).
@@ -6462,6 +6505,35 @@ const WEST_TOUR_LAYOUT_FIX_CSS = `
   border-radius: inherit !important;
   overflow: hidden !important;
   background-clip: padding-box !important;
+}
+
+/* Видео на герое тура. Лежит поверх фоновой фотографии и проявляется, когда
+   сможет играть; затемняющий ::after карточки остаётся выше него, поэтому
+   контраст текста не меняется. */
+#rec2121233163 .tn-elem[data-elem-id="1721240739929"] .sb-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .7s ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+#rec2121233163 .tn-elem[data-elem-id="1721240739929"] .sb-hero-video.is-playing {
+  opacity: 1;
+}
+/* Затемнение под текстом. Фотографии героя тёмные снизу, а вода на видео
+   светлая, и белый заголовок на ней читается на грани. Добавляем градиент
+   ТОЛЬКО когда видео реально играет: на страницах с фото ничего не меняется.
+   Через :has, потому что затемнение живёт на родителе, а класс — на видео. */
+#rec2121233163 .tn-elem[data-elem-id="1721240739929"] .tn-atom:has(.sb-hero-video.is-playing)::after {
+  background: linear-gradient(180deg, rgba(0,0,0,0.34) 0%, rgba(0,0,0,0.20) 45%, rgba(0,0,0,0.42) 100%);
+}
+/* Человек просил меньше движения — оставляем фотографию. */
+@media (prefers-reduced-motion: reduce) {
+  #rec2121233163 .tn-elem[data-elem-id="1721240739929"] .sb-hero-video { display: none; }
 }
 
 #rec2121233163 .tn-elem[data-elem-id="1766426116262000001"] {
@@ -7767,6 +7839,37 @@ html[lang]:not([lang="en"]) #rec2121222013 .sb-private-card-pill {
 `;
 
 const TOUR_LAYOUT_AUTOFIT_SCRIPT = `
+(function () {
+  /* Запуск геройского видео.
+
+     Грузим ТОЛЬКО после window.load: полтора мегабайта, начатые раньше,
+     отбирают полосу у LCP, а на мобильном у нас три четверти кликов.
+     Поэтому в разметке стоит data-src, а не src.
+
+     Не грузим вовсе, если человек включил экономию трафика или системное
+     «уменьшить движение» — во втором случае видео ещё и скрыто стилями.
+
+     Класс is-playing вешаем по событию playing, а не canplay: бывает, что
+     браузер готов, но автозапуск отклонён политикой — тогда лучше оставить
+     фотографию, чем показать застывший первый кадр. */
+  function startHeroVideo() {
+    var node = document.querySelector('.sb-hero-video[data-src]');
+    if (!node) return;
+    try {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var conn = navigator.connection;
+      if (conn && conn.saveData) return;
+    } catch (e) {}
+    node.addEventListener('playing', function () { node.classList.add('is-playing'); }, { once: true });
+    node.src = node.getAttribute('data-src');
+    node.removeAttribute('data-src');
+    var attempt = node.play();
+    if (attempt && typeof attempt.catch === 'function') attempt.catch(function () {});
+  }
+  if (document.readyState === 'complete') startHeroVideo();
+  else window.addEventListener('load', startHeroVideo);
+})();
+
 (function () {
   var HERO_ID = 'rec2121233163';
   var HERO_CARD_ID = '1721240739929';
