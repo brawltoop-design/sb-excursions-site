@@ -38739,6 +38739,62 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "How Much Does a Bali Trip Cost? Real Prices for 2026":
+      "Сколько стоит поездка на Бали: цены 2026",
+    "Canggu, Bali: What It&#39;s Actually Like and What to Do There":
+      "Чангу на Бали: какой он и что там делать",
+    "Canggu, Bali: What It's Actually Like and What to Do There":
+      "Чангу на Бали: какой он и что там делать",
+    "What to Pack for Bali: A Practical Checklist by Activity":
+      "Что взять на Бали: чек-лист по видам отдыха",
+    "8 Best Beaches in Bali With Crystal Clear Water for Swimming, Snorkeling and Photos":
+      "8 лучших пляжей Бали с кристально чистой водой",
+    "8 Best Budget Restaurants in Bali and Affordable Warungs Worth Trying":
+      "8 недорогих ресторанов и варунгов на Бали",
+    "Can You Swim in Bali? 8 Beaches With Calm, Safe Water":
+      "Можно ли купаться на Бали? 8 спокойных пляжей",
+    "7 Best Beach Clubs in Bali | Vibe, Areas and Sunset Timing":
+      "7 лучших пляжных клубов Бали: районы и закаты",
+    "7 Best Viewpoints in Bali: Volcano, Cliffs, Rice Terraces":
+      "7 видовых точек Бали: вулкан, скалы, рисовые террасы",
+    "Bali Visa and Entry Requirements: What You Actually Need":
+      "Виза на Бали: что реально нужно для въезда",
+    "Best Time to Visit Bali: A Month-by-Month Guide":
+      "Когда лучше ехать на Бали: гид по месяцам",
+    "How to Get Around Bali: Scooter, Driver, Grab and Real Drive Times":
+      "Как передвигаться по Бали: скутер, водитель, Grab",
+    "Ubud in One Day: 7 Stops in Order, Times and Fees":
+      "Убуд за день: 7 остановок, время и цены входа",
+    "Kelingking Beach: The Viewpoint Is Free, the Climb Is 45 Min":
+      "Пляж Келингкинг: смотровая бесплатно, подъём 45 мин",
+    "Uluwatu to Nusa Penida: How Long It Takes and the Cost":
+      "Из Улувату на Нуса-Пениду: время в пути и цена",
+    "Grab vs Gojek in Bali, or a Private Driver: What Costs Less":
+      "Grab, Gojek или водитель на Бали: что дешевле",
+    "Canggu Beaches Bali: Honest Guide to Surf, Sand, Sunsets":
+      "Пляжи Чангу на Бали: честно про сёрф и закаты",
+    "10-Day Bali Itinerary: North, East and Rest Days Included":
+      "Маршрут по Бали на 10 дней: север, восток, дни отдыха",
+    "Bali Tourist Tax 2026: What It Costs and How to Pay It":
+      "Туристический сбор на Бали 2026: цена и как платить",
+    "Bali With Kids: Where to Stay, What to Do and What to Skip":
+      "Бали с детьми: где жить, что делать, что пропустить",
+    "Amed and Tulamben Snorkeling: 7 Spots and the USAT Liberty":
+      "Снорклинг в Амеде и Туламбене: 7 мест и USAT Liberty",
+    "Gili Air vs Gili Trawangan: Which Island Fits Your Trip":
+      "Гили Эйр или Гили Траванган: какой остров выбрать",
+    "How to Get Around Bali: 7 Transport Options Compared":
+      "Транспорт на Бали: сравниваем 7 способов",
+    "Nusa Penida: The Complete Guide to Bali's Most Dramatic Island":
+      "Нуса-Пенида: полный гид по самому яркому острову Бали",
+    "Nusa Penida: The Complete Guide to Bali&#39;s Most Dramatic Island":
+      "Нуса-Пенида: полный гид по самому яркому острову Бали",
+    "Gili Islands vs Nusa Penida: Which Day Trip Should You Pick?":
+      "Острова Гили или Нуса-Пенида: куда ехать на день",
+    "Is Nusa Penida Worth It? Honest Answers by Trip Type":
+      "Стоит ли ехать на Нуса-Пениду? Честный разбор",
+    "Ubud to Nusa Penida: Drive Time, Boat and Day Trips":
+      "Из Убуда на Нуса-Пениду: время в пути, лодка и туры",
     "Tours that fit this guide":
       "Туры по теме этой статьи",
     "Mount Batur Sunrise From Ubud: Hike $35, Jeep $60":
@@ -38876,11 +38932,55 @@ const PINNED_TRANSLATIONS = {
     "7 Bali Honeymoon Day Trips for a Private, Unrushed Week":
       "7 идей для медового месяца на Бали | Приватно и без спешки",
     "Tanah Lot vs Uluwatu Sunset: Which Temple to Pick in 2026":
-      "Танах Лот или Улувату | Где встречать закат на Бали в 2026",
+      "Танах Лот или Улувату: где закат лучше в 2026",
     "Mount Batur vs Mount Agung: Which Bali Volcano to Climb":
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "Where to Stay in Bali First Time: 6 Areas Compared Honestly":
+      "Dónde alojarse en Bali la primera vez: 6 zonas comparadas",
+    "8 Best Beaches in Bali With Crystal Clear Water for Swimming, Snorkeling and Photos":
+      "8 mejores playas de Bali con agua cristalina y snorkel",
+    "Bali Airport to Ubud: How Long It Takes and What to Pay":
+      "Del aeropuerto de Bali a Ubud: cuánto tarda y cuánto cuesta",
+    "Kelingking Beach: The Viewpoint Is Free, the Climb Is 45 Min":
+      "Playa Kelingking: mirador gratis y 45 min de subida",
+    "Bali Tourist Tax 2026: What It Costs and How to Pay It":
+      "Tasa turística de Bali 2026: cuánto cuesta y cómo pagarla",
+    "Is Nusa Penida Worth It? Honest Answers by Trip Type":
+      "¿Vale la pena Nusa Penida? Respuestas por tipo de viaje",
+    "Bali Visa and Entry Requirements: What You Actually Need":
+      "Visado y requisitos de entrada a Bali: qué necesitas",
+    "Tirta Empul: How the Purification Ritual Actually Works":
+      "Tirta Empul: cómo funciona el ritual de purificación",
+    "Bali Airport Transfer Guide: Times to 6 Areas, From $15":
+      "Traslados aeropuerto de Bali: tiempos a 6 zonas, desde $15",
+    "Ubud to Nusa Penida: Drive Time, Boat and Day Trips":
+      "De Ubud a Nusa Penida: tiempo en coche, barco y excursión",
+    "Snorkeling in Bali If You Cannot Swim: 6 Calm Spots":
+      "Snorkel en Bali sin saber nadar: 6 lugares tranquilos",
+    "What to Eat in Bali: Balinese Dishes, Warung Culture and Food Safety":
+      "Qué comer en Bali: platos balineses, warungs y seguridad",
+    "8 Best Budget Restaurants in Bali and Affordable Warungs Worth Trying":
+      "8 restaurantes baratos en Bali y warungs que valen la pena",
+    "Grab vs Gojek in Bali, or a Private Driver: What Costs Less":
+      "Grab, Gojek o conductor privado en Bali: qué cuesta menos",
+    "Gili Islands vs Nusa Penida: Which Day Trip Should You Pick?":
+      "Islas Gili o Nusa Penida: ¿qué excursión de un día elegir?",
+    "Is the Lovina Dolphin Tour Worth It? Honest 2026 Answer":
+      "¿Vale la pena el tour de delfines en Lovina? Respuesta 2026",
+    "Whale Shark Season in Sumbawa: When to Go From Bali":
+      "Tiburón ballena en Sumbawa: cuándo ir desde Bali",
+    "Can You Swim in Bali? 8 Beaches With Calm, Safe Water":
+      "¿Se puede nadar en Bali? 8 playas seguras y tranquilas",
+    "Nusa Penida vs Nusa Lembongan: Which Island Day Trip Wins":
+      "Nusa Penida vs Nusa Lembongan: qué excursión elegir",
+    "9 Best Snorkeling Spots in Bali With Clear Water, Easy Access":
+      "9 mejores sitios de snorkel en Bali con agua clara",
+    "8 Best Instagram Places in Bali for Photos That Still Look Good in Real Life":
+      "8 lugares de Bali para Instagram que no decepcionan",
+    "7 Steps to Learn to Surf in Bali as a Complete Beginner":
+      "7 pasos para aprender a surfear en Bali desde cero",
     "Mount Batur in the Rainy Season: Guides Run Most Mornings":
       "Batur en temporada de lluvias: salidas casi cada mañana",
     "Batur vs Bromo vs Rinjani vs Ijen: Only Batur Fits a Morning":
@@ -38900,7 +39000,7 @@ const PINNED_TRANSLATIONS = {
     "Blue Lagoon Bali: Clearest Water 07:00-10:00, Trips From $50":
       "Blue Lagoon Bali: agua clara de 07:00 a 10:00, desde $50",
     "Bali Private Driver Cost: $59 a Car per Day, Not per Person":
-      "Conductor privado en Bali: $59 por coche al día, no por persona",
+      "Conductor privado en Bali: $59 por coche/día, no por persona",
     "8 Best Sunset Spots in Bali, Sorted by Drive Time":
       "8 mejores atardeceres de Bali, por tiempo de viaje",
     "Duration":
@@ -38963,6 +39063,52 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "Kelingking Beach: The Viewpoint Is Free, the Climb Is 45 Min":
+      "Kelingking : point de vue gratuit, montée 45 min",
+    "Bali White Water Rafting: Ayung River Guide for 2026":
+      "Rafting à Bali : guide de la rivière Ayung 2026",
+    "Is Nusa Penida Safe? 7 Real Risks and How to Manage Them":
+      "Nusa Penida est-elle sûre ? 7 risques réels à gérer",
+    "Canggu and Seminyak Beaches: Surf, Sunsets and Which to Pick":
+      "Canggu ou Seminyak : plages, surf et couchers de soleil",
+    "Where to Stay in Bali First Time: 6 Areas Compared Honestly":
+      "Où loger à Bali la première fois : 6 quartiers comparés",
+    "Is Nusa Penida Worth It? Honest Answers by Trip Type":
+      "Nusa Penida vaut-elle le détour ? Réponses par profil",
+    "Uluwatu to Nusa Penida: How Long It Takes and the Cost":
+      "Uluwatu vers Nusa Penida : durée et prix du trajet",
+    "Is Mount Batur Safe? Yes With a Guide, Descent in Daylight":
+      "Le mont Batur est-il sûr ? Oui avec guide, descente de jour",
+    "8 Best Budget Restaurants in Bali and Affordable Warungs Worth Trying":
+      "8 restaurants pas chers à Bali et warungs à petits prix",
+    "How to Get to Gili Trawangan from Bali: Every Route":
+      "Rejoindre Gili Trawangan depuis Bali : tous les trajets",
+    "Is Mount Batur an Active Volcano? Facts and Eruption History":
+      "Le mont Batur est-il un volcan actif ? Faits et éruptions",
+    "Gili Air vs Gili Trawangan: Which Island Fits Your Trip":
+      "Gili Air ou Gili Trawangan : quelle île pour votre séjour",
+    "How to Get Around Bali: 7 Transport Options Compared":
+      "Se déplacer à Bali : 7 moyens de transport comparés",
+    "Are the Gili Islands Safe? Water, Boats and Getting Around":
+      "Les îles Gili sont-elles sûres ? Mer, bateaux, transports",
+    "Bali Airport to Ubud: How Long It Takes and What to Pay":
+      "Aéroport de Bali à Ubud : durée du trajet et prix",
+    "7 Best Viewpoints in Bali: Volcano, Cliffs, Rice Terraces":
+      "Top 7 des points de vue à Bali : volcan, falaises, rizières",
+    "Nusa Penida One Day Itinerary: Hour-by-Hour 2026 Plan":
+      "Nusa Penida en 1 jour : itinéraire heure par heure 2026",
+    "7 Steps to Learn to Surf in Bali as a Complete Beginner":
+      "7 étapes pour apprendre à surfer à Bali quand on débute",
+    "Can You Swim in Bali? 8 Beaches With Calm, Safe Water":
+      "Peut-on nager à Bali ? 8 plages aux eaux calmes et sûres",
+    "Ubud in One Day: 7 Stops in Order, Times and Fees":
+      "Ubud en un jour : 7 étapes, horaires et tarifs",
+    "Snorkeling in Bali If You Cannot Swim: 6 Calm Spots":
+      "Snorkeling à Bali sans savoir nager : 6 spots calmes",
+    "Nusa Penida: The Complete Guide to Bali's Most Dramatic Island":
+      "Nusa Penida, la plus spectaculaire des îles de Bali : guide",
+    "Nusa Penida: The Complete Guide to Bali&#39;s Most Dramatic Island":
+      "Nusa Penida, la plus spectaculaire des îles de Bali : guide",
     "Tours that fit this guide":
       "Nos excursions sur ce sujet",
     "Mount Batur in the Rainy Season: Guides Run Most Mornings":
