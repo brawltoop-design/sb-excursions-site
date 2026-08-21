@@ -40487,6 +40487,8 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "Bali Tours and Private Day Trips":
+      "Туры и индивидуальные экскурсии на Бали",
     "Surfboard Rental in Bali: IDR 150-300k a Day, When to Buy":
       "Аренда доски на Бали: 150–300 тыс. рупий в день",
     "Bali Surf Forecast: Period, Wind and Tide Pick Your Spot":
@@ -40845,6 +40847,8 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "Bali Tours and Private Day Trips":
+      "Excursions à Bali et circuits privés à la journée",
     "Surfboard Rental in Bali: IDR 150-300k a Day, When to Buy":
       "Location de planche a Bali : 150-300 000 IDR par jour",
     "Bali Surf Forecast: Period, Wind and Tide Pick Your Spot":
