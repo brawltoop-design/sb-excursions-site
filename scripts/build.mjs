@@ -36,6 +36,7 @@ const STEPS = [
   ["dubai-noindex.mjs", "дубайский блог — вон из индекса Google"],
   ["build-llms-txt.mjs", "llms.txt — карта сайта для нейросетей"],
   ["build-og-images.mjs", "картинки 1200x630 для превью ссылок"],
+  ["add-organization-schema.mjs", "разметка организации на страницах, собранных в обход генератора"],
   ["stamp-sitemap-lastmod.mjs", "честный lastmod: дата меняется только у изменившихся страниц"],
   ["stamp-css-version.mjs", "версия наших стилей в ссылках — чтобы правки доезжали"],
   ["check-inline-js.mjs", "проверка: инлайновый JS парсится на всех страницах"],

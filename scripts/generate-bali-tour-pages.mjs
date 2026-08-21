@@ -1,22 +1,15 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { SITE_URL, WHATSAPP_NUMBER, ORGANIZATION_SCHEMA } from "./site-identity.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, "..");
 
-// Обязательно с www: сервер отдаёт 308-редирект с sbexcursion.com на
-// www.sbexcursion.com, и ресурс в Search Console заведён тоже на www.
-// Если ставить сюда голый домен, то canonical, og:url, hreflang и sitemap
-// начинают указывать на адрес, который сам себя перенаправляет: Google
-// перезаписывает canonical, а в sitemap видит чужие URL и пишет по каждой
-// странице «Нет ссылающихся файлов Sitemap».
-const SITE_URL = "https://www.sbexcursion.com";
 // Тот же адрес, экранированный для подстановки в регулярки, — чтобы при смене
 // домена не пришлось искать по файлу второй, зашитый руками, вариант.
 const SITE_URL_RE = SITE_URL.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-const WHATSAPP_NUMBER = "6285333685020";
 const DUBAI_WHATSAPP_NUMBER = "971506048673";
 const GENERIC_FOOTER_WA_TEXT =
   "Hello!%20I&#039;m%20interested%20in%20your%20excursions.%20Could%20you%20help%20me%20with%20the%20booking%20details%3F";
@@ -24,66 +17,6 @@ const BALI_GENERIC_FOOTER_WA_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${GEN
 const DUBAI_GENERIC_FOOTER_WA_LINK = `https://wa.me/${DUBAI_WHATSAPP_NUMBER}?text=${GENERIC_FOOTER_WA_TEXT}`;
 const BALI_GENERIC_FOOTER_PHONE_LINK = `<a href="${BALI_GENERIC_FOOTER_WA_LINK}"target="_blank"style="color: inherit"><u>+62 853 3368 5020</u></a>`;
 const DUBAI_GENERIC_FOOTER_PHONE_LINK = `<a href="${DUBAI_GENERIC_FOOTER_WA_LINK}"target="_blank"style="color: inherit"><u>+971 50 604 8673</u></a>`;
-// Организация одним куском, чтобы во всех schema стояли одни и те же данные.
-// sameAs — то, чем поисковики и нейросети подтверждают, что за сайтом стоит
-// живая компания, а не одинокий лендинг: без внешних профилей подтвердить
-// нечем. Ссылки взяты те же, что стоят в подвале сайта.
-const ORGANIZATION_SCHEMA = {
-  // TravelAgency — подтип LocalBusiness: для локальных туристических
-  // запросов и AI-ответов «tour operator in Bali» это сильнее голого
-  // Organization. Адрес и диапазон цен — из подвала сайта и прайса.
-  "@type": "TravelAgency",
-  "@id": `${SITE_URL}/#organization`,
-  name: "SB Excursions",
-  url: SITE_URL,
-  description:
-    "Private guided day tours across Bali and the Nusa islands, booked directly over WhatsApp.",
-  areaServed: { "@type": "Place", name: "Bali, Indonesia" },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Jl. Petitenget",
-    addressLocality: "Seminyak",
-    addressRegion: "Bali",
-    addressCountry: "ID",
-  },
-  priceRange: "$15-$150",
-  telephone: "+62 853 3368 5020",
-  logo: {
-    "@type": "ImageObject",
-    url: `${SITE_URL}/images/tild6536-3637-4563-a362-633234333130__favikon_sb_excursion.png`,
-  },
-  // wa.me здесь не место: sameAs — только профили-подтверждения сущности,
-  // контакт для брони уже лежит в contactPoint.
-  //
-  // Сюда же добавлять по мере появления: ссылку Google Business Profile
-  // (maps.app.goo.gl/...), страницу компании в LinkedIn, профиль
-  // ProvenExpert. Чем больше подтверждённых профилей, тем увереннее
-  // поисковики и ИИ склеивают бренд в сущность. Но только живые адреса:
-  // ссылка на удалённую страницу подтверждает не существование бренда,
-  // а его отсутствие.
-  sameAs: [
-    /* Wikidata здесь была и её пришлось убрать. Элемент Q141142313 удалён
-       21.08.2026 в 11:56 UTC администратором с формулировкой «Does not meet
-       the notability policy» (лог удалений 672430061), адрес отдаёт 404.
-       Мёртвая ссылка в sameAs хуже её отсутствия: поисковик идёт по ней
-       подтверждать сущность и не находит ничего.
-
-       Пересоздавать элемент нельзя — снесут повторно по тому же основанию.
-       Wikidata станет возможна, когда о компании напишут независимые
-       источники, то есть после публикаций в прессе, а не до них. */
-    "https://www.tripadvisor.com/Attraction_Review-g469404-d34593301-Reviews-SB_Excursions-Seminyak_Kuta_District_Badung_Regency_Bali.html",
-    "https://www.trustpilot.com/review/sbexcursion.com",
-    "https://www.instagram.com/dubai_sb_excursions",
-    "https://t.me/SurfBase",
-  ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "reservations",
-    telephone: "+62 853 3368 5020",
-    url: `https://wa.me/${WHATSAPP_NUMBER}`,
-    availableLanguage: ["English", "Russian", "Spanish", "French", "Chinese"],
-  },
-};
 
 /* Иконка в кружке «Watch video» на обложке тура. В шаблоне там на всех
    страницах стоял один и тот же балийский храм — на вертолётном туре и на
