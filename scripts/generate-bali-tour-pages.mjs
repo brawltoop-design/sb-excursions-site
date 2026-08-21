@@ -33942,6 +33942,1954 @@ const JOURNAL_SEO_GUIDES = [
         "answer": "Rent for trips under about ten days, buy used for stays past three or four weeks, and bring your own only if you are advanced, need exact dimensions and will surf daily. The maths: a month of rental is about IDR 3 million, a used board nets out at USD 50–80 after resale, and flying a board round trip costs roughly USD 60–300 on charging airlines, plus the transit damage risk."
       }
     ]
+  },
+  {
+    "slug": "tanah-lot-temple-guide",
+    "badge": "Travel guide",
+    "navLabel": "Tanah Lot",
+    "cardTourLabel": "Temples and sunsets",
+    "heroTourSlug": "tanah-lot-bedugul-tour",
+    "relatedTourSlugs": [
+      "tanah-lot-bedugul-tour",
+      "private-car-with-driver-bali",
+      "bali-airport-transfer"
+    ],
+    "inlineStats": [
+      "9 stops on site",
+      "Entry IDR 75,000",
+      "Sunset 18:05-18:50"
+    ],
+    "title": "Tanah Lot: No Temple Entry, IDR 75,000, Sunset 18:05-18:50",
+    "description": "Non-Hindus cannot enter Tanah Lot temple. What the IDR 75,000 ticket buys as of August 2026, when low water opens the causeway, and sunset timing.",
+    "excerpt": "Start with the part most guides bury: you cannot go inside Tanah Lot temple. The shrines on the rock are closed to non-Hindus at every tide, on every day of the year. What you buy at the gate — IDR 75,000 per foreign adult as of August 2026, cash only — is a coastal park: a chain of clifftop viewpoints, a sea arch, a market you have to walk through, and, when the tide is out, a walk across the causeway to the base of the rock. Whether that walk is possible depends on the hour you arrive rather than the day, and low water lines up with sunset only a few days a fortnight. Sunset itself falls between 18:05 and 18:50 depending on the month. This guide covers the fee, the tide, where to stand, and the ride home that strands people after dark.",
+    "rankings": [
+      {
+        "name": "The market walk from the gate",
+        "imageSrc": "/images/tours-real/tanah-lot-bedugul-tour.jpg",
+        "area": "Gate to main terrace",
+        "bestFor": "Knowing the layout in advance",
+        "summary": "The path from the ticket gate to your first sight of the rock runs about 500 metres through covered lanes of stalls — sarongs, hats, sandals, carvings, cold drinks. Five to ten minutes at an unhurried pace, and unavoidable: the site is laid out to route you through it. Haggling is expected. Call it a market gauntlet rather than a village craft market and you will arrive in the right frame of mind."
+      },
+      {
+        "name": "The main terraces and Tanah Lot rock",
+        "imageSrc": "/images/remote/tanah-lot-bali-indonesia-20220827-0957-1103-c4066c44.jpg",
+        "area": "Opposite the rock",
+        "bestFor": "The postcard silhouette",
+        "summary": "The cliff platforms opposite the rock give the frame everyone knows: the rock centre-frame, the sun setting to its right. They are also where every coach group is unloaded, so at the sunset hour you photograph over other people's raised phones. Worth knowing while you stand there — roughly a third of the visible rock is reinforced concrete, shaped and tinted to match after the face began crumbling in the 1980s. Sixteenth-century in meaning, partly modern in material."
+      },
+      {
+        "name": "The causeway to the base of the rock",
+        "imageSrc": "/images/remote/tanah-lot-bali-indonesia-20220827-0957-1103-c4066c44.jpg",
+        "area": "20-30 m offshore",
+        "bestFor": "Standing under the temple",
+        "summary": "The rock sits only 20-30 metres offshore, and at low water a rock-and-sand causeway is exposed so you can walk across to its base. The usable window is about two hours either side of low water, best within an hour of it. Staff close the crossing when the swell is up and during ceremonies, so even a perfect tide is not a promise. The surface is wet, uneven and slick with algae — closed shoes, not flip-flops."
+      },
+      {
+        "name": "Tirta Pabersihan spring and the snake cave",
+        "imageSrc": "/images/places/temple-dress-code.jpg",
+        "area": "Base of the rock",
+        "bestFor": "A blessing, by donation only",
+        "summary": "At the foot of the rock, reachable only at low tide, a freshwater spring called Tirta Pabersihan emerges and an attendant performs a short blessing: water on the hands, a sip, wet rice pressed to the forehead. Nearby a grotto holds one or two banded sea kraits, treated as guardians. Neither has a posted price; reported donations cluster somewhere between IDR 10,000 and 50,000, and no figure is official. The kraits are venomous, placid and near-impossible to provoke — touching one is still your choice, not a quaint custom."
+      },
+      {
+        "name": "Pura Enjung Galuh headland",
+        "imageSrc": "/images/places/seminyak-sunset.jpg",
+        "area": "Between the two temples",
+        "bestFor": "Both temples from one spot",
+        "summary": "A small headland jutting into the sea between the two temples, roughly two minutes further along the clifftop from the main terraces. From one position you get Tanah Lot on one side and the Batu Bolong arch on the other, which no other spot on the site offers. It carries a fraction of the terrace crowd, there is room to set a tripod down, and almost no coach itinerary mentions it exists."
+      },
+      {
+        "name": "Pura Batu Bolong at Tanah Lot",
+        "imageSrc": "/images/places/uluwatu-temple-cliff.jpg",
+        "area": "4 minutes south-west",
+        "bestFor": "The sea arch, fewer people",
+        "summary": "A second sea temple about four minutes south-west along the clifftop, on a promontory undercut by a natural arch; the walkway to the shrine runs across the top of it, with the sea on both sides. Included in the same ticket, no second gate. The shrine, like Tanah Lot, is not open to non-Hindus. Note the name: type 'Batu Bolong' into a map and you will be sent to a beach in Canggu, a different place entirely."
+      },
+      {
+        "name": "The cliff warungs and restaurants",
+        "imageSrc": "/images/places/seminyak-sunset.jpg",
+        "area": "Clifftop terrace",
+        "bestFor": "A seat instead of a crush",
+        "summary": "Simple warungs and sit-down restaurants line the cliff edge, and buying a drink holds you a seat for the sunset hour. It trades the front-row angle for not standing in a crush for ninety minutes — the right call with children, with anyone who tires standing, and with anyone not there to photograph. There is no cover charge, but you are expected to order; we could not verify any published menu pricing, so ask before you sit down in high season."
+      },
+      {
+        "name": "Kecak and fire dance at Surya Mandala",
+        "imageSrc": "/images/places/uluwatu-temple-cliff.jpg",
+        "area": "Surya Mandala stage",
+        "bestFor": "Absorbing the exit traffic",
+        "summary": "A Kecak and fire dance runs at the Surya Mandala stage inside the grounds, ticketed separately from entry at IDR 100,000 at the door and around IDR 90,000 booked online in 2026; agency listings show US$7-8 with markup added. The catch nobody mentions: it runs through the sunset hour, roughly 18:00 to 19:00, so it is the show or the viewpoint walk, not both. It is also a different performance from the better-known Uluwatu Kecak."
+      },
+      {
+        "name": "The car park after dark",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Main car park",
+        "bestFor": "Not getting stranded",
+        "summary": "The part that ruins evenings. Grab and Gojek can drop you here but generally cannot collect you — Tanah Lot sits inside a local transport cooperative zone, and the boundary you would have to walk out to is not signed. Add a car park that empties within the same half hour onto a two-lane road, and a return to Seminyak or Kuta that routinely takes one to two hours. Have a driver waiting, or expect to negotiate a price in the dark."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What you can see at Tanah Lot, and what you cannot",
+        "paragraphs": [
+          "The single most useful thing to know before you pay at the gate: **non-Hindus cannot enter Tanah Lot temple**. Not at low tide, not on a quiet morning, not with a guide. The shrines sit on top of the rock and are reserved for worship, so every visitor photograph you have ever seen was taken from the mainland or from the sand at the base. Copy that invites you to explore the ancient temple is selling something that does not exist, and it is the reason a lot of people leave here vaguely disappointed without being able to say why.",
+          "What the ticket does buy is a managed coastal park — the site is run as DTW Tanah Lot by a Tabanan Regency body, not as a free-access village temple. From the gate to the first view of the rock is **about 500 metres through the market lanes, five to ten minutes**, and the chain of clifftop viewpoints beyond it runs another 500 metres or so. Walking the whole chain end to end at a comfortable pace takes **20-25 minutes**, which is the number to plan a sunset around.",
+          "One more piece of honesty, because it changes how you look at the thing: **roughly a third of the visible rock is engineered** — reinforced concrete shaped and tinted to match, installed under a Japanese-funded stabilisation programme after the face began crumbling in the 1980s. The monetary figures circulating for that programme are not credible and we will not repeat them. The rock is genuinely a 16th-century sea temple in use and meaning; part of what you photograph is modern engineering holding it up."
+        ],
+        "bullets": [
+          "**Included in the one ticket:** the clifftop viewpoints opposite the rock, the Enjung Galuh headland, the Pura Batu Bolong headland and the beach below the main terrace — no viewpoint charges a supplement",
+          "**Included, tide permitting:** the causeway walk to the base of the rock, the Tirta Pabersihan spring and the snake cave",
+          "**Included whether you want it or not:** the market lanes, because the route from the gate runs straight through them",
+          "**Not included:** the temple itself, at any tide; and during the temple's anniversary the inner Main Mandala closes to all non-worshippers",
+          "**Not included:** the Kecak and fire dance, which is a separate ticket on a separate stage inside the grounds"
+        ]
+      },
+      {
+        "heading": "The tide decides whether you reach the rock",
+        "paragraphs": [
+          "Tanah Lot rock sits **only about 20-30 metres offshore**. At low water a rock-and-sand causeway is exposed and you can walk over to the base; at high water it is cut off completely and the temple appears to float. Both are worth seeing, but they are two different visits, and which one you get is decided by the hour you arrive rather than by the day.",
+          "Bali's south coast runs on a **semi-diurnal tide: two highs and two lows in roughly every 24 hours 50 minutes**, successive lows about 12 hours 25 minutes apart. That gives you two low-water windows a day, and usually at least one falls in daylight — but not necessarily anywhere near sunset. The usable window is **roughly two hours either side of low water, and comfortably inside an hour of it**. Low water also shifts about **50 minutes later each day**, which is why a tide table you checked on Monday is wrong by Thursday.",
+          "Sunset and low water only line up in runs of three or four days, roughly every fortnight. If a guest wants both the rock walk and the silhouette on the same evening, we choose the date for it; otherwise we plan them as two different hours or two different days. Read the tide table for **the hour you will be standing there**, not the day's headline high and low, and know that consumer tide sites interpolate Tanah Lot from a reference port, so times can be **15-30 minutes out**. We do not publish a height threshold — the available sources use different datums and disagree — so the honest instruction is to read the table, then look at the sea."
+        ],
+        "bullets": [
+          "**Closed shoes or grippy sandals.** The exposed rock is wet, uneven and slick with algae; flip-flops on that surface are how ankles get hurt",
+          "**Staff close the causeway when the swell is up**, and during ceremonies at the base — a perfect tide is not a guarantee of access",
+          "**In the wet season, November to March**, the sea is often too rough for base access even at low water",
+          "**Check a tide table for Tanah Lot, Canggu or Benoa** the evening before and again on the morning of the visit — the Indonesian Navy's Pushidrosal data sits behind most consumer apps"
+        ]
+      },
+      {
+        "heading": "Tickets, opening hours and the cash you need at the gate",
+        "paragraphs": [
+          "Entry is **IDR 75,000 for a foreign adult and IDR 40,000 for a foreign child** — the rates in force since 1 January 2024 and still showing on the site's own ticket page in **August 2026**. Indonesian visitors pay IDR 30,000 adult and IDR 20,000 child. In dollars IDR 75,000 is roughly US$4.50-5, but treat any USD figure as approximate. Parking is **IDR 3,000 for a motorbike, IDR 5,000 for a car, IDR 10,000 for a bus**. Everything at the gate is **cash only** — card readers are unreliable, there is no ATM on site, and the nearest machines are back in Kediri or Canggu.",
+          "This fee is on a rise that keeps being deferred, so **check the board at the gate**. Management announced in December 2025 that from 1 April 2026 foreign adults would pay IDR 100,000 and foreign children IDR 60,000, with parking roughly doubling. On 29 March 2026 the site's own promotion office confirmed the increase was postponed, and in early April the Tabanan tourism office said it had been pushed to next year, citing a sharp drop in foreign arrivals to the regency. No new date has been set. A fair number of English-language pages already print IDR 100,000 as though it were live; an equally large number still print IDR 60,000, which has been wrong since the start of 2024."
+        ],
+        "bullets": [
+          "**Opening hours: sources disagree on the morning.** 06:00, 06:30 and 07:00 all appear in print, and the official ticket page lists no hours at all. The **19:00 close is consistent**, and last entry is reported at about 30 minutes before it",
+          "**The Love Bali tourist levy is a separate payment** — IDR 150,000 per foreign visitor per entry to Bali, paid to the province online or at the airport, not at Tanah Lot. Whether it is actually checked here is disputed, so keep the QR voucher on your phone either way",
+          "**There is no online booking** for the entrance ticket. You pay at the booth on the day",
+          "**Carry small notes** for toilets and donations. Most blocks charge IDR 2,000-5,000, though there is a free block near the ticket counter",
+          "**No sarong is required** for the general grounds — this is open coastal parkland and the inner temple is closed anyway. Shoulders and knees covered is the courteous default, and a sarong is expected if you take the blessing at the spring. Anyone told a sarong is compulsory just to walk in is being upsold; our drivers keep spare sarongs in the car, so the question never comes up on our days out"
+        ]
+      },
+      {
+        "heading": "Sunset: when to arrive, where to stand, when to leave",
+        "paragraphs": [
+          "Sunset at Tanah Lot falls between **about 18:05 and 18:50** depending on the month — earliest in late May and early June, latest in late January and February. The 18:00-18:30 window repeated across a lot of blogs is simply wrong for most of the year, and from late November to mid-March the sun does not go down until after 18:30. Best light is the **20-40 minutes before sunset**, plus blue hour afterwards.",
+          "Arrive **16:30-17:00**. That gives you time to park, clear the ticket queue, walk the market and choose a position before the surge, which runs 17:30-18:30. Most visitors turn up at 18:00-18:30, too late to do anything but stand behind other people. Then stay twenty minutes after the sun touches the water: almost everyone leaves at exactly that moment, which is usually when the colour starts, and waiting also spares you the worst of the car park.",
+          "The main terraces are the default position and the most crowded one, not the best one. **Pura Enjung Galuh is about two minutes further along the clifftop and gives you Tanah Lot on one side and the Batu Bolong arch on the other**; the Batu Bolong headland is about four minutes and carries a fraction of the crowd. Between November and March a clear sunset is a lottery — the wet-season sky often does not deliver one at all, and any guide selling the famous Tanah Lot sunset without that caveat is setting you up. If sunset is the whole point of your evening, our [Tanah Lot versus Uluwatu comparison](/bali/en/journal/tanah-lot-vs-uluwatu-sunset) puts the two side by side. Bring a phone torch: the paths are dark within twenty minutes of the sun going, and there are steps."
+        ]
+      },
+      {
+        "heading": "Getting there, and the ride home that strands people",
+        "paragraphs": [
+          "Tanah Lot is closest to Canggu — **about 13 km, 30-50 minutes** — then Seminyak at **60-90 minutes**, Kuta and the airport area at **60-100**, Ubud at **90-120**. From the Bukit (Uluwatu, Jimbaran, Nusa Dua) it is 1.5-2 hours each way, which makes a sunset-only run a very long evening. Those are ranges rather than numbers because Bali's realised average speed off the toll road is around 30-35 km/h, and the leg that has to arrive before sunset lands squarely in the 16:30-20:00 evening peak. If you are self-driving or briefing a taxi, navigate to **Pura Tanah Lot or DTW Tanah Lot** — typing Batu Bolong will route you to a beach in Canggu, 13 km away.",
+          "**Grab and Gojek can drop you at Tanah Lot but generally cannot collect you.** The area is covered by a local transport cooperative agreement, so app drivers will not or cannot pick up at the gate, the zone boundary is not clearly signed, and working out where it ends in the dark while walking against the outbound crowd is a genuinely bad end to the evening. Either arrange a driver who waits or accept a negotiated local price under time pressure. A [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) from $59 per car removes the problem outright — the car sits in the car park while you are at the cliff. For comparison, street rates for a private driver in Bali run IDR 600,000-900,000 for an 8-10 hour day, with overtime reported at IDR 50,000-100,000 an hour depending on the source.",
+          "Everybody leaves within the same half hour onto a two-lane road, so **getting back to Seminyak or Kuta after sunset routinely takes one to two hours**. Do not book a 20:00 dinner in Seminyak off a Tanah Lot sunset. If Tanah Lot is the end of a bigger day, our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) from $59 per person runs the highlands in the morning and the coast at sunset, which is the only order that works — Bedugul clouds over from late morning and sunset cannot be brought forward. Budget 11-13 hours door to door for that day; the 10-hour figure most operators advertise does not survive contact with a real sunset. And if you are landing the same day, a [private airport pickup](/bali/en/tours/bali-airport-transfer) from $15 is the sane first leg, because the airport run to Tanah Lot is 60-100 minutes and not a drive to improvise after a flight."
+        ]
+      },
+      {
+        "heading": "Days to plan around, and what to build the rest of the day from",
+        "paragraphs": [
+          "Two things in the Balinese calendar close the site or change it. **Nyepi, the day of silence, shuts the entire island for 24 hours** — Tanah Lot, the market, the roads and the airport included. Nyepi 2026 fell on 19 March; the 2027 date is reported as either 8 or 9 March depending on the source, so confirm it before you fix travel dates. The temple's own anniversary, **Pujawali, comes round every 210 days** and brings large numbers of Balinese worshippers; the inner Main Mandala closes to non-worshippers, although the July 2026 Pujawali did not close the site to visitors at all. The Melasti processions in the days before Nyepi bring sacred objects down to the sea here — spectacular, very crowded, access restricted.",
+          "Season matters more than any single date. **The dry season, roughly April to October, gives the reliable clear-horizon sunsets**; November to March is a lottery, and the swell often closes the base of the rock even at low water. July and August are peak for crowds, though 2026 has been a quieter year than usual — foreign arrivals to Tabanan Regency fell by roughly a third in the first two months of the year, which is precisely why the ticket increase was shelved. One live note as we write in **August 2026**: the Tanah Lot Art and Food Festival is running at the site in late August, which means extra crowds and pressure on the car park.",
+          "Tanah Lot is a 90-minute stop, not a day. The standard pairing is the Bedugul highlands in the morning and the coast at sunset: [Ulun Danu Beratan](/bali/en/journal/ulun-danu-beratan-temple-guide) on the lake, [the wider Bedugul highlands](/bali/en/journal/bedugul-highlands-guide) for the cool air and the market gardens, then the descent to Tabanan. Our [route write-up for that day](/bali/en/journal/tanah-lot-bedugul-day-trip-route) has the hour-by-hour version, including where the schedule usually slips. Pack a layer for the highlands that you will not want four hours later at the coast — the lake sits at roughly 1,200 m and runs 6-8°C cooler than the beach."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How much is the Tanah Lot entrance fee?",
+        "answer": "IDR 75,000 for a foreign adult and IDR 40,000 for a foreign child, the rates in force since January 2024 and still showing on the site's own ticket page in August 2026. Indonesian visitors pay IDR 30,000 and IDR 20,000. Parking is IDR 3,000-10,000 depending on vehicle. Cash only, no ATM on site, no online booking. An announced rise to IDR 100,000 for foreign adults was postponed in March 2026 with no new date set, so check the board at the gate."
+      },
+      {
+        "question": "Can you go inside Tanah Lot temple?",
+        "answer": "No — the shrines on the rock are closed to non-Hindus at every tide and on every day of the year. What you can do is view the rock from the clifftop terraces and, at low water, walk the causeway to its base for the spring and the snake cave. Pura Batu Bolong, the second temple inside the grounds, is the same: you walk the causeway across the arch and look, but you do not enter the shrine."
+      },
+      {
+        "question": "What time is sunset at Tanah Lot, and when should I arrive?",
+        "answer": "Sunset falls between roughly 18:05 and 18:50 depending on the month — earliest in late May and early June, latest in late January and February, and after 18:30 from late November through mid-March. Arrive 16:30-17:00 to park, clear the ticket queue, walk the 500 metres of market lanes and pick a viewpoint before the 17:30-18:30 crowd surge. Stay twenty minutes past sunset for the best colour and a less painful exit."
+      },
+      {
+        "question": "Can you walk out to Tanah Lot rock?",
+        "answer": "Only at low tide, and only when the swell is small enough for staff to open the causeway. The rock sits 20-30 metres offshore and a rock-and-sand crossing is exposed for roughly two hours either side of low water. Because Bali's coast is semi-diurnal, there are two low windows a day and low water shifts about 50 minutes later daily, so check a tide table for the hour you will arrive. Sunset and low water coincide only a few days a fortnight."
+      },
+      {
+        "question": "How long does it take to get to Tanah Lot from Canggu or Seminyak?",
+        "answer": "From Canggu it is about 13 km and 30-50 minutes; from Seminyak 60-90 minutes; from Kuta and the airport area 60-100; from Ubud 90-120. The afternoon leg is slower than any published figure because it runs into the 16:30-20:00 peak, and the return after sunset to Seminyak or Kuta routinely takes one to two hours. Grab and Gojek can drop you here but generally cannot pick you up, so plan the ride home before you go."
+      },
+      {
+        "question": "What are Tanah Lot's opening hours?",
+        "answer": "The site closes at 19:00, which every source agrees on, with last entry reported at about 30 minutes before that — arriving after roughly 18:30 is pointless. The opening hour is genuinely disputed: 06:00, 06:30 and 07:00 all appear in print, and the official ticket page states no hours at all. For a quiet visit with the tide in your favour, 07:00-09:00 is the least crowded stretch of the day by a wide margin."
+      }
+    ]
+  },
+  {
+    "slug": "handara-gate-bali-guide",
+    "badge": "Travel guide",
+    "navLabel": "Handara Gate",
+    "cardTourLabel": "Temples and sunsets",
+    "heroTourSlug": "tanah-lot-bedugul-tour",
+    "relatedTourSlugs": [
+      "tanah-lot-bedugul-tour",
+      "private-car-with-driver-bali",
+      "bali-airport-transfer"
+    ],
+    "inlineStats": [
+      "6 things to know",
+      "Photo fee IDR 50,000",
+      "Day tour from $59"
+    ],
+    "title": "Handara Gate Is a Golf Resort Entrance, Not a Temple",
+    "description": "Handara Gate is the entrance to a golf resort, not a temple. Behind it: a driveway and lawn. Photo fee about IDR 50,000, a numbered queue, and when to go.",
+    "excerpt": "Handara Gate is not a temple. It is the vehicle entrance to Bali Handara Golf & Resort in Pancasari, built as a candi bentar in traditional style, with no shrine, no deity and no ceremonies. Through the arch you are looking at the resort's paved driveway, mown lawn and ornamental trees, with the golf course behind — not the mountain valley the famous photographs imply. The main Denpasar–Singaraja highway runs a few metres behind the camera. You buy a photo ticket of about IDR 50,000 per foreign visitor as published across 2024 to 2026, receive a numbered queue ticket, and get roughly three minutes in the frame. The ticket does not admit you to the resort. Arrive between 06:30 and 08:00 and it is a fifteen-minute stop; arrive at eleven and it can eat two hours.",
+    "rankings": [
+      {
+        "name": "It is a golf resort entrance, not a temple",
+        "imageSrc": "/images/remote/gates-of-heaven-lempuyang-temple-bali-ea398706.jpg",
+        "area": "Pancasari, Buleleng",
+        "bestFor": "Getting the category right",
+        "summary": "The gate is a candi bentar — the Balinese split gate form — built as the vehicle entrance to Bali Handara Golf & Resort, a course developed in the 1970s. There is no shrine, no deity, no priest and no ceremony here, and it sits on no pilgrimage route. Sellers who file it under temples are misdescribing it. None of that makes it a bad photograph; it simply is not a religious site."
+      },
+      {
+        "name": "Behind it is a driveway and a lawn",
+        "imageSrc": "/images/places/canggu-rice-fields.jpg",
+        "area": "Through the arch",
+        "bestFor": "Knowing what you will see",
+        "summary": "Through the gate you are looking at the resort's paved access driveway, mown grass, planted ornamental trees and, further back, the golf course and clubhouse. There is no valley, gorge, cliff or ravine. The green wall in the background is the forested inner slope of the caldera that rings Pancasari — a hillside a short distance away, not a distant range and not a drop. On a misty morning you will not see it at all."
+      },
+      {
+        "name": "The photo fee, paid in cash",
+        "imageSrc": "/images/places/temple-dress-code.jpg",
+        "area": "Ticket booth",
+        "bestFor": "Budgeting the stop honestly",
+        "summary": "Two prices circulate and both are stable: IDR 30,000 and IDR 50,000, with foreigners paying IDR 50,000 — roughly USD 3 — as published across 2024 to 2026. Some guides re-report the same pair as an adult and child rate, and older listings still show lower figures, so check at the booth. Payment is cash. A small extra ask for the staff photographer is normal here rather than a scam."
+      },
+      {
+        "name": "A numbered queue and about three minutes",
+        "imageSrc": "/images/tours-real/tanah-lot-bedugul-tour.jpg",
+        "area": "The photo line",
+        "bestFor": "Understanding the real cost",
+        "summary": "You buy at the booth, take a numbered ticket and wait for staff to call your number. There is one photo position and one staff photographer working the line, and the slot is about three minutes per person — the resort's own figure, with visitors reporting two to five. Before roughly 08:00 the wait runs from nothing to half an hour; from mid-morning, one to two hours is common, and longer behind coach groups."
+      },
+      {
+        "name": "Arrive 06:30 to 08:00, or come back late",
+        "imageSrc": "/images/places/bali-in-shoulder-season.jpg",
+        "area": "Timing",
+        "bestFor": "Turning it into a short stop",
+        "summary": "The queue, not the light, is what you are managing. Be in line between 06:30 and 08:00, or return between 16:00 and 18:00. Early mornings also give the best chance of the ridge showing behind the gate: cloud and mist build through late morning in these highlands and are heavier from November to April. Even in the dry season a clear backdrop is a chance rather than a promise."
+      },
+      {
+        "name": "The ticket buys the photo and nothing else",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Beyond the gate",
+        "bestFor": "Avoiding the second surprise",
+        "summary": "Anyone can buy the photo ticket — you do not need to be a resort guest or a golfer — but it does not admit you to the resort, the golf course, the grounds, the clubhouse or the restaurant. There is no walk, viewpoint, garden or cafe attached to it. Paid extras are sold at the same address, including a pre-wedding package and a resort tour, but those are separate purchases at a very different price."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What Handara Gate actually is",
+        "paragraphs": [
+          "Handara Gate is the vehicle entrance to **Bali Handara Golf & Resort**, a golf course in Pancasari village, Sukasada district, Buleleng Regency, at roughly **1,200 to 1,400 m** inside the old Buyan–Tamblingan caldera. The gate is a candi bentar, the split gate form used all over Bali, executed in traditional style as the resort's driveway entrance and, functionally, its signage. The resort was developed in the 1970s. **It is not a temple**: no shrine, no deity, no priest, no ceremonies, no sacred status, nothing worshipped and no place on any pilgrimage route.",
+          "Half the disappointment at Handara comes from arriving with the wrong category in mind. Customers who booked \"the gates of heaven\" are usually thinking of Lempuyang in east Bali, which is a genuine working temple on the other side of the island. Nor is Handara hidden or off the beaten path, whatever the captions say — it is a ticketed, queue-managed photo concession on the main Denpasar–Singaraja trunk road, with a booth, a numbered ticket system and cars parked on the shoulder. Knowing that in advance is the difference between a good ten minutes and an irritated hour."
+        ]
+      },
+      {
+        "heading": "What is behind the gate, and what is behind the camera",
+        "paragraphs": [
+          "Through the arch you are looking at the resort's **paved access driveway, mown lawn and planted ornamental trees**, with the golf course and clubhouse further back. It is not a mountain valley, gorge, canyon, cliff edge or jungle ravine, which is what the framing of the circulated photographs implies. The green wall in the background is the forested inner slope of the caldera that rings Pancasari — a hillside a short distance away, not a distant range and not a drop.",
+          "On a clear morning you genuinely do get greenery and a ridgeline behind the stonework, and it photographs well. On a typical Bedugul morning you get white mist and the ridge is invisible. Many widely shared versions are heavily colour-graded on top of that, and some are outright composites with a different mountain dropped in. The famous composition survives because the photographer crouches low and crops tight, and because all of the following sits a metre or two outside the frame:"
+        ],
+        "bullets": [
+          "**The Denpasar–Singaraja highway**, which passes immediately in front of the gate — the traffic is directly behind the photographer's back",
+          "**The ticket booth and the numbered queue**, which can be thirty people deep by mid-morning",
+          "**The parking on the highway shoulder**, because there is no dedicated car park at the gate",
+          "**The resort's own signage**, since this gate is corporate signage as much as it is architecture"
+        ]
+      },
+      {
+        "heading": "Handara Gate price, and how the queue works",
+        "paragraphs": [
+          "There is no entrance fee at Handara Gate, because there is nothing to enter. What you pay is a **photo fee** — a timed slot to stand in the gate. The best-supported figures, published consistently from 2024 through 2026, are **IDR 30,000 for Indonesian visitors and IDR 50,000 for foreign visitors**, which is about USD 3 at an August 2026 rate of roughly IDR 17,800 to the dollar. Treat the dollar figure as approximate and **check the price at the booth**: this is a privately set fee, not a government tariff.",
+          "The queue is the real cost of this stop. You buy at the booth, receive a **numbered queue ticket**, and wait until staff call your number; there is one photo position and one staff photographer working the line, and the slot is about **three minutes per person**, which is the resort's own figure. Visitor reports across 2024 to 2026 put the wait at anything from nothing to about 30 minutes before roughly 08:00 to 09:00, commonly **one to two hours from mid-morning**, and two to three hours when coach groups land ahead of you. Budget **10 to 20 minutes off-peak and 60 to 90 minutes mid-day** for what is, functionally, one photograph."
+        ],
+        "bullets": [
+          "**The two numbers are stable; the labels are not.** Some guides re-report the same IDR 30,000 and IDR 50,000 as an adult and child rate rather than domestic and foreign, and older listings still show IDR 20,000 and IDR 30,000",
+          "**Cash only.** Cards are not accepted at the booth, so bring notes before you leave the coast",
+          "**The staff photographer.** Sources disagree on whether a staff-taken shot is included in the ticket; where it is charged separately, about **IDR 10,000** is the figure that is actually attested. Agree it before you hand over your phone",
+          "**Drones.** Reported fees range from IDR 100,000 to IDR 300,000 and the sources genuinely disagree, with IDR 200,000 appearing most often. Where permitted it covers the gate area only, not overflight of the resort or the course",
+          "**Resort and golf guests are consistently reported not to pay** the photo fee at all",
+          "**Playing the course is a different order of money** — green fees run around **IDR 2,000,000 per player for 18 holes** as published for 2026, including cart, caddy, insurance and tax"
+        ]
+      },
+      {
+        "heading": "Getting to Handara Gate and where it fits in a day",
+        "paragraphs": [
+          "Handara Gate sits on **Jl. Raya Denpasar–Singaraja in Pancasari**, about **10 km north of Ulun Danu Beratan** on the same road. From Ubud or the south coast, budget **two hours or more each way**, and 2 to 2.5 hours from the airport. Map apps quote as little as an hour from Seminyak; that number does not survive contact with the climb above Baturiti behind a line of trucks. There is **no dedicated car park** — parking is free on the highway shoulder and gets tight at peak. There is no practical scheduled service up here for visitors, so it is a private car or nothing.",
+          "The good news for itinerary building is that the gate costs almost no extra driving. It sits directly on the route between [Ulun Danu Beratan](/bali/en/journal/ulun-danu-beratan-temple-guide) and the Wanagiri ridge or Munduk, so the only real cost is the queue — which is exactly how we sell it, as a short stop on a highland day rather than a destination. Our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) **from $59 per person** runs this road with a driver who knows the difference between the queue at 07:30 and the queue at 11:00, and if you would rather build the day yourself, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** does the same job with your own stop list. Both book over WhatsApp with no prepayment, and our [Bedugul highlands guide](/bali/en/journal/bedugul-highlands-guide) covers the other stops on the same stretch of road.",
+          "One thing not to attempt is the highlands on arrival day. It is **four to five hours of driving round trip** before you stop anywhere, and the gate wants you there at breakfast time. Land, sleep, go the next morning — we run a separate [private airport pickup](/bali/en/tours/bali-airport-transfer) **from $15** for the arrival leg, and our [day-trip route guide](/bali/en/journal/tanah-lot-bedugul-day-trip-route) shows how the Bedugul stops sequence once you are rested."
+        ]
+      },
+      {
+        "heading": "The best time to visit Handara Gate",
+        "paragraphs": [
+          "The gate itself has no opening hours in any meaningful sense: it stands on an open public road with no barrier, so what has hours is the ticket booth. Published booth hours cluster at **06:00 to 19:00 WITA**, though at least one guide lists 08:00 to 17:00, so treat the edges of the day as uncertain and confirm on the spot. The window that matters is your arrival — **be in the queue between 06:30 and 08:00**, or come back between 16:00 and 18:00. Between roughly 09:00 and 15:00 you are queueing behind everyone else's itinerary.",
+          "Weather follows the Bedugul highland pattern: clearer early, with cloud and mist building through late morning and the afternoon, heavier from November to April, and the driest months from June to September. Bring a layer, because at this altitude the mornings are genuinely cool by Bali standards, and bring cash and patience. There is also one scheduling conflict nobody mentions: the Wanagiri viewpoints just west along the ridge need you there before the fog rolls in around 10:00, and Handara needs you there before the queue. **They cannot both be first.** Decide which one the trip is actually for, and put the other second."
+        ]
+      },
+      {
+        "heading": "Handara or Lempuyang? They are not the same gate",
+        "paragraphs": [
+          "The two most photographed gates in Bali are constantly swapped for each other, and they have almost nothing in common. **Lempuyang** — the \"Gates of Heaven\" — is the split gate of an active Hindu temple in Karangasem, in the far east of the island, and **Mount Agung really is framed between its halves**, though cloud hides it often enough to make it a lottery. The mirror-perfect water in every viral photo of Lempuyang does not exist: a staff member holds a small mirror or piece of dark glass under the lens, and the blue is reflected sky. Handara runs no trick at all — what you see is the gate, honestly photographed, in front of a driveway.",
+          "The practical differences matter more than the aesthetic ones. Lempuyang requires a sarong, temple etiquette and a compulsory shuttle from the lower terminal, costs roughly **IDR 120,000 to 160,000 per foreign visitor all-in as published across 2025 and 2026** (cash, and subject to change), and routinely holds people in a two-to-four-hour queue. Handara has no dress rules and, off-peak, is done in fifteen minutes. They also sit on opposite sides of the island, roughly three hours apart, so **they cannot be combined in one day**, whatever an itinerary claims. Our [comparison of the two gates](/bali/en/journal/handara-gate-vs-lempuyang-gates-of-heaven) goes through it point by point."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How much does Handara Gate cost?",
+        "answer": "You pay a photo fee rather than an entrance fee: most consistently IDR 30,000 for Indonesian visitors and IDR 50,000 for foreigners — about USD 3 — as published across 2024 to 2026, cash only. Check the figure at the booth, since it is privately set. A staff photographer may be an extra IDR 10,000 or so, and reported drone fees range from IDR 100,000 to IDR 300,000 depending on the source."
+      },
+      {
+        "question": "Is Handara Gate a temple?",
+        "answer": "No. It is the vehicle entrance to Bali Handara Golf & Resort, built as a Balinese split gate in traditional style, with no shrine, no deity, no priest and no ceremonies, and no place on any pilgrimage route. The genuine temple gate people confuse it with is Lempuyang, in Karangasem on the far east side of Bali, which is a working Hindu temple with a sarong requirement."
+      },
+      {
+        "question": "What is actually behind Handara Gate?",
+        "answer": "The resort's paved driveway, mown lawn, ornamental trees and, further back, the golf course and clubhouse — not a valley, gorge or cliff. The green ridge in the photographs is the forested inner slope of the caldera around Pancasari, a hillside close by rather than a distant range, and it is often lost in mist. The Denpasar–Singaraja highway runs immediately in front of the gate, just behind the photographer."
+      },
+      {
+        "question": "How do I get to Handara Gate from Ubud?",
+        "answer": "By private car, and budget two hours or more each way depending on traffic — there is no practical scheduled service on this road. The gate is on Jl. Raya Denpasar–Singaraja in Pancasari, about 10 km north of Ulun Danu Beratan, so almost everyone folds it into a highland day rather than driving up for the gate alone. Parking is free on the highway shoulder; there is no dedicated car park."
+      },
+      {
+        "question": "What is the best time to visit Handara Gate?",
+        "answer": "Be in the queue between 06:30 and 08:00, or come back between 16:00 and 18:00. The ticket booth is published as running roughly 06:00 to 19:00 WITA, though some sources list shorter hours, so confirm on the day. Mornings also give the best chance of a visible ridge behind the gate, because highland cloud builds through late morning; the driest months up here are June to September."
+      },
+      {
+        "question": "Is Handara Gate worth visiting?",
+        "answer": "It is worth ten to twenty minutes if you are already driving the Bedugul road, and rarely worth more than that. The stonework is genuinely fine and the photograph is real, but the ticket buys about three minutes in one position and admits you to nothing else — no garden, viewpoint, cafe or resort access. Off-peak it costs almost no extra driving; mid-morning it can cost 60 to 90 minutes of queueing."
+      }
+    ]
+  },
+  {
+    "slug": "handara-gate-vs-lempuyang-gates-of-heaven",
+    "badge": "Travel guide",
+    "navLabel": "Handara or Lempuyang",
+    "cardTourLabel": "Temples and sunsets",
+    "heroTourSlug": "private-car-with-driver-bali",
+    "relatedTourSlugs": [
+      "private-car-with-driver-bali",
+      "tanah-lot-bedugul-tour",
+      "bali-airport-transfer"
+    ],
+    "inlineStats": [
+      "7 points compared",
+      "Handara from IDR 50,000",
+      "Lempuyang queue 2-4 h"
+    ],
+    "title": "Handara Gate vs Lempuyang: One Is a Temple, One Is Not",
+    "description": "Handara Gate is a golf resort driveway; Lempuyang is a working temple where the reflection is a mirror. Fees, queues and which drive is worth it.",
+    "excerpt": "These are not two versions of the same photo. Handara Gate is the vehicle entrance to a golf resort in Pancasari, about 10 km north of the Bedugul lake temple: no shrine, no deity, no ceremony, and behind it a paved driveway, lawn and the golf course rather than the mountain valley the framing implies. The main Denpasar–Singaraja highway runs directly behind the camera. Lempuyang is the opposite — a genuinely revered Hindu temple in far-east Karangasem, with Mount Agung framed between the gate halves — but the mirror-perfect water in every viral photo does not exist. There is no pool. A staff member holds a mirror under the lens, a trick made public in 2019. The two sit on opposite sides of Bali and cannot be combined in one day. Here is what each costs, how long each queue runs, and which one is worth the drive from where you are staying.",
+    "rankings": [
+      {
+        "name": "What each gate actually is",
+        "imageSrc": "/images/remote/gates-of-heaven-lempuyang-temple-bali-ea398706.jpg",
+        "area": "Buleleng vs Karangasem",
+        "bestFor": "Setting expectations before you drive",
+        "summary": "Handara is a candi bentar built as the vehicle entrance to Bali Handara Golf & Resort — no shrine, no deity, no priest, no ceremony, no sacred status. Lempuyang is the split gate of Pura Penataran Agung Lempuyang, an active temple in one of Bali's most revered temple groups, where ceremonies happen and temple rules are enforced. One is corporate signage executed in traditional style; the other is a place of worship."
+      },
+      {
+        "name": "What is actually behind the gate",
+        "imageSrc": "/images/tours-real/tanah-lot-bedugul-tour.jpg",
+        "area": "Pancasari and Abang",
+        "bestFor": "The reality check",
+        "summary": "Through Handara you see the resort's paved driveway, mown lawn, ornamental trees and, further back, the golf course — not the valley or gorge the tight crop implies. The green wall is a nearby caldera slope, and on a typical highland morning it is lost in mist. Through Lempuyang you genuinely see Mount Agung framed between the gate halves. That backdrop is real, and it is also frequently hidden by cloud."
+      },
+      {
+        "name": "The mirror under the lens",
+        "imageSrc": "/images/remote/gates-of-heaven-lempuyang-temple-bali-ea398706.jpg",
+        "area": "Lempuyang only",
+        "bestFor": "Understanding the viral photo",
+        "summary": "There is no water at the Gates of Heaven — no lake, no pool, no reflecting pond. A staff member holds a small mirror or piece of dark glass flat under the lens, and the blue below the gate is reflected sky. The technique went public in July 2019 after a Fortune editor's tweet, and was reported by outlets including PetaPixel and Vice. Handara has no equivalent trick: what you see there is what is there."
+      },
+      {
+        "name": "What you pay, and for what",
+        "imageSrc": "/images/places/uluwatu-temple-cliff.jpg",
+        "area": "Cash only at both",
+        "bestFor": "Budgeting each stop",
+        "summary": "Handara charges a photo fee rather than an entrance fee: two figures circulate across 2024-2026, IDR 30,000 and IDR 50,000, with foreign visitors paying 50,000 for a slot of about three minutes. Lempuyang charges IDR 70,000 foreign entry as raised in March 2024, plus a compulsory IDR 50,000 return shuttle, so the honest all-in figure is higher. Both are cash, and both are worth confirming at the gate on the day."
+      },
+      {
+        "name": "The queue, which is the real cost",
+        "imageSrc": "/images/places/bali-in-peak-season.jpg",
+        "area": "Both gates",
+        "bestFor": "Protecting the rest of your day",
+        "summary": "At Handara, arrive before roughly 08:00-09:00 and you wait anywhere from nothing to about half an hour; mid-morning it commonly runs one to two hours, and two to three when coach groups land ahead of you. At Lempuyang the scale is different: waits reported through 2026 average two to four hours, worst between 09:00 and 11:00, and the standard advice is to reach the lower shuttle terminal by around 05:15."
+      },
+      {
+        "name": "Dress code and temple etiquette",
+        "imageSrc": "/images/places/temple-dress-code.jpg",
+        "area": "Lempuyang",
+        "bestFor": "Not being turned away",
+        "summary": "Sarong and sash are mandatory at Lempuyang; a basic one is included with the ticket according to most reports, with upgrades around IDR 10,000-25,000. Standard Balinese temple rules apply, including the traditional request that menstruating women do not enter, and you do not climb on or sit in the gate structure. Handara has no dress rules whatsoever, because there is nothing sacred there to respect."
+      },
+      {
+        "name": "The drive, and why one day cannot hold both",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Opposite ends of Bali",
+        "bestFor": "Deciding from where you sleep",
+        "summary": "Handara sits on the main highway about 10 km north of the Ulun Danu Beratan lake temple, so it slots into a Bedugul day for almost no extra driving. Lempuyang is in far-east Karangasem: consistently reported at 2-2.5 hours from Ubud, and 2.5-3 hours or more from the south coast. The two gates are roughly three hours apart across mountain roads, which rules out combining them."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The short answer: which gate is worth your day",
+        "paragraphs": [
+          "If you only have room for one, take Handara Gate — but only as a **ten-minute stop on a Bedugul day**, early in the morning, and never as the reason for the drive. It sits on the main highway about **10 km north of the [Ulun Danu Beratan lake temple](/bali/en/journal/ulun-danu-beratan-temple-guide)**, so it costs you almost no extra driving on a route you were taking anyway. Lempuyang is the better site by some distance — a genuinely revered temple with Mount Agung really framed between the gate halves — but it is on the far east of the island and the photo queue there has been reported at **two to four hours** through 2026. That is a half day minimum, for one photograph.",
+          "Where you are staying decides this more than the gates do. From Ubud, Lempuyang is a **2-2.5 hour drive each way** and a defensible early start. From Seminyak, Canggu or the airport, published times run **2.5-3 hours, and up to 3-4 hours** by some accounts, which turns it into a very long day built around a queue. Handara, by contrast, pairs naturally with the lake temple, the botanic garden and the Twin Lakes ridge — our [Bedugul highlands guide](/bali/en/journal/bedugul-highlands-guide) lays out the whole day. And no, the two cannot be combined: they are on opposite sides of Bali."
+        ]
+      },
+      {
+        "heading": "Handara Gate is a golf resort driveway",
+        "paragraphs": [
+          "Handara Gate is a **candi bentar** — a Balinese split gate — built as the vehicle entrance to Bali Handara Golf & Resort in Pancasari village, Buleleng Regency, at roughly 1,200-1,400 m. It is not a temple. **There is no shrine, no deity, no priest and no ceremony**, nothing is worshipped there, and it appears on no pilgrimage route. Tour sellers who file it under 'temples' or call it a Gate of Heaven are misdescribing it, and the customers who arrive expecting a sacred site are the ones who leave annoyed.",
+          "What is behind it matters more than what it is called. Through the gate you are looking at the resort's **paved access driveway, mown lawn, ornamental trees and, further back, the golf course and clubhouse**. It is not a valley, gorge, canyon or cliff edge. The green wall in the circulated photos is the forested inner slope of the Buyan-Tamblingan caldera — a hillside nearby rather than a distant range, and on a typical highland morning it is white mist and invisible. The composition works because the photographer crouches low and crops tight, which removes the **main Denpasar-Singaraja highway running immediately behind the camera**, along with the ticket booth, the parked cars and the thirty people in line. Our [Handara Gate guide](/bali/en/journal/handara-gate-bali-guide) walks through the stop in detail.",
+          "One reciprocal point most listings omit: the ticket buys the photo slot and nothing else. **It does not admit you to the resort, the golf course, the clubhouse or the restaurant** — beyond the gate is private property, and there is no walk, viewpoint, garden or cafe included. Paid add-ons are sold separately at the same location, such as a pre-wedding package published at around IDR 850,000 per couple. Playing the course is a different order of money entirely: green fees are published at around **IDR 2,000,000 per player for 18 holes for 2026**."
+        ]
+      },
+      {
+        "heading": "Lempuyang is a real temple, and the water is a mirror",
+        "paragraphs": [
+          "Pura Penataran Agung Lempuyang is the lowest and most accessible temple in the Lempuyang complex, in Abang district, Karangasem, east Bali. It is a **working Hindu temple**: ceremonies happen and temple rules apply. Lempuyang is one of the island's most revered temple groups, and the summit temple, Pura Lempuyang Luhur, is a further climb of roughly **1,700 steps** — a two to three hour ascent through macaque territory that most day visitors never attempt and that nobody should sell casually as part of a photo stop.",
+          "The mirror-perfect water below the gate does not exist. **There is no lake, pool or reflecting pond.** A staff member or local guide holds a small mirror or piece of dark glass flat against the underside of the lens, so the blue in the bottom of the frame is reflected sky. This was made public in **July 2019**, when a Fortune editor's tweet went viral and outlets including PetaPixel and Vice reported the technique. In practice they usually shoot on your own phone. Reports on tipping conflict — some visitors say **IDR 20,000-50,000** is expected, others report that nothing is asked at all — so carry small notes and treat the tip as part of the budget rather than an afterthought.",
+          "What is real is the backdrop: **Mount Agung, Bali's highest volcano, framed between the gate halves**. That part is no trick. It is also frequently hidden by cloud, so treat the volcano as a lottery rather than a guarantee; early morning in the dry season, roughly April to October, gives the best odds. Standard Balinese temple etiquette applies at the gate:"
+        ],
+        "bullets": [
+          "**Sarong and sash are mandatory.** A basic one is included with the ticket according to most reports; upgrades run around IDR 10,000-25,000",
+          "Menstruating women are traditionally asked not to enter — a standard Balinese temple rule, not a Lempuyang quirk",
+          "Do not climb on or sit in the gate structure itself",
+          "**Cash only**, both at the ticket office and for the compulsory shuttle",
+          "The site closes for Nyepi, when the entire island shuts down"
+        ]
+      },
+      {
+        "heading": "Fees, queues and the honest time budget",
+        "paragraphs": [
+          "Handara charges a **photo fee, not an entrance fee** — you are buying a timed slot to stand in the gate. Two figures circulate consistently across 2024-2026, **IDR 30,000 and IDR 50,000, with foreign visitors paying 50,000**, cash only; check it at the booth, because some guides re-report those same two numbers as an adult/child split. The slot is about **three minutes per person** by the operator's own figure, two to five in practice. A small extra ask of around **IDR 10,000** for a staff member to shoot on your phone is normal and is not a scam, but agree it before handing the phone over. Drones carry a separate fee reported at **IDR 200,000**, with higher figures also in circulation.",
+          "Lempuyang costs more and is structured differently. Karangasem raised entry on **1 March 2024** to **IDR 70,000 for foreign visitors** and IDR 40,000 domestic, and the mountain shuttle is a **separate IDR 50,000 return** — private cars and motorbikes are not permitted on the upper road. Published foreign entry figures in circulation range from 70,000 up to 150,000, so the honest way to quote it is all-in: **roughly IDR 120,000-160,000 per foreign visitor including the compulsory shuttle, cash, as published for 2025-26 — check at the gate.** If a blog shows IDR 55,000, that is the pre-2024 price still recirculating. And do not confuse any of this with the **IDR 150,000 Bali tourist levy**, a one-off paid to the province on arrival.",
+          "The queue is the real currency at both. At Handara, arriving **before roughly 08:00-09:00** means anything from no wait to about 30 minutes; mid-morning onward commonly runs **one to two hours**, and two to three when coach groups land ahead of you. Budget **10-20 minutes off-peak, 60-90 minutes mid-day** for what is functionally one photograph. At Lempuyang the widely repeated advice is to be at the lower shuttle terminal by **around 05:15** for the first shuttle and a low queue number. Waits through 2026 have been reported at **two to four hours**, worst between 09:00 and 11:00, though some later arrivals report 30-60 minutes once the morning surge clears."
+        ]
+      },
+      {
+        "heading": "Getting to each gate, and why one day cannot hold both",
+        "paragraphs": [
+          "Handara sits on Jl. Raya Denpasar-Singaraja in Pancasari, directly on the route between the Bedugul lakes and the Munduk ridge, so it costs almost no detour. There is **no dedicated car park** — parking is free on the highway shoulder and tight at peak. The gate itself stands on an open public road with no barrier; what has hours is the **ticket booth, published at roughly 06:00-19:00 WITA**, with some sources listing 08:00-17:00 instead. Be in the queue between 06:30 and 08:00, or come back late afternoon. Treat map estimates for the drive up from the south with suspicion: this is the road where navigation apps quote under an hour from Seminyak and reality is closer to two.",
+          "Lempuyang is in Abang, Karangasem, at the far east of the island. From Ubud it is a consistently reported **2-2.5 hours each way**; from Kuta, Seminyak or Canggu, published times run **2.5-3 hours and up to 3-4 hours**, so treat it as a full day rather than a morning. Hours are genuinely disputed — the gate area generally opens somewhere between **06:00 and 07:00** and runs to late afternoon, but the photo queue closes before the posted closing time. From the Bedugul highlands it is roughly three hours across the island, which is why the two gates **cannot be done in one day**, whatever an itinerary tells you.",
+          "For Handara, the natural container is a Bedugul day. Our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) **from $59 per person** covers the lake temple, the highlands and sunset at Tanah Lot, with the gate as an early add-on rather than the headline — the [day-trip route breakdown](/bali/en/journal/tanah-lot-bedugul-day-trip-route) shows where the hours actually go. For Lempuyang, or for any day that needs a 04:30 departure and stops chosen on the morning, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** is the honest tool: the driver waits at the lower terminal while you queue, and the price is per car rather than per head. Everything is booked over WhatsApp with no prepayment, and if you are heading north straight from landing, a [private airport pickup](/bali/en/tours/bali-airport-transfer) **from $15** starts the same day."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Are Handara Gate and Lempuyang the same place?",
+        "answer": "No — they are two different gates on opposite sides of Bali. Handara Gate is the vehicle entrance to Bali Handara Golf & Resort in Pancasari, in the Bedugul highlands, and is not a temple at all. The Gates of Heaven belong to Pura Penataran Agung Lempuyang, an active Hindu temple in Karangasem, east Bali, roughly three hours away across mountain roads."
+      },
+      {
+        "question": "Handara Gate or Lempuyang — which is better?",
+        "answer": "Lempuyang is the better site, but Handara is the better use of a day for most visitors. Lempuyang is a genuine temple with Mount Agung really framed between the gate halves, and it costs a half day minimum because of the queue. Handara is a resort driveway that photographs well and slots into a Bedugul day for almost no extra driving. Choose Lempuyang only if you want the temple, not just the picture."
+      },
+      {
+        "question": "Is there really water at the Gates of Heaven in Lempuyang?",
+        "answer": "No. There is no lake, pool or reflecting pond below the gate. The mirror-perfect reflection is produced by a staff member holding a small mirror or piece of dark glass flat under the camera or phone lens, so the blue you see is reflected sky. The technique was made public in July 2019 after a viral tweet and has been widely reported since."
+      },
+      {
+        "question": "How much does Handara Gate cost?",
+        "answer": "Two figures circulate consistently across 2024-2026, IDR 30,000 and IDR 50,000, with foreign visitors paying IDR 50,000 per person, cash only — worth checking at the booth on the day. That buys a timed slot of about three minutes in the gate and nothing else: it does not admit you to the resort, the golf course or the clubhouse. A small extra of about IDR 10,000 for a staff member to shoot on your phone is normal."
+      },
+      {
+        "question": "How long is the queue at Handara Gate and Lempuyang?",
+        "answer": "Handara runs from no wait to about 30 minutes before roughly 08:00-09:00, and commonly one to two hours later in the morning — two to three when coach groups arrive first. Lempuyang is a different scale: waits reported through 2026 average two to four hours, worst between 09:00 and 11:00. Reaching the lower shuttle terminal by around 05:15 is the single lever that controls the day."
+      },
+      {
+        "question": "Can I visit Handara Gate and Lempuyang on the same day?",
+        "answer": "No — they sit on opposite sides of Bali, roughly three hours apart across mountain roads, and each has its own queue. Handara belongs on a Bedugul highlands day alongside the Ulun Danu Beratan lake temple and the Twin Lakes ridge. Lempuyang needs its own early start from Ubud or east Bali, and makes a very long day from the south coast."
+      }
+    ]
+  },
+  {
+    "slug": "ulun-danu-beratan-temple-guide",
+    "badge": "Travel guide",
+    "navLabel": "Ulun Danu",
+    "cardTourLabel": "Temples and sunsets",
+    "heroTourSlug": "tanah-lot-bedugul-tour",
+    "relatedTourSlugs": [
+      "tanah-lot-bedugul-tour",
+      "private-car-with-driver-bali",
+      "bali-airport-transfer"
+    ],
+    "inlineStats": [
+      "IDR 100,000 entry",
+      "1,200 m elevation",
+      "Arrive 07:00-09:00"
+    ],
+    "title": "Ulun Danu Beratan: IDR 100,000 Entry and the Old 50,000 Note",
+    "description": "The lake temple at Bedugul: IDR 100,000 for foreign adults as published from July 2026, why mornings are cold, and why it is on the old 50,000 note.",
+    "excerpt": "Pura Ulun Danu Beratan sits on Lake Beratan at Candikuning, about 1,200 metres up in the Bedugul highlands, and the eleven-tiered shrine on the islet is the picture everyone knows. Two things to get straight before you go. Foreign adults now pay IDR 100,000 as published from 1 July 2026, up from IDR 75,000, and most English-language guides still quote the old figure. And the temple is on the old 50,000 rupiah note, the one replaced in December 2016; today's note shows a Legong dancer and Komodo. You also cannot walk to the island shrine or enter the inner courtyards: the visit is gardens and lakeshore, looking across water. Mornings here are genuinely cold by Bali standards, and the floating effect depends on how high the lake is standing. We aim to be at the gate between 07:00 and 09:00, before the coaches and the cloud.",
+    "rankings": [
+      {
+        "name": "The eleven-tier meru on the islet",
+        "imageSrc": "/images/tours-real/tanah-lot-bedugul-tour.jpg",
+        "area": "Lake Beratan",
+        "bestFor": "The photograph everyone comes for",
+        "summary": "Pura Lingga Petak, the eleven-tiered meru standing on a small islet a few metres offshore, is the shrine in every photograph of Bali's highlands. A second, smaller shrine and a Buddhist stupa sit alongside it on the water. You view it across the lake from the lawn — there is no bridge, no causeway and no walking out to it, which is worth knowing before you frame the picture in your head."
+      },
+      {
+        "name": "A working water temple, not a viewpoint",
+        "imageSrc": "/images/places/canggu-rice-fields.jpg",
+        "area": "Candikuning, Tabanan",
+        "bestFor": "Understanding what you see",
+        "summary": "The temple is dedicated to Dewi Danu, goddess of the lake waters, and is historically tied to the subak irrigation system that feeds the rice terraces downhill. Lake Beratan is the reservoir at the top of that chain, which is why a shrine sits on it rather than on a hilltop. Ceremonies still happen here, and sections of the grounds can close without notice when they do."
+      },
+      {
+        "name": "IDR 100,000 for foreign adults from July 2026",
+        "imageSrc": "/images/places/uluwatu-temple-cliff.jpg",
+        "area": "Ticket window",
+        "bestFor": "Getting the budget right",
+        "summary": "The fee changed on 1 July 2026: foreign adults IDR 100,000 and foreign children IDR 75,000, up from IDR 75,000 and IDR 50,000. Indonesian visitors pay a flat IDR 50,000 and IDR 25,000, replacing the old weekday and weekend split. detikBali, Kompas Travel and The Bali Sun all report the same figures. Most English-language blogs still quote the old price. Check at the gate — this site raises prices on notice."
+      },
+      {
+        "name": "The old 50,000 note, not today's",
+        "imageSrc": "/images/tours-real/tanah-lot-bedugul-tour.jpg",
+        "area": "In your wallet",
+        "bestFor": "Not repeating the guidebook error",
+        "summary": "Guides say \"the temple on the 50,000 rupiah note\" in the present tense, and it is wrong. Ulun Danu Beratan appeared on the reverse of the previous Rp50,000 note, the one with I Gusti Ngurah Rai on the front, which was superseded in December 2016. Today's Rp50,000 shows Djuanda Kartawidjaja on the front, with a Legong dancer and Komodo National Park on the back. Old notes were never invalidated, so you may still see one."
+      },
+      {
+        "name": "You look at the shrine, you do not enter it",
+        "imageSrc": "/images/places/temple-dress-code.jpg",
+        "area": "Gardens and lakeshore",
+        "bestFor": "Setting expectations before you pay",
+        "summary": "The inner worship courtyards are closed to visitors and the island shrine cannot be reached on foot. What the ticket buys is the lakeside park: gardens, lawns, a small deer enclosure, stalls, jetties and the view across the water. Dress modestly, shoulders and knees covered, though the park area is not sarong-policed the way Lempuyang is, and rental sarongs are available at the entrance."
+      },
+      {
+        "name": "The lake level decides the floating look",
+        "imageSrc": "/images/places/bali-in-rainy-season.jpg",
+        "area": "Lake Beratan",
+        "bestFor": "Choosing which month to come",
+        "summary": "The floating effect depends on how high the lake is standing. It is widely reported that in drier months the water drops enough to expose mud and grass around the islet, leaving the shrine on land rather than in water. We have found no authoritative lake-level record, so treat that as a risk rather than a rule. High water is associated with the wet season and the months just after it, roughly November to May."
+      },
+      {
+        "name": "Be at the gate before the coaches",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "07:00-09:00",
+        "bestFor": "Beating cloud and crowds",
+        "summary": "Two separate clocks push you early. Coach groups from the south begin arriving around 09:30, and highland cloud builds through late morning and again in the afternoon. Sunrise light comes from the east across the water, so early is also the better light. Indonesian sources give hours as 07:00 to 19:00 daily, with Saturday opening at 05:00; a few English pages list shorter hours, so confirm on the day."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What Pura Ulun Danu Beratan actually is",
+        "paragraphs": [
+          "A water temple complex on the shore of Lake Beratan at Candikuning, in Baturiti district, Tabanan Regency, at roughly **1,200 metres above sea level**. It is dedicated to Dewi Danu, goddess of the lake waters, and historically tied to the **subak irrigation system** that feeds the rice terraces further down the mountain. The shrine in every photograph is the **eleven-tiered meru, Pura Lingga Petak, standing on a small islet just offshore**; a second, smaller shrine and a Buddhist stupa sit nearby on the water.",
+          "What surprises most first-time visitors is the setting around it. The wider site is a landscaped lakeside park — gardens, lawns, a small deer enclosure, souvenir stalls and boat jetties — so in practice this is **a park with a temple in it** rather than a temple visit in the Uluwatu or Lempuyang sense. That is not a complaint. It is a pleasant, unhurried hour of walking at altitude, which is a rare thing in Bali. But do adjust the photo expectation: the images that circulate are usually cropped tight and heavily graded, with the jetties, the moored boats and the people on the bank taken out of frame. Our [Bedugul highlands guide](/bali/en/journal/bedugul-highlands-guide) covers the other stops strung along the same road."
+        ]
+      },
+      {
+        "heading": "The entrance fee changed on 1 July 2026",
+        "paragraphs": [
+          "The number most guides still get wrong. From 1 July 2026 the gate charges **IDR 100,000 for foreign adults and IDR 75,000 for foreign children**, up from IDR 75,000 and IDR 50,000. Indonesian visitors pay a flat **IDR 50,000 for adults and IDR 25,000 for children**, which replaced the old weekday and weekend split. detikBali, Kompas Travel and The Bali Sun all published the same figures, including the same \"before\" column. At roughly **IDR 17,800 to the US dollar in August 2026**, the foreign adult ticket works out at about **USD 6** — treat any dollar figure as approximate and check the price at the gate.",
+          "Do not treat IDR 100,000 as permanent, either. One Indonesian travel site dates the same increase to 2 January 2026, which appears to be an earlier announcement that slipped; Tanah Lot publicly postponed its own parallel increase in March 2026 after arrivals dropped. Prices here move on notice, so quote it as the published July 2026 fee rather than a fixed fact. Parking is small money: **around IDR 3,000 for a motorbike, IDR 5,000 for a car and IDR 10,000 for a coach**, though one source quotes cars at IDR 10,000. Published child tickets cover ages 5 to 10, which implies under-fives are not ticketed, but we have not seen that stated outright. detikBali also reports that management offers **20-30% discounts on group and travel-agent bookings**, which is worth asking about for a family of six.",
+          "The lake boats are a separate charge, and the on-site tariffs are published by craft type: a **traditional wooden sampan around IDR 75,000**, a **pedal duck boat around IDR 90,000 for 20 minutes for two people**, a **speedboat around IDR 150,000-200,000 per trip** for up to five, and pedal water-bikes from about IDR 15,000. Boat hire runs roughly **08:00 to 16:00**, a narrower window than the temple itself. The one trap here is the pricing unit: operators quote per boat to Indonesians and per person to foreigners, and at least one outside operator advertises IDR 150,000 per person for a canoe tour. Agree the total, out loud, before anyone steps in."
+        ]
+      },
+      {
+        "heading": "Getting to Bedugul from Ubud, the south and the airport",
+        "paragraphs": [
+          "Candikuning sits **about 60 km north of Ngurah Rai airport** on the main Denpasar-Singaraja road, and the figure that matters is driving time, not distance. Realistic private-car times: **1.5-2.5 hours from Seminyak or Canggu, 1.5-2.5 hours from Ubud, 2-2.5 hours from the airport**, and roughly 40-90 minutes down the mountain if you are coming from Lovina. Google Maps will sometimes quote 55 minutes from Seminyak. Ignore that number — it assumes an empty island, and we have never seen it achieved on a real morning.",
+          "The road is paved the whole way and takes coaches. There is **no practical scheduled service for visitors**: bemos do run to Candikuning from Batubulan terminal in Denpasar and from Sukasada near Singaraja for around IDR 40,000-50,000, but they are infrequent and no use for a day with a fixed shape. That leaves a private driver or a scooter, and at 1,200 metres in highland rain we would not put a first-time visitor on a scooter. Our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) runs **from $59 per person** and pairs the lake temple with the west-coast sunset temple; if you would rather build the route yourself, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) is **from $59 per car**. Both are booked over WhatsApp with no prepayment.",
+          "If you are thinking of putting Bedugul on your arrival day, reconsider. It is **2-2.5 hours from the terminal** before you have unpacked anything, and the highlands reward a fresh start rather than a red-eye. A [private airport pickup](/bali/en/tours/bali-airport-transfer) **from $15** to the hotel first, then the mountains on a proper morning, is the version that works. Our [Tanah Lot and Bedugul route notes](/bali/en/journal/tanah-lot-bedugul-day-trip-route) set out the order we actually drive the day in, and why."
+        ]
+      },
+      {
+        "heading": "When to go: the hour, the day and the season",
+        "paragraphs": [
+          "Aim to be at the gate **between 07:00 and 09:00**, for two independent reasons. Coach groups from the south start landing around **09:30**, and Bedugul's cloud builds through late morning and again in the afternoon. Sunrise light comes from the east across the water, so early is also simply the better light. Indonesian sources give the hours as **07:00 to 19:00 daily, with Saturdays opening at 05:00** — a genuine sunrise window that most English-language guides miss entirely. A few English pages list shorter hours (08:00-18:00, and one at 08:00-21:00), so confirm on the day rather than planning around a late arrival.",
+          "Season matters more at this stop than anywhere else in Bedugul, because the floating effect is a function of lake level. It is **widely reported that in the drier months the water drops far enough to expose mud bank and grass around the islet**, leaving the meru standing on land. We have not been able to find an authoritative lake-level record to say how far or how often, so we treat it as a risk to disclose rather than a rule to promise. High water — and with it the reliable floating look and the boat rides — is associated with the wet season and the months just after, roughly **November to May**. Bedugul's driest months are **June to September**, the wettest is around **February**, so clear skies and high water pull in opposite directions.",
+          "If you have your heart set on the mirror-flat floating shot in August, know the risk before you drive two hours, and build the day so it is worth making anyway — the gardens, the Candikuning market and the Botanic Garden above it do not care about the lake level. Handara Gate is 8-10 km further up the same road and costs almost no extra driving, but it is a **golf-resort driveway entrance, not a temple**, and the queue rather than the light is the constraint. Our [Handara Gate guide](/bali/en/journal/handara-gate-bali-guide) explains what is actually behind the gate before you commit an hour to standing in line."
+        ]
+      },
+      {
+        "heading": "What to wear and what to bring",
+        "paragraphs": [
+          "The most common mistake at this stop is arriving from Seminyak dressed for Seminyak. At **1,200 metres the mornings are genuinely cold by Bali standards**, and rain is normal here even in the dry season — this is one of the wetter corners of the island. It is also a working temple site, although the public park area is not sarong-enforced the way Lempuyang is; modest clothing is what is expected, and rental sarongs are available at the entrance if you want one.",
+          "Facilities are good by Bali standards — sealed parking, toilets and cafes — and the adjacent **Candikuning (Bukit Mungsu) market** sells strawberries, spices and mountain produce, which makes the natural snack stop a two-minute walk away. Bear in mind that sections of the temple grounds can close without notice for ceremonies or maintenance, so a specific corner you saw in a photo is not guaranteed to be open."
+        ],
+        "bullets": [
+          "**A warm layer** — a light jacket or long sleeves; visitors shivering in beachwear are a daily sight at the gate",
+          "**Shoulders and knees covered** — modest dress is expected, and a sarong is only strictly needed if you enter a prayer area",
+          "**Cash in rupiah** — we have found no source confirming that cards work at the ticket window, so do not rely on one; prepaid e-tickets are sold online if you prefer to pay in advance",
+          "**Small notes** for parking and the lake boats, which are separate charges from the entrance ticket",
+          "**Something waterproof** — the cloud that builds late morning frequently arrives as rain"
+        ]
+      },
+      {
+        "heading": "What the visit includes, and how the day fits together",
+        "paragraphs": [
+          "You do not go inside. Visitors cannot enter the inner worship courtyards and cannot set foot on the island shrine — **the visit is the gardens, the lawns and the lakeshore, looking at the meru across water**, with photography from outside the gates. Every source we have checked agrees on this, and it is the exact point where someone who came expecting to walk out to that shrine feels short-changed. Knowing it before you buy the ticket turns the same visit into a good lakeside hour instead of a letdown.",
+          "That also sets the length of the stop. We budget roughly an hour, or an hour and a half if you take a boat out or walk up to the Bali Botanic Garden above the market. It leaves the afternoon for the descent and a sunset on the west coast, which is why Tanah Lot is the standard second half of this route rather than a separate trip. Our [Tanah Lot guide](/bali/en/journal/tanah-lot-temple-guide) covers what that visit does and does not include, so you can decide whether to give it the evening before you are already in the car."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How much is the entrance fee at Ulun Danu Beratan?",
+        "answer": "Foreign adults pay IDR 100,000 and foreign children IDR 75,000, as published from 1 July 2026 — about USD 6 at the August 2026 rate of roughly IDR 17,800 to the dollar. Indonesian visitors pay a flat IDR 50,000 and IDR 25,000. The previous rates were IDR 75,000 and IDR 50,000 for foreigners, which is what most English-language blogs still quote. Parking is separate at roughly IDR 3,000-10,000 depending on vehicle. Check the price at the gate; this site raises fees on notice."
+      },
+      {
+        "question": "Is Ulun Danu Beratan the temple on the 50,000 rupiah note?",
+        "answer": "It was on the old note, not the current one. The temple appeared on the reverse of the previous Rp50,000 banknote, the one with I Gusti Ngurah Rai on the front, which was superseded in December 2016. Today's Rp50,000 shows Djuanda Kartawidjaja on the front and a Legong dancer with Komodo National Park on the back. The older notes were never declared invalid, so you may still be handed one in change — but a traveller with a current note in their wallet can disprove the present-tense version on the spot."
+      },
+      {
+        "question": "Can you go inside the floating temple at Ulun Danu Beratan?",
+        "answer": "No. The inner worship courtyards are closed to visitors and the island shrine cannot be reached on foot — there is no bridge or causeway. What the ticket covers is the surrounding lakeside park: gardens, lawns, a small deer enclosure, stalls, jetties and the view of the eleven-tiered meru across the water. Photography is from outside the gates. Sections of the grounds can also close without notice for ceremonies or maintenance."
+      },
+      {
+        "question": "How long does it take to get to Ulun Danu Beratan from Ubud?",
+        "answer": "Budget 1.5-2.5 hours each way by private car from Ubud, and the same from Seminyak or Canggu; the airport is 2-2.5 hours and Lovina roughly 40-90 minutes down the mountain. Google Maps sometimes quotes under an hour from the south, which is not achievable in real Bali traffic. There is no practical scheduled service for visitors — infrequent bemos run to Candikuning from Batubulan and Sukasada, but a private driver is the workable option."
+      },
+      {
+        "question": "What time does Ulun Danu Beratan open?",
+        "answer": "Indonesian sources consistently give 07:00 to 19:00 daily, with Saturdays opening earlier at 05:00 — the sunrise window most English guides miss. A few English-language pages list shorter hours, including 08:00-18:00, so confirm on the day rather than planning a late arrival. Lake boat hire keeps a narrower window of roughly 08:00 to 16:00. Aim to arrive between 07:00 and 09:00: coach groups start landing around 09:30 and highland cloud builds through late morning."
+      },
+      {
+        "question": "When is the best time of year to see the floating temple effect?",
+        "answer": "High water is associated with the wet season and the months just after it, roughly November to May, which is when the floating look and the boat rides are most reliable. It is widely reported that in drier months the lake drops enough to expose mud and grass around the islet, leaving the shrine on land — we have found no authoritative lake-level record to confirm how far or how often, so treat it as a risk rather than a certainty. Bedugul is driest June to September and wettest around February, so clear skies and high water pull against each other."
+      }
+    ]
+  },
+  {
+    "slug": "bedugul-highlands-guide",
+    "badge": "Travel guide",
+    "navLabel": "Bedugul",
+    "cardTourLabel": "Temples and sunsets",
+    "heroTourSlug": "tanah-lot-bedugul-tour",
+    "relatedTourSlugs": [
+      "tanah-lot-bedugul-tour",
+      "private-car-with-driver-bali",
+      "bali-airport-transfer"
+    ],
+    "inlineStats": [
+      "6 highland stops",
+      "Day tour from $59",
+      "1.5-2.5 h from the coast"
+    ],
+    "title": "Bedugul Bali: 6 Things to Do and Why You Go in the Morning",
+    "description": "What to do in Bedugul: the lake temple, the botanic garden, the Wanagiri swings and Munduk's waterfalls — with 2026 gate prices and why you go early.",
+    "excerpt": "Bedugul is the highland strip in the middle of Bali: Lake Beratan and its water temple, the botanic garden above Candikuning market, the twin lakes along the Wanagiri ridge and the waterfalls around Munduk, strung along one mountain road at 700 to 1,400 metres. It runs on a morning clock — fog builds from late morning and the coaches from the south land around 09:30, so a stop that is clear and quiet at 08:00 can be white and queueing by 11:00. Two honest warnings before you go. Handara Gate is the vehicle entrance to a golf resort, not a temple, and behind the arch is a driveway, a lawn and the golf course rather than a mountain valley. And at Ulun Danu Beratan you photograph the meru from the gardens: the inner courtyards and the island shrine are closed to visitors.",
+    "rankings": [
+      {
+        "name": "Pura Ulun Danu Beratan",
+        "imageSrc": "/images/tours-real/tanah-lot-bedugul-tour.jpg",
+        "area": "Candikuning, Lake Beratan",
+        "bestFor": "The classic Bedugul photograph",
+        "summary": "The eleven-tiered meru standing on its islet is the image that sells Bedugul, and the visit is the lakeside park around it: you cannot enter the inner courtyards or set foot on the island shrine. Foreign adults pay IDR 100,000 as published from 1 July 2026, children IDR 75,000, domestic visitors a flat IDR 50,000 — check at the gate. Be there at 07:00, before the coaches land around 09:30."
+      },
+      {
+        "name": "Bali Botanic Garden",
+        "imageSrc": "/images/places/canggu-rice-fields.jpg",
+        "area": "Candikuning, Tabanan",
+        "bestFor": "A long unhurried walk",
+        "summary": "Indonesia's largest botanic garden: 157 hectares of montane forest, orchids, bamboo and lawn on the slope above Candikuning market, founded in 1959. Admission is a statutory tariff — IDR 15,500 on weekdays and IDR 25,500 at weekends and national holidays as published in 2026, the same for foreign and domestic visitors, with the car charged separately. It closes at 16:00 on weekdays, earlier than most map listings claim, and it repays two to three hours."
+      },
+      {
+        "name": "Handara Gate",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Pancasari, Buleleng",
+        "bestFor": "One photograph, nothing more",
+        "summary": "A candi bentar built as the vehicle entrance to Bali Handara Golf and Resort. It is not a temple, and through the arch is the resort driveway, mown lawn and golf course rather than a mountain valley, with the Denpasar–Singaraja highway immediately behind the camera. The photo ticket is IDR 50,000 for foreign visitors, cash, for about three minutes in the gate. Off-peak it costs you fifteen minutes; mid-morning the queue commonly runs one to two hours."
+      },
+      {
+        "name": "Wanagiri Hidden Hills and the twin lakes",
+        "imageSrc": "/images/places/bali-in-shoulder-season.jpg",
+        "area": "Wanagiri ridge, Buleleng",
+        "bestFor": "Swings over the twin lakes",
+        "summary": "Not one attraction. The ridge road west of Pancasari carries a row of independently owned photo businesses, each with its own gate, its own bamboo props and its own price — published rates run from about IDR 20,000 to IDR 150,000 per person, and some gates charge per platform instead of at the entrance. They all frame the same view of lakes Buyan and Tamblingan, which you can also see for nothing from the free pull-offs in between."
+      },
+      {
+        "name": "Banyu Wana Amertha waterfalls",
+        "imageSrc": "/images/places/bali-waterfall.jpg",
+        "area": "Wanagiri, near Munduk",
+        "bestFor": "Four waterfalls, one ticket",
+        "summary": "The rare waterfall stop here where one ticket covers everything: Bhuana Sari, Single, Spray and Twin falls sit on the same trail. Published entry is reported anywhere between IDR 30,000 and IDR 50,000 per person across 2025 and 2026 — sources disagree, so carry the top figure. Cash, a couple of thousand rupiah for parking, gates around 07:00 to 17:00 with last entry at closing. The least complicated stop on this road."
+      },
+      {
+        "name": "The Munduk waterfall walk",
+        "imageSrc": "/images/places/tegalalang-rice-terraces.jpg",
+        "area": "Munduk, Buleleng",
+        "bestFor": "A half-day walk",
+        "summary": "The trail links five falls through coffee and clove plantations — Labuhan Kebo, Melanting, Belong, Red Coral and Golden Valley — and every one of them has its own ticket hut, with no combined pass. A 2025 tally came to about IDR 105,000 per person before Golden Valley, Red Coral alone at 45,000. The full circuit is a four to six hour walk on wet, mossy steps, which is why Munduk works as an overnight base rather than a last stop."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Why Bedugul runs on a morning clock",
+        "paragraphs": [
+          "Bedugul is the name people use for the whole highland strip in central Bali: Lake Beratan and its water temple at Candikuning, the botanic garden above the market, the Handara gate at Pancasari, the twin lakes along the Wanagiri ridge, and Munduk beyond them. The Bedugul stops sit **between 1,200 and 1,400 metres**, with Munduk lower and warmer at 700 to 900, and that altitude governs everything about the day. Cloud and fog build through late morning and the afternoon; guides along the Wanagiri ridge converge on the same line, that the view is clearest **between 06:00 and 09:00 and often gone by 10:00**.",
+          "The second clock is arrivals. Coach groups from the south reach Ulun Danu Beratan **from about 09:30** — the temple gate is published as open **07:00 to 19:00**, with a couple of Indonesian sources reporting an 05:00 opening on Saturdays, so confirm on the day if you want the sunrise window. At Handara Gate it is the queue rather than the light that decides your morning: **close to nothing before 08:00, commonly one to two hours by mid-morning**, and two to three hours when a coach lands ahead of you.",
+          "Seasonally, Bedugul is **driest from June to September and wettest around February**, but this is the wettest part of the island and an afternoon shower is normal even in the dry months. Bring a layer. Visitors arrive from Seminyak in beachwear and are genuinely cold standing by the lake at seven in the morning."
+        ]
+      },
+      {
+        "heading": "Getting to Bedugul, and how long it really takes",
+        "paragraphs": [
+          "From the south coast, budget **1.5 to 2.5 hours each way** to Candikuning — that is the range private drivers actually report from Seminyak, Canggu and Ubud — and **2 to 2.5 hours from the airport**. Google Maps sometimes quotes under an hour from Seminyak. Ignore it: the last climb from Baturiti runs behind trucks on a single carriageway, and a day built on the optimistic number falls apart before lunch. From Lovina and the north coast you come down the mountain in **40 to 60 minutes**, which is why Bedugul pairs naturally with a north-coast leg.",
+          "There is no practical scheduled transport for visitors. Bemos do run to Candikuning from the Batubulan and Singaraja terminals for around **IDR 40,000 to 50,000**, and the Perama tourist shuttle passes through Bedugul and Munduk on its Kuta–Ubud–Lovina route, but neither works around a fog-driven early start. In practice you take a car. Our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) runs **from $59 per person** and puts the lake temple in the morning and the west coast at sunset; if you would rather set your own order of stops, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) is **from $59 per car** and the driver waits while you walk. Both are booked on WhatsApp with no prepayment.",
+          "Landing day is the wrong day for this drive — two hours of mountain switchbacks after a long flight is nobody's idea of a good start. Take a [private airport pickup](/bali/en/tours/bali-airport-transfer) **from $15** to the hotel and put the highlands on a rested morning instead. Our [Tanah Lot and Bedugul route notes](/bali/en/journal/tanah-lot-bedugul-day-trip-route) set out the order we drive the stops in and where the day usually goes wrong."
+        ]
+      },
+      {
+        "heading": "The gates that all charge differently",
+        "paragraphs": [
+          "Wanagiri is the stop customers get wrong most often, because **there is no such thing as the Wanagiri ticket**. The ridge road west of Pancasari carries a strip of independently owned photo businesses, each with its own gate, its own swings and platforms and its own price list. Published per-person rates across 2025 and 2026 run from about **IDR 20,000 to IDR 150,000**, with domestic rates reported from around IDR 10,000, and at some gates entry is free and you pay **IDR 40,000 to 60,000 per platform** instead. Neighbouring gates on the same road differ by several times over, so ask before you walk in.",
+          "Two things follow. The view itself is free — there are unbranded pull-offs on the same ridge looking down on Buyan and Tamblingan, and nobody is charging for them. And the props are informally built timber and bamboo cantilevered over a steep slope, with no published safety-inspection regime; the ground is uneven, slippery when wet, and railings are scarce. Staff help you on and off, and we would not describe it as more than that. Look at the structure yourself before putting a nervous parent on a swing. Keep food out of sight, too — the monkeys along this road are habituated and pushy.",
+          "Handara Gate has the opposite problem: one price, wrongly described. It is the vehicle entrance to a golf resort, with no shrine, no priest and no ceremonies, and the green wall behind it is the forested caldera slope, not a valley. Two prices circulate — **IDR 30,000 and IDR 50,000, with foreigners paying 50,000** — cash only, for a slot of about three minutes, and the ticket buys the photo and nothing else: not the driveway, the course, the clubhouse or the restaurant. Expect a small extra ask of **about IDR 10,000** if a staff member shoots on your phone; that is normal, not a scam. Our [Handara Gate guide](/bali/en/journal/handara-gate-bali-guide) and the [comparison with Lempuyang's Gates of Heaven](/bali/en/journal/handara-gate-vs-lempuyang-gates-of-heaven) go through the queue and the two sites in detail."
+        ]
+      },
+      {
+        "heading": "What the gates cost, as published",
+        "paragraphs": [
+          "Every fee up here is paid in cash at a booth, and several of them moved during 2026. These are the published figures we work from — treat them as a budget rather than a promise and check at the gate, because this region raises prices on notice and English-language guides run a year or two behind.",
+          "Rupiah is the number that matters; dollar equivalents drift. At roughly **IDR 17,800 to the US dollar in August 2026**, the list below comes to less than most people expect. The expensive part of a Bedugul day is the driving, not the tickets."
+        ],
+        "bullets": [
+          "**Ulun Danu Beratan: IDR 100,000 for foreign adults, IDR 75,000 for foreign children** as published from 1 July 2026, up from 75,000 and 50,000 — about USD 6, with domestic visitors on a flat IDR 50,000",
+          "**Bali Botanic Garden: IDR 15,500 on weekdays, IDR 25,500 at weekends and national holidays**, the same for foreign and domestic visitors, plus the car at IDR 20,000 weekday and IDR 30,000 weekend — on a weekday the car costs more than the passenger",
+          "**Handara Gate: IDR 50,000 per foreign visitor**, cash, for roughly three minutes in the gate; the booth is published as 06:00 to 19:00, though some sources list 08:00 to 17:00",
+          "**Wanagiri photo gates: roughly IDR 20,000 to IDR 150,000 per person**, depending entirely on which operator you stop at; the roadside viewpoints on the same ridge are free",
+          "**Munduk waterfalls: a separate ticket at every fall** — a 2025 tally of Melanting, Labuhan Kebo, Belong and Red Coral came to about IDR 105,000 per person, Red Coral alone at 45,000",
+          "**Banyu Wana Amertha: one ticket for four falls**, reported between IDR 30,000 and IDR 50,000 across 2025 and 2026 — sources disagree, so carry the higher figure",
+          "**Parking: a few thousand rupiah nearly everywhere** — around IDR 3,000 for a motorbike and IDR 5,000 for a car at Beratan, often free on the Wanagiri shoulder",
+          "**Boats on Lake Beratan: from about IDR 75,000** for a traditional canoe, with speedboat trips published around IDR 150,000 to 200,000 and rentals running roughly 08:00 to 16:00; operators quote per person to tourists and per boat to locals, so agree the total before boarding"
+        ]
+      },
+      {
+        "heading": "Munduk is a base, not a fourth stop",
+        "paragraphs": [
+          "Munduk sits west of the twin lakes at **700 to 900 metres** — lower, warmer and less fog-bound than the Wanagiri ridge — and it is the one place in this cluster that repays an overnight. The waterfall trail links five falls through coffee and clove plantations, each with its own ticket hut and no combined pass. Booths open **between 06:00 and 08:00 depending on the fall**, which catches out people who set off at dawn assuming everything opens together.",
+          "The full circuit is a **four to six hour walk**, mostly on steps that stay wet and mossy year-round, so proper shoes rather than sandals. These are not swimming falls as a rule; Labuhan Kebo and Red Coral are the two people actually get into. Melanting is the tallest on the trail and throws enough spray to soak a camera in a minute — the 100-metre height quoted all over the internet has no authoritative source behind it, so we do not repeat it as fact.",
+          "The drive is why Munduk fails as the last stop of a Bedugul day: **about two hours from Ubud and three to four from the airport**, on a narrow, steep, hairpinned approach road. Warn anyone prone to motion sickness about this leg specifically. There are **no ATMs in the village at all** — the nearest are at Gobleg a few kilometres away, then Pancasari and Bedugul — so climb with cash in small notes. If the day only has room for one waterfall, take Banyu Wana Amertha on the way through instead."
+        ]
+      },
+      {
+        "heading": "What to bring, and what will disappoint you",
+        "paragraphs": [
+          "Cash in small notes, a rain layer and shoes you can walk steps in cover most of it, plus something warm for the 07:00 hour at the lake. Card acceptance at these booths is not something we would rely on, and the Wanagiri ridge has essentially no cash machines.",
+          "Two expectations to set before you go. At Ulun Danu Beratan you are visiting a lakeside park with a temple in it: **the inner courtyards and the island shrine are closed to visitors**, and the photograph is taken across the water from the gardens. The floating effect also depends on the lake being high — it is widely reported to drop in the dry season and leave the meru standing on mud, and while we have found no authoritative record of lake levels, it is a real enough risk that we would not sell the floating-temple picture for an August departure without saying so first.",
+          "The other is the banknote line every guide repeats. Ulun Danu Beratan appeared on the reverse of the **old IDR 50,000 note, replaced in December 2016**; today's 50,000 shows a Legong dancer and Komodo National Park, so anyone with a wallet can disprove the present-tense version on the spot. Our [Ulun Danu Beratan guide](/bali/en/journal/ulun-danu-beratan-temple-guide) covers the temple, the boats and the Candikuning market next door in more detail."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What is there to do in Bedugul?",
+        "answer": "Six things, all on one mountain road: the water temple at Lake Beratan, the botanic garden above Candikuning market, the Handara resort gate at Pancasari, the twin-lake photo gates along the Wanagiri ridge, the Banyu Wana Amertha waterfalls and the Munduk waterfall trail. End to end the strip is about 45 minutes of driving, but a day from the south realistically fits three or four stops, because the approach alone is 1.5 to 2.5 hours each way."
+      },
+      {
+        "question": "What is the weather like in Bedugul?",
+        "answer": "Cool and cloudy by Bali standards — the area sits at 1,200 to 1,400 metres, so mornings are genuinely chilly and cloud usually builds from late morning into the afternoon. June to September is the driest window and February the wettest, but this is the wettest part of the island and afternoon rain happens even in the dry season. Bring a warm layer and a rain shell, and do your looking before 10:00."
+      },
+      {
+        "question": "How much does Wanagiri Hidden Hills cost?",
+        "answer": "There is no single price, because Wanagiri is not a single attraction: published per-person rates along the ridge run from about IDR 20,000 to IDR 150,000 depending on which operator's gate you walk into, and some charge around IDR 40,000 to 60,000 per photo platform rather than at the entrance. Domestic rates are reported from about IDR 10,000. The free roadside pull-offs on the same ridge look out over the same two lakes."
+      },
+      {
+        "question": "How much is the entrance fee for Ulun Danu Beratan?",
+        "answer": "IDR 100,000 for foreign adults and IDR 75,000 for foreign children as published from 1 July 2026, roughly USD 6, with domestic visitors on a flat IDR 50,000. That replaced the old IDR 75,000 foreign adult rate most English-language guides still quote. Parking is a few thousand rupiah, boats on the lake are a separate negotiated charge, and it is cash at the window — check the current figure at the gate."
+      },
+      {
+        "question": "How much does the Munduk waterfall walk cost?",
+        "answer": "Budget IDR 100,000 to 125,000 per person, because every fall on the trail has its own ticket hut and there is no combined pass. A 2025 tally ran Melanting 20,000, Labuhan Kebo 20,000, Belong 20,000 and Red Coral 45,000; Golden Valley is free or up to 20,000, and is sometimes waived if you eat at the café. Nearby Banyu Wana Amertha covers four falls on one ticket, reported between IDR 30,000 and 50,000."
+      },
+      {
+        "question": "How much is the Bali Botanic Garden and when does it close?",
+        "answer": "IDR 15,500 per person on weekdays and IDR 25,500 at weekends and national holidays as published in 2026, the same rate for foreign and domestic visitors, plus a separate vehicle charge of IDR 20,000 to 30,000 for a car. It closes at 16:00 Monday to Friday and 17:00 at weekends — earlier than the 18:00 shown on some map listings — and shuts entirely for Nyepi. Allow two to three hours for 157 hectares."
+      }
+    ]
+  },
+  {
+    "slug": "tanah-lot-bedugul-day-trip-route",
+    "badge": "Travel guide",
+    "navLabel": "The route",
+    "cardTourLabel": "Temples and sunsets",
+    "heroTourSlug": "tanah-lot-bedugul-tour",
+    "relatedTourSlugs": [
+      "tanah-lot-bedugul-tour",
+      "private-car-with-driver-bali",
+      "bali-airport-transfer"
+    ],
+    "inlineStats": [
+      "7 stops in order",
+      "Day tour from $59",
+      "11-13 hours door to door"
+    ],
+    "title": "Tanah Lot and Bedugul in One Day: Highlands First, Coast Last",
+    "description": "The order that makes a Bedugul and Tanah Lot day work: highlands by 09:00 before the mist, Tanah Lot by 16:30 for sunset, and what the day costs.",
+    "excerpt": "Bedugul and Tanah Lot fit into one day, but only in that order. The lake at Ulun Danu Beratan is clear early and clouds over from late morning; Tanah Lot faces west and does nothing until the last hour of light. So the day runs highlands first, coast last: out of the south around 07:00, at the lake by 09:00, at Tanah Lot by 16:30 for a sunset that falls between roughly 18:05 and 18:50 depending on the month. Two things to know before booking. You cannot go inside Tanah Lot temple — the shrines on the rock are closed to non-Hindus, and what the ticket buys is a coastal park with viewpoints. And this is an 11 to 13 hour day door to door, not the 10 hours most itineraries advertise.",
+    "rankings": [
+      {
+        "name": "07:00 — out of the south before the peak",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Seminyak, Canggu, Kuta",
+        "bestFor": "Beating the morning peak",
+        "summary": "The whole day hinges on this. Bali's morning peak runs **07:30 to 10:00** and sits directly across the road you need north. Leaving at 07:00 costs an hour of sleep and saves close to an hour of road. We pick up at 07:00 from Canggu and Seminyak, half an hour earlier from Kuta, which has the longest run to the lake at **135 to 180 minutes**. Nothing later in the day recovers a late start."
+      },
+      {
+        "name": "09:00 — Ulun Danu Beratan while the lake is clear",
+        "imageSrc": "/images/tours-real/tanah-lot-bedugul-tour.jpg",
+        "area": "Lake Beratan, Bedugul",
+        "bestFor": "A clear lake, no crowds",
+        "summary": "The temple gardens open at **07:00** and the reflection you came for exists in the morning. Sources consistently put the mist arriving from late morning, with the fog window reported at roughly **11:00 to 15:00**, and the highlands carry a higher afternoon thunderstorm risk than the coast in both seasons. Arrive by 09:00 and you get the lake, the shrines and an hour that is not spent behind other people's phones."
+      },
+      {
+        "name": "10:30 — the rest of the highlands, chosen carefully",
+        "imageSrc": "/images/places/bali-in-peak-season.jpg",
+        "area": "Candikuning and Baturiti",
+        "bestFor": "One add-on, not five",
+        "summary": "Bedugul has a cluster of add-ons within twenty minutes of the lake, and this is where days quietly fall apart. The Handara Gate is the entrance to a golf resort rather than a mountain pass, and the photograph involves a queue; the Candikuning market is a real stop but a short one. Pick one, hold it to forty-five minutes, and protect the afternoon — the schedule has no slack after lunch."
+      },
+      {
+        "name": "12:30 — lunch and one stop on the way down",
+        "imageSrc": "/images/places/canggu-rice-fields.jpg",
+        "area": "Baturiti to Tabanan",
+        "bestFor": "Filling the dead middle hours",
+        "summary": "Bedugul to Tanah Lot is about **50 km and 90 to 120 minutes** driven straight through, which would land you on the coast at 13:00 with three hours to kill. So the descent carries lunch and one interior stop — rice terraces or a coffee plantation — and the leg stretches to two and a half or three hours. Published itineraries allow anywhere between one and three hours for this leg, which is the main source of slippage."
+      },
+      {
+        "name": "16:00–16:30 — arrive at Tanah Lot",
+        "imageSrc": "/images/places/temple-dress-code.jpg",
+        "area": "Beraban, Tabanan",
+        "bestFor": "Ticket, market walk, scouting",
+        "summary": "The gate-to-terrace walk runs about **500 metres through covered souvenir lanes** and takes five to ten minutes at an unhurried pace; there is no way around it. Tickets are **cash only and there is no ATM on site**. Arriving at 16:30 gives you the queue, the market and time to look at three viewpoints before committing to one. Arriving at 18:00, which most people do, gives you the back of a crowd."
+      },
+      {
+        "name": "17:00–18:50 — the viewpoint chain and the sunset",
+        "imageSrc": "/images/remote/tanah-lot-bali-indonesia-20220827-0957-1103-c4066c44.jpg",
+        "area": "Tanah Lot clifftop",
+        "bestFor": "Standing somewhere better than default",
+        "summary": "Sunset here falls between roughly **18:05 and 18:50** depending on the month — never at 18:00, whatever the blogs repeat. The main terraces are the crowded default; Enjung Galuh headland is two minutes further along the clifftop and Pura Batu Bolong about four, both on the same ticket and both quieter. Best light is the twenty to forty minutes before sunset and the blue hour after, once most of the crowd has gone."
+      },
+      {
+        "name": "18:50–19:15 — the exit, which is the hard part",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Tanah Lot car park",
+        "bestFor": "Not getting stranded at dusk",
+        "summary": "Everyone leaves within half an hour of the same moment onto a two-lane road, and **Grab and Gojek can drop you at Tanah Lot but generally cannot collect you** — the area is a local transport cooperative zone. Independent visitors end up negotiating in the dark under time pressure. With a driver waiting you can let the first wave go, and the run back to Seminyak still takes **60 to 120 minutes**."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Why the highlands go first and the coast goes last",
+        "paragraphs": [
+          "Two things fix the order, and neither is negotiable. Ulun Danu Beratan sits on Lake Beratan at roughly **1,200 metres**, opens at **07:00**, and is at its clearest early: mist and low cloud build from late morning, with the fog window reported at around **11:00 to 15:00**, and afternoon thunderstorms are more likely in the interior than on the south coast in both seasons. Tanah Lot is the opposite problem — a west-facing sea temple whose entire point is a sunset that lands between roughly **18:05 and 18:50** depending on the month. One is a morning site, the other is an evening site, and they are about two hours of driving apart.",
+          "Run it backwards, coast first and then the climb, and you get Tanah Lot in flat midday light and a lake under cloud. That is how most self-planned versions of this day end. Our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) **from $59 per person** is built the other way round: pickup at 07:00, lake by 09:00, coast by 16:30. If you want the detail on each site before committing, we have separate guides to [Ulun Danu Beratan](/bali/en/journal/ulun-danu-beratan-temple-guide) and to the [Handara Gate](/bali/en/journal/handara-gate-bali-guide) — the second is a resort entrance rather than a mountain pass, and that is worth knowing before you build an hour around it."
+        ]
+      },
+      {
+        "heading": "How long the driving actually takes",
+        "paragraphs": [
+          "Map estimates under-read this route badly. Off the Bali Mandara toll, traffic **rarely exceeds 40 km/h**, and across a long day the realised average is closer to **30–35 km/h**. Route planners are reasonably accurate on the north–south run but consistently optimistic across the Kuta–Seminyak–Canggu strip, which is exactly where this day starts and ends. Figures like Seminyak to Bedugul in an hour, or Ubud to Tanah Lot in half an hour, are machine estimates that no daytime driver achieves. Plan on the ranges below and treat anything faster as a bonus.",
+          "Door to door this is **11 hours from Canggu, 11.5 to 12 from Seminyak or Kuta, and 11.5 to 12.5 from Ubud** — add 30 to 60 minutes from November to March, when the descent from Baturiti is slower. That matters if you are arranging transport yourself: a full day of [car and driver](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** is normally quoted as an 8 to 10 hour day, so this route runs into overtime by design rather than by accident. Agree the finish time before you set off rather than discovering it at 19:00 in a car park. And if you land the same day, do not stack the two — take a [private airport pickup](/bali/en/tours/bali-airport-transfer) **from $15**, sleep, and give this route a day of its own."
+        ],
+        "bullets": [
+          "**South to Bedugul:** Ubud 75–120 min, Canggu 105–150 min, Seminyak 120–165 min, Kuta 135–180 min",
+          "**Bedugul to Tanah Lot:** about 50 km, 90–120 min driven straight through, 2.5–3 hours with lunch and one stop",
+          "**Tanah Lot back south:** Canggu 30–50 min, Seminyak 60–90 min, Kuta 60–100 min, Ubud 90–120 min — and after sunset the Seminyak and Kuta runs commonly take 60–120 min",
+          "**Peak windows:** 07:30–10:00 and 16:30–20:00, the second of which is precisely when this itinerary is on the road",
+          "**Pad the return, not the outbound.** The 07:00 departure beats the morning peak; the leg home sits in the site exodus and the evening peak at once"
+        ]
+      },
+      {
+        "heading": "What the day costs",
+        "paragraphs": [
+          "Entrance is paid at each gate, in cash, and these numbers have been moving. **Tanah Lot is IDR 75,000 per foreign adult and IDR 40,000 per foreign child as of August 2026**, which is the figure on the site's own ticket page. An increase to IDR 100,000 was announced in December 2025 for 1 April 2026, then postponed on 29 March 2026 with no new date set, so English-language pages currently show both figures and both were defensible when written. Check at the gate. Parking is **IDR 5,000 for a car** at current rates, with a doubling announced and deferred alongside the entrance rise.",
+          "Ulun Danu Beratan is the one to hedge. An increase to **IDR 100,000 per foreign adult from 1 July 2026**, up from IDR 75,000, was announced in December 2025 — but the parallel Tanah Lot rise announced the same month was deferred, so sources disagree on what is actually being charged. Budget **IDR 75,000–100,000 per adult and check at the gate**. Separate from all of this is the provincial Love Bali levy, **IDR 150,000 per foreign visitor per entry to Bali**, which is not an attraction fee and is not collected at either temple; guests who paid it at the airport sometimes think they have prepaid entry.",
+          "Our packaged version, [the Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) **from $59 per person**, is booked on WhatsApp with no prepayment. However you book, bring rupiah in cash: card readers at the Tanah Lot booth are unreliable and there is no ATM on site."
+        ],
+        "bullets": [
+          "**Tanah Lot:** IDR 75,000 foreign adult, IDR 40,000 foreign child, as of August 2026 — cash only, confirm at the gate",
+          "**Ulun Danu Beratan:** reported between IDR 75,000 and IDR 100,000 per foreign adult after the announced 1 July 2026 rise — confirm at the gate",
+          "**Kecak and fire dance at Tanah Lot:** IDR 100,000 per person at the gate, around IDR 90,000 booked online (2026) — a separate ticket from entrance",
+          "**Private car and driver, market rate:** IDR 600,000–900,000 for a standard car on an 8–10 hour day (roughly USD 40–60, approximate), IDR 900,000–1,200,000 for a larger vehicle",
+          "**Overtime:** roughly IDR 50,000–100,000 per extra hour — sources disagree on the rate, so settle it before departure",
+          "**Tipping:** IDR 50,000–100,000 per day is the local norm for good service"
+        ]
+      },
+      {
+        "heading": "What Tanah Lot actually is, and what it is not",
+        "paragraphs": [
+          "You cannot go inside the temple. The shrines on the rock are **closed to non-Hindus at all times**, so what the ticket buys is a coastal park with a chain of viewpoints and, tide permitting, a walk to the base of the rock. Worth knowing too that roughly **a third of the visible rock is engineered** — reinforced concrete shaped to match, from a Japanese-funded stabilisation programme after the rock face began crumbling in the 1980s. None of this makes it a poor stop. It makes it a different stop from the one the brochures describe, and our [Tanah Lot temple guide](/bali/en/journal/tanah-lot-temple-guide) walks the site in detail.",
+          "The second disappointment is tides. A rock-and-sand causeway is exposed around low water and submerged at high. Bali's south coast is semi-diurnal, so there are **two low windows a day, each shifting about 50 minutes later than the day before**, and they usually do not fall near sunset — low water and sunset line up only in runs of a few days, roughly every two weeks. If you want both on one visit, the date has to be chosen for it; otherwise pick one. Read a tide table for the hour you will actually be standing there rather than the day's headline, then look at the sea, and wear closed shoes: the exposed rock is wet, uneven and slick with algae.",
+          "For the sunset itself, walk past the main terraces. **Enjung Galuh headland is about two minutes further along the clifftop and the Pura Batu Bolong headland about four**, both included in the same ticket, both materially quieter, and almost no coach itinerary mentions either. The full chain takes 20 to 25 minutes to walk end to end. One trap worth naming: the **Kecak and fire dance runs roughly 18:00 to 19:00** on the Surya Mandala stage inside the grounds, which is the sunset hour. You can do the viewpoint walk or the dance, not both — though the dance does absorb the exit jam rather than sitting in it."
+        ]
+      },
+      {
+        "heading": "Two climates in one day",
+        "paragraphs": [
+          "Bedugul at 09:00 and Tanah Lot at 18:00 are not the same weather. The lake sits at roughly **1,200 metres**, with days around **24°C and nights near 18°C**, against **29–32°C and high humidity on the south coast** — a gap of six to eight degrees at midday and more after dark. Guests who packed only for a beach holiday spend the best hour of the lake visit being cold and hurrying. It is one packable layer, not a change of outfit, and it goes in the car rather than the hotel room."
+        ],
+        "bullets": [
+          "**A light layer and a rain shell** for the highlands — the interior is cloudier and wetter than the coast in both seasons",
+          "**Closed or grippy shoes**, not flip-flops, if there is any chance of walking out to the base of the rock",
+          "**Cash in small notes** — tickets, parking, toilets and the market at Tanah Lot are cash, and there is no ATM on site",
+          "**A phone torch** — the clifftop paths are dark within twenty minutes of sunset and there are steps",
+          "**One sarong per person** in the car. Neither site requires one for the areas visitors can reach, but it settles the question at the gate and covers any enterable temple the day adds",
+          "**Realistic expectations of the market** — the walk in runs through covered souvenir lanes, haggling is expected, and it is a gauntlet rather than a village craft fair"
+        ]
+      },
+      {
+        "heading": "When to do this, and when not to",
+        "paragraphs": [
+          "The dry season, roughly **April to October**, gives the clear horizons that make the Tanah Lot sunset worth the drive and the reliable morning windows at the lake. **November to March** is a lottery on both counts: wet-season sunsets frequently do not materialise, the swell often closes base access to the rock, and the descent from Baturiti is slower — add 30 to 60 minutes to the day. July and August are the crowd peak, although foreign arrivals to Tabanan were reported down around 30% in early 2026, which is the stated reason the fee increase was shelved.",
+          "Two dates to plan around. Nyepi, the Balinese day of silence, shuts the island completely — roads, sites and the airport — for a full 24 hours; it fell on 19 March in 2026 and moves each year, so check it before fixing your dates. The temple's piodalan anniversary comes round every 210 days and brings large domestic pilgrim crowds, though it did not close the site to visitors in July 2026. And if you have only one sunset in Bali and are based in the south, our comparison of [Tanah Lot and Uluwatu](/bali/en/journal/tanah-lot-vs-uluwatu-sunset) is the quicker way to decide which one earns the evening."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can you visit Tanah Lot and Bedugul in one day?",
+        "answer": "Yes, and it is the standard pairing — but it works in one direction only: Bedugul in the morning, Tanah Lot for sunset. The lake at Ulun Danu Beratan is clearest early and mists over from late morning, while Tanah Lot faces west and only comes alive in the last hour of light. Expect 11 to 13 hours door to door if sunset is included, rather than the 10 hours most itineraries advertise."
+      },
+      {
+        "question": "What is the best route for a Bedugul and Tanah Lot day trip?",
+        "answer": "Leave the south by 07:00, reach Ulun Danu Beratan by 09:00, spend late morning on one highland add-on, then take lunch and a single stop on the descent and arrive at Tanah Lot between 16:00 and 16:30. Sunset falls between roughly 18:05 and 18:50 depending on the month, the complex closes at 19:00, and last entry is reported at about 18:30."
+      },
+      {
+        "question": "How long is the drive from Seminyak to Bedugul?",
+        "answer": "Two to two and three-quarter hours in daytime traffic, not the one hour route planners return. Bali's realised average speed is around 30–35 km/h off the toll road, and the Kuta–Seminyak–Canggu strip is where map estimates are most optimistic. From Canggu allow 105–150 minutes, from Kuta 135–180, from Ubud 75–120. Departing before 07:30 removes most of the morning commute load."
+      },
+      {
+        "question": "How much does a Tanah Lot and Ulun Danu day trip cost?",
+        "answer": "Budget entrance fees plus transport. Tanah Lot is IDR 75,000 per foreign adult as of August 2026, and Ulun Danu Beratan is reported between IDR 75,000 and IDR 100,000 following an announced 1 July 2026 rise — both cash at the gate, and both worth confirming on the day. A private car with driver runs IDR 600,000–900,000 for a standard 8–10 hour day, roughly USD 40–60 approximate, with overtime on a route this long. Our tour is from $59 per person."
+      },
+      {
+        "question": "Can you go inside Tanah Lot temple?",
+        "answer": "No — the shrines on the rock are closed to non-Hindus at all times, at any tide. The ticket buys a coastal park with a chain of clifftop viewpoints and, when low water falls in daylight, a walk across the causeway to the base of the rock. Around a third of the visible rock is reinforced concrete from a 1980s stabilisation programme, which is worth knowing before you frame the photograph."
+      },
+      {
+        "question": "What time should you arrive at Tanah Lot for sunset?",
+        "answer": "Between 16:00 and 16:30, which sounds early and is not. The walk from the gate to the terraces runs about 500 metres through souvenir lanes and takes five to ten minutes, the ticket queue builds from mid-afternoon, and the crowd surge runs 17:30 to 18:30. Arriving at 16:30 lets you scout the Enjung Galuh and Batu Bolong headlands before deciding where to stand."
+      }
+    ]
+  },
+  {
+    "slug": "gili-trawangan-guide",
+    "badge": "Travel guide",
+    "navLabel": "Gili Trawangan",
+    "cardTourLabel": "Island getaways",
+    "heroTourSlug": "gili-islands-getaway",
+    "relatedTourSlugs": [
+      "gili-islands-getaway",
+      "gili-island-tour",
+      "fast-boat-transfer-bali"
+    ],
+    "inlineStats": [
+      "6.5-7 km loop on foot",
+      "Fun dive IDR 640,000",
+      "Overnight from $70"
+    ],
+    "title": "Gili Trawangan: the Party Is One Strip, the Rest Is Quiet",
+    "description": "The biggest Gili in full: the 6.5-7 km walk round, island-wide dive prices, unregulated cidomo fares, no drinkable tap water, and where the noise is.",
+    "excerpt": "Gili Trawangan is the biggest of the three Gilis and the only one with a real nightlife strip — but the strip is one arc of coast, not the island. The land is about 3.4 km², roughly 1,500 people live here, and the coastal track measures 6.5-7 km, so you can walk the whole circuit in 1.5-2 hours. No cars or motorbikes are allowed anywhere; you move on foot, by bicycle or by cidomo, and cidomo fares are negotiated rather than regulated. Two things are worth saying before you book rather than after: the tap water is not drinkable anywhere on the island, and there is no hospital here and no recompression chamber you should count on — serious cases go by speedboat and ambulance to Mataram on Lombok, 60-90 minutes away. Here is what it costs, where the quiet is, and how the boats work.",
+    "rankings": [
+      {
+        "name": "The harbour strip and night market",
+        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "area": "South-east arc",
+        "bestFor": "Food, cash and boats",
+        "summary": "Nearly everything transactional on Gili T sits in this arc: the boat landing, the dive shops, the ATMs — Wikivoyage counts over twelve — and the pasar malam, where point-and-grill seafood and nasi campur ran roughly IDR 20,000-40,000 in 2025-26 listings. It is also the busiest and loudest stretch of the island, and the reason first-time visitors assume the whole place is like this."
+      },
+      {
+        "name": "The bar rotation",
+        "imageSrc": "/images/places/bali-beach-club.jpg",
+        "area": "Main strip",
+        "bestFor": "Nightlife on any night",
+        "summary": "Bars take turns hosting the late night, so there is somewhere going every night rather than only at weekends. One venue runs the long shift — reported up to around 04:00 — while the others wind down between midnight and 01:00. Specific weekday line-ups get copied between blogs and change constantly, so ask on arrival rather than planning your week around a post."
+      },
+      {
+        "name": "Shore snorkelling for turtles",
+        "imageSrc": "/images/tours-real/gili-islands-getaway.jpg",
+        "area": "East and north-east coast",
+        "bestFor": "Turtles without a boat",
+        "summary": "The standard turtle swim is a shore entry off the east coast just north of the boat landing, no boat required. Green turtles graze the shallow seagrass at 0.5-2 m; hawksbills sit deeper along the drop-off. Turtle Point on the north-east corner is the reliable spot and carries a noticeable north-to-south drift that walks you down the coast — pick your exit before you get in."
+      },
+      {
+        "name": "Diving at island-wide fixed prices",
+        "imageSrc": "/images/tours-real/gili-island-tour.jpg",
+        "area": "Dive shops island-wide",
+        "bestFor": "Fun dives and courses",
+        "summary": "Gili Trawangan carries the bulk of the dive industry across the three islands, and rates are set collectively by GIDA, the dive alliance, so member shops charge close to identical prices. Published for 2025-26: a single fun dive IDR 640,000, two dives IDR 1,280,000, a night dive IDR 790,000, plus a one-time marine park fee of IDR 100,000. Choose on instructor and group size, not price."
+      },
+      {
+        "name": "Walking or cycling the full circuit",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "Whole island",
+        "bestFor": "Seeing the quiet three-quarters",
+        "summary": "The coastal track runs 6.5-7 km and takes 1.5-2 hours on foot without stops, or 45-60 minutes by bicycle. The north-west stretch is soft sand and slower than the map suggests — most cyclists end up pushing through it. There is almost no street lighting once you leave the strip, so carry a torch if the loop is going to run into dusk."
+      },
+      {
+        "name": "The quiet north and west coast",
+        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "area": "North-west shore",
+        "bestFor": "Sunsets and actual silence",
+        "summary": "The west coast faces Bali and Gunung Agung, which is why the sunset bars line it, and the north and west are genuinely thinly built — this is where people who dislike the strip end up staying. The trade-off is real and worth costing out: from the far north-west it is a forty-minute walk home along unlit sand, or a cidomo fare negotiated in the dark."
+      },
+      {
+        "name": "Hopping to Gili Meno and Gili Air",
+        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "area": "Island-hopper boat",
+        "bestFor": "A half-day off the island",
+        "summary": "The scheduled island-hopper links all three islands twice a day, the Bangsal-based circuit leaving around 09:00 and again about 16:00. Fares are asymmetric and cheap outbound from Gili T — roughly IDR 20,000 to Meno and IDR 23,000 to Gili Air, with the return legs costing more. Miss the afternoon circuit and you are chartering a boat, so treat the timetable as the constraint it is."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What Gili Trawangan actually is",
+        "paragraphs": [
+          "Gili Trawangan is the biggest of the three Gilis, which in practice means **about 3 km long by 2 km wide, roughly 340 hectares — about 3.4 km² of land**. The frequently repeated 6 km² figure is just length times width and overstates it. Around **1,500 people live here permanently**. Development is very uneven: the south-east arc, from the harbour through to the sunset-bar end, holds nearly all the bars, dive shops, hostels and the night market, while the north and west coasts are thinly built and quiet. The west coast faces Bali and Gunung Agung, so that is the sunset side; the east coast faces Lombok and Rinjani for sunrises.",
+          "It suits divers and dive-course students, solo travellers who want company by dinner, groups who want nightlife, and anyone who wants the widest choice of food, services and operators in the archipelago. It is a poor fit for people who want silence — unless they deliberately book the north or west, which genuinely is quiet. If you are weighing it against the neighbours, our [Gili Air vs Gili Trawangan comparison](/bali/en/journal/gili-air-vs-gili-trawangan) puts them side by side."
+        ]
+      },
+      {
+        "heading": "The party reputation against the map",
+        "paragraphs": [
+          "The reputation is accurate and geographically tiny. **Nightlife runs every night rather than only at weekends**: the bars take turns hosting the late one, and the host venue is reported to run to around 04:00 while the others close somewhere between midnight and 01:00. All of it sits on the south-east arc, alongside the harbour, the dive shops and the night market. Walk twenty minutes north or west and you are on an unlit coast where the loudest thing is the sea. Saying \"Gili T is a party island\" overstates the whole island and understates the strip.",
+          "The mistake is booking blind in either direction. Some people book the strip and cannot sleep; others book the far north-west for the nightlife and then walk forty minutes home along unlit sand. There is a second noise source worth checking: the resident population is Muslim, there are **two mosques on Gili T**, the call to prayer sounds five times daily, and prayers, sermons and sometimes music can run late — if you are noise-sensitive, ask how close your room is before you book. Away from the beach, signs in the village ask visitors to cover up. Then there is the drinking, which is the one part of the island's reputation that can actually hurt you."
+        ],
+        "bullets": [
+          "**Bottled beer and sealed cans opened in front of you** are the low-risk choice, and it is a genuinely small sacrifice",
+          "**Free-poured spirits, cocktails, buckets and cheap local arak are the risk** — methanol poisoning has killed and blinded travellers in Indonesia, UK FCDO advice notes cases traced to licensed bars, shops and hotels in tourist areas, and methanol cannot be detected by taste or smell",
+          "**Symptoms typically begin 12-24 hours after drinking**, long enough that people blame the food; if vision blurs after a night out, that is a medical emergency, not a hangover",
+          "**Drink spiking is separately reported** in FCDO advice across Bali, Lombok and the Gili Islands, linked to sexual assault — watch your drink being made and keep hold of it",
+          "**Magic mushrooms and cannabis are hawked openly on the strip and are illegal** under Indonesian narcotics law, which carries long prison sentences and, at the extreme, the death penalty. Open selling is not tolerance"
+        ]
+      },
+      {
+        "heading": "Getting here from Bali, and the day-trip maths",
+        "paragraphs": [
+          "The standard route is a fast boat, and Gili Trawangan is the terminus for most operators, so it has the most sailings and the most flexibility of the three islands. **Padang Bai in east Bali is the main port, roughly 1.5-2.5 hours at sea**, with Sanur around 2h40 and Serangan around 2.5-3 hours. Amed is the shortest crossing at about an hour, but **two booking aggregators currently list Amed port as closed for construction**, so verify it is open before you plan around it. Fares move constantly: well-known operators publish **roughly IDR 400,000-700,000 one way per person for 2025-26** — Eka Jaya's own site lists IDR 685,000, or IDR 650,000 booked online — which is about USD 23-39 at the August 2026 rate of roughly IDR 17,750 to the dollar. Aggregator listings down to about IDR 234,000 circulate and sit well below what the named operators charge, so read what is actually included. Add a harbour fee of about IDR 20,000, often already inside the ticket, and confirm it when you check in. Our [Gili fast boat guide](/bali/en/journal/gili-islands-fast-boat-guide) goes through ports and operators, and we sell [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) from $15 depending on the route.",
+          "Door to door from south Bali, including the hotel pickup, the check-in buffer and the crossing, **realistically runs 5-7 hours**, and boats leave overwhelmingly in the morning — a reliable same-day late-afternoon arrival does not exist. That arithmetic is what makes the day trip awkward: **you buy about 3-5 hours ashore for a 12-16 hour day**, and both good snorkelling windows, early morning and late afternoon, fall outside it. It works from Amed or Candidasa, where the crossing is short. From anywhere else an overnight is better value — our [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) runs from $70, and our [Gili day tour](/bali/en/tours/gili-island-tour) from $115 if one long day is genuinely all you have.",
+          "Two warnings we repeat to every guest. **Do not book the last boat back to Bali on the day of an international flight** — crossings are cancelled and delayed in rough weather, there is no bridge and no road, and the only fix is a night's buffer in Bali or Lombok. And budget for **Bali's tourist levy of IDR 150,000 per person**, paid online or on arrival for Bali itself; it is widely reported as not charged again when you come back from the Gilis on the same trip, but we have not seen that confirmed in the regulation, so ask at the point where you pay. If you want the Bali-side road leg on your own terms — a stop en route, or a late return from the harbour — a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) from $59 per car covers it."
+        ]
+      },
+      {
+        "heading": "No cars, and the cidomo question",
+        "paragraphs": [
+          "There are **no cars and no motorbikes on Gili Trawangan** — they are banned by local ordinance across all three islands, and it changes the feel of the place more than any single beach does. You walk, you cycle, or you take a cidomo, the small horse cart. The coastal track is 6.5-7 km: **1.5-2 hours on foot, 45-60 minutes by bike**. Bicycle hire runs **IDR 30,000-50,000 a day** as a baseline, with IDR 50,000-75,000 commonly asked at beachfront stands in high season. The north-west stretch is soft sand where most cyclists end up pushing, and there is almost no street lighting away from the strip, so carry a torch after dark. Electric bikes and scooters have been banned, confiscated, re-legalised and confiscated again over recent years and we cannot tell you what the rule will be the week you arrive — check on the island rather than assuming.",
+          "The cidomo is the most argued-about thing here, in two separate ways. First the money: **there is no fixed public tariff on Gili Trawangan** and published figures disagree sharply. Second the ethics: the carts are a working livelihood for local families, welfare standards are contested, and North Lombok has announced an intention to eventually replace cidomo with electric carts, with no timetable attached. You do not have to settle that argument to plan a trip. What matters practically is that on an island you can walk round in under two hours, **most journeys do not need a cart at all** — and the ones that do are a negotiation, not a tariff:"
+        ],
+        "bullets": [
+          "**Short hop within the centre:** published figures range from IDR 25,000 to IDR 75,000",
+          "**Harbour to your hotel:** commonly published at IDR 75,000-150,000, and a lot of arrivals are a walk instead",
+          "**Full island circuit:** sources are far apart, from around IDR 150,000 up to IDR 250,000-350,000",
+          "**Per cart or per person is itself disputed** — one well-used source records IDR 20,000-50,000 per head, other sources insist the cart is priced whole. Settle it out loud before you get in",
+          "**Rates rise after sunset** and nothing is metered. Agree the number and the currency first, every time"
+        ]
+      },
+      {
+        "heading": "What things cost, and why you should arrive with cash",
+        "paragraphs": [
+          "Bring cash. Gili Trawangan is the best-served of the three islands for money — Wikivoyage counts **over twelve ATMs**, clustered near the harbour and thinning north and west, with Mandiri usually described as the most reliable — but the machines **run dry in the evening in peak season**, so withdraw in the morning. Withdrawal surcharges of IDR 25,000-50,000 per transaction are normal and per-transaction caps are low, commonly reported between IDR 1,500,000 and 2,500,000, so one larger withdrawal beats several small ones. Warungs, the night market, bike hire, cidomo drivers and boat-boys are cash. Everything below is a published band from 2025-26 listings rather than a quote, and prices here move with season, operator and booking lead time.",
+          "Diving is the one price you cannot shop around. **GIDA, the Gili Island Dive Alliance, sets minimum prices**, so member shops charge close to identical rates: as published for 2025-26, **a single fun dive IDR 640,000, two dives IDR 1,280,000, a night dive IDR 790,000**, with discounts stepping in from three dives and reaching -20% on a ten-dive pack at IDR 5,120,000. Courses run Discover Scuba IDR 1,350,000 for one dive, **Open Water somewhere between IDR 6,200,000 and 6,900,000** depending which shop you ask, Advanced Open Water IDR 5,900,000. On top sits a **one-time government marine park fee of IDR 100,000 per person**, paid at the dive shop. Because price is fixed, choose on instructor, group size and language instead. Snorkellers skip most of this — the turtles are reachable from the beach, as our [Gili snorkelling and turtles guide](/bali/en/journal/gili-islands-snorkelling-turtles) sets out."
+        ],
+        "bullets": [
+          "**Food:** warung meal IDR 15,000-40,000; night-market nasi campur IDR 20,000-40,000, the best value on the island; mid-range restaurant IDR 40,000-100,000 per head; whole grilled fish IDR 150,000-300,000 by size",
+          "**Drinks:** small Bintang IDR 30,000-70,000 depending on the venue, with IDR 35,000 typical; cocktails around IDR 90,000-100,000, heavily discounted in happy hour",
+          "**Bicycle:** IDR 30,000-50,000 a day as a baseline, IDR 50,000-75,000 asked at beachfront stands in high season",
+          "**Shared snorkel trip:** roughly IDR 100,000-175,000 per person for a 3-4 hour three-island boat booked locally, materially more on booking platforms; private boats from several hundred thousand upward",
+          "**Island-hopper boat:** roughly IDR 20,000-45,000 per person depending on direction and leg — cheaper leaving Gili T than coming back to it",
+          "**Accommodation:** budget bungalows around IDR 300,000 low season and IDR 450,000-500,000 in high season; Wikivoyage's bands run budget USD 10-40, mid-range USD 50-100, splurge USD 100 and up",
+          "**Divers' extras:** the IDR 100,000 marine park fee, and a Gili Eco Trust contribution of about IDR 50,000 often collected alongside it"
+        ]
+      },
+      {
+        "heading": "Water, clinics and the honest medical picture",
+        "paragraphs": [
+          "**Gili Trawangan has no usable natural fresh groundwater** — the lens beneath the island is contaminated with seawater. Fresh water is made or brought in, and the practical consequences are the same whichever arrangement is currently running: **tap water is not drinkable anywhere on the Gilis**, older and cheaper accommodation may still have salt or brackish showers (ask specifically if that matters to you), and purified refill stations exist but availability varies. An island-wide clean-water shortage was reported in October 2024, with local commenters disputing how broadly it bit. Short showers are not a gesture here.",
+          "There is **no hospital on any Gili island — only clinics**. Gili Trawangan has the most of them, including Warna Medica within the Empat Pillar Medika network, and an inpatient clinic with beds was reported as opening in February 2025. Anything serious means evacuation: speedboat to Bangsal on Lombok with an ambulance meeting the pier, then road to Mataram, **roughly 60-90 minutes door to hospital**. On recompression the sources contradict each other — most say there is no functioning chamber on the islands, one claims otherwise — so plan on the conservative version: **assume there is no chamber here**, and carry dive insurance with evacuation cover. That is the operative point regardless of who turns out to be right. Our [Gili safety guide](/bali/en/journal/are-gili-islands-safe) covers the rest of it."
+        ],
+        "bullets": [
+          "**Reef shoes with thick soles** are the single most useful item — urchins and shallow coral cause most minor injuries here",
+          "**The channels between the islands run far stronger than they look.** Never try to swim between islands, and treat Shark Point's current with respect",
+          "**Sun is the most common avoidable injury** — a burned back after a face-down snorkelling day. Broad-spectrum SPF 30+, reapplied, plus a rash vest, and stay wary between 10:00 and 16:00",
+          "**Pack repellent.** Dengue is present in Indonesia and the mosquito that carries it bites during the day",
+          "**Shuffle rather than stride in the shallows** for resting stingrays, and rinse jellyfish stings with seawater, not fresh water",
+          "**Pharmacies are small and thinly stocked** — bring your own regular medication from Bali rather than expecting to replace it"
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can you walk around Gili Trawangan?",
+        "answer": "Yes — the coastal track runs 6.5-7 km and takes 1.5-2 hours on foot without stops, or 45-60 minutes by bicycle. The north-west stretch is soft sand and slower than it looks, and most cyclists end up pushing through that part. There is almost no street lighting away from the main strip, so carry a torch if your loop will run past dusk."
+      },
+      {
+        "question": "How much does a cidomo cost on Gili Trawangan?",
+        "answer": "There is no fixed public tariff on Gili Trawangan, so the fare is a negotiation rather than a rate. Published figures range from IDR 25,000-75,000 for a short hop in the centre, IDR 75,000-150,000 harbour to hotel, and anywhere from around IDR 150,000 to IDR 350,000 for a full island circuit. Sources even disagree on whether it is priced per cart or per person, and rates rise after dark — agree the number before boarding."
+      },
+      {
+        "question": "How much does diving on Gili Trawangan cost?",
+        "answer": "Prices are set collectively by GIDA, the Gili Island Dive Alliance, so shops charge close to identical rates: as published for 2025-26, a single fun dive is IDR 640,000, two dives IDR 1,280,000 and a night dive IDR 790,000, with a ten-dive pack at IDR 5,120,000. Open Water runs between IDR 6,200,000 and 6,900,000 depending on the shop. Add a one-time marine park fee of IDR 100,000 per person, paid at the dive shop."
+      },
+      {
+        "question": "Is Gili Trawangan just a party island?",
+        "answer": "No — the nightlife is real but geographically tiny, concentrated on the south-east arc around the harbour. Bars take turns hosting the late night, reported to around 04:00, while the others close between midnight and 01:00. The north and west coasts are thinly built and genuinely quiet. Where you sleep decides which island you experience, so choose the coast deliberately rather than booking blind."
+      },
+      {
+        "question": "Can you drink the tap water on Gili Trawangan?",
+        "answer": "No. Gili Trawangan has no usable natural fresh groundwater and tap water is not drinkable anywhere on the Gilis — fresh water is made or shipped in. Older and cheaper accommodation may still have salt or brackish showers, so ask specifically if that matters to you. Refill stations exist but availability varies, and an island-wide clean-water shortage was reported in October 2024."
+      },
+      {
+        "question": "How do you get to Gili Trawangan from Bali, and how long does it take?",
+        "answer": "By fast boat, with Padang Bai in east Bali the main port at roughly 1.5-2.5 hours at sea; Sanur is about 2h40 and Serangan around 2.5-3 hours. Realistic door-to-door from south Bali is 5-7 hours including pickup and check-in, and boats leave overwhelmingly in the morning. Well-known operators published roughly IDR 400,000-700,000 one way per person for 2025-26, about USD 23-39 at the August 2026 rate."
+      }
+    ]
+  },
+  {
+    "slug": "gili-air-guide",
+    "badge": "Travel guide",
+    "navLabel": "Gili Air",
+    "cardTourLabel": "Island getaways",
+    "heroTourSlug": "gili-islands-getaway",
+    "relatedTourSlugs": [
+      "gili-islands-getaway",
+      "gili-island-tour",
+      "fast-boat-transfer-bali"
+    ],
+    "inlineStats": [
+      "8 things to do",
+      "Overnight from $70",
+      "Loop walk 4.5-5 km"
+    ],
+    "title": "Gili Air: the Middle Gili Most People End Up Preferring",
+    "description": "Gili Air is quieter than Trawangan, livelier than Meno: turtles off the east coast, prices in rupiah, the crossing from Bali, and how it works with kids.",
+    "excerpt": "Gili Air is the island most visitors end up preferring, and the reason is unglamorous: it has enough. Enough cafes, dive shops and beach bars to fill a week, without Gili Trawangan's nightlife strip and without Gili Meno's problem of running out of restaurants by day four. It is small — a coastal loop of about 4.5-5 km — completely car-free, and around 1,800 people live here, the largest permanent community of the three. Green and hawksbill turtles graze the shallows off the east and north-east coast and are seen from shore year-round. Be honest about the evenings, though: there is roughly one party a week in peak season and the island is otherwise quiet by about 23:00. Below: what to do, what things cost in rupiah, how the crossing actually works, and what changes when you bring children.",
+    "rankings": [
+      {
+        "name": "Turtles off the east side",
+        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "area": "East and north-east coast",
+        "bestFor": "Shore snorkelling with turtles",
+        "summary": "The shore snorkelling here is the main reason people stay rather than day-trip. Green and hawksbill turtles are resident and present year-round, grazing the shallow seagrass off the east and north-east coast; the commonly named entry is Turtle Point, also called Sandy Beach, on the north-east, where they are often seen close in from the beach. Sightings are realistic, not guaranteed. Go early — mornings are calmer, clearer and quieter. Wear reef shoes: these shallows hold very spiny urchins."
+      },
+      {
+        "name": "The coastal loop, on foot or by bike",
+        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "area": "Whole island",
+        "bestFor": "Getting your bearings on day one",
+        "summary": "The coastal loop is about 4.5-5 km, and how long it takes is genuinely disputed — published guides quote anything from one hour to just under two. The measured distance supports 1-1.5 hours of actual walking, longer with stops, and the north and west stretches are soft sand and slow going. A bicycle costs IDR 30,000-50,000 a day and covers the circuit in roughly half an hour, sand sections excepted."
+      },
+      {
+        "name": "Dinner on Jalan Mojo",
+        "imageSrc": "/images/tours-real/gili-island-tour.jpg",
+        "area": "Inland, north of the harbour",
+        "bestFor": "Eating well for very little",
+        "summary": "Jalan Mojo is the inland road running north from the harbour, and it is where the island actually eats: cafes, casual restaurants and evening drinks, plus long-running warungs including Sunny, Oranges, zZz and Warung Muslim. A warung meal runs IDR 10,000-35,000 and a nasi campur was quoted at IDR 20,000. Plenty of visitors eat every meal on the west-coast sunset strip and never find this street, which is how a cheap island turns expensive."
+      },
+      {
+        "name": "Sunset tables on the west coast",
+        "imageSrc": "/images/places/bali-beach-club.jpg",
+        "area": "West coast",
+        "bestFor": "The evening ritual, at a price",
+        "summary": "The west-facing beach bars are where the island collects at the end of the day: beanbags on the sand, low tables, the sun dropping behind Gili Meno. They are also the most expensive food on Gili Air — west-coast sunset tables carry a clear premium over inland and harbour-side places for the same dishes. The sensible compromise, and what most people settle into after a couple of nights, is a drink here and dinner on Jalan Mojo."
+      },
+      {
+        "name": "Diving the same reefs as Gili T",
+        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "area": "Hans Reef and Air Wall",
+        "bestFor": "Same reefs, fewer boats",
+        "summary": "Gili Air dives the same reefs as Trawangan with fewer boats on them, and prices are set collectively: the Gili Island Dive Alliance fixes minimum rates, so nearly every member shop charges the same and haggling is close to pointless. Published 2025-2026 rates are a single fun dive at IDR 640,000, two dives IDR 1,280,000, a Discover Scuba day IDR 1,350,000, plus a one-time marine park fee of IDR 100,000 per person. Choose on instructor and group size instead."
+      },
+      {
+        "name": "A shared three-island snorkel boat",
+        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "area": "All three Gilis",
+        "bestFor": "Seeing all three islands",
+        "summary": "The standard half-day boat loops the three islands with three or four snorkelling stops, usually 3-4 hours, with departures around mid-morning and early afternoon. Booked locally on Gili Air it runs about IDR 120,000-150,000 per person; published bands elsewhere reach IDR 175,000. A private boat is IDR 900,000-1,700,000 depending on size and duration. Boats carry twenty to thirty people, so the earlier departure is both calmer and less crowded."
+      },
+      {
+        "name": "Half a day on Gili Meno",
+        "imageSrc": "/images/tours-real/gili-islands-getaway.jpg",
+        "area": "Gili Meno",
+        "bestFor": "Turtles and underwater sculpture",
+        "summary": "Meno is the next island west and works far better as half a day than as a base. The Nest — Jason deCaires Taylor's ring of 48 life-size figures, installed in 2017 — sits roughly 100 m off the beach in 3-5 m of water and is snorkelled straight from shore, no boat needed. Go on a calm morning near low tide. The scheduled hopper runs only two circuits a day, so check the times or you will be chartering a boat home."
+      },
+      {
+        "name": "Letting small children roam",
+        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "area": "Anywhere on the island",
+        "bestFor": "Families with small children",
+        "summary": "There are no cars or motorbikes on any of the three islands — a local ordinance bans them — which removes the single biggest source of parental anxiety in Bali. Gili Air is small enough to walk around in about 90 minutes or cycle in 30, and bikes with child seats are widely available here, more so than on the other two. The paths are sand, though: strollers do not work, so bring a carrier for under-threes."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What Gili Air is actually like",
+        "paragraphs": [
+          "Gili Air is the middle island in mood as much as in position. It is the closest of the three to Lombok, it covers **about 175 hectares** — half of Trawangan's 340, a little more than Meno's 150 — and it holds **the largest permanent community of the three at roughly 1,800 people**. That last figure explains the feel: there is a working village behind the beach frontage rather than a purely tourist strip, alongside enough cafes, dive shops, yoga studios and beach bars to fill a week. **No cars or motorbikes exist on any Gili island** — a local ordinance bans them — so transport is feet, bicycles and cidomo horse carts.",
+          "The thing to settle before you book is the evening. Gili Air is not a toned-down Gili Trawangan, it is a different proposition: **roughly one party a week in peak season**, rotating between bars, and otherwise the island is quiet by about 23:00. If you want to catch that one night, ask locally on arrival rather than planning around it. People who arrive expecting a smaller version of the strip come away disappointed for the wrong reason — the island is doing exactly what it advertises."
+        ],
+        "bullets": [
+          "**No nightlife strip.** One rotating party a week in high season, and nothing that runs late outside it",
+          "**Sandy, uneven paths.** Pleasant on foot, hard work on a bike through the north and west, and impossible with a stroller",
+          "**Tap water is not drinkable.** Bottled and refill-station water is the norm, and some cheaper rooms still have brackish showers — ask specifically before booking if it matters",
+          "**Very spiny sea urchins in the shallows.** The most common minor injury on the island; reef shoes solve it",
+          "**A working Muslim village.** There is a mosque, the call to prayer is audible five times daily and longer during Ramadan, and visitors are asked to cover up away from the beach",
+          "**Clinic-level medical care only.** There is no hospital on any of the three islands"
+        ]
+      },
+      {
+        "heading": "Getting to Gili Air from Bali, Ubud or Lombok",
+        "paragraphs": [
+          "**Check the routing before you pay.** Some Bali fast boats call at Gili Air directly; many do not and terminate at Gili Trawangan instead. Being dropped at Trawangan and hopping across costs a second fare, a wait for one of only two scheduled circuits a day, and up to a couple of hours. Where the direct service runs, **Padang Bai to Gili Air is roughly 1.5-2 hours at sea**; Sanur is about 2h40 and Serangan about 3 hours. Our [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) start **from $15**, and we confirm which island the boat actually stops at before anything is paid. Our [fast boat guide](/bali/en/journal/gili-islands-fast-boat-guide) goes through the ports and operators in more detail.",
+          "The crossing is the short part of the day. The road leg from Seminyak, Canggu or Kuta to Padang Bai runs **1h10-2h30 depending on traffic**, and Ubud to Padang Bai is only **1-1.5 hours** — but operators collect you around 1.5 hours before sailing from the south and up to three hours ahead for some Ubud transfers, so an 08:00 departure can mean a **05:00-06:30 hotel pickup**. Realistic door-to-door from south Bali is **5-7 hours** each way. That arithmetic is why we are blunt about the [Gili day tour](/bali/en/tours/gili-island-tour) **from $115**: last boats off Gili Air generally leave between **15:15 and 15:35**, so a day trip buys roughly **3-5 hours ashore against 12-16 hours door to door**, and it only really adds up from east Bali. Snorkelling is best early morning and late afternoon, both outside that window, which is why the [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) **from $70** is materially better value from anywhere else — and why day trips are not recommended for young children, elderly travellers or anyone prone to motion sickness.",
+          "Coming via Lombok, Gili Air has the shortest crossing of the three: **Bangsal harbour to Gili Air is roughly 10-15 minutes** by fast or private boat, longer on the public one. That short hop is also a genuine safety advantage, since it is the fastest of the three islands to evacuate from. Buy the public-boat ticket at **the official office on the left side of the harbour** — touts outside it are a documented problem — and note that the boat **leaves when it fills, at around 20-40 passengers**, not to a timetable, with the ticket office open roughly 07:00-17:00. Landings on all three islands are shallow beach or short-jetty landings: carry your own bag and expect wet feet."
+        ],
+        "bullets": [
+          "**Fast boat from Bali, one way per person:** roughly **IDR 400,000-700,000 (about USD 22-39)** with well-known operators on fares published 2025-2026 — one major operator lists IDR 685,000, discounted to IDR 650,000 for online booking. Much cheaper aggregator figures circulate and should be treated with suspicion; fares are seasonally tiered and move",
+          "**Harbour and arrival charges:** roughly **IDR 10,000-20,000 per person** at Padang Bai, Bangsal and on island arrival. **Gili Air's arrival fee was reported at IDR 20,000 per person for 2026, collected in cash on the spot** — carry small notes and check the amount at the pier, as these levies change without notice",
+          "**Public boat from Bangsal:** around **IDR 18,000-23,000 per person**, bought at the official office",
+          "**Island hopper between the Gilis:** **IDR 20,000-45,000 per person** depending on direction and leg — the fares are asymmetric, and legs towards Trawangan cost more than legs away from it",
+          "**Bali's tourist levy:** **IDR 150,000 per person**, one-off, for entering Bali. It is widely reported as not re-charged when you return from the Gilis on the same trip, but we could not confirm that against the official regulation — budget for it twice if you want certainty"
+        ]
+      },
+      {
+        "heading": "Turtles, urchins and getting in the water",
+        "paragraphs": [
+          "The east and north-east coast is where the shore snorkelling happens, and it is the strongest single reason to stay on Gili Air rather than visit it. **Green and hawksbill turtles are resident and present year-round**, grazing shallow seagrass sometimes only metres off the sand. The commonly named shore spot is Turtle Point, also signed as Sandy Beach, on the north-east. Sightings are realistic rather than guaranteed, and **mornings are materially better** — calmer water, less boat traffic, better light.",
+          "Two rules matter more than all the others: **stay roughly 2-3 metres away, and never put yourself between a turtle and the surface.** They are air-breathing reptiles, and blocking the ascent causes real stress. No touching, no chasing, no standing on coral — float horizontally and use your fins deliberately. The only reason these turtles tolerate snorkellers at all is years of being left alone, and habituation is the asset being spent. Wear reef shoes: **the shallows here hold very spiny sea urchins**, which cause most of the minor injuries on the island. Our [turtle snorkelling guide](/bali/en/journal/gili-islands-snorkelling-turtles) covers the sites and the etiquette across all three islands.",
+          "Beyond shore range, **Hans Reef on the north-east and Air Wall** are the main boat sites, and the same reefs the Trawangan shops dive are within easy reach with fewer boats on them. Shared three-island snorkel trips book locally at **IDR 120,000-150,000 per person**, with wider published bands reaching IDR 175,000; a private boat runs **IDR 900,000-1,700,000** by size and duration. Divers pay a **one-time government marine park fee of IDR 100,000 per person**, collected at the dive shop — confirm it on the day, because these small levies are inconsistently applied between operators."
+        ]
+      },
+      {
+        "heading": "Gili Air vs Gili Trawangan and Gili Meno",
+        "paragraphs": [
+          "The three islands sit within sight of each other and are not remotely interchangeable. **Gili Trawangan is about 340 hectares with roughly 1,500 residents**, a 6.5-7 km coastal track, the bulk of the dive industry and the only real nightlife — a rotation in which one host bar goes late each night while the others close around midnight. Its development is geographically concentrated: the south-east arc holds nearly all of it, and the north and west coasts are genuinely quiet. **Gili Meno is the smallest at about 150 hectares with 400-500 residents**, with effectively no nightlife, the thinnest food scene of the three, and one or two cash machines that cannot be relied on at all.",
+          "Gili Air sits between them, which is why it is the default recommendation for anyone not specifically chasing nightlife or total isolation. The honest failure modes are worth stating plainly: Trawangan disappoints people who wanted quiet and booked the strip; Meno disappoints people who booked two weeks and ran out of restaurants by day four; Gili Air disappoints people who wanted a night out. Our [three-island comparison](/bali/en/journal/gili-trawangan-vs-air-vs-meno) sets them side by side in more detail."
+        ],
+        "bullets": [
+          "**Choose Gili Trawangan if** you are diving seriously, travelling solo and want company, or want a proper night out — and book the north or west coast if you also want to sleep",
+          "**Choose Gili Air if** you want somewhere to go in the evening without a strip, are travelling with children, are staying a week or more, or genuinely cannot decide",
+          "**Choose Gili Meno if** you want to do very little for three or four nights — and bring all the cash you will need, because its machines run dry"
+        ]
+      },
+      {
+        "heading": "Gili Air with children",
+        "paragraphs": [
+          "Gili Air is the standard family recommendation of the three, and the car-free ordinance is most of the reason. **There is no traffic to manage anywhere on the island**, which changes the whole texture of a day with small children compared with Bali. Distances are short — **about 90 minutes to walk the loop, roughly 30 minutes by bicycle** — and **bikes with child seats are widely available here**, more so than on Trawangan or Meno. A hopper ride away, Gili Meno's turtle sanctuary lands well with children; it charges no entry fee and runs on donations, so carry small notes, with IDR 50,000-100,000 a normal contribution.",
+          "The hard part is the transit, not the island. The fast-boat crossing is open sea, frequently bumpy, and **one-day round trips are explicitly not recommended for children** or anyone motion-sensitive; in the wet season the crossing is rougher and cancellations more common. Once ashore, there are **no large supermarkets**, so nappies, wipes, formula, baby food and children's sunscreen have to come with you from Bali. **The paths are sand and uneven, so strollers do not work** — bring a carrier for under-threes. Medical cover is clinic level only, with the nearest hospitals in Mataram on Lombok, **60-90 minutes away by speedboat plus a waiting ambulance**.",
+          "In the water, keep children on the sheltered leeward side. **The currents in the channels between the islands run far stronger than they look**, and swimming between islands is not viable at any fitness level. Reef shoes matter more for small feet than adult ones, given the urchins. For diving, PADI's Bubblemaker starts at **age 8** in confined water and Junior Open Water at **age 10**, with 10-11 year-olds limited to 12 m and required to dive with a parent or a dive professional. Our [Gili Islands with kids guide](/bali/en/journal/gili-islands-with-kids) has the full packing and logistics list."
+        ]
+      },
+      {
+        "heading": "What it costs, and when to go",
+        "paragraphs": [
+          "Gili Air is inexpensive if you eat where the island eats and expensive if you do not, and that single choice swings a daily budget more than accommodation does. West-coast sunset tables carry a clear premium; the same dishes on Jalan Mojo or by the harbour cost a fraction. All figures below are as published for 2025-2026, with USD conversions at roughly **IDR 17,800 to the dollar in August 2026** — treat every one as a band rather than a quote, because they move with season, operator and booking lead time.",
+          "Bring cash from Bali. Gili Air has **several ATMs, clustered near the harbour and along Jalan Mojo** — more than Meno, fewer than Trawangan. **CIMB Niaga permits up to IDR 2,500,000 per transaction**, local surcharges run **IDR 25,000-50,000 per withdrawal** on top of whatever your own bank charges, and machines run dry on peak evenings, so withdraw in the morning and in one go rather than in small repeated amounts. There is a money changer at the Oseana shop by the harbour. Warungs, bicycle hire, cidomo drivers and boat boys are cash; mid-range restaurants and dive shops take cards, generally with a surcharge added.",
+          "On timing, the **dry season runs roughly April/May to October** — calmer seas, the best underwater visibility and the most reliable crossings. **July and August are simultaneously the best weather and the worst value**: peak crowding, peak pricing, and a detail people miss — trade winds can make the strait rough in those same months, which matters more here because Gili Air is often reached on a smaller boat from Bangsal. **May, June and September are the sweet spot.** The wet season, roughly November to March, brings downpours in bursts rather than all-day rain, cheaper rooms and a much quieter island, but variable visibility and a materially higher rate of boat cancellations — this is not the season to book a return boat on the day of an international flight. Turtles are there year-round. The other price spike is around **22 December to 3 January**, and if Ramadan falls in your window it changes daytime food service and staffing; the dates shift about 11 days earlier each year, so check them for your travel year."
+        ],
+        "bullets": [
+          "**Warung meal** IDR 10,000-35,000; a nasi campur was quoted at IDR 20,000 at Warung Muslim",
+          "**Standard local dishes** (nasi goreng, gado-gado, curry) IDR 25,000-35,000; Western-style mains IDR 80,000-100,000",
+          "**Rooms** from IDR 50,000-250,000 at the budget end, mid-range from about IDR 300,000, upper and luxury USD 70-150+",
+          "**Bicycle hire** IDR 30,000-50,000 a day, more at beachfront stands in high season",
+          "**Cidomo:** Gili Air is the one island with a documented fixed rate — a cooperative-set **IDR 200,000 per cart for a trip of any length**, recorded June 2025. That rests on a single dated source with no independent confirmation, so agree the price and the currency before you board",
+          "**Diving** IDR 640,000 for a single fun dive, identical across alliance member shops, plus the one-time IDR 100,000 marine park fee"
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Gili Air from Ubud?",
+        "answer": "Ubud to Gili Air means a fast boat from Padang Bai, with a realistic door-to-door time of 5-7 hours. The road leg itself is only 1-1.5 hours, but operators pick up early — up to three hours before sailing on some Ubud transfers — so an 08:00 departure can mean a 05:00-06:30 hotel pickup. Padang Bai to Gili Air is roughly 1.5-2 hours at sea where the direct service is offered. Check that your boat actually calls at Gili Air; many terminate at Gili Trawangan and leave you to hop across."
+      },
+      {
+        "question": "Is Gili Air better than Gili Meno?",
+        "answer": "For most people yes, because Gili Air has enough restaurants, dive shops and ATMs to sustain a week while Meno works best as three or four nights. Meno is smaller (about 150 hectares, 400-500 residents), has effectively no nightlife, the thinnest food choice of the three and cash machines that cannot be planned around. Meno wins on shore snorkelling and its underwater sculpture circle; Gili Air wins on everything you need daily. Plenty of people do both — Meno as a half-day trip from a base on Air."
+      },
+      {
+        "question": "When is the best time to visit Gili Air?",
+        "answer": "May, June and September are the sweet spot — dry-season conditions with calm seas and good visibility, but without July-August crowds and peak pricing. The dry season runs roughly April or May to October, and the wet season from about November to March, with rougher crossings and more cancellations. One caveat: trade winds can make the strait rough in July and August too, so dry season does not guarantee flat water, and that matters more on Gili Air because the Bangsal boats are smaller. Turtles are resident year-round."
+      },
+      {
+        "question": "Can you see turtles from the beach on Gili Air?",
+        "answer": "Yes — green and hawksbill turtles are resident year-round and are regularly seen from shore off the east and north-east coast, with Turtle Point, also called Sandy Beach, the usual entry. Sightings are realistic rather than guaranteed, and mornings are calmer, clearer and quieter than afternoons. Keep roughly 2-3 metres away and never position yourself between a turtle and the surface, because they need to breathe. Wear reef shoes: the shallows here hold very spiny urchins, which cause most of the island's minor injuries."
+      },
+      {
+        "question": "How much does Gili Air cost per day?",
+        "answer": "Eating at warungs and staying in a budget room, Gili Air runs on very little — meals IDR 10,000-35,000, budget rooms IDR 50,000-250,000 a night, a bicycle IDR 30,000-50,000 a day, all as published for 2025-2026. Western-style mains on the west-coast sunset strip are IDR 80,000-100,000, and that is where budgets go. A single fun dive is IDR 640,000 plus a one-time IDR 100,000 marine park fee. USD conversions are approximate at roughly IDR 17,800 to the dollar in August 2026, and fares move seasonally."
+      },
+      {
+        "question": "Is Gili Air good with kids?",
+        "answer": "Yes, it is the standard family recommendation of the three, mainly because no cars or motorbikes are allowed on any Gili island. The loop is walkable in about 90 minutes, cyclable in 30, and bikes with child seats are widely available here. The crossing is the hard part: it is open sea, often bumpy, and one-day round trips are not recommended for children. Bring nappies, formula and children's sunscreen from Bali, and a carrier rather than a stroller — the paths are sand."
+      }
+    ]
+  },
+  {
+    "slug": "gili-meno-guide",
+    "badge": "Travel guide",
+    "navLabel": "Gili Meno",
+    "cardTourLabel": "Island getaways",
+    "heroTourSlug": "gili-islands-getaway",
+    "relatedTourSlugs": [
+      "gili-islands-getaway",
+      "gili-island-tour",
+      "fast-boat-transfer-bali"
+    ],
+    "inlineStats": [
+      "1.5 km² island",
+      "48 underwater figures",
+      "Getaways from $70"
+    ],
+    "title": "Gili Meno: The Emptiest Gili, and Who Will Hate It",
+    "description": "The smallest Gili: 1.5 km², about 400 residents, turtles off the beach and a 48-figure underwater sculpture. Bring cash — the ATM cannot be relied on.",
+    "excerpt": "Gili Meno is the smallest of the three Gilis — roughly 1.5 km² of island and a permanent population of about 400 to 500 people — and the emptiness is the product, not a side effect. There is no nightlife, the food choice is genuinely thin, and the cash problem is bad enough that every source we checked says the same thing: arrive with the money you need. What you get back is the best shore snorkelling of the three. Turtles graze a few metres off the west coast, and Jason deCaires Taylor's 48-figure sculpture, The Nest, sits about 100 metres out in 3 to 5 metres of water, reachable with a mask and fins. Medical cover is clinic level only and the nearest hospital is in Mataram on Lombok. Here is who Meno suits, who should book Gili Air instead, what it costs, and the honest answer on drinking water.",
+    "rankings": [
+      {
+        "name": "The Nest, the underwater sculpture",
+        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "area": "About 100 m offshore",
+        "bestFor": "Snorkelling with no boat",
+        "summary": "Jason deCaires Taylor's circle of 48 life-size figures, commissioned by the BASK resort and installed in 2017. It lies roughly 100 metres off the beach in 3 to 5 metres of water, so you reach it with a mask and fins — no boat, no ticket. It doubles as an artificial reef and carries coral growth now, which is why standing on it in calm conditions, as people do, is not harmless."
+      },
+      {
+        "name": "Turtles straight off the beach",
+        "imageSrc": "/images/tours-real/gili-island-tour.jpg",
+        "area": "West and north-west coast",
+        "bestFor": "Several turtles in one swim",
+        "summary": "The west and north-west shallows give some of the more reliable turtle encounters in Indonesia — several green and hawksbill turtles in a single calm morning session is normal rather than lucky. The usual entries are near the disused west-coast jetty and the stretch by Good Heart. Keep two to three metres back, never put yourself between a turtle and the surface, and let it come up to breathe."
+      },
+      {
+        "name": "Turtle Paradise and the east coast",
+        "imageSrc": "/images/places/blue-lagoon-padang-bai.jpg",
+        "area": "North-east and east side",
+        "bestFor": "Turtles within 20 m of shore",
+        "summary": "Turtle Paradise sits off the north-east corner, and on the east coast, off the Karma Beach bungalows, turtles come in to roughly 20 metres from the sand. Meno Wall is the named boat site and carries real current, so it is not a casual shore swim. Urchins and shallow coral cause most of the minor injuries here, which makes reef shoes the most useful thing in your bag."
+      },
+      {
+        "name": "The turtle sanctuary",
+        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "area": "Gili Meno",
+        "bestFor": "Twenty minutes with children",
+        "summary": "A small local hatchery that collects eggs, rears hatchlings for about a year and releases them — reported at roughly 2,000 a year. There is no ticket; it runs on donations, and IDR 50,000-100,000 is a normal contribution, so carry small notes. It is the Gili hatchery usually named as the credible one, in contrast to the Gili Trawangan facility. Sanctuary describes intent, not accreditation — headstarting is debated among marine biologists."
+      },
+      {
+        "name": "Walking the whole island",
+        "imageSrc": "/images/tours-real/gili-islands-getaway.jpg",
+        "area": "Coastal path",
+        "bestFor": "Seeing all of Meno at once",
+        "summary": "The coastal path runs about 4 to 4.5 km and takes an hour to ninety minutes at a leisurely pace; crossing the interior takes roughly fifteen minutes. There are no cars or motorbikes anywhere on the Gilis, so nothing overtakes you. Bicycle hire exists but is less organised than on the other two islands, and the soft sand makes cycling hard work — on Meno, walking is usually faster."
+      },
+      {
+        "name": "The saline lake, from a distance",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "West and centre of the island",
+        "bestFor": "A short look, then repellent",
+        "summary": "A shallow salt lake takes up part of the interior. It produces salt in the dry season, may be full or bone dry depending on when you come, and it is not a swimming spot. It is also the island's main mosquito source, which is why insect repellent matters more on Meno than on Trawangan or Air. There is no malaria on the Gilis, but dengue is present and the mosquito bites during the day."
+      },
+      {
+        "name": "Long stretches of empty beach",
+        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "area": "All the way round",
+        "bestFor": "Couples and people who read",
+        "summary": "This is the actual product: a handful of resorts, a scattering of warungs and beach shacks, and sand with nobody on it. There is effectively no nightlife and no evening to plan around — the island goes quiet after dark, and the call to prayer from the village mosque is part of the soundtrack. Three or four nights suits most people. Two weeks is where the thin food choice starts to bite."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Who Gili Meno suits, and who will not enjoy it",
+        "paragraphs": [
+          "Gili Meno is the smallest of the three islands — **about 150 hectares, roughly 1.5 km²** — with the smallest permanent population, **somewhere between 400 and 500 people** depending on which source you take. That is the whole proposition: a few resorts, a few warungs, a saline lake in the middle and a lot of empty sand. The gaps in infrastructure are real rather than picturesque. Meno has the **fewest shops, the least reliable cash and the thinnest medical cover of the three**, and some businesses close entirely out of season.",
+          "It works well for honeymooners and couples, for people who genuinely want to do nothing for three or four days, and for snorkellers who came for turtles and the sculpture rather than for a dive scene. It works badly for almost everyone else, and the failure is usually the same one: booking Meno for a fortnight and running out of restaurants by day four. Most people who enjoy Meno stay three or four nights and combine it with Gili Air or Gili Trawangan. Our [three-island comparison](/bali/en/journal/gili-trawangan-vs-air-vs-meno) sets the three side by side if you are still choosing."
+        ],
+        "bullets": [
+          "**Solo travellers hoping to meet people** — there is no hostel scene and no bar strip to meet anyone in",
+          "**Budget travellers who want variety** — warung food is cheap, but there is very little of it within walking distance of most rooms",
+          "**Families who need a second option** — one restaurant, one refusing child, no plan B",
+          "**Anyone who might need a pharmacy at 22:00** — stock is limited and the clinic is basic",
+          "**Anyone travelling in February, March or November on price alone** — the cheap months and the shut months are the same months"
+        ]
+      },
+      {
+        "heading": "The Nest, and the snorkelling that is the real reason to come",
+        "paragraphs": [
+          "What makes Meno worth the extra transfer is that the best snorkelling starts at the beach rather than on a boat. **The Nest** — Jason deCaires Taylor's **circle of 48 life-size figures**, commissioned by the BASK resort and installed in **2017** — sits about **100 metres offshore in 3 to 5 metres of water**. You swim out with a mask and fins; no boat and no ticket are involved. Conditions matter more here than on the other two islands: **a calm morning, near low tide, ideally around a new moon** for the clearest light. That is a narrower window than Gili T or Gili Air demand, so give yourself more than one morning rather than pinning it on a single afternoon.",
+          "The turtles are the other half of it. The west and north-west shallows produce **several green and hawksbill turtles in one calm session** often enough that it counts as normal, and off the Karma Beach bungalows on the east coast they come **within roughly 20 metres of shore**. Both species are resident, so there is no turtle season to plan around. The etiquette below is not decoration — these animals tolerate snorkellers because they have been treated calmly for years, and that habituation is the thing being spent. Our [guide to snorkelling with turtles](/bali/en/journal/gili-islands-snorkelling-turtles) covers the sites and timing across all three islands. Divers pay a **one-off marine park fee of IDR 100,000 per person** as published for 2025-26; snorkellers are reportedly rarely charged, but ask at the shop."
+        ],
+        "bullets": [
+          "**Keep two to three metres away.** No touching, no chasing, no riding, no sudden movements",
+          "**Never position yourself between a turtle and the surface** — they breathe air, and blocking the ascent causes real stress",
+          "**Float horizontally and use your fins deliberately.** Do not stand on the coral, and do not stand on the statues at The Nest",
+          "**Reef shoes with thick soles.** Urchins, fire coral and stingrays resting in the shallows are the usual causes of injury — shuffle your feet rather than striding",
+          "**A rash vest plus reef-safe sunscreen.** A burned back after a day face-down in the water is the most common avoidable injury on the Gilis"
+        ]
+      },
+      {
+        "heading": "Getting to Gili Meno, and getting off it again",
+        "paragraphs": [
+          "Meno has the **fewest direct connections from Bali** of the three islands. Some operators call here; many do not, and the common route is Bali to Gili Trawangan or Gili Air followed by a second local leg. Where a direct sailing exists, **Padang Bai to Meno runs roughly 1.5 to 2 hours at sea**; Sanur is about 2h40 and Serangan about 3 hours, on top of **1.5 to 2.5 hours by road** from South Bali or Ubud to the harbour. Realistic door to door from South Bali is **6 to 8 hours**, an hour or two longer than the other two islands because of that transfer. Whatever you book — including our [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) **from $15** — check whether the sailing actually calls at Meno before you pay, and read our [fast boat guide](/bali/en/journal/gili-islands-fast-boat-guide) for the ports and the operator differences.",
+          "Then there is the constraint that defines a stay here: **the island-hopper runs twice a day and nothing else is scheduled**. The Bangsal circuit goes Bangsal-Gili Air-Gili Meno-Gili Trawangan and reverses, **leaving Bangsal at roughly 09:00 and again at 16:00** on schedules published for 2025-26 — confirm locally the day before, because these move. Miss the afternoon circuit and you are chartering a private boat, which starts in the several-hundred-thousand-rupiah range and climbs. Hopper fares are **reported between IDR 20,000 and IDR 45,000 per person per leg** and are asymmetric — the direction you travel changes the price — so treat any single quoted number with suspicion. Landings are shallow beach landings: expect wet feet and to carry your own bag.",
+          "A day trip is the wrong format for this island. Our [Gili day tour](/bali/en/tours/gili-island-tour) **from $115** buys roughly 3 to 5 hours ashore against about 8 hours in transit from South Bali, and on a day trip the sensible rule is one island, which in practice means Gili Trawangan. Meno only makes sense overnight, when the day boats have gone and the morning snorkelling window is yours — that is what our [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) **from $70** is built around. One booking rule regardless of operator: **never put the last boat back to Bali on the same day as an international flight.** Crossings are cancelled in rough weather and there is no bridge."
+        ]
+      },
+      {
+        "heading": "Cash, water and medical cover: the three thin things",
+        "paragraphs": [
+          "**Plan as if there is no ATM on Gili Meno.** Sources disagree on whether there are two machines south of the boat landing, one Mandiri near the harbour, or none currently working; the consistent thread is that whatever exists cannot be relied on. Withdraw on Gili Trawangan, Gili Air or the mainland before you get on the boat. Where Gili ATMs do work, the local surcharge runs **IDR 25,000-50,000 per withdrawal** and the per-transaction cap is usually **IDR 2,500,000** as published 2025-26, so one large withdrawal costs less than several small ones. Warungs, snorkel trips, bike hire and cidomo drivers are cash. Larger hotels and dive centres take cards, generally with a surcharge added — reports of one are consistent, but we have not found a reliable standard percentage, so do not budget against a number.",
+          "The honest answer on drinking water: **tap water is not drinkable anywhere on the Gilis, Meno included.** Beyond that, three reputable sources describe three different supply systems for this island — an undersea pipe from Lombok in place since 2017, water shipped in by boat, and a natural freshwater lens supplemented by desalination in the dry season. We cannot tell you which is currently operative, and we are not going to pick one. All three agree on the part that affects you: **bottled or refill-station water is the norm, and refill stations are fewer here than on Gili T or Gili Air.** Some cheaper rooms still run salt or brackish showers, so ask specifically before booking if that matters.",
+          "Medical cover is **clinic level only, and thinner than on the other two islands** — a small basic clinic in the Empat Pillar Medika network, historically nurse-staffed, handling cuts, infections and routine problems. **There is no hospital on any Gili island.** Anything serious means a boat to a neighbouring island and then to Lombok, where the nearest hospitals are in Mataram, **roughly 60 to 90 minutes away by speedboat plus ambulance**. On a recompression chamber, sources contradict each other outright, so we publish the conservative version: assume **there is none on the islands** and that decompression illness means an evacuation to Mataram. Insurance that pays for evacuation, not just treatment, is not optional here. Our guide to [how safe the Gili Islands are](/bali/en/journal/are-gili-islands-safe) goes through the rest."
+        ],
+        "bullets": [
+          "**Dengue, not malaria.** There is no malaria on the Gilis; dengue is present and the mosquito bites during the day. The saline lake breeds them, so repellent matters more on Meno",
+          "**Never swim between the islands.** The channel currents run far stronger than they look, at any fitness level",
+          "**Bring your own regular medication.** Pharmacies are small and stock is limited",
+          "**Carry small notes.** Arrival and harbour charges are collected in cash on the spot at some landings"
+        ]
+      },
+      {
+        "heading": "What Gili Meno costs, and when to go",
+        "paragraphs": [
+          "Warung food on Meno is the cheapest of the three islands — **IDR 10,000-20,000 for a warung meal, grilled fish around IDR 60,000-70,000, a beer about IDR 35,000**, as published for 2025-26. The catch is walkable choice. With few options near most rooms, visitors end up eating at resort prices for most meals, which is why a quiet island is not automatically a cheap one. Rooms run from around **USD 10-16 at the very bottom of 2026 platform listings** to premium beachfront well above **USD 150**; Wikivoyage's bands put budget at **IDR 70,000-300,000** a night and mid-range at roughly USD 30-75, with USD figures approximate. Diving is priced by the **GIDA** dive alliance rather than by the individual shop: **a single fun dive is IDR 640,000**, and Open Water sits in the **IDR 6.2-6.9 million** band where shops disagree. Haggling achieves nothing; choose on the instructor and the group size.",
+          "Be sceptical of any single fast-boat fare. One-way Bali-Gili prices published in 2025-26 run from about **IDR 234,000** on the cheapest aggregator listings to **IDR 650,000-685,000** on Eka Jaya's own website — sources disagree sharply, and the better-known operators sit at the top of that range rather than the bottom. Cidomo figures for Meno are older and thinner than for the other two islands: Wikivoyage records **IDR 80,000 for a local trip and IDR 175,000 to cross the island**, and sources also disagree on whether a cidomo is priced per cart or per head. Agree the number before you get in. On an island you can walk around in ninety minutes, you will rarely need one.",
+          "On timing, **April or May through October** is the dry season: calmest sea, best visibility, most reliable crossings. **July and August are peak crowding and peak pricing**, with a second spike around **22 December to 3 January**, so **May, June and September** are the best combination of flat water and space. The cheapest months here — **February, March and November** — carry a warning the other islands do not need: **low season on Meno means some restaurants and dive shops shut entirely**, and an island with limited choice gets thinner still. Turtles are resident year-round, and hatchling activity at the sanctuary peaks roughly May to October."
+        ],
+        "bullets": [
+          "**Bali tourist levy: IDR 150,000 per person**, for entering Bali rather than the Gilis. Widely reported as not re-charged when you come back on the same trip, though we have not been able to confirm that against the regulation itself",
+          "**Harbour and arrival charges: roughly IDR 10,000-20,000 per person.** Sometimes inside the ticket, sometimes collected in cash — check at the gate",
+          "**Gili Eco Trust contribution: about IDR 50,000**, often collected alongside the marine park fee",
+          "**Turtle sanctuary: donation only**, with IDR 50,000-100,000 a normal contribution",
+          "**Shared three-island snorkel trips: IDR 100,000-175,000 per person**, published 2025-26 — though The Nest and the west-coast turtle grounds need no boat at all"
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What is there to do on Gili Meno?",
+        "answer": "Snorkelling, walking and very little else — which is the point. The Nest, a circle of 48 underwater statues, sits about 100 metres off the beach in 3 to 5 metres of water and needs no boat; the west and north-west shallows give reliable green and hawksbill turtle encounters; the small turtle sanctuary runs on donations; and the coastal path circles the island in an hour to ninety minutes. There is effectively no nightlife, and the food choice is the thinnest of the three islands."
+      },
+      {
+        "question": "Is there an ATM on Gili Meno?",
+        "answer": "Plan as if there is not. Sources variously report two machines, one Mandiri near the harbour, or none currently working, and all of them agree that whatever exists cannot be planned around — withdraw on Gili Trawangan, Gili Air or the mainland first. Budget cash for warung meals at IDR 10,000-20,000, grilled fish at IDR 60,000-70,000, a beer around IDR 35,000 and hopper legs at IDR 20,000-45,000 per person, all as published for 2025-26. Warungs, boat trips, bike hire and cidomo drivers do not take cards."
+      },
+      {
+        "question": "Where are the underwater statues on Gili Meno?",
+        "answer": "The Nest lies roughly 100 metres off the beach in about 3 to 5 metres of water, and you snorkel to it directly from shore — no boat, no ticket. It is a circle of 48 life-size figures by Jason deCaires Taylor, commissioned by the BASK resort and installed in 2017, and it now works as an artificial reef with coral growing on it. Go on a calm morning near low tide, ideally around a new moon, and do not stand on the figures even when it is shallow enough to."
+      },
+      {
+        "question": "Gili Meno or Gili Air: which should I choose?",
+        "answer": "Gili Air for most people, Gili Meno only if the emptiness is specifically what you want. Gili Air is about 175 hectares with roughly 1,800 residents, a real village, a proper spread of cafes, dive shops and yoga studios, better cash access and a more capable clinic, plus the shortest crossing to Lombok at 10 to 15 minutes from Bangsal. Meno is around 150 hectares and 400 to 500 people, with no nightlife, the fewest restaurants and the thinnest medical cover. Many people split the difference and stay on both."
+      },
+      {
+        "question": "Can you drink the tap water on Gili Meno?",
+        "answer": "No — tap water is not drinkable anywhere on the Gilis, including Meno. How the island is actually supplied is genuinely unclear: three reputable sources describe three different systems, an undersea pipe from Lombok since 2017, water shipped in by boat, and a natural freshwater lens topped up by desalination in the dry season, and we cannot resolve which is currently operative. Practically, buy bottled water or use a refill station, and note that there are fewer refill points here than on the other two islands. Some cheaper rooms still have brackish showers, so ask when booking."
+      },
+      {
+        "question": "How much does Bask Gili Meno cost per night?",
+        "answer": "We do not publish a rate for it, because resort pricing on Meno moves with season and booking window and we have no verified current figure. What we can say is where it sits: BASK is the resort that commissioned The Nest in 2017, and it belongs to Meno's premium beachfront tier. For 2026, platform listings for the island run from around USD 10-16 at the very bottom to well above USD 150 for premium beachfront, with Wikivoyage putting mid-range at roughly USD 30-75. Check the resort's own site for current rates rather than a third-party quote."
+      }
+    ]
+  },
+  {
+    "slug": "gili-islands-fast-boat-guide",
+    "badge": "Travel guide",
+    "navLabel": "Fast boats",
+    "cardTourLabel": "Island getaways",
+    "heroTourSlug": "fast-boat-transfer-bali",
+    "relatedTourSlugs": [
+      "fast-boat-transfer-bali",
+      "gili-islands-getaway",
+      "bali-airport-transfer"
+    ],
+    "inlineStats": [
+      "8 routes compared",
+      "Fares from IDR 325,000",
+      "Crossings 1.5-3.5h"
+    ],
+    "title": "Bali to Gili Islands: 8 Routes, Real Times and Fares",
+    "description": "Every way from Bali to the Gili Islands — Padang Bai, Sanur, Serangan, the Lembar ferry and Bangsal — with 2026 fares in IDR and real crossing times.",
+    "excerpt": "There is no airport on any of the three Gili Islands, so every arrival is by boat, and the real choice is how much of the journey happens on the road and how much at sea. Padang Bai in east Bali gives the shortest crossing — advertised at 90 minutes, realistically nearer two hours — and the longest drive. Sanur and Serangan in the south sit close to the airport belt but put you 2.5 to 3.5 hours at sea, often with a Nusa Penida or Lembongan stop the ticket does not spell out. Standard 2026 fares run around IDR 325,000 to 550,000 one way, with harbour tax paid in cash on top. The part most guides skip is the safety record: this fleet has burned, capsized and sunk, the most recent fatal incident on the corridor in August 2026, and we would rather you read that here.",
+    "rankings": [
+      {
+        "name": "Padang Bai fast boat, the shortest crossing",
+        "imageSrc": "/images/places/blue-lagoon-padang-bai.jpg",
+        "area": "East Bali",
+        "bestFor": "Least time at sea",
+        "summary": "The main Gili harbour and the closest point on Bali to the islands. Advertised crossing is 1.5 hours; realistically 1h45 to 2h30 depending on operator, sea state and whether the boat calls at Gili Air first. Standard 2026 fares run IDR 325,000-550,000 one way — sampled August 2026 departures showed Semaya at Rp 400,000, D'Camel at Rp 475,000 and Eka Jaya at Rp 675,000. The trade is road time: 2-2.5 hours from Kuta or Sanur, and a pickup that can start before dawn."
+      },
+      {
+        "name": "Sanur terminal, best facilities and most stops",
+        "imageSrc": "/images/remote/1280px-sanur-port-sf0001-b8fad127.jpg",
+        "area": "South Bali",
+        "bestFor": "Comfortable waiting, easy access",
+        "summary": "Bali's only genuinely modern passenger terminal, and the easiest harbour to reach by taxi or ride-hailing. Fares to Gili Trawangan were published at around IDR 425,000-550,000 one way in August 2026, naming The Tanis, Starfish Fast Cruise and Scoot in that band. Crossings are quoted at 2.15-3.5 hours. The catch is routing: many Sanur 'Gili' sailings call at Nusa Lembongan or Nusa Penida first, and the duration on the booking page is often the leg to that first island, not to yours."
+      },
+      {
+        "name": "Serangan, twenty minutes from the airport",
+        "imageSrc": "/images/remote/sanur-beach-bali-59142775.jpg",
+        "area": "South Bali",
+        "bestFor": "Short drive, long crossing",
+        "summary": "Just south of Sanur, used by Blue Water Express, Gili Getaway and Marina. Operators put it roughly 20 minutes from Ngurah Rai airport and about 20 from Seminyak and Kuta in light traffic, which is the entire reason to choose it. You pay for that in sea time: 2.5-3.5 hours, with Blue Water's Serangan to Gili Air run quoted around 3.5, on the exposed side of the strait. Standard fares roughly IDR 425,000-550,000 as published in 2026."
+      },
+      {
+        "name": "Amed, the one-hour crossing that may not exist",
+        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "area": "Northeast Bali",
+        "bestFor": "Nothing, until you confirm it",
+        "summary": "Historically the fastest way across: 45-60 minutes to Gili Trawangan from Jemeluk beach, run mainly by Freebird Express. Sources actively disagree about whether it still runs. Several report the harbour closed to commercial fast boats for want of a proper jetty, while aggregators still list an Amed departure and some sellers openly route 'Amed to Gili' by van to Padang Bai instead. Travellers have arrived at the beach to find no boat. Get written confirmation from the operator before building a day around it."
+      },
+      {
+        "name": "The public ferry to Lembar, then north by road",
+        "imageSrc": "/images/places/blue-lagoon-padang-bai.jpg",
+        "area": "Padangbai to Lombok",
+        "bestFor": "Lowest fare, whole day gone",
+        "summary": "The state ASDP roll-on ferry crosses to Lembar in south-west Lombok — it does not go to the Gilis. Adult foot passengers paid IDR 65,300 as published in February 2026; the IDR 46,000 figure still circulating on travel sites is out of date. Scheduled at 4-5 hours, commonly 5-6 and occasionally near 8. Then 1.5-2.5 hours by road to Bangsal and a local boat: realistically 10-14 hours door to door. Ticketing is online-only through Ferizy — there are no counters at the port."
+      },
+      {
+        "name": "Fly to Lombok and come in from Bangsal",
+        "imageSrc": "/images/places/bali-airport-arrivals.jpg",
+        "area": "Via Lombok airport",
+        "bestFor": "Skipping the strait entirely",
+        "summary": "You cannot fly to the Gilis — none of the three islands has an airstrip, and every arrival is by boat. What you can do is fly Bali to Lombok International Airport and approach from the Lombok side: roughly 1.5-2.5 hours by road north to Bangsal, then a short local crossing of a few minutes to Gili Air or up to 40 by public boat to Trawangan. Whether it saves money depends entirely on the airfare; what it buys is a sea crossing measured in minutes rather than hours."
+      },
+      {
+        "name": "Bangsal harbour and the local boats",
+        "imageSrc": "/images/tours-real/gili-island-tour.jpg",
+        "area": "Northwest Lombok",
+        "bestFor": "The last few kilometres",
+        "summary": "Every local boat to the Gilis leaves from here, run by the Koperasi Karya Bahari, a boat-owners' cooperative with an effective monopoly on the crossing. Times are short: about 3-15 minutes to Gili Air, 10-20 to Gili Meno, 30-40 to Gili Trawangan by public boat and roughly 10 by private speedboat. Fares are genuinely disputed — sources spread from about IDR 25,000 to IDR 100,000 per person — and a charter runs IDR 300,000-350,000 per boat, more after 18:00. Buy at the official desk."
+      },
+      {
+        "name": "The island hopper between the three Gilis",
+        "imageSrc": "/images/tours-real/gili-island-tour.jpg",
+        "area": "Trawangan, Meno, Air",
+        "bestFor": "Moving on with luggage",
+        "summary": "Two scheduled circuits a day link the three islands, run by the same cooperative — there are no bridges, and the channel currents make swimming across genuinely unsafe. Reported timings have the morning run leaving Gili Air around 08:30, Gili Meno 08:50 and Gili Trawangan 09:30, with an afternoon circuit from mid-afternoon. Times shift and are posted at the harbour office, so confirm the day before. Fares are small and disputed, roughly IDR 20,000-45,000 a leg. Miss the hop and you charter."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What it actually costs to reach Gili Trawangan",
+        "paragraphs": [
+          "The honest answer is a band, not a number. A standard one-way fast-boat ticket was published in 2026 at **IDR 325,000-550,000 from Padang Bai** and **IDR 425,000-550,000 from Sanur or Serangan**. Aggregators put the same seats at **USD 22-42, averaging around USD 29** in their 2026 listings, but treat the dollar figure as approximate — it moves with the rate. Sampled departures on a single August 2026 date came in at Rp 400,000 for Semaya, Rp 475,000 for D'Camel and Rp 675,000 for Eka Jaya on the same route. Premium products sit higher: an Eka Jaya premium seat around Rp 790,000, and Blue Water Express reported at Rp 950,000 one way with transfers included — that last figure comes from an undated reseller page, so treat it as indicative rather than a quote.",
+          "Two things are almost never inside the ticket price. **Harbour tax is paid in cash at the gate** — widely quoted as Rp 10,000 at Padang Bai and Rp 20,000 at the Gili end, roughly Rp 40,000 for a return — though several sellers report variations, so carry IDR 10,000-25,000 per side and check at the gate. The second is margin: the same seat on the same boat can differ two- to threefold between booking channels, which makes any price you find online a data point rather than the price. We sell [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) **from $15** depending on route and operator, quoted over WhatsApp with the operator named and no prepayment, so you can hold it against whatever else you have been shown."
+        ]
+      },
+      {
+        "heading": "Getting to the harbour, and what the shuttle really means",
+        "paragraphs": [
+          "Padang Bai is the harbour our drivers know best, and the drive is the honest cost of the shortest crossing. Operators quote roughly **1.5-2 hours from Ubud, 2-2.5 from Kuta, Seminyak or Sanur, 2.5-3 hours or more from Canggu** and about 20 minutes from Candidasa. Those are traffic-dependent marketing estimates rather than measurements — plan on plus or minus 45 minutes. The number that reshapes your day is not the drive but the **shuttle pickup time, which sellers set 2.5-3.5 hours before sailing** because the van collects other passengers en route. Door to door, Ubud to Gili Trawangan is realistically **5-6 hours** despite the 90-minute crossing printed on the ticket.",
+          "Almost every ticket is sold as including a shared hotel shuttle, and that is the single most oversold element on this route: the zones are narrow, and the surcharge tends to be disclosed late. If the pickup window does not work for you — small children, an early flight the day before, or simply wanting to arrive at the harbour awake — a [private car with driver](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** leaves when you say and drops you at the fast-boat beach rather than at the ASDP ferry terminal, which is a separate place in the same bay and a mistake taxi drivers make regularly."
+        ],
+        "bullets": [
+          "**Named as free pickup zones by one operator**: Kuta, Legian, Nusa Dua, Denpasar city, Seminyak, Sanur and central Ubud around Monkey Forest",
+          "**Inverted for others**: Blue Water Express includes central Ubud, Candidasa and Padang Bai but charges extra for South Bali hotels, because it sails from a different port",
+          "**Usually surcharged or not served at all**: Canggu, Uluwatu, Sidemen, Amed, Lovina, Munduk",
+          "**No operator publishes surcharge amounts in IDR** — get the figure in writing before you book, not at the door",
+          "**Ask for the pickup time before booking, not after**: for an 08:00 Padang Bai sailing, a South Bali or Canggu pickup can be 04:30-05:30",
+          "**The return drop-off can take longer than the crossing**, because the shuttle works around every other passenger's hotel",
+          "**Baggage is capped by the boat, commonly 20-25 kg**, with excess charged; check-in is typically 30-60 minutes before departure"
+        ]
+      },
+      {
+        "heading": "Direct is not the same as non-stop",
+        "paragraphs": [
+          "Very few Bali-Gili fast boats are point-to-point. Most run a circuit: a Bali port, sometimes a Nusa island, then Gili Trawangan, then Gili Air, then Bangsal on Lombok. Sellers call that 'direct' when what they mean is **no change of boat, not no stops**. An intermediate island call typically adds **45-90 minutes** including time at anchor. Padang Bai departures come closest to genuinely direct — Gili Trawangan usually first at about 1.5 hours, Gili Air about 1h45-2h, Bangsal last. Sanur and Serangan sailings frequently call at Nusa Penida or Nusa Lembongan first: Blue Water runs Serangan 08:00 to Nusa Penida, then Nusa Penida 09:15 onward, and Scoot routes via Lembongan.",
+          "Three consequences follow. The quoted duration on a booking page is often the leg to the first island rather than to yours, so **a Gili Air ticket on a Trawangan-first boat is 20-40 minutes longer than advertised**. A minority of 'Bali to Gili' tickets are really Bali to Lombok tickets terminating at Bangsal with a shuttle boat attached. And **Gili Meno is served directly by fewer operators** — Eka Jaya advertises direct sailings from Padang Bai and Serangan; otherwise you land on Trawangan or Air and hop. At anchor transfers move passengers and luggage between vessels in open water, which nobody mentions at the counter. Our [step-by-step guide to reaching Gili Trawangan](/bali/en/journal/how-to-get-to-gili-trawangan-from-bali) walks one route through end to end."
+        ]
+      },
+      {
+        "heading": "The safety record, and what to check before you board",
+        "paragraphs": [
+          "This is the part we would rather over-explain than reassure you about. The Bali-Gili fleet has a documented history of fires, capsizes and sinkings. **Gili Cat II exploded and burned about 200 metres out of Padang Bai on 15 September 2016** with 35 aboard, killing two European passengers and injuring 13-19; officials attributed it to a short circuit near the fuel tank. Marina Srikandi sank with 32 aboard on a Gili route. On **4 June 2025 the fast boat Tanis capsized off Nusa Lembongan** with 89 aboard after being struck by a wave, with no deaths. On **5 August 2025 Dolphin II capsized on the Nusa Penida-Sanur leg** with 80 aboard, killing three — reporting described it as the fourth maritime incident in Bali within weeks.",
+          "The comfortable assumption that the big public ferry must be the safe option does not survive the record either. On **12 August 2026 the Padangbai-Lembar ferry KM Putri Yasmin caught fire in the Lombok Strait**: one 19-year-old passenger died and 172 people were evacuated against a manifest listing 131, with officials confirming more people were aboard than the manifest showed — exactly the failure that makes a rescue harder. The UK FCDO warns that sea conditions change rapidly, that safety standards vary between providers and that vessels can be crowded, overloaded and poorly maintained; Australia's Smartraveller notes operators may not comply with international safety and maintenance standards. No source establishes a documented safety-record difference between named operators, so paying at the top of the band buys a bigger, newer hull and a better-resourced crew, not an audit. Our guide to [whether the Gili Islands are safe](/bali/en/journal/are-gili-islands-safe) covers the islands themselves.",
+          "Several sources advise travellers who are pregnant, prone to seasickness, travelling with very small children, or living with mobility or cardiac conditions to reconsider the fast boat altogether. That is their advice, and we pass it on rather than talk you out of it. Here is the checklist we would run through ourselves, in order:"
+        ],
+        "bullets": [
+          "**A named ticket and a place on the passenger manifest** — give your real name at check-in and count your party; a manifest is only as good as the process behind it",
+          "**Life jackets visibly stowed in the cabin**, enough for everyone aboard. Child sizes are often unavailable, so bring your own if you need one — the FCDO says this explicitly",
+          "**A life raft, GPS and VHF, ideally an EPIRB** — the better operators advertise the specification, which is what makes it checkable",
+          "**Windows that open and exits you can find from your seat** — passengers escaped the 2025 Lembongan capsize by breaking the windows",
+          "**A boat not obviously loaded past its stated capacity** — walk away and take the next sailing rather than squeeze on",
+          "**Travel insurance that does not exclude fast-boat or small-vessel travel**, checked before you leave home rather than at the harbour",
+          "**The operator's written weather policy**: whether a cancellation means a refund or only a reschedule — in practice most reschedule",
+          "**No crossings after dark** unless you are satisfied the vessel is properly equipped, which is the FCDO's wording"
+        ]
+      },
+      {
+        "heading": "Sea state, cancellations, and the flight you should not book",
+        "paragraphs": [
+          "Sea state, not distance, decides whether you sail. Typical wave height on the route is **1-2 metres**; in strong wind or the rainy season it can exceed 3 metres, particularly in the afternoon. **December to February is the northwest monsoon and the roughest period**, with January and February bringing the heaviest, most sustained weather. One operator-adjacent report of a BMKG maritime forecast for 22-23 January 2026 gave 2.5-6.0 metre waves on several Bali-Lombok-Gili routes with fast boats suspended pending harbourmaster clearance — a single reported forecast rather than a norm, but it shows the ceiling. **April to October is calmest**, and April-June and September-October combine calm water with fewer crowds. Within any day, the **08:00-10:00 departures are consistently the smoothest**, and that holds even in the wet season.",
+          "Two things follow. Dry season does not mean calm: **July and August winds regularly produce a rough ride** despite the sunshine. And cancellations are decided by the harbourmaster at short notice, often on the morning itself and communicated late. The most expensive mistake on this route is scheduling the Gili-to-Bali return for the same day as an international flight. Build in **at least one buffer night**, and more in January and February. It can strand you at the island end too — the small boats to Gili Meno and the inter-island hoppers stop running in conditions the larger Bali-Gili boats still handle."
+        ]
+      },
+      {
+        "heading": "Day trip, overnight, or moving in for a week",
+        "paragraphs": [
+          "The Gilis absorb whatever time you give them, and the crossing is the constraint. A day trip is two crossings and a pre-dawn pickup inside a single day, which is doable from South Bali on a morning Padang Bai sailing and leaves you a few hours on the sand. Our [Gili day tour](/bali/en/tours/gili-island-tour) runs **from $115** and our [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) **from $70**. If you have any flexibility at all, we push people towards the overnight: the late afternoon and the early morning are the two windows when the islands are quiet, and the day trip is precisely the version that misses both. Our [day-trip guide](/bali/en/journal/gili-islands-day-trip-from-bali) works through whether it is worth doing at all.",
+          "Which island you land on changes the trip more than which boat you take. Most fast boats stop at Gili Trawangan first and Gili Air second, and Gili Meno is the one served directly by fewer operators — otherwise you land elsewhere and take the hopper across. Our comparison of [Trawangan, Air and Meno](/bali/en/journal/gili-trawangan-vs-air-vs-meno) sets out the differences before you commit a ticket to one of them. Whichever you pick, book the return with a night in hand: the harbourmaster, not your calendar, decides whether the boat sails."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How much does it cost to get from Bali to Gili Trawangan?",
+        "answer": "A standard one-way fast-boat ticket was published in 2026 at IDR 325,000-550,000 from Padang Bai and IDR 425,000-550,000 from Sanur or Serangan, which aggregators list as roughly USD 22-42 — treat the dollar figure as approximate. Harbour tax is extra and paid in cash at the gate, widely quoted as Rp 10,000 in Bali and Rp 20,000 at the Gili end; budget IDR 10,000-25,000 per side and check at the gate, because sellers report variations. The same seat can differ two- to threefold between booking channels, so compare before you buy."
+      },
+      {
+        "question": "How long is the fast boat from Bali to the Gili Islands?",
+        "answer": "From Padang Bai it is advertised at 1.5 hours and realistically takes 1h45 to 2h30; from Sanur or Serangan it is 2.15 to 3.5 hours. Add 45-90 minutes if the boat calls at Nusa Penida or Nusa Lembongan on the way, which many South Bali sailings do. Door to door is the number that matters: Ubud to Gili Trawangan is realistically 5-6 hours once the shuttle pickup and check-in are counted, despite the 90-minute headline on the ticket."
+      },
+      {
+        "question": "Can you fly from Bali to the Gili Islands?",
+        "answer": "No — none of the three Gili islands has an airstrip, so every arrival is by boat. The nearest you can get by air is a flight from Bali to Lombok International Airport, then roughly 1.5-2.5 hours by road north to Bangsal, then a short local crossing: a few minutes to Gili Air, about 10-20 to Gili Meno, 30-40 to Gili Trawangan by public boat. It removes the Lombok Strait crossing from your itinerary, which is worth considering in January and February."
+      },
+      {
+        "question": "Should I leave from Sanur, Serangan or Padang Bai?",
+        "answer": "Padang Bai if you want the least time at sea, Sanur or Serangan if you want the least time in a van. Padang Bai is 2-2.5 hours' drive from the Kuta, Seminyak and Sanur belt but only about two hours' crossing. Serangan is put at roughly 20 minutes from the airport in light traffic but 2.5-3.5 hours at sea on the exposed side of the strait. Sanur has by far the best terminal but the highest share of sailings that call at a Nusa island first. If anyone in the party gets seasick, take Padang Bai."
+      },
+      {
+        "question": "How do you get between Gili Trawangan, Gili Meno and Gili Air?",
+        "answer": "By the public island hopper, which runs two scheduled circuits a day and costs roughly IDR 20,000-45,000 a leg — sources disagree on the exact fare, so treat it as a range rather than a figure. Reported morning timings leave Gili Air around 08:30, Gili Meno 08:50 and Gili Trawangan 09:30, with an afternoon circuit; confirm at the harbour ticket office the day before, because times shift and are only posted locally. Missing the hop means a private charter at IDR 300,000-350,000 per boat, with a surcharge after 18:00."
+      },
+      {
+        "question": "Are the fast boats to the Gili Islands safe?",
+        "answer": "The record is mixed and we will not pretend otherwise: this fleet has a documented history of fires, capsizes and sinkings, including Gili Cat II out of Padang Bai in 2016 with two dead, Dolphin II in August 2025 with three dead, and the Padangbai-Lembar public ferry KM Putri Yasmin, which burned in August 2026 killing one, with 172 people evacuated against a 131-person manifest. The UK FCDO warns that standards vary between providers and vessels can be crowded and poorly maintained. Cross in the morning, prefer April-October, check life jackets and exits before you sit down, and make sure your insurance does not exclude small-vessel travel."
+      }
+    ]
+  },
+  {
+    "slug": "gili-islands-with-kids",
+    "badge": "Travel guide",
+    "navLabel": "Gili with kids",
+    "cardTourLabel": "Island getaways",
+    "heroTourSlug": "gili-islands-getaway",
+    "relatedTourSlugs": [
+      "gili-islands-getaway",
+      "fast-boat-transfer-bali",
+      "private-car-with-driver-bali"
+    ],
+    "inlineStats": [
+      "8 things to plan",
+      "Overnight from $70",
+      "No cars on any island"
+    ],
+    "title": "Gili Islands with Kids: Pick Gili Air, Skip the Day Trip",
+    "description": "Which Gili island suits children, what the fast boat crossing is really like, why no cars changes everything, and the clinic-only medical reality.",
+    "excerpt": "Take children to the Gilis and the islands themselves are the easy part. There are no cars or motorbikes on any of the three, so a four-year-old can run ahead down a sandy lane without you flinching. Gili Air is the usual family answer: about 175 hectares, walkable in an hour and a half, enough cafes and clinics to feel supported, and no nightlife strip. The hard parts are the crossing and the medicine. The fast boat is open sea, often bumpy, and a Bali day trip runs 12-16 hours door to door for 3-5 hours ashore — explicitly not the format for small children. There is no hospital on any island, only clinics; the nearest hospitals are in Mataram on Lombok, roughly 60-90 minutes away by speedboat and ambulance. Plan an overnight, bring nappies and reef shoes from Bali, and carry evacuation cover.",
+    "rankings": [
+      {
+        "name": "Gili Air, the default with children",
+        "imageSrc": "/images/tours-real/gili-islands-getaway.jpg",
+        "area": "Middle island, closest to Lombok",
+        "bestFor": "Babies, toddlers, first-timers",
+        "summary": "The standard family recommendation, and the one we book most. About **175 hectares**, with a coastal loop of 4.5-5 km that takes an hour to ninety minutes on foot or roughly half an hour by bike, so nothing is far from your room. It has the largest resident community of the three, cafes, dive shops and a clinic — but no nightlife strip. Roughly one party a week in high season; otherwise quiet well before midnight."
+      },
+      {
+        "name": "Gili Meno, quiet turtles and thin cover",
+        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "area": "Smallest of the three",
+        "bestFor": "Three or four nights, not longer",
+        "summary": "The smallest island at **around 150 hectares** with 400-500 residents, the most reliable shore snorkelling of the three, and a donation-funded turtle hatchery that lands well with children. It is also the thinnest: fewest shops, least reliable cash, a small basic clinic, and few enough restaurants that a child who refuses one of them becomes a genuine problem. It works as a few nights added to Gili Air, not as a fortnight."
+      },
+      {
+        "name": "Gili Trawangan, but only the north or west",
+        "imageSrc": "/images/tours-real/gili-island-tour.jpg",
+        "area": "Away from the harbour strip",
+        "bestFor": "Older kids, most choice",
+        "summary": "Gili T has the widest choice of food, rooms and dive schools, and nearly all of the noise — bars, night market, hostels — sits on one **south-east arc** near the harbour. The north and west coasts are genuinely quiet and thinly built. Book there and you get the island's services without its sound system; book blind on the strip and nobody in the family sleeps. The coastal track is 6.5-7 km, so factor in the walking."
+      },
+      {
+        "name": "The crossing, which is the hard part",
+        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "area": "Padang Bai to the Gilis",
+        "bestFor": "Planning around, not through",
+        "summary": "Open sea, frequently bumpy, and the part of this trip children find genuinely hard. **Padang Bai to Gili Trawangan runs about 1.5-2.5 hours**; Sanur, Serangan and Nusa Dua sailings are 3-4 hours. Add the road leg from south Bali and an early pickup and a family is 5-7 hours door to door. Wet-season crossings, roughly November to March, are rougher and cancelled more often — build in a buffer night before any flight."
+      },
+      {
+        "name": "No cars, anywhere, on any island",
+        "imageSrc": "/images/tours-real/gili-island-tour.jpg",
+        "area": "All three islands",
+        "bestFor": "Letting small children roam",
+        "summary": "Cars and motorbikes are banned by local ordinance on all three islands. Transport is feet, bicycles and cidomo horse carts, and bikes **with child seats are widely available, particularly on Gili Air**, at roughly IDR 30,000-50,000 a day as published for 2025-2026. The flip side is the surface: paths are soft, uneven sand, so strollers do not work and anyone under three ends up in a carrier. Cidomo fares are negotiated, not regulated."
+      },
+      {
+        "name": "Turtles you can reach from the beach",
+        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "area": "North-east coasts",
+        "bestFor": "Snorkelling with no boat",
+        "summary": "Green turtles graze shallow seagrass in **0.5-2 m of water** off Gili Trawangan's north-east tip and near Turtle Point on Gili Air, close enough to reach from a beach entry with a mask. Gili Meno's west and north-west are the most reliable of all. Sightings are realistic, not guaranteed, and mornings are calmest and clearest. Keep 2-3 m back, never chase, and never sit between a turtle and the surface."
+      },
+      {
+        "name": "A plan for 10:00 to 16:00",
+        "imageSrc": "/images/places/bali-beach-club.jpg",
+        "area": "Wherever you are staying",
+        "bestFor": "Not burning small children",
+        "summary": "The islands sit close to the equator and UV is intense year-round, with **roughly 10:00 to 16:00 the window to stay out of**. Sea breeze masks the burn, and water and white sand bounce UV back under an umbrella. A rash vest beats sunscreen on a small back that spends an hour face-down over a reef — a burned back after a day of snorkelling is the single most common avoidable injury here."
+      },
+      {
+        "name": "Know where the hospital is, because it is not here",
+        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "area": "Mataram, Lombok",
+        "bestFor": "Reading before you book",
+        "summary": "There is no hospital on any of the three islands, only clinics — the Empat Pillar Medika network runs one on each, operating around the clock with call-outs to hotels. The nearest hospitals are in Mataram on Lombok, **roughly 60-90 minutes away** by speedboat to Bangsal plus a waiting ambulance. Gili Air's 10-15 minute crossing to Bangsal is the shortest of the three, which is a quiet argument for it with young children."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Which Gili island to take children to",
+        "paragraphs": [
+          "**Gili Air** is the answer for most families. It is the middle island in mood as well as geography: **about 175 hectares**, a coastal loop of **4.5-5 km** that takes an hour to ninety minutes on foot or roughly thirty minutes by bike, the largest permanent community of the three at around 1,800 people, and enough cafes, dive shops and small guesthouses to fill a week — without a nightlife strip. High season brings roughly one party a week, rotating between bars; the rest of the time the island is quiet well before midnight. Our [Gili Air guide](/bali/en/journal/gili-air-guide) covers the island in full. Worth saying plainly that \"best island for families\" is a judgement rather than a measurement — it is the one most sources land on, and the one we land on too.",
+          "The other two are not wrong, they are narrower. **Gili Meno** is the smallest at **around 150 hectares** with 400-500 residents, has the best shore snorkelling of the three and a small turtle hatchery children love — but the fewest shops, the least reliable cash and a basic clinic. It is a three-or-four-night island, not a fortnight, and in the cheap months some restaurants and dive shops close entirely. **Gili Trawangan** has the most of everything, concentrated almost entirely on one south-east arc; its north and west coasts are genuinely quiet. Families do stay there happily. They stay on the far side.",
+          "One question to ask wherever you book: all three islands are Muslim villages with mosques and a call to prayer audible five times a day, and for longer during Ramadan, whose dates shift about eleven days earlier each year. If your children are light sleepers, ask how close the room is to the mosque before you commit. While you are asking, ask whether the shower runs fresh or brackish — on the cheaper places across all three islands it is still sometimes brackish."
+        ]
+      },
+      {
+        "heading": "Getting there with children, and why we do not day-trip it",
+        "paragraphs": [
+          "The standard route is a fast boat from **Padang Bai in east Bali**, crossing to Gili Trawangan in **about 1.5-2.5 hours**; sailings from Sanur, Serangan and Nusa Dua run 3-4 hours. Nobody counts the road leg, and with children it is the part that hurts: Seminyak, Kuta or Canggu to Padang Bai is **1h10 to 2h30 by road** and Ubud around 1-1.5 hours, while operators pick up roughly 1.5 hours before departure and up to three hours ahead for some Ubud transfers. An 08:00 sailing therefore means a **05:00-06:30 hotel pickup**, and 5-7 hours door to door. We sell [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) **from $15**, booked on WhatsApp with no prepayment; if you would rather own the road leg, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** means you leave when the children are actually awake.",
+          "The day-trip version exists — our [Gili day tour](/bali/en/tours/gili-island-tour) **from $115** — and we will say plainly that it is not the format for small children. Door to door from south Bali it runs **12-16 hours for roughly 3-5 hours ashore**, and one-day round trips are explicitly not recommended for young children, elderly travellers or anyone prone to motion sickness. It makes sense from east Bali, where the crossing is short, and it makes sense with teenagers. With a four-year-old it is two rough boat rides bracketing a nap. The [overnight Gili getaway](/bali/en/tours/gili-islands-getaway) **from $70** fixes the arithmetic: the last day boats leave, the island empties, and the good snorkelling hours — early morning and late afternoon — belong to people who stayed.",
+          "Two things to check at booking. First, **routing**: many Bali fast boats terminate at Gili Trawangan and never call at Gili Air, so a family booked on Air can land on the wrong island and wait for one of only two daily hopper circuits. Second, **fares**, which are a mess: aggregators list one-way tickets from around IDR 234,000 while Eka Jaya's own site published IDR 685,000, discounted to IDR 650,000 online, for 2025-2026. Sources disagree by roughly a factor of three, fares are seasonally tiered, and none of them is fixed. Budget separately for the **IDR 20,000 per person collected on arrival at Gili Air** (reported for 2026 — carry small notes and check at the landing) and Bali's own **IDR 150,000 tourist levy**, widely reported as not re-charged when you return from the Gilis, though we cannot confirm that against the regulation. Our [fast boat guide](/bali/en/journal/gili-islands-fast-boat-guide) goes operator by operator."
+        ]
+      },
+      {
+        "heading": "What no cars actually changes",
+        "paragraphs": [
+          "**Cars and motorbikes are banned by local ordinance on all three islands.** After two weeks of Bali, where the pavement doubles as a scooter lane, the effect on a family holiday is larger than it sounds: a six-year-old walking twenty metres ahead down a sandy track stops being a decision you have to make every few seconds. Distances help — Gili Air's loop is 90 minutes on foot, Gili Trawangan's coastal track is 6.5-7 km and 1.5-2 hours without stops — and bikes **with child seats are widely available, particularly on Gili Air**, at roughly **IDR 30,000-50,000 a day** as published for 2025-2026, more at beachfront stands in high season.",
+          "What the sand takes back: **strollers do not work here**. The paths are soft and uneven, worst along the north-west stretches, so bring a carrier for anyone under three. There is almost no street lighting on Gili Trawangan, which makes a head torch a genuine item rather than a packing-list cliché. And cidomo horse-cart fares are a negotiation rather than a tariff: published figures for Gili Trawangan range from IDR 25,000 for a short hop to IDR 350,000 for a full circuit, sources disagree even on whether the price is per cart or per person, and rates rise after dark. Gili Air is the one island with a documented flat rate, reported at **IDR 200,000 for a trip of any length as of June 2025** — a single source, so treat it as a starting point. Agree the number before anyone climbs in, and remember most accommodation is walkable anyway.",
+          "Two smaller things. Landings are shallow beach or short-jetty landings, so you carry your own bags and quite possibly get your feet wet — pack accordingly if someone in the group is also carrying a toddler. And electric scooters have had an unstable legal history on the islands, banned and unbanned more than once between 2023 and 2024; do not assume you can hire one, and check on arrival."
+        ]
+      },
+      {
+        "heading": "The medical reality before you book",
+        "paragraphs": [
+          "**There is no hospital on any of the three islands.** Care is clinic level: the Empat Pillar Medika network runs clinics on all three — Warna Medica on Gili Trawangan, Gili Air Clinic Center, Pillar Meno Medika — operating around the clock with call-outs to hotels, and a first inpatient clinic on Gili Trawangan was reported to have opened in February 2025. Pharmacies are small and thinly stocked, so bring your own prescriptions rather than assuming you can replace them. **The nearest hospitals are in Mataram on Lombok** — Harapan Keluarga and RSUD Provinsi NTB — **roughly 60-90 minutes away**, by speedboat to Bangsal with an ambulance meeting the pier. Gili Air's crossing to Bangsal is **10-15 minutes**, the shortest of the three, and that is not a small detail with a young child.",
+          "This is what makes travel insurance with evacuation cover non-optional rather than sensible, and DAN-style dive cover specifically if anyone is diving. On the recompression question we will not pick a side: sources contradict each other on whether a functioning hyperbaric chamber exists anywhere on the islands, so plan on a Lombok evacuation and let the insurance carry the weight instead of a rumour.",
+          "Day to day the injuries are smaller and predictable. **Reef shoes are the single most useful thing you can pack** — sea urchins are dense in the shallows, notably on Gili Air, and the spines snap off under the skin; fire coral and coral cuts infect fast in the tropics. Stingrays rest in the shallows, so teach children to shuffle rather than stride. The channels between the islands run far stronger than they look, especially on incoming and outgoing tides: keep children on the sheltered leeward side of whichever island you are on, and nobody swims between islands at any age or fitness level. Rinse a jellyfish sting with seawater, not fresh. Our [honest safety guide](/bali/en/journal/are-gili-islands-safe) covers the rest, including boat safety."
+        ]
+      },
+      {
+        "heading": "What to bring from Bali, because you cannot buy it there",
+        "paragraphs": [
+          "There are **no large supermarkets on any of the three islands**. Small shops, warungs and resort kitchens, yes; a shelf of familiar formula and the right size of nappy, no. Anything a small child specifically needs, buy it in Bali and carry it over.",
+          "Carry cash too. Withdrawal fees run **IDR 25,000-50,000 per transaction** with per-transaction caps commonly around **IDR 1,500,000-2,500,000** as published for 2025-2026, and machines fail on connectivity as often as on cash. Gili Trawangan has the most ATMs, clustered near the harbour; Gili Air has a handful near the harbour and along Jalan Mojo; Gili Meno's one or two run dry often enough that the only sane plan is to arrive with the cash you need."
+        ],
+        "bullets": [
+          "**Nappies, wipes, formula and baby food** for the whole trip — no shop on the islands reliably stocks them",
+          "**A carrier, not a stroller** — sand paths defeat wheels, and the under-threes end up on someone's back regardless",
+          "**Reef shoes for every child** — urchins and shallow coral cause most of the minor injuries here",
+          "**Broad-spectrum SPF 30+ and a rash vest each**, reef-safe if you can find it — the burning window is roughly 10:00-16:00 and the sea breeze hides it",
+          "**Your own medicines, plus motion-sickness tablets** bought in Bali — island pharmacies are small and the crossing is open sea",
+          "**Cash in small notes** — for the Gili Air arrival fee, cidomo drivers, warungs, bike hire and beach vendors, all cash in practice",
+          "**A head torch** — Gili Trawangan in particular has almost no street lighting after dark",
+          "**Refillable water bottles** — tap water is not drinkable on any of the islands, and refill stations exist on Gili T and Gili Air"
+        ]
+      },
+      {
+        "heading": "The water: turtles, boats and how young they can dive",
+        "paragraphs": [
+          "The reason children remember the Gilis is that the turtles are **reachable from the beach**. Two shore-entry zones sit on Gili Trawangan's north-east tip over sand and seagrass at **0.5-2 m**, with coral at 2-3 m and a drop-off past about six metres; the northern zone is quieter with less boat traffic than the eastern one. Gili Air has the same thing at Turtle Point on the north-east, and Gili Meno's west and north-west coasts are the most reliable of the three — green and hawksbill turtles are resident year-round, though sightings are realistic rather than guaranteed. Mornings are calmest and clearest. The etiquette is not decorative: stay **2-3 m back, never chase or touch, and never put yourself between a turtle and the surface**, because it is an air-breathing reptile and blocking the ascent genuinely stresses it. Our [turtle snorkelling guide](/bali/en/journal/gili-islands-snorkelling-turtles) lists the sites.",
+          "Shared three-island snorkel boats run **roughly IDR 100,000-175,000 per person** for three to four hours, typically leaving around 09:30-10:30 and 13:00 with 20-30 people aboard. With small children a private charter is often the better buy — one operator published about **IDR 550,000 for two hours and IDR 750,000 for four** in 2025, per boat rather than per person — because you can turn for shore when a child has had enough. On Gili Meno the turtle hatchery takes donations rather than a ticket, with **IDR 50,000-100,000 a normal contribution**, and hatchling activity peaks roughly May to October. It is the facility usually named as the credible one; head-starting hatchlings is a contested method among marine biologists generally, and the Gili Trawangan hatchery that day-trippers are often shown draws consistent criticism over its tank conditions.",
+          "For diving, the age gates are set by the training agencies rather than the shops: **PADI Bubblemaker from age 8** in a pool or shallow confined water, **Junior Open Water from 10**, with 10-11 year-olds limited to 12 m and required to dive with a parent or dive professional, and 12-14 year-olds to 18 m. Bubblemaker was quoted at around **IDR 1,000,000-1,300,000** by individual shops in 2025-2026 — single-operator prices, so ask on the day. Divers also pay a one-time **government marine park fee of IDR 100,000 per person**, collected at the dive shop; check it at the counter. Dive prices across the islands are set as minimums by the local dive alliance, so shop on instructor quality and group size, not price."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Which Gili island is best with kids?",
+        "answer": "Gili Air. It has more infrastructure than Gili Meno and far less nightlife noise than Gili Trawangan, its coastal loop is only 4.5-5 km, bikes with child seats are easy to hire, and its 10-15 minute crossing to Bangsal on Lombok is the shortest of the three if anyone needs a hospital. Gili Meno suits three or four nights for the turtles and the quiet; Gili Trawangan works if you deliberately book its north or west coast."
+      },
+      {
+        "question": "Can you do a Gili Islands day trip from Bali with children?",
+        "answer": "You can, but we would not with young children. From south Bali a day trip runs 12-16 hours door to door for only 3-5 hours ashore, and one-day round trips are explicitly not recommended for children or anyone prone to motion sickness. From east Bali the crossing is short enough to change the maths. Everywhere else an overnight costs less in misery and buys the early-morning and late-afternoon snorkelling that day-trippers never see."
+      },
+      {
+        "question": "How long is the fast boat to the Gili Islands, and is it rough?",
+        "answer": "Padang Bai to Gili Trawangan takes about 1.5-2.5 hours at sea, and Sanur, Serangan or Nusa Dua sailings 3-4 hours. It is open sea and frequently bumpy. Wet-season crossings from roughly November to March are rougher with more cancellations, and trade winds can also chop up July and August, so dry season does not guarantee flat water. Buy motion-sickness tablets in Bali, check life jackets are present and accessible before you sail, and accept a cancellation rather than pressing a crew to go."
+      },
+      {
+        "question": "Is there a kids club on Gili Air?",
+        "answer": "Not in the sense a large beach resort means it. Gili Air is a village island of small guesthouses, boutique bungalows and a handful of villas rather than big chain resorts, so we would not plan a holiday around a supervised kids club — ask your specific property what it runs before booking. What the island offers instead is the thing those clubs exist to solve: no cars at all, a ninety-minute loop, sheltered shallow swimming and bikes with child seats."
+      },
+      {
+        "question": "What should we look for in Gili Air accommodation with kids?",
+        "answer": "Ask three questions before you book: how far it is from the harbour on foot, since there are no cars and you carry your own bags off a beach landing; how close the mosque is, if your children are light sleepers; and whether the shower runs fresh or brackish, because cheaper places on all three islands still sometimes have salt water. Tap water is not drinkable anywhere on the Gilis, so check there is drinking water or a refill station nearby."
+      },
+      {
+        "question": "Can you stay on Gili Trawangan with children?",
+        "answer": "Yes, if you book the north or west coast. Almost all of the bars, hostels and the night market sit on a single south-east arc near the harbour, and the rest of the island is quiet and thinly built. The trade-off is distance: the coastal track is 6.5-7 km, there is almost no street lighting, and you will walk or cycle to most restaurants. Book blind on the strip and nobody in the family sleeps."
+      }
+    ]
+  },
+  {
+    "slug": "gili-islands-snorkelling-turtles",
+    "badge": "Travel guide",
+    "navLabel": "Turtles and reefs",
+    "cardTourLabel": "Island getaways",
+    "heroTourSlug": "gili-island-tour",
+    "relatedTourSlugs": [
+      "gili-island-tour",
+      "gili-islands-getaway",
+      "fast-boat-transfer-bali"
+    ],
+    "inlineStats": [
+      "7 turtle spots",
+      "Shared boats from IDR 100,000",
+      "Best at first light"
+    ],
+    "title": "Gili Islands Snorkelling: Turtles From the Beach, No Boat",
+    "description": "Green turtles graze the seagrass metres off all three Gilis. Where to swim in, the best hour of the day, boat-trip costs and the etiquette.",
+    "excerpt": "You do not need a boat to swim with a turtle in the Gilis. Green turtles graze the shallow seagrass off Gili Trawangan's north-east tip, Gili Meno's west coast and Gili Air's Sandy Beach, sometimes five to ten metres from the sand, and hawksbills sit deeper along the drop-off. They are resident year-round, so there is no turtle season to plan around — only a turtle hour, which is early morning, before the boats start crossing and the light flattens. A shared three-island snorkel trip runs roughly IDR 100,000-175,000 per person on local listings published in 2025-2026, and mask and fins hire ashore costs very little. This guide covers where to swim in on each island, what the sanctuaries actually are, and the etiquette that keeps these turtles calm enough to approach in the first place.",
+    "rankings": [
+      {
+        "name": "Gili Trawangan's north-east shore",
+        "imageSrc": "/images/tours-real/gili-island-tour.jpg",
+        "area": "Gili Trawangan",
+        "bestFor": "Turtles without a boat",
+        "summary": "The standard turtle swim on the busiest island, and it starts on the sand. Two entry zones sit on the north-east tip: the eastern one is closer to the boat landing and has traffic crossing it, the northern one is quieter with better-preserved coral and fewer boats. The profile is sand and seagrass at half a metre to two metres, coral at two to three, then a drop-off past about six."
+      },
+      {
+        "name": "Gili Meno's west and north-west coast",
+        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "area": "Gili Meno",
+        "bestFor": "Several turtles in one swim",
+        "summary": "Meno is the strongest of the three for turtles, and several sightings in a single calm morning is normal rather than lucky. Greens and hawksbills come in to five or ten metres off the sand along the west coast near the disused jetty and the north-west near Good Heart. The east coast off the Karma bungalows holds them within roughly twenty metres of shore."
+      },
+      {
+        "name": "The Nest, the underwater sculpture circle",
+        "imageSrc": "/images/places/blue-lagoon-padang-bai.jpg",
+        "area": "Gili Meno, from the beach",
+        "bestFor": "A swim to something man-made",
+        "summary": "Jason deCaires Taylor's circle of 48 life-size figures, commissioned by the BASK resort and installed in 2017, sits about 100 metres off the beach in three to five metres of water — reachable from shore with no boat. It has grown into an artificial reef, which is also why standing on it is not an option, however shallow it looks on a flat morning."
+      },
+      {
+        "name": "Turtle Paradise and Meno Wall",
+        "imageSrc": "/images/tours-real/gili-islands-getaway.jpg",
+        "area": "Gili Meno, by boat",
+        "bestFor": "Guided sites off Meno",
+        "summary": "Meno's two named boat sites. Turtle Paradise sits off the north-east corner. Meno Wall carries real current, which makes it a guided site rather than a casual paddle, and it is the one to skip if you are an unconfident swimmer. Both turn up on the standard shared three-island trip, so you rarely need to arrange them separately unless you want a private boat and a quieter reef."
+      },
+      {
+        "name": "Turtle Point and Sandy Beach",
+        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "area": "Gili Air, north-east",
+        "bestFor": "Quiet shore snorkelling",
+        "summary": "Gili Air's east and north-east coast holds turtles close in, and Turtle Point at Sandy Beach is where people see them from the beach itself. It is the gentlest of the three islands to snorkel from — fewer boats crossing than Trawangan, more infrastructure than Meno. One warning that matters here more than anywhere: the shallows carry very spiny sea urchins, so reef shoes are not optional."
+      },
+      {
+        "name": "Hans Reef and Air Wall",
+        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "area": "Gili Air, by boat",
+        "bestFor": "Divers and strong swimmers",
+        "summary": "The two main boat sites off Gili Air. Hans Reef lies off the north-east and is the better known of the pair; Air Wall is the other named site. Both are primarily dive sites that snorkellers can visit by boat on a calm day. Neither is necessary if turtles are the goal — the shore entry at Sandy Beach does that job for the price of a mask."
+      },
+      {
+        "name": "The Gili Meno turtle sanctuary",
+        "imageSrc": "/images/tours-real/gili-island-tour.jpg",
+        "area": "Gili Meno",
+        "bestFor": "Families, donation entry",
+        "summary": "A small local hatchery rather than an accredited rescue centre: eggs are collected, hatchlings reared for roughly a year and then released, at a reported rate of about 2,000 a year. There is no entry fee — it runs on donations, and IDR 50,000-100,000 is a normal contribution. Hatchling activity peaks around May to October. It is the facility usually named as the credible one on the islands."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Turtles here are a shore swim, not a boat trip",
+        "paragraphs": [
+          "Green and hawksbill turtles are **resident on all three Gilis year-round**, which is the single most useful fact about snorkelling here: there is no season to wait for and no migration to miss. The reason you can meet one without a boat is the shape of the north and east coasts — **sand and seagrass at 0.5-2m, coral at 2-3m, then a drop-off beyond about 6m**. Green turtles graze and rest on the shallow seagrass, sometimes only metres from the beach. Hawksbills sit deeper along the drop-off and are easier to find at high tide. Sightings are realistic rather than guaranteed: we have had guests see five in an hour and guests see none.",
+          "On **Gili Trawangan the standard swim is the north-east tip**, entered straight off the beach. There are two zones. The eastern one, closer to the boat landing, is busier and has boat traffic crossing it; the northern one is quieter, with better-preserved coral and fewer boats. Take the northern one if you have a choice. The entry is beginner-friendly — shallow, gradual, little current in good conditions — but **Turtle Point at the north-east corner carries a noticeable north-to-south drift** that will move you along the coast whether you planned for it or not. Walk up-current before you get in and let it carry you back.",
+          "Meno is the stronger island for turtles overall and Gili Air is the quiet middle option; our [Gili Meno guide](/bali/en/journal/gili-meno-guide) and [Gili Air guide](/bali/en/journal/gili-air-guide) cover where to stay and eat on each."
+        ]
+      },
+      {
+        "heading": "When to go: the hour matters more than the month",
+        "paragraphs": [
+          "**Early morning is the answer, and it is not close.** At first light the water is calmest, the surface is unbroken so light actually reaches the seagrass, and the day's boats have not started crossing the shallows. Late afternoon is second best for the same three reasons. **High tide helps** if you are hunting hawksbills on the drop-off, because there is more water over the coral. The exception is The Nest off Gili Meno, which wants a calm morning **near low tide**, ideally around a new moon, when the light reaches the figures cleanly. That is a narrower window than the shore swims and worth planning a day around.",
+          "Season affects the crossing and the visibility more than it affects the turtles. The **dry months, roughly April/May to October**, bring calm seas, the best underwater visibility and the most reliable fast boats. **July and August are peak crowding and peak pricing**, and trade winds can still churn the strait, so dry season does not automatically mean flat water. **May, June and September** are the best combination of calm sea and space. From November to March visibility drops, crossings are cancelled more often and the islands go quiet and cheap. Turtles are there through all of it; **hatchling activity at the Gili Meno sanctuary peaks around May to October**."
+        ]
+      },
+      {
+        "heading": "What a snorkelling trip costs",
+        "paragraphs": [
+          "Most people who take a boat take the shared three-island trip, and it is cheap: **roughly IDR 100,000-175,000 per person for a 3-4 hour glass-bottom boat**, on local listings published in 2025-2026 — very approximately USD 6-10 at 2026 rates, though the rupiah figure is the one to hold onto. One operator lists a four-hour shared trip at IDR 175,000. Booked through a platform before you arrive, the same trip runs **IDR 160,000-300,000**. Departures are typically around 09:30-10:30 and 13:00, and the boats carry **20-30 people**. Prices move with season and operator, so treat every figure here as a band rather than a quote.",
+          "That timetable is the catch, and nobody selling the trip will say it. **The shared boats leave in the exact hours when the snorkelling is worst** — high sun, choppier water, and twenty other people dropping into the same patch of reef. If turtles are the point of your trip, swim from the beach at first light and treat the boat as sightseeing. **Private boats are quoted anywhere from about IDR 550,000 for two hours on a small boat up to IDR 1,700,000 for a larger boat**, with full-day guided three-island packages higher again; published figures vary widely between operators and most are 2025-dated, so agree the price and the route before you step aboard."
+        ],
+        "bullets": [
+          "**Snorkel gear hire ashore is cheap and everywhere** — mask, snorkel and fins from the shops along every main strip, so there is little reason to fly your own out",
+          "**Marine park fee: IDR 100,000 per person, one-time**, paid at the dive shop. It is levied on divers; snorkellers are reportedly rarely charged. Ask at the shop rather than assuming either way",
+          "**A Gili Eco Trust contribution of about IDR 50,000** is often collected alongside it",
+          "**Harbour and arrival fees of roughly IDR 10,000-20,000 per person.** Gili Air was reported at IDR 20,000 cash on arrival; Gili Trawangan's is usually already inside the boat fare. Carry small notes and check at the pier — these change without notice",
+          "**Bring cash from Bali or from Gili T.** Gili Meno's one or two ATMs run dry regularly and cannot be planned around, and boat trips, gear hire and warungs are cash in practice"
+        ]
+      },
+      {
+        "heading": "Getting there, and why a day trip fights the turtles",
+        "paragraphs": [
+          "The Gilis are reached by fast boat from east or south Bali. **Padang Bai is the main port — about 1h20-2h at sea to Gili Trawangan**, with the most sailings; Sanur is about 2h40 and Serangan roughly 2.5-3 hours. Amed is the shortest crossing on paper, but **two booking aggregators currently list Amed port as closed for construction**, so verify before you build a plan around it. The road leg is what people underestimate: **1.5-2.5 hours from Seminyak, Canggu or Kuta to Padang Bai and 1-1.5 hours from Ubud**, with pickups about 1.5 hours before departure and up to three hours ahead from some Ubud hotels. An 08:00 sailing means a **05:00-06:30 hotel pickup**. Door to door from south Bali, allow 5-7 hours. We sell [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) **from $15**, and a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** if you would rather run the Bali side on your own schedule.",
+          "A day trip is possible, and here is what it actually buys: **roughly 3-5 hours ashore against a 12-16 hour door-to-door day**. The earliest Padang Bai departures are 08:00-09:00 and the last boats leave **Gili Trawangan around 15:00-16:00 and Gili Air around 15:15-15:35** — and operators differ sharply, so a same-day return only works if your outbound and return legs are with the same company. Those hours ashore are the middle of the day, which is the worst snorkelling window on the island. From Amed or Candidasa the arithmetic works. From anywhere else an overnight is materially better value, and in our case it is also cheaper: the [Gili day tour](/bali/en/tours/gili-island-tour) is **from $115** while the [overnight getaway](/bali/en/tours/gili-islands-getaway) is **from $70**, both booked over WhatsApp with no prepayment. Our [day-trip guide](/bali/en/journal/gili-islands-day-trip-from-bali) works through the timings in full.",
+          "Between the islands, the scheduled hopper runs **two circuits a day**, out of Bangsal at roughly 09:00 and 16:00, calling at Air, Meno and Trawangan and back. Fares are small and asymmetric — **roughly IDR 20,000-45,000 depending on the leg and the direction**. Miss the afternoon circuit off Gili Meno and your only option is chartering a boat, which is the biggest single constraint of basing yourself there. Which island to sleep on is a separate question, and our [island-by-island comparison](/bali/en/journal/gili-trawangan-vs-air-vs-meno) is the short answer to it."
+        ]
+      },
+      {
+        "heading": "The etiquette that keeps the turtles approachable",
+        "paragraphs": [
+          "The reason a Gili turtle lets you swim alongside it is that it has been treated calmly by strangers for years. **Habituation is the asset being spent** every time someone grabs a shell for a photograph — the animal learns, and the next hundred snorkellers get a shorter encounter. None of the rules below are ours. They are the standing local etiquette, and the dive shops and guides on all three islands hold people to them.",
+          "Two of them are safety rules for the animal rather than politeness. **Turtles are air-breathing reptiles**, so a snorkeller hovering between a turtle and the surface is standing on its next breath — it will hold, and it will stress. And a single fin kick into coral destroys a structure that took decades to grow; the fix is to float horizontally instead of treading water upright, which most people find easier the moment somebody points it out."
+        ],
+        "bullets": [
+          "**Keep roughly 2-3 metres (6-10ft) away** and let the turtle decide how close the encounter gets",
+          "**Never position yourself between a turtle and the surface** — it needs that path to breathe",
+          "**No touching, riding or chasing.** A turtle swimming away is telling you the encounter is over",
+          "**No sudden movements**, and give extra space to any animal that is feeding or resting",
+          "**Do not stand on coral or kick it** — float horizontally and use your fins deliberately",
+          "**Wear a rash vest rather than loading up on sunscreen**, and buy reef-safe if you need it. Gili Eco Trust, Kayu Cafe and Pituq Waroeng on Gili Trawangan stock it",
+          "**Refuse single-use plastic.** A floating bag looks exactly like a jellyfish to a green turtle",
+          "**Reef shoes**, especially on Gili Air, where the shallows carry very spiny sea urchins"
+        ]
+      },
+      {
+        "heading": "Sanctuaries, hatcheries and the honest caveats",
+        "paragraphs": [
+          "**The Gili Meno turtle sanctuary has no entry fee and runs on donations** — IDR 50,000-100,000 is a normal contribution, and small notes are the practical form of it. It is a small local hatchery: eggs are collected, hatchlings reared for around a year, then released, at a reported rate of roughly 2,000 a year. It works well with children. Be clear about what it is not, though. **'Sanctuary' here describes intent, not accreditation**, and the headstart method it uses — rearing hatchlings in tanks before release — is genuinely contested among marine biologists, not a settled conservation good.",
+          "The other facility, the hatchery on Gili Trawangan, is the one many day-trippers are shown, and **reviewers repeatedly describe poor tank conditions there**. We have not been able to verify that independently, so take it as consistently reported rather than proven — but if you have time for only one, Meno's is the one we point people towards. Either way, the turtles you will remember are the ones grazing seagrass twenty metres off the beach, not the ones in a tank.",
+          "A few things the brochures skip. **Currents in the channels between the islands run far stronger than they look** — do not swim between islands at any fitness level, and note that Shark Point off Gili Trawangan and Meno Wall both carry real current. Sea urchins, fire coral and resting stingrays are the ordinary hazards, so shuffle your feet in the shallows rather than striding, and wear reef shoes. Coral cuts infect readily in the tropics. And the most common injury on a Gili snorkelling day is not marine at all: **a burned back**. The sea breeze masks it, sand and water reflect UV back at you, and the dangerous window is roughly 10:00 to 16:00 — the exact hours a day-tripper spends face-down in the water."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What is the best time to see turtles on Gili Air?",
+        "answer": "Early morning, not long after first light, is the best time on Gili Air and on all three islands — calmest water, cleanest light and no boat traffic yet across the shallows. Late afternoon is the second window. Turtles are resident year-round, so there is no season to wait for; the shore entry is Turtle Point at Sandy Beach on the north-east coast. Wear reef shoes, because the shallows there hold very spiny sea urchins."
+      },
+      {
+        "question": "Can you see turtles snorkelling from the beach in the Gili Islands?",
+        "answer": "Yes, on all three islands, and it is the better way to do it. Green turtles graze the shallow seagrass beds sometimes five to ten metres from the sand — off Gili Trawangan's north-east tip, along Gili Meno's west and north-west coast, and off Gili Air's north-east. Hawksbills sit deeper along the drop-off past about six metres and show more readily at high tide. Sightings are realistic rather than guaranteed on any given swim."
+      },
+      {
+        "question": "Which Gili island is best for snorkelling?",
+        "answer": "Gili Meno for turtles specifically, Gili Trawangan for the widest choice of sites. Meno's west and north-west coast produces several turtles in a single calm morning often enough to be the norm, and The Nest sculpture circle is reachable straight from the beach. Trawangan has Turtle Point, Halik Reef, Shark Point, the Bounty jetty wreck and most of the dive industry. Gili Air is the quiet middle ground with good shore snorkelling and fewer boats."
+      },
+      {
+        "question": "How much does a snorkelling trip in the Gili Islands cost?",
+        "answer": "Roughly IDR 100,000-175,000 per person for a shared 3-4 hour three-island boat trip, on local listings published in 2025-2026 — very approximately USD 6-10. The same trip booked through an online platform runs IDR 160,000-300,000. Private boats are quoted from about IDR 550,000 for two hours up to IDR 1,700,000 for a larger boat, with operators differing widely. Mask and fins hire ashore is cheap. Treat all of these as moving bands."
+      },
+      {
+        "question": "Is there an entry fee for the Gili Meno turtle sanctuary?",
+        "answer": "No entry fee — the Gili Meno sanctuary runs entirely on donations, and IDR 50,000-100,000 is a normal contribution. Bring small notes, because Meno's ATMs are unreliable and should not be planned around. Divers pay a separate one-time marine park fee of IDR 100,000 per person at the dive shop; snorkellers are reportedly rarely charged, but ask at the shop rather than assuming. Check both at the gate, as small levies change without notice."
+      },
+      {
+        "question": "Can you touch the turtles in the Gili Islands?",
+        "answer": "No — no touching, riding or chasing, and keep roughly 2-3 metres away. The rule that matters most is never to position yourself between a turtle and the surface: they are air-breathing reptiles, and blocking the route to the next breath causes real stress. Give feeding or resting animals extra space, avoid sudden movements, and never stand on or kick coral. These turtles approach people only because they have been left alone for years."
+      }
+    ]
   }
 ];
 
@@ -33953,6 +35901,14 @@ const JOURNAL_SEO_GUIDES = [
 // попавшиеся по порядку массива — ссылки уходили не по смыслу и копились
 // на нескольких страницах. Теперь покрыт весь журнал.
 const GUIDE_CLUSTERS = {
+  tanahLot: [
+    "tanah-lot-temple-guide",
+    "handara-gate-bali-guide",
+    "handara-gate-vs-lempuyang-gates-of-heaven",
+    "ulun-danu-beratan-temple-guide",
+    "bedugul-highlands-guide",
+    "tanah-lot-bedugul-day-trip-route",
+  ],
   surf: [
     "surf-lessons-bali-beginners",
     "best-surf-spots-in-bali",
@@ -34146,10 +36102,17 @@ const GUIDE_CLUSTERS = {
     "gili-trawangan-vs-air-vs-meno",
     "are-gili-islands-worth-it",
     "are-gili-islands-safe",
+    "gili-trawangan-guide",
+    "gili-air-guide",
+    "gili-meno-guide",
+    "gili-islands-fast-boat-guide",
+    "gili-islands-with-kids",
+    "gili-islands-snorkelling-turtles",
   ],
 };
 
 const GUIDE_CLUSTER_PARTNERS = {
+  tanahLot: "templesWaterfalls",
   surf: "beaches",
   areaComparisons: "areas",
   planning: "itineraries",
@@ -34367,6 +36330,18 @@ const JOURNAL_FLAGSHIP_SLUG = "first-time-in-bali-complete-guide";
 // Human-labelled rows for the journal hub. Each is a horizontal carousel, so
 // a first-time visitor reads it like a landing page instead of an SEO index.
 const JOURNAL_HUB_ROWS = [
+  {
+    title: "Islands and temples",
+    subtitle: "The Gilis, Tanah Lot and the Bedugul highlands",
+    slugs: [
+      "gili-islands-fast-boat-guide",
+      "gili-air-guide",
+      "gili-trawangan-guide",
+      "tanah-lot-temple-guide",
+      "handara-gate-bali-guide",
+      "bedugul-highlands-guide",
+    ],
+  },
   {
     title: "Surf Bali",
     subtitle: "Which wave, which tide, which month",
@@ -40490,6 +42465,18 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "Gili Islands with Kids: Pick Gili Air, Skip the Day Trip":
+      "Гили с детьми: берите Гили Эйр, а не поездку на день",
+    "Gili Air: the Middle Gili Most People End Up Preferring":
+      "Гили Эйр: средний остров, который выбирают чаще всего",
+    "Tanah Lot and Bedugul in One Day: Highlands First, Coast Last":
+      "Танах Лот и Бедугул за день: сначала горы, потом берег",
+    "Bedugul Bali: 6 Things to Do and Why You Go in the Morning":
+      "Бедугул: 6 занятий и почему ехать надо утром",
+    "Ulun Danu Beratan: IDR 100,000 Entry and the Old 50,000 Note":
+      "Улун Дану: билет 100 000 IDR и старая купюра в 50 000",
+    "Tanah Lot: No Temple Entry, IDR 75,000, Sunset 18:05-18:50":
+      "Танах Лот: внутрь нельзя, 75 000 IDR, закат 18:05–18:50",
     "Bali Tours and Private Day Trips":
       "Туры и индивидуальные экскурсии на Бали",
     "Surfboard Rental in Bali: IDR 150-300k a Day, When to Buy":
@@ -40708,6 +42695,16 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "Gili Islands with Kids: Pick Gili Air, Skip the Day Trip":
+      "Islas Gili con niños: elige Gili Air, no la excursión",
+    "Gili Air: the Middle Gili Most People End Up Preferring":
+      "Gili Air: la isla intermedia que casi todos prefieren",
+    "Tanah Lot and Bedugul in One Day: Highlands First, Coast Last":
+      "Tanah Lot y Bedugul en un día: montaña y luego costa",
+    "Ulun Danu Beratan: IDR 100,000 Entry and the Old 50,000 Note":
+      "Ulun Danu Beratan: 100.000 IDR y el billete antiguo",
+    "Tanah Lot: No Temple Entry, IDR 75,000, Sunset 18:05-18:50":
+      "Tanah Lot: sin entrar al templo, 75.000 IDR, atardecer",
     "Surfboard Rental in Bali: IDR 150-300k a Day, When to Buy":
       "Alquiler de tablas en Bali: 150-300 mil IDR al día",
     "Bali Surf Forecast: Period, Wind and Tide Pick Your Spot":
@@ -40850,6 +42847,20 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "Gili Islands with Kids: Pick Gili Air, Skip the Day Trip":
+      "Îles Gili avec enfants : Gili Air, pas la journée",
+    "Gili Air: the Middle Gili Most People End Up Preferring":
+      "Gili Air : la Gili du milieu que la plupart préfèrent",
+    "Tanah Lot and Bedugul in One Day: Highlands First, Coast Last":
+      "Tanah Lot et Bedugul en un jour : montagne puis côte",
+    "Ulun Danu Beratan: IDR 100,000 Entry and the Old 50,000 Note":
+      "Ulun Danu Beratan : 100 000 IDR et le vieux billet",
+    "Handara Gate vs Lempuyang: One Is a Temple, One Is Not":
+      "Handara Gate ou Lempuyang : un seul est un temple",
+    "Handara Gate Is a Golf Resort Entrance, Not a Temple":
+      "Handara Gate : une entrée de golf, pas un temple",
+    "Tanah Lot: No Temple Entry, IDR 75,000, Sunset 18:05-18:50":
+      "Tanah Lot : temple fermé, 75 000 IDR, coucher de soleil",
     "Bali Tours and Private Day Trips":
       "Excursions à Bali et circuits privés à la journée",
     "Surfboard Rental in Bali: IDR 150-300k a Day, When to Buy":
@@ -41212,7 +43223,11 @@ async function translateTextMap(texts, locale = "en", options = {}) {
   // ("СБ Экскурсии", "SB Excursiones", …). Restore it everywhere, including
   // values that came straight from the cache.
   for (const [source, value] of translated) {
-    translated.set(source, glossary === "surf" ? fixSurfGlossary(normalizeBrandName(value), locale) : normalizeBrandName(value));
+    const branded = normalizeBrandName(value);
+    translated.set(source,
+      glossary === "surf" ? fixSurfGlossary(branded, locale)
+      : glossary === "places" ? fixPlacesGlossary(branded, locale)
+      : branded);
   }
 
   return translated;
@@ -41323,6 +43338,38 @@ const SURF_GLOSSARY = {
 /* Адреса, на которых включается сёрф-глоссарий. Держим рядом с самим
    глоссарием, чтобы список не разъехался с кластером. */
 const SURF_GLOSSARY_ROUTES = /\/journal\/(?:best-surf-spots-in-bali|bali-surf-spots-for-beginners|bali-surf-spots-intermediate|uluwatu-surf-guide|canggu-surf-spots|bukit-peninsula-surf-spots|east-bali-surf-spots|west-bali-surf-medewi-balian|bali-surf-season-month-by-month|bali-surf-conditions-tides-swell-wind|is-surfing-in-bali-safe|bali-surfboard-rental-and-transport|surf-lessons-bali-beginners)\b/;
+
+/* Второй кластер: Гили и Танах-Лот. Ошибок здесь меньше — транслитерация
+   сработала правильно («Гили Эйр», а не «Гили Воздух»), — но две есть:
+   дайв-сайт Air Wall переводится дословно, а cidomo записывается через «с»,
+   хотя индонезийское c читается как «ч». */
+const PLACES_GLOSSARY_ROUTES = /\/journal\/(?:tanah-lot-temple-guide|handara-gate-bali-guide|handara-gate-vs-lempuyang-gates-of-heaven|ulun-danu-beratan-temple-guide|bedugul-highlands-guide|tanah-lot-bedugul-day-trip-route|gili-trawangan-guide|gili-air-guide|gili-meno-guide|gili-islands-fast-boat-guide|gili-islands-with-kids|gili-islands-snorkelling-turtles)\b/;
+
+const PLACES_GLOSSARY = {
+  ru: [
+    /* Air Wall — имя дайв-сайта у Гили Эйр, а не описание стены. */
+    [/Воздушн[а-яё]+\s+стен[а-яё]+/giu, "Air Wall"],
+    /* cidomo: индонезийское c = «ч». «Сидомо» читается неправильно. */
+    [/(?<![а-яёА-ЯЁ])[Сс]идомо/gu, "чидомо"],
+    [/(?<![а-яёА-ЯЁ])Сидомо/gu, "Чидомо"],
+  ],
+  es: [
+    [/Puerta de Handara/giu, "Handara Gate"],
+    [/Gili Aire/giu, "Gili Air"],
+  ],
+  fr: [
+    [/Porte de Handara/giu, "Handara Gate"],
+  ],
+};
+
+function fixPlacesGlossary(text, locale) {
+  if (!text) return text;
+  const rules = PLACES_GLOSSARY[locale];
+  if (!rules) return text;
+  let value = String(text);
+  for (const [pattern, replacement] of rules) value = value.replace(pattern, replacement);
+  return value;
+}
 
 function fixSurfGlossary(text, locale) {
   if (!text) return text;
@@ -41630,7 +43677,10 @@ async function buildLocalizedStaticHtmlPage(html, locale = "en", options = {}) {
      и в «Страна грез — единственный перерыв с песчаным дном» нет ни одного
      слова из списка. А по маршруту мы знаем тему точно — и соседние темы
      (храмы, детские площадки, обеденный перерыв) вообще вне зоны риска. */
-  const glossary = SURF_GLOSSARY_ROUTES.test(String(currentRoute || "")) ? "surf" : null;
+  const route = String(currentRoute || "");
+  const glossary = SURF_GLOSSARY_ROUTES.test(route) ? "surf"
+    : PLACES_GLOSSARY_ROUTES.test(route) ? "places"
+    : null;
 
   let localizedHtml = String(html || "");
 
