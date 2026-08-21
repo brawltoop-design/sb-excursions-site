@@ -42631,6 +42631,17 @@ const BALI_FAQ_CONTENT_REPLACEMENTS = [
   ["office in Business Bay, Dubai (The Opus by Omniyat)", "office in Seminyak, Bali"],
   ["within Dubai city limits", "within Bali (Seminyak, Kuta, Canggu, Ubud, Nusa Dua and nearby areas)"],
   ["I%20want%20to%20book%20your%20Dubai%20Safari%20desert%20tour%21", "I%20want%20to%20book%20a%20Bali%20tour%21"],
+  /* Ниже — не локализация, а прямые ошибки: страница собирается копией
+     дубайского FAQ, и всё, чего не было в этом списке, доезжало до Бали как
+     есть. На балийской странице стояли дирхамы, эмиратский НДС 5% и отмена
+     из-за песчаных бурь. Правим только то, что заведомо неверно для Индонезии:
+     набор способов оплаты и условия возврата — заявления владельца, их не
+     трогаем. Ставка налога убрана, а не заменена на 11%: «все налоги включены»
+     верно при любой ставке и не устареет. */
+  ["Cash (AED, USD, EUR)", "Cash (IDR, USD, EUR)"],
+  ["already include 5% VAT", "already include all taxes"],
+  ["sandstorms or high waves", "storms or high waves"],
+  ["If the Coast Guard or authorities cancel", "If the harbour authorities cancel"],
 ];
 
 function applyBaliInfoHeaderNav(html) {
