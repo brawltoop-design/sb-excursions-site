@@ -1,0 +1,5946 @@
+{
+ "/dubai/en": {
+  "hash": "a37f8b627c3047eb",
+  "date": "2026-08-21"
+ },
+ "/dubai/en/about": {
+  "hash": "4e9e7d721ca1a182",
+  "date": "2026-08-21"
+ },
+ "/dubai/en/faq": {
+  "hash": "a3b4580e39b8dd7e",
+  "date": "2026-08-21"
+ },
+ "/dubai/en/tours/full-day-dubai-desert-safari": {
+  "hash": "7d015519fc022e96",
+  "date": "2026-08-21"
+ },
+ "/dubai/en/tours/abu-dhabi-city-tour-from-dubai": {
+  "hash": "474386d874328e22",
+  "date": "2026-08-21"
+ },
+ "/dubai/en/tours/hot-air-balloon-sunrise-flight": {
+  "hash": "5792f6b072f84bec",
+  "date": "2026-08-21"
+ },
+ "/dubai/en/tours/dubai-marina-yacht-party": {
+  "hash": "d2f0d149f3c6553e",
+  "date": "2026-08-21"
+ },
+ "/dubai/en/tours/dubai-marina-1-hour-shared-yacht-tour": {
+  "hash": "3028a4ecd90dcd60",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tour-prices": {
+  "hash": "a66655e4365695fa",
+  "date": "2026-08-21"
+ },
+ "/ai-planner": {
+  "hash": "65ac2b457a5d3791",
+  "date": "2026-08-21"
+ },
+ "/work-with-us": {
+  "hash": "9adeb4c8d72e1230",
+  "date": "2026-08-21"
+ },
+ "/zh/work-with-us": {
+  "hash": "f82b0f4bbfb260e9",
+  "date": "2026-08-21"
+ },
+ "/ru/work-with-us": {
+  "hash": "13bd3a64739d9c13",
+  "date": "2026-08-21"
+ },
+ "/es/work-with-us": {
+  "hash": "67ab92a6ff1c4827",
+  "date": "2026-08-21"
+ },
+ "/fr/work-with-us": {
+  "hash": "f46c999afd7efa21",
+  "date": "2026-08-21"
+ },
+ "/bali/en/main-page": {
+  "hash": "a54b32d590a225af",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/main-page": {
+  "hash": "b09bcc8aac732371",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/main-page": {
+  "hash": "37ae1b83f5ac6290",
+  "date": "2026-08-21"
+ },
+ "/bali/es/main-page": {
+  "hash": "392ee7fb46615e48",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/main-page": {
+  "hash": "1da9eae70b39b57b",
+  "date": "2026-08-21"
+ },
+ "/bali/de/main-page": {
+  "hash": "310e3e792457a58f",
+  "date": "2026-08-21"
+ },
+ "/bali/en/about": {
+  "hash": "73b4f187339f0257",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/about": {
+  "hash": "69784101f16f68b4",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/about": {
+  "hash": "dea37eda548cf753",
+  "date": "2026-08-21"
+ },
+ "/bali/es/about": {
+  "hash": "b91293e8bc8b59cc",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/about": {
+  "hash": "09ac8ee2e72529de",
+  "date": "2026-08-21"
+ },
+ "/bali/de/about": {
+  "hash": "13d7933bf82d272f",
+  "date": "2026-08-21"
+ },
+ "/bali/en/faq": {
+  "hash": "ce0017ac3b91f3bf",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/faq": {
+  "hash": "907a4bf9263ada4e",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/faq": {
+  "hash": "55e0284d78f079c3",
+  "date": "2026-08-21"
+ },
+ "/bali/es/faq": {
+  "hash": "4c596467a376925d",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/faq": {
+  "hash": "9e95074800cec5d0",
+  "date": "2026-08-21"
+ },
+ "/bali/de/faq": {
+  "hash": "7b1f1efed7b40a4a",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal": {
+  "hash": "4c3834c086bbdc85",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal": {
+  "hash": "5bc628ed660b13d0",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal": {
+  "hash": "e55522a11e19e549",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal": {
+  "hash": "e971d7ca6125a355",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal": {
+  "hash": "f2b2ceacc05c4fdc",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal": {
+  "hash": "da0ab96d7d993d1d",
+  "date": "2026-08-21"
+ },
+ "/bali/en/guides": {
+  "hash": "418d44592824a121",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/guides": {
+  "hash": "c8f7344d4119b853",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/guides": {
+  "hash": "3eaf46884e62b3e0",
+  "date": "2026-08-21"
+ },
+ "/bali/es/guides": {
+  "hash": "c9205f02c53fe4ed",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/guides": {
+  "hash": "7bdc3f7e44a91de9",
+  "date": "2026-08-21"
+ },
+ "/bali/de/guides": {
+  "hash": "0a2c3dafb994c9c8",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/ubud-highlights-tour": {
+  "hash": "0de73088dc2275a3",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/ubud-highlights-tour": {
+  "hash": "7ab7970fb9e0a9a0",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/ubud-highlights-tour": {
+  "hash": "f2f2b3b63a460ce9",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/ubud-highlights-tour": {
+  "hash": "069c867b242faef9",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/ubud-highlights-tour": {
+  "hash": "0814cea2d10775ad",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/ubud-highlights-tour": {
+  "hash": "9895dc2b71d64c99",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/north-bali-lovina-dolphins-tour": {
+  "hash": "6d14141e4ba1ea9a",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/north-bali-lovina-dolphins-tour": {
+  "hash": "73ae80b6222befa4",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/north-bali-lovina-dolphins-tour": {
+  "hash": "1aeb4135b56c0ebd",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/north-bali-lovina-dolphins-tour": {
+  "hash": "89253f1f8777508b",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/north-bali-lovina-dolphins-tour": {
+  "hash": "537f676b7493766e",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/north-bali-lovina-dolphins-tour": {
+  "hash": "7b90259aa863adc3",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/dolphin-sunrise-city-tour": {
+  "hash": "938d13e23e8a6b66",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/dolphin-sunrise-city-tour": {
+  "hash": "664159127e26f71c",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/dolphin-sunrise-city-tour": {
+  "hash": "c4833672c4d2819c",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/dolphin-sunrise-city-tour": {
+  "hash": "207fd9ff29cd99af",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/dolphin-sunrise-city-tour": {
+  "hash": "cad914391a96dcc3",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/dolphin-sunrise-city-tour": {
+  "hash": "21c3f4b97828b56c",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/east-bali-instagram-tour": {
+  "hash": "4f3a3c0d503ec000",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/east-bali-instagram-tour": {
+  "hash": "041e307825f4510c",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/east-bali-instagram-tour": {
+  "hash": "5d5d3244fa12d9c9",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/east-bali-instagram-tour": {
+  "hash": "7d82f5453f2b20e9",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/east-bali-instagram-tour": {
+  "hash": "7c5c6b6ce4a80595",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/east-bali-instagram-tour": {
+  "hash": "3f68997b2255a4d7",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/tanah-lot-bedugul-tour": {
+  "hash": "02f8e321ae81091e",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/tanah-lot-bedugul-tour": {
+  "hash": "2324f2782a60d08d",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/tanah-lot-bedugul-tour": {
+  "hash": "2549f9f360dba7ab",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/tanah-lot-bedugul-tour": {
+  "hash": "ee5a36745838c682",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/tanah-lot-bedugul-tour": {
+  "hash": "ef3d0b588970f1cc",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/tanah-lot-bedugul-tour": {
+  "hash": "c920e9eef7362c84",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/bali-unesco": {
+  "hash": "e8a98008cbef1ef5",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/bali-unesco": {
+  "hash": "d41afda1a830e9f4",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/bali-unesco": {
+  "hash": "d9887be0bb11f225",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/bali-unesco": {
+  "hash": "4619ba33aa5b2889",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/bali-unesco": {
+  "hash": "8975ba52c1c3c4a0",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/mount-batur-sunrise-jeep-tour": {
+  "hash": "0e4d1d04422dee00",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/mount-batur-sunrise-jeep-tour": {
+  "hash": "8e332d74bbe63797",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/mount-batur-sunrise-jeep-tour": {
+  "hash": "35ae9dea4a9dd8f6",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/mount-batur-sunrise-jeep-tour": {
+  "hash": "24dcb692b825414a",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/mount-batur-sunrise-jeep-tour": {
+  "hash": "95c4cf92f34951d8",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/mount-batur-sunrise-jeep-tour": {
+  "hash": "352000d3ca2ab499",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/mount-batur-sunrise-jeep-hot-spring": {
+  "hash": "27d8b2966c26c7f4",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring": {
+  "hash": "79c8edb936ed755d",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/mount-batur-sunrise-jeep-hot-spring": {
+  "hash": "ae13b2cd928b9908",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/mount-batur-sunrise-jeep-hot-spring": {
+  "hash": "c079f16ad55b08a9",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/mount-batur-sunrise-jeep-hot-spring": {
+  "hash": "b1a9f079ecd060e2",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/mount-batur-sunrise-jeep-hot-spring": {
+  "hash": "f437e62afea129c2",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/mount-batur-sunrise-hike": {
+  "hash": "360fcdbedc05d86a",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/mount-batur-sunrise-hike": {
+  "hash": "8b5af6ce682b71b8",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/mount-batur-sunrise-hike": {
+  "hash": "47fe7f2e160ee8ca",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/mount-batur-sunrise-hike": {
+  "hash": "46d6299cc5f0181d",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/mount-batur-sunrise-hike": {
+  "hash": "b1fb751525ff6a5c",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/mount-batur-sunrise-hike": {
+  "hash": "6f6d76b64eca6b15",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/atv-ride-adventure": {
+  "hash": "687a4d4488e51c72",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/atv-ride-adventure": {
+  "hash": "637164f2817bd0e3",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/atv-ride-adventure": {
+  "hash": "1ebb2d7e14167c45",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/atv-ride-adventure": {
+  "hash": "dbc46a076c7f8333",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/atv-ride-adventure": {
+  "hash": "b4d4b057ada2ae92",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/atv-ride-adventure": {
+  "hash": "8ce34f42f020d738",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/atv-quad-bikes": {
+  "hash": "c03a1e98cfcd5e20",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/atv-quad-bikes": {
+  "hash": "946d720bacb6c4e8",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/atv-quad-bikes": {
+  "hash": "4f78086475f163d6",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/atv-quad-bikes": {
+  "hash": "5f122224cbb36e70",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/atv-quad-bikes": {
+  "hash": "68fb5ede4c313ffe",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/atv-quad-bikes": {
+  "hash": "7882288fa2ba1bd0",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/bali-instagram-highlights-tour": {
+  "hash": "d091b6eef4e34faf",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/bali-instagram-highlights-tour": {
+  "hash": "709662c9d8072403",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/bali-instagram-highlights-tour": {
+  "hash": "c285da9316133345",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/bali-instagram-highlights-tour": {
+  "hash": "0c844a376d4df68c",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/bali-instagram-highlights-tour": {
+  "hash": "ede379cfe1fd15fd",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/bali-instagram-highlights-tour": {
+  "hash": "ee11c4372c29f3f0",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/ubud-instagram-tour": {
+  "hash": "0bb5e09d7c33968e",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/ubud-instagram-tour": {
+  "hash": "a07d5bcef68d70cd",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/ubud-instagram-tour": {
+  "hash": "0bfacbab52000f68",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/ubud-instagram-tour": {
+  "hash": "6db20d81acbb7167",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/ubud-instagram-tour": {
+  "hash": "b39d2c6e3f48b428",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/ubud-instagram-tour": {
+  "hash": "39280274da5b8be5",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/nusa-penida-private-day-tour-manta-snorkeling": {
+  "hash": "f0f88484a5fbf06d",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/nusa-penida-private-day-tour-manta-snorkeling": {
+  "hash": "82f55848cf0970de",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/nusa-penida-private-day-tour-manta-snorkeling": {
+  "hash": "5af9b74302874a01",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/nusa-penida-private-day-tour-manta-snorkeling": {
+  "hash": "30e0c6d5dae90c27",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/nusa-penida-private-day-tour-manta-snorkeling": {
+  "hash": "b23416f8edabbbe7",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/nusa-penida-private-day-tour-manta-snorkeling": {
+  "hash": "d942245f6a6781e6",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/nusa-penida-west-tour": {
+  "hash": "91c5efa6b9e12f2d",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/nusa-penida-west-tour": {
+  "hash": "60af1e9daecde542",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/nusa-penida-west-tour": {
+  "hash": "877aef33a9fc2324",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/nusa-penida-west-tour": {
+  "hash": "9521bf05890fa9c8",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/nusa-penida-west-tour": {
+  "hash": "f6cf828203e6ff8f",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/nusa-penida-west-tour": {
+  "hash": "b2ed0bdb27a4a88e",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/nusa-penida-east-tour": {
+  "hash": "e9340cd1685cc649",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/nusa-penida-east-tour": {
+  "hash": "c8ca1c5c4900b057",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/nusa-penida-east-tour": {
+  "hash": "a5d7f01a39553e07",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/nusa-penida-east-tour": {
+  "hash": "45a959a57d8c5227",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/nusa-penida-east-tour": {
+  "hash": "a83eed95373a12b7",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/nusa-penida-east-tour": {
+  "hash": "63f8b2b7cd5dcd49",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/nusa-penida-full-day-tour": {
+  "hash": "1d1163beacba631a",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/nusa-penida-full-day-tour": {
+  "hash": "80b3e1198c80e02e",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/nusa-penida-full-day-tour": {
+  "hash": "84cac171076a7281",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/nusa-penida-full-day-tour": {
+  "hash": "50778e725b2fc545",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/nusa-penida-full-day-tour": {
+  "hash": "d2f918d640a60a82",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/nusa-penida-full-day-tour": {
+  "hash": "b9f07d2d45595dca",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/nusa-penida-manta-rays-point": {
+  "hash": "47c965c1a7a9d4cb",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/nusa-penida-manta-rays-point": {
+  "hash": "c1ad86e8fa3df2d9",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/nusa-penida-manta-rays-point": {
+  "hash": "17fd7c1f1ea6e8c9",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/nusa-penida-manta-rays-point": {
+  "hash": "517d36872f1d8d0d",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/nusa-penida-manta-rays-point": {
+  "hash": "19508b2c17f0756d",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/nusa-penida-manta-rays-point": {
+  "hash": "a660cd340e2cc4d4",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/gili-islands-getaway": {
+  "hash": "fc95c0ef071188d7",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/gili-islands-getaway": {
+  "hash": "c0bc4d4b71beabaf",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/gili-islands-getaway": {
+  "hash": "4fbe41dd939afacf",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/gili-islands-getaway": {
+  "hash": "f4bdfa38f73ab17a",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/gili-islands-getaway": {
+  "hash": "c381fa0a4a63edaf",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/gili-islands-getaway": {
+  "hash": "77110b8679591987",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/gili-island-tour": {
+  "hash": "f17c2f2bb5141215",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/gili-island-tour": {
+  "hash": "a245c81d531f3a0d",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/gili-island-tour": {
+  "hash": "9f8806ede6852d9f",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/gili-island-tour": {
+  "hash": "de8a29de075051cc",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/gili-island-tour": {
+  "hash": "d225a3b2780e6ba5",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/gili-island-tour": {
+  "hash": "c755592a06c342f1",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/sumbawa-whale-shark-snorkeling-trip": {
+  "hash": "2427a45d05d5f556",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/sumbawa-whale-shark-snorkeling-trip": {
+  "hash": "36e3ab70c694d4f0",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/sumbawa-whale-shark-snorkeling-trip": {
+  "hash": "c935808bf4cba954",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/sumbawa-whale-shark-snorkeling-trip": {
+  "hash": "f474dc950dafe378",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/sumbawa-whale-shark-snorkeling-trip": {
+  "hash": "166bde2f35835aab",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/sumbawa-whale-shark-snorkeling-trip": {
+  "hash": "f4c2b2d813576aaf",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/blue-lagoon-snorkeling": {
+  "hash": "2b65e6d65e802aa4",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/blue-lagoon-snorkeling": {
+  "hash": "85f7944f5749c7a3",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/blue-lagoon-snorkeling": {
+  "hash": "92d5a621f640133f",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/blue-lagoon-snorkeling": {
+  "hash": "0991e7514e06af07",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/blue-lagoon-snorkeling": {
+  "hash": "3b1b07dc8d2ee80d",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/blue-lagoon-snorkeling": {
+  "hash": "88360f2fe41f2096",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/white-water-rafting": {
+  "hash": "1f78cf8413b5d980",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/white-water-rafting": {
+  "hash": "07b523553e1ec146",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/white-water-rafting": {
+  "hash": "3fd9987c2301c075",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/white-water-rafting": {
+  "hash": "ba6af864b8e8d6a1",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/white-water-rafting": {
+  "hash": "d690a79afb6ed00f",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/white-water-rafting": {
+  "hash": "85c7b7e5c3a3acaa",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/sunset-cruise-bali": {
+  "hash": "1e6efbc1a6cbef5e",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/sunset-cruise-bali": {
+  "hash": "55ba063b21aa60c4",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/sunset-cruise-bali": {
+  "hash": "c032d698f701a4e1",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/sunset-cruise-bali": {
+  "hash": "d43120f39a0791b3",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/sunset-cruise-bali": {
+  "hash": "2f48ad0cc6ffda97",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/sunset-cruise-bali": {
+  "hash": "c19010a2d89a1719",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/surf-lesson-experience": {
+  "hash": "cf1ae01ed2f439b6",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/surf-lesson-experience": {
+  "hash": "911a92ddd2410957",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/surf-lesson-experience": {
+  "hash": "f3607fcbf6498947",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/surf-lesson-experience": {
+  "hash": "3e958a10d8183d38",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/surf-lesson-experience": {
+  "hash": "d3c17620b253ff4c",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/surf-lesson-experience": {
+  "hash": "d69f3d21fc5fe5c3",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/bali-airport-transfer": {
+  "hash": "9ea7edad235f74ee",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/bali-airport-transfer": {
+  "hash": "a08c38fcdfce10a1",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/bali-airport-transfer": {
+  "hash": "9a18c8e09c9c3628",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/bali-airport-transfer": {
+  "hash": "060085705c55512d",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/bali-airport-transfer": {
+  "hash": "f4d134c03e0aa142",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/bali-airport-transfer": {
+  "hash": "0c63c24f0f7c75d1",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/private-car-with-driver-bali": {
+  "hash": "6494107c725c16d9",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/private-car-with-driver-bali": {
+  "hash": "4a7f6ad5ba424ff1",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/private-car-with-driver-bali": {
+  "hash": "161125c28f907fea",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/private-car-with-driver-bali": {
+  "hash": "0cf32092a36f081b",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/private-car-with-driver-bali": {
+  "hash": "7566587abf72a927",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/private-car-with-driver-bali": {
+  "hash": "274bd0eca38f82b6",
+  "date": "2026-08-21"
+ },
+ "/bali/en/tours/fast-boat-transfer-bali": {
+  "hash": "2111f1170c42abd9",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/tours/fast-boat-transfer-bali": {
+  "hash": "4284d59b58b4d736",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/tours/fast-boat-transfer-bali": {
+  "hash": "cfdc4047a28e4883",
+  "date": "2026-08-21"
+ },
+ "/bali/es/tours/fast-boat-transfer-bali": {
+  "hash": "f654a16070813b33",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/tours/fast-boat-transfer-bali": {
+  "hash": "5dd38be9a334e7f9",
+  "date": "2026-08-21"
+ },
+ "/bali/de/tours/fast-boat-transfer-bali": {
+  "hash": "9d4b4d249af6d88a",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/ubud-highlights-tour/why-book": {
+  "hash": "4f3123a0039f5cd9",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/ubud-highlights-tour/why-book": {
+  "hash": "c74575b3911ef4e5",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/ubud-highlights-tour/why-book": {
+  "hash": "0f5575c605fd1fcb",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/ubud-highlights-tour/why-book": {
+  "hash": "18ceb31b7cf08aad",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/ubud-highlights-tour/why-book": {
+  "hash": "c9cb4536808e702b",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/ubud-highlights-tour/travel-guide": {
+  "hash": "1dc880be2daf3e79",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/ubud-highlights-tour/travel-guide": {
+  "hash": "bc822c1cd3e96e20",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/ubud-highlights-tour/travel-guide": {
+  "hash": "5ed158df235dae1b",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/ubud-highlights-tour/travel-guide": {
+  "hash": "215ee4123050255c",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/ubud-highlights-tour/travel-guide": {
+  "hash": "cbb4966b64a76e37",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/ubud-highlights-tour/tour-schedule": {
+  "hash": "4aa76f833b2fc681",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/ubud-highlights-tour/tour-schedule": {
+  "hash": "283e1d328f9eed3a",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/ubud-highlights-tour/tour-schedule": {
+  "hash": "fe09318a023cb1b2",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/ubud-highlights-tour/tour-schedule": {
+  "hash": "f01cec71c6b5b389",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/ubud-highlights-tour/tour-schedule": {
+  "hash": "03cf0718383c9b3e",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/north-bali-lovina-dolphins-tour/why-book": {
+  "hash": "1c642eeb7039f804",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/north-bali-lovina-dolphins-tour/why-book": {
+  "hash": "6dfb56f8cc590c1c",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/north-bali-lovina-dolphins-tour/why-book": {
+  "hash": "4e5f86178bfe8984",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/north-bali-lovina-dolphins-tour/why-book": {
+  "hash": "cef34dcf913208fb",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/north-bali-lovina-dolphins-tour/why-book": {
+  "hash": "44ea585638520407",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/north-bali-lovina-dolphins-tour/travel-guide": {
+  "hash": "5206367a6c1bd727",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/north-bali-lovina-dolphins-tour/travel-guide": {
+  "hash": "b9b201d138c62dae",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/north-bali-lovina-dolphins-tour/travel-guide": {
+  "hash": "d91975b9cb161bf4",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/north-bali-lovina-dolphins-tour/travel-guide": {
+  "hash": "5d1c4c64fc8533de",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/north-bali-lovina-dolphins-tour/travel-guide": {
+  "hash": "6d3e82b4f3d03cf9",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/north-bali-lovina-dolphins-tour/tour-schedule": {
+  "hash": "914410fe715fb01a",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/north-bali-lovina-dolphins-tour/tour-schedule": {
+  "hash": "1e0370784726af1f",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/north-bali-lovina-dolphins-tour/tour-schedule": {
+  "hash": "eed662e7c9c73122",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/north-bali-lovina-dolphins-tour/tour-schedule": {
+  "hash": "56e924a2d561389c",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/north-bali-lovina-dolphins-tour/tour-schedule": {
+  "hash": "710e83fa6e94f840",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/dolphin-sunrise-city-tour/why-book": {
+  "hash": "19816cc5d8c43a7f",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/dolphin-sunrise-city-tour/why-book": {
+  "hash": "ac1adc67c835f38f",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/dolphin-sunrise-city-tour/why-book": {
+  "hash": "2c9786abfb65ef58",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/dolphin-sunrise-city-tour/why-book": {
+  "hash": "299faafb0c152a8c",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/dolphin-sunrise-city-tour/why-book": {
+  "hash": "f3e7670cac6be468",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/dolphin-sunrise-city-tour/travel-guide": {
+  "hash": "0217319519970c68",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/dolphin-sunrise-city-tour/travel-guide": {
+  "hash": "4cb6c7b4121806c8",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/dolphin-sunrise-city-tour/travel-guide": {
+  "hash": "731900daf6968d67",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/dolphin-sunrise-city-tour/travel-guide": {
+  "hash": "26006e01195de023",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/dolphin-sunrise-city-tour/travel-guide": {
+  "hash": "4f97d44bf865ba1e",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/dolphin-sunrise-city-tour/tour-schedule": {
+  "hash": "462ec855d8cb686d",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/dolphin-sunrise-city-tour/tour-schedule": {
+  "hash": "891bce709997c4a6",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/dolphin-sunrise-city-tour/tour-schedule": {
+  "hash": "9c17bf93e97dbb2a",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/dolphin-sunrise-city-tour/tour-schedule": {
+  "hash": "90162c1bf27147f0",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/dolphin-sunrise-city-tour/tour-schedule": {
+  "hash": "31751c7ce2c4f85c",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/east-bali-instagram-tour/why-book": {
+  "hash": "27c2fba6f268c489",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/east-bali-instagram-tour/why-book": {
+  "hash": "da8a82983402990b",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/east-bali-instagram-tour/why-book": {
+  "hash": "291f3293d52a5a6e",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/east-bali-instagram-tour/why-book": {
+  "hash": "1255cddc6e1aaef2",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/east-bali-instagram-tour/why-book": {
+  "hash": "abefa31e6d2ab370",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/east-bali-instagram-tour/travel-guide": {
+  "hash": "aef1bd38d5d9bbdf",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/east-bali-instagram-tour/travel-guide": {
+  "hash": "f263e23687738e0a",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/east-bali-instagram-tour/travel-guide": {
+  "hash": "9da1559e034f1fc7",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/east-bali-instagram-tour/travel-guide": {
+  "hash": "75b5a3e543f20a5b",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/east-bali-instagram-tour/travel-guide": {
+  "hash": "09c8f3ce6a4a3553",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/east-bali-instagram-tour/tour-schedule": {
+  "hash": "f96736603b6399ba",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/east-bali-instagram-tour/tour-schedule": {
+  "hash": "fd5004946c0bc048",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/east-bali-instagram-tour/tour-schedule": {
+  "hash": "0952f8ca75428fdd",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/east-bali-instagram-tour/tour-schedule": {
+  "hash": "259c762ab73bbfe0",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/east-bali-instagram-tour/tour-schedule": {
+  "hash": "1c07192488cf438f",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/tanah-lot-bedugul-tour/why-book": {
+  "hash": "4a618ac783a96e46",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/tanah-lot-bedugul-tour/why-book": {
+  "hash": "088a4fe8e46d03c7",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/tanah-lot-bedugul-tour/why-book": {
+  "hash": "5470b77afc0fe47b",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/tanah-lot-bedugul-tour/why-book": {
+  "hash": "f776113efd215a99",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/tanah-lot-bedugul-tour/why-book": {
+  "hash": "a936ba62b611e473",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/tanah-lot-bedugul-tour/travel-guide": {
+  "hash": "ffa78c2315a30e24",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/tanah-lot-bedugul-tour/travel-guide": {
+  "hash": "5b323ee2d9384db6",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/tanah-lot-bedugul-tour/travel-guide": {
+  "hash": "558285c65d8aa33e",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/tanah-lot-bedugul-tour/travel-guide": {
+  "hash": "ece89a1d483afe41",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/tanah-lot-bedugul-tour/travel-guide": {
+  "hash": "180945ba689f5160",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/tanah-lot-bedugul-tour/tour-schedule": {
+  "hash": "9fd07952ec115cee",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/tanah-lot-bedugul-tour/tour-schedule": {
+  "hash": "733b1d6697a3326a",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/tanah-lot-bedugul-tour/tour-schedule": {
+  "hash": "66aff56d38ca988e",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/tanah-lot-bedugul-tour/tour-schedule": {
+  "hash": "e02209feff5ca122",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/tanah-lot-bedugul-tour/tour-schedule": {
+  "hash": "525753fda85c67e1",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-unesco/why-book": {
+  "hash": "859c6fada1820f5b",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-unesco/why-book": {
+  "hash": "e7706cf4dce73df4",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-unesco/why-book": {
+  "hash": "2a90ac4110b32c8e",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-unesco/why-book": {
+  "hash": "3ced4f373bd8c9d4",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-unesco/why-book": {
+  "hash": "98727a8e8dd9dfe4",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-unesco/travel-guide": {
+  "hash": "be7e397fae79a9b0",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-unesco/travel-guide": {
+  "hash": "537350503dc50aaa",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-unesco/travel-guide": {
+  "hash": "0f83bd9ebe6ede85",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-unesco/travel-guide": {
+  "hash": "75145fd15e964c65",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-unesco/travel-guide": {
+  "hash": "a6458c9312d4233e",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-unesco/tour-schedule": {
+  "hash": "b784bfabb3441f03",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-unesco/tour-schedule": {
+  "hash": "d4c9582e8ae11850",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-unesco/tour-schedule": {
+  "hash": "4d3b76c4a7baad3b",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-unesco/tour-schedule": {
+  "hash": "b09861df19e84b75",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-unesco/tour-schedule": {
+  "hash": "dfec1050a3a67060",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-sunrise-jeep-tour/why-book": {
+  "hash": "61c7054031b4188b",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-sunrise-jeep-tour/why-book": {
+  "hash": "687084af24870544",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-sunrise-jeep-tour/why-book": {
+  "hash": "b64a556c4209de56",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-sunrise-jeep-tour/why-book": {
+  "hash": "1b5a9d984de8d2d1",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-sunrise-jeep-tour/why-book": {
+  "hash": "bf4326757b4cb737",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-sunrise-jeep-tour/travel-guide": {
+  "hash": "18ecf4faf47f971e",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-sunrise-jeep-tour/travel-guide": {
+  "hash": "097c847ac6f358c8",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-sunrise-jeep-tour/travel-guide": {
+  "hash": "c0effcb56ed09082",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-sunrise-jeep-tour/travel-guide": {
+  "hash": "e9522067f2fa5477",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-sunrise-jeep-tour/travel-guide": {
+  "hash": "f99b83f96b83e22e",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-sunrise-jeep-tour/tour-schedule": {
+  "hash": "2d6bf6bf37fa72e0",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-sunrise-jeep-tour/tour-schedule": {
+  "hash": "e553bf0e7bf42264",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-sunrise-jeep-tour/tour-schedule": {
+  "hash": "31b1242bee097b75",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-sunrise-jeep-tour/tour-schedule": {
+  "hash": "88a78c365f0444dc",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-sunrise-jeep-tour/tour-schedule": {
+  "hash": "7ea195bdd3d3bab1",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-sunrise-jeep-hot-spring/why-book": {
+  "hash": "74506a0963f3eb38",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-sunrise-jeep-hot-spring/why-book": {
+  "hash": "79b81f4ff06d93da",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-sunrise-jeep-hot-spring/why-book": {
+  "hash": "fb615c3099a38843",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-sunrise-jeep-hot-spring/why-book": {
+  "hash": "9d61ca43e5c39f73",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-sunrise-jeep-hot-spring/why-book": {
+  "hash": "c3f63066e868c16e",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-sunrise-jeep-hot-spring/travel-guide": {
+  "hash": "4a0909c5ead80973",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-sunrise-jeep-hot-spring/travel-guide": {
+  "hash": "575954837baa4e5a",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-sunrise-jeep-hot-spring/travel-guide": {
+  "hash": "791d616f083731ff",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-sunrise-jeep-hot-spring/travel-guide": {
+  "hash": "ff991b5bdbddabb0",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-sunrise-jeep-hot-spring/travel-guide": {
+  "hash": "71d7dee1a0197fcd",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-sunrise-jeep-hot-spring/tour-schedule": {
+  "hash": "bb8d6a175385b8cd",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-sunrise-jeep-hot-spring/tour-schedule": {
+  "hash": "23ea5c023a6e5432",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-sunrise-jeep-hot-spring/tour-schedule": {
+  "hash": "ead74ec9c092b18d",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-sunrise-jeep-hot-spring/tour-schedule": {
+  "hash": "8faeea738ad7427c",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-sunrise-jeep-hot-spring/tour-schedule": {
+  "hash": "bef7eb9ea5711466",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-sunrise-hike/why-book": {
+  "hash": "eb5ff717f805a219",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-sunrise-hike/why-book": {
+  "hash": "d7caf8330f855385",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-sunrise-hike/why-book": {
+  "hash": "8f6890c0e107337e",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-sunrise-hike/why-book": {
+  "hash": "2bbd1c660c7dbefc",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-sunrise-hike/why-book": {
+  "hash": "3083318d05039cf3",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-sunrise-hike/travel-guide": {
+  "hash": "3204309277ebd524",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-sunrise-hike/travel-guide": {
+  "hash": "27bd1784b8b8ca32",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-sunrise-hike/travel-guide": {
+  "hash": "5e9e07d5690ab4f1",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-sunrise-hike/travel-guide": {
+  "hash": "096be34fc1ade101",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-sunrise-hike/travel-guide": {
+  "hash": "037c1f0d45c9e006",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-sunrise-hike/tour-schedule": {
+  "hash": "f267017a1cc2446d",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-sunrise-hike/tour-schedule": {
+  "hash": "8202f0ccce191707",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-sunrise-hike/tour-schedule": {
+  "hash": "a45a8c75ae70ad25",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-sunrise-hike/tour-schedule": {
+  "hash": "d0ffb0e33d80b637",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-sunrise-hike/tour-schedule": {
+  "hash": "7876967b2cf2d1f1",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/atv-ride-adventure/why-book": {
+  "hash": "9e490764db3931c6",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/atv-ride-adventure/why-book": {
+  "hash": "45d318a44d498fcc",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/atv-ride-adventure/why-book": {
+  "hash": "d456515e603645e2",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/atv-ride-adventure/why-book": {
+  "hash": "eef6329ab8f11784",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/atv-ride-adventure/why-book": {
+  "hash": "16b3fe4781a21042",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/atv-ride-adventure/travel-guide": {
+  "hash": "8a1042291801f61d",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/atv-ride-adventure/travel-guide": {
+  "hash": "c8a60a843c91f427",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/atv-ride-adventure/travel-guide": {
+  "hash": "09c6646fb13d8951",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/atv-ride-adventure/travel-guide": {
+  "hash": "ebb192d2503ca876",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/atv-ride-adventure/travel-guide": {
+  "hash": "6296378b95e16d14",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/atv-ride-adventure/tour-schedule": {
+  "hash": "5a4ef7501176d955",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/atv-ride-adventure/tour-schedule": {
+  "hash": "8b921560f4a4c823",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/atv-ride-adventure/tour-schedule": {
+  "hash": "92247bf7aa37422e",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/atv-ride-adventure/tour-schedule": {
+  "hash": "f4cf8008ad3e59dd",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/atv-ride-adventure/tour-schedule": {
+  "hash": "3ba4f3da472e439c",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/atv-quad-bikes/why-book": {
+  "hash": "20d6419ba899a01c",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/atv-quad-bikes/why-book": {
+  "hash": "24d7694d227bf938",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/atv-quad-bikes/why-book": {
+  "hash": "6d6b2fbabfe22ca3",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/atv-quad-bikes/why-book": {
+  "hash": "aa951985a2023f08",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/atv-quad-bikes/why-book": {
+  "hash": "1cbb86105cddadb5",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/atv-quad-bikes/travel-guide": {
+  "hash": "296f6bf26b09168b",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/atv-quad-bikes/travel-guide": {
+  "hash": "347f8224404b1fa5",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/atv-quad-bikes/travel-guide": {
+  "hash": "f225d67e0b4cad6b",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/atv-quad-bikes/travel-guide": {
+  "hash": "49cd0cca9f0dadd6",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/atv-quad-bikes/travel-guide": {
+  "hash": "d7b5340153575ead",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/atv-quad-bikes/tour-schedule": {
+  "hash": "fcd5a2f497671ee5",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/atv-quad-bikes/tour-schedule": {
+  "hash": "fbf2df1273d02571",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/atv-quad-bikes/tour-schedule": {
+  "hash": "877d4f32e54d0fe5",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/atv-quad-bikes/tour-schedule": {
+  "hash": "9380d0bff71b0013",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/atv-quad-bikes/tour-schedule": {
+  "hash": "79b92dd7301340ed",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-instagram-highlights-tour/why-book": {
+  "hash": "fcf4a67a06d4663a",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-instagram-highlights-tour/why-book": {
+  "hash": "70a8c2ced87ec67d",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-instagram-highlights-tour/why-book": {
+  "hash": "67bc2b0a7ef10dad",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-instagram-highlights-tour/why-book": {
+  "hash": "286884c6fba8b59e",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-instagram-highlights-tour/why-book": {
+  "hash": "8aa91ba46030aad6",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-instagram-highlights-tour/travel-guide": {
+  "hash": "0c81c8d8b933bb3f",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-instagram-highlights-tour/travel-guide": {
+  "hash": "98411c4ebdd718b9",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-instagram-highlights-tour/travel-guide": {
+  "hash": "961db830c4c774c3",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-instagram-highlights-tour/travel-guide": {
+  "hash": "784728ac08e9e2fd",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-instagram-highlights-tour/travel-guide": {
+  "hash": "5d2d4fe295a3befc",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-instagram-highlights-tour/tour-schedule": {
+  "hash": "51823ff4b1d3f954",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-instagram-highlights-tour/tour-schedule": {
+  "hash": "e45699a06ed3b721",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-instagram-highlights-tour/tour-schedule": {
+  "hash": "36a285a070ff60c2",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-instagram-highlights-tour/tour-schedule": {
+  "hash": "38ac048585b7a0e5",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-instagram-highlights-tour/tour-schedule": {
+  "hash": "9286a98e1f17e1ca",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/ubud-instagram-tour/why-book": {
+  "hash": "70771b2b1b0e4f6f",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/ubud-instagram-tour/why-book": {
+  "hash": "a64bde3f4f666441",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/ubud-instagram-tour/why-book": {
+  "hash": "127e62351896fdb9",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/ubud-instagram-tour/why-book": {
+  "hash": "ac72f6bd72578af5",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/ubud-instagram-tour/why-book": {
+  "hash": "9fad8ea7ba5aa52c",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/ubud-instagram-tour/travel-guide": {
+  "hash": "48e6bbef5422f9d2",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/ubud-instagram-tour/travel-guide": {
+  "hash": "dd38b88978e52361",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/ubud-instagram-tour/travel-guide": {
+  "hash": "e1ef37800c02f77a",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/ubud-instagram-tour/travel-guide": {
+  "hash": "d2ce8de59842ee02",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/ubud-instagram-tour/travel-guide": {
+  "hash": "30be106ad86e7907",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/ubud-instagram-tour/tour-schedule": {
+  "hash": "1ec29581eeea401f",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/ubud-instagram-tour/tour-schedule": {
+  "hash": "e002016dd04598e3",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/ubud-instagram-tour/tour-schedule": {
+  "hash": "abd04c6c53213134",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/ubud-instagram-tour/tour-schedule": {
+  "hash": "d7b59cd22b9232b4",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/ubud-instagram-tour/tour-schedule": {
+  "hash": "8e7eb4d85a8ade27",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-private-day-tour-manta-snorkeling/why-book": {
+  "hash": "bff8dc4ced74ae36",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-private-day-tour-manta-snorkeling/why-book": {
+  "hash": "45540a4be3fade87",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-private-day-tour-manta-snorkeling/why-book": {
+  "hash": "8fe04aa90e9170cf",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-private-day-tour-manta-snorkeling/why-book": {
+  "hash": "b7aec9183dad1b99",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-private-day-tour-manta-snorkeling/why-book": {
+  "hash": "864e36595b87f135",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-private-day-tour-manta-snorkeling/travel-guide": {
+  "hash": "7fa9b578b8f4255f",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-private-day-tour-manta-snorkeling/travel-guide": {
+  "hash": "6ef4ea93c37cbede",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-private-day-tour-manta-snorkeling/travel-guide": {
+  "hash": "37aafaa62457c181",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-private-day-tour-manta-snorkeling/travel-guide": {
+  "hash": "f71783a9f55f4f08",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-private-day-tour-manta-snorkeling/travel-guide": {
+  "hash": "a2439845ed00d138",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-private-day-tour-manta-snorkeling/tour-schedule": {
+  "hash": "54056904e37b501c",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-private-day-tour-manta-snorkeling/tour-schedule": {
+  "hash": "6adcc98c721200fc",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-private-day-tour-manta-snorkeling/tour-schedule": {
+  "hash": "fa51f4b23f6fe9c9",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-private-day-tour-manta-snorkeling/tour-schedule": {
+  "hash": "b5b82108346246f3",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-private-day-tour-manta-snorkeling/tour-schedule": {
+  "hash": "782e63f4faf24b42",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-west-tour/why-book": {
+  "hash": "abacdcf920a7853a",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-west-tour/why-book": {
+  "hash": "edc17470c857fcda",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-west-tour/why-book": {
+  "hash": "5747b9b7325ad587",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-west-tour/why-book": {
+  "hash": "a5993aa843288052",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-west-tour/why-book": {
+  "hash": "04d0dbb1c78b9ad9",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-west-tour/travel-guide": {
+  "hash": "febb36d82156efbd",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-west-tour/travel-guide": {
+  "hash": "80b396d447987fb5",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-west-tour/travel-guide": {
+  "hash": "19992ebd3f33fded",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-west-tour/travel-guide": {
+  "hash": "3b87f77661dfba29",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-west-tour/travel-guide": {
+  "hash": "d4345ac32dedcf39",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-west-tour/tour-schedule": {
+  "hash": "8bc174f978af11d4",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-west-tour/tour-schedule": {
+  "hash": "2e68382e4e7ec00d",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-west-tour/tour-schedule": {
+  "hash": "2e3bb8652fbbd787",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-west-tour/tour-schedule": {
+  "hash": "c09c219bbaa7b1b7",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-west-tour/tour-schedule": {
+  "hash": "61d2f8cf30509bb0",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-east-tour/why-book": {
+  "hash": "f6f60721f850e2fc",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-east-tour/why-book": {
+  "hash": "58d12bb292b4b86f",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-east-tour/why-book": {
+  "hash": "a295d598f28fd94c",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-east-tour/why-book": {
+  "hash": "918cc50aa7a5347a",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-east-tour/why-book": {
+  "hash": "351610638b7d6b70",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-east-tour/travel-guide": {
+  "hash": "a5166ece45169ec6",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-east-tour/travel-guide": {
+  "hash": "348706ee51d9ccb0",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-east-tour/travel-guide": {
+  "hash": "9f5eada18fb2b934",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-east-tour/travel-guide": {
+  "hash": "5f9f68328184ba88",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-east-tour/travel-guide": {
+  "hash": "52359eb9d41312c0",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-east-tour/tour-schedule": {
+  "hash": "48db953cf2b59263",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-east-tour/tour-schedule": {
+  "hash": "4d9febd8f1d2a8e3",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-east-tour/tour-schedule": {
+  "hash": "d052e6a9ab1eca32",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-east-tour/tour-schedule": {
+  "hash": "36453b489ccc1907",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-east-tour/tour-schedule": {
+  "hash": "5344efd407a4481a",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-full-day-tour/why-book": {
+  "hash": "3642d417cdbe3bdf",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-full-day-tour/why-book": {
+  "hash": "3f245024cd8fa2f0",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-full-day-tour/why-book": {
+  "hash": "1bee98afed7ae7a3",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-full-day-tour/why-book": {
+  "hash": "1bb82db95e5056ff",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-full-day-tour/why-book": {
+  "hash": "dab0427825a08cad",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-full-day-tour/travel-guide": {
+  "hash": "cdfee4cf7286ab20",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-full-day-tour/travel-guide": {
+  "hash": "e64bc43f4f291321",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-full-day-tour/travel-guide": {
+  "hash": "0629ace76e4d113d",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-full-day-tour/travel-guide": {
+  "hash": "5bbc9302bf98bd7a",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-full-day-tour/travel-guide": {
+  "hash": "757ee9184318932d",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-full-day-tour/tour-schedule": {
+  "hash": "b68c4c796a1f9986",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-full-day-tour/tour-schedule": {
+  "hash": "39291ad06c16a8a1",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-full-day-tour/tour-schedule": {
+  "hash": "9377dd2a4d8f73a3",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-full-day-tour/tour-schedule": {
+  "hash": "d2c45bf32e7e4e93",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-full-day-tour/tour-schedule": {
+  "hash": "007742e0837b4e13",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-manta-rays-point/why-book": {
+  "hash": "22ac0b9d6491fc85",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-manta-rays-point/why-book": {
+  "hash": "06676cf04540e4e8",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-manta-rays-point/why-book": {
+  "hash": "9a6c42fbd778f942",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-manta-rays-point/why-book": {
+  "hash": "fa72e85afe727aee",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-manta-rays-point/why-book": {
+  "hash": "c47d5c1a6c37f197",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-manta-rays-point/travel-guide": {
+  "hash": "99499f71080e0335",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-manta-rays-point/travel-guide": {
+  "hash": "4f0ef6ce4e5d988b",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-manta-rays-point/travel-guide": {
+  "hash": "361c33a8c58f4f67",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-manta-rays-point/travel-guide": {
+  "hash": "fa3a0dc11d343aea",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-manta-rays-point/travel-guide": {
+  "hash": "5867160bbe75a591",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-manta-rays-point/tour-schedule": {
+  "hash": "ee21ddd5c3d03792",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-manta-rays-point/tour-schedule": {
+  "hash": "66f7f910d394a038",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-manta-rays-point/tour-schedule": {
+  "hash": "687afc330da47f7e",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-manta-rays-point/tour-schedule": {
+  "hash": "7d4419206773eac0",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-manta-rays-point/tour-schedule": {
+  "hash": "bb3faef17bb62abf",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/gili-islands-getaway/why-book": {
+  "hash": "8bfdf39bc42e7d6e",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/gili-islands-getaway/why-book": {
+  "hash": "9cad5112ebbc54df",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/gili-islands-getaway/why-book": {
+  "hash": "1dbca3953207cf2e",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/gili-islands-getaway/why-book": {
+  "hash": "d43cbd8d54900458",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/gili-islands-getaway/why-book": {
+  "hash": "14d0c0f5311a7662",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/gili-islands-getaway/travel-guide": {
+  "hash": "d5c8a634ce997a32",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/gili-islands-getaway/travel-guide": {
+  "hash": "6f4ae972144e2b98",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/gili-islands-getaway/travel-guide": {
+  "hash": "52db678256070d85",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/gili-islands-getaway/travel-guide": {
+  "hash": "53ada0043b84d424",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/gili-islands-getaway/travel-guide": {
+  "hash": "a2917d1cfae07f5d",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/gili-islands-getaway/tour-schedule": {
+  "hash": "96d025cd2c34c49f",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/gili-islands-getaway/tour-schedule": {
+  "hash": "a27ce02f7d5b8f3c",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/gili-islands-getaway/tour-schedule": {
+  "hash": "04071c5ddad6e9c7",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/gili-islands-getaway/tour-schedule": {
+  "hash": "4efc95255c61ab02",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/gili-islands-getaway/tour-schedule": {
+  "hash": "4d5c96b27c2a823d",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/gili-island-tour/why-book": {
+  "hash": "711f2ffbacc52695",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/gili-island-tour/why-book": {
+  "hash": "6e6f468704566494",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/gili-island-tour/why-book": {
+  "hash": "4e5efaa725246994",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/gili-island-tour/why-book": {
+  "hash": "90b1c5f653bb215e",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/gili-island-tour/why-book": {
+  "hash": "d4e498ede3d02fde",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/gili-island-tour/travel-guide": {
+  "hash": "c458783873d96ea5",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/gili-island-tour/travel-guide": {
+  "hash": "8daec880b898b4f1",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/gili-island-tour/travel-guide": {
+  "hash": "bbcbc224cbdf7206",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/gili-island-tour/travel-guide": {
+  "hash": "36e1524c931d7076",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/gili-island-tour/travel-guide": {
+  "hash": "49bae9101ff04c17",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/gili-island-tour/tour-schedule": {
+  "hash": "8b666936f9081b3d",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/gili-island-tour/tour-schedule": {
+  "hash": "822d7a8da4629ef7",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/gili-island-tour/tour-schedule": {
+  "hash": "acbb6e405d4c733e",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/gili-island-tour/tour-schedule": {
+  "hash": "b63eb3f828c59a13",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/gili-island-tour/tour-schedule": {
+  "hash": "cb788121c069a5af",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/sumbawa-whale-shark-snorkeling-trip/why-book": {
+  "hash": "83a4572d6d88e886",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/sumbawa-whale-shark-snorkeling-trip/why-book": {
+  "hash": "4544fc9e779fcd5e",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/sumbawa-whale-shark-snorkeling-trip/why-book": {
+  "hash": "4320f9e1abc21038",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/sumbawa-whale-shark-snorkeling-trip/why-book": {
+  "hash": "840389c1ea51757c",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/sumbawa-whale-shark-snorkeling-trip/why-book": {
+  "hash": "0c817b6e6a7c89cb",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/sumbawa-whale-shark-snorkeling-trip/travel-guide": {
+  "hash": "688942c9933790fc",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/sumbawa-whale-shark-snorkeling-trip/travel-guide": {
+  "hash": "a73b8c238e2320fd",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/sumbawa-whale-shark-snorkeling-trip/travel-guide": {
+  "hash": "f7f286ab11130c80",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/sumbawa-whale-shark-snorkeling-trip/travel-guide": {
+  "hash": "01b42e9bebfb1f51",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/sumbawa-whale-shark-snorkeling-trip/travel-guide": {
+  "hash": "cb8dce8275201cea",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/sumbawa-whale-shark-snorkeling-trip/tour-schedule": {
+  "hash": "1aa9e89f540dfdba",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/sumbawa-whale-shark-snorkeling-trip/tour-schedule": {
+  "hash": "6137a79d42c2494e",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/sumbawa-whale-shark-snorkeling-trip/tour-schedule": {
+  "hash": "e0c60ddeec5740c2",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/sumbawa-whale-shark-snorkeling-trip/tour-schedule": {
+  "hash": "f32adbaf496d0a25",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/sumbawa-whale-shark-snorkeling-trip/tour-schedule": {
+  "hash": "2e8ed690c47aeac3",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/blue-lagoon-snorkeling/why-book": {
+  "hash": "82e0ac45462c1794",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/blue-lagoon-snorkeling/why-book": {
+  "hash": "15ad92b8fa70719d",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/blue-lagoon-snorkeling/why-book": {
+  "hash": "2611c923640195f5",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/blue-lagoon-snorkeling/why-book": {
+  "hash": "0295f215fd839604",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/blue-lagoon-snorkeling/why-book": {
+  "hash": "0b2163b24e2033a0",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/blue-lagoon-snorkeling/travel-guide": {
+  "hash": "c591813492c17732",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/blue-lagoon-snorkeling/travel-guide": {
+  "hash": "0ad0aedfd18f73cc",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/blue-lagoon-snorkeling/travel-guide": {
+  "hash": "ad42f91d59c7d7ca",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/blue-lagoon-snorkeling/travel-guide": {
+  "hash": "fa16737743cdaead",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/blue-lagoon-snorkeling/travel-guide": {
+  "hash": "7d38eb0d50f186af",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/blue-lagoon-snorkeling/tour-schedule": {
+  "hash": "caad19d157b027e2",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/blue-lagoon-snorkeling/tour-schedule": {
+  "hash": "69cde425df561424",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/blue-lagoon-snorkeling/tour-schedule": {
+  "hash": "e3a72747b54764c4",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/blue-lagoon-snorkeling/tour-schedule": {
+  "hash": "ca21d9a60c0f9e72",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/blue-lagoon-snorkeling/tour-schedule": {
+  "hash": "8bbb084c09949c70",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/white-water-rafting/why-book": {
+  "hash": "12e6594051499a3c",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/white-water-rafting/why-book": {
+  "hash": "eba33236186aa743",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/white-water-rafting/why-book": {
+  "hash": "6f0c71134f0787cf",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/white-water-rafting/why-book": {
+  "hash": "b52cc53ffee38cc6",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/white-water-rafting/why-book": {
+  "hash": "975c964643a34fa9",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/white-water-rafting/travel-guide": {
+  "hash": "019d4b23f501aa25",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/white-water-rafting/travel-guide": {
+  "hash": "aba1868576bd4728",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/white-water-rafting/travel-guide": {
+  "hash": "692d8b97ce5c5e2b",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/white-water-rafting/travel-guide": {
+  "hash": "4bbf8079ce501360",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/white-water-rafting/travel-guide": {
+  "hash": "d18d1fbba7dd36e4",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/white-water-rafting/tour-schedule": {
+  "hash": "08fd79b0e964be08",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/white-water-rafting/tour-schedule": {
+  "hash": "af06f212d20371a9",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/white-water-rafting/tour-schedule": {
+  "hash": "3d0b5b9517d2446a",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/white-water-rafting/tour-schedule": {
+  "hash": "32e9c25eac584d72",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/white-water-rafting/tour-schedule": {
+  "hash": "c3ab430249c69f9f",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/sunset-cruise-bali/why-book": {
+  "hash": "60b70b11ad171aaa",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/sunset-cruise-bali/why-book": {
+  "hash": "7d053a9223263693",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/sunset-cruise-bali/why-book": {
+  "hash": "3a9e249f41bc378f",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/sunset-cruise-bali/why-book": {
+  "hash": "5b7b111f8b89c91e",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/sunset-cruise-bali/why-book": {
+  "hash": "3ce26de110e7d5af",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/sunset-cruise-bali/travel-guide": {
+  "hash": "79c6491912a9d86c",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/sunset-cruise-bali/travel-guide": {
+  "hash": "46b2380e11edd29b",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/sunset-cruise-bali/travel-guide": {
+  "hash": "946384965870d3bc",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/sunset-cruise-bali/travel-guide": {
+  "hash": "fccd966f1b5d37bd",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/sunset-cruise-bali/travel-guide": {
+  "hash": "39d8180eb1472244",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/sunset-cruise-bali/tour-schedule": {
+  "hash": "5299ced3b59c30ff",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/sunset-cruise-bali/tour-schedule": {
+  "hash": "97886c419d15340f",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/sunset-cruise-bali/tour-schedule": {
+  "hash": "72b64b6bb3e32dd2",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/sunset-cruise-bali/tour-schedule": {
+  "hash": "663aff44bd197676",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/sunset-cruise-bali/tour-schedule": {
+  "hash": "fd988da7c2a8334d",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/surf-lesson-experience/why-book": {
+  "hash": "7ae2c78ff38c3cd9",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/surf-lesson-experience/why-book": {
+  "hash": "b36890ae38e4c999",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/surf-lesson-experience/why-book": {
+  "hash": "32a51e0a797d2bb1",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/surf-lesson-experience/why-book": {
+  "hash": "87905080b4c12416",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/surf-lesson-experience/why-book": {
+  "hash": "2215ac1cc77c9169",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/surf-lesson-experience/travel-guide": {
+  "hash": "8244ca03d87aff4f",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/surf-lesson-experience/travel-guide": {
+  "hash": "553f0eb805f2e9ab",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/surf-lesson-experience/travel-guide": {
+  "hash": "eb8a84d9f66e3b74",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/surf-lesson-experience/travel-guide": {
+  "hash": "cd63c5a8336b22ff",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/surf-lesson-experience/travel-guide": {
+  "hash": "84864ddeecd233d3",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/surf-lesson-experience/tour-schedule": {
+  "hash": "490b3d3d62163950",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/surf-lesson-experience/tour-schedule": {
+  "hash": "8229d825746248cf",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/surf-lesson-experience/tour-schedule": {
+  "hash": "622485caae3fb29e",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/surf-lesson-experience/tour-schedule": {
+  "hash": "50c21a409661584a",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/surf-lesson-experience/tour-schedule": {
+  "hash": "9d177466d62b0961",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-airport-transfer/why-book": {
+  "hash": "30861c185ab1d907",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-airport-transfer/why-book": {
+  "hash": "e18d4f7f2163f205",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-airport-transfer/why-book": {
+  "hash": "f930c9d67267bad7",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-airport-transfer/why-book": {
+  "hash": "2e1052f242e4bd8c",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-airport-transfer/why-book": {
+  "hash": "eeeb5416607d267b",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-airport-transfer/travel-guide": {
+  "hash": "14fc05787b2cd02b",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-airport-transfer/travel-guide": {
+  "hash": "ddebdf2bf8271fa1",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-airport-transfer/travel-guide": {
+  "hash": "cef8a08955233314",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-airport-transfer/travel-guide": {
+  "hash": "6928b7dfb293935c",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-airport-transfer/travel-guide": {
+  "hash": "836724d0e5845f1f",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-airport-transfer/tour-schedule": {
+  "hash": "7827446fed61b6a1",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-airport-transfer/tour-schedule": {
+  "hash": "881d7cfbf3e695ce",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-airport-transfer/tour-schedule": {
+  "hash": "ae8d774331091dd4",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-airport-transfer/tour-schedule": {
+  "hash": "dd2d8e69d4efa0af",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-airport-transfer/tour-schedule": {
+  "hash": "cb6c4ebbbdf43fa0",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/private-car-with-driver-bali/why-book": {
+  "hash": "22ede8b046f5c4a5",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/private-car-with-driver-bali/why-book": {
+  "hash": "186cde84cb6d8ff6",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/private-car-with-driver-bali/why-book": {
+  "hash": "af0311961e0f5499",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/private-car-with-driver-bali/why-book": {
+  "hash": "aa2114b36da3495e",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/private-car-with-driver-bali/why-book": {
+  "hash": "f087887fef1465d4",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/private-car-with-driver-bali/travel-guide": {
+  "hash": "69db635b8db10c03",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/private-car-with-driver-bali/travel-guide": {
+  "hash": "0d8f3b4da050461d",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/private-car-with-driver-bali/travel-guide": {
+  "hash": "f4a7da9a3891e867",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/private-car-with-driver-bali/travel-guide": {
+  "hash": "5a98a65913aa4536",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/private-car-with-driver-bali/travel-guide": {
+  "hash": "0657047c196f72d3",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/private-car-with-driver-bali/tour-schedule": {
+  "hash": "c39de0ce7e886c81",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/private-car-with-driver-bali/tour-schedule": {
+  "hash": "1985ec0b18de00f7",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/private-car-with-driver-bali/tour-schedule": {
+  "hash": "b2a1ec38edd743e6",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/private-car-with-driver-bali/tour-schedule": {
+  "hash": "f69205a3c11b994b",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/private-car-with-driver-bali/tour-schedule": {
+  "hash": "0b9488ac340db9a9",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/fast-boat-transfer-bali/why-book": {
+  "hash": "628873d4320e833a",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/fast-boat-transfer-bali/why-book": {
+  "hash": "678a6e4f6a08c74d",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/fast-boat-transfer-bali/why-book": {
+  "hash": "a955fee40ac9d7b9",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/fast-boat-transfer-bali/why-book": {
+  "hash": "3bda75ceef5b6d1b",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/fast-boat-transfer-bali/why-book": {
+  "hash": "f6827b73afb072ac",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/fast-boat-transfer-bali/travel-guide": {
+  "hash": "78959c191e15a4e9",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/fast-boat-transfer-bali/travel-guide": {
+  "hash": "5dbf646f69b1778a",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/fast-boat-transfer-bali/travel-guide": {
+  "hash": "e99817db5c50a746",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/fast-boat-transfer-bali/travel-guide": {
+  "hash": "48d2f8d01a8f37b9",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/fast-boat-transfer-bali/travel-guide": {
+  "hash": "d099d97962a67ff8",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/fast-boat-transfer-bali/tour-schedule": {
+  "hash": "1e525331b9390aa0",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/fast-boat-transfer-bali/tour-schedule": {
+  "hash": "0ea336ae43b577e7",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/fast-boat-transfer-bali/tour-schedule": {
+  "hash": "4e2b04d9170c9d0b",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/fast-boat-transfer-bali/tour-schedule": {
+  "hash": "7865d384ff8bf590",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/fast-boat-transfer-bali/tour-schedule": {
+  "hash": "0e083d067258bc74",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-sunset-spots-bali": {
+  "hash": "ae853f5c2ffe986a",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-sunset-spots-bali": {
+  "hash": "e92e8216c0f586c7",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-sunset-spots-bali": {
+  "hash": "51249a062104262c",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-sunset-spots-bali": {
+  "hash": "c5ef926dc9f53617",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-sunset-spots-bali": {
+  "hash": "3b5c49215132c45b",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/best-sunset-spots-bali": {
+  "hash": "997ec15b43c35e1f",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-day-trip-from-sanur": {
+  "hash": "a747f0f5f820dfd1",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-day-trip-from-sanur": {
+  "hash": "18dc3378827db934",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-day-trip-from-sanur": {
+  "hash": "8201a702ac4e5ea9",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-day-trip-from-sanur": {
+  "hash": "b8c31e63e6cd2564",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-day-trip-from-sanur": {
+  "hash": "6401ef8f12d89341",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/nusa-penida-day-trip-from-sanur": {
+  "hash": "615f108abd06352a",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/how-to-get-to-nusa-penida": {
+  "hash": "20e89e221185dc84",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/how-to-get-to-nusa-penida": {
+  "hash": "3bca7534449f97c9",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/how-to-get-to-nusa-penida": {
+  "hash": "4f21848045d7e5f8",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/how-to-get-to-nusa-penida": {
+  "hash": "adc7b47155d8e718",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/how-to-get-to-nusa-penida": {
+  "hash": "29784de46162e433",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/how-to-get-to-nusa-penida": {
+  "hash": "c0ece6511aa739a4",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/how-to-get-to-gili-trawangan-from-bali": {
+  "hash": "6a3e0090c2d90581",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/how-to-get-to-gili-trawangan-from-bali": {
+  "hash": "b598b88faaf552c8",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/how-to-get-to-gili-trawangan-from-bali": {
+  "hash": "5e5aabcf3dc55c3c",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/how-to-get-to-gili-trawangan-from-bali": {
+  "hash": "0c547f87ca086669",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/how-to-get-to-gili-trawangan-from-bali": {
+  "hash": "b9344e0a2a924d7d",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-sunrise-from-ubud": {
+  "hash": "058d1c38027b1205",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-sunrise-from-ubud": {
+  "hash": "4a3dcd796b6b3edf",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-sunrise-from-ubud": {
+  "hash": "53dfd315ab1cda02",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-sunrise-from-ubud": {
+  "hash": "09a2701d5b1e1bde",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-sunrise-from-ubud": {
+  "hash": "d6311f40491cc678",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/mount-batur-sunrise-from-ubud": {
+  "hash": "c4c8d654cbe63248",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-sunrise-from-south-bali": {
+  "hash": "e4a259a29a76bdbd",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-sunrise-from-south-bali": {
+  "hash": "1eb7d2ed55ac2f7f",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-sunrise-from-south-bali": {
+  "hash": "1126856b46f86ac5",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-sunrise-from-south-bali": {
+  "hash": "cab4bc5cd0610ec2",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-sunrise-from-south-bali": {
+  "hash": "d1c182fa424804eb",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/mount-batur-sunrise-from-south-bali": {
+  "hash": "9fed5a071ff36dea",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-airport-transfer-guide": {
+  "hash": "4f4a6cbe8444fba6",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-airport-transfer-guide": {
+  "hash": "42c601de0153635f",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-airport-transfer-guide": {
+  "hash": "17bb09f0fa3a49e0",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-airport-transfer-guide": {
+  "hash": "007e1f4dc7c616e5",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-airport-transfer-guide": {
+  "hash": "6094187789d84ec1",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/bali-airport-transfer-guide": {
+  "hash": "83f5588152bf58c8",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/snorkeling-near-seminyak-and-canggu": {
+  "hash": "4c069b19c53c4b17",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/snorkeling-near-seminyak-and-canggu": {
+  "hash": "2f88d9a28982c9d1",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/snorkeling-near-seminyak-and-canggu": {
+  "hash": "1d6618ebea336103",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/snorkeling-near-seminyak-and-canggu": {
+  "hash": "a75a363f735bc843",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/snorkeling-near-seminyak-and-canggu": {
+  "hash": "9b5b9b856a6e97cc",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/is-nusa-penida-worth-it": {
+  "hash": "0b21990193d231f0",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/is-nusa-penida-worth-it": {
+  "hash": "344deca0f935105b",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/is-nusa-penida-worth-it": {
+  "hash": "a4e15302b2f775a9",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/is-nusa-penida-worth-it": {
+  "hash": "ce35d66f20bf88ab",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/is-nusa-penida-worth-it": {
+  "hash": "a401067ec475c8e8",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/is-nusa-penida-worth-it": {
+  "hash": "5414a485918f4d25",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/is-nusa-penida-safe": {
+  "hash": "7c03cd2ccfdbfd83",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/is-nusa-penida-safe": {
+  "hash": "2bc3291161c74b30",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/is-nusa-penida-safe": {
+  "hash": "bea5b95832f87b56",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/is-nusa-penida-safe": {
+  "hash": "8b61d005dcd3b80a",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/is-nusa-penida-safe": {
+  "hash": "01604226f20095cc",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/is-nusa-penida-safe": {
+  "hash": "dcb6c1ade0990f79",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/is-mount-batur-safe": {
+  "hash": "983f9b147c43413a",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/is-mount-batur-safe": {
+  "hash": "bf6e3ee102cc9fe7",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/is-mount-batur-safe": {
+  "hash": "d436ad60d47a7b00",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/is-mount-batur-safe": {
+  "hash": "8e0cb4f40db46412",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/is-mount-batur-safe": {
+  "hash": "6d388338070b0611",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/is-mount-batur-safe": {
+  "hash": "381b6ac4a406d5ff",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-vs-mount-agung": {
+  "hash": "cc025164bc621a27",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-vs-mount-agung": {
+  "hash": "8f3afc74cdba1462",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-vs-mount-agung": {
+  "hash": "338e63753a935c9d",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-vs-mount-agung": {
+  "hash": "4ff3a42f44b74cc4",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-vs-mount-agung": {
+  "hash": "b87425bdff623573",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/mount-batur-vs-mount-agung": {
+  "hash": "7c6ba54e2d44c6d4",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-vs-nusa-lembongan": {
+  "hash": "e2edab285c35b646",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-vs-nusa-lembongan": {
+  "hash": "115b3a4238e8bc61",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-vs-nusa-lembongan": {
+  "hash": "9abf43c6b31cf9d8",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-vs-nusa-lembongan": {
+  "hash": "1b764d2867144bb2",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-vs-nusa-lembongan": {
+  "hash": "630ab3f6eea85c32",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/nusa-penida-vs-nusa-lembongan": {
+  "hash": "b6b2d38b699a7723",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/gili-air-vs-gili-trawangan": {
+  "hash": "64bbea8f7526d258",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/gili-air-vs-gili-trawangan": {
+  "hash": "070d48a11017cc61",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/gili-air-vs-gili-trawangan": {
+  "hash": "566e46328c78f366",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/gili-air-vs-gili-trawangan": {
+  "hash": "8014a434b4888945",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/gili-air-vs-gili-trawangan": {
+  "hash": "5313616276ea509b",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/gili-air-vs-gili-trawangan": {
+  "hash": "6ca0fc32610cf0c7",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/tanah-lot-vs-uluwatu-sunset": {
+  "hash": "e719dbc1bce0c1e2",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/tanah-lot-vs-uluwatu-sunset": {
+  "hash": "86e33c87fddcc9a3",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/tanah-lot-vs-uluwatu-sunset": {
+  "hash": "121ba101263c04b7",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/tanah-lot-vs-uluwatu-sunset": {
+  "hash": "031cc04d11710542",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/tanah-lot-vs-uluwatu-sunset": {
+  "hash": "117d01706e7768cf",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/tanah-lot-vs-uluwatu-sunset": {
+  "hash": "70106281cc8dcac3",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/lovina-dolphin-tour-worth-it": {
+  "hash": "f4a4efc88637d024",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/lovina-dolphin-tour-worth-it": {
+  "hash": "434a209b7af95969",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/lovina-dolphin-tour-worth-it": {
+  "hash": "df49eb836f408f31",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/lovina-dolphin-tour-worth-it": {
+  "hash": "e90af7673f38030b",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/lovina-dolphin-tour-worth-it": {
+  "hash": "5f14fd9f15269bda",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/lovina-dolphin-tour-worth-it": {
+  "hash": "cbd2ee3d56ca254f",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-sunset-cruise-worth-it": {
+  "hash": "1c756f5bc945c3fe",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-sunset-cruise-worth-it": {
+  "hash": "19b602942f9a9a8b",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-sunset-cruise-worth-it": {
+  "hash": "4f1f19ead9fb67e4",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-sunset-cruise-worth-it": {
+  "hash": "223db2892b2bbefc",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-sunset-cruise-worth-it": {
+  "hash": "cc6e6f4da879a1b8",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-with-kids": {
+  "hash": "d171f5510e4a77c3",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-with-kids": {
+  "hash": "ecfd656fb4bd454d",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-with-kids": {
+  "hash": "bba852355b7d0a65",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-with-kids": {
+  "hash": "1d032d420a0e74b4",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-with-kids": {
+  "hash": "f372ef8698099661",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/nusa-penida-with-kids": {
+  "hash": "6f51b33f0e2810d8",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-day-trips-with-kids": {
+  "hash": "72b1e358e8aa7e57",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-day-trips-with-kids": {
+  "hash": "d8775b599d48c3f1",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-day-trips-with-kids": {
+  "hash": "a036f5ed808fb646",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-day-trips-with-kids": {
+  "hash": "c412dbd72fa6c471",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-day-trips-with-kids": {
+  "hash": "7912c09d1db0ae80",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/bali-day-trips-with-kids": {
+  "hash": "75e24a9208ebf591",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-honeymoon-day-trips": {
+  "hash": "f9817b58ed72bc16",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-honeymoon-day-trips": {
+  "hash": "d25506a51e325b97",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-honeymoon-day-trips": {
+  "hash": "205b1241b2c3b2bd",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-honeymoon-day-trips": {
+  "hash": "4f94f5dd334f3b00",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-honeymoon-day-trips": {
+  "hash": "a332ed5b111e2122",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-itinerary-5-days": {
+  "hash": "7d3b6438aa05fc05",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-itinerary-5-days": {
+  "hash": "739fe6d186c26062",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-itinerary-5-days": {
+  "hash": "e330f5a3e6544e79",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-itinerary-5-days": {
+  "hash": "521df64b94d12934",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-itinerary-5-days": {
+  "hash": "cd0e7f22b49ad985",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-itinerary-10-days": {
+  "hash": "1402f7ce9a9f6377",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-itinerary-10-days": {
+  "hash": "e490661acb6ae0aa",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-itinerary-10-days": {
+  "hash": "5b1d1f8ff5f7e38c",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-itinerary-10-days": {
+  "hash": "f901a1eeec86d59d",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-itinerary-10-days": {
+  "hash": "85ef00cbc3c5ced3",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/bali-itinerary-10-days": {
+  "hash": "b06efa47da29e3df",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/white-water-rafting-bali-guide": {
+  "hash": "8e140828270add07",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/white-water-rafting-bali-guide": {
+  "hash": "b5e22c86ff7e3b13",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/white-water-rafting-bali-guide": {
+  "hash": "ecd4302cafb469aa",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/white-water-rafting-bali-guide": {
+  "hash": "c5b17a96bb97ef57",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/white-water-rafting-bali-guide": {
+  "hash": "8b5f67e057dbcb1e",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/white-water-rafting-bali-guide": {
+  "hash": "0177ea81174f4139",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-atv-tours-guide": {
+  "hash": "5a36d4601b19a973",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-atv-tours-guide": {
+  "hash": "9858e86a0ae96078",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-atv-tours-guide": {
+  "hash": "b937730caae2b758",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-atv-tours-guide": {
+  "hash": "17321e7462b9a9fa",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-atv-tours-guide": {
+  "hash": "0a89b314283d3214",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/bali-atv-tours-guide": {
+  "hash": "8c03cbec1d31dfd3",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/surf-lessons-bali-beginners": {
+  "hash": "0077194cf336db46",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/surf-lessons-bali-beginners": {
+  "hash": "cdce44e5e49abdf1",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/surf-lessons-bali-beginners": {
+  "hash": "a7d49e5a52251f5f",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/surf-lessons-bali-beginners": {
+  "hash": "756563875ab0245c",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/surf-lessons-bali-beginners": {
+  "hash": "410cab630954a3b0",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/surf-lessons-bali-beginners": {
+  "hash": "42ea8f56fc256845",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/ubud-in-one-day": {
+  "hash": "b1b64dc2afde4e75",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/ubud-in-one-day": {
+  "hash": "246e55a9f209f07f",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/ubud-in-one-day": {
+  "hash": "170cce66cda2e902",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/ubud-in-one-day": {
+  "hash": "06b73c28c6368ad9",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/ubud-in-one-day": {
+  "hash": "737db74bbf246762",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/ubud-in-one-day": {
+  "hash": "2e5d05119aff1124",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-one-day-itinerary": {
+  "hash": "952b023a554dd16c",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-one-day-itinerary": {
+  "hash": "97133079b0e9942d",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-one-day-itinerary": {
+  "hash": "080d027f56c5cf62",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-one-day-itinerary": {
+  "hash": "bde48927bec5f770",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-one-day-itinerary": {
+  "hash": "7f3226cdaf2857c2",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/nusa-penida-one-day-itinerary": {
+  "hash": "facdc3127b7a0154",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-without-a-tour": {
+  "hash": "c20d03622554c8ea",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-without-a-tour": {
+  "hash": "77e4632c954f9e62",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-without-a-tour": {
+  "hash": "8b3cb3df19064f1c",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-without-a-tour": {
+  "hash": "15235f64be996ab7",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-without-a-tour": {
+  "hash": "ea38fd4ccc8bcc99",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/nusa-penida-without-a-tour": {
+  "hash": "16a16bd9fb100ab5",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-day-trip-from-ubud": {
+  "hash": "60bb6276830a2016",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-day-trip-from-ubud": {
+  "hash": "92767d2f9158fce0",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-day-trip-from-ubud": {
+  "hash": "a73aca561e920f54",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-day-trip-from-ubud": {
+  "hash": "7ac7f12836c6ad07",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-day-trip-from-ubud": {
+  "hash": "e7040a645a81b567",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-day-trip-from-uluwatu": {
+  "hash": "1f977498bbf49935",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-day-trip-from-uluwatu": {
+  "hash": "610ae6aa0f0bb796",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-day-trip-from-uluwatu": {
+  "hash": "efbc97ebeea23da8",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-day-trip-from-uluwatu": {
+  "hash": "8a61a44f0dfc75ae",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-day-trip-from-uluwatu": {
+  "hash": "36e18c4a0d990f06",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/nusa-penida-day-trip-from-uluwatu": {
+  "hash": "4a4a339febf274fa",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-day-trip-from-canggu": {
+  "hash": "4b6eb0754f9b209e",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-day-trip-from-canggu": {
+  "hash": "92d8a856c1c70e47",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-day-trip-from-canggu": {
+  "hash": "1f3441ef385d12ee",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-day-trip-from-canggu": {
+  "hash": "a4e2246f1197ff23",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-day-trip-from-canggu": {
+  "hash": "18b0a8af4c2fbdef",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-day-trip-from-seminyak": {
+  "hash": "f66df6e9b3527eef",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-day-trip-from-seminyak": {
+  "hash": "65afd76ad9a4c03d",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-day-trip-from-seminyak": {
+  "hash": "5aa85fbdfcc76034",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-day-trip-from-seminyak": {
+  "hash": "5b6cdaa9496b5046",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-day-trip-from-seminyak": {
+  "hash": "a6bf7305d293b7de",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-private-driver-cost": {
+  "hash": "7a775746b4b6c0dd",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-private-driver-cost": {
+  "hash": "6dfc256848207fb5",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-private-driver-cost": {
+  "hash": "1e6492f4399b893d",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-private-driver-cost": {
+  "hash": "ef4c26e9951fa125",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-private-driver-cost": {
+  "hash": "ce2481fd17138266",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/bali-private-driver-cost": {
+  "hash": "b99bedbbc7c8770f",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-snorkeling-for-beginners": {
+  "hash": "a0cd74d3424b7bc3",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-snorkeling-for-beginners": {
+  "hash": "d5d6971056d26d53",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-snorkeling-for-beginners": {
+  "hash": "827892c4138d11a0",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-snorkeling-for-beginners": {
+  "hash": "48a0cd1d3eb513f3",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-snorkeling-for-beginners": {
+  "hash": "57661b9cb725d11b",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/bali-snorkeling-for-beginners": {
+  "hash": "bb2e882eb73c8e02",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-7-day-itinerary": {
+  "hash": "2383a34df94ea540",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-7-day-itinerary": {
+  "hash": "1f200e6a7ae121d6",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-7-day-itinerary": {
+  "hash": "212d7f28123c740d",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-7-day-itinerary": {
+  "hash": "f4c7ad98c67e7128",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-7-day-itinerary": {
+  "hash": "d1c768467f20c8b3",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/bali-7-day-itinerary": {
+  "hash": "79161c535f64b2c3",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/how-to-get-around-bali": {
+  "hash": "7eba233a13d5296a",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/how-to-get-around-bali": {
+  "hash": "ddf8dd0f774f27ba",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/how-to-get-around-bali": {
+  "hash": "25c22237a84896c4",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/how-to-get-around-bali": {
+  "hash": "db72cf2cf3ee0f40",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/how-to-get-around-bali": {
+  "hash": "a7a7effb4c4d9f1a",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/how-to-get-around-bali": {
+  "hash": "d2cb1f7fe50a087e",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/gili-t-day-trip-from-seminyak": {
+  "hash": "cd79b4b83dd2564c",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/gili-t-day-trip-from-seminyak": {
+  "hash": "224da7552da3d20b",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/gili-t-day-trip-from-seminyak": {
+  "hash": "48b9dff893ced784",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/gili-t-day-trip-from-seminyak": {
+  "hash": "fbda4c006511589a",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/gili-t-day-trip-from-seminyak": {
+  "hash": "c7fff0dd3f72d802",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/blue-lagoon-padang-bai-guide": {
+  "hash": "add7b960441a8a30",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/blue-lagoon-padang-bai-guide": {
+  "hash": "4d18a89bd35f3907",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/blue-lagoon-padang-bai-guide": {
+  "hash": "cf228442a6bdb730",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/blue-lagoon-padang-bai-guide": {
+  "hash": "2c08616d10c61595",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/blue-lagoon-padang-bai-guide": {
+  "hash": "a50819e28087916a",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/blue-lagoon-padang-bai-guide": {
+  "hash": "97610a716c1d03c3",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-beaches-nusa-penida": {
+  "hash": "2a873ea69ca188ea",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-beaches-nusa-penida": {
+  "hash": "2a7c9e83d73039cd",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-beaches-nusa-penida": {
+  "hash": "9fad019f8a5df5ee",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-beaches-nusa-penida": {
+  "hash": "24dfb7665bbfbd85",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-beaches-nusa-penida": {
+  "hash": "ee8129cd1d0134c7",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/best-beaches-nusa-penida": {
+  "hash": "a78f6b792cadfa7a",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/manta-point-bali-guide": {
+  "hash": "31d9ef74df75f761",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/manta-point-bali-guide": {
+  "hash": "54037ee73f39bea4",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/manta-point-bali-guide": {
+  "hash": "b237331ab2cb247e",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/manta-point-bali-guide": {
+  "hash": "2a833a3d835faed1",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/manta-point-bali-guide": {
+  "hash": "ad3ce18da347a1c9",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/crystal-bay-nusa-penida": {
+  "hash": "7df7c8f1d7d4cf63",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/crystal-bay-nusa-penida": {
+  "hash": "db4539cf7a9b5c72",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/crystal-bay-nusa-penida": {
+  "hash": "9a6106af318954c9",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/crystal-bay-nusa-penida": {
+  "hash": "3ae74fd3bcb89183",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/crystal-bay-nusa-penida": {
+  "hash": "771c168d4a2c3ed4",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/can-you-swim-in-bali": {
+  "hash": "4176718e3c008e94",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/can-you-swim-in-bali": {
+  "hash": "0b30e8ca024ca99b",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/can-you-swim-in-bali": {
+  "hash": "5bb496d2783b2486",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/can-you-swim-in-bali": {
+  "hash": "b7a15a9a3fe2923b",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/can-you-swim-in-bali": {
+  "hash": "63e59fb51210d39e",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/snorkeling-with-turtles-bali": {
+  "hash": "8b5def603431d949",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/snorkeling-with-turtles-bali": {
+  "hash": "66f2dd606778285a",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/snorkeling-with-turtles-bali": {
+  "hash": "6caf1e7d2b53e861",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/snorkeling-with-turtles-bali": {
+  "hash": "4acfcf90f31563d5",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/snorkeling-with-turtles-bali": {
+  "hash": "2ea0ec7a62dd5d7a",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/snorkeling-with-turtles-bali": {
+  "hash": "dba5e9e73308b2fe",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-time-clear-water-bali": {
+  "hash": "31196d3755957867",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-time-clear-water-bali": {
+  "hash": "5a04605096ec5b64",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-time-clear-water-bali": {
+  "hash": "2c60218ec0839a76",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-time-clear-water-bali": {
+  "hash": "53162cf1c2e14f6e",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-time-clear-water-bali": {
+  "hash": "4e644b319da1891b",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/gili-islands-vs-nusa-penida": {
+  "hash": "ce79536327a54b20",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/gili-islands-vs-nusa-penida": {
+  "hash": "4033d08dff1051d9",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/gili-islands-vs-nusa-penida": {
+  "hash": "39ddb6a61fb68ce9",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/gili-islands-vs-nusa-penida": {
+  "hash": "806d5c89cf1b65eb",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/gili-islands-vs-nusa-penida": {
+  "hash": "f1f76ed69df141f1",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/calm-beaches-bali-kids": {
+  "hash": "4828598ea69ff90f",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/calm-beaches-bali-kids": {
+  "hash": "11fac01a672277c3",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/calm-beaches-bali-kids": {
+  "hash": "7108a5843d499e75",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/calm-beaches-bali-kids": {
+  "hash": "9af18cfd7af6ae77",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/calm-beaches-bali-kids": {
+  "hash": "76c865ff71abcefc",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/calm-beaches-bali-kids": {
+  "hash": "98cb459a76cffdd6",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-white-sand-beaches-bali": {
+  "hash": "9f5bbd30f3e4772f",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-white-sand-beaches-bali": {
+  "hash": "7938f6e3d8e70e13",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-white-sand-beaches-bali": {
+  "hash": "d718087c3146674a",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-white-sand-beaches-bali": {
+  "hash": "b8b57069c8077d50",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-white-sand-beaches-bali": {
+  "hash": "c46a945287c8fe62",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/best-white-sand-beaches-bali": {
+  "hash": "c265b95eba16e551",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/amed-tulamben-snorkeling": {
+  "hash": "0127460c04a13072",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/amed-tulamben-snorkeling": {
+  "hash": "728204cf9bf76d0f",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/amed-tulamben-snorkeling": {
+  "hash": "74f5d29f3ae3830a",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/amed-tulamben-snorkeling": {
+  "hash": "c5b72f7ebbe075fe",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/amed-tulamben-snorkeling": {
+  "hash": "296840abd74fb200",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/amed-tulamben-snorkeling": {
+  "hash": "7cff8213c27edc26",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/menjangan-island-bali": {
+  "hash": "7b9ffbe533474aa1",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/menjangan-island-bali": {
+  "hash": "b81555928a893386",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/menjangan-island-bali": {
+  "hash": "2cbc7a1058d3ac10",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/menjangan-island-bali": {
+  "hash": "ca5d6533d295bb51",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/menjangan-island-bali": {
+  "hash": "8741a89265b73ec4",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-beaches-canggu-seminyak": {
+  "hash": "9feed735c51e94c4",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-beaches-canggu-seminyak": {
+  "hash": "125e08bf6097600a",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-beaches-canggu-seminyak": {
+  "hash": "98a6c3f362ff9aae",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-beaches-canggu-seminyak": {
+  "hash": "e70cd9b06ec6c85b",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-beaches-canggu-seminyak": {
+  "hash": "934951602198f71c",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/best-beaches-canggu-seminyak": {
+  "hash": "a17bb0a850a8fdda",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-beaches-uluwatu-bukit": {
+  "hash": "709ca374ea3edcc5",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-beaches-uluwatu-bukit": {
+  "hash": "744498c8c5ac1a39",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-beaches-uluwatu-bukit": {
+  "hash": "afdf5344a5dafeb3",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-beaches-uluwatu-bukit": {
+  "hash": "0df20f51edf31487",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-beaches-uluwatu-bukit": {
+  "hash": "4deb50217fbe7cae",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/best-beaches-uluwatu-bukit": {
+  "hash": "20961360734b18e5",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-snorkeling-spots-bali": {
+  "hash": "1ecc22e7f304a0f9",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-snorkeling-spots-bali": {
+  "hash": "c81d0111049a13ae",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-snorkeling-spots-bali": {
+  "hash": "a67e566e48d21706",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-snorkeling-spots-bali": {
+  "hash": "dc147f2f763d0da7",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-snorkeling-spots-bali": {
+  "hash": "9529cc9fab046a50",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/first-time-in-bali-complete-guide": {
+  "hash": "d43df2125822e6aa",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/first-time-in-bali-complete-guide": {
+  "hash": "8621bc41be0b68dc",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/first-time-in-bali-complete-guide": {
+  "hash": "4da72c40f32efb1c",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/first-time-in-bali-complete-guide": {
+  "hash": "1f23db09efc8c354",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/first-time-in-bali-complete-guide": {
+  "hash": "9c559026b223b94d",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-beaches-bali-crystal-clear-water": {
+  "hash": "13c043e284cc0ef2",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-beaches-bali-crystal-clear-water": {
+  "hash": "06028d107bd1aa8f",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-beaches-bali-crystal-clear-water": {
+  "hash": "ad17f9d4a7d6ea4c",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-beaches-bali-crystal-clear-water": {
+  "hash": "d33c48719ca49c8a",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-beaches-bali-crystal-clear-water": {
+  "hash": "a73434e3f5d395a6",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/best-beaches-bali-crystal-clear-water": {
+  "hash": "f3879bc50573744b",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-places-to-visit-bali-first-time": {
+  "hash": "dc5e70ffd3d262e6",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-places-to-visit-bali-first-time": {
+  "hash": "32b34c10195d52be",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-places-to-visit-bali-first-time": {
+  "hash": "f0bb83cd9af29584",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-places-to-visit-bali-first-time": {
+  "hash": "8c51f37bae1f1693",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-places-to-visit-bali-first-time": {
+  "hash": "65c3e97672f7128f",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-beach-clubs-bali-young-adults": {
+  "hash": "a694722af7b044c7",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-beach-clubs-bali-young-adults": {
+  "hash": "11612df28341d869",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-beach-clubs-bali-young-adults": {
+  "hash": "309bb1496474436d",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-beach-clubs-bali-young-adults": {
+  "hash": "22daab6f4ab81ae0",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-beach-clubs-bali-young-adults": {
+  "hash": "999af2e2f6b1c0e0",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-budget-restaurants-bali-warungs": {
+  "hash": "baa22e9366b2f231",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-budget-restaurants-bali-warungs": {
+  "hash": "0b38f9118c85b26e",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-budget-restaurants-bali-warungs": {
+  "hash": "03eac22c1c542c8c",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-budget-restaurants-bali-warungs": {
+  "hash": "2862d73f52b233ea",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-budget-restaurants-bali-warungs": {
+  "hash": "b02a11f7bf0afa06",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-instagram-places-bali": {
+  "hash": "5794556cbb7bf7d8",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-instagram-places-bali": {
+  "hash": "ac0c37c13a12c5ba",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-instagram-places-bali": {
+  "hash": "76e95c22ea91dfaa",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-instagram-places-bali": {
+  "hash": "298a1292143e12f2",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-instagram-places-bali": {
+  "hash": "0514207b51b2e752",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/where-to-stay-bali-first-time": {
+  "hash": "592d701e34986de9",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/where-to-stay-bali-first-time": {
+  "hash": "1cb24d2ba9b91a99",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/where-to-stay-bali-first-time": {
+  "hash": "f8c355933500cd4d",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/where-to-stay-bali-first-time": {
+  "hash": "ff45e0d2310c4f5f",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/where-to-stay-bali-first-time": {
+  "hash": "d406d068b545be61",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/where-to-stay-bali-first-time": {
+  "hash": "5df8821121c4a2bd",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-things-to-do-bali-for-couples": {
+  "hash": "369e60a63d2a1ac5",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-things-to-do-bali-for-couples": {
+  "hash": "8f5cf408558ae7de",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-things-to-do-bali-for-couples": {
+  "hash": "e6d83bb2dd9ccab1",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-things-to-do-bali-for-couples": {
+  "hash": "8134b1324bd8fc33",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-things-to-do-bali-for-couples": {
+  "hash": "f9799d0b43c78ca6",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-temples-bali-cultural-sites": {
+  "hash": "aa164ca2f20b44b1",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-temples-bali-cultural-sites": {
+  "hash": "951582494fa66ddc",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-temples-bali-cultural-sites": {
+  "hash": "f8a7fa65b5d8009c",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-temples-bali-cultural-sites": {
+  "hash": "59f98e5385d398d3",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-temples-bali-cultural-sites": {
+  "hash": "4841833e9227825b",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-waterfalls-bali-day-trips": {
+  "hash": "459ff592f4a72021",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-waterfalls-bali-day-trips": {
+  "hash": "2e90dbf79876d65a",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-waterfalls-bali-day-trips": {
+  "hash": "c608924b8af95018",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-waterfalls-bali-day-trips": {
+  "hash": "b0d52d4aa61bcce6",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-waterfalls-bali-day-trips": {
+  "hash": "080df75a4a861891",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-viewpoints-bali-sunrise-cliffs-rice-terraces": {
+  "hash": "dfc5e56e85af0dea",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-viewpoints-bali-sunrise-cliffs-rice-terraces": {
+  "hash": "63d34a26ac881fed",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-viewpoints-bali-sunrise-cliffs-rice-terraces": {
+  "hash": "e67d42ab0c8e4924",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-viewpoints-bali-sunrise-cliffs-rice-terraces": {
+  "hash": "fc7f0081e094b060",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-viewpoints-bali-sunrise-cliffs-rice-terraces": {
+  "hash": "8a4fae76dba481de",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-itinerary-7-days-first-time": {
+  "hash": "aeb83ad158a572ac",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-itinerary-7-days-first-time": {
+  "hash": "d757b164a7b792c0",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-itinerary-7-days-first-time": {
+  "hash": "a85c69589941024f",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-itinerary-7-days-first-time": {
+  "hash": "874d5b383d825bf4",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-itinerary-7-days-first-time": {
+  "hash": "7f5417bd1c8339fd",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/things-to-do-ubud-bali-complete-guide": {
+  "hash": "e2d8c91fa7968576",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/things-to-do-ubud-bali-complete-guide": {
+  "hash": "42b06931208d2ce3",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/things-to-do-ubud-bali-complete-guide": {
+  "hash": "3bc96a754e059c94",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/things-to-do-ubud-bali-complete-guide": {
+  "hash": "06e9c81eedb0c628",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/things-to-do-ubud-bali-complete-guide": {
+  "hash": "081f1cacd02c9383",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/how-much-does-a-bali-trip-cost": {
+  "hash": "b0f5b6be34f94ee3",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/how-much-does-a-bali-trip-cost": {
+  "hash": "af0e4eae526f14e5",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/how-much-does-a-bali-trip-cost": {
+  "hash": "a31de31462f540f7",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/how-much-does-a-bali-trip-cost": {
+  "hash": "0e828f5a19baf1b5",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/how-much-does-a-bali-trip-cost": {
+  "hash": "b4278b7ba960dd03",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/how-much-does-a-bali-trip-cost": {
+  "hash": "941f87ab59fed515",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-visa-entry-requirements": {
+  "hash": "1b9b405103d6b32c",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-visa-entry-requirements": {
+  "hash": "abbbb67cd13c581a",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-visa-entry-requirements": {
+  "hash": "5b3a153686234452",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-visa-entry-requirements": {
+  "hash": "1ae4988e3b2a2a37",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-visa-entry-requirements": {
+  "hash": "1b93c232b13e4688",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/how-to-get-around-bali-transport-guide": {
+  "hash": "b182c426c42af5c0",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/how-to-get-around-bali-transport-guide": {
+  "hash": "510ea0cef9ee63f3",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/how-to-get-around-bali-transport-guide": {
+  "hash": "a32883df16e589ae",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/how-to-get-around-bali-transport-guide": {
+  "hash": "d584f288d20090e8",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/how-to-get-around-bali-transport-guide": {
+  "hash": "617ddcf99eee8419",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-time-to-visit-bali-month-by-month": {
+  "hash": "bd6c851523087590",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-time-to-visit-bali-month-by-month": {
+  "hash": "53a49cdfd3eb397c",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-time-to-visit-bali-month-by-month": {
+  "hash": "e6b2292497afa3e2",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-time-to-visit-bali-month-by-month": {
+  "hash": "d2f1c638d3cdfeba",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-time-to-visit-bali-month-by-month": {
+  "hash": "c2f200c1ac9db962",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/best-time-to-visit-bali-month-by-month": {
+  "hash": "a89f1e99e75d1bee",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-complete-guide": {
+  "hash": "828f246b160e376b",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-complete-guide": {
+  "hash": "fbb2a5f29655a06f",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-complete-guide": {
+  "hash": "e3c0c92ec822769f",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-complete-guide": {
+  "hash": "aeec25e702e6d0ee",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-complete-guide": {
+  "hash": "f4fc70e8974b8609",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/things-to-do-canggu-bali-guide": {
+  "hash": "f1fe2a2496f92cb5",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/things-to-do-canggu-bali-guide": {
+  "hash": "302164973bd13dc5",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/things-to-do-canggu-bali-guide": {
+  "hash": "10e74cdeb4c3efae",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/things-to-do-canggu-bali-guide": {
+  "hash": "70f02481d68f614f",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/things-to-do-canggu-bali-guide": {
+  "hash": "338a40247fa47222",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/things-to-do-uluwatu-bali-guide": {
+  "hash": "633aef936b64bbee",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/things-to-do-uluwatu-bali-guide": {
+  "hash": "34b512912b160f37",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/things-to-do-uluwatu-bali-guide": {
+  "hash": "71c671aeb5e96f6d",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/things-to-do-uluwatu-bali-guide": {
+  "hash": "ad9d6d6346049956",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/things-to-do-uluwatu-bali-guide": {
+  "hash": "09e517c2e6e49ad2",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/things-to-do-seminyak-bali-guide": {
+  "hash": "e00fbc15f81a228e",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/things-to-do-seminyak-bali-guide": {
+  "hash": "fa57e38950ea73be",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/things-to-do-seminyak-bali-guide": {
+  "hash": "ffa394b28a2ced2e",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/things-to-do-seminyak-bali-guide": {
+  "hash": "bdb78b5156f597fb",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/things-to-do-seminyak-bali-guide": {
+  "hash": "5793bfdc4816e72e",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/things-to-do-seminyak-bali-guide": {
+  "hash": "cfa99c68402eb751",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-with-kids-family-guide": {
+  "hash": "b9f8cabad7dea8c2",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-with-kids-family-guide": {
+  "hash": "83320d91ccbb4fa2",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-with-kids-family-guide": {
+  "hash": "93f4d1f9968f9063",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-with-kids-family-guide": {
+  "hash": "03ca0ba8d5d024c4",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-with-kids-family-guide": {
+  "hash": "cb36ea95237a652e",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/what-to-pack-for-bali": {
+  "hash": "4bf7c3d22fee4f65",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/what-to-pack-for-bali": {
+  "hash": "bf6d2bc5b409031e",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/what-to-pack-for-bali": {
+  "hash": "87955579032a7ea0",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/what-to-pack-for-bali": {
+  "hash": "d11dea44935bcf1a",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/what-to-pack-for-bali": {
+  "hash": "d9bfdc8e8ff7fded",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/what-to-eat-in-bali-food-guide": {
+  "hash": "d3a94cabd95df337",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/what-to-eat-in-bali-food-guide": {
+  "hash": "804c94bf51dddb3b",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/what-to-eat-in-bali-food-guide": {
+  "hash": "3c115053865380b1",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/what-to-eat-in-bali-food-guide": {
+  "hash": "8cb03ecc5c1e7dcb",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/what-to-eat-in-bali-food-guide": {
+  "hash": "37611ec2cf764bd6",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-safety-scams-and-health": {
+  "hash": "2ed6fd229554b126",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-safety-scams-and-health": {
+  "hash": "c957c666638b5454",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-safety-scams-and-health": {
+  "hash": "9266c3a88b6f935d",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-safety-scams-and-health": {
+  "hash": "e1dd60addcdbd183",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-safety-scams-and-health": {
+  "hash": "f6f58d13f421d01f",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/bali-safety-scams-and-health": {
+  "hash": "a5499db855696ecf",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/can-you-hike-mount-batur-without-a-guide": {
+  "hash": "68b0cafb9b977262",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/can-you-hike-mount-batur-without-a-guide": {
+  "hash": "2b046abcb5339309",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/can-you-hike-mount-batur-without-a-guide": {
+  "hash": "886b1384b7667393",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/can-you-hike-mount-batur-without-a-guide": {
+  "hash": "7b4cf38776798aa9",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/can-you-hike-mount-batur-without-a-guide": {
+  "hash": "ca031e3f8eecc164",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/can-you-hike-mount-batur-without-a-guide": {
+  "hash": "2d6c3360e8732c24",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-tourist-tax-levy-guide": {
+  "hash": "1dd5847ced5f8a02",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-tourist-tax-levy-guide": {
+  "hash": "4afb501d7d904a1c",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-tourist-tax-levy-guide": {
+  "hash": "4af57ce4d0c3c1e6",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-tourist-tax-levy-guide": {
+  "hash": "be8810f5c0cf9d6e",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-tourist-tax-levy-guide": {
+  "hash": "76b6ffbb31df7ac6",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/bali-tourist-tax-levy-guide": {
+  "hash": "3bdf5ebdd49d62c3",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/is-mount-batur-worth-it": {
+  "hash": "726cedba0308b1ee",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/is-mount-batur-worth-it": {
+  "hash": "aacbccbb01e5a6b4",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/is-mount-batur-worth-it": {
+  "hash": "e1bf038346150355",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/is-mount-batur-worth-it": {
+  "hash": "17eafa2338a70585",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/is-mount-batur-worth-it": {
+  "hash": "95ee1526ae2a32a8",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/are-gili-islands-worth-it": {
+  "hash": "42ad0b4472904fec",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/are-gili-islands-worth-it": {
+  "hash": "b27566312aca1bc3",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/are-gili-islands-worth-it": {
+  "hash": "d7ea1574bc2c5905",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/are-gili-islands-worth-it": {
+  "hash": "3a394e357c4e79a6",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/are-gili-islands-worth-it": {
+  "hash": "a925d177c108c9ea",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/are-gili-islands-worth-it": {
+  "hash": "690d5c91bd291d6d",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-entrance-fees-2026": {
+  "hash": "737b65fdf3625b02",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-entrance-fees-2026": {
+  "hash": "334cd15d03da3a3b",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-entrance-fees-2026": {
+  "hash": "bfdcb5f85a48320d",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-entrance-fees-2026": {
+  "hash": "6044efac02149a17",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-entrance-fees-2026": {
+  "hash": "8bf6fbccb61bd639",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-sunrise-vs-sunset": {
+  "hash": "56a7fddc70c04603",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-sunrise-vs-sunset": {
+  "hash": "1e4c859b91daa937",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-sunrise-vs-sunset": {
+  "hash": "a10ce6c6c95d2876",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-sunrise-vs-sunset": {
+  "hash": "68793629c0b17810",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-sunrise-vs-sunset": {
+  "hash": "6f9a9217fc602a39",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/gili-trawangan-vs-air-vs-meno": {
+  "hash": "c7ed79719de3bef9",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/gili-trawangan-vs-air-vs-meno": {
+  "hash": "b1f571677515fc51",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/gili-trawangan-vs-air-vs-meno": {
+  "hash": "005f824061d68ba6",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/gili-trawangan-vs-air-vs-meno": {
+  "hash": "29b3dcb47f9f0a16",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/gili-trawangan-vs-air-vs-meno": {
+  "hash": "0b0143bceae7c887",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/are-gili-islands-safe": {
+  "hash": "0bf948192011be10",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/are-gili-islands-safe": {
+  "hash": "3091a74196edccc1",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/are-gili-islands-safe": {
+  "hash": "0acf5b88ebdecb04",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/are-gili-islands-safe": {
+  "hash": "0989fbae736fd494",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/are-gili-islands-safe": {
+  "hash": "26fb11324920372c",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/are-gili-islands-safe": {
+  "hash": "6816c21b57bc66c2",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/manta-ray-season-bali": {
+  "hash": "4a3c3c1801709092",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/manta-ray-season-bali": {
+  "hash": "6807822d3e4d5ae0",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/manta-ray-season-bali": {
+  "hash": "4f505c7d83c9c81a",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/manta-ray-season-bali": {
+  "hash": "8b31290c6ae44b36",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/manta-ray-season-bali": {
+  "hash": "03efb4222222e748",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/grab-gojek-or-private-driver-bali": {
+  "hash": "55f4d942fe9e79fd",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/grab-gojek-or-private-driver-bali": {
+  "hash": "aef2487ba40f4244",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/grab-gojek-or-private-driver-bali": {
+  "hash": "6eb16de01138253b",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/grab-gojek-or-private-driver-bali": {
+  "hash": "65d5365fb33ad52d",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/grab-gojek-or-private-driver-bali": {
+  "hash": "28fcf8dda6acf994",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/grab-gojek-or-private-driver-bali": {
+  "hash": "26f8a9ed143fc2c7",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/whale-shark-season-sumbawa": {
+  "hash": "469b55b674ffb0a3",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/whale-shark-season-sumbawa": {
+  "hash": "5d2ec7a7f7209e10",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/whale-shark-season-sumbawa": {
+  "hash": "160e00e3a0f8d18c",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/whale-shark-season-sumbawa": {
+  "hash": "b657473f3a2525f2",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/whale-shark-season-sumbawa": {
+  "hash": "af6759906f7ad970",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/whale-shark-season-sumbawa": {
+  "hash": "291d1d4cf3f27e5c",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-tours-in-rainy-season": {
+  "hash": "30577c96a7a286df",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-tours-in-rainy-season": {
+  "hash": "f3a127818bc804ee",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-tours-in-rainy-season": {
+  "hash": "d3b74078dcec4ecb",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-tours-in-rainy-season": {
+  "hash": "55841163df3ce675",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-tours-in-rainy-season": {
+  "hash": "40ff885cee579a52",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/kelingking-beach-guide": {
+  "hash": "8406b72c87d57afe",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/kelingking-beach-guide": {
+  "hash": "fc57077e07f2f007",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/kelingking-beach-guide": {
+  "hash": "13c0291dd5029cc1",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/kelingking-beach-guide": {
+  "hash": "12d37ac004772b7a",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/kelingking-beach-guide": {
+  "hash": "41a474bac28b30c7",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/kelingking-beach-guide": {
+  "hash": "c60ba57342352c52",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/broken-beach-angels-billabong": {
+  "hash": "cd67b4e15e138b85",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/broken-beach-angels-billabong": {
+  "hash": "b728cd447b0a0cb4",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/broken-beach-angels-billabong": {
+  "hash": "c82798ba5701f55b",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/broken-beach-angels-billabong": {
+  "hash": "84270240b10bfeca",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/broken-beach-angels-billabong": {
+  "hash": "9b21cf9c7160fa20",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/broken-beach-angels-billabong": {
+  "hash": "7802b712791b6372",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/diamond-beach-nusa-penida-guide": {
+  "hash": "557e8073d7515190",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/diamond-beach-nusa-penida-guide": {
+  "hash": "c98401a0f2971c0f",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/diamond-beach-nusa-penida-guide": {
+  "hash": "695244f069c8442d",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/diamond-beach-nusa-penida-guide": {
+  "hash": "51142f86290fce9d",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/diamond-beach-nusa-penida-guide": {
+  "hash": "ac9161ce3b134e92",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/diamond-beach-nusa-penida-guide": {
+  "hash": "07dedaf8633012f2",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/tukad-cepung-waterfall-guide": {
+  "hash": "203b4fd137c43170",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/tukad-cepung-waterfall-guide": {
+  "hash": "4177c33a69860175",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/tukad-cepung-waterfall-guide": {
+  "hash": "cd63c53ac2f58fdc",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/tukad-cepung-waterfall-guide": {
+  "hash": "a0cdb71042d1776e",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/tukad-cepung-waterfall-guide": {
+  "hash": "4dc94de58d142273",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/tukad-cepung-waterfall-guide": {
+  "hash": "d5bdba4d9155f273",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/tirta-empul-guide": {
+  "hash": "106780dc6b0adc2f",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/tirta-empul-guide": {
+  "hash": "dd01460cb40fb06f",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/tirta-empul-guide": {
+  "hash": "f975cddb57d52625",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/tirta-empul-guide": {
+  "hash": "c6c0a5147b631969",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/tirta-empul-guide": {
+  "hash": "dc77ca2e71b467a1",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/tirta-empul-guide": {
+  "hash": "046915c7ed10a2bc",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-snorkeling-cost": {
+  "hash": "80e8de734eb8dd24",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-snorkeling-cost": {
+  "hash": "8e7591254d404fdb",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-snorkeling-cost": {
+  "hash": "4257412b11aedfe9",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-snorkeling-cost": {
+  "hash": "f3e64ed86d8e78b5",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-snorkeling-cost": {
+  "hash": "422e5dcd95a0c3e0",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/jatiluwih-vs-tegalalang": {
+  "hash": "198b3d274dc448a4",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/jatiluwih-vs-tegalalang": {
+  "hash": "1938c15d792e3508",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/jatiluwih-vs-tegalalang": {
+  "hash": "c63d38c3295688c5",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/jatiluwih-vs-tegalalang": {
+  "hash": "2640ea0e65a6c3f7",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/jatiluwih-vs-tegalalang": {
+  "hash": "3b1f110a369cb870",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/sanur-to-nusa-penida-fast-boat": {
+  "hash": "b2d4cfd9f8d245ee",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/sanur-to-nusa-penida-fast-boat": {
+  "hash": "4fe956913df2472a",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/sanur-to-nusa-penida-fast-boat": {
+  "hash": "5bdfd3d00f8a8c34",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/sanur-to-nusa-penida-fast-boat": {
+  "hash": "ec0d171a32e0f383",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/sanur-to-nusa-penida-fast-boat": {
+  "hash": "289a8dac7f68c967",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/sanur-to-nusa-penida-fast-boat": {
+  "hash": "632c3ddfa715ec1a",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/airport-to-ubud-transfer": {
+  "hash": "dbcfef1721a3117c",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/airport-to-ubud-transfer": {
+  "hash": "69a3972df70d0d1e",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/airport-to-ubud-transfer": {
+  "hash": "e3273bc092a50daf",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/airport-to-ubud-transfer": {
+  "hash": "efc2b432a69774c6",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/airport-to-ubud-transfer": {
+  "hash": "57df8ce656ba99d3",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/airport-to-ubud-transfer": {
+  "hash": "9402e918f32f6f2a",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/ubud-to-mount-batur": {
+  "hash": "626c30fb654697d1",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/ubud-to-mount-batur": {
+  "hash": "00cd1793aab850cf",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/ubud-to-mount-batur": {
+  "hash": "201282529bf4e002",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/ubud-to-mount-batur": {
+  "hash": "a169f636aceb2423",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/ubud-to-mount-batur": {
+  "hash": "e65e27b76272a868",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-tours-for-seniors": {
+  "hash": "458d82507a559c9e",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-tours-for-seniors": {
+  "hash": "b13d3a67607e3803",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-tours-for-seniors": {
+  "hash": "38c0b2e49cd8dfb8",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-tours-for-seniors": {
+  "hash": "ff1edf8f6af304eb",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-tours-for-seniors": {
+  "hash": "0353e186f9623761",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/bali-tours-for-seniors": {
+  "hash": "ebc9d64364cfd458",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-layover-day-tour": {
+  "hash": "fa69e5355b4348b4",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-layover-day-tour": {
+  "hash": "20287aba1c09ea5c",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-layover-day-tour": {
+  "hash": "b2b061a530ec79e0",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-layover-day-tour": {
+  "hash": "0ecab7af7abeb2df",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-layover-day-tour": {
+  "hash": "9b6552b7246d8436",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/sanur-vs-seminyak": {
+  "hash": "afafddc7b93a384d",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/sanur-vs-seminyak": {
+  "hash": "b1c4c60867e8131a",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/sanur-vs-seminyak": {
+  "hash": "d712125e026ad0e5",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/sanur-vs-seminyak": {
+  "hash": "a32e826f5212200c",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/sanur-vs-seminyak": {
+  "hash": "7ea32e500b738a20",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/sanur-vs-seminyak": {
+  "hash": "5bcf62bc3d73a633",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/seminyak-vs-uluwatu": {
+  "hash": "ab2182c5594bf740",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/seminyak-vs-uluwatu": {
+  "hash": "9ccc2f83ce34b448",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/seminyak-vs-uluwatu": {
+  "hash": "ba83eee4ec6f1eab",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/seminyak-vs-uluwatu": {
+  "hash": "8fc0d9ddb1fb1328",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/seminyak-vs-uluwatu": {
+  "hash": "df77c1b09264528c",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/seminyak-vs-uluwatu": {
+  "hash": "a79f6238f31a7fca",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/canggu-vs-seminyak": {
+  "hash": "ec50a6482be65fdf",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/canggu-vs-seminyak": {
+  "hash": "53fbf9c2e2786504",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/canggu-vs-seminyak": {
+  "hash": "21314371b92be946",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/canggu-vs-seminyak": {
+  "hash": "9bebdf244e93472d",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/canggu-vs-seminyak": {
+  "hash": "4d0884b2ecfa866d",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/canggu-vs-seminyak": {
+  "hash": "3d73464e665de431",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/ubud-vs-uluwatu": {
+  "hash": "c511d9dc5ae6b67c",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/ubud-vs-uluwatu": {
+  "hash": "b5d65466bb5846c4",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/ubud-vs-uluwatu": {
+  "hash": "8db79fd5efd650c6",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/ubud-vs-uluwatu": {
+  "hash": "2a92692d23169d5c",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/ubud-vs-uluwatu": {
+  "hash": "eb513f3b9b046626",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/ubud-vs-uluwatu": {
+  "hash": "967c11af20e15cb2",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/canggu-vs-uluwatu": {
+  "hash": "966d524e904927b6",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/canggu-vs-uluwatu": {
+  "hash": "f57f34eaebb4f7d2",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/canggu-vs-uluwatu": {
+  "hash": "b1fc588cd18c3720",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/canggu-vs-uluwatu": {
+  "hash": "85b6a5fdb51665e8",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/canggu-vs-uluwatu": {
+  "hash": "9773256fb77c07be",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/canggu-vs-uluwatu": {
+  "hash": "7cac37b87224866a",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/canggu-vs-ubud": {
+  "hash": "bef15aa5a0de0009",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/canggu-vs-ubud": {
+  "hash": "f906205e80fe6b12",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/canggu-vs-ubud": {
+  "hash": "a76d0bd2eb242166",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/canggu-vs-ubud": {
+  "hash": "1cbba868bfd7a686",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/canggu-vs-ubud": {
+  "hash": "0d45383d5e41db44",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/sanur-vs-uluwatu": {
+  "hash": "36362e35e508d9b6",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/sanur-vs-uluwatu": {
+  "hash": "825d925a027b1a49",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/sanur-vs-uluwatu": {
+  "hash": "e0aaa585c37e80ee",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/sanur-vs-uluwatu": {
+  "hash": "7a461776f992f13b",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/sanur-vs-uluwatu": {
+  "hash": "076cffa6a5352969",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/sanur-vs-uluwatu": {
+  "hash": "9d903ac6b1809549",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-dua-vs-seminyak": {
+  "hash": "d08afd16da8a97e9",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-dua-vs-seminyak": {
+  "hash": "6df661fcdacdfe7c",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-dua-vs-seminyak": {
+  "hash": "c3bac820b868ba67",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-dua-vs-seminyak": {
+  "hash": "3785bbf64a6a7d40",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-dua-vs-seminyak": {
+  "hash": "c9a1cc51bfed97ee",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/nusa-dua-vs-seminyak": {
+  "hash": "e6a3697c58eff580",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/canggu-vs-kuta": {
+  "hash": "5f4b456887f2209f",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/canggu-vs-kuta": {
+  "hash": "3e0629183dca539a",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/canggu-vs-kuta": {
+  "hash": "4adebc2ecee9f290",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/canggu-vs-kuta": {
+  "hash": "43e27059b2e3036e",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/canggu-vs-kuta": {
+  "hash": "dfd956f0c9e86b95",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/canggu-vs-kuta": {
+  "hash": "56d0648ce54b187a",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/kuta-vs-seminyak": {
+  "hash": "15bad0cf678a954d",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/kuta-vs-seminyak": {
+  "hash": "2695d6e0202b6516",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/kuta-vs-seminyak": {
+  "hash": "56cc91caeaa52617",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/kuta-vs-seminyak": {
+  "hash": "160f5a83e34d2c27",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/kuta-vs-seminyak": {
+  "hash": "831ba3dcad3a1d1a",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/kuta-vs-seminyak": {
+  "hash": "f20b9dae617488e9",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/jimbaran-vs-seminyak": {
+  "hash": "64bf36ef5b41a0a2",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/jimbaran-vs-seminyak": {
+  "hash": "092a924441814a73",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/jimbaran-vs-seminyak": {
+  "hash": "664f4a77ab19f6f6",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/jimbaran-vs-seminyak": {
+  "hash": "f6175baf6ca309ad",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/jimbaran-vs-seminyak": {
+  "hash": "97c2954929a2e790",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/seminyak-vs-ubud": {
+  "hash": "fd308cfa4b2bd062",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/seminyak-vs-ubud": {
+  "hash": "9f7c06c59b22fca4",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/seminyak-vs-ubud": {
+  "hash": "4766f55f482e0511",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/seminyak-vs-ubud": {
+  "hash": "b3a1e829e5df4a28",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/seminyak-vs-ubud": {
+  "hash": "da126e4f2fa34012",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/seminyak-vs-ubud": {
+  "hash": "ca9421b2f772455f",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/what-to-wear-mount-batur-sunrise": {
+  "hash": "0e1fa45d3b543cb0",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/what-to-wear-mount-batur-sunrise": {
+  "hash": "880c51f815816d97",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/what-to-wear-mount-batur-sunrise": {
+  "hash": "b5d9568514ed1c91",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/what-to-wear-mount-batur-sunrise": {
+  "hash": "d0c74a577632a861",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/what-to-wear-mount-batur-sunrise": {
+  "hash": "f540dc8221eda4be",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-sunrise-cost": {
+  "hash": "eb94ecc70c7df2f0",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-sunrise-cost": {
+  "hash": "6f29370291f8a5bd",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-sunrise-cost": {
+  "hash": "dee780dd2280a8a0",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-sunrise-cost": {
+  "hash": "7a58084668b0b49c",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-sunrise-cost": {
+  "hash": "54d15cb176e908f4",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/what-time-to-leave-for-mount-batur-sunrise": {
+  "hash": "e8e722d30574e6f5",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/what-time-to-leave-for-mount-batur-sunrise": {
+  "hash": "9ed554a827fb95ad",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/what-time-to-leave-for-mount-batur-sunrise": {
+  "hash": "fba199e7b69ab0e6",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/what-time-to-leave-for-mount-batur-sunrise": {
+  "hash": "e09a2f31d286354b",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/what-time-to-leave-for-mount-batur-sunrise": {
+  "hash": "b2d50d02513b3914",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/how-hard-is-the-mount-batur-hike": {
+  "hash": "4c7abc71f0f54a58",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/how-hard-is-the-mount-batur-hike": {
+  "hash": "4683f01e72a9ccea",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/how-hard-is-the-mount-batur-hike": {
+  "hash": "3f1978f1614086f4",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/how-hard-is-the-mount-batur-hike": {
+  "hash": "603b4db7ca1574e6",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/how-hard-is-the-mount-batur-hike": {
+  "hash": "d5173169fe2b90b6",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-hot-springs-guide": {
+  "hash": "e22538fe98ec85c2",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-hot-springs-guide": {
+  "hash": "cd827ad400eb087b",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-hot-springs-guide": {
+  "hash": "e29396356bf45541",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-hot-springs-guide": {
+  "hash": "3b1bd06991817fc4",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-hot-springs-guide": {
+  "hash": "bf55841cd4438e14",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/mount-batur-hot-springs-guide": {
+  "hash": "253dfbdfb72e8845",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-with-kids": {
+  "hash": "765604643f3de895",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-with-kids": {
+  "hash": "9549b6bcf6f3fc4c",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-with-kids": {
+  "hash": "a3a964668b27b113",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-with-kids": {
+  "hash": "cff9cff89dc1b836",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-with-kids": {
+  "hash": "57b54840e1f7c656",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-in-rainy-season": {
+  "hash": "5f3e525c36e957c8",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-in-rainy-season": {
+  "hash": "456b672133f5df62",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-in-rainy-season": {
+  "hash": "340cf30d2c30ae9f",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-in-rainy-season": {
+  "hash": "9ffdcedc84beba24",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-in-rainy-season": {
+  "hash": "1458f2bc30c161ab",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/is-mount-batur-an-active-volcano": {
+  "hash": "323e262ea14e7796",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/is-mount-batur-an-active-volcano": {
+  "hash": "c5939b4d376a3201",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/is-mount-batur-an-active-volcano": {
+  "hash": "e2cefa65f0c3aa4e",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/is-mount-batur-an-active-volcano": {
+  "hash": "d786c8f631ccb2c8",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/is-mount-batur-an-active-volcano": {
+  "hash": "560c4341425a83dd",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/is-mount-batur-an-active-volcano": {
+  "hash": "96fa02537d39dacf",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/canggu-to-mount-batur": {
+  "hash": "804fa7f2b8590437",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/canggu-to-mount-batur": {
+  "hash": "27ec6450dd523cf3",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/canggu-to-mount-batur": {
+  "hash": "808421782d75754a",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/canggu-to-mount-batur": {
+  "hash": "718f53b255e30fe0",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/canggu-to-mount-batur": {
+  "hash": "ea1d14788e9feef1",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/seminyak-to-mount-batur": {
+  "hash": "0879cf76124573f7",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/seminyak-to-mount-batur": {
+  "hash": "f94ba67305672a23",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/seminyak-to-mount-batur": {
+  "hash": "e056f9599fb9b84a",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/seminyak-to-mount-batur": {
+  "hash": "817fd98b0f904c5d",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/seminyak-to-mount-batur": {
+  "hash": "4bc138e26ba3c840",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/kintamani-viewpoint-and-lake-batur": {
+  "hash": "91dfbefb19a110a0",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/kintamani-viewpoint-and-lake-batur": {
+  "hash": "278f5ef7e0618026",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/kintamani-viewpoint-and-lake-batur": {
+  "hash": "aea300ab04b69e21",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/kintamani-viewpoint-and-lake-batur": {
+  "hash": "7c81dbb6b56a0d68",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/kintamani-viewpoint-and-lake-batur": {
+  "hash": "fdd28ce75ee9c25a",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-vs-bromo-rinjani-ijen": {
+  "hash": "48e342a7d7c24138",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-vs-bromo-rinjani-ijen": {
+  "hash": "91b17fbba62aed1f",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-vs-bromo-rinjani-ijen": {
+  "hash": "7185f495d2de6697",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-vs-bromo-rinjani-ijen": {
+  "hash": "9357396597cc69f7",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-vs-bromo-rinjani-ijen": {
+  "hash": "ece2d1ae2e414393",
+  "date": "2026-08-21"
+ },
+ "/bali/de/journal/mount-batur-vs-bromo-rinjani-ijen": {
+  "hash": "7960eeeb3c6a3f33",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-sunrise-what-to-expect": {
+  "hash": "70613c38fad266ed",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-sunrise-what-to-expect": {
+  "hash": "eca1cc298a3ca431",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-sunrise-what-to-expect": {
+  "hash": "1e3275b38cfacf17",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-sunrise-what-to-expect": {
+  "hash": "f2841536c04d35bd",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-sunrise-what-to-expect": {
+  "hash": "e5caa99ac81f85f2",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/where-is-mount-batur": {
+  "hash": "84f510a33734af17",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/where-is-mount-batur": {
+  "hash": "50e04e3d1c18946b",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/where-is-mount-batur": {
+  "hash": "ea30e1451031fc77",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/where-is-mount-batur": {
+  "hash": "b9e7ed8d5b222144",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/where-is-mount-batur": {
+  "hash": "5fe2479a6e66c62e",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-dua-to-mount-batur": {
+  "hash": "929dc0bf8c7fa9c2",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-dua-to-mount-batur": {
+  "hash": "7f64daa88b161306",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-dua-to-mount-batur": {
+  "hash": "7da843d450f9bbc9",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-dua-to-mount-batur": {
+  "hash": "d7d13572fd2c7149",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-dua-to-mount-batur": {
+  "hash": "6043c05c88c6ee87",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/uluwatu-to-mount-batur": {
+  "hash": "ef86b29d7bae03c6",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/uluwatu-to-mount-batur": {
+  "hash": "c3d95a4e56792c84",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/uluwatu-to-mount-batur": {
+  "hash": "43758e56a8d6863f",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/uluwatu-to-mount-batur": {
+  "hash": "14c3ccba10994e7e",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/uluwatu-to-mount-batur": {
+  "hash": "d75838768f57ddda",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/sanur-to-mount-batur": {
+  "hash": "265e3dbaed9aa81a",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/sanur-to-mount-batur": {
+  "hash": "f9943366e6e46019",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/sanur-to-mount-batur": {
+  "hash": "8a561eb73e26cb34",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/sanur-to-mount-batur": {
+  "hash": "a1291885acdd77e2",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/sanur-to-mount-batur": {
+  "hash": "5fbb27c72e8b2bc1",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-black-lava-fields": {
+  "hash": "66af160a9cd443a7",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-black-lava-fields": {
+  "hash": "61386d2069906b07",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-black-lava-fields": {
+  "hash": "920bfe8e5428bfb7",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-black-lava-fields": {
+  "hash": "6c427f93d11ad3b3",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-black-lava-fields": {
+  "hash": "79eefd5b6bf18976",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-atv-quad-or-jeep": {
+  "hash": "320ff95ab6f3e39c",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-atv-quad-or-jeep": {
+  "hash": "4155ec8f052cb8a4",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-atv-quad-or-jeep": {
+  "hash": "83208eace52ec093",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-atv-quad-or-jeep": {
+  "hash": "26d41818bdc63824",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-atv-quad-or-jeep": {
+  "hash": "884c43f1deda227b",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/how-to-book-mount-batur-tour": {
+  "hash": "6d42eb90a210363a",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/how-to-book-mount-batur-tour": {
+  "hash": "f728a4ad7265b60b",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/how-to-book-mount-batur-tour": {
+  "hash": "a05413036d19fd47",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/how-to-book-mount-batur-tour": {
+  "hash": "806770db4b997026",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/how-to-book-mount-batur-tour": {
+  "hash": "b4e47dee475f8c0e",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-photo-guide": {
+  "hash": "2b6a57b1730575e2",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-photo-guide": {
+  "hash": "e4ef9b2aafc57ebb",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-photo-guide": {
+  "hash": "200657f8591599f1",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-photo-guide": {
+  "hash": "4bb2f9c5a8844fb8",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-photo-guide": {
+  "hash": "a1ca6f1bdcd4d5a5",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/sidemen-to-mount-batur": {
+  "hash": "98acabf5115a8899",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/sidemen-to-mount-batur": {
+  "hash": "7b888b05f4cab5d5",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/sidemen-to-mount-batur": {
+  "hash": "41a0a12e06090d85",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/sidemen-to-mount-batur": {
+  "hash": "9c62119185c785e1",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/sidemen-to-mount-batur": {
+  "hash": "a1dbb787feacb3ec",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/amed-to-mount-batur": {
+  "hash": "2f70bb851b1e45c6",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/amed-to-mount-batur": {
+  "hash": "13c7339e857c9b20",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/amed-to-mount-batur": {
+  "hash": "dd9ea618eaa206c9",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/amed-to-mount-batur": {
+  "hash": "aedd04073c8baabd",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/amed-to-mount-batur": {
+  "hash": "e4608be1705dd9ea",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-snorkeling-spots": {
+  "hash": "cbd4dd218f9c963a",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-snorkeling-spots": {
+  "hash": "8525918786114fdf",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-snorkeling-spots": {
+  "hash": "d5625ed2e1470294",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-snorkeling-spots": {
+  "hash": "89f403377de0be6c",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-snorkeling-spots": {
+  "hash": "7cba71f1e1a9b17c",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/manta-bay-vs-manta-point": {
+  "hash": "22e1bd25286580a2",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/manta-bay-vs-manta-point": {
+  "hash": "4d375450248105bb",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/manta-bay-vs-manta-point": {
+  "hash": "597c1974c17a37d7",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/manta-bay-vs-manta-point": {
+  "hash": "1f5ac50090185042",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/manta-bay-vs-manta-point": {
+  "hash": "4ac4a06048cb567b",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/manta-point-depth-and-diving": {
+  "hash": "63959116f741adf0",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/manta-point-depth-and-diving": {
+  "hash": "7b452494f76aba6e",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/manta-point-depth-and-diving": {
+  "hash": "473f6a44efd3ff5a",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/manta-point-depth-and-diving": {
+  "hash": "83e04b53653187b5",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/manta-point-depth-and-diving": {
+  "hash": "8c2fe9488525bab0",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/where-to-see-manta-rays-in-bali": {
+  "hash": "8491f2d5ad04f17e",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/where-to-see-manta-rays-in-bali": {
+  "hash": "f98ca531010856d2",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/where-to-see-manta-rays-in-bali": {
+  "hash": "485a25c77f94736b",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/where-to-see-manta-rays-in-bali": {
+  "hash": "9a84920f8ef66c20",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/where-to-see-manta-rays-in-bali": {
+  "hash": "e4acb8d0426d1360",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/how-many-days-in-nusa-penida": {
+  "hash": "a1ccc82c2f9d7aa6",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/how-many-days-in-nusa-penida": {
+  "hash": "b4300509935a7d1c",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/how-many-days-in-nusa-penida": {
+  "hash": "794ca2662af3ab22",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/how-many-days-in-nusa-penida": {
+  "hash": "c5298c9c885ae41d",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/how-many-days-in-nusa-penida": {
+  "hash": "def3826cd966aaf3",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-snorkeling-non-swimmers": {
+  "hash": "f0e1db4ddc2eb835",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-snorkeling-non-swimmers": {
+  "hash": "74f857d553bdfcdf",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-snorkeling-non-swimmers": {
+  "hash": "b719a5777bb79d03",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-snorkeling-non-swimmers": {
+  "hash": "fd12318dc0e6c85a",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-snorkeling-non-swimmers": {
+  "hash": "ed7827c5a17ecf78",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/best-surf-spots-in-bali": {
+  "hash": "dbfdf00efb9b83a6",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/best-surf-spots-in-bali": {
+  "hash": "26860eb8ee3d5883",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/best-surf-spots-in-bali": {
+  "hash": "a337769bca24a14d",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/best-surf-spots-in-bali": {
+  "hash": "bc82be5be81a7ff9",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/best-surf-spots-in-bali": {
+  "hash": "a7000ca8d6847f2c",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-surf-spots-for-beginners": {
+  "hash": "511f944074e7c50f",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-surf-spots-for-beginners": {
+  "hash": "f330e08263377fcb",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-surf-spots-for-beginners": {
+  "hash": "eb37690eb5924ec8",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-surf-spots-for-beginners": {
+  "hash": "c45819ab780b6fe8",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-surf-spots-for-beginners": {
+  "hash": "0575b47c8af3a910",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-surf-spots-intermediate": {
+  "hash": "4eb5cff4409896cd",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-surf-spots-intermediate": {
+  "hash": "09c2bf0ae1326637",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-surf-spots-intermediate": {
+  "hash": "0865c579d3973b33",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-surf-spots-intermediate": {
+  "hash": "4b3626dab8d6dd9b",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-surf-spots-intermediate": {
+  "hash": "0c3769653a7b623a",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/uluwatu-surf-guide": {
+  "hash": "7037e7c3e4669984",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/uluwatu-surf-guide": {
+  "hash": "9352c569d351f147",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/uluwatu-surf-guide": {
+  "hash": "e0e93bae2f9ca517",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/uluwatu-surf-guide": {
+  "hash": "f8789fc0d406c8c5",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/uluwatu-surf-guide": {
+  "hash": "47e8105ca0bf2c22",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/canggu-surf-spots": {
+  "hash": "7a5bcf063eaabd33",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/canggu-surf-spots": {
+  "hash": "28b301d0da7c9988",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/canggu-surf-spots": {
+  "hash": "20dad087fa452755",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/canggu-surf-spots": {
+  "hash": "677d0e713fccc453",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/canggu-surf-spots": {
+  "hash": "a726c8218a76c9cd",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bukit-peninsula-surf-spots": {
+  "hash": "10f8d1bc5c3f93b4",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bukit-peninsula-surf-spots": {
+  "hash": "c8d2242a15ea1364",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bukit-peninsula-surf-spots": {
+  "hash": "d77f5844ceb1282f",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bukit-peninsula-surf-spots": {
+  "hash": "74cd15b6004c4f52",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bukit-peninsula-surf-spots": {
+  "hash": "11cc8855a278abfe",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/east-bali-surf-spots": {
+  "hash": "781b0e87373ce4a9",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/east-bali-surf-spots": {
+  "hash": "5ec6fc34c2da4e7a",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/east-bali-surf-spots": {
+  "hash": "682ebeae8f638647",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/east-bali-surf-spots": {
+  "hash": "a54afe1a6a57d54a",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/east-bali-surf-spots": {
+  "hash": "57661fee38e989ba",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/west-bali-surf-medewi-balian": {
+  "hash": "c869d7667aaaaa8e",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/west-bali-surf-medewi-balian": {
+  "hash": "56dc0f7ba7f004ec",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/west-bali-surf-medewi-balian": {
+  "hash": "fd81182669783066",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/west-bali-surf-medewi-balian": {
+  "hash": "5db2744134bea0a2",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/west-bali-surf-medewi-balian": {
+  "hash": "815aab05bc18c00a",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-surf-season-month-by-month": {
+  "hash": "802554dc14414c4a",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-surf-season-month-by-month": {
+  "hash": "a45deaa45e281f35",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-surf-season-month-by-month": {
+  "hash": "593bf37851a651b2",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-surf-season-month-by-month": {
+  "hash": "1ce20ba74d17916e",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-surf-season-month-by-month": {
+  "hash": "19051320ef21d4bb",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-surf-conditions-tides-swell-wind": {
+  "hash": "9d06301d13560013",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-surf-conditions-tides-swell-wind": {
+  "hash": "966411fcc6b1306b",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-surf-conditions-tides-swell-wind": {
+  "hash": "6f94b30436191b85",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-surf-conditions-tides-swell-wind": {
+  "hash": "390e08dd64f6366c",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-surf-conditions-tides-swell-wind": {
+  "hash": "c2a4186484da0089",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/is-surfing-in-bali-safe": {
+  "hash": "2b8c96e2e7de474a",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/is-surfing-in-bali-safe": {
+  "hash": "f8c8cce9fbadb3ee",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/is-surfing-in-bali-safe": {
+  "hash": "8ccaf6e874e5d4b8",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/is-surfing-in-bali-safe": {
+  "hash": "9dda34be2c9c62a3",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/is-surfing-in-bali-safe": {
+  "hash": "25eb2a2871de9e04",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-surfboard-rental-and-transport": {
+  "hash": "baeadbe516802444",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-surfboard-rental-and-transport": {
+  "hash": "4f7ca22f8c928bfd",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-surfboard-rental-and-transport": {
+  "hash": "0c76b0f12f09c34e",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-surfboard-rental-and-transport": {
+  "hash": "6ef8d032640ce92c",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-surfboard-rental-and-transport": {
+  "hash": "4eb53ac820bf5761",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/bali-tour-prices-2026-real-costs": {
+  "hash": "1f28acfa4088bde3",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/bali-tour-prices-2026-real-costs": {
+  "hash": "061bf673cac4ea64",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/bali-tour-prices-2026-real-costs": {
+  "hash": "1ae945e69e34d6ce",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/bali-tour-prices-2026-real-costs": {
+  "hash": "4abd243994eda6a3",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/bali-tour-prices-2026-real-costs": {
+  "hash": "ec962eddcf3a0dae",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/mount-batur-sunrise-jeep-vs-hike": {
+  "hash": "7d6f96cf4c6bfdb6",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike": {
+  "hash": "6b7115043efb5194",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/mount-batur-sunrise-jeep-vs-hike": {
+  "hash": "908f45061e1483ed",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/mount-batur-sunrise-jeep-vs-hike": {
+  "hash": "eeaa8058cea3a951",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/mount-batur-sunrise-jeep-vs-hike": {
+  "hash": "22c727fd7f98c6a1",
+  "date": "2026-08-21"
+ },
+ "/bali/en/journal/nusa-penida-tours-compared": {
+  "hash": "f57c2a0c8f7e7ff9",
+  "date": "2026-08-21"
+ },
+ "/bali/zh/journal/nusa-penida-tours-compared": {
+  "hash": "7d140e3ef0dab69a",
+  "date": "2026-08-21"
+ },
+ "/bali/ru/journal/nusa-penida-tours-compared": {
+  "hash": "1454cd91d9956f30",
+  "date": "2026-08-21"
+ },
+ "/bali/es/journal/nusa-penida-tours-compared": {
+  "hash": "6e58f9fffc904fe8",
+  "date": "2026-08-21"
+ },
+ "/bali/fr/journal/nusa-penida-tours-compared": {
+  "hash": "e16c3cfa1c0c320e",
+  "date": "2026-08-21"
+ }
+}

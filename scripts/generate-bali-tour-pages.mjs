@@ -43744,11 +43744,18 @@ function writeSitemap() {
   // Партнёрская Work With Us живёт на пяти языках по собственной схеме URL
   // (/work-with-us и /{ru,es,fr,zh}/work-with-us — собирает
   // scripts/build-work-with-us.mjs), поэтому hreflang-группа для неё своя.
+  //
+  // Немецкого здесь НЕТ и не должно быть: build-work-with-us.mjs собирает
+  // страницу из рукописного COPY, где немецкого варианта нет. Пока langs
+  // включал de, карта сайта отдавала Google /de/work-with-us — реальный 404.
+  // Та же ловушка частичной раскатки, что с DE_WAVE_*: список языков в одном
+  // месте разъехался со списком в другом.
+  const WWU_LANGS = langs.filter((code) => code !== "de");
   const wwuPath = (code) => (code === "en" ? "/work-with-us" : `/${code}/work-with-us`);
   const wwuAlternates =
-    langs.map((code) => `\n    <xhtml:link rel="alternate" hreflang="${code}" href="${SITE_URL}${wwuPath(code)}"/>`).join("") +
+    WWU_LANGS.map((code) => `\n    <xhtml:link rel="alternate" hreflang="${code}" href="${SITE_URL}${wwuPath(code)}"/>`).join("") +
     `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL}${wwuPath("en")}"/>`;
-  const wwuEntries = langs.map(
+  const wwuEntries = WWU_LANGS.map(
     (code) => `  <url>
     <loc>${SITE_URL}${wwuPath(code)}</loc>${wwuAlternates}
     <lastmod>${lastmod}</lastmod>
