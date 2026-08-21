@@ -60,6 +60,9 @@ const ORGANIZATION_SCHEMA = {
   // (https://www.wikidata.org/wiki/Q...). Чем больше подтверждённых
   // профилей, тем увереннее поисковики и ИИ склеивают бренд в сущность.
   sameAs: [
+    /* Wikidata первой: это нейтральная база сущностей, из которой языковые
+       модели берут «кто есть кто». Остальные — профили-подтверждения. */
+    "https://www.wikidata.org/wiki/Q141142313",
     "https://www.tripadvisor.com/Attraction_Review-g469404-d34593301-Reviews-SB_Excursions-Seminyak_Kuta_District_Badung_Regency_Bali.html",
     "https://www.trustpilot.com/review/sbexcursion.com",
     "https://www.instagram.com/dubai_sb_excursions",
