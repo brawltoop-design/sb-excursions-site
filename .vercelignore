@@ -2,3 +2,16 @@ node_modules/
 images/bali-tours/west-collage-src/
 .claude/
 audit/
+
+# Внутреннее наружу не выкладываем. Проверено curl'ом: до этой правки
+# /scripts/build.mjs и /PRICES-TODO.md отдавались с кодом 200, то есть весь
+# исходник генератора (48 тысяч строк, включая текст всех статей) лежал в
+# открытом доступе. Для поиска это ещё и дубликат всего контента сайта
+# одним файлом.
+*.md
+scripts/
+reddit-bot/
+.generated/
+_to_delete/
+_ФАЙЛЫ ОТ КЛОДА/
+sbexcursion.com-audit/
