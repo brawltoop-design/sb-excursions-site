@@ -14813,7 +14813,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Which route to choose: west, east, full day or manta",
         "paragraphs": [
-          "The drive from Uluwatu is identical for every route, so choose by what you want from the island rather than by logistics. Four options cover almost everyone:"
+          "The drive from Uluwatu is identical for every route, so choose by what you want from the island rather than by logistics. Four options cover almost everyone: The west route is the one built around [Kelingking Beach](/bali/en/journal/kelingking-beach-guide); if you are weighing the same day from the other side of the island, [Canggu to Nusa Penida](/bali/en/journal/nusa-penida-day-trip-from-canggu) runs the same boat off a longer drive."
         ],
         "bullets": [
           "**[Nusa Penida West Tour](/bali/en/tours/nusa-penida-west-tour) — from $49 per car**: Kelingking, Angel's Billabong, Broken Beach and Crystal Bay. The classic first-visit loop, and the route this guide's day plan follows.",
@@ -15262,7 +15262,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "How a driver day actually runs",
         "paragraphs": [
           "A typical full driver day runs **10-12 hours** door to door, and the route stays yours the whole way. Most guests send a rough list the evening before — three to five stops makes a comfortable day — and the driver sequences them around traffic and opening hours. Distances are the real constraint: the southern hotel areas sit about 45-90 minutes from Ubud depending on traffic, and the far east or the north coast runs roughly 2-3 hours each way, so one far region per day is the sensible ceiling.",
-          "The difference from a fixed tour is control. Our [Ubud highlights tour](/bali/en/tours/ubud-highlights-tour) from $69 runs a proven 10-hour route that already works; a driver day starts from a blank map. Take the fixed tour when you want the greatest hits handled for you, and the driver day when you have your own list — a specific warung, a beach club at sunset, or a slow morning that fixed departures do not allow. When the list you send is an Ubud list, the order matters as much as the stops, and [a seven-stop Ubud day sequenced from the ridge walk to the Kintamani rim](/bali/en/journal/ubud-in-one-day) is the version that fits inside those hours."
+          "The difference from a fixed tour is control. Our [Ubud highlights tour](/bali/en/tours/ubud-highlights-tour) from $69 runs a proven 10-hour route that already works; a driver day starts from a blank map. Take the fixed tour when you want the greatest hits handled for you, and the driver day when you have your own list — a specific warung, a beach club at sunset, or a slow morning that fixed departures do not allow. When the list you send is an Ubud list, the order matters as much as the stops, and [a seven-stop Ubud day sequenced from the ridge walk to the Kintamani rim](/bali/en/journal/ubud-in-one-day) is the version that fits inside those hours. It is also what makes the awkward stops possible: [Tukad Cepung](/bali/en/journal/tukad-cepung-waterfall-guide) wants an early arrival for the light beam, and no shared tour will give you that."
         ]
       },
       {
@@ -16013,7 +16013,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Make it a full east-coast day",
         "paragraphs": [
           "Blue Lagoon on its own is a two-hour stop, so build around it. Swim first, then walk or ride over to Bias Tugel for beach time, and eat at a harbor warung before the drive back. If you are heading onward, Padang Bai is Bali's main jump-off for the islands — [fast boat transfers](/bali/en/tours/fast-boat-transfer-bali) run from $15, which is why plenty of people snorkel the lagoon the morning before a Gili crossing. Staying in Bali? Pair the cove with the east side's temples, palms and viewpoints on an [East Bali day trip](/bali/en/tours/east-bali-instagram-tour) from $69.",
-          "If snorkeling is the main event of your Bali trip, keep perspective: Blue Lagoon is the convenient option, not the ceiling. The wall at Amed and the wreck at Tulamben are about an hour further up the coast, and the really clear water lives across the channel. Start with our island-wide list of [the best snorkeling spots in Bali](/bali/en/journal/best-snorkeling-spots-bali), then see [which beaches actually have crystal-clear water](/bali/en/journal/best-beaches-bali-crystal-clear-water) before you lock the itinerary. Bias Tugel is one of the few coves on this coast with genuinely pale sand, which is why it makes our list of [Bali's real white sand beaches](/bali/en/journal/best-white-sand-beaches-bali)."
+          "If snorkeling is the main event of your Bali trip, keep perspective: Blue Lagoon is the convenient option, not the ceiling. The wall at Amed and the wreck at Tulamben are about an hour further up the coast, and the really clear water lives across the channel. Start with our island-wide list of [the best snorkeling spots in Bali](/bali/en/journal/best-snorkeling-spots-bali), then see [which beaches actually have crystal-clear water](/bali/en/journal/best-beaches-bali-crystal-clear-water) before you lock the itinerary. Bias Tugel is one of the few coves on this coast with genuinely pale sand, which is why it makes our list of [Bali's real white sand beaches](/bali/en/journal/best-white-sand-beaches-bali). Padang Bai is also the harbour the Gili boats leave from, which is why it is the only base where [a day trip to the Gili Islands from Bali](/bali/en/journal/gili-islands-day-trip-from-bali) leaves you real hours ashore rather than ninety minutes."
         ]
       }
     ],
@@ -24554,7 +24554,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "First boat to Nusa Penida: why the earliest one decides your day",
         "paragraphs": [
-          "Departures begin early in the morning and run through the day, and the first boats are the ones worth aiming for. Two reasons, and neither is about the view from the deck. The strait is calmest before midday, so the early crossing is the smoothest one you will get. And the west-coast viewpoints are genuinely quiet for the first hour after the first boats land — by 11:00 the Kelingking staircase has a queue on it. Our [Nusa Penida East Tour](/bali/en/tours/nusa-penida-east-tour) meets at **Sanur port at 07:00**, with optional hotel pickup at **06:15-06:30**, for exactly that reason."
+          "Departures begin early in the morning and run through the day, and the first boats are the ones worth aiming for. Two reasons, and neither is about the view from the deck. The strait is calmest before midday, so the early crossing is the smoothest one you will get. And the west-coast viewpoints are genuinely quiet for the first hour after the first boats land — by 11:00 the Kelingking staircase has a queue on it. Our [Nusa Penida East Tour](/bali/en/tours/nusa-penida-east-tour) meets at **Sanur port at 07:00**, with optional hotel pickup at **06:15-06:30**, for exactly that reason. The reason the first boat matters is one viewpoint: [Kelingking Beach](/bali/en/journal/kelingking-beach-guide) is the stop everyone comes for, and by eleven the railing is three deep."
         ],
         "bullets": [
           "**Calmer water**: morning crossings bounce less than afternoon ones, in every season.",
@@ -24595,7 +24595,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "When the boats do not run",
         "paragraphs": [
           "In strong swell the boats are cancelled, and it is usually the whole fleet rather than one operator. It happens most in the **rainy months from November to March**, but a big swell can shut the strait on a clear, sunny day — wind and wave height decide it, not rain. Calls are often made in the morning, sometimes at the port itself, which is a frustrating way to start a day and still the right way. Nobody at Sanur harbor is talking you out of a crossing they could safely sell you.",
-          "Two things follow. First, do not stack the crossing against a flight: keep a full day between your Penida trip and an international departure, and use our [airport transfer guide](/bali/en/journal/bali-airport-transfer-guide) to time the last leg. Second, hold a plan B. Because we book on WhatsApp with **no prepayment**, a cancelled sea day costs you nothing but the plan, and the same driver can turn it into a mainland route instead — a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car is the usual swap."
+          "Two things follow. First, do not stack the crossing against a flight: keep a full day between your Penida trip and an international departure, and use our [airport transfer guide](/bali/en/journal/bali-airport-transfer-guide) to time the last leg. Second, hold a plan B. Because we book on WhatsApp with **no prepayment**, a cancelled sea day costs you nothing but the plan, and the same driver can turn it into a mainland route instead — a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car is the usual swap. Sea state is also the honest answer to the question people ask before booking at all \u2014 [how safe Nusa Penida is](/bali/en/journal/is-nusa-penida-safe) has more to do with the crossing and the cliff edges than with anything on the island itself."
         ]
       },
       {
@@ -25909,7 +25909,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "How does the area change your day trips?",
         "paragraphs": [
-          "This is the part blogger comparisons leave out, and it is the part we live with every morning. Almost every big day out in Bali starts with a drive: to Sanur harbour for the Nusa islands, or north to Kintamani for the volcano. The area you sleep in decides how much of that day the drive eats. Here is the drive to Sanur harbour from the areas people usually compare:"
+          "This is the part blogger comparisons leave out, and it is the part we live with every morning. Almost every big day out in Bali starts with a drive: to Sanur harbour for the Nusa islands, or north to Kintamani for the volcano. The area you sleep in decides how much of that day the drive eats. Here is the drive to Sanur harbour from the areas people usually compare: Ubud wins outright on one thing: the Ayung gorge is on its doorstep, so [rafting in Bali](/bali/en/journal/white-water-rafting-bali-guide) is a morning from Ubud and half a day from the Bukit."
         ],
         "bullets": [
           "**Sanur** - the harbour is inside the area, a few minutes on foot or by car",
@@ -26534,7 +26534,7 @@ const JOURNAL_SEO_GUIDES = [
         "paragraphs": [
           "This is the part area comparisons leave out, and it is the part we deal with every morning. Every excursion in Bali starts with a drive, and that drive is paid for out of your sleep rather than out of the tour price.",
           "From Seminyak, the drive to **Sanur port** — where the Nusa Penida fast boats leave — is **30-50 minutes**. Nusa Dua makes a comparable southern run from the other side of the airport; we set pickup per hotel rather than per district, because the hour you leave moves the number more than the district does. What matters is the comparison neither of them loses: from **Canggu the same port is 60-90 minutes**, from **Uluwatu and the Bukit 60-90**, and from **Ubud 45-70** — which surprises people, because Ubud feels further out than Canggu and is not.",
-          "The crossing itself is **30-45 minutes**, so the boat is never the long part of a Penida day; the road to the port is. Put plainly: **choosing between Nusa Dua and Seminyak will not change your alarm clock. Choosing Canggu over either of them will**, by up to an hour each way, on every island day you book. Our [Nusa Penida west route](/bali/en/tours/nusa-penida-west-tour) runs from $49 per car with hotel pickup, and the [Seminyak to Nusa Penida guide](/bali/en/journal/nusa-penida-day-trip-from-seminyak) walks through the day stage by stage."
+          "The crossing itself is **30-45 minutes**, so the boat is never the long part of a Penida day; the road to the port is. Put plainly: **choosing between Nusa Dua and Seminyak will not change your alarm clock. Choosing Canggu over either of them will**, by up to an hour each way, on every island day you book. Our [Nusa Penida west route](/bali/en/tours/nusa-penida-west-tour) runs from $49 per car with hotel pickup, and the [Seminyak to Nusa Penida guide](/bali/en/journal/nusa-penida-day-trip-from-seminyak) walks through the day stage by stage. The islands are the clearest case: [Seminyak to the Gili Islands](/bali/en/journal/gili-t-day-trip-from-seminyak) means a pre-dawn pickup and a long drive to the harbour before the boat even starts."
         ]
       },
       {
@@ -26863,7 +26863,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "How does your area change the day trips you book?",
         "paragraphs": [
-          "This is the part nobody writes about, and it is the part we live with every morning. **Your area does not only decide your dinner. It sets your alarm.** Almost everything that leaves Bali by sea from this coast goes through Sanur port, and the drive there is the hidden cost of your base:"
+          "This is the part nobody writes about, and it is the part we live with every morning. **Your area does not only decide your dinner. It sets your alarm.** Almost everything that leaves Bali by sea from this coast goes through Sanur port, and the drive there is the hidden cost of your base: Both also sit within twenty minutes of [Canggu](/bali/en/journal/things-to-do-canggu-bali-guide), which is where most people end up eating anyway, and both are on the right side of the island for [the best sunset spots in Bali](/bali/en/journal/best-sunset-spots-bali)."
         ],
         "bullets": [
           "**Sanur** — the port is inside the district; you walk to the boat",
