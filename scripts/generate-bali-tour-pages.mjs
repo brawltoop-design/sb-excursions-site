@@ -251,11 +251,22 @@ const DE_WAVE_TOURS = new Set([
 ]);
 
 const DE_WAVE_GUIDES = new Set([
-  /* Трёх легаси-гайдов здесь нет намеренно: bali-canggu-beaches-guide,
-     gili-islands-day-trip-from-bali и swimming-with-whale-sharks-indonesia
-     живут отдельными HTML вне генератора (LEGACY_GUIDE_SLUGS), и языковые
-     версии для них он не собирает. Оставь их в списке — карта сайта позовёт
-     Google на четыре несуществующих адреса. */
+  /* ВНИМАНИЕ, комментарий был неверен и правился 2026-08-21.
+     bali-canggu-beaches-guide, gili-islands-day-trip-from-bali и
+     swimming-with-whale-sharks-indonesia в списке ЕСТЬ, хотя старый текст
+     утверждал обратное. Немецкие версии генератор для них не собирает —
+     это отдельные HTML вне его.
+
+     Живой поломки при этом нет, и вот почему: карта сайта и hreflang берут
+     языки не отсюда напрямую, а через фильтр по существующим файлам
+     (add-hreflang.mjs строит список из тех, что реально лежат на диске).
+     Проверено: hreflang="de" на этих трёх страницах отсутствует, а
+     /bali/de/journal/... для них отдаёт 404 и в sitemap не попадает.
+
+     Убирать слаги отсюда не стали: список читает и localeCoversGuide, и
+     трогать его без нужды — заводить новую несогласованность вместо
+     старой. Если появится генерация немецких версий легаси-гайдов, эти три
+     строки станут правдой сами. */
   "best-time-to-visit-bali-month-by-month",
   "bali-safety-scams-and-health",
   "how-much-does-a-bali-trip-cost",
@@ -14828,6 +14839,22 @@ const JOURNAL_SEO_GUIDES = [
           "Season matters more from Uluwatu than elsewhere, because a cancelled crossing costs you the longest drive on the route. From **April to October** the strait is dependably calmer and morning boats run close to schedule; in the rainy months boats still cross most days, but build a spare day into the plan. Our [clear water calendar](/bali/en/journal/best-time-clear-water-bali) breaks sea conditions down month by month."
         ]
       }
+    ,
+      {
+        "heading": "Nusa Penida to Uluwatu: the return leg nobody plans",
+        "paragraphs": [
+          "Everything written about this route describes the way out. The way back is the half that goes wrong, because it runs on a hard deadline the island does not advertise. **The last scheduled fast boat from Nusa Penida to Sanur is 17:00**, with a single operator listing 17:15, and nothing after it. More usefully: the real exodus is **16:30** — that is the final sailing for most operators, and the 17:00 slot is held by only three or four. Banjar Nyuh port itself runs 07:00 to 17:00 and closes with the last boat.",
+          "Two things eat the margin. **Check-in is 30 minutes before departure and a missed boat is a forfeited ticket, no refund** — and boats are reported to leave on time and occasionally early, so treat that half hour as a floor rather than a target. And the drive to the harbour from the west-coast viewpoints, the ones everybody saves for last, takes **40-60 minutes on genuinely poor roads**. Standing at Kelingking at 15:30 means you are not making the 16:30 boat.",
+          "Then Bali starts again on the far side. From Sanur port to Uluwatu you are crossing the whole south of the island in the evening — the same **Simpang Siur** congestion that ruins the Nusa Dua run, at the same hour. A day that ends with the 16:30 boat puts you back on the Bukit somewhere around dinner, not before it. Our [Nusa Penida day tour](/bali/en/tours/nusa-penida-full-day-tour) is built backwards from that boat rather than forwards from the sunrise, which is why the last stop is always a coastal one near the harbour."
+        ],
+        "bullets": [
+          "**16:30** — the last boat for most operators, and the one to plan around",
+          "**17:00** — the genuine last departure, run by only a handful; do not bank on it",
+          "**30 minutes** — check-in cutoff, enforced, ticket forfeited if missed",
+          "**40-60 minutes** — west-coast viewpoints to the harbour, on bad road",
+          "**Never the last boat** before an onward flight or a paid dinner"
+        ]
+      }
     ],
     "faq": [
       {
@@ -26545,6 +26572,22 @@ const JOURNAL_SEO_GUIDES = [
         ],
         "paragraphsAfter": [
           "If you are still weighing more than two areas, our [six-area comparison for first trips](/bali/en/journal/where-to-stay-bali-first-time) puts them side by side. And whichever you land on, most of the distance question dissolves with a [private car and driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car: the pickup time bends around you instead of around a fixed departure, which matters a great deal more than the gap between these two areas."
+        ]
+      }
+    ,
+      {
+        "heading": "How far is Nusa Dua from Seminyak, and how long does it really take",
+        "paragraphs": [
+          "The road distance is **18-22 km**, and the spread is real rather than sloppy measurement: Seminyak runs about three kilometres along Jl. Kayu Aya and Petitenget, and the Nusa Dua resorts sit up to four kilometres apart inside the ITDC gates, so which two doors you pick moves the number by five.",
+          "The time is where every online answer goes wrong. Routing engines return **17-18 minutes** for this drive. Nobody has ever done it in 17 minutes. That figure is computed on posted speed limits over a straight seventeen kilometres with no traffic applied, and south Bali does not work that way. What actually happens, checked August 2026: **30-40 minutes before 08:30 or after 20:30, 45-65 minutes through the middle of the day, and 75-110 minutes in the 16:30-19:30 peak**. Travellers on the forums converge on the same advice from the other direction — allow an hour and stop worrying.",
+          "One intersection causes most of it. **Simpang Siur, the Dewa Ruci roundabout**, is where Kuta, the airport, Sanur, the toll road and the bypass all meet, and between 16:30 and 19:00 it is the reason a twenty-kilometre drive becomes an hour and a half. The **Bali Mandara toll road** is the way around the worst of it and costs **IDR 14,000** for a car — that was the rate set in April 2024 and still the last one we can document, though a review was contractually due in 2026, so treat it as approximately right rather than exact."
+        ],
+        "bullets": [
+          "**Before 08:30** — 30-40 minutes, the only window where the drive is genuinely short",
+          "**10:00-15:00** — 45-65 minutes, the sane default to plan around",
+          "**16:30-19:30** — 75-110 minutes, and Friday and Saturday evenings are the worst of it",
+          "**After 20:30** — back to 30-40 minutes",
+          "**Any online estimate under 30 minutes** — free-flow arithmetic, not a real journey"
         ]
       }
     ],
