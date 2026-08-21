@@ -54,9 +54,15 @@ const ORGANIZATION_SCHEMA = {
   },
   // wa.me здесь не место: sameAs — только профили-подтверждения сущности,
   // контакт для брони уже лежит в contactPoint.
+  //
+  // Сюда же добавлять по мере появления: TripAdvisor-профиль, ссылку
+  // Google Business Profile (maps.app.goo.gl/...), Wikidata-сущность
+  // (https://www.wikidata.org/wiki/Q...). Чем больше подтверждённых
+  // профилей, тем увереннее поисковики и ИИ склеивают бренд в сущность.
   sameAs: [
     "https://www.instagram.com/dubai_sb_excursions",
     "https://t.me/SurfBase",
+    "https://www.trustpilot.com/review/sbexcursion.com",
   ],
   contactPoint: {
     "@type": "ContactPoint",
@@ -32237,6 +32243,1701 @@ const JOURNAL_SEO_GUIDES = [
         "answer": "Blue Lagoon at Padang Bai on the mainland: a small sheltered cove where you walk in from the beach into shallow water with good coral, clearest between 07:00 and 10:00, from $50 with gear, guide, lunch and pickup. On Nusa Penida itself the answer is Crystal Bay, inside the bay, where you can stand on sand."
       }
     ]
+  },
+  {
+    "slug": "best-surf-spots-in-bali",
+    "badge": "Travel guide",
+    "navLabel": "Best surf spots",
+    "cardTourLabel": "Surf and active days",
+    "heroTourSlug": "surf-lesson-experience",
+    "relatedTourSlugs": [
+      "surf-lesson-experience",
+      "private-car-with-driver-bali",
+      "bali-airport-transfer"
+    ],
+    "inlineStats": [
+      "2 seasons, 2 coasts",
+      "Swell 365 days a year",
+      "Lessons from $35"
+    ],
+    "title": "Best Surf Spots in Bali, Mapped by Coast, Level and Season",
+    "description": "Every notable surf break in Bali sorted by coast, level and season — Uluwatu to Medewi, sand to reef — with honest crowd notes from a local operator.",
+    "excerpt": "Bali's surf spots stop being confusing the moment you see the pattern: one Southern Ocean swell engine that never switches off, and two coasts that take turns being offshore. From May to September the trades groom the west — the Bukit reefs from Uluwatu to Balangan, the Canggu rock shelves, the Kuta sand strip, the cobblestone points of Medewi and Balian. From November to March the wind swings west-to-northwest and the east side wakes up: Keramas, Serangan, Sanur, Nusa Dua. Levels range from waist-deep whitewater over sand to a peak one guide calls the most dangerous wave in Bali. This page is the table of the whole island — every region, its level, its season — with detailed guides one click deeper. We drive surfers to all of it, boards in the back.",
+    "rankings": [
+      {
+        "name": "Uluwatu",
+        "imageSrc": "/images/places/uluwatu-surf.jpg",
+        "area": "Bukit west coast",
+        "bestFor": "The benchmark left-hand wave",
+        "summary": "A left-hand wave breaking over a flat limestone-and-coral platform below the cave, split into named sections — Temples, the Peak, Racetrack, Outside Corner — that run from intermediate to genuine big-wave expert. It is not a beginner wave at any tide. Best May to September, rideable year-round until the wet-season westerlies ruin it. The lineup is one of the busiest anywhere; Temples, the long paddle to the southern end, stays the calmest of the main sections."
+      },
+      {
+        "name": "Padang Padang & Baby Padang",
+        "imageSrc": "/images/remote/padang-padang-beach-bali-f5988498.jpg",
+        "area": "Bukit west coast",
+        "bestFor": "Barrels, and the soft option",
+        "summary": "Padang Padang is the Balinese Pipeline: a sharp, very shallow left for advanced and expert surfers only, and it needs a specific swell to switch on at all — when it does, the crowd and the localism are as heavy as anywhere in Bali. Across the channel, Baby Padang is the opposite animal: a right over seaweed-cushioned reef that works on almost no swell and stays busy but friendly. Most guides call it beginner-to-improver, though not all agree — it is still reef."
+      },
+      {
+        "name": "Bingin & Impossibles",
+        "imageSrc": "/images/remote/bingin-beach-9330583d.jpg",
+        "area": "Bukit west coast",
+        "bestFor": "Short perfection, long walls",
+        "summary": "Bingin is a short, hollow left over a coral shelf so shallow it dries out at low tide — intermediate to advanced, expert territory on the low. The crowd is extreme and the local crew runs the peak, so wait your turn. Next door, Impossibles stretches fast left walls down a long, sharp reef; it gets busy too, but multiple take-off zones spread the pack in a way Bingin's single peak never can. Both are dry-season waves."
+      },
+      {
+        "name": "Balangan & Dreamland",
+        "imageSrc": "/images/remote/1280px-balangan-beach-bali-2017-08-16-b16af1dd.jpg",
+        "area": "Bukit west coast",
+        "bestFor": "The Bukit's easiest entry",
+        "summary": "Dreamland is the only break in this stretch with a substantially sandy bottom: an A-frame with lefts and rights, beginner-to-intermediate on ordinary days, serious once it reaches double overhead, and heavily touristed. Balangan, the northernmost of the group, is a left-hand wave that stays mellow at higher tides on a small swell and turns serious on low tide with size; crowd reports vary more here than for any other Bukit wave. Both run April to October."
+      },
+      {
+        "name": "Canggu: Batu Bolong to Pererenan",
+        "imageSrc": "/images/remote/batu-bolong-beach-canggu-c733e2b3.jpg",
+        "area": "Southwest coast",
+        "bestFor": "Longboard shelf to punchy peaks",
+        "summary": "Batu Bolong is the famous one: a long, mellow left over flat lava rock and sand patches, longboard-oriented, beginner-to-intermediate, with a crowd as thick as any in Bali. Old Man's next door spreads similar waves across several take-off zones. The level jumps fast from there — Echo Beach runs a fast, tubey left over jagged rock, and Pererenan's punchy right can draw forty surfers at dawn on a two-foot day. Clean mornings run May to October."
+      },
+      {
+        "name": "Kuta, Legian & Seminyak",
+        "imageSrc": "/images/places/surfing-in-canggu.jpg",
+        "area": "Southwest sand strip",
+        "bestFor": "Learning without reef",
+        "summary": "The island's only long stretch of true sand-bottom surf, which is why every first lesson happens here. Kuta is the softest and the most crowded; Legian breaks with a little more push; Seminyak and Double Six offer more space, with surf schools thick on the inside banks. Dry-season mornings, May to October, are the window — from November to March the wind turns onshore and the monsoon current dumps plastic on exactly these beaches."
+      },
+      {
+        "name": "The wet-season side: Keramas to Nusa Dua",
+        "imageSrc": "/images/places/uluwatu-surf.jpg",
+        "area": "East coast & Bukit east",
+        "bestFor": "Offshore November to March",
+        "summary": "When the westerlies wreck the west coast, this side turns offshore. Keramas is the star: a world-class right over black volcanic reef, advanced-plus, with a WSL contest pedigree and floodlit night sessions. Serangan is the accessible one — shifting peaks in deeper water, intermediate-friendly, rarely flat, and one of the wet season's most crowded lineups. Sanur hides a beginner-friendly inside reef and an expert-only outer one, and Nusa Dua's main peak is a wave one guide calls the most dangerous in Bali."
+      },
+      {
+        "name": "West Bali: Medewi & Balian",
+        "imageSrc": "/images/places/surfing-in-canggu.jpg",
+        "area": "Jembrana & Tabanan",
+        "bestFor": "Long lefts, light crowds",
+        "summary": "Medewi is a mellow left-hand wave peeling over round cobblestones — improver to intermediate, with the rocky walk-in as the real filter — and midweek the lineup stays light. Balian, the rivermouth further east toward Tabanan, is the consistency play: it breaks essentially year-round with genuinely low crowds. Guides dispute its grade; the safe read is improver-to-intermediate that turns serious above head-high. Skip it right after the first heavy wet-season rains, when the river runs dirty through the lineup."
+      },
+      {
+        "name": "Nusa Lembongan",
+        "imageSrc": "/images/places/uluwatu-surf.jpg",
+        "area": "Across the Badung Strait",
+        "bestFor": "Reef trio by fast boat",
+        "summary": "The fast boat from Sanur puts you on a row of coral reefs off Lembongan's north shore. Playgrounds is the learner wave, a forgiving A-frame that is still coral underneath; Shipwrecks is the consistent right, sharp and shallow on the inside, with old seaweed-farm spikes still in the reef; Lacerations earns its name. One correction worth printing: these are dry-season waves behind the southeast trades — Lembongan is not the wet-season escape some blogs suggest."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "One swell engine, two coasts that take turns",
+        "paragraphs": [
+          "Bali's surf runs on a single engine: low-pressure systems in the Southern Ocean, sending **south-southwest swell** at the island all twelve months. That is why Bali is effectively never flat — in a typical August, the model record shows rideable swell present **essentially 100% of the time** at Uluwatu. Open-ocean swell averages **1.6–1.7 m in the wet season and 2.2 m in July–August**, but the number that matters more is the period: it stretches from about 12.4 to **14.4 seconds** at the mid-year peak, and longer-period swell breaks harder, hollower and further out on reef. Those figures are deep-water swell heights, not wave faces — the wave at the reef is regularly much bigger than the raw number suggests.",
+          "The wind decides which side of the island is clean. From roughly **May to September** the trades blow from the east-southeast and groom everything that faces southwest: the Bukit reefs, Canggu, the Kuta strip, Medewi and Balian, the Lembongan reefs. From **November to March** the monsoon swings west-to-northwest and the mirror flips — Sanur, Keramas, Serangan and Nusa Dua turn offshore while the west coast blows out. The swap is near-total: through the core dry-season months, clean wind on the east coast all but disappears. One honest asymmetry, though — the east coast takes the same swell only after it bends around the Bukit, so it arrives smaller, and Sanur sits in Nusa Penida's shadow on top of that. Wet-season surf is cleaner than its reputation, but it is smaller surf."
+        ],
+        "bullets": [
+          "**May–September:** the Bukit west coast, Canggu, the Kuta–Seminyak sand strip, Medewi and Balian, Nusa Lembongan",
+          "**November–March:** Keramas, Serangan, Sanur and Nusa Dua — plus the south-coast outliers Green Bowl and Nyang Nyang, which run on the wet-season wind clock",
+          "**April and October:** the shoulders — smaller, cleaner, quieter everywhere, and on the climatology numbers October is the best-balanced month of the year",
+          "**Every month:** dawn. First light has the lightest wind in every season, which is why our surf days start early"
+        ]
+      },
+      {
+        "heading": "The dry-season side: the Bukit, Canggu and the sand between",
+        "paragraphs": [
+          "The Bukit's west coast is the wave list that made Bali famous, and it is **all reef, nearly all lefts**: Balangan and Dreamland as the gentler doorway, Bingin and Impossibles in the middle, Padang Padang and Uluwatu at the top of the ladder. Read the ladder honestly. Uluwatu is **not a beginner wave at any tide**; Padang Padang is advanced-to-expert only; Bingin's crowd and local hierarchy are as serious as its shallow shelf. The kind exceptions are Baby Padang's seaweed-padded right and Dreamland's part-sand bottom. Our [Bukit Peninsula guide](/bali/en/journal/bukit-peninsula-surf-spots) walks the coast reef by reef, tide window by tide window.",
+          "North of the airport the bottom changes and so does the mood. **Kuta, Legian and Seminyak break over sand** — this is where lessons happen, and where a [private beginner lesson](/bali/en/tours/surf-lesson-experience) **from $35** puts a board, leash and instructor in the water with you. Canggu is the next step, not the first one: Batu Bolong's long left runs over a **lava-rock shelf with sand patches**, kind to improvers on a longboard but repeatedly flagged as unsuitable for absolute first-timers because of the rips. Echo Beach and Pererenan are intermediate-and-up, and when the sand stops teaching you anything, Kuta Reef and the airport reefs wait offshore. The full strip, peak by peak, is in our [Canggu surf guide](/bali/en/journal/canggu-surf-spots)."
+        ]
+      },
+      {
+        "heading": "The wet-season side: Keramas to Nusa Dua",
+        "paragraphs": [
+          "From November to March, the same drivers who took you to Uluwatu in July point the car east. **Keramas** is the marquee wave: a fast right over black volcanic reef, a World Championship Tour venue that even runs **floodlit night sessions**, honestly rated advanced-and-up, about **45 minutes from Sanur** by the bypass. **Serangan**, fifteen-odd minutes from the airport, is the accessible one: a field of shifting peaks in deeper water that rarely goes flat and draws one of the wet season's most crowded lineups. Sanur itself splits in two — **Baby Reef**, the mellow surf-school wave inside the bay, and the outer **Sanur Reef**, expert-only, fiercely local, and too small to break properly most days even in season.",
+          "**Nusa Dua** almost never goes flat — its outer reef takes the swell head-on, spread across several named peaks, and the main peak is the one a respected guide calls **probably the most dangerous wave in Bali**. Intermediates should aim at the satellite peaks, not the main one. Two south-coast outliers belong to this season for wind reasons: **Green Bowl**, a right at the bottom of a long cliff staircase that keeps its crowd modest, and Nyang Nyang below the cliffs south of Uluwatu. Everything on this side runs smaller than the Bukit would on the same swell — our [east Bali surf guide](/bali/en/journal/east-bali-surf-spots) covers the coast in detail."
+        ]
+      },
+      {
+        "heading": "The quiet corners: west Bali and Nusa Lembongan",
+        "paragraphs": [
+          "Northwest of Canggu the coast empties out. **Medewi** is a mellow left peeling over round cobblestones — improver to intermediate, with the rocky walk-in as the real test — and midweek the lineup stays light; the river-mouth right a few hundred metres south is the recognised escape when the point gets busy. **Balian** is the consistency play: rivermouth peaks over cobble and sand that break essentially year-round with genuinely low crowds. Guides dispute Balian's grade, so we publish the safe read — improver-to-intermediate, serious above head-high — and we skip it after the first heavy wet-season rains for water-quality reasons. The long version is in our [Medewi and Balian guide](/bali/en/journal/west-bali-surf-medewi-balian).",
+          "**Nusa Lembongan** is the other direction: a [fast boat from Sanur](/bali/en/tours/fast-boat-transfer-bali) — tickets with hotel pickup from $15 — and you are looking at a row of dry-season reefs. **Playgrounds** is the island's learner wave, forgiving by reef standards but still reef; **Shipwrecks** is the consistent right, sharp and shallow inside, with old seaweed-farm spikes in the reef; **Lacerations** is the safety briefing in one word, and Razors across the channel stays the quietest of the four. They all want the **April-to-October trades** — in the wet-season westerlies these reefs are onshore, the same as the west coast."
+        ]
+      },
+      {
+        "heading": "Boards in the car, tides on the chart: how a surf day runs",
+        "paragraphs": [
+          "Chasing the right coast in the right season means driving, and driving with boards. Our [car with driver](/bali/en/tours/private-car-with-driver-bali) runs **from $59 for the day, and boards fit** — the plan stays loose on purpose. You message us on WhatsApp, we start before dawn because **first light carries the lightest wind in every month of the year**, and if the first spot is blown or the tide is wrong, the driver already knows the fallback. No prepayment, same as every tour we run. Landing with a board bag? A [private airport pickup](/bali/en/tours/bali-airport-transfer) from $15 starts the trip at the kerb instead of the taxi line.",
+          "Respect the tide chart more than the forecast app. South Bali runs a mixed tide with a **spring range around 2–2.5 metres**, and the premier waves break over fringing reef platforms that sit barely a metre below mean sea level — at a spring low, parts of some reefs are effectively dry, and a spot can go from perfect to unrideable inside a single session. Tide preferences are not uniform either: some waves only work on low, others want mid-to-high, and for a few — Padang Padang is the famous case — published guides genuinely contradict each other. Our regional guides list windows spot by spot; when in doubt, ask the surfers walking back up the path.",
+          "Gear stays simple: **boardshorts and a rashguard work all twelve months** — no wetsuit, ever. The one nuance is the Bukit late in the dry season, when upwelling pulls the water down to a **25–26°C average in August and September**, noticeably cooler than the 29°C of March; cold-prone surfers pack a 1–2 mm top for dawn sessions and regret nothing. A long-sleeve rashguard earns its place year-round anyway — sun on the paddle out, reef on the way in."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What are the best surf spots in Bali?",
+        "answer": "Uluwatu is the benchmark — a section-rich left over a limestone reef platform running from intermediate to expert — with Padang Padang, Bingin and Keramas completing the marquee list. But the honest answer depends on your level: for beginners the best spots are the sand-bottom beaches from Kuta to Seminyak, for improvers Medewi and Balian in west Bali, and from November to March the east coast from Serangan to Keramas takes over."
+      },
+      {
+        "question": "Where should a beginner surf in Bali?",
+        "answer": "On sand: Kuta, Legian and Seminyak are the island's true beginner venues, and the south end of Kuta is the least rip-affected stretch. Batu Bolong in Canggu suits improvers on longboards, but it breaks over a rock shelf and Canggu's rips make it a poor first-ever venue. A private lesson from $35, with board, leash and instructor included, is the fastest safe start."
+      },
+      {
+        "question": "When is the best time to surf in Bali?",
+        "answer": "May to September for the west coast — the Bukit, Canggu, the Kuta strip, Medewi — and November to March for the east coast around Sanur, Keramas and Nusa Dua. There is genuinely no flat season: the Southern Ocean sends swell all year, so the only question is which coast the wind favours. On the climatology numbers, October is the best-balanced single month, with April close behind."
+      },
+      {
+        "question": "Which surf breaks in Bali work in the wet season?",
+        "answer": "The east and southeast side: Keramas, Serangan, Sanur and Nusa Dua turn offshore from November to March, plus Green Bowl and Nyang Nyang on the south coast. Expect clean but smaller waves — the swell bends around the Bukit and loses size on the way in. Avoid the west coast then: it is onshore, and the monsoon can land up to 60 tonnes of plastic a day on Kuta and Legian."
+      },
+      {
+        "question": "How are Bali's surf spots arranged around the island?",
+        "answer": "Think of five zones: the sand strip from Kuta to Canggu on the southwest coast; the reef ladder down the Bukit's west side from Balangan to Uluwatu; the wet-season coast from Sanur through Keramas, plus Nusa Dua on the Bukit's east; the quiet cobblestone points of Medewi and Balian in the far west; and the Lembongan reefs across the strait. This page is the table of the island — the regional guides go spot by spot."
+      },
+      {
+        "question": "How crowded are Bali's surf breaks?",
+        "answer": "The famous ones are as crowded as anywhere on earth — Uluwatu's Peak, Padang Padang, Bingin and Batu Bolong all sit at the top of the scale, and Padang and Bingin add real localism. The escape valves are real too: Temples at Uluwatu's southern end, Medewi midweek, Balian almost always, Green Bowl behind its cliff staircase, and Nusa Dua's crowd diluted across several separate peaks."
+      }
+    ]
+  },
+  {
+    "slug": "bali-surf-spots-for-beginners",
+    "badge": "Travel guide",
+    "navLabel": "Beginner surf spots",
+    "cardTourLabel": "Surf and active days",
+    "heroTourSlug": "surf-lesson-experience",
+    "relatedTourSlugs": [
+      "surf-lesson-experience",
+      "private-car-with-driver-bali",
+      "white-water-rafting"
+    ],
+    "inlineStats": [
+      "5 true sand bottoms",
+      "Tide: mid-high, rising",
+      "Lessons from $35"
+    ],
+    "title": "Where to Learn to Surf in Bali: 5 Sand Beaches, 1 Exception",
+    "description": "The five genuinely sand-bottom beginner surf spots in Bali, the Batu Bolong exception, and the Canggu waves that look easy on Instagram but are not.",
+    "excerpt": "Ask where to learn to surf in Bali and the honest answer is a short list: Kuta, Legian, Double Six, Seminyak and the inside peak at Berawa — the beaches that break over genuine sand. Batu Bolong in Canggu earns a place too, but as an exception with terms attached, because its bottom is rock and reef with sand patches, not the sand beach the photos imply. That distinction is the whole guide: a first-timer falls constantly, and sand forgives what rock does not. Below we rank the six places we actually take beginners, give the one tide rule that holds across the entire strip — mid to high, rising — and name the Canggu waves that look beginner-friendly on a phone screen and are anything but. Lessons run from $35, board and coach included.",
+    "rankings": [
+      {
+        "name": "Kuta Beach",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "Kuta",
+        "bestFor": "The first-ever lesson",
+        "summary": "The benchmark, and still the answer. Sand from the shoreline out through the whole impact zone, with no reef anywhere, and usually the smallest surf on the strip because Kuta Reef and the Bukit peninsula filter the swell before it lands. Two kilometres of beach spread the famous crowds into tolerable peaks; surf schools favour the higher tide, when the whitewater is at its mellowest. The south end toward Discovery is the stretch least troubled by rips."
+      },
+      {
+        "name": "Legian",
+        "imageSrc": "/images/tours-real/surf-lesson-experience.jpg",
+        "area": "Legian",
+        "bestFor": "Week two, more push",
+        "summary": "One beach north and appreciably more swell — guides report days when Legian runs close to twice the size of Kuta. Still genuine sand, still both lefts and rights off shifting banks, and fine for beginners at one to three feet on a rising mid tide. On a dropping low it turns into heavy close-outs, and on bigger swells the high-tide shorebreak dumps hard onto the sand, so treat it as the week-two beach, not the day-one beach. Noticeably quieter than Kuta."
+      },
+      {
+        "name": "Double Six",
+        "imageSrc": "/images/remote/sunset-double-six-beach-2023-12-07-327b775c.jpg",
+        "area": "Seminyak-Legian border",
+        "bestFor": "Whitewater with lifeguards watching",
+        "summary": "Sand with no reef in any direction, lifeguards on the beach, and a walk-in entry at the end of Jalan Double Six. The sandbars shift, so whether the day serves lefts or rights depends on where the rips last pushed the sand. First-timers learn in the inside whitewater; the outside bank suits improvers on a longboard. Surf it mid to high on the push — the consensus against low tide here is near-universal — and in the morning, before the sea breeze."
+      },
+      {
+        "name": "Seminyak Beach",
+        "imageSrc": "/images/remote/seminyak-beach-61041117.jpg",
+        "area": "Seminyak",
+        "bestFor": "Repetitions without the crowd",
+        "summary": "The least crowded sand beach on the whole Kuta strip, which makes it the option when you want repetitions without traffic. Stay on Seminyak Beach proper: the named peaks at Petitenget and Ku De Ta are punchier, carry rock patches that get shallow at low tide, and belong to improvers. Quality depends entirely on the day's sandbanks. After heavy wet-season rain the water near Petitenget deteriorates enough that we simply move the session south."
+      },
+      {
+        "name": "Berawa (the inside Peak only)",
+        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "area": "Canggu (south)",
+        "bestFor": "Sand inside, quiet lineup",
+        "summary": "The one Canggu beach with a genuinely sand-bottom learner zone — but only the inside Peak. Rock and coral sit out the back and at The Ledge to the south, so a beginner's session stays on the Peak, full stop. It is markedly quieter than Batu Bolong. On tide, the honest answer: our sources contradict each other outright, so we apply the strip rule — mid to high, rising. After heavy rain the river pushes dirty water into the lineup; give it a day."
+      },
+      {
+        "name": "Batu Bolong — the exception",
+        "imageSrc": "/images/remote/batu-bolong-beach-canggu-c733e2b3.jpg",
+        "area": "Canggu",
+        "bestFor": "First green waves, carefully",
+        "summary": "The exception, with its terms stated plainly: this is not a sand beach. The bottom is sand over a flat-ish rock and reef shelf, with sea urchins that matter once the tide drops out. The wave itself is slow, soft and long — which is why every surf school in Canggu is on it, and why the realistic hazard is somebody else's longboard rather than the bottom. Come once you stand consistently, aim for mid to high tide on the push, and paddle out through the channels beside the reef."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The rule that organises everything: sand bottom",
+        "paragraphs": [
+          "Every spot on this page obeys a single rule: **sand under the take-off, sand under the whole ride**. A beginner falls on most of the waves they attempt — that is the deal — and what you land on decides what falling costs. The strip from Kuta through Legian and Seminyak breaks over **sand, not reef**, which is the entire reason Bali is the easiest major destination in the world to learn in. And ignore the '3-5 foot beginner waves' line that circulates on marketing pages: a genuine first-timer learns in **knee-to-waist whitewater**, and the sand beaches serve exactly that, essentially every day of the year.",
+          "Our [private beginner lesson](/bali/en/tours/surf-lesson-experience) runs **from $35 for a 2-4 hour session**, board, leash and coach included, booked on WhatsApp with no prepayment. The instructor chooses between Kuta, Legian and Double Six on the morning itself — by tide and sandbank, not by timetable. If you want to know what the session actually looks like, step by step, our [beginner surf lesson guide](/bali/en/journal/surf-lessons-bali-beginners) walks through all of it."
+        ]
+      },
+      {
+        "heading": "One tide rule covers the whole strip",
+        "paragraphs": [
+          "**Mid to high, on a rising tide** — that setting works at every beach in this guide and is dangerous at none of them, which is why our instructors default to it. Low tide is the common enemy: the sand beaches turn into fast, heavy close-outs, and the rock-bottom Canggu spots go shallow enough to expose reef and sea urchins. This is also why our lesson start times float with the tide chart rather than sitting at a fixed hour.",
+          "The wind rule is even simpler: **surf in the morning**. Dry-season trade winds blow from the easterly quadrant — offshore to side-offshore for this coast — and the sea breeze chops everything up from late morning onward. If every beach looks too big on the day, head south: Kuta usually carries **the smallest surf on the strip**, because Kuta Reef and the Bukit peninsula filter the swell before it arrives. For the full mechanics — swell period, spring tides, why the same beach behaves differently week to week — see our [guide to Bali surf conditions](/bali/en/journal/bali-surf-conditions-tides-swell-wind)."
+        ]
+      },
+      {
+        "heading": "The waves that look beginner-friendly on Instagram and are not",
+        "paragraphs": [
+          "Canggu is the most photographed learn-to-surf destination in Bali, and most of Canggu is not sand. That gap between the feed and the bottom is where beginners get hurt, so here is the blacklist — every spot on it is rock, reef, rips or a boat ride. When you are ready for the step up, our [Canggu surf spots guide](/bali/en/journal/canggu-surf-spots) covers them properly, tide windows and all:"
+        ],
+        "bullets": [
+          "**Old Man's** — the wave is genuinely mellow, but the take-off zones sit over reef; only the first hundred metres or so of the paddle-out is sand",
+          "**Echo Beach's main left** — shallow, jagged volcanic reef and an intermediate-to-advanced wave; one widely copied guide calls it sand and 'all levels', and it is wrong",
+          "**The Sandbar next to Echo Beach** — actually sand, but fast and hollow; an improver's wave, not a first-timer's",
+          "**Pererenan** — a volcanic rock shelf that goes very shallow on the inside at anything below mid tide",
+          "**Seseh** — quiet black sand in the photos; strong, unpredictable rips, rock sections mixed into the sand, and no lifeguards watching you",
+          "**Kuta Reef, Airport Lefts, Airport Rights** — sharp coral that you reach by boat; nothing about them is beginner surfing"
+        ]
+      },
+      {
+        "heading": "When a beginner should come",
+        "paragraphs": [
+          "The beginner beaches work all twelve months; the honest question is what condition they are in. The windows we recommend are **late April to early June and September to October**: dry-season offshore mornings without the full weight of mid-year swell. June through August is peak season on the charts precisely because the ocean is at its most powerful — the open-ocean swell average climbs to **2.0-2.2 metres** — and rip currents scale with it. Great months for the Bukit reefs; poor months for a first-timer at an open beach break.",
+          "December to March is the trade-off block: the smallest waves of the year, but the west coast turns onshore by afternoon and the monsoon flushes the rivers — Kuta, Legian and Seminyak collect **up to 60 tonnes of plastic a day** at the peak of it. Some schools argue the wet season suits beginners because the swell is smallest; that logic works at Sanur's sandy lagoon on the east coast, not at Kuta or Canggu. Water is warm all year — **no wetsuit, ever**. The full picture, month by month, is in our [Bali surf season guide](/bali/en/journal/bali-surf-season-month-by-month)."
+        ]
+      },
+      {
+        "heading": "Getting a board to the right beach at the right hour",
+        "paragraphs": [
+          "If you sleep in Kuta, Legian or Seminyak, logistics barely exist: every beach in this guide down to Seseh is a walk-in off the sand, board under your arm. From Ubud, Uluwatu or Sanur it becomes a timing problem, because the window that matters — morning glass on a rising mid tide — does not wait for traffic. From Ubud the drive runs **60-90 minutes depending on traffic**, so a first lesson means leaving not long after dawn.",
+          "The clean solution is a [car with driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59** — boards fit, the driver waits while you surf, and when Batu Bolong is elbow-to-elbow he moves you down the coast to Berawa or Seminyak instead. Flying in with your own board bag, our [private airport pickup](/bali/en/tours/bali-airport-transfer) **from $15** saves the arrival-day negotiation. Tell us the tide window on WhatsApp and our drivers build the morning around it."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What is the best surf spot in Bali for beginners?",
+        "answer": "Kuta Beach — sand through the whole impact zone, and usually the smallest waves on the coast because Kuta Reef and the Bukit peninsula filter the swell before it arrives. Two kilometres of beach spread the crowds into separate peaks. Surf it mid to high on a rising tide; the south end toward Discovery is the stretch least troubled by rips."
+      },
+      {
+        "question": "Where is the best place to learn to surf in Bali?",
+        "answer": "The sand-bottom strip from Kuta through Legian to Seminyak — the only stretch where a complete beginner can fall all morning with nothing but sand underneath. First lessons happen in knee-to-waist whitewater, a private session costs from $35 with board and coach included, and the instructor picks the exact beach on the day by tide and sandbank rather than by timetable."
+      },
+      {
+        "question": "Is Canggu a good place to learn to surf?",
+        "answer": "Partly. Batu Bolong is soft and slow and every surf school uses it, but its bottom is rock and reef with sand patches — not sand — with urchins at low tide and one of the most crowded lineups in Bali. Berawa's inside Peak is the one genuinely sand-bottom learner zone in Canggu. A true first lesson is easier at Kuta or Double Six; save Canggu for week two."
+      },
+      {
+        "question": "Which surf spots in Bali should beginners avoid?",
+        "answer": "Anything without sand under the take-off: Echo Beach's main peak (jagged volcanic reef), Pererenan (rock shelf), Old Man's take-off zones, and the boat-access coral reefs — Kuta Reef, Airport Lefts and Airport Rights. Seseh looks calm and empty in photos but carries strong rips with no lifeguards. If a wave made a famous surf video, it almost certainly breaks over reef — watch it, don't paddle at it."
+      },
+      {
+        "question": "What tide is best for beginner surfing in Bali?",
+        "answer": "Mid to high on a rising tide — that setting is safe at every beach in this guide and dangerous at none of them. At low tide the sand beaches close out fast and heavy, and the rock-bottom Canggu spots get shallow enough to expose reef and sea urchins. It is why our lesson times float with the tide chart instead of sitting at a fixed hour."
+      },
+      {
+        "question": "When is the best time of year to learn to surf in Bali?",
+        "answer": "Late April to early June and September to October — dry-season offshore mornings without the full power of the mid-year swell. June to August brings the year's biggest surf and strongest rips; December to March turns the beginner beaches onshore by afternoon and dirty, with monsoon plastic landing on Kuta, Legian and Seminyak. You can still learn then — book the earliest slot of the day and lower expectations."
+      }
+    ]
+  },
+  {
+    "slug": "bali-surf-spots-intermediate",
+    "badge": "Travel guide",
+    "navLabel": "Intermediate spots",
+    "cardTourLabel": "Surf and active days",
+    "heroTourSlug": "surf-lesson-experience",
+    "relatedTourSlugs": [
+      "surf-lesson-experience",
+      "private-car-with-driver-bali",
+      "fast-boat-transfer-bali"
+    ],
+    "inlineStats": [
+      "7 breaks in order",
+      "Peak swell Jun-Aug",
+      "Car + driver from $59"
+    ],
+    "title": "Bali Surf Spots for Intermediates: 7 Breaks in Order",
+    "description": "The sand-to-reef progression for intermediates in Bali: seven breaks in the right order, plus how falling, tides and positioning change on reef.",
+    "excerpt": "There is a moment in every surfer's Bali trip when the sand-bottom beaches stop teaching you anything, and the reef — which a month ago looked like somebody else's sport — starts looking like an invitation. This guide is the bridge. We ordered seven breaks so each one adds exactly one new problem: rock under a soft wave at Batu Bolong, a real reef lineup at Baby Padang, reef speed over a forgiving bottom at Dreamland, a proper left-hand wave with a shutdown section at Balangan, cobblestone points out west, a boat reef off Kuta, and finally Bingin and Impossibles, where the ladder ends. Along the way: how falling changes, how you position off a fixed reef instead of a shifting sandbank, why the tide flips from preference to safety rule, and how to move boards around the island without arguing with a hatchback driver.",
+    "rankings": [
+      {
+        "name": "Batu Bolong, Canggu",
+        "imageSrc": "/images/places/surfing-in-canggu.jpg",
+        "area": "Canggu strip",
+        "bestFor": "First wave over rock",
+        "summary": "The halfway house: a wave as soft and longboard-friendly as anything on the sand, breaking over **rock and reef with sand patches** — your first chance to practise falling flat with consequences underneath. Most guides call it **mid to high on the push**; the low goes shallow and exposes urchins. The real hazard is the 10/10 crowd of loose boards, not the bottom. Old Man's next door teaches the same lesson — reef under the takeoff zones despite a sandy first 100 m of paddle."
+      },
+      {
+        "name": "Baby Padang",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "Bukit, Padang beach",
+        "bestFor": "Your first Bukit reef",
+        "summary": "The right-hander across the channel from Padang Padang proper, in the lee of a headland that strips the power out of the swell while leaving the shape. The bottom is **reef covered in seaweed** — noticeably kinder underfoot than bare Bukit coral — and the channel paddle-out is one of the few genuinely low-stress entries on the peninsula. Surf it **mid to high on a rising tide** so the reef stays covered. Expect a mushy wall peeling 50-80 m and a busy but friendly lineup where loose boards are the main hazard."
+      },
+      {
+        "name": "Dreamland",
+        "imageSrc": "/images/remote/dreamland-beach-bali-cc260a0f.jpg",
+        "area": "Bukit west coast",
+        "bestFor": "Reef speed, forgiving bottom",
+        "summary": "An A-frame over a flat, partly sand-covered limestone shelf — the **most forgiving bottom on the Bukit**, though not a true sand beach break. Most guides call **low to mid** the best tide, with mid the safe answer while you learn the place; on the full high the bay turns into a dumping shore-pound. Respect the **rip running out through the middle of the bay** and the rocks on the inside — there is no reliable lifeguard cover here."
+      },
+      {
+        "name": "Balangan",
+        "imageSrc": "/images/remote/1280px-balangan-beach-bali-2017-08-16-b16af1dd.jpg",
+        "area": "Bukit, northernmost reef",
+        "bestFor": "Your first proper left-hand reef break",
+        "summary": "A long left-hand wave over reef, in three sections. Guides genuinely disagree about its ideal tide, so take the well-supported progression window instead: **medium-to-high tide on a shoulder-to-head-high swell**, mellow enough to learn on. What no source contradicts: the **end section shuts down on low tide**, and a building swell pushes you down the reef toward it — kick out early, come in near the headland, and avoid the nasty shore break through the middle of the bay. Do not paddle out here alone."
+      },
+      {
+        "name": "Balian, west Bali",
+        "imageSrc": "/images/remote/canggu-beach-5-cdb79e3d.jpg",
+        "area": "West Bali, 1.5-2.5 h out",
+        "bestFor": "Long point rides over cobbles",
+        "summary": "A rivermouth peak over **cobblestones and sand** that works **on every tide** — lower is punchier, higher mellower — and runs year-round, which makes it the safest wave on this list to plan a date around. Fine for intermediates to about head-high; it gets serious above that. Thirty minutes further west, Medewi's boulder-bottom left peels for **up to ~500 m** at mid-to-high tide — bring booties for the rocky walk in, and skip the first rains of the wet season, when the river fouls the water."
+      },
+      {
+        "name": "Kuta Reef, by boat",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "Off Tuban, by boat",
+        "bestFor": "First boat-access reef",
+        "summary": "A left over sharp coral roughly **800 m offshore** — in practice you take a local boat from the beach at Jalan Wana Segara, around **Rp 100k return**, rather than paddling. Often described as the friendliest introduction to Bali reef surfing for a competent intermediate, which is a different claim from beginner-friendly: go **mid to high**, because low tide is dangerously shallow and the takeoff doubles up over the coral. Neighbouring Airport Lefts is the softer of the airport reefs and runs the same tide rule."
+      },
+      {
+        "name": "Bingin and Impossibles",
+        "imageSrc": "/images/remote/bingin-beach-9330583d.jpg",
+        "area": "Bukit, mid-peninsula",
+        "bestFor": "The graduation waves",
+        "summary": "The reward at the top of the ladder, not a starting rung. Bingin is a pitching left often called the easiest barrel in Bali — relative, not literal — safest at **mid to high tide** and strictly for surfers who know the reef on the low, in front of a 10/10 crowd of locals who have every set dialled. Impossibles next door runs so fast that **roughly one wave in ten is makeable**, which teaches wave selection like nothing else on the island. Earn these."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "First, an honest definition of intermediate",
+        "paragraphs": [
+          "For this list, intermediate means you paddle into unbroken green waves without a push, take off at an angle, and hold a line while other people are riding around you. If any of that is still hit-and-miss, stay on the sand between Kuta and Canggu a little longer — our [beginner spots guide](/bali/en/journal/bali-surf-spots-for-beginners) covers that strip beach by beach — or book a [private lesson](/bali/en/tours/surf-lesson-experience) **from $35**: most of what follows is exactly what a good coach drills into you before a first reef session anyway."
+        ]
+      },
+      {
+        "heading": "What changes when you swap sand for reef",
+        "paragraphs": [
+          "Three things at once. The bottom stops moving — a sandbank shifts with every storm, but a reef is a fixed object, so the takeoff zone is a fixed place and positioning becomes lining up landmarks instead of chasing peaks. The tide stops being a preference and becomes a safety variable — Bali runs a tidal range of **roughly 0 to 2.5 m on spring tides**, enough to take one reef from friendly to nearly dry inside a single session. And falling becomes a skill with rules:"
+        ],
+        "bullets": [
+          "**Fall flat and shallow** — starfish out, never dive off the board, and cover your head when you surface",
+          "**Know your exit before you enter** — reef paddle-outs are routes through channels, not straight lines through whitewater",
+          "**Never fight the current** — route around it; at Balangan a building swell pushes you down the reef toward the shutdown end section, so kick out early and come in near the headland",
+          "**Take a higher line over the shallow sections** as the tide drops — that is where reefs collect skin",
+          "**Pack reef-cut first aid**, and booties for rocky entries like Medewi, where the boulders are slippery"
+        ]
+      },
+      {
+        "heading": "The tide rule, and where it flips",
+        "paragraphs": [
+          "The default that is defensible everywhere and dangerous nowhere: **mid to high, on a rising tide**. Across the Kuta-Canggu strip every rock and reef spot goes dangerously shallow at low water and every sand bank closes out; on the Bukit the broad rule that holds across sources is that **higher tide means fuller, slower and more forgiving — lower means hollower, faster and shallower**. Baby Padang wants the reef well covered, and Kuta Reef's takeoff doubles up over the coral on the low.",
+          "Then learn the exceptions, because they mark the edge of intermediate territory. At Dreamland most guides actually prefer **low to mid**, with mid the safe answer while you learn it — the full high turns the bay into a dumping shore-pound. At Balangan reputable guides genuinely disagree, which is why we publish a window rather than a number. And Bingin's famous barrel window is **low to mid over a reef that dries out** — its best tide is also its most dangerous, which is exactly why it sits at the top of the ladder. Our [tides, swell and wind guide](/bali/en/journal/bali-surf-conditions-tides-swell-wind) unpacks how to read a Bali tide chart properly."
+        ]
+      },
+      {
+        "heading": "Boards, drivers and the dawn window",
+        "paragraphs": [
+          "The hard part of surfing beyond Canggu is usually the car, not the wave. Standard hatchbacks — which is what most ride-hailing cars are — frequently cannot take a board, and drivers are known to develop sudden car trouble when you show up with one. A [car with driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59** fixes it: boards fit, the driver waits out your session, and you chase the tide window instead of a pickup app. Leave early — everything in this guide is cleanest at dawn, before the sea breeze fills in late morning.",
+          "Honest drive times: **Balian 1.5-2 hours** from Canggu or Seminyak, **Medewi 2-2.5 hours and longer in traffic** — distrust the optimistic 90-minute claims. The reefs off Kuta are a boat problem instead: local boats run from Jalan Wana Segara for **around Rp 100k return**, and paddling out is possible but not recommended. And if you extend the ladder to Nusa Lembongan — Playgrounds is a forgiving A-frame an easy **200 m paddle** off the beach, though still reef if you fall in the wrong spot — the [fast boat from Sanur](/bali/en/tours/fast-boat-transfer-bali) runs about 30 minutes, and boards travel free but must be declared when you book, not at the jetty."
+        ]
+      },
+      {
+        "heading": "The graduation: Bingin, Impossibles and the Uluwatu cave",
+        "paragraphs": [
+          "You are ready for the top of the ladder when the bullet list above is reflex rather than checklist. Bingin is the reward — a pitching takeoff into what people call the easiest barrel in Bali, relative rather than literal, over a reef that **dries out at low tide**. One access note we will not pretend away: in **July 2025** the authorities demolished most of the cliffside warung strip that older guides still describe as the way down, and a staged redevelopment has been announced — check conditions on the ground before trusting old directions. Our [Bukit surf guide](/bali/en/journal/bukit-peninsula-surf-spots) tracks the peninsula spot by spot.",
+          "Uluwatu is manageable for a strong intermediate at **mid to high tide on the Peak**, but the cave is the serious part: at high tide the surge slams the walls and exits must be timed to lulls between sets — mistimed exits are the main injury mechanism there. The current sweeps the lineup north, so aim well south of the cave coming in; if you get carried past, ride the drift and come ashore at Padang rather than fighting back. Taking a local guide for a first Uluwatu session is the standard recommendation across serious sources, not an upsell. The full section-by-section picture is in our [Uluwatu surf guide](/bali/en/journal/uluwatu-surf-guide)."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What are the best surf spots in Bali for intermediate surfers?",
+        "answer": "In progression order: Batu Bolong in Canggu, then Baby Padang, Dreamland and Balangan on the Bukit, Balian and Medewi out west, and Kuta Reef by boat. Each rung adds one new problem — rock under a soft wave, a real reef lineup, reef speed, a shutdown section, boulder entries, then isolation. Bingin, Impossibles and Uluwatu are the graduation, not the starting point."
+      },
+      {
+        "question": "Which reef break in Bali should I surf first?",
+        "answer": "Baby Padang, the right-hander across the channel from Padang Padang. The headland strips the power out of the swell, the reef is covered in seaweed rather than bare coral, and the channel paddle-out is one of the calmest on the Bukit. Go mid to high on a rising tide so the reef stays covered, and expect a busy but friendly lineup."
+      },
+      {
+        "question": "What tide should intermediates surf in Bali?",
+        "answer": "Mid to high on a rising tide — the default that is defensible everywhere and dangerous nowhere. Bali's tidal range runs to roughly 2.5 m on spring tides, so a reef can go from friendly to nearly dry within one session. Learn the exceptions before trusting them: most guides prefer low to mid at Dreamland, and Bingin's low-tide barrel window is strictly for people who already know the reef."
+      },
+      {
+        "question": "Can an intermediate surfer handle Uluwatu?",
+        "answer": "On the right day, yes. The Peak at mid to high tide on a smaller swell is rated intermediate-to-advanced and is where most first-time Uluwatu visitors surf. The wave is not the real test — the cave entry and exit, the northward current and one of the busiest lineups in Bali are, and mistimed cave exits are the main injury mechanism. Take a local guide for the first session; that is standard advice, not an upsell."
+      },
+      {
+        "question": "How do you fall safely on a reef break?",
+        "answer": "Fall flat and shallow, never dive off the board headfirst — spread your weight so you do not go deep, and cover your head when you surface. Keep a mental map of the shallow sections and take a higher line over them on a dropping tide. Carry reef-cut first aid in the beach bag, and wear booties at rocky entries like Medewi, where the boulders are slippery."
+      },
+      {
+        "question": "When is the best season for intermediate surf spots in Bali?",
+        "answer": "The dry season — roughly May to October, with April a shoulder month — when winds from the easterly quadrant blow offshore across the coasts where nearly every spot in this guide sits; June to August is the most powerful, most consistent stretch. In the wet season the wind flips onshore on the west coast and the east side — Keramas, Nusa Dua, Serangan — becomes the offshore option. Mornings are cleanest year-round; the sea breeze chops everything up by late morning."
+      }
+    ]
+  },
+  {
+    "slug": "uluwatu-surf-guide",
+    "badge": "Travel guide",
+    "navLabel": "Uluwatu surf",
+    "cardTourLabel": "Getting to the waves",
+    "heroTourSlug": "private-car-with-driver-bali",
+    "relatedTourSlugs": [
+      "private-car-with-driver-bali",
+      "surf-lesson-experience",
+      "bali-airport-transfer"
+    ],
+    "inlineStats": [
+      "5 named sections",
+      "Season Apr-Oct",
+      "Car+driver from $59"
+    ],
+    "title": "Uluwatu Surf Guide: Sections, Tides and the Cave Explained",
+    "description": "Uluwatu's five sections — Temples, the Peak, Racetrack, Outside Corner, the Bombie — the tide each wants, the cave entry, and the day-trip logistics.",
+    "excerpt": "Uluwatu is one reef with five named sections, and the tide decides which of them you surf. Temples and the Peak want mid to high water; Racetrack only becomes Racetrack as the tide drains; Outside Corner and the Bombie wait for the biggest swells of the dry season. Everything breaks left over a flat limestone-coral platform, everyone enters and exits through the cave at Suluban, and the current runs north past the Peak whether you planned for it or not. This guide walks the reef section by section — which tide and size each one works at, how to time the cave on a high tide, what the crowd really looks like, and how to get there from Canggu or Seminyak with boards in the car. Honest reading: it is not a beginner wave at any tide.",
+    "rankings": [
+      {
+        "name": "The Peak",
+        "imageSrc": "/images/places/uluwatu-surf.jpg",
+        "area": "Front of the cave",
+        "bestFor": "The classic Uluwatu left-hand wave",
+        "summary": "The section straight out from the cave, which makes it the most consistent, the most surfed and the most crowded at Uluwatu — one guide rates the crowd ten out of ten. A powerful, barrelling takeoff into a bowling wall with a tapering shoulder, best on mid to high tide; it gets shallow and starts closing out as the water drops. It works from the smallest swells that reach the Bukit up to double-overhead faces, with the occasional short right spinning off toward the cliff."
+      },
+      {
+        "name": "Racetrack",
+        "imageSrc": "/images/remote/padang-padang-beach-bali-f5988498.jpg",
+        "area": "North along the reef",
+        "bestFor": "Low-tide barrels for experts",
+        "summary": "North of the Peak, over the shallowest, sharpest stretch of the reef. It technically breaks through all tides but only becomes Racetrack proper as the water drains: a super-fast, hollow drainer that peels 100 metres and more, with documented four-second barrels on the lowest tides of the month. This is where most Uluwatu reef injuries happen — advanced to expert only. If the current sweeps you past it on the way in, ride the drift and come ashore at Padang Padang instead of fighting back."
+      },
+      {
+        "name": "Temples",
+        "imageSrc": "/images/places/uluwatu-temple-cliff.jpg",
+        "area": "Southern end of the reef",
+        "bestFor": "Escaping the Peak crowd",
+        "summary": "The southernmost section, and the long paddle against the current is exactly why its crowd is the thinnest of the main peaks. A bombie outside refracts swell onto the takeoff, so Temples breaks as thick, powerful double-up barrels rather than a clean bowl, running about 100 metres before shutting down. Mid to high tide is the window, with the best shape at mid. The right call when the Peak is unbearable — provided you budget real energy for the paddle back south."
+      },
+      {
+        "name": "Outside Corner",
+        "imageSrc": "/images/places/uluwatu-cliffs-at-sunset.jpg",
+        "area": "Seaward of Racetrack",
+        "bestFor": "Big swells, thin crowds",
+        "summary": "The outer point section, breaking seaward of the start of Racetrack — only the Bombie lies further out. It does not turn on below about six feet of open-ocean swell, then serves thick, pushy walls rolling 100 to 200 metres that ask for big carving turns rather than barrels. It breaks through the tides; on big swells go on the low, because the cave exit and the incoming-tide current — not the wave face — are what turn a session bad. Size keeps the lineup honest and thin."
+      },
+      {
+        "name": "The Bombie",
+        "imageSrc": "/images/places/uluwatu-surf.jpg",
+        "area": "Outermost reef",
+        "bestFor": "The biggest days only",
+        "summary": "The outermost peak of the whole system — a deep-water bombora beyond Outside Corner that only breaks properly from roughly triple overhead, holding faces of 20 to 40 feet. On the biggest days a Bombie wave links through Outside Corner for rides approaching two kilometres. Effectively empty: a handful of big-wave surfers ride it, some with tow or boat support. For everyone else it is the show you watch from the clifftop with a coffee."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "One reef, five named sections",
+        "paragraphs": [
+          "Uluwatu is not one wave. It is a flat **limestone-and-coral reef platform** under the cliffs at Pecatu, and every section on it breaks **left** — in order, south to north: **Temples, the Peak, Racetrack, Outside Corner and, furthest out, the Bombie**. The Peak sits directly in front of the cave, which is why it is where every first-time visitor ends up and why it is the busiest. The reef picks up swell from **about 2 ft up to 15 ft and beyond**, and each section has its own tide and size window — reading those windows is the whole art of surfing this spot.",
+          "One correction that saves embarrassment in the lineup: travel sites often list 'Suluban' as a separate break. It is not one. Suluban is the cove and cave below the warung strip that give access to the reef — any 'Suluban wave' you have read about is Uluwatu's Peak or Racetrack. Uluwatu is also just the southern anchor of a longer run of reefs: [Padang Padang, Impossibles and Bingin sit minutes up the coast](/bali/en/journal/bukit-peninsula-surf-spots), close enough to check as a fallback on the same drive."
+        ]
+      },
+      {
+        "heading": "Which tide for which section",
+        "paragraphs": [
+          "Bali runs a big tidal range — **from about zero to 2.5 metres on spring tides** — so this reef can go from unsurfable to perfect inside a single session. The rule that holds across every section: **higher tide means fuller, slower and more forgiving, with more water over the reef; lower tide means hollower, faster and far shallower**. What changes from section to section is which side of that trade you want.",
+          "We plan sessions around a live tide chart on the day, never around remembered times — the windows move too much through the month. Our [tides, swell and wind guide](/bali/en/journal/bali-surf-conditions-tides-swell-wind) covers how to read the chart; here is what it means at Uluwatu:"
+        ],
+        "bullets": [
+          "**The Peak — mid to high.** Gets shallow and starts closing out as the tide drops. The most consistent section, working on the smallest swells that reach the Bukit.",
+          "**Temples — mid to high, best shape at mid.** Thick double-up barrels and a long paddle that keeps the crowd down.",
+          "**Racetrack — low.** It only becomes Racetrack proper as the tide drains, and the lowest tides of the month turn it into an experts-only, multi-section barrel.",
+          "**Outside Corner — size first, tide second.** Needs about 6 ft of open-ocean swell to turn on; it breaks through the tides, but on big swells go on the low — the cave exit and the incoming-tide current, not the wave face, are what end sessions badly.",
+          "**The Bombie — tide is not the gate.** Higher tide is the most commonly cited preference, but at the triple-overhead-plus size it needs, it breaks on essentially all tides. Swell is the switch — and note that high tide makes the cave far more dangerous."
+        ]
+      },
+      {
+        "heading": "The cave: getting in is easy, getting out is the skill",
+        "paragraphs": [
+          "Everyone enters and exits Uluwatu through the same hole in the cliff: stairs and walkways drop from the clifftop through the warung strip to a limestone cave at Suluban that opens straight onto the water. At **low tide** the cave floor and the reef in front of it are exposed — you walk **around 100 metres across shallow, sharp reef** to reach the channel. Slow and cutting, but low-risk if you watch your feet; **booties are strongly recommended**. At **high tide** the cave floods. You can paddle straight out of the mouth, but water surges in and out and slams the cliff walls, so **time your entry and exit to a lull between sets**. Mistimed exits are the main injury mechanism here, and on a big swell at high tide the cave is genuinely dangerous.",
+          "Once outside, do not sit and drift — the rip pulls you north toward Racetrack. Coming back in is the part that catches people: the current runs from Temples north past the Peak toward Racetrack and on toward Padang, so **aim well south of the cave — upcurrent — and let the drift carry you onto it**. If you overshoot past Racetrack, do not fight your way back against the flow. Keep going and come ashore at Padang Padang, or wait for a lull and cross a wider, deeper part of the reef.",
+          "For a first session, the advice is uniform across every serious source: **go out with a guide who knows the cave**. At Uluwatu that is the standard recommendation, not an upsell — the exit is the exam."
+        ]
+      },
+      {
+        "heading": "Season, size and the crowd",
+        "paragraphs": [
+          "The dry season — **roughly April to October, peaking June to August** — is Uluwatu's season, because the southeast trade winds blow offshore into this west-southwest-facing reef. The wave itself picks up Southern Ocean groundswell all year; what the wet season from November to March ruins is the wind, when west and northwest onshores chop the face apart. **Dawn and evening glass-offs are the premium sessions** in any month. For the wider calendar, see our [month-by-month surf season guide](/bali/en/journal/bali-surf-season-month-by-month).",
+          "The crowd deserves its own paragraph, because here it is a genuine hazard rather than an annoyance. Uluwatu is routinely described as **one of the busiest lineups in Bali, and it is worst when the surf is small** — anything under head-high funnels every surfer on the Bukit onto the Peak, where loose boards and dropped-in takeoffs rank among the top hazards and localism is real. The lineup **thins noticeably above 6 ft**. The two escapes both cost you something: the long paddle south to Temples, or the size out at Outside Corner."
+        ]
+      },
+      {
+        "heading": "Is Uluwatu safe — and is it your wave yet?",
+        "paragraphs": [
+          "Honest answer: Uluwatu is safe for surfers who can already handle a shallow reef break and read a tide chart, and it is **not a beginner wave at any tide** — no section, no size, no exception. The hazards are concrete rather than exotic: sharp, shallow coral; a strong current running north up the point; a cave that surges at high tide; and a dense, mixed-ability crowd. All of them are manageable with experience and a plan, and we go deeper on the general question in [is surfing in Bali safe](/bali/en/journal/is-surfing-in-bali-safe).",
+          "If you are still learning, the move is not a smaller day at Uluwatu — it is a different wave. Beginner lessons happen on sand-bottom beaches, and our [private surf lesson](/bali/en/tours/surf-lesson-experience) costs **from $35 for a 2-4 hour session** with board and coach included. Near Uluwatu itself, improvers surf **Baby Padang**, the mellow right across the channel from Padang Padang with one of the few low-stress paddle-outs on the Bukit. Watch the main reef from the clifftop until the day it looks inviting rather than terrifying — that shift is the honest sign you are ready."
+        ]
+      },
+      {
+        "heading": "Getting there with boards: the drive, the parking, the stairs",
+        "paragraphs": [
+          "Uluwatu sits at the far southern end of the Bukit Peninsula, and the road over the plateau is at its emptiest before dawn — convenient, because dawn is also when the wind is cleanest. Our [car with driver](/bali/en/tours/private-car-with-driver-bali) runs **from $59 for the day and boards fit inside** — no roof racks, no rope, no scooter ride with a board under one arm. You park at the clifftop above the warung strip, and from there everything travels down the stairs by hand, so pack light and leave the board bag in the car.",
+          "The day-trip shape that works: arrive for the tide your section wants — first light if the chart cooperates — surf it, then take breakfast in the warungs hanging over the reef and watch the tide rebuild the wave in real time. Because the driver waits, you can paddle out again when the next window opens instead of committing to one shot. Flying in with boards? Our [private airport pickup](/bali/en/tours/bali-airport-transfer) runs **from $15** if you would rather go straight from the terminal to the cliffs."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is Uluwatu safe to surf?",
+        "answer": "Safe enough for experienced surfers who match the section to the tide — and genuinely dangerous for anyone else. The reef is sharp and shallow, a strong current runs north along the point, and the cave floods and surges at high tide, which is when mistimed exits cause most injuries. It is not a beginner wave at any tide. For a first session, going out with a guide is the standard recommendation, not an upsell."
+      },
+      {
+        "question": "What tide is best for surfing Uluwatu?",
+        "answer": "It depends on the section. The Peak and Temples want mid to high tide; Racetrack only turns on as the tide drops, and its lowest-tide version is for experts; Outside Corner cares about swell size more than tide. The broad rule: higher tide means fuller and more forgiving, lower means hollower, faster and shallower. Read a live tide chart on the day — never plan around remembered or published times."
+      },
+      {
+        "question": "Can beginners take a surf lesson at Uluwatu?",
+        "answer": "No — the main Uluwatu reef is not a lesson wave at any tide or size. Beginner lessons in Bali run on sand-bottom beaches, and a private lesson costs from $35 for a 2-4 hour session with board and coach included. Around Uluwatu itself, improvers surf Baby Padang, the mellow right across the channel from Padang Padang, while the clifftop warungs are the right place to study the main reef."
+      },
+      {
+        "question": "When is the best time of year to surf Uluwatu?",
+        "answer": "The dry season, roughly April to October, with June to August the biggest and most consistent stretch — southeast trade winds blow offshore into the reef. The wave picks up Southern Ocean swell year-round, but from November to March the west and northwest onshores wreck the shape. Dawn and evening glass-offs are the premium sessions in any month, whatever the calendar says."
+      },
+      {
+        "question": "How does an Uluwatu surf day trip work?",
+        "answer": "Leave early: the reef sits at the southern tip of the Bukit, and a dawn arrival buys the cleanest wind and the thinnest crowd of the day. A car with driver costs from $59 for the day and boards fit inside; the driver waits at the clifftop while you surf, so you can run a second session when the tide window reopens instead of committing to one shot."
+      },
+      {
+        "question": "How crowded is Uluwatu?",
+        "answer": "Very — it is routinely described as one of the busiest lineups in Bali, and counterintuitively the crowd is worst when the surf is small. It thins noticeably once sets pass six feet. The Peak, directly in front of the cave, is the most crowded section; Temples and Outside Corner are the quietest, at the price of a long paddle or a big-wave skill set."
+      }
+    ]
+  },
+  {
+    "slug": "canggu-surf-spots",
+    "badge": "Travel guide",
+    "navLabel": "Canggu surf",
+    "cardTourLabel": "Getting to the waves",
+    "heroTourSlug": "surf-lesson-experience",
+    "relatedTourSlugs": [
+      "surf-lesson-experience",
+      "private-car-with-driver-bali",
+      "white-water-rafting"
+    ],
+    "inlineStats": [
+      "7 breaks north to south",
+      "Only 2 real sand bottoms",
+      "Season May-Oct"
+    ],
+    "title": "Canggu Surf Spots: 7 Breaks, Only 2 Real Sand Bottoms",
+    "description": "Canggu's surf spots break by break, Seseh to Berawa: which are rock, which are sand, real crowd levels, safe tide windows and where beginners fit.",
+    "excerpt": "Canggu sells itself as a beginner surf town, and the brochure skips one detail: most of the strip breaks over rock. Of the seven named spots from Seseh down to Berawa, only the Sandbar in front of La Brisa and Berawa's inside Peak sit over genuine sand — Batu Bolong, Old Man's, Echo Beach and Pererenan are reef or lava-rock shelf, and Seseh mixes black sand with rock. That does not make Canggu a bad place to surf; Batu Bolong remains one of the softest, longest longboard waves in Bali. It does mean the tide chart is not optional, and the \"sand-bottom beginner beach\" line you read elsewhere is wrong. This guide walks the strip north to south — bottom, tide, level and the honest crowd rating for each — the way our drivers brief surfers before a dawn run.",
+    "rankings": [
+      {
+        "name": "Seseh",
+        "imageSrc": "/images/remote/canggu-beach-3-a94bbee1.jpg",
+        "area": "Cemagi, north of Pererenan",
+        "bestFor": "Empty lineups, confident surfers",
+        "summary": "The quiet top end of the strip: long lefts and shorter rights off black-sand banks mixed with rock sections, and often almost nobody out. The catch is everything else — strong, unpredictable rips, no lifeguards, no surf schools, help a long way away. Sources describe the bottom inconsistently, so treat any precise claim with suspicion. We drive intermediates here when the main peaks are heaving; we do not bring beginners, sand or no sand."
+      },
+      {
+        "name": "Pererenan",
+        "imageSrc": "/images/remote/canggu-beach-5-cdb79e3d.jpg",
+        "area": "North Canggu rivermouth",
+        "bestFor": "Punchy peaks, smaller crowds",
+        "summary": "A volcanic rock shelf, not a beach break: a punchy right runs into the channel and a longer left-hand wave shuts down over the shallow inside — guides disagree about which is the better wave. Surf it mid to high tide and kick out of the left early; low tide puts near-dry rock and sea urchins under you. It maxes out around head-high, and quiet is relative here — 40-plus surfers at dawn on a 2 ft day is a documented reality."
+      },
+      {
+        "name": "Echo Beach",
+        "imageSrc": "/images/places/surfing-in-canggu.jpg",
+        "area": "Batu Mejan",
+        "bestFor": "Fast lefts, experienced surfers",
+        "summary": "Central Canggu's serious wave: a fast, tubey left over jagged volcanic reef, with a shorter right off the same peak. It starts working around 3 ft and barrels on solid swell, and it is intermediate to advanced, full stop — low tide exposes sharp, uneven rock, and the south-end rip that ferries you to the lineup pulls hard. One guide calls Echo Beach sand-bottom and all-levels; that describes the sandy peaks down the beach, not this left."
+      },
+      {
+        "name": "The Sandbar",
+        "imageSrc": "/images/remote/la-brisa-beach-club-at-echo-beach-canggu-bali-6a6aff6f.jpg",
+        "area": "In front of La Brisa",
+        "bestFor": "Improvers wanting sand underneath",
+        "summary": "One of only two genuine sand bottoms in Canggu, one bank over from Echo Beach's reef. Sand does not mean gentle: the wave here is fast and hollow, an improver's wave rather than a first-timer's — the place to push a shorter board harder, knowing a fall costs a rinse instead of reef rash. If you want Echo-adjacent speed without the rock underneath, this is the honest middle step."
+      },
+      {
+        "name": "Old Man's",
+        "imageSrc": "/images/places/canggu-beach-club.jpg",
+        "area": "Batu Bolong Beach",
+        "bestFor": "Longboards, first green waves",
+        "summary": "Soft, slow and forgiving — which is exactly why the whole world is on it. The take-off zones are reef, not sand; only the first 100 m or so of the paddle-out is sandy. Lefts wall up more, slower rights peel toward the Batu Bolong channel, and multiple peaks spread a 10/10 crowd a little better than next door. Tide reports genuinely conflict here, so keep it simple: around mid tide, avoid the extremes."
+      },
+      {
+        "name": "Batu Bolong",
+        "imageSrc": "/images/remote/batu-bolong-beach-canggu-c733e2b3.jpg",
+        "area": "Central Canggu",
+        "bestFor": "The classic Canggu longboard wave",
+        "summary": "Canggu's most famous wave and its most misdescribed: the bottom is sand over a rock and reef shelf, not a sand beach. The main wave is a long, slow left that can run beyond 100 m; a shorter, faster right breaks off the same peak. Ride it on a rising mid-to-high tide — low means shallow rock and urchins, full high goes fat and mushy. The lineup is a true 10/10, and the likeliest thing to hit you is someone else's longboard."
+      },
+      {
+        "name": "Berawa",
+        "imageSrc": "/images/remote/canggu-beach-3-a94bbee1.jpg",
+        "area": "South Canggu",
+        "bestFor": "Beginners on the inside Peak",
+        "summary": "The only Canggu spot with a genuinely sand-bottom beginner zone — and only at the inside Peak. Out the back and south at The Ledge the bottom turns to rock and reef, so learners stay inside. Quieter than the Batu Bolong stretch though no longer empty, and the shifting bank runs hot and cold: barrels one day, mushy close-outs the next. Guides contradict each other outright on the best tide here, and after heavy rain the river makes the water genuinely dirty."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The strip north to south, and what is actually under you",
+        "paragraphs": [
+          "From north to south, the surf spots in Canggu run: **Seseh, Pererenan, Echo Beach, the Sandbar, then the shared Old Man's and Batu Bolong reef, with Berawa at the southern end**. The town markets itself as a learn-to-surf capital, and here is the detail the marketing skips: **only the Sandbar and Berawa's inside Peak break over genuine sand**. Batu Bolong, Old Man's, Echo Beach and Pererenan sit on reef or volcanic rock shelf, and Seseh mixes black sand with rock sections. None of it is the live razor coral of the Bukit, but rock still decides your tide window and what a bad fall costs.",
+          "The whole strip takes the same south-west swell and cleans up on the same wind: **offshore for Canggu is north through north-east to east**, which in practice means dawn. The sea breeze fills in from late morning and turns everything to chop, so the working day here starts at first light. For how these waves rank against the rest of the island, our [best surf spots in Bali](/bali/en/journal/best-surf-spots-in-bali) guide puts Canggu in context."
+        ]
+      },
+      {
+        "heading": "The honest crowd picture",
+        "paragraphs": [
+          "We will not pretend otherwise: central Canggu is some of the most crowded surf in Bali. The useful part is that the crowd is not evenly spread, and ten minutes of driving changes everything:"
+        ],
+        "bullets": [
+          "**Batu Bolong and Old Man's — a genuine 10/10.** Surf schools, rental foamies and longboards on every peak; the realistic hazard is **board collision, not the bottom**. Old Man's multiple take-off zones disperse people slightly better than Batu Bolong's single peak.",
+          "**Echo Beach and Pererenan — smaller numbers, tighter zones.** Echo's take-off area is narrow, so it feels more crowded than the count suggests; Pererenan can see **40-plus surfers at dawn on a 2 ft day**, so nobody should drive there expecting a secret.",
+          "**Berawa and Seseh — the quiet end.** Berawa is noticeably calmer than the Batu Bolong stretch though no longer empty; Seseh is where you go for a near-empty lineup, with the rip-and-remoteness caveats that come with one."
+        ]
+      },
+      {
+        "heading": "Tides: the one rule that keeps you off the rocks",
+        "paragraphs": [
+          "If you take one line from this page, take this one: **mid to high tide, on the push**. Every rock spot on the strip — Batu Bolong, Echo Beach, Pererenan — goes dangerously shallow at low tide, with **sea urchins** in the mix at Batu Bolong and Pererenan, and low tide is no gift at the sand spots either, which close out over the inner banks. Full high has its own cost at Batu Bolong, where the wave goes fat and mushy. Two footnotes: at **Old Man's** the guides argue both ways, so treat it as around mid and avoid the extremes; at **Berawa** the sources contradict each other outright, and quality there is about the bank, not the chart. The mechanics behind all of this are in our [tides, swell and wind guide](/bali/en/journal/bali-surf-conditions-tides-swell-wind).",
+          "Season is simpler. **May to September or October** is the dry season: trade winds blowing offshore or cross-offshore for this coast and the most consistent south-west groundswell, strongest June to August. **November to March** swings the wind onshore from the west, and Canggu's rivermouths add their own problem — runoff, debris and poor water quality after rain, worst around Berawa and Pererenan. The mellow waves stay rideable year-round, but in the wet months the session is dawn or nothing. The month-by-month picture is in our [Bali surf season guide](/bali/en/journal/bali-surf-season-month-by-month)."
+        ]
+      },
+      {
+        "heading": "Where a Canggu surf beginner actually fits",
+        "paragraphs": [
+          "Searches for beginner surfing in Canggu return a lot of confident nonsense, so here is the honest routing. A true first-timer belongs in whitewater over sand, and **Berawa's inside Peak is the only such zone in Canggu** — the wider, softer alternative is the real sand strip further south toward Legian and Kuta. **Batu Bolong and Old Man's are legitimate step-two waves**: soft take-offs, slow walls, every surf school in town uses them — provided someone times the tide for you and you accept that the bottom is rock. Our [private surf lesson](/bali/en/tours/surf-lesson-experience) runs **from $35 for a 2-4 hour session**, board and coach included, and the instructor picks the tide window rather than a timetable — which on this strip is most of the safety.",
+          "Leave **Echo Beach's left, Pererenan and Seseh** alone until you are comfortably riding green waves: shallow rock at the first two, lonely rips at the third. For beginner-safe picks across the whole island, see [Bali surf spots for beginners](/bali/en/journal/bali-surf-spots-for-beginners)."
+        ]
+      },
+      {
+        "heading": "Getting there with boards, and timing the drive",
+        "paragraphs": [
+          "Every spot on this strip is a walk-in off the beach — no boats, unlike the Kuta and Airport reefs further south — but each has its own narrow access lane and small toll: **about Rp2,000 on the Jalan Batu Mejan side** for Echo Beach, **about Rp4,000 per person at Jalan Pantai Berawa**, and Pererenan collects its own small fee. The lanes are slow, and a longboard on a scooter rack in Canggu traffic is its own extreme sport. Our [car with driver](/bali/en/tours/private-car-with-driver-bali) runs **from $59 for the day and boards fit inside** — the standard surf-day pattern is a first-light check of two or three peaks before committing, with the driver holding dry clothes and coffee money while you surf.",
+          "Timing beats everything else here. The wind window closes late morning, so a dawn start is the plan in the dry season and non-negotiable in the wet. And if you are landing with a board bag, a [private airport pickup](/bali/en/tours/bali-airport-transfer) from $15 gets you and it to Canggu without a taxi-rank negotiation — the same WhatsApp thread then sorts the next morning's surf run."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Which Canggu surf spot is best for beginners?",
+        "answer": "Berawa's inside Peak — it is the only genuinely sand-bottom learning zone in Canggu. Batu Bolong and Old Man's are the standard lesson waves and their take-offs are soft and slow, but both break over rock and reef, so go with an instructor who times the tide for mid to high on the push. For a very first lesson, the true sand beaches south toward Legian and Kuta are more forgiving still."
+      },
+      {
+        "question": "Is Batu Bolong surf over sand or rock?",
+        "answer": "Rock — Batu Bolong breaks over a flattish rock and reef shelf with sand patches, not the sand-bottom beach many blogs promise. It is still the friendliest wave in central Canggu: soft, slow take-offs and long walls that every surf school uses. Respect the tide, though. At low the inside goes shallow and there are urchins on the reef; on a rising mid-to-high it is a different, kinder wave."
+      },
+      {
+        "question": "Is Echo Beach surf beginner-friendly?",
+        "answer": "No. Echo Beach's main peak is a fast, sometimes tubey left over shallow, jagged volcanic reef, and it belongs to intermediate and advanced surfers — low tide exposes sharp rock and the south-end rip pulls hard. You will find one guide calling Echo sand-bottom and all-levels; that describes the sandy peaks along the beach and the Sandbar next door, not the main left-hand wave. Beginners should surf the Sandbar, Batu Bolong or Berawa instead."
+      },
+      {
+        "question": "Is Berawa good for surfing?",
+        "answer": "Yes — Berawa is the quieter central-Canggu option with something for two levels: mellow lefts and rights over the sand-bottom inside Peak for beginners, and rock and reef out the back and at The Ledge to the south for intermediates. It is inconsistent — barrels one day, mushy close-outs the next — and guides genuinely disagree on its best tide. After heavy rain the river pushes dirty water into the lineup, so give it a day."
+      },
+      {
+        "question": "Where should I surf a longboard in Canggu?",
+        "answer": "Batu Bolong first — it is the classic Canggu longboard wave, a slow left-hand wave that can wall up beyond 100 metres on the right day — with Old Man's next to it offering the same pace across more take-off zones. The cost is company: both rate a genuine 10/10 for crowd, and the realistic hazard is somebody else's board, not the bottom. Dawn on a rising mid tide is the least chaotic window."
+      },
+      {
+        "question": "When is the best time to surf in Canggu?",
+        "answer": "May to September or October, and in the morning. Dry-season trade winds blow offshore to cross-offshore for this coast and the south-west groundswell is at its most consistent, strongest June to August. Year-round, the sea breeze wrecks the surface by late morning, so plan dawn sessions. From November to March the wind swings onshore and rain flushes the rivermouths — chop, debris and poor water quality, rideable at the mellow spots but dawn only."
+      }
+    ]
+  },
+  {
+    "slug": "bukit-peninsula-surf-spots",
+    "badge": "Travel guide",
+    "navLabel": "Bukit surf spots",
+    "cardTourLabel": "Getting to the waves",
+    "heroTourSlug": "private-car-with-driver-bali",
+    "relatedTourSlugs": [
+      "private-car-with-driver-bali",
+      "surf-lesson-experience",
+      "bali-airport-transfer"
+    ],
+    "inlineStats": [
+      "7 reef breaks, 2 coasts",
+      "Tide swings up to 2.5 m",
+      "300+ steps to Green Bowl"
+    ],
+    "title": "Bukit Peninsula Surf Spots: 7 Breaks and What Each Demands",
+    "description": "Padang Padang, Bingin, Impossibles, Dreamland, Balangan, Green Bowl, Nyang Nyang — honest tides, seasons, hazards and the stairs down each cliff.",
+    "excerpt": "The Bukit Peninsula packs seven world-class reef breaks into one limestone cliff line just south of the airport: Balangan, Dreamland, Bingin, Impossibles and Padang Padang facing west, Green Bowl and Nyang Nyang facing south. They share Southern Ocean groundswell and almost nothing else. The west coast runs on dry-season trade winds from roughly April to October; the two south-coast waves are blown out by exactly those winds and come alive in the wet season instead. Every spot sits below a cliff, and the price of entry runs from a barefoot walk across Dreamland's sand to roughly 300 steps down to Green Bowl. All of it answers to a tide that can swing about 2.5 metres on springs. This guide covers what each break demands, who should paddle out, who should watch from the bridge, and how our drivers time the whole dance.",
+    "rankings": [
+      {
+        "name": "Balangan",
+        "imageSrc": "/images/remote/1280px-balangan-beach-bali-2017-08-16-b16af1dd.jpg",
+        "area": "Northern end of the cliff line",
+        "bestFor": "Improvers at medium-high tide",
+        "summary": "The northernmost break of the cluster: a left-hand wave running down a straight reef in three sections, typically **around 50 m** a ride and past 300 m on a perfect day. Reputable guides genuinely disagree on its tide — the points nobody disputes are that **high tide works** and the end section is dangerous on low. Medium-to-high tide with shoulder-to-head-high swell is the forgiving window; the current pushes you toward the shutdown section as swell builds, so exit early near the headland."
+      },
+      {
+        "name": "Dreamland",
+        "imageSrc": "/images/remote/dreamland-beach-bali-cc260a0f.jpg",
+        "area": "New Kuta, Pecatu",
+        "bestFor": "The most forgiving bottom",
+        "summary": "The soft option, with caveats. Four waves share the bay — a central A-frame with a short right and a faster left, two lefts at the south end, a right off the northern reef — over the **sandiest, most forgiving bottom on the Bukit**. Most guides say the lower the tide the better; **mid tide is the safe call for beginners**. The shore dump and a rip running out through the middle of the bay are what actually catch people, and there is no reliable lifeguard."
+      },
+      {
+        "name": "Bingin",
+        "imageSrc": "/images/remote/bingin-beach-9330583d.jpg",
+        "area": "West coast, mid-cluster",
+        "bestFor": "Your first reef barrel, eventually",
+        "summary": "A short, pitching left barrel over a coral shelf that **dries out at low tide**. Low-to-mid on a medium swell is the window it is famous for — often called the easiest barrel in Bali, which is relative, not literal. The crowd is extreme and the locals have it completely dialled. One more thing: the cliffside warung strip was **demolished in July 2025** and access is being rebuilt, so we confirm what is standing before anyone commits to the walk down."
+      },
+      {
+        "name": "Impossibles",
+        "imageSrc": "/images/remote/padang-padang-beach-bali-f5988498.jpg",
+        "area": "Between Padang and Bingin",
+        "bestFor": "Fast walls, wave selection",
+        "summary": "Three shifting left peaks along a long stretch of sharp, shallow reef between Padang Padang and Bingin. The name is honest: the sections run so fast that **roughly one wave in ten** breaks slowly enough to make, so wave selection is the whole game. The upper peak likes mid-to-high tide, the lower peaks low-to-mid. Unusually for the Bukit there is **no current out the back**, and the standard way in is the paddle from Padang beach through the channel."
+      },
+      {
+        "name": "Padang Padang",
+        "imageSrc": "/images/remote/padang-padang-beach-bali-f5988498.jpg",
+        "area": "Below the Padang bridge",
+        "bestFor": "Experts; everyone else watches",
+        "summary": "The Balinese Pipeline, and the one wave here with no intermediate setting. It needs **at least 4 ft of swell** to break at all and only becomes the real Padang Padang above about 6 ft, when the long, properly hollow barrel appears in front of the rock. **Mid-to-high rising tide**; low is too shallow to be sensible. Falls almost always end on reef, the lineup is 10/10 crowded and skilled, and the bridge above gives one of the best free surf-watching views in Bali."
+      },
+      {
+        "name": "Nyang Nyang",
+        "imageSrc": "/images/remote/1280px-nyang-nyang-beach-101be024.jpg",
+        "area": "South coast, below Uluwatu",
+        "bestFor": "Advanced surfers, empty lineups",
+        "summary": "A thick right over coral into a channel below the cliffs south of Uluwatu — and an **advanced wave first**, whatever older write-ups say. It wants a **spring high tide** (around 2 m of tide is cited as optimal), is unsurfable at low and sections badly at mid. Season runs October to April, when the swell drops to the size it needs. A steep road now runs down the cliff, so the famous 500 steps are optional. No lifeguard, and the locals are always in position."
+      },
+      {
+        "name": "Green Bowl",
+        "imageSrc": "/images/remote/melasti-beach-coast-09ee1977.jpg",
+        "area": "South coast, Ungasan",
+        "bestFor": "Wet-season dawn patrols",
+        "summary": "A quick, steep right — plus a fickle left that improves on lower tides — peeling over reef into a well-defined channel. It faces south, so its season is **inverted: November to April**, March the most cited month, with the rare north wind as its offshore; dawn glass is the reliable window. It breaks on all tides; avoid high mainly because the **beach itself floods** and the exits wash out. Budget roughly **300-plus steps** each way, and know it is always bigger than it looks from the top."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "How the Bukit works: two coasts, two opposite seasons",
+        "paragraphs": [
+          "The Bukit is the limestone foot of Bali, hanging just south of the airport, and its west coast holds the densest run of world-class waves on the island: **Balangan, Dreamland, Bingin, Impossibles and Padang Padang** in a line, with Uluwatu itself at the far end — that one gets [its own guide](/bali/en/journal/uluwatu-surf-guide), because the cave entry alone deserves the space. All of them break over reef except Dreamland's sandier bay, and all drink the same **S-SW groundswell out of the Southern Ocean**. Swell arrives year-round; what defines the season is wind. From roughly **April to October** the SE trade winds blow offshore into these west-facing reefs, with **June to August** the peak and August repeatedly cited as the most consistent month.",
+          "Green Bowl and Nyang Nyang break the pattern, and most roundups get this wrong. They sit on the **south coast** of the peninsula, so the same trades that groom Padang Padang blow them out sideways. Their season is the inverse — roughly **October to April**, when the swell drops to the size they want and the mornings go glassy before any wind arrives. Their true offshore is a north wind, which Bali rarely produces, which is why every serious session there is a dawn session. The practical upshot: the Bukit never fully switches off. It just changes coasts.",
+          "Then there is tide, the master variable. Bali swings **up to about 2.5 m on spring tides** — enough to take one reef from unsurfable to perfect inside a single session. The rule that held across every source we checked: **more water means fuller, slower and more forgiving; less water means hollower, faster and closer to the coral**. Never trust a static tide time printed on a page, including this one. Pull a live tide table every morning; our [tides, swell and wind guide](/bali/en/journal/bali-surf-conditions-tides-swell-wind) explains how to read one."
+        ]
+      },
+      {
+        "heading": "The stair count, spot by spot",
+        "paragraphs": [
+          "Every wave on this page sits below a cliff, and the descent is part of what each spot demands — board under one arm, water for the climb, and a realistic look at your legs after a three-hour session. Dreamland is the single exception: you walk off the sand. At the other extreme, Green Bowl's staircase runs to roughly **300 to 387 steps** depending on who counted, and the wave is famously always bigger than it looks from the top of that cliff.",
+          "Bingin needs its own honest paragraph. On **21 July 2025** the provincial and regency governments demolished **48 unpermitted structures** along the beach — most of the cliffside warung strip that surf guides still describe as the way down and the place to leave your bag, for Impossibles as well as Bingin. A staged **IDR 20 billion redevelopment** — new beach access, a wider staircase, toilets — has since been announced. Until it settles, treat any published Bingin access instructions, including ours, as provisional; our drivers confirm what is actually standing before a client commits to the walk down."
+        ],
+        "bullets": [
+          "**Balangan** — enter near the headland; walk the reef at low tide, short paddle at high",
+          "**Dreamland** — straight off the beach through the New Kuta development; no stairs, no cave",
+          "**Bingin** — steep cliff paths, currently being rebuilt after the 2025 demolition",
+          "**Impossibles** — paddle from Padang Padang beach through the channel and around the reef",
+          "**Padang Padang** — stairs through the rock cleft below the bridge; beach fee around **Rp 10,000**",
+          "**Nyang Nyang** — a steep road now runs down the cliff; the roughly 500 steps are optional",
+          "**Green Bowl** — the full staircase, roughly 300 steps and more; count them on the way back up"
+        ]
+      },
+      {
+        "heading": "Who paddles out, and who watches from the bridge",
+        "paragraphs": [
+          "Be honest with yourself here, because the reef will not be flexible about it. **Padang Padang proper is expert territory**: falls land on shallow, sharp coral, the outgoing water drags you over the sucking end section, and the lineup is as crowded, skilled and competitive as anywhere in Indonesia. Bingin at low tide belongs to surfers who already know the contours of the shelf. Nyang Nyang is an advanced wave first, whatever its empty lineup suggests from the clifftop. There is no shame in the alternative — watching Padang Padang from the bridge on a proper swell is one of the best free spectacles in Bali, and we happily drive non-surfing partners down for exactly that.",
+          "There are real windows for everyone else. **Baby Padang**, the right-hander across the channel from the famous left, breaks over seaweed-cushioned reef, wants mid-to-high tide, and is the safest wave you can ride in this whole group — busy but friendly, and exactly the kind of venue a coach wants for a first reef session. Our [private surf lesson](/bali/en/tours/surf-lesson-experience) runs **from $35** with board and coach included, and the instructor picks the venue by tide, not by timetable. **Dreamland at mid tide on a small swell** suits beginners who respect the shore dump. **Balangan at medium-to-high tide, shoulder-to-head-high**, is the improver's wave — just don't paddle out alone, and exit near the headland before the current feeds you to the end section. More waves at this level are in our [beginner spots guide](/bali/en/journal/bali-surf-spots-for-beginners)."
+        ]
+      },
+      {
+        "heading": "Getting there with boards, and timing the drive",
+        "paragraphs": [
+          "The Bukit punishes fixed plans. A tide window opens and shuts inside a session, the west coast wants you at dawn before the trades wake up, and the spot that looked right from the cliff can be closing out by the time you have carried a board down 300 steps. The way we run surf days here is deliberately loose: a [car with driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59**, boards in the back, and the plan written in pencil. Check the tide chart over breakfast, drive to the break whose window is open, let the driver wait on the clifftop while you surf — then move when the tide does. The seven spots sit close together on one small peninsula, so chasing the window is a short drive, not a commitment.",
+          "Two practical notes. Boards travel fine in the car, and our [surfboard rental and transport guide](/bali/en/journal/bali-surfboard-rental-and-transport) covers picking one up before you head down the peninsula. And on arrival day, remember the Bukit starts just south of the airport — this is the rare surf destination where you can land in the morning and be looking at the lineup the same day. A [private airport pickup](/bali/en/tours/bali-airport-transfer) **from $15** takes you and a board bag straight there, and like everything we run it is booked over WhatsApp with no prepayment — which matters on a peninsula where the plan should change with the tide."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is Padang Padang surf suitable for intermediates?",
+        "answer": "No — Padang Padang proper is an advanced-to-expert wave, and the honest move for intermediates is to watch it from the bridge. It needs at least 4 ft of swell to break at all and becomes a long, hollow barrel above about 6 ft, with falls that almost always end on shallow reef. Baby Padang, the right-hander across the channel, is the option below that level: softer, seaweed-cushioned reef and a friendly lineup."
+      },
+      {
+        "question": "What tide do you surf Bingin Beach on?",
+        "answer": "Low to mid tide on a medium swell is Bingin's famous barrel window — but the coral shelf dries out at low, so that window belongs to surfers who know the reef. Mid to high gives the safest clearance at the cost of a shorter, softer wall, and on a small swell at high tide it goes gentle enough that beginners do surf it. Check access before you go: the cliffside strip was demolished in July 2025 and is being rebuilt."
+      },
+      {
+        "question": "Why is the Bali surf spot called Impossibles?",
+        "answer": "Because most of its waves genuinely cannot be made — the left-hand sections break so fast down the reef that roughly one wave in ten runs slowly enough for a long ride. Wave selection matters more here than fitness or bravery. The consolations are real: the reef is long with spread-out takeoff zones, and there is no current out the back, so you can sit, wait and hunt the makeable one."
+      },
+      {
+        "question": "Is Dreamland Beach good for beginner surfers?",
+        "answer": "Conditionally, yes — Dreamland has the sandiest, most forgiving bottom of the Bukit surf spots, walk-in access with no cliff stairs, and works from just 2-4 ft of southwest swell. The conditions: go at mid tide on a small day, and respect the shore dump, which is the hazard that actually catches beginners here. There is also a rip running out through the middle of the bay and no reliable lifeguard, so stay leashed to your board."
+      },
+      {
+        "question": "What tide is best for Balangan surf?",
+        "answer": "Medium to high tide with a shoulder-to-head-high swell is the safest published answer — reputable guides genuinely disagree beyond that, one camp favouring the monthly tidal extremes, another mid-to-high. Both agree high tide works, and every source that describes the reef in detail says the end section is dangerous at low tide. If you are an improver: higher tide, smaller swell, exit near the headland, and don't paddle out alone."
+      },
+      {
+        "question": "When can you surf Green Bowl?",
+        "answer": "From roughly November to April — the opposite of the west-coast Bukit season, because Green Bowl faces south and the dry-season SE trades that groom Padang Padang blow it out. March is the most cited month, and dawn is the dependable window since its true offshore is a north wind Bali rarely delivers. It breaks on all tides with mid the common pick; avoid high tide mainly because the beach floods and the exit paths wash out."
+      }
+    ]
+  },
+  {
+    "slug": "east-bali-surf-spots",
+    "badge": "Travel guide",
+    "navLabel": "East coast surf",
+    "cardTourLabel": "Getting to the waves",
+    "heroTourSlug": "private-car-with-driver-bali",
+    "relatedTourSlugs": [
+      "private-car-with-driver-bali",
+      "surf-lesson-experience",
+      "fast-boat-transfer-bali"
+    ],
+    "inlineStats": [
+      "7 breaks ranked",
+      "Prime season Nov-Mar",
+      "Driver from $59"
+    ],
+    "title": "East Bali Surf Spots: Where to Go When the West Is Blown Out",
+    "description": "Bali's east coast surf spots for the wet season: Keramas, Sanur, Serangan and Nusa Dua break by break — tides, hazards and the dawn-wind rule.",
+    "excerpt": "From November to March the monsoon blows the famous west-coast breaks out by mid-morning, and Bali's second surf map opens: Keramas, Sanur, Serangan, Nusa Dua and Padang Galak turn offshore instead. This guide explains the seasonal inversion honestly, including the part most pages skip — the wind flips but the swell does not, so the east coast runs smaller and its marquee waves need real swell to switch on. Then we go break by break: who each wave is actually for, the tide band that keeps you off live coral, the crowds and localism as they really are, and the dawn-wind rule that decides whether you surf at all. Plus the logistics that make or break an east-side session — drive times, jukung prices, and getting boards to the beach before first light.",
+    "rankings": [
+      {
+        "name": "Serangan (Turtle Island)",
+        "imageSrc": "/images/remote/1280px-tanjung-benoa-beach-bali-34b54f5b.jpg",
+        "area": "Serangan Island, SE of Sanur",
+        "bestFor": "Reliable wet-season waves, most levels",
+        "summary": "A field of shifting lefts and rights over coral-and-stone reef, and the biggest swell magnet on the east coast — it starts working under 3 ft, holds 6 ft-plus and rarely goes flat. The inside A-frame suits improvers on small days; the outside peaks are for experienced surfers. Expect the most crowded lineup of the wet season, and also the friendliest — the vibe is consistently reported as good-natured. Mid to high tide; at low you are walking on live coral and urchins."
+      },
+      {
+        "name": "Keramas",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "Gianyar, 45 min from Sanur",
+        "bestFor": "World-class rights, advanced surfers only",
+        "summary": "A world-class right over black volcanic reef, fed by a river-cut channel that funnels swell straight onto the peak — which is why it stays rideable on small days and jacks so abruptly. Wet season is prime and when it barrels best, from about 3 ft up to double overhead. It is also a WSL venue with floodlit night surfing at Komune, busy from dawn, with real localism and a jagged reef that has ended trips. Advanced and up, mid to high tide, never low."
+      },
+      {
+        "name": "Nusa Dua — Main Peak and satellites",
+        "imageSrc": "/images/remote/nusa-dua-beach-bali-6de7a5f4.jpg",
+        "area": "Bukit east side, reef 500 m-1 km out",
+        "bestFor": "Size and reliability, never flat",
+        "summary": "The wet season's answer to Uluwatu: exposed enough that it almost never goes flat, which makes it the banker on the small days that dominate November to March. The Main Peak is a long right that starts around 3-5 ft and holds 12 ft-plus — advanced to expert territory — while the satellite peaks nearby give intermediates a way in. Budget for the position: the reef sits well offshore, the sweep runs like a river on higher tides, and a boat beats the twenty-minute paddle."
+      },
+      {
+        "name": "Sanur — Baby Reef",
+        "imageSrc": "/images/remote/morning-in-sanur-beach-bali-e4a03643.jpg",
+        "area": "Sanur bay, off Mertasari",
+        "bestFor": "Beginners, longboards, small days",
+        "summary": "The entry point that makes the east side work for everyone else: mellow lefts and rights breaking in deeper, more forgiving water inside Sanur bay, 700 m to a kilometre off Pantai Mertasari. It works best on the small swells that frustrate the outer reefs, which is exactly why Sanur's surf schools and longboarders live here. The crowd is busy but calm rather than competitive. Take a jukung out — around Rp 90,000 for a three-person boat — and keep it to mid or high tide; it is still reef."
+      },
+      {
+        "name": "Sanur Reef",
+        "imageSrc": "/images/remote/sanur-beach-bali-59142775.jpg",
+        "area": "Outer reef, 1-2 km off south Sanur",
+        "bestFor": "Expert barrels on rare days",
+        "summary": "When it lines up, one of the fastest, hollowest right barrels in Indonesia — rides of 100 m-plus get reported. The catch is the word when: even in its best month it is rideable only around 22% of the time, and the local benchmark says the Nusa Dua reefs must be double-overhead before it truly wakes. Very shallow sharp coral, serious currents off the Lombok Strait, and localism that several independent sources call entrenched. Experts only, by boat from Mertasari, on the mid-to-high window."
+      },
+      {
+        "name": "Padang Galak",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "5 km north of Sanur",
+        "bestFor": "Sand bottom, no reef falls",
+        "summary": "The one sand-bottom option in the group: a black-sand rivermouth beach break with a fast right and a left that bends over a bowl of reef. Sandbars shift, so the wave — and its best tide — changes between seasons; check it on the day rather than trusting last year's notes. Consistent, around 150 days a year, and the natural pick for surfers not ready to fall on coral. Honest caveats: a board-snapping shore dump, rocks in the sand, and rivermouth water worth skipping after heavy rain."
+      },
+      {
+        "name": "Green Ball (Green Bowl)",
+        "imageSrc": "/images/remote/1280px-beautiful-mengiat-beach-aee0fefe.jpg",
+        "area": "Bukit south tip — not east coast",
+        "bestFor": "Dawn glass on small swell",
+        "summary": "The odd one out — it sits on the Bukit's south tip near Ungasan, not the east coast, and earns its place in wet-season lists purely on wind: it needs a northerly, and a plain westerly blows cross-shore here. On a small swell at dawn it is an uncrowded right, with a left on offer, over reef, reached by a long, steep cliff staircase that keeps the lineup thin. Respect the rip running out through the channel, and treat it as a quiet morning option, not a backup for Keramas."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Why the east coast switches on in the wet season",
+        "paragraphs": [
+          "Bali's surf seasons are a story about wind, not swell. From roughly **April to October** the dry-season trades blow from the **east to south-east** — offshore at Uluwatu and the Kuta-Canggu strip, straight onshore at Sanur and Keramas. From roughly **November to March** the monsoon arrives from the **west to north-west** and the island flips: the beaches in our [Canggu surf guide](/bali/en/journal/canggu-surf-spots) turn to chop by mid-morning while the east coast wakes up offshore. The swap is near-total — at Nusa Dua, ideal offshore wind runs around **60% of the time in December-February** and falls to almost nothing from May through September.",
+          "What never flips is the swell. Every wave Bali gets is Southern Ocean groundswell from the **south-west to south**, all twelve months, and the east coast only receives it after it bends around the Bukit and through the Bali-Lombok gap. It arrives filtered: on the same day the east side usually runs smaller than the west, wet-season swell is smaller to begin with — the typical range is quoted at **2-5 ft** — and Sanur sits in an extra shadow cast by Nusa Penida. So the reliable wet-season calls are the swell magnets, **Serangan and Nusa Dua**, which almost never go flat; Keramas is the quality wave but goes quiet on small swell, and Sanur Reef needs the Nusa Dua reefs **double-overhead** before it wakes at all. Our [month-by-month season guide](/bali/en/journal/bali-surf-season-month-by-month) puts numbers on every month."
+        ]
+      },
+      {
+        "heading": "The dawn-wind reality",
+        "paragraphs": [
+          "In the wet season the monsoon itself is your offshore, and it is generous: January reports at Keramas show **light offshore holding well past midday**. The constraint is the sky instead — afternoon squalls and thunderstorms are the session-enders from November to March, so the rhythm is surf the morning, keep one eye on the horizon after lunch.",
+          "In the dry season the east coast still opens, but strictly early. Overnight the trades weaken and cool air drains off the slopes of **Mount Agung**, spreading seaward as a land breeze that holds a light offshore over Keramas and Sanur at first light. As the land heats, the sea breeze and the returning trade swing it all onshore — in August the flip lands around **9:00-9:30am**. Paddle out at dawn or accept a bumpy session; there is no afternoon rescue. How wind, tide and swell period interact is unpacked in our [conditions guide](/bali/en/journal/bali-surf-conditions-tides-swell-wind).",
+          "One outlier to file correctly: **Green Ball** appears in wet-season lists, but it sits on the Bukit's south coast, not the east, and it wants a wind from the north — a plain westerly blows cross-shore there. Treat it as a dawn-glass call on small swell, not a monsoon banker."
+        ]
+      },
+      {
+        "heading": "One tide rule for the whole coast",
+        "paragraphs": [
+          "Bali runs a big, fast tide — the spring range at Sanur reaches about **2-2.4 m**, which can carry a reef from perfect to dry inside one session. Across the east coast the safe rule is **mid to high, never low**: low tide means sharp live coral at Sanur, Serangan and Nusa Dua, and jagged exposed volcanic rock at Keramas. Guides argue about each spot's exact optimum, so read these as bands rather than appointments:"
+        ],
+        "bullets": [
+          "**Keramas** — mid to high; sources disagree on which is better, none of them defend low",
+          "**Serangan** — mid to high; at low you are walking across live reef and sea urchins",
+          "**Nusa Dua** — mid to high, with the caveat that the sweep along the reef runs hardest on the higher tides",
+          "**Sanur Reef** — a narrow mid-to-high window; the high tide fattens the barrel and is what makes it survivable",
+          "**Padang Galak** — a sandbar break, so the best tide depends on this year's banks; check on the day"
+        ]
+      },
+      {
+        "heading": "Getting boards to the east side before first light",
+        "paragraphs": [
+          "Because the whole game is arriving early, the drive is part of the surf plan. **Serangan sits 15-20 minutes from Sanur** and about 15 from the airport; **Keramas is roughly 45 minutes from Sanur** up the coastal bypass, with paid parking behind the beach and a short walk to the channel; **Padang Galak** hides down a gravel track that is genuinely hard to find on a first visit. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) runs **from $59 for the day**, boards fit inside, and pre-dawn pickups are normal for us — you want to be waxing up at first light, not watching the wind turn through a windscreen.",
+          "Two access notes. The Sanur reefs are boat territory: local jukungs run from the Mertasari beachfront for **around Rp 90,000-100,000**, and at Nusa Dua a boat beats the twenty-minute paddle to the Main Peak. Serangan is the honest asterisk — current guides contradict each other on whether you can still drive the causeway or whether access went boat-only, so we confirm the arrangement on the day rather than promise either version. And since Sanur doubles as the fast-boat port, [fast boat tickets with pickup](/bali/en/tours/fast-boat-transfer-bali) from $15 are easy to fold into the same trip — just know that Lembongan's Shipwrecks is a **dry-season wave**, onshore in exactly the monsoon that lights up this coast."
+        ]
+      },
+      {
+        "heading": "Match the wave to your level — the honest version",
+        "paragraphs": [
+          "The east side is mostly reef, and its marquee waves are not tour products. **Keramas is advanced to expert**: an abrupt take-off over jagged rock, a world-tour pedigree, and a lineup that is packed and competitive from dawn, with localism that is real. **Sanur Reef is expert only**, with localism several independent sources describe as entrenched. **Nusa Dua's Main Peak** holds some of the biggest paddle-in surf on the island. We drive more clients to watch Keramas barrel than to surf it, and we consider that good guiding.",
+          "The defensible recommendations are **Serangan** for intermediates — crowded, forgiving, good-natured — **Baby Reef** for beginners and longboarders, and **Padang Galak** for anyone not ready to fall on coral. If you are still at the whitewater stage, a [private surf lesson](/bali/en/tours/surf-lesson-experience) **from $35** with board and coach included is a faster road than trial and error on a reef, and our [intermediate spots guide](/bali/en/journal/bali-surf-spots-intermediate) maps the step after that."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "When is the best time to surf Bali's east coast?",
+        "answer": "November to March, when the west-to-northwest monsoon blows offshore on the east side — at Nusa Dua, ideal offshore wind runs around 60% of the time in December-February against almost none from May to September. You can still surf Keramas or Sanur in the dry season, but only in the window from first light to about 9:30am, before the trades swing everything onshore."
+      },
+      {
+        "question": "Is Keramas suitable for intermediate surfers?",
+        "answer": "Treat Keramas as advanced to expert. The wave jacks abruptly over jagged volcanic reef, the end section runs shallow, and the lineup — a world-tour venue with floodlit night sessions — is crowded and competitive from dawn, with real localism. One guide rates it intermediate-friendly; every other source we trust says otherwise. Intermediates get more waves and a far friendlier crowd at Serangan, back toward Sanur."
+      },
+      {
+        "question": "Can beginners surf in Sanur?",
+        "answer": "Yes — at Baby Reef, the mellow inside break in Sanur bay where the surf schools operate. It breaks left and right in deeper, more forgiving water, works best on small swell, and the crowd is calm. Take a jukung from Pantai Mertasari, around Rp 90,000 for three people, and stick to mid or high tide. Do not confuse it with Sanur Reef, the expert wave on the outer reef — the names get blurred and they are different sports."
+      },
+      {
+        "question": "Why is Serangan the go-to wet-season surf spot?",
+        "answer": "Because it catches the most swell on the east coast and rarely goes flat — deep water offshore lets it work from under 3 ft — while NW through SW winds all keep it clean when other spots go sideshore. The price is Bali's most crowded wet-season lineup, though it is consistently reported as the friendliest. One honest note: land access over the causeway is disputed in current guides, so confirm the arrangement, or go by boat, before you commit."
+      },
+      {
+        "question": "Where should you surf in Bali during the wet season?",
+        "answer": "On the east and south-east side: Serangan and Nusa Dua as the reliable calls, Keramas when a proper swell runs, Baby Reef for beginners, Padang Galak for a sand bottom. The west coast — Kuta, Canggu, the Bukit's west reefs — spends December to March onshore and choppy, and the monsoon also delivers a plastic tide onto the west-facing beaches. Wet-season waves are smaller, typically quoted at 2-5 ft, but the mornings are clean."
+      },
+      {
+        "question": "What tide should you surf on Bali's east coast reefs?",
+        "answer": "Mid to high, and never low — that is the one rule the whole coast agrees on. Bali's spring tides move around 2-2.4 m in about six hours, and at low the reef flats turn into exposed live coral at Sanur, Serangan and Nusa Dua and jagged volcanic rock at Keramas. Guides disagree on each spot's exact optimum, so read the band, not the hour, and remember a session can change completely as the tide swings."
+      }
+    ]
+  },
+  {
+    "slug": "west-bali-surf-medewi-balian",
+    "badge": "Travel guide",
+    "navLabel": "Uncrowded west",
+    "cardTourLabel": "Getting to the waves",
+    "heroTourSlug": "private-car-with-driver-bali",
+    "relatedTourSlugs": [
+      "private-car-with-driver-bali",
+      "surf-lesson-experience",
+      "bali-airport-transfer"
+    ],
+    "inlineStats": [
+      "Left rides up to ~500 m",
+      "Balian works year-round",
+      "2-2.5 h drive from Canggu"
+    ],
+    "title": "Medewi and Balian: The Two-Hour Drive That Buys You Space",
+    "description": "Medewi's long left, Balian's year-round rivermouth, cobblestone entries and the honest 2-2.5 hour drive — west Bali's quiet surf, spot by spot.",
+    "excerpt": "The surf between Canggu and Uluwatu gets more crowded every season, and the honest fix is not a secret spot — it is distance. Drive west for two hours and Bali changes: the lineups at Medewi and Balian hold a fraction of the south-coast crowd, Medewi's left point peels for several hundred metres, and Balian's rivermouth works year-round on every tide. The price of that space is real: 2-2.5 hours in the car to Medewi, a cobblestone entry that punishes bare feet, and strong currents with nobody much around. This guide covers both waves honestly — tides, seasons, hazards, who they suit — plus the two smaller spots nearby, what the drive actually takes, and how to bring boards without arguing with a hatchback.",
+    "rankings": [
+      {
+        "name": "Medewi — the long left point",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "Jembrana, west coast",
+        "bestFor": "Long lefts and longboards",
+        "summary": "Bali's signature long left: a slow, mellow wall peeling over a cobble-and-sand shelf for several hundred metres — up to ~500 m on the right swell. It is famous for length, not power, which is exactly why longboarders love it. Best around mid to high tide; it breaks on all tides, but low water exposes the boulders. Dry season, May to October, brings the most power and the cleanest morning offshores."
+      },
+      {
+        "name": "Medewi Right",
+        "imageSrc": "/images/places/surfing-in-canggu.jpg",
+        "area": "South of the main point",
+        "bestFor": "The regular-footer's crowd escape",
+        "summary": "A few hundred metres south of the famous left, a genuinely separate wave breaks right off the rivermouth — faster, steeper and hollower than the point, over the same boulder bottom. It needs more swell to work and the takeoff is not for improvers, but the lineup is notably lighter than the main peak. Walk south along the beach, cross the first river, and ask a local where the paddle-out channel runs."
+      },
+      {
+        "name": "Pulukan",
+        "imageSrc": "/images/places/bali-green-season.jpg",
+        "area": "One beach east of Medewi",
+        "bestFor": "The backup when Medewi sleeps",
+        "summary": "The standard fallback: an A-frame over sand and rock with a notable right, one beach east of Medewi on the same road. It works on low to mid tide, picks up swell when Medewi is too small, and shuts down when the swell gets too big. More exposed to wind than the point, so it is a morning call — but the crowd is close to zero most days."
+      },
+      {
+        "name": "Balian — the rivermouth",
+        "imageSrc": "/images/remote/melasti-beach-coast-09ee1977.jpg",
+        "area": "Tabanan, rivermouth",
+        "bestFor": "Waves on any given date",
+        "summary": "The most consistent spot in west Bali and the easiest place on the island to promise waves: it works year-round and on all tides — lower tide punchier, higher tide mellower. The river builds a cobble bank where the lefts wrap longer than the rights, and it holds anything from knee-high to triple overhead. Fine for improvers on small days; it gets serious above head-high. Skip the first rains of the wet season — the river runs dirty."
+      },
+      {
+        "name": "Soka — a stop, not a session",
+        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "area": "Between Tabanan and Balian",
+        "bestFor": "A black-sand leg stretch",
+        "summary": "We list Soka as a beach stop, not a surf spot, and that is deliberate. The only two surf reports we could find flatly contradict each other — one describes a mellow longboard paddle, the other an extremely shallow outer reef that is rarely surfed — and no source gives a tide or a wave direction. As a black-sand photo-and-coffee stop on the way to Balian it earns its place; as a session it is a gamble we will not sell you."
+      },
+      {
+        "name": "The drive west",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Denpasar-Gilimanuk road",
+        "bestFor": "Boards need racks, not luck",
+        "summary": "The road is sealed the whole way and a normal car handles it fine — the constraint is the boards, not the asphalt. Small hatchbacks, which is what most ride-hail cars in Canggu are, frequently cannot take them, and drivers develop sudden 'car problems' when a board bag appears. Book a van or an SUV with racks, confirm board carriage when you book, and leave before dawn to meet the land breeze."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Why Bali's quietest surf is two hours west",
+        "paragraphs": [
+          "Every season the lineups from Canggu to Uluwatu absorb more surfers, and every season more people ask us about uncrowded surf spots in Bali as if there were a password. There is not. What exists is distance: the coast between Balian and Medewi catches the same southwest swell as the famous breaks, but it sits a real drive from the cafes, and that drive is the whole filter. **Medewi runs light to moderate midweek** and only fills when a proper swell lands; **Balian is explicitly rated low-crowd** by the same guides that call it ultra consistent; Pulukan, one beach further, is close to empty. The west is getting busier year on year — but it remains nowhere near Kuta or Canggu levels, and these are the quietest established waves on the island that a normal car can reach.",
+          "One structural note before the spot-by-spot: west Bali is goofy-foot country. **Medewi is a left**, and at Balian **the lefts wrap longer and arrive more often than the rights** — the only dependable right out here is Medewi Right, which needs extra swell to break at all. If you surf regular and hate your backhand, weigh that before committing to the drive; our [map of Bali's best surf spots](/bali/en/journal/best-surf-spots-in-bali) shows where the rights live."
+        ]
+      },
+      {
+        "heading": "Medewi: the long left, and what the cobblestones do to your feet",
+        "paragraphs": [
+          "Medewi is Bali's signature long left point — a slow, unhurried wall that peels down a cobble-and-sand shelf for **several hundred metres** on a good swell. Exactly how many hundred is genuinely disputed: one surf camp claims over 800 m, another says up to 500 m, so we will promise you **up to ~500 m** and let the wave over-deliver. It is famous for length, not power, and that is precisely the appeal — this is the closest thing Bali has to a purpose-built longboard wave, and single-fins outnumber shortboards most mornings. Tide: **best around mid to high**. It breaks on all tides, but a fuller ocean keeps the wall smooth and the boulders covered.",
+          "Now, your feet. The entry is a field of **rounded boulders — slippery, some barnacle-covered** — and you cross it at least twice per session. At low tide the rocks stand exposed and the walk gets slower and meaner; **booties are strongly recommended**, and nobody who packed a pair has ever regretted it. From the parking and the warungs it is about a **five-minute walk** across the rocks to the water. Once in, respect the **currents and rips** — the wave is gentle, but the ocean around it is not obliged to be. In the wet season Medewi goes smaller and mushier, which actually suits learners, though the water quality drops after rain."
+        ]
+      },
+      {
+        "heading": "Balian: the rivermouth that always has something",
+        "paragraphs": [
+          "Balian is the easiest wave in Bali to promise someone. It is rated **ultra consistent, works year-round, and breaks on all tides** — the tide changes its character rather than switching it off: **lower tide livens it up** into punchier, more performance-style walls, **higher tide mellows it out**. The river feeds a cobblestone bank at the mouth and the peaks shift along it, lefts and rights both, with the lefts longer. It holds everything from **knee-high to triple overhead**, and the guides that rate it say it is best around head to head-and-a-half high and excellent up to double overhead.",
+          "Two honest notes. First, skill level: sources genuinely disagree about who Balian is for — one lists it beginner-to-intermediate, another intermediate-to-advanced — and both are right, because the wave changes personality with size. Call it **improver-friendly when small, serious above head-high**. Second, the rivermouth itself: **avoid the first rains of the wet season**, when stormwater runoff pushes dirty water into the lineup. Sea urchins and jellyfish turn up, and occasional shark sightings are reported in several guides — anecdotal rather than confirmed, but we would rather you hear it from us than in the lineup. For how tide, swell and wind interact on this coast, our [tides, swell and wind guide](/bali/en/journal/bali-surf-conditions-tides-swell-wind) goes deeper."
+        ]
+      },
+      {
+        "heading": "Getting there with boards: the drive is the easy part",
+        "paragraphs": [
+          "The road is not the obstacle people imagine. The **Denpasar-Gilimanuk trunk road is sealed the whole way**, a normal car handles every metre of it, and there is no 4WD moment anywhere. The real constraint is the boards: **standard hatchbacks — which is what most ride-hail cars in Canggu are — frequently cannot take them**, and drivers are known to develop sudden 'car problems' when a passenger appears with a board bag. Scooter racks are the local solution, and they are the wrong solution here: a two-hour-plus highway run with a board on your hip is no way to arrive fresh for a long paddle.",
+          "This is exactly the trip our [private car with driver](/bali/en/tours/private-car-with-driver-bali) exists for — **from $59 for the day, boards fit**, the driver leaves when you say and waits while you surf. Tell us at booking that boards are coming and we send a car they actually fit in. Leave before first light: the reliable clean window out west is the **dawn land breeze off the northeast quadrant**, and it is worth being in the water while it still holds. Some surfers skip the south coast entirely and point west straight from the plane — a [private airport pickup](/bali/en/tours/bali-airport-transfer) from $15 starts the trip without a taxi negotiation. For what renting versus bringing your own actually costs, see our [board rental and transport guide](/bali/en/journal/bali-surfboard-rental-and-transport)."
+        ],
+        "bullets": [
+          "**Balian: ~1.5-2 hours** from Canggu or Seminyak on the sealed west-coast road",
+          "**Medewi: 2-2.5 hours, longer in traffic** — sources quote anything from 1.5 to 3 hours; plan for the honest end",
+          "**Balian to Medewi: ~24 km, about 30 minutes** — close enough to check both in one morning",
+          "**Boards need roof racks, a van or an SUV** — arrange it at booking, not at the kerb"
+        ]
+      },
+      {
+        "heading": "So is the two-hour drive worth it?",
+        "paragraphs": [
+          "For the right surfer, without hesitation. If you are an improver or better who counts waves per session rather than bars per beach, a longboarder chasing length, or a goofy-footer tired of living on your backhand — the west coast pays the drive back with interest, in wave count and in silence. If you are a complete beginner, honestly, no: your money is better spent on a sand-bottom beach in the south, where a [private lesson](/bali/en/tours/surf-lesson-experience) costs **from $35** with board and coach included, and the spots in our [beginner spots guide](/bali/en/journal/bali-surf-spots-for-beginners) forgive every mistake a cobblestone shelf would punish.",
+          "Two ways to squeeze more from the trip. First, stay a night: Balian and Medewi are **about 30 minutes apart**, and two dawn sessions for one drive changes the arithmetic completely. Second, break the drive at **Soka** — a black-sand beach between Tabanan and Balian that we list as a photo-and-coffee stop, not a surf spot, because the few reports about its wave flatly contradict each other. Stretch your legs, take the picture, keep driving. Booking, as always, is a WhatsApp message with no prepayment — tell us the date and whether boards are coming, and we will tell you what time to set the alarm."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is Medewi the best longboard wave in Bali?",
+        "answer": "It is the strongest candidate on the island. Medewi is a slow, mellow left point that peels for several hundred metres — up to roughly 500 m on the right swell — and it is famous for length rather than power, which is exactly what a longboard wants. Ride it around mid to high tide, wear booties for the boulder entry, and go at dawn while the northeast land breeze holds the face clean."
+      },
+      {
+        "question": "Are Medewi and Balian really uncrowded?",
+        "answer": "By Bali standards, yes. Medewi runs light to moderate midweek and only fills when a real swell arrives; Balian is explicitly rated low-crowd despite being the most consistent wave on this coast; Pulukan is close to empty. The filter is the 2-2.5 hour drive from Canggu. The west is getting busier every year, but it remains nowhere near Kuta or Canggu levels."
+      },
+      {
+        "question": "What tide is best at Medewi?",
+        "answer": "Mid to high tide. The wave breaks on all tides, but a fuller ocean gives the smoothest walls and — just as important — keeps water over the rounded boulders on the inside. At low tide the rocks stand exposed, the entry and exit turn slow and slippery, and booties stop being optional. Time the session around the fuller half of the tide and the whole day gets easier."
+      },
+      {
+        "question": "Can beginners surf at Balian Beach?",
+        "answer": "Only conditionally. Guides genuinely disagree about Balian's level — some list it beginner-to-intermediate, others intermediate-to-advanced — because the wave changes with size: improver-friendly when small, serious above head-high. A complete beginner is better off on the sand-bottom beaches of the south with an instructor, and should come to Balian once green waves and a cobblestone bottom are no longer news."
+      },
+      {
+        "question": "How long is the drive from Canggu to Medewi and Balian?",
+        "answer": "Plan 2-2.5 hours to Medewi, longer in traffic — sources quote anything from 1.5 to 3 hours, and the optimistic figure only happens at dawn. Balian is closer, about 1.5-2 hours, and the two spots sit roughly 24 km / 30 minutes apart, so checking both in one morning is easy. The road is sealed the whole way; the real planning issue is a car that takes boards."
+      },
+      {
+        "question": "When is the surf season in west Bali?",
+        "answer": "May to October, the dry season, brings the most power and the cleanest conditions — the coast faces southwest, so the dry-season wind from the northeast quadrant blows offshore, and the dawn land breeze is the reliable window. Both spots stay rideable year-round though: Balian is rated ultra consistent on any tide, and Medewi's wet season is smaller and mushier, which actually suits learners."
+      }
+    ]
+  },
+  {
+    "slug": "bali-surf-season-month-by-month",
+    "badge": "Travel guide",
+    "navLabel": "Surf season",
+    "cardTourLabel": "Surf and active days",
+    "heroTourSlug": "surf-lesson-experience",
+    "relatedTourSlugs": [
+      "surf-lesson-experience",
+      "private-car-with-driver-bali",
+      "sunset-cruise-bali"
+    ],
+    "inlineStats": [
+      "Waves 12 months a year",
+      "Peak swell Jun-Sep",
+      "Lessons from $35"
+    ],
+    "title": "Bali Surf Season Month by Month: There Is No Off-Season",
+    "description": "Bali surf season month by month: which coast is offshore, typical swell size, crowds, and who each month suits. Dry season west, wet season east.",
+    "excerpt": "There is no month without waves in Bali. The Southern Ocean swell engine runs all twelve months, so the real season question is wind, not surf. From April to October the east-to-southeast trades blow offshore on the Bukit's west-facing reefs and the west coast from Kuta to Medewi; from November to March the wind swings west and the clean side becomes Nusa Dua, Sanur, Serangan and Keramas. Peak power arrives June to September, when offshore swell averages 2.0-2.2 m at 14-second periods and a typical August delivers clean, rideable waves 99% of the time. The wet season brings smaller, friendlier waves to the east coast, and October is the best-balanced month of the year. Below are all twelve months: which coast is offshore, typical size, the crowd, and who each month actually suits.",
+    "rankings": [
+      {
+        "name": "January: surf the east coast",
+        "imageSrc": "/images/places/bali-in-rainy-season.jpg",
+        "area": "Sanur to Nusa Dua",
+        "bestFor": "Small clean rights, warm water",
+        "summary": "The heart of the wet season and Bali's rainiest month — **around 350 mm over 19 rain days** — with the west-to-northwest monsoon putting Kuta, Canggu and the Bukit's west reefs onshore and strewing them with river plastic. The clean surf is east: Sanur, Nusa Dua and Serangan handle the refracted **1.7 m swell at 12 s** on clear mornings. Water sits near **29°C**. Suits surfers who like rights and don't mind sharing the few working peaks — Serangan gets genuinely busy."
+      },
+      {
+        "name": "February: Keramas at its cleanest",
+        "imageSrc": "/images/places/bali-green-season.jpg",
+        "area": "East coast",
+        "bestFor": "East-coast barrel hunters",
+        "summary": "Same regime as January, slightly drier — **280 mm over 18 days** — and the month Keramas comes up clean most often in the forecast archives, which is reason enough for some surfers to book it. Offshore swell holds at **1.7 m at 12.5 s**, arriving smaller on the east coast after bending around the Bukit. Mornings are the window; afternoons blow out or rain. Suits intermediate-to-advanced surfers hunting east-coast rights — Keramas itself is an advanced wave, with Sanur's Baby Reef the mellow alternative."
+      },
+      {
+        "name": "March and April: the turn",
+        "imageSrc": "/images/places/bali-in-shoulder-season.jpg",
+        "area": "Island-wide transition",
+        "bestFor": "Quiet water, Nyepi caveat",
+        "summary": "March is the turn: the calmest average wind of the year but the monsoon only half broken, so you keep wet-season rain (**215 mm over 20 days**) without dry-season reliability — and Nyepi, the Balinese Day of Silence, shuts the entire island including the airport for 24 hours. April is the reward: **1.7 m at 13.8 s**, rain down to **90 mm over 12 days**, the quietest month for visitors, and the west coast switching back on. Water is at its warmest, about **29°C**."
+      },
+      {
+        "name": "May and June: the trades arrive",
+        "imageSrc": "/images/places/surfing-in-canggu.jpg",
+        "area": "Bukit and west coast",
+        "bestFor": "Beginner window, building power",
+        "summary": "The trades settle in and the swell builds — **1.9 m at 14.1 s in May, 2.1 m at 14.3 s in June** — and the Bukit's west reefs start doing what the films promise. Late April to early June is one of the two beginner windows of the year: clean dawn sessions on the Kuta-to-Canggu sand with real push but not yet peak power. By June the trades strengthen and blow from first light, so early starts stop being optional."
+      },
+      {
+        "name": "July: the peak of the peak",
+        "imageSrc": "/images/places/bali-in-peak-season.jpg",
+        "area": "Bukit Peninsula",
+        "bestFor": "Experienced surfers chasing size",
+        "summary": "The biggest month of the year: **2.2 m of offshore swell at 14.4 s**, and faces at the reefs run well beyond that figure. Also the busiest — **around 697,000 visitors** — with the trades at full strength, strong enough some days to blow too hard from the east-southeast. Dawn is everything. Suits experienced surfers with reef time who came for size; it is the wrong month for a first lesson or a first reef wave."
+      },
+      {
+        "name": "August: the sure thing",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "Bukit Peninsula",
+        "bestFor": "Consistency you can plan around",
+        "summary": "Statistically the sure thing: the same **2.2 m at 14.4 s**, and in a typical August clean, rideable waves about **99% of the time**. The trade wind stays fresh, and dry-season upwelling drops the Bukit's water to a **26°C average, dipping toward 24** — some surfers add a 1-2 mm top at dawn. Bingin is often cited as at its most consistent this month. Crowds run barely thinner than July, so patience in the lineup is part of the kit."
+      },
+      {
+        "name": "September: the crossover month",
+        "imageSrc": "/images/places/bali-in-peak-season.jpg",
+        "area": "Bukit and west coast",
+        "bestFor": "Peak size, friendlier wind",
+        "summary": "The crossover: **2.0 m at 14.3 s** with the trades easing — peak-season power with shoulder-season wind, which is why long-run climatologies rate it among Uluwatu's best months of the year. The Bukit's water hits its coolest dawn minima, near **23°C**, while the rest of the island stays warm. The beginner window reopens as the month closes. Suits everyone from solid intermediates upward — and anyone who wants July's waves without July's lineup."
+      },
+      {
+        "name": "October: the best-balanced month",
+        "imageSrc": "/images/places/bali-in-shoulder-season.jpg",
+        "area": "West coast and Bukit",
+        "bestFor": "The month we'd book",
+        "summary": "On the numbers, the best-balanced month of the year: **1.8 m at 13.8 s**, the most dependable offshore wind of any month, just **90 mm of rain across 6 days**, water back to **27°C**, and roughly **22% fewer visitors than July**. What you give up is the top end — the heaviest, hollowest versions of the reefs come less often. For intermediates, and for anyone who would rather surf twice a day than wait for one bombing session, this is the month we would book ourselves."
+      },
+      {
+        "name": "November and December: the swap back east",
+        "imageSrc": "/images/places/bali-green-season.jpg",
+        "area": "West turns to east",
+        "bestFor": "Two coasts in one trip",
+        "summary": "November is the tail of the reliable window — **1.6 m at 13.2 s**, wind still mostly offshore in the west but turning variable while the east coast switches on. Plan to move between coasts rather than committing to one. By December the west monsoon is established: **1.6 m at 12.7 s**, rain climbing toward **290 mm over 16 days**, Keramas and Nusa Dua take over, and the beginner call moves to Sanur. The season has not ended; it has changed address."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "How the Bali surf season actually works",
+        "paragraphs": [
+          "Bali's swell engine never switches off. Storms in the Southern Ocean send **south-to-southwest groundswell at the island all twelve months**, and even the smallest wet-season months average **1.6-1.7 m of offshore swell** — in a typical August, surfable waves are present essentially every day. So the season question is not whether there is surf, but which coast the wind is grooming. From **April to October** the east-to-southeast trades clean the Bukit's west-facing reefs — Uluwatu, Padang Padang, Bingin — and the west coast from Kuta up to Medewi (strictly side-offshore on the Kuta strip, since those beaches face southwest). From **November to March** the monsoon swings west to northwest, and the clean side becomes the Bukit's east flank and the Sanur stretch: Nusa Dua, Serangan, Sanur, Keramas.",
+          "The two coasts are not mirror images, and this is the part most season guides skip. The east coast receives the same southern swell only after it bends around the Bukit, so waves arrive **noticeably smaller and need a bigger raw swell to work** — Keramas faces more east than south, and Sanur sits in a second shadow cast by Nusa Penida. In practice the wet season delivers clean but smaller surf, and the east coast can be flat on a day the Bukit would have been solid. One myth to bin while we are here: Bali does **not** get northeast swell in the wet season — the December-to-February swell runs southwest and south-southwest, same as July."
+        ]
+      },
+      {
+        "heading": "Peak season: June to September",
+        "paragraphs": [
+          "From June to September the offshore swell averages **2.0-2.2 m at periods above 14 seconds** — and period, not height, is the real seasonal variable. Average height climbs only about a third from the wet-season floor, but the period stretches from 12.4 to 14.4 seconds, which means far more energy per wave: the reefs break harder, further out, and well above the raw swell figure on the face. July is the biggest and busiest month (**around 697,000 visitors**), with trades that blow from first light and can be too strong for clean faces some days. August matches it for size and beats everything for reliability. Our [Uluwatu guide](/bali/en/journal/uluwatu-surf-guide) covers how each section of the reef handles that power.",
+          "One thing the brochure photos don't show: the same trade winds drive coastal upwelling, and the Bukit's water drops to a **26°C average in August with dawn minima near 23-24°C** — the north and east of the island stay warmer. Nobody needs a wetsuit, but on long dawn sessions a 1-2 mm top earns its bag space, and a long-sleeve rashguard is worth wearing all year for sun and reef anyway. This is the window for confident intermediates and upward with reef experience; it is emphatically not the season to learn."
+        ]
+      },
+      {
+        "heading": "Wet season: November to March",
+        "paragraphs": [
+          "Wet-season rain is not the problem people imagine. The typical day is a clear or partly cloudy morning, cloud building through midday, then a heavy burst in the afternoon that is often finished within the hour — and since the light-wind surf window is the morning in every month, rain and surfing rarely collide. January and February are the exception, when a strong monsoon can string genuinely wet days together (**January: about 350 mm over 19 rain days**). The east coast is offshore for the clear majority of December-to-February mornings, Nusa Dua rarely goes flat, and Keramas barrels best in exactly this window — our [east Bali surf guide](/bali/en/journal/east-bali-surf-spots) walks the lineup spot by spot.",
+          "The two real costs are elsewhere. First, the west coast turns onshore, choppy and poor. Second, the monsoon plastic tide: heavy rain flushes river waste to sea and the wind returns it to the west-facing beaches — **up to 60 tonnes a day** has been collected from Kuta and Legian in this season. Keep off the west beaches, and skip surfing near any river mouth for 24-48 hours after heavy rain. Who the season suits: surfers who like rights, anyone based on the Sanur-to-Nusa Dua side, and beginners at Sanur — the one genuinely easy east-coast venue, since most of the rest is reef."
+        ]
+      },
+      {
+        "heading": "The shoulder months — and the best month of all",
+        "paragraphs": [
+          "If we had to pick one month on the numbers, it would be **October**: 1.8 m at 13.8 s, the most dependable offshore wind of the year, 90 mm of rain across six days, 27°C water, and roughly 22% fewer visitors than July. September is the crossover — peak size with moderating wind — and April is October's quiet mirror on the other side of the year. What every shoulder month trades away is the top end: swell runs **20-27% smaller than the July-August peak** with slightly shorter periods, so the heaviest, hollowest versions of the Bukit reefs come less often. Most surfers consider that a fair exchange.",
+          "For beginners the calendar is stricter: the honest windows are **late April to early June and September to October**, when the west-coast sand bottoms get clean offshore mornings without peak-season power in the water. Two cautions we repeat to every first-timer: Canggu's rips make it a poor place to start despite the marketing — the least rip-affected stretch is the south end of Kuta — and the famous reefs are a different sport entirely. A [private beginner lesson](/bali/en/tours/surf-lesson-experience) runs **from $35 for a 2-4 hour session** with board and coach included, and the instructor picks the beach and tide window for the day. More in our [beginner spots guide](/bali/en/journal/bali-surf-spots-for-beginners)."
+        ]
+      },
+      {
+        "heading": "Tides move faster than seasons",
+        "paragraphs": [
+          "Whatever month you choose, the tide will matter more on the day. South Bali runs a **mixed semidiurnal tide — two highs and two lows of unequal height — with spring ranges around 2-2.5 m**, over fringing reef flats that sit only about a metre below mean sea level. On a spring cycle that much water moves in roughly six hours, so a reef can go from perfect to unrideable inside a single session: either the wave stops breaking properly, or it breaks over centimetres of water. And tide preferences are not uniform — some reefs only work low, others mid-to-high, and guides genuinely conflict on a few famous ones. Check the spot, not just the chart; our [conditions guide](/bali/en/journal/bali-surf-conditions-tides-swell-wind) explains how to read the combination."
+        ]
+      },
+      {
+        "heading": "Getting to the offshore coast with boards",
+        "paragraphs": [
+          "The month decides the coast; your accommodation usually doesn't move with it. That gap is a driving problem, and the easiest fix is a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59** — boards fit, the driver waits while you surf, and you can look at two spots before paddling out, which matters most in the shoulder months when day-to-day wind is less locked in."
+        ],
+        "bullets": [
+          "**Dry season (April-October):** base on the Bukit or the Canggu strip and the surf is on your doorstep — dawn starts beat both the wind and the crowds in every month",
+          "**Wet season (November-March):** base in Sanur or Nusa Dua, or keep a west-side base and make morning runs east — **Keramas is about 45 minutes from Sanur or the airport**, Serangan about 15 from the airport",
+          "**Arriving with boardbags:** a [private airport pickup](/bali/en/tours/bali-airport-transfer) **from $15** saves the taxi-rank negotiation at the exact moment you least want it"
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "When is the surf season in Bali?",
+        "answer": "All year — Bali has no true off-season. The dry season from April to October is offshore on the west coast and the Bukit's famous reefs, with peak swell June to September. The wet season from November to March swings the wind west, and the clean surf moves to the east side: Nusa Dua, Serangan, Sanur and Keramas. The coast changes; the waves never stop."
+      },
+      {
+        "question": "What is the best time to surf in Bali?",
+        "answer": "For most surfers, September and October: near-peak swell with the year's most dependable offshore wind, warm water and thinner crowds than July and August. Advanced surfers chasing maximum size aim for June to August on the Bukit. Beginners do best from late April to early June and September to October, when the west-coast sand beaches get clean mornings and manageable swell."
+      },
+      {
+        "question": "Can you surf in Bali in January?",
+        "answer": "Yes — January still delivers around 1.7 m of offshore swell, but the west-to-northwest monsoon puts Kuta, Canggu and the Bukit's west reefs onshore. Surf the east side instead: Sanur, Serangan, Nusa Dua and Keramas are clean most mornings. Expect Bali's wettest month, roughly 350 mm over 19 rain days, mostly as afternoon downpours, and smaller waves than the dry season because the swell refracts around the Bukit."
+      },
+      {
+        "question": "How big is the surf in Bali in July?",
+        "answer": "July is the peak: offshore swell averages 2.2 m at 14-second-plus periods — the biggest and most powerful of the year — and wave faces on the reefs run well beyond that figure. It is also the busiest month, and the trades blow at full strength, sometimes too hard for clean faces. It suits experienced surfers; beginners are better served by the shoulder months."
+      },
+      {
+        "question": "Is December a good month to surf in Bali?",
+        "answer": "Yes, if you surf the right coast. December opens the wet season: the west-facing beaches turn onshore and collect monsoon debris, while Nusa Dua, Sanur, Serangan and Keramas turn clean and offshore. The swell is the year's smallest at about 1.6 m and 12.7 s, which makes for friendlier reef waves. Beginners should head for Sanur — the sand-bottom west beaches are at their worst."
+      },
+      {
+        "question": "When is Bali's peak surf season?",
+        "answer": "June through September, when offshore swell holds at 2.0-2.2 m with 14-second periods and the east-to-southeast trades groom the Bukit and the west coast. July and August are the biggest and busiest months; September keeps most of the size with gentler wind. This is the window for Uluwatu, Padang Padang and Bingin at full strength — and the wrong one for a first lesson."
+      }
+    ]
+  },
+  {
+    "slug": "bali-surf-conditions-tides-swell-wind",
+    "badge": "Travel guide",
+    "navLabel": "Reading conditions",
+    "cardTourLabel": "Surf and active days",
+    "heroTourSlug": "private-car-with-driver-bali",
+    "relatedTourSlugs": [
+      "private-car-with-driver-bali",
+      "surf-lesson-experience",
+      "bali-airport-transfer"
+    ],
+    "inlineStats": [
+      "Swell SSW all year",
+      "Spring tides 2-2.5 m",
+      "Driver day from $59"
+    ],
+    "title": "Bali Surf Forecast: Period, Wind and Tide Pick Your Spot",
+    "description": "How we read Bali surf conditions: why swell period beats height, which coast the wind puts offshore, and the tide window that makes or kills each reef.",
+    "excerpt": "Bali is effectively never flat — Southern Ocean storms send swell from the south-southwest all year — so the morning question is never whether there are waves, but where they are clean. Three numbers answer it, in order. Swell period beats height: the offshore average only moves between 1.6 and 2.2 m across the year, but period climbs from about 12.4 to 14.4 seconds, and long-period swell breaks harder and further out on the reefs. Wind picks the coast: dry-season trades from the east groom the Bukit and the Kuta-to-Medewi strip; wet-season westerlies flip the island to Sanur, Keramas, Serangan and Nusa Dua. And the tide picks the hour — springs move 2-2.5 m of water over reef flats that sit barely a metre under the surface. Here is how we read a forecast and choose the drive before 6 am.",
+    "rankings": [
+      {
+        "name": "Read the period before the height",
+        "imageSrc": "/images/places/uluwatu-surf.jpg",
+        "area": "The swell panel",
+        "bestFor": "Judging real wave energy",
+        "summary": "Bali's average swell height only moves from about 1.6 to 2.2 m across the year, but the period climbs from 12.4 to 14.4 seconds — and period is what the reef feels. A 1.7 m swell at 14 seconds carries far more energy than the same height at 12 seconds: it refracts further around the Bukit and breaks harder and further out. One caution: forecast heights are deep-water swell, not wave faces — Uluwatu in July regularly runs double on the face."
+      },
+      {
+        "name": "Check the direction — SSW is the engine",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "180-247° window",
+        "bestFor": "Knowing which coast lights up",
+        "summary": "Bali's swell comes from Roaring Forties storms with a near-unobstructed run from South Africa to southwest Australia, arriving from the south-southwest essentially all year. The swell window is roughly S to WSW, with 225° the most consistent line. This engine never switches off, which is why the island is effectively never flat — the wet-season question is wind quality, not whether waves exist. The more westerly the angle, the more the east coast misses out."
+      },
+      {
+        "name": "Let the wind pick your coast",
+        "imageSrc": "/images/remote/canggu-beach-3-a94bbee1.jpg",
+        "area": "Island-wide",
+        "bestFor": "Dry west, wet east",
+        "summary": "From roughly April to October the trades blow from the east to east-southeast and groom the Bukit's west side plus the whole Kuta-to-Medewi strip. From November to March the flow swings west to northwest: those spots turn to chop while Sanur, Keramas, Serangan and Nusa Dua switch on. The swap is near-total — Nusa Dua's offshore mornings peak in December-February and all but vanish from May through September."
+      },
+      {
+        "name": "Find the tide window for your reef",
+        "imageSrc": "/images/remote/sanur-beach-bali-59142775.jpg",
+        "area": "Reef by reef",
+        "bestFor": "Avoiding a dry reef flat",
+        "summary": "The tide here is mixed semidiurnal — two highs and two lows a day of clearly unequal size — and a spring cycle moves 2-2.5 m of water in about six hours, over reef flats that sit only around a metre below mean sea level. A reef can go from perfect to unrideable inside one session. There is no universal best tide: some reefs only break at low, Uluwatu and Bingin are usually cited mid-to-high, and on Padang Padang the guides genuinely disagree."
+      },
+      {
+        "name": "Beat the sea breeze — surf at dawn",
+        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "area": "The daily wind clock",
+        "bestFor": "Timing the clean window",
+        "summary": "Outside the strongest trade months the wind runs on a thermal clock: lightest at dawn, building as the land heats, strongest onshore push in the afternoon. In June and July the trades override that cycle and blow from first light — strong enough some days to rough up even the offshore coast. The conclusion is the same in every month of the year: the reliable clean window is dawn, and the early drive is the price of it."
+      },
+      {
+        "name": "Read what the forecast doesn't show",
+        "imageSrc": "/images/places/bali-in-shoulder-season.jpg",
+        "area": "Wet-season fine print",
+        "bestFor": "Water quality and crowds",
+        "summary": "No swell chart shows the monsoon plastic tide that puts up to 60 tonnes of debris a day on Kuta, Legian and Seminyak between November and March, or the river-mouth runoff we avoid for a day or two after heavy rain, or the crowd that turns a good forecast into a forty-man lineup. Surf cams are patchy and only show one moment at one tide. A call to someone standing on the cliff still beats every chart."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The three numbers that matter, in the order we read them",
+        "paragraphs": [
+          "Start with the fact that makes Bali unusual: the swell never really stops. Storms in the Roaring Forties push swell at the island all year through a window of roughly **S to WSW (180-247°)**, with SSW around 225° the most consistent line. One long-running forecast dataset for Uluwatu puts surfable swell in the water essentially **all of a typical August**, with clean rideable waves 99% of the time. So a Bali surf forecast is never answering \"are there waves\" — it is answering which coast, which reef, which hour.",
+          "Read the period before the height. The offshore average only moves from **1.6-1.7 m in December-February to 2.2 m in July-August**, but the period climbs from about **12.4 to 14.4 seconds**, and period is what a reef feels: a 1.7 m swell at 14 seconds refracts further around the Bukit and breaks harder and further out than the same height at 12. One warning on units — these are deep-water swell heights from model points well offshore, not wave faces, and Uluwatu in July is regularly double that on the face. For how the numbers move through the year, our [month-by-month surf season guide](/bali/en/journal/bali-surf-season-month-by-month) lays out all twelve."
+        ]
+      },
+      {
+        "heading": "One island, two forecasts: the wind flip",
+        "paragraphs": [
+          "The wind panel decides which half of the island works. From roughly **April to October** the trades blow from the **east to east-southeast** — the textbooks say \"southeast trades\", but the direction actually measured on the south coast sits further east — and they groom the Bukit's west side (Uluwatu, Padang Padang, Bingin, Impossibles, Balangan) plus the whole west-coast run from Kuta through Canggu to Balian and Medewi. From **November to March** the monsoon swings the flow **west to northwest**: those same spots turn to chop while the east side switches on — Sanur, Keramas, Serangan and Nusa Dua, where offshore mornings run around 60% of the time in December-February by one model climatology, and all but disappear from May through September.",
+          "Do not read the two coasts as equals. The east side receives the same southerly swell only after it bends around the Bukit, so it arrives smaller and needs a bigger raw swell to work; **Keramas faces more east than south**, and Sanur sits in an extra shadow cast by Nusa Penida. The practical translation: the wet season delivers cleaner but smaller waves, and the east coast can be nearly flat on a day the Bukit would have been solid. Our [east Bali surf guide](/bali/en/journal/east-bali-surf-spots) covers those spots one by one."
+        ]
+      },
+      {
+        "heading": "The tide: the number that ends sessions",
+        "paragraphs": [
+          "Bali runs a **mixed semidiurnal tide** — two highs and two lows a day of clearly unequal size — with a spring range of roughly **2-2.5 m** (the Benoa reference station has recorded 2.46 m) over fringing coral platforms that sit only about a metre below mean sea level. On a spring cycle the water moves that full range in about six hours, so a reef can go from perfect to unrideable inside one session. At low it fails in one of two ways: the wave stops reaching the takeoff zone, or it still breaks — in centimetres of water over live coral.",
+          "Springs fall on the new and full moon, neaps on the quarters — a neap cycle moves only around a metre — so the same reef behaves differently week to week on identical swell. Check the day against a Benoa tide table before committing to a drive, and be suspicious of auto-generated spot pages: one big forecast site's Uluwatu page claims the surf \"isn't affected by the tide\", a template artifact that contradicts every local source. For the section-by-section picture at the island's most famous wave, see our [Uluwatu surf guide](/bali/en/journal/uluwatu-surf-guide). The honest per-spot summary:"
+        ],
+        "bullets": [
+          "**Low-tide reefs exist** — Outside Corner at Uluwatu is one, and Green Bowl's left is at its best on a spring low",
+          "**Uluwatu's main sections and Bingin** are generally cited as mid-to-high — Bingin's shelf dries right out at low",
+          "**Padang Padang is genuinely disputed** — reputable guides publish both low-to-mid and mid-to-high windows, so ask in the lineup before trusting either",
+          "**Around 0.3 m on the chart**, some spots are already showing bare reef rather than water"
+        ]
+      },
+      {
+        "heading": "How we pick the drive at 5 am",
+        "paragraphs": [
+          "The order of operations is fixed: the season names the coast, the swell panel names two or three candidate reefs, and the tide table names the hour. Dawn is the default start in every month — the wind is lightest at first light and builds onshore through the day, and in **June-July** the trades can blow hard from sunrise, which is one more reason to be in the water early. Distance is the part visitors underestimate: crossing to the wet-season coast is real driving — **Keramas sits about 45 minutes from Sanur** along the bypass, Serangan about 15 minutes from the airport side — and a wrong guess costs you the clean window.",
+          "This is exactly why we run surf mornings as a [car with driver](/bali/en/tours/private-car-with-driver-bali) — **from $59 for the day, boards fit inside**, booked on WhatsApp with no prepayment. The driver waits while you check the first reef from the cliff; if the wind or tide is wrong you move on instead of paddling out at the wrong spot, and when a spring tide kills the session after two hours, the car turns that into a second session somewhere else rather than the end of the day. If these numbers still feel like homework, a [private surf lesson](/bali/en/tours/surf-lesson-experience) **from $35** solves it differently: the instructor reads the tide window and picks the beach for you."
+        ]
+      },
+      {
+        "heading": "What no forecast page shows",
+        "paragraphs": [
+          "Surf cams cover only a handful of Bali's breaks, they come and go, and a cam frame answers one narrow question — what this spot looks like right now, at this tide. On a spring cycle that answer expires within the hour, which is also why a surf report written at dawn can be useless by mid-morning. We treat cams and reports as a cross-check, not a decision: a phone call to someone standing on the cliff — a warung owner, another driver — still beats every chart, and our drivers make those calls before any long detour.",
+          "Two more things the charts omit. Between **November and March**, heavy rain flushes river debris to sea and the monsoon returns it to the west-facing beaches — up to **60 tonnes of plastic a day** is collected from Kuta and Legian at the peak — and we stay away from river mouths for a day or two after a big downpour. And water temperature: boardshorts work all twelve months, but dry-season upwelling cools the Bukit to an **August average around 25.8 °C** with lows near 23-24 °C, so cold-prone surfers pack a 1-2 mm top for July-September dawn patrols. The full hazards picture — reef, rips, etiquette — is in our guide to [whether surfing in Bali is safe](/bali/en/journal/is-surfing-in-bali-safe)."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What should I check first in a Bali surf forecast?",
+        "answer": "The swell period, before the height. Bali's average swell height only ranges from about 1.6 to 2.2 m across the whole year, but the period climbs from roughly 12.4 to 14.4 seconds, and long-period swell breaks harder and further out on the reefs. After period, read the swell direction, then the local wind to pick a coast, then the tide table to pick your hour."
+      },
+      {
+        "question": "What tide is best for surfing in Bali?",
+        "answer": "There is no single best tide — every reef has its own window, and getting this wrong is the classic Bali mistake. Uluwatu's main sections and Bingin are generally cited as mid-to-high, some waves only break at low, and on Padang Padang published guides genuinely disagree. What is universal: on a spring low the shallow reef flats go nearly dry, so treat any reef session around a 0.3 m tide with real caution."
+      },
+      {
+        "question": "Is there a Bali surf cam I can check?",
+        "answer": "Cams exist at some of the better-known breaks, but coverage is patchy, cameras come and go, and a frame only shows the current moment at the current tide — on a spring cycle it is out of date within the hour. Use a cam as a cross-check next to the swell period and a tide table, or do what we do and phone someone standing on the cliff."
+      },
+      {
+        "question": "How big does the Bali swell get by season?",
+        "answer": "Offshore swell averages about 1.6-1.7 m at 12.4-12.7 seconds in December-February and rises to about 2.2 m at 14.4 seconds in July-August — and those are deep-water figures, so faces at the reefs run bigger. Bali is effectively never flat: even the smallest wet-season months deliver rideable size, and the real December-February variable is wind quality, not whether waves exist."
+      },
+      {
+        "question": "Where do I surf when my coast is blown out?",
+        "answer": "Cross the island. In the wet season the west coast turns onshore and Sanur, Keramas, Serangan and Nusa Dua switch on; in the dry season it flips back. Expect the east side smaller — the swell bends around the Bukit to get there and loses energy on the way. Green Bowl, on the Bukit's south tip, is a wet-season option too: a small-swell, early-morning spot."
+      },
+      {
+        "question": "Do I need to read surf reports as a beginner?",
+        "answer": "No — a beginner's forecast is simpler: a sand-bottom beach, whitewater, and an instructor who picks the tide window for you. Lessons run from $35 for a 2-4 hour session, and the start time floats with the tide rather than the clock. The reading skills in this guide start to matter once you paddle out to unbroken waves over reef, usually after your first weeks."
+      }
+    ]
+  },
+  {
+    "slug": "is-surfing-in-bali-safe",
+    "badge": "Travel guide",
+    "navLabel": "Surf safety",
+    "cardTourLabel": "Surf and active days",
+    "heroTourSlug": "surf-lesson-experience",
+    "relatedTourSlugs": [
+      "surf-lesson-experience",
+      "private-car-with-driver-bali",
+      "bali-airport-transfer"
+    ],
+    "inlineStats": [
+      "7 risks, ranked",
+      "0 fatal surfer shark bites",
+      "Lessons from $35"
+    ],
+    "title": "Is Surfing in Bali Safe? Yes — the Real Risks, Ranked",
+    "description": "Yes — if you fear the right things. The real Bali surf risks ranked by likelihood: reef cuts, rips, urchins, crowds, and the actual shark numbers.",
+    "excerpt": "Yes, surfing in Bali is safe — as long as you fear the right things. Every guest asks us about sharks; almost nobody asks about reef cuts, and that ranking is exactly backwards. The incident logs show six surfing shark bites between 2010 and 2017, all non-fatal, all at river-mouth breaks on the west coast near Balian — zero at Uluwatu or anywhere on the Bukit. Meanwhile guides describe reef contact at the Bukit breaks as a matter of when, not if, and an unscrubbed cut can turn red and swollen within a day. This guide ranks the real risks in the order they actually happen: cuts and infection, dirty water after rain, rips, urchins, rocks on the way in and out, crowds — and sharks last, with the numbers that put them there.",
+    "rankings": [
+      {
+        "name": "Reef cuts and infection",
+        "imageSrc": "/images/remote/bingin-beach-9330583d.jpg",
+        "area": "Every Bukit reef break",
+        "bestFor": "The one that actually happens",
+        "summary": "Guides describe reef contact at the Bukit breaks as a matter of when, not if. The cut is rarely the drama — the problem is what stays in it: coral fragments and debris embed in the tissue and keep feeding infection, so a scratch you barely noticed turns **red, warm and swollen within 12-24 hours**. Scrub it hard the same hour — the full protocol is below — and treat every reef cut as a dirty wound: if your tetanus booster has lapsed, this is the trip to fix that."
+      },
+      {
+        "name": "Dirty water after rain",
+        "imageSrc": "/images/places/drinks-safety.jpg",
+        "area": "River mouths, Nov-Mar",
+        "bestFor": "The infection multiplier",
+        "summary": "The highest-probability health risk for a Bali surfer is the water itself. The only sustained testing — weekly seawater sampling since January 2022 — found that **both tested surf beaches, Petitenget and Batu Bolong, failed the provincial quality standard**, with one 2023 round reading E. coli above the test's upper limit. Wet-season rain flushes rivers and overflowing septic tanks straight into the lineup. The rule costs nothing: stay off river mouths, skip the first days after heavy rain, and double the caution when you're carrying an open cut."
+      },
+      {
+        "name": "Rip currents",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "Channels and beach breaks",
+        "bestFor": "Deadlier for swimmers than surfers",
+        "summary": "The Bukit's reef ledges channel water back out to sea fast — Bingin, Dreamland, Padang Padang and Uluwatu all do it, and the Padang channel rip strengthens with the swell. Note who actually drowns: the recent recorded deaths are **mostly swimmers, not surfers** — a leashed board is flotation a swimmer doesn't have. The same current that speeds your paddle-out is dangerous to whoever loses their board, so check your leash before a session and know where the channel runs before you need it."
+      },
+      {
+        "name": "Sea urchins",
+        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "area": "Reef flats underfoot",
+        "bestFor": "Painful, predictable, treatable",
+        "summary": "Wade in over reef around Uluwatu and urchin spines find feet — they puncture, snap off deep, and left alone they form nodules and get infected. The treatment is well agreed: **hot-water immersion for 30-90 minutes at 43-45°C**, hot but not scalding, because the toxin breaks down with heat. Pull large visible spines with tweezers, don't dig for the deep ones, and use vinegar soaks to dissolve shallow fragments. Urine, for the record, does nothing. Booties turn this whole entry into a non-event."
+      },
+      {
+        "name": "Rocks on entry and exit",
+        "imageSrc": "/images/places/uluwatu-surf.jpg",
+        "area": "Uluwatu cave, Padang stairs",
+        "bestFor": "Where sessions actually end",
+        "summary": "Uluwatu's cave is the operational risk point of the whole peninsula. At **low tide you walk about 100 m across sharp, shallow reef**; at high tide the cave floods and the surge slams the walls — mistimed exits are the main injury mechanism here. Coming in, aim well south of the cave so the northward drift carries you onto it; swept past Racetrack, don't fight the current — carry on and come ashore at Padang Padang. A guide for a first cave session is the standard advice, not an upsell."
+      },
+      {
+        "name": "Crowds and drop-ins",
+        "imageSrc": "/images/places/uluwatu-surf.jpg",
+        "area": "Peak-season lineups",
+        "bestFor": "The most likely collision",
+        "summary": "Uluwatu is rated **ultra crowded, weekdays and weekends alike**, and at The Peak — the small takeoff zone in front of the cave — the crowd itself is a top-three hazard: loose boards and dropped-in takeoffs, not the reef. July and August are the crush; April-May and September-October are the calmer shoulders, and the lineup thins once the swell tops about six feet. Dawn is the reliable move — in season, regulars describe the cliff lineup as packed by mid-morning."
+      },
+      {
+        "name": "Sharks, with the actual numbers",
+        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "area": "West-coast river mouths",
+        "bestFor": "Last for a reason",
+        "summary": "The logged record for Bali: **six surfing incidents from 2010 to 2017, all non-fatal, all on the west coast around Balian and Tabanan** — zero at Uluwatu or anywhere on the Bukit. The two best-documented bites were suspected bull sharks at a river-mouth break, one tied to post-rain conditions. The 2023 tiger shark filmed near Uluwatu was feeding on a dugong; surfers paddled in, nobody was touched. Murky river mouths after rain are the one setting that earns respect — and you're avoiding those anyway."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The short answer: safe, if you fear the right things",
+        "paragraphs": [
+          "Two different sports share the word \"surfing\" in Bali, and safety questions blur them together. Beginner surfing happens on the sand-bottom beaches between Kuta and Canggu, in waist-deep whitewater with an instructor an arm's length away — a [private lesson](/bali/en/tours/surf-lesson-experience) runs **from $35**, and a fall there costs you nothing but salt water. The famous danger lives on the Bukit reef breaks — Uluwatu, Bingin, Padang Padang — where sharp coral sits under fast, shallow waves. Our [beginner spots guide](/bali/en/journal/bali-surf-spots-for-beginners) draws that line beach by beach.",
+          "For the reef breaks, the honest answer is: safe for the surfer who fears the right things. Almost nobody we drive to Uluwatu worries about reef cuts, and nearly everyone worries about sharks — the exact inverse of the real ranking. What actually sends surfers to clinics is small and cumulative: cuts that got infected, urchin spines, a loose board in a packed lineup. There is a **24/7 clinic minutes from the Bukit breaks** in Pecatu, and its existence tells you what the routine injuries are — wounds, not bites."
+        ]
+      },
+      {
+        "heading": "Reef cut first aid: scrub it like you mean it",
+        "paragraphs": [
+          "A reef cut goes bad for a specific reason: coral fragments and debris embed in the tissue and keep seeding infection long after the bleeding stops, which is why a cut that looks trivial can go septic. The local protocol is therefore aggressive and immediate — **within minutes, not after the session**.",
+          "One honest caveat: Bali's own clinics genuinely disagree on antiseptics — one names povidone-iodine as the standard, another warns against iodine and peroxide entirely as tissue-damaging. The step nobody disputes is mechanical. Irrigate and scrub, and let the clinic you visit pick the chemistry."
+        ],
+        "bullets": [
+          "**Irrigate with bottled water** — not tap water (Indonesian tap water is not clean) and not seawater",
+          "**Scrub, don't rinse** — sterile gauze or a clean cloth plus soap; a simple rinse won't dislodge the embedded coral particles, and the longer you clean, the better",
+          "Pull visible fragments out with **sterilised tweezers**",
+          "Cover with a **breathable sterile dressing** and stay out of the water while it heals",
+          "Go to a clinic for bleeding that won't stop, anything deeply embedded, a wound that needs stitches — or **redness, warmth or swelling in the first 12-24 hours**, pus, or fever"
+        ]
+      },
+      {
+        "heading": "Rain, river mouths and when to skip a session",
+        "paragraphs": [
+          "The least photogenic risk in Bali surfing is the water quality, and it beats sharks by a wide margin. The only sustained testing that exists — **weekly seawater sampling since January 2022** by the Clean Bali Foundation with the Westerlaken Foundation — found that both tested surf beaches, Petitenget in Seminyak and Batu Bolong in Canggu, **failed the provincial seawater standard**, with one 2023 round measuring E. coli above the test's upper reporting limit. The consequences are ear, eye, throat and wound infections, and plenty of surfers pick one up.",
+          "The mechanism is seasonal. From roughly **November to March**, wet-season rain flushes rivers into the surf zone, septic tanks overflow — most of the surf-tourism belt has no sewer network — and onshore wind holds it all against the coast. So the practical rule costs you nothing: surf away from river mouths, skip the first day or two after heavy rain, and be twice as strict with an open cut. The same murky river-mouth conditions produced the Balian shark bites, so this one rule covers two risks at once. Our [month-by-month season guide](/bali/en/journal/bali-surf-season-month-by-month) shows where the clean windows fall."
+        ]
+      },
+      {
+        "heading": "Bali surf etiquette: the rotation is the safety system",
+        "paragraphs": [
+          "Localism in Bali is real — especially down the Bukit — but Balinese surfers frame it as function rather than territory: with a hundred-plus people competing for waves over shallow reef, someone enforcing order in the lineup is what prevents injuries. The visitor's job is not a ritual, it is a queue.",
+          "If you're heading for the flagship wave, read our [Uluwatu guide](/bali/en/journal/uluwatu-surf-guide) first — the cave entry and the section-by-section crowd map matter as much as the rules below."
+        ],
+        "bullets": [
+          "**Never drop in.** The surfer closest to the peak has priority; one person per wave",
+          "**Respect the rotation.** Most reef breaks, Uluwatu and Bingin included, run an unwritten queue — take your wave, then paddle to the back of the line. Jumping it is the one offence that reliably earns hostility",
+          "**Give locals priority** at their home break; you are a guest",
+          "**Control your board.** Ditching it in a packed lineup is what actually injures people — learn to duck-dive or turtle-roll before you paddle out at a crowded reef",
+          "**Paddle wide**, through the channel, never through the lineup",
+          "**Match the break to your level.** The Peak, Padang Padang and the Temple section are not places to learn",
+          "**Say hello.** Locals make the same point independently: basic friendliness materially changes how you're treated"
+        ]
+      },
+      {
+        "heading": "Boards, drivers and the dawn start",
+        "paragraphs": [
+          "The safest session of the day is the earliest one — glassy, uncrowded, and finished before the mid-morning crush. That is a transport problem before it is a surfing problem, because Bali's ride-hailing does not do boards: a standard Grab or Gojek compact will usually refuse one, and **around Uluwatu the villages block ride-hailing pickups outright** — drivers won't enter the clifftop lanes. The working answer is a pre-booked MPV. Our [car with driver](/bali/en/tours/private-car-with-driver-bali) runs **from $59 for the day**, boards fit inside, and the driver waits while you surf — dawn at Uluwatu, breakfast after, home by noon.",
+          "Flying in with your own board, two things protect the trip: boards come out at the oversize-baggage area, and if yours arrives damaged you must **file the damage report (PIR) at the airline's counter before leaving the airport** — after that you have no claim. Airport taxi drivers are also known to raise the fare on the spot when they see a board bag, so pre-book instead: our [airport transfer](/bali/en/tours/bali-airport-transfer) is **from $15**. For rental boards, scooter racks and the buy-versus-rent arithmetic, see our [board logistics guide](/bali/en/journal/bali-surfboard-rental-and-transport)."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is surfing in Bali dangerous?",
+        "answer": "Less dangerous than its reputation, provided you rank the risks honestly. The ones that actually happen are reef cuts and the infections that follow, rips, urchin spines, rocks on entry and exit, and collisions in crowded lineups — sharks sit at the very bottom of the list. The beginner beaches from Kuta to Canggu break over sand and are genuinely forgiving; the Bukit reef breaks demand respect, experience and an early alarm."
+      },
+      {
+        "question": "Are there sharks where you surf in Bali?",
+        "answer": "Yes, but the record is tiny: six logged surfing incidents from 2010 to 2017, all non-fatal, all at river-mouth breaks around Balian and Tabanan on the west coast — none at Uluwatu or anywhere on the Bukit. The two best-documented bites were suspected bull sharks, one tied to conditions after heavy rain. Avoid murky river mouths in the days after rain and you have addressed essentially all of Bali's shark risk."
+      },
+      {
+        "question": "What should I do about a reef cut in Bali?",
+        "answer": "Scrub it within minutes: irrigate with bottled water — never tap or seawater — then clean with gauze and soap long enough to dislodge embedded coral fragments, pull visible pieces out with sterilised tweezers, and cover with a breathable dressing. Stay out of the water while it heals. See a clinic if it turns red, warm or swollen within 12-24 hours, or for anything deep — a reef cut counts as a dirty wound, so keep your tetanus current."
+      },
+      {
+        "question": "What is the surf etiquette in Bali?",
+        "answer": "One person per wave, and the surfer closest to the peak has priority — never drop in. Most Bali reef breaks run an unwritten rotation: take your wave, then paddle back to the end of the queue, because jumping the line is the one offence that reliably earns hostility. Give locals priority at their home break, keep hold of your board, paddle out wide through the channel, and say hello — friendliness genuinely changes how you're treated."
+      },
+      {
+        "question": "How crowded are Bali's surf spots?",
+        "answer": "Very — Uluwatu is rated ultra crowded on weekdays and weekends alike, and Old Man's in Canggu fills with surf-school groups. July and August are the peak crush; April-May and September-October are noticeably calmer, and lineups thin once the swell gets above about six feet. The reliable tactic is the dawn session — in high season, regulars describe the Uluwatu cliff lineup as packed by mid-morning."
+      },
+      {
+        "question": "Is surfing in Bali safe for beginners?",
+        "answer": "Yes — beginner lessons happen on sand-bottom beaches in waist-deep whitewater, where a fall ends in a splash, and a private lesson with board and coach included costs from $35. The safety line is the bottom: sand is forgiving, reef is not. Stay on the Kuta-to-Canggu strip until you catch green waves confidently, and treat Uluwatu, Padang Padang and the other Bukit reefs as a later chapter."
+      }
+    ]
+  },
+  {
+    "slug": "bali-surfboard-rental-and-transport",
+    "badge": "Travel guide",
+    "navLabel": "Boards and transport",
+    "cardTourLabel": "Getting to the waves",
+    "heroTourSlug": "private-car-with-driver-bali",
+    "relatedTourSlugs": [
+      "private-car-with-driver-bali",
+      "bali-airport-transfer",
+      "surf-lesson-experience"
+    ],
+    "inlineStats": [
+      "Rental IDR 150-300k/day",
+      "Used boards ~$200",
+      "Board rack +IDR 5-15k/day"
+    ],
+    "title": "Surfboard Rental in Bali: IDR 150-300k a Day, When to Buy",
+    "description": "Surfboard rental prices in Bali by day, week and month, whether buying beats flying your board in, and how to move it — scooter racks, drivers, airlines.",
+    "excerpt": "Surfboard rental in Bali runs about IDR 150,000–300,000 a day, IDR 1.0–1.8 million a week and IDR 3.0–4.5 million a month, depending on board quality and whether the shop delivers. Stay two weeks or more and the maths flips: a used board from the Canggu buy-and-sell market costs about USD 200, resells for USD 120–150 when you leave, and beats both the rental bill and most airlines' board fees. Moving the board is its own subject — scooter side racks add IDR 5,000–15,000 a day, standard Grab and Gojek cars refuse boards, Uluwatu blocks ride-hailing entirely, and airlines into Denpasar split between free carriage on Garuda, Qantas, Emirates and Singapore, and per-board fees on the Lion group and most low-cost carriers. This page is the full logistics rundown: what to pay, when to buy instead, and how to get a board to the wave without drama.",
+    "rankings": [
+      {
+        "name": "Walk-up rental on the beach",
+        "imageSrc": "/images/tours-real/surf-lesson-experience.jpg",
+        "area": "Kuta–Canggu beachfront",
+        "bestFor": "First sessions, zero planning",
+        "summary": "The beach racks charge by the hour: soft-tops at IDR 50,000–100,000, performance boards at IDR 100,000–150,000, a full day at IDR 150,000–250,000. It is the most expensive way to surf per hour and the most convenient — you point, pay and paddle, and some racks quote as little as IDR 50,000 for two hours on a soft-top. Fine for a session or two; past that, the arithmetic turns against you."
+      },
+      {
+        "name": "Shop rental by the day",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "Canggu & the Bukit",
+        "bestFor": "Quality boards, honest rates",
+        "summary": "Proper rental shops run two tiers: standard boards — the workhorse 6'6\" to 7'2\" range plus fish — at IDR 200,000 a day, and premium boards in the Firewire and Hayden Shapes class, plus a 9'0\" longboard, at IDR 300,000, leash and fins included. The Bukit operations cover everything from Uluwatu to Nusa Dua and can arrange hotel delivery. Photograph every existing ding before riding off; no shop publishes a deposit or damage policy, so returns are settled on trust and evidence."
+      },
+      {
+        "name": "Weekly and monthly rates",
+        "imageSrc": "/images/places/scooter-and-driver-in-bali.jpg",
+        "area": "Duration discounts",
+        "bestFor": "Trips of a week plus",
+        "summary": "A week runs IDR 1.0–1.8 million and a month IDR 3.0–4.5 million. The structure is consistent across shops: a week costs about five daily rates and a month about fifteen, which means roughly 30% off at a week and half price at a month. The south-Bali delivery fleets quote USD 59–120 a week, deliver free between Kuta and Canggu, charge about USD 10 to reach Uluwatu or Sanur, and want two days' notice. Past three or four weeks, stop renting — the used market wins."
+      },
+      {
+        "name": "Buying used and reselling",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "Canggu used market",
+        "bestFor": "Stays past three weeks",
+        "summary": "The second-hand market is deep because departing surfers sell constantly. A normal used board costs about USD 200 and well-used ones start near USD 50, through the Bali and Canggu buy-and-sell Facebook groups plus the used racks most shops keep. Sell it back for USD 120–150 on your way out and the board cost you USD 50–80 for the whole trip — less than a month of rental, and less than most airlines charge to fly a board both ways."
+      },
+      {
+        "name": "Scooter with a side rack",
+        "imageSrc": "/images/places/scooter-in-bali.jpg",
+        "area": "Island-wide",
+        "bestFor": "Solo surfers, one board",
+        "summary": "The side-mounted rack is how Bali actually moves boards. It holds one board as standard — a second rack can be fitted for two — and adds IDR 5,000–15,000 a day to a scooter that rents for IDR 80,000–150,000. Not every model takes a rack: one large renter lists the Honda Beat 110 and Vario 160 as rack-less, so ask for the rack at booking, not at pickup. Purpose-built surf editions of the NMax start around USD 10 a day."
+      },
+      {
+        "name": "A car with a driver",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Anywhere, pre-booked",
+        "bestFor": "Groups, longboards, Bukit missions",
+        "summary": "Standard compact Grab and Gojek cars will not take a longboard or several boards, and Uluwatu's villages block ride-hailing outright — pecalang turn drivers away from the clifftop lanes, and airport taxis are known to raise the fare once they see a board bag. The working answer is a pre-booked MPV, the Avanza/Innova class every Bali driver runs: boards go in flat, the driver waits through your session, and ours costs from $59 for the day."
+      },
+      {
+        "name": "Flying your board into DPS",
+        "imageSrc": "/images/places/bali-airport-arrivals.jpg",
+        "area": "DPS / Ngurah Rai",
+        "bestFor": "Advanced surfers, exact dimensions",
+        "summary": "Garuda, Qantas, Emirates and Singapore Airlines carry boards free within their limits; Lion Air and Batik charge IDR 200,000 per board domestic or USD 20 international, and most low-cost carriers charge something. Watch the small ATR turboprops on domestic legs — a standard 6'0\" shortboard at 183 cm exceeds their 160–170 cm limits. Boards land at the oversize belt, and a damaged board means filing the PIR at the airline counter before you leave the airport, or the claim dies."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What surfboard rental costs in Bali by day, week and month",
+        "paragraphs": [
+          "Surfboard hire across Bali's published rate cards is remarkably consistent: **IDR 150,000–300,000 a day, IDR 1.0–1.8 million a week, IDR 3.0–4.5 million a month**. The spread is real and tracks two things — board quality and whether the shop delivers. Standard rental boards, the workhorse 6'6\"–7'2\" range plus fish, sit at **IDR 200,000 a day / 1,000,000 a week / 3,000,000 a month**; premium boards — Firewire, Hayden Shapes and a proper 9'0\" longboard — at IDR 300,000 / 1,800,000 / 4,500,000, leash and fins included. Note the shape of the discount: a week costs about five daily rates and a month about fifteen, so committing longer roughly halves the per-day cost.",
+          "Below the shop tier sits the beach walk-up rack — **soft-tops at IDR 50,000–100,000 per hour**, performance boards at IDR 100,000–150,000 per hour, a full day at IDR 150,000–250,000 — and above it the delivery operations: Canggu shops rent from IDR 50,000 a day with free villa delivery, and the big south-Bali fleets quote USD 59–120 a week, deliver free from Kuta to Canggu, charge about USD 10 to reach Uluwatu or Sanur, and want booking two days ahead. Two practical notes. First, photograph every existing ding before you ride off — no shop we have seen publishes a deposit or damage policy, so the conversation at return time is only as good as your photos. Second, if you are a beginner, skip the rental arithmetic entirely: our [private surf lesson](/bali/en/tours/surf-lesson-experience) runs from **$35 for a 2–4 hour session** with the board and coach included."
+        ]
+      },
+      {
+        "heading": "Are surfboards cheaper in Bali? Used, yes — new, not really",
+        "paragraphs": [
+          "New boards first, honestly: not by much. Bali-brand production models publish at **IDR 6.4–6.7 million**, and custom orders from local shapers are quoted around IDR 5 million — the shops' own dollar conversions put that near USD 330, though treat every dollar figure on this page as indicative rather than exchange-rate gospel. Broader guide pricing puts a new shortboard from about USD 400 and a new longboard from USD 700, which is not far from home.",
+          "The used market is where Bali is genuinely cheap, because the turnover of departing surfers never stops. A normal second-hand board runs about **USD 200**, tired but watertight ones from USD 50, through the Bali and Canggu buy-and-sell Facebook groups and the used racks most shops keep — [Canggu](/bali/en/journal/canggu-surf-spots) is the centre of gravity for both. Dings are cheap to fix here too: small repairs from about USD 5, a tube of Solarez around USD 7 for do-it-yourself, a major break around USD 100.",
+          "So the arithmetic. A month of standard rental is IDR 3,000,000 — roughly USD 185 — while a USD 200 used board resold for USD 120–150 on departure nets out at **USD 50–80 for the whole trip**. Against rental alone the crossover lands around three to four weeks; add what most airlines charge to fly a board and it moves closer to two. Renting stays the right call for beginners, trips under about ten days, and anyone who wants to switch boards as the swell changes. Bringing your own still makes sense for advanced surfers with exact dimensions who will surf every day."
+        ]
+      },
+      {
+        "heading": "Moving a board around the island",
+        "paragraphs": [
+          "The default is a scooter with a side-mounted rack. It holds **one board** as standard, a second rack can be fitted for two, and it costs **IDR 5,000–15,000 a day on top of the scooter** — which itself runs IDR 80,000–150,000 a day for the usual Honda and Yamaha models, while purpose-built surf editions of the NMax with the rack already fitted start around USD 10. Two catches. Not every model takes a rack — one large renter lists the Honda Beat 110 and Vario 160 as no-rack — so ask for the rack when you book, not at pickup. And on legality we will be straight with you: we could not find any official ruling on carrying a board on a scooter in Indonesia. It is universal practice and shops fit racks as a standard accessory, but nobody can show you the regulation.",
+          "The part visitors consistently get wrong is the car. **A standard compact Grab or Gojek will not take a longboard or multiple boards** — most drivers refuse on sight unless you booked a larger vehicle. Worse, [Uluwatu](/bali/en/journal/uluwatu-surf-guide) and parts of the Bukit enforce local bans on ride-hailing: village pecalang and local transport groups block pickups in the clifftop lanes, and drivers will not risk entering. Airport taxi drivers are known to raise the quoted fare on the spot once they see a board bag. The working answer to all of it is a pre-booked MPV — the Toyota Avanza/Innova class every Bali driver runs. Our [car with driver](/bali/en/tours/private-car-with-driver-bali) costs from **$59 for the day**: boards go in flat, and the driver waits through your session, which matters most on the long west-coast runs to [Medewi and Balian](/bali/en/journal/west-bali-surf-medewi-balian) where there is no plan B if your transport falls through."
+        ]
+      },
+      {
+        "heading": "Flying a board into Denpasar, and out to the islands",
+        "paragraphs": [
+          "The airline split into DPS is sharp. **Garuda Indonesia, Qantas, Emirates and Singapore Airlines carry boards free** within their limits — Garuda gives a 23 kg sporting allowance with a 300 cm length cap on standard aircraft, Singapore takes one board per person and nothing over 32 kg, and KLM is free except on North America routes. On the other side, **Lion Air and Batik Air charge IDR 200,000 per board domestic and USD 20 international**, Citilink charges by weight band, and Wings Air's published fee is disputed between IDR 500,000 and 1,000,000 — verify. The general range on charging carriers is USD 50–150 per board on international sectors and USD 30–100 domestic. All of these figures change; check the airline's current page before ticketing, not after.",
+          "Two traps and one recommendation. Trap one: onward domestic legs. The small ATR turboprops have hard length limits — **160 cm on Garuda's ATRs, 170 cm on Citilink's ATR 72-600** — and a standard 6'0\" shortboard is 183 cm, so it physically will not fly on some services. Check the aircraft type, not just the airline. Trap two: damage. Boards come out at the oversize belt, and if yours arrives broken you must file a Property Irregularity Report at the airline's counter **before leaving the airport** — walk out first and the claim is gone. The recommendation: land with transport already arranged rather than negotiating at the curb with a board bag. Our [private airport pickup](/bali/en/tours/bali-airport-transfer) runs from **$15** — tell us how many boards and how long, and the right car shows up. Heading onward to Lombok or the Gilis, [fast boat tickets with pickup](/bali/en/tours/fast-boat-transfer-bali) start from $15; ask about boards when you book."
+        ]
+      },
+      {
+        "heading": "The Bali surf trip packing list, board edition",
+        "paragraphs": [
+          "Pack less than you think. Every consumable on the board side is on the shelf between Kuta and Canggu, usually within a day's reach of wherever you sleep, and the local prices below are why board bags into Bali travel light. The one item genuinely worth carrying from home is fins, if you ride a specific template. And whatever you rent, the pre-ride photo of existing dings is part of the packing routine too."
+        ],
+        "bullets": [
+          "**Leash ~$20 and wax ~$5** — stocked in every surf shop; not worth the baggage weight",
+          "**Fins $50–150** — bring your own if the template matters; buying here is possible but the range is the range",
+          "**Deck pad ~$20** — used boards often come with tired grip",
+          "**Board bag $15–200+** — buy one locally if you plan to fly out with a board you bought here",
+          "**Solarez ~$7** — sun-cure resin for small dings; professional repairs start around $5 and even a major break runs about $100",
+          "**A basic wound kit** — bottled water and gauze: the standard Bali reef-cut response is to irrigate with bottled water and scrub, not just rinse; our [safety guide](/bali/en/journal/is-surfing-in-bali-safe) covers the full protocol"
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How much does surfboard rental cost in Bali?",
+        "answer": "Plan on IDR 150,000–300,000 a day, IDR 1.0–1.8 million a week and IDR 3.0–4.5 million a month, with leash and fins included at proper shops. Beach walk-up hire costs more per hour — IDR 50,000–150,000 depending on the board — and delivery shops in the south start around IDR 50,000 a day. Weekly rates run about five daily rates, monthly about fifteen, so longer commitments roughly halve the per-day cost."
+      },
+      {
+        "question": "Are surfboards cheaper in Bali?",
+        "answer": "Used boards, yes; new boards, not really. New Bali-brand boards publish at IDR 6.4–6.7 million and custom orders around IDR 5 million, which is close to home pricing. The used market is the bargain: about USD 200 for a solid second-hand board, from USD 50 for a beaten one, and you can resell for USD 120–150 when you leave through the same Canggu buy-and-sell groups."
+      },
+      {
+        "question": "Where can I rent a surfboard in Canggu?",
+        "answer": "Canggu has the island's densest rental cover: shop rental from around IDR 50,000 a day with free villa delivery, walk-up racks on the beach charging by the hour, and the big south-Bali delivery fleets carrying 150-plus boards that deliver free between Kuta and Canggu and ask for booking two days ahead. Photograph existing dings before taking any board — deposit and damage policies are unwritten everywhere."
+      },
+      {
+        "question": "How much does it cost to fly a surfboard to Bali?",
+        "answer": "Between nothing and a few hundred dollars, depending on the airline. Garuda, Qantas, Emirates and Singapore Airlines carry boards free within their size and weight limits; Lion Air and Batik charge IDR 200,000 domestic or USD 20 international per board; and charging carriers generally run USD 50–150 per board on international sectors. Fees change — verify on the airline's own page before booking, and check aircraft length limits on domestic legs."
+      },
+      {
+        "question": "Can I take a surfboard on a Grab or Gojek in Bali?",
+        "answer": "Usually not. Standard compact Grab and Gojek cars refuse longboards and multiple boards unless you specifically book a larger vehicle, and Uluwatu plus parts of the Bukit block ride-hailing pickups entirely — local guards turn drivers away from the clifftop lanes. A scooter with a side rack handles one board; for anything more, pre-book a car with a driver in the MPV class."
+      },
+      {
+        "question": "Should I bring my own surfboard to Bali or rent one?",
+        "answer": "Rent for trips under about ten days, buy used for stays past three or four weeks, and bring your own only if you are advanced, need exact dimensions and will surf daily. The maths: a month of rental is about IDR 3 million, a used board nets out at USD 50–80 after resale, and flying a board round trip costs roughly USD 60–300 on charging airlines, plus the transit damage risk."
+      }
+    ]
   }
 ];
 
@@ -32248,6 +33949,21 @@ const JOURNAL_SEO_GUIDES = [
 // попавшиеся по порядку массива — ссылки уходили не по смыслу и копились
 // на нескольких страницах. Теперь покрыт весь журнал.
 const GUIDE_CLUSTERS = {
+  surf: [
+    "surf-lessons-bali-beginners",
+    "best-surf-spots-in-bali",
+    "bali-surf-spots-for-beginners",
+    "bali-surf-spots-intermediate",
+    "uluwatu-surf-guide",
+    "canggu-surf-spots",
+    "bukit-peninsula-surf-spots",
+    "east-bali-surf-spots",
+    "west-bali-surf-medewi-balian",
+    "bali-surf-season-month-by-month",
+    "bali-surf-conditions-tides-swell-wind",
+    "is-surfing-in-bali-safe",
+    "bali-surfboard-rental-and-transport",
+  ],
   planning: [
     "first-time-in-bali-complete-guide",
     "best-places-to-visit-bali-first-time",
@@ -32342,7 +34058,6 @@ const GUIDE_CLUSTERS = {
   activities: [
     "white-water-rafting-bali-guide",
     "bali-atv-tours-guide",
-    "surf-lessons-bali-beginners",
     "best-beach-clubs-bali-young-adults",
     "best-things-to-do-bali-for-couples",
     "bali-honeymoon-day-trips",
@@ -32431,6 +34146,7 @@ const GUIDE_CLUSTERS = {
 };
 
 const GUIDE_CLUSTER_PARTNERS = {
+  surf: "beaches",
   areaComparisons: "areas",
   planning: "itineraries",
   itineraries: "areas",
@@ -32647,6 +34363,18 @@ const JOURNAL_FLAGSHIP_SLUG = "first-time-in-bali-complete-guide";
 // Human-labelled rows for the journal hub. Each is a horizontal carousel, so
 // a first-time visitor reads it like a landing page instead of an SEO index.
 const JOURNAL_HUB_ROWS = [
+  {
+    title: "Surf Bali",
+    subtitle: "Which wave, which tide, which month",
+    slugs: [
+      "best-surf-spots-in-bali",
+      "bali-surf-spots-for-beginners",
+      "uluwatu-surf-guide",
+      "canggu-surf-spots",
+      "bali-surf-season-month-by-month",
+      "is-surfing-in-bali-safe",
+    ],
+  },
   {
     title: "Plan your first trip",
     subtitle: "The essentials, in the order you need them",
@@ -38758,6 +40486,24 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "Surfboard Rental in Bali: IDR 150-300k a Day, When to Buy":
+      "Аренда доски на Бали: 150–300 тыс. рупий в день",
+    "Bali Surf Forecast: Period, Wind and Tide Pick Your Spot":
+      "Прогноз сёрфинга на Бали: период, ветер и прилив",
+    "Medewi and Balian: The Two-Hour Drive That Buys You Space":
+      "Медеви и Балиан: два часа пути за пустой лайнап",
+    "East Bali Surf Spots: Where to Go When the West Is Blown Out":
+      "Споты востока Бали: куда ехать, когда запад задуло",
+    "Bukit Peninsula Surf Spots: 7 Breaks and What Each Demands":
+      "Сёрф-споты Букита: 7 волн и что нужно для каждой",
+    "Canggu Surf Spots: 7 Breaks, Only 2 Real Sand Bottoms":
+      "Сёрф-споты Чангу: 7 волн, песок только на двух",
+    "Uluwatu Surf Guide: Sections, Tides and the Cave Explained":
+      "Сёрфинг на Улувату: секции, приливы и выход через пещеру",
+    "Bali Surf Spots for Intermediates: 7 Breaks in Order":
+      "Споты Бали для среднего уровня: 7 волн по порядку",
+    "Best Surf Spots in Bali, Mapped by Coast, Level and Season":
+      "Лучшие сёрф-споты Бали: побережье, уровень, сезон",
     "How Much Does a Bali Trip Cost? Real Prices for 2026":
       "Сколько стоит поездка на Бали: цены 2026",
     "Canggu, Bali: What It&#39;s Actually Like and What to Do There":
@@ -38956,6 +40702,22 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "Surfboard Rental in Bali: IDR 150-300k a Day, When to Buy":
+      "Alquiler de tablas en Bali: 150-300 mil IDR al día",
+    "Bali Surf Forecast: Period, Wind and Tide Pick Your Spot":
+      "Previsión de surf en Bali: periodo, viento y marea",
+    "Medewi and Balian: The Two-Hour Drive That Buys You Space":
+      "Medewi y Balian: dos horas de viaje por un pico vacío",
+    "East Bali Surf Spots: Where to Go When the West Is Blown Out":
+      "Surf en el este de Bali: adónde ir si el oeste no va",
+    "Bukit Peninsula Surf Spots: 7 Breaks and What Each Demands":
+      "Spots de surf del Bukit: 7 olas y qué exige cada una",
+    "Canggu Surf Spots: 7 Breaks, Only 2 Real Sand Bottoms":
+      "Spots de surf de Canggu: 7 olas, solo 2 de arena",
+    "Bali Surf Spots for Intermediates: 7 Breaks in Order":
+      "Spots de surf en Bali para nivel intermedio: 7 olas",
+    "Best Surf Spots in Bali, Mapped by Coast, Level and Season":
+      "Mejores spots de surf de Bali: costa, nivel y temporada",
     "Where to Stay in Bali First Time: 6 Areas Compared Honestly":
       "Dónde alojarse en Bali la primera vez: 6 zonas comparadas",
     "8 Best Beaches in Bali With Crystal Clear Water for Swimming, Snorkeling and Photos":
@@ -39082,6 +40844,22 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "Surfboard Rental in Bali: IDR 150-300k a Day, When to Buy":
+      "Location de planche a Bali : 150-300 000 IDR par jour",
+    "Bali Surf Forecast: Period, Wind and Tide Pick Your Spot":
+      "Prévisions de surf a Bali : période, vent et marée",
+    "Medewi and Balian: The Two-Hour Drive That Buys You Space":
+      "Medewi et Balian : deux heures de route pour du calme",
+    "East Bali Surf Spots: Where to Go When the West Is Blown Out":
+      "Surf a l est de Bali : ou aller quand l ouest est venté",
+    "Bukit Peninsula Surf Spots: 7 Breaks and What Each Demands":
+      "Spots de surf du Bukit : 7 vagues et leurs exigences",
+    "Canggu Surf Spots: 7 Breaks, Only 2 Real Sand Bottoms":
+      "Spots de surf de Canggu : 7 vagues, 2 fonds de sable",
+    "Uluwatu Surf Guide: Sections, Tides and the Cave Explained":
+      "Surf a Uluwatu : sections, marées et sortie par la grotte",
+    "Best Surf Spots in Bali, Mapped by Coast, Level and Season":
+      "Meilleurs spots de surf de Bali : côte, niveau, saison",
     "Kelingking Beach: The Viewpoint Is Free, the Climb Is 45 Min":
       "Kelingking : point de vue gratuit, montée 45 min",
     "Bali White Water Rafting: Ayung River Guide for 2026":
@@ -39338,7 +41116,7 @@ async function fetchGoogleTranslation(text, locale = "en") {
 }
 
 async function translateTextMap(texts, locale = "en", options = {}) {
-  const { richText = false } = options;
+  const { richText = false, glossary = null } = options;
   const bucket = translationCacheBucket(locale);
   const sources = Array.from(new Set((texts || []).filter(shouldTranslateTextValue)));
   const translated = new Map();
@@ -39426,7 +41204,7 @@ async function translateTextMap(texts, locale = "en", options = {}) {
   // ("СБ Экскурсии", "SB Excursiones", …). Restore it everywhere, including
   // values that came straight from the cache.
   for (const [source, value] of translated) {
-    translated.set(source, normalizeBrandName(value));
+    translated.set(source, glossary === "surf" ? fixSurfGlossary(normalizeBrandName(value), locale) : normalizeBrandName(value));
   }
 
   return translated;
@@ -39444,6 +41222,107 @@ function normalizeBrandName(text) {
     .replace(/SB\s*[-–—]?\s*(?:Ausflüge|Ausfluege|Exkursionen|Touren|Reisen)/giu, BRAND_NAME)
     .replace(/(?:Excursiones|Excursões|Escursioni|Excursions)\s+(?:de|del|di)\s+SB/giu, BRAND_NAME)
     .replace(/SB\s*(?:短途旅行|游览|旅游|远足|观光)/gu, BRAND_NAME);
+}
+
+/* Сёрф-глоссарий: чиним то, что Google Translate портит системно.
+
+   Две беды, обе видны только на сёрф-статьях:
+
+   1. НАЗВАНИЯ СПОТОВ переводятся как нарицательные. Dreamland становится
+      «Страной грёз», Green Bowl — «Зелёной чашей», Impossibles —
+      «Невозможным». Причём непоследовательно: в одном и том же языке рядом
+      стоят Dreamland и «Страна грез». Транслитерация (Улувату, Чангу,
+      Паданг-Паданг) — это нормально и её мы не трогаем; чиним только
+      превращение имени в обычное слово.
+
+   2. SURF BREAK — «перерыв», «pause», «descanso». Для сёрфера это
+      мгновенный сигнал, что текст писала машина.
+
+   NEVER_TRANSLATE здесь не помогает: он сравнивает значение целиком, а
+   названия стоят внутри предложений.
+
+   ОБЛАСТЬ ДЕЙСТВИЯ. «Храмы», «площадка» и «перерыв» — нормальные слова на
+   страницах про храмы, детские площадки и расписание, поэтому глоссарий
+   включается только на статьях сёрф-кластера, по адресу страницы
+   (SURF_GLOSSARY_ROUTES). Пробовали сторож по содержимому сегмента — не
+   работает: сегменты короткие, в «Страна грез — единственный перерыв с
+   песчаным дном» нет ни одного сёрф-слова. */
+
+const SURF_GLOSSARY = {
+  /* Две ловушки JavaScript, на которых глоссарий промахнулся дважды:
+
+     1. \w — только латиница, поэтому «Зелен\w*» не находит «Зеленая».
+     2. \b определяется через тот же \w, поэтому «\bперерыв» вообще никогда
+        не срабатывает: между пробелом и «п» границы слова нет.
+
+     Отсюда явные классы [а-яё] и явные просмотры вместо \b. */
+  ru: [
+    [/Стран[аеуы]\s+гр[её]з/giu, "Dreamland"],
+    [/Зел[её]н[а-яё]*\s+чаш[а-яё]*|Грин\s+Боул[а-яё]*/giu, "Green Bowl"],
+    [/Гоночн[а-яё]*\s+трасс[а-яё]*|Рейстрек[а-яё]*|Ипподром[а-яё]*/giu, "Racetrack"],
+    [/Кораблекрушени[а-яё]*/giu, "Shipwrecks"],
+    [/Игров[а-яё]*\s+площадк[а-яё]*/giu, "Playgrounds"],
+    [/Внешн[а-яё]*\s+угол|Внешнего\s+угла|Внешнему\s+углу|Аутсайд\s+Корнер[а-яё]*/giu, "Outside Corner"],
+    [/(?<![а-яёА-ЯЁ])Рваные(?![а-яёА-ЯЁ])/gu, "Lacerations"],
+    /* Google местами пишет имя спота со строчной: «Бингин и невозможное».
+       Наречие «невозможно» при этом законно («волну невозможно создать»),
+       поэтому ловим только формы с окончанием прилагательного. */
+    [/(?<![а-яёА-ЯЁ])[Нн]евозможн(?:ое|ые|ых|ым|ыми|ом)(?![а-яёА-ЯЁ])/gu, "Impossibles"],
+    [/Б[эе]би[\s-]Паданг[а-яё]*|Детск[а-яё]*\s+Паданг[а-яё]*/giu, "Baby Padang"],
+    [/Темплс[а-яё]*/giu, "Temples"],
+    /* Секции Улувату с большой буквы — имена, а не слова. Без флага i,
+       чтобы «пик сезона» и «храм Улувату» со строчной остались как есть. */
+    [/(?<![а-яёА-ЯЁ])Храм(?:ы|ов|ам|ами|ах)(?![а-яёА-ЯЁ])/gu, "Temples"],
+    /* break как сёрф-термин: в сёрф-статье «перерыв» — всегда ошибка.
+       «Перерыв» и «спот» — оба мужского рода с твёрдой основой, поэтому
+       окончание переносим как есть: перерывов -> спотов, перерыве -> споте. */
+    [/(?<![а-яёА-ЯЁ])перерыв([а-яё]*)/giu, "спот$1"],
+    /* swell: «набухание» — среднего рода, как и «волнение», поэтому
+       прилагательные вокруг остаются согласованными. «Свелл» мужского рода
+       и ломал бы «большее необработанное …». */
+    [/(?<![а-яёА-ЯЁ])набухани([ея][а-яё]*)/giu, "волнени$1"],
+    [/(?<![а-яёА-ЯЁ])прорывается/giu, "работает"],
+    [/(?<![а-яёА-ЯЁ])прорываются/giu, "работают"],
+  ],
+  /* Род подбираем под исходное слово, иначе ломаются артикли и согласование:
+     descanso и spot мужского рода, ruptura и ola — женского; во французском
+     pause женского, поэтому не spot (муж.), а vague (жен.). */
+  es: [
+    [/Pa[íi]s\s+de\s+los\s+sue[ñn]os|Tierra\s+de\s+(?:los\s+)?sue[ñn]os/giu, "Dreamland"],
+    [/Taz[óo]n\s+verde|Cuenco\s+verde/giu, "Green Bowl"],
+    [/Pista\s+de\s+carreras/giu, "Racetrack"],
+    [/\bNaufragios\b/gu, "Shipwrecks"],
+    [/\bdescansos\b/giu, "spots"],
+    [/\bdescanso\b/giu, "spot"],
+    [/\brupturas\b/giu, "olas"],
+    [/\bruptura\b/giu, "ola"],
+    [/\bhinchaz[óo]n\b/giu, "marejada"],
+  ],
+  fr: [
+    [/Pays\s+des\s+r[êe]ves/giu, "Dreamland"],
+    [/Bol\s+vert/giu, "Green Bowl"],
+    [/\bNaufrages\b|\b[ÉE]paves\b/gu, "Shipwrecks"],
+    [/\bpauses\b/giu, "vagues"],
+    [/\bpause\b/giu, "vague"],
+    [/\bruptures\b/giu, "vagues"],
+    [/\brupture\b/giu, "vague"],
+    [/\bgonflement(?:s)?\b/giu, "houle"],
+  ],
+};
+
+
+
+/* Адреса, на которых включается сёрф-глоссарий. Держим рядом с самим
+   глоссарием, чтобы список не разъехался с кластером. */
+const SURF_GLOSSARY_ROUTES = /\/journal\/(?:best-surf-spots-in-bali|bali-surf-spots-for-beginners|bali-surf-spots-intermediate|uluwatu-surf-guide|canggu-surf-spots|bukit-peninsula-surf-spots|east-bali-surf-spots|west-bali-surf-medewi-balian|bali-surf-season-month-by-month|bali-surf-conditions-tides-swell-wind|is-surfing-in-bali-safe|bali-surfboard-rental-and-transport|surf-lessons-bali-beginners)\b/;
+
+function fixSurfGlossary(text, locale) {
+  if (!text) return text;
+  const rules = SURF_GLOSSARY[locale];
+  if (!rules) return text;
+  let value = String(text);
+  for (const [pattern, replacement] of rules) value = value.replace(pattern, replacement);
+  return value;
 }
 
 /* Покрыт ли конкретный АДРЕС этим языком.
@@ -39576,7 +41455,7 @@ function restoreHtmlBlocks(html, blocks = []) {
   return String(html || "").replace(/__SB_HTML_BLOCK_(\d+)__/g, (_, rawIndex) => blocks[Number(rawIndex)] || "");
 }
 
-async function translateStandaloneHtmlVisibleText(html, locale = "en") {
+async function translateStandaloneHtmlVisibleText(html, locale = "en", options = {}) {
   if (locale === "en") return html;
 
   const { protectedHtml, blocks } = protectHtmlBlocks(html);
@@ -39617,7 +41496,7 @@ async function translateStandaloneHtmlVisibleText(html, locale = "en") {
     return _;
   });
 
-  const translationMap = await translateTextMap(Array.from(textValues), locale);
+  const translationMap = await translateTextMap(Array.from(textValues), locale, { glossary: options.glossary || null });
 
   const translatePreservingWhitespace = (rawText) => {
     const source = String(rawText || "");
@@ -39738,6 +41617,13 @@ async function buildLocalizedStaticHtmlPage(html, locale = "en", options = {}) {
     routeBuilder,
   } = options;
 
+  /* Сёрф-глоссарий включаем по адресу страницы, а не по содержимому.
+     Сторож «есть ли в сегменте сёрф-слово» не работает: сегменты короткие,
+     и в «Страна грез — единственный перерыв с песчаным дном» нет ни одного
+     слова из списка. А по маршруту мы знаем тему точно — и соседние темы
+     (храмы, детские площадки, обеденный перерыв) вообще вне зоны риска. */
+  const glossary = SURF_GLOSSARY_ROUTES.test(String(currentRoute || "")) ? "surf" : null;
+
   let localizedHtml = String(html || "");
 
   if (shell === "tilda") {
@@ -39749,7 +41635,7 @@ async function buildLocalizedStaticHtmlPage(html, locale = "en", options = {}) {
   }
 
   localizedHtml = rewriteBaliLocaleRoutesInHtml(localizedHtml, locale);
-  localizedHtml = await translateStandaloneHtmlVisibleText(localizedHtml, locale);
+  localizedHtml = await translateStandaloneHtmlVisibleText(localizedHtml, locale, { glossary });
   localizedHtml = rewriteBaliLocaleRoutesInHtml(localizedHtml, locale);
 
   if (shell === "tilda") {
