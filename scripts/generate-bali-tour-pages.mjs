@@ -35890,6 +35890,1833 @@ const JOURNAL_SEO_GUIDES = [
         "answer": "No — no touching, riding or chasing, and keep roughly 2-3 metres away. The rule that matters most is never to position yourself between a turtle and the surface: they are air-breathing reptiles, and blocking the route to the next breath causes real stress. Give feeding or resting animals extra space, avoid sudden movements, and never stand on or kick coral. These turtles approach people only because they have been left alone for years."
       }
     ]
+  },
+  {
+    "slug": "bali-airport-to-canggu-transfer",
+    "badge": "Travel guide",
+    "navLabel": "Airport to Canggu",
+    "cardTourLabel": "Airport and transfers",
+    "heroTourSlug": "bali-airport-transfer",
+    "relatedTourSlugs": [
+      "bali-airport-transfer",
+      "private-car-with-driver-bali",
+      "fast-boat-transfer-bali"
+    ],
+    "inlineStats": [
+      "18-25 km to Canggu",
+      "40-90 min drive",
+      "Transfers from $15"
+    ],
+    "title": "Bali Airport to Canggu: 40-90 Minutes and What It Costs",
+    "description": "Bali airport to Canggu is 18-25 km and 40-90 minutes. Grab, the airport taxi counter and a pre-booked car compared in rupiah, checked August 2026.",
+    "excerpt": "Canggu sits 18-25 km from Bali's airport and the drive takes 40-60 minutes off-peak, 75-90 minutes or more if you land in the late-afternoon rush. Ngurah Rai (DPS) is the only airport on the island, so it is also the closest one to Canggu — there is no second option to compare. On price, the three real choices in August 2026 are a Grab or Gojek from the app lounge in the car park (IDR 185,000-218,000 in a May 2026 in-app check, more when it surges), the official taxi counter in arrivals (roughly IDR 250,000-400,000, with the board at the counter the only binding price), or a pre-booked car at a rate fixed before you fly. Canggu is the route where pre-booking earns its keep, and this guide explains exactly why — and when it does not.",
+    "rankings": [
+      {
+        "name": "A pre-booked car with a name board",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Arrival corridor, by the flight information counter",
+        "bestFor": "Night landings, families, real luggage",
+        "summary": "The driver waits with your name on a board whatever hour you clear customs, and the fare was agreed before you flew. Published market rates for Canggu cluster at **IDR 250,000-350,000** per standard car including tolls and parking, checked August 2026. It is the only option whose price you already know while you are still in the air."
+      },
+      {
+        "name": "Grab or Gojek from the app lounge",
+        "imageSrc": "/images/places/ride-hailing-app.jpg",
+        "area": "Signposted lounge in the terminal car park",
+        "bestFor": "One or two people with hand luggage, in daylight",
+        "summary": "The cheapest of the honest options. Checked in-app on a May 2026 morning, Canggu came out at **Grab IDR 185,000 / Gojek IDR 218,000** per car — the two apps leapfrog each other by destination, so price both rather than trusting a winner. There is no kerbside pickup: you walk to the lounge with your bags."
+      },
+      {
+        "name": "The official airport taxi counter",
+        "imageSrc": "/images/places/bali-airport-arrivals.jpg",
+        "area": "Inside the arrivals hall, before the exit doors",
+        "bestFor": "A walk-up at 03:00 with no app and no booking",
+        "summary": "You name the destination, pay a fixed zone fare at the desk, and a driver walks you to the car. No meter, no haggling, open 24 hours. Published Canggu figures scatter across **IDR 250,000-400,000** and the sources contradict each other badly, so treat the board at the counter as the only binding price."
+      },
+      {
+        "name": "Blue Bird, picked up one floor up",
+        "imageSrc": "/images/places/bluebird-taxi.jpg",
+        "area": "Departures level, above arrivals",
+        "bestFor": "Light bags, a working meter, an off-peak hour",
+        "summary": "Blue Bird cannot collect at arrivals, so the standing workaround is to walk up to departures and take one that has just dropped off. Tariff runs about **IDR 7,000 flagfall plus IDR 6,500-6,600 per km**, checked August 2026. Watch the clock: waiting time bills at roughly IDR 45,000 an hour, which is exactly what a Kerobokan crawl generates."
+      },
+      {
+        "name": "The \"taxi? transport?\" offers outside the doors",
+        "imageSrc": "/images/places/arrival-day-in-south-bali.jpg",
+        "area": "Kerbside, the moment you clear customs",
+        "bestFor": "Nothing — this is the one to walk past",
+        "summary": "They start the second the doors open and quote inflated flat fares that have nothing to do with the official counter. Remember the geography: the counter is inside the building before the exit, the app lounge is signposted in the car park, a pre-booked driver stands still holding a board. Anyone walking toward you is none of those three."
+      },
+      {
+        "name": "Knowing which Canggu you are going to",
+        "imageSrc": "/images/remote/canggu-beach-3-a94bbee1.jpg",
+        "area": "Berawa, Batu Bolong, Pererenan, Nelayan",
+        "bestFor": "Getting the last three kilometres right",
+        "summary": "Canggu is not one address. The lanes into Berawa, Batu Bolong and Pererenan are narrow, one-way in places and genuinely slow, and the final **3 km can take as long as the first 15**. Send the driver a map pin rather than a villa name — half the arrival-night delays we see are a driver circling the correct lane."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "How far is Canggu from Bali airport, and how long it really takes",
+        "paragraphs": [
+          "Canggu is **18-25 km** from Ngurah Rai (DPS) depending on the routing, and the drive takes **40-60 minutes in normal traffic and 75-90 minutes or more at peak**. Ngurah Rai is the only airport on Bali, so the closest-airport question has one answer and no runner-up. Drivers pick between three ways north: straight up through Kuta, out onto Sunset Road, or east onto the Bali Mandara toll and then north via Sunset Road — that last variant is quoted at **22 km and 50-75 minutes**, longer on the map and sometimes faster on the clock. Only the toll variant touches a toll gate, at **IDR 14,000** for a normal car (Category I, set 27 April 2024 and still current in August 2026; pages still printing IDR 13,000 are recycling older data).",
+          "A word on the numbers you will see elsewhere. Transfer operators advertise 35-60 minutes for this run. That is a real time — at 02:00. For an afternoon arrival it is optimistic by half an hour, and we would rather you knew that before you booked a 19:00 dinner. The two windows that matter are **07:00-09:00 and 16:00-19:00**, and the evening one is far the worse for arrivals, because the Denpasar commute, the sunset traffic and the Kuta-Sunset Road-Kerobokan congestion all land on top of each other. Landing between 15:00 and 19:00, budget the top of every range on this page. Landing after 21:00 or before 07:00, budget the bottom."
+        ],
+        "bullets": [
+          "**Sunset Road and Kerobokan** — the standing chokepoints on every non-toll routing, and the reason the middle of the drive is slower than the start",
+          "**The last 3 km into Berawa, Batu Bolong and Pererenan** — narrow, partly one-way, and capable of eating as long as the first 15 km",
+          "**Rain** — it halves the scooters and doubles the demand for cars in the same ten minutes",
+          "**Ceremonies** — melasti processions, an odalan, a cremation, Galungan on 17 June 2026 or Kuningan on 27 June 2026 can close a road for an hour with no notice and no app warning",
+          "**Nyepi, Thursday 19 March 2026** — the airport and the toll road both close for 24 hours from 06:00. No transfer of any kind exists that day, at any price"
+        ]
+      },
+      {
+        "heading": "What the airport to Canggu transfer costs in August 2026",
+        "paragraphs": [
+          "Rupiah first, because that is the number you actually pay, and because almost every dollar figure published for Bali transfers is wrong. The rupiah sat near **IDR 17,800 to the dollar in August 2026**, while most travel pages still convert at 15,000-16,000 — which quietly inflates their dollar column by 10-18%. All the rupiah figures below were checked in August 2026, except the Grab and Gojek quotes, which carry their own timestamp because they are the only fares in this guide anyone verified in-app on a stated date.",
+          "One structural point sits underneath that list. An app quote is not final in the way the other two are: the airport ride category is priced above the equivalent city ride, an exit surcharge is reported on top (around IDR 10,000-12,000, though we have not confirmed it independently), and the whole number can move with demand between the moment you look and the moment you accept. A counter fare and a pre-booked fare are the same number when you pay them as when you agreed them. That is the real difference between the tiers, and it matters more than the gap in rupiah."
+        ],
+        "bullets": [
+          "**Grab or Gojek: IDR 185,000 / IDR 218,000** per car, checked in-app one May 2026 morning. Both apps quote upfront, and the winner changes by destination — on this route Gojek was the more expensive of the two",
+          "**Official taxi counter: roughly IDR 250,000-400,000**, a fixed zone fare paid before you board, said to include fuel, parking and tolls. Sources disagree with each other by hundreds of thousands on this route, so the printed board at the counter is the only binding price",
+          "**Pre-booked private car: around IDR 250,000-350,000** on published 2026 rate cards for a standard car up to four people, with meet-and-greet, tolls, parking and typically 90 minutes of free waiting",
+          "**Blue Bird on the meter: about IDR 7,000 plus IDR 6,500-6,600 per km**, from the departures level only — mathematically the cheapest way out for one person travelling light, and the worst option if you land into the evening crawl, because waiting time keeps billing while you sit still"
+        ]
+      },
+      {
+        "heading": "When Grab is the cheaper answer, and when it stops being one",
+        "paragraphs": [
+          "We will say the unhelpful thing first: if you are one or two people with cabin bags, landing at 09:00, going to a hotel on a main road, book a Grab. It is the cheapest real option, the price is locked before you accept, and the difference over a pre-booked car pays for two days of lunches. Our own transfer does not make sense for that trip and we are not going to pretend otherwise. Price both apps — they leapfrog each other by destination. Our [Grab and taxi cost guide](/bali/en/journal/bali-grab-taxi-driver-cost) covers app pricing in more detail, and the [airport transfer cost comparison](/bali/en/journal/bali-airport-transfer-cost) sets Canggu against the other south Bali runs.",
+          "Canggu is also the route where the app answer flips fastest, and it flips for four reasons at once: it is long enough that a surge multiplies a big number rather than a small one, it is the corridor where surge is most reliably observed, it ends in lanes that app drivers navigate badly, and it is the arrival everyone does with a full trip's luggage — which makes the walk to the lounge in the car park hurt more here than anywhere. Ride-hailing from DPS is cars only: **there is no GrabBike or GoRide pickup at the airport**, which strands more solo backpackers than any other single fact on this page. If any of the following is true of your arrival, a fixed price bought in advance is the better buy, and our [private airport transfer](/bali/en/tours/bali-airport-transfer) starts **from $15** per car with the Canggu rate quoted flat on WhatsApp before you book, no prepayment."
+        ],
+        "bullets": [
+          "**Three or more people, or two people with checked bags** — you are into a bigger vehicle either way, and the app premium for one closes most of the gap",
+          "**A late-evening or overnight landing**, when apps surge and driver numbers thin out",
+          "**A flight with any real chance of delay** — a pre-booked driver tracks the flight and waits; an app booking has to be made from the ground, tired, at whatever the price is by then",
+          "**A villa rather than a hotel**, especially in Pererenan or the back lanes of Berawa"
+        ]
+      },
+      {
+        "heading": "Landing after dark, and the surge nobody warns you about",
+        "paragraphs": [
+          "Everything at Ngurah Rai runs 24 hours — immigration, baggage, the taxi counter, the roads. What changes overnight is the reliability order, and it inverts. A pre-booked driver is unaffected: the car is there, the price is the price. The official counter is the most dependable walk-up at 03:00, because it is a desk with a board rather than an algorithm with a driver shortage. The apps degrade the most: driver numbers drop significantly after midnight, acceptance can take several refreshes, and when three flights land together between 22:00 and 02:00 ride-hailing can run at **two to three times** the normal rate.",
+          "That asymmetry holds regardless of the details nobody can pin down. A night surcharge of around IDR 50,000 between 18:00 and 06:00 is commonly reported at the counter but not independently confirmed — ask at the desk before you pay. Pre-booked fixed rates, ours included, do not move for the hour. The compensation for a night arrival is real, though: the roads are empty, and a 01:00 run to Canggu genuinely lands at the bottom of that 40-90 minute range instead of the top. If you want the same certainty for the days after, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) runs **from $59 per car** and removes the negotiation entirely."
+        ]
+      },
+      {
+        "heading": "The last three kilometres, and getting around once you are in Canggu",
+        "paragraphs": [
+          "The single most useful thing you can do for your own arrival is send the driver a map pin, in advance, on WhatsApp. Canggu is four or five villages sharing one name — Berawa, Batu Bolong, Pererenan, Nelayan, Padang Linjong — connected by lanes built for scooters and now full of cars. A driver who has the destination as a pin arrives; a driver who has it as a villa name circles. The last 3 km can take as long as the first 15, and that is true whoever is driving.",
+          "Once you are settled, one local quirk is worth knowing before it catches you out: in parts of Canggu, as in Ubud and the Bukit, local transport cooperatives informally block app drivers from **picking up** on their turf. Drop-offs are almost always fine — it is the return trip that fails. The signals are printed banners naming Grab and Gojek, a map that shows no cars from where you stand, or a driver messaging you to walk out to the main road. Walking five or ten minutes to a neutral junction and re-booking is the whole workaround. Our [guide to the Seminyak run](/bali/en/journal/bali-airport-to-seminyak-transfer) covers the same ground for the neighbouring corridor.",
+          "If Canggu is a first stop rather than the whole trip, plan the onward leg the way you planned this one. [Fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) start **from $15**, and the pickup end is what makes them work from Canggu, since the harbours are on the other side of the island and the boats leave early. Our [Gili from Canggu guide](/bali/en/journal/gili-islands-from-canggu) walks through the timings honestly, including which departures are realistic from this side of Bali and which are not."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How far is Canggu from Bali airport?",
+        "answer": "Canggu is 18-25 km from Ngurah Rai airport depending on which route the driver takes. Going via Kuta or Sunset Road is the shorter distance; the indirect variant using the Bali Mandara toll and then Sunset Road is quoted at about 22 km. Distance is the least important number here — the drive time varies far more than the kilometres do."
+      },
+      {
+        "question": "How long does the transfer from Bali airport to Canggu take?",
+        "answer": "Budget 40-60 minutes in normal traffic and 75-90 minutes or more at peak. The bad windows are 07:00-09:00 and, much worse for arrivals, 16:00-19:00. Late-night landings run at the bottom of that range. Operators advertising 35-60 minutes are quoting a best case that really only exists overnight, so plan your first evening around 90 minutes if you land in the afternoon."
+      },
+      {
+        "question": "How much is a taxi from Bali airport to Canggu?",
+        "answer": "Roughly IDR 250,000-400,000 at the official airport taxi counter, checked August 2026 — published figures for this route disagree sharply, so the printed board at the counter is the only binding price. A pre-booked private car sits around IDR 250,000-350,000 on 2026 rate cards including tolls and parking. Grab and Gojek came in lower, at IDR 185,000 and IDR 218,000 in a May 2026 in-app check."
+      },
+      {
+        "question": "What is the closest airport to Canggu in Bali?",
+        "answer": "I Gusti Ngurah Rai International Airport (DPS), near Kuta, roughly 18-25 km south of Canggu. It is the only airport on Bali, so there is no alternative to compare it against. Whatever a search result implies, for Canggu the answer is always DPS, and the drive is 40-90 minutes depending on the hour you land."
+      },
+      {
+        "question": "Can I take a Grab or Gojek from Bali airport to Canggu?",
+        "answer": "Yes, for cars. Both apps have an official airport presence, but curbside pickup at arrivals is banned — you book in the app, then walk several minutes with your luggage to the signposted Grab or Gojek lounge in the terminal car park, where staff match you to a driver at an assigned bay. Motorbike pickup is not available from the airport at all, so a cheap scooter ride out is not an option."
+      },
+      {
+        "question": "Is it worth pre-booking an airport transfer to Canggu?",
+        "answer": "For a solo traveller or couple with hand luggage landing in daylight, no — take a Grab and keep the difference. Pre-booking pays off on this route when you are three or more, have checked bags, land after dark when apps can run at two to three times normal, or your flight might be delayed. Our transfers start from $15 per car, booked on WhatsApp with no prepayment and a price that does not move."
+      }
+    ]
+  },
+  {
+    "slug": "bali-airport-to-seminyak-transfer",
+    "badge": "Travel guide",
+    "navLabel": "Airport to Seminyak",
+    "cardTourLabel": "Airport and transfers",
+    "heroTourSlug": "bali-airport-transfer",
+    "relatedTourSlugs": [
+      "bali-airport-transfer",
+      "private-car-with-driver-bali",
+      "nusa-penida-full-day-tour"
+    ],
+    "inlineStats": [
+      "12-15 km from DPS",
+      "20-75 min door to door",
+      "Transfers from $15"
+    ],
+    "title": "Bali Airport to Seminyak: 12 km, 20-75 Minutes, 3 Ways",
+    "description": "Seminyak sits 12-15 km from Bali airport: 20-30 minutes off-peak, 45-75 at rush hour. Counter, app and private prices in rupiah, checked August 2026.",
+    "excerpt": "Seminyak sits 12-15 km from Bali airport, which is a 20-30 minute drive on a clear road and 45-75 minutes if you land into the evening crawl. Nothing about the distance explains that gap: the traffic does, and the toll road runs the wrong way to help. There are three sensible ways to cover it. The official counter in arrivals sells a fixed zone fare of roughly IDR 150,000-250,000, agreed before you board. Grab and Gojek quote less, but only from the signposted lounge in the car park — on the morning of 10 May 2026 the same ride showed IDR 115,000 on Gojek against IDR 136,000 on Grab. A pre-booked private car costs more and is the only price you know before you land. Here is when each one is the right call.",
+    "rankings": [
+      {
+        "name": "Grab or Gojek from the lounge",
+        "imageSrc": "/images/places/ride-hailing-app.jpg",
+        "area": "Car park lounge, a few minutes' walk",
+        "bestFor": "One person, one bag, daylight",
+        "summary": "Usually the cheapest number on the screen. On the morning of 10 May 2026 the same Seminyak ride quoted IDR 115,000 on Gojek and IDR 136,000 on Grab — Gojek won that day, and lost badly to Canggu on the same check, which is why the honest advice is to price both rather than to name a winner. Book in the app, then walk to the signposted lounge in the car park; there is no kerbside pickup at arrivals."
+      },
+      {
+        "name": "The official airport taxi counter",
+        "imageSrc": "/images/places/bali-airport-arrivals.jpg",
+        "area": "Inside arrivals, before the doors",
+        "bestFor": "Walking up at 03:00 with no plan",
+        "summary": "A fixed zone fare, paid at the counter before a driver walks you to the car. No meter, no haggling, open 24 hours, and the fare is stated to include fuel, parking and tolls. Published figures for Seminyak scatter across roughly IDR 150,000-250,000 depending which 2026 guide you read (checked August 2026), so treat every number online, including ours, as an indication — the board at the counter is the only binding price."
+      },
+      {
+        "name": "A pre-booked private transfer",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Name board at the arrivals meeting point",
+        "bestFor": "Families, luggage, late landings",
+        "summary": "Costs more than the apps and buys certainty instead: a driver with your name on a board, a price agreed before you fly, and no negotiating in a hot arrivals hall at midnight. Published 2026 rate cards put Seminyak around IDR 300,000 for a standard car including parking, tolls and 90 minutes of free waiting. Ours is fixed in dollars at $15 per car, booked over WhatsApp with nothing paid up front."
+      },
+      {
+        "name": "Blue Bird from the departures level",
+        "imageSrc": "/images/places/bluebird-taxi.jpg",
+        "area": "One floor up, level 2",
+        "bestFor": "Light luggage and a real meter",
+        "summary": "Blue Bird cannot collect arriving passengers at arrivals, so the standing workaround is to walk up to departures and take one that has just dropped off. It is the only genuine meter you will meet in Bali: roughly IDR 7,000 flagfall plus about IDR 6,500 per kilometre, checked August 2026. Confirm the bird logo and driver ID, get in before naming the destination, and check the meter is running."
+      },
+      {
+        "name": "The touts inside the doors",
+        "imageSrc": "/images/places/bali-airport-arrivals.jpg",
+        "area": "Arrivals hall and the pavement outside",
+        "bestFor": "Nobody — this is the one to walk past",
+        "summary": "The calls of \"taxi? transport?\" start the moment you clear the doors, and the flat fares quoted are several times what the counter charges for the same ride. They are not the official counter and they are not affiliated with it. Nothing dramatic happens if you decline; keep walking to the counter inside the hall, to your name-board driver, or to the app lounge."
+      },
+      {
+        "name": "A car and driver for the whole day",
+        "imageSrc": "/images/places/seminyak-sunset.jpg",
+        "area": "Airport first, then wherever you want",
+        "bestFor": "Early landings with plans",
+        "summary": "If you land in the morning and your room is not ready until two, a transfer is the wrong product. A car with a driver for the day costs per vehicle, not per person, and turns the airport run into the first stop of an itinerary — lunch, a temple, the villa at sunset. This only makes sense if you actually want to be out; after a night flight, take the transfer and sleep."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "How far Seminyak is, and how long it really takes",
+        "paragraphs": [
+          "Seminyak is **12-15 km** from Ngurah Rai airport — closer than almost anywhere people fly in for, and one of the least predictable short drives in south Bali. On a clear road it is **20-30 minutes**. Between roughly **07:00-09:00 and 16:00-19:00** the same run stretches to **45-75 minutes**, because everything heading north-west out of the airport funnels through the Kuta corridor and Sunset Road. The Bali Mandara toll road, which is what makes the Nusa Dua and Sanur runs so reliable, is no help here at all: it crosses Benoa Bay to the south and east, and Seminyak lies in the opposite direction. There is no bypass on this axis, so one blocked junction backs up the whole thing.",
+          "Two things stretch it further and neither appears in a routing app. The first is a ceremony — a melasti procession walking to the sea, an odalan, a cremation — which can close a coastal road for an hour with no notice and no diversion signs. The second is **Nyepi, Thursday 19 March 2026**, when the airport itself closes for 24 hours from 06:00 and no transfer of any kind exists at any price. For every other day, a rule that does not go stale: land between **15:00 and 19:00** and budget the top of every range on this page; land after **21:00 or before 07:00** and you will see the bottom. If you are weighing Seminyak against the next town up the coast, our [airport to Canggu guide](/bali/en/journal/bali-airport-to-canggu-transfer) covers this same road and then another 40 minutes of it."
+        ]
+      },
+      {
+        "heading": "What the airport to Seminyak transfer costs",
+        "paragraphs": [
+          "Every option below is priced **per car, not per person**, and quoted in rupiah, because rupiah is the only figure that stays honest. Most transfer pages online converted their dollar prices when the rupiah sat near 15,000-16,000 to the dollar; in **August 2026 it is closer to IDR 17,800**, so those dollar columns now overstate what you actually hand over by a tenth or more.",
+          "Two of these numbers are firm and two are not. A counter fare and a pre-agreed private rate are fixed before you move. An app quote is a live price that moves with demand: the same screen that showed IDR 115,000 one quiet morning can show double when three flights land together. There is also an airport exit surcharge on app rides, reported at around **IDR 10,000-12,000** on top of the fare — we have not been able to confirm that independently, so treat an app quote as near-final rather than final. No toll applies on this route in either direction.",
+          "Our own [private airport pickup](/bali/en/tours/bali-airport-transfer) is **from $15 per car** — about IDR 265,000 at the August 2026 rate — fixed in dollars, agreed on WhatsApp, nothing paid in advance, and the same price whether you land at 11:00 or 02:40. For the same comparison across every other destination on the island, see our [airport transfer cost guide](/bali/en/journal/bali-airport-transfer-cost)."
+        ],
+        "bullets": [
+          "**Official taxi counter: roughly IDR 150,000-250,000** (checked August 2026). Fixed by zone, paid before you board, 24 hours. Published figures disagree inside that band, so the board at the counter is the only binding price",
+          "**Grab or Gojek: roughly IDR 115,000-280,000**, quoted in the app before you accept. Checked in-app on the morning of **10 May 2026: Gojek 115,000, Grab 136,000**; a separate 2026 guide reports Grab at 180,000-280,000 in busier hours, which is the same product at a different moment",
+          "**Blue Bird on the meter: about IDR 7,000 flagfall plus roughly IDR 6,500 per km** (checked August 2026). A clear run lands near the app band; a stuck run costs more, because waiting time is charged at around IDR 45,000 an hour",
+          "**Pre-booked private car: typically IDR 300,000** for a standard car on published 2026 rate cards, including airport parking, tolls, meet-and-greet and 90 minutes of free waiting. Big vans on the same cards run to IDR 700,000"
+        ]
+      },
+      {
+        "heading": "The walk out of arrivals, and where each ride waits",
+        "paragraphs": [
+          "The sequence is autogate or immigration desk, baggage reclaim, customs QR scan, then the arrivals hall — and the tourist levy checkpoint is a separate station, so have that QR ready unless you want a detour with a trolley. The official taxi counter sits inside the hall before you reach the doors, usually described as on the left as you walk out. Pre-booked drivers wait in the arrival corridor holding name boards, and the airport's own named meeting point is in front of the Flight Information Counter by the blue direction pole; the car itself collects from a designated pick-up zone rather than the kerb outside the door.",
+          "Grab and Gojek both operate at the airport in 2026, but neither may collect you at the arrivals kerb. Each runs a signposted, air-conditioned lounge in the car park buildings — you book in the app, walk out past the money changers and the retail, and staff on site match you to a driver at an assigned bay. Nobody publishes an honest distance for that walk, so budget **several minutes with luggage** rather than trusting a figure. One thing worth knowing before you plan around it: **GrabBike and GoRide are not available for airport pickup at all**. Cars only. Solo travellers routinely arrive expecting a cheap scooter ride and find there isn't one.",
+          "Blue Bird is the other case where the map in your head is wrong. It cannot pick up arriving passengers at arrivals, and the standard workaround is to walk one floor up to departures and take a cab that has just dropped off. Confirm the bird logo and the driver ID on the dash — copycat liveries exist — get in before discussing the destination, and check the meter is running; \"tolong pakai argo ya\" is the phrase, and if it is refused, get out. Everything else calling for your attention in that hall is a tout quoting an inflated flat fare, and none of them are the official counter."
+        ]
+      },
+      {
+        "heading": "Landing after dark",
+        "paragraphs": [
+          "The airport runs 24 hours and so does the ground transport, but the reliability order inverts at night. A pre-booked driver waits regardless of how late the flight is. The counter is open around the clock and is the most reliable walk-up option at 03:00 — state the destination, pay the fixed fare, follow the driver. The apps are the ones that degrade: driver numbers drop after midnight, acceptance can take repeated refreshes, and the wait is unpredictable in a way it never is at noon.",
+          "Whether the price rises after dark genuinely depends on which product you booked, and the three answers are all true at once. Apps surge, and can run at **two to three times** the normal rate between 22:00 and 02:00 when several flights land together. The counter is commonly reported to add about **IDR 50,000 between 18:00 and 06:00**, though we have not seen that confirmed independently — ask at the counter before you pay. A pre-agreed private rate does not move at all. The takeaway that survives all three: a pre-booked transfer is the only option whose price you know before you land, and the apps are the only option that can triple. The compensation is the road itself — at 02:00 there is nothing on it, and Seminyak is a genuine **20 minutes** away."
+        ]
+      },
+      {
+        "heading": "When you should not book us",
+        "paragraphs": [
+          "If you are one person with a carry-on, landing in daylight, and not in a hurry: do not book a private transfer. Walk to the app lounge, price the trip in both Grab and Gojek, and take whichever is cheaper with the shorter wait. On the morning that was checked, Gojek quoted **IDR 115,000** to Seminyak — well under half our fixed $15, at the August 2026 exchange rate. Blue Bird from the departures level is the other honest budget answer for a light traveller. Neither of those is a compromise on a quiet Tuesday afternoon, and we would rather say so than pretend the gap is about quality. Our [Grab, Gojek or private driver comparison](/bali/en/journal/grab-gojek-or-private-driver-bali) works through where each one actually wins.",
+          "The private car earns its difference in specific situations, and they are easy to recognise. Two or more of you, because the price is per car — a family of four pays the same **$15** as a solo traveller. Real luggage, a surfboard, a pram. A 01:00 landing with a child asleep on your shoulder, when nobody wants to walk to a car park and refresh an app. A delayed flight, because the driver tracks it and waits. A first arrival in Indonesia, when the last thing you want at the doors is a negotiation. And the plain fact that the number is settled in Seminyak before you leave home: [our airport pickup](/bali/en/tours/bali-airport-transfer) is from $15 per car, fixed, with no prepayment and no surge."
+        ]
+      },
+      {
+        "heading": "Once you are in Seminyak",
+        "paragraphs": [
+          "The return runs the same corridor with the same problem. A flight out in the late afternoon means planning with the **45-75 minute** figure rather than the 20-30 one, and adding the check-in buffer to that, not to the optimistic number. Morning departures before the 07:00-09:00 build-up are the easy ones. Nothing about the return is difficult; it just rewards using the pessimistic half of the range.",
+          "For the days in between, a transfer is the wrong tool. A [car with a driver](/bali/en/tours/private-car-with-driver-bali) is **from $59 per car** for the day and costs the same whether one person or four are in it — which is why it beats app cars on any itinerary with more than two stops. If the plan includes the islands, our [Nusa Penida private day tour](/bali/en/tours/nusa-penida-full-day-tour) is **from $75** including the boat and the driver on the far side. And for how the whole island fits together — apps, drivers, scooters, boats — our [Bali transport guide](/bali/en/journal/how-to-get-around-bali-transport-guide) is the longer version of this page."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How far is Seminyak from Bali airport?",
+        "answer": "About 12-15 km, which sounds like nothing and behaves like something else. Reckon on 20-30 minutes when the road is clear and 45-75 minutes at peak, roughly 07:00-09:00 and 16:00-19:00. The Bali Mandara toll road does not help on this route — it runs south and east across Benoa Bay, while Seminyak is north-west of the airport, so every car takes the surface roads through the Kuta corridor."
+      },
+      {
+        "question": "How long does the transfer from the airport to Seminyak take?",
+        "answer": "Twenty to thirty minutes off-peak, forty-five to seventy-five at rush hour. The two windows that hurt are 07:00-09:00 and, worse, 16:00-19:00, when the commuter flow and the beach-club traffic overlap on the same road. After 21:00 or before 07:00 you will see the bottom of the range. Balinese ceremonies can close a coastal road with no warning, which is why no honest estimate for Bali is a single number."
+      },
+      {
+        "question": "How much is a taxi from Bali airport to Seminyak?",
+        "answer": "The official counter inside arrivals charges a fixed zone fare of roughly IDR 150,000-250,000, checked August 2026 — published figures scatter across that band, and the board at the counter is the only binding price. Grab and Gojek run around IDR 115,000-280,000 depending on demand. A pre-booked private car sits near IDR 300,000 on 2026 rate cards; ours is fixed at $15 per car with no prepayment."
+      },
+      {
+        "question": "Can I use Grab or Gojek from Bali airport to Seminyak?",
+        "answer": "Yes, for cars, but not from the kerb. Both apps run signposted lounges in the airport car park buildings: you book in the app, walk out several minutes with your luggage, and staff match you to a driver at an assigned bay. GrabBike and GoRide are not available for airport pickup at all. Price both apps before you choose — on 10 May 2026 Gojek quoted IDR 115,000 to Seminyak and Grab 136,000, and that order flips by destination."
+      },
+      {
+        "question": "What is the cheapest way to get from Denpasar airport to Seminyak?",
+        "answer": "Usually an app car from the lounge, and on the morning it was checked that meant Gojek at IDR 115,000 rather than Grab at 136,000. The other cheap and legitimate route is Blue Bird on the meter, picked up one floor up at departures, since Blue Bird cannot collect at arrivals. Both suit a solo traveller with light luggage in daylight. Both get less appealing after midnight, when app supply thins and fares can surge."
+      },
+      {
+        "question": "Should I book an airport transfer to Seminyak in advance?",
+        "answer": "It depends on the arrival. For a solo traveller landing in daylight with one bag, no — the apps are cheaper and the counter is a fine fallback. Book ahead if you are two or more (the price is per car), if you have real luggage, if you land between roughly 22:00 and 06:00, or if it is your first arrival in Indonesia. Our transfer is from $15 per car, arranged on WhatsApp with nothing paid up front."
+      }
+    ]
+  },
+  {
+    "slug": "bali-airport-to-uluwatu-transfer",
+    "badge": "Travel guide",
+    "navLabel": "Airport to Uluwatu",
+    "cardTourLabel": "Airport and transfers",
+    "heroTourSlug": "bali-airport-transfer",
+    "relatedTourSlugs": [
+      "bali-airport-transfer",
+      "private-car-with-driver-bali",
+      "nusa-penida-full-day-tour"
+    ],
+    "inlineStats": [
+      "20-25 km from DPS",
+      "45-90 min drive",
+      "IDR 200-400k per car"
+    ],
+    "title": "Bali Airport to Uluwatu: 45-90 Minutes, IDR 200-400k",
+    "description": "How long the airport-to-Uluwatu drive really takes, what a car costs in rupiah — checked August 2026 — and why the Bukit is where ride-hailing fails.",
+    "excerpt": "Uluwatu is about 20-25 km from Bali's airport — roughly 45 minutes if you land in the morning, and up to an hour and a half if you land into the 16:00-19:00 rush that pushes half the island up onto the Bukit at once. A car is IDR 200,000-400,000 depending on how you book it, checked August 2026: the apps sit at the bottom of that band, the airport taxi counter and pre-booked private drivers at the top. That part is straightforward. The part nobody warns you about is the way back. Uluwatu, Bingin, Padang Padang, Ungasan and most of the big beach clubs are blocked-pickup zones — you can be dropped anywhere, but calling a Grab to collect you often returns an empty map. This guide covers both directions, where to meet a car at arrivals, and when not to pre-book anything.",
+    "rankings": [
+      {
+        "name": "Pre-booked private transfer",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Name board at the arrival corridor",
+        "bestFor": "Families, bags, night landings",
+        "summary": "A price agreed before you fly and a driver who waits however late you are. Published 2026 rate cards put a standard car to Uluwatu, Pecatu or Ungasan at IDR 300,000-400,000, tolls, parking and 90 minutes of free waiting included. Ours starts from $15 per car, fixed in dollars."
+      },
+      {
+        "name": "Grab or Gojek from the car park lounge",
+        "imageSrc": "/images/places/ride-hailing-app.jpg",
+        "area": "Signposted lounge in the parking structure",
+        "bestFor": "Solo travellers, daylight, light luggage",
+        "summary": "Checked in-app on a May 2026 weekday morning: Grab IDR 206,000, Gojek IDR 232,500 to Uluwatu. Cheapest honest option if you can walk several minutes with your bags. No kerbside pickup is permitted, no motorbike pickup exists at DPS, and both apps surge when flights bunch up."
+      },
+      {
+        "name": "The official taxi counter in arrivals",
+        "imageSrc": "/images/places/bali-airport-arrivals.jpg",
+        "area": "Inside the hall, before the doors",
+        "bestFor": "Walk-up reliability at 03:00",
+        "summary": "You state the destination, pay a fixed zone fare at the desk, and a driver walks you to the car. Roughly IDR 250,000-400,000 for the Bukit, but published figures disagree by a factor of two to three across sources — the board at the counter is the only binding price."
+      },
+      {
+        "name": "Blue Bird from the Departures level",
+        "imageSrc": "/images/places/bluebird-taxi.jpg",
+        "area": "One floor up, level 2",
+        "bestFor": "Light luggage and a real meter",
+        "summary": "Blue Bird cannot collect at arrivals, so people walk up to Departures and take one that has just dropped off. Flagfall IDR 7,000, about IDR 6,500-6,600 per km, minimum IDR 30,000, waiting IDR 45,000 an hour. The only option whose total you learn on arrival, not before."
+      },
+      {
+        "name": "Local transport once you are on the Bukit",
+        "imageSrc": "/images/places/uluwatu-cliffs-at-sunset.jpg",
+        "area": "Uluwatu, Bingin, Padang Padang, Ungasan",
+        "bestFor": "Nothing, if you can avoid it",
+        "summary": "Drop-offs are fine everywhere; pickups are what village cooperatives block, and the Bukit polices it hardest. Prices here are fully negotiated with no published figures at all. Agree the total in rupiah before the car moves, or walk five to ten minutes out of the zone and rebook."
+      },
+      {
+        "name": "A car and driver for the whole day",
+        "imageSrc": "/images/places/bukit-beach-club.jpg",
+        "area": "Door to door, Bukit-wide",
+        "bestFor": "Beach clubs, temple sunset, early boats",
+        "summary": "The planning-stage answer to the return problem: the same driver waits and takes you home, so the blocked-pickup question never arises. From $59 per car for the day. On the Bukit this is worth more than anywhere else in Bali, because the alternative is a negotiation in the dark."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "How far is Uluwatu from the airport, and how long the drive really takes",
+        "paragraphs": [
+          "Uluwatu is **20-25 km** from Ngurah Rai airport — Pecatu, Bingin, Padang Padang and Ungasan all sit inside that band — and the drive takes **about 45 minutes on a clean run, up to 90 minutes** if you land into the late-afternoon rush. It is genuinely closer than Ubud, which is **36-40 km** and routinely **90 minutes or more**. The useful calibration is Jimbaran: **6-8 km, 15-30 minutes**. Almost all of the extra time to Uluwatu is spent on the climb beyond Jimbaran and along Jalan Uluwatu, not on the flat run out of the airport.",
+          "There is no toll shortcut on this route. The Bali Mandara toll road runs east and south to Benoa and Nusa Dua; Uluwatu is reached on the surface road through Jimbaran, so any page that prices a toll into your Uluwatu transfer is describing a different journey. The two windows that wreck the drive are **07:00-09:00 and 16:00-19:00**, and for arrivals the evening one is far worse — it stacks the Denpasar commute against the sunset migration up onto the Bukit toward the temple, the beach clubs and the surf breaks. Land between roughly 15:00 and 19:00 and budget the top of every range on this page; land after 21:00 or before 07:00 and you will see the bottom.",
+          "Then there is the Balinese calendar, which no routing app reads. A melasti procession, an odalan or a cremation closes a road for an hour with no notice and no diversion signs — that is the honest reason a Bali driving estimate can never be a single number. **Nyepi falls on Thursday 19 March 2026**: the airport shuts from **06:00 on the 19th to 06:00 on the 20th**, the toll road closes with it, and no transfer of any kind exists at any price. **Galungan (17 June 2026) and Kuningan (27 June 2026)** bring processions and penjor-lined village roads rather than a shutdown. If you are still choosing between the south and the centre, our [airport to Ubud guide](/bali/en/journal/airport-to-ubud-transfer) sets out the longer run."
+        ]
+      },
+      {
+        "heading": "What the ride costs, checked August 2026",
+        "paragraphs": [
+          "Every figure below is per car, not per person, and every one was checked in August 2026. The honest summary is a band: **IDR 200,000-400,000** gets you from arrivals to a Bukit address, and where you land inside that band depends far more on how you book than on how far you go.",
+          "Convert those carefully. The rupiah sat near **IDR 17,800 to the dollar** in August 2026, while most travel pages still convert at 15,000-16,000 and therefore overstate the dollar cost by **10-18%**. That is why we lead with rupiah everywhere. Our own prices are the exception, because they are set in dollars and fixed: a [private airport pickup](/bali/en/tours/bali-airport-transfer) starts **from $15** per car, quoted and confirmed on WhatsApp before you fly, with no prepayment. Our [full breakdown of transfer costs](/bali/en/journal/bali-airport-transfer-cost) puts the Bukit next to the other main destinations.",
+          "When should you not book us? If you are one person with a carry-on landing at ten in the morning, walk to the Grab or Gojek lounge and take the app — at **IDR 206,000** checked in May 2026 it is the cheaper answer and the wait is bearable. A pre-booked car earns its money in the other cases: four people with luggage, an arrival after dark, a villa down an unnamed lane in Pecatu or Bingin that the app map places a few hundred metres from the actual gate, or a landing late enough that the app queue has thinned out. Our [Grab and Gojek cost guide](/bali/en/journal/bali-grab-taxi-driver-cost) has the app numbers for the rest of the island."
+        ],
+        "bullets": [
+          "**Grab IDR 206,000 / Gojek IDR 232,500** — checked in-app on a weekday morning, 10 May 2026, off-peak. Airport ride categories are reported to carry a surcharge of roughly **IDR 10,000-12,000** on top, and both apps surge with demand",
+          "**Official airport taxi counter, roughly IDR 250,000-400,000** for the Bukit zone, paid at the desk before you board. Published figures for this counter disagree by a factor of two to three across sources — the board at the counter is the only binding price",
+          "**Pre-booked private car, IDR 300,000-400,000** for a standard vehicle to Uluwatu, Pecatu or Ungasan on 2026 rate cards. One operator lists **IDR 350,000** standard and **IDR 800,000** for a big van, including tolls, parking, a name-board meet and 90 minutes of free waiting",
+          "**Blue Bird meter:** flagfall **IDR 7,000**, about **IDR 6,500-6,600 per km** (sources differ slightly), minimum fare **IDR 30,000**, plus **IDR 45,000 per hour** of waiting time — which is exactly what makes a meter lose in the evening crawl"
+        ]
+      },
+      {
+        "heading": "Where you actually meet a car at DPS",
+        "paragraphs": [
+          "The walk out of the airport goes: autogate or immigration desk, baggage reclaim, customs QR scan, then the arrivals hall. The official taxi counter sits inside that hall before you leave the building, commonly on your left. Drivers holding name boards wait in the arrival corridor on the right, and the named meeting point for pre-booked transfers is in front of the Flight Information Counter by the blue direction pole outside the arrival gate — the car itself collects from a designated pick-up zone rather than from the door. The moment you clear the doors, men start calling \"taxi? transport?\". They are not the counter, and their flat quotes run several times the app price.",
+          "Grab and Gojek both operate at DPS in 2026, but not at the kerb. Curbside pickup at arrivals is banned, and each app runs a signposted, air-conditioned lounge in the car park structure serving the terminals: you book in the app, walk over, and staff match you to a driver at an assigned bay. Nobody publishes an exact distance for that walk — it goes past the money changers and the retail area, and it is several minutes with luggage. One hard rule worth knowing before you plan around it: **there is no GrabBike or GoRide pickup from the airport at all**. Cars only. Solo travellers who budget for a cheap scooter pickup get caught by this constantly.",
+          "Blue Bird cannot collect arriving passengers at arrivals either — local transport cooperatives control airport ground pickup, and this is a negotiated carve-out rather than a free market. The long-standing workaround is to walk up one floor to Departures and take a Blue Bird that has just dropped off. Travelling light, it is the cheapest legitimate metered way out of the airport, with the usual cautions: check the bird logo and the driver ID card (copycats trade on names like \"Blue Biru\"), get in before you discuss the destination, and confirm the meter is on — *tolong pakai argo ya*. If the driver refuses, get out. One 2026 source lists a Blue Bird airport fare to Uluwatu of **IDR 202,000**, but that reads like a MyBluebird app quote rather than a rank at arrivals, so treat it as indicative only."
+        ]
+      },
+      {
+        "heading": "Why the Bukit is where ride-hailing lets you down",
+        "paragraphs": [
+          "This is the part that catches people, and it has nothing to do with the airport. The Bukit is the most heavily blocked ride-hailing territory in Bali. Local transport cooperatives — *pangkalan*, operating under traditional banjar and desa adat rules — informally bar app drivers from picking up on their turf, and in parts of the Bukit the *pecalang*, the village security, actively police it. The 2026 pattern covers **Uluwatu, Bingin, Padang Padang, Pandawa, Nyang Nyang and Ungasan**, along with the big beach clubs — Savaya, Sundays, Ulu Cliff House — and most hotel driveways. The asymmetry is the whole trap: **drop-offs are almost always fine; pickups are what is blocked**. You get there cheaply, then find you cannot get back.",
+          "Ride-hailing is legal for tourists everywhere in Bali under Pergub Bali No. 40/2019, and the provincial transport agency has said so on the record — but officials have also told app drivers to cooperate with registered local stands, which is why nobody is coming to help you. Hold it in your head as legal but locally unenforceable, not illegal, whatever a man at a beach path tells you. What a blocked-zone ride actually costs is undocumented and fully negotiated: reports run from \"much higher\" to a claimed twenty times, with no rupiah figures behind them, and the IDR 500,000-750,000 numbers that circulate for Uluwatu are airport transfers being repurposed, not short local hops. So use a procedure instead of a price. Check the trip in Grab or Gojek first so you have an anchor, agree the total out loud in rupiah before the car moves, and if the quote is absurd, walk **five to ten minutes** out of the zone to a main road and rebook. That walk is your entire leverage. Where a sign is posted, respect it — this is a livelihood dispute inside a village, and putting a driver into it creates a problem for him, not for you.",
+          "The planning-stage fix is dull and it works: arrange the return before you go. For a temple sunset, a Bingin beach day or dinner on the clifftop, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** removes the negotiation entirely, because the same driver waits and takes you home. The same logic covers early starts — a [Nusa Penida day tour](/bali/en/tours/nusa-penida-full-day-tour) **from $75** leaves from Sanur harbour at an hour when no app will collect you from a Pecatu villa, so that pickup has to be agreed the night before. Our comparison of [Grab, Gojek and a private driver](/bali/en/journal/grab-gojek-or-private-driver-bali) works through where each one genuinely wins."
+        ],
+        "bullets": [
+          "**Printed signs** zip-tied to poles and walls, often with the app logos crossed out. Indonesian wording: *ojek online dilarang*, *kawasan pangkalan*. The most reliable single tell",
+          "**The app goes empty.** You could book from 300 m away but not from where you stand: no vehicles on the map, or the search times out over and over",
+          "**The driver's message.** He accepts, then chats — please walk to the main road, cannot enter, meet me at the junction",
+          "**The parked cluster:** men on scooters or in unmarked cars at a beach path, temple car park or hotel driveway, approaching anyone looking at a phone. Some will say the apps are illegal. They are not",
+          "**The physical block:** cooperative members or pecalang turning app cars away at the entrance to the lane"
+        ]
+      },
+      {
+        "heading": "Landing late on the Bukit",
+        "paragraphs": [
+          "The airport runs 24 hours and so does ground transport, but the reliability order inverts after midnight. Pre-booked private comes first — the driver waits regardless of your delay, and operators track the flight. The official counter is second, and it is the most dependable walk-up option at 03:00: state the destination, pay the fixed zone fare, follow the driver out. The apps come last. Driver numbers online drop significantly after midnight, acceptance can take repeated refreshes, and the wait is unpredictable at exactly the hour you have least patience for it.",
+          "Whether prices rise at night depends on which product you bought, and all three answers are true at once. Apps surge — **two to three times normal** when several flights land together between 22:00 and 02:00 — and that is the mechanism nobody disputes. The counter is commonly reported to add a night surcharge of about **IDR 50,000 between 18:00 and 06:00**, but we have not been able to confirm that independently, so ask at the desk rather than assume it. A pre-booked fixed rate does not move at all. The one-line version: a pre-booked transfer is the only option whose price you know before you land, and the apps are the only option that can triple.",
+          "The compensation is the road itself. At 02:00 the climb past Jimbaran is empty, Jalan Uluwatu is empty, and the **45-minute** end of the range is real rather than aspirational — it is the only time of day it is. If you are arriving after dark with bags and a villa gate that has to be found in an unlit lane, that is the argument for someone standing in the arrival corridor with your name on a board, rather than you refreshing an app in a car park at three in the morning."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How far is Uluwatu from Bali airport?",
+        "answer": "About 20-25 km, covering Pecatu, Bingin, Padang Padang and Ungasan. It is much closer than Ubud, which sits 36-40 km away. A useful calibration: Jimbaran is only 6-8 km from the airport, so most of the Uluwatu journey is the climb up onto the Bukit beyond Jimbaran rather than the run out of the airport."
+      },
+      {
+        "question": "How much does a taxi from Bali airport to Uluwatu cost?",
+        "answer": "Expect IDR 200,000-400,000 per car, checked August 2026. Grab quoted IDR 206,000 and Gojek IDR 232,500 in-app on a May 2026 morning; the official arrivals counter runs roughly IDR 250,000-400,000; pre-booked private cars sit at IDR 300,000-400,000 on 2026 rate cards. Published counter figures vary widely between sources, so the board at the desk is the only binding price."
+      },
+      {
+        "question": "How long does the drive from Denpasar airport to Uluwatu take?",
+        "answer": "Around 45 minutes on a clean run and up to 90 minutes at the worst times. The 16:00-19:00 window is the one that hurts on arrival, because the Denpasar commute overlaps with the sunset rush up onto the Bukit toward the temple and the beach clubs. Landings after 21:00 or before 07:00 see the bottom of the range."
+      },
+      {
+        "question": "Can I use Grab or Gojek from Bali airport to Uluwatu?",
+        "answer": "Yes, for cars. Curbside pickup at arrivals is banned, so you book in the app and walk to the signposted Grab or Gojek lounge in the car park structure, where staff match you to a driver at an assigned bay. It is several minutes on foot with luggage. There is no GrabBike or GoRide pickup from the airport at all."
+      },
+      {
+        "question": "Why can't I get a Grab or Gojek in Uluwatu?",
+        "answer": "Local transport cooperatives informally block app pickups across the Bukit — Uluwatu, Bingin, Padang Padang, Pandawa, Nyang Nyang, Ungasan and the big beach clubs — and in places village security enforces it. Drop-offs are almost always fine; pickups are what is blocked. Ride-hailing is legal under Pergub Bali No. 40/2019, but the blocking is community enforcement, so walking five to ten minutes out of the zone is your practical fix."
+      },
+      {
+        "question": "Is it worth pre-booking an airport transfer to Uluwatu?",
+        "answer": "It depends on your party. One person with a carry-on landing in daylight should just use the app lounge — it is cheaper. Pre-booking earns its money with four people and luggage, a late-night landing, or a villa down an unnamed Pecatu or Bingin lane, because the price is fixed before you fly and the driver waits however late the flight is. Ours starts from $15 per car."
+      }
+    ]
+  },
+  {
+    "slug": "bali-airport-to-sanur-transfer",
+    "badge": "Travel guide",
+    "navLabel": "Airport to Sanur",
+    "cardTourLabel": "Airport and transfers",
+    "heroTourSlug": "bali-airport-transfer",
+    "relatedTourSlugs": [
+      "bali-airport-transfer",
+      "fast-boat-transfer-bali",
+      "private-car-with-driver-bali"
+    ],
+    "inlineStats": [
+      "20-60 minute drive",
+      "IDR 120,000-300,000",
+      "Last boat 15:15-15:30"
+    ],
+    "title": "Bali Airport to Sanur: 20-60 Minutes and the Last Boat",
+    "description": "The drive from Bali airport to Sanur takes 20-30 minutes off-peak and 45-60 at rush hour. Fares, the Mandara toll, and how to make the last Penida boat.",
+    "excerpt": "The drive from Bali airport to Sanur takes 20-30 minutes in light traffic and 45-60 minutes if you land into the evening rush — about 15 km, most of it on the Bali Mandara toll road over the water. Budget an hour door to gate, not thirty minutes. Expect roughly IDR 120,000-200,000 by Grab or Gojek and IDR 180,000-300,000 for a pre-booked car or the airport taxi counter, checked August 2026. Most people going to Sanur are not going to Sanur at all: it is the harbour for Nusa Penida, Lembongan and the direct Gili boats. That makes the arithmetic different. The last widely bookable Penida boat leaves mid-afternoon, check-in is an hour before, and a missed boat is a fare you do not get back. This guide covers the drive, the real prices, and how to time both against the water.",
+    "rankings": [
+      {
+        "name": "Pre-booked private transfer",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Name board, arrival corridor",
+        "bestFor": "Boat mornings and late flights",
+        "summary": "A driver holding your name at the arrival corridor, a price agreed before you left home, and no walk to a lounge with luggage. Ours starts **from $15 per car**, includes the toll and airport parking, and the driver tracks the flight — the only option whose price does not move when the plane does."
+      },
+      {
+        "name": "Grab or Gojek from the lounge",
+        "imageSrc": "/images/places/ride-hailing-app.jpg",
+        "area": "E-hailing lounge, car park",
+        "bestFor": "Solo travellers with a carry-on",
+        "summary": "Cheapest by a clear margin: **IDR 148,000 on Grab and 180,000 on Gojek** in the one in-app check with a verifiable timestamp, a May 2026 morning. Kerbside pickup is banned, so you book in the app and walk to the signposted lounge in the car park structure. Surcharge and toll come on top."
+      },
+      {
+        "name": "The official taxi counter",
+        "imageSrc": "/images/places/bali-airport-arrivals.jpg",
+        "area": "Inside arrivals, before the doors",
+        "bestFor": "Walk-ups at 03:00",
+        "summary": "A fixed zone fare paid at the counter before you board — no meter, no haggling, open 24 hours. Published figures for Sanur scatter across **IDR 180,000-300,000** (checked August 2026) depending on which page you read, which is exactly why the board at the counter is the only price that binds."
+      },
+      {
+        "name": "Blue Bird from the Departures level",
+        "imageSrc": "/images/places/ride-hailing-app.jpg",
+        "area": "One floor up, drop-off lane",
+        "bestFor": "Travellers who want a meter",
+        "summary": "Blue Bird cannot collect arriving passengers downstairs, so the standing workaround is walking up to Departures and taking one that has just dropped off. Tariff runs about **IDR 7,000 base plus 6,600 per km** (checked August 2026). Check the bird logo and driver ID, and confirm the meter is switched on."
+      },
+      {
+        "name": "Straight to the port for a same-day boat",
+        "imageSrc": "/images/remote/1280px-sanur-port-sf0001-b8fad127.jpg",
+        "area": "Pelabuhan Sanur",
+        "bestFor": "Wheels-down before about 12:00",
+        "summary": "Works only when the arithmetic works: last widely bookable Penida boat **15:15-15:30**, check-in **60 minutes** before, drive **30-60 minutes**. Land before noon with your e-VOA, levy and customs QR codes already paid and it is comfortable. Land at 14:00 and you are buying a boat you will watch leave."
+      },
+      {
+        "name": "Lembongan instead of Penida",
+        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "area": "Sanur Port, later sailings",
+        "bestFor": "Afternoon landings",
+        "summary": "Lembongan sails later than Penida — first **08:30**, last **17:15** — which buys roughly ninety minutes on a late arrival, and a 10-15 minute local shuttle links it to Penida the next morning. Mind the hole in the timetable: nothing leaves between **14:30 and 17:00**."
+      },
+      {
+        "name": "A night in Sanur, boat in the morning",
+        "imageSrc": "/images/remote/sanur-beach-bali-59142775.jpg",
+        "area": "Sanur",
+        "bestFor": "Evening arrivals and every Gili trip",
+        "summary": "The answer we give most often. A Sanur hotel night costs less than a forfeited fast boat plus an unplanned room, and morning crossings are the calm ones. For the Gilis it is not even a choice — every Sanur departure is **morning only**, so arrival-day is off the table entirely."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "How long the drive from the airport to Sanur takes",
+        "paragraphs": [
+          "Plan on **20-30 minutes** if you land in the middle of the day and **45-60 minutes or more** if you land into the evening rush. It is only about **15 km**, but Sanur sits on the Bypass Ngurah Rai, one of the busiest roads in south Bali, and the final stretch along Jalan Danau Tamblingan crawls when the whole neighbourhood is heading out for dinner. The two windows that hurt are **07:00-09:00 and 16:00-19:00**, and the evening one is by far the worse of the two for arrivals. Land after 21:00 or before 07:00 and the same run takes **20-25 minutes**. If a fast boat is waiting at the other end, budget **a full hour door to gate**, not thirty minutes.",
+          "Sanur is one of only three destinations where the **Bali Mandara toll road** genuinely changes the drive. It runs on stilts across Benoa Bay — **8.1-8.3 km** of mainline, about 12.7 km counting the access ramps — and it was built because the Bypass past the runway cannot be widened. Our drivers take it and exit at Benoa, skipping the airport-area and Jimbaran congestion altogether. Category I cars pay **IDR 14,000**, unchanged since 27 April 2024 and still current in August 2026; pages quoting 12,500 or 13,000 are recycling older tariffs. Payment is cashless e-money, with no cash lanes at the gate. A pre-booked transfer absorbs the toll; an app fare may add it. For Kuta, Seminyak, Uluwatu or Ubud the toll does nothing at all — those lie the wrong way from the airport, and any guide implying otherwise has not driven it."
+        ]
+      },
+      {
+        "heading": "What the ride costs, and when you should just open Grab",
+        "paragraphs": [
+          "Two price bands, and they overlap less than the internet suggests. Ride-hailing runs roughly **IDR 120,000-200,000** per car (checked August 2026); the one fare check with a verifiable timestamp — taken in-app on a May 2026 weekday morning — put Sanur at **IDR 148,000 on Grab and 180,000 on Gojek**. Add an airport exit surcharge of about **IDR 10,000-12,000**, add the **IDR 14,000** toll, and remember that an app quote is not a final number the way a counter fare is: it moves with demand and can run at two to three times normal when several flights land together. A pre-booked car or the official counter sits at **IDR 180,000-300,000** (checked August 2026), and one operator's published 2026 rate card fixes Sanur-Renon at **IDR 300,000** for a standard car and 700,000 for a large van, tolls and parking included. Counter fares quoted online disagree with each other by a factor of two, so treat the board at the counter as the only binding price.",
+          "Here is the honest version. If you are one or two people with cabin bags, landing in daylight, and you do not mind a several-minute walk to the e-hailing lounge, Grab or Gojek is cheaper and you should use it — our [Grab and private driver cost guide](/bali/en/journal/bali-grab-taxi-driver-cost) has the numbers area by area. Our [private airport transfer](/bali/en/tours/bali-airport-transfer) **from $15 per car** earns its keep in the other cases: a family with checked bags, a flight landing after midnight, a delayed flight, or a morning boat where a driver who tracks the arrival and waits with a name board is the difference between a holiday and a scramble. Our price is fixed before you land, in dollars, with the toll and parking inside it. For the full spread across every south Bali destination, see our [airport transfer cost breakdown](/bali/en/journal/bali-airport-transfer-cost)."
+        ]
+      },
+      {
+        "heading": "Getting out of the terminal, and where each ride waits",
+        "paragraphs": [
+          "The clock starts at the jet bridge, not at the kerb. **Ninety minutes from landing to kerbside is typical at DPS, up to two hours** when several wide-bodies arrive together — but **under 30 minutes** if you turn up with your e-VOA, the Bali tourist levy and the customs declaration already paid and saved as QR codes on your phone. That single variable decides more boat connections than traffic ever does. Without an e-VOA, the immigration queue alone runs 45-75 minutes off-peak and 75-120 minutes at peak, and the worst arrival waves are 10:00-14:00 and 22:00-02:00.",
+          "Then there is the geography of the arrivals hall, which is not intuitive and catches out people who have been to plenty of other airports:"
+        ],
+        "bullets": [
+          "**The official taxi counter** is inside the hall before you walk out, commonly on the left. State the destination, pay the fixed zone fare, and a driver escorts you to the car — the most reliable walk-up option at 03:00.",
+          "**Pre-booked drivers** wait in the arrival corridor with name boards, near the Flight Information Counter and the blue direction pole. The car itself collects from a designated pick-up zone rather than the door.",
+          "**Grab and Gojek** run official, air-conditioned lounges in the car park structure — signposted, past the retail area, and a several-minute walk with luggage. Kerbside pickup at arrivals is banned, so there is no shortcut.",
+          "**GrabBike and scooter pickups are not available** at the airport at all. Solo travellers who planned on a cheap motorbike ride discover this after clearing customs, which is a bad moment for it.",
+          "**Blue Bird** cannot collect at arrivals either; the workaround people use is the Departures level one floor up. Check the bird logo and the driver ID, get in before naming the destination, and confirm the meter is running.",
+          "**Touts** start calling 'taxi? transport?' the moment you clear the doors, quoting inflated flat fares. They are not the counter and they are not your driver."
+        ]
+      },
+      {
+        "heading": "Timing the airport against the last boat to Nusa Penida",
+        "paragraphs": [
+          "Sanur Port — Pelabuhan Sanur, on Jalan Pantai Matahari Terbit — opened in 2022 and replaced the old beach launches, so you board from a jetty instead of wading out. Around twenty sailings a day cross to Nusa Penida, the first at **07:00-07:30**. The last one is where the sources fight: bookable timetables end at **15:15-15:30**, while some pages claim 16:00 or even 17:00. We plan to the **15:30 boat** and treat anything later as a single-operator sailing that fills first. The crossing takes **30-50 minutes** depending on the boat and the swell, at the long end in the windy June-September months. Tickets bought direct from operators run **IDR 106,000-170,000** one way (checked August 2026); the same seat through an agent is commonly **IDR 150,000-250,000**, and the USD-quoted aggregator fares near $14 are the marked-up end, not the port price.",
+          "We sell the boat leg on its own — [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) **from $15** — and the whole island day as a [private Nusa Penida tour](/bali/en/tours/nusa-penida-full-day-tour) **from $75**, with the driver, the boat and the car on Penida arranged in one WhatsApp thread. Our [Sanur to Nusa Penida guide](/bali/en/journal/sanur-to-nusa-penida-fast-boat) goes through the operators sailing by sailing. However you book it, work the clock backwards from the boat rather than forwards from the plane:"
+        ],
+        "bullets": [
+          "**Check-in closes 60 minutes before departure** at Sanur Port, and that hour is real, not padding. For a 15:30 boat, be at the terminal by **14:15**.",
+          "**The drive is 30-60 minutes**, so you are leaving the airport by **13:15-13:45** — earlier if you land into the afternoon.",
+          "**Landing to kerbside averages 90 minutes**, which puts wheels-down at roughly **11:45-12:15** for a comfortable connection, and about **13:00** as the absolute edge with prepaid QR codes and no checked bag.",
+          "**Land after 14:00 and the answer is no.** Sleep in Sanur and take a morning boat — the sea is calmer before noon anyway.",
+          "**A missed boat is not refunded.** Standard operator terms are a 100% fee inside two days of travel, and they explicitly disclaim liability for delayed flights. If your flight slips, reschedule the ticket from the transit lounge, not after you land.",
+          "**Budget IDR 25,000 per adult** (IDR 15,000 per child) for the Nusa islands tourism retribution, collected on arrival. Carry it in cash, but check at booking whether it now has to be bought online — a cashless portal was reportedly introduced during 2026 and we have not confirmed how it is being enforced.",
+          "**Check the luggage allowance** before you commit. Operator terms commonly list 15 kg per person on standard boats, with excess charged and subject to space — which collides awkwardly with a 23 kg long-haul checked bag."
+        ]
+      },
+      {
+        "heading": "Going to the Gilis? Sanur is a choice, not a default",
+        "paragraphs": [
+          "Sanur has direct Gili boats, and they are why plenty of people end up here rather than driving east. Three sailings, all in the morning: Semaya One at **08:45**, Starfish at **09:00**, Scoot at **09:30**, crossing in **3 to 3h45** for **IDR 345,000-460,000** one way (checked August 2026). The trade is straightforward — a longer sea leg in exchange for a **20-30 minute** drive instead of the **two-hour** haul east, and the Semaya One route chains Lembongan and the Gilis onto one ticket. The catch is equally straightforward: every departure is morning-only, so a Sanur Gili boat is useless on the day you land.",
+          "Padangbai has the shortest crossing and is the default harbour, but the drive is what kills arrival-day Gili trips: **1h10 to 2h30 from the airport, so plan two hours**, and the last dependable departure is early afternoon, around **13:00-13:30**. Claims of 16:00 boats are seasonal and operator-specific. To make the early-afternoon crossing you would need to land by roughly **07:30**, which almost no long-haul arrival does. Amed is closed for construction, so ignore the pages still listing it as an option. Our advice here is the boring one: overnight in Sanur or Candidasa and take a morning boat. Our [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) **from $70** is built around that, and our [airport to the islands guide](/bali/en/journal/bali-airport-to-the-islands) compares all four harbours side by side."
+        ]
+      },
+      {
+        "heading": "Night landings, and the day nothing moves at all",
+        "paragraphs": [
+          "The airport runs 24 hours and so does the road to Sanur. What changes after dark is the reliability order, not the availability. Pre-booked first: the driver waits regardless of the delay and the price was agreed before you boarded. The official counter second: open around the clock, and the most dependable walk-up option at 03:00. The apps last: driver numbers drop sharply after midnight, acceptance can take repeated refreshes, and fares can run at **two to three times** normal when a cluster of flights lands between 22:00 and 02:00. A night surcharge of about **IDR 50,000** between 18:00 and 06:00 is commonly reported at the counter, but we have not been able to confirm it — ask before you pay rather than after. The compensation is the road itself: at 02:00 the run to Sanur is **20-25 minutes** and the toll gates are empty.",
+          "Two calendar warnings, because no routing app predicts either. **Nyepi falls on Thursday 19 March 2026**: the airport closes from 06:00 that day until 06:00 the next, the toll road closes with it, ferries are suspended, and no transfer of any kind exists at any price. The 18th and the 20th then become the most oversubscribed transport days of the year. Year-round, a Melasti procession, a temple odalan or a cremation can close a coastal road for an hour with no warning, and **Galungan on 17 June 2026** and **Kuningan on 27 June 2026** bring the biggest of them. This is the honest reason a Bali driving estimate is always a range and never a single figure — and the reason we tell guests with a morning boat to leave a margin they will probably not need."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How long does it take to get from Bali airport to Sanur?",
+        "answer": "About 20-30 minutes in light traffic and 45-60 minutes or more if you land during the 07:00-09:00 or 16:00-19:00 rush. It is roughly 15 km, most of it on the Bali Mandara toll road. Late-night arrivals do the same run in 20-25 minutes. If you are connecting to a fast boat, budget a full hour from the airport door to the port gate."
+      },
+      {
+        "question": "How much is a taxi from Bali airport to Sanur?",
+        "answer": "Expect roughly IDR 180,000-300,000 at the airport taxi counter or for a pre-booked private car, and IDR 120,000-200,000 by Grab or Gojek, checked August 2026. Counter fares published online disagree with each other by a factor of two, so the board at the counter is the only binding price. Our own private transfer is fixed from $15 per car with toll and parking included."
+      },
+      {
+        "question": "How do I get from Denpasar airport to Sanur harbour?",
+        "answer": "The same drive, the same 20-60 minutes. Sanur Port is at the north end of Sanur on Jalan Pantai Matahari Terbit, a few minutes past the main hotel strip. Tell the driver Pelabuhan Sanur rather than just Sanur, because the beach hotels and the port are different drop-offs. Check-in closes 60 minutes before the boat departs, and that hour is enforced."
+      },
+      {
+        "question": "Can I reach Nusa Penida on the day I land in Bali?",
+        "answer": "Only if you are on the ground by about midday. The last widely bookable Sanur to Penida boat leaves 15:15-15:30, check-in is an hour before, the drive is 30-60 minutes, and landing to kerbside at the airport averages 90 minutes. Land after 14:00 and you should sleep in Sanur. Nusa Lembongan sails until 17:15, which buys roughly ninety minutes of margin."
+      },
+      {
+        "question": "Is Grab available at Bali airport for a ride to Sanur?",
+        "answer": "Yes, but not at the kerb. Grab and Gojek both run official lounges in the car park structure; you book in the app and walk there with your luggage, several minutes past the retail area. GrabBike and other motorbike pickups are not available at the airport at all. Expect an airport surcharge of about IDR 10,000-12,000 on top of the fare, plus the toll."
+      },
+      {
+        "question": "Do I pay the Bali Mandara toll separately?",
+        "answer": "On a pre-booked private transfer, no: the IDR 14,000 Category I toll is included along with airport parking. On a Grab or Gojek ride it can be added to your fare, since the driver pays it cashless at the gate. That 14,000 figure has been in force since April 2024, so pages still quoting 12,500 or 13,000 are republishing older tariffs."
+      }
+    ]
+  },
+  {
+    "slug": "bali-airport-to-the-islands",
+    "badge": "Travel guide",
+    "navLabel": "Airport to islands",
+    "cardTourLabel": "Airport and transfers",
+    "heroTourSlug": "fast-boat-transfer-bali",
+    "relatedTourSlugs": [
+      "fast-boat-transfer-bali",
+      "bali-airport-transfer",
+      "gili-islands-getaway"
+    ],
+    "inlineStats": [
+      "Penida: land by 12:00",
+      "Lembongan boats to 17:15",
+      "Fast boats from $15"
+    ],
+    "title": "Bali Airport to Nusa Penida or the Gilis: Land Before Noon",
+    "description": "Can you reach Nusa Penida or the Gilis on arrival day? Honest last-boat times, the DPS drive, IDR prices checked August 2026, and when to sleep in Sanur.",
+    "excerpt": "Nusa Lembongan, usually. Nusa Penida, only if you are on the ground before roughly midday. The Gili Islands, almost never. The last widely bookable fast boat from Sanur to Nusa Penida leaves around 15:15-15:30, check-in closes an hour earlier, and clearing Ngurah Rai takes about 90 minutes on a normal day. Lembongan runs later, to 17:00 and 17:15, which buys roughly ninety extra minutes and a ten-minute shuttle across to Penida in the morning. Gili boats from Padangbai stop dependably by early afternoon, and the drive there alone is two hours. This guide sets out the arithmetic island by island, the rupiah prices as they stood in August 2026 for the transfer and the ticket, what happens to a boat ticket when the flight slips, and when the right answer is simply a night in Sanur.",
+    "rankings": [
+      {
+        "name": "Clearing Ngurah Rai",
+        "imageSrc": "/images/places/bali-airport-arrivals.jpg",
+        "area": "Arrivals hall",
+        "bestFor": "The 90 minutes nobody budgets",
+        "summary": "Landing to kerbside runs about 90 minutes on an ordinary day and up to two hours when several widebodies land together. Prepay the e-VOA, the tourist levy and the customs declaration as QR codes and the same walk can take under 30 minutes. That single gap decides whether an arrival-day boat is possible at all."
+      },
+      {
+        "name": "The drive to Sanur Port",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "~15 km via the Mandara toll",
+        "bestFor": "Penida and Lembongan boats",
+        "summary": "Twenty to thirty minutes in light traffic, 45-60 and up in the 16:00-19:00 evening peak. Budget a full hour door to gate, not thirty minutes. A temple procession or a cremation can close a coastal road for an hour with no notice and no routing app sees it coming, which is why we quote ranges."
+      },
+      {
+        "name": "Nusa Penida on arrival day",
+        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "area": "Sanur Port",
+        "bestFor": "Flights on the ground before midday",
+        "summary": "The last widely bookable boat leaves 15:15-15:30 and check-in closes an hour before it. Work backwards through a 30-60 minute drive and 90 minutes in the terminal and you need wheels down by 11:45-12:15. Around 13:00 is the absolute edge, and only with autogates and no checked bag."
+      },
+      {
+        "name": "Nusa Lembongan on arrival day",
+        "imageSrc": "/images/remote/1280px-sanur-port-sf0001-b8fad127.jpg",
+        "area": "Sanur Port",
+        "bestFor": "Afternoon landings",
+        "summary": "Lembongan's last sailings at 17:00 and 17:15 buy roughly ninety minutes over Penida, which is the most useful fact on this page for an afternoon arrival. Mind the hole in the timetable: nothing departs between 14:30 and 17:00. A 10-15 minute local shuttle carries you across to Penida the next morning."
+      },
+      {
+        "name": "The Gilis via Padangbai",
+        "imageSrc": "/images/places/blue-lagoon-padang-bai.jpg",
+        "area": "~55-60 km east of the airport",
+        "bestFor": "Any day except arrival day",
+        "summary": "The boat is not the problem, the drive is: 1h10 to 2h30 from the airport, and you should plan on two hours. The last dependable Padangbai departure to Gili Trawangan is early afternoon, roughly 13:00-13:30, so making it means landing by about 07:30. Almost no long-haul arrival does."
+      },
+      {
+        "name": "The Gilis direct from Sanur or Serangan",
+        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "area": "Sanur and Serangan",
+        "bestFor": "A short drive and a long crossing",
+        "summary": "Three morning departures from Sanur - 08:45, 09:00 and 09:30 - cross in 3h to 3h45 and cost IDR 345,000-460,000 one way, checked August 2026. Serangan adds a single 09:00 sailing of about 2h30. All of them are morning-only, so they suit a Bali hotel start and are useless on arrival day."
+      },
+      {
+        "name": "A night in Sanur, boat at first light",
+        "imageSrc": "/images/places/arrival-day-in-south-bali.jpg",
+        "area": "Sanur",
+        "bestFor": "Almost every real arrival",
+        "summary": "The version that works. Land, drive 20-30 minutes, sleep a few hundred metres from the jetty, then take the 07:00-07:30 Penida boat or the 08:30 Lembongan one with the whole day ahead. One hotel night costs less than a missed non-refundable fast boat plus the unplanned night you end up taking anyway."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Can you land and reach the islands the same day?",
+        "paragraphs": [
+          "Straight answer: **Nusa Lembongan usually yes, Nusa Penida only if you land before midday, the Gili Islands almost never.** The last widely bookable fast boat from Sanur to Nusa Penida goes at **15:15-15:30**, and check-in closes **60 minutes** before departure, so you have to be inside the terminal by **14:15**. Work backwards from there: **30-60 minutes** from the airport to Sanur Port, and **about 90 minutes** from wheels down to the kerb at Ngurah Rai on a normal day, up to two hours at peak. That puts a comfortable landing at **11:45-12:15** and the absolute edge near **13:00** — and the edge only exists if you clear immigration on an autogate with no checked bag. A handful of pages advertise 16:00 or 17:00 Penida sailings; we cannot find them in any bookable timetable, and where they do run they are single-operator and the first to sell out.",
+          "**Nusa Lembongan runs later than Penida**, and for an afternoon arrival that is the single most useful thing to know. Sailings from Sanur start at **08:30** and the last two go at **17:00 and 17:15** — roughly **90 minutes** more runway than Penida gives you. The catch is the hole in the middle of the timetable: **nothing departs between 14:30 and 17:00**, so a 15:00 landing is not catching \"the next boat\", it is catching the evening boat. Lembongan and Penida are linked by a **10-15 minute** local shuttle, which makes arriving on Lembongan tonight and crossing tomorrow a legitimate way to save a day. Our [fast boat tickets](/bali/en/tours/fast-boat-transfer-bali) **from $15** include hotel pickup, and we book you onto the sailing that matches your actual landing time rather than the one that looked good a month ago.",
+          "The Gili Islands are a different order of problem, and the boat is not the culprit — the drive is. Padangbai sits **55-60 km** east of the airport, **1h10 to 2h30** away depending on the hour, and the last dependable departure to Gili Trawangan is early afternoon, around **13:00-13:30**. With a **60-minute** check-in and **90 minutes** in the terminal, your flight would need to land by roughly **07:30** to make it without sprinting. Sanur's direct Gili boats all leave between **08:45 and 09:30**, so they do not rescue the day either. If you land after breakfast, the honest plan is a night in south Bali and a morning boat — our [Gili fast boat guide](/bali/en/journal/gili-islands-fast-boat-guide) has the harbour-by-harbour version."
+        ]
+      },
+      {
+        "heading": "Getting from the arrivals hall to the jetty",
+        "paragraphs": [
+          "The ninety minutes between landing and the kerb is the part almost everyone leaves out of the plan. Prepay three things and it collapses: the **e-VOA** (a biometric autogate takes 60-90 seconds), the **Bali tourist levy of IDR 150,000** per foreign visitor through the Love Bali portal, and the customs **e-CD** declaration. All three are QR codes on your phone, and travellers who arrive holding them regularly clear in **under 30 minutes**. Arrive without them and the immigration queue alone runs **45-75 minutes off-peak and 75-120 minutes at peak**, with the worst arrival waves between 10:00-14:00 and 22:00-02:00.",
+          "Three real options for the ride. Grab and Gojek both work at the airport but **cannot collect you at the arrivals kerb** — you book in the app and walk to a signposted lounge in the car park structure, several minutes away with luggage, and **GrabBike is not available for airport pickup at all**. App fares checked in-app on a May 2026 morning ran **IDR 148,000 Grab / 180,000 Gojek to Sanur** and **IDR 106,500 / 119,500 to Kuta**, before an airport exit surcharge of roughly **IDR 10,000-12,000** and the **IDR 14,000** Mandara toll on the Sanur run. The official taxi counter inside the arrivals hall sells fixed zone fares paid before you board — roughly **IDR 150,000-200,000 for Kuta or Seminyak and IDR 250,000-400,000 for Sanur, Canggu, Nusa Dua or Uluwatu**, checked August 2026 — but published figures for that counter disagree by a factor of two or three across sources, so treat ours as orientation: **the board at the counter is the only binding price.**",
+          "Here is where we talk ourselves out of a sale. If you are one person with a carry-on heading to Kuta or Seminyak in daylight, **open both apps, compare, and walk to the lounge** — it will beat anything we or the counter can offer, and our [Grab and driver cost breakdown](/bali/en/journal/bali-grab-taxi-driver-cost) shows the arithmetic. A [private airport pickup](/bali/en/tours/bali-airport-transfer) **from $15** earns its money in the other cases: a family with checked bags, a 02:00 landing when app drivers thin out and fares can double or triple, and precisely this one — a boat to catch, where a driver who tracks the flight and is standing at the name board whenever you actually walk out is the difference between making the 15:30 and buying the ticket twice. The same holds for the Padangbai run, where the drive is **1h10 to 2h30** and no shared shuttle will wait for a late flight."
+        ]
+      },
+      {
+        "heading": "What the boat actually costs, in rupiah",
+        "paragraphs": [
+          "Sanur to Nusa Penida, one way, published **August 2026: IDR 106,000-170,000** buying direct from the operator counters, against **IDR 150,000-250,000** through most online agents. The cheap end is the smaller, slower boats — Starfish, The Angkal and Axe Stone at around **IDR 117,000-120,000** — and Semaya One at **IDR 170,000** is the premium end. When an aggregator quotes you \"about USD 14\", note what that means at August 2026's rate of roughly **IDR 17,800 to the dollar**: about **IDR 249,000**, i.e. double the counter price, and that difference is the agent's margin rather than the fare. Most travel pages online still convert at 15,000-16,000, which is exactly why their dollar figures are wrong — and why every number on this page leads with rupiah.",
+          "For the Gilis the figure to hold onto is the bundle price. A Padangbai ticket **including the shuttle from Denpasar, Kuta, Seminyak, Sanur or Ubud should not exceed about IDR 350,000 one way**, and some operators sell the same journey at **IDR 790,000**. Sanur's direct morning boats to Gili Trawangan run **IDR 345,000 (Starfish), IDR 420,000 (Semaya One) and IDR 460,000 (Scoot)** for a **3h to 3h45** crossing, checked August 2026. Padangbai has the shortest sea leg at **1h30-2h** and the longest drive; Serangan is the closest harbour to the airport, with one **09:00** sailing of about **2h30**. Amed, still listed as a departure point on plenty of pages, is **closed for construction** — operators now sell it as a car transfer to Padangbai plus the boat. Our [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) **from $70** puts the boat, the transfer and the island night on one WhatsApp thread.",
+          "Two smaller numbers catch people at the jetty. The Nusa islands charge a **tourism retribution of IDR 25,000 per adult and IDR 15,000 per child**, collected on arrival at Banjar Nyuh, Sampalan and Buyuk; carry it in cash, but ask your operator when you book — there are reports of a move to prepaid online payment during 2026 that we have not been able to confirm from an official source. And fast boats work to a **15 kg standard / 25 kg premium** luggage allowance per person, with excess charged and subject to available space. That is worth confirming with the operator when you book rather than discovering it at the gangway with a 23 kg suitcase you have just carried off a long-haul flight."
+        ]
+      },
+      {
+        "heading": "When the flight slips: what it costs and what to do first",
+        "paragraphs": [
+          "An arrival-day boat ticket is, in practice, non-refundable. Standard operator terms are **free cancellation 7 or more days out, a 50% fee 2-7 days out, and 100% inside 2 days** — and operators state plainly that they are **not liable for delayed or missed flights**, late pickups or sea conditions. Booking agents pass that disclaimer straight through to the operator. So the true cost of a tight connection is not the ticket price, it is the ticket plus the unplanned Bali hotel night you were trying to avoid in the first place.",
+          "The mitigation is timing, not argument. Some resellers allow **free rescheduling up to 24 hours before departure** and charge inside that window, which means the moment to move the booking is when your airline first shows the delay — while you are still at the departure gate, not after you land in Denpasar. Weather is treated differently: if the operator cancels for sea conditions you get a refund or a free move to the next available sailing. Everything below assumes you find out early enough to act."
+        ],
+        "bullets": [
+          "**Message the operator before you board**, the moment a delay appears on the board — a reschedule is free at 24 hours out and charged inside it",
+          "**Switch islands rather than days** if you are losing the Penida boat: the **17:00 and 17:15** Lembongan sailings plus a **10-15 minute** shuttle in the morning save the day for the price of one hotel change",
+          "**Do not book a shared shuttle** on arrival day — it runs to a fixed pickup window and calls at several hotels, and it will not wait for you",
+          "**Treat the ticket as gone** and re-buy in the morning rather than negotiating at the counter; Sanur runs **20-22 daily sailings** to Penida, so a seat tomorrow is not a scarce resource",
+          "**Book the Sanur hotel while you are still in the air** if you will land after 14:00 — you have already made the decision, you just have not admitted it yet"
+        ]
+      },
+      {
+        "heading": "The Sanur night, and the trip that actually works",
+        "paragraphs": [
+          "For most arrivals the right answer is unglamorous: land, drive **20-30 minutes** to Sanur (**45-60 or more** if you hit the evening peak), sleep a few hundred metres from the jetty, and take the **07:00-07:30** Penida boat or the **08:30** Lembongan one with the entire day in front of you. Sanur Port has been a proper terminal with jetty boarding since 2022 — no wading out to a beach-launched boat with your bags overhead — and there are **20-22 daily sailings to Penida** and around **17 to Lembongan**, so the morning is never the bottleneck. Our [Sanur to Nusa Penida fast boat guide](/bali/en/journal/sanur-to-nusa-penida-fast-boat) has the timetable in detail, and the [airport transfer cost breakdown](/bali/en/journal/bali-airport-transfer-cost) covers the drive by destination.",
+          "The other thing a Sanur night buys is a real day on the island instead of a half one. A [Nusa Penida private day tour](/bali/en/tours/nusa-penida-full-day-tour) **from $75** works because you are on the 07:30 boat and standing at Kelingking before the day-trip crowd arrives; the same tour started from a 15:30 crossing is a rushed viewpoint and a dark drive back to the harbour. Everything we run books over WhatsApp with no prepayment, which is worth saying plainly on a page about missed connections: if your flight slips, you are rearranging a conversation rather than chasing a refund."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get from Bali airport to Nusa Penida?",
+        "answer": "Two legs. From Ngurah Rai you drive about 15 km to Sanur Port — 20-30 minutes in light traffic, 45-60 or more at the evening peak, so budget a full hour door to gate. Then a fast boat crosses in 30-50 minutes depending on the operator and the swell; the cheaper small boats are the slow ones. Check-in closes 60 minutes before departure, and that hour is real, not padding."
+      },
+      {
+        "question": "Can I go to Nusa Penida on my arrival day?",
+        "answer": "Only if you are on the ground before roughly midday. The last widely bookable Sanur boat leaves 15:15-15:30, check-in closes at 14:15, the drive takes 30-60 minutes and clearing the airport takes about 90 minutes on a normal day. That means landing at 11:45-12:15 to be comfortable, or near 13:00 at the absolute edge with an e-VOA and no checked bag. Land after 14:00 and you should sleep in Sanur and take a morning boat."
+      },
+      {
+        "question": "Can I reach the Gili Islands from Bali airport the same day?",
+        "answer": "Realistically, no. The last dependable Padangbai departure to Gili Trawangan is early afternoon, around 13:00-13:30, and Padangbai is a 1h10 to 2h30 drive from the airport. Add a 60-minute check-in and about 90 minutes in the terminal and your flight would need to land by roughly 07:30. Sanur's direct Gili boats all leave between 08:45 and 09:30, so they do not help either. Overnight in Sanur, Padangbai or Candidasa and go in the morning."
+      },
+      {
+        "question": "How much does it cost to get from Denpasar airport to Nusa Penida?",
+        "answer": "Checked August 2026: the transfer to Sanur Port runs about IDR 120,000-200,000 by Grab or Gojek and IDR 180,000-300,000 for a prebooked car or the airport taxi counter, with the counter board being the only binding price. The boat is IDR 106,000-170,000 one way direct from the operator, or IDR 150,000-250,000 through an agent. Add IDR 25,000 island retribution per adult. Our fast boat tickets with hotel pickup start from $15."
+      },
+      {
+        "question": "What time is the last boat from Sanur to Nusa Penida?",
+        "answer": "Bookable inventory ends at 15:15-15:30, and that is the time to plan against. Some pages advertise sailings at 16:00, 16:30 or 17:00; we cannot find those in any bookable timetable, and where they do run they are single-operator and the first to sell out — not something to bet a flight connection on. Nusa Lembongan is the later island: its last two sailings go at 17:00 and 17:15."
+      },
+      {
+        "question": "Is Nusa Lembongan easier than Nusa Penida on arrival day?",
+        "answer": "Yes, by roughly ninety minutes. Lembongan boats run from 08:30 to 17:15, against Penida's mid-afternoon cut-off. Watch the gap in the middle of the day, though — nothing departs between 14:30 and 17:00, so missing the 14:30 means waiting for the evening pair. Lembongan connects to Penida by a 10-15 minute local shuttle, which makes landing late, sleeping on Lembongan and crossing in the morning a legitimate way to save a day."
+      }
+    ]
+  },
+  {
+    "slug": "bali-airport-transfer-cost",
+    "badge": "Travel guide",
+    "navLabel": "Transfer cost",
+    "cardTourLabel": "Airport and transfers",
+    "heroTourSlug": "bali-airport-transfer",
+    "relatedTourSlugs": [
+      "bali-airport-transfer",
+      "private-car-with-driver-bali",
+      "fast-boat-transfer-bali"
+    ],
+    "inlineStats": [
+      "7 destinations priced",
+      "IDR 106,500-500,000",
+      "Transfers from $15"
+    ],
+    "title": "Bali Airport Transfer Cost 2026: IDR 106,000–500,000 per Car",
+    "description": "Every way out of Bali airport priced in rupiah — Grab, the fixed-fare counter, Blue Bird and pre-booked cars — checked August 2026, plus drive times.",
+    "excerpt": "A car from Bali's airport to Kuta costs about IDR 106,500 in Grab, roughly IDR 150,000-200,000 at the official taxi counter, and IDR 150,000-250,000 pre-booked with a name-board driver. To Ubud, the far end of the scale, the same three sit near IDR 338,500, IDR 350,000-500,000 and IDR 350,000-450,000 — all per car, all one way, all checked August 2026. Plan in rupiah, because the dollar figures printed on most transfer pages were converted at IDR 15,000-16,000 while the rupiah actually sat near 17,800 in August 2026, so their prices read 10-18% high. This guide prices every way out of the terminal: the app lounges in the car park, the metered Blue Bird one floor up at Departures, the fixed-fare counter in arrivals, and a pre-booked private car. It also says plainly which one wins for a solo traveller with a backpack, and which for a family with three suitcases at midnight.",
+    "rankings": [
+      {
+        "name": "Grab or Gojek from the app lounge",
+        "imageSrc": "/images/places/ride-hailing-app.jpg",
+        "area": "Car park, both terminals",
+        "bestFor": "Solo travellers with hand luggage",
+        "summary": "The cheapest way out for one person going somewhere close. Fares checked in-app on a May 2026 morning: **IDR 106,500** to Kuta, **185,000** to Canggu, **338,500** to Ubud. There is no kerbside pickup — you book in the app, then walk several minutes to a signposted air-conditioned lounge in the car park where staff match you to a bay."
+      },
+      {
+        "name": "Blue Bird from the Departures level",
+        "imageSrc": "/images/places/bluebird-taxi.jpg",
+        "area": "One floor up from arrivals",
+        "bestFor": "A genuine meter, light bags",
+        "summary": "Blue Bird cannot collect at arrivals — the local cooperatives hold that ground — so the standard workaround is the escalator up to Departures and a cab that has just dropped off. Tariff runs about **IDR 7,000** flagfall plus roughly **6,500 per km**, minimum **30,000**. Confirm the meter is switched on before the car moves."
+      },
+      {
+        "name": "The official fixed-fare taxi counter",
+        "imageSrc": "/images/places/bali-airport-arrivals.jpg",
+        "area": "Arrivals hall, before the doors",
+        "bestFor": "3am landings and dead phones",
+        "summary": "A fixed zone fare paid at the desk before you board — no meter, no haggling, per car, open 24 hours. Published figures disagree by a factor of two or three, so plan on roughly **IDR 150,000-200,000** for Kuta or Seminyak and **350,000-500,000** for Ubud, and treat the board at the counter as the only binding price."
+      },
+      {
+        "name": "A pre-booked private transfer",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Name board at the meeting point",
+        "bestFor": "Families, luggage, a fixed budget",
+        "summary": "The only price you know before the plane lands. The market band for a standard car runs **IDR 150,000-250,000** to Kuta and **350,000-450,000** to Ubud with tolls and airport parking included; ours starts **from $15** and the driver waits however late you land. A van for six or more sits nearer **IDR 600,000-900,000**."
+      },
+      {
+        "name": "A car and driver for the whole day",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Airport pickup, then anywhere",
+        "bestFor": "Morning landings with a plan",
+        "summary": "If you land at nine and the villa will not take you until two, a transfer is the wrong product. A car and driver runs **from $59 per car** for the day, fuel, parking and waiting included, which turns the airport run into the first stop of an itinerary rather than a separate fare you pay and forget."
+      },
+      {
+        "name": "What is not on the menu: bikes and Uber",
+        "imageSrc": "/images/places/passport-control.jpg",
+        "area": "Everywhere in the terminal",
+        "bestFor": "Backpackers planning a cheap hop",
+        "summary": "GrabBike and GoRide do not pick up from the airport at all — Grab states this on its own airport page — so a solo traveller counting on a scooter ride out is getting a car whether they budgeted for one or not. Uber has not operated here since 2018, when it sold the region to Grab. Cars only, from the lounge."
+      },
+      {
+        "name": "The \"transport, taxi?\" men outside",
+        "imageSrc": "/images/places/money-exchange.jpg",
+        "area": "The moment you clear the doors",
+        "bestFor": "Nobody, honestly",
+        "summary": "They start on you the second the doors open and quote inflated flat fares that have nothing to do with the counter you just walked past. They are not the official counter and they have no fare board. Price the trip in Grab before you exit the building — that number is your anchor, and it is the whole of your leverage."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What a ride out of Bali airport actually costs",
+        "paragraphs": [
+          "A car from the airport to Kuta costs **IDR 106,500** in Grab, roughly **IDR 150,000-200,000** at the official taxi counter, and **IDR 150,000-250,000** pre-booked with a name-board driver. To Ubud, the far end of the scale, the same three run about **IDR 338,500**, **IDR 350,000-500,000** and **IDR 350,000-450,000**. Every figure below is per car, one way, and was compiled in August 2026; the app fares come from an in-app check on a single May 2026 morning, which is the only price data in this whole niche carrying a timestamp anyone can verify.",
+          "Read the columns against each other rather than reaching for the lowest. The app quote is the cheapest headline and the least binding — airport rides are priced above the equivalent city ride, tolls are extra on the Sanur and Nusa Dua runs, and the number moves with demand. The counter fare is fixed but sits above the app, commonly quoted at around 15% more. The pre-booked fare is the only one you know before you land: our [private airport pickup](/bali/en/tours/bali-airport-transfer) holds **from $15** — about **IDR 267,000** at the August 2026 rate of roughly IDR 17,800 to the dollar — booked on WhatsApp with no prepayment, whatever hour the plane arrives."
+        ],
+        "bullets": [
+          "**Kuta, Legian, Tuban** — Grab **IDR 106,500** / Gojek **119,500**; pre-booked private **150,000-250,000**; counter roughly **150,000-200,000**. Drive 15-30 min",
+          "**Seminyak** — Grab **136,000** / Gojek **115,000**, though one 2026 guide puts app fares as high as **280,000** in demand; pre-booked **150,000-300,000**; counter roughly **150,000-200,000**. Drive 20-30 min off-peak",
+          "**Canggu** — Grab **185,000** / Gojek **218,000**; pre-booked **250,000-350,000**; counter **250,000-350,000**. Drive 40-60 min, and the last 3 km into Berawa or Pererenan can take as long as the first 15",
+          "**Sanur** — Grab **148,000** / Gojek **180,000**; pre-booked **300,000**; counter **250,000-400,000**. Drive 20-30 min midday, plus about **IDR 14,000** if the driver takes the toll",
+          "**Nusa Dua** — Grab **128,000** / Gojek **148,500**; pre-booked around **300,000**; counter **250,000-400,000**. Drive 15-30 min and barely worse at rush hour, because it runs almost entirely on the toll road",
+          "**Uluwatu and the Bukit** — Grab **206,000** / Gojek **232,500**; pre-booked **300,000-400,000**; counter **250,000-400,000**. Drive about 45 min in light traffic",
+          "**Ubud** — Grab **338,500** / Gojek **378,000**; pre-booked **350,000-450,000**; counter **350,000-500,000**. Drive 60-90 min in normal traffic, longer in the evening",
+          "**A six-plus van**, where a standard car will not swallow the luggage, runs roughly **IDR 600,000-900,000** pre-booked depending on destination"
+        ]
+      },
+      {
+        "heading": "Why the dollar prices on other transfer pages are wrong",
+        "paragraphs": [
+          "The rupiah sat near **IDR 17,800 to the US dollar** through August 2026 — the mid-market rate ran roughly 17,762 to 18,087 over the preceding month. Most transfer pages you will find were written when the rate was 15,000-16,000 and have never been re-converted, so their dollar column overstates what you will actually hand over by roughly **10-18%**. An IDR 350,000 transfer is about **USD 20** today; the article quoting the identical rupiah figure calls it $23-25 and has done for two years.",
+          "That is why we lead with rupiah and stamp a date on it. Even the rupiah figures deserve a health warning, because this corner of the internet recycles itself: one 2026-dated page quotes a flat IDR 70,000-150,000 band for Kuta, Uluwatu and Ubud alike, which cannot be true for all three; another states Canggu is 300,000 and then 350,000-500,000 two lines apart. Ranges and mechanisms survive; single authoritative prices do not. Our [Grab, taxi and private driver cost guide](/bali/en/journal/bali-grab-taxi-driver-cost) applies the same arithmetic to getting around once you have left the airport."
+        ]
+      },
+      {
+        "heading": "Where each option is, and what gets added to the quote",
+        "paragraphs": [
+          "The walk out of arrivals goes past Starbucks and Customer Service, past the transfer meeting points, then past the rank of drivers holding name boards — and only after that, turning right, do you reach the ride-hailing area. Knowing the order matters, because the touts start the moment you clear the doors and the thing you actually want is usually still ahead of you.",
+          "Then there are the extras that separate a quote from a total. An airport exit surcharge of roughly **IDR 10,000-12,000** on app fares is reported by 2026 guides, though we have not been able to confirm it against an operator document — treat it as likely rather than certain. The Bali Mandara toll is real and traceable: the operator set Category I at **IDR 14,000** in April 2024 and it is still current, even though several 2026 pages reprint the older 13,000. A pre-booked private fare absorbs tolls, airport parking and waiting time; an app quote does not, which is how a 128,000 Grab to Nusa Dua and a 300,000 private car end up closer than they first look — and identical if the app surges."
+        ],
+        "bullets": [
+          "**The official taxi counter** — inside the arrivals hall before you exit the building, commonly described as on the left as you walk out",
+          "**Name-board drivers** — the arrival corridor, near the Flight Information Counter and the blue direction pole; the car itself collects from a designated pick-up zone, not the door",
+          "**Grab and Gojek lounges** — air-conditioned rooms in the car park structures serving both terminals, past the money changers and retail. No source publishes the distance, so call it a several-minute walk with bags rather than a number",
+          "**Blue Bird** — not at arrivals at all. One floor up at Departures, catching a cab that has just dropped off"
+        ]
+      },
+      {
+        "heading": "How long the drive takes, and what makes it worse",
+        "paragraphs": [
+          "Every drive time from this airport is a range, and the spread is traffic rather than distance. Nusa Dua is the one honest exception at **15-30 minutes** in any hour, because the toll road bypasses the surface congestion entirely. Kuta runs **15-30 minutes**, Seminyak **20-30** off-peak but **45-75** at peak, Sanur **20-30** midday and **35-50** at peak, Uluwatu about **45 minutes** on a clean run and up to **90** on a late-afternoon landing, Canggu **40-60** normally and **75-90 or more** at peak, and Ubud **60-90 minutes** in normal traffic stretching to **1.5-2.5 hours** in the evening. Any service advertising a 60-minute airport-to-Ubud run is quoting the 3am best case.",
+          "Two windows do the damage: **07:00-09:00** and **16:00-19:00**, with the evening one far worse for arrivals because three flows compound — the commuter exodus out of Denpasar that wrecks the Ubud run, the sunset rush up onto the Bukit, and ordinary Sunset Road and Kerobokan congestion feeding Seminyak and Canggu. Land between 15:00 and 19:00 and budget the top of every range above; land after 21:00 or before 07:00 and you can budget the bottom. Then there is the thing no routing app predicts: a temple anniversary, a cremation or a Melasti procession can close a coastal road for an hour with no warning, and on **Nyepi, Thursday 19 March 2026**, the airport and the toll road shut for 24 hours and no transfer exists at any price.",
+          "Route-specific detail lives in our guides to [the airport-to-Ubud run](/bali/en/journal/airport-to-ubud-transfer) and [the airport-to-Canggu run](/bali/en/journal/bali-airport-to-canggu-transfer). One pairing deserves a flag here: Sanur is the harbour for the Nusa Penida and Lembongan boats, so a late landing followed by an early boat is the one combination worth locking down on both halves — our [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) start from $15 and the pickup time is set against the sailing, not against a guess."
+        ]
+      },
+      {
+        "heading": "Solo with a backpack, or a family with three suitcases",
+        "paragraphs": [
+          "If you are one person with a cabin bag heading to Kuta, Seminyak or Nusa Dua in daylight, book Grab or Gojek from the lounge and do not book us. At **IDR 106,500** to Kuta against a pre-booked **150,000-250,000**, the gap is real money and the walk to the car park is a mild inconvenience, not a hardship. Price both apps before you commit — they leapfrog each other by destination, and in the May check Gojek beat Grab to Seminyak while losing badly to Canggu. If you travel light and want a meter rather than an algorithm, the Departures-level Blue Bird is the cheapest legitimate metered ride out of the terminal.",
+          "The maths inverts with people and bags. Four adults and four suitcases do not fit a standard app car, an XL costs roughly 70-80% more where you can get one, and there is no dispatcher helping you if the first two drivers cancel. Add a Canggu or Ubud destination at 17:00, or an arrival after midnight, or a first trip to Bali with nobody on the other end, and a fixed price with a driver holding your name at the meeting point stops being a luxury. That is what our [private airport pickup](/bali/en/tours/bali-airport-transfer) from $15 is for, and the price does not move because your flight did.",
+          "One more case worth naming: if you land in the morning with a plan for the day, buy the day rather than the ride. A [car and driver](/bali/en/tours/private-car-with-driver-bali) runs **from $59 per car** for the whole day — the going market rate for a standard car is **IDR 600,000-900,000**, which four people split into IDR 175,000 each — with fuel, parking and waiting at every stop included. What a full day actually covers, and where the overtime clock starts, is set out in our [private driver cost guide](/bali/en/journal/bali-private-driver-cost)."
+        ]
+      },
+      {
+        "heading": "Landing after midnight",
+        "paragraphs": [
+          "The airport runs 24 hours and so does the ground transport, but the reliability order inverts after dark. The official counter is the most dependable walk-up option at 03:00: you state the destination, pay the fixed fare, and someone walks you to the car. The apps degrade — driver numbers online drop sharply after midnight, acceptance can take repeated refreshes, and the wait is unpredictable. A pre-booked driver is simply there, tracking the flight, however late it lands.",
+          "Whether prices rise at night has three different answers, all correct, because they describe three different products. **Apps surge**, and when several flights land together between 22:00 and 02:00 the reported multiplier is double or triple — this is the best-established of the three. The **counter** is commonly reported to add a night surcharge of about **IDR 50,000** between 18:00 and 06:00, but we could not confirm it independently, so ask at the desk rather than assuming. A **pre-booked fixed rate** does not move at all. The useful takeaway does not depend on resolving any of that: a pre-booked transfer is the only option whose price you know before you land, and the apps are the only option that can triple. The consolation is that the roads are empty — a 03:00 Ubud run genuinely can approach the 60 minutes that daytime arrivals never see."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How much is a taxi from Bali airport?",
+        "answer": "At the official fixed-fare counter in arrivals, plan on roughly IDR 150,000-200,000 for Kuta or Seminyak, IDR 250,000-400,000 for Canggu, Sanur, Nusa Dua or Uluwatu, and IDR 350,000-500,000 for Ubud, per car, checked August 2026. Published figures for this counter disagree by a factor of two or three between sources, so treat the fare board at the desk as the only binding price. You pay before you board and a driver walks you to the car."
+      },
+      {
+        "question": "How much is Grab from Bali airport?",
+        "answer": "Fares checked in-app on a May 2026 morning, per car, one way: Kuta IDR 106,500, Nusa Dua 128,000, Seminyak 136,000, Sanur 148,000, Canggu 185,000, Uluwatu 206,000, Ubud 338,500. Gojek quoted 115,000-378,000 across the same destinations, beating Grab to Seminyak and losing to Canggu, so check both. Airport rides also carry a surcharge reported at around IDR 10,000-12,000, and toll is extra on the Sanur and Nusa Dua runs."
+      },
+      {
+        "question": "How much does a Bali airport transfer cost in 2026?",
+        "answer": "For a standard car the whole market sits between roughly IDR 106,500 and IDR 500,000 per car depending on destination and how you book, checked August 2026. Apps are cheapest, the counter sits above them, and a pre-booked private car runs IDR 150,000-250,000 to Kuta up to IDR 350,000-450,000 to Ubud with tolls and parking included. Our own pickup starts from $15 with no prepayment. A six-plus van runs nearer IDR 600,000-900,000."
+      },
+      {
+        "question": "Is Grab cheaper than a private transfer from Bali airport?",
+        "answer": "For a solo traveller with hand luggage going to Kuta, Seminyak or Nusa Dua in daylight, yes, and by enough to matter — book the app and skip us. The gap closes once you add the airport surcharge, the toll on toll routes and any surge, and it disappears entirely for a family with suitcases, a late-night landing or a peak-hour run to Canggu or Ubud, where an XL car costs 70-80% more and cancellations leave you with no fallback."
+      },
+      {
+        "question": "Can you use Grab or Gojek at Bali airport?",
+        "answer": "Yes, for cars, but not at the kerb. Both apps run signposted, air-conditioned lounges in the car park structures serving the international and domestic terminals; you book in the app, walk over — past the money changers and the retail area, a several-minute walk with bags — and staff match you to a driver at an assigned bay. GrabBike and GoRide do not pick up from the airport at all, so a scooter ride out is not an option."
+      },
+      {
+        "question": "Do Bali airport transfer prices go up at night?",
+        "answer": "It depends on which product you booked. Ride-hailing apps surge, and when several flights land together between 22:00 and 02:00 the reported multiplier is double or triple. The official counter is commonly reported to add about IDR 50,000 between 18:00 and 06:00, though that figure is not independently confirmed — ask at the desk. A pre-booked private fare does not change at all. The upside of a night landing is empty roads and drive times at the bottom of every range."
+      }
+    ]
+  },
+  {
+    "slug": "gili-islands-from-ubud",
+    "badge": "Travel guide",
+    "navLabel": "Gili from Ubud",
+    "cardTourLabel": "Island getaways",
+    "heroTourSlug": "fast-boat-transfer-bali",
+    "relatedTourSlugs": [
+      "fast-boat-transfer-bali",
+      "gili-islands-getaway",
+      "private-car-with-driver-bali"
+    ],
+    "inlineStats": [
+      "4-5 hours door to door",
+      "Boat IDR 400,000-550,000",
+      "1h30 crossing from Padang Bai"
+    ],
+    "title": "Gili Islands from Ubud: Padang Bai, 4-5 Hours Door to Door",
+    "description": "Ubud is inland: the Gili boats leave from Padang Bai, 1h15-2h east. Drive times, IDR fares checked August 2026, pickup zones and why a day trip fails.",
+    "excerpt": "There is no boat to the Gilis from Ubud — Ubud is inland, and every crossing starts at a coastal harbour. From Ubud that harbour is Padang Bai, about 38 km east: a 1h15–2h drive, then a fast boat of roughly 1h30 to Gili Trawangan and Gili Air. Door to door, plan 4–5 hours, with a hotel pickup at 06:30–07:00 for the 08:00–09:00 departure wave. Fast boat fares sat at IDR 400,000–550,000 one way when we checked in August 2026, and hotel pickup is included only from a small central Ubud zone that most villas fall outside of. A day trip is technically possible and we do not recommend it: fourteen hours out for four or five on the island. This guide covers each harbour, the real drive times, the surcharges, and the return schedule that decides everything.",
+    "rankings": [
+      {
+        "name": "Padang Bai, the harbour Ubud uses",
+        "imageSrc": "/images/places/blue-lagoon-padang-bai.jpg",
+        "area": "38 km east of Ubud",
+        "bestFor": "Short drive and short crossing",
+        "summary": "The only harbour that makes sense from Ubud. Direct services reach Gili Trawangan in about **1h30**, and the drive east is the shortest of any Bali base. Departures cluster in an **08:00–09:00** wave with an early-afternoon one behind it — Eka Jaya at 09:00, 10:30 and 13:30, Wahana Gili Ocean at 09:00 and 14:00."
+      },
+      {
+        "name": "The drive from Ubud to the coast",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Ida Bagus Mantra bypass",
+        "bestFor": "Working out when to leave",
+        "summary": "Operators print one hour. Plan **1h15–2h**, and use **2h** if you have a named boat to catch. The climb out of Ubud and the coastal bypass both clog in the **07:00–09:30** morning wave, which is exactly when the boats sail. Roadworks, rain and ceremony closures push it further with no warning."
+      },
+      {
+        "name": "The shuttle included in the ticket",
+        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "area": "Central Ubud only",
+        "bestFor": "Couples and solo travellers in the centre",
+        "summary": "Most Padang Bai operators include a shuttle from Ubud Central, and if you are inside that zone it is comfortably the cheapest way to reach the harbour. It is a collection loop around other guests' hotels, so budget **1h30–2h30** rather than the raw drive time."
+      },
+      {
+        "name": "The out-of-zone surcharge",
+        "imageSrc": "/images/places/tegalalang-rice-terraces.jpg",
+        "area": "Penestanan, Sayan, Payangan, Tegalalang",
+        "bestFor": "Villas outside the core",
+        "summary": "Ubud sprawls and the free zone is small. Published August 2026: Eka Jaya **IDR 385,000 per minivan** (4–6 seats) from Ubud, Tegalalang or Pejeng; Gili Getaway **IDR 275,000 per private car**; generic agent guidance **IDR 150,000 per person** or **IDR 250,000–400,000 per car**. Cash to the driver on the day."
+      },
+      {
+        "name": "The Cocomart meeting point",
+        "imageSrc": "/images/remote/1280px-sanur-port-sf0001-b8fad127.jpg",
+        "area": "Jl. Raya Pengosekan",
+        "bestFor": "Avoiding the surcharge",
+        "summary": "The published workaround for out-of-zone guests: get yourself to the Cocomart supermarket on Jl. Raya Pengosekan and join the shuttle there. A short taxi across town is usually cheaper than the surcharge. It only works if you can stand there with luggage at **06:30**, which not every villa lane allows."
+      },
+      {
+        "name": "Serangan and Sanur, the southern harbours",
+        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "area": "South Bali",
+        "bestFor": "Guests already staying in the south",
+        "summary": "Both work; neither suits Ubud. Serangan crossings run **2h15–2h30**, or **2.5–3.5h** when the boat calls at Lembongan, Penida or Gili Gede. Sanur is **2h45–3h** out and notably longer back, **3h15–4h15**. From Ubud you would drive away from the short boat to sit longer on the water."
+      },
+      {
+        "name": "Amed is closed",
+        "imageSrc": "/images/tours-real/gili-islands-getaway.jpg",
+        "area": "East Bali",
+        "bestFor": "Nobody, for now",
+        "summary": "Historically the shortest crossing from north and east Bali, Amed has been closed since a regulation required a proper jetty for embarkation, and no reopening date has been announced. Travellers from Amed and Tulamben are routed to Padang Bai instead, roughly **45 minutes** away by road."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The short answer: Padang Bai, and leave at dawn",
+        "paragraphs": [
+          "There is no boat to the Gili Islands from Ubud, and there never will be — Ubud sits inland in the hills and every fast boat to the Gilis leaves from a harbour on the coast. From Ubud the right harbour is **Padang Bai**, about **38 km east**. The drive is **1h15–2h**, the direct crossing to Gili Trawangan and Gili Air is about **1h30**, and door to door you should plan **4–5 hours**. In practice that means a hotel pickup at **06:30–07:00** to make the **08:00–09:00** departure wave. The pickup time is the number to plan your morning around, not the sailing time.",
+          "Padang Bai is also why Ubud has the easiest Gili journey of any Bali base: short drive, short boat. Every other base has to give up one or the other. We sell [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) from $15 and a [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) from $70, booked on WhatsApp with no prepayment. Those two are our own fixed USD prices — unlike the rupiah figures further down, which move."
+        ]
+      },
+      {
+        "heading": "The drive east, and why the published times are wrong",
+        "paragraphs": [
+          "Every operator page on this route publishes the free-flow drive time, and those figures run **40–60% short of reality**. \"Only a one-hour drive to Padang Bai\" is a real sentence on real booking sites; one route planner will quote you 32 minutes. Neither survives a 07:00 departure. The pinch points are the climb out of Ubud and Jl. Prof. Dr. Ida Bagus Mantra, the coastal bypass — both fill during the **07:00–09:30** morning wave, which is precisely when the boats leave. Roadworks on the bypass, rain, and temple ceremonies that close local roads without notice all add to it.",
+          "So: **1h15–2h** is the planning range and **2h** is what you use when a specific boat is booked. A shared shuttle is slower again, **1h30–2h30**, because the van collects other guests around Ubud before it turns east. If you want the car to yourself, a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car covers the run comfortably — though for a plain harbour transfer that is more car than most people need, and we would rather say so. Our [airport to Ubud transfer guide](/bali/en/journal/airport-to-ubud-transfer) covers the same roads in the other direction."
+        ]
+      },
+      {
+        "heading": "What it costs: boat, transfer, harbour fee",
+        "paragraphs": [
+          "Fast boat fares from Bali to the Gilis ran **IDR 330,000–790,000 one way** when we checked in **August 2026**, with most tickets landing between **IDR 400,000 and IDR 550,000** and returns around **IDR 950,000**. Named Padang Bai figures from that same check: **IDR 400,600** on one listing, **IDR 450,000** on several, **IDR 685,000** for Eka Jaya, **IDR 790,000** for Gili Gili Fast Boat. Price moves with operator, season, booking lead time and channel, so treat any single figure as a starting point.",
+          "We quote rupiah deliberately. The rupiah sat near **IDR 17,800 to the dollar** in August 2026, which puts that band at roughly **USD 22–31** — but most travel pages still convert at 15,000–16,000, so their dollar figures read about a fifth low. Budget the whole journey in these parts:"
+        ],
+        "bullets": [
+          "**Fast boat ticket, IDR 400,000–550,000** one way is the typical band, checked August 2026 — much the biggest line",
+          "**Out-of-zone Ubud pickup, IDR 275,000–385,000 per vehicle**, paid in cash to the driver on the day, only if your villa falls outside the free zone",
+          "**A harbour fee at Padang Bai**, cash, sometimes inside the ticket and sometimes collected on the spot — no operator publishes the amount, so carry small notes rather than a card",
+          "**Around IDR 35,000** for the beach shuttle at Gili Meno, where boats moor offshore, if that is your island"
+        ]
+      },
+      {
+        "heading": "Is pickup from your Ubud villa included?",
+        "paragraphs": [
+          "Most Padang Bai operators do include a shuttle, and the standard wording is a free transfer from popular tourist areas \"including Ubud Central\". Everything hinges on that last word. **Ubud Central is a genuinely small polygon**, and the agents admit it themselves: many Ubud hotels and resorts sit outside the core pickup zone, which makes it a fairly limited region. Ubud sprawls up ridges and down river valleys, and the places people actually book are often on the wrong side of the line:",
+          "Out of zone you have two published options: pay the surcharge — **IDR 385,000 per minivan** for Ubud, Tegalalang or Pejeng on Eka Jaya's August 2026 table, **IDR 275,000 per private car** on Gili Getaway's — or make your own way to the central collection point, which operators name as the Cocomart supermarket on Jl. Raya Pengosekan. Watch which harbour you are buying, though: Gili Getaway's cheaper Ubud fee ends at **Serangan** in the south, so you save on the transfer and hand it back several times over on the water.",
+          "One thing nobody can tell you cleanly is whether a given operator's Ubud shuttle is free or charged. Two agent pages carrying the same Eka Jaya tariff describe the same service in opposite terms — one calls it complimentary, the other says the free shuttle is suspended — while both print the identical IDR 385,000. Inclusion varies by operator and booking channel, so ask in writing before you pay. And if you are two people in central Ubud, the shuttle inside the ticket is the cheapest way to Padang Bai and you should simply use it; do not pay us for that leg. Our [Gili fast boat guide](/bali/en/journal/gili-islands-fast-boat-guide) compares the operators and harbours in more depth."
+        ],
+        "bullets": [
+          "**Penestanan and Sayan**, west across the Campuhan ridge",
+          "**Kedewatan and Payangan**, north up the Ayung valley",
+          "**Pengosekan and Nyuh Kuning**, immediately south of the centre",
+          "**Tegalalang**, north, and priced as its own zone by at least one operator"
+        ]
+      },
+      {
+        "heading": "Why a Gili day trip from Ubud does not work",
+        "paragraphs": [
+          "Ubud is the only Bali base where a Gili day trip is even arithmetically possible, and it is still not worth doing. The earliest Padang Bai departure is **08:00**, which means a pickup at **06:00–06:30** and arrival on Gili Trawangan around **09:30–10:00**. The last boat back to Padang Bai leaves Gili T at about **15:15**, with a few operators running to **15:30–16:00**; from Gili Air it is around **15:35**. That puts you back at Padang Bai at **16:45–17:30** and in Ubud somewhere between **18:30 and 20:00**, on the worst traffic of the day.",
+          "Add it up and it is **roughly fourteen hours out for four or five usable hours** on an island whose entire appeal is that nothing is urgent. You spend more of the day moving than sitting still, and you do the return crossing tired. Every source we read on this route reaches the same conclusion: go for one night. Our [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) from $70 exists because of exactly that arithmetic.",
+          "If what you actually want is an island day and you are based in Ubud, [Nusa Penida](/bali/en/tours/nusa-penida-full-day-tour) from $75 is the honest alternative — nearer harbour, shorter crossing, home for dinner. And from Canggu or Uluwatu the Gili day trip is not merely long but impossible: the Serangan boats turn around within the hour, which we set out in our [Gili from Canggu guide](/bali/en/journal/gili-islands-from-canggu)."
+        ]
+      },
+      {
+        "heading": "The days the boats do not sail",
+        "paragraphs": [
+          "**December to February** is peak cancellation season on the Bali–Gili crossing, and cancellations arrive in multi-day blocks rather than single sailings. In January 2026 the forecast ran **2.5–6.0 m** across the Bali–Lombok–Gili routes and **72 fast boats** had **80–90 trips** cancelled. This crossing sits in open water and is far more swell-sensitive than the Nusa Penida runs. If you travel in that window, build a buffer day into the itinerary, and never schedule a Gili return for the same day as an international flight out of Denpasar.",
+          "**Nyepi** shuts the whole chain down for 24 hours: ferries suspended, the airport closed, no vehicles on the road and therefore no hotel pickup either. The next one is **Monday 8 March 2027**, and the days either side compress around it. Ordinary temple ceremonies close local roads unannounced all year, which is the quiet reason Bali drive times are unpredictable rather than merely long. If the sea closes the route entirely, the flight and the public ferry are the fallbacks — our [Bali to Lombok transport guide](/bali/en/journal/bali-to-lombok-transport) covers both."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Gili Air from Ubud?",
+        "answer": "Car east to Padang Bai, then a fast boat. The drive is 38 km and takes 1h15–2h, and the crossing is about 1h30 to Gili Trawangan and Gili Air on a direct service. There is no boat from Ubud itself — it is inland. Plan 4–5 hours door to door and a pickup at 06:30–07:00 for the 08:00–09:00 departures."
+      },
+      {
+        "question": "What is the best way to get to Gili Air from Ubud?",
+        "answer": "A Padang Bai fast boat with the transfer arranged in advance. Padang Bai gives Ubud the shortest drive and the shortest crossing at once, which no other Bali base gets. If you are in central Ubud, the shuttle included in most operators' tickets is the cheapest way to the harbour and there is no reason to pay for a separate car."
+      },
+      {
+        "question": "How much is the ferry to Gili Trawangan from Ubud?",
+        "answer": "Fast boat fares ran IDR 330,000–790,000 one way when we checked in August 2026, most commonly IDR 400,000–550,000, with returns near IDR 950,000. Padang Bai listings that month included IDR 400,600, IDR 450,000, IDR 685,000 for Eka Jaya and IDR 790,000 for Gili Gili Fast Boat. Add a small cash harbour fee whose amount no operator publishes."
+      },
+      {
+        "question": "Is hotel pickup from Ubud included in a fast boat ticket?",
+        "answer": "Usually only from Ubud Central, which is a small zone. Penestanan, Sayan, Kedewatan, Payangan, Pengosekan, Nyuh Kuning and Tegalalang commonly fall outside it. Out of zone, expect IDR 275,000–385,000 per vehicle in cash on the day, or make your own way to the Cocomart collection point on Jl. Raya Pengosekan. Confirm inclusion in writing at booking — operators word it inconsistently."
+      },
+      {
+        "question": "Can I do a Gili Islands day trip from Ubud?",
+        "answer": "Technically yes, and we would talk you out of it. Pickup at 06:00–06:30 for the 08:00 boat gets you to Gili Trawangan by 09:30–10:00; the last return leaves around 15:15, putting you back in Ubud at 18:30–20:00. That is about fourteen hours for four or five on the island. One night makes far more sense, or take Nusa Penida as a day instead."
+      },
+      {
+        "question": "Should I go via Sanur or Serangan instead of Padang Bai?",
+        "answer": "Not from Ubud. Serangan crossings run 2h15–2h30, or 2.5–3.5h if the boat calls at Lembongan, Penida or Gili Gede, and Sanur is 2h45–3h out and 3h15–4h15 back. Those harbours suit guests already in South Bali. From Ubud you would drive away from the short boat to spend longer at sea. Amed, once the shortest crossing, is closed with no reopening date."
+      }
+    ]
+  },
+  {
+    "slug": "gili-islands-from-canggu",
+    "badge": "Travel guide",
+    "navLabel": "Gili from Canggu",
+    "cardTourLabel": "Island getaways",
+    "heroTourSlug": "fast-boat-transfer-bali",
+    "relatedTourSlugs": [
+      "fast-boat-transfer-bali",
+      "gili-islands-getaway",
+      "private-car-with-driver-bali"
+    ],
+    "inlineStats": [
+      "4h30-5h30 door to door",
+      "Boat IDR 330,000-790,000",
+      "Overnight from $70"
+    ],
+    "title": "Canggu to the Gili Islands: 4h30-5h30, Overnight Only",
+    "description": "Real door-to-door times from Canggu to Gili Trawangan and Gili Air, whether the free boat pickup reaches your villa, IDR fares checked August 2026.",
+    "excerpt": "Canggu is on the wrong side of Bali for the Gili boats. There is no direct connection: every Gili trip is a car to a harbour plus a fast boat, and from Canggu that means roughly 4h30-5h door-to-door via Serangan or 5h-5h30 via Padang Bai. The pickup question matters more here than anywhere else on the island, because Canggu sits exactly on the edge of the free transfer zone most operators publish, with Canggu Club or Canggu Station as the named cut-off. Berawa and Batu Bolong are usually inside it; Pererenan, Nyanyi, Cemagi and Seseh usually are not, and the surcharge runs from IDR 50,000 per person on a shared van to IDR 225,000 for a private car, checked August 2026. And the day trip does not work from here: the boats back to Serangan leave the islands around midday. This guide gives the honest times, the fares, and what to book instead.",
+    "rankings": [
+      {
+        "name": "Serangan harbour",
+        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "area": "South Bali, 30-90 min drive",
+        "bestFor": "Short drive, long crossing",
+        "summary": "Serangan is the harbour Canggu guests are normally routed to, and the drive is the easy part: **30-60 minutes free-flow, but plan 60-90** in the morning boat wave. The crossing is where the time goes — **2h15-2h30 on a direct service, 2.5-3.5h** if the boat calls at Lembongan, Penida or Gili Gede on the way. The port's own marketing puts Canggu twenty minutes away; ignore that figure entirely."
+      },
+      {
+        "name": "Padang Bai harbour",
+        "imageSrc": "/images/places/blue-lagoon-padang-bai.jpg",
+        "area": "East Bali, 1h10-2h30 drive",
+        "bestFor": "The shortest boat, if you leave at dawn",
+        "summary": "**1h10-1h15 free-flow and 2h-2h30 realistically**, because it means crossing the whole south of Bali and then running the Ida Bagus Mantra coastal bypass, which clogs from about 07:00. The reward is the shortest crossing on the route: **about 1h30** to Gili Trawangan on a direct boat. Departures cluster in an **08:00-09:00** wave, with early-afternoon sailings after."
+      },
+      {
+        "name": "Sanur harbour",
+        "imageSrc": "/images/remote/1280px-sanur-port-sf0001-b8fad127.jpg",
+        "area": "South Bali, similar drive to Serangan",
+        "bestFor": "Operator choice, not speed",
+        "summary": "The third working harbour, with a drive from Canggu broadly like Serangan's but a slower boat: **2h45-3h outbound**, and notably longer coming back at **3h15-4h15**. Take Sanur because the operator or the schedule you want sails from there, not because it saves anything. That long return leg is the part people forget when they plan the last day of a trip."
+      },
+      {
+        "name": "The free pickup line",
+        "imageSrc": "/images/remote/canggu-beach-3-a94bbee1.jpg",
+        "area": "Canggu Club, Canggu Station, Canggu Point",
+        "bestFor": "Berawa and Batu Bolong stays",
+        "summary": "This one fact decides your morning. Most operators publish a free hotel transfer zone whose edge is drawn at Canggu Club, Canggu Station or Canggu Point, and one agent says outright that Canggu sits on the edge of the free pickup area. **Berawa and Batu Bolong are usually inside it; Pererenan, Nyanyi, Cemagi, Seseh and Tumbak Bayuh usually are not.** Out-of-zone guests get a central Canggu meeting point instead of a villa door."
+      },
+      {
+        "name": "The out-of-zone surcharge",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Everything past Canggu Club",
+        "bestFor": "Pererenan, Cemagi and Seseh villas",
+        "summary": "Checked August 2026: Gili Getaway publishes **IDR 225,000 per private car, maximum four people**, or **IDR 50,000 per person on a shared vehicle** for Canggu beyond Canggu Club. Generic agent guidance runs **IDR 150,000 per person or IDR 250,000-400,000 per private car**, and one Padang Bai operator prices Canggu at **IDR 385,000 per minivan**. Paid in cash to the driver on the day, and it varies by operator, vehicle and season."
+      },
+      {
+        "name": "The return leg",
+        "imageSrc": "/images/tours-real/gili-island-tour.jpg",
+        "area": "Gili Trawangan and Gili Air back to Bali",
+        "bestFor": "The constraint that shapes the whole trip",
+        "summary": "Boats back to Serangan leave the islands around midday — **Gili T 12:15, Gili Air 12:30** on one published schedule, reaching Serangan somewhere in a **15:00-15:45** window that sources disagree about. Padang Bai-bound boats run later: last from **Gili T around 15:15**, some to 15:30-16:00, and from **Gili Air around 15:35**. Whichever you take, the drive back to Canggu is still ahead of you."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "How long Canggu to the Gili Islands actually takes",
+        "paragraphs": [
+          "There is no boat from Canggu, and there is no direct Gili connection from anywhere on Bali's west coast. Every trip is a car to one of three working harbours — Padang Bai in East Bali, Serangan or Sanur in the south — and then a fast boat. From a Canggu villa, door to door to Gili Trawangan is **4h30-5h via Serangan** (short drive, long boat) or **5h-5h30 via Padang Bai** (long drive, short boat). You cannot have both a short drive and a short crossing from here. That combination belongs to Ubud, which is why the same trip [runs shorter from Ubud](/bali/en/journal/gili-islands-from-ubud).",
+          "The number to plan around is the pickup time, not the departure time. Operators set Canggu pickups roughly **90 minutes before** a Serangan sailing, so a 09:00 boat means **07:00-07:30** at your gate, and an 08:00-09:00 Padang Bai boat means **06:00-06:30**. Check-in closes **30-60 minutes** before departure, which is part of why the advertised totals never match reality. Treat every drive time an operator publishes as a free-flow figure: on this route they run 40-60% short.",
+          "What makes the drive worse, roughly in order: the 07:30-09:30 morning wave, which is precisely when the boats leave; the shared-shuttle loop collecting other guests around Seminyak and Kerobokan; temple ceremony road closures, which happen year-round and without notice; rain; and roadworks on the Ida Bagus Mantra bypass. Canggu's own lanes are the first bottleneck, before you reach a main road at all. Local advice we agree with: once traffic builds, no shortcut saves you — leaving earlier is the only lever."
+        ]
+      },
+      {
+        "heading": "Does the included pickup actually reach your villa?",
+        "paragraphs": [
+          "Almost every fast boat ticket advertises free hotel pickup, and for Canggu that promise has a hard edge to it. The published zones cover Kerobokan, Seminyak, Legian, Kuta, Sanur, Denpasar and the airport in full, then stop partway through Canggu at a named landmark — Canggu Club for one operator, Canggu Station or Canggu Point for others. Which side of that line your villa sits on is worth checking before you book anything, because it decides both the price and whether a driver reaches your door at 07:00 or you have to get yourself to a car park.",
+          "Roughly how it falls in practice:"
+        ],
+        "bullets": [
+          "**Usually inside the free zone:** Berawa, Batu Bolong, and the Canggu Club end of the strip",
+          "**Usually outside:** Pererenan, Nyanyi, Cemagi, Seseh and Tumbak Bayuh — anything past the Canggu Club line",
+          "**Out of zone, cheapest fix:** the shared-vehicle surcharge at **IDR 50,000 per person**, checked August 2026 — under-advertised, and the right answer for one or two people travelling light",
+          "**Out of zone, private car:** **IDR 225,000 for up to four**, or **IDR 385,000 per minivan** on one operator's tariff — only worth it for a family or a group with luggage",
+          "**Either way:** confirm at booking whether the transfer is in the ticket price. One operator's own agent pages describe the identical service as complimentary on one page and IDR 385,000 on another, so inclusion depends on the operator and the booking channel, not on a rule",
+          "**Our position:** if you are in Berawa or Batu Bolong, the free shuttle already covers you and you should not pay anyone extra for the land leg. Book the boat ticket and stop there"
+        ]
+      },
+      {
+        "heading": "What the boat costs, checked August 2026",
+        "paragraphs": [
+          "Fast boat fares from Bali to the Gilis run **IDR 330,000-790,000 one way**, most commonly **IDR 400,000-550,000**, with returns around **IDR 950,000** — all checked August 2026. From Padang Bai we found listings at **IDR 400,600 and IDR 450,000**, with named operators at **IDR 685,000** and **IDR 790,000**; from Sanur, **IDR 425,000-550,000** depending on the operator. Price moves with the port, the season, how far ahead you book and which channel you book through, so read every figure as a starting point rather than a quote.",
+          "Lead with rupiah, and be suspicious of dollar prices you read elsewhere. The rupiah sat near **IDR 17,800 to the dollar** in August 2026 while most travel pages still convert at 15,000-16,000, which is why their dollar figures read low by about a fifth. At the August rate the band above works out to roughly **USD 19-44** one way, and that conversion will be stale within a month or two. There is also a harbour fee at Padang Bai, Serangan and Gili Trawangan: sometimes included in the ticket, sometimes collected in cash on the spot, and no source publishes the amount — so carry small notes and do not count on a card reader at any pier.",
+          "Our own [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) start **from $15**, booked on WhatsApp with no prepayment; our prices are fixed in dollars, so they do not drift with the rupiah. For the operator-by-operator comparison, see our [fast boat guide](/bali/en/journal/gili-islands-fast-boat-guide). If you are actually heading to mainland Lombok rather than the three islands, [the Lombok options](/bali/en/journal/bali-to-lombok-transport) are a different calculation, and the 47-minute flight is not the obvious winner it looks like."
+        ]
+      },
+      {
+        "heading": "Why a Gili day trip from Canggu does not work",
+        "paragraphs": [
+          "The honest answer to the day trip question is no, and the reason is the turnaround rather than the distance. The Serangan boats a Canggu guest would naturally take arrive at Gili Trawangan around **11:00-12:00** and depart back at **12:15**. That is somewhere between fifteen minutes and an hour on the island, for a **4h30-5h** journey in each direction. Nobody sells it in those terms, but that is what the timetable says.",
+          "The workaround — routing via Padang Bai to reach the later returns — makes the arithmetic worse, not better. It needs a pickup around **05:45**, it does buy you a genuine island window, and then it puts you back in Canggu around **19:00-20:00**, with the evening leg run in the worst traffic of the day. That is a fourteen-hour day for a few hours of beach. We will drive it if you insist, with a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59 per car**, but we would rather say plainly that it is not a good day out.",
+          "One night fixes it. The [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) **from $70** turns the same two crossings into a proper trip, because you sleep on the island and the return boat stops being a deadline. And if what you want is an island day trip that genuinely works from Canggu, take [Nusa Penida](/bali/en/tours/nusa-penida-full-day-tour) **from $75** — the crossing is a fraction of the length, the return boats run late enough to matter, and you are back for dinner."
+        ]
+      },
+      {
+        "heading": "Weather, Nyepi, and the days nothing sails",
+        "paragraphs": [
+          "December to February is peak cancellation season on the Bali-Gili crossing, and cancellations arrive in multi-day blocks rather than as single missed sailings. In January 2026 the national weather agency forecast **2.5-6.0 metre waves** across the Bali, Lombok and Gili routes, and **72 fast boats** running 80-90 trips were cancelled. This leg crosses open water and is far more swell-sensitive than the Nusa Penida runs. Travelling in that window, build a buffer day into the itinerary and never schedule a Gili return for the same day as an international departure.",
+          "One fixed date to know: Nyepi, the day of silence, falls on **Monday 8 March 2027**. Ferries are formally suspended, Ngurah Rai airport closes for a full 24 hours, and nobody is permitted on the roads — which means no hotel pickup either, and the days on both sides of it compress as everyone reschedules. No Gili or Lombok transfer of any kind operates that day, ours included.",
+          "Same-day boat-to-flight connections deserve the same caution. A midday boat back to Serangan lands you in that **15:00-15:45** window on a good day, and the drive from the harbour to the airport sits on top of a boat that can run late. If your flight is that evening, come back the day before. For the reverse direction, arriving into Canggu, our [airport to Canggu guide](/bali/en/journal/bali-airport-to-canggu-transfer) covers the drive times and what the arrivals-hall counter actually charges."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is there a boat from Gili Air to Canggu?",
+        "answer": "No — no boat lands anywhere near Canggu. Fast boats from Gili Air arrive at Serangan, Sanur or Padang Bai, and you drive from there. Gili Air departures for Serangan leave around 12:30 on one published schedule, reaching Bali in a 15:00-15:45 window; the last Gili Air boat toward Padang Bai goes around 15:35. Add 60-90 minutes from Serangan to Canggu, or 2h-2h30 from Padang Bai."
+      },
+      {
+        "question": "How do I get the ferry to Gili T from Canggu?",
+        "answer": "Car to a harbour, then a fast boat. Via Serangan the drive is 30-60 minutes free-flow, plan 60-90, and the crossing is 2h15-2h30 direct or up to 3.5h with stops. Via Padang Bai the drive is 1h10-2h30 and the crossing about 1h30. Door to door: 4h30-5h through Serangan, 5h-5h30 through Padang Bai. Pickup is roughly 90 minutes before the boat leaves."
+      },
+      {
+        "question": "Can you do a day trip to Gili T from Canggu?",
+        "answer": "Realistically, no. The Serangan boats reach Gili Trawangan around 11:00-12:00 and turn around at 12:15, which leaves fifteen minutes to an hour on the island. Going via Padang Bai to catch the later returns means a 05:45 pickup and a return to Canggu around 19:00-20:00 through the day's worst traffic. One night on the island solves it; from Canggu, Nusa Penida is the day trip that actually works."
+      },
+      {
+        "question": "How much is the fast boat from Canggu to the Gili Islands?",
+        "answer": "Fares run IDR 330,000-790,000 one way, most commonly IDR 400,000-550,000, and around IDR 950,000 return — checked August 2026. At the August rate of about IDR 17,800 per dollar that is roughly USD 19-44 one way, though most travel sites still convert at 15,000-16,000 and quote it too low. Add a harbour fee in cash at some ports; no operator publishes the amount, so carry small notes."
+      },
+      {
+        "question": "Does the fast boat include hotel pickup in Canggu?",
+        "answer": "Partly. Canggu sits on the edge of the published free pickup zone, cut off at Canggu Club, Canggu Station or Canggu Point depending on the operator. Berawa and Batu Bolong are usually covered; Pererenan, Nyanyi, Cemagi, Seseh and Tumbak Bayuh usually are not. Beyond the line, expect IDR 50,000 per person on a shared van or IDR 225,000 for a private car of four, checked August 2026. Confirm inclusion at booking — operators word it inconsistently."
+      },
+      {
+        "question": "How early do I need to be picked up in Canggu for a morning boat?",
+        "answer": "For a 09:00 Serangan departure, 07:00-07:30. For an 08:00-09:00 Padang Bai boat, 06:00-06:30. Operators set Canggu pickups about 90 minutes ahead of the sailing, and check-in closes 30-60 minutes before departure. Published drive times on this route are free-flow figures and run 40-60% short of reality, so if you must make a specific boat, plan for the top of every range rather than the middle."
+      }
+    ]
+  },
+  {
+    "slug": "bali-to-lombok-transport",
+    "badge": "Travel guide",
+    "navLabel": "Bali to Lombok",
+    "cardTourLabel": "Island getaways",
+    "heroTourSlug": "fast-boat-transfer-bali",
+    "relatedTourSlugs": [
+      "fast-boat-transfer-bali",
+      "gili-islands-getaway",
+      "bali-airport-transfer"
+    ],
+    "inlineStats": [
+      "7 routes compared",
+      "Crossing 1h15-5h20",
+      "Fares from IDR 350,000"
+    ],
+    "title": "Bali to Lombok: Fly South, Take the Fast Boat North",
+    "description": "The honest comparison: a 47-minute flight lands 1h30 from the Gilis, while the fast boat from Padang Bai takes 1h30-2h30. Prices, August 2026.",
+    "excerpt": "Fly if you are heading to south Lombok; take the fast boat if you are heading to the Gilis or Senggigi. The decision turns on geography, not speed. Lombok's airport sits at Praya in the far south, while the fast boats land at Bangsal in the northwest. The flight is 40 to 50 minutes in the air, but add the drive to Denpasar, check-in and a 90-minute taxi from Praya to Bangsal and you are at three to four hours door to door — the same envelope as the boat. Crossings run from about 1h15, Padang Bai to Senggigi, up to four or five hours from Serangan, with fares of IDR 350,000 to 600,000 checked in August 2026. Below: every route, the public ferry nobody explains properly, and the months when boats stop sailing.",
+    "rankings": [
+      {
+        "name": "Padang Bai to Bangsal by fast boat",
+        "imageSrc": "/images/places/blue-lagoon-padang-bai.jpg",
+        "area": "East Bali to northwest Lombok",
+        "bestFor": "The Gilis and north Lombok",
+        "summary": "The default crossing and the one most people should take: 1h30 to 2h30 of open water into Bangsal, which is also the harbour the local boats to the three Gilis leave from. The catch is the drive to reach it — 1h15 to 2h from Ubud, 2h to 2h30 from Canggu, 2 to 3 hours from Uluwatu, and every one of those is a morning drive."
+      },
+      {
+        "name": "Padang Bai to Senggigi by fast boat",
+        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "area": "East Bali to west Lombok",
+        "bestFor": "The shortest sea crossing",
+        "summary": "About 1h15 dock to dock, the fastest crossing anywhere on this route, landing at Senggigi on Lombok's west coast. Not every operator runs it, and some sell Teluk Nare or Teluk Kode instead, so read the arrival harbour printed on the ticket rather than assuming Senggigi. Same East Bali drive to reach Padang Bai in the first place."
+      },
+      {
+        "name": "Sanur to Bangsal by fast boat",
+        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "area": "South Bali to northwest Lombok",
+        "bestFor": "Staying in Sanur, Seminyak or Kuta",
+        "summary": "Two and a half to three hours or more at sea, but the drive shrinks to 20-30 minutes from the airport in light traffic, 45-60 or more at peak. This is the trade every South Bali guest makes on this route: a short drive for a long boat. You do not get to have both."
+      },
+      {
+        "name": "Serangan to Bangsal by fast boat",
+        "imageSrc": "/images/remote/1280px-sanur-port-sf0001-b8fad127.jpg",
+        "area": "South Bali to northwest Lombok",
+        "bestFor": "Proximity to the airport",
+        "summary": "The longest sea leg of the fast-boat options, up to four or five hours, usually because the service calls somewhere else on the way. Serangan is the closest harbour to Denpasar airport, which is why it gets booked; on a rough day it is also the longest stretch you will spend in a boat that is moving under you."
+      },
+      {
+        "name": "The flight, Denpasar to Lombok (DPS-LOP)",
+        "imageSrc": "/images/places/bali-airport-arrivals.jpg",
+        "area": "Denpasar to Praya",
+        "bestFor": "Kuta Lombok and the south",
+        "summary": "Forty to fifty minutes in the air, multiple departures daily on Lion Group, TransNusa and Citilink. It only wins if you are going south: the airport is at Praya, 25-30 minutes from Kuta Lombok but roughly 1h30 from Bangsal. Counting check-in and both transfers, it is a three to four hour affair door to door."
+      },
+      {
+        "name": "The ASDP public ferry, Padang Bai to Lembar",
+        "imageSrc": "/images/places/blue-lagoon-padang-bai.jpg",
+        "area": "East Bali to southwest Lombok",
+        "bestFor": "Budget travel, motorbikes, and backup",
+        "summary": "The working car ferry: 4 to 5 hours normally, 4 to 6 and occasionally longer in swell, running every 60 to 90 minutes around the clock with no booking and tickets sold at the port counter only. Fares are a fraction of the fast boat. Lembar is in the southwest, though, so Gili-bound passengers land hours from where they want to be."
+      },
+      {
+        "name": "Bangsal onward to the Gili Islands",
+        "imageSrc": "/images/tours-real/gili-island-tour.jpg",
+        "area": "Northwest Lombok",
+        "bestFor": "Gili Trawangan, Air and Meno",
+        "summary": "Bangsal is both where the Bali fast boats land and where the local boats to the three Gilis depart, and that single overlap is why the sea route beats flying for anyone Gili-bound. Fly instead and you land at Praya, then spend about 90 minutes driving north to the same jetty you could have arrived at directly."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Fast boat or flight? It depends which end of Lombok you want",
+        "paragraphs": [
+          "The answer is geographic, not a question of speed. Lombok International Airport sits at **Praya, in the far south** of the island, while every fast boat from Bali lands at **Bangsal in the northwest**. The flight itself is **40-50 minutes** in the air — published averages cluster at 46, 47 and 49 minutes — with multiple departures daily on Lion Group (Lion Air and Wings Air), TransNusa and Citilink. But the airborne time is the smallest part of it. Add the drive to Denpasar, check-in, and the transfer at the far end, and flying is a **3-4 hour door-to-door** journey. That is the same envelope as the boat.",
+          "So the rule is short. Heading to **the Gilis or Senggigi**, the fast boat wins outright, because flying means landing roughly **1h30 from Bangsal** — the exact harbour you would otherwise have arrived at directly. The published transfers out of Praya run about **IDR 250,000 to Senggigi** and around 1h30 to Bangsal (quickest recorded run 54 minutes; the DAMRI bus is the cheap way and takes longer), both checked August 2026. Heading to **Kuta Lombok, the south coast, or southern access to Rinjani**, flying wins clearly: Praya to Kuta Lombok is **25-30 minutes and around IDR 150,000** by taxi.",
+          "The counterweights run the other direction. Boats get cancelled by weather and flights mostly do not, and boats make some people seasick. Cost tips towards the boat: DPS-LOP fares run roughly **IDR 570,000-800,000** booked about six weeks ahead and **IDR 1,070,000-1,870,000** last minute, checked August 2026 — the aggregators publish those as USD 32-45 and USD 60-105, converted here at about IDR 17,800 to the dollar. If the Gilis rather than Lombok proper are the real destination, our [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) from $70 covers the whole chain, and our [Gili fast boat guide](/bali/en/journal/gili-islands-fast-boat-guide) goes deeper on the harbours."
+        ]
+      },
+      {
+        "heading": "What the crossing costs and how long the morning really is",
+        "paragraphs": [
+          "Fast boat fares on the Bali-Lombok route run **IDR 350,000-600,000 one way**, checked August 2026. Ferryhopper lists **10-plus daily departures year-round** across Padang Bai, Serangan and Sanur, with durations from **1h15 to 5h20** depending on the port and how many stops the boat makes. Packages that bundle Bali hotel pickup into the ticket are quoted around USD 53-67; that is agent margin sitting on top of the boat fare. Treat every dollar figure you read on this route with suspicion — the rupiah sat near **IDR 17,800 to the dollar** in August 2026 while most travel pages still convert at 15,000-16,000, which is why their prices look cheaper than the counter. If you are coming straight off a flight, our [airport to the islands guide](/bali/en/journal/bali-airport-to-the-islands) covers the arrival-day arithmetic in detail.",
+          "The number that ruins mornings is not the crossing, it is the drive. Check-in is **60 minutes before departure** at both Padang Bai and Sanur, and that hour is real rather than padding. Every drive time an operator publishes is a free-flow figure and runs **40-60% short** of what the road actually does at 07:30 — which is precisely when the boats leave. Plan the upper end of every range below, and fix the pickup time in your head rather than the departure time, because the pickup is what you have to be ready for. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car is the version of this that waits for you; a shared shuttle runs a fixed collection loop and does not."
+        ],
+        "bullets": [
+          "**Ubud to Padang Bai: 1h15-2h.** Operators advertise one hour. The climb out of Ubud and the Ida Bagus Mantra bypass both clog in the 07:00-09:30 wave — allow 2h if you must catch a specific boat",
+          "**Canggu to Padang Bai: 2h-2h30**, against 1h15 free-flow, because it means crossing the whole south first. Canggu to Serangan is 30-60 minutes free-flow but plan 60-90",
+          "**Uluwatu to Serangan or Sanur: 1h-1h30.** Google will say around 30 minutes. Local advice is blunt: if the map says 55, assume 90. The Bukit has no alternative road when Jl. Uluwatu jams",
+          "**Denpasar airport to Padang Bai: 1h10-2h30** — plan two hours. Airport to Sanur is 20-30 minutes in light traffic and 45-60 or more at peak, so budget an hour door to gate",
+          "**A small harbour fee**, in cash, applies at the Bali ports. No operator publishes the amount and some include it in the ticket — carry small rupiah notes and do not count on card payment anywhere on a jetty",
+          "**Luggage is typically capped around 15 kg standard and 25 kg premium** per person, with excess charged subject to space. Confirm it with your operator if you are moving full checked bags"
+        ]
+      },
+      {
+        "heading": "The public ferry to Lembar, and what it actually is",
+        "paragraphs": [
+          "The third option gets mentioned in passing and never explained: the **ASDP public car ferry, Padang Bai to Lembar**. It is not a cheaper fast boat. It is a working vehicle ferry that runs **every 60-90 minutes, 24 hours a day**, takes **4-5 hours** in normal conditions and **4-6 hours or more** in swell, and sells tickets at the port counter only — no online booking, no reservation, you turn up and wait. Foot-passenger fares are **IDR 46,000-75,000**, checked August 2026; sources disagree on the exact figure because ASDP sets the tariff and revises it, so take the range as the range. Vehicles are the other reason to use it: **motorbike under 500cc IDR 160,600, over 500cc IDR 313,800, car IDR 127,300**.",
+          "Two things to weigh before you romanticise it. First, **Lembar is in the southwest of Lombok** — the wrong end again if the Gilis are the destination, meaning a long land transfer plus a local boat after a crossing that already consumed most of the day. Second, it is barebones: no facilities to speak of, and delays from swell and port congestion are routine rather than exceptional. We name it because it is a genuine 24-hour escape hatch when the fast boats have stopped for the day or for the weather, and because it is the cheapest way to move a motorbike between the islands. We would not sell it as the way to start a holiday. For the land side of all this, our [getting around Bali guide](/bali/en/journal/how-to-get-around-bali-transport-guide) has the wider picture."
+        ]
+      },
+      {
+        "heading": "The weather record you should actually weigh",
+        "paragraphs": [
+          "Here is the honest version. There is no public incident register for these operators that we would be willing to quote you, so anyone offering a confident safety statistic for the cheap boat is inventing it. What is documented is the weather, and it is enough to plan around. **December to February is peak cancellation season** on the Bali-Gili-Lombok crossing, and cancellations arrive in multi-day blocks rather than as single sailings. In one January 2026 event, BMKG forecast **2.5-6.0 metre waves** across these routes and **72 fast boats running 80-90 trips were cancelled**. The Lombok Strait is open water and considerably more swell-sensitive than the short Nusa Penida runs — this is not the same kind of crossing.",
+          "The practical reading of that. Morning crossings are smoother than afternoon ones, and the **June-September windy season** roughens the strait as well. A cancelled sailing is the system working correctly; the boat worth being wary of is the one that sails after the rest of the fleet has stopped. Standard operator terms are **free cancellation 7 or more days out, a 50% fee inside 2-7 days, and 100% within 2 days** — but weather cancellations sit outside that, with a full refund or a free reschedule to the next departure. Between December and February, build in a buffer day and never schedule a Lombok return for the same day as an international flight out of Denpasar.",
+          "One fixed date to write down: **Nyepi, Monday 8 March 2027**. Ferries are formally suspended, Ngurah Rai airport closes for a full 24 hours with no landings or take-offs, and nobody is permitted on the roads — which means no hotel pickup either. No Lombok transfer of any kind operates that day, and the days either side compress accordingly. Ordinary temple ceremonies also close local roads without warning year-round, which is a large part of why Bali drive times are unpredictable rather than merely long."
+        ]
+      },
+      {
+        "heading": "How we book it, and when you should not book us",
+        "paragraphs": [
+          "We sell [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) **from $15** — our own fixed price in dollars, not a converted figure — over WhatsApp with no prepayment. What you are paying us for is coordination rather than the seat: a pickup time set against the real drive instead of the free-flow one, a driver who waits when your morning slips, and someone to reschedule with the moment the sea forecast turns. If you are landing at Denpasar and want the harbour leg handled from the kerb, [private airport pickup](/bali/en/tours/bali-airport-transfer) starts **from $15** as well.",
+          "Now the part most operators leave out. If you are one person with a backpack going from the airport to Kuta or Sanur, Grab or Gojek is simply cheaper — the airport-to-Sanur run costs **IDR 120,000-200,000** by ride-hail against **IDR 180,000-300,000** for a prebooked car or the airport taxi counter, checked August 2026. Take the cheaper option; we would. Two caveats before you do: ride-hail pickup at Denpasar is restricted to designated zones rather than the terminal kerb, and counter fares are negotiated rather than fixed, so **the board at the counter is the only binding price** — sources disagree on where in that range you will land. Our [Grab and taxi cost guide](/bali/en/journal/bali-grab-taxi-driver-cost) has the full comparison.",
+          "The arithmetic flips with numbers, bags and deadlines. Four people with luggage in a private car at **$59 for the whole car** beats four separate ride-hail fares, and it beats a shared shuttle that spends 40 minutes collecting other guests before it points at the harbour. Solo and travelling light on a flexible day: use Grab. Two or more people, checked bags, or a boat with a check-in deadline: book the car and stop thinking about it."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do you get from Bali to Lombok?",
+        "answer": "Three ways. The fast boat from Padang Bai, Sanur or Serangan, which takes anywhere from 1h15 to 5h20 depending on the port and the number of stops. The DPS-LOP flight, 40 to 50 minutes in the air with multiple departures daily. Or the ASDP public car ferry from Padang Bai to Lembar, 4 to 6 hours, running around the clock. Which one is right depends entirely on which end of Lombok you are going to."
+      },
+      {
+        "question": "Should I fly or take the ferry from Bali to Lombok?",
+        "answer": "Fly if you are heading to Kuta Lombok, the south coast or southern Rinjani access, because the airport is at Praya in the far south. Take the fast boat if you are heading to the Gilis or Senggigi, because the boats land at Bangsal in the northwest and flying means landing about 90 minutes from that same harbour. Door to door, both come out at three to four hours, so speed is not the deciding factor — geography is."
+      },
+      {
+        "question": "How long is the ferry from Bali to Lombok?",
+        "answer": "Fast boats run 1h30 to 2h30 from Padang Bai to Bangsal, around 1h15 from Padang Bai to Senggigi, 2h30 to 3h or more from Sanur, and up to four or five hours from Serangan. The ASDP public ferry to Lembar takes 4 to 5 hours normally and 4 to 6 or longer in swell. Add 60 minutes of check-in and the Bali drive to the harbour, which is usually the longer half of the morning."
+      },
+      {
+        "question": "How much is the fast boat from Bali to Lombok?",
+        "answer": "IDR 350,000 to 600,000 one way, checked August 2026, varying by port, operator, season and booking channel. Bundles that include Bali hotel pickup are quoted around USD 53-67, which is agent margin on top of the fare. Be careful with dollar prices on this route: the rupiah sat near IDR 17,800 to the dollar in August 2026 while many travel pages still convert at 15,000-16,000. Our own fast boat tickets with hotel pickup start from $15, a fixed dollar price."
+      },
+      {
+        "question": "Is the fast boat from Bali to Lombok safe?",
+        "answer": "There is no public incident register for these operators worth quoting, so treat confident safety statistics online as invented. What is documented is weather. December to February is peak cancellation season, and in one January 2026 event BMKG forecast 2.5 to 6.0 metre waves and 72 fast boats running 80 to 90 trips were cancelled. Morning crossings are calmer than afternoon ones. A cancelled sailing means the system is working; the boat to avoid is the one that sails when everyone else has stopped."
+      },
+      {
+        "question": "How much is a flight from Bali to Lombok?",
+        "answer": "Roughly IDR 570,000 to 800,000 booked about six weeks ahead and IDR 1,070,000 to 1,870,000 last minute, checked August 2026 — aggregators quote those as USD 32-45 and USD 60-105, converted at about IDR 17,800 to the dollar. Carriers are Lion Group (Lion Air and Wings Air), TransNusa and Citilink. The cheapest departure days are Tuesday, Wednesday and Saturday, and October and January tend to have the best fares."
+      }
+    ]
+  },
+  {
+    "slug": "nusa-penida-tour-cost",
+    "badge": "Travel guide",
+    "navLabel": "Penida cost",
+    "cardTourLabel": "Nusa Penida",
+    "heroTourSlug": "nusa-penida-full-day-tour",
+    "relatedTourSlugs": [
+      "nusa-penida-full-day-tour",
+      "fast-boat-transfer-bali",
+      "private-car-with-driver-bali"
+    ],
+    "inlineStats": [
+      "Shared day 700k-1.2m IDR",
+      "Return boat 300-500k IDR",
+      "Private tour from $75"
+    ],
+    "title": "Nusa Penida Tour Cost: IDR 700,000–1,200,000 Shared",
+    "description": "A shared Nusa Penida day costs IDR 700,000-1,200,000 per person all-in, checked August 2026 — boat, island driver, fees and lunch, priced part by part.",
+    "excerpt": "A shared Nusa Penida day trip from Bali realistically costs IDR 700,000 to 1,200,000 per person all in, checked August 2026 — and the wider honest band, from a stripped-back budget day to a comfortable one, is IDR 500,000 to 1,500,000. A premium private day sits at IDR 1,500,000 to 2,500,000 per person. The reason listings look so different is not service level, it is the boat: a return fast boat from Sanur is IDR 300,000 to 500,000 per person, and the cheapest headline prices almost always exclude it. This guide breaks the day into the parts you actually pay for — the levy, the boat, the island driver, the arrival retribution, the small cash fees at each viewpoint, lunch, and the separate marine park fee if you snorkel — so you can price any listing yourself before you book it.",
+    "rankings": [
+      {
+        "name": "The Bali tourist levy",
+        "imageSrc": "/images/places/money-exchange.jpg",
+        "area": "Once per trip to Bali",
+        "bestFor": "Paying before you leave home",
+        "summary": "**IDR 150,000 per foreign visitor**, one payment per entry to Bali, made on the official Love Bali portal in return for a QR voucher — checked August 2026, with a rise to 300,000 discussed but not in force. Children on a foreign passport are not exempted, so budget it per head, not per family."
+      },
+      {
+        "name": "The ride to Sanur harbour",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "South Bali to Sanur",
+        "bestFor": "The leg most listings quietly exclude",
+        "summary": "Boats leave from Sanur. From Kuta a metered Blue Bird covers the 15 km for **IDR 110,000–140,000**, checked August 2026; from Ubud or Canggu allow **60–90 minutes**, close to two hours in the 07:00–09:00 harbour rush. Ask whether the boat fare includes a Bali-side hotel shuttle — many do not."
+      },
+      {
+        "name": "The return fast boat",
+        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "area": "Sanur to Nusa Penida",
+        "bestFor": "The single biggest line item",
+        "summary": "**IDR 150,000–300,000 one way**, or **IDR 300,000–500,000 booked as a return**, checked August 2026 — booking both legs together saves up to around 25 per cent. When a day-tour listing looks impossibly cheap, this is almost always the item that has been left outside the price."
+      },
+      {
+        "name": "Island arrival retribution",
+        "imageSrc": "/images/places/crystal-bay.jpg",
+        "area": "Penida pier",
+        "bestFor": "Pre-paying online in 2026",
+        "summary": "**IDR 25,000 per adult and 15,000 per child**, charged on arrival at Nusa Penida, Lembongan and Ceningan, with nothing to pay on departure. The 2026 change is the channel rather than the amount: buy it through the online payment link instead of handing cash over at the pier. Checked August 2026."
+      },
+      {
+        "name": "Land transport on the island",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "West circuit, or west plus east",
+        "bestFor": "Where group size decides your price",
+        "summary": "A seat in a shared car with a driver-guide runs roughly **IDR 200,000–400,000 per person**, checked August 2026. The cost is per vehicle underneath, so six passengers split it six ways and a couple does not. Adding the east coast for Diamond and Atuh means a longer, rougher drive than the western loop."
+      },
+      {
+        "name": "Small fees at the viewpoints",
+        "imageSrc": "/images/places/kelingking-beach-viewpoint.jpg",
+        "area": "Kelingking, Broken Beach, Diamond",
+        "bestFor": "Cash in small notes",
+        "summary": "Sources genuinely disagree here. Diamond Beach is quoted at **IDR 25,000** by one 2026 source and **35,000 plus 5,000 parking** by another, while one operator's fee page lists no per-site charges at all. Village councils set and change these locally without notice — plan on **IDR 5,000–35,000 per site** and treat the person collecting at the gate as the only binding price."
+      },
+      {
+        "name": "Lunch",
+        "imageSrc": "/images/places/broken-beach-arch.jpg",
+        "area": "Warung or restaurant stop",
+        "bestFor": "The cheapest part to upgrade",
+        "summary": "**IDR 50,000–100,000 per person**, checked August 2026. One meal sits inside most mid-market packages and outside most half-day and boat-only products. A restaurant lunch rather than a warung plate is a real part of why a mid-range organised day is quoted at IDR 900,000–1,200,000."
+      },
+      {
+        "name": "The marine park fee, if you get in the water",
+        "imageSrc": "/images/places/crystal-bay.jpg",
+        "area": "Nusa Penida MPA",
+        "bestFor": "Snorkellers and divers only",
+        "summary": "**IDR 100,000 per foreign visitor per day** for snorkelling or diving inside the Nusa Penida marine protected area, stacking on top of the 25,000 retribution and the 150,000 levy. Longer stays can buy **200,000 for up to a month**. As of August 2026 this is the most reliably omitted line on a snorkel listing."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What a Nusa Penida day trip actually costs",
+        "paragraphs": [
+          "A shared, join-in Nusa Penida day trip from Bali costs **IDR 700,000–1,200,000 per person** all in, checked August 2026. The wider honest band — from a stripped-back day you assemble yourself to a comfortable organised one — is **IDR 500,000–1,500,000**, and a mid-range tour or private driver with a proper restaurant lunch is quoted at **IDR 900,000–1,200,000**. Premium private packages with a private boat, a dedicated guide and upscale dining run **IDR 1,500,000–2,500,000 per person**, and the same product listed on the large booking platforms sits near **USD 150 per person**. Anything advertised far below IDR 700,000 is not a cheaper day. It is a shorter list of inclusions.",
+          "One rule before you compare anything else you read online. The rupiah sat near **IDR 17,800 to the dollar in August 2026**, while most travel pages still convert at 15,000–16,000 — which is why their dollar figures run roughly **10–14% high**, and why every market number on this page is rupiah first. Our own prices are fixed in dollars and do not drift with the rate: our [Nusa Penida private day tour](/bali/en/tours/nusa-penida-full-day-tour) is **from $75**, and [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) are **from $15**. Booking is over WhatsApp with no prepayment, so nothing is locked in before you have seen the whole bill."
+        ]
+      },
+      {
+        "heading": "Where the cheap listings hide the extras",
+        "paragraphs": [
+          "The single biggest reason two Nusa Penida listings differ by half is whether the round-trip fast boat sits inside the price. Here is the arithmetic that catches people out: a manta snorkel day advertised at **IDR 500,000** realistically carries **+150,000** Bali levy, **+25,000** island retribution, **+100,000** marine park fee and **+300,000–500,000** for the return boat, which is **IDR 1,075,000–1,275,000** for the day before lunch and tips. None of that is a scam. Four separate authorities collect four separate fees and no operator can bundle all of them, so the honest listings name them and the optimistic ones do not.",
+          "Our [Sanur to Nusa Penida fast boat guide](/bali/en/journal/sanur-to-nusa-penida-fast-boat) covers the crossing itself. Before you compare two day-tour prices, run them through these six questions — in our experience they explain almost the whole spread:"
+        ],
+        "bullets": [
+          "**Is the return fast boat included, or only the island portion?** This one question accounts for most of the price difference you will see.",
+          "**Which circuit?** West only — Kelingking, Broken Beach, Angel's Billabong, Crystal Bay — or west plus east, which adds Diamond and Atuh and a longer, rougher drive.",
+          "**How many people share the car?** Island transport is priced per vehicle underneath, so a full six-seat share is a very different per-head number from a couple.",
+          "**Is snorkelling in the price, and is the IDR 100,000 marine park fee in it too?** The usual answer is yes to the first and no to the second.",
+          "**Is lunch a set warung plate, a restaurant meal, or nothing at all?** That gap is IDR 50,000–100,000 per person, checked August 2026.",
+          "**What happens if the boat cannot run?** Compare the refund and reschedule terms rather than the headline price — that is the clause that actually costs money."
+        ]
+      },
+      {
+        "heading": "Shared or private, and when the maths flips",
+        "paragraphs": [
+          "Shared works well for a couple who do not mind a fixed circuit and a fixed clock. A seat in a shared car with a driver-guide is **IDR 200,000–400,000 per person**, checked August 2026, precisely because the vehicle cost splits across a full load. The trade is the order of the day: a shared car reaches Kelingking when the fleet reaches Kelingking, and the queue at the viewpoint is the thing people remember from the trip rather than the price they paid.",
+          "Private buys the sequence and the pace, and its per-head number improves fast with group size. Our [Nusa Penida private day tour](/bali/en/tours/nusa-penida-full-day-tour) is **from $75** with our own driver on the island, which is the like-for-like comparison against a mid-market organised day at IDR 900,000–1,200,000 rather than against a shared seat. Note that a genuine private speedboat charter is a different product again — **USD 800–1,400 per boat** for up to six from Benoa, Serangan or Sanur — and it only makes sense at four to six passengers.",
+          "If you would rather build the day yourself, that is a perfectly good answer and we say so plainly: buy the return boat, take a shared car on the island, carry cash for the site fees, and you will land at the bottom of the range. Our guides to [how to get to Nusa Penida](/bali/en/journal/how-to-get-to-nusa-penida) and [what tours in Bali really cost](/bali/en/journal/bali-tour-prices-guide) go through the components in the same order."
+        ]
+      },
+      {
+        "heading": "Snorkelling and mantas are a separate bill",
+        "paragraphs": [
+          "If you get in the water at Nusa Penida, a **IDR 100,000 per foreign visitor per day** marine protected area fee applies, in force since July 2023 and still 100,000 as of August 2026. It stacks on the 25,000 island retribution and the 150,000 Bali levy, and it is the line most commonly missing from an advertised snorkel price. Anyone diving over several days should ask about the multi-day passes: **200,000 for up to a month**, 500,000 for three months, 800,000 for six.",
+          "The trip itself prices very differently depending on where you buy it. Booked on the island, group trips start from **IDR 250,000** and shared boats to Manta Point are quoted around **IDR 500,000**; packaged from the Bali side through an agent or platform, the same standard group tour averages **USD 30–45 per person**, roughly IDR 530,000–800,000. Checked August 2026, and the spread is the story — you are mostly paying for the booking channel and the transfer, not a better boat. A private charter starts near **IDR 3,000,000 for a boat of four**, about 750,000 each at full occupancy and much worse at two.",
+          "No operator can promise you a manta, and any listing that implies otherwise is selling you something it does not control. Sightings happen year-round with the best odds **May to October**, and Manta Point sits on the exposed south-west coast, so it is the first stop dropped when there is swell — Manta Bay is the calmer substitute with lower reliability. Compare the reschedule policy between two listings, not the headline number."
+        ]
+      },
+      {
+        "heading": "Getting to the harbour, and when not to book us",
+        "paragraphs": [
+          "Boats leave from Sanur, and the drive there is where a carefully budgeted day quietly goes wrong. From Ubud or Canggu allow **60–90 minutes**, stretching to close to two hours in the **07:00–09:00 harbour rush** on a weekday, and add more for rain or a ceremony road closure, which arrives without notice or diversion signs. For four people with an early departure and an evening return, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** removes the whole problem — the driver waits at Sanur and takes you home when the boat lands, however late that is.",
+          "Now the part that matters more. If you are one person staying in Sanur, do not book us for this leg — walk. From Kuta a metered Blue Bird covers the 15 km for **IDR 110,000–140,000**, checked August 2026, and a Grab or Gojek car sits in similar territory; both beat a pre-booked private car for a solo traveller with a daypack. We earn our fee when there are three or four of you, when there is luggage, when the return lands in the evening crawl, or when missing the boat costs you the entire day. Our [Grab, taxi and private driver cost comparison](/bali/en/journal/bali-grab-taxi-driver-cost) sets the numbers side by side so you can check that for yourself."
+        ],
+        "bullets": [
+          "**Carry small notes.** Site and parking fees are cash, IDR 5,000–35,000, and nobody at the gate has change.",
+          "**Pre-pay the island retribution online** — since 2026 it is a payment link rather than cash at the pier.",
+          "**Pay the Bali levy before you fly** and keep the QR voucher on your phone: IDR 150,000 once per entry, checked August 2026.",
+          "**Do not plan a crossing near Nyepi.** In 2027 it falls on **8 March**: ferries stop, the airport closes for 24 hours, and nothing moves for a window either side.",
+          "**If the day is really about the water rather than the viewpoints**, an [overnight Gili getaway](/bali/en/tours/gili-islands-getaway) from $70 buys far more sea time than a Penida day sprint."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How much does a Nusa Penida tour cost?",
+        "answer": "A shared join-in day trip from Bali costs IDR 700,000 to 1,200,000 per person all in, checked August 2026, with the wider honest band running IDR 500,000 to 1,500,000 depending on comfort. Premium private packages with a private boat and dedicated guide are quoted at IDR 1,500,000 to 2,500,000 per person. Our own private day tour is from $75, booked on WhatsApp with no prepayment."
+      },
+      {
+        "question": "Is Nusa Penida expensive compared with a normal Bali day?",
+        "answer": "It is one of the pricier single days in Bali, and the reason is structural: the boat is a fixed cost per person, so it does not dilute across your group. A full day on mainland Bali with a private car runs IDR 600,000 to 900,000 per vehicle for up to five or six people, checked August 2026, while Penida charges roughly that per head once the return crossing is in the total."
+      },
+      {
+        "question": "How much is the fast boat from Sanur to Nusa Penida?",
+        "answer": "IDR 150,000 to 300,000 one way and IDR 300,000 to 500,000 booked as a return, checked August 2026. Booking both legs together rather than buying the return on the island saves up to around 25 per cent. Prices move with operator, vessel and season, so confirm at the desk on the day. Our fast boat tickets with hotel pickup are from $15."
+      },
+      {
+        "question": "What is not included in a cheap Nusa Penida day trip price?",
+        "answer": "Most often the return fast boat, which is the biggest single item. Also commonly outside the headline: the IDR 150,000 Bali tourist levy, the IDR 25,000 island arrival retribution, the IDR 100,000 marine park fee if you snorkel, small cash fees of IDR 5,000 to 35,000 at individual viewpoints, lunch at IDR 50,000 to 100,000, and tips. All figures checked August 2026."
+      },
+      {
+        "question": "Do I have to pay entrance fees on Nusa Penida?",
+        "answer": "Yes, but the reliable one is small: IDR 25,000 per adult and 15,000 per child on arrival, pre-purchased online rather than paid in cash at the pier since 2026. Per-site charges are genuinely disputed between sources and change locally without notice, so budget IDR 5,000 to 35,000 per viewpoint in cash and treat whoever is collecting at the gate as the only binding price."
+      },
+      {
+        "question": "Is a private Nusa Penida tour worth the extra money?",
+        "answer": "It depends on your group size and what a queue costs you. For two people on a fixed west-coast circuit, a shared car at IDR 200,000 to 400,000 per person is good value. For three or four, the per-head gap narrows quickly and private buys the stop order, so you reach Kelingking before the fleet rather than behind it. What private does not buy is a manta sighting or better weather."
+      }
+    ]
+  },
+  {
+    "slug": "bali-grab-taxi-driver-cost",
+    "badge": "Travel guide",
+    "navLabel": "Grab vs taxi",
+    "cardTourLabel": "Airport and transfers",
+    "heroTourSlug": "private-car-with-driver-bali",
+    "relatedTourSlugs": [
+      "private-car-with-driver-bali",
+      "bali-airport-transfer",
+      "nusa-penida-full-day-tour"
+    ],
+    "inlineStats": [
+      "5 km app car Rp35-60k",
+      "Bluebird Rp6,500 per km",
+      "Driver day Rp600-900k"
+    ],
+    "title": "Grab vs Taxi in Bali: Grab Wins Until It Can't Reach You",
+    "description": "Grab, Gojek, Bluebird and a private driver compared on real rupiah prices, checked August 2026, plus the pickup zones where no app can collect you.",
+    "excerpt": "For a solo traveller with a small bag, Grab or Gojek is almost always the cheapest way to move around south Bali: a 5 km hop between Kuta and Seminyak runs roughly Rp35,000-60,000 by car and Rp15,000-25,000 by bike, prices checked August 2026. A Bluebird meter starts at about Rp7,000 plus roughly Rp6,500 per kilometre, which is competitive until traffic stops and the waiting charge starts running. A private driver is a flat Rp600,000-900,000 for the whole day, which only makes sense once you have three or four stops, or three or four people. The number that decides it is none of those. Large parts of Ubud, the Bukit and Canggu have zones where no app driver will collect you, and drop-offs are fine while pickups are not, so people arrive cheaply and cannot get back. Here is how to spot one first.",
+    "rankings": [
+      {
+        "name": "Grab and Gojek cars",
+        "imageSrc": "/images/places/ride-hailing-app.jpg",
+        "area": "South Bali, most towns",
+        "bestFor": "One-way hops under 30 km",
+        "summary": "The fare is fixed by the app before you accept, so there is nothing to negotiate and no meter to watch. Kuta to Seminyak, 5 km, runs about **Rp35,000-60,000**; Seminyak to Canggu **Rp50,000-80,000**; Canggu to Ubud, 30 km, **Rp200,000-300,000** (checked August 2026). The two apps leapfrog each other by route, so price both and take the shorter ETA."
+      },
+      {
+        "name": "Grab and Gojek bikes",
+        "imageSrc": "/images/places/scooter-and-driver-in-bali.jpg",
+        "area": "Anywhere except the airport",
+        "bestFor": "Solo, no luggage, jammed roads",
+        "summary": "Roughly half to two-thirds cheaper than the car and immune to a blocked road: Kuta to Seminyak **Rp15,000-25,000**, Seminyak to Canggu **Rp20,000-32,000**, Canggu to Ubud **Rp80,000-125,000** (checked August 2026). No motorbike pickup is permitted at the airport at all, which strands more solo travellers than any other rule on this page."
+      },
+      {
+        "name": "Bluebird, the metered taxi",
+        "imageSrc": "/images/places/bluebird-taxi.jpg",
+        "area": "Kuta to Sanur, Denpasar, Nusa Dua",
+        "bestFor": "A meter you can actually watch",
+        "summary": "The only genuine meter a visitor will meet: flagfall about **Rp7,000**, roughly **Rp6,500 per kilometre**, minimum fare **Rp30,000**, waiting time about **Rp45,000 an hour** (widely published for Bali, checked August 2026, though we could not confirm it against a company tariff sheet). That waiting charge is exactly why a meter loses to a locked app fare in the evening crawl."
+      },
+      {
+        "name": "Maxim and InDrive",
+        "imageSrc": "/images/places/ride-hailing-app.jpg",
+        "area": "South Bali",
+        "bestFor": "Squeezing out the last rupiah",
+        "summary": "Maxim is the cheapest tier and the roughest, with a clunkier app, weaker English and looser GPS discipline. InDrive is not a price list at all: you name a figure and drivers counter it, so it is a negotiation wearing an app. Neither has a fare anyone can honestly quote you in advance. Uber has not operated in Bali since 2018."
+      },
+      {
+        "name": "Getting out of the airport",
+        "imageSrc": "/images/places/bali-street-at-night.jpg",
+        "area": "Ngurah Rai arrivals",
+        "bestFor": "Knowing the options before you land",
+        "summary": "Apps work at DPS for cars only, and only from a signposted lounge in the car park, several minutes' walk with luggage. One in-app check on the morning of 10 May 2026 returned Grab at **Rp106,500** to Kuta, **Rp185,000** to Canggu and **Rp338,500** to Ubud, with Gojek within a few tens of thousands either way. A reported airport surcharge sits on top."
+      },
+      {
+        "name": "A private driver by the day",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "The whole island",
+        "bestFor": "Multi-stop days, groups, the north and east",
+        "summary": "A flat **Rp600,000-900,000** per car for a standard Avanza-class day, **Rp850,000-1,100,000** for an Innova or Hiace, with fuel and ordinary parking already inside the rate (checked August 2026). A day means **8-12 hours door to door**, overtime runs about **Rp100,000 an hour**, and four people splitting Rp700,000 pay **Rp175,000** each."
+      },
+      {
+        "name": "Blocked-zone local transport",
+        "imageSrc": "/images/places/money-exchange.jpg",
+        "area": "Central Ubud, the Bukit, beach clubs",
+        "bestFor": "Understanding the bill you did not plan for",
+        "summary": "Where a local stand controls pickup, the only alternative is a cash price negotiated on the spot, with no meter and no app quote to anchor it. Every source agrees these quotes sit well above app rates, and none of them will publish a figure, which tells you enough. Price the trip in Grab on your phone before you speak to anyone."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What Grab, a Bluebird and a driver actually cost",
+        "paragraphs": [
+          "If you are one person with one bag going one way across south Bali in daylight, Grab or Gojek is the cheapest answer and you should stop reading and open the app. A 5 km car hop between Kuta and Seminyak is about **Rp35,000-60,000**, the same ride on the back of a bike **Rp15,000-25,000**, both checked August 2026. Some 2026 sources put that same 5 km as low as Rp25,000 and others as high as Rp80,000, and both are right: the spread is time of day, promo codes and which app has a driver on the corner. Treat every number on this page as a band, never a price.",
+          "A Bluebird meter is the only real meter you will meet in Bali: flagfall about **Rp7,000**, roughly **Rp6,500 per kilometre**, a **Rp30,000** minimum, and waiting time at about **Rp45,000 an hour**. That last figure is the whole story. In free-flowing traffic the meter is competitive with an app; in the 17:00-19:00 crawl it keeps ticking while a Grab fare you accepted twenty minutes ago does not. Book through the MyBluebird app rather than flagging one down, and if the meter is not running say \"tolong pakai argo ya\" or get out. Repainted look-alikes with fast meters are a long-standing problem.",
+          "A private driver is a different product priced a different way: **Rp600,000-900,000 flat per car** for a standard Avanza-class day, fuel and parking included, negotiated per vehicle rather than per person. Our own [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** is a fixed USD price booked over WhatsApp with no prepayment, which sidesteps the exchange-rate problem entirely. For the full breakdown of what a day rate includes and excludes, our [private driver cost guide](/bali/en/journal/bali-private-driver-cost) goes line by line."
+        ],
+        "bullets": [
+          "**Kuta to Seminyak, 5 km** — app car Rp35,000-60,000, app bike Rp15,000-25,000, Bluebird meter Rp40,000-60,000",
+          "**Seminyak to Canggu, 7-8 km** — app car Rp50,000-80,000, app bike Rp20,000-32,000, Bluebird meter Rp70,000-110,000",
+          "**Kuta to Sanur, 15 km** — Bluebird meter Rp110,000-140,000",
+          "**Seminyak to Nusa Dua, 22 km** — Bluebird meter Rp160,000-200,000",
+          "**Canggu to Ubud, 30 km** — app car Rp200,000-300,000, app bike Rp80,000-125,000",
+          "**Ubud to Sanur, 35 km** — app car Rp230,000-340,000, app bike Rp95,000-145,000",
+          "**A full day with a driver** — Rp600,000-900,000 per car, as many stops as fit in 8-12 hours"
+        ]
+      },
+      {
+        "heading": "The zones where no app can pick you up",
+        "paragraphs": [
+          "This is the part that decides more Bali days than price does. In central Ubud around the Palace and Monkey Forest road, across most of the Bukit — Uluwatu, Bingin, Padang Padang, Pandawa, Nyang Nyang, Ungasan — at the big beach clubs, in parts of Canggu, inside the Nusa Dua resort grounds, up in Kintamani and at a great many hotel driveways, local transport cooperatives informally bar app drivers from collecting passengers on their turf. The asymmetry is what catches people: **drop-offs are almost always fine, pickups are what is blocked**. You get there for Rp90,000 and then discover there is no way back at that price. It is not a fixed map and it changes village by village, so learn the pattern rather than a list.",
+          "On paper you are entitled to use the apps. Bali's own transport agency has said on the record, citing Peraturan Gubernur Bali No. 40/2019, that there is no prohibition on app-based transport anywhere on the island — so when a tout tells you Grab is illegal here, he is wrong. But officials have also told app drivers to cooperate with registered local stands, which means nobody is coming to enforce your right. Write it in your head as legal but locally unenforceable. Where a sign is posted, respect it: this is a livelihood dispute inside a village, and dragging a driver into it creates a problem for him, not for you.",
+          "Here are the five signals, roughly in the order they show up."
+        ],
+        "bullets": [
+          "**Printed signs** — posters and banners zip-tied to poles naming Gojek or Grab, often with the logos crossed out, usually in Indonesian: \"ojek online dilarang\", \"kawasan pangkalan\". The single most reliable tell.",
+          "**The app goes empty** — you could book from 300 m away but not from where you stand; the map shows no vehicles, or the search times out again and again.",
+          "**The driver messages you** — he accepts, then chats \"please walk to the main road\" or \"cannot enter, meet at the junction\".",
+          "**The parked cluster** — a knot of men on scooters or in unmarked cars at a beach path, temple car park or hotel driveway, calling \"transport? taxi?\" at anyone looking at a phone.",
+          "**A physical block** — in the Bukit, pecalang or cooperative members turning app cars away at the lane entrance.",
+          "**The fix** — walk five to ten minutes to a main road or a neutral junction and book from there; in the Bukit budget the full ten. Ordering a bike rather than a car meets less resistance. If you would rather not do any of this, arrange the return by WhatsApp before you go."
+        ]
+      },
+      {
+        "heading": "The airport is a separate country",
+        "paragraphs": [
+          "Grab and Gojek do operate at Ngurah Rai, but not at the kerb. Each runs a signposted, air-conditioned lounge in the car park structure and a dispatcher matches you to a bay, so budget a several-minute walk with your bags past the money changers and the name-board drivers. Cars only: **GrabBike and GoRide are not available for airport pickup at all**. One in-app check on the morning of 10 May 2026 — the only figures on this page with a verifiable timestamp — returned Grab at Rp106,500 to Kuta, Rp136,000 to Seminyak, Rp185,000 to Canggu, Rp148,000 to Sanur, Rp128,000 to Nusa Dua, Rp206,000 to Uluwatu and Rp338,500 to Ubud, with Gojek beating Grab to Seminyak and losing badly to Canggu. Those were off-peak quotes on one day; a reported airport exit surcharge of around Rp10,000-12,000 and, on Sanur or Nusa Dua runs, about Rp14,000 of Bali Mandara toll sit on top.",
+          "The official taxi counter in the arrivals hall works on fixed zone fares agreed before you board, and it is the most reliable walk-up option at 03:00. Published zone figures vary between sources by a factor of two to three, so we will not pretend to a single number — **the board at the counter is the only binding price**, and you confirm it before you move. Cash in rupiah is safest; card acceptance is patchy. A night surcharge of about Rp50,000 between 18:00 and 06:00 is commonly reported but not something we can confirm, so ask at the desk. Blue Bird cannot collect arriving passengers at arrivals; the standard workaround is to walk up to Departures on Level 2 and take one that has just dropped off, at meter rate.",
+          "A pre-booked transfer is the only option whose price you know before the wheels touch down. Our [private airport pickup](/bali/en/tours/bali-airport-transfer) is a fixed **from $15**, driver waiting with a name board however late the flight lands, no prepayment. For a family of four arriving at 23:00 with luggage, that is the sane choice — apps are the one option that can double or triple when several flights land together. But we will say the honest thing too: for one person with a backpack going to Kuta at 09:00, Grab at around Rp106,500 beats us, and you should take it. Our [airport transfer cost guide](/bali/en/journal/bali-airport-transfer-cost) sets out the whole comparison by destination."
+        ],
+        "bullets": [
+          "**Kuta and Seminyak, counter fare** — roughly Rp150,000-200,000, confirmed at the desk before you pay",
+          "**Canggu, Sanur, Nusa Dua, Uluwatu** — roughly Rp250,000-400,000, wide because sources disagree sharply",
+          "**Ubud** — roughly Rp350,000-500,000; one page quoting a flat Rp70,000-150,000 for every destination is not credible and should be ignored",
+          "**After dark** — a night surcharge of about Rp50,000 between 18:00 and 06:00 is commonly reported at the counter; pre-booked fixed rates do not move at all"
+        ]
+      },
+      {
+        "heading": "When Grab is the right answer, and when it is not",
+        "paragraphs": [
+          "Grab and Gojek win on cost for the short, single, one-way trip in the covered part of the island, and it is not close. They also win on transparency: the price is locked before you accept, which no negotiated option can match. If your day is one hotel to one restaurant and back, install both apps, price the trip in each, and take whichever shows the shorter ETA — a twelve-minute wait in Canggu costs more in lost evening than the Rp5,000 spread between them.",
+          "A driver wins the moment the day has shape. Two legs of Canggu to Ubud and back is already Rp400,000-600,000 in app fares, with nobody waiting for you at the rice terrace and no guarantee of a car when you want to leave. Add a third stop and you have passed the day rate before lunch. Add a fourth person and the arithmetic stops being close at all. And in Amed, Lovina, Munduk, Sidemen or Kintamani there is no metered option and thin app coverage, so it is a private driver or nothing. Our [Grab, Gojek or private driver](/bali/en/journal/grab-gojek-or-private-driver-bali) comparison drills further into that trade-off, and the [full transport guide](/bali/en/journal/how-to-get-around-bali-transport-guide) covers scooters, boats and shuttles alongside.",
+          "One more case worth naming: a morning boat. Sanur harbour is where the fast boats to Nusa Penida, Lembongan and the Gilis leave, and departures are early enough that gambling on an app driver accepting at 04:30 is a bad bet. Our [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) **from $15** put the land leg and the boat on one booking so the timing is somebody else's problem."
+        ],
+        "bullets": [
+          "**One person, one bag, one stop, daylight, south Bali** — Grab or Gojek, every time",
+          "**Two or three stops in a day** — app fares pass the flat day rate before you finish lunch",
+          "**Four people** — Rp700,000 split four ways is Rp175,000 each for a full day with a car waiting at every stop",
+          "**Coming back from Uluwatu, a beach club or central Ubud after dark** — arrange the return before you go, not when you want to leave",
+          "**Amed, Lovina, Munduk, Sidemen, Kintamani** — no Bluebird, thin app coverage, driver or nothing",
+          "**A 06:00 boat from Sanur** — book the pickup in advance rather than testing the app at dawn"
+        ]
+      },
+      {
+        "heading": "Why every Bali price you read is a range",
+        "paragraphs": [
+          "Distance tells you almost nothing here. Canggu to Ubud is 29 km and a mapping app will offer you 32 minutes; the real figure is **1 to 1.5 hours**, and up to 2 hours or more at peak, because there is no toll and no bypass on that axis so one bottleneck compounds down the whole road. The rule that survives contact with reality: take the map estimate and add 50-100% inside south Bali in daylight. The two windows to avoid are **07:00-09:00** and, much worse, **16:00-19:00**, when the Denpasar commute, the sunset rush up onto the Bukit and the general Kuta-Kerobokan congestion all land at once.",
+          "Prices move with the same forces. App surge is reliable on Friday and Saturday nights between 21:00 and 01:00 in the Canggu-Seminyak corridor, and instantly in heavy rain, which spikes demand for cars and empties the bike supply at the same moment; one 2026 comparison saw the multiplier reach double, though that is a single observation rather than a rule. Waiting twenty minutes usually clears it. None of this touches a flat driver rate, which is the actual argument for one.",
+          "Then there is the currency, which is why so much of what you will read online is simply wrong. The rupiah sat near **IDR 17,800 to the dollar in August 2026**, while most travel pages still convert at 15,000-16,000 and therefore overstate the dollar cost by 10-18%. That is why every figure here is in rupiah with a date attached, and why the only USD numbers we publish are our own fixed prices. One further caveat for the bike fares specifically: national rules on app motorbike tariffs were under revision as of August 2026, with a presidential regulation still being drafted, so treat any per-kilometre figure as provisional."
+        ],
+        "bullets": [
+          "**Weekday commute** — 08:00-10:00 and 17:00-19:00 across Kuta, Seminyak, Canggu and Sanur",
+          "**Friday afternoon** heading north to Ubud, Sunday evening coming back to the south",
+          "**Ceremony closures** — melasti, ngaben, odalan, Galungan and Kuningan shut roads with no notice and no diversion; Nyepi closes the island and the airport for a full 24 hours",
+          "**Post-sunset convergence** — everyone leaving Tanah Lot or Uluwatu at the same moment onto one two-lane road",
+          "**Rain** — halves the scooters, doubles the demand for cars, and moves every price to the top of its band"
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How much does Grab cost in Bali?",
+        "answer": "A short app car hop such as Kuta to Seminyak, about 5 km, runs roughly Rp35,000-60,000; the same trip on a GrabBike is Rp15,000-25,000 (prices checked August 2026). Longer runs scale with distance: Canggu to Ubud, 30 km, is Rp200,000-300,000 by car and Rp80,000-125,000 by bike. The fare is fixed in the app before you accept, so there is no meter and no haggling. Rain, Friday and Saturday nights and the 17:00-19:00 crawl push you to the top of every range."
+      },
+      {
+        "question": "Is Grab cheaper than a taxi in Bali?",
+        "answer": "Usually yes for one person on a short run, and the gap widens the worse the traffic gets. A Bluebird meter charges about Rp6,500 per kilometre on top of roughly Rp7,000 flagfall, plus around Rp45,000 an hour of waiting time, so a jammed 5 km takes longer and costs more while the app fare was locked before you got in. A metered taxi wins in three situations: when the apps are surging, when you are standing in a zone where no app driver can collect you, and when you would rather watch a meter than trust an algorithm."
+      },
+      {
+        "question": "How much is a Bluebird taxi in Bali?",
+        "answer": "The rates published for Bali in 2026 are a flagfall of about Rp7,000, roughly Rp6,500 per kilometre, a Rp30,000 minimum fare and waiting time at about Rp45,000 an hour. Worked examples from the same source: Kuta to Seminyak Rp40,000-60,000, Seminyak to Canggu Rp70,000-110,000, Kuta to Sanur Rp110,000-140,000, Seminyak to Nusa Dua Rp160,000-200,000. These figures are repeated across Bali travel sources but we could not confirm them against a Blue Bird tariff document, so treat the running meter as the authority. Book in the MyBluebird app; repainted look-alikes with fast meters are a real and long-standing problem."
+      },
+      {
+        "question": "Why is Grab not available where I am in Bali?",
+        "answer": "Almost certainly a local pickup zone. Transport cooperatives, governed by traditional village rules, informally bar app drivers from collecting passengers in central Ubud, across much of the Bukit, at the big beach clubs, in parts of Canggu, inside Nusa Dua's resort grounds, in Kintamani and at many hotel driveways. Drop-offs are usually fine; pickups are what is blocked, which is why people arrive cheaply and cannot get back. Ride-hailing is legal islandwide under Peraturan Gubernur Bali No. 40/2019, but nobody enforces that for you. Walk five to ten minutes to a main road and book from there, or arrange the return in advance."
+      },
+      {
+        "question": "How much does a taxi from Bali airport cost?",
+        "answer": "The official counter in arrivals sells fixed zone fares paid before you board: roughly Rp150,000-200,000 for Kuta or Seminyak, roughly Rp250,000-400,000 for Canggu, Sanur, Nusa Dua or Uluwatu, and roughly Rp350,000-500,000 for Ubud. Published figures vary between sources by a factor of two to three, so the board at the counter is the only binding price and you should confirm it before you move. A night surcharge of about Rp50,000 between 18:00 and 06:00 is commonly reported. Apps are usually cheaper but pick up only from the lounge in the car park, cars only, with a surcharge on top."
+      },
+      {
+        "question": "Grab or Gojek, which is cheaper in Bali?",
+        "answer": "On bikes Gojek tends to run about 15-25% below GrabBike on the same route, though at least one 2026 comparison found no consistent winner, so treat it as a tendency rather than a rule. On cars the two sit within about Rp10,000 of each other and leapfrog by destination: in one airport check Gojek beat Grab to Seminyak and lost badly to Canggu. Install both, price the trip in each, and take whichever shows the shorter ETA. Uber has not operated in Bali since 2018, so there is nothing to compare it against."
+      }
+    ]
+  },
+  {
+    "slug": "bali-tour-prices-guide",
+    "badge": "Travel guide",
+    "navLabel": "What tours cost",
+    "cardTourLabel": "Airport and transfers",
+    "heroTourSlug": "private-car-with-driver-bali",
+    "relatedTourSlugs": [
+      "private-car-with-driver-bali",
+      "nusa-penida-full-day-tour",
+      "bali-airport-transfer"
+    ],
+    "inlineStats": [
+      "Day tours IDR 500k-2.5m",
+      "Levy IDR 150,000 a head",
+      "Prices checked Aug 2026"
+    ],
+    "title": "Bali Tour Prices 2026: IDR 500,000-2,500,000 a Day",
+    "description": "What Bali day tours actually cost in August 2026, in rupiah: shared versus private, what the entry fees add, and the IDR 150,000 tourist levy.",
+    "excerpt": "A full-day Bali tour in August 2026 costs roughly IDR 500,000 to 2,500,000 per person, and where you land in that band has less to do with the destination than with four things nobody puts in the headline price: whether the car and guide are shared or private, whether entrance permits and boat tickets sit inside the price or get collected at the gate, how far the operator's free pickup radius reaches from your hotel, and the IDR 150,000 tourist levy every foreign visitor owes. This guide takes the experiences people actually book — Nusa Penida, manta snorkelling, Mount Batur, rafting, the Gilis and airport transfers — and rebuilds each price from its parts, in rupiah, checked August 2026. It also says plainly where a Grab car or a metered taxi beats booking us.",
+    "rankings": [
+      {
+        "name": "The Bali tourist levy",
+        "imageSrc": "/images/places/love-bali-levy.jpg",
+        "area": "Paid online, before you land",
+        "bestFor": "The fee nobody mentions until the gate",
+        "summary": "**IDR 150,000 per foreign visitor**, one payment per entry, paid on the official Love Bali portal for a QR voucher — checked August 2026. Children on a foreign passport are not explicitly exempt, so budget it per head. A rise to IDR 300,000 has been proposed repeatedly and is not in force."
+      },
+      {
+        "name": "Private airport transfer",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Ngurah Rai to your hotel",
+        "bestFor": "Luggage, late arrivals, families",
+        "summary": "Published 2026 rates disagree by roughly 2x at the bottom end, so take the band rather than a number: **IDR 150,000-500,000 per car** to Kuta or Seminyak, **IDR 350,000-950,000 to Ubud**, checked August 2026. It is priced per car, not per person, which is why it overtakes the counter taxi from two passengers up."
+      },
+      {
+        "name": "Car and driver for the day",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Island-wide, 8-12 hours",
+        "bestFor": "Two or more people with a multi-stop plan",
+        "summary": "The negotiated market rate for an Avanza-class car is **IDR 600,000-900,000 for the day**, an Innova or Hiace **IDR 850,000-1,100,000**, checked August 2026. Per vehicle, not per head: four people splitting IDR 700,000 pay **IDR 175,000 each**. Overtime beyond the agreed hours runs about IDR 100,000 an hour."
+      },
+      {
+        "name": "Mount Batur sunrise trek",
+        "imageSrc": "/images/places/mount-batur-sunrise-trek.jpg",
+        "area": "Kintamani, 02:00 start",
+        "bestFor": "Sunrise, if you are a group of four",
+        "summary": "Fixed costs first: the permit is **IDR 100,000 per person** and a registered guide is compulsory at **IDR 300,000-600,000 per group** — hikers without one are turned back at the trailhead. A shared package with transport, guide and breakfast realistically lands **IDR 500,000-800,000 per person**; hot springs add about IDR 200,000. Checked August 2026."
+      },
+      {
+        "name": "Nusa Penida, shared day tour",
+        "imageSrc": "/images/places/kelingking-beach-viewpoint.jpg",
+        "area": "Sanur to Nusa Penida",
+        "bestFor": "Kelingking on a budget, with a full car",
+        "summary": "**IDR 700,000-1,200,000 per person all-in** is the honest shared-tour range, checked August 2026. Anything advertised well below that has almost always left the round-trip fast boat outside the price — **IDR 150,000-300,000 each way** — which is the single biggest reason one listing looks half the price of the next."
+      },
+      {
+        "name": "Nusa Penida, private day",
+        "imageSrc": "/images/places/kelingking-beach-viewpoint.jpg",
+        "area": "West circuit, or west plus east",
+        "bestFor": "Choosing your own stop order",
+        "summary": "Premium private packages are quoted at **IDR 1,500,000-2,500,000 per person**, checked August 2026. OTA listings show around USD 150 per person, but most of those pages convert at a stale 15,500-16,000 rupiah, so read their rupiah figure instead. A genuine speedboat charter is a different product at USD 800-1,400 per boat, worthwhile only at four to six passengers."
+      },
+      {
+        "name": "Manta snorkelling",
+        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "area": "Manta Point and Manta Bay",
+        "bestFor": "The stop children remember",
+        "summary": "Booked on the island, a shared boat is **IDR 250,000-500,000 per person**; the same 3-4 stop trip packaged from Bali is quoted at USD 30-45, roughly **IDR 530,000-800,000**. Neither figure includes the **IDR 100,000 per person per day** marine park fee. Private charters start near IDR 3,000,000 for a boat of four. Checked August 2026."
+      },
+      {
+        "name": "Cash, notes and the rate",
+        "imageSrc": "/images/places/money-exchange.jpg",
+        "area": "Before you book anything",
+        "bestFor": "Not overpaying by a stale exchange rate",
+        "summary": "The rupiah sat near **IDR 17,700-17,880 to the US dollar** through August 2026. Most travel pages still convert at 15,500-16,000, so their dollar columns run **10-14% high**. Read the rupiah figure and ignore the dollars, and carry small notes: gate fees and parking are cash only, and nobody has change."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "What a Bali day tour actually costs in 2026",
+        "paragraphs": [
+          "Here is the short answer, in rupiah, checked August 2026. A shared organised day tour with transport, a guide, permits and one meal lands at **IDR 500,000-1,200,000 per person**, depending on the destination and how full the car is. A private car with a driver for your own itinerary is **IDR 600,000-900,000 per vehicle** for a standard Avanza-class car over eight to ten hours, whatever the group size. Premium private island days — Nusa Penida with a dedicated guide and a sit-down lunch — run **IDR 1,500,000-2,500,000 per person**. Anything advertised far below those bands is not cheaper. It has left something out, and the rest of this guide is about what.",
+          "One warning about dollars before we go further. The rupiah traded around **IDR 17,700-17,880 to the US dollar** through August 2026, and most travel pages quoting Bali prices in USD are still converting at 15,500-16,000. Their dollar figures run **10-14% too high**, and a page that never refreshes its rate quietly shows you a price drop that never happened. We publish the rupiah figure first and date-stamp it. The only dollar figures on this site that need no rate caveat are our own, because they are fixed in USD and do not move with the market — a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** is $59 whatever the rupiah does that week."
+        ]
+      },
+      {
+        "heading": "Shared or private, and why group size sets the price",
+        "paragraphs": [
+          "On most Bali day tours the two big costs — the car and the guide — are charged per group, not per head. Mount Batur shows the mechanic cleanly. The trekking permit is **IDR 100,000 per person**, but the compulsory guide is **IDR 300,000-600,000 per group** and the car is one car. A European-facing agency selling the identical shared trek quotes **IDR 1,490,000 for one person, 1,600,000 for two, 1,890,000 for three and 2,190,000 for four** — the same product, with the per-head price falling from 1,490,000 to about **547,000** simply because there are four of you. Checked August 2026.",
+          "That is also why a private car often beats a shared seat the moment you are two or more. At a market rate of **IDR 700,000 for the day**, four people pay **IDR 175,000 each** for a vehicle that waits at every stop, with nobody else's schedule involved. The same arithmetic runs on Nusa Penida, where a shared island car splits six ways and a private one does not — our [Nusa Penida private day tour](/bali/en/tours/nusa-penida-full-day-tour) **from $75** is priced against that comparison, and we take the island day apart line by line in [what a Nusa Penida tour costs](/bali/en/journal/nusa-penida-tour-cost). Booking private as a solo traveller is the one case where you are genuinely paying a premium for privacy rather than buying it back in split costs."
+        ]
+      },
+      {
+        "heading": "The fees that live outside the price",
+        "paragraphs": [
+          "Every quoted Bali tour price sits on top of a layer of small government and local charges that almost no listing includes. None is large alone; together they routinely add IDR 275,000-475,000 to an island day. All checked August 2026 — and the ferry operators themselves publish the warning that harbour, entrance and retribution charges change without prior notice, which is exactly why a date stamp matters more than a number.",
+          "Put them together on the trip where they stack worst. A manta snorkel advertised at **IDR 500,000** actually carries the IDR 150,000 levy (once per trip), the IDR 25,000 island retribution, the IDR 100,000 marine park fee and **IDR 300,000-500,000** for the return fast boat from Bali: **IDR 1,075,000-1,275,000** for the day, before lunch and tips. The boat leg is where most of the spread between listings hides, which is why we sell [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) **from $15** as a visible separate line rather than folding it invisibly into a tour price."
+        ],
+        "bullets": [
+          "**Bali tourist levy — IDR 150,000 per foreign visitor**, once per entry, paid on the official Love Bali portal for a QR voucher. Enforcement is spot checks at busy sites with no statutory fine, and roughly 43% of arrivals pay it — pay it anyway, it is small and it is the law",
+          "**Nusa islands retribution — IDR 25,000 adult, IDR 15,000 child**, charged on arrival only, and since 2026 bought online rather than in cash at the pier",
+          "**Nusa Penida marine park fee — IDR 100,000 per person per day** for anyone snorkelling or diving. The most commonly omitted charge on manta trips; multi-day passes exist for divers",
+          "**Gili harbour tax — IDR 20,000 in each direction**, the only ports in the region charging both ways, plus IDR 10,000 leaving Padangbai or Serangan — about **IDR 60,000 on a return trip**",
+          "**Small site fees on Nusa Penida — typically IDR 5,000-35,000 per stop**, cash, set by individual village councils and changed locally. Published sources genuinely contradict each other here, so carry small notes rather than a fee table",
+          "**Mount Batur extras** — hot springs about IDR 200,000 if they are not bundled, and the guide fee is separate from the IDR 100,000 permit",
+          "**Tips — IDR 50,000-100,000** per guide or driver, plus the driver's lunch at IDR 30,000-50,000 as ordinary courtesy on a full day",
+          "**Late-hour surcharges** — roughly IDR 100,000 on a private transfer after about 22:00, and about IDR 50,000 at the official airport taxi counter between 18:00 and 06:00. Both are market convention rather than an official tariff, so both are negotiable"
+        ]
+      },
+      {
+        "heading": "How far the pickup radius really reaches",
+        "paragraphs": [
+          "Operators define a free pickup zone — usually the town the activity is based in, plus the immediate south — and charge a supplement outside it. It is the least-explained number in Bali tour pricing and it is perfectly measurable. Rafting on the Telaga Waja starts around **IDR 270,000 per person** if you drive yourself to the put-in and around **IDR 400,000** with hotel pickup: a **130,000 delta** for the same river. Mount Batur transport is **IDR 400,000 round trip from Ubud against IDR 700,000 from Kuta or Seminyak** — a 300,000 gap on an identical trek. Ask which zone a quoted price assumes before you compare two listings. Checked August 2026.",
+          "On pre-dawn products the supplement is often charged in sleep instead of rupiah. The Batur pickup window runs 01:00-02:30, and a Canggu guest gets the 01:00 end of it while an Ubud guest gets 02:30 — same price, ninety minutes of bed. Drive times deserve the same honesty. Canggu to Ubud is 29 km and a map will say 32 minutes; the real figure is **1-1.5 hours, up to 2 hours at peak**. What makes it worse, roughly in the order it bites: the south Bali commute at **08:00-10:00 and 17:00-19:00**; Friday afternoon heading up to Ubud and Sunday evening coming back down; ceremony road closures, which arrive with no notice and no diversion signage; everyone leaving a sunset viewpoint onto the same two-lane road; and rain. Take any map estimate inside south Bali and add **50-100%**. Our [private driver cost guide](/bali/en/journal/bali-private-driver-cost) covers what a \"full day\" actually means — 10-12 hours door to door in most 2026 quotes, counted from your villa, not from the first temple."
+        ]
+      },
+      {
+        "heading": "When you should not book us",
+        "paragraphs": [
+          "If you are one person with a cabin bag going from the airport to Kuta or Seminyak, do not pre-book a private car — ours or anyone else's. Walk to the signposted Grab or Gojek lounge in the terminal car park (there is no kerbside pickup at Ngurah Rai, and no motorbikes from the airport at all), or go up to Departures on Level 2 and take a metered Blue Bird, which is not allowed to pick up at Arrivals. Blue Bird's Bali meter is widely republished as **IDR 7,000 flagfall, IDR 6,500 per km and IDR 30,000 minimum** — checked August 2026, though we could not confirm it against a Blue Bird tariff document, so treat it as indicative. App fares from the airport are quoted anywhere from **IDR 120,000 to 320,000** depending on destination and surge, and the published 2026 figures for that same short run disagree so badly that the only sensible move is to price it in the app while you are standing there. We lay the three options side by side in our [Grab, taxi and driver cost guide](/bali/en/journal/bali-grab-taxi-driver-cost).",
+          "A private car earns its money in the cases an app does not cover. A family of four with luggage landing at 23:00 is comparing a minivan at **IDR 550,000-700,000**, not a 200,000 quote for a car that may not have a boot for four bags. A delayed flight is worth someone standing there with a name board. And there are villages where app pickups are blocked outright by local transport cooperatives — central Ubud around the Palace, most of the Bukit from Uluwatu to Pandawa, several beach clubs and most hotel driveways. Drop-offs there are almost always fine; pickups are what is blocked, which is how people get somewhere cheaply and then cannot leave. The official airport taxi counter is the third route: fixed by destination zone, quoted across 2026 sources at roughly **IDR 100,000-200,000 to Kuta and IDR 350,000-500,000 to Ubud**, figures that vary far too much to trust in advance. The board at the counter is the only binding price, and you agree it before the car moves. More detail in [what an airport transfer costs](/bali/en/journal/bali-airport-transfer-cost)."
+        ]
+      },
+      {
+        "heading": "How our prices work, and the days nothing runs",
+        "paragraphs": [
+          "Our prices are fixed in US dollars, quoted per car where a car is the product, confirmed on WhatsApp and paid on the day — no prepayment. A [private airport pickup](/bali/en/tours/bali-airport-transfer) is **from $15**, which at the August 2026 rate is roughly IDR 265,000 and sits inside the market band above. The other direction deserves saying out loud too: our full-day car rate is **from $59 per car**, above the IDR 600,000-900,000 you can negotiate for yourself over WhatsApp if you are comfortable haggling, know which vehicle you want and are content to settle the finish time verbally. The difference buys a named driver with working English, a written finish time so overtime never arrives as a surprise, and someone to call when a road closes. If that is not worth it to you, negotiate direct — we would rather say so than pretend the street rate does not exist.",
+          "What our rate includes is the vehicle, driver, fuel and ordinary parking. What it excludes, and what nobody's includes: entrance and temple fees paid per person in cash at the gate, the Bali Mandara toll (about **IDR 13,000** for Golongan I, though 2026 listings disagree on this one), the marine park and retribution fees on the Nusa islands, and the IDR 150,000 levy. And one date no price can buy: **Nyepi falls on Monday 8 March 2027**, when the island closes for 24 hours from 06:00 — airport shut, roads closed to everyone including private cars, ferries stopped, guests required to stay inside their accommodation. No tours, transfers or boats run that day or in the window either side, the Ogoh-Ogoh parade closes town roads the evening before, and smaller ceremony closures happen all year with no notice. Build a buffer day around it."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How much do Bali tours cost?",
+        "answer": "A shared organised day tour with transport, guide, permits and a meal runs IDR 500,000-1,200,000 per person, checked August 2026. A private car with driver for your own route is IDR 600,000-900,000 per vehicle for eight to ten hours, whatever the group size. Premium private island days reach IDR 1,500,000-2,500,000 per person. Add the IDR 150,000 tourist levy and any gate fees on top of all of these."
+      },
+      {
+        "question": "Are Bali tours expensive?",
+        "answer": "Not by the headline price — by the extras. A manta snorkel advertised at IDR 500,000 realistically costs IDR 1,075,000-1,275,000 once you add the IDR 150,000 levy, the IDR 25,000 island retribution, the IDR 100,000 marine park fee and the IDR 300,000-500,000 return fast boat. Checked August 2026. Compare listings on what is included, not on the number in the ad."
+      },
+      {
+        "question": "How much is a private driver for a day in Bali?",
+        "answer": "IDR 600,000-900,000 for an Avanza-class car and IDR 850,000-1,100,000 for an Innova or Hiace, checked August 2026, priced per vehicle rather than per person. A full day means 10-12 hours door to door in most quotes, counted from your villa. Overtime is about IDR 100,000 an hour, and entrance fees, the toll and tips sit outside the rate. Agree the finish time in writing when you book."
+      },
+      {
+        "question": "What is the Bali tourist tax, and do I have to pay it?",
+        "answer": "IDR 150,000 per foreign visitor, one payment per entry, paid on the official Love Bali portal or app for a QR voucher — unchanged as of August 2026, with a proposed rise to IDR 300,000 not in force. Enforcement is random checks by tourism officers at busy sites such as Uluwatu and Tanah Lot, with no statutory fine attached. Roughly 43% of arrivals actually pay. Pay it before you land and keep the QR on your phone."
+      },
+      {
+        "question": "Why do Nusa Penida tour prices vary so much?",
+        "answer": "Four reasons, in order of impact. Whether the round-trip fast boat is inside the price or sold separately at IDR 150,000-300,000 each way; whether the route is the west circuit only or west plus east, which adds a long rough drive; how many people share the island car, since it is one per-group cost; and whether snorkelling is added, which triggers the IDR 100,000 per person per day marine park fee. Checked August 2026."
+      },
+      {
+        "question": "Is it cheaper to book Bali tours in advance or on arrival?",
+        "answer": "For the same product, booking on the island is usually cheaper — a shared manta boat starts at IDR 250,000 per person booked on Nusa Penida against USD 30-45 packaged from Bali. What you give up is availability, the boat connection and someone to sort it out when a swell closes Manta Point. Booking ahead with no prepayment, as we do on WhatsApp, is the middle path: a held slot with nothing at risk if you change your mind."
+      }
+    ]
   }
 ];
 
@@ -35967,6 +37794,14 @@ const GUIDE_CLUSTERS = {
     "airport-to-ubud-transfer",
     "bali-private-driver-cost",
     "grab-gojek-or-private-driver-bali",
+    "bali-airport-to-canggu-transfer",
+    "bali-airport-to-seminyak-transfer",
+    "bali-airport-to-uluwatu-transfer",
+    "bali-airport-to-sanur-transfer",
+    "bali-airport-to-the-islands",
+    "bali-airport-transfer-cost",
+    "bali-grab-taxi-driver-cost",
+    "bali-tour-prices-guide",
   ],
   practical: [
     "bali-safety-scams-and-health",
@@ -36053,6 +37888,7 @@ const GUIDE_CLUSTERS = {
     "nusa-penida-day-trip-from-uluwatu",
     "nusa-penida-day-trip-from-canggu",
     "nusa-penida-day-trip-from-seminyak",
+    "nusa-penida-tour-cost",
   ],
   mountBatur: [
     "mount-batur-sunrise-from-ubud",
@@ -36108,6 +37944,9 @@ const GUIDE_CLUSTERS = {
     "gili-islands-fast-boat-guide",
     "gili-islands-with-kids",
     "gili-islands-snorkelling-turtles",
+    "gili-islands-from-ubud",
+    "gili-islands-from-canggu",
+    "bali-to-lombok-transport",
   ],
 };
 
@@ -36330,6 +38169,18 @@ const JOURNAL_FLAGSHIP_SLUG = "first-time-in-bali-complete-guide";
 // Human-labelled rows for the journal hub. Each is a horizontal carousel, so
 // a first-time visitor reads it like a landing page instead of an SEO index.
 const JOURNAL_HUB_ROWS = [
+  {
+    title: "Getting there and what it costs",
+    subtitle: "Airport runs, boats and real 2026 prices",
+    slugs: [
+      "bali-airport-transfer-cost",
+      "bali-airport-to-canggu-transfer",
+      "bali-airport-to-the-islands",
+      "bali-grab-taxi-driver-cost",
+      "bali-tour-prices-guide",
+      "nusa-penida-tour-cost",
+    ],
+  },
   {
     title: "Islands and temples",
     subtitle: "The Gilis, Tanah Lot and the Bedugul highlands",
@@ -42465,6 +44316,22 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "Bali Tour Prices 2026: IDR 500,000-2,500,000 a Day":
+      "Цены на туры по Бали: 500 тыс. — 2,5 млн IDR за день",
+    "Grab vs Taxi in Bali: Grab Wins Until It Can&#39;t Reach You":
+      "Grab или такси на Бали: пока Grab пускают — он дешевле",
+    "Nusa Penida Tour Cost: IDR 700,000–1,200,000 Shared":
+      "Сколько стоит тур на Нуса-Пениду: от 700 тыс. IDR",
+    "Bali to Lombok: Fly South, Take the Fast Boat North":
+      "Бали — Ломбок: на юг самолётом, на север катером",
+    "Bali Airport Transfer Cost 2026: IDR 106,000–500,000 per Car":
+      "Трансфер из аэропорта Бали: 106–500 тыс. IDR за машину",
+    "Bali Airport to Nusa Penida or the Gilis: Land Before Noon":
+      "Аэропорт — Пенида и Гили: успеть до полудня",
+    "Bali Airport to Uluwatu: 45-90 Minutes, IDR 200-400k":
+      "Аэропорт — Улувату: 45–90 минут, 200–400 тыс. IDR",
+    "Bali Airport to Seminyak: 12 km, 20-75 Minutes, 3 Ways":
+      "Аэропорт — Семиньяк: 12 км, 20–75 минут, 3 способа",
     "Gili Islands with Kids: Pick Gili Air, Skip the Day Trip":
       "Гили с детьми: берите Гили Эйр, а не поездку на день",
     "Gili Air: the Middle Gili Most People End Up Preferring":
@@ -42695,6 +44562,14 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "Nusa Penida Tour Cost: IDR 700,000–1,200,000 Shared":
+      "Cuánto cuesta un tour a Nusa Penida: desde 700 mil IDR",
+    "Bali to Lombok: Fly South, Take the Fast Boat North":
+      "De Bali a Lombok: avión al sur, barco rápido al norte",
+    "Bali Airport Transfer Cost 2026: IDR 106,000–500,000 per Car":
+      "Traslado desde el aeropuerto de Bali: 106–500 mil IDR",
+    "Bali Airport to Nusa Penida or the Gilis: Land Before Noon":
+      "Aeropuerto a Nusa Penida o Gili: aterriza antes del mediodía",
     "Gili Islands with Kids: Pick Gili Air, Skip the Day Trip":
       "Islas Gili con niños: elige Gili Air, no la excursión",
     "Gili Air: the Middle Gili Most People End Up Preferring":
@@ -42847,6 +44722,22 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "Bali Tour Prices 2026: IDR 500,000-2,500,000 a Day":
+      "Prix des excursions à Bali : 500k à 2,5M IDR la journée",
+    "Grab vs Taxi in Bali: Grab Wins Until It Can&#39;t Reach You":
+      "Grab ou taxi à Bali : Grab gagne, sauf là où il ne va pas",
+    "Nusa Penida Tour Cost: IDR 700,000–1,200,000 Shared":
+      "Prix d une journée à Nusa Penida : à partir de 700k IDR",
+    "Bali to Lombok: Fly South, Take the Fast Boat North":
+      "Bali à Lombok : avion au sud, bateau rapide au nord",
+    "Bali Airport Transfer Cost 2026: IDR 106,000–500,000 per Car":
+      "Transfert aéroport de Bali : 106 à 500k IDR par voiture",
+    "Bali Airport to Sanur: 20-60 Minutes and the Last Boat":
+      "Aéroport de Bali à Sanur : 20 à 60 min et le dernier bateau",
+    "Bali Airport to Uluwatu: 45-90 Minutes, IDR 200-400k":
+      "Aéroport de Bali à Uluwatu : 45 à 90 min, 200-400k IDR",
+    "Bali Airport to Canggu: 40-90 Minutes and What It Costs":
+      "Aéroport de Bali à Canggu : 40 à 90 minutes et le prix",
     "Gili Islands with Kids: Pick Gili Air, Skip the Day Trip":
       "Îles Gili avec enfants : Gili Air, pas la journée",
     "Gili Air: the Middle Gili Most People End Up Preferring":
