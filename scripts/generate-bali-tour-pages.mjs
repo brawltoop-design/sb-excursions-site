@@ -29162,21 +29162,21 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Mount Bromo",
-        "imageSrc": "/images/places/mount-batur-jeep.jpg",
+        "imageSrc": "/images/places/mount-bromo-caldera.jpg",
         "area": "East Java",
         "bestFor": "A sunrise viewpoint on a dedicated Java leg",
         "summary": "About 2,329 m, but the classic experience is a sunrise viewpoint followed by a walk and stairs to the crater rim — not a summit climb. That makes it the least physical of the four. The catch is geography: Bromo requires flying to Java, so it belongs to a separate leg of the trip, not a Bali morning. We do not run Bromo tours."
       },
       {
         "name": "Mount Rinjani",
-        "imageSrc": "/images/places/hiking-shoes.jpg",
+        "imageSrc": "/images/places/mount-rinjani-segara-anak.jpg",
         "area": "Lombok",
         "bestFor": "Trekkers who plan days around one mountain",
         "summary": "At 3,726 m Rinjani is the tallest of the four and the only true expedition: a multi-day trek with a minimum of 2 days and 1 night, and serious fitness required. You travel to Lombok for the mountain itself rather than adding it to a beach holiday. If you only want a look at it, Rinjani is visible on the horizon from Batur's rim at sunrise."
       },
       {
         "name": "Mount Ijen",
-        "imageSrc": "/images/places/warm-layer-for-sunrise.jpg",
+        "imageSrc": "/images/places/kawah-ijen-crater-lake.jpg",
         "area": "East Java",
         "bestFor": "The blue flames on a Java itinerary",
         "summary": "About 2,769 m, climbed at night for the famous blue flames in the sulfur crater; gas masks are used near the rim. Like Bromo it sits in East Java, so it needs a Java trip, and most travellers pair the two in one overland loop. It is a striking experience and completely different in character from a Batur sunrise. We do not run Ijen tours."
@@ -32312,7 +32312,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The wet-season side: Keramas to Nusa Dua",
-        "imageSrc": "/images/places/uluwatu-surf.jpg",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
         "area": "East coast & Bukit east",
         "bestFor": "Offshore November to March",
         "summary": "When the westerlies wreck the west coast, this side turns offshore. Keramas is the star: a world-class right over black volcanic reef, advanced-plus, with a WSL contest pedigree and floodlit night sessions. Serangan is the accessible one — shifting peaks in deeper water, intermediate-friendly, rarely flat, and one of the wet season's most crowded lineups. Sanur hides a beginner-friendly inside reef and an expert-only outer one, and Nusa Dua's main peak is a wave one guide calls the most dangerous in Bali."
@@ -34000,7 +34000,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Pura Batu Bolong at Tanah Lot",
-        "imageSrc": "/images/places/uluwatu-temple-cliff.jpg",
+        "imageSrc": "/images/remote/tanah-lot-bali-indonesia-20220827-0957-1103-c4066c44.jpg",
         "area": "4 minutes south-west",
         "bestFor": "The sea arch, fewer people",
         "summary": "A second sea temple about four minutes south-west along the clifftop, on a promontory undercut by a natural arch; the walkway to the shrine runs across the top of it, with the sea on both sides. Included in the same ticket, no second gate. The shrine, like Tanah Lot, is not open to non-Hindus. Note the name: type 'Batu Bolong' into a map and you will be sent to a beach in Canggu, a different place entirely."
@@ -34625,7 +34625,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The Munduk waterfall walk",
-        "imageSrc": "/images/places/tegalalang-rice-terraces.jpg",
+        "imageSrc": "/images/places/bali-waterfall.jpg",
         "area": "Munduk, Buleleng",
         "bestFor": "A half-day walk",
         "summary": "The trail links five falls through coffee and clove plantations — Labuhan Kebo, Melanting, Belong, Red Coral and Golden Valley — and every one of them has its own ticket hut, with no combined pass. A 2025 tally came to about IDR 105,000 per person before Golden Valley, Red Coral alone at 45,000. The full circuit is a four to six hour walk on wet, mossy steps, which is why Munduk works as an overnight base rather than a last stop."
