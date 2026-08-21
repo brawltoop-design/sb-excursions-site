@@ -383,5 +383,55 @@
   "file": "mount-rinjani-segara-anak.jpg",
   "source": "https://www.pexels.com/photo/aerial-view-of-volcano-on-shore-4870657/",
   "photographer": "ROMAN ODINTSOV"
+ },
+ "Boat Open Sea Aerial": {
+  "file": "boat-open-sea-aerial.jpg",
+  "source": "https://www.pexels.com/photo/aerial-view-of-speedboat-on-calm-water-31262564/",
+  "photographer": "Ahmet Arıkaya"
+ },
+ "Boat Wake Turquoise": {
+  "file": "boat-wake-turquoise.jpg",
+  "source": "https://www.pexels.com/photo/motorboat-on-water-16604584/",
+  "photographer": "Maahid Photos"
+ },
+ "Boat Underway Blue": {
+  "file": "boat-underway-blue.jpg",
+  "source": "https://www.pexels.com/photo/white-boat-cruising-on-the-ocean-7763500/",
+  "photographer": "Merve Şahin"
+ },
+ "Palm Beach Quiet": {
+  "file": "palm-beach-quiet.jpg",
+  "source": "https://www.pexels.com/photo/beautiful-beach-with-calm-blue-waters-4679438/",
+  "photographer": "Image Studio"
+ },
+ "White Sand Empty Beach": {
+  "file": "white-sand-empty-beach.jpg",
+  "source": "https://www.pexels.com/photo/trees-near-the-shoreline-5995916/",
+  "photographer": "Olivier Bergeron"
+ },
+ "Beach Cove Headland": {
+  "file": "beach-cove-headland.jpg",
+  "source": "https://www.pexels.com/photo/idyllic-beach-scene-with-clear-blue-sky-28825342/",
+  "photographer": "inaudete souza"
+ },
+ "Tropical Road Palms": {
+  "file": "tropical-road-palms.jpg",
+  "source": "https://www.pexels.com/photo/gray-concrete-road-between-palm-trees-1450369/",
+  "photographer": "Asad Photo Maldives"
+ },
+ "Country Road Asia": {
+  "file": "country-road-asia.jpg",
+  "source": "https://www.pexels.com/photo/coconut-trees-beside-road-2548530/",
+  "photographer": "Asad Photo Maldives"
+ },
+ "Snorkeller Over Reef": {
+  "file": "snorkeller-over-reef.jpg",
+  "source": "https://www.pexels.com/photo/snorkeler-exploring-vibrant-coral-reef-waters-38208422/",
+  "photographer": "Abdulaziz hasan"
+ },
+ "Reef Fish Shallow": {
+  "file": "reef-fish-shallow.jpg",
+  "source": "https://www.pexels.com/photo/woman-in-body-of-water-2121302/",
+  "photographer": "John Cahil Rom"
  }
 }

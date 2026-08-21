@@ -10483,7 +10483,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The boat back and evening in Sanur",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/remote/morning-in-sanur-beach-bali-e4a03643.jpg",
         "area": "Sanur",
         "bestFor": "Dinner instead of a transfer",
         "summary": "Boats return in the late afternoon, and this is where Sanur pays off a second time: you step off the jetty already in your own neighborhood. Guests heading back to Canggu or Uluwatu face a long drive in evening traffic; you are minutes from dinner."
@@ -11283,7 +11283,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Sanur",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/remote/sanur-beach-bali-59142775.jpg",
         "area": "South-east coast",
         "bestFor": "Island crossings and calm first nights",
         "summary": "About 30-45 minutes on the bypass road, one of the most predictable runs from the airport. Sanur is also the harbor for the Nusa Penida fast boats, which makes it the logical first night if an island crossing sits early in your itinerary — you wake up a short walk from the boat."
@@ -11566,14 +11566,14 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Traveling with a baby or toddler",
-        "imageSrc": "/images/places/crystal-bay.jpg",
+        "imageSrc": "/images/places/beach-cove-headland.jpg",
         "area": "Verdict: it depends",
         "bestFor": "Private car, shortened route",
         "summary": "The crossing can be choppy, island roads are rough, and the star viewpoints are cliff edges. Families do it — with a private car, two or three stops instead of five, and long rests at Crystal Bay — but with under-fives a mainland day is the easier win."
       },
       {
         "name": "You get seasick or dread rough roads",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/places/boat-open-sea-aerial.jpg",
         "area": "Verdict: skip it",
         "bestFor": "Land days: Ubud, east Bali",
         "summary": "The fast-boat crossing takes 30-45 minutes and gets bouncy outside the dry season, and once ashore the island lanes are narrow, potholed and slow. If motion is your enemy, the same budget buys a smooth land day you will actually enjoy."
@@ -11729,7 +11729,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Swimming outside the safe zones",
-        "imageSrc": "/images/places/crystal-bay.jpg",
+        "imageSrc": "/images/places/white-sand-empty-beach.jpg",
         "area": "Crystal Bay, Kelingking Beach, Diamond Beach",
         "bestFor": "Fine in the right bay, dangerous in the wrong one",
         "summary": "Crystal Bay's inner section is a genuine morning swim; Kelingking and Diamond Beach are not — both carry heavy shore break and rip currents, and there are no lifeguards anywhere on the island. Swim where your driver or boat crew confirms conditions that day, not where a photo suggested."
@@ -12432,7 +12432,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Traveling with kids",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/white-sand-empty-beach.jpg",
         "area": "Gili Air",
         "bestFor": "Shallow water and short distances",
         "summary": "Air wins family stays: calm, shallow entries on the east coast, no car traffic, and distances a tired child can walk. Trawangan works from its quieter north side, but the main strip stays loud late. On both islands the seabed mixes sand with coral rubble, so pack reef shoes."
@@ -12710,7 +12710,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Decision test 1: can you accept wild-animal odds",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/beach-cove-headland.jpg",
         "area": "Before you book",
         "bestFor": "Managing expectations",
         "summary": "Sightings are the norm, not a rule. If a morning without dolphins would ruin the trip for you, this is the wrong tour — the honest way to book Lovina is for the whole sunrise route, with the dolphins as the probable highlight rather than a promise."
@@ -12886,7 +12886,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The proposal scenario",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/palm-beach-quiet.jpg",
         "area": "Who it suits",
         "bestFor": "Asking the question",
         "summary": "A deck at golden hour gives you privacy, a clean backdrop and a built-in reason to dress up — better proposal logistics than any beach. Share the plan when you book so the moment lands in the light, not in the middle of dinner service."
@@ -13310,7 +13310,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Nusa Penida Day with Manta Point",
-        "imageSrc": "/images/places/kelingking-beach-t-rex-cliff.jpg",
+        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
         "area": "Nusa Penida",
         "bestFor": "Cliffs and manta rays in one day",
         "summary": "A full private day on Penida from $60: the cliff viewpoints, the island's west coast and snorkeling at Manta Point, with early hotel pickup and the harbor transfer handled. It is the biggest single day of the week — schedule an empty day after it."
@@ -14736,7 +14736,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The drive to Sanur harbor",
-        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "imageSrc": "/images/remote/1280px-sanur-port-sf0001-b8fad127.jpg",
         "area": "Bukit to Sanur",
         "bestFor": "Sleep or breakfast in the car",
         "summary": "Roughly 60-90 minutes depending on traffic, mostly on the bypass past Jimbaran and Kuta. This leg is why the start is early — leaving later means hitting the morning jam and cutting it close for the boat."
@@ -15750,7 +15750,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Free time on Gili Trawangan",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/white-sand-empty-beach.jpg",
         "area": "Step 5 · Gili Trawangan",
         "bestFor": "Lunch and a swim",
         "summary": "Back on Trawangan you get free time for lunch and a swim on an island with no cars — bicycles and horse carts are the only traffic. Beach restaurants sit right on the sand facing the water, and the slower pace is the point of the stop."
@@ -15898,7 +15898,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "What to bring",
-        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "imageSrc": "/images/places/snorkeller-over-reef.jpg",
         "area": "Your day pack",
         "bestFor": "Packing right",
         "summary": "Reef shoes for the rocky entry, a mask you have actually tested, a rash guard so you can skip most of the sunscreen, water, and a dry bag for phones on the boat. Rental gear exists at the beach, but fit is a lottery. Small cash notes cover parking, coconuts and the warung — cards are optimistic in Padang Bai."
@@ -16089,7 +16089,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Gamat Bay",
-        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "imageSrc": "/images/places/reef-fish-shallow.jpg",
         "area": "West route",
         "bestFor": "Snorkeling off the beach",
         "summary": "A tiny cove between Toyapakeh and Crystal Bay that most itineraries skip, which is exactly why snorkelers rate it. Coral starts close to shore and the fish life beats Crystal Bay's on most days. The catch is access: a steep scramble down on foot, and currents at the mouth of the bay, so it is best visited by boat with a guide."
@@ -16179,7 +16179,7 @@ const JOURNAL_SEO_GUIDES = [
     "rankings": [
       {
         "name": "The Cleaning Station",
-        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "imageSrc": "/images/places/snorkeller-over-reef.jpg",
         "area": "Southwest coast, Nusa Penida",
         "bestFor": "Why sightings are reliable",
         "summary": "Manta Point isn't a lucky sighting spot — it's a cleaning station, a rocky outcrop where small wrasse pick parasites off manta rays. The mantas queue up and circle the same patch of reef for as long as the cleaning takes, which is why boats return to this exact spot daily and why sightings are consistent year-round."
@@ -16312,7 +16312,7 @@ const JOURNAL_SEO_GUIDES = [
     "rankings": [
       {
         "name": "The Bay Itself",
-        "imageSrc": "/images/places/crystal-bay.jpg",
+        "imageSrc": "/images/places/beach-cove-headland.jpg",
         "area": "West coast, Nusa Penida",
         "bestFor": "First-timers getting oriented",
         "summary": "A white-sand crescent on Nusa Penida's west coast, framed by headlands and a small rocky islet just offshore. It's the calmest entry point on an island famous for cliffs you can only look at — here you can actually swim. Warungs and loungers line the back of the beach; facilities are basic but enough for a full day."
@@ -16326,7 +16326,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Sunset at Crystal Bay",
-        "imageSrc": "/images/remote/sunset-double-six-beach-2023-12-07-327b775c.jpg",
+        "imageSrc": "/images/places/crystal-bay.jpg",
         "area": "West-facing, evening",
         "bestFor": "Ending a Penida day",
         "summary": "Crystal Bay faces due west, which makes it the island's default sunset beach — the sun drops into the strait framed by the islet. Most day-trippers have already left for their boats by then, so the light show comes with a quieter beach. If you're staying overnight on Penida, this is the evening plan."
@@ -16340,7 +16340,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Gamat Bay Next Door",
-        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "imageSrc": "/images/places/reef-fish-shallow.jpg",
         "area": "Between Crystal Bay and Toyapakeh",
         "bestFor": "A quieter snorkel cove",
         "summary": "A short hop up the coast toward Toyapakeh, Gamat Bay is a pocket cove that most land tours skip because the path down is steep. The reef is denser than Crystal Bay's and the fish life better, but there's no real beach to lounge on — it's a snorkel stop, not a sunbathing stop. Easiest reached by boat."
@@ -16599,7 +16599,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The seagrass, not the coral",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/beach-cove-headland.jpg",
         "area": "Shallows around all three Gilis",
         "bestFor": "Watching turtles feed",
         "summary": "Counterintuitive but decisive: turtles are grazers, and the grass beds are their dining room. Coral gardens get the photos; seagrass gets the sightings. The meadows sit in roughly two to eight metres of water, which means you can watch a feeding turtle comfortably from the surface with no freediving skills at all. Guides know each meadow — let them position the boat."
@@ -16613,14 +16613,14 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The rules: look, don't touch",
-        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "imageSrc": "/images/places/snorkeller-over-reef.jpg",
         "area": "Every site",
         "bestFor": "Keeping sightings sustainable",
         "summary": "Sea turtles are protected in Indonesia. Keep two to three metres of distance, never touch or hold one, and never block its path upward — turtles have to surface to breathe every few minutes. No chasing for a photo, no flash. The practical payoff: an unbothered turtle keeps feeding and stays with you far longer than a harassed one ever will."
       },
       {
         "name": "Nusa Penida's occasionals",
-        "imageSrc": "/images/places/crystal-bay.jpg",
+        "imageSrc": "/images/places/white-sand-empty-beach.jpg",
         "area": "Penida north coast and channel",
         "bestFor": "Bonus sightings on manta trips",
         "summary": "You can meet a turtle at Crystal Bay or along Penida's north-coast reefs, but treat it as a bonus, not the plan — the currents that make Penida spectacular also make its turtles transient. If turtles are the priority, cross to the Gilis. If the priority is mantas and cliffs with a chance of turtles on the side, Penida is the trip."
@@ -16709,7 +16709,7 @@ const JOURNAL_SEO_GUIDES = [
     "rankings": [
       {
         "name": "April to October: the dry season",
-        "imageSrc": "/images/places/crystal-bay.jpg",
+        "imageSrc": "/images/places/beach-cove-headland.jpg",
         "area": "Island-wide",
         "bestFor": "Reliable visibility",
         "summary": "The southeast trade winds keep rain away and rivers low, so less sediment washes into the sea. From roughly April to October you get the most consistent visibility across the whole island, with the middle of that stretch usually calmest. It is also high season, which means fuller boats at the famous spots — book a morning departure and you barely notice."
@@ -16737,7 +16737,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The Nusa Penida channel",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/places/boat-wake-turquoise.jpg",
         "area": "Badung Strait",
         "bestFor": "Year-round clarity",
         "summary": "The strait between Bali and Nusa Penida moves a huge volume of ocean water on every tide, which flushes the sites along Penida's coast clean. Visibility there stays strong even in months when mainland beaches look murky. The trade-off is movement: sites are drift-prone, and crossings get bumpy once the wet season's afternoon weather builds."
@@ -16838,14 +16838,14 @@ const JOURNAL_SEO_GUIDES = [
     "rankings": [
       {
         "name": "Travel time from Bali",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/places/boat-underway-blue.jpg",
         "area": "Sanur & Padang Bai",
         "bestFor": "Short crossings: Penida",
         "summary": "Nusa Penida is roughly 45 minutes by fast boat from Sanur, so a day trip leaves after breakfast and has you back for dinner. The Gilis are a genuinely long crossing — around two hours each way from east Bali, more door to door from the southern resorts. As a pure day trip, Penida takes far less of your holiday in transit."
       },
       {
         "name": "Water and swim conditions",
-        "imageSrc": "/images/places/crystal-bay.jpg",
+        "imageSrc": "/images/places/white-sand-empty-beach.jpg",
         "area": "Both islands",
         "bestFor": "Gentler water: Gilis",
         "summary": "Penida's sites are flushed by the deep channel between the islands, so visibility is strong year-round; the trade-off is current and swell exposure at the famous spots. The Gilis sit in calmer, shallower water with no rivers near, so conditions are gentler and more predictable. Clarity is excellent at both — the difference is how much the ocean moves while you are in it."
@@ -17250,7 +17250,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "USAT Liberty Wreck",
-        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "imageSrc": "/images/places/reef-fish-shallow.jpg",
         "area": "Tulamben",
         "bestFor": "The famous one",
         "summary": "Bali's most famous dive site is also snorkelable: the upper sections of this WWII cargo ship sit shallow enough to see clearly from the surface on a calm day. Entry is over smooth black stones, so bring reef shoes. Divers swarm it mid-morning; snorkel at first light or late afternoon and you will share it with far fewer bubbles."
@@ -17264,7 +17264,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Tulamben Drop-off",
-        "imageSrc": "/images/places/crystal-bay.jpg",
+        "imageSrc": "/images/places/beach-cove-headland.jpg",
         "area": "Tulamben",
         "bestFor": "Wall scenery from the surface",
         "summary": "At the other end of Tulamben bay a wall falls away into deep blue, and you can hang above it in flat water watching divers below like an aquarium in reverse. Visibility here is often the best in the bay. It is a longer surface swim than the wreck, so save it for a calm, confident day."
@@ -17364,7 +17364,7 @@ const JOURNAL_SEO_GUIDES = [
     "rankings": [
       {
         "name": "Pos II Wall",
-        "imageSrc": "/images/places/crystal-bay.jpg",
+        "imageSrc": "/images/places/white-sand-empty-beach.jpg",
         "area": "Menjangan Island",
         "bestFor": "The signature wall",
         "summary": "Menjangan's calling card: a coral wall that drops from a knee-deep reef flat straight into deep blue, with visibility that regularly beats anything on mainland Bali. You float over the edge in still water and watch the wall fall away below you — gorgonian fans, turtles and clouds of reef fish, with no surf or surge to fight."
@@ -17378,7 +17378,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Eel Garden",
-        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "imageSrc": "/images/places/snorkeller-over-reef.jpg",
         "area": "Menjangan Island",
         "bestFor": "Clearest water of the day",
         "summary": "Near the island's western tip, a pale sand slope where garden eels sway below the shallows and the water is often the clearest of the whole trip. A little current can run through here, which is exactly why the visibility holds up. Your boatman will judge conditions on the day; when it is on, this is the best snorkel on the island."
@@ -17392,7 +17392,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Temple Point",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/palm-beach-quiet.jpg",
         "area": "Menjangan Island",
         "bestFor": "Deer, shrine and shallows",
         "summary": "Menjangan means deer, and you will likely see them wandering near the small temple when your boat stops at the island's shrine. The reef off this stretch is shallow and healthy, the water usually pool-calm, and setting foot on a wild, uninhabited national-park island is part of what you drove all those hours for."
@@ -22067,21 +22067,21 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Is Gili Air worth visiting?",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/white-sand-empty-beach.jpg",
         "area": "Verdict: worth it, but sleep there",
         "bestFor": "Calm swimming, slow mornings",
         "summary": "Air is the quiet one: shallow east-coast entries, cafes that recognise you by day two, no bar strip. It is also the island a day trip skips, because reaching it trades away the two best snorkel sites. Worth visiting, yes — worth staying on, specifically, rather than touching for an hour."
       },
       {
         "name": "You get seasick",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/places/boat-open-sea-aerial.jpg",
         "area": "Verdict: skip it",
         "bestFor": "A shorter crossing closer to Bali",
         "summary": "This is the longest open-water crossing in our day-trip range, and the strait is not always flat. Outside the dry season it can be a bouncy couple of hours each way, twice in one day. If motion is your enemy, the 30-45 minute hop to Nusa Penida is a completely different morning."
       },
       {
         "name": "You only have four or five days in Bali",
-        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "imageSrc": "/images/places/reef-fish-shallow.jpg",
         "area": "Verdict: skip it",
         "bestFor": "Penida or Padang Bai instead",
         "summary": "On a short trip the Gilis cost a full day plus the flat evening that follows it. The same wish — clear water with something big in it — is answered much closer to home by manta snorkeling off Nusa Penida from $29 or a half day at Blue Lagoon from $50."
@@ -22590,7 +22590,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Gili Meno",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/beach-cove-headland.jpg",
         "area": "Smallest island",
         "bestFor": "Turtles and doing very little",
         "summary": "The smallest and quietest of the three, with a short list of kitchens and rooms and a reputation built on the turtles in its shallows. You can walk it end to end in well under two hours. After the day boats leave in the afternoon it is close to silent, which is either the whole appeal or the reason to stay elsewhere."
@@ -22618,7 +22618,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Getting between them",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/places/boat-wake-turquoise.jpg",
         "area": "Inter-island hopping boats",
         "bestFor": "Seeing more than one island",
         "summary": "Public hopping boats connect the three on a fixed schedule a few times a day, not on demand. Miss the last one and you are sleeping where you stand. Plan dinner on the island you are staying on, and treat a hop as a daytime activity rather than an evening plan."
@@ -22927,7 +22927,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The substitute bay when the point is closed",
-        "imageSrc": "/images/places/crystal-bay.jpg",
+        "imageSrc": "/images/places/beach-cove-headland.jpg",
         "area": "West coast, Nusa Penida",
         "bestFor": "Knowing plan B before you go",
         "summary": "When the swell shuts Manta Point, the day is not always cancelled outright. The captain usually moves the snorkel stops to a sheltered west-coast bay where entry is easy and the coral sits shallow. It makes for a good morning in the water. It is not a manta morning, and no operator can convert one into the other on the day."
@@ -23243,7 +23243,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "March",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/palm-beach-quiet.jpg",
         "area": "Wet season easing",
         "bestFor": "Quiet mornings as conditions turn",
         "summary": "The tail of the rain. Conditions improve unevenly through the month and the bay is quiet, so a good March morning can feel like you have the place to yourself. It is still a gamble rather than a plan. If you have the flexibility to move your boat day by 24 hours, March rewards it more than any other month on this list."
@@ -23552,7 +23552,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Where to swim instead",
-        "imageSrc": "/images/places/crystal-bay.jpg",
+        "imageSrc": "/images/places/white-sand-empty-beach.jpg",
         "area": "Crystal Bay, same route",
         "bestFor": "The actual swim of the day",
         "summary": "Crystal Bay is on the same west-coast loop and is where the swimming happens. Planning the day so Kelingking is for looking and Crystal Bay is for water solves the problem that catches most first visits."
@@ -24191,7 +24191,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Amed and Tulamben",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/white-sand-empty-beach.jpg",
         "area": "Northeast Bali coast",
         "bestFor": "Shore entry, wreck snorkeling and calm mornings",
         "summary": "The reef begins a few metres off the black sand, so there is nothing to buy at the entrance. We do not run a fixed-price Amed tour; a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car gets you there and waits. Roughly three hours each way from Seminyak. Bring cash for gear and a boat."
@@ -25361,7 +25361,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The road to your day trips",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/places/boat-underway-blue.jpg",
         "area": "Sanur",
         "bestFor": "Nusa Penida and Lembongan mornings",
         "summary": "The harbour for Nusa Penida and Nusa Lembongan is inside Sanur, so an island day starts with a few minutes on foot. From Seminyak the same day starts with a 30–50 minute drive, which is still the second-best position on the mainland and well ahead of Canggu or Uluwatu at 60–90 minutes. The crossing is 30–45 minutes by fast boat from either base."
@@ -25525,7 +25525,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The morning of a day trip",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/places/boat-open-sea-aerial.jpg",
         "area": "Winner: Seminyak",
         "bestFor": "Boats to Nusa Penida and the islands",
         "summary": "Every island day starts at the port in Sanur. From Seminyak that drive is 30-50 minutes; from Uluwatu it is 60-90. The crossing is 30-45 minutes either way, so it is the road that differs — from the Bukit you leave earlier and get back later, and across a week of outings that adds up."
@@ -25539,7 +25539,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "When neither is the answer",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/beach-cove-headland.jpg",
         "area": "Sanur, Nusa Dua, Jimbaran or Ubud",
         "bestFor": "Calm water, or no sea at all",
         "summary": "If you came to swim, both of these are the wrong call. Sanur has calm water and the island port on its doorstep, Nusa Dua the most predictable white sand on the mainland, Jimbaran a quieter bay with seafood served on the sand. And if what you actually want is rice terraces and temples, that is Ubud, which has no coast at all."
@@ -25689,7 +25689,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Neither of them",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/palm-beach-quiet.jpg",
         "area": "Sanur, Nusa Dua, Ubud, the Bukit",
         "bestFor": "Swimming, quiet or culture",
         "summary": "If the trip is about calm water, Sanur or Nusa Dua. If it is about rice terraces and temples, Ubud, and accept that the sea is far away. If it is about serious surf and cliffs, the Bukit. Picking one of these two because they are the famous names is how people end up disappointed in a place that was never for them."
@@ -25988,14 +25988,14 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The drive to your day trips",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/places/boat-wake-turquoise.jpg",
         "area": "A tie, at the wrong end",
         "bestFor": "Anyone planning Nusa Penida or Mount Batur",
         "summary": "Both areas sit 60-90 minutes from Sanur port, where the Penida boats leave, against 30-50 minutes from Seminyak. Both count as southern areas for Mount Batur, so the sunrise pickup lands an hour earlier than it does in Ubud. Same tour, earlier alarm, shorter day."
       },
       {
         "name": "Who neither area suits",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/white-sand-empty-beach.jpg",
         "area": "Sanur, Nusa Dua or Ubud",
         "bestFor": "Families, swimmers and interior-first trips",
         "summary": "Travelling with small children who want to get into the water? Both areas are the wrong call, and Sanur or Nusa Dua is the right one. If the trip is really about rice terraces, temples and the volcano, Ubud beats both, and it sits closer to the Penida boats than either of them."
@@ -26137,7 +26137,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The Nusa Penida morning",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/places/boat-underway-blue.jpg",
         "area": "Winner: Ubud, narrowly",
         "bestFor": "Boat days out of Sanur harbour",
         "summary": "Every fast boat leaves from Sanur: 45–70 minutes from Ubud against 60–90 from Canggu, then a 30–45 minute crossing either way. Ubud takes it, but only by about a quarter of an hour. If Penida is the whole reason for the trip, be honest that neither area is the quick one — Seminyak reaches Sanur in 30–50 minutes and Sanur itself is at the pier."
@@ -26151,7 +26151,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Who each one is wrong for",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/beach-cove-headland.jpg",
         "area": "Read before booking",
         "bestFor": "Avoiding the classic mismatch",
         "summary": "Canggu is wrong for anyone who wants calm swimming water, quiet evenings, or a base that suits small children. Ubud is wrong for surfers, for anyone who needs the sea at the end of the day, and for anyone with a dawn flight home, because the airport run is 1.5–2.5 hours depending on traffic."
@@ -26297,7 +26297,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Day trips and drive time",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/places/boat-open-sea-aerial.jpg",
         "area": "Sanur",
         "bestFor": "Anyone with two or more sea days",
         "summary": "Sanur harbour is where every fast boat to Nusa Penida and Lembongan leaves from, and the crossing is 30-45 minutes. From Uluwatu the same day starts with 60-90 minutes of driving before the boat. One such morning is a fair trade for a week on the cliffs; three is not."
@@ -26465,7 +26465,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The pre-dawn starts",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/places/boat-wake-turquoise.jpg",
         "area": "Both southern bases",
         "bestFor": "Batur sunrise and island days",
         "summary": "Southern areas leave for the Mount Batur sunrise about an hour earlier than Ubud, with pickups falling between 01:30 and 03:30. Nusa Dua and Seminyak both sit on the wrong side of that hour, and neither buys you sleep. The Nusa Penida crossing from Sanur is 30-45 minutes, so on island days it is the road, never the boat, that eats the morning."
@@ -26618,7 +26618,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The drive out to day trips",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/places/boat-underway-blue.jpg",
         "area": "Winner: Kuta",
         "bestFor": "Nusa Penida, Batur and anything with a pre-dawn pickup",
         "summary": "Every big day on Bali begins by leaving your area, and this is where the two stop being equivalent. From Canggu the port at Sanur is 60-90 minutes; from Seminyak, which sits on Kuta's side of the island, it is 30-50. Kuta and Legian belong to that side. The crossing to Nusa Penida is 30-45 minutes on top, and the earlier alarm comes out of your sleep, not out of the island."
@@ -26789,7 +26789,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The drive to your day trips",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/places/boat-open-sea-aerial.jpg",
         "area": "Close call, edge to Seminyak",
         "bestFor": "Early starts that do not eat the day",
         "summary": "Everything that leaves by sea from this side of Bali goes through Sanur port, and from Seminyak that transfer is 30-50 minutes. Kuta sits on the same corridor and behaves much the same. The real gap is elsewhere: Canggu and the Bukit are both 60-90 minutes from the same port, which is a whole hour of sleep."
@@ -26916,7 +26916,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Everyday life in Jimbaran",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/palm-beach-quiet.jpg",
         "area": "Jimbaran",
         "bestFor": "Slow evenings on the sand",
         "summary": "A bay instead of an open coast, fish restaurants with tables set directly on the sand, and a pace noticeably calmer than Kuta. The trade is that fewer things sit within walking distance, so more of your week runs on a driver or a scooter than it would in Seminyak."
@@ -29493,7 +29493,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Sanur — the middle option",
-        "imageSrc": "/images/tours-real/mount-batur-sunrise-hike.jpg",
+        "imageSrc": "/images/remote/sanur-beach-bali-59142775.jpg",
         "area": "Roughly 1.5 to 2 hours one way",
         "bestFor": "A beach base without the longest drive",
         "summary": "Sanur sits between Ubud and the other beach areas in driving terms: roughly 1.5 to 2 hours each way, with sunrise pickups between 01:30 and 02:00. It is the compromise — you keep the coast and the calm seafront, and pay for it with an alarm that rings earlier than in Ubud but later than in Canggu or Uluwatu."
@@ -31244,14 +31244,14 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Manta Bay",
-        "imageSrc": "/images/places/kelingking-beach-t-rex-cliff.jpg",
+        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
         "area": "West coast, below the Kelingking cliffs",
         "bestFor": "Mantas when the south corner is closed",
         "summary": "A second manta mooring, closer to the harbour and tucked under the west cliffs, so it is shallower and better sheltered than the point. Captains use it when the southern swell is running. Many operators print only the words Manta Point on the itinerary and take you here instead, which is not a swap in quality but is worth knowing before the boat turns north instead of south."
       },
       {
         "name": "Gamat Bay",
-        "imageSrc": "/images/places/crystal-bay.jpg",
+        "imageSrc": "/images/places/beach-cove-headland.jpg",
         "area": "Narrow cove north of Crystal Bay",
         "bestFor": "The best coral of the day",
         "summary": "A small cove with a coral wall running along one side and the healthiest hard coral on the standard route. It is also the stop where the current is felt most often: water squeezes past the headland, and you can find yourself moving along the wall without swimming. Guides usually put swimmers in at one end and let the boat follow. No beach, boat entry only."
@@ -31265,7 +31265,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Toyapakeh and the wall",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/places/boat-wake-turquoise.jpg",
         "area": "The strait between Penida and Ceningan",
         "bestFor": "Fish life and easy floating on the right tide",
         "summary": "A shallow reef in the channel, close to the harbour, with more small fish than anywhere else on the route and a coral edge that drops away into the strait. When the tide is still it is the gentlest snorkeling of the day. When the tide is running it carries you along, and you cover a lot of reef without moving your arms. Which one you get is decided by the hour, not the season."
@@ -31430,14 +31430,14 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Manta Bay — the sheltered one",
-        "imageSrc": "/images/places/kelingking-beach-t-rex-cliff.jpg",
+        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
         "area": "West coast, below the Kelingking cliffs",
         "bestFor": "Calmer water and a shorter boat ride",
         "summary": "A bay on the lee side of the island where mantas come in to feed rather than to be cleaned. It is shallower, the water moves less, and the cliffs above it are the same ones you look down from at Kelingking. Because it is closer to the harbour and out of the swell, it is the default substitute — and on a rough morning, a good session here beats a cancelled one at the point."
       },
       {
         "name": "What is identical at both",
-        "imageSrc": "/images/places/crystal-bay.jpg",
+        "imageSrc": "/images/places/white-sand-empty-beach.jpg",
         "area": "Either mooring",
         "bestFor": "Setting your expectations",
         "summary": "Reef mantas, not the giant oceanic species. Wingspans commonly around three metres, occasionally larger. Boat entry down a ladder into open water at both, life vests at both, twenty to forty minutes floating at both. Neither mooring guarantees anything: these are wild animals, and any operator promising a sighting is selling certainty they do not have."
@@ -31586,14 +31586,14 @@ const JOURNAL_SEO_GUIDES = [
     "rankings": [
       {
         "name": "The cleaning station: 8-12 metres",
-        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "imageSrc": "/images/places/snorkeller-over-reef.jpg",
         "area": "Over the reef at the south-west corner",
         "bestFor": "Understanding why snorkeling works here",
         "summary": "Mantas hold position above a patch of coral heads while small wrasse work over their skin and gills. That patch is shallow, which is unusual — many manta cleaning stations elsewhere sit well beyond snorkelling depth. Here you float on the surface and look down onto animals that are often only a few metres below you, and regularly much closer than that when one rises through the column."
       },
       {
         "name": "The sand and the drop",
-        "imageSrc": "/images/places/crystal-bay.jpg",
+        "imageSrc": "/images/places/beach-cove-headland.jpg",
         "area": "Around the station",
         "bestFor": "Divers planning the profile",
         "summary": "Around the coral heads the bottom is sand at roughly twelve to fifteen metres, and it steps down from there toward the wall as you move away from the station. Most dives here are shallow, long and undemanding on air precisely because there is no reason to go deep — the animals are above you, not below. Depth is not what makes this dive demanding."
@@ -31754,7 +31754,7 @@ const JOURNAL_SEO_GUIDES = [
     "rankings": [
       {
         "name": "Nusa Penida — the only real answer",
-        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "imageSrc": "/images/places/reef-fish-shallow.jpg",
         "area": "Across the strait, 30-40 min by boat from Sanur",
         "bestFor": "Actually seeing mantas",
         "summary": "Two moorings on the island's west and south-west coasts bring reef mantas in year-round, because one of them is a cleaning station where small fish groom the animals. It is shallow enough to snorkel, it runs as a day trip from anywhere in south Bali with an early pickup, and it is where every manta photograph taken in Bali comes from. Everything below is a place people mistakenly go instead."
@@ -31959,7 +31959,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Three days or more",
-        "imageSrc": "/images/places/crystal-bay.jpg",
+        "imageSrc": "/images/places/white-sand-empty-beach.jpg",
         "area": "Both halves plus the water",
         "bestFor": "Divers and snorkellers",
         "summary": "Only worth it if the sea is the point. Three days lets you put a full snorkelling or diving day in without losing a land half, and gives you a spare morning if the manta mooring is closed by swell. For anyone whose Penida plan is viewpoints and beaches, the third day is one more day of the same roads."
@@ -32101,7 +32101,7 @@ const JOURNAL_SEO_GUIDES = [
     "rankings": [
       {
         "name": "What actually keeps you up",
-        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "imageSrc": "/images/places/snorkeller-over-reef.jpg",
         "area": "Every stop",
         "bestFor": "The thing most people do not know",
         "summary": "A life vest, and it is not optional on shared boats. With one on you float whether or not you do anything, and with a mask and snorkel you breathe with your face in the water while doing nothing at all. Swimming ability is not what keeps you at the surface here — the vest is. What swimming ability buys you is calm, which is a different thing and matters more."
@@ -32453,7 +32453,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Berawa (the inside Peak only)",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/white-sand-empty-beach.jpg",
         "area": "Canggu (south)",
         "bestFor": "Sand inside, quiet lineup",
         "summary": "The one Canggu beach with a genuinely sand-bottom learner zone — but only the inside Peak. Rock and coral sit out the back and at The Ledge to the south, so a beginner's session stays on the Peak, full stop. It is markedly quieter than Batu Bolong. On tide, the honest answer: our sources contradict each other outright, so we apply the strip rule — mid to high, rising. After heavy rain the river pushes dirty water into the lineup; give it a day."
@@ -33277,7 +33277,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Soka — a stop, not a session",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/beach-cove-headland.jpg",
         "area": "Between Tabanan and Balian",
         "bestFor": "A black-sand leg stretch",
         "summary": "We list Soka as a beach stop, not a surf spot, and that is deliberate. The only two surf reports we could find flatly contradict each other — one describes a mellow longboard paddle, the other an extremely shallow outer reef that is rarely surfed — and no source gives a tide or a wave direction. As a black-sand photo-and-coffee stop on the way to Balian it earns its place; as a session it is a gamble we will not sell you."
@@ -33568,7 +33568,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Beat the sea breeze — surf at dawn",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/palm-beach-quiet.jpg",
         "area": "The daily wind clock",
         "bestFor": "Timing the clean window",
         "summary": "Outside the strongest trade months the wind runs on a thermal clock: lightest at dawn, building as the land heats, strongest onshore push in the afternoon. In June and July the trades override that cycle and blow from first light — strong enough some days to rough up even the offshore coast. The conclusion is the same in every month of the year: the reliable clean window is dawn, and the early drive is the price of it."
@@ -33694,7 +33694,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Sea urchins",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/white-sand-empty-beach.jpg",
         "area": "Reef flats underfoot",
         "bestFor": "Painful, predictable, treatable",
         "summary": "Wade in over reef around Uluwatu and urchin spines find feet — they puncture, snap off deep, and left alone they form nodules and get infected. The treatment is well agreed: **hot-water immersion for 30-90 minutes at 43-45°C**, hot but not scalding, because the toxin breaks down with heat. Pull large visible spines with tweezers, don't dig for the deep ones, and use vinegar soaks to dissolve shallow fragments. Urine, for the record, does nothing. Booties turn this whole entry into a non-event."
@@ -33715,7 +33715,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Sharks, with the actual numbers",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/beach-cove-headland.jpg",
         "area": "West-coast river mouths",
         "bestFor": "Last for a reason",
         "summary": "The logged record for Bali: **six surfing incidents from 2010 to 2017, all non-fatal, all on the west coast around Balian and Tabanan** — zero at Uluwatu or anywhere on the Bukit. The two best-documented bites were suspected bull sharks at a river-mouth break, one tied to post-rain conditions. The 2023 tiger shark filmed near Uluwatu was feeding on a dugong; surfers paddled in, nobody was touched. Murky river mouths after rain are the one setting that earns respect — and you're avoiding those anyway."
@@ -34946,7 +34946,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Hopping to Gili Meno and Gili Air",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/places/boat-underway-blue.jpg",
         "area": "Island-hopper boat",
         "bestFor": "A half-day off the island",
         "summary": "The scheduled island-hopper links all three islands twice a day, the Bangsal-based circuit leaving around 09:00 and again about 16:00. Fares are asymmetric and cheap outbound from Gili T — roughly IDR 20,000 to Meno and IDR 23,000 to Gili Air, with the return legs costing more. Miss the afternoon circuit and you are chartering a boat, so treat the timetable as the constraint it is."
@@ -35126,7 +35126,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Letting small children roam",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/palm-beach-quiet.jpg",
         "area": "Anywhere on the island",
         "bestFor": "Families with small children",
         "summary": "There are no cars or motorbikes on any of the three islands — a local ordinance bans them — which removes the single biggest source of parental anxiety in Bali. Gili Air is small enough to walk around in about 90 minutes or cycle in 30, and bikes with child seats are widely available here, more so than on the other two. The paths are sand, though: strollers do not work, so bring a carrier for under-threes."
@@ -35278,7 +35278,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "The turtle sanctuary",
-        "imageSrc": "/images/places/calm-beach-in-bali.jpg",
+        "imageSrc": "/images/places/white-sand-empty-beach.jpg",
         "area": "Gili Meno",
         "bestFor": "Twenty minutes with children",
         "summary": "A small local hatchery that collects eggs, rears hatchlings for about a year and releases them — reported at roughly 2,000 a year. There is no ticket; it runs on donations, and IDR 50,000-100,000 is a normal contribution, so carry small notes. It is the Gili hatchery usually named as the credible one, in contrast to the Gili Trawangan facility. Sanctuary describes intent, not accreditation — headstarting is debated among marine biologists."
@@ -35638,7 +35638,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Know where the hospital is, because it is not here",
-        "imageSrc": "/images/places/fast-boat-from-sanur.jpg",
+        "imageSrc": "/images/places/boat-open-sea-aerial.jpg",
         "area": "Mataram, Lombok",
         "bestFor": "Reading before you book",
         "summary": "There is no hospital on any of the three islands, only clinics — the Empat Pillar Medika network runs one on each, operating around the clock with call-outs to hotels. The nearest hospitals are in Mataram on Lombok, **roughly 60-90 minutes away** by speedboat to Bangsal plus a waiting ambulance. Gili Air's 10-15 minute crossing to Bangsal is the shortest of the three, which is a quiet argument for it with young children."
@@ -35759,7 +35759,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "name": "Gili Meno's west and north-west coast",
-        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "imageSrc": "/images/places/reef-fish-shallow.jpg",
         "area": "Gili Meno",
         "bestFor": "Several turtles in one swim",
         "summary": "Meno is the strongest of the three for turtles, and several sightings in a single calm morning is normal rather than lucky. Greens and hawksbills come in to five or ten metres off the sand along the west coast near the disused jetty and the north-west near Good Heart. The east coast off the Karma bungalows holds them within roughly twenty metres of shore."
