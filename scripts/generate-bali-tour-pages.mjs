@@ -13681,7 +13681,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/tours-real/white-water-rafting.jpg",
         "area": "Before launch",
         "bestFor": "Peace of mind",
-        "summary": "Every raft runs with a licensed local guide, and life jackets, helmets and a paddle briefing come before anyone touches the water. The guide reads the river and calls the strokes; your entire job is to follow four or five simple commands and hold on when told to."
+        "summary": "Every raft runs with a river guide, and life jackets, helmets and a paddle briefing come before anyone touches the water. Worth knowing: formal competency certification is not universal on the Ayung — a few dozen guides across Bali hold the national BNSP standard, against several hundred working the river — so it is a fair question to ask your operator. The guide reads the river and calls the strokes; your entire job is to follow four or five simple commands and hold on when told to."
       },
       {
         "name": "What to wear and pack",
@@ -13695,21 +13695,21 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/places/hiking-shoes.jpg",
         "area": "Entry and exit",
         "bestFor": "Knowing before you book",
-        "summary": "The one real physical test of the day is not the river — it is the several hundred concrete steps down into the gorge at the start and back out at the end. Fit travelers barely notice; anyone with knee trouble should weigh this part honestly before booking."
+        "summary": "The one real physical test of the day is not the river — it is the concrete steps. On the main Ayung route that is around 509 down into the gorge at the start and about 250 back up at the finish, which are two different staircases in two different places with a shuttle between them, not one climb repeated. Other operators on the same river publish roughly 600 down and 400 up. Fit travelers barely notice; anyone with knee trouble should weigh this part honestly before booking."
       },
       {
         "name": "Season and water level",
         "imageSrc": "/images/places/bali-green-season.jpg",
         "area": "Year-round",
         "bestFor": "Picking your month",
-        "summary": "Rafting runs all year on the Ayung. From April to October the water sits lower and gentler — the easiest window for nervous first-timers. November to March rains raise the river and speed it up, which returning rafters enjoy. Trips are called off only when levels become genuinely unsafe."
+        "summary": "Rafting runs all year on the Ayung. From April to October the water sits lower and gentler — the easiest window for nervous first-timers. November to March rains raise the river and speed it up, which returning rafters enjoy. Season describes the character of the water rather than a guarantee, and the decision to cancel is the operator's own: Bali's disaster agencies issue advisories, not closures. Ask your operator what their own stop threshold is."
       },
       {
         "name": "Pickup and travel time",
         "imageSrc": "/images/places/private-driver-in-bali.jpg",
         "area": "Logistics",
         "bestFor": "Planning the day",
-        "summary": "Morning or midday hotel pickup, with the exact time confirmed on WhatsApp the day before. From Kuta, Seminyak or Canggu budget 1-1.5 hours each way depending on traffic; staying in Ubud puts you a short drive from the launch point and shortens the whole day."
+        "summary": "Morning or midday hotel pickup, with the exact time confirmed on WhatsApp the day before. Measured road times to the Kedewatan launch area: Seminyak 36-40 km and 1.5-2 hours, Canggu about 42 km and around 2 hours, Kuta about 1.5 hours, Nusa Dua about 60 km and 2-2.5 hours. Staying in Ubud puts you 20 minutes from the launch point and shortens the whole day by three hours or more."
       },
       {
         "name": "Pairing it with Ubud or an ATV ride",
@@ -13723,15 +13723,15 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Is white water rafting in Bali safe?",
         "paragraphs": [
-          "Yes — white water rafting in Bali is safe for beginners when you run it with a licensed operator, and the Ayung River near Ubud is where almost everyone should do it first. The rapids are **beginner-friendly**: lively enough to soak the whole raft, mild enough that guides take families and complete first-timers down the same stretch every day of the year. **Every raft carries a licensed local guide**, life jackets and helmets are standard, and the briefing before launch covers the four or five paddle commands you need. You are never asked to read the river yourself — the guide steers, calls the strokes and does the thinking.",
-          "The honest risks are mundane rather than dramatic. The wet concrete stairs into the gorge cause more scrapes than the rapids do, and the equatorial sun on open water burns faster than people expect, so sunscreen and a strap for your sunglasses matter more than courage. Sit the trip out if you are pregnant, recovering from surgery, or managing a serious back or heart condition — say so on WhatsApp and we will point you to a calmer day instead. For the wider picture on staying out of trouble on the island, see our [Bali safety guide](/bali/en/journal/bali-safety-scams-and-health)."
+          "Yes — white water rafting in Bali is safe for beginners when you run it with a licensed operator, and the Ayung River near Ubud is where almost everyone should do it first. The rapids are **beginner-friendly**: lively enough to soak the whole raft, mild enough that guides take families and complete first-timers down the same stretch every day of the year. **Every raft carries a river guide**, life jackets and helmets are standard, and the briefing before launch covers the four or five paddle commands you need. Certification is a separate question from experience: only a few dozen guides on the island hold the national BNSP competency standard, so ask your operator directly rather than reading «licensed» on a website. You are never asked to read the river yourself — the guide steers, calls the strokes and does the thinking.",
+          "The honest risks are not the rapids. Most of what happens on the day happens on the wet concrete stairs into the gorge, and in heavy rain the slope above them is the one genuinely serious hazard — a landslide killed three people on that climb in November 2021, on a day when the rafting itself had already been called off. Ask about the path, not just the water. Beyond that, the equatorial sun on open water burns faster than people expect, and the equatorial sun on open water burns faster than people expect, so sunscreen and a strap for your sunglasses matter more than courage. Sit the trip out if you are pregnant, recovering from surgery, or managing a serious back or heart condition — say so on WhatsApp and we will point you to a calmer day instead. For the wider picture on staying out of trouble on the island, see our [Bali safety guide](/bali/en/journal/bali-safety-scams-and-health)."
         ]
       },
       {
         "heading": "Who the Ayung River suits — and who it does not",
         "paragraphs": [
           "The Ayung suits families, couples and mixed groups where not everyone is athletic — which is exactly who our [Ayung River rafting day](/bali/en/tours/white-water-rafting) is built for, **from $35** with hotel pickup and a **4-6 hour** door-to-door day. Children join Ayung trips constantly; tell us their ages on WhatsApp when you book so the crew can plan seating and gear. Non-swimmers can go too — the life jacket and the raft do the floating, and being relaxed about getting splashed matters more than swimming ability. If you are building a family-wide day around it, our guide to [Bali day trips with kids](/bali/en/journal/bali-day-trips-with-kids) covers pacing.",
-          "Two groups should think twice. Adrenaline chasers who have rafted big water elsewhere may find the Ayung tame — east Bali's Telaga Waja river runs longer and pushier, and honesty says experienced paddlers will prefer it. And anyone with bad knees should weigh the stairs: the walk into the gorge and back out is **several hundred concrete steps**, the hardest part of the day by a comfortable margin. The river itself asks very little of you."
+          "Two groups should think twice. Adrenaline chasers who have rafted big water elsewhere may find the Ayung tame — east Bali's Telaga Waja river runs longer and pushier, and honesty says experienced paddlers will prefer it. And anyone with bad knees should weigh the stairs: on the main Ayung route it is about **509 steps down** into the gorge and **250 back up** at the finish, two separate staircases with a shuttle between them, and the hardest part of the day by a comfortable margin. If that is the constraint, Telaga Waja is the counterintuitive answer — around five steps at the start, and some operators sell it as the run with no staircase at the end. The river itself asks very little of you."
         ]
       },
       {
@@ -13752,7 +13752,7 @@ const JOURNAL_SEO_GUIDES = [
     "faq": [
       {
         "question": "Is white water rafting in Bali safe?",
-        "answer": "Yes. The Ayung River's rapids are beginner-friendly, every raft carries a licensed local guide, and life jackets and helmets are standard on every run. The realistic hazards are the wet stairs into the gorge and the equatorial sun, not the water. Skip it if you are pregnant or recovering from surgery."
+        "answer": "Mostly, and the honest answer needs two caveats. The Ayung's rapids are beginner-friendly, every raft carries a river guide, and life jackets and helmets are standard on every run. But formal competency certification is not universal — only a few dozen guides across Bali hold the national BNSP standard — and no outside authority closes the river in bad weather, so the decision to run belongs to your operator. The realistic hazards are the wet stairs into the gorge, the slope above them in heavy rain, and the equatorial sun, not the water. Skip it if you are pregnant or recovering from surgery."
       },
       {
         "question": "How much does white water rafting in Bali cost?",
@@ -13776,11 +13776,11 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "When is the best time of year for rafting in Bali?",
-        "answer": "Rafting runs year-round on the Ayung. April to October brings lower, gentler water — the easiest conditions for first-timers. November to March rains raise the river and speed it up, which returning rafters enjoy. Trips are called off only when levels become genuinely unsafe, which is rare."
+        "answer": "Rafting runs year-round on the Ayung. April to October brings lower, gentler water — the easiest conditions for first-timers. November to March rains raise the river and speed it up, which returning rafters enjoy. The call to cancel belongs to the operator — no outside authority closes the river, and the local disaster agency issues advisories rather than bans. Ask yours what their stop threshold is before you book."
       },
       {
         "question": "Ayung River or Telaga Waja — which rafting is better?",
-        "answer": "Pick the Ayung for a first run: beginner-friendly rapids, jungle gorge scenery on Ubud's edge, and the shortest transfers from most hotel areas. Telaga Waja in east Bali runs longer and faster and suits people who have rafted before. For most visitors the Ayung is the right default."
+        "answer": "Pick the Ayung for a first run: beginner-friendly rapids and jungle gorge scenery on Ubud's edge. It has the shortest transfer only if you are staying in Ubud — 20 minutes against about 70 to Telaga Waja. From Seminyak or Kuta the east river is actually the closer one, roughly 95 minutes against 1.5-2 hours to the Ayung. Telaga Waja runs longer and faster and is usually sold as the trip for people who have rafted before — but there is a reversal worth knowing: it is the physically easier day. The Ayung route has around 509 steps down and 250 back up; Telaga Waja has about five at the start, and some operators sell it specifically as the run with no staircase at the finish. If knees are the constraint rather than nerve, the harder river is the gentler choice."
       }
     ]
   },
@@ -13881,7 +13881,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Licenses, age limits and who should sit it out",
         "paragraphs": [
-          "**No driving license is needed for quad biking in Bali**, because the rides run on closed private tracks rather than public roads — that applies to both of our ATV days. What tracks do enforce is age: a minimum for driving solo, and a separate rule for riding as a tandem passenger. Those numbers vary between operators and get revised, so we will not quote figures that might be wrong by the time you travel. **Send the ages of everyone in your group on WhatsApp** and we confirm exactly who can drive and who rides passenger before anything is booked.",
+          "**Operators state that no driving license is needed for quad biking in Bali**, on the grounds that the rides run on private tracks rather than public roads — that applies to both of our ATV days. Two honest caveats: no one cites a regulation by number, and some tracks are linked by short stretches of public road, where an international permit or an Indonesian SIM C is the formal requirement. What tracks do enforce is age: a minimum for driving solo, and a separate rule for riding as a tandem passenger. Those numbers vary between operators and get revised, so we will not quote figures that might be wrong by the time you travel. **Send the ages of everyone in your group on WhatsApp** and we confirm exactly who can drive and who rides passenger before anything is booked.",
           "Who should skip it: anyone pregnant, and anyone nursing a recent back, neck or shoulder injury — the track is bumpy by design and the handlebars transmit every rut. For everyone else, first-timers are the core audience rather than the exception. The quads are forgiving at low speed, the guide rides ahead and sets the pace, and the route builds up gradually — the river and tunnel come once you have had time to settle, not in the first five minutes."
         ]
       },
