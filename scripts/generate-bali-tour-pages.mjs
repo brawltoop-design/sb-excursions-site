@@ -10452,7 +10452,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Which route to choose: our four private tours from Sanur",
         "paragraphs": [
-          "All four of our Nusa Penida routes are private — your own car and driver on the island, no bus groups — and all include the fast boat tickets and harbor transfers. Prices are direct 2026 rates, booked over WhatsApp with **no prepayment**:"
+          "All four of our Nusa Penida routes are private — your own car and driver on the island, no bus groups — and all include the fast boat tickets and harbor transfers. Prices are direct 2026 rates, booked over WhatsApp with **no prepayment**: Every west route ends at the same railing, so it pays to know what the descent involves before the day starts: [Kelingking Beach](/bali/en/journal/kelingking-beach-guide) is free to look at and a serious climb to reach."
         ],
         "bullets": [
           "**[Nusa Penida West Tour](/bali/en/tours/nusa-penida-west-tour) — from $49 per car**: the classic first visit — Kelingking viewpoint, Angel's Billabong, Broken Beach and a swim at Crystal Bay. Priced per car, so couples and small groups pay less per person.",
@@ -10917,7 +10917,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "What time you leave Ubud for the sunrise",
         "paragraphs": [
           "**Sunrise tours pick up in Ubud between 01:30 and 03:30**, and the exact slot depends on how you go up. The guided hike collects guests between **01:30 and 03:00**, because you need roughly two hours on the trail before first light. The jeep formats pick up later, around **02:00-03:30**, since the 4x4 covers most of the distance for you. Your exact time is confirmed on WhatsApp the day before, calculated from that week's sunrise and where in Ubud you stay. The drive to Kintamani takes **60-90 minutes** at that hour — the roads are empty, so the spread comes from hotel location rather than traffic. Sunrise itself lands between roughly **06:00 and 06:30 all year**, and the light show usually starts 20-30 minutes before the sun clears the horizon.",
-          "Ubud's advantage is plain geography. The town sits on the road that climbs toward the Kintamani rim, so you spend the minimum possible time in a car at 3 a.m. From Canggu, Seminyak, Uluwatu or Sanur the same morning means an extra hour or more of driving each way and a correspondingly earlier alarm — we cover those timings separately in the [Mount Batur sunrise from south Bali](/bali/en/journal/mount-batur-sunrise-from-south-bali) guide. If your itinerary lets you choose, schedule the volcano for the Ubud leg of the trip and keep the south for beach days."
+          "Ubud's advantage is plain geography. The town sits on the road that climbs toward the Kintamani rim, so you spend the minimum possible time in a car at 3 a.m. From Canggu, Seminyak, Uluwatu or Sanur the same morning means an extra hour or more of driving each way and a correspondingly earlier alarm — we cover those timings separately in the [Mount Batur sunrise from south Bali](/bali/en/journal/mount-batur-sunrise-from-south-bali) guide. If your itinerary lets you choose, schedule the volcano for the Ubud leg of the trip and keep the south for beach days. Ubud has it easy by comparison: [Canggu to Mount Batur](/bali/en/journal/canggu-to-mount-batur) is a full hour earlier off the same sunrise."
         ]
       },
       {
@@ -12998,7 +12998,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "The route that works: west side, ending in the water",
         "paragraphs": [
           "The family route is the **west loop — Kelingking viewpoint, Angel's Billabong, Broken Beach — finished with a long swim at Crystal Bay**. It keeps each driving leg short, front-loads the walking while energy is high, and saves the water for when it is most wanted. The [Nusa Penida West Tour](/bali/en/tours/nusa-penida-west-tour) runs this exact day **from $49 per car** — per car, not per person, which is the pricing model built for families. Pickup is early with harbor transfer arranged, and the exact time is confirmed on WhatsApp the day before.",
-          "A private car is not a luxury here; it is the mechanism that makes the day work with children. You extend Crystal Bay by an hour because the kids are finally happy, skip a viewpoint when someone is done, and let a toddler sleep between stops instead of marching to a group van's schedule. If your children swim confidently, the [private day tour with Manta Point snorkeling](/bali/en/tours/nusa-penida-private-day-tour-manta-snorkeling) from $60 adds real time in the water to the same land loop. What we do not recommend with kids is the full-island circuit: it trades beach time for hours of rough road, which is exactly the wrong trade for a family."
+          "A private car is not a luxury here; it is the mechanism that makes the day work with children. You extend Crystal Bay by an hour because the kids are finally happy, skip a viewpoint when someone is done, and let a toddler sleep between stops instead of marching to a group van's schedule. If your children swim confidently, the [private day tour with Manta Point snorkeling](/bali/en/tours/nusa-penida-private-day-tour-manta-snorkeling) from $60 adds real time in the water to the same land loop. What we do not recommend with kids is the full-island circuit: it trades beach time for hours of rough road, which is exactly the wrong trade for a family. The one stop to settle in advance is [Kelingking Beach](/bali/en/journal/kelingking-beach-guide): the viewpoint works fine with a hand held, the staircase below it does not."
         ]
       },
       {
@@ -14754,7 +14754,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Which route to choose: west, east, full day or manta",
         "paragraphs": [
-          "The drive from Uluwatu is identical for every route, so choose by what you want from the island rather than by logistics. Four options cover almost everyone: The west route is the one built around [Kelingking Beach](/bali/en/journal/kelingking-beach-guide); if you are weighing the same day from the other side of the island, [Canggu to Nusa Penida](/bali/en/journal/nusa-penida-day-trip-from-canggu) runs the same boat off a longer drive."
+          "The drive from Uluwatu is identical for every route, so choose by what you want from the island rather than by logistics. Four options cover almost everyone: The west route is the one built around [Kelingking Beach](/bali/en/journal/kelingking-beach-guide); if you are weighing the same day from the other side of the island, [Canggu to Nusa Penida](/bali/en/journal/nusa-penida-day-trip-from-canggu) runs the same boat off a longer drive. If the water is the point rather than the cliffs, read what the session actually involves first — [Manta Point](/bali/en/journal/manta-point-bali-guide) is open ocean over a cleaning station, not a sheltered bay."
         ],
         "bullets": [
           "**[Nusa Penida West Tour](/bali/en/tours/nusa-penida-west-tour) — from $49 per car**: Kelingking, Angel's Billabong, Broken Beach and Crystal Bay. The classic first-visit loop, and the route this guide's day plan follows.",
@@ -14917,7 +14917,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Snorkeling route or viewpoint route — pick one",
         "paragraphs": [
           "From Canggu there are two routes that make sense, and trying to force both into one day is the classic mistake. The **snorkeling route** is the [Manta Point day](/bali/en/tours/nusa-penida-manta-rays-point) at **from $29 per person**: a full day on the water covering Manta Point plus reef stops such as Gamat Bay and Crystal Bay, with gear, early hotel pickup and the harbor transfer included. For the sea-first crowd Canggu attracts, this is the day most people are actually picturing when they say Nusa Penida.",
-          "The **viewpoint route** is the [Nusa Penida West Tour](/bali/en/tours/nusa-penida-west-tour) at **from $49 per car** — a private car and driver covering Kelingking, Broken Beach and Angel's Billabong. The per-car price is the quiet advantage for Canggu villas: split it between housemates and it undercuts almost any group tour, and the route stays yours to adjust."
+          "The **viewpoint route** is the [Nusa Penida West Tour](/bali/en/tours/nusa-penida-west-tour) at **from $49 per car** — a private car and driver covering Kelingking, Broken Beach and Angel's Billabong. The per-car price is the quiet advantage for Canggu villas: split it between housemates and it undercuts almost any group tour, and the route stays yours to adjust. If you take the viewpoint route, the day is built around one stop: [Kelingking Beach](/bali/en/journal/kelingking-beach-guide), which is where the queue forms and where the descent decides how much of the rest you see."
         ],
         "bullets": [
           "**Snorkeling day — from $29** per person: Manta Point, Gamat Bay and Crystal Bay, with gear and hotel pickup included",
@@ -15338,7 +15338,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Which beginner snorkeling tour to choose",
         "paragraphs": [
-          "Three of our private tours cover every spot in this ranking, and they scale by confidence rather than by budget:"
+          "Three of our private tours cover every spot in this ranking, and they scale by confidence rather than by budget: If a tour is sold simply as manta snorkeling, ask which mooring it means: [Manta Bay](/bali/en/journal/manta-bay-vs-manta-point) is the shallower and calmer of the two, and the better first one."
         ],
         "bullets": [
           "**[Blue Lagoon snorkeling, Padang Bai](/bali/en/tours/blue-lagoon-snorkeling) — from $50** per person: the default first-timer day. Half day to full day with morning hotel pickup and lunch included, covering Blue Lagoon, Tanjung Jepun and a swim stop at Bias Tugel.",
@@ -16858,7 +16858,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Two islands answering different questions",
         "paragraphs": [
-          "Gili vs Nusa Penida is not really a fair fight, because the islands are built for different days. Nusa Penida is a spectacle: limestone cliffs, the Kelingking ridge, manta rays in open water — a day of big visuals and early alarms. The Gilis are a mood: three flat, car-free specks of sand off Lombok where the agenda is snorkel, eat, swim, repeat. People who come home disappointed usually picked the wrong island for their energy level, not a bad island. Decide what you want the day to feel like first, and the rest of this comparison mostly resolves itself."
+          "Gili vs Nusa Penida is not really a fair fight, because the islands are built for different days. Nusa Penida is a spectacle: limestone cliffs, the Kelingking ridge, manta rays in open water — a day of big visuals and early alarms. The Gilis are a mood: three flat, car-free specks of sand off Lombok where the agenda is snorkel, eat, swim, repeat. People who come home disappointed usually picked the wrong island for their energy level, not a bad island. Decide what you want the day to feel like first, and the rest of this comparison mostly resolves itself. Penida's whole case fits in one view: [Kelingking Beach](/bali/en/journal/kelingking-beach-guide) has no equivalent on the Gilis, and the Gilis have no equivalent of Penida's roads either."
         ]
       },
       {
@@ -17137,7 +17137,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Nusa Penida: the whitest sand, earned on foot",
         "paragraphs": [
-          "Diamond Beach and Atuh, side by side on Nusa Penida's east coast, have the whitest sand anywhere within reach of Bali — and both make you work for it with long stairways cut into the cliffs. Wear proper footwear, carry water, and be honest about the sea: Diamond's shore break is for wading, not swimming, while Atuh is swimmable only on calm days around higher tides. The [Nusa Penida east tour](/bali/en/tours/nusa-penida-east-tour) covers both coves plus the Thousand Islands viewpoint in one day with a local driver who knows the stairs and the timing. For the island's full coastline, including the swimmable west, see [the best beaches on Nusa Penida](/bali/en/journal/best-beaches-nusa-penida)."
+          "Diamond Beach and Atuh, side by side on Nusa Penida's east coast, have the whitest sand anywhere within reach of Bali — and both make you work for it with long stairways cut into the cliffs. Wear proper footwear, carry water, and be honest about the sea: Diamond's shore break is for wading, not swimming, while Atuh is swimmable only on calm days around higher tides. The [Nusa Penida east tour](/bali/en/tours/nusa-penida-east-tour) covers both coves plus the Thousand Islands viewpoint in one day with a local driver who knows the stairs and the timing. For the island's full coastline, including the swimmable west, see [the best beaches on Nusa Penida](/bali/en/journal/best-beaches-nusa-penida). The one everybody photographs is the hardest to stand on: [Kelingking Beach](/bali/en/journal/kelingking-beach-guide) has the whitest sand in this guide and about an hour of climbing to get back up from it."
         ]
       },
       {
@@ -17269,7 +17269,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Amed or Tulamben: pick by what you want to see",
         "paragraphs": [
-          "**Jemeluk Bay** is the all-rounder — the densest easy reef and the best warungs on the sand. **The Japanese Wreck** at Banyuning is the one to freedive: shallow, compact and coral-covered. **The USAT Liberty** at Tulamben is the bucket-list item, best snorkelled at first light before the dive groups arrive. **Coral Garden and the Drop-off** reward a second Tulamben hour once the wreck gets busy. **Lipah** is the quiet afternoon option when Jemeluk turns choppy. The two villages are only about twenty minutes apart by car, so a one-day loop covering three of these spots is realistic without rushing."
+          "**Jemeluk Bay** is the all-rounder — the densest easy reef and the best warungs on the sand. **The Japanese Wreck** at Banyuning is the one to freedive: shallow, compact and coral-covered. **The USAT Liberty** at Tulamben is the bucket-list item, best snorkelled at first light before the dive groups arrive. **Coral Garden and the Drop-off** reward a second Tulamben hour once the wreck gets busy. **Lipah** is the quiet afternoon option when Jemeluk turns choppy. The two villages are only about twenty minutes apart by car, so a one-day loop covering three of these spots is realistic without rushing. Neither coast has the one thing people ask for most, so it is worth knowing where it is: [Manta Bay](/bali/en/journal/manta-bay-vs-manta-point) is the shallow mooring off Nusa Penida where mantas turn up year-round."
         ]
       },
       {
@@ -18110,7 +18110,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Bali's clearest-water beaches at a glance",
         "paragraphs": [
-          "Travel times below are one-way from the southern hotel areas (Kuta, Seminyak, Canggu) and assume normal daytime traffic. The clarity window is when each spot is usually calmest and least stirred up, based on the 2026 dry-season pattern:"
+          "Travel times below are one-way from the southern hotel areas (Kuta, Seminyak, Canggu) and assume normal daytime traffic. The clarity window is when each spot is usually calmest and least stirred up, based on the 2026 dry-season pattern: The clearest water on this list that almost nobody actually swims in sits at the foot of [Kelingking Beach](/bali/en/journal/kelingking-beach-guide) — the descent is over 400 steps and the shore break at the bottom carries an official no-swimming rule."
         ],
         "table": {
           "headers": [
@@ -19334,7 +19334,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Bali viewpoints at a glance: area, light window, entry",
         "paragraphs": [
-          "Nine viewpoints that justify the drive, with the light window each one is built for and whether you pay at the gate. Times are the hours the view works, not gate hours, and reflect 2026 conditions:"
+          "Nine viewpoints that justify the drive, with the light window each one is built for and whether you pay at the gate. Times are the hours the view works, not gate hours, and reflect 2026 conditions: The cliff that draws the biggest crowd is not on mainland Bali at all — [Kelingking Beach](/bali/en/journal/kelingking-beach-guide) is a boat crossing away, and the railing is three deep by eleven."
         ],
         "table": {
           "headers": [
@@ -21563,7 +21563,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Which option fits your morning",
         "paragraphs": [
-          "The decision is rarely about principle. It comes down to how much sleep you are willing to lose, what your knees make of a loose descent, and whether standing on the actual summit matters to you. Sorted that way:"
+          "The decision is rarely about principle. It comes down to how much sleep you are willing to lose, what your knees make of a loose descent, and whether standing on the actual summit matters to you. Sorted that way: Whichever option you land on, the drive sets the alarm before the trail does: [Canggu to Mount Batur](/bali/en/journal/canggu-to-mount-batur) starts at 01:30."
         ],
         "bullets": [
           "**You wanted to go solo to save money**: the guided hike is **from $35** including pickup, which a solo attempt plus transport rarely beats once the trailhead conversation goes against you.",
@@ -23842,7 +23842,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Fitting Diamond Beach into one day from Bali",
         "paragraphs": [
           "Diamond Beach is at the far east of the island, which is why the standard west-coast loop leaves it out entirely. Our [Nusa Penida East Tour](/bali/en/tours/nusa-penida-east-tour) is built around this side: **from $75**, a **10-12 hour** day, with a **07:00 meeting at Sanur port** or an optional **06:15-06:30 hotel pickup** if you are staying elsewhere in south Bali. The early start is the whole argument for a guided day here — it puts you at the top of the stairs while the light is still on the bay and the steps are still empty.",
-          "If you want both coasts in one go, the [Nusa Penida Full Day Tour](/bali/en/tours/nusa-penida-full-day-tour) from $75 covers the longer loop — but be realistic about it: adding Kelingking and Broken Beach to a Diamond Beach descent makes for a long, hot day, and something always gets rushed. The [west tour](/bali/en/tours/nusa-penida-west-tour) from $49 per car is the cheaper day and does not include Diamond at all. Travelling independently, a [fast boat transfer](/bali/en/tours/fast-boat-transfer-bali) from $15 handles the crossing and you sort the car on arrival. Everything books over WhatsApp with no prepayment, and we put the routes side by side in [Nusa Penida tours compared](/bali/en/journal/nusa-penida-tours-compared)."
+          "If you want both coasts in one go, the [Nusa Penida Full Day Tour](/bali/en/tours/nusa-penida-full-day-tour) from $75 covers the longer loop — but be realistic about it: adding Kelingking and Broken Beach to a Diamond Beach descent makes for a long, hot day, and something always gets rushed. The [west tour](/bali/en/tours/nusa-penida-west-tour) from $49 per car is the cheaper day and does not include Diamond at all. Travelling independently, a [fast boat transfer](/bali/en/tours/fast-boat-transfer-bali) from $15 handles the crossing and you sort the car on arrival. Everything books over WhatsApp with no prepayment, and we put the routes side by side in [Nusa Penida tours compared](/bali/en/journal/nusa-penida-tours-compared). What does not fit into the same day is the water: [Manta Point](/bali/en/journal/manta-point-bali-guide) sits on the opposite corner of the island and needs its own morning."
         ]
       }
     ],
@@ -24495,7 +24495,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "First boat to Nusa Penida: why the earliest one decides your day",
         "paragraphs": [
-          "Departures begin early in the morning and run through the day, and the first boats are the ones worth aiming for. Two reasons, and neither is about the view from the deck. The strait is calmest before midday, so the early crossing is the smoothest one you will get. And the west-coast viewpoints are genuinely quiet for the first hour after the first boats land — by 11:00 the Kelingking staircase has a queue on it. Our [Nusa Penida East Tour](/bali/en/tours/nusa-penida-east-tour) meets at **Sanur port at 07:00**, with optional hotel pickup at **06:15-06:30**, for exactly that reason. The reason the first boat matters is one viewpoint: [Kelingking Beach](/bali/en/journal/kelingking-beach-guide) is the stop everyone comes for, and by eleven the railing is three deep."
+          "Departures begin early in the morning and run through the day, and the first boats are the ones worth aiming for. Two reasons, and neither is about the view from the deck. The strait is calmest before midday, so the early crossing is the smoothest one you will get. And the west-coast viewpoints are genuinely quiet for the first hour after the first boats land — by 11:00 the Kelingking staircase has a queue on it. Our [Nusa Penida East Tour](/bali/en/tours/nusa-penida-east-tour) meets at **Sanur port at 07:00**, with optional hotel pickup at **06:15-06:30**, for exactly that reason. The reason the first boat matters is one viewpoint: [Kelingking Beach](/bali/en/journal/kelingking-beach-guide) is the stop everyone comes for, and by eleven the railing is three deep. Snorkelers have a second reason to take it: [Manta Point](/bali/en/journal/manta-point-bali-guide) is calmest and clearest in the first session of the morning, and the later boats miss it."
         ],
         "bullets": [
           "**Calmer water**: morning crossings bounce less than afternoon ones, in every season.",
@@ -26649,7 +26649,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "How does the area change your day trips?",
         "paragraphs": [
           "This is the part the blogger comparisons leave out, and for us it is the whole job. Nothing worth a full day sits inside Canggu or Kuta. Nusa Penida means the port at Sanur. Mount Batur means Kintamani, in the middle of the island. The terraces and temples mean Ubud and beyond. Your area does not change what you see on those days — it changes what time you get up and how much of the day the road takes.",
-          "Drive times to the Sanur port, where the Nusa Penida boats leave, as we run them:"
+          "Drive times to the Sanur port, where the Nusa Penida boats leave, as we run them: The volcano morning is the clearest case: [Canggu to Mount Batur](/bali/en/journal/canggu-to-mount-batur) means a 01:30 pickup and 1.5-2.5 hours each way, the longest transfer either area asks of you."
         ],
         "bullets": [
           "**Sanur** — the port is inside the district, a few minutes from most of it",
@@ -29235,7 +29235,7 @@ const JOURNAL_SEO_GUIDES = [
         "paragraphs": [
           "All three of our Batur formats are private: your own guide or driver, hotel pickup and return included, no prepayment, and booking over WhatsApp. Between November and March the upper trail — loose black volcanic sand — can be slippery and cloud cover can hide the view, so if the sunrise matters to you, keep a backup morning in the plan. Guides still run most mornings in the wet season and cancel only in genuinely bad weather.",
           "Two small practical notes. The wait at the summit for sunrise is **30-60 minutes** and the cold is wind chill, so a fleece plus a windproof shell fixes it. Many guided climbs also follow the local tradition of eggs steamed in volcanic vapour at the top — it is a tradition rather than a guaranteed inclusion, so confirm on WhatsApp when you book.",
-          "If a pre-dawn start does not appeal at all, the Kintamani rim road is public and the daytime caldera view costs nothing. A private car with driver, from **$59** per car, covers it as part of a normal sightseeing day — you still see the volcano, just from the rim and at a civilised hour. The same daytime option is the sensible answer for pregnant travellers or anyone with health concerns: the jeep track is bumpy and the hike strenuous, so ask your doctor before committing to either."
+          "If a pre-dawn start does not appeal at all, the Kintamani rim road is public and the daytime caldera view costs nothing. A private car with driver, from **$59** per car, covers it as part of a normal sightseeing day — you still see the volcano, just from the rim and at a civilised hour. The same daytime option is the sensible answer for pregnant travellers or anyone with health concerns: the jeep track is bumpy and the hike strenuous, so ask your doctor before committing to either. Where you sleep decides when the alarm goes off: [Canggu to Mount Batur](/bali/en/journal/canggu-to-mount-batur) is a 01:30 pickup, a full hour earlier than the same morning from Ubud."
         ]
       }
     ],
