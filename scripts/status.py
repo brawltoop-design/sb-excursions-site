@@ -50,8 +50,9 @@ def bar(n, mx, w=28):
 def h(t): print(f"\n{'─'*72}\n  {t}\n{'─'*72}")
 
 # ── 1. ПОИСК ─────────────────────────────────────────────────────────────
-h("ПОИСК: 28 дней против предыдущих 28")
-cur, prev = sa(["date"], 3, 31, 200), sa(["date"], 31, 59, 200)
+h("ПОИСК: последние 7 дней против предыдущих 7")
+print("   по неделям, а не по месяцу: месячное среднее размазывает рост\n")
+cur, prev = sa(["date"], 3, 10, 50), sa(["date"], 10, 17, 50)
 a, b = tot(cur), tot(prev)
 for lbl, x, y, fmt in [("клики", a[0], b[0], "{:.0f}"), ("показы", a[1], b[1], "{:.0f}"),
                        ("CTR, %", a[2], b[2], "{:.2f}"), ("позиция", a[3], b[3], "{:.1f}")]:
@@ -59,7 +60,7 @@ for lbl, x, y, fmt in [("клики", a[0], b[0], "{:.0f}"), ("показы", a[
     mark = "" if lbl != "позиция" else ("  лучше" if x < y else "  хуже")
     print(f"   {lbl:9} {fmt.format(x):>9}   было {fmt.format(y):>9}   {d}{mark}")
 
-h("ПО НЕДЕЛЯМ")
+h("ПО НЕДЕЛЯМ ЗА ДВА МЕСЯЦА")
 days = sorted(sa(["date"], 3, 59, 200), key=lambda r: r["keys"][0])
 weeks = [days[i:i+7] for i in range(0, len(days), 7)]
 mx = max((sum(r["clicks"] for r in w) for w in weeks if w), default=1)
