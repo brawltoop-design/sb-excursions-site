@@ -4720,7 +4720,7 @@ function buildWestFaqs(tour) {
       ),
     ],
     [
-      `What is included in the ${tour.price || "tour"} price?`,
+      `What is included in the ${tour.price ? String(tour.price).replace(/^From\s+/i, "") : "tour"} price?`,
       includes.length
         ? `Typical inclusions are ${includes.join(", ").toLowerCase()}.`
         : `The final inclusion list is confirmed before booking together with the route timing and format.`,
@@ -9977,7 +9977,7 @@ const JOURNAL_ARTICLE_TYPES = [
       sections.push({
         heading: "💰 What is included in the price",
         paragraphs: [
-          `Pricing for the ${tour.title} starts from ${tour.price}. Here is what a typical booking covers.`,
+          `Pricing for the ${tour.title} starts at ${String(tour.price || "").replace(/^From\s+/i, "")}. Here is what a typical booking covers.`,
         ],
         bullets: buildIncludes(tour),
       });
@@ -10172,7 +10172,7 @@ const JOURNAL_ARTICLE_TYPES = [
         heading: "✉️ Booking and confirmation — what you need to send",
         paragraphs: [
           `To confirm the ${tour.title}, you will need to share your preferred date, hotel name and area, and group size. This lets the operator match the right vehicle, guide, and timing window.`,
-          `Pricing starts from ${tour.price}. The exact quote depends on your group size, hotel distance, and any add-on options.`,
+          `Pricing starts at ${String(tour.price || "").replace(/^From\s+/i, "")}. The exact quote depends on your group size, hotel distance, and any add-on options.`,
         ],
         bullets: buildIncludes(tour),
       });
