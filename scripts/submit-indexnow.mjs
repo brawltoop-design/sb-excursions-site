@@ -95,7 +95,27 @@ async function sitemapUrls() {
   return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
 }
 
-const urls = process.argv.includes("--all") ? await sitemapUrls() : await priorityUrls();
+/* --changed: только те адреса, у которых честный lastmod стал сегодняшним.
+   Ровно то, что IndexNow и просит — уведомление об изменившемся, а не
+   переподача всего сайта. Список берём из манифеста, который пишет
+   stamp-sitemap-lastmod.mjs, так что гадать не приходится.
+
+   Запускать ПОСЛЕ деплоя, не в сборке: иначе поисковик придёт за свежим
+   адресом раньше, чем туда доедет новое содержимое. */
+async function changedUrls() {
+  const manifestPath = path.join(ROOT, ".generated", "sitemap-lastmod.json");
+  const manifest = JSON.parse(await fs.readFile(manifestPath, "utf8"));
+  const today = new Date().toISOString().slice(0, 10);
+  return Object.entries(manifest)
+    .filter(([, v]) => v && v.date === today)
+    .map(([urlPath]) => `${SITE}${urlPath}`);
+}
+
+const urls = process.argv.includes("--all")
+  ? await sitemapUrls()
+  : process.argv.includes("--changed")
+    ? await changedUrls()
+    : await priorityUrls();
 console.log(`адресов к отправке: ${urls.length}`);
 
 // Проверяем, что ключ реально отдаётся с домена, иначе заявка бессмысленна.

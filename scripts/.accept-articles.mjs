@@ -7,11 +7,22 @@ const guides = data.guides || data.result?.guides || [];
 const F = "scripts/generate-bali-tour-pages.mjs";
 let s = await fs.readFile(F, "utf8");
 
-const LIVE_TOURS = new Set(["atv-quad-bikes", "atv-ride-adventure", "bali-airport-transfer", "bali-instagram-highlights-tour", "bali-unesco", "blue-lagoon-snorkeling", "dolphin-sunrise-city-tour", "east-bali-instagram-tour", "fast-boat-transfer-bali", "gili-island-tour", "gili-islands-getaway", "mount-batur-sunrise-hike", "mount-batur-sunrise-jeep-hot-spring", "mount-batur-sunrise-jeep-tour", "north-bali-lovina-dolphins-tour", "nusa-penida-east-tour", "nusa-penida-full-day-tour", "nusa-penida-manta-rays-point", "nusa-penida-private-day-tour-manta-snorkeling", "nusa-penida-west-tour", "private-car-with-driver-bali", "sumbawa-whale-shark-snorkeling-trip", "sunset-cruise-bali", "surf-lesson-experience", "tanah-lot-bedugul-tour", "ubud-highlights-tour", "ubud-instagram-tour", "white-water-rafting"]);
-const CLUSTER = new Set(["amed-tulamben-snorkeling", "bali-7-day-itinerary", "bali-airport-transfer-guide", "bali-atv-tours-guide", "bali-canggu-beaches-guide", "bali-day-trips-with-kids", "bali-honeymoon-day-trips", "bali-itinerary-10-days", "bali-itinerary-5-days", "bali-private-driver-cost", "bali-safety-scams-and-health", "bali-snorkeling-for-beginners", "bali-sunset-cruise-worth-it", "bali-tour-prices-2026-real-costs", "best-beach-clubs-bali-young-adults", "best-beaches-bali-crystal-clear-water", "best-beaches-canggu-seminyak", "best-beaches-nusa-penida", "best-beaches-uluwatu-bukit", "best-instagram-places-bali", "best-snorkeling-spots-bali", "best-sunset-spots-bali", "best-temples-bali-cultural-sites", "best-things-to-do-bali-for-couples", "best-time-clear-water-bali", "best-time-to-visit-bali-month-by-month", "best-viewpoints-bali-sunrise-cliffs-rice-terraces", "best-waterfalls-bali-day-trips", "best-white-sand-beaches-bali", "blue-lagoon-padang-bai-guide", "calm-beaches-bali-kids", "can-you-swim-in-bali", "crystal-bay-nusa-penida", "gili-air-vs-gili-trawangan", "gili-islands-day-trip-from-bali", "gili-islands-vs-nusa-penida", "gili-t-day-trip-from-seminyak", "how-to-get-around-bali", "how-to-get-to-gili-trawangan-from-bali", "how-to-get-to-nusa-penida", "is-mount-batur-safe", "is-nusa-penida-safe", "is-nusa-penida-worth-it", "lovina-dolphin-tour-worth-it", "manta-point-bali-guide", "menjangan-island-bali", "mount-batur-sunrise-from-south-bali", "mount-batur-sunrise-from-ubud", "mount-batur-sunrise-jeep-vs-hike", "mount-batur-vs-mount-agung", "nusa-penida-complete-guide", "nusa-penida-day-trip-from-canggu", "nusa-penida-day-trip-from-sanur", "nusa-penida-day-trip-from-seminyak", "nusa-penida-day-trip-from-ubud", "nusa-penida-day-trip-from-uluwatu", "nusa-penida-one-day-itinerary", "nusa-penida-tours-compared", "nusa-penida-vs-nusa-lembongan", "nusa-penida-with-kids", "nusa-penida-without-a-tour", "snorkeling-near-seminyak-and-canggu", "snorkeling-with-turtles-bali", "surf-lessons-bali-beginners", "swimming-with-whale-sharks-indonesia", "tanah-lot-vs-uluwatu-sunset", "ubud-in-one-day", "what-to-pack-for-bali", "where-to-stay-bali-first-time", "white-water-rafting-bali-guide"]);
+/* Списки живых туров и гайдов раньше были зашиты руками и устаревали каждый
+   раз, когда мы добавляли статью: приёмка отвергала верный текст со словами
+   «неизвестный гайд». Теперь читаем их из самого генератора — источник один. */
+const GEN = await fs.readFile(F, "utf8");
+const LIVE_TOURS = new Set([...GEN.matchAll(/\n    slug: "([a-z0-9-]+)"/g)].map((m) => m[1]));
+/* Гайды берём с диска, а не из генератора: часть статей описана другой
+   структурой, часть вообще отдельными HTML вне генератора. Файл на диске —
+   единственный признак того, что ссылка никуда не денется. */
+const CLUSTER = new Set(
+  (await fs.readdir(".")).
+    filter((f) => /^bali-journal-guide-[a-z0-9-]+\.html$/.test(f) && !/-(ru|es|fr|zh|de)\.html$/.test(f)).
+    map((f) => f.slice("bali-journal-guide-".length, -".html".length)),
+);
 const FORBIDDEN = /nestled|hidden gem|breathtaking|must-visit|paradise|!/i;
 // Актуальные цены туров после переценки августа-2026.
-const ALLOWED_PRICES = new Set(["$15", "$20", "$25", "$29", "$35", "$49", "$50", "$59", "$60", "$69", "$70", "$75", "$79", "$89", "$115", "$150"]);
+const ALLOWED_PRICES = new Set(["$15", "$20", "$25", "$29", "$35", "$49", "$50", "$59", "$60", "$65", "$69", "$70", "$75", "$79", "$89", "$115", "$150"]);
 
 const ok = [], rejected = [];
 for (const g of guides) {

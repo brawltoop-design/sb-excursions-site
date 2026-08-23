@@ -286,7 +286,36 @@ const DE_WAVE_GUIDES = new Set([
 function localeCoversTour(locale, slug) {
   return locale !== "de" || DE_WAVE_TOURS.has(slug);
 }
+/* Статьи, которые пока выходят только по-английски.
+ *
+ * Причина не редакционная, а техническая: перевод идёт через неофициальную
+ * точку Google, и 23 августа 2026 она перестала отвечать совсем — за сутки
+ * правок мы выбрали её лимит. У этих одиннадцати статей кэша переводов не
+ * было никогда, поэтому их русские, испанские, французские и китайские
+ * версии собрались английским текстом.
+ *
+ * Английский текст на /bali/ru/ — это для Google дубликат, а не перевод, и
+ * он вредит обеим страницам. Пока перевод не пройдёт вчистую, этих статей на
+ * других языках просто нет: файлы не создаются, в hreflang не попадают, в
+ * карту сайта не попадают.
+ *
+ * Снять список, когда сборка отработает без предупреждения о переводе. */
+const ENGLISH_ONLY_GUIDES = new Set([
+  "bali-rafting-price-2026",
+  "ayung-vs-telaga-waja-rafting",
+  "rafting-from-seminyak-canggu-nusa-dua",
+  "is-bali-rafting-safe",
+  "bali-rafting-with-kids-age-limits",
+  "what-to-wear-rafting-bali",
+  "nyepi-what-actually-closes",
+  "rice-terrace-season-jatiluwih-tegalalang",
+  "lovina-dolphin-season-year-round",
+  "bali-waterfalls-by-season",
+  "galungan-kuningan-dates-what-changes",
+]);
+
 function localeCoversGuide(locale, slug) {
+  if (locale !== "en" && ENGLISH_ONLY_GUIDES.has(slug)) return false;
   return locale !== "de" || DE_WAVE_GUIDES.has(slug);
 }
 /* Статьи-спутники туров немецкий не получает вовсе — см. комментарий выше. */
@@ -1726,8 +1755,9 @@ function place(title, kind, maps, copy, vibe, interests){ return { title:title, 
 const tours = [
   {
     slug: "ubud-highlights-tour",
-    metaTitle: "Ubud Day Tour in Bali | Monkey Forest, Rice Terraces from $69",
-    metaDescription: "Full-day private Ubud tour: Monkey Forest, Tegalalang rice terraces, temples and Kintamani lunch. From $69 with car, tickets and pickup. Book via WhatsApp.",
+    metaTitle: "Ubud Tour: 10 Hours, Hotel Pickup, $65 per Car + Tickets",
+    metaDescription:
+      "Monkey Forest, Tegalalang and Kintamani in one 10-hour day. $65 per car for up to 5, entrance tickets $22 per person. Hotel pickup and drop-off included.",
     title: "Ubud Rice Terrace, Temple & Volcano Tour",
     eyebrow: "All-inclusive Ubud and Kintamani day",
     mapLabel: "Heritage route",
@@ -1737,7 +1767,8 @@ const tours = [
     bestFor: "First-time Bali visitors",
     format: "All-inclusive private day tour",
     area: "Kintamani, Ubud, and central Bali",
-    price: "From $69",
+    price: "From $65 per car",
+    ticketsPerPerson: 22,
     image: sourceImage("tild3365-3333-4637-a663-636263353664__dika-pebriyanta-qqxc.jpg"),
     imageAlt: "Rice terraces, temple stops, and Mount Batur viewpoint scenery in Bali",
     lead:
@@ -1890,7 +1921,7 @@ const tours = [
       "Insurance",
     ],
     goodToKnow: [
-      "Breakfast and lunch are not included in the source package, so bring cash if you want to stop for food during or after the route.",
+      "Breakfast is included — you eat it on the road before the boat. Lunch is not, so bring cash if you want to stop for food on the way back.",
       "Pickup starts around 03:00 am because dolphin timing in Lovina depends on reaching the beach before sunrise.",
       "Covered pickup areas listed by the source include Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, and Jimbaran.",
       "Bring a change of clothes, hat, camera, sunglasses, sunscreen, and extra cash for personal expenses.",
@@ -1920,7 +1951,7 @@ const tours = [
       ],
       [
         "Are breakfast and lunch included?",
-        "No. The source explicitly lists breakfast and lunch as excluded, along with personal expenses.",
+        "Breakfast is included. Lunch is not, and neither are personal expenses — plan for one meal on the drive home.",
       ],
       [
         "What time do we go out on the dolphin boat?",
@@ -1954,8 +1985,9 @@ const tours = [
   },
   {
     slug: "east-bali-instagram-tour",
-    metaTitle: "East Bali Instagram Tour | Gates of Heaven & Palaces from $69",
-    metaDescription: "Photo route through east Bali: Lempuyang Gates of Heaven, royal water palaces and cliff views, 8-10 hours. From $69 with driver and tickets. Book on WhatsApp.",
+    metaTitle: "East Bali Photo Tour: 10 Hours, $65 per Car + Tickets",
+    metaDescription:
+      "Lempuyang, Tirta Gangga and Taman Ujung on a 10-hour east Bali route. $65 per car for up to 5, tickets $18 per person, hotel pickup and drop-off included.",
     title: "East Bali Instagram Tour",
     eyebrow: "Gates of Heaven and royal palaces",
     duration: "8-10 hours",
@@ -1963,7 +1995,8 @@ const tours = [
     bestFor: "Photo-focused Bali itineraries",
     format: "Private day tour",
     area: "Lempuyang and east Bali",
-    price: "From $69",
+    price: "From $65 per car",
+    ticketsPerPerson: 18,
     image: sourceImage("tild6662-3531-4435-b037-386262376635__leo_visions-ulj5djrj.jpg"),
     imageAlt: "East Bali Gates of Heaven style scenery",
     lead:
@@ -1992,8 +2025,9 @@ const tours = [
   },
   {
     slug: "tanah-lot-bedugul-tour",
-    metaTitle: "Tanah Lot & Bedugul Tour, Bali | Lake Temple & Sunset from $59",
-    metaDescription: "Private Bali day tour to Ulun Danu Beratan, Handara Gate, Candikuning and Jatiluwih, ending with sunset at Tanah Lot. 9-11 hours from $59. Book on WhatsApp.",
+    metaTitle: "Tanah Lot & Bedugul: 10 Hours, $65 per Car + Tickets",
+    metaDescription:
+      "Ulun Danu Beratan, Handara, Jatiluwih and sunset at Tanah Lot in 10 hours. $65 per car for up to 5, tickets $20 per person, hotel pickup and drop-off.",
     title: "Tanah Lot and Bedugul Tour",
     eyebrow: "Temples, lakes, and cooler highlands",
     duration: "9-11 hours",
@@ -2001,7 +2035,8 @@ const tours = [
     bestFor: "Classic sightseeing days",
     format: "Private day tour",
     area: "West and central Bali",
-    price: "From $59",
+    price: "From $65 per car",
+    ticketsPerPerson: 20,
     image: sourceImage("tild3365-3333-4637-a663-636263353664__dika-pebriyanta-qqxc.jpg"),
     imageAlt: "Temple and lake scenery in Bedugul Bali",
     lead:
@@ -2030,8 +2065,9 @@ const tours = [
   },
   {
     slug: "bali-unesco",
-    metaTitle: "Bali UNESCO Heritage Tour | Jatiluwih & Tanah Lot from $69",
-    metaDescription: "Bali UNESCO day tour: Taman Ayun, Ulun Danu Beratan, Jatiluwih rice terraces and Tanah Lot in 10 hours. Private car and tickets from $69. Book via WhatsApp.",
+    metaTitle: "Bali UNESCO Tour: 10 Hours, $65 per Car + Tickets",
+    metaDescription:
+      "Taman Ayun, Ulun Danu Beratan, Jatiluwih and Tanah Lot in one 10-hour day. $65 per car for up to 5, tickets $20 per person, hotel pickup and drop-off.",
     title: "Bali UNESCO Heritage Sites Tour",
     eyebrow: "UNESCO temples, rice terraces, and Tanah Lot",
     duration: "10 hours",
@@ -2039,7 +2075,8 @@ const tours = [
     bestFor: "culture lovers, couples, families, and first-time Bali sightseeing days",
     format: "Private heritage sightseeing route",
     area: "West & Central Bali UNESCO route",
-    price: "From $69",
+    price: "From $65 per car",
+    ticketsPerPerson: 20,
     image: sourceImage("bali-tours/unesco-jatiluwih-hero.jpg"),
     imageAlt: "Jatiluwih rice terraces and mountain scenery on the Bali UNESCO Heritage Sites Tour",
     lead:
@@ -2067,7 +2104,7 @@ const tours = [
       "Bottled water",
     ],
     goodToKnow: [
-      "Lunch, personal expenses, and additional services are not included in the standard price.",
+      "Lunch and personal expenses are not included. Entrance tickets are, at $20 per person on top of the car.",
       "The covered pickup areas listed by the source are Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua, and Jimbaran.",
       "Bring a camera, cash money, sunglasses, comfortable footwear for temple and terrace walks, and an optional light layer for the cooler Bedugul section.",
       "This is presented as a private sightseeing route rather than a shared group format because the source lists a private air-conditioned vehicle.",
@@ -2099,7 +2136,7 @@ const tours = [
       ],
       [
         "Is lunch included?",
-        "No. The source lists lunch, personal expenses and additional services as excluded.",
+        "No. Lunch is not included on this route — your driver will stop wherever you want to eat, and you pay there.",
       ],
       [
         "Do I need a sarong for the temple visits?",
@@ -2132,7 +2169,7 @@ const tours = [
     plannerPriority: 24,
     related: ["tanah-lot-bedugul-tour", "ubud-highlights-tour", "private-car-with-driver-bali"],
     whatsappText:
-      "Hello! I want to book the Bali UNESCO Heritage Sites Tour for $69 per person. Please send availability, pickup areas, and full details.",
+      "Hello! I want to book the Bali UNESCO Heritage Sites Tour for $65 per car. Please send availability, pickup areas, and full details.",
     mainPageFeatures: [
       ["⏰", "10 hours private route"],
       ["🚐", "Hotel pickup from major Bali areas"],
@@ -2437,8 +2474,9 @@ const tours = [
   },
   {
     slug: "bali-instagram-highlights-tour",
-    metaTitle: "Bali Instagram Photo Tour | Custom Scenic Route from $69",
-    metaDescription: "Flexible Bali photo day: pick your scenic stops — waterfalls, gates and rice terraces — in 8-10 hours. From $69 with private car. Book via WhatsApp.",
+    metaTitle: "Bali Photo Tour: 10 Hours, $65 per Car + Tickets",
+    metaDescription:
+      "The most photographed stops in central Bali on a 10-hour route. $65 per car for up to 5, entrance tickets $7 per person, hotel pickup and drop-off included.",
     title: "Bali Instagram Highlights Tour",
     mainPage: false,
     aiPlanner: false,
@@ -2448,7 +2486,8 @@ const tours = [
     bestFor: "Couples, creators, and honeymoon trips",
     format: "Private day tour",
     area: "Flexible scenic Bali route",
-    price: "From $69",
+    price: "From $65 per car",
+    ticketsPerPerson: 7,
     image: sourceImage("tild6662-3531-4435-b037-386262376635__leo_visions-ulj5djrj.jpg"),
     imageAlt: "Scenic Bali viewpoint for Instagram tour",
     lead:
@@ -2477,8 +2516,9 @@ const tours = [
   },
   {
     slug: "ubud-instagram-tour",
-    metaTitle: "Ubud Instagram Tour, Bali | Gates of Heaven & Waterfall from $89",
-    metaDescription: "Photo-first Ubud day: Gates of Heaven, Tirta Gangga, Tukad Cepung waterfall, Tegalalang. From $89 with lunch, tickets and hotel pickup. Book via WhatsApp.",
+    metaTitle: "Ubud Instagram Tour: 10 Hours, $65 per Car + Tickets",
+    metaDescription:
+      "Gates of Heaven, Tirta Gangga, Tukad Cepung and Tegalalang in 10 hours. $65 per car for up to 5, tickets $15 per person, hotel pickup and drop-off included.",
     title: "Ubud Instagram Tour",
     eyebrow: "Gates of Heaven, waterfall and rice terrace day",
     duration: "10 hours",
@@ -2486,13 +2526,14 @@ const tours = [
     bestFor: "Couples, solo travelers, creators, and first-time Bali visitors",
     format: "All-inclusive guided day tour",
     area: "East Bali icons with a Tegalalang rice terrace finish",
-    price: "From $89",
+    price: "From $65 per car",
+    ticketsPerPerson: 15,
     image: sourceImage("tild6662-3531-4435-b037-386262376635__leo_visions-ulj5djrj.jpg"),
     imageAlt: "Gates of Heaven style Bali scenery for the Ubud Instagram Tour",
     lead:
       "Capture Bali's most famous photo route in one smooth day with the Gates of Heaven at Lempuyang, Tirta Gangga Water Palace, Tukad Cepung Waterfall, and the green terraces of Tegalalang.",
     summary:
-      "This Ubud Instagram Tour is the strongest all-inclusive Bali photo day when you want iconic stops, polished logistics, and real guidance with your content. It combines east Bali's most recognizable landmarks with a softer Ubud-style rice terrace finish, while hotel pickup, tickets, lunch, and guide support are handled from $89.",
+      "This Ubud Instagram Tour is the strongest all-inclusive Bali photo day when you want iconic stops, polished logistics, and real guidance with your content. It combines east Bali's most recognizable landmarks with a softer Ubud-style rice terrace finish, while hotel pickup, lunch and guide support are handled from $65 per car, with entrance tickets added at $15 per person.",
     overview:
       "The route is built for travelers who want Bali's headline visuals without stitching together a long road day on their own. Expect an early start, photo help from an English-speaking driver-guide, temple and palace scenery, a waterfall stop where you can swim, and a final rice terrace section that gives the day a more complete Bali look than an east-only itinerary.",
     highlights: [
@@ -2717,7 +2758,7 @@ const tours = [
     goodToKnow: [
       "Bali hotel pickup and drop-off can be arranged as an extra service, with common covered areas including Sanur, Kuta, Legian, Seminyak, Jimbaran, Canggu, Nusa Dua, Ubud, Uluwatu, and Tegalalang.",
       "Diamond Beach has steep stairs, so comfortable shoes and a moderate level of mobility are recommended.",
-      "Tree House photo fees, Diamond Beach swing fees, breakfast, and personal expenses are usually not included.",
+      "The Tree House photo fee is included. The Diamond Beach swing is not — it is charged on the spot by the people who own it, and so are personal expenses. Everything else on the route is covered.",
       "Bring sunblock, a hat, a towel, a change of clothes, extra money, and motion sickness medicine if you need it for boat crossings.",
       "Sea conditions, harbor queues, and peak-season traffic can slightly change the exact timing of the day, so the published schedule is always an estimate.",
       "If you already have a private driver or taxi in Bali, meeting at Sanur Port is usually the simplest option.",
@@ -2943,7 +2984,7 @@ const tours = [
       "Private Bali hotel transfer if the transfer option is selected",
     ],
     goodToKnow: [
-      "Lunch and personal expenses are not included in the standard booking.",
+      "Lunch and personal expenses are not included — there are warungs on the island and you pay there.",
       "Padang Bai harbor tax and island admission may still be payable in cash depending on the selected option and local check-in flow.",
       "Meeting-point bookings check in at Wannen Bali Office, Jl. Segara No.28, Padang Bai, Karangasem, Bali.",
       "This route is not recommended for non-swimmers, pregnant travelers, or guests with serious back, heart, or mobility issues.",
@@ -6111,11 +6152,11 @@ function renderWestStylePage(tour) {
   const brokenBaliDestinationsMenu =
     '<ul role="list" class="t-menusub__list"> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
     'href="/bali/en/main-page#tours" data-menu-item-number="1">Dubai, UAE</a> </li> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
-    'href="/bali/en/main-page#tours" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul>';
+    'href="/bali/en/main-page" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul>';
   const fixedBaliDestinationsMenu =
     '<ul role="list" class="t-menusub__list"> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
     'href="/dubai/en#tours" data-menu-item-number="1">Dubai, UAE</a> </li> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
-    'href="/bali/en/main-page#tours" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul>';
+    'href="/bali/en/main-page" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul>';
 
   let html = getWestTemplateHtml();
 
@@ -6185,9 +6226,16 @@ function renderWestStylePage(tour) {
   // Цена за машину: подпись под ценой в карточке private-оффера из шаблона
   // говорит «per person» — для таких туров это неправда, меняем на «per car».
   if (/per car/i.test(String(tour.price || ""))) {
+    /* Подпись под ценой. Для маршрутных туров цена идёт за машину, а входные
+       билеты человек оплачивает сверху по числу людей — и это должно быть
+       видно рядом с цифрой, а не в глубине текста. Иначе семья из четверых
+       считает 65 долларов на всех и получает счёт на 153. */
+    const note = tour.ticketsPerPerson
+      ? `per car &middot; entrance tickets $${tour.ticketsPerPerson} per person`
+      : "per car";
     html = html.replaceAll(
       'sb-private-card-price-note">per person<',
-      'sb-private-card-price-note">per car<',
+      `sb-private-card-price-note">${note}<`,
     );
   }
 
@@ -9740,7 +9788,7 @@ const TOUR_LOCAL_CONTEXT = {
     insiderNote: "Lovina's dolphin-watching boats head out before sunrise — the dolphins feed in the early morning waters. Spinner dolphins are the most common species, often leaping and spinning in groups of 20–100+.",
     practicalTips: [
       "Pickup from south Bali is around 02:00–03:00 AM for the predawn boat departure at Lovina Beach.",
-      "Dolphin sightings are common (80%+ success rate) but not guaranteed. Spinner dolphins are the primary species.",
+      "Spinner dolphins live off Lovina year-round rather than migrating through, which is why boats go out every morning. Nobody has published a sighting rate for Lovina — not the researchers who have studied the bay, and not the operators who quote percentages — so we do not print one either.",
       "After dolphins, the route typically includes Gitgit Waterfall, Ulun Danu Beratan Temple, and Jatiluwih rice terraces.",
       "Bali's north coast (Lovina area) is quieter and more local-feeling than the tourist south — a good contrast experience.",
       "The drive from south Bali to Lovina takes about 3 hours through mountain roads with scenic views.",
@@ -9764,7 +9812,7 @@ const TOUR_LOCAL_CONTEXT = {
     comparison: "Compact version of the North Bali Lovina Dolphins Tour. Less driving, fewer stops, same dolphin experience.",
     faq: [
       ["How does this differ from the full North Bali tour?", "This is a shorter 8-hour version focused on the dolphin sunrise and 2–3 key stops. The full North Bali tour is 10–12 hours with more sightseeing."],
-      ["Are dolphin sightings guaranteed?", "Not guaranteed, but Lovina has an 80%+ sighting rate. Spinner dolphins are present year-round, with morning feeding being the most reliable viewing window."],
+      ["Are dolphin sightings guaranteed?", "Not guaranteed, and anyone quoting you a percentage invented it: no study of Lovina has ever published a monthly or overall sighting rate. What is documented is that the spinner dolphins are resident rather than migratory, so no month is closed to you. The north coast shelf drops to 200 m within 2-5 km of shore, which is why the boats reach the animals in 15-20 minutes."],
     ],
   },
   "bali-airport-transfer": {
@@ -9791,7 +9839,7 @@ const TOUR_LOCAL_CONTEXT = {
     practicalTips: [
       "Standard booking is for 10 hours. Extra hours can usually be added for a reasonable fee.",
       "Drivers provide an air-conditioned car (usually Toyota Avanza or similar) with bottled water.",
-      "Entrance fees and meals are typically not included in the driver price — budget extra for these.",
+      "This is a boat seat and the transfer to the harbour, nothing else — there are no entrance tickets on a crossing, and no meal is served.",
       "Discuss your itinerary with the driver at pickup. They can suggest optimal routing based on traffic and opening hours.",
       "Tipping your driver is appreciated — IDR 50,000–100,000 (≈ $3–7) is a common gesture for good service.",
     ],
@@ -10213,6 +10261,1586 @@ const JOURNAL_FEATURED_GUIDE_SLUGS = [
 
 const JOURNAL_SEO_GUIDES = [
   {
+    "slug": "nyepi-what-actually-closes",
+    "badge": "Culture guide",
+    "navLabel": "Nyepi closures",
+    "cardTourLabel": "Driver, day before/after",
+    "heroTourSlug": "private-car-with-driver-bali",
+    "relatedTourSlugs": [
+      "private-car-with-driver-bali"
+    ],
+    "inlineStats": [
+      "Closed 06:00 to 06:00",
+      "440 flights cancelled",
+      "First landing 06:52"
+    ],
+    "title": "Nyepi in Bali: What Actually Closes, Hour by Hour",
+    "description": "Ngurah Rai shuts 06:00 to 06:00, ferries stop earlier, no check-in or check-out. What Nyepi really closes in Bali and how to plan the days around it.",
+    "excerpt": "Nyepi is the one day of the year when Bali stops as a matter of signed instruction rather than habit. In 2026 the Day of Silence ran from **06:00** on Thursday 19 March 2026 to **06:00** on Friday 20 March 2026. Inside those 24 hours the airport cancelled **440 flights**, the ferry terminals shut earlier than the airport did and reopened later, street lighting was physically switched off, and hotels were barred from checking anyone in or out. The rules are written down and countersigned, and they apply to visitors the same way they apply to Balinese households. Below is what closes, in the order it closes, what stays on despite the headlines, and one thing we should say at the top: we do not run tours on Nyepi and we do not accept bookings for that date.",
+    "rankings": [
+      {
+        "name": "Ngurah Rai International Airport",
+        "imageSrc": "/images/places/bali-green-season.jpg",
+        "area": "Tuban, south Bali",
+        "bestFor": "The hard stop everything else follows",
+        "summary": "In 2026 the airport stood down for the full 24 hours, **06:00** on 19 March 2026 to 06:00 on 20 March 2026, under NOTAM A0096. General manager Nugroho Jati put the total at **440 flights** cancelled, 231 domestic and 209 international, with 19 aircraft left parked on the apron overnight. The 2025 closure removed 425 flights, 207 domestic and 218 international, under general manager Ahmad Syaugi Shahab. Medical evacuation and emergency flights are the only exceptions."
+      },
+      {
+        "name": "Gilimanuk and Ketapang, the Java crossing",
+        "imageSrc": "/images/places/bali-in-rainy-season.jpg",
+        "area": "West Bali and East Java",
+        "bestFor": "Anyone driving between Bali and Java",
+        "summary": "Gilimanuk closed at **05:00** on 19 March 2026, an hour ahead of the airport, and reopened at 06:00 on 20 March 2026. The Java side works on a different clock and a different time zone: Ketapang stopped at **17:00 WIB** on 18 March 2026 and did not restart until 06:00 WIB on 20 March 2026. Counted end to end, the crossing was dead from the evening before Nyepi, not from Nyepi morning."
+      },
+      {
+        "name": "Padangbai, and what ASDP published for 2024",
+        "imageSrc": "/images/places/bali-waterfall.jpg",
+        "area": "East Bali, crossings to Lombok",
+        "bestFor": "People booking a boat the morning after",
+        "summary": "Padangbai shut earliest and opened latest of the Bali terminals: **04:00** on 19 March 2026 through to **11:30** on 20 March 2026, five and a half hours after the airport was already working. The ASDP release for 2024, from spokesperson Shelvy Arifin, shows the same shape elsewhere: Ketapang closing from 01:00 with a final sailing at 23:00 the night before and resuming on 12 March 2024 at 05:00, Lembar with a last ferry at 03:30 and a 10:00 restart."
+      },
+      {
+        "name": "Sanur harbour and the Penida boats",
+        "imageSrc": "/images/places/tirta-empul-holy-spring.jpg",
+        "area": "Sanur, Nusa Penida, Lembongan, Ceningan",
+        "bestFor": "Island-hopping days that need moving",
+        "summary": "Sanur harbour operates 06:00 to 18:00 on every day of the year except Nyepi, when it does not operate at all. The restrictions extend to Nusa Penida, Lembongan and Ceningan, and not to Java or Lombok. One point that confuses visitors regularly: Penida also holds its own Nyepi Segara on a separate date, which in 2025 ran from 06:00 on 7 October 2025 to 06:00 on 8 October 2025. It is a second closure, not the one in the national calendar."
+      },
+      {
+        "name": "Mobile data, television and radio",
+        "imageSrc": "/images/places/tegalalang-rice-terraces.jpg",
+        "area": "Island-wide",
+        "bestFor": "Working out what your phone will do",
+        "summary": "Komdigi circular No. 2/2026, signed by minister Meutya Hafid, switches off mobile data, television and radio broadcast, and IPTV. Fixed-line internet, Wi-Fi delivered over fibre, SMS and voice calls stay on. Hospitals, guard posts, police, TNI, BMKG, BPBD, Basarnas and the fire service are exempt. In 2026 the shutdown did not land in full: live streams kept appearing from Bali on social media, and the minister said the gap would be recorded and evaluated for the following Nyepi."
+      },
+      {
+        "name": "Street lighting",
+        "imageSrc": "/images/places/tukad-cepung-light-beams.jpg",
+        "area": "Denpasar, Buleleng and other regencies",
+        "bestFor": "Understanding why it is genuinely dark",
+        "summary": "The darkness is switched, not requested. Denpasar turns off **18,627** street lamps through 697 distribution boxes, work done by around 70 people at roughly 23:00 on the night of Pengerupukan, per the 2023 figures. Buleleng counted 16,178 lighting points for 2026. Point 5 of the joint appeal covers the private side of the same rule: no leaving the house, no firecrackers, no loudspeakers, no excessive light."
+      },
+      {
+        "name": "ATMs and cash",
+        "imageSrc": "/images/places/canggu-rice-fields.jpg",
+        "area": "Denpasar, Kuta and elsewhere",
+        "bestFor": "Deciding how much cash to draw",
+        "summary": "Machines go off the evening before and come back the morning after. Part of the BCA network in Denpasar and Kuta was switched off at **21:00** on 18 March 2026 and turned back on during the morning of 20 March 2026. The cause is the lighting rule rather than the banking system: mobile banking and BI-FAST transfers keep working through the day. What stops is the lit box on the street, not the money behind it."
+      },
+      {
+        "name": "Hotel check-in and check-out",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "All accommodation on the island",
+        "bestFor": "Getting the dates on your booking right",
+        "summary": "Both are prohibited on Nyepi, so hotels answer with a minimum of two nights across the date. A single night over Nyepi is not a stay anyone will sell you. Plan to be in your room by the evening before and to leave no earlier than the following morning. There is no version of the day in which you land, cross the island and settle in, because none of those three movements is permitted."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The 24 hours are official, and they start at 06:00",
+        "paragraphs": [
+          "The document people should be reading is the Seruan Bersama issued by FKUB Bali together with Kanwil Kemenag and published on 6 March 2026. Its wording sets the window precisely: terhitung mulai hari Kamis, 19 Maret 2026 pukul 06.00 WITA sampai dengan hari Jumat, 20 Maret 2026 pukul 06.00 WITA. It is countersigned under diketahui by the governor of Bali, the head of Polda Bali and the commander of Korem 163/Wira Satya, a military resort command rather than a military district. Point 5 spells out the restrictions in plain terms: do not leave the house, no firecrackers, no loudspeakers, no excessive light.",
+          "Everything else is derived from four vows, the Catur Brata Penyepian: amati geni, amati karya, amati lelungan and amati lelanguan. No fire or light, no work, no travel, no entertainment. That is worth holding onto, because it explains why the closures are not a list of separate policies that might be waived one at a time. An airport shutting for **24 hours** and a street lamp going dark at 23:00 the night before are the same rule applied to different equipment.",
+          "The date itself moves, because Nyepi is set on the Balinese calendar and not the Gregorian one. In 2026 it fell on 19 March 2026. For the following year the sources disagree: some give 8 March 2027 and others 9 March 2027, and the joint decree of three ministers that fixes the national holiday calendar had not been issued as of August 2026, so there is no settled answer yet. Treat any Nyepi date you see written without a year attached as unusable. Our [month-by-month guide to Bali](/bali/en/journal/best-time-to-visit-bali-month-by-month) covers how the rest of the calendar behaves around it."
+        ]
+      },
+      {
+        "heading": "The airport: 440 flights, and the first plane lands at 06:52",
+        "paragraphs": [
+          "Ngurah Rai closes under a NOTAM, which in 2026 was A0096, covering **06:00** on 19 March 2026 to 06:00 on 20 March 2026. General manager Nugroho Jati gave the count as **440 flights** cancelled, 231 domestic and 209 international, and 19 aircraft spent the night parked on the apron because they could not be moved. The year before, under general manager Ahmad Syaugi Shahab, the figure was 425 flights, split 207 domestic and 218 international. Medical evacuation and emergency flights are the stated exceptions, and they are the only ones.",
+          "The edges of the window matter more than the middle. On the announced 2026 schedule the last domestic departure was **23:10** on 18 March 2026 and the last international departure **01:30** on 19 March 2026. On the other side, the airport communications office, through Gede Eka Sandi Asmadi, recorded what actually happened: the first arrival was Citilink QG 692 from Surabaya at **06:52**, followed by Hongkong Airlines HX 707 at 06:58. The first departures came later, QG 691 at **08:10** and HX 706 at 09:00.",
+          "The practical version of that is short. After 06:00 is not the same as at 06:00, and departures in particular sit closer to 08:00 and 09:00. If you are connecting through Jakarta, Kuala Lumpur or Singapore on the morning after Nyepi, build the itinerary around a Bali departure two or three hours after the airport technically reopens, and do not book a same-morning onward flight with a tight layover. Airlines rebuild the schedule through the day, so a seat listed for the first hour after reopening is a planning assumption, not a plane."
+        ]
+      },
+      {
+        "heading": "Ports close before the airport and reopen after it",
+        "paragraphs": [
+          "The sea shuts earlier and opens later than the air, in both directions, and this is where itineraries break. For 2026 the times were: Gilimanuk closed **05:00** on 19 March 2026 and reopened 06:00 on 20 March 2026; Padangbai closed **04:00** on 19 March 2026 and reopened **11:30** on 20 March 2026; Ketapang on the Java side closed **17:00 WIB** on 18 March 2026 and reopened 06:00 WIB on 20 March 2026. Padangbai is the outlier worth writing down, because it comes back five and a half hours after Ngurah Rai has already reopened.",
+          "The pattern is not new. The ASDP release for 2024, from Shelvy Arifin, describes Ketapang closing from 01:00 with the last sailing at 23:00 the night before and service resuming on 12 March 2024 at 05:00, and Lembar taking its final ferry at 03:30 and resuming at 10:00. Sanur harbour, which handles the fast boats, works 06:00 to 18:00 daily and does not work on Nyepi at all. In practical terms the crossing you are counting on has probably stopped by the time you go to bed on the eve of Nyepi.",
+          "Two points of scope. First, the restrictions extend to Nusa Penida, Lembongan and Ceningan, and not to Java or Lombok, which is why the Java-side terminal closes on Bali's timetable rather than its own. Second, Penida keeps a separate observance called Nyepi Segara on a different date entirely: in 2025 it ran 06:00 on 7 October 2025 to 06:00 on 8 October 2025. Visitors regularly confuse the two and turn up at Sanur on a day when only Penida has closed, or plan around Penida's date thinking it is the island-wide one."
+        ]
+      },
+      {
+        "heading": "Internet, ATMs and street lights: what is off and what only claims to be",
+        "paragraphs": [
+          "Komdigi circular No. 2/2026, signed by minister Meutya Hafid, is specific about the split. Off: mobile data, television and radio broadcast, IPTV. On: fixed-line internet, Wi-Fi delivered over fibre, SMS and voice calls. Exempt entirely: hospitals, guard posts, police, TNI, BMKG, BPBD, Basarnas and the fire service. So the common line that Bali goes offline is wrong in both directions. Your phone loses data in the street and your villa may keep working Wi-Fi, and a text message or a phone call goes through either way.",
+          "It is also worth saying that in 2026 the shutdown did not work as written. Live streams kept coming out of Bali on social media through the day, and the minister's own comment was that this would be recorded and could be evaluated for the next Nyepi. Plan for no mobile data, because that is the instruction, and do not plan on having it because the instruction slipped once. Download maps, boarding passes and anything you need offline the day before.",
+          "The lights are a separate operation and a physical one. Denpasar switches off **18,627** street lamps through 697 distribution boxes, a job carried out by around 70 people at roughly 23:00 on the night of Pengerupukan, according to the 2023 account; Buleleng counted 16,178 lighting points in 2026. ATMs follow the same logic rather than a banking one: part of the BCA network in Denpasar and Kuta went dark at **21:00** on 18 March 2026 and came back on the morning of 20 March 2026, because a lit machine on a street is light. Mobile banking and BI-FAST transfers keep running. Draw the cash you want two days ahead, not on the eve."
+        ]
+      },
+      {
+        "heading": "Two cases, and the rule they actually show",
+        "paragraphs": [
+          "On 19 March 2026, at around 07:15, pecalang stopped a 57-year-old American, Karl Adolf Amrhein, walking down a street with his luggage. Both his hotel booking in Ubud and his visa had run out. The case never reached a court; police helped him find a villa to stay in. That is the ordinary outcome of the ordinary mistake, and the reason we tell people to fix their accommodation dates before anything else.",
+          "The second case reads very differently. On 20 and 21 August 2026 the Denpasar district court sentenced a 26-year-old Swiss national, Luzian Andrin Zgraggen, to a year in prison, with judge Tjokorda Putra Budi Pastima presiding. The charge was not going outside as such. It was brought under the new criminal code, for insulting a religious observance: he went out against a direct warning from accommodation staff, filmed himself on an empty beach and posted the clip with an obscene caption. Held together, the two cases give the rule that matters. Walking out gets you walked back. Publicly mocking the observance is what gets prosecuted.",
+          "The people doing the stopping are pecalang, traditional village security, and their standing is set out in Bali Regional Regulation No. 4/2019, article 1 point 20 and article 47. They assist state security forces after coordinating with the Prajuru Desa Adat, and they are compensated with olih-olihan under village awig-awig rather than paid a salary. They are not police and they are not hotel staff, and arguing with them on the basis that they are neither is a poor plan. In 2026 the single exception to staying indoors was the takbir procession between 18:00 and 21:00, on foot and without amplifiers. Our [safety, scams and health guide](/bali/en/journal/bali-safety-scams-and-health) covers the wider question of who has authority over what in Bali.",
+          "Now our own position, because it is the part most operators blur. We do not run anything on Nyepi, and we do not take bookings for that date. This is not a recommendation or a weather call: movement by vehicle is prohibited for the whole **24 hours**, so there is no private, discreet or early-morning version of a tour that we could legally drive. Anyone selling you one is selling something they cannot deliver.",
+          "The two days on either side are a different matter, and they are the good ones. The eve of Nyepi carries Melasti processions to the sea, the Tawur Kesanga offerings and the ogoh-ogoh parades in the evening, and the morning after is Ngembak Geni, when the island is working again and unusually quiet on the roads. Both are days for a [private car with driver](/bali/en/tours/private-car-with-driver-bali) at $59 per car rather than a fixed itinerary, because processions close roads without notice and the plan has to bend around them. If you meet a Melasti column on its way to the water, the etiquette is simple and it matters: stand well back on the verge, leave the road to the sea clear, do not walk into the procession or in front of the carried effigies to photograph them, and let it pass before the car moves. Our drivers pull over and wait rather than edge through. One honest limit: Melasti and ogoh-ogoh dates are set village by village, and there is no single island-wide schedule to book against, so the route gets decided on the day by whoever is driving."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What time does Nyepi start and end?",
+        "answer": "It runs 24 hours from **06:00** to **06:00** WITA. In 2026 that meant 06:00 on Thursday 19 March 2026 to 06:00 on Friday 20 March 2026, set out in the joint appeal published by FKUB Bali and Kanwil Kemenag on 6 March 2026. The date moves each year because Nyepi follows the Balinese calendar, so always check the year alongside the date."
+      },
+      {
+        "question": "Does Bali airport really close for Nyepi?",
+        "answer": "Yes, completely, under a NOTAM. In 2026 that was NOTAM A0096 covering **06:00** on 19 March 2026 to 06:00 on 20 March 2026, and airport management put the result at **440 flights** cancelled, 231 domestic and 209 international, with 19 aircraft parked overnight on the apron. Medical evacuation and emergency flights are the only exceptions."
+      },
+      {
+        "question": "Can I fly out the morning Nyepi ends?",
+        "answer": "You can, but not at **06:00**. In 2026 the first arrival was Citilink QG 692 from Surabaya at **06:52** and the first departure was QG 691 at **08:10**, with Hongkong Airlines HX 706 following at 09:00. Departures cluster nearer 08:00 to 09:00, so give yourself two or three hours of slack before any onward connection."
+      },
+      {
+        "question": "Do ferries and fast boats stop for Nyepi?",
+        "answer": "They stop before the airport does and start after it. In 2026 Gilimanuk closed at **05:00** on 19 March 2026, Padangbai at **04:00** on 19 March 2026, and Ketapang on the Java side at **17:00 WIB** on 18 March 2026. Padangbai did not reopen until **11:30** on 20 March 2026. Sanur harbour, which serves the Penida boats, does not operate on Nyepi at all."
+      },
+      {
+        "question": "Does the internet work during Nyepi in Bali?",
+        "answer": "Partly. Komdigi circular **No. 2/2026** switches off mobile data, television and radio broadcast, and IPTV, while fixed-line internet, Wi-Fi over fibre, SMS and voice calls stay on. Hospitals, police, TNI, BMKG, BPBD, Basarnas and the fire service are exempt. In 2026 the shutdown was incomplete and the minister said it would be evaluated for the next Nyepi."
+      },
+      {
+        "question": "Can I check into a hotel on Nyepi?",
+        "answer": "No. Check-in and check-out are both prohibited on the day, which is why hotels enforce a minimum of **two nights** across the date. Book so that you arrive by the evening before at the latest and leave no earlier than the following morning. A one-night stay covering Nyepi is not something any property will sell."
+      },
+      {
+        "question": "What happens if a tourist goes outside during Nyepi?",
+        "answer": "Two documented cases show the range. An American stopped by pecalang on the street with his luggage at around **07:15** on 19 March 2026 was helped to find accommodation and never went to court. A Swiss visitor who ignored a direct warning, filmed himself on an empty beach and posted the clip with an obscene caption was sentenced to **a year in prison** in Denpasar on 20 and 21 August 2026, under the new criminal code, for insulting a religious observance."
+      },
+      {
+        "question": "When is Nyepi 2027?",
+        "answer": "Either **8 or 9 March 2027**, and the sources disagree. The joint decree of three ministers that fixes Indonesia's national holiday calendar had not been issued as of August 2026, so no official date existed at that point. If your trip depends on it, hold the booking until the decree is published rather than trusting an aggregator."
+      }
+    ]
+  },
+  {
+    "slug": "rice-terrace-season-jatiluwih-tegalalang",
+    "badge": "Season guide",
+    "navLabel": "Rice terrace season",
+    "cardTourLabel": "Terraces by private car",
+    "heroTourSlug": "private-car-with-driver-bali",
+    "relatedTourSlugs": [
+      "private-car-with-driver-bali",
+      "ubud-highlights-tour"
+    ],
+    "inlineStats": [
+      "Red rice: 5.5 months from January",
+      "Mangsur: 3.5 months from August",
+      "Ticket IDR 75,000"
+    ],
+    "title": "Bali Rice Terraces: When Jatiluwih Is Green or Cut",
+    "description": "Jatiluwih plants red rice in January and a short white variety in August. What that means for the view month by month, and why Tegalalang differs.",
+    "excerpt": "Jatiluwih runs on a written subak calendar: red rice in January, a short white variety in August. That calendar decides whether you see a green panorama, bare mud or a harvest. Tegalalang publishes nothing at all, and the reason is structural.",
+    "rankings": [
+      {
+        "name": "Jatiluwih in January",
+        "imageSrc": "/images/places/bali-in-rainy-season.jpg",
+        "area": "Penebel, Tabanan",
+        "bestFor": "Water, mud and planting lines — not a green panorama",
+        "summary": "The subak charter obliges members to plant Balinese rice in January. Pekaseh I Wayan Mustra, quoted in the Indonesian press, said red rice planting would only start in January 2026 after a high-yield variety went in during August 2025. Fields at this point are flooded or freshly transplanted."
+      },
+      {
+        "name": "Jatiluwih, February to April",
+        "imageSrc": "/images/places/bali-green-season.jpg",
+        "area": "Penebel, Tabanan",
+        "bestFor": "The green red-rice panorama the site is known for",
+        "summary": "Red rice needs about 5.5 months from a January planting, so this is the fill-out stage. On 23 February 2023 the crop was just over a month old, with two weedings due at 1.5 and 2.5 months. In February 2023, 227.41 ha of the subak were under red rice."
+      },
+      {
+        "name": "Jatiluwih, May to early July",
+        "imageSrc": "/images/places/tegalalang-rice-terraces.jpg",
+        "area": "Penebel, Tabanan",
+        "bestFor": "Cutting, drying, loaded fields and empty ones side by side",
+        "summary": "The panen raya of red rice ran from May 2025 to the first week of July 2025. On 26 June 2025 about 30 per cent of the fields were still uncut, at 7.5 t/ha. The Jatiluwih Festival on 20-22 June 2026 fell inside this window, which the DTW manager described as coincidence rather than scheduling."
+      },
+      {
+        "name": "Jatiluwih, September and October",
+        "imageSrc": "/images/places/canggu-rice-fields.jpg",
+        "area": "Penebel, Tabanan",
+        "bestFor": "The second green window, from the short August variety",
+        "summary": "Balinese white rice, mangsur, is usually planted in August with a growing period of about 3.5 months according to the official DTW site. That puts the green phase in the weeks after planting and a harvest towards November — the 2024/25 season was cut in November 2024 at 6-7 t/ha."
+      },
+      {
+        "name": "Tegalalang, the Ceking slope",
+        "imageSrc": "/images/tours-real/ubud-highlights-tour.jpg",
+        "area": "Kedisan, Gianyar",
+        "bestFor": "A patchwork you can walk into, close up, at any time of year",
+        "summary": "The view is held by fewer than ten private owners in the banjars Tangkub and Kebon, and by several small subaks — Kedisan Kaja is 22.8 ha against 131 ha in a single Jatiluwih tempek. Wayan Japa works about 1.8 ha with 7-8 workers a day and is contractually required to always keep rice in the ground."
+      },
+      {
+        "name": "The subak ritual calendar",
+        "imageSrc": "/images/places/tirta-empul-holy-spring.jpg",
+        "area": "Any subak in Bali",
+        "bestFor": "Reading the age of a field without asking anyone",
+        "summary": "Offerings are pegged to the crop in days: Banten Tulung on day 7 after planting, Mubuhin on day 12, Ngabut Bulih at 14 days, Wali Nyungsung on day 60, Mabiyukukung around day 75, Banten Manyi on the day of the harvest. If you see one, you know how old the crop is to within a few days."
+      },
+      {
+        "name": "Checking before you book",
+        "imageSrc": "/images/tours-real/private-car-with-driver-bali.jpg",
+        "area": "From home, two weeks out",
+        "bestFor": "Deciding whether the trip is worth the drive this month",
+        "summary": "Message the Jatiluwih management office on WhatsApp, look at the fields yourself in Sentinel-2 at 10 m per pixel with a 5-day revisit, and read the BPS Bali table of harvested paddy area per month for Tabanan and Gianyar. Three independent checks, all free, all faster than trusting a stock photo."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "A subak is not a village, and that is why the view switches",
+        "paragraphs": [
+          "The UNESCO nomination dossier 1194rev is blunt about it: subaks are not villages, they are specialised institutions charged with managing irrigation water, and most of them have written legal codes called awig-awig. Membership follows the water, not the address. Two neighbours on the same lane can belong to different subaks, and two fields on opposite sides of the valley can be governed by the same rulebook.",
+          "Water is divided by proportional dividers cut so that you can see at a glance how much is going into each canal. That is what makes a schedule enforceable rather than aspirational. After the harvest the fields are flooded together, which strips pests of their habitat, and the dossier states plainly that this depends on farmers being able to schedule simultaneous harvests over large areas.",
+          "So the planting decision is collective, and the visual consequence is direct: a subak panorama changes state all at once. The largest water-temple congregation on the island, Pura Ulun Danu Batur, coordinates more than **250 subaks**. At the time the dossier was submitted, in **2010-2011**, Bali held roughly **82,000 ha** of irrigated terraces."
+        ]
+      },
+      {
+        "heading": "Jatiluwih's calendar is written down, and the charter names the month",
+        "paragraphs": [
+          "The official DTW Jatiluwih site publishes the cycle. Red rice is usually planted in January, with a growing period of about **5.5 months**. Balinese white rice, mangsur, is usually planted in August, with a growing period of about **3.5 months**. Pekaseh I Wayan Mustra — named in the Indonesian press rather than on the site itself — puts the rule behind it in one sentence: in August farmers are free to choose the variety, but in January the subak obliges them to plant Balinese rice.",
+          "That single line explains the whole viewing problem. Jatiluwih is one subak with a charter that names a month, so the panorama switches as a block. Anyone who tells you that a terrace this large always has something green somewhere has the logic backwards. Size does not hedge your odds here — it synchronises them. The patchy site is the small one, not the big one.",
+          "The scale, from the same source: **7** tempek, a total the site gives as about **303 ha**, and **545** members. We say about 303 because the arithmetic does not close — the seven individual areas listed on that page add up to **338.7 ha**, and the site does not explain the gap. In February 2023, **227.41 ha** of the subak were under red rice."
+        ]
+      },
+      {
+        "heading": "Two documented seasons, with dates",
+        "paragraphs": [
+          "Season 2022/23: planting ran December 2022 into January 2023, the variety was padi merah cendana grown from the previous harvest's own seed, with two weedings — peniangan — at **1.5** and **2.5 months**. By 23 February 2023 the rice was described as a little over a month old, and the expected yield was around **7 t/ha**.",
+          "Season 2024/25: the harvest came in November 2024 at **6-7 t/ha**, then the panen raya of red rice ran from May 2025 to the first week of July 2025. On 26 June 2025 roughly **30 per cent** of the fields were still uncut, yield was **7.5 t/ha**, and the GKP price had climbed to **IDR 2 million** per quintal against **IDR 700,000** before. Mustra said a high-yield variety went in during August 2025 and that red rice planting would only begin in January 2026. An independent peg on the same window: the Jatiluwih Festival ran **20-22 June 2026**, and DTW manager I Ketut \"John\" Purna described the overlap with the harvest as a coincidence, not something the festival was scheduled around.",
+          "Read together, those two seasons give an honest booking rule. If you want green Jatiluwih, aim at February to April and at September to October. If you want a harvest — people in the fields, cut stalks, loaded motorbikes — aim at May and June. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) at **$59** for the car is the setup that works there, because Penebel is a slow road and the light on the terraces is better early and late than at the hour a group bus arrives. For sunrise timing on the ridge itself, our notes on [Bali viewpoints](/bali/en/journal/best-viewpoints-bali-sunrise-cliffs-rice-terraces) cover where to stand.",
+          "What we will not do is sell Jatiluwih as a guaranteed photograph in December and January or in July and August. In those windows the fields are being ploughed, flooded, transplanted or cut, and the recorded calendar says so. We are not going to promise green terraces year-round, and if that is the only reason you are making the drive, move the date instead of buying the day."
+        ]
+      },
+      {
+        "heading": "Tegalalang has no schedule to publish",
+        "paragraphs": [
+          "The slope you photograph at Ceking sits in the banjars Tangkub and Kebon of Kedisan village, and it is held by fewer than ten private owners. Wayan Japa works about **1.8 ha** of it with **7-8** workers a day, paid **IDR 120,000** with food or **IDR 100,000** without, and his agreement requires him to always keep rice in the ground; the variety is mansur, and tourists often join the harvest. In 2020 owners put up mirrors facing the restaurants across the valley after an **IDR 4.5 million** a month arrangement expired in 2019 — the view is a commercial asset, and it is negotiated, not managed by one body.",
+          "That fragmentation is the whole difference. The Tegalalang panorama is formed by several small subaks: Kedisan Kaja is **22.8 ha** in total, with pekaseh I Putu Yoga Wibawa running about **4 ha** organically, against **131 ha** in Telabah Gede, a single tempek of Jatiluwih. Small units, separate decisions, staggered fields — a patchwork by construction.",
+          "There is no published planting calendar for Tegalalang, and no source we could find puts the two sites side by side month by month. Blogs will tell you Tegalalang is green in March and April or in September and October, and that Jatiluwih is bare while Tegalalang is full. Neither claim has a source behind it. Our separate comparison of the two, [Jatiluwih vs Tegalalang](/bali/en/journal/jatiluwih-vs-tegalalang), goes through the layout of each site. What is safe to say is structural: with several owners and several subaks, a total blank across the whole slope is unlikely, and a total sweep of green is equally unscheduled.",
+          "If you can read the offerings, you can date a field without asking. The subak ritual calendar counts the crop in days: Banten Tulung on the 7th day after planting, Mubuhin on the 12th, Ngabut Bulih at 14 days, Wali Nyungsung on the 60th, Mabiyukukung around the 75th, and Banten Manyi on the day of the cut. Tegalalang is a stop on our [Ubud Highlights tour](/bali/en/tours/ubud-highlights-tour) at **$65** for the car, with entrance tickets paid per person on top."
+        ]
+      },
+      {
+        "heading": "How to check before you book, in four ways",
+        "paragraphs": [
+          "One: ask the people who run it. Kantor Badan Pengelola DTW Jatiluwih, Jl. Batu Luwih Kawan, Penebel, Tabanan 82152. WhatsApp **+62-85692381416** and **+62-85739939148** — the site names the second number for bookings. Instagram @infojatiluwih and TikTok @infojatiluwih_, not @jatiluwihdestination. The news feed on the website has been dead since 2024, so a silent site tells you nothing about the fields; message a human.",
+          "Two: look yourself. Sentinel-2 imagery is free in the Copernicus Browser at **10 m** per pixel in the visible bands, with a revisit every **5 days**. At that resolution the subak reads clearly, and a cut field looks different from a flooded one even to an untrained eye. Compare the last two clear passes before you commit to a date.",
+          "Three: read the statistics. BPS Bali publishes harvested paddy area per month with a breakdown by regency, including Tabanan and Gianyar. Island-wide the peak is May — **16,500 ha** in May 2024, **14,280 ha** in May 2023 — and the trough is February, at **3,588.93 ha** in February 2024, with January 2025 at **7,376.70 ha**. But in Gianyar, January 2025 was the strongest month of the year at **2,188.91 ha**. The island pattern does not transfer to the regency, which is precisely why Tegalalang and Jatiluwih should not be treated as one season.",
+          "Four: tickets and rules, so the day does not stall at the gate. Foreign adult **IDR 75,000**, child **IDR 50,000**, Indonesians **IDR 25,000** and **IDR 15,000**. Drones only with permission. A banner carries a surcharge of **IDR 300,000** on one page of the official site and **IDR 150,000** in the accordion on the same site — the two figures contradict each other and we have not been able to resolve which is current, so call before you plan anything with a banner. Guided trekking starts at **IDR 450,000**, cycling at **IDR 470,000**, and bookings are taken at least **2 days** ahead."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "When is Jatiluwih actually green?",
+        "answer": "By the written calendar, red rice goes in during January and needs about **5.5 months**, so the fields fill out roughly from February to April. The August mangsur planting needs about **3.5 months**, which gives a second green window around September and October. That is the schedule, not a guarantee: in the 2024/25 season the harvest came in November 2024 and the main red-rice cut ran from May 2025 into the first week of July 2025."
+      },
+      {
+        "question": "When is the harvest, if that is what I want to see?",
+        "answer": "May and June. The documented panen raya of red rice ran from May 2025 to the first week of July 2025, and on 26 June 2025 about **30 per cent** of the fields were still standing, at **7.5 t/ha**. The Jatiluwih Festival on **20-22 June 2026** fell inside that window, which the DTW manager described as a coincidence rather than deliberate timing."
+      },
+      {
+        "question": "If Jatiluwih is cut, will Tegalalang be green?",
+        "answer": "Nobody publishes a planting calendar for Tegalalang, and there is no source that compares the two sites month by month. What can be said is structural: the Tegalalang view is made by several small subaks — Kedisan Kaja is only **22.8 ha** — plus fewer than ten private owners, so the slope is staggered rather than synchronised. A patchwork is likely. A specific month is not predictable."
+      },
+      {
+        "question": "Isn't a big terrace a safer bet, since part of it is always green?",
+        "answer": "No, and this is the most common mistake about Jatiluwih. It is one subak with a charter that names the planting month, so **7** tempek and roughly **303 ha** switch state together. Size synchronises the view instead of hedging it. The fragmented site is the smaller one."
+      },
+      {
+        "question": "How much does Jatiluwih cost to enter?",
+        "answer": "Foreign adult **IDR 75,000**, child **IDR 50,000**, Indonesian visitors **IDR 25,000** and **IDR 15,000**. Guided trekking starts at **IDR 450,000** and cycling at **IDR 470,000**, both booked at least **2 days** in advance through the management office."
+      },
+      {
+        "question": "Can I fly a drone or set up a banner for a shoot?",
+        "answer": "Drones require permission from the management office. A banner carries a surcharge listed as **IDR 300,000** in one place on the official site and **IDR 150,000** in the accordion on the same site. The two figures contradict each other and we have not resolved which applies, so confirm by phone before you plan the shoot."
+      },
+      {
+        "question": "How do I check the state of the fields two weeks before my trip?",
+        "answer": "Three ways that all work from home. WhatsApp the Jatiluwih office on **+62-85692381416** or **+62-85739939148** — the website news feed has been dead since 2024, so ask a person. Open the free Copernicus Browser and compare the last Sentinel-2 passes at **10 m** per pixel, refreshed every **5 days**. Then check the BPS Bali monthly harvested-area table for Tabanan and Gianyar."
+      },
+      {
+        "question": "Should I book Jatiluwih for December or January?",
+        "answer": "You can go, and the place is worth seeing in any state, but we will not describe it as a green panorama in those weeks. That is when the fields are being prepared, flooded and transplanted — the pekaseh said red rice planting would only begin in January 2026. Come for the water system, the water temples and the walk, and put the photograph you have in mind on a February-to-April or September-to-October date instead."
+      }
+    ]
+  },
+  {
+    "slug": "lovina-dolphin-season-year-round",
+    "badge": "Travel guide",
+    "navLabel": "Lovina dolphin season",
+    "cardTourLabel": "Lovina sunrise boat",
+    "heroTourSlug": "dolphin-sunrise-city-tour",
+    "relatedTourSlugs": [
+      "dolphin-sunrise-city-tour",
+      "north-bali-lovina-dolphins-tour",
+      "nusa-penida-manta-rays-point"
+    ],
+    "inlineStats": [
+      "IMMA confirmed 2018, no season named",
+      "72.4% of approaches inside 50 m",
+      "Monthly sighting rate: never published"
+    ],
+    "title": "Bali Dolphin Season in Lovina: Why There Isn't One",
+    "description": "Lovina's spinner dolphins are resident year-round, so no month is dolphin season. What actually changes is the sea, the boat crowd and your morning.",
+    "excerpt": "There is no dolphin season in Lovina, because the dolphins do not leave: the **583 km²** Buleleng IMMA was confirmed in November **2018** on criteria for regular aggregations, calving and species diversity, and the justification carries no seasonal qualifier anywhere in it. Nobody has ever published a monthly sighting rate — not Mustika, not Westerlaken — so every \"April to October is better\" line you read comes from a seller rather than a dataset. What has been measured is the boat crowd, and that is the thing which actually decides your morning.",
+    "rankings": [
+      {
+        "name": "Shared jukung from the beach",
+        "imageSrc": "/images/tours-real/north-bali-lovina-dolphins-tour.jpg",
+        "area": "Lovina, departs about 06:00",
+        "bestFor": "The cheapest seat on the water",
+        "summary": "Balipedia's rates, updated 30 April **2026**, put a shared boat at **IDR 100,000** and **IDR 50,000** — the list gives the pair without saying which category is which. Collection on the beach is around **05:45**, departure about **06:00**, and the trip runs **1-2 hours**. You do not choose who else is aboard and you do not choose how close the boat goes, and that second thing decides the morning more than the price does."
+      },
+      {
+        "name": "Private jukung",
+        "imageSrc": "/images/places/bali-green-season.jpg",
+        "area": "Lovina, 1-6 people",
+        "bestFor": "Being able to ask for distance",
+        "summary": "**IDR 450,000** for one to three people and **IDR 600,000** for four to six on the same balipedia list. The extra money buys one thing worth having: the boat is yours, so asking the boatman to hang back and cut the engine is a request rather than a negotiation with five strangers who each paid to get close. Whether he does it is a separate question, and the compliance figures further down are not encouraging."
+      },
+      {
+        "name": "Boat with snorkelling added",
+        "imageSrc": "/images/tours-real/tanah-lot-bedugul-tour.jpg",
+        "area": "Lovina reef, after the dolphins",
+        "bestFor": "Filling the rest of the morning",
+        "summary": "The same beach list sells a snorkelling version, priced per seat shared or per boat private. The snorkelling happens on the reef and has nothing to do with the dolphins, so treat it as a second activity bolted onto the same boat rather than a closer look at the animals. Nobody gets in the water with a spinner dolphin on this trip, and any listing that implies otherwise is selling something the boat does not do."
+      },
+      {
+        "name": "A departure after 08:00",
+        "imageSrc": "/images/places/bali-in-rainy-season.jpg",
+        "area": "Lovina, off-peak hour",
+        "bestFor": "Fewer boats on the same water",
+        "summary": "The fleet sails at about **06:00** and each trip runs **1-2 hours**, so a start after 08:00 puts you on water the pack has largely left. Nobody has measured sighting rates by hour, which means this buys you space rather than a better chance: you are trading the market's convention for a quieter sea. Worth asking for if you are already staying in the north and do not need the sunrise."
+      },
+      {
+        "name": "Lovina Dolphin Sunrise Tour",
+        "imageSrc": "/images/tours-real/north-bali-lovina-dolphins-tour.jpg",
+        "area": "From south Bali, 8 hours",
+        "bestFor": "One long day from Kuta, Seminyak or Ubud",
+        "summary": "$69 per person for an **8-hour** day with breakfast included, which is the realistic shape of a Lovina morning if you are not already sleeping in the north. We do not quote a percentage chance of seeing dolphins, and we ask the boatman to hold back rather than race the pack. Both of those cost us bookings and we would rather lose them."
+      },
+      {
+        "name": "North Bali day tour",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "North coast, 10-12 hours",
+        "bestFor": "People who want the coast as well as the boat",
+        "summary": "$79 per person over **10-12 hours**, with the dolphin boat as the first item and the rest of the north coast after it. The honest trade is time in the car: the boat is on the water for **1-2 hours** and the day is ten or more. If the dolphins are the only reason you are going, the shorter version above is the one that makes sense."
+      },
+      {
+        "name": "Manta snorkelling at Nusa Penida",
+        "imageSrc": "/images/places/manta-ray-snorkeling.jpg",
+        "area": "Manta Point, Nusa Penida",
+        "bestFor": "Anyone who wants to be in the water with an animal",
+        "summary": "From $29 per person, and the difference from Lovina is structural rather than a matter of degree. At the cleaning station the mantas arrive on their own to be cleaned and the snorkellers stay still on the surface, so nothing is being chased. It is the answer we give when a guest asks to swim with the dolphins in Lovina, and it is the only version of that request we will sell."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The dolphins live here, so there is nothing to wait for",
+        "paragraphs": [
+          "The Buleleng Important Marine Mammal Area covers **583 km²** of the north coast and was confirmed in November **2018**, after a workshop held from 12 to 16 March **2018** in Kota Kinabalu. It qualified on three criteria: B(2) for regular aggregations, C(1) as a reproductive area, and D(2) for diversity. The supporting text notes that dolphins are consistently observed feeding there and that calves are recorded regularly. There is no seasonal qualifier in the justification — no months named, no better half of the year, nothing that would let anyone build a season out of it.",
+          "The reason the animals are reliably close is the shape of the seabed rather than anything about the calendar. The bottom falls to **200 m** within **2-5 km** of shore and to **500 m** within **5-8 km**, so the deep water sits within sight of the beach. Night feeding at **200-300 m** is documented for the species; no study of the daily cycle has been done for the Lovina animals. A jukung needs **15-20 minutes** of running time to reach that water, which is why Lovina became a dolphin town and nowhere on the south coast did.",
+          "The main animal is the pygmy spinner dolphin, Stenella longirostris roseiventris. Six species have been documented in the area in total. The two qualifying species for the IMMA are the spinner and Fraser's dolphin, Lagenodelphis hosei, with pilot whales, Risso's dolphins, spotted dolphins and bottlenose dolphins also recorded. The population is resident, which is the whole point: the month you choose does not change whether the dolphins are in the bay.",
+          "What the month does change is the sea state, the number of boats around you and how the morning feels afterwards. Those are real variables and two of them have been counted. The dolphins are the constant here, not the variable, and any calendar built around them is describing the tourism rather than the animals."
+        ]
+      },
+      {
+        "heading": "Nobody has ever published a monthly sighting rate",
+        "paragraphs": [
+          "Neither Mustika, in her work from 2011, 2012 and 2015, nor Westerlaken, in 2022 and 2025, counted the proportion of trips that found dolphins — not overall, and certainly not by month. That figure does not exist in the peer-reviewed literature or in any official source. Every \"April to October is better\" and every \"May to September is better\" traces back to an operator website with nothing published behind it. We do not quote a percentage, because there is no number to quote.",
+          "There is one indirect series worth knowing about. Westerlaken observed daily from 9 January to 15 May **2021**, between **06:00** and **10:00**, and counted active boats: the range was **0 to 47**, the average **15.5**, and the peak of 47 happened once, on 14 May **2021**. So boats were working in January, February and March, though not every day, which is the closest thing anyone has to evidence about the low months. The caveat has to travel with the number: that was a pandemic season, against a fleet the same paper describes as almost 200 boats. It counts boats, not dolphins.",
+          "What argues for a high chance of an encounter is the residency itself, plus a feeding ground that sits **15-20 minutes** from the beach. What argues against a spectacle is the animal: spinner dolphins are on the surface for less than two minutes at a time, and at first detection they are almost always simply travelling rather than doing anything photogenic. Both of those things are usually true on the same morning.",
+          "So there is no percentage here, and an operator who offers you one is making it up. What we can tell you is what the trip actually consists of, which is covered in [our breakdown of whether the Lovina dolphin trip is worth it](/bali/en/journal/lovina-dolphin-tour-worth-it)."
+        ]
+      },
+      {
+        "heading": "Why the boat leaves at 06:00, and why one captain says go later",
+        "paragraphs": [
+          "Westerlaken chose the **06:00-10:00** window for observations because it coincides with the peak time for dolphin-watching tourism, not because it is when the dolphins are most active. Balipedia confirms the commercial pattern: gathering on the beach around **05:45**, departure about **06:00**, a trip of **1-2 hours**. The hour is a tourism convention that everyone now repeats.",
+          "There is a biological argument for the early start, and it needs stating precisely. For Stenella longirostris as a species, the literature documents night foraging on mesopelagic prey at depths of **200-300 m** and daytime rest in coastal bays. That is documented for the species; no study of the daily cycle has been done for the Lovina animals specifically. It fits indirectly with Mustika's finding that dolphins at first detection were almost always travelling, which is what an animal heading in from a night offshore would be doing.",
+          "The counter-argument comes from inside the market. Captain Zul told Mongabay he advises going out after 8 in the morning, when the scene is less crowded, and that the dolphins are active in the morning generally, from sunrise until midday. Nobody has measured sighting rates by hour, so this is not a settled question, but the man saying it puts boats on that water.",
+          "Either way, a **06:00** departure from Lovina means a pickup in the middle of the night if you are staying in the south. Our [Lovina dolphin sunrise tour](/bali/en/tours/dolphin-sunrise-city-tour) runs $69 per person over **8 hours** with breakfast included, and the longer [north Bali day](/bali/en/tours/north-bali-lovina-dolphins-tour) is $79 over **10-12 hours** with the coast added after the boat. On both, we ask the boatman to keep his distance, and we tell you in advance that we cannot promise an encounter."
+        ]
+      },
+      {
+        "heading": "The crowd is the variable, and it is the one that has been measured",
+        "paragraphs": [
+          "Westerlaken's 2025 figures put numbers on what the morning looks like from the animals' side. Of recorded approaches, **72.4%** happened at less than **50 m**, **23.1%** at 50 to 100 m, and only **4.5%** beyond 100 m. Captain behaviour was scored as not matching the rules in **68.3%** of cases, as matching them in **12.4%**, and as neutral in **19.3%**. This is not a few drivers behaving badly at the edges of an otherwise orderly fleet. It is the normal state of the water.",
+          "Dolphin behaviour recorded in the presence of boats breaks down as travelling **45.2%**, avoidance **30.1%**, social **15.3%** and resting **9.4%** — shares of the recorded states, not of the animals' day. Close to a third of what observers logged was avoidance. Mustika's earlier data, from 2007 to 2009, gives the scale: an average of **34.5** boats a day, up to about **100** in the high season, a single pod surrounded by as many as **83** boats, a median of **15.35** boats and a median ratio of **0.8** spinner dolphins per boat. Across 36 days and 175 scan samples she logged 64 separate boats showing behaviours of concern. The mean distance of the nearest jukung was about **10 m**, and about **25 m** averaged across the five nearest. The peer-reviewed wording from 2022 is that the disturbance caused by dolphin watching in Lovina is severe.",
+          "There is a commercial reading of the same data. Visitor satisfaction scores **7.1 out of 10**, which the study calls low to medium, and for western visitors it correlates with how the encounter is managed and with their preferred number of boats. The crowd is measurably the thing that ruins the morning, not the weather and not the dolphins.",
+          "Whether the crowd is seasonal has not been measured. The only modern series of boat counts runs from January to May **2021**, in a pandemic year, with an average of **15.5** boats a day. Avoiding the peak holiday weeks is reasonable common sense, and we will not dress it up as a finding. If you can pick your date, pick a weekday outside school holidays and book a boat rather than a seat."
+        ]
+      },
+      {
+        "heading": "The rules, the gap between them, and what a decent morning looks like",
+        "paragraphs": [
+          "In 2017 the fisheries ministry, together with the Buleleng fisheries and marine office and the Buleleng culture and tourism office, agreed four points for dolphin watching: do not cut across the animals but travel alongside them in the same direction, lift and switch off the engine when close to dolphins, keep a minimum distance of **50 metres**, and do not feed them. The document is an agreement between agencies rather than a regulation, and at the same time a BPSPL representative, Permana Yudiarso, said plainly that implementation by boat captains was not yet good. The compliance figures above are what that sentence looks like eight years later.",
+          "In February **2023** the Buleleng tourism office, under Gede Dody Sukma Oktiva Askara, drafted a standard operating procedure with the Buleleng SAR post, Balawista, the hotel and restaurant association and BPSPL. It sets **25 m** as the threshold for cutting the engine and makes a first-aid kit, life jackets, whistles and buoys mandatory. We could not find any record of it being adopted as a district regulation. At national level there is no code of conduct for marine mammal watching at all, as Sahri and colleagues noted in 2020, even though dolphins have been legally protected in Indonesia since **1975** and three whale species since **1978**. So the rules exist as text, twice, at two different distances, and bind nobody.",
+          "One practice we will not book under any framing. Boats sell a surcharge on the water for a swim with the dolphins; we do not arrange it, and we ask guests not to buy it on the beach either. Putu Lisa Mustika's objection is about the animals' time rather than etiquette: if the hours available for resting and feeding are cut, the animal is less fit and more prone to disease. If being in the water with a large animal is what you actually want, go to Nusa Penida instead, where the [manta cleaning station](/bali/en/tours/nusa-penida-manta-rays-point) works from $29 per person and the animals come in of their own accord while the snorkellers stay still.",
+          "A decent morning in Lovina looks like this. One boat, yours rather than a seat on someone else's, a boatman who has been asked before departure to stay at **50 m** and cut the engine, and a realistic idea of what you are going to see: backs and fins breaking the surface for under two minutes at a time, from an animal that is mostly just moving through. Book it for the sea and the hour rather than for a guaranteed encounter, because no month is dolphin season and no operator can honestly sell you one."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "When is dolphin season in Lovina?",
+        "answer": "There is no dolphin season. The spinner dolphins off the north coast are a resident population, and the **583 km²** Buleleng IMMA confirmed in November **2018** names no months at all in its justification — it qualified on regular aggregations, calving and species diversity, none of them seasonal. What changes month to month is the sea state and the number of boats, not whether the animals are in the bay."
+      },
+      {
+        "question": "What are the chances of seeing dolphins on a morning trip?",
+        "answer": "No published figure exists. Neither Mustika (2011, 2012, 2015) nor Westerlaken (2022, 2025) counted the share of successful trips, in total or by month. What can be said is that the population is resident and the feeding ground sits **15-20 minutes** from the beach, with the seabed dropping to **200 m** within **2-5 km** of shore. Any operator quoting you a percentage invented it, and we do not quote one."
+      },
+      {
+        "question": "Is April to October better than the rest of the year?",
+        "answer": "That claim comes from operator websites, not from data. The only modern series of observations ran daily from 9 January to 15 May **2021**, from **06:00** to **10:00**, and counted **0 to 47** active boats with an average of **15.5** — meaning boats were working through January, February and March, though not every day. It was also a pandemic season against a fleet described as almost 200 boats, so it measures the industry rather than the animals."
+      },
+      {
+        "question": "What time does the boat leave, and is it worth going later?",
+        "answer": "Boats gather on the beach around **05:45** and leave about **06:00**, running **1-2 hours**. That hour is a tourism convention: the research window of **06:00-10:00** was chosen because it coincides with peak dolphin-watching tourism, not because it is peak dolphin activity. Captain Zul, interviewed by Mongabay, advises going after 8 in the morning when the water is quieter, and says the animals are active from sunrise to midday. Nobody has measured sighting rates by hour."
+      },
+      {
+        "question": "How many boats will be around the dolphins?",
+        "answer": "Measured, and the numbers are blunt. Mustika recorded an average of **34.5** boats a day between 2007 and 2009, up to about **100** in the high season, and a single pod surrounded by as many as **83** boats. Westerlaken's 2025 data has **72.4%** of approaches happening inside **50 m** and captain behaviour scored as not matching the rules in **68.3%** of cases. The peer-reviewed 2022 wording is that the disturbance is severe."
+      },
+      {
+        "question": "Is a private boat worth it over a shared seat?",
+        "answer": "Yes, and not for the comfort. On a shared boat you are one of several people who each paid to get close, so asking the boatman to hang back is a negotiation with strangers; on your own boat it is a request you make before departure. The beach list prices a private hire per boat and a shared trip per person, so a group closes most of the gap. Whether the boatman actually keeps his distance is a separate question — measured compliance with the **50 m** agreement is poor."
+      },
+      {
+        "question": "Can I swim with the dolphins in Lovina?",
+        "answer": "A surcharge for it is sold on the water. We do not sell it and will not arrange it: as Putu Lisa Mustika puts it, cutting into the hours an animal has for resting and feeding leaves it less fit and more prone to disease. For close contact in the water, the manta cleaning station at Nusa Penida from $29 works the other way round — the animals come in on their own while the snorkellers stay still."
+      },
+      {
+        "question": "Are there legal rules about how close a boat can get?",
+        "answer": "Nothing binding. A 2017 agreement between the fisheries ministry and two Buleleng offices set **50 metres** as the minimum distance, required the engine to be lifted and switched off near dolphins, and banned cutting across the pod and feeding — but it is an agreement, and a BPSPL official said at the time that captains were not implementing it well. A February **2023** draft procedure by the Buleleng tourism office uses **25 m** instead, and we found no record of it being adopted. Nationally there is no code of conduct for marine mammal watching, despite dolphins being protected since **1975**."
+      }
+    ]
+  },
+  {
+    "slug": "bali-waterfalls-by-season",
+    "badge": "Travel guide",
+    "navLabel": "Waterfalls by season",
+    "cardTourLabel": "Waterfalls by private car",
+    "heroTourSlug": "private-car-with-driver-bali",
+    "relatedTourSlugs": [
+      "private-car-with-driver-bali",
+      "north-bali-lovina-dolphins-tour",
+      "white-water-rafting"
+    ],
+    "inlineStats": [
+      "2,157 mm island average",
+      "Dry-season peak August 2026",
+      "4 falls with real numbers"
+    ],
+    "title": "Bali Waterfalls by Season: Flow, Colour and Floods",
+    "description": "Spring-fed falls stay clear all year, river-fed ones turn brown after rain. How Bali waterfalls change by season, and what the flood record shows.",
+    "excerpt": "Bali does not have one waterfall season. Dinas PU Provinsi Bali put the island average at **2,157 mm** of rain a year in its 2016 hydrology tables, with Tabanan highest at **2,466 mm** and Buleleng lowest at **1,702 mm**. What decides how a given fall looks is not that map but where it gets its water: BWS Bali Penida counted **229** springs in Buleleng at **2,782.69 l/s** in 2015, and spring-fed cascades hold their colour while river-fed ones answer to the last storm. BMKG's 10 March 2026 outlook placed the peak of the 2026 dry season in August, and all of Bali was in dry season by **11 July 2026**. The worst flood of recent years, **17** dead across **356** logged disaster points, arrived on **10 September 2025** — inside the dry season of that year. The months below follow the 2026 outlook; every event is dated to the year it happened.",
+    "rankings": [
+      {
+        "name": "December to February",
+        "imageSrc": "/images/places/bali-in-rainy-season.jpg",
+        "area": "Island-wide",
+        "bestFor": "Maximum volume, brown water",
+        "summary": "BMKG's outlook for December 2025 to January 2026 put Java, Bali and Nusa Tenggara at **300-500 mm** a month, with a category above **500 mm** for January 2026. That is a forecast, not a verified measurement. River-fed falls run loud and turbid in this window; spring-fed ones keep their colour."
+      },
+      {
+        "name": "March",
+        "imageSrc": "/images/places/bali-green-season.jpg",
+        "area": "Nusa Penida, south Gianyar, Klungkung, Karangasem",
+        "bestFor": "The first zones to flip dry",
+        "summary": "BBMKG Wilayah III has the dry season starting in March 2026 in these zones, ahead of the rest of Bali. They cross into the dry season first, so the change shows in the east and on Nusa Penida rather than in the waterfall belt."
+      },
+      {
+        "name": "April",
+        "imageSrc": "/images/places/tukad-cepung-light-beams.jpg",
+        "area": "Most of Bali",
+        "bestFor": "Rivers settling, water clearing",
+        "summary": "Nationally BMKG had **114** climate zones entering the dry season in April 2026. On Bali this is the month most zones switch. River-fed falls stop turning brown every few days, which is what actually changes the photograph."
+      },
+      {
+        "name": "May to June",
+        "imageSrc": "/images/tours-real/ubud-highlights-tour.jpg",
+        "area": "North and central Bali",
+        "bestFor": "Clear water before the peak",
+        "summary": "BMKG counted **184** zones starting the dry season in May 2026 and **163** in June 2026 across the country. Bali's north and centre, which is where the tall falls are, sit in the May group rather than the March one."
+      },
+      {
+        "name": "July to August",
+        "imageSrc": "/images/places/bali-waterfall.jpg",
+        "area": "Island-wide",
+        "bestFor": "The driest stretch of 2026",
+        "summary": "All of Bali was in dry season by **11 July 2026**. BMKG's June update put **369** climate zones, **48.84%** of all zones in the country, at the dry-season peak in August 2026. Flow drops in this window; the northern cascades run on groundwater and hold their level."
+      },
+      {
+        "name": "September",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Tabanan, Jembrana, Denpasar",
+        "bestFor": "The month that breaks the rule",
+        "summary": "Rain began early on Tuesday 9 September 2025 and by 13 September 2025 BPBD Provinsi Bali had logged **356** disaster points, **205** of them floods, **17** dead and **5** missing. On paper this is the dry season, which is exactly why the sequence is worth knowing."
+      },
+      {
+        "name": "October to November",
+        "imageSrc": "/images/tours-real/private-car-with-driver-bali.jpg",
+        "area": "Island-wide",
+        "bestFor": "The window we can say least about",
+        "summary": "We have no monthly rainfall normals for Bali stations that we would print. The only set we trust is the annual regency table for 2016. The one climate signal in our sources is a weak La Nina that ran from October 2025 and ended in February 2026."
+      },
+      {
+        "name": "Any month, north Bali",
+        "imageSrc": "/images/tours-real/north-bali-lovina-dolphins-tour.jpg",
+        "area": "Buleleng",
+        "bestFor": "Spring-fed flow that ignores the calendar",
+        "summary": "Buleleng is the driest regency at **1,702 mm** a year and still holds **125** of Bali's **391** river basins and **229** springs at **2,782.69 l/s**. Groundwater, not last week's rain, is what keeps the northern cascades running through August."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Rain is not evenly spread across the island",
+        "paragraphs": [
+          "Almost every rainfall figure quoted about Bali traces back to one table. Dinas PU Provinsi Bali's 2016 hydrology volume, table 4.5, gives an island average of **2,157 mm** a year and then splits it by regency: Tabanan **2,466 mm** at the top, Bangli **2,335**, Badung **2,275**, Gianyar **2,250**, Karangasem **2,208**, Denpasar **2,125**, Jembrana **2,056**, Klungkung **2,000**, and Buleleng **1,702** at the bottom.",
+          "Be careful with the line that the north is thirty percent drier. Buleleng is **31%** below Tabanan and **21%** below the island average. Those are two different comparisons, and the percentage only means something once you name the pair.",
+          "The ridge running along the island decides the direction of everything. The same source states that Bali's river systems flow from north to south in the southern half of the island and from south to north in the northern half. There are **391** river basins in total: Buleleng holds **125** of them, Karangasem **73**, Nusa Penida **60** on its own alongside Klungkung's **10**, Tabanan **36**, Badung **34**, Gianyar **9**, Bangli **9**, Denpasar **7**.",
+          "So the regency with the least rain carries the largest share of the river network: Buleleng holds **125** of the **391** basins. Rainfall alone does not explain why a north Bali fall can be clear on a week when a Tabanan or Bangli one is brown. That explanation is groundwater, and it is the next section."
+        ]
+      },
+      {
+        "heading": "Springs are why the north keeps water",
+        "paragraphs": [
+          "BWS Bali Penida's 2015 inventory, table 4.4, counts springs and their discharge by regency: Bangli **447** springs at **3,632.74 l/s**, Buleleng **229** at **2,782.69**, Karangasem **215** at **12,838.15**, which is the largest discharge on the island, Tabanan **188** at **6,570.88**, Jembrana **129** at **395.30**, Gianyar **106** at **3,280.36**, Klungkung **42**, Badung **38**, and Denpasar with none. The total comes to **32,271.82 l/s**.",
+          "One caveat has to travel with those numbers. The same document contradicts itself: its text says **1,934** springs while its table sums to **1,394**. We quote both figures rather than pick the one that reads better, because we cannot tell which is the typo.",
+          "The clearest place to see the difference between spring water and river water is Sekumpul, where the left cascade is described as spring-fed and clear all year while the right one draws from the Sekumpul village river and carries brown silt after rain. They sit close enough to appear in the same frame. This description is consistent across many independent travel publications, but we found no official hydrogeological confirmation of it, so treat it as a widely repeated observation rather than a measured fact.",
+          "Flow drops in the dry months across the island. What holds up best are the northern cascades, because they run on groundwater rather than on last week's rain, and the spring counts above are the reason. That is the whole seasonal story in the north: less rain, steadier water."
+        ]
+      },
+      {
+        "heading": "The wet season is January-February, and the peak of the dry season is August",
+        "paragraphs": [
+          "BMKG's forecast of 10 March 2026 had the dry season starting in April 2026 in **114** climate zones, May 2026 in **184** and June 2026 in **163**, with the peak of the season in August 2026. The June update sharpened that: **369** climate zones, **48.84%** of all zones in the country, at peak in August 2026. The weak La Nina that began in October 2025 ended in February 2026.",
+          "For Bali itself, BBMKG Wilayah III splits the island. The dry season starts in March 2026 on Nusa Penida and in southern Gianyar, Klungkung and Karangasem, in April 2026 across most of the island, and in May 2026 in the north and centre. By **11 July 2026** the whole of Bali was in the dry season.",
+          "At the other end of the year, BMKG forecast **300-500 mm** a month for December 2025 and January 2026 across Java, Bali and Nusa Tenggara, with a category above **500 mm** a month for January 2026. We are repeating a forecast here, not a verified total, and we have not seen the confirmed monthly measurements. There are no published monthly rainfall normals for Bali stations that we would put in print, which is why this guide works in seasons and dated events rather than in month-by-month millimetres. Our [month-by-month guide](/bali/en/journal/best-time-to-visit-bali-month-by-month) uses the same caveat."
+        ]
+      },
+      {
+        "heading": "The deadliest flood of recent years hit in the dry season",
+        "paragraphs": [
+          "Rain started early on Tuesday 9 September 2025. The first disaster report reached BPBD at **02:34** WITA on Wednesday 10 September 2025, from Tabanan. By **12:00** WITA on 13 September 2025, BPBD Provinsi Bali had logged **356** disaster points, **205** of them floods, **17** dead, **5** missing and **149** evacuated, across Denpasar, Tabanan, Badung, Gianyar, Jembrana, Klungkung, Bangli and Karangasem.",
+          "The rainfall behind it was not uniform. A BMKG station in Jembrana recorded **385.5 mm** over the night of 9 September 2025, more than twice the **150 mm** per day extreme-rainfall threshold. Denpasar recorded **188.4 mm** in the same event. One station's number is not the island's, and anyone quoting the higher figure as a regional total is stretching it.",
+          "The casualty count also grew for three days: **2** dead on 10 September 2025 from BNPB, **9** dead and **2** missing on 11 September 2025 via Mongabay, **17** and **5** on 13 September 2025 from BPBD. If you are reading a live number during an event in Bali, treat it as a floor rather than a total.",
+          "For contrast, in the middle of the wet season on 23-24 February 2026, BPBD Bali logged **76** incidents in roughly **18 hours**: Denpasar **36**, Karangasem **12**, Badung **12**, Tabanan **5**, Gianyar **5**, Buleleng **4**, Klungkung and Jembrana one each. More than **30** people were evacuated and no deaths were reported. The wetter month produced the smaller event, which is why we do not sell the dry season as the safe one."
+        ]
+      },
+      {
+        "heading": "What this means at four specific waterfalls",
+        "paragraphs": [
+          "Tukad Cepung sits in Desa Penida Kelod, Tembuku, in Bangli, and is about **15 m** high. Entry is a single **IDR 30,000**, the same for Indonesians and foreigners. The manager, Putra, puts high-season traffic at **350-450** people a day. There are handrails along the stairs, a first-aid kit and insurance on site. The light shaft is where the sources fall apart: the official village site says between **11:00** and **12:00** local time, guidebooks print **09:00-11:00** and **09:30-11:30**, and Walk My World states plainly that the window is not strict and reports beams at **08:30**. We have not resolved that, and no publication we found names the months when the shaft appears; the site detail is in our [Tukad Cepung guide](/bali/en/journal/tukad-cepung-waterfall-guide). Because of the timing spread, we only sell Tukad Cepung on a [private car with driver](/bali/en/tours/private-car-with-driver-bali) at **$59** for the car, where you can sit out an hour in the canyon instead of leaving when a group bus leaves.",
+          "Gitgit shows the same problem in official form. Two pages published by the same Buleleng administration disagree: Kominfo in 2018 gives **35 m**, Disbudpar in 2024 gives **48 m**. The route descriptions differ too, **11 km** with a **250 m** walk on one page against **13.4 km**, **29 minutes** of driving and a **20-minute** walk on the other. Gitgit is a built-in stop on our Lovina sunrise day at **$69** for **8 hours** and on the North Bali day at **$79** for **10-12 hours**, which is the only way we think it is worth the distance.",
+          "Sekumpul and Nung Nung we would rather you visit without us. Buleleng's Diskominfo estimates Sekumpul at **150 m** with a descent of **365** steps, while guidebooks widely print about **80 m** and about **500** steps; entry is **IDR 15,000** for adults and **IDR 5,000** for children, split between Lemukih and Sekumpul villages, with e-ticketing in place. Nung Nung is **50 m** with about **500** steep concrete steps, in Desa Pelaga, Petang, Badung, roughly **45 km** and **1.5-2 hours** from Denpasar; from January 2026 a foreign adult pays **IDR 30,000** and a child **IDR 20,000**, Indonesians **IDR 15,000** and **IDR 10,000**. Detik, on a January 2026 visit, found wet and slippery sections of the staircase. Each of these is a day on its own, we do not run either of them, and we are not going to bolt them onto a route to make a page look fuller.",
+          "On safety, on 18 January 2024 the Buleleng tourism office, through Gede Dody Sukma Oktiva Askara, said it was working towards permanent lifeguard cover at every water attraction in the regency and a clean split between the guide role and the rescuer role, citing **120** certified basic-level rescuers. That was a statement of intent, not a rule that came into force, and drownings in Buleleng continued afterwards, at Kebo Iwa on 21 November 2025 and at Tembok Barak on 25-26 April 2026. We found no published wet-weather closure rule for any of the four falls above, which means the decision on a brown, loud day is yours and your driver's. What is fixed rather than announced is small: Sekumpul now runs on e-ticketing, and Tukad Cepung has handrails, a first-aid kit and insurance.",
+          "One last seasonal note that runs the other way. High flow is a problem at a waterfall and an advantage on a river, so the months when the catchments are full are the months to put [white-water rafting](/bali/en/tours/white-water-rafting) at **$49** per person into the plan instead of a long staircase. High flow is also a different thing from a flood day: after a night like 9 September 2025, the river is not a plan."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Do Bali waterfalls dry up in the dry season?",
+        "answer": "No source we checked supports that for any of the falls we checked. Flow drops in the dry months, which is not the same statement. The northern cascades are the most stable because they run on groundwater: BWS Bali Penida counted **229** springs in Buleleng at **2,782.69 l/s** in 2015."
+      },
+      {
+        "question": "Which months have the most water in Bali waterfalls?",
+        "answer": "BMKG forecast **300-500 mm** a month for December 2025 and January 2026 across Java, Bali and Nusa Tenggara, with a category above **500 mm** for January 2026. That is a forecast rather than a verified total, and more rain does not automatically mean a better day out."
+      },
+      {
+        "question": "Is the dry season the safe season for waterfalls?",
+        "answer": "Not automatically. The worst flood of recent years began with rain on 9 September 2025, inside the dry season of that year. By 13 September 2025 BPBD Provinsi Bali had logged **356** disaster points, **205** floods, **17** dead, **5** missing and **149** evacuated across Denpasar, Tabanan, Badung, Gianyar, Jembrana, Klungkung, Bangli and Karangasem."
+      },
+      {
+        "question": "What time do the light beams appear at Tukad Cepung?",
+        "answer": "Sources disagree and we have not resolved it. The official village site says between **11:00** and **12:00** local time. Guidebooks print **09:00-11:00** and **09:30-11:30**. Walk My World says the window is not strict and reports beams at **08:30**. No publication we found names the months."
+      },
+      {
+        "question": "How tall is Sekumpul and how many steps are there?",
+        "answer": "Buleleng's official Diskominfo page estimates **150 m** and a descent of **365** steps. Guidebooks widely print about **80 m** and about **500** steps. The contradiction is unresolved. Entry is **IDR 15,000** for adults and **IDR 5,000** for children, split between Lemukih and Sekumpul villages, with e-ticketing."
+      },
+      {
+        "question": "How tall is Gitgit waterfall?",
+        "answer": "Two official pages from the same Buleleng administration disagree: Kominfo in 2018 says **35 m**, Disbudpar in 2024 says **48 m**. The access descriptions differ as well, **11 km** with a **250 m** walk against **13.4 km** with **29 minutes** of driving and a **20-minute** walk."
+      },
+      {
+        "question": "Are there lifeguards at Bali waterfalls?",
+        "answer": "On 18 January 2024 the Buleleng tourism office announced it was pushing for permanent lifeguard cover at all water attractions and a split between guide and rescuer roles, citing **120** certified basic-level rescuers. It was an intention, not an adopted rule, and drownings continued at Kebo Iwa on 21 November 2025 and Tembok Barak on 25-26 April 2026."
+      },
+      {
+        "question": "Buleleng is the driest regency, so are there fewer waterfalls in the north?",
+        "answer": "Buleleng gets **1,702 mm** a year against Tabanan's **2,466 mm** and an island average of **2,157 mm**, and it still holds **125** of Bali's **391** river basins and **229** springs. Less rain falls there, and more of the water that does arrive comes out of the ground rather than off a hillside."
+      }
+    ]
+  },
+  {
+    "slug": "galungan-kuningan-dates-what-changes",
+    "badge": "Travel guide",
+    "navLabel": "Galungan 2026-2028",
+    "cardTourLabel": "Ceremony week by car",
+    "heroTourSlug": "ubud-highlights-tour",
+    "relatedTourSlugs": [
+      "ubud-highlights-tour",
+      "private-car-with-driver-bali",
+      "tanah-lot-bedugul-tour"
+    ],
+    "inlineStats": [
+      "Only Galungan of 2026: 17 June 2026",
+      "210-day cycle, 1.74 Galungans a year",
+      "Penjor come down 22 July 2026"
+    ],
+    "title": "Galungan and Kuningan 2026-2028: Dates and Impact",
+    "description": "Galungan runs on a 210-day cycle, so 2026 has only one. Confirmed dates to 2028, what closes, what does not, and how the penjor streets look.",
+    "excerpt": "Galungan runs on the **210**-day Pawukon calendar, which is why it lands **1.74** times a year on average and why 2026 has exactly one: Wednesday **17 June 2026**, with Kuningan on Saturday **27 June 2026**. The chain from there is fixed — **13 January 2027** and **11 August 2027**, **8 March 2028** and **4 October 2028** — and it comes from a circular of the Hindu directorate at the religious affairs ministry, not from the national holiday list, because Galungan is not a national holiday of Indonesia. The five days off around it are a provincial dispensation signed by the governor on **6 October 2025**. Tour infrastructure keeps working. Individual temples do not: Lempuyang was shut to visitors for **five days** in 2026 and reopened on **22 June 2026**, and Penglipuran cancelled its penjor that year.",
+    "rankings": [
+      {
+        "name": "Ubud and the lanes around it",
+        "imageSrc": "/images/tours-real/ubud-highlights-tour.jpg",
+        "area": "Gianyar",
+        "bestFor": "Penjor along a road that is still working",
+        "summary": "The three dispensation days in the middle of the week — **16**, **17** and **18 June 2026** — are the ones with the most ceremony traffic on the road. Penjor are up from the afternoon of Penampahan onward and stand until **22 July 2026**, so the penjor are not what those three days add. Tour infrastructure keeps working here, and our drivers work all five days. How much else pauses is not published, so we do not promise that a specific warung or shop will be open. What changes is the traffic, because processions close short stretches without notice and reopen them a while later. Our Ubud day runs at **$65** per car, entrance tickets paid per person on top, and on these dates the value is in the driver knowing the back lanes rather than in the itinerary."
+      },
+      {
+        "name": "Ngelawang villages",
+        "imageSrc": "/images/places/tirta-empul-holy-spring.jpg",
+        "area": "Gianyar and Badung",
+        "bestFor": "Barong Bangkung going door to door",
+        "summary": "A Barong Bangkung walks the street with a beleganjur gamelan and a crowd of children, money is handed over on canang sari, and the purpose is tolak bala. The window is the days between Galungan on **17 June 2026** and Kuningan on **27 June 2026**, and the day after Kuningan. Our source puts it in Gianyar and Badung above all, not across the whole island, so we do not sell it as something you will see anywhere you happen to be. Nobody publishes a route or a time."
+      },
+      {
+        "name": "Jatiluwih and the Tabanan highlands",
+        "imageSrc": "/images/places/tegalalang-rice-terraces.jpg",
+        "area": "Tabanan",
+        "bestFor": "A holiday-week day that does not depend on a temple",
+        "summary": "We run Jatiluwih the same way through Galungan week as any other week: a [private car with a driver](/bali/en/tours/private-car-with-driver-bali) at **$59** for the day, entrance tickets paid per person on top. This is the fallback we reach for when someone wants a full day out on **17 June 2026** without the risk of arriving at a gate that a village has closed for its own ceremony. The terraces answer to a planting calendar, not to Pawukon, so the holiday changes nothing about what you see there."
+      },
+      {
+        "name": "Tanah Lot and Bedugul",
+        "imageSrc": "/images/tours-real/tanah-lot-bedugul-tour.jpg",
+        "area": "Tabanan and Bedugul",
+        "bestFor": "A west-side day on the dispensation dates",
+        "summary": "The route goes ahead on all five dispensation days, at **$65** per car plus **$20** per person in tickets. What we will not do is promise a specific ceremony at a specific temple on that road: odalan dates are set village by village and there is no single island schedule to check them against. If a gate is closed on the day, the driver reorders the stops rather than cancelling the day."
+      },
+      {
+        "name": "Pura Lempuyang",
+        "imageSrc": "/images/places/temple-dress-code.jpg",
+        "area": "Karangasem",
+        "bestFor": "Not this week, unless someone has confirmed it",
+        "summary": "In 2026 Lempuyang was closed to visitors for **five days** over Galungan and reopened on Monday **22 June 2026**. The announcement came from I Nyoman Jati, head of the Purwayu traditional village; the reason given was Pujawali and Pidolan, pecalang were posted at the entrance, and guides and private drivers were told in advance. The first closed day was never published, so we state only the reopening. We do not put the gate on a Galungan-week route without a confirmation for that year."
+      },
+      {
+        "name": "Penglipuran",
+        "imageSrc": "/images/places/bali-green-season.jpg",
+        "area": "Bangli",
+        "bestFor": "A village visit, not a penjor photograph",
+        "summary": "In 2026 Penglipuran cancelled its Galungan celebration and did not put up penjor at all, following a recent death in the community. The village stayed open seven days a week from **08:00** to **18:30**, bamboo forest included. That is the point worth taking away: a village can be open and still have nothing of the holiday to show, and in 2026 there were no penjor standing there to see."
+      },
+      {
+        "name": "Any main road on Galungan morning",
+        "imageSrc": "/images/tours-real/private-car-with-driver-bali.jpg",
+        "area": "Island-wide",
+        "bestFor": "A driver who already knows the detours",
+        "summary": "Galungan is not on Indonesia's national holiday list, so the days off are a Bali provincial dispensation and the rest of the country works. Traffic is local rather than national: families moving between family temples, processions occupying a lane, roadside parking where there is usually none. On Kuningan itself, **27 June 2026**, the activity concentrates before noon. A car with a driver is **$59** for the day, and that is the line item that absorbs the delay."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Why the date moves: a 210-day calendar, not a lunar one",
+        "paragraphs": [
+          "Galungan is not late or early. It runs on Pawukon, a cycle of **210** days made of **30** wuku of seven days each, running in fixed order from Sinta to Watugunung. Galungan sits in Dunggulan, the eleventh wuku, which occupies days **71** to **77** of the cycle. Ten more weeks turn at the same time, from the one-day week to the ten-day week — Ekawara through Dasawara — and a Balinese date is the intersection of several of them at once rather than a position in a month.",
+          "Only the three-, five-, six- and seven-day weeks divide **210** evenly. The four-, eight- and nine-day weeks do not, and the calendar patches the remainder by hand: in both the four-day and the eight-day week the second-to-last day is repeated twice in the week that would otherwise have ended on day **72**, and in the nine-day week the first day is repeated three times in the opening week. That patch sits right next to Galungan, which is one reason the arithmetic looks arbitrary from outside and is not.",
+          "Galungan is where three of those cycles meet: Buda in the seven-day week, Keliwon in the five-day week, and the wuku Dunggulan. Buda is Wednesday, so Galungan is always a Wednesday. Kuningan is Saniscara Keliwon Kuningan, day **84** of the cycle, exactly **10** days later, so Kuningan is always a Saturday. The gap between them never changes and never needs looking up.",
+          "There is also a ritual month here, and it is **35** days long — the interval at which the five-day and seven-day weeks come back into phase. Six of those make the full **210**. If you are planning a trip by calendar month, this is the one grid on the island that ignores months completely, which is worth holding alongside a normal [month-by-month view of the Bali year](/bali/en/journal/best-time-to-visit-bali-month-by-month)."
+        ]
+      },
+      {
+        "heading": "Confirmed dates through 2028, and why 2026 has only one Galungan",
+        "paragraphs": [
+          "The dates: in 2025, Galungan fell on **23 April 2025** and **19 November 2025**. In 2026 there is one, Wednesday **17 June 2026**, with Kuningan on Saturday **27 June 2026**. In 2027 there are two, **13 January 2027** and **11 August 2027**, with Kuningan on **23 January 2027** and **21 August 2027**. In 2028 there are two again, **8 March 2028** and **4 October 2028**, with Kuningan on **18 March 2028** and **14 October 2028**.",
+          "The chain runs at exactly **210** days with no exceptions: **19 November 2025** to **17 June 2026** to **13 January 2027** to **11 August 2027** to **8 March 2028** to **4 October 2028**. Divide the solar year by the cycle — **365.2425** over **210** — and you get **1.74** Galungans a year. An average of **1.74** means most years hold two and some hold one, and 2026 is one of the single-Galungan years because the November 2025 date and the January 2027 date fall just outside it on either side.",
+          "Where the 2026 date comes from matters if you are trying to verify it yourself. It is not in the joint decree of three ministers that fixes Indonesia's public holidays, because Galungan is not a national holiday of Indonesia. It is in a circular of the Hindu directorate general at the ministry of religious affairs, number B-253/DJ.VI/Dt.VI.I.3/BA.03/09/2025. We checked every date above one at a time against kalenderbali.org, and they match the published table on Wikipedia."
+        ]
+      },
+      {
+        "heading": "The five days off are provincial, not national",
+        "paragraphs": [
+          "The days off come from a circular of the governor of Bali, number B.30.800.1.6.2/61594/PK/BKPSDM, dated **6 October 2025** and signed by Wayan Koster. It lists five days around this holiday: Tuesday **16 June 2026** Penampahan Galungan, Wednesday **17 June 2026** Galungan, Thursday **18 June 2026** Umanis Galungan, Friday **26 June 2026** Penampahan Kuningan, and Saturday **27 June 2026** Kuningan.",
+          "The document calls these a dispensation for Balinese Hindu holy days, not a facultative holiday. The second phrase is widely used and comes from how the ministry frames it, but it is not the wording of the provincial circular. The same circular carries **13** dispensation entries for 2026 in total; the five above are the ones attached to Galungan and Kuningan.",
+          "The ceremonial sequence is longer than the five days off. It runs Sugihan Jawa on **11 June 2026**, Sugihan Bali on **12 June 2026**, Penyekeban on **14 June 2026**, Penyajaan on **15 June 2026**, Penampahan on **16 June 2026**, Galungan on **17 June 2026**, Umanis Galungan on **18 June 2026**, Pemaridan Guru on **20 June 2026**, Ulihan on **21 June 2026**, Pemacekan Agung on **22 June 2026**, Buda Paing Kuningan on **24 June 2026**, Penampahan Kuningan on **26 June 2026** and Kuningan on **27 June 2026**. Every one of those offsets is tied to the wuku and the concurrent weeks rather than to the moon, so the same spacing carries over to 2027 and 2028 unchanged.",
+          "One thing we cannot tell you is how much of the tourism industry actually pauses. There is no published figure for hotel occupancy or for how many operators stand down over Galungan, and we are not going to invent a percentage. What we can say from our own dispatch is that a [car with a driver](/bali/en/tours/private-car-with-driver-bali) at **$59** for the day is bookable on all five dates, and that the constraint on the day is road closures rather than staff."
+        ]
+      },
+      {
+        "heading": "Penjor: when they go up, when they come down",
+        "paragraphs": [
+          "The rule as written is precise. Penjor are installed on Anggara Wage of wuku Dungulan, the day before Galungan, and the same guidance adds that they should go up on Penampahan itself, after twelve noon. For 2026 that is the afternoon of Tuesday **16 June 2026**.",
+          "The same publication from the Buleleng administration then admits what happens in practice: many households put their penjor up before Penampahan, and mostly on a Sunday. So the picture of a street transforming in one afternoon is not something we will promise you. The build-up is staggered across several days, and a street photographed on the Sunday before will already have penjor on it while the house next door is still empty.",
+          "They come down on Buda Kliwon Pahang. In 2026 that is Wednesday **22 July 2026**, exactly **35** days after Galungan, because Dunggulan is wuku number **11** and Pahang is number **16**, five wuku on. The attributes are burned and the ash placed in a klungah nyuh gading together with kawangen and **11** kepeng coins. The same source also allows a household to take the penjor down the day after Kuningan, on Redite Umanis Langkir, so both practices are correct.",
+          "A caveat on a number you will see repeated: the figure of **42** days appears a paragraph earlier in that same publication, which contradicts its own wuku arithmetic. We count **35**. The practical consequence is generous either way — in 2026 the penjor window ran roughly from **16 June 2026** to **22 July 2026**, which is a month longer than the holiday week most people plan around."
+        ]
+      },
+      {
+        "heading": "What this means for a traveller's day",
+        "paragraphs": [
+          "The infrastructure keeps working and specific temples do not. In 2026 Pura Lempuyang was closed to visitors for **five days** over the holiday and reopened on Monday **22 June 2026**; the head of the Purwayu traditional village, I Nyoman Jati, announced it, the reason was Pujawali and Pidolan, and pecalang were on the entrance. Guides and private drivers were warned in advance. The first day of the closure was never published, so **22 June 2026** is the only date we will state. We do not put the gate on a Galungan-week itinerary without a fresh confirmation, and we would rather lose the booking than drive you to a closed entrance.",
+          "Penglipuran is the other one we handle without a sales line. In 2026 the village cancelled its Galungan celebration and put up no penjor at all, after a recent death in the community. It remained open seven days a week from **08:00** to **18:30**, bamboo forest included, so the visit was possible and the reason for going was not. Treat any listing that markets Penglipuran as the penjor village as a description of a normal year rather than a promise about yours.",
+          "Ngelawang is worth looking for. A Barong Bangkung is walked from house to house with a beleganjur gamelan and a crowd of children, money goes on the canang sari, and the point of it is tolak bala. Look for it on the days between Galungan on **17 June 2026** and Kuningan on **27 June 2026**, and on the day after Kuningan — and above all in Gianyar and Badung, which is as far as our source goes. It is not an island-wide guarantee and there is no timetable.",
+          "On Kuningan itself the day is front-loaded. The guidance is that Kuningan prayers should not be made after twelve noon, and the same text says plainly that this is an ethic of timing rather than an absolute prohibition, so what you get in practice is activity concentrated in the morning and a quiet afternoon. Plan the drive accordingly. Our [Ubud day](/bali/en/tours/ubud-highlights-tour) at **$65** per car, entrance tickets paid per person on top, runs through the holiday week, and so does a day built around [viewpoints and rice terraces](/bali/en/journal/best-viewpoints-bali-sunrise-cliffs-rice-terraces), which follow a planting calendar rather than Pawukon. One last detail for anyone reading about Galungan Nadi, the Galungan that coincides with a full moon: **17 June 2026** is not one, and neither of the 2028 dates is one either. We have not verified the two 2027 dates against the penanggal, so we make no claim about them."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "When is Galungan in 2026?",
+        "answer": "Wednesday **17 June 2026**, and it is the only Galungan of that year. Kuningan follows ten days later on Saturday **27 June 2026**. Galungan always falls on a Wednesday and Kuningan always on a Saturday, because both are defined as intersections of the seven-day and five-day weeks with a named wuku rather than as calendar dates."
+      },
+      {
+        "question": "Why does 2026 have only one Galungan?",
+        "answer": "Because the cycle is **210** days and the solar year is longer than one cycle but shorter than two. Dividing **365.2425** by **210** gives **1.74** Galungans a year, so most years hold two and some hold one. The chain runs **19 November 2025**, **17 June 2026**, **13 January 2027** — the two neighbours fall outside 2026 on either side."
+      },
+      {
+        "question": "What are the Galungan and Kuningan dates for 2027 and 2028?",
+        "answer": "In 2027, Galungan falls on **13 January 2027** and **11 August 2027**, with Kuningan on **23 January 2027** and **21 August 2027**. In 2028, Galungan is on **8 March 2028** and **4 October 2028**, with Kuningan on **18 March 2028** and **14 October 2028**. Each Galungan is exactly **210** days after the previous one."
+      },
+      {
+        "question": "Is Galungan a public holiday in Indonesia?",
+        "answer": "No. Galungan is not on the national holiday list, and the 2026 date comes from a circular of the Hindu directorate general at the ministry of religious affairs, number B-253/DJ.VI/Dt.VI.I.3/BA.03/09/2025. The days off are a Bali provincial dispensation, set by a circular of the governor dated **6 October 2025** and signed by Wayan Koster."
+      },
+      {
+        "question": "Which days are off in Bali for Galungan 2026?",
+        "answer": "Five: Tuesday **16 June 2026** Penampahan Galungan, Wednesday **17 June 2026** Galungan, Thursday **18 June 2026** Umanis Galungan, Friday **26 June 2026** Penampahan Kuningan and Saturday **27 June 2026** Kuningan. The governor's circular carries **13** dispensation entries for 2026 in total, of which these five belong to this holiday."
+      },
+      {
+        "question": "How long do penjor stay up?",
+        "answer": "**35** days. They are meant to go up on Penampahan after twelve noon — the afternoon of **16 June 2026** — and come down on Buda Kliwon Pahang, which in 2026 was Wednesday **22 July 2026**. Some households take them down the day after Kuningan instead, on Redite Umanis Langkir. A figure of **42** days circulates and contradicts the wuku arithmetic in the same source."
+      },
+      {
+        "question": "Can I visit Lempuyang during Galungan week?",
+        "answer": "Not without checking for that year. In 2026 Pura Lempuyang was closed to visitors for **five days** and reopened on Monday **22 June 2026**, announced by I Nyoman Jati of the Purwayu traditional village, with Pujawali and Pidolan as the reason and pecalang on the entrance. The first closed day was never published. We do not schedule the gate that week without a confirmation."
+      },
+      {
+        "question": "Where can I see ngelawang, and will Penglipuran have penjor?",
+        "answer": "Ngelawang runs on the days between Galungan on **17 June 2026** and Kuningan on **27 June 2026**, and on the day after Kuningan, and the source points to Gianyar and Badung rather than the whole island. There is no timetable. As for Penglipuran, in 2026 the village cancelled the celebration and put up no penjor at all after a death in the community, while staying open **08:00** to **18:30**, so no one can promise you penjor there."
+      }
+    ]
+  },
+  {
+    "badge": "Travel guide",
+    "slug": "bali-rafting-price-2026",
+    "navLabel": "Rafting prices 2026",
+    "cardTourLabel": "Ayung rafting from $49",
+    "heroTourSlug": "white-water-rafting",
+    "relatedTourSlugs": [
+      "white-water-rafting",
+      "atv-quad-bikes",
+      "private-car-with-driver-bali"
+    ],
+    "inlineStats": [
+      "Ayung: IDR 250,000-1,200,000",
+      "Agent rate 37% of list price",
+      "Plus-plus adds 22.1%, not 21%"
+    ],
+    "title": "Bali Rafting Prices 2026: IDR 250k to 1.2M Explained",
+    "description": "What Ayung and Telaga Waja rafting really costs in 2026: operator rack rates, agent prices, and what the extras add. Every figure in rupiah, sourced.",
+    "excerpt": "The same seat in the same raft on the Ayung sells for **IDR 250,000** and for **IDR 1,200,000**, and both numbers are real. Sobek publishes **1,200,000** for a foreign adult on its price list, quotes **990,000** on its own booking page for the same self-drive trip, and its partner Wira Tour sells that identical Sobek departure at **440,000** for a group of two to five — **37%** of the list price, or 2.7 times cheaper. Across the market the two current price guides do not agree either: raftingbali.net puts the Ayung at **250,000-770,000**, ubudcenter's 2026 guide at **450,000-550,000**, so the same quote reads as high on one and normal on the other. And a rate quoted plus-plus compounds to **22.1%**, not 21%. This is every published figure we could verify, with the source of each one named.",
+    "rankings": [
+      {
+        "name": "Sobek via Wira Tour",
+        "imageSrc": "/images/tours-real/white-water-rafting.jpg",
+        "area": "Ayung River",
+        "bestFor": "Lowest verified rate on Sobek boats",
+        "summary": "The same Sobek departure sold three ways: **IDR 1,200,000** on the price list, **IDR 990,000** self-drive in Sobek's own booking engine, and **IDR 440,000** through Wira Tour for a group of two to five, with prices held to 31 December 2026. At six to ten the agent rate is **IDR 425,000**; with the shuttle it goes back up to **IDR 618,000**. One boat, one guide, one river, and a factor of 2.7 between the highest and the lowest way to buy the seat."
+      },
+      {
+        "name": "Mason Adventures",
+        "imageSrc": "/images/places/ayung-river-rafting.jpg",
+        "area": "Ayung, Ubud",
+        "bestFor": "Fixed five-hour slots on a branded boat",
+        "summary": "**IDR 795,000** on Mason's own booking site for five hours, with departures at 09:00-14:00 and 12:00-17:00 and a group size of one to ten. Agents sell the same adult seat at **IDR 770,000**, and third-party marketplaces list it lower again, at **IDR 585,000-695,000** — below Mason's own page in every case we found. Hot shower, towel and lunch are included, and the lunch is specified as food only."
+      },
+      {
+        "name": "Arum Jeram Bali",
+        "imageSrc": "/images/places/ayung-river-gorge.jpg",
+        "area": "Ayung, 10 km run",
+        "bestFor": "Self-drive travellers on a budget",
+        "summary": "The cheapest verified seat on the Ayung at **IDR 250,000** for a 10 km run, with shower and towel included. The catch is the road: transfer is quoted separately and starts at **IDR 500,000**, twice the price of the rafting itself. Good value if you already have a car or a driver for the day, and the most expensive boat on the river if you have to buy the transfer with it."
+      },
+      {
+        "name": "Surya Bintang",
+        "imageSrc": "/images/places/ayung-river-rafting.jpg",
+        "area": "Ayung",
+        "bestFor": "A mid-market reference point",
+        "summary": "**IDR 680,000** puts Surya Bintang between the budget boats and the branded operators on the same stretch of the Ayung: close to three times the **IDR 250,000** floor and a little over half of Sobek's **IDR 1,200,000** list price. Useful mainly as a yardstick — when a quote you have been given sits far outside that middle, the difference is coming from the package, not from the river."
+      },
+      {
+        "name": "Melangit (Bali Rafting Adventure)",
+        "imageSrc": "/images/places/bali-green-season.jpg",
+        "area": "Melangit, Klungkung",
+        "bestFor": "Short drive from Ubud, no long staircase",
+        "summary": "The 2026 tariff is published in dollars rather than rupiah, which is exactly what makes it hard to line up against the rest of the market. Converted at the rates used throughout this article it comes to roughly **IDR 390,000** self-drive with a two-adult minimum, **IDR 534,000** with a group transfer at a four-person minimum and **IDR 712,000** with a private car — our arithmetic, not the operator's. Note the floor: at **IDR 300,000** booked online, Melangit is not the cheap river people assume."
+      },
+      {
+        "name": "Graha Adventure",
+        "imageSrc": "/images/tours-real/white-water-rafting.jpg",
+        "area": "Ayung",
+        "bestFor": "Nothing to compare until you message",
+        "summary": "Graha publishes no rate anywhere on its site. Every quote runs through WhatsApp, priced against your date, group composition, transport and hotel area — the same four variables both price guides name as the things that move a rafting rate. The consequence is practical: Graha cannot be placed on the **IDR 250,000-1,200,000** scale before you write to them, and afterwards there is no published number to hold anyone to."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The four prices for the same seat",
+        "paragraphs": [
+          "Sobek publishes one price list and it is identical on both rivers: **IDR 1,200,000** for a foreign adult, **IDR 800,000** for a child aged 7 to 15, and **IDR 600,000** for domestic guests with a KTP. The same three numbers cover the Ayung and Telaga Waja, which already tells you what kind of number it is. The two rivers are different lengths, different drives and different logistics, and a figure that does not move between them is a list price rather than a costing of the trip.",
+          "Open the booking section of the same balisobek.com and the numbers change. The Ayung is **IDR 990,000** if you drive yourself and **IDR 1,200,000** with transfer; Telaga Waja is **IDR 900,000** self-drive and **IDR 1,200,000** with transfer. The gap between two sections of one website is **IDR 210,000**. Nobody is being dishonest — the list price bundles the shuttle and the booking engine unbundles it — but if you compare a quote against the list without checking which page the list came from, you are comparing two different products.",
+          "Then there is the partner channel. Wira Tour (raftingbali.net, prices held to 31 December 2026) sells the same Sobek departure on the Ayung at **IDR 440,000** per adult for a group of two to five and **IDR 425,000** at six to ten, with a child grid running alongside the adult one. With the shuttle the adult seat becomes **IDR 618,000**. That 440,000 is **37%** of the 1,200,000 list: the agent seat costs **2.7 times less** than the operator's own headline for the same boat, the same guide and the same river. Our [Ayung rafting trip](/bali/en/tours/white-water-rafting) sits in that agent band, from $49.",
+          "One caveat worth stating plainly. Sobek does not itself describe **IDR 1,200,000** as a rack rate, and a different agent, water-sport-bali.com, calls Sobek's published price **IDR 600,000**. So the word published is doing marketing work rather than accounting work: it is an anchor a seller chooses, not a defined term you can audit. Treat any discount expressed as a percentage off a published price as unverifiable until the seller shows you which page that price came from."
+        ]
+      },
+      {
+        "heading": "The market corridor, and why two guides disagree",
+        "paragraphs": [
+          "Two price guides, both current, describe the same market and do not agree. raftingbali.net, checked on 20 August 2026, gives the Ayung at **IDR 250,000-770,000** for adults and **IDR 250,000-585,000** for children, Telaga Waja at **IDR 270,000-495,000**, and Melangit from **IDR 300,000** booked online. ubudcenter.com, under the heading Price Guide 2026, puts the Ayung at **IDR 450,000-550,000** and Telaga Waja at **IDR 450,000-600,000** — a corridor roughly a fifth as wide, with a floor nearly twice as high.",
+          "Neither site explains the other's numbers, and neither is obviously wrong. Both name the same four things as what moves a price: which operator runs the boat, what the package includes, which area you are collected from, and the date. Neither publishes the sample behind its range. The effect on you is arithmetic rather than advice: a quote of **IDR 600,000** sits comfortably inside raftingbali's corridor and above ubudcenter's ceiling, so the guide you happened to open decides whether the number you were given looks normal or high. Our [full Ayung rafting guide](/bali/en/journal/white-water-rafting-bali-guide) covers what the trip itself actually involves.",
+          "One thing the corridor does settle. Melangit has a reputation as the budget river and the numbers do not support it: at **IDR 300,000** its online entry price is the highest floor of the three, above Telaga Waja's **IDR 270,000** and the Ayung's **IDR 250,000**. Melangit's advantages are the short drive from Ubud — 21 km, about 50 minutes — and the walk to the water: 5 minutes from the parking, no long staircase. Saving money is not one of them. If price is your only filter, the cheap seats are on the Ayung, where a crowd of operators competes over the same stretch of water."
+        ]
+      },
+      {
+        "heading": "What operators actually charge, side by side",
+        "paragraphs": [
+          "Mason Adventures quotes **IDR 795,000** on its own booking site for a five-hour trip, with departures at 09:00-14:00 and 12:00-17:00 and a group size of one to ten. Through an agent the same adult seat is **IDR 770,000**, and third-party marketplaces list it between **IDR 585,000** and **695,000** — below Mason's own page in every case we found. The operator's own channel being the most expensive one is not an anomaly here; on the Ayung it is the pattern.",
+          "Arum Jeram Bali is the floor of the Ayung market at **IDR 250,000** for a 10 km run, and it is also the clearest illustration of how rafting here is really priced. Transfer is not included and starts at **IDR 500,000**, so the road costs twice what the river does. That single line rearranges the whole comparison: a 250,000 boat plus transfer lands above Surya Bintang's all-in **IDR 680,000** and close to Mason's **IDR 795,000**, which includes a shared round-trip transfer. If you are coming from the south, price the car first and the raft second — read [what a private driver costs](/bali/en/journal/bali-private-driver-cost) before deciding whether a self-drive rate is cheaper for you in practice.",
+          "Surya Bintang sits in the middle of the same river at **IDR 680,000**. On the Melangit, baliraftingadventure publishes its 2026 tariff in dollars rather than rupiah, so it cannot be compared with anything above without converting it first. At the rates used throughout this article the three tiers come to roughly **IDR 390,000** for self-drive with a two-adult minimum, **IDR 534,000** with a group transfer at a four-person minimum, and **IDR 712,000** with a private car; a child tariff runs under each tier on the same page. Those rupiah figures are our arithmetic, not the operator's, because it publishes none."
+        ]
+      },
+      {
+        "heading": "The extras nobody quotes",
+        "paragraphs": [
+          "Hardware is the first line item that turns up after the quote. A rented GoPro is delivered for **IDR 50,000** to the airport, Kuta, Legian and Seminyak and **IDR 80,000** to Nusa Dua, Canggu and Ubud, free to Renon and Sanur; we could confirm the delivery charges but not what the rental itself costs, so budget for a number we cannot give you. One guest review of an ATV-plus-rafting combo mentions a drone package at around **SGD 80** for the whole group. That is a single reported figure from a review rather than a tariff, and it is worth treating as such.",
+          "One charge has nothing to do with rafting and lands on the same budget anyway. The Bali tourist levy is **IDR 150,000** per person, collected on arrival to the island rather than by the operator, so it will never appear on a rafting invoice and still has to be paid before you get anywhere near a raft.",
+          "Then there is the arithmetic of plus-plus. A rate quoted plus-plus carries **10%** service charge and **11%** tax, and they are applied in sequence rather than summed: the true uplift is **22.1%**, not 21%. On a single **IDR 795,000** ticket the difference between the two sums is small change; across a family booking with transfers it is not, and a bill you worked out by adding the two percentages comes up short at the desk. Of the operator and agent pages we checked, only Bali Golden Tour states the compounding explicitly."
+        ]
+      },
+      {
+        "heading": "What the extra money actually buys",
+        "paragraphs": [
+          "Every Ayung operator we checked provides a shower and a towel at the finish, and that includes the **IDR 250,000** boat at the bottom of the market. The useful reading is the reverse of the one you are meant to take: when a more expensive package lists a shower and a towel among its inclusions, it is listing something the cheapest trip on the river also hands you, and none of the extra money is going there.",
+          "What the extra money does buy is visible once you line the packages up. Between **IDR 250,000** and **IDR 795,000** the things that actually change are the transfer — separate and from **IDR 500,000** at Arum Jeram, shared and included at Mason — the lunch, the group size, which Mason caps at ten, the five-hour fixed slot, and the brand on the boat. Those five items are the whole difference between the floor of the market and a branded operator on the same water.",
+          "Graha Adventure publishes no rate at all. Everything runs through WhatsApp, priced against your date, group, transport and hotel area. The consequence is that you cannot compare Graha with anyone else without messaging first, and there is no online figure to hold them to once you do."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How much does rafting on the Ayung cost in 2026?",
+        "answer": "Between **IDR 250,000** and **IDR 1,200,000** per adult, depending almost entirely on the channel you book through. raftingbali.net gives a market corridor of **IDR 250,000-770,000**, while ubudcenter's 2026 guide narrows it to **IDR 450,000-550,000**. Sobek's list price sits at the top of the range and its own partner sells the same boat at **IDR 440,000**."
+      },
+      {
+        "question": "Why is the agent price so much lower than the operator's own price?",
+        "answer": "Because the operator's headline figure bundles the transfer and the agent's does not, and because a list price is a marketing anchor rather than a costed rate. Sobek shows **IDR 1,200,000** on its price list, **IDR 990,000** self-drive in its own booking engine — a **IDR 210,000** gap between two pages of one website — and its partner Wira Tour sells the same self-drive seat at **IDR 440,000**, which is **37%** of the list."
+      },
+      {
+        "question": "Which of the three rivers is cheapest?",
+        "answer": "The Ayung, not Melangit, despite Melangit's budget reputation. Melangit's online entry price is **IDR 300,000**, the highest floor of the three rivers: Telaga Waja starts at **IDR 270,000** and the Ayung at **IDR 250,000**. Melangit's real advantages are the short drive from Ubud and the easy walk to the water, not the ticket price."
+      },
+      {
+        "question": "What is not included in a Bali rafting price?",
+        "answer": "Transfer, most consequentially: Arum Jeram quotes it separately from **IDR 500,000**, against a **IDR 250,000** trip. Photos, charged per boat rather than per person, are excluded almost everywhere and Arum Jeram lists photo and video with no figure attached, so you learn the price at the finish. Camera rental adds a delivery charge of **IDR 50,000** or **IDR 80,000** depending on your area, free to Renon and Sanur."
+      },
+      {
+        "question": "Does the price include the Bali tourist levy?",
+        "answer": "No, and no operator can include it. The levy is **IDR 150,000** per person, collected by the province on arrival to the island, so it sits outside the rafting invoice entirely. Budget it once per traveller for the whole trip rather than per activity, and do not expect to see it itemised on any quote you are sent."
+      },
+      {
+        "question": "What does plus-plus mean on a rafting quote?",
+        "answer": "It means **10%** service charge and **11%** tax are added to the rate you were quoted, and they are applied in sequence rather than summed, so the real uplift is **22.1%**, not 21%. Of the operator and agent pages we checked, only Bali Golden Tour states this explicitly. A total you calculated by adding the two percentages will be short of what the desk asks for."
+      },
+      {
+        "question": "Why will Graha Adventure not quote a price online?",
+        "answer": "Graha publishes no rate at all. Everything runs through WhatsApp, priced against your date, group, transport and hotel area. The consequence is that you cannot compare Graha with anyone else without messaging first, and nothing you are told on WhatsApp can be checked against a published number afterwards."
+      }
+    ]
+  },
+  {
+    "slug": "ayung-vs-telaga-waja-rafting",
+    "badge": "Travel guide",
+    "navLabel": "Ayung vs Telaga Waja",
+    "cardTourLabel": "Bali White Water Rafting",
+    "heroTourSlug": "white-water-rafting",
+    "relatedTourSlugs": [
+      "atv-quad-bikes",
+      "private-car-with-driver-bali",
+      "ubud-highlights-tour"
+    ],
+    "inlineStats": [
+      "509 steps down, 250 up",
+      "4-metre dam drop at finish",
+      "Class II–III vs Class III+"
+    ],
+    "title": "Ayung vs Telaga Waja: 509 Stairs or Class III+",
+    "description": "The trade between Bali's two main rafting rivers is not price or difficulty. It is 509 steps on the easy river against a 4-metre dam drop on the hard one.",
+    "excerpt": "Bali's two main rafting rivers are usually compared on difficulty: the Ayung at Class **II–III** for beginners, Telaga Waja at Class **III+** for everyone else. The grades are not stable — the same Telaga Waja run is III+ on Sobek's own site, III–IV on the aggregators and II–IV elsewhere — and the grade is not what decides how the day feels. Stairs do. On the Ayung, Sobek's route is about **509** steps down and **250** back up; Mason's is roughly **600** down and **400** up. On Telaga Waja, the same Sobek counts about **5** steps at the start and **250** at the finish, and separate listings sell the route on there being no climb at all after the takeout. The harder river is the easier day for knees. What Telaga Waja adds instead is one man-made feature: a drop of around **4 metres** over the Bajing dam at the very end. This guide puts the published numbers side by side — distance, time on the water, steps, average speed and age limits — and says each time which operator confirms them and which does not.",
+    "rankings": [
+      {
+        "name": "Ayung River, the Sobek run",
+        "imageSrc": "/images/places/ayung-river-rafting.jpg",
+        "area": "Ubud, Gianyar",
+        "bestFor": "A first raft, families, short transfer",
+        "summary": "Class II–III, a rafted section of 10–14 km depending on the operator, 1.5–2 hours on the water, six guests and a guide per boat. The access is the hard part: about 509 steps down and 250 up, a count published by the partner Wira Tour rather than by Sobek itself. The start sits about 20 minutes from Ubud, which is why this is the default first raft."
+      },
+      {
+        "name": "Ayung River, the Mason run",
+        "imageSrc": "/images/places/ayung-river-gorge.jpg",
+        "area": "Ubud, Gianyar",
+        "bestFor": "Same river, a heavier walk",
+        "summary": "Same water, a different staircase. The counts circulating for Mason's access are about 600 steps down and 400 up, roughly a thousand in total, and Mason itself never mentions steps anywhere on its own pages. Balipon gives a third set for the Ayung, 500 down and 200 up. None of the six operator sites we checked publish a step count, so every figure here comes from a reseller or a review, not from the company running the boat."
+      },
+      {
+        "name": "Telaga Waja with Sobek",
+        "imageSrc": "/images/tours-real/white-water-rafting.jpg",
+        "area": "Karangasem, east Bali",
+        "bestFor": "Repeat rafters and bad knees",
+        "summary": "Class III+ by Sobek's own description, III–IV on the aggregators, II–IV on torntackies. Published length runs 14–18 km, with 16 km the typical claim, and 2–3 hours on the water. The access flips: about 5 steps from the lobby to the start and 250 from the finish up to the restaurant, against 509 and 250 on the supposedly gentle river. Sobek publishes no distance figure for either river."
+      },
+      {
+        "name": "Telaga Waja, the stair-free finishes",
+        "imageSrc": "/images/places/hiking-shoes.jpg",
+        "area": "Muncan area listings",
+        "bestFor": "No climb after the takeout",
+        "summary": "Separate listings are sold on a direct promise of no step or stair to be climbed after the rafting finish. That is a property of those specific takeouts, not of the river: with Sobek the same river still ends in about 250 steps up to the restaurant. Read the package you are actually booking rather than the river name at the top of it."
+      },
+      {
+        "name": "The Bajing dam finale",
+        "imageSrc": "/images/places/bali-green-season.jpg",
+        "area": "End of the Telaga Waja run",
+        "bestFor": "The one drop people book for",
+        "summary": "The climax of Telaga Waja is a slide over the Bajing dam, around 4 metres, right at the end of the run. Alam Amazing Adventures names the structure and gives the height, bali-river-rafting confirms 4 metres without naming it, and Lazy River says 5 metres. The dam is concrete rather than a natural rapid, so the height of the drop does not change between trips. The Ayung has no equivalent single feature."
+      },
+      {
+        "name": "Speed, once you do the division",
+        "imageSrc": "/images/tours-real/white-water-rafting.jpg",
+        "area": "Both rivers, on paper",
+        "bestFor": "Anyone comparing kilometres",
+        "summary": "The longer river is not the faster one. Telaga Waja at 16 km in 2.5–3 hours works out at 5.3–6.4 km/h; the Ayung at 12 km in 1.5–2 hours works out at 6–8 km/h. The distance gap is 1.3 times, not the double the listings imply. What the extra kilometres buy is time in the boat, 2–3 hours against 1.5–2, and grade rates what the rapids demand of the guide rather than how fast the boat moves."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The numbers, not the adjectives",
+        "paragraphs": [
+          "The Ayung is graded Class II–III. Telaga Waja is Class III+ on Sobek's own site, III–IV across most aggregators and II–IV on torntackies — three answers for the same water, all published at once. Treat the grade as an adjective and compare the figures underneath it: distance, hours on the water, and the walk in and out.",
+          "The rafted section of the Ayung is **10–14 km** depending on the operator, **1.5–2 hours** on the water, with six guests plus a guide in the boat. Telaga Waja is longer on paper: **14–18 km** across published figures, **16 km** in the typical claim (Alam Amazing, Lazy River), and **2–3 hours** on the water. Sobek runs both rivers and publishes no distance for either one, which is worth knowing before you compare kilometres between two pages written by two different marketing teams.",
+          "For scale: the Ayung is the longest river on Bali, about **65–68.5 km** in the 2002 Bappeda Bali report — whose own infobox on the same page gives **62.5 km**. You raft a section of it, never the river, which is why the **10–14 km** figure moves from one operator to the next rather than settling on a number. Our own trip runs the Ayung section, and the practical detail in the [white water rafting guide](/bali/en/journal/white-water-rafting-bali-guide) matters more on the day than any of these totals."
+        ]
+      },
+      {
+        "heading": "The paradox: the harder river is the easier day",
+        "paragraphs": [
+          "On the Ayung with Sobek, the access is about **509 steps** down to the river and **250** back up at the end. That number is published by the partner Wira Tour, not by Sobek itself. Two things make it less brutal than it reads: there are rest points along the descent, and there is an internal shuttle between the put-in and the takeout, so you are not climbing back up the same flight you came down. The climb still comes last, after **1.5–2 hours** in the boat, so plan the rest of the day around a slow hour afterwards rather than a tight connection.",
+          "The counts differ by operator on the same river. Mason's access is quoted at roughly **600 steps** down and **400** up, about a thousand in total — and Mason's own pages never mention steps at all. Balipon gives **500** down and **200** up. Not one of the six operator sites we checked (Mason, Sobek, Arum Jeram, Surya Bintang, Ayung Dewata, Ubud Rafting Bali) publishes a step count anywhere. Every figure above comes from a reseller or a third party, which is exactly why they disagree. Whatever you carry goes down those steps and back up with you, which is a different [packing question](/bali/en/journal/what-to-pack-for-bali) from what the water asks for.",
+          "Telaga Waja, the river sold as the hard one, inverts this. With Sobek it is about **5 steps** from the lobby to the start and **250** from the finish up to the restaurant. Several operators go further and sell the route on a direct promise of no step or stair to be climbed after the rafting finish — Viator 67379P12, GetYourGuide t645142, Marriott XPLOV1 and XXPUR5. Read that as listing-specific, not river-wide. \"Telaga Waja has no stairs\" is not true as a general statement; it has several times fewer of them, and on some takeouts none after the boat."
+        ]
+      },
+      {
+        "heading": "The finale is a dam, not a rapid",
+        "paragraphs": [
+          "What Telaga Waja is actually booked for sits at the very end of the run: a slide over the Bajing dam, around **4 metres** high. Alam Amazing Adventures names the structure and states the height; bali-river-rafting confirms the same **4 metres** without naming it; Lazy River puts it at **5 metres**. A metre of disagreement on the one feature the whole trip is sold on is the reason we quote all three figures rather than pick the tallest.",
+          "The important word is dam. This is a concrete structure rather than a natural drop, so the height of the drop does not change between trips. It also means the photo everyone has seen of Telaga Waja is a photo of one engineered moment at the end of two to three hours of river.",
+          "The Ayung has no equivalent single feature. What it has instead is the gorge itself and the carved stone reliefs cut into the rock walls along the route — a slower kind of thing to look at, and the reason the easier river still gets booked by people who have rafted before. If you want the drop, you go east; if you want the gorge, you stay in Ubud and book the [Ayung rafting trip](/bali/en/tours/white-water-rafting)."
+        ]
+      },
+      {
+        "heading": "Speed: the counterintuitive part",
+        "paragraphs": [
+          "Do the division and the reputation collapses. **16 km** in **2.5–3 hours** on Telaga Waja is **5.3–6.4 km/h**. **12 km** in **1.5–2 hours** on the Ayung is **6–8 km/h**. The average speed on the hard river is not higher — it is equal at best and lower at worst. Grade describes what individual rapids demand of the guide, not how fast the boat travels.",
+          "The other stretched claim is length. Telaga Waja is routinely described as twice the trip, but **16 km** against **12 km** is **1.3 times**, not two. What you are buying with the extra kilometres is time in the boat: **2–3 hours** instead of **1.5–2**."
+        ]
+      },
+      {
+        "heading": "Who each river is for",
+        "paragraphs": [
+          "The Ayung is the right call for a first raft, for families, and for anyone based in Ubud — the start is about **20 minutes** away, which leaves the rest of the day intact. The condition attached to it is knees. If stairs are already an issue at home, **509 steps** down and **250** up, or Mason's **600** and **400**, will be the part of the trip you remember, and no amount of Class II–III water changes that.",
+          "Telaga Waja is for the second raft, for people who want the drop, and — against every instinct — for people who do badly on stairs. Those two groups almost never get pointed at the same river, but the published access numbers put them there: about **5 steps** at the start with Sobek, and takeouts on some listings with no climb at all after the boat. The trade is the drive east and a longer day on the water — **2–3 hours** rather than **1.5–2** — in exchange for a **4-metre** drop over the Bajing dam at the end and a staircase you can actually manage.",
+          "The age windows point the same way. Sobek runs Telaga Waja at **7–75** and the Ayung at **4–75** through its partner, so the lower limit moves with the river while the ceiling of **75** stays where it is on both, which makes that ceiling an operator policy rather than a property of the water. The same partner page adds that guests **65+** must be in good health and accept the conditions around climbing the steps — suggestive of a link between the stairs and the ceiling, but no source states one, so treat it as our reading."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Which river is harder, the Ayung or Telaga Waja?",
+        "answer": "Telaga Waja, on paper. Sobek grades it Class III+ on its own site, aggregators say III–IV and torntackies says II–IV, against Class II–III for the Ayung. The spread between those three answers for the same water is a fair warning about how firm river grading is in Bali. Telaga Waja is also longer, 14–18 km against 10–14 km, and 2–3 hours on the water against 1.5–2."
+      },
+      {
+        "question": "How many steps are there on the Ayung?",
+        "answer": "About 509 down and 250 up on the Sobek route, roughly 600 down and 400 up on Mason's, and 500 down with 200 up according to Balipon. Every one of those figures comes from a reseller or a third party: none of the six operator sites we checked, Sobek and Mason included, publish a step count at all. That is why the three counts disagree by hundreds of steps on the same river."
+      },
+      {
+        "question": "Does Telaga Waja really have no stairs?",
+        "answer": "Not as a blanket statement. With Sobek there are about 5 steps from the lobby to the start and about 250 from the finish up to the restaurant. Separate listings do sell a takeout with no step or stair to be climbed after the rafting finish, but that is a property of those packages rather than of the river. The honest version: several times fewer steps than the Ayung."
+      },
+      {
+        "question": "What is the drop at the end of Telaga Waja?",
+        "answer": "A slide over the Bajing dam, around 4 metres, at the very end of the run. Alam Amazing Adventures names the dam and gives the height, bali-river-rafting confirms 4 metres without naming the structure, and Lazy River states 5 metres. It is a man-made concrete dam rather than a natural rapid."
+      },
+      {
+        "question": "Is Telaga Waja twice as long as the Ayung?",
+        "answer": "No. The typical claim of 16 km against 12 km on the Ayung is 1.3 times, not double. The extra distance buys time in the boat, 2–3 hours instead of 1.5–2. Average speed does not favour the harder river either: 16 km in 2.5–3 hours is 5.3–6.4 km/h, while 12 km in 1.5–2 hours on the Ayung works out at 6–8 km/h."
+      },
+      {
+        "question": "What are the age limits on each river?",
+        "answer": "Sobek runs Telaga Waja at 7–75 and the Ayung at 4–75 through its partner. The lower limit moves with the river, the ceiling of 75 does not, which makes 75 an operator policy rather than a feature of the water. The same company running both rivers is what makes the comparison usable at all: two different lower limits, one shared ceiling."
+      },
+      {
+        "question": "Which river should a first-time rafter pick?",
+        "answer": "The Ayung, in most cases: Class II–III water, 1.5–2 hours on the river, six guests and a guide per boat, and a start about 20 minutes from Ubud so the rest of the day survives. The exception is knees. If 509 steps down and 250 up, or Mason's 600 and 400, sound like the wrong kind of day, Telaga Waja is the easier walk despite being the harder water."
+      }
+    ]
+  },
+  {
+    "slug": "rafting-from-seminyak-canggu-nusa-dua",
+    "badge": "Travel guide",
+    "navLabel": "Getting to the river",
+    "cardTourLabel": "Transfer times by river",
+    "heroTourSlug": "white-water-rafting",
+    "relatedTourSlugs": [
+      "white-water-rafting",
+      "private-car-with-driver-bali",
+      "atv-quad-bikes"
+    ],
+    "inlineStats": [
+      "Seminyak to Ayung: 1.5–2 hours",
+      "Seminyak to Telaga Waja: 95 min",
+      "Melangit: 21 km from Ubud"
+    ],
+    "title": "Rafting From Seminyak: Ayung 2h vs Telaga Waja 95 Min",
+    "description": "From south Bali the far river is not farther. Verified transfer times and road distances to Ayung, Telaga Waja and Melangit, with pickup schedules.",
+    "excerpt": "From south Bali the geography is counterintuitive. Telaga Waja — the river everyone calls the far one — is about **95 minutes** from Seminyak or Kuta on Sobek's own pickup table, while Ayung, the Ubud river, takes **1.5–2 hours** from the same hotels, because the road to it runs through Ubud and the road east runs through Klungkung. Ayung's put-in is Kedewatan, about **20 minutes** from central Ubud, **36–40 km** from Seminyak, around **42 km** from Canggu and about **60 km** from Nusa Dua. Melangit is the closest of the three to Ubud at **21 km** and roughly **50 minutes**, and the only one without a long staircase: **5 minutes** from the parking to the water and **7 minutes** back at the end. Transfers without an operator shuttle run **IDR 350,000–450,000** one way from Seminyak and **IDR 500,000–600,000** from Nusa Dua. Every figure here is attributed, and where two sources disagree, as they do on Canggu to Karangasem and on the airport run to Melangit, both numbers are printed instead of averaged.",
+    "rankings": [
+      {
+        "name": "Ayung from Ubud",
+        "imageSrc": "/images/places/ayung-river-gorge.jpg",
+        "area": "Kedewatan, Gianyar",
+        "bestFor": "Shortest drive, 20 minutes",
+        "summary": "Most operators put in on Jl. Kedewatan in Ubud, Gianyar, and a few start higher upstream at Payangan. From central Ubud that is about **20 minutes**, the shortest transfer to any rafting river on the island. It is also the only base from which a Bali river sits under half an hour away; from everywhere else the drive is measured in hours."
+      },
+      {
+        "name": "Ayung from Seminyak or Kuta",
+        "imageSrc": "/images/tours-real/white-water-rafting.jpg",
+        "area": "Seminyak, Kuta",
+        "bestFor": "Standard first rafting day",
+        "summary": "**36–40 km** and **1.5–2 hours** from Seminyak, about **1.5 hours** from Kuta. Most of that is not distance, it is Ubud. A one-way taxi or Grab is **IDR 350,000–450,000**; a private car round trip is **IDR 600,000–800,000**. Leave at **8:00**, and at Mason add another **7 km**, about **15 minutes**, from the car park to the put-in."
+      },
+      {
+        "name": "Telaga Waja from the south",
+        "imageSrc": "/images/places/ayung-river-rafting.jpg",
+        "area": "Karangasem, east Bali",
+        "bestFor": "South-coast hotels, fewer stairs",
+        "summary": "Sobek's pickup table gives about **95 minutes** from Seminyak or Kuta — the same as Ayung or less, because the road runs east through Klungkung instead of into Ubud traffic. Sanur is about **80 minutes**, Ubud about **70**, and Ubud to Karangasem measures **71 km / 1 h 13 min** on Wanderlog, which lines up with the operator figure. Canggu is missing from the table."
+      },
+      {
+        "name": "Melangit",
+        "imageSrc": "/images/places/bali-green-season.jpg",
+        "area": "21 km from Ubud",
+        "bestFor": "Bad knees, no long staircase",
+        "summary": "**21 km** and about **50 minutes** from Ubud, roughly **1.5 hours** from Kuta, **44 km** from the airport. **5 minutes** on foot from the parking to the put-in, **7 minutes** back at the end, no long staircase either side. The run is **7.5–8 km** with **30–37 drops** of **1–3 metres** over **1.5–2 hours**. Class ratings disagree: III–IV or grade 1–3 depending on the source."
+      },
+      {
+        "name": "Ayung from Nusa Dua or Jimbaran",
+        "imageSrc": "/images/tours-real/private-car-with-driver-bali.jpg",
+        "area": "Nusa Dua, Jimbaran",
+        "bestFor": "Only with a full day to spend",
+        "summary": "About **60 km** and **2–2.5 hours** each way to Ayung, so the driving alone takes **4–5 hours** out of the day before the briefing or the stairs. A one-way taxi is **IDR 500,000–600,000**. Sobek's pickup time to Telaga Waja from Nusa Dua or Jimbaran is about **108 minutes**, which is the same kind of day with roughly an hour handed back."
+      },
+      {
+        "name": "ATV and rafting in one day",
+        "imageSrc": "/images/tours-real/white-water-rafting.jpg",
+        "area": "Combined day trip",
+        "bestFor": "Only if you count the hours first",
+        "summary": "**8–9 hours** door to door for **3.5 hours** of activity — **1.5 hours** on the quad and **2 hours** on the water, by bali-river-rafting's own breakdown; a review on the same page has the guest back at a Kuta hotel at **19:30**. Booking minimums apply on top: Sobek takes **2 people**, Bali River Rafting **2**, ubudcenter **3**."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Ayung: Kedewatan is close to Ubud and nowhere else",
+        "paragraphs": [
+          "Most Ayung operators start at Kedewatan — Jl. Kedewatan, Ubud, Gianyar — and some put in higher upstream at Payangan. From Ubud itself that is about **20 minutes**, which is why the river reads as an Ubud activity even though almost none of its customers sleep in Ubud. From the south the numbers change shape. Seminyak is **36–40 km** and **1.5–2 hours**, Canggu around **42 km** and about **2 hours**, Nusa Dua about **60 km** and **2–2.5 hours**, all per balisuntours; Kuta comes in at roughly **1.5 hours** by bali-river-rafting's own figure. The kilometres are small and the hours are not.",
+          "If the operator shuttle is not included, a taxi or Grab from Seminyak is **IDR 350,000–450,000** one way and from Nusa Dua **IDR 500,000–600,000**. A private car for the round trip is **IDR 600,000–800,000**, which for two people usually undercuts two one-way fares and removes the part nobody plans for: finding a ride out of a river valley at midday. That is how our [private car with driver](/bali/en/tours/private-car-with-driver-bali) is priced too, and the arithmetic behind choosing car over taxi is set out in [what a private driver in Bali actually costs](/bali/en/journal/bali-private-driver-cost).",
+          "The recommended departure from the south is **8:00**. That is not a comfort preference, it is the hour that keeps you ahead of the road into Ubud, and losing it costs more time than any route choice recovers. One more line the map does not show: at Mason the car park is not the river. From there it is another **7 km**, about **15 minutes** in a vehicle, before the stairs even start. Budget the transfer to the operator, then budget the operator's own internal transfer on top of it."
+        ]
+      },
+      {
+        "heading": "Telaga Waja: the pickup table almost nobody prints",
+        "paragraphs": [
+          "Sobek publishes pickup times rather than distances, and they are the most useful numbers in this article because they come from a company that drives the route every morning. Ubud is about **70 minutes**, Sanur about **80**, Seminyak and Kuta about **95**, Nusa Dua and Jimbaran about **108**. These are operator times, not a routing engine's estimate. What Sobek counts inside them — the hotel pickup loop, the briefing — the table does not say, so ask whether the number starts at your lobby or at the road.",
+          "For the road itself there is one clean independent measurement. Ubud to Karangasem is **71 km** and **1 hour 13 minutes** on Wanderlog. Set that against Sobek's **70 minutes** from Ubud and the two agree almost exactly, which is reasonable evidence the rest of the table is not padded for comfort. Where the table stops being useful is Canggu — the district does not appear in Sobek's pickup pricing at all. If that is where you are staying, ask for a time in writing rather than reading the Seminyak row and adding a guess."
+        ]
+      },
+      {
+        "heading": "The far river is the shorter drive from the south",
+        "paragraphs": [
+          "From Seminyak or Kuta, Telaga Waja is about **95 minutes** and Ayung is **1.5–2 hours**. The river people call the far one is, from the south coast, the same drive or a shorter one. The reason is what each road is made of. Getting to Ayung means going into Ubud and through it. Getting to Telaga Waja means the trunk road east through Klungkung, where the traffic thins and average speed is higher.",
+          "The distances do differ, just not the way people picture. Canggu to Karangasem measures **86 km** and **1 hour 24 minutes** on Wanderlog, against the **134 km** other measuring tools return for the same pair; we use the shorter figure and flag the disagreement rather than splitting it. Compare that with Canggu's roughly **42 km** and about **2 hours** to Ayung: the eastern river is about double the road distance and not more driving time.",
+          "Two cautions before you use any of this to argue with a booking agent. Karangasem is a regency, not a put-in, so a regency-level measurement approximates the drive to the river rather than measuring it, and we found no direct Canggu-to-Muncan figure to check it against. And the **95 minutes** belongs to Sobek. Another operator running the same road with a different pickup order will produce a different number."
+        ]
+      },
+      {
+        "heading": "Melangit: 21 km from Ubud and five minutes from the car",
+        "paragraphs": [
+          "Melangit answers both problems at once. It is **21 km** and about **50 minutes** from Ubud, roughly **1.5 hours** from Kuta, and **44 km** from the airport — though the airport drive is where the sources fall apart, one saying **1 hour** and another **1.5**, a 50% spread on the same drive, which we cannot resolve from published data. If you are flying in or out the same day, plan on the longer figure.",
+          "The part that matters most is what happens after you park. Melangit has no long staircase: **5 minutes** on foot from the parking to the put-in, **7 minutes** from the take-out back to the car park. Against Ayung, where Sobek's partner Wira Tour publishes about **509 steps** down and **250 up**, that is a completely different physical day. For anyone with a knee, a hip or a recent injury, the access decides the day long before the water does.",
+          "The run itself is **7.5–8 km** with **30–37 drops** of **1–3 metres**, one of them around **3 metres**, over **1.5–2 hours**. The grade is where the sources stop agreeing entirely: raftingbali calls it III–IV, baliraftingadventure calls it grade 1–3. Same water, two ratings that do not overlap, and neither comes from a shared standard — the number on a booking page describes the operator's own scale rather than the river."
+        ]
+      },
+      {
+        "heading": "What the drive does to the rest of the day",
+        "paragraphs": [
+          "Start with the booking minimums, because they decide whether the trip runs at all: Sobek takes **2 people**, Bali River Rafting **2**, ubudcenter **3**. A solo traveller coming up from the south is not only paying for the transfer, they need a second seat filled or a private rate agreed before the shuttle is confirmed. Ask about the minimum in the first message, not after you have arranged the pickup — a booking can look confirmed and still not have the second seat it needs.",
+          "The combination day is where the driving quietly eats everything. ATV plus rafting runs **8–9 hours** door to door for **3.5 hours** of activity — **1.5 hours** on the quad and **2 hours** on the water, by bali-river-rafting's own breakdown. A review on that same page records the guest back at their Kuta hotel at **19:30**. If you want both, running our [ATV quad bikes](/bali/en/tours/atv-quad-bikes) and [white water rafting](/bali/en/tours/white-water-rafting) as two separate mornings costs no more river time and gives back most of an evening.",
+          "From Nusa Dua the arithmetic is blunt. The drive to Ayung alone takes **4–5 hours** out of the day at **2–2.5 hours** each way, before the briefing, the stairs or a single rapid. Sobek's pickup time from Nusa Dua or Jimbaran to Telaga Waja is about **108 minutes** each way, which is the same day with roughly an hour returned to it."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How long is the drive from Seminyak to Ayung rafting?",
+        "answer": "**36–40 km** and **1.5–2 hours** each way, per balisuntours. The distance is short and the time is not, because the last part of the route goes into Ubud and through it. The recommended departure from the south is **8:00**. At Mason, add a further **7 km** and about **15 minutes** from the car park to the put-in before the stairs begin."
+      },
+      {
+        "question": "Is Telaga Waja really closer than Ayung from Seminyak?",
+        "answer": "In driving time, yes. Sobek's pickup table gives about **95 minutes** from Seminyak or Kuta to Telaga Waja, while Ayung is **1.5–2 hours** from the same hotels. The road east runs through Klungkung and keeps moving; the road to Ayung runs into Ubud traffic. In kilometres Telaga Waja is farther, which is why the assumption persists."
+      },
+      {
+        "question": "What does the transfer cost if the operator does not include it?",
+        "answer": "A one-way taxi or Grab from Seminyak is **IDR 350,000–450,000**, and from Nusa Dua **IDR 500,000–600,000**. A private car for the round trip is **IDR 600,000–800,000**. For two or more people the round-trip car is usually the cheaper option, and it removes the problem of arranging a ride back from the valley after the run."
+      },
+      {
+        "question": "How long does Canggu to the rafting rivers take?",
+        "answer": "Canggu to Ayung is around **42 km** and about **2 hours** (balisuntours). For the east there is no clean answer: Canggu to Karangasem measures **86 km** and **1 hour 24 minutes** on Wanderlog while other tools return **134 km** for the same pair, there is no direct Canggu-to-Muncan measurement, and Canggu does not appear in Sobek's pickup price list at all."
+      },
+      {
+        "question": "Which river has the shortest walk from the car park?",
+        "answer": "Melangit. It is **5 minutes** on foot from the parking to the put-in and **7 minutes** from the take-out back to the car park, with no long staircase at either end. At the other end of the scale, a Mason trip on Ayung adds **7 km** and about **15 minutes** of driving from the car park before the walk down even begins."
+      },
+      {
+        "question": "Can rafting be done as a day trip from Nusa Dua?",
+        "answer": "Yes, but the driving takes **4–5 hours** of it. Nusa Dua to Ayung is about **60 km** and **2–2.5 hours** each way, before the briefing or the stairs. Sobek's pickup time from Nusa Dua or Jimbaran to Telaga Waja is about **108 minutes** each way, so the eastern river gives back roughly an hour on an otherwise identical day."
+      },
+      {
+        "question": "Is combining ATV and rafting in one day worth it?",
+        "answer": "It is **8–9 hours** door to door for **3.5 hours** of activity: **1.5 hours** on the quad and **2 hours** on the water, by bali-river-rafting's own breakdown. A review on that page records the guest back at a Kuta hotel at **19:30**. Everything beyond those 3.5 hours is transfer, changing and lunch, so from the far south it is a long day for a moderate return."
+      }
+    ]
+  },
+  {
+    "badge": "Travel guide",
+    "slug": "is-bali-rafting-safe",
+    "navLabel": "Rafting safety",
+    "cardTourLabel": "Ayung rafting from $49",
+    "heroTourSlug": "white-water-rafting",
+    "relatedTourSlugs": [
+      "white-water-rafting",
+      "atv-quad-bikes",
+      "private-car-with-driver-bali"
+    ],
+    "inlineStats": [
+      "5 deaths since November 2021",
+      "50 guides certified, May 2026",
+      "22 operators, 600 guides: Ayung"
+    ],
+    "title": "Is Bali Rafting Safe? 5 Deaths and 50 Certified Guides",
+    "description": "Every documented Bali rafting fatality since 2021, why no rafting-specific SOP exists, and what to ask an operator before you pay. Sources for each claim.",
+    "excerpt": "Bali rafting has no published safety record. The last count anyone made was Al Jazeera's, on 10 July 2023: **five tourists** dead since November 2021, three of them not in the water. Nothing official covers 2024 to 2026, which means nobody counted, not that nothing happened. The deadliest single incident killed three people on a stairway at Payangan after the operator had already cancelled the trip for rain. Two capsizes in 2022 — one on the Ayung, one on Telaga Waja — killed two more; no charges were filed in either case. The reason is structural: there is no rafting-specific standard operating procedure in Bali, no mandatory equipment list, no guide working-hour rule, no limit on boats sharing a river, and the tourism office in Gianyar says outright that it cannot stop a company from operating. What exists is a competency certificate: **50 guides** certified across Bali on 16 and 17 May 2026, against roughly **600 guides and 22 operators** on the Ayung alone. Every fatality below carries its date and its source.",
+    "rankings": [
+      {
+        "name": "Ask who certified the guide",
+        "imageSrc": "/images/tours-real/white-water-rafting.jpg",
+        "area": "Ayung, Ubud",
+        "bestFor": "Ask: does the guide in my boat hold the BNSP certificate",
+        "summary": "Around 600 guides work the Ayung across roughly 22 operators, and as of May 2026 most of them held no formal competency certificate. The 50 guides certified on 16 and 17 May 2026 came from across Bali, not only from this river, so the two numbers are not a percentage. FAJI Bali had asked the ministry for a quota of 100 and received half of it."
+      },
+      {
+        "name": "The stairway, not the rapids",
+        "imageSrc": "/images/places/hiking-shoes.jpg",
+        "area": "Payangan, Gianyar",
+        "bestFor": "Ask: what happens to a group already at the bottom when it rains",
+        "summary": "The deadliest documented incident killed three people on the walk back up, not on the water. On 25 November 2021 a group descended roughly 500 steps at Begawan Banjar, the operator cancelled the trip because of the downpour, and at 14:00 a landslide hit the group on the climb out. Three of the six people caught under the debris died, two of them children."
+      },
+      {
+        "name": "High water and who calls it off",
+        "imageSrc": "/images/places/bali-in-rainy-season.jpg",
+        "area": "Telaga Waja, Karangasem",
+        "bestFor": "Ask: who cancels when the river rises",
+        "summary": "On 26 November 2022 on Telaga Waja a raft flipped about 3 km below the start at around 14:30; police said the flow was up and the route should have been changed. On the Ayung on 3 October 2022 a kiosk vendor by the bank had told the guides not to run the river that day; they ran it. In December 2024 the Karangasem disaster agency described its own instrument as an appeal, not a prohibition."
+      },
+      {
+        "name": "Helmet and jacket, whole run",
+        "imageSrc": "/images/places/ayung-river-rafting.jpg",
+        "area": "Ayung gorge",
+        "bestFor": "Ask: who checks helmets and jackets before launch",
+        "summary": "When the body of the American who died on the Ayung on 3 October 2022 was sighted, it had neither helmet nor life jacket. Both rafts in that group had flipped: 12 people in the water, 11 out. Bali has no mandatory equipment rule for a raft and no age rating for life jackets, so the check on the bank before launch is the only check that exists."
+      },
+      {
+        "name": "The permit is for a location",
+        "imageSrc": "/images/tours-real/white-water-rafting.jpg",
+        "area": "Industry-wide, Bali",
+        "bestFor": "Ask: what is the written procedure when a raft flips",
+        "summary": "Opening a rafting company in Bali requires a location permit, and that is the entry requirement. Nigel Mason of Mason Adventures told Al Jazeera there is no rafting-specific procedure behind it: no mandatory equipment list, no age rating for life jackets, no cap on guide working hours, no rescue protocol, and guides on the river who cannot swim. Of 14 companies the outlet approached, one agreed to discuss safety."
+      },
+      {
+        "name": "What the hospital treats",
+        "imageSrc": "/images/places/ayung-river-gorge.jpg",
+        "area": "BIMC Hospital, Bali",
+        "bestFor": "Ask: how many boats share the water at my start time",
+        "summary": "BIMC Hospital names five rafting injuries it sees: sprains, cuts and bruises, head injuries, broken noses and teeth, and drowning. It publishes no frequencies, so this is a list and not a ranking. Four of the five are impact injuries, and on a river shared by about 22 operators another raft is one routine source of impact. Rafting is classed as medium-high risk under Permenparekraf No. 4/2021."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Five deaths since November 2021, and where the count stops",
+        "paragraphs": [
+          "The only count anyone has published stops on **10 July 2023**. On that date Al Jazeera put the number of tourists killed on Bali's rafting rivers since **November 2021** at **five**. There is no official summary covering 2024, 2025 or the part of 2026 already behind us — not a lower figure, no figure at all. Treat that as nobody counting rather than nothing happening. Bali has no rafting incident register you can look up before booking; what exists is a scatter of news reports, each one filed after somebody died.",
+          "The composition of those five matters more than the total, and it is the part that gets lost. **Three of the five** did not die in the water. The paddling, the rapids and the swim if you go over the side account for a minority of the documented deaths. The way in and out of the gorge accounts for more. That is not the risk profile the brochure photos imply, and it changes what you should be asking before you book a rafting trip on any of the island's rivers.",
+          "Two further deaths sit outside the window Al Jazeera used, and they show how long the pattern runs. A **46-year-old** Indian national died on **24 December 2019** in a boat operated by Alam Rafting, with the guide named in reports as I Nengah Sukara. A **24-year-old** woman from Hong Kong died on **19 February 2008**. Neither is inside the five, and neither appears in any current government figure, because there is no current government figure for them to appear in."
+        ]
+      },
+      {
+        "heading": "The deadliest day was on the stairs, after the trip was cancelled",
+        "paragraphs": [
+          "**25 November 2021**, Begawan Banjar in Payangan, Gianyar. A group walked down roughly **500 steps** to the river. At the bottom the operator looked at the rain and cancelled the trip — the correct call, made by the person paid to make it. Nobody went on the water. At **14:00**, while the group was climbing back out, the slope above the stairway came down. Nuryanti, **36**, and a **10-year-old** boy were killed; an **8-year-old** was found the next day. **Six people** in total were under the debris.",
+          "The sequence is the part to carry into your own booking. The operator's judgement about the water was right and it protected nobody, because the hazard was the exit from the gorge, not the river. The access at Payangan is a long concrete stairway cut into a wet slope, and it is used in the rain. Ask an operator what they do with a group that is already at the bottom when the weather turns — who decides, how long the group waits, and whether anyone goes up first to look at the slope. That climb is the physical part of the day, and our [what to pack for Bali](/bali/en/journal/what-to-pack-for-bali) list treats it that way.",
+          "One geographic correction, because the two names get merged in listings. This happened at Payangan, not Kedewatan. Both are Ayung put-ins — some operators start lower, on the Ubud side at Kedewatan, others higher up at Payangan — and they are different access points with different slopes and different stairways. A safety record from one is not a safety record for the other. When an operator tells you they run the Ayung, you still do not know where you will be walking, and the walking is where people have died."
+        ]
+      },
+      {
+        "heading": "Two capsizes, two bodies, no charges filed",
+        "paragraphs": [
+          "**3 October 2022**, Ayung. Both rafts in the group went over: **10 tourists and 2 guides** in the water, **11** of them out. Clifford Neil Robinaugh, a US citizen — **62** according to the Bali Sun, **64** according to Al Jazeera — was not found in a week of searching. When his body was sighted, it was wearing neither helmet nor life jacket. Before the launch, a woman running a kiosk by the bank had told the guides not to run the river that day. They ran it.",
+          "**26 November 2022**, Telaga Waja. One of two rafts flipped about **3 km** below the start at roughly **14:30**. The woman who died was **43**, from Saudi Arabia, a mother of four; the current carried her **150 metres** and she struck her head on a rock. The guide was detained. Kompol I Gede Made Punia said the raft went over because the water was big and that the boat is suspected to have hit a rock, and stated separately that with the flow increased the route should have been changed.",
+          "No charges were filed in either case. The guide detained after Telaga Waja was not prosecuted, and the Ayung capsize produced no case at all. That is the enforcement picture you are buying into: on the documented record so far, a death on a Bali rafting river has not produced a prosecution."
+        ]
+      },
+      {
+        "heading": "No rafting SOP exists, and the industry says so itself",
+        "paragraphs": [
+          "Nigel Mason of Mason Adventures told Al Jazeera what the rulebook contains, which is nothing. There is no rafting-specific standard operating procedure in Bali: no mandatory equipment list for a raft, no age rating for life jackets, no cap on guide working hours, no rule on alcohol, no limit on how many boats share a river, no rescue protocol. To open a rafting company an investor needs a location permit, and that is the entry requirement. Mason also said there are guides working the river who cannot swim.",
+          "The regulators describe their own position in similar terms. Ibu Pande at the Gianyar tourism office said an SOP does exist, precisely because the activity is fairly risky, but did not produce the document — and added that her office has no authority to stop a company from operating. In December 2024 the Karangasem disaster agency, BPBD, described its instrument the same way: it issues an appeal, not a prohibition. When the river comes up, the decision belongs to the operator alone, and nobody above them can override it.",
+          "The silence around this is measurable. Of **14** rafting companies Al Jazeera approached for that reporting, **one** agreed to talk about safety. The absence of an SOP does not mean there are no careful operators — the company whose owner said all of this on the record is the same one whose base in Ubud later hosted the certification. It does mean the gap between a careful operator and a careless one is entirely internal policy: invisible from a booking page and unverified by any inspector. Price tells you nothing about it either way. How a standard Ayung day is actually put together is in our [white water rafting guide](/bali/en/journal/white-water-rafting-bali-guide)."
+        ]
+      },
+      {
+        "heading": "50 certified guides against 600 on one river",
+        "paragraphs": [
+          "I Ketut Weja, deputy chair of FAJI Bali, gave NusaBali the numbers on **17 May 2026**: about **22 operators** and roughly **600 guides** working the Ayung, most of them without formal competency certification. On **16 and 17 May 2026**, at Mason's base in Ubud, the tourism ministry together with LSP Pramindo and FAJI Bali certified **50 guides**. FAJI had asked for a quota of **100** and received half of it. That is the whole cohort the exercise produced.",
+          "Do not turn those two numbers into a percentage. The **50** came from across Bali, not only from the Ayung, so 50 out of 600 is arithmetic across two different populations. What the certification covers is worth more than the ratio: an interview, field observation, rope work, what the guide does when a raft flips, and evacuation. The standard is BNSP, recognised in the ASEAN competency scheme. Those are precisely the skills that decide the outcome of the two capsizes above, and as of May 2026 most guides on the busiest river had not been assessed on them.",
+          "This is where the questions from the cards above belong, and they are the same questions whether you book [white water rafting on the Ayung](/bali/en/tours/white-water-rafting) with us or with anyone else: who certified the guide in your boat, what the assessment covered, and who calls the trip off when the river rises. From the national side, as of **August 2025** Indonesia had **420** rafting operators, and rafting is classed as a medium-high risk business under Permenparekraf **No. 4/2021**. The risk classification exists; the operating procedure underneath it does not. BIMC Hospital lists **five** injuries it treats from rafting — sprains, cuts and bruises, head injuries, broken noses and teeth, and drowning — without publishing how often each occurs. On a river with about 22 operators sharing the water, colliding with another raft is not an abstract scenario."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How many people have died rafting in Bali?",
+        "answer": "Five tourists between November 2021 and 10 July 2023, by Al Jazeera's count, and three of those five died off the water rather than in it. No official tally has been published for 2024, 2025 or 2026, so the current number is unknown rather than zero. Two earlier deaths are documented: an Indian national aged 46 on 24 December 2019, and a Hong Kong national aged 24 on 19 February 2008."
+      },
+      {
+        "question": "Which river is more dangerous, the Ayung or Telaga Waja?",
+        "answer": "There is no data that ranks them. Each has one documented fatal capsize in 2022: the Ayung on 3 October, Telaga Waja on 26 November. In the Telaga Waja case police said the water was high and the route should have been changed; on the Ayung a vendor on the bank had advised the guides not to go. With about 22 operators on the Ayung alone and no central incident register anywhere in Bali, per-river accident rates are not published, so anyone quoting one to you is guessing."
+      },
+      {
+        "question": "Are rafting guides in Bali certified?",
+        "answer": "Most are not, at least on the Ayung. FAJI Bali's deputy chair I Ketut Weja told NusaBali on 17 May 2026 that roughly 600 guides work that river and the majority hold no formal competency certificate. On 16 and 17 May 2026, 50 guides from across Bali were certified to the BNSP standard, which is recognised in the ASEAN competency scheme. FAJI had requested a quota of 100."
+      },
+      {
+        "question": "Is there a government safety standard for Bali rafting?",
+        "answer": "No rafting-specific standard operating procedure exists. Nigel Mason of Mason Adventures listed the gaps to Al Jazeera: no mandatory equipment on the raft, no age rating for life jackets, no guide working hours, no alcohol rule, no limit on boats sharing a river, no rescue protocol. Opening a company requires a location permit. Rafting is classed as a medium-high risk business under Permenparekraf No. 4/2021."
+      },
+      {
+        "question": "Will anyone stop a trip when the river is high?",
+        "answer": "Only the operator. The Gianyar tourism office states it has no authority to stop a company operating, and in December 2024 the Karangasem disaster agency described its instrument as an appeal, not a prohibition. After the Telaga Waja death on 26 November 2022, police said the flow had increased and the route should have been changed. On the Ayung in October 2022 a kiosk vendor told the guides to stop; they went anyway."
+      },
+      {
+        "question": "What should I ask an operator before booking?",
+        "answer": "Four things. Whether the guide in your boat holds the BNSP competency certificate. What happens to a group already at the bottom of the stairway when heavy rain starts. Who decides to cancel when the river rises. And who checks helmets and life jackets before launch: when the body of the American missing after the 3 October 2022 Ayung capsize was sighted, it had neither helmet nor life jacket."
+      },
+      {
+        "question": "What injuries are most common in Bali rafting?",
+        "answer": "BIMC Hospital names five: sprains, cuts and bruises, head injuries, broken noses and teeth, and drowning. It publishes no frequencies, so treat that as a list and not a ranking. Four of the five are impact injuries. On a river shared by about 22 operators, one routine source of impact is another raft, which is why the helmet matters on the flat stretches as well as in the rapids."
+      }
+    ]
+  },
+  {
+    "badge": "Travel guide",
+    "slug": "bali-rafting-with-kids-age-limits",
+    "navLabel": "Rafting with kids",
+    "cardTourLabel": "Ayung rafting from $49",
+    "heroTourSlug": "white-water-rafting",
+    "relatedTourSlugs": [
+      "white-water-rafting",
+      "ubud-highlights-tour",
+      "private-car-with-driver-bali"
+    ],
+    "inlineStats": [
+      "Minimum age: 4 to 7",
+      "120 cm minimum height",
+      "509 steps down, 250 back up"
+    ],
+    "title": "Bali Rafting With Kids: Minimum Age 4, 6 or 7?",
+    "description": "Minimum age on the Ayung runs from 4 to 7 depending on the operator, and the real filter is height and stairs. Every published limit, operator by operator.",
+    "excerpt": "There is no island-wide minimum age for rafting in Bali. On the Ayung the published floor runs from **4 to 7** depending on which operator — and sometimes which page of the same operator — you read: Sobek lists Child **4-15** through its partner and a **7-15** child rate on its own site, Surya Bintang starts at **5**, Arum Jeram and Graha at **6**, Bali Rafting Adventure at **7**, and Mason writes that ages below 5 and above 65 are \"not advised\" rather than barred. The number that actually decides is not the birthday. Surya Bintang is the only operator in this set publishing physical limits — maximum **120 kg** and minimum height **120 cm** — and 120 cm is roughly the average height of a seven-year-old, so the height line quietly overrides the age line. The second filter is the staircase: about **509 steps** down and **250** up at Sobek on the Ayung, roughly **600** and **400** at Mason. Melangit replaces the staircase with a short walk at both ends. Swimming is not required; pregnancy, heart conditions and epilepsy are what get a booking refused.",
+    "rankings": [
+      {
+        "name": "Sobek",
+        "imageSrc": "/images/places/ayung-river-rafting.jpg",
+        "area": "Ayung River",
+        "bestFor": "Youngest published floor, age 4",
+        "summary": "Two different floors for the same boat: Child **4-15** and Adult **16-75** through the partner reseller, but a child rate of **7-15** on Sobek's own site. The stairs are the real cost of the day — about **509 steps** down and **250** back up. The child price is **IDR 800,000** at rack and **IDR 415,000** self-drive in a group of 2-5. Guests **65+** must separately accept the stair conditions."
+      },
+      {
+        "name": "Mason Adventures",
+        "imageSrc": "/images/tours-real/white-water-rafting.jpg",
+        "area": "Ayung River",
+        "bestFor": "One packaged family price",
+        "summary": "Ages below **5** and above **65** are \"not advised\" — advice, not a ban, which moves the decision to the desk on the morning. Access is the longest climb here: roughly **600 steps** down and **400** up. The child rate of **IDR 585,000** for ages **5-12** and the family package at **IDR 2,500,000** for two adults and up to three children exist through agents. Mason's own booking page has no child category at all and sells one price, **IDR 795,000**."
+      },
+      {
+        "name": "Surya Bintang Adventures",
+        "imageSrc": "/images/places/ayung-river-gorge.jpg",
+        "area": "Ayung River",
+        "bestFor": "Parents who want hard numbers",
+        "summary": "The only operator here that publishes physical limits rather than only a birthday: maximum **120 kg** and minimum height **120 cm**, alongside an age floor of **5** and insurance stated as covering **5-65**. Because 120 cm is roughly the average height at seven, the height line overrides the age line and stops most children under **7**. Useful if you would rather be refused by email than at the riverbank with a child already in a helmet."
+      },
+      {
+        "name": "Graha Adventure",
+        "imageSrc": "/images/places/hiking-shoes.jpg",
+        "area": "Ayung River",
+        "bestFor": "Under-6s handled case by case",
+        "summary": "The most granular age table of the group, and it moves with the transfer: child **6-11** and adult **11-65** if you drive yourself, **6-65** if you take the operator's transfer, and children under **6** by arrangement rather than a flat refusal. Note that 11 appears in both columns — child **6-11** and adult **11-65**. The reseller page does not explain the overlap, so ask which rate an eleven-year-old is quoted at before you book."
+      },
+      {
+        "name": "Bali Rafting Adventure",
+        "imageSrc": "/images/tours-real/private-car-with-driver-bali.jpg",
+        "area": "Melangit River",
+        "bestFor": "Families who cannot do stairs",
+        "summary": "Ages **7-65** — the narrowest window in this set — on the one river here where the access at both ends is a short walk rather than a staircase. The child tariff for ages **7-12** is **$20** self-drive, **$25** with a group transfer and **$35** with a private car; the operator publishes dollars and not rupiah. Pregnant women and guests with heart conditions or epilepsy are not carried."
+      },
+      {
+        "name": "Arum Jeram Bali",
+        "imageSrc": "/images/places/ayung-river-rafting.jpg",
+        "area": "Ayung River",
+        "bestFor": "Children who cannot swim",
+        "summary": "Takes children from **6**, and is the operator that answers the swimming question on its own page: \"Tidak wajib. Semua peserta akan menggunakan pelampung keselamatan\" — not required, every participant wears a life jacket. Shower, locker and towel are inside the **IDR 250,000** ticket, which matters when three people are changing out of wet clothes. The transfer is quoted separately from **IDR 500,000**, so the drive can cost more than the rafting."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "There is no island-wide minimum age",
+        "paragraphs": [
+          "Bali has no single rule. Each operator writes its own floor, and the same company can print two different numbers on two different pages. Sobek, sold through its partner Wira Tour, lists Child **4-15** and Adult **16-75**. On Sobek's own site the child rate is **7-15**. Same river, same boats, same guides — the floor depends on which page you booked from. Graha, listed by that same reseller, splits it further and ties it to the transfer: child **6-11** and adult **11-65** if you arrive under your own steam, **6-65** if you take the operator's transfer, and anything under **6** by arrangement rather than a flat no.",
+          "Mason phrases it as advice rather than a rule: ages below 5 and above 65 are \"not advised\". That is not a refusal, and in practice it hands the decision to whoever is at the desk on the day. Arum Jeram Bali takes children from **6**. Surya Bintang Adventures takes them from **5** and states that insurance covers ages **5-65**. Bali Rafting Adventure runs **7-65**. On Telaga Waja, Sobek runs **7-75**. So on the Ayung alone the published floor moves from **4 to 7** — close to double — while the ceiling moves from **65** to **75** depending on whose boat you are in.",
+          "The practical consequence is that a five-year-old is bookable at some of these operators and not at others, on the same water on the same morning, at prices that overlap. Ask with the child's age and height in the same message, so the answer you get is on record against the right numbers. If you are booking [white water rafting on the Ayung](/bali/en/tours/white-water-rafting) for a mixed-age group, the youngest passenger decides which operator you can use; if that floor rules the youngest out, a day like [Nusa Penida with kids](/bali/en/journal/nusa-penida-with-kids) is the easier plan to move."
+        ]
+      },
+      {
+        "heading": "Height, not age, is what actually stops a child",
+        "paragraphs": [
+          "Surya Bintang Adventures is the rare operator that publishes physical limits instead of only a birthday: maximum **120 kg** and minimum height **120 cm**, alongside a stated age floor of **5**. Those two lines contradict each other, and the second one wins. **120 cm** is roughly the average height of a seven-year-old, so the height bar filters out most children under **7** no matter what the age column says. A five-year-old who looks bookable on the website can still be turned away at the start point for being short, after the drive and after payment.",
+          "Sobek, Mason and Graha publish no weight limit at all. That is not generosity — it means the limit is nowhere in writing and gets set on the day by two physical things: how many people the raft carries, and the size range of the life jackets on the rack. Neither is published, so the rule you are measured against is equipment, not policy.",
+          "An answer that quotes the child's actual height back at you is worth considerably more than a website line reading \"from 5\", so keep the reply. If the operator will only repeat the age range and will not comment on a 110 cm child, treat that as an unanswered question rather than a yes — the person who will make the call has not made it yet."
+        ]
+      },
+      {
+        "heading": "The stairs decide more than the rapids",
+        "paragraphs": [
+          "The hardest part of an Ayung day is not the water. Sobek's route has around **509 steps** down to the river and **250** back up at the finish. At Mason it is roughly **600** down and **400** up. A child who stops at step 300 gets carried, by an adult, in wet sandals on wet concrete, and no booking page puts that in the description.",
+          "Sobek asks guests **65 and over** to confirm separately that they accept the conditions of the stair climb. It is the only explicitly written physical condition in the whole set of operator pages, and it is aimed at grandparents. Nobody publishes an equivalent warning for a five-year-old, although the staircase is identical for both. If three generations are booking together, the operator has written a condition for one end of the age range and nothing for the other.",
+          "If the staircase is the deciding factor, the fix is a different river rather than a different operator. On Telaga Waja, Sobek counts about **5 steps** at the start and **250** at the finish, and some operators sell the route on a finish with no climb at all. On Melangit it is a **5-minute** walk from the parking to the start and **7 minutes** from the finish back to the car. Whichever river you pick, settle before you book who in the party carries a tired child up the last flight, because on the Ayung that job exists."
+        ]
+      },
+      {
+        "heading": "Swimming, life jackets and who has to sit out",
+        "paragraphs": [
+          "Children do not need to be able to swim. Arum Jeram answers it plainly on its own page: \"Tidak wajib. Semua peserta akan menggunakan pelampung keselamatan\" — not required, every participant wears a life jacket. That is the standard across the operators we checked. The jacket, the helmet and the guide in the boat are the system, and swimming ability is not part of it. A child who is frightened of water rather than unable to swim is a different question, and one better answered at home than at the top of the steps.",
+          "The published exclusions are about health, not age. Bali Rafting Adventure does not take pregnant women, people with heart conditions or people with epilepsy. Sobek's list is longer and adds uncontrolled hypertension, less than six months since major surgery, and back, neck or spine injuries. Most of those conditions are adult conditions. Read the list for the whole party, not only for the child.",
+          "Declare a condition when you book rather than at the river. A refusal at the desk arrives after the drive, after the changing room and usually after payment, and it leaves one person standing on the bank for two hours. If someone in the group is likely to be excluded, redraw the day before you leave the hotel."
+        ]
+      },
+      {
+        "heading": "What a family actually pays",
+        "paragraphs": [
+          "Sobek's rack price for a child is **IDR 800,000**. The same seat through its partner is **IDR 415,000** if you drive yourself and book as a group of 2-5. Same operator, same boat, same guide, at just over half the published child rate. This is the normal state of the market rather than a promotion, and it is why the number on the operator's own site should be treated as an anchor rather than a price. Ask both channels before you decide which one you are actually buying from.",
+          "Mason's child price of **IDR 585,000** for ages **5-12** exists through agents. On Mason's own booking page there is no child category at all — one price, **IDR 795,000**, whoever is sitting in the seat. The family package, again through the agent, is **IDR 2,500,000** for two adults and up to three children. For a family of five that packaged figure is worth checking against the sum of separate tickets in both directions, because the two numbers come from different pages that do not reference each other.",
+          "On Melangit the child tariff for ages **7-12** is **$20**, **$25** or **$35**, depending on whether you drive yourself, join a group transfer or take a private car; that operator publishes dollars and not rupiah. One large listing site gives no child price for Melangit at all and simply says to check the operator page. Our [white water rafting guide](/bali/en/journal/white-water-rafting-bali-guide) sets out what a river morning involves from pickup to lunch."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What is the minimum age for rafting in Bali?",
+        "answer": "There is no island-wide minimum — it runs from **4 to 7** depending on the operator. Sobek through its partner takes children from **4**, Surya Bintang from **5**, Arum Jeram and Graha from **6**, Bali Rafting Adventure from **7**. Mason writes that ages below **5** are \"not advised\" rather than barred. On Telaga Waja, Sobek runs **7-75**. Get the limit into your confirmation, with the child's height alongside it, before you pay."
+      },
+      {
+        "question": "Is there a height or weight limit for children?",
+        "answer": "At one operator, yes, and it matters more than the age line. Surya Bintang publishes a maximum of **120 kg** and a minimum height of **120 cm** while stating an age floor of **5**. Since 120 cm is roughly the average height of a seven-year-old, that line stops most children under **7** regardless. Sobek, Mason and Graha publish no weight limit at all, which means the real limit is raft capacity and the life jacket sizes available on the day."
+      },
+      {
+        "question": "Does my child need to know how to swim?",
+        "answer": "No. Arum Jeram states it directly — \"Tidak wajib. Semua peserta akan menggunakan pelampung keselamatan\": not required, every participant wears a life jacket. The helmet, the jacket and the guide in the boat are the system, and swimming ability is not part of it. Fear of water is a separate matter from swimming ability, and it is worth settling before the drive rather than at the top of the steps."
+      },
+      {
+        "question": "Can a child manage the Ayung stairs?",
+        "answer": "That depends on who can carry the child if they stop. The counts are about **509 steps** down and **250** up at Sobek, and roughly **600** down and **400** up at Mason. Sobek writes a stair condition only for guests **65 and over**, who have to accept it separately; there is no equivalent line anywhere for a five-year-old, although the staircase is the same one. A tired child on the way up is carried by a parent, in wet sandals on wet concrete."
+      },
+      {
+        "question": "Which river is easiest with small children?",
+        "answer": "Melangit, if the staircase is your constraint: the access at both ends is a short walk rather than a long stairway. The age window there is **7-65**, narrower than on the Ayung, and the child tariff for ages **7-12** runs **$20** to **$35** depending on the transfer. Telaga Waja is next — Sobek counts about **5 steps** at the start and **250** at the finish, and some operators sell it with no climb at the end at all."
+      },
+      {
+        "question": "How much does a child pay for rafting on the Ayung?",
+        "answer": "Sobek: **IDR 800,000** at rack, or **IDR 415,000** through the partner for self-drive in a group of 2-5. Mason: **IDR 585,000** for ages **5-12** through agents, or a family package at **IDR 2,500,000** for two adults and up to three children; Mason's own page has no child category and sells one price, **IDR 795,000**. On Melangit, ages **7-12** pay **$20** to **$35** by transfer type."
+      },
+      {
+        "question": "Who is not allowed to go rafting at all?",
+        "answer": "Bali Rafting Adventure does not take pregnant women, people with heart conditions or people with epilepsy. Sobek adds uncontrolled hypertension, less than six months since major surgery, and back, neck or spine injuries. Those are the published lists. Declare a condition when you book rather than at the river — a refusal at the desk comes after the drive, after the changing room and usually after payment."
+      }
+    ]
+  },
+  {
+    "slug": "what-to-wear-rafting-bali",
+    "badge": "Travel guide",
+    "navLabel": "What to wear rafting",
+    "cardTourLabel": "Ayung rafting from $49",
+    "heroTourSlug": "white-water-rafting",
+    "relatedTourSlugs": [
+      "white-water-rafting",
+      "atv-quad-bikes",
+      "private-car-with-driver-bali"
+    ],
+    "inlineStats": [
+      "4 items on every list",
+      "IDR 250,000 includes a shower",
+      "500-600 steps down, 250-400 up"
+    ],
+    "title": "What to Wear Rafting in Bali: 4 Items Operators Agree On",
+    "description": "Sobek, Graha and Arum Jeram publish different packing lists that overlap on exactly four items. What is provided, what is not, what the dry bag fits.",
+    "excerpt": "Three operators on the same river publish three different packing lists, and they agree on exactly **four items**: a change of clothes, footwear you can get wet in, sunscreen and a waterproof camera. Everything past that is one company's habit. The list matters less than what is already in the ticket: showers and changing facilities come with the run at every Ayung operator we checked, down to the **IDR 250,000** trip at Arum Jeram. Lockers are the real variable — Mason gives you an electronic one, Surya Bintang wants a refundable **IDR 50,000** deposit, and Sobek does not list one at all, suggesting instead that your phone or wallet rides in the dry bag. That bag is small: a backpack and a full-size camera do not go in it, which is also why a photo service waits at the finish at **IDR 150,000-300,000** per boat. And the hardest part of the day is not the water. It is **500-600 steps** down and **250-400** back up on wet concrete, which makes a closed heel with a strap the one item worth being fussy about.",
+    "rankings": [
+      {
+        "name": "Closed-heel water shoes",
+        "imageSrc": "/images/places/hiking-shoes.jpg",
+        "area": "Stairs and boat floor",
+        "bestFor": "500-600 wet steps down to the river",
+        "summary": "Every published list names footwear, and the lists disagree on what counts: Sobek and Arum Jeram say secure water sandals or trainers, Graha allows flip-flops. The stairs settle the argument. The walk in is **500-600 steps** down and **250-400** back up on wet concrete, and it happens before and after the run, not during it. A closed heel with a strap behind the ankle is the item we would not compromise on."
+      },
+      {
+        "name": "A full change of clothes",
+        "imageSrc": "/images/tours-real/white-water-rafting.jpg",
+        "area": "For the finish point",
+        "bestFor": "The one thing Mason asks you to bring",
+        "summary": "This is the item on every list, and it is the only thing Mason asks for: bring a change of clothes. You will be wet from the first rapid onward, and the finish point, not the hotel, is where you shower and change. Whatever you wore on the water will still be soaked when you leave, and no operator hands out dry clothes at the other end."
+      },
+      {
+        "name": "Sunscreen",
+        "imageSrc": "/images/places/sunscreen.jpg",
+        "area": "Open water, no shade",
+        "bestFor": "Hours on the river with nowhere to hide",
+        "summary": "Sunscreen is one of the **four items** all three published lists share, and it is the second most common way the day goes wrong after the stairs. The run takes hours, the gorge shades some of it and none of the rest, and there is nowhere on a raft to sit out of the sun. Graha also lists a hat, which does more here than a second coat of cream. Add a strap for your sunglasses."
+      },
+      {
+        "name": "Waterproof phone case",
+        "imageSrc": "/images/places/ayung-river-rafting.jpg",
+        "area": "In the raft with you",
+        "bestFor": "Photos you do not have to buy back",
+        "summary": "Sobek recommends one, and the size of the dry bag explains why. A backpack and a full-size camera do not fit the bag you are handed, so unless your phone is sealed and on your body, you will come off the river with no pictures of it. The photo service at the finish charges **IDR 150,000-300,000** per boat, not per person, so six people split it and two people do not."
+      },
+      {
+        "name": "Small cash notes",
+        "imageSrc": "/images/places/ayung-river-gorge.jpg",
+        "area": "Before and after the run",
+        "bestFor": "Locker deposits, drinks, photo files",
+        "summary": "Lockers are not standard equipment. Mason hands out electronic ones, Arum Jeram includes a locker in the **IDR 250,000** ticket, Surya Bintang holds a refundable **IDR 50,000** deposit, and Sobek does not list a locker anywhere, suggesting instead that a small phone or wallet goes in the dry bag. The deposit, the drinks and the photo files are all settled at the finish, at the end of the day rather than at booking."
+      },
+      {
+        "name": "Repellent and quick-dry layers",
+        "imageSrc": "/images/tours-real/white-water-rafting.jpg",
+        "area": "Sobek's longer list",
+        "bestFor": "Deciding what is optional",
+        "summary": "Past the shared four, each extra item comes from a single operator rather than from consensus. Sobek is the only one asking for quick-drying clothes and swimwear, insect repellent and a waterproof phone case. Graha is the only one naming a hat, and adds swim shorts and a t-shirt. Mason names nothing beyond the change of clothes. Anything backed by one list is optional; anything backed by three is not."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "The four items every list agrees on",
+        "paragraphs": [
+          "Three operators run the same river and publish three different packing lists. Sobek, Graha and Arum Jeram overlap on exactly **four items**: a change of clothes, footwear you can get wet in — secure water sandals or trainers — sunscreen, and a waterproof camera. Everything outside those four is one company's habit rather than an industry standard, which is worth knowing before you spend money on kit specifically for a half day on the water.",
+          "Sobek writes the longest list. On top of the shared four it asks for quick-drying clothes and swimwear, insect repellent and a waterproof phone case. Graha writes the shortest usable version: swim shorts, a t-shirt, shoes or flip-flops, a hat, a camera. Mason asks for one thing — bring a change of clothes — and says nothing at all about footwear, sun or cameras. Mason also includes shared round-trip transfers, so its guest is driven door to door and handed the rest on arrival.",
+          "Our reading is simple. Treat the **four items** as the floor, add a hat and a phone case because two of the three operators independently thought they were worth writing down, and stop there. Nothing on any of these lists needs to be bought new, and none of it needs to be technical: a swimsuit, an old t-shirt, shoes you do not mind ruining. If you are still assembling the general island bag rather than the river one, [what to pack for Bali](/bali/en/journal/what-to-pack-for-bali) covers the parts that have nothing to do with rafting."
+        ]
+      },
+      {
+        "heading": "What the ticket already covers",
+        "paragraphs": [
+          "A shower and a towel are included at every Ayung operator we checked, including the cheapest one on the river. Arum Jeram sells the run at **IDR 250,000** and still lists shower, locker and towel, alongside a certified guide, helmet, life jacket, paddle, raft, accident insurance, a buffet lunch and a welcome drink. That is the floor of this market, not a premium package, and it already covers most of what people arrive carrying.",
+          "Mason lists lunch, locker, shower and changing facilities, towel, shared round-trip transfers and insurance. The shower is hot and the lockers are electronic. Sobek lists showers and bath towels at the finish points, a dry bag and lunch at the finish — and no locker anywhere in the inclusions. Its partner's answer to the storage question is that a small phone or wallet can go in the dry bag. Surya Bintang does give you a locker, against a refundable deposit of **IDR 50,000**.",
+          "The practical rule follows from that gap: do not bring to the river anything you cannot store, and if you are booking Sobek, get the locker confirmed in writing before you pay. A camera bag left in a car parked at the top of several hundred steps is a different decision from one in a locked box at the finish point, and you will not be back at the car until the day is over. Our own breakdown of how these runs are assembled is in the [white water rafting guide](/bali/en/journal/white-water-rafting-bali-guide)."
+        ]
+      },
+      {
+        "heading": "The dry bag is smaller than you think",
+        "paragraphs": [
+          "The dry bag handed out at the start is sized for a phone or a wallet, not for luggage. A daypack does not fit, a full-size camera does not fit, and anything larger stays behind at the top of the stairs whether or not there is a locker for it. Guests routinely arrive expecting to keep a small backpack with them in the raft, and that is not what the bag is for.",
+          "One consequence is that most people finish the run with no photographs of it, and a photo service is waiting at the finish point selling images at **IDR 150,000-300,000** per boat. We are putting those two facts next to each other as an observation, not an accusation: no operator states any connection between the size of the bag and the price of the pictures, and we are not asserting one.",
+          "If you want your own shots, the only reliable way is a sealed phone case worn on your body, which is exactly what Sobek recommends in its own packing list. If you would rather buy the pictures, the per-boat price is worth knowing before someone quotes it to you wet and tired at the finish. **IDR 150,000-300,000** is charged per raft, so six people split it between them and a couple pays the same amount for two."
+        ]
+      },
+      {
+        "heading": "Dress for the stairs, not just the water",
+        "paragraphs": [
+          "The most physical part of an Ayung day is not the rapids. It is **500-600 steps** down to the river and **250-400** back up at the end, on wet concrete, in whatever you chose to put on your feet that morning. Rapids last seconds each and the raft does most of the work. The staircase lasts as long as your legs take, and the climb out comes at the point in the day when you are already tired and soaked. A closed heel with a strap behind the ankle matters more than everything else on any of these lists put together.",
+          "Graha's list allows flip-flops, and flip-flops are fine for the walk from the changing room to the lunch table. They are not what we would walk down several hundred wet steps in, and a strap that fails halfway is a problem with no good solution on a staircase in a gorge. Whatever you wear will be soaked through and will not dry before you leave, which is one more argument for shoes you do not mind writing off and for the change of clothes every operator asks for.",
+          "The sun is the second recurring problem. Open water at this latitude gives you no shade for the length of the run, so a hat that survives a splash and a strap for your sunglasses do more work than an extra layer of clothing. If you would rather see the whole sequence before you commit to it, our [Ayung rafting trip](/bali/en/tours/white-water-rafting) page sets out the day from pickup to the last flight of steps."
+        ]
+      },
+      {
+        "heading": "What is excluded and sold at the finish",
+        "paragraphs": [
+          "Lunch is included almost everywhere and drinks usually are not. Mason states the meal as food only, so anything you drink at the table is a separate line at the end. It is a small charge and an easy one to be caught by, because it lands at exactly the moment your wallet is in a locker at the other end of the site, and because nothing in the booking tells you the price of a beer or a coconut in advance. Carry small notes and check the menu before you sit down.",
+          "Photo and video sit in the excluded column at operator after operator — Arum Jeram, Kuber and Bali River Rafting all list them there, the last one as photo, video or optional drink at the restaurant. The photo service at the finish sells images at **IDR 150,000-300,000** per boat, and it is the add-on almost everyone meets, because the dry bag rules out carrying a camera of your own.",
+          "The transfer is quoted separately by some operators rather than folded into the run. Arum Jeram sells the rafting at **IDR 250,000** and prices transfers from **IDR 500,000**, so the number you compared against another operator's package was never the whole day. What a car and driver of your own costs for the same hours is in our breakdown of [what a private driver costs](/bali/en/journal/bali-private-driver-cost)."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "What should I actually wear on the raft?",
+        "answer": "Swimwear or quick-drying clothes you do not mind soaking, plus closed water shoes with a heel strap. Sobek, Graha and Arum Jeram overlap on **four items**: a change of clothes, water footwear, sunscreen and a waterproof camera. Graha adds a hat, Sobek adds repellent and a waterproof phone case. Whatever you wear on the water will still be wet when you leave, so the change of clothes is not optional."
+      },
+      {
+        "question": "Can I raft in flip-flops?",
+        "answer": "Graha's own list permits them. Whether the operator you booked does is a separate question, and we would not walk **500-600** wet steps in them either way. That staircase, not the rapids, is where the day goes wrong, and the climb back up is **250-400** steps at the end of it. A closed heel with a strap behind the ankle handles both the stairs and the boat floor. Keep the flip-flops in the bag for after the shower."
+      },
+      {
+        "question": "Do I need to bring a towel?",
+        "answer": "No. A shower and a towel come with the ticket at every Ayung operator we checked, Arum Jeram's **IDR 250,000** run included, and Mason adds a hot shower and changing facilities. The item worth carrying instead is a full change of dry clothes, which nobody provides."
+      },
+      {
+        "question": "Is there a locker for my phone and wallet?",
+        "answer": "Not everywhere. Mason gives out electronic lockers and Arum Jeram includes a locker in its **IDR 250,000** ticket. Surya Bintang provides one against a refundable **IDR 50,000** deposit. Sobek lists no locker at all in its inclusions, and its partner's suggestion is that a small phone or wallet travels in the dry bag. If storage matters to you, the inclusions list of the operator you booked is the only place that settles it."
+      },
+      {
+        "question": "Will my camera fit in the dry bag?",
+        "answer": "A full-size camera will not, and neither will a backpack. The bag issued at the start is sized for a phone or a wallet, and anything larger stays behind at the top of the stairs. If you want pictures of your own run, the workable option is a sealed waterproof phone case worn on your body, which is what Sobek recommends in its packing list. Otherwise you are buying the photo service at the finish."
+      },
+      {
+        "question": "How much do the finish-line photos cost?",
+        "answer": "**IDR 150,000-300,000**, and the charge is per boat rather than per person. That makes it cheap for a raft of six and expensive for a couple travelling as two. Arum Jeram, Kuber and Bali River Rafting all place photo and video in the excluded column outright, so the sale happens at the finish rather than at booking."
+      },
+      {
+        "question": "What else gets charged on the day?",
+        "answer": "Drinks with lunch at Mason, which are not part of the meal. Photo and video are excluded at most operators. And the transfer can be a line of its own: Arum Jeram sells the run at **IDR 250,000** but quotes transfers from **IDR 500,000**. Check which of the three a quoted price includes before you compare it with another one."
+      }
+    ]
+  },
+  {
     "slug": "best-sunset-spots-bali",
     "badge": "Travel guide",
     "navLabel": "Best sunset spots",
@@ -10311,7 +11939,7 @@ const JOURNAL_SEO_GUIDES = [
           "**Staying in Ubud**: no coast at all. Rice-field light inland, or fold Tanah Lot into a day trip that ends there."
         ],
         "paragraphsAfter": [
-          "That last case is the one people get wrong most often. Ubud to the west coast is a genuinely long evening drive, and doing it purely for a sunset usually disappoints. The better move is to make the sunset the last stop of a day you were already spending in the car — which is exactly how our [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) is built, from $59 over 9-11 hours with a morning hotel pickup."
+          "That last case is the one people get wrong most often. Ubud to the west coast is a genuinely long evening drive, and doing it purely for a sunset usually disappoints. The better move is to make the sunset the last stop of a day you were already spending in the car — which is exactly how our [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) is built, from $65 per car over 9-11 hours with a morning hotel pickup."
         ]
       },
       {
@@ -10325,7 +11953,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Making the sunset the end of a full day",
         "paragraphs": [
           "The best evenings on this list are the ones you did not drive out for specially. A day that ends at the coast costs you nothing extra in time, and it removes the worst part of a Bali sunset plan: sitting in westbound traffic at 17:30 watching the light get better through a car window.",
-          "Three ways we build that into a day. The [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) from $59 works its way through the highlands and lands at the temple for the evening. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car lets you set your own route and simply tell the driver where you want to be at 18:00. And the [sunset cruise](/bali/en/tours/sunset-cruise-bali) from $150 skips the land question entirely. If you want the temple comparison in detail before choosing, we put the two icons head to head in [Tanah Lot vs Uluwatu at sunset](/bali/en/journal/tanah-lot-vs-uluwatu-sunset)."
+          "Three ways we build that into a day. The [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) from $65 per car works its way through the highlands and lands at the temple for the evening. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car lets you set your own route and simply tell the driver where you want to be at 18:00. And the [sunset cruise](/bali/en/tours/sunset-cruise-bali) from $150 skips the land question entirely. If you want the temple comparison in detail before choosing, we put the two icons head to head in [Tanah Lot vs Uluwatu at sunset](/bali/en/journal/tanah-lot-vs-uluwatu-sunset)."
         ]
       }
     ],
@@ -10945,7 +12573,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "The rest of your Ubud day",
         "paragraphs": [
           "Every format has you back in Ubud by late morning — **6-8 hours door to door for the jeep options, 5-8 for the hike** — which is the quiet argument for basing the volcano morning here rather than the coast. The pattern that works: sleep until pickup, doze in the car, nap again from late morning until early afternoon, then take the evening as planned. Schedule nothing before 14:00, and do not stack two pre-dawn starts on consecutive days. If you want to see how a full Ubud day fits together around the volcano, our [Ubud in one day](/bali/en/journal/ubud-in-one-day) guide maps the afternoon-and-evening version.",
-          "If the pre-dawn start is a dealbreaker, you can still see Batur in daylight. The [Ubud Rice Terrace, Temple & Volcano Tour](/bali/en/tours/ubud-highlights-tour) — **from $69** — leaves at a humane **08:00** and takes in the Kintamani crater view on a 10-hour route through central Bali. You trade the sunrise color for a full night of sleep, which is a fair trade for families and anyone on a short trip."
+          "If the pre-dawn start is a dealbreaker, you can still see Batur in daylight. The [Ubud Rice Terrace, Temple & Volcano Tour](/bali/en/tours/ubud-highlights-tour) — **from $65 per car — leaves at a humane **08:00** and takes in the Kintamani crater view on a 10-hour route through central Bali. You trade the sunrise color for a full night of sleep, which is a fair trade for families and anyone on a short trip."
         ]
       }
     ],
@@ -12491,7 +14119,7 @@ const JOURNAL_SEO_GUIDES = [
     "inlineStats": [
       "2 temples, 7 criteria",
       "Kecak daily around 18:00",
-      "Tour from $59"
+      "Tour from $65 per car"
     ],
     "title": "Tanah Lot vs Uluwatu Sunset: Which Temple to Pick in 2026",
     "description": "Tanah Lot or Uluwatu for sunset? Both temples compared by crowds, photo angles, the Kecak dance and drive times from every major Bali area.",
@@ -12558,8 +14186,8 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Our Tanah Lot route: the sunset comes at the end",
         "paragraphs": [
-          "The [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) is built backwards from the sunset. It is a private 9-11 hour day through west and central Bali — **from $59**, with a morning hotel pickup — and the sequence is the point: the Bedugul highlands, the lake temple and the rice-terrace country come first, so the car reaches Tanah Lot in the late golden hour instead of at midday, when the light is flat and the crowds are at their thickest for the least reward.",
-          "Because the day is private, the pace flexes — more time at the lake, a longer coffee stop, an earlier arrival at the coast if you want to walk to the rock before the light drops. Booking is a WhatsApp message with **no prepayment**, and the exact pickup time is confirmed on WhatsApp the day before. If temples are your main interest rather than one sunset, the [Bali UNESCO Heritage Sites Tour](/bali/en/tours/bali-unesco) — **from $69**, 10 hours — covers the recognised heritage route through west and central Bali, and our [guide to Bali's best temples](/bali/en/journal/best-temples-bali-cultural-sites) explains how the island's big names differ from each other."
+          "The [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) is built backwards from the sunset. It is a private 9-11 hour day through west and central Bali — **from $65 per car, with a morning hotel pickup — and the sequence is the point: the Bedugul highlands, the lake temple and the rice-terrace country come first, so the car reaches Tanah Lot in the late golden hour instead of at midday, when the light is flat and the crowds are at their thickest for the least reward.",
+          "Because the day is private, the pace flexes — more time at the lake, a longer coffee stop, an earlier arrival at the coast if you want to walk to the rock before the light drops. Booking is a WhatsApp message with **no prepayment**, and the exact pickup time is confirmed on WhatsApp the day before. If temples are your main interest rather than one sunset, the [Bali UNESCO Heritage Sites Tour](/bali/en/tours/bali-unesco) — **from $65 per car, 10 hours — covers the recognised heritage route through west and central Bali, and our [guide to Bali's best temples](/bali/en/journal/best-temples-bali-cultural-sites) explains how the island's big names differ from each other."
         ]
       },
       {
@@ -12870,7 +14498,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "The free sunsets a cruise has to beat",
         "paragraphs": [
           "**Bali's best sunsets are free**, and an honest comparison starts there. The Uluwatu cliffs face the burn head-on from roughly 70 meters up; Tanah Lot puts a temple silhouette in front of it for a small entrance fee; the Seminyak and Canggu beach bars sell the same sky from a beanbag for the price of a drink. Each of those is covered in our [best sunset spots guide](/bali/en/journal/best-sunset-spots-bali), and the two temple icons get a direct comparison in [Tanah Lot vs Uluwatu at sunset](/bali/en/journal/tanah-lot-vs-uluwatu-sunset).",
-          "What the cruise adds is the horizon and the exclusivity. On the water there is nothing between you and the sun — no crowd ten rows deep at the Uluwatu wall, no photographers wading into frame at Tanah Lot — and the evening keeps going after the light dies, which no free viewpoint manages. If you want the land-based icons with the logistics handled, the [Tanah Lot and Bedugul day tour](/bali/en/tours/tanah-lot-bedugul-tour) from $59 ends at the temple for sunset; the cruise is the upgrade for the one night the trip is built around."
+          "What the cruise adds is the horizon and the exclusivity. On the water there is nothing between you and the sun — no crowd ten rows deep at the Uluwatu wall, no photographers wading into frame at Tanah Lot — and the evening keeps going after the light dies, which no free viewpoint manages. If you want the land-based icons with the logistics handled, the [Tanah Lot and Bedugul day tour](/bali/en/tours/tanah-lot-bedugul-tour) from $65 per car ends at the temple for sunset; the cruise is the upgrade for the one night the trip is built around."
         ]
       },
       {
@@ -13078,7 +14706,7 @@ const JOURNAL_SEO_GUIDES = [
     ],
     "title": "7 Bali Day Trips With Kids That Actually Work in 2026",
     "description": "Seven Bali day trips that work with kids, ranked by a local operator — real 2026 prices from $20, age notes for ATV and rafting, and pacing tips.",
-    "excerpt": "Yes, Bali day trips work with kids — if you run them privately and at your family's pace. This guide ranks seven family day trips we drive year-round: the Ubud rice terrace and volcano route from $69, Ayung River rafting from $49, Blue Lagoon snorkeling from $50, and an Ubud ATV track from $20. Every tour here is private, so nap stops, toilet breaks and early exits cost nothing but a word to your driver. Where an activity has age rules — ATV and rafting mainly — we say so plainly: operators set age minimums, and we confirm them for your kids' exact ages on WhatsApp before you pay anything. No deposits, no group buses, no schedule but yours.",
+    "excerpt": "Yes, Bali day trips work with kids — if you run them privately and at your family's pace. This guide ranks seven family day trips we drive year-round: the Ubud rice terrace and volcano route from $65 per car, Ayung River rafting from $49, Blue Lagoon snorkeling from $50, and an Ubud ATV track from $20. Every tour here is private, so nap stops, toilet breaks and early exits cost nothing but a word to your driver. Where an activity has age rules — ATV and rafting mainly — we say so plainly: operators set age minimums, and we confirm them for your kids' exact ages on WhatsApp before you pay anything. No deposits, no group buses, no schedule but yours.",
     "rankings": [
       {
         "name": "Ubud Rice Terrace, Temple & Volcano Tour",
@@ -13223,7 +14851,7 @@ const JOURNAL_SEO_GUIDES = [
     ],
     "title": "7 Bali Honeymoon Day Trips for a Private, Unrushed Week",
     "description": "Seven honeymoon day trips in Bali planned as a real week — private sunset cruise, Batur sunrise, Ubud, Penida and the Gilis, with 2026 prices from $60.",
-    "excerpt": "A Bali honeymoon works best as a seven-night week with three or four private day trips and empty days between them — not a tour every morning. This guide builds that week from seven romantic days we run as private tours: an Ubud day from $69, a Mount Batur sunrise jeep from $75, the UNESCO heritage route from $69, a Nusa Penida day with Manta Point snorkeling from $60, a Gili Islands snorkeling day from $115, and a sunset cruise finale from $150. Every one runs with your own car, driver and schedule, booked over WhatsApp with no prepayment, so the two of you never share a minibus with strangers. Below is the day-by-day assembly, the privacy case, and the timing details that make the week feel calm instead of scheduled.",
+    "excerpt": "A Bali honeymoon works best as a seven-night week with three or four private day trips and empty days between them — not a tour every morning. This guide builds that week from seven romantic days we run as private tours: an Ubud day from $65 per car, a Mount Batur sunrise jeep from $75, the UNESCO heritage route from $65 per car, a Nusa Penida day with Manta Point snorkeling from $60, a Gili Islands snorkeling day from $115, and a sunset cruise finale from $150. Every one runs with your own car, driver and schedule, booked over WhatsApp with no prepayment, so the two of you never share a minibus with strangers. Below is the day-by-day assembly, the privacy case, and the timing details that make the week feel calm instead of scheduled.",
     "rankings": [
       {
         "name": "Bali Sunset Cruise from Benoa",
@@ -13258,7 +14886,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/tours-real/east-bali-instagram-tour.jpg",
         "area": "Lempuyang and east Bali",
         "bestFor": "The couple-photo day",
-        "summary": "The 8-10 hour east route from $69, built around the Lempuyang gates and the east Bali icons. Being private matters most here: your driver times each stop so the two of you are posing at the gates, not queueing behind six tour vans."
+        "summary": "The 8-10 hour east route from $65 per car, built around the Lempuyang gates and the east Bali icons. Being private matters most here: your driver times each stop so the two of you are posing at the gates, not queueing behind six tour vans."
       },
       {
         "name": "Nusa Penida Day with Manta Point",
@@ -13287,7 +14915,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Why private is the honeymoon argument, not a luxury",
         "paragraphs": [
           "A private car with your own driver changes a honeymoon day more than any other booking decision. On a group tour the schedule belongs to the slowest stranger in the van; on a private day it belongs to the two of you. Stay forty minutes at a viewpoint that group itineraries allow fifteen for, skip a stop that looks crowded, pull over for an unplanned coffee above a rice terrace — the route bends around your day instead of the reverse.",
-          "Privacy also fixes the two things couples complain about most on tours: strangers in the photos and no time alone. On the [Bali UNESCO Heritage Sites Tour](/bali/en/tours/bali-unesco) — **from $69 for a 10-hour day** — the difference is clearest, because temples and terraces reward lingering and a fixed group schedule is precisely what cannot give you that. Every day plan in this guide runs the same way, booked over **WhatsApp with no prepayment**, so shuffling days around weather or a late night costs nothing. For couple-friendly ideas beyond day trips — dinners, spas, beach clubs — see our [Bali for couples guide](/bali/en/journal/best-things-to-do-bali-for-couples); this article stays focused on how to stack the days themselves."
+          "Privacy also fixes the two things couples complain about most on tours: strangers in the photos and no time alone. On the [Bali UNESCO Heritage Sites Tour](/bali/en/tours/bali-unesco) — **from $65 per car for a 10-hour day** — the difference is clearest, because temples and terraces reward lingering and a fixed group schedule is precisely what cannot give you that. Every day plan in this guide runs the same way, booked over **WhatsApp with no prepayment**, so shuffling days around weather or a late night costs nothing. For couple-friendly ideas beyond day trips — dinners, spas, beach clubs — see our [Bali for couples guide](/bali/en/journal/best-things-to-do-bali-for-couples); this article stays focused on how to stack the days themselves."
         ]
       },
       {
@@ -13369,7 +14997,7 @@ const JOURNAL_SEO_GUIDES = [
     ],
     "title": "5-Day Bali Itinerary: South Coast, Ubud, Penida, Batur",
     "description": "A realistic 5-day Bali itinerary: arrival in the south, Ubud, Nusa Penida, Mount Batur or the Gilis, and temples before your flight — with 2026 tour prices.",
-    "excerpt": "Five days in Bali is enough for the island's essential experiences if you treat each day as one region: land and settle in the south on day 1, spend day 2 in Ubud, cross to Nusa Penida on day 3, take the Mount Batur sunrise or a Gili Islands day on day 4, and fit a temple around your flight on day 5. This is the compressed version of our 7-day plan — the same anchor days with the buffer removed. The day tours behind it start at $49 per car for Nusa Penida and $69 for the Ubud loop, all with hotel pickup, booked over WhatsApp with no prepayment. Below: the five days in order, what this plan gives up against a full week, and the rules for swapping days without breaking the sequence.",
+    "excerpt": "Five days in Bali is enough for the island's essential experiences if you treat each day as one region: land and settle in the south on day 1, spend day 2 in Ubud, cross to Nusa Penida on day 3, take the Mount Batur sunrise or a Gili Islands day on day 4, and fit a temple around your flight on day 5. This is the compressed version of our 7-day plan — the same anchor days with the buffer removed. The day tours behind it start at $49 per car for Nusa Penida and $65 per car for the Ubud loop, all with hotel pickup, booked over WhatsApp with no prepayment. Below: the five days in order, what this plan gives up against a full week, and the rules for swapping days without breaking the sequence.",
     "rankings": [
       {
         "name": "Day 1 — Arrival day in the south",
@@ -13458,7 +15086,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How much do the day tours on a 5-day Bali itinerary cost?",
-        "answer": "Direct 2026 prices: airport transfer from $15, the Ubud rice terrace and volcano day from $69, Nusa Penida west from $49 per car, the Mount Batur sunrise hike from $35 or jeep from $75, and the Gili Islands snorkeling day from $115. Booking runs on WhatsApp with no prepayment."
+        "answer": "Direct 2026 prices: airport transfer from $15, the Ubud rice terrace and volcano day from $65 per car, Nusa Penida west from $49 per car, the Mount Batur sunrise hike from $35 or jeep from $75, and the Gili Islands snorkeling day from $115. Booking runs on WhatsApp with no prepayment."
       },
       {
         "question": "Where should I stay for a 5-day Bali trip?",
@@ -13517,7 +15145,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/places/tegalalang-rice-terraces.jpg",
         "area": "Ubud and central Bali",
         "bestFor": "The first booked tour day",
-        "summary": "The first booked day: the Ubud rice terrace, temple and volcano loop runs 10 hours from an 08:00 hotel pickup and costs from $69. Tegalalang's terraces, a water temple and the Kintamani volcano viewpoint in one circuit — the classic central-Bali day and the right warm-up for the week ahead."
+        "summary": "The first booked day: the Ubud rice terrace, temple and volcano loop runs 10 hours from an 08:00 hotel pickup and costs from $65 per car. Tegalalang's terraces, a water temple and the Kintamani volcano viewpoint in one circuit — the classic central-Bali day and the right warm-up for the week ahead."
       },
       {
         "name": "Day 4: Mount Batur sunrise",
@@ -13545,7 +15173,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/tours-real/east-bali-instagram-tour.jpg",
         "area": "East Bali",
         "bestFor": "Temples, water palaces and photos",
-        "summary": "The East Bali Instagram Tour runs 8-10 hours from a morning pickup and costs from $69, covering the Lempuyang gates and the east-coast water palaces. If photo queues are not your thing, the same direction works as a snorkeling day around Amed's shipwreck coast instead — the same drive, a different reward."
+        "summary": "The East Bali Instagram Tour runs 8-10 hours from a morning pickup and costs from $65 per car, covering the Lempuyang gates and the east-coast water palaces. If photo queues are not your thing, the same direction works as a snorkeling day around Amed's shipwreck coast instead — the same drive, a different reward."
       },
       {
         "name": "Day 8: North Bali and Lovina",
@@ -13573,7 +15201,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "What ten days adds to a seven-day trip",
         "paragraphs": [
-          "Ten days in Bali buys three things a seven-day trip cannot: **the east coast, the north coast and real rest**. The first six days of this plan deliberately track our [seven-day Bali itinerary](/bali/en/journal/bali-7-day-itinerary) — arrival, a self-guided south day, the [Ubud rice terrace and volcano loop](/bali/en/tours/ubud-highlights-tour) from $69, a Mount Batur sunrise, a rest day, then the [Nusa Penida full day](/bali/en/tours/nusa-penida-full-day-tour) from $75. Days 7 to 9 are the extension: an east-Bali day around the Lempuyang gates and water palaces, the long run north to Lovina, and one deliberately empty day before the flight home. If you only have a week, read the seven-day guide instead — this version only makes sense once the extra 72 hours actually exist.",
+          "Ten days in Bali buys three things a seven-day trip cannot: **the east coast, the north coast and real rest**. The first six days of this plan deliberately track our [seven-day Bali itinerary](/bali/en/journal/bali-7-day-itinerary) — arrival, a self-guided south day, the [Ubud rice terrace and volcano loop](/bali/en/tours/ubud-highlights-tour) from $65 per car, a Mount Batur sunrise, a rest day, then the [Nusa Penida full day](/bali/en/tours/nusa-penida-full-day-tour) from $75. Days 7 to 9 are the extension: an east-Bali day around the Lempuyang gates and water palaces, the long run north to Lovina, and one deliberately empty day before the flight home. If you only have a week, read the seven-day guide instead — this version only makes sense once the extra 72 hours actually exist.",
           "The extension changes the accommodation math too. With seven days, one southern base is the obvious call; with ten, **splitting the stay is worth considering** — five or six nights in the south, then the balance in Sanur or Ubud. Every tour here includes hotel pickup, so nothing breaks if you stay put; the split simply returns two to three hours of car time on the Penida, east and north days. Whichever you choose, fix the hotel plan before booking the tours, because pickup times and even route order are built around where you sleep."
         ]
       },
@@ -13614,7 +15242,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How much do day tours cost for a 10-day Bali itinerary?",
-        "answer": "Direct 2026 prices for the five booked days in this plan: Ubud from $69, Mount Batur sunrise from $35 as a hike or from $60 by jeep, Nusa Penida from $75, east Bali from $69 and the Lovina day from $79. Airport transfers run from $15."
+        "answer": "Direct 2026 prices for the five booked days in this plan: Ubud from $65 per car, Mount Batur sunrise from $35 as a hike or from $60 by jeep, Nusa Penida from $75, east Bali from $69 and the Lovina day from $79. Airport transfers run from $15."
       },
       {
         "question": "Should I stay in one place or move hotels during 10 days in Bali?",
@@ -13744,7 +15372,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Combining rafting with an Ubud day",
         "paragraphs": [
-          "Rafting slots into an Ubud itinerary better than any other adventure on the island, because the Ayung gorge runs directly past Ubud's western edge. The clean combination is water in the morning and town in the afternoon: finish the run, change into dry clothes, and spend the rest of the day on Ubud's cafes, the Campuhan ridge and the Monkey Forest at your own pace. If you would rather cover the classics with a driver handling the route, the [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) — **from $69**, 10 hours — works better as a separate day than a same-day squeeze. Our [one-day Ubud plan](/bali/en/journal/ubud-in-one-day) shows how the pieces fit together.",
+          "Rafting slots into an Ubud itinerary better than any other adventure on the island, because the Ayung gorge runs directly past Ubud's western edge. The clean combination is water in the morning and town in the afternoon: finish the run, change into dry clothes, and spend the rest of the day on Ubud's cafes, the Campuhan ridge and the Monkey Forest at your own pace. If you would rather cover the classics with a driver handling the route, the [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) — **from $65 per car, 10 hours — works better as a separate day than a same-day squeeze. Our [one-day Ubud plan](/bali/en/journal/ubud-in-one-day) shows how the pieces fit together.",
           "For a double adventure day, pair the river with the [Ubud ATV quad bike ride](/bali/en/tours/atv-quad-bikes) — **from $20**, built around a 1.5-hour ride through jungle, rice field, river and tunnel track in the same part of the island. A 4-6 hour rafting slot leaves enough daylight for either combination; just ask for the morning pickup rather than midday when you book on WhatsApp."
         ]
       }
@@ -14084,7 +15712,7 @@ const JOURNAL_SEO_GUIDES = [
     ],
     "inlineStats": [
       "7 stops in order",
-      "Tours from $69",
+      "Tours from $65 per car",
       "10-11 hour day plan"
     ],
     "title": "Ubud in One Day: 7 Stops in Order, Times and Fees",
@@ -14170,7 +15798,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "The Instagram version of this day",
         "paragraphs": [
-          "If photos are the point of the day, there is a different route built for exactly that. The [Ubud Instagram tour](/bali/en/tours/ubud-instagram-tour) — **from $89**, **10 hours**, **07:00 hotel pickup** — is honest about what it is: a photo run through the east Bali icons that finishes at the Tegalalang rice terraces. It is not an Ubud sightseeing day. You trade the Monkey Forest and Tirta Empul for the east-coast icon shots, and you reach Tegalalang late in the day, when the light softens and the day-trip crowd has thinned.",
+          "If photos are the point of the day, there is a different route built for exactly that. The [Ubud Instagram tour](/bali/en/tours/ubud-instagram-tour) — **from $65 per car, **10 hours**, **07:00 hotel pickup** — is honest about what it is: a photo run through the east Bali icons that finishes at the Tegalalang rice terraces. It is not an Ubud sightseeing day. You trade the Monkey Forest and Tirta Empul for the east-coast icon shots, and you reach Tegalalang late in the day, when the light softens and the day-trip crowd has thinned.",
           "Pick the Instagram route if your camera roll matters more than the checklist, and the classic highlights day if you want Ubud itself. For a rundown of where the famous frames actually are — and which ones involve a queue — see our guide to the [best Instagram places in Bali](/bali/en/journal/best-instagram-places-bali)."
         ]
       },
@@ -14193,7 +15821,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How much does a one-day Ubud tour cost?",
-        "answer": "Direct 2026 prices: the private Ubud highlights day — Monkey Forest, rice terraces, temples and Kintamani — from $69 for 10 hours with an 08:00 hotel pickup. The photo-focused Ubud Instagram tour runs from $89, and a private car with driver from $59 per car if you want to build your own route."
+        "answer": "Direct 2026 prices: the private Ubud highlights day — Monkey Forest, rice terraces, temples and Kintamani — from $65 per car for 10 hours with an 08:00 hotel pickup. The photo-focused Ubud Instagram tour runs from $65 per car, and a private car with driver from $59 per car if you want to build your own route."
       },
       {
         "question": "Can you do Ubud without a tour or a driver?",
@@ -15203,7 +16831,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "How a driver day actually runs",
         "paragraphs": [
           "A typical full driver day runs **10-12 hours** door to door, and the route stays yours the whole way. Most guests send a rough list the evening before — three to five stops makes a comfortable day — and the driver sequences them around traffic and opening hours. Distances are the real constraint: the southern hotel areas sit about 45-90 minutes from Ubud depending on traffic, and the far east or the north coast runs roughly 2-3 hours each way, so one far region per day is the sensible ceiling.",
-          "The difference from a fixed tour is control. Our [Ubud highlights tour](/bali/en/tours/ubud-highlights-tour) from $69 runs a proven 10-hour route that already works; a driver day starts from a blank map. Take the fixed tour when you want the greatest hits handled for you, and the driver day when you have your own list — a specific warung, a beach club at sunset, or a slow morning that fixed departures do not allow. When the list you send is an Ubud list, the order matters as much as the stops, and [a seven-stop Ubud day sequenced from the ridge walk to the Kintamani rim](/bali/en/journal/ubud-in-one-day) is the version that fits inside those hours. It is also what makes the awkward stops possible: [Tukad Cepung](/bali/en/journal/tukad-cepung-waterfall-guide) wants an early arrival for the light beam, and no shared tour will give you that."
+          "The difference from a fixed tour is control. Our [Ubud highlights tour](/bali/en/tours/ubud-highlights-tour) from $65 per car runs a proven 10-hour route that already works; a driver day starts from a blank map. Take the fixed tour when you want the greatest hits handled for you, and the driver day when you have your own list — a specific warung, a beach club at sunset, or a slow morning that fixed departures do not allow. When the list you send is an Ubud list, the order matters as much as the stops, and [a seven-stop Ubud day sequenced from the ridge walk to the Kintamani rim](/bali/en/journal/ubud-in-one-day) is the version that fits inside those hours. It is also what makes the awkward stops possible: [Tukad Cepung](/bali/en/journal/tukad-cepung-waterfall-guide) wants an early arrival for the light beam, and no shared tour will give you that."
         ]
       },
       {
@@ -15419,7 +17047,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/places/tegalalang-rice-terraces.jpg",
         "area": "Ubud and central Bali",
         "bestFor": "First taste of green Bali",
-        "summary": "The [Ubud highlights tour](/bali/en/tours/ubud-highlights-tour) from $69 runs **10 hours** from an **08:00 hotel pickup** and covers rice terraces, temples and Kintamani volcano views in one private loop. It is the classic first full day because it shows the Bali that does not exist on the beach strip."
+        "summary": "The [Ubud highlights tour](/bali/en/tours/ubud-highlights-tour) from $65 per car runs **10 hours** from an **08:00 hotel pickup** and covers rice terraces, temples and Kintamani volcano views in one private loop. It is the classic first full day because it shows the Bali that does not exist on the beach strip."
       },
       {
         "name": "Day 3: Nusa Penida west coast",
@@ -15454,7 +17082,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/tours-real/tanah-lot-bedugul-tour.jpg",
         "area": "West and central Bali",
         "bestFor": "A temple finish before the flight",
-        "summary": "If your flight leaves in the evening or later, the [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) from $59 fills the last day — **9-11 hours** from a morning hotel pickup, ending with the lake temple and the Tanah Lot silhouette at golden hour. On an earlier flight, swap the tour for a slow morning and book the airport transfer from $15 the day before."
+        "summary": "If your flight leaves in the evening or later, the [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) from $65 per car fills the last day — **9-11 hours** from a morning hotel pickup, ending with the lake temple and the Tanah Lot silhouette at golden hour. On an earlier flight, swap the tour for a slow morning and book the airport transfer from $15 the day before."
       }
     ],
     "sections": [
@@ -15498,7 +17126,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How much does a 7-day Bali itinerary cost in tours?",
-        "answer": "Every bookable day starts between $15 and $115: the airport transfer from $15, Ubud from $69, Nusa Penida from $49 per car, Mount Batur from $35 (hike) or from $60 (jeep), the sea day from $50 or from $115, and Tanah Lot from $59. Totals depend on group size, since some prices are per car."
+        "answer": "Every bookable day starts between $15 and $115: the airport transfer from $15, Ubud from $65 per car, Nusa Penida from $49 per car, Mount Batur from $35 (hike) or from $60 (jeep), the sea day from $50 or from $115, and Tanah Lot from $59. Totals depend on group size, since some prices are per car."
       },
       {
         "question": "Where should I stay for a one-week Bali itinerary?",
@@ -15618,7 +17246,7 @@ const JOURNAL_SEO_GUIDES = [
         ],
         "bullets": [
           "**[Private car with driver](/bali/en/tours/private-car-with-driver-bali) — from $59 per car**: flexible daily use, hotel pickup on your schedule, priced per vehicle so a group of four splits one fare",
-          "**[Ubud rice terrace, temple and volcano day](/bali/en/tours/ubud-highlights-tour) — from $69**: a ready-made 10-hour route if you would rather not plan stops yourself",
+          "**[Ubud rice terrace, temple and volcano day](/bali/en/tours/ubud-highlights-tour) — from $65 per car: a ready-made 10-hour route if you would rather not plan stops yourself",
           "**Grab or Gojek**: keep them for what they are good at — short in-town hops, food runs, and the ride home from dinner"
         ],
         "paragraphsAfter": [
@@ -15953,7 +17581,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Make it a full east-coast day",
         "paragraphs": [
-          "Blue Lagoon on its own is a two-hour stop, so build around it. Swim first, then walk or ride over to Bias Tugel for beach time, and eat at a harbor warung before the drive back. If you are heading onward, Padang Bai is Bali's main jump-off for the islands — [fast boat transfers](/bali/en/tours/fast-boat-transfer-bali) run from $15, which is why plenty of people snorkel the lagoon the morning before a Gili crossing. Staying in Bali? Pair the cove with the east side's temples, palms and viewpoints on an [East Bali day trip](/bali/en/tours/east-bali-instagram-tour) from $69.",
+          "Blue Lagoon on its own is a two-hour stop, so build around it. Swim first, then walk or ride over to Bias Tugel for beach time, and eat at a harbor warung before the drive back. If you are heading onward, Padang Bai is Bali's main jump-off for the islands — [fast boat transfers](/bali/en/tours/fast-boat-transfer-bali) run from $15, which is why plenty of people snorkel the lagoon the morning before a Gili crossing. Staying in Bali? Pair the cove with the east side's temples, palms and viewpoints on an [East Bali day trip](/bali/en/tours/east-bali-instagram-tour) from $65 per car.",
           "If snorkeling is the main event of your Bali trip, keep perspective: Blue Lagoon is the convenient option, not the ceiling. The wall at Amed and the wreck at Tulamben are about an hour further up the coast, and the really clear water lives across the channel. Start with our island-wide list of [the best snorkeling spots in Bali](/bali/en/journal/best-snorkeling-spots-bali), then see [which beaches actually have crystal-clear water](/bali/en/journal/best-beaches-bali-crystal-clear-water) before you lock the itinerary. Bias Tugel is one of the few coves on this coast with genuinely pale sand, which is why it makes our list of [Bali's real white sand beaches](/bali/en/journal/best-white-sand-beaches-bali). Padang Bai is also the harbour the Gili boats leave from, which is why it is the only base where [a day trip to the Gili Islands from Bali](/bali/en/journal/gili-islands-day-trip-from-bali) leaves you real hours ashore rather than ninety minutes."
         ]
       }
@@ -17537,7 +19165,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Getting between these beaches without losing your day",
         "paragraphs": [
-          "The coastal shortcuts between Canggu and Seminyak are narrow, and traffic peaks exactly when you want to move — the two hours before sunset. Beach-hopping by scooter works if you ride confidently; if you don't, a [private car with a driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car for the day removes the parking problem entirely, and the driver waits while you walk each beach. If you'd rather fold the coast into a bigger day of photo stops, the [Bali Instagram highlights tour](/bali/en/tours/bali-instagram-highlights-tour) from $69 runs the same way: one car, one driver, and no timetable but yours."
+          "The coastal shortcuts between Canggu and Seminyak are narrow, and traffic peaks exactly when you want to move — the two hours before sunset. Beach-hopping by scooter works if you ride confidently; if you don't, a [private car with a driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car for the day removes the parking problem entirely, and the driver waits while you walk each beach. If you'd rather fold the coast into a bigger day of photo stops, the [Bali Instagram highlights tour](/bali/en/tours/bali-instagram-highlights-tour) from $65 per car runs the same way: one car, one driver, and no timetable but yours."
         ]
       }
     ],
@@ -17671,7 +19299,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Getting to Uluwatu's beaches without a headache",
         "paragraphs": [
-          "The Bukit's roads are steep, and several beach car parks sit down rough tracks that rattle inexperienced scooter riders. If you're hopping between three or four beaches — say Melasti, Padang Padang, and Bingin, with sunset at the temple — a [private car with a driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car makes the day simple: the driver handles the clifftop parking while you handle the stairs. To fold the Bukit's coves into a wider photo day across the island, the [Bali Instagram highlights tour](/bali/en/tours/bali-instagram-highlights-tour) from $69 covers the same ground with a route built around light and crowds."
+          "The Bukit's roads are steep, and several beach car parks sit down rough tracks that rattle inexperienced scooter riders. If you're hopping between three or four beaches — say Melasti, Padang Padang, and Bingin, with sunset at the temple — a [private car with a driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car makes the day simple: the driver handles the clifftop parking while you handle the stairs. To fold the Bukit's coves into a wider photo day across the island, the [Bali Instagram highlights tour](/bali/en/tours/bali-instagram-highlights-tour) from $65 per car covers the same ground with a route built around light and crowds."
         ]
       }
     ],
@@ -18749,7 +20377,7 @@ const JOURNAL_SEO_GUIDES = [
     description:
       "Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua and Sanur compared by atmosphere, drive times and who each one suits — so you choose by fit, not by photograph.",
     excerpt:
-      "For a first trip, base yourself in Seminyak, Sanur or Ubud: Seminyak sits 25-50 minutes from Ngurah Rai airport and has walkable restaurants and beach clubs, Sanur is 30-60 minutes away with the calmest swimming water in the south, and Ubud is 75-120 minutes inland for rice terraces and temples. Traffic decides the upper end of every one of those numbers. Our tours pick up from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua and Jimbaran, so any of those bases works for day trips: the Ubud Rice Terrace, Temple and Volcano Tour starts at 08:00, runs 10 hours and costs from $69 as of August 2026, and an airport transfer is from $15. Most first-timers split two areas over 7-10 days, and picking the right base matters more than squeezing in one more attraction.",
+      "For a first trip, base yourself in Seminyak, Sanur or Ubud: Seminyak sits 25-50 minutes from Ngurah Rai airport and has walkable restaurants and beach clubs, Sanur is 30-60 minutes away with the calmest swimming water in the south, and Ubud is 75-120 minutes inland for rice terraces and temples. Traffic decides the upper end of every one of those numbers. Our tours pick up from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua and Jimbaran, so any of those bases works for day trips: the Ubud Rice Terrace, Temple and Volcano Tour starts at 08:00, runs 10 hours and costs from $65 per car as of August 2026, and an airport transfer is from $15. Most first-timers split two areas over 7-10 days, and picking the right base matters more than squeezing in one more attraction.",
     rankings: [
       {
         name: "Canggu",
@@ -20412,9 +22040,9 @@ const JOURNAL_SEO_GUIDES = [
     heroTourSlug: "surf-lesson-experience",
     relatedTourSlugs: ["surf-lesson-experience", "sunset-cruise-bali", "private-car-with-driver-bali"],
     inlineStats: ["Surf and cafes", "Digital nomad hub", "Beach club sunsets"],
-    title: "Canggu, Bali: What It's Actually Like and What to Do There",
+    title: "Canggu, Bali: The Traffic Is the Deciding Factor",
     description:
-      "An honest guide to Canggu — surf beaches, cafe culture, beach clubs and coworking — plus the traffic reality, who it suits, and who would be happier somewhere else.",
+      "Surf beaches, cafes and beach clubs, and the one thing that decides whether Canggu suits you at all. What the area is really like, and where it thins out.",
     excerpt:
       "Canggu is Bali's young, caffeinated, scooter-heavy coastal strip: black-sand surf beaches, cafes built for laptops, and sunset beach clubs. It suits some travelers perfectly and frustrates others completely. The deciding factor is usually whether you like the traffic and the crowd.",
     rankings: [
@@ -20620,9 +22248,9 @@ const JOURNAL_SEO_GUIDES = [
     heroTourSlug: "sunset-cruise-bali",
     relatedTourSlugs: ["sunset-cruise-bali", "bali-airport-transfer", "tanah-lot-bedugul-tour"],
     inlineStats: ["Restaurants and spas", "Easy airport access", "Sunset beach bars"],
-    title: "Seminyak, Bali: The Comfortable Base for a First Trip",
+    title: "Seminyak, Bali: 25-40 Min From the Airport, Walkable",
     description:
-      "Why Seminyak works as a first-trip base — restaurants, spas, shopping and sunset beach bars — plus how it compares with Canggu, Kuta and Uluwatu.",
+      "The polished middle of south Bali: better restaurants than Kuta, calmer than Canggu, and 25-40 minutes from the airport. Who it suits, who should skip it.",
     excerpt:
       "Seminyak is the polished middle ground of south Bali: better restaurants than Kuta, calmer than Canggu, closer to the airport than anywhere else worth staying. It is not the most exciting part of the island, and for a first trip that is usually the point.",
     rankings: [
@@ -21557,7 +23185,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "When you can walk on Batur without a guide",
         "paragraphs": [
           "The pressure concentrates on the sunrise window. In daylight, the lake shore below the crater, the old lava fields at the base and the lanes between the villages are ordinary places to walk, and nobody is stopping anyone. What you cannot do unaccompanied is the thing you came for: the summit at first light. That trade is worth naming out loud, because a midday walk on the lower slopes in full sun is a completely different experience from a cold, dark climb that finishes above the cloud layer.",
-          "There is also the option of looking at Batur rather than climbing it, which suits more travelers than admit it. The Kintamani rim road sits across the caldera with the volcano and the lake in one frame, and it costs nothing beyond the drive. Our [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) — **from $69**, **10 hours**, **08:00 hotel pickup** — takes that view in at a civilised hour, and a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from **$59 per car** lets you build your own Kintamani stop. Neither needs an alarm at 01:30."
+          "There is also the option of looking at Batur rather than climbing it, which suits more travelers than admit it. The Kintamani rim road sits across the caldera with the volcano and the lake in one frame, and it costs nothing beyond the drive. Our [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) — **from $65 per car, **10 hours**, **08:00 hotel pickup** — takes that view in at a civilised hour, and a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from **$59 per car** lets you build your own Kintamani stop. Neither needs an alarm at 01:30."
         ]
       },
       {
@@ -21725,7 +23353,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Where the levy fits into a normal arrival day",
         "paragraphs": [
           "Realistically this is a five-minute task that people spend three days worrying about. The sequence that works: pay the levy and file the arrival card at home, screenshot both, land, clear immigration, collect bags, walk out and get into a car that is already waiting. Nothing about the levy has to happen at the airport unless you decide it does.",
-          "Our [Bali airport transfer](/bali/en/tours/bali-airport-transfer) starts from $15 with a driver holding a name board in arrivals — the practical details, including what happens when a flight lands late, are in the [airport transfer guide](/bali/en/journal/bali-airport-transfer-guide). For the days after, a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car keeps the route open, or take a set day like the [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) from $69, ten hours with an 08:00 hotel pickup. If your trip crosses water, [fast boat transfers](/bali/en/tours/fast-boat-transfer-bali) start from $15.",
+          "Our [Bali airport transfer](/bali/en/tours/bali-airport-transfer) starts from $15 with a driver holding a name board in arrivals — the practical details, including what happens when a flight lands late, are in the [airport transfer guide](/bali/en/journal/bali-airport-transfer-guide). For the days after, a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car keeps the route open, or take a set day like the [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) from $65 per car, ten hours with an 08:00 hotel pickup. If your trip crosses water, [fast boat transfers](/bali/en/tours/fast-boat-transfer-bali) start from $15.",
           "We book over WhatsApp with no prepayment, and none of our prices include the levy — that one is strictly between you and the provincial government. Fold the Rp 150,000 per head into the arrival-day budget alongside the visa and the first taxi, and it stops being a surprise. The [full trip cost breakdown](/bali/en/journal/how-much-does-a-bali-trip-cost) puts it in proportion against everything else you will spend in a week."
         ]
       }
@@ -21953,7 +23581,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Is Mount Batur worth visiting if you skip the sunrise entirely?",
         "paragraphs": [
-          "**Yes — from the rim, at a normal hour.** The Kintamani rim road looks straight down into the caldera at the volcano and the lake, and you can stand there mid-morning with a coffee and no alarm clock behind you. It is a different thing: a wide view of the mountain rather than a view from it. Our [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) — **from $69**, **10 hours**, with an **08:00 hotel pickup** — includes Kintamani alongside the rice terraces and temples of central Bali.",
+          "**Yes — from the rim, at a normal hour.** The Kintamani rim road looks straight down into the caldera at the volcano and the lake, and you can stand there mid-morning with a coffee and no alarm clock behind you. It is a different thing: a wide view of the mountain rather than a view from it. Our [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) — **from $65 per car, **10 hours**, with an **08:00 hotel pickup** — includes Kintamani alongside the rice terraces and temples of central Bali.",
           "This is the option most people never consider, and for families, older travelers and anyone on a short trip it is usually the better answer. You see the volcano, you keep the rest of the day, and you sleep. If you want the same drive entirely on your own timing, a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from **$59 per car** does it on your schedule. For how Batur compares with Bali's bigger climb, see [Mount Batur vs Mount Agung](/bali/en/journal/mount-batur-vs-mount-agung)."
         ]
       },
@@ -21980,7 +23608,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "Is Mount Batur worth visiting?",
-        "answer": "Yes, and you do not have to climb it to see it. The Kintamani rim road looks straight into the caldera at the volcano and the lake, and it works at a normal hour with no alarm clock. Our Ubud rice terrace, temple and volcano tour includes that stop, from $69 over 10 hours with an 08:00 hotel pickup. Climbing it is a separate decision."
+        "answer": "Yes, and you do not have to climb it to see it. The Kintamani rim road looks straight into the caldera at the volcano and the lake, and it works at a normal hour with no alarm clock. Our Ubud rice terrace, temple and volcano tour includes that stop, from $65 per car over 10 hours with an 08:00 hotel pickup. Climbing it is a separate decision."
       },
       {
         "question": "How hard is the Mount Batur sunrise hike?",
@@ -22259,14 +23887,14 @@ const JOURNAL_SEO_GUIDES = [
           "Besakih is the one people query most, and it no longer behaves like the others. Since the site was rebuilt around a large arrival and parking complex, you buy the **Besakih temple entrance fee** at the bottom and then either walk uphill to the temple gates or pay for a shuttle buggy — the buggy is separate, and so is parking. You will also be approached about hiring a local guide, usually described as compulsory. Paying a guide at Besakih is normal and the explanations are genuinely useful, but it is a negotiated fee rather than part of your ticket, so agree the number before anyone starts walking."
         ],
         "paragraphsAfter": [
-          "On a temple day the tickets are not where your money goes — the driving is. Besakih is roughly a two-hour drive from the south coast, and combining it with anything else fills a full day. Our [Bali UNESCO heritage tour](/bali/en/tours/bali-unesco) runs **10 hours from $69** with a morning pickup from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua or Jimbaran. If you would rather choose one temple properly than tick off four, we compared them in [the best temples and cultural sites in Bali](/bali/en/journal/best-temples-bali-cultural-sites)."
+          "On a temple day the tickets are not where your money goes — the driving is. Besakih is roughly a two-hour drive from the south coast, and combining it with anything else fills a full day. Our [Bali UNESCO heritage tour](/bali/en/tours/bali-unesco) runs **10 hours from $65 per car with a morning pickup from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua or Jimbaran. If you would rather choose one temple properly than tick off four, we compared them in [the best temples and cultural sites in Bali](/bali/en/journal/best-temples-bali-cultural-sites)."
         ]
       },
       {
         "heading": "Tegalalang entrance fee and the donation boxes inside the valley",
         "paragraphs": [
           "The **Tegalalang entrance fee** is one of the smallest tickets in this guide and the one most likely to end up costing you the most. A small payment at the gate gets you into the valley, and parking is charged on top. After that, the terraces are working farmland split between different families, several of whom have set up their own collection points — a plank bridge here, a path up the far slope there — each asking for a further small amount as you pass. It is not a scam. It is how the families whose rice you are photographing are paid for the foot traffic.",
-          "The swings are a separate business again. Each platform is privately run with its own price list, and this is the one item on a Tegalalang morning that costs several times the entrance ticket. If you only want the terrace photograph, you do not need one. Two more practical notes: the valley is steep and the steps turn to slick mud after rain, and the light and the crowds are both best before about **09:00**, ahead of the buses from the south. Our [Ubud Rice Terrace, Temple and Volcano tour](/bali/en/tours/ubud-highlights-tour) from **$69** starts with an 08:00 hotel pickup for exactly that reason, and [Ubud in one day](/bali/en/journal/ubud-in-one-day) shows how the rest of the day fits around it."
+          "The swings are a separate business again. Each platform is privately run with its own price list, and this is the one item on a Tegalalang morning that costs several times the entrance ticket. If you only want the terrace photograph, you do not need one. Two more practical notes: the valley is steep and the steps turn to slick mud after rain, and the light and the crowds are both best before about **09:00**, ahead of the buses from the south. Our [Ubud Rice Terrace, Temple and Volcano tour](/bali/en/tours/ubud-highlights-tour) from **$65** per car starts with an 08:00 hotel pickup for exactly that reason, and [Ubud in one day](/bali/en/journal/ubud-in-one-day) shows how the rest of the day fits around it."
         ]
       },
       {
@@ -22485,7 +24113,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "If it is a sunset you want, take it to the coast",
         "paragraphs": [
           "The honest reframe for most people asking this question: you do not want a Batur sunset, you want a good sunset. Bali's evenings belong to the **west coast**, where the sun drops into open sea between roughly **18:00 and 18:45** year-round and you get about 30 usable minutes of light. The Uluwatu cliffs, Tanah Lot and the beaches at Seminyak and Canggu all deliver that with no headlamp involved. Our [best sunset spots in Bali](/bali/en/journal/best-sunset-spots-bali) sorts them by where you are sleeping, and [Tanah Lot vs Uluwatu](/bali/en/journal/tanah-lot-vs-uluwatu-sunset) settles the two icons.",
-          "On the water, the [Bali sunset cruise](/bali/en/tours/sunset-cruise-bali) from Benoa runs **2-4 hours from $150** with late-afternoon transfer support, and it is the one option nobody else is standing in. If the real objection is the 2 a.m. alarm rather than the sunset, you can still see the Batur caldera in daylight: the [Ubud Rice Terrace, Temple & Volcano Tour](/bali/en/tours/ubud-highlights-tour) leaves at **08:00**, runs **10 hours** and includes the Kintamani crater view, **from $69**. That is a viewpoint stop rather than the sunrise, and we would rather say so than pretend otherwise."
+          "On the water, the [Bali sunset cruise](/bali/en/tours/sunset-cruise-bali) from Benoa runs **2-4 hours from $150** with late-afternoon transfer support, and it is the one option nobody else is standing in. If the real objection is the 2 a.m. alarm rather than the sunset, you can still see the Batur caldera in daylight: the [Ubud Rice Terrace, Temple & Volcano Tour](/bali/en/tours/ubud-highlights-tour) leaves at **08:00**, runs **10 hours** and includes the Kintamani crater view, **from $65 per car. That is a viewpoint stop rather than the sunrise, and we would rather say so than pretend otherwise."
         ]
       },
       {
@@ -23093,7 +24721,7 @@ const JOURNAL_SEO_GUIDES = [
           "**Late nights outside the main strips**, when supply thins out and surge does the rest."
         ],
         "paragraphsAfter": [
-          "A classic Ubud day makes the point. Rice terrace, temple, volcano viewpoint, waterfall on the way back is four stops with real waiting at each, spread over a route where app coverage gets thin fast. That is why our [Ubud Rice Terrace, Temple & Volcano tour](/bali/en/tours/ubud-highlights-tour) runs as one car for **10 hours** with an **08:00 hotel pickup** from covered areas, from $69. If you would rather build the route yourself, [one day in Ubud](/bali/en/journal/ubud-in-one-day) lays out what fits."
+          "A classic Ubud day makes the point. Rice terrace, temple, volcano viewpoint, waterfall on the way back is four stops with real waiting at each, spread over a route where app coverage gets thin fast. That is why our [Ubud Rice Terrace, Temple & Volcano tour](/bali/en/tours/ubud-highlights-tour) runs as one car for **10 hours** with an **08:00 hotel pickup** from covered areas, from $65 per car. If you would rather build the route yourself, [one day in Ubud](/bali/en/journal/ubud-in-one-day) lays out what fits."
         ]
       },
       {
@@ -23107,7 +24735,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "What a driver day actually looks like",
         "paragraphs": [
           "The difference is not comfort, it is friction. The car is where you left it. Your bags stay in it, the air conditioning is running when you come back up the steps, and nobody has to stand at a junction with one bar of signal trying to make a booking stick. On a four-stop day that is easily an hour you get back, plus the stops you would otherwise cut because getting to them looked like too much hassle.",
-          "There are three ways to buy that. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) from **$59 per car** if you want to invent your own route as you go. A fixed itinerary such as the [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour), from $59 over **9-11 hours** with a morning pickup, if you would rather someone else did the planning. Or the [Ubud highlights tour](/bali/en/tours/ubud-highlights-tour) from $69 for the standard first-timer route. What each of those should cost against everything else on the island is in [Bali tour prices, real costs](/bali/en/journal/bali-tour-prices-2026-real-costs)."
+          "There are three ways to buy that. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) from **$65** per car if you want to invent your own route as you go. A fixed itinerary such as the [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour), from $65 per car over **9-11 hours** with a morning pickup, if you would rather someone else did the planning. Or the [Ubud highlights tour](/bali/en/tours/ubud-highlights-tour) from $65 per car for the standard first-timer route. What each of those should cost against everything else on the island is in [Bali tour prices, real costs](/bali/en/journal/bali-tour-prices-2026-real-costs)."
         ]
       },
       {
@@ -23351,7 +24979,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/places/tegalalang-rice-terraces.jpg",
         "area": "Ubud, Kintamani, central Bali",
         "bestFor": "A full day rain does not cancel",
-        "summary": "Rice terraces, temples and the Batur caldera view, on an 08:00 hotel pickup and roughly 10 hours on the road. Nothing on the route needs clear skies, and the terraces are greener now than at any point in the dry season. From $69 on the [Ubud highlights tour](/bali/en/tours/ubud-highlights-tour)."
+        "summary": "Rice terraces, temples and the Batur caldera view, on an 08:00 hotel pickup and roughly 10 hours on the road. Nothing on the route needs clear skies, and the terraces are greener now than at any point in the dry season. From $65 per car on the [Ubud highlights tour](/bali/en/tours/ubud-highlights-tour)."
       },
       {
         "name": "ATV through the mud",
@@ -23372,7 +25000,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/places/tirta-empul-holy-spring.jpg",
         "area": "Central and west Bali",
         "bestFor": "Culture days that ignore the forecast",
-        "summary": "Temples are the most weather-proof thing on the island, and at Tirta Empul you queue up to stand under cold water anyway. Overcast light also flattens the harsh midday contrast that ruins temple photos in the dry season. The [UNESCO heritage route](/bali/en/tours/bali-unesco) runs the same 10 hours in March as in July, from $69."
+        "summary": "Temples are the most weather-proof thing on the island, and at Tirta Empul you queue up to stand under cold water anyway. Overcast light also flattens the harsh midday contrast that ruins temple photos in the dry season. The [UNESCO heritage route](/bali/en/tours/bali-unesco) runs the same 10 hours in March as in July, from $65 per car."
       },
       {
         "name": "A private car and no fixed route",
@@ -23431,7 +25059,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Front-load the day, and the rain stops mattering",
         "paragraphs": [
-          "The single most useful habit in the wet season is to start early. Our [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) has an **08:00 hotel pickup** and runs about **10 hours**, from $69. By the time the afternoon cloud builds you are already three or four stops in, and the last part of the route is the drive home anyway. The same logic applies to the [UNESCO heritage route](/bali/en/tours/bali-unesco) from $69 and to the [Tanah Lot and Bedugul day](/bali/en/tours/tanah-lot-bedugul-tour) from $59 over 9-11 hours, though that one ends at the coast, which is where a wet-season sunset is least reliable.",
+          "The single most useful habit in the wet season is to start early. Our [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) has an **08:00 hotel pickup** and runs about **10 hours**, from $65 per car. By the time the afternoon cloud builds you are already three or four stops in, and the last part of the route is the drive home anyway. The same logic applies to the [UNESCO heritage route](/bali/en/tours/bali-unesco) from $65 per car and to the [Tanah Lot and Bedugul day](/bali/en/tours/tanah-lot-bedugul-tour) from $65 per car over 9-11 hours, though that one ends at the coast, which is where a wet-season sunset is least reliable.",
           "Sunrise trips sit outside the rain window entirely, which is the good news, and inside the cloud window, which is the bad. A [Mount Batur sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) from $60 leaves in the dark and is finished before the rain starts, but whether you see the sun depends on what is sitting in the caldera at 06:00. Some mornings it is clear above the cloud layer and better than anything in August; some mornings it is grey. If you want the odds and the differences between the versions, [jeep vs hike](/bali/en/journal/mount-batur-sunrise-jeep-vs-hike) lays them out."
         ]
       },
@@ -23948,7 +25576,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "The entrance fee and what you pay on the day",
         "paragraphs": [
           "There is an **entrance fee, paid in cash rupiah at the gate**, plus a small parking charge. We deliberately do not print a figure here. Site fees around Bali get adjusted without notice, and a stale number in a guide is worse than no number, because you budget for it and then end up arguing at a counter over the difference. Bring cash, expect the parking charge on top, and treat both as pocket money rather than a line in the trip budget.",
-          "Waterfall and temple entrance fees are not included in tour prices — ours or anyone else's. They are collected per person at each gate and vary from site to site. What you pay us covers the car, the driver and the fuel for the whole day; what you pay at the gate covers the site. Our [breakdown of real Bali tour prices](/bali/en/journal/bali-tour-prices-2026-real-costs) goes through which cost sits where, so nothing at the counter comes as a surprise."
+          "On our tours the entrance is covered — the price you agree on WhatsApp is the price of the day, and nobody asks you for cash at the gate. Going independently is a different arrangement: fees are collected per person at each site, in rupiah, and they vary from gate to gate. Bring small notes if you are driving yourself."
         ]
       },
       {
@@ -23962,10 +25590,10 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Building it into a day that works",
         "paragraphs": [
           "The timing is what makes this stop awkward to plan. Most Bali photo days start before dawn — Lempuyang, Batur, rice terraces in soft light — while the beams here need the sun directly overhead. So Tukad Cepung has to be the **midday slot** in a day that started somewhere else, which only works on a private route where you set the order. A group bus arrives when it arrives, and if that is 09:00 you get the canyon without the light. For what else is competing for the same hours, see [the best Instagram places in Bali](/bali/en/journal/best-instagram-places-bali).",
-          "Three ways we handle it. The [East Bali Instagram tour](/bali/en/tours/east-bali-instagram-tour) runs **8-10 hours from $69** with a morning hotel pickup through the east-side photo stops, and because it is private the stop list is agreed with you on WhatsApp beforehand — ask for Tukad Cepung and it goes in the midday slot. The [Bali Instagram Highlights tour](/bali/en/tours/bali-instagram-highlights-tour), also **from $69** over 8-10 hours, is the flexible-route version of the same idea. Or take a [private car with driver](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** and set the whole day yourself. Nothing is prepaid, so if the forecast turns you are not out of pocket in advance."
+          "Three ways we handle it. The [East Bali Instagram tour](/bali/en/tours/east-bali-instagram-tour) runs **8-10 hours from $65 per car with a morning hotel pickup through the east-side photo stops, and because it is private the stop list is agreed with you on WhatsApp beforehand — ask for Tukad Cepung and it goes in the midday slot. The [Bali Instagram Highlights tour](/bali/en/tours/bali-instagram-highlights-tour), also **from $65 per car over 8-10 hours, is the flexible-route version of the same idea. Or take a [private car with driver](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** and set the whole day yourself. Nothing is prepaid, so if the forecast turns you are not out of pocket in advance."
         ],
         "paragraphsAfter": [
-          "Staying in Ubud makes all of this easier: roughly an hour out and an hour back means a bad forecast costs you a morning rather than a whole day. The [Ubud Instagram tour](/bali/en/tours/ubud-instagram-tour) from **$89** runs 10 hours with a **7:00 am pickup** and finishes at the Tegalalang rice terraces, which is the right shape for a day with a midday canyon stop in the middle of it, if you ask for one. For everything else within reach of the same base, [things to do in Ubud](/bali/en/journal/things-to-do-ubud-bali-complete-guide) has the rest."
+          "Staying in Ubud makes all of this easier: roughly an hour out and an hour back means a bad forecast costs you a morning rather than a whole day. The [Ubud Instagram tour](/bali/en/tours/ubud-instagram-tour) from **$65** per car runs 10 hours with a **7:00 am pickup** and finishes at the Tegalalang rice terraces, which is the right shape for a day with a midday canyon stop in the middle of it, if you ask for one. For everything else within reach of the same base, [things to do in Ubud](/bali/en/journal/things-to-do-ubud-bali-complete-guide) has the rest."
         ]
       }
     ],
@@ -23980,7 +25608,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How much is the Tukad Cepung entrance fee?",
-        "answer": "There is an entrance fee collected in cash rupiah at the gate, plus a small parking charge. We do not print a figure, because site fees in Bali get adjusted without notice and a stale number is worse than none. Bring cash — cards are not taken. Entrance fees are not included in tour prices; what you pay us covers the car, driver and fuel."
+        "answer": "If you come with us the entrance and parking are already in the price — you agree a number on WhatsApp and that is what the day costs. If you drive yourself, the fee is collected in cash rupiah at the gate along with a small parking charge. We do not print a figure for the independent case, because site fees in Bali get adjusted without notice and a stale number is worse than none."
       },
       {
         "question": "How do you get to Tukad Cepung waterfall?",
@@ -24010,7 +25638,7 @@ const JOURNAL_SEO_GUIDES = [
     "inlineStats": [
       "40 min from Ubud",
       "2 sarongs, not 1",
-      "UNESCO tour from $69"
+      "UNESCO tour from $65 per car"
     ],
     "title": "Tirta Empul: How the Purification Ritual Actually Works",
     "description": "How the melukat ritual at Tirta Empul works, spout by spout: what to wear, which fountains everyone skips, and why the first hour after opening matters.",
@@ -24077,8 +25705,8 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Getting there, and how to fit it into a day",
         "paragraphs": [
           "Tirta Empul sits in Tampaksiring, in the Pakerisan river valley north-east of Ubud. From central Ubud it is **roughly 30-40 minutes** by car. From Sanur, allow around an hour and a quarter; from Seminyak, Canggu or Uluwatu, plan on **90 minutes to two hours each way** depending on traffic, which is why almost nobody in the south comes here as a standalone trip. The valley is also one of the areas covered by Bali's UNESCO subak listing, so the temple usually gets visited as part of a wider cultural route rather than on its own.",
-          "There are two sensible ways to fit it into a day, and both are the same day you were already spending in a car. Our [Bali UNESCO Heritage Sites tour](/bali/en/tours/bali-unesco) runs the cultural route over 10 hours from $69, with a morning hotel pickup from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua or Jimbaran. The [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) covers Kintamani and central Bali over 10 hours from $69 with an 08:00 pickup. Both are private, so the stop list gets agreed on WhatsApp before the day — say you want Tirta Empul early and the route is built around it.",
-          "If you would rather set your own pace entirely, a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car lets you leave your hotel at whatever hour gets you to the gate at opening, which is the single biggest thing you can do to improve this stop. Photo-led days work too: the [East Bali Instagram tour](/bali/en/tours/east-bali-instagram-tour) runs 8-10 hours from $69 through Lempuyang and the east. For how these prices compare across operators, we broke it down in [real Bali tour prices](/bali/en/journal/bali-tour-prices-2026-real-costs)."
+          "There are two sensible ways to fit it into a day, and both are the same day you were already spending in a car. Our [Bali UNESCO Heritage Sites tour](/bali/en/tours/bali-unesco) runs the cultural route over 10 hours from $65 per car, with a morning hotel pickup from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua or Jimbaran. The [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) covers Kintamani and central Bali over 10 hours from $65 per car with an 08:00 pickup. Both are private, so the stop list gets agreed on WhatsApp before the day — say you want Tirta Empul early and the route is built around it.",
+          "If you would rather set your own pace entirely, a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car lets you leave your hotel at whatever hour gets you to the gate at opening, which is the single biggest thing you can do to improve this stop. Photo-led days work too: the [East Bali Instagram tour](/bali/en/tours/east-bali-instagram-tour) runs 8-10 hours from $65 per car through Lempuyang and the east. For how these prices compare across operators, we broke it down in [real Bali tour prices](/bali/en/journal/bali-tour-prices-2026-real-costs)."
         ]
       },
       {
@@ -24293,7 +25921,7 @@ const JOURNAL_SEO_GUIDES = [
     "inlineStats": [
       "Tegalalang 25 min from Ubud",
       "Jatiluwih 1.5-2 hrs from Ubud",
-      "UNESCO day tour from $69"
+      "UNESCO day tour from $65 per car"
     ],
     "title": "Jatiluwih vs Tegalalang: Which Rice Terraces to Visit",
     "description": "Jatiluwih or Tegalalang? One is 25 minutes from Ubud with swings and cafes, the other a UNESCO valley 2 hours out with real trails. How to choose.",
@@ -24367,7 +25995,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "When to go, and what the rice is actually doing",
         "paragraphs": [
-          "The green in every photo you have seen is rice a few weeks to a couple of months into its cycle. After harvest the same terrace is stubble, mud and standing water — still interesting, not what you came for. Nobody publishes a planting calendar, and the fields are staggered plot by plot. Jatiluwih's size protects you here: somewhere on that hillside is always green. Tegalalang is one small valley, so a single harvest can flatten the whole frame at once.",
+          "The green in every photo you have seen is rice a few weeks to a couple of months into its cycle. After harvest the same terrace is stubble, mud and standing water — still interesting, not what you came for. Jatiluwih is the exception: its subak does publish a calendar. Red rice goes in around January on a **5.5-month** cycle, and a short white Balinese variety around August on a **3.5-month** one. Pekaseh I Wayan Mustra puts it plainly — in August farmers may choose their variety, in January the Balinese rice is compulsory. Because a subak schedules its members together rather than plot by plot, the whole panorama switches at once instead of staggering, so size does not protect you there the way people assume. Tegalalang publishes nothing: it is one small valley in the hands of fewer than ten owners, and a single harvest can flatten the frame.",
           "Season matters less than the hour. Both read best **before 10:00** — cooler, quieter, and at Jatiluwih ahead of the cloud. In the wet season, roughly **November to March**, afternoons bring real downpours: Jatiluwih's trails turn to clay and Tegalalang's steps get genuinely slick, so an early start is a plan rather than a preference. Our [month-by-month guide to Bali](/bali/en/journal/best-time-to-visit-bali-month-by-month) covers what each month does to the light and the roads."
         ],
         "bullets": [
@@ -24381,8 +26009,8 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "How to fit either one into a real day",
         "paragraphs": [
-          "If Jatiluwih is the one you want, it belongs to a west and central Bali day rather than an Ubud morning. Our [Bali UNESCO Heritage Sites tour](/bali/en/tours/bali-unesco) runs that route from **$69** over **10 hours**, with a morning hotel pickup from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua or Jimbaran. The [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour), from **$59** over 9-11 hours, covers the same western half of the island if you would rather finish the day at the coast.",
-          "For Tegalalang, the terrace is a stop rather than a day. The [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) picks up at **08:00** and runs **10 hours** through Ubud and Kintamani from **$69**. If the photo list is the actual goal, the [Ubud Instagram tour](/bali/en/tours/ubud-instagram-tour) is built around east Bali icons and finishes at the Tegalalang terraces, from **$89** with a 07:00 pickup — and [the best Instagram places in Bali](/bali/en/journal/best-instagram-places-bali) shows what else tends to land on that list.",
+          "If Jatiluwih is the one you want, it belongs to a west and central Bali day rather than an Ubud morning. Our [Bali UNESCO Heritage Sites tour](/bali/en/tours/bali-unesco) runs that route from **$65** per car over **10 hours**, with a morning hotel pickup from Ubud, Sanur, Seminyak, Canggu, Legian, Kuta, Nusa Dua or Jimbaran. The [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour), from **$65** per car over 9-11 hours, covers the same western half of the island if you would rather finish the day at the coast.",
+          "For Tegalalang, the terrace is a stop rather than a day. The [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) picks up at **08:00** and runs **10 hours** through Ubud and Kintamani from **$65** per car. If the photo list is the actual goal, the [Ubud Instagram tour](/bali/en/tours/ubud-instagram-tour) is built around east Bali icons and finishes at the Tegalalang terraces, from **$65** per car with a 07:00 pickup — and [the best Instagram places in Bali](/bali/en/journal/best-instagram-places-bali) shows what else tends to land on that list.",
           "If you would rather set your own hours, a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from **$59 per car** lets you leave at 06:30 and decide at lunchtime whether to push on or turn back — worth reading next to [what a private driver in Bali actually costs](/bali/en/journal/bali-private-driver-cost). Everything is booked over WhatsApp with no prepayment, so if the forecast turns overnight you can move the day instead of losing it."
         ]
       }
@@ -24430,8 +26058,8 @@ const JOURNAL_SEO_GUIDES = [
       "Boat seats from $15",
       "Penida days from $29"
     ],
-    "title": "Sanur to Nusa Penida Fast Boat: 30-40 Min, Seats From $15",
-    "description": "The Sanur to Nusa Penida fast boat takes 30-40 minutes. First boats leave early, last returns run in the afternoon, and seats start at $15 one way.",
+    "title": "Sanur to Nusa Penida Fast Boat: Last Return Is 17:00",
+    "description": "The crossing is 30-40 minutes. The part that catches people out is the way back: the last scheduled boat is 17:00, and the real exodus leaves at 16:30.",
     "excerpt": "The Sanur to Nusa Penida fast boat crosses the Badung Strait in roughly 30-40 minutes, and Sanur is the main port for it — nearly every Penida-bound boat leaves from there. Departures start early in the morning and the last boats back run in the afternoon, which is what shapes the whole day: you take one of the first crossings out and you plan the return before lunch, not after it. A seat on its own starts from $15, and an organized Penida day that already includes the boat starts from $29. When the swell builds the boats are cancelled outright, and that is the one part of the plan nobody controls.",
     "rankings": [
       {
@@ -24506,6 +26134,15 @@ const JOURNAL_SEO_GUIDES = [
         ],
         "paragraphsAfter": [
           "The other end of the day matters just as much. **The last boats back to Sanur leave in the afternoon**, not at sunset, so a Penida day ends earlier than most people expect — you are usually back on the water while the light is still good. That is a real limitation and worth knowing before you book: if you were picturing sunset at Kelingking, you need a night on the island rather than a day trip. [Nusa Penida without a tour](/bali/en/journal/nusa-penida-without-a-tour) covers how staying over changes the maths."
+        ]
+      },
+      {
+        "heading": "The last boat back, and why 16:30 is the real deadline",
+        "paragraphs": [
+          "The way out is the easy half. The way back runs on a deadline the island does not advertise, and it is the single thing that turns a good day on Nusa Penida into a scramble. **The last scheduled fast boat from Nusa Penida to Sanur is 17:00**, with one operator listing 17:15 and nothing after it.",
+          "The more useful number is earlier. **The real exodus is 16:30** — that is when the bulk of the day-trip traffic sails, when the queue at the harbour is at its longest, and when a seat is easiest to lose. Turning up at 16:50 for a 17:00 departure is not a plan; it is a bet on nobody else having the same idea.",
+          "Two practical consequences. First, sunset on Penida is not available to day visitors: the sun goes down after the last boat has gone, so if the sunset matters, you either stay the night on the island or you accept that you will watch it from Bali. Second, the island roads decide whether you make the harbour at all — Kelingking to Banjar Nyuh is a real drive on steep concrete, not the ten minutes a map suggests.",
+          "If you are on a private day with a driver, this is handled for you: the return boat is part of the plan and the driver times the last stop around it. Our [Nusa Penida day trips](/bali/en/journal/nusa-penida-tours-compared) are all built backwards from the boat rather than forwards from the pickup."
         ]
       },
       {
@@ -24634,7 +26271,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/tours-real/ubud-highlights-tour.jpg",
         "area": "Central Bali and Kintamani",
         "bestFor": "Short trips where the first full day has to count",
-        "summary": "The classic Ubud day trip is not an arrival-day option, and we would rather say so. Our [Ubud Rice Terrace, Temple & Volcano tour](/bali/en/tours/ubud-highlights-tour) runs 10 hours from $69 with an 08:00 hotel pickup — it starts from your hotel, not the terminal, and it is a long day. Book it for the morning after you land, once the drive north is behind you."
+        "summary": "The classic Ubud day trip is not an arrival-day option, and we would rather say so. Our [Ubud Rice Terrace, Temple & Volcano tour](/bali/en/tours/ubud-highlights-tour) runs 10 hours from $65 per car with an 08:00 hotel pickup — it starts from your hotel, not the terminal, and it is a long day. Book it for the morning after you land, once the drive north is behind you."
       }
     ],
     "sections": [
@@ -24677,7 +26314,7 @@ const JOURNAL_SEO_GUIDES = [
         "paragraphs": [
           "Ubud check-in is commonly 14:00, so a 09:00 landing leaves you several hours and a room you cannot enter. You can sit in a café with your suitcases, or you can pay for the car by the day instead of by the trip. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) from **$59 per car** covers the airport run and whatever you attach to it — the silver workshops at Celuk and the Sukawati market are on the route north rather than a detour from it, and a warung lunch on the way beats anything you ate on the plane.",
           "This is a bad idea after a red-eye, and we would rather lose the upsell than pretend otherwise. If you flew overnight from Europe or the Gulf and landed at 06:00, the correct plan is the fastest drive available, a shower and a sleep. The terraces look better on day two, and jet lag makes the first afternoon expensive in a way money does not fix. What to do with your first proper day is laid out in [Ubud in one day](/bali/en/journal/ubud-in-one-day) and the longer [things to do in Ubud guide](/bali/en/journal/things-to-do-ubud-bali-complete-guide).",
-          "Our own [Ubud Rice Terrace, Temple & Volcano tour](/bali/en/tours/ubud-highlights-tour) runs **10 hours from $69** with an **08:00 hotel pickup**, and we do not sell it as an arrival-day option. It begins at your hotel, not the terminal, and it is a full day out. It belongs on your first morning in Ubud, when the drive north is already done."
+          "Our own [Ubud Rice Terrace, Temple & Volcano tour](/bali/en/tours/ubud-highlights-tour) runs **10 hours from $65 per car with an **08:00 hotel pickup**, and we do not sell it as an arrival-day option. It begins at your hotel, not the terminal, and it is a full day out. It belongs on your first morning in Ubud, when the drive north is already done."
         ]
       },
       {
@@ -24888,7 +26525,7 @@ const JOURNAL_SEO_GUIDES = [
           "**[Mount Batur Sunrise Jeep Tour](/bali/en/tours/mount-batur-sunrise-jeep-tour)** — from $60, 6-8 hours, night or pre-dawn pickup, no climbing involved at all.",
           "**From Canggu, Seminyak, Kuta or Nusa Dua** — add an hour to whatever an Ubud guest is doing, so roughly 01:30 rather than 02:30.",
           "**Staying north of Ubud** in Tegalalang or Payangan — you are already partway up the hill, and the pickup usually slides fifteen minutes later.",
-          "**Daytime instead** — the [Ubud Rice Terrace, Temple & Volcano tour](/bali/en/tours/ubud-highlights-tour) from $69 leaves at 08:00 and reaches the Kintamani rim in full daylight."
+          "**Daytime instead** — the [Ubud Rice Terrace, Temple & Volcano tour](/bali/en/tours/ubud-highlights-tour) from $65 per car leaves at 08:00 and reaches the Kintamani rim in full daylight."
         ],
         "paragraphsAfter": [
           "We confirm the exact minute over WhatsApp the evening before, once we know your villa and the lane it sits on. Some Ubud addresses cannot take a car to the gate, and it is much better to establish that at 21:00 than at 02:30 with a driver circling in the dark. Nothing is prepaid either, so if you decide over dinner that you cannot face the alarm, you tell us and that is the end of it."
@@ -24905,7 +26542,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Ubud to Kintamani in daylight, if 02:30 is not happening",
         "paragraphs": [
           "The rim viewpoints at Kintamani sit on the same road as the trailhead, slightly before it, and they hand you the whole caldera in one look: the black lava field, the lake, and the cone across the valley. You get all of that in daylight without setting an alarm for the middle of the night. It costs the same **90 minutes** of driving, and you arrive to warungs, coffee and a view instead of a torch beam. Nobody will pretend it is the same as the summit. It is the reasonable version of it.",
-          "Two ways we run it from Ubud. The [Ubud Rice Terrace, Temple & Volcano tour](/bali/en/tours/ubud-highlights-tour) is 10 hours from $69 with an 08:00 hotel pickup, taking in Kintamani alongside the terraces and temples of central Bali. Or take a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car and build the day yourself: rim first, then whatever you want on the way back down. If you would rather not leave town at all, [one day in Ubud](/bali/en/journal/ubud-in-one-day) keeps everything within twenty minutes."
+          "Two ways we run it from Ubud. The [Ubud Rice Terrace, Temple & Volcano tour](/bali/en/tours/ubud-highlights-tour) is 10 hours from $65 per car with an 08:00 hotel pickup, taking in Kintamani alongside the terraces and temples of central Bali. Or take a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car and build the day yourself: rim first, then whatever you want on the way back down. If you would rather not leave town at all, [one day in Ubud](/bali/en/journal/ubud-in-one-day) keeps everything within twenty minutes."
         ],
         "paragraphsAfter": [
           "One caveat for the wet season: the caldera makes its own weather. Mornings are usually the clearest part of the day and cloud thickens from late morning onward, so a midday arrival in January can mean a view of white. Going early helps in every month, sunrise trip or not."
@@ -24934,7 +26571,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "Can you see Mount Batur from Ubud without hiking?",
-        "answer": "Not from Ubud itself — the town sits in a valley with no view of the volcano. The nearest place you can see it properly is the Kintamani rim, about 90 minutes north, which gives you the caldera, the lake and the cone with no walking at all. Our Ubud full-day tour from $69 includes that stop."
+        "answer": "Not from Ubud itself — the town sits in a valley with no view of the volcano. The nearest place you can see it properly is the Kintamani rim, about 90 minutes north, which gives you the caldera, the lake and the cone with no walking at all. Our Ubud full-day tour from $65 per car includes that stop."
       },
       {
         "question": "Is Mount Batur sunrise better from Ubud or south Bali?",
@@ -24942,7 +26579,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How much does a Mount Batur trip from Ubud cost?",
-        "answer": "Our sunrise hike starts from $35 and runs 5-8 hours door to door. The jeep and hot spring route is from $75 over 6-8 hours, and the jeep sunrise tour from $60. A daytime Kintamani visit as part of a full Ubud day tour starts from $69. Booking is over WhatsApp with no prepayment."
+        "answer": "Our sunrise hike starts from $35 and runs 5-8 hours door to door. The jeep and hot spring route is from $75 over 6-8 hours, and the jeep sunrise tour from $60. A daytime Kintamani visit as part of a full Ubud day tour starts from $65 per car. Booking is over WhatsApp with no prepayment."
       }
     ]
   },
@@ -24978,7 +26615,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/tours-real/tanah-lot-bedugul-tour.jpg",
         "area": "West and central Bali",
         "bestFor": "The gentlest full sightseeing day",
-        "summary": "From $59 across 9-11 hours with a morning hotel pickup. The lake temple at Bedugul is effectively a flat garden stroll, and Tanah Lot is level once you reach the viewing terraces — the steps come on the approach, not at the view. A long day with low effort; the car covers the distance."
+        "summary": "From $65 per car across 9-11 hours with a morning hotel pickup. The lake temple at Bedugul is effectively a flat garden stroll, and Tanah Lot is level once you reach the viewing terraces — the steps come on the approach, not at the view. A long day with low effort; the car covers the distance."
       },
       {
         "name": "Mount Batur Sunrise Jeep Tour",
@@ -24999,7 +26636,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/tours-real/ubud-highlights-tour.jpg",
         "area": "Ubud, Kintamani and central Bali",
         "bestFor": "A first Bali day with short stops",
-        "summary": "From $69 for 10 hours with an 08:00 hotel pickup from covered areas. The Kintamani volcano view is taken from a restaurant terrace rather than a trail. Rice terraces are the variable: you can photograph them from the roadside edge or walk down into the valley. Say at the start that you are staying up top."
+        "summary": "From $65 per car for 10 hours with an 08:00 hotel pickup from covered areas. The Kintamani volcano view is taken from a restaurant terrace rather than a trail. Rice terraces are the variable: you can photograph them from the roadside edge or walk down into the valley. Say at the start that you are staying up top."
       },
       {
         "name": "Bali UNESCO Heritage Sites Tour",
@@ -25054,8 +26691,8 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Temples and Tanah Lot: flat inside, steps on the way in",
         "paragraphs": [
           "**Bali's temples are mostly level once you are inside the walls** — open courtyards, stone paving, shade. What catches people out is the approach. Split gates usually sit at the top of a flight of steps, and car parks are set either above or below the entrance. It is rarely more than one staircase, but there is almost always one staircase. Tanah Lot follows the same pattern: the viewing terraces are flat, the walk in from the car park through the market lanes is longer than people expect and gently sloped, and there are steps before you reach the sea view.",
-          "That combination is what makes the [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) — **from $59 across 9-11 hours with a morning hotel pickup** — the gentlest full sightseeing day we run. The lake temple at Bedugul is essentially a garden you walk through on the flat, at an altitude where the air is noticeably cooler than the coast, which matters a great deal if heat is the limiting factor rather than legs.",
-          "For a culture-heavy day at roughly the same effort, the [UNESCO heritage route](/bali/en/tours/bali-unesco) runs **from $69** over 10 hours with morning pickup from most southern and central hotel areas. Our [guide to Bali's temples and cultural sites](/bali/en/journal/best-temples-bali-cultural-sites) covers which ones reward the walk in. Dress code applies at all of them, and you will need a sarong, normally available at the entrance."
+          "That combination is what makes the [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) — **from $65 per car across 9-11 hours with a morning hotel pickup** — the gentlest full sightseeing day we run. The lake temple at Bedugul is essentially a garden you walk through on the flat, at an altitude where the air is noticeably cooler than the coast, which matters a great deal if heat is the limiting factor rather than legs.",
+          "For a culture-heavy day at roughly the same effort, the [UNESCO heritage route](/bali/en/tours/bali-unesco) runs **from $65 per car over 10 hours with morning pickup from most southern and central hotel areas. Our [guide to Bali's temples and cultural sites](/bali/en/journal/best-temples-bali-cultural-sites) covers which ones reward the walk in. Dress code applies at all of them, and you will need a sarong, normally available at the entrance."
         ]
       },
       {
@@ -25132,7 +26769,7 @@ const JOURNAL_SEO_GUIDES = [
     "inlineStats": [
       "12h layover, ~7 usable hours",
       "Airport-Ubud return: 3-5 hours",
-      "Private car from $59"
+      "Private car from $65 per car"
     ],
     "title": "Bali Layover Tour: What Actually Fits in One Day",
     "description": "A 12-hour Bali layover leaves roughly 7 usable hours on the island. What fits near the airport, why Ubud rarely does, and when to head back to the terminal.",
@@ -25192,7 +26829,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/places/tegalalang-rice-terraces.jpg",
         "area": "3-5 hours of driving, return",
         "bestFor": "16-hour layovers and overnights",
-        "summary": "Listed here so you can rule it out with confidence. The terraces, the monkey forest and the Kintamani rim are genuinely worth a day — they are simply not worth four hours in a car and ninety minutes on the ground. If your stop runs 16 hours or you are staying the night, take the [Ubud highlights tour](/bali/en/tours/ubud-highlights-tour) from $69 instead."
+        "summary": "Listed here so you can rule it out with confidence. The terraces, the monkey forest and the Kintamani rim are genuinely worth a day — they are simply not worth four hours in a car and ninety minutes on the ground. If your stop runs 16 hours or you are staying the night, take the [Ubud highlights tour](/bali/en/tours/ubud-highlights-tour) from $65 per car instead."
       }
     ],
     "sections": [
@@ -25217,7 +26854,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Why Ubud rarely fits, even though everyone asks",
         "paragraphs": [
           "Ubud is the first thing people type into a layover search, and for most layovers it is the wrong answer. The road north from the airport runs through Denpasar and its traffic, and depending on the hour it takes **90 minutes to two and a half hours each way**. Call it **3-5 hours of driving for the round trip**. Against seven usable hours that leaves you two to four hours in Ubud itself: one rice terrace, a rushed lunch, and an afternoon spent watching the clock rather than the view.",
-          "There is a version where it works. An overnight stop, or a layover of **16 hours or more** that lands early in the morning. Then the full [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) makes sense on its own terms — from $69, 10 hours, 08:00 pickup, with the Kintamani volcano rim included. If you have that much time you are not really on a layover any more, you are on a day trip, and our [one day in Ubud](/bali/en/journal/ubud-in-one-day) guide is written for exactly that. For seven hours, go south."
+          "There is a version where it works. An overnight stop, or a layover of **16 hours or more** that lands early in the morning. Then the full [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) makes sense on its own terms — from $65 per car, 10 hours, 08:00 pickup, with the Kintamani volcano rim included. If you have that much time you are not really on a layover any more, you are on a day trip, and our [one day in Ubud](/bali/en/journal/ubud-in-one-day) guide is written for exactly that. For seven hours, go south."
         ]
       },
       {
@@ -25231,7 +26868,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Getting around without wasting the hours you have",
         "paragraphs": [
           "Ride-hailing apps work across much of south Bali but not everywhere, and some beach and temple areas are effectively closed to app drivers. You end up negotiating a ride back at the exact moment you cannot afford to negotiate anything. On a layover, a car that waits for you is worth far more than the fare you save. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) from **$59 per car** stays with you all day, holds the small bag while you swim, and knows which road back to the airport is actually moving at 17:30.",
-          "If you only need one leg — a hotel for a few hours of sleep before a dawn departure, say — a straight [airport transfer](/bali/en/tours/bali-airport-transfer) from **$15** is the cheaper tool. What usually does not fit is a fixed full-day route: the [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) from $59 runs 9-11 hours, longer than most layovers have left once the buffers come off. For going rates and how drivers charge, see [what a private driver in Bali costs](/bali/en/journal/bali-private-driver-cost) and our [Bali airport transfer guide](/bali/en/journal/bali-airport-transfer-guide)."
+          "If you only need one leg — a hotel for a few hours of sleep before a dawn departure, say — a straight [airport transfer](/bali/en/tours/bali-airport-transfer) from **$15** is the cheaper tool. What usually does not fit is a fixed full-day route: the [Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) from $65 per car runs 9-11 hours, longer than most layovers have left once the buffers come off. For going rates and how drivers charge, see [what a private driver in Bali costs](/bali/en/journal/bali-private-driver-cost) and our [Bali airport transfer guide](/bali/en/journal/bali-airport-transfer-guide)."
         ]
       },
       {
@@ -25270,7 +26907,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "What to do in Bali in one day?",
-        "answer": "Pick one direction and do it properly. Either the south — Uluwatu, a Bukit beach, Jimbaran and a sunset — or one inland route such as Ubud's rice terraces, a temple and the Kintamani volcano rim, which runs as a 10-hour tour from $69. Trying to combine both means five hours in a car and very little standing still."
+        "answer": "Pick one direction and do it properly. Either the south — Uluwatu, a Bukit beach, Jimbaran and a sunset — or one inland route such as Ubud's rice terraces, a temple and the Kintamani volcano rim, which runs as a 10-hour tour from $65 per car. Trying to combine both means five hours in a car and very little standing still."
       },
       {
         "question": "How do I get from Bali airport to Ubud and back in one day?",
@@ -25875,7 +27512,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Should you split the trip between Ubud and Uluwatu?",
         "paragraphs": [
           "Over about a week, yes - and it is the combination we set up most often, because the two halves genuinely do not overlap. Put **Ubud first and the coast second**. Two reasons: the inland days are the early ones, and the airport run from Ubud is 1.5-2.5 hours depending on traffic, which is a poor way to spend a departure morning. Ending on the Bukit means the last drive is short. Under five nights, do not split at all - packing, checkout and a mid-trip transfer will cost you most of a day, and you will get better value from one base plus a driver.",
-          "If you stay inland and want the coast anyway, or stay coastal and want the culture, the gap closes with wheels rather than with a second hotel. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) is from $59 per car for a flexible day, and the pickup bends around you instead of a fixed departure. From the south, our [Ubud rice terrace, temple and volcano day](/bali/en/tours/ubud-highlights-tour) from $69 covers the inland highlights without moving hotels - which is exactly how most guests who chose the Bukit end up seeing Ubud."
+          "If you stay inland and want the coast anyway, or stay coastal and want the culture, the gap closes with wheels rather than with a second hotel. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) is from $59 per car for a flexible day, and the pickup bends around you instead of a fixed departure. From the south, our [Ubud rice terrace, temple and volcano day](/bali/en/tours/ubud-highlights-tour) from $65 per car covers the inland highlights without moving hotels - which is exactly how most guests who chose the Bukit end up seeing Ubud."
         ]
       }
     ],
@@ -26144,7 +27781,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "What is Ubud actually like?",
         "paragraphs": [
           "Ubud sits in the centre of the island and everything about it follows from that. Rice terraces begin where the town ends, the temples are working temples rather than photo stops, the Monkey Forest is a walk from the middle of town, and the green is relentless. It is quieter than Canggu, the evenings are about dinner rather than a strip, and people who arrive planning two nights routinely wish they had booked four.",
-          "What Ubud takes from you is the sea. There is none — not a poor beach, not a small one, none — and a pool does not replace it if the ocean is why you booked Bali. The airport run is long as well, **1.5 to 2.5 hours** depending on traffic, which matters on arrival day when you have been flying all night and again on the morning you fly out. If you want the area's headline sights handled in a single day rather than assembled yourself, that is our [Ubud highlights tour](/bali/en/tours/ubud-highlights-tour) **from $69**."
+          "What Ubud takes from you is the sea. There is none — not a poor beach, not a small one, none — and a pool does not replace it if the ocean is why you booked Bali. The airport run is long as well, **1.5 to 2.5 hours** depending on traffic, which matters on arrival day when you have been flying all night and again on the morning you fly out. If you want the area's headline sights handled in a single day rather than assembled yourself, that is our [Ubud highlights tour](/bali/en/tours/ubud-highlights-tour) **from $65 per car."
         ]
       },
       {
@@ -27119,7 +28756,7 @@ const JOURNAL_SEO_GUIDES = [
         "bullets": [
           "**Nusa Penida and the islands** - the boats leave from Sanur: **30-50 minutes from Seminyak, 45-70 from Ubud**, then **30-45 minutes** across the water. Our [Nusa Penida west route](/bali/en/tours/nusa-penida-west-tour) is **from $49 per car**, and the drive from the inland side is broken down in [Ubud to Nusa Penida](/bali/en/journal/nusa-penida-day-trip-from-ubud)",
           "**Mount Batur sunrise** - Ubud is **about 1.5 hours** from the foot of the mountain, and southern pickups leave **an hour earlier** for the same sunrise, which is why the island-wide pickup window runs **01:30 to 03:30**. The version from the coast is set out in [Mount Batur sunrise from south Bali](/bali/en/journal/mount-batur-sunrise-from-south-bali)",
-          "**Inland days: waterfalls, rafting, rice terraces** - these cluster around the centre of the island, so Ubud starts them closer and finishes them earlier. From Seminyak the same sights are a full day out, and our [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) runs **from $69**",
+          "**Inland days: waterfalls, rafting, rice terraces** - these cluster around the centre of the island, so Ubud starts them closer and finishes them earlier. From Seminyak the same sights are a full day out, and our [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) runs **from $65 per car",
           "**Airport days** - Ubud is **1.5-2.5 hours** from the terminal depending on traffic, and that lands twice: once on the arrival you are already tired for, once on the departure you have to build a margin around. Transfers are **from $15**"
         ],
         "paragraphsAfter": [
@@ -30983,7 +32620,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Pairing a Batur morning with east Bali sightseeing",
         "paragraphs": [
-          "Guests staying in Sidemen are usually combining volcano, coast and east Bali sightseeing in one stretch of the trip, so the real question is the order rather than the shortlist. Our rule is one pre-dawn day, then one normal day. The [East Bali Instagram Tour](/bali/en/tours/east-bali-instagram-tour) runs **8 to 10 hours from $69** with a morning hotel pickup and takes in Lempuyang and east Bali. It is a full day in its own right and does not fit onto the back of a night that started at 02:30.",
+          "Guests staying in Sidemen are usually combining volcano, coast and east Bali sightseeing in one stretch of the trip, so the real question is the order rather than the shortlist. Our rule is one pre-dawn day, then one normal day. The [East Bali Instagram Tour](/bali/en/tours/east-bali-instagram-tour) runs **8 to 10 hours from $65 per car with a morning hotel pickup and takes in Lempuyang and east Bali. It is a full day in its own right and does not fit onto the back of a night that started at 02:30.",
           "The same applies on the water. [Blue Lagoon Snorkeling](/bali/en/tours/blue-lagoon-snorkeling) at Padang Bai is **from $50**, half day to full day, again with a morning pickup, and further up the coast our [Amed and Tulamben snorkelling guide](/bali/en/journal/amed-tulamben-snorkeling) sets out what is there. Both are daytime trips with early starts of their own, and both are wasted on a body that has been awake since two in the morning.",
           "If you would rather not fix an itinerary in advance, a [private car with driver](/bali/en/tours/private-car-with-driver-bali) is **from $59 per car** for flexible daily use across all major regions. That also covers the daylight version of the volcano: the public rim road on the Penelokan side gives you the caldera and the lake for free, in full light, with no alarm at all. We describe it in [Kintamani viewpoint and Lake Batur](/bali/en/journal/kintamani-viewpoint-and-lake-batur). It is not the summit, and we do not pretend it is."
         ]
@@ -31016,7 +32653,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "Can I combine Mount Batur with east Bali sightseeing on the same day?",
-        "answer": "We would not advise it. The sunrise hike is 5 to 8 hours door to door and ends with most guests asleep by early afternoon. Put the East Bali Instagram Tour, 8 to 10 hours from $69 with a morning hotel pickup, on a separate day. Two proper days beat one long day that neither trip survives."
+        "answer": "We would not advise it. The sunrise hike is 5 to 8 hours door to door and ends with most guests asleep by early afternoon. Put the East Bali Instagram Tour, 8 to 10 hours from $65 per car with a morning hotel pickup, on a separate day. Two proper days beat one long day that neither trip survives."
       },
       {
         "question": "What is the drive back to Sidemen like after the sunrise hike?",
@@ -34068,7 +35705,7 @@ const JOURNAL_SEO_GUIDES = [
         "paragraphs": [
           "Tanah Lot is closest to Canggu — **about 13 km, 30-50 minutes** — then Seminyak at **60-90 minutes**, Kuta and the airport area at **60-100**, Ubud at **90-120**. From the Bukit (Uluwatu, Jimbaran, Nusa Dua) it is 1.5-2 hours each way, which makes a sunset-only run a very long evening. Those are ranges rather than numbers because Bali's realised average speed off the toll road is around 30-35 km/h, and the leg that has to arrive before sunset lands squarely in the 16:30-20:00 evening peak. If you are self-driving or briefing a taxi, navigate to **Pura Tanah Lot or DTW Tanah Lot** — typing Batu Bolong will route you to a beach in Canggu, 13 km away.",
           "**Grab and Gojek can drop you at Tanah Lot but generally cannot collect you.** The area is covered by a local transport cooperative agreement, so app drivers will not or cannot pick up at the gate, the zone boundary is not clearly signed, and working out where it ends in the dark while walking against the outbound crowd is a genuinely bad end to the evening. Either arrange a driver who waits or accept a negotiated local price under time pressure. A [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) from $59 per car removes the problem outright — the car sits in the car park while you are at the cliff. For comparison, street rates for a private driver in Bali run IDR 600,000-900,000 for an 8-10 hour day, with overtime reported at IDR 50,000-100,000 an hour depending on the source.",
-          "Everybody leaves within the same half hour onto a two-lane road, so **getting back to Seminyak or Kuta after sunset routinely takes one to two hours**. Do not book a 20:00 dinner in Seminyak off a Tanah Lot sunset. If Tanah Lot is the end of a bigger day, our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) from $59 per person runs the highlands in the morning and the coast at sunset, which is the only order that works — Bedugul clouds over from late morning and sunset cannot be brought forward. Budget 11-13 hours door to door for that day; the 10-hour figure most operators advertise does not survive contact with a real sunset. And if you are landing the same day, a [private airport pickup](/bali/en/tours/bali-airport-transfer) from $15 is the sane first leg, because the airport run to Tanah Lot is 60-100 minutes and not a drive to improvise after a flight."
+          "Everybody leaves within the same half hour onto a two-lane road, so **getting back to Seminyak or Kuta after sunset routinely takes one to two hours**. Do not book a 20:00 dinner in Seminyak off a Tanah Lot sunset. If Tanah Lot is the end of a bigger day, our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) from $65 per car runs the highlands in the morning and the coast at sunset, which is the only order that works — Bedugul clouds over from late morning and sunset cannot be brought forward. Budget 11-13 hours door to door for that day; the 10-hour figure most operators advertise does not survive contact with a real sunset. And if you are landing the same day, a [private airport pickup](/bali/en/tours/bali-airport-transfer) from $15 is the sane first leg, because the airport run to Tanah Lot is 60-100 minutes and not a drive to improvise after a flight."
         ]
       },
       {
@@ -34210,7 +35847,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Getting to Handara Gate and where it fits in a day",
         "paragraphs": [
           "Handara Gate sits on **Jl. Raya Denpasar–Singaraja in Pancasari**, about **10 km north of Ulun Danu Beratan** on the same road. From Ubud or the south coast, budget **two hours or more each way**, and 2 to 2.5 hours from the airport. Map apps quote as little as an hour from Seminyak; that number does not survive contact with the climb above Baturiti behind a line of trucks. There is **no dedicated car park** — parking is free on the highway shoulder and gets tight at peak. There is no practical scheduled service up here for visitors, so it is a private car or nothing.",
-          "The good news for itinerary building is that the gate costs almost no extra driving. It sits directly on the route between [Ulun Danu Beratan](/bali/en/journal/ulun-danu-beratan-temple-guide) and the Wanagiri ridge or Munduk, so the only real cost is the queue — which is exactly how we sell it, as a short stop on a highland day rather than a destination. Our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) **from $59 per person** runs this road with a driver who knows the difference between the queue at 07:30 and the queue at 11:00, and if you would rather build the day yourself, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** does the same job with your own stop list. Both book over WhatsApp with no prepayment, and our [Bedugul highlands guide](/bali/en/journal/bedugul-highlands-guide) covers the other stops on the same stretch of road.",
+          "The good news for itinerary building is that the gate costs almost no extra driving. It sits directly on the route between [Ulun Danu Beratan](/bali/en/journal/ulun-danu-beratan-temple-guide) and the Wanagiri ridge or Munduk, so the only real cost is the queue — which is exactly how we sell it, as a short stop on a highland day rather than a destination. Our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) **from $65 per car** runs this road with a driver who knows the difference between the queue at 07:30 and the queue at 11:00, and if you would rather build the day yourself, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** does the same job with your own stop list. Both book over WhatsApp with no prepayment, and our [Bedugul highlands guide](/bali/en/journal/bedugul-highlands-guide) covers the other stops on the same stretch of road.",
           "One thing not to attempt is the highlands on arrival day. It is **four to five hours of driving round trip** before you stop anywhere, and the gate wants you there at breakfast time. Land, sleep, go the next morning — we run a separate [private airport pickup](/bali/en/tours/bali-airport-transfer) **from $15** for the arrival leg, and our [day-trip route guide](/bali/en/journal/tanah-lot-bedugul-day-trip-route) shows how the Bedugul stops sequence once you are rested."
         ]
       },
@@ -34370,7 +36007,7 @@ const JOURNAL_SEO_GUIDES = [
         "paragraphs": [
           "Handara sits on Jl. Raya Denpasar-Singaraja in Pancasari, directly on the route between the Bedugul lakes and the Munduk ridge, so it costs almost no detour. There is **no dedicated car park** — parking is free on the highway shoulder and tight at peak. The gate itself stands on an open public road with no barrier; what has hours is the **ticket booth, published at roughly 06:00-19:00 WITA**, with some sources listing 08:00-17:00 instead. Be in the queue between 06:30 and 08:00, or come back late afternoon. Treat map estimates for the drive up from the south with suspicion: this is the road where navigation apps quote under an hour from Seminyak and reality is closer to two.",
           "Lempuyang is in Abang, Karangasem, at the far east of the island. From Ubud it is a consistently reported **2-2.5 hours each way**; from Kuta, Seminyak or Canggu, published times run **2.5-3 hours and up to 3-4 hours**, so treat it as a full day rather than a morning. Hours are genuinely disputed — the gate area generally opens somewhere between **06:00 and 07:00** and runs to late afternoon, but the photo queue closes before the posted closing time. From the Bedugul highlands it is roughly three hours across the island, which is why the two gates **cannot be done in one day**, whatever an itinerary tells you.",
-          "For Handara, the natural container is a Bedugul day. Our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) **from $59 per person** covers the lake temple, the highlands and sunset at Tanah Lot, with the gate as an early add-on rather than the headline — the [day-trip route breakdown](/bali/en/journal/tanah-lot-bedugul-day-trip-route) shows where the hours actually go. For Lempuyang, or for any day that needs a 04:30 departure and stops chosen on the morning, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** is the honest tool: the driver waits at the lower terminal while you queue, and the price is per car rather than per head. Everything is booked over WhatsApp with no prepayment, and if you are heading north straight from landing, a [private airport pickup](/bali/en/tours/bali-airport-transfer) **from $15** starts the same day."
+          "For Handara, the natural container is a Bedugul day. Our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) **from $65 per car** covers the lake temple, the highlands and sunset at Tanah Lot, with the gate as an early add-on rather than the headline — the [day-trip route breakdown](/bali/en/journal/tanah-lot-bedugul-day-trip-route) shows where the hours actually go. For Lempuyang, or for any day that needs a 04:30 departure and stops chosen on the morning, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** is the honest tool: the driver waits at the lower terminal while you queue, and the price is per car rather than per head. Everything is booked over WhatsApp with no prepayment, and if you are heading north straight from landing, a [private airport pickup](/bali/en/tours/bali-airport-transfer) **from $15** starts the same day."
         ]
       }
     ],
@@ -34491,7 +36128,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Getting to Bedugul from Ubud, the south and the airport",
         "paragraphs": [
           "Candikuning sits **about 60 km north of Ngurah Rai airport** on the main Denpasar-Singaraja road, and the figure that matters is driving time, not distance. Realistic private-car times: **1.5-2.5 hours from Seminyak or Canggu, 1.5-2.5 hours from Ubud, 2-2.5 hours from the airport**, and roughly 40-90 minutes down the mountain if you are coming from Lovina. Google Maps will sometimes quote 55 minutes from Seminyak. Ignore that number — it assumes an empty island, and we have never seen it achieved on a real morning.",
-          "The road is paved the whole way and takes coaches. There is **no practical scheduled service for visitors**: bemos do run to Candikuning from Batubulan terminal in Denpasar and from Sukasada near Singaraja for around IDR 40,000-50,000, but they are infrequent and no use for a day with a fixed shape. That leaves a private driver or a scooter, and at 1,200 metres in highland rain we would not put a first-time visitor on a scooter. Our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) runs **from $59 per person** and pairs the lake temple with the west-coast sunset temple; if you would rather build the route yourself, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) is **from $59 per car**. Both are booked over WhatsApp with no prepayment.",
+          "The road is paved the whole way and takes coaches. There is **no practical scheduled service for visitors**: bemos do run to Candikuning from Batubulan terminal in Denpasar and from Sukasada near Singaraja for around IDR 40,000-50,000, but they are infrequent and no use for a day with a fixed shape. That leaves a private driver or a scooter, and at 1,200 metres in highland rain we would not put a first-time visitor on a scooter. Our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) runs **from $65 per car** and pairs the lake temple with the west-coast sunset temple; if you would rather build the route yourself, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) is **from $59 per car**. Both are booked over WhatsApp with no prepayment.",
           "If you are thinking of putting Bedugul on your arrival day, reconsider. It is **2-2.5 hours from the terminal** before you have unpacked anything, and the highlands reward a fresh start rather than a red-eye. A [private airport pickup](/bali/en/tours/bali-airport-transfer) **from $15** to the hotel first, then the mountains on a proper morning, is the version that works. Our [Tanah Lot and Bedugul route notes](/bali/en/journal/tanah-lot-bedugul-day-trip-route) set out the order we actually drive the day in, and why."
         ]
       },
@@ -34565,7 +36202,7 @@ const JOURNAL_SEO_GUIDES = [
     ],
     "inlineStats": [
       "6 highland stops",
-      "Day tour from $59",
+      "Day tour from $65 per car",
       "1.5-2.5 h from the coast"
     ],
     "title": "Bedugul Bali: 6 Things to Do and Why You Go in the Morning",
@@ -34628,7 +36265,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Getting to Bedugul, and how long it really takes",
         "paragraphs": [
           "From the south coast, budget **1.5 to 2.5 hours each way** to Candikuning — that is the range private drivers actually report from Seminyak, Canggu and Ubud — and **2 to 2.5 hours from the airport**. Google Maps sometimes quotes under an hour from Seminyak. Ignore it: the last climb from Baturiti runs behind trucks on a single carriageway, and a day built on the optimistic number falls apart before lunch. From Lovina and the north coast you come down the mountain in **40 to 60 minutes**, which is why Bedugul pairs naturally with a north-coast leg.",
-          "There is no practical scheduled transport for visitors. Bemos do run to Candikuning from the Batubulan and Singaraja terminals for around **IDR 40,000 to 50,000**, and the Perama tourist shuttle passes through Bedugul and Munduk on its Kuta–Ubud–Lovina route, but neither works around a fog-driven early start. In practice you take a car. Our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) runs **from $59 per person** and puts the lake temple in the morning and the west coast at sunset; if you would rather set your own order of stops, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) is **from $59 per car** and the driver waits while you walk. Both are booked on WhatsApp with no prepayment.",
+          "There is no practical scheduled transport for visitors. Bemos do run to Candikuning from the Batubulan and Singaraja terminals for around **IDR 40,000 to 50,000**, and the Perama tourist shuttle passes through Bedugul and Munduk on its Kuta–Ubud–Lovina route, but neither works around a fog-driven early start. In practice you take a car. Our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) runs **from $65 per car** and puts the lake temple in the morning and the west coast at sunset; if you would rather set your own order of stops, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) is **from $59 per car** and the driver waits while you walk. Both are booked on WhatsApp with no prepayment.",
           "Landing day is the wrong day for this drive — two hours of mountain switchbacks after a long flight is nobody's idea of a good start. Take a [private airport pickup](/bali/en/tours/bali-airport-transfer) **from $15** to the hotel and put the highlands on a rested morning instead. Our [Tanah Lot and Bedugul route notes](/bali/en/journal/tanah-lot-bedugul-day-trip-route) set out the order we drive the stops in and where the day usually goes wrong."
         ]
       },
@@ -34714,7 +36351,7 @@ const JOURNAL_SEO_GUIDES = [
     ],
     "inlineStats": [
       "7 stops in order",
-      "Day tour from $59",
+      "Day tour from $65 per car",
       "11-13 hours door to door"
     ],
     "title": "Tanah Lot and Bedugul in One Day: Highlands First, Coast Last",
@@ -34776,7 +36413,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Why the highlands go first and the coast goes last",
         "paragraphs": [
           "Two things fix the order, and neither is negotiable. Ulun Danu Beratan sits on Lake Beratan at roughly **1,200 metres**, opens at **07:00**, and is at its clearest early: mist and low cloud build from late morning, with the fog window reported at around **11:00 to 15:00**, and afternoon thunderstorms are more likely in the interior than on the south coast in both seasons. Tanah Lot is the opposite problem — a west-facing sea temple whose entire point is a sunset that lands between roughly **18:05 and 18:50** depending on the month. One is a morning site, the other is an evening site, and they are about two hours of driving apart.",
-          "Run it backwards, coast first and then the climb, and you get Tanah Lot in flat midday light and a lake under cloud. That is how most self-planned versions of this day end. Our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) **from $59 per person** is built the other way round: pickup at 07:00, lake by 09:00, coast by 16:30. If you want the detail on each site before committing, we have separate guides to [Ulun Danu Beratan](/bali/en/journal/ulun-danu-beratan-temple-guide) and to the [Handara Gate](/bali/en/journal/handara-gate-bali-guide) — the second is a resort entrance rather than a mountain pass, and that is worth knowing before you build an hour around it."
+          "Run it backwards, coast first and then the climb, and you get Tanah Lot in flat midday light and a lake under cloud. That is how most self-planned versions of this day end. Our [Tanah Lot and Bedugul private day tour](/bali/en/tours/tanah-lot-bedugul-tour) **from $65 per car** is built the other way round: pickup at 07:00, lake by 09:00, coast by 16:30. If you want the detail on each site before committing, we have separate guides to [Ulun Danu Beratan](/bali/en/journal/ulun-danu-beratan-temple-guide) and to the [Handara Gate](/bali/en/journal/handara-gate-bali-guide) — the second is a resort entrance rather than a mountain pass, and that is worth knowing before you build an hour around it."
         ]
       },
       {
@@ -34798,7 +36435,7 @@ const JOURNAL_SEO_GUIDES = [
         "paragraphs": [
           "Entrance is paid at each gate, in cash, and these numbers have been moving. **Tanah Lot is IDR 75,000 per foreign adult and IDR 40,000 per foreign child as of August 2026**, which is the figure on the site's own ticket page. An increase to IDR 100,000 was announced in December 2025 for 1 April 2026, then postponed on 29 March 2026 with no new date set, so English-language pages currently show both figures and both were defensible when written. Check at the gate. Parking is **IDR 5,000 for a car** at current rates, with a doubling announced and deferred alongside the entrance rise.",
           "Ulun Danu Beratan is the one to hedge. An increase to **IDR 100,000 per foreign adult from 1 July 2026**, up from IDR 75,000, was announced in December 2025 — but the parallel Tanah Lot rise announced the same month was deferred, so sources disagree on what is actually being charged. Budget **IDR 75,000–100,000 per adult and check at the gate**. Separate from all of this is the provincial Love Bali levy, **IDR 150,000 per foreign visitor per entry to Bali**, which is not an attraction fee and is not collected at either temple; guests who paid it at the airport sometimes think they have prepaid entry.",
-          "Our packaged version, [the Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) **from $59 per person**, is booked on WhatsApp with no prepayment. However you book, bring rupiah in cash: card readers at the Tanah Lot booth are unreliable and there is no ATM on site."
+          "Our packaged version, [the Tanah Lot and Bedugul tour](/bali/en/tours/tanah-lot-bedugul-tour) **from $65 per car**, is booked on WhatsApp with no prepayment. However you book, bring rupiah in cash: card readers at the Tanah Lot booth are unreliable and there is no ATM on site."
         ],
         "bullets": [
           "**Tanah Lot:** IDR 75,000 foreign adult, IDR 40,000 foreign child, as of August 2026 — cash only, confirm at the gate",
@@ -34854,7 +36491,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How much does a Tanah Lot and Ulun Danu day trip cost?",
-        "answer": "Budget entrance fees plus transport. Tanah Lot is IDR 75,000 per foreign adult as of August 2026, and Ulun Danu Beratan is reported between IDR 75,000 and IDR 100,000 following an announced 1 July 2026 rise — both cash at the gate, and both worth confirming on the day. A private car with driver runs IDR 600,000–900,000 for a standard 8–10 hour day, roughly USD 40–60 approximate, with overtime on a route this long. Our tour is from $59 per person."
+        "answer": "Budget entrance fees plus transport. Tanah Lot is IDR 75,000 per foreign adult as of August 2026, and Ulun Danu Beratan is reported between IDR 75,000 and IDR 100,000 following an announced 1 July 2026 rise — both cash at the gate, and both worth confirming on the day. A private car with driver runs IDR 600,000–900,000 for a standard 8–10 hour day, roughly USD 40–60 approximate, with overtime on a route this long. Our tour is from $65 per car."
       },
       {
         "question": "Can you go inside Tanah Lot temple?",
@@ -37712,6 +39349,33 @@ const JOURNAL_SEO_GUIDES = [
 // попавшиеся по порядку массива — ссылки уходили не по смыслу и копились
 // на нескольких страницах. Теперь покрыт весь журнал.
 const GUIDE_CLUSTERS = {
+  /* Сезонность: когда ехать и что в этот момент закрыто. Тема отдельная от
+     «лучшее время для Бали» — там общий вопрос, на который отвечают
+     путеводители, а здесь конкретные события с датами и последствиями. */
+  seasons: [
+    "nyepi-what-actually-closes",
+    "rice-terrace-season-jatiluwih-tegalalang",
+    "lovina-dolphin-season-year-round",
+    "bali-waterfalls-by-season",
+    "galungan-kuningan-dates-what-changes",
+    "best-time-to-visit-bali-month-by-month",
+    "manta-ray-season-bali",
+    "whale-shark-season-sumbawa",
+    "bali-tours-in-rainy-season",
+  ],
+  /* Рафтинг вынесен из activities в свой кластер: там он лежал рядом с
+     пляжными клубами и турами для пожилых, и внутренние ссылки между такими
+     соседями не работают. Плотный кластер вокруг одной темы — то, что
+     сделало Батур сильнейшей темой сайта. */
+  rafting: [
+    "white-water-rafting-bali-guide",
+    "bali-rafting-price-2026",
+    "ayung-vs-telaga-waja-rafting",
+    "rafting-from-seminyak-canggu-nusa-dua",
+    "is-bali-rafting-safe",
+    "bali-rafting-with-kids-age-limits",
+    "what-to-wear-rafting-bali",
+  ],
   tanahLot: [
     "tanah-lot-temple-guide",
     "handara-gate-bali-guide",
@@ -37835,7 +39499,6 @@ const GUIDE_CLUSTERS = {
     "jatiluwih-vs-tegalalang",
   ],
   activities: [
-    "white-water-rafting-bali-guide",
     "bali-atv-tours-guide",
     "best-beach-clubs-bali-young-adults",
     "best-things-to-do-bali-for-couples",
@@ -42007,12 +43670,12 @@ function patchBaliMainFile(filePath) {
   let html = fs.readFileSync(filePath, "utf8");
   const brokenBaliDestinationsMenu =
     '<ul role="list" class="t-menusub__list"> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
-    'href="/bali/en/main-page#tours" data-menu-item-number="1">Bali, Indonesia</a> </li> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
-    'href="/bali/en/main-page#tours" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul>';
+    'href="/bali/en/main-page" data-menu-item-number="1">Bali, Indonesia</a> </li> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
+    'href="/bali/en/main-page" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul>';
   const fixedBaliDestinationsMenu =
     '<ul role="list" class="t-menusub__list"> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
     'href="/dubai/en#tours" data-menu-item-number="1">Dubai, UAE</a> </li> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
-    'href="/bali/en/main-page#tours" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul>';
+    'href="/bali/en/main-page" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul>';
 
   const staticReplacements = [
     [
@@ -42087,7 +43750,7 @@ function patchBaliMainFile(filePath) {
     .split('field="li_title__7301316445702">Bali Instagram Tour: Gates of Heaven &amp; Royal Palaces </div>')
     .join('field="li_title__7301316445702">Ubud Instagram Tour: Gates of Heaven, Waterfall &amp; Rice Terrace</div>')
     .split("The ultimate East Bali experience. Visit Lempuyang Temple (Gates of Heaven), Tirta Gangga Water Palace, and Virgin Beach. Professional photos, private transfers, and zero stress. Book your Bali Instagram tour via WhatsApp!")
-    .join("All-inclusive Bali photo route with Lempuyang Temple, Tirta Gangga, Tukad Cepung Waterfall, and Tegalalang Rice Terrace. Tickets, lunch, and hotel pickup included from $89.")
+    .join("All-inclusive Bali photo route with Lempuyang Temple, Tirta Gangga, Tukad Cepung Waterfall, and Tegalalang Rice Terrace. Lunch and hotel pickup from $65 per car, entrance tickets $18 per person.")
     .split('href="/bali/en/tours/east-bali-instagram-tour" data-lid="7301316445702"')
     .join('href="/bali/en/tours/ubud-instagram-tour" data-lid="7301316445702"')
     .split("alt=\"Bali Instagram Highlights Tour\"")
@@ -42103,7 +43766,7 @@ function patchBaliMainFile(filePath) {
     .split(">Beautiful and Easy Full Day Route</span>")
     .join(">Perfect for couples, solo travelers and creators</span>")
     .split(">Ask Price</div></div><a href=\"/bali/en/tours/ubud-instagram-tour\" class=\"sb-btn\">Details</a>")
-    .join(">from $89</div></div><a href=\"/bali/en/tours/ubud-instagram-tour\" class=\"sb-btn\">Details</a>");
+    .join(">from $65 per car</div></div><a href=\"/bali/en/tours/ubud-instagram-tour\" class=\"sb-btn\">Details</a>");
 
   html = html.replace(/\/bali\/en\/tours\/(?:bali\/en\/tours\/)+/g, "/bali/en/tours/");
 
@@ -43722,7 +45385,7 @@ const UNESCO_PAGE_TRANSLATIONS = {
       ["¿Por qué la gente reserva esta ruta en vez de varias excursiones separadas?", "Porque reúne templos, lago de montaña, arrozales UNESCO y Tanah Lot en un solo día bien construido."],
     ],
     whatsappText:
-      "¡Hola! Quiero reservar el tour UNESCO de Bali por $69 por persona. Por favor envíen disponibilidad, zonas de recogida y todos los detalles.",
+      "¡Hola! Quiero reservar el tour UNESCO de Bali por $65 per car por persona. Por favor envíen disponibilidad, zonas de recogida y todos los detalles.",
     privateOfferEyebrow: "Ruta patrimonial UNESCO",
     privateOfferTopline: "Ideal para templos y grandes paisajes de Bali",
     mapLabel: "Ruta UNESCO",
@@ -44294,6 +45957,14 @@ function ensureTranslationCache() {
 }
 
 function saveTranslationCache() {
+  /* Громко сообщаем о неудачных запросах. Молчаливый сбой перевода —
+     это английский текст на русской странице, и заметить его без счётчика
+     нельзя: шапка и старые абзацы переведены, страница выглядит целой. */
+  if (translationFailures) {
+    console.warn(`⚠ перевод: ${translationFailures} строк не удалось получить — Google Translate ограничил частоту.\n` +
+      "  В кэш они НЕ записаны, следующая сборка запросит их заново.\n" +
+      "  Собранные сейчас страницы содержат английский текст на месте этих строк — не деплой их.");
+  }
   if (!translationCacheDirty) return;
   fs.mkdirSync(path.dirname(TRANSLATION_CACHE_PATH), { recursive: true });
   fs.writeFileSync(TRANSLATION_CACHE_PATH, `${JSON.stringify(translationCacheState, null, 2)}\n`);
@@ -45003,7 +46674,45 @@ function unmaskHtmlTags(fragment, tags = []) {
   return String(fragment || "").replace(/𓆩SBTAG(\d+)𓆪/g, (_, rawIndex) => tags[Number(rawIndex)] || "");
 }
 
-async function fetchGoogleTranslation(text, locale = "en") {
+/* Точка translate_a/single неофициальная и режет по частоте: при заливке
+   новой пачки статей она отдаёт 429 сотнями подряд. Раньше это молча
+   превращалось в английский текст на русских страницах. Теперь три попытки
+   с растущей паузой плюс минимальный интервал между запросами — медленнее,
+   но сборка доходит до конца с настоящим переводом. */
+const TRANSLATE_MIN_GAP_MS = 45;
+let translateLastCallAt = 0;
+
+/* Общий предел времени на переводы за одну сборку.
+ *
+ * Точка translate_a/single не просто медленная — она умеет подвешивать
+ * соединение так, что процесс остаётся ждать TLS-сокет, которого уже нет.
+ * Пер-запросный таймаут это не всегда ловит: сборка простояла так три часа,
+ * напечатав первый шаг и замолчав.
+ *
+ * Поэтому здесь жёсткий общий бюджет. Кончился — API больше не зовём, и
+ * сборка доходит до конца на том, что уже в кэше. Непереведённые строки
+ * останутся английскими, счётчик их посчитает, предупреждение об этом
+ * напечатается. Дальше просто запускаем сборку ещё раз: кэш пополняется
+ * с каждым проходом, и рано или поздно проход отработает вчистую.
+ * Лучше законченная сборка с честным отчётом, чем висящий процесс. */
+const TRANSLATE_BUDGET_MS = 8 * 60 * 1000;
+const translateStartedAt = Date.now();
+let translateBudgetSpent = false;
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function fetchGoogleTranslation(text, locale = "en", attempt = 0) {
+  if (Date.now() - translateStartedAt > TRANSLATE_BUDGET_MS) {
+    if (!translateBudgetSpent) {
+      translateBudgetSpent = true;
+      console.warn(`⚠ перевод: бюджет ${TRANSLATE_BUDGET_MS / 60000} минут исчерпан, дальше только кэш`);
+    }
+    throw new Error("translation budget exhausted");
+  }
+  const gap = TRANSLATE_MIN_GAP_MS - (Date.now() - translateLastCallAt);
+  if (gap > 0) await sleep(gap);
+  translateLastCallAt = Date.now();
+
   const url = new URL("https://translate.googleapis.com/translate_a/single");
   url.searchParams.set("client", "gtx");
   url.searchParams.set("sl", "en");
@@ -45011,14 +46720,34 @@ async function fetchGoogleTranslation(text, locale = "en") {
   url.searchParams.set("dt", "t");
   url.searchParams.set("q", text);
 
-  const response = await fetch(url, { headers: { accept: "application/json,text/plain,*/*" } });
+  let response;
+  try {
+    /* Таймаут обязателен. Без него зависший коннект держит сборку вечно:
+       fetch без сигнала ждёт бесконечно, и генератор простоял так 14 часов,
+       напечатав первый шаг и замолчав. Пятнадцати секунд хватает с запасом —
+       обычный ответ приходит за десятые доли. */
+    response = await fetch(url, {
+      headers: { accept: "application/json,text/plain,*/*" },
+      signal: AbortSignal.timeout(15000),
+    });
+  } catch (error) {
+    if (attempt < 1) { await sleep(1200); return fetchGoogleTranslation(text, locale, attempt + 1); }
+    throw error;
+  }
   if (!response.ok) {
+    /* 429 и 5xx лечатся ожиданием, 4xx кроме 429 — нет. */
+    if ((response.status === 429 || response.status >= 500) && attempt < 1) {
+      await sleep(2000);
+      return fetchGoogleTranslation(text, locale, attempt + 1);
+    }
     throw new Error(`Translation request failed with ${response.status}`);
   }
 
   const payload = JSON.parse(await response.text());
   return Array.isArray(payload?.[0]) ? payload[0].map((item) => item?.[0] || "").join("") : text;
 }
+
+let translationFailures = 0;
 
 async function translateTextMap(texts, locale = "en", options = {}) {
   const { richText = false, glossary = null } = options;
@@ -45040,7 +46769,7 @@ async function translateTextMap(texts, locale = "en", options = {}) {
   }
 
   const separator = "\n[[SBXSEP]]\n";
-  const maxChunkLength = 2800;
+  const maxChunkLength = 4500;
   let chunk = [];
   let chunkLength = 0;
 
@@ -45067,9 +46796,15 @@ async function translateTextMap(texts, locale = "en", options = {}) {
           translated.set(source, finalText);
           translationCacheDirty = true;
         } catch {
-          bucket[source] = source;
+          /* НЕ пишем исходник в кэш. Раньше здесь стояло bucket[source] = source,
+             и это отравляло кэш навсегда: неофициальная точка translate_a/single
+             режет по частоте, при сбое английская строка ложилась как «перевод»,
+             а следующая сборка видела запись и больше не пыталась. Так на сайте
+             копился английский текст на русских и французских страницах —
+             2556 записей к августу 2026. Теперь при сбое строка остаётся
+             непереведённой в этой сборке и будет запрошена в следующей. */
           translated.set(source, source);
-          translationCacheDirty = true;
+          translationFailures += 1;
         }
       }
     } else {
@@ -45273,8 +47008,16 @@ function fixSurfGlossary(text, locale) {
    бы на всех 1400 страницах, а ссылки вели бы в 404 — и в переключателе, и,
    что хуже, в hreflang, где Google такое считает ошибкой разметки. */
 function localeCoversRoute(route, locale) {
-  if (locale !== "de") return true;
   const text = String(route || "");
+  /* Статьи, временно выходящие только по-английски, отсекаем ДО проверки
+     немецкого: иначе карта сайта и hreflang звали бы Google на русские и
+     французские адреса, которых мы намеренно не собрали. Это третий механизм
+     покрытия, и он про адрес, а не про слаг — правя один, надо править все. */
+  if (locale !== "en") {
+    const only = text.match(/\/bali\/[a-z-]+\/journal\/([a-z0-9-]+)$/);
+    if (only && ENGLISH_ONLY_GUIDES.has(only[1])) return false;
+  }
+  if (locale !== "de") return true;
   let match = text.match(/\/bali\/[a-z-]+\/tours\/([a-z0-9-]+)$/);
   if (match) return DE_WAVE_TOURS.has(match[1]);
   // статья-спутник тура: /bali/xx/journal/<тур>/<тип> — немецкий их не получает
