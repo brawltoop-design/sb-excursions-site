@@ -46829,6 +46829,29 @@ async function translateTextMap(texts, locale = "en", options = {}) {
     pending.push(source);
   }
 
+  /* Выгрузка строк вместо перевода.
+  
+     Кэш переводов ключуется целой исходной строкой, и заполнить его можно не
+     только ответом Google. Когда точка в отказе — а в августе 2026 она ушла в
+     429 на полтора суток, — строки переводятся вручную и вписываются в кэш.
+     Но угадать их нельзя: сюда приходят уже нарезанные сегменты, и ключ должен
+     совпасть с ними побайтово.
+  
+     TRANSLATE_DUMP=путь пишет каждый непереведённый сегмент в JSONL и ничего не
+     запрашивает. Строки при этом остаются английскими, поэтому такая сборка
+     годится только для выгрузки — деплоить её нельзя. */
+  if (process.env.TRANSLATE_DUMP && pending.length) {
+    const lines = pending.map((source) => JSON.stringify({
+      locale,
+      richText,
+      masked: prepared.get(source)?.masked || source,
+      source,
+    })).join("\n");
+    fs.appendFileSync(process.env.TRANSLATE_DUMP, lines + "\n");
+    for (const source of pending) translated.set(source, source);
+    return translated;
+  }
+
   const separator = "\n[[SBXSEP]]\n";
   const maxChunkLength = 4500;
   let chunk = [];
