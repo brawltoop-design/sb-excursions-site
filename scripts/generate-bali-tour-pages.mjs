@@ -39773,6 +39773,64 @@ function buildGuideOfferFromRelated(guide) {
   };
 }
 
+// Свой герой для статьи, независимо от первой карточки.
+//
+// По умолчанию герой берётся из rankings[0].image, а тот падает на фото
+// опорного тура — поэтому 155 статей делили 76 картинок, и Google просто не
+// выбирал миниатюру: одинаковый файл на десятке URL нечего показывать в
+// выдаче. Здесь верхние по показам статьи получают собственное фото.
+//
+// Первая карточка при этом не трогается: у половины этих статей она
+// служебная («Pickup and the Sanur port meeting point»), и подставлять туда
+// вид Kelingking значило бы врать подписью. Герой и карточка — разные вещи.
+//
+// Правило по фотографиям: узнаваемое место — только проверенный снимок
+// именно этого места; где места нет (водитель, пошлина, урок сёрфинга) —
+// годится сток. Каждый файл просмотрен глазами перед установкой.
+const GUIDE_HERO_IMAGES = {
+  // Nusa Penida и лодки
+  "kelingking-beach-guide": ["/images/tours-real/nusa-penida-west-tour.jpg", "Kelingking Beach cliff and cove on Nusa Penida"],
+  "diamond-beach-nusa-penida-guide": ["/images/tours-real/nusa-penida-east-tour.jpg", "Diamond Beach and its limestone pinnacles, Nusa Penida"],
+  "is-nusa-penida-worth-it": ["/images/tours-real/nusa-penida-full-day-tour.jpg", "Nusa Penida west coast cliffs above the sea"],
+  "nusa-penida-day-trip-from-sanur": ["/images/places/angels-billabong-rock-pool.jpg", "Broken Beach, the collapsed cove on Nusa Penida"],
+  "nusa-penida-day-trip-from-uluwatu": ["/images/places/bukit-beach-club.jpg", "Bukit peninsula coastline in south Bali"],
+  "sanur-to-nusa-penida-fast-boat": ["/images/places/boat-wake-turquoise.jpg", "Fast boat crossing to Nusa Penida"],
+  "how-to-get-to-nusa-penida": ["/images/tours-real/fast-boat-transfer-bali.jpg", "Fast boat on the crossing from Sanur"],
+
+  // Вулканы
+  "mount-batur-vs-mount-agung": ["/images/places/mount-agung-sunrise.jpg", "Mount Agung at sunrise, east Bali"],
+  "mount-batur-vs-bromo-rinjani-ijen": ["/images/places/mount-batur-jeep.jpg", "Mount Batur cone seen from the Kintamani rim"],
+  "is-mount-batur-safe": ["/images/places/mount-batur-cone.jpg", "The bare upper slopes of Mount Batur"],
+  "mount-batur-hot-springs-guide": ["/images/places/lake-batur-caldera.jpg", "Lake Batur and the caldera floor at Kintamani"],
+  "best-viewpoints-bali-sunrise-cliffs-rice-terraces": ["/images/places/volcano-sunrise-above-clouds.jpg", "Volcano silhouette above the clouds at sunrise in Bali"],
+
+  // Вода
+  "blue-lagoon-padang-bai-guide": ["/images/tours-real/blue-lagoon-snorkeling.jpg", "Snorkelling in the Blue Lagoon at Padang Bai"],
+  "bali-snorkeling-for-beginners": ["/images/places/snorkeler-beginner.jpg", "Beginner snorkeller in clear shallow water"],
+  "white-water-rafting-bali-guide": ["/images/places/rafting-jungle-river.jpg", "Raft running whitewater through jungle in Bali"],
+
+  // Пляжи
+  "best-white-sand-beaches-bali": ["/images/places/white-sand-beach-aerial.jpg", "White sand beach and reef from above in Bali"],
+  "calm-beaches-bali-kids": ["/images/places/palm-beach-quiet.jpg", "Quiet palm-lined beach with calm water in Bali"],
+  "tanah-lot-vs-uluwatu-sunset": ["/images/places/tanah-lot-sunset.jpg", "Tanah Lot temple at sunset"],
+
+  // Районы
+  "nusa-dua-vs-seminyak": ["/images/places/mid-range-hotel-in-bali.jpg", "Resort pool in Nusa Dua"],
+  "sanur-vs-seminyak": ["/images/places/bali-beach-club.jpg", "Beach club sunbeds above the sea in Bali"],
+  "sanur-vs-uluwatu": ["/images/places/bali-in-september.jpg", "Sanur reef flat at low tide"],
+  "seminyak-vs-uluwatu": ["/images/places/uluwatu-cliff-golden-hour.jpg", "Uluwatu temple on the cliff edge at golden hour"],
+  "canggu-vs-kuta": ["/images/places/canggu-beach-club.jpg", "Wide grey-sand beach at Canggu"],
+  "canggu-vs-uluwatu": ["/images/places/bali-rice-paddy-sunset.jpg", "Rice paddy at sunset behind Canggu"],
+  "ubud-vs-uluwatu": ["/images/tours-real/ubud-instagram-tour.jpg", "Rice terraces around Ubud"],
+  "things-to-do-seminyak-bali-guide": ["/images/places/beach-bar-surfboards.jpg", "Beach bar with surfboards and bean bags at dusk"],
+  "things-to-do-canggu-bali-guide": ["/images/places/surf-lesson-beach.jpg", "Beginner surf lesson on the beach in Bali"],
+
+  // Транспорт и деньги
+  "bali-private-driver-cost": ["/images/places/scooter-and-driver-in-bali.jpg", "Balinese private driver at the wheel"],
+  "grab-gojek-or-private-driver-bali": ["/images/places/scooter-ride-hailing-driver.jpg", "Ride-hailing scooter driver waiting by the rice fields in Bali"],
+  "bali-tourist-tax-levy-guide": ["/images/places/digital-arrival-card.jpg", "Paying the Bali tourist levy on a phone"],
+};
+
 function buildSeoGuideArticle(guide) {
   const heroTour = tourBySlug(guide.heroTourSlug) || tours[0];
   // Список мест есть не у всякого гайда: разбор пошлины или ответ «можно ли
@@ -39803,8 +39861,8 @@ function buildSeoGuideArticle(guide) {
     faq: guide.faq,
     inlineStats: guide.inlineStats,
     rankings,
-    heroImage: rankings[0]?.image || publicImagePath(heroTour),
-    heroImageAlt: `${leadPlace} in Bali`,
+    heroImage: GUIDE_HERO_IMAGES[guide.slug]?.[0] || rankings[0]?.image || publicImagePath(heroTour),
+    heroImageAlt: GUIDE_HERO_IMAGES[guide.slug]?.[1] || `${leadPlace} in Bali`,
     relatedTours: guide.relatedTourSlugs.map((slug) => tourBySlug(slug)).filter(Boolean),
     relatedGuides: relatedGuidesFor(guide),
   };
