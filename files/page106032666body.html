@@ -8,8 +8,8 @@ href=""
 aria-expanded="false" role="button" data-menu-submenu-hook="link_sub1_1816521261" data-menu-item-number="1">
 Our Tours
 </a> <div class="t-menusub" data-submenu-hook="link_sub1_1816521261" data-submenu-margin="15px" data-add-submenu-arrow=""> <div class="t-menusub__menu"> <div class="t-menusub__content"> <ul role="list" class="t-menusub__list"> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"
-href="/dubai/en#tours" data-menu-item-number="1">Dubai, UAE</a> </li> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"
-href="/bali/en/main-page#tours" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul> </div> </div> </div> </li> <li class="t228__list_item"
+href="/dubai/en/main-page" data-menu-item-number="1">Dubai, UAE</a> </li> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"
+href="/bali/en/main-page" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul> </div> </div> </div> </li> <li class="t228__list_item"
 style="padding:0 30px;"> <a class="t-menu__link-item"
 href="/dubai/en/about" data-menu-submenu-hook="" data-menu-item-number="2">
 About Us
@@ -60,8 +60,8 @@ href=""
 aria-expanded="false" role="button" data-menu-submenu-hook="link_sub1_2128776473" data-menu-item-number="1">
 Our Tours
 </a> <div class="t-menusub" data-submenu-hook="link_sub1_2128776473" data-submenu-margin="15px" data-add-submenu-arrow=""> <div class="t-menusub__menu"> <div class="t-menusub__content"> <ul role="list" class="t-menusub__list"> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"
-href="/dubai/en#tours" data-menu-item-number="1">Dubai, UAE</a> </li> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"
-href="/bali/en/main-page#tours" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul> </div> </div> </div> </li> <li class="t451m__list_item"> <a class="t-menu__link-item"
+href="/dubai/en/main-page" data-menu-item-number="1">Dubai, UAE</a> </li> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"
+href="/bali/en/main-page" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul> </div> </div> </div> </li> <li class="t451m__list_item"> <a class="t-menu__link-item"
 href="/dubai/en/about" data-menu-submenu-hook="" data-menu-item-number="2">
 About Us
 </a> </li> <li class="t451m__list_item"> <a class="t-menu__link-item"
@@ -242,12 +242,18 @@ rec.setAttribute('data-animationappear','off');rec.style.opacity=1;t_onFuncLoad(
 
 
 
+
+
+
+
+
+
 <script id="sb-mobile-tours-link">
 (function () {
   function toursHref() {
     var parts = window.location.pathname.split("/");
     var lang = parts[1] === "bali" && parts[2] ? parts[2] : "en";
-    return "/bali/" + lang + "/main-page#tours";
+    return "/bali/" + lang + "/main-page";
   }
   function apply() {
     if (window.location.pathname.indexOf("/bali/") !== 0) return;

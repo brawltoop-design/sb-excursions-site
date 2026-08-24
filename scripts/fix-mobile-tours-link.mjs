@@ -5,7 +5,11 @@
  * разворачивает подменю «Дубай / Бали», а сам никуда не ведёт, и клик по
  * нему Tilda гасит своим preventDefault. На десктопе подменю раскрывается
  * по наведению, а на телефоне пользователь, тапнувший «Туры», ждёт перехода
- * к списку туров — владелец попросил вести на /bali/<язык>/main-page#tours.
+ * к списку туров — ведём на /bali/<язык>/main-page.
+ *
+ * Без якоря #tours: 24 августа 2026 владелец попросил убрать его отовсюду —
+ * в адресной строке после тапа оставалась решётка, и это его раздражало.
+ * Каталог туров и так первый экран главной, доскроллом ничего не выигрываем.
  *
  * Поэтому мало проставить href — нужен свой обработчик клика на стадии
  * перехвата (capture), до тильдовского. Язык берём из текущего адреса,
@@ -32,7 +36,7 @@ const SCRIPT = `<script id="${MARK}">
   function toursHref() {
     var parts = window.location.pathname.split("/");
     var lang = parts[1] === "bali" && parts[2] ? parts[2] : "en";
-    return "/bali/" + lang + "/main-page#tours";
+    return "/bali/" + lang + "/main-page";
   }
   function apply() {
     if (window.location.pathname.indexOf("/bali/") !== 0) return;
@@ -76,14 +80,52 @@ async function* walk(dir) {
   }
 }
 
-const stats = { добавлено: 0, обновлено: 0, "пропущено дубай": 0, "без бургера": 0 };
+const stats = { добавлено: 0, обновлено: 0, "пропущено дубай": 0, "без бургера": 0, "якорь снят": 0 };
 
 for await (const file of walk(ROOT)) {
   const rel = path.relative(ROOT, file);
   let html = await fs.readFile(file, "utf8");
+  const before = html;
+  const pageLang = (/-(ru|es|fr|zh|de)\.html$/.exec(rel) || [])[1] || "";
+  const dubaiPage = isDubai(rel);
 
-  if (!/t451__link-item_submenu|t-menu__link-item_submenu/.test(html)) { stats["без бургера"]++; continue; }
-  if (isDubai(rel)) { stats["пропущено дубай"]++; continue; }
+  /* Якорь #tours в ссылках на главную.
+
+     Владелец просил убрать его трижды. Первые два раза правились шаблоны, но
+     ссылки живут в четырёх разных разметках: тильдовское подменю, выпадашка
+     собственной шапки журнала, её мобильная шторка и статические файлы Tilda.
+     Больше всего — около трёх тысяч — как раз в шторке, то есть ровно там,
+     куда он и тыкал с телефона.
+
+     Поэтому чистим не по контейнеру, а по самому адресу. Внутристраничных
+     ссылок вида href="#tours" на сайте нет, так что скролл ничего не теряет.
+
+     ВАЖНО: этот блок идёт ДО проверки на бургер. Страницы журнала тильдовской
+     шапки не имеют, и пока чистка стояла ниже, они отсеивались раньше неё —
+     правка не доезжала как раз до той разметки, где ссылок больше всего. */
+  if (!dubaiPage) {
+    html = html
+      .replace(/href="\/bali\/([a-z]{2})\/main-page#tours"/g, 'href="/bali/$1/main-page"')
+      .replace(/href="\/dubai\/en#tours"/g, 'href="/dubai/en/main-page"');
+
+    /* Выпадашка и шторка шапки журнала зашиты по-английски: с испанской
+       страницы пункт «Bali, Indonesia» вёл на английскую главную. Подставляем
+       язык самой страницы, но ТОЛЬКО внутри этих блоков — снаружи такой же
+       адрес стоит в переключателе языков, где он и должен вести на английскую. */
+    if (pageLang) {
+      html = html.replace(
+        /<(ul|div)[^>]*class="[^"]*(?:t-menusub__list|sb-journal-tour-header__dropdown-menu|sb-journal-tour-header__drawer-submenu)[^"]*"[^>]*>[\s\S]*?<\/\1>/g,
+        (block) => block.replace(/href="\/bali\/en\/main-page"/g, `href="/bali/${pageLang}/main-page"`),
+      );
+    }
+  }
+
+  const hasBurger = /t451__link-item_submenu|t-menu__link-item_submenu/.test(html);
+  if (!hasBurger || dubaiPage) {
+    stats[dubaiPage ? "пропущено дубай" : "без бургера"]++;
+    if (html !== before) { await fs.writeFile(file, html); stats["якорь снят"]++; }
+    continue;
+  }
 
   const had = html.includes(`id="${MARK}"`);
   // старую копию убираем, чтобы правки скрипта доезжали при пересборке

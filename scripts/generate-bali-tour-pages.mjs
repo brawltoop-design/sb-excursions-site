@@ -342,7 +342,10 @@ const JOURNAL_SPEAKABLE = {
   "@type": "SpeakableSpecification",
   cssSelector: ["h1", ".sb-journal-lead"],
 };
-const WEATHER_MAIN_PAGE_ROUTE = "/bali/en/main-page#tours";
+/* Кнопка виджета погоды ведёт на главную без якоря: 24 августа 2026 владелец
+   попросил убрать решётку из адресной строки везде, а каталог туров и так
+   первый экран главной. */
+const WEATHER_MAIN_PAGE_ROUTE = "/bali/en/main-page";
 const JOURNAL_FEATURED_ARTICLES = [
   ["ubud-highlights-tour", "selling"],
   ["nusa-penida-manta-rays-point", "interesting"],
@@ -714,11 +717,13 @@ html[data-sb-destination="bali"] #rec2128776473 .t-menusub__list .t-menusub__lin
   // разворачивает подменю «Дубай / Бали», а сам никуда не ведёт, и Tilda
   // вдобавок гасит клик своим preventDefault. Поэтому мало проставить href —
   // нужен свой обработчик на стадии перехвата, до тильдовского.
-  // Ведём на список туров того же языка, на котором открыта страница.
+  // Ведём на главную того же языка, на котором открыта страница.
+  // Без якоря #tours: 24 августа 2026 владелец попросил убрать решётку из
+  // адресной строки. Каталог туров и так первый экран главной.
   function baliToursHref() {
     var parts = window.location.pathname.split("/");
     var lang = parts[1] === "bali" && parts[2] ? parts[2] : "en";
-    return "/bali/" + lang + "/main-page#tours";
+    return "/bali/" + lang + "/main-page";
   }
 
   function linkMobileToursItem() {
@@ -9174,8 +9179,8 @@ function renderJournalHeader(tour) {
               <div class="sb-journal-tour-header__dropdown">
                 <button class="sb-journal-tour-header__nav-link sb-journal-tour-header__dropdown-trigger" type="button" aria-expanded="false">Our Tours</button>
                 <div class="sb-journal-tour-header__dropdown-menu" role="menu">
-                  <a href="/dubai/en#tours" role="menuitem">Dubai, UAE</a>
-                  <a href="/bali/en/main-page#tours" role="menuitem">Bali, Indonesia</a>
+                  <a href="/dubai/en/main-page" role="menuitem">Dubai, UAE</a>
+                  <a href="/bali/en/main-page" role="menuitem">Bali, Indonesia</a>
                 </div>
               </div>
               <a class="sb-journal-tour-header__nav-link" href="/bali/en/about">About Us</a>
@@ -9239,7 +9244,7 @@ function renderJournalHeader(tour) {
               <div class="sb-journal-tour-header__drawer-group">
                 <a class="sb-journal-tour-header__drawer-link sb-journal-tour-header__drawer-link_toggle" href="/bali/en/main-page#tours">Our Tours</a>
                 <div class="sb-journal-tour-header__drawer-submenu">
-                  <a href="/dubai/en#tours">Dubai, UAE</a>
+                  <a href="/dubai/en/main-page">Dubai, UAE</a>
                   <a href="/bali/en/main-page#tours">Bali, Indonesia</a>
                 </div>
               </div>
