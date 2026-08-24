@@ -46753,7 +46753,10 @@ let translateLastCallAt = 0;
  * напечатается. Дальше просто запускаем сборку ещё раз: кэш пополняется
  * с каждым проходом, и рано или поздно проход отработает вчистую.
  * Лучше законченная сборка с честным отчётом, чем висящий процесс. */
-const TRANSLATE_BUDGET_MS = 8 * 60 * 1000;
+/* Восемь минут — на обычную сборку, где переводится десяток новых строк.
+   Догоняющий проход после простоя Google (сотни строк разом) в них не влезает,
+   поэтому лимит поднимается переменной окружения: TRANSLATE_BUDGET_MIN=30. */
+const TRANSLATE_BUDGET_MS = Number(process.env.TRANSLATE_BUDGET_MIN || 8) * 60 * 1000;
 const translateStartedAt = Date.now();
 let translateBudgetSpent = false;
 
