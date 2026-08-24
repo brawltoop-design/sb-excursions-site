@@ -1,7 +1,7 @@
 # Происхождение видео на героях туров
 
 Пять роликов — материал заказчика (Батур-хайк, манта, китовая акула, джипы на Батуре, дельфины Ловины).
-Шесть — сток Pexels: лицензия разрешает коммерческое использование без указания автора,
+Восемь — сток Pexels: лицензия разрешает коммерческое использование без указания автора,
 но источник фиксируем, чтобы можно было проверить или заменить.
 
 | Тур | Pexels ID | Автор | Страница | Взятый фрагмент | Что в кадре |
@@ -11,6 +11,8 @@
 | sunset-cruise-bali | 6981406 | Mikhail Nilov | https://www.pexels.com/video/drone-footage-of-seascape-during-golden-hour-6981406/ | 27.0–39.0 с | закат, джукунг на золотой дорожке |
 | fast-boat-transfer-bali | 8960342 | Dima Osadchy | https://www.pexels.com/video/aerial-shot-of-watercrafts-on-the-water-8960342/ | 1.0–13.0 с | причал, спидботы, посадка |
 | bali-unesco | 33628474 | Rohit Chandra Lal | https://www.pexels.com/video/ulun-danu-beratan-temple-on-lake-bratan-33628474/ | целиком, 9,6 с | храм Улун Дану Братан на озере, горы за водой |
+| tanah-lot-bedugul-tour | 35113992 | Tom Fisk | https://www.pexels.com/video/stunning-tanah-lot-temple-sunset-in-bali-35113992/ | 3,0–13,0 с | Танах Лот на закате с воздуха |
+| mount-batur-sunrise-jeep-tour | 19953762 | Kintamani Exploring | https://www.pexels.com/video/jeep-kintamani-19953762/ | 1,5–13,5 с | колонна джипов на грунтовке, пассажиры машут |
 | ubud-highlights-tour | 4232189 | Michele Esposito | https://www.pexels.com/video/drone-shot-of-a-rice-farming-in-multi-layer-terraces-4232189/ | 4,0–14,0 с | крутые зелёные рисовые террасы сверху |
 
 Кодирование: `scale=1280:-2, fps=30, libx264, preset slow, -an, +faststart`.
@@ -51,3 +53,9 @@
 
 На тур `ubud-highlights-tour` вместо него поставлен ролик Michele Esposito с террасами
 сверху: маршрут тура идёт через Тегаллаланг, так что кадр показывает то, куда везут.
+
+Ролик с джипами снят вертикально (1440×2560) и пережат в 720×1280, как манта и
+китовая акула. В широкую рамку героя попадает 28% высоты кадра, поэтому ему задано
+`HERO_VIDEO_POSITION` = `50% 42%`: по центру видны только колёса, на 35% срезает
+поднятые руки пассажиров. На мобильном, где карточка героя вытянута вверх,
+вертикальный кадр наоборот работает лучше горизонтального.
