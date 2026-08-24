@@ -11860,7 +11860,7 @@ const JOURNAL_SEO_GUIDES = [
       "Sunset 18:00-18:45 year-round",
       "Cruise from $150"
     ],
-    "title": "8 Best Sunset Spots in Bali, Sorted by Drive Time",
+    "title": "Sunset in Bali Is 18:00-18:45: 8 Spots by Drive Time",
     "description": "From the Uluwatu cliffs to a boat off Benoa, eight sunset spots sorted by where you sleep — so you choose by drive time instead of by photograph.",
     "excerpt": "The best sunset spots in Bali are almost all on the west coast, and the honest way to choose between them is by where you are staying rather than by which photo looks best. Bali sits close to the equator, so the sun drops fast and lands between roughly 18:00 and 18:45 all year — you get about 30 usable minutes, not the long golden hour of higher latitudes. That makes drive time the deciding factor: a spot 90 minutes away costs you the whole evening. This guide covers eight places worth the trip, from free clifftops and beach bars to the water itself on a private cruise from $150, and tells you which one fits your neighborhood.",
     "rankings": [
@@ -16307,7 +16307,7 @@ const JOURNAL_SEO_GUIDES = [
       "60-90 min to the boat",
       "Penida from $29"
     ],
-    "title": "Uluwatu to Nusa Penida: How Long It Takes and the Cost",
+    "title": "Uluwatu to Nusa Penida: 60-90 Min Drive, Then the Boat",
     "description": "The drive from Uluwatu to Sanur port takes 60-90 minutes, then a fast boat across. West and east island routes compared, with 2026 day trips from $29.",
     "excerpt": "Uluwatu to Nusa Penida is a three-leg trip: a drive of roughly 60-90 minutes from the Bukit to Sanur harbor, a fast boat across the strait, and a private-car loop around the island's cliffs and bays. Uluwatu is the farthest common pickup zone from the harbor, so it gets the earliest starts — the East tour, for example, offers a 06:15-06:30 hotel pickup — and an evening return. Prices in 2026 run from $29 per person for the Manta Point snorkeling day, from $49 per car for the West tour, and from $75 for the East or Full Day routes, booked direct on WhatsApp with no prepayment. This guide maps the day stage by stage, compares the four routes and shows how to fit Penida into a surf-focused Uluwatu stay.",
     "rankings": [
@@ -17367,7 +17367,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Can you do Gili Trawangan in one day from Seminyak?",
         "paragraphs": [
-          "Yes — Gili Trawangan works as a one-day trip from Seminyak. The [Gili Islands private snorkeling day trip](/bali/en/tours/gili-island-tour) runs **7-9 hours door to door** at **from $115 per person** and covers both Gili Trawangan and Gili Meno in one loop: road transfer to Padang Bai, fast boat across the strait, snorkeling at Turtle Point and the Meno statue circle, free time on Trawangan, then the return crossing. The price includes the fast boat, a private snorkeling boat at the islands and GoPro photos of the day. You can take hotel pickup from Seminyak or meet the boat at Padang Bai; **exact pickup time is confirmed on WhatsApp the day before**.",
+          "Yes — Gili Trawangan works as a one-day trip from Seminyak. The [Gili Islands private snorkeling day trip](/bali/en/tours/gili-island-tour) runs **7-9 hours door to door** at **from $115 per person** and covers both Gili Trawangan and Gili Meno in one loop: road transfer to Padang Bai, fast boat across the strait, snorkeling at Turtle Point and the Meno statue circle, free time on Trawangan, then the return crossing. The price includes the fast boat, a private snorkeling boat at the islands and GoPro photos of the day. You can take hotel pickup from Seminyak or meet the boat at Padang Bai; **exact pickup time is confirmed on WhatsApp the day before**. If you are weighing the format itself rather than the departure point, our [Gili Islands day trip from Bali](/bali/en/journal/gili-islands-day-trip-from-bali) works through the hours ashore in full.",
           "The honest math behind the early start: Seminyak sits on Bali's southwest coast and the boats leave from Padang Bai in the east, so the road leg alone runs **about 90 minutes to 2 hours each way depending on traffic**. That is also why the private format matters — one car, straight to the harbor, no hotel-loop pickups eating your morning. Treat the whole day as spoken for and plan nothing for the evening beyond dinner. Meeting the boat at Padang Bai instead of taking hotel pickup also puts you a few minutes from Blue Lagoon, the sheltered cove covered in our [Blue Lagoon Padang Bai snorkeling guide](/bali/en/journal/blue-lagoon-padang-bai-guide)."
         ]
       },
@@ -18490,7 +18490,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Two islands answering different questions",
         "paragraphs": [
-          "Gili vs Nusa Penida is not really a fair fight, because the islands are built for different days. Nusa Penida is a spectacle: limestone cliffs, the Kelingking ridge, manta rays in open water — a day of big visuals and early alarms. The Gilis are a mood: three flat, car-free specks of sand off Lombok where the agenda is snorkel, eat, swim, repeat. People who come home disappointed usually picked the wrong island for their energy level, not a bad island. Decide what you want the day to feel like first, and the rest of this comparison mostly resolves itself. Penida's whole case fits in one view: [Kelingking Beach](/bali/en/journal/kelingking-beach-guide) has no equivalent on the Gilis, and the Gilis have no equivalent of Penida's roads either."
+          "Gili vs Nusa Penida is not really a fair fight, because the islands are built for different days. Nusa Penida is a spectacle: limestone cliffs, the Kelingking ridge, manta rays in open water — a day of big visuals and early alarms. The Gilis are a mood: three flat, car-free specks of sand off Lombok where the agenda is snorkel, eat, swim, repeat. People who come home disappointed usually picked the wrong island for their energy level, not a bad island. Decide what you want the day to feel like first, and the rest of this comparison mostly resolves itself. Penida's whole case fits in one view: [Kelingking Beach](/bali/en/journal/kelingking-beach-guide) has no equivalent on the Gilis, and the Gilis have no equivalent of Penida's roads either. If the Gilis win for you, the next question is whether one day is enough — that is [a day trip to the Gili Islands from Bali](/bali/en/journal/gili-islands-day-trip-from-bali)."
         ]
       },
       {
@@ -23698,7 +23698,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "How long the day really is",
         "paragraphs": [
-          "The Gilis sit further from Bali than most itineraries admit. Boats leave from **Padang Bai** on the east coast, which is already **90 minutes to 2 hours** from Seminyak, Canggu or Ubud in morning traffic, and the crossing itself runs **roughly 1.5-2 hours each way** depending on the boat and the sea. Our [Gili Islands private snorkeling day trip](/bali/en/tours/gili-island-tour) is **7-9 hours door to door from $115 per person** — the short end if you meet us at Padang Bai, the long end if you take the hotel pickup from the south.",
+          "The Gilis sit further from Bali than most itineraries admit. Boats leave from **Padang Bai** on the east coast, which is already **90 minutes to 2 hours** from Seminyak, Canggu or Ubud in morning traffic, and the crossing itself runs **roughly 1.5-2 hours each way** depending on the boat and the sea. Our [Gili Islands private snorkeling day trip](/bali/en/tours/gili-island-tour) is **7-9 hours door to door from $115 per person** — the short end if you meet us at Padang Bai, the long end if you take the hotel pickup from the south. The hour-by-hour version of that day, and who should skip it, is in our [day trip to the Gili Islands from Bali](/bali/en/journal/gili-islands-day-trip-from-bali).",
           "Subtract the travel and you can see exactly what is left: **one island and two snorkel stops**. In practice that is Turtle Point and the statue circle off Gili Meno from the boat, then free time on Gili Trawangan for lunch and a swim before the return leg. That is a full day and a good one, as long as it is the day you booked. The stage-by-stage timeline is in our [Gili Trawangan day trip from Seminyak](/bali/en/journal/gili-t-day-trip-from-seminyak) guide, and every route option is laid out in [how to get to Gili Trawangan from Bali](/bali/en/journal/how-to-get-to-gili-trawangan-from-bali)."
         ]
       },
@@ -26943,7 +26943,7 @@ const JOURNAL_SEO_GUIDES = [
       "Seminyak 30–50 min to port",
       "Batur pickup 01:30–03:30"
     ],
-    "title": "Sanur or Seminyak: Which Bali Base Suits Your Trip",
+    "title": "Sanur or Seminyak: Swimmable Water vs Walkable Dinners",
     "description": "Sanur or Seminyak? Sanur for calm swimming water and the Nusa Penida port at your door; Seminyak for restaurants, shops and sunsets you can walk between.",
     "excerpt": "Pick Sanur if you want water you can actually swim in and boat days that start with a walk instead of a drive; pick Seminyak if you want restaurants, shops and sunsets within a few streets of each other. The harbour for Nusa Penida and Nusa Lembongan sits inside Sanur, while Seminyak is 30–50 minutes from it — still the second-best position on the mainland, and well ahead of Canggu or Uluwatu at 60–90 minutes. What Sanur does not have is a restaurant strip or an evening that runs late. What Seminyak does not have is swimmable sea: the sand there is dark and volcanic and the surf is real. For volcano days the two are identical, because both are southern pickups, which leave about an hour earlier than the same trip from Ubud. This guide compares them on daily life, the water, the road to your excursions, and who should skip both.",
     "rankings": [
@@ -27107,7 +27107,7 @@ const JOURNAL_SEO_GUIDES = [
       "Penida west from $49 a car",
       "Batur pickup 01:30-03:30"
     ],
-    "title": "Seminyak or Uluwatu: Which Area Fits Your Bali Trip",
+    "title": "Seminyak or Uluwatu: Walk to Dinner or Drive to Cliffs",
     "description": "Seminyak or Uluwatu? Seminyak for walkable dinners and shorter drives to the Sanur boats; Uluwatu for cliffs, the lightest sand in the south and surf.",
     "excerpt": "Pick Seminyak if you want to walk to dinner and keep your outings short; pick Uluwatu if you want cliffs, the lightest sand in south Bali and surf worth driving for. The two sit at opposite ends of the south, and the difference shows up twice: in how an evening feels, and in what time your alarm goes off. Every island boat leaves from the port at Sanur, which is 30-50 minutes from Seminyak and 60-90 from Uluwatu, so the same Nusa Penida day is simply shorter from the Bukit. Neither area gives you a calm swimming beach: Seminyak is dark volcanic sand with a real shore break, and Uluwatu's lighter beaches sit at the bottom of long staircases. This guide compares them by daily life, beach and water, surf, day-trip logistics, and who each area does not suit.",
     "rankings": [
@@ -27412,7 +27412,7 @@ const JOURNAL_SEO_GUIDES = [
       "Uluwatu to Sanur port 60-90 min",
       "Batur pickup 01:30-03:30"
     ],
-    "title": "Ubud or Uluwatu: Which Area Fits Your Bali Trip",
+    "title": "Ubud or Uluwatu: One Has No Coast, the Other No Inland",
     "description": "Ubud or Uluwatu? Pick Ubud for temples, rice terraces and shorter volcano mornings; pick Uluwatu for cliffs, surf and the lightest sand in south Bali.",
     "excerpt": "Pick Ubud if the point of the trip is the island itself, and Uluwatu if the point of the trip is the sea. They are not two versions of the same holiday: Ubud has no coast at all, and the Bukit has almost nothing inland. The difference nobody writes about is what the choice does to your alarm clock. Sanur harbour, where the Nusa Penida boats leave, is 45-70 minutes from Ubud and 60-90 from Uluwatu, and every southern area leaves for a Mount Batur sunrise roughly an hour before Ubud does. This guide compares both areas by daily life, water, evenings and the drive to your day trips, and says plainly who each one is wrong for.",
     "rankings": [
@@ -28216,7 +28216,7 @@ const JOURNAL_SEO_GUIDES = [
       "Batur pickup 01:30-03:30",
       "Surf lesson from $35"
     ],
-    "title": "Canggu or Kuta: Which Bali Area Actually Suits Your Trip",
+    "title": "Canggu or Kuta: Two Weeks vs a Short Trip by the Airport",
     "description": "Canggu or Kuta: Canggu suits surf, cafes and long stays; Kuta suits short trips, awkward flights and early day-trip starts. Neither beach is for swimming.",
     "excerpt": "Pick Canggu if you are staying two weeks or more and want cafes, surfing most mornings and a crowd that never quite leaves; pick Kuta if the trip is short, the flights are awkward, or the area is mainly a base you leave each morning. Both sit on the same dark volcanic sand with real shore break, so neither is a swimming holiday, and that is the part most people get wrong before they book. Where they genuinely differ is the morning you head out: the port at Sanur is 60-90 minutes from Canggu against 30-50 from Seminyak, on Kuta's side of the island, so a Nusa Penida day from Canggu starts earlier and ends later for exactly the same amount of island. This guide compares the two by daily life, sand and water, surf, the drive out to day trips, and who should honestly pick neither. Where we quote money it is ours: a surf lesson from $35, the Nusa Penida west route from $49 per car, an airport transfer from $15.",
     "rankings": [
@@ -29560,7 +29560,7 @@ const JOURNAL_SEO_GUIDES = [
       "From $75",
       "After the cold summit"
     ],
-    "title": "Mount Batur Hot Springs: When the Soak Is Worth It, and When It Is Not",
+    "title": "Mount Batur Hot Springs: Go After the Sunrise, Not Instead",
     "description": "The natural hot springs beside Lake Batur, and why they belong at the end of a sunrise morning rather than as a trip of their own. What the jeep and hot spring tour includes, from $75.",
     "excerpt": "The hot springs sit at the foot of the volcano beside Lake Batur, and their real value is timing rather than novelty. Every version of a Mount Batur sunrise ends the same way: you have stood still in wind at 1,717 m for 30-60 minutes, you are cold, and you face a drive home. Warm water at that exact point does more for the morning than anything else on the menu. The jeep and hot spring tour runs from $75 over 6-8 hours with pickup around 02:00-03:30, and adds the soak to the same 4x4 sunrise. This guide covers what the springs are, where they fit in the morning, what to bring, and the honest case for skipping them.",
     "rankings": [
@@ -36603,7 +36603,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Getting here from Bali, and the day-trip maths",
         "paragraphs": [
           "The standard route is a fast boat, and Gili Trawangan is the terminus for most operators, so it has the most sailings and the most flexibility of the three islands. **Padang Bai in east Bali is the main port, roughly 1.5-2.5 hours at sea**, with Sanur around 2h40 and Serangan around 2.5-3 hours. Amed is the shortest crossing at about an hour, but **two booking aggregators currently list Amed port as closed for construction**, so verify it is open before you plan around it. Fares move constantly: well-known operators publish **roughly IDR 400,000-700,000 one way per person for 2025-26** — Eka Jaya's own site lists IDR 685,000, or IDR 650,000 booked online — which is about USD 23-39 at the August 2026 rate of roughly IDR 17,750 to the dollar. Aggregator listings down to about IDR 234,000 circulate and sit well below what the named operators charge, so read what is actually included. Add a harbour fee of about IDR 20,000, often already inside the ticket, and confirm it when you check in. Our [Gili fast boat guide](/bali/en/journal/gili-islands-fast-boat-guide) goes through ports and operators, and we sell [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) from $15 depending on the route.",
-          "Door to door from south Bali, including the hotel pickup, the check-in buffer and the crossing, **realistically runs 5-7 hours**, and boats leave overwhelmingly in the morning — a reliable same-day late-afternoon arrival does not exist. That arithmetic is what makes the day trip awkward: **you buy about 3-5 hours ashore for a 12-16 hour day**, and both good snorkelling windows, early morning and late afternoon, fall outside it. It works from Amed or Candidasa, where the crossing is short. From anywhere else an overnight is better value — our [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) runs from $70, and our [Gili day tour](/bali/en/tours/gili-island-tour) from $115 if one long day is genuinely all you have.",
+          "Door to door from south Bali, including the hotel pickup, the check-in buffer and the crossing, **realistically runs 5-7 hours**, and boats leave overwhelmingly in the morning — a reliable same-day late-afternoon arrival does not exist. That arithmetic is what makes the day trip awkward: **you buy about 3-5 hours ashore for a 12-16 hour day**, and both good snorkelling windows, early morning and late afternoon, fall outside it. It works from Amed or Candidasa, where the crossing is short. From anywhere else an overnight is better value — our [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) runs from $70, and our [Gili day tour](/bali/en/tours/gili-island-tour) from $115 if one long day is genuinely all you have. Our [Gili Islands day trip from Bali](/bali/en/journal/gili-islands-day-trip-from-bali) goes through what those hours ashore actually look like.",
           "Two warnings we repeat to every guest. **Do not book the last boat back to Bali on the day of an international flight** — crossings are cancelled and delayed in rough weather, there is no bridge and no road, and the only fix is a night's buffer in Bali or Lombok. And budget for **Bali's tourist levy of IDR 150,000 per person**, paid online or on arrival for Bali itself; it is widely reported as not charged again when you come back from the Gilis on the same trip, but we have not seen that confirmed in the regulation, so ask at the point where you pay. If you want the Bali-side road leg on your own terms — a stop en route, or a late return from the harbour — a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) from $59 per car covers it."
         ]
       },
@@ -36777,7 +36777,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Getting to Gili Air from Bali, Ubud or Lombok",
         "paragraphs": [
           "**Check the routing before you pay.** Some Bali fast boats call at Gili Air directly; many do not and terminate at Gili Trawangan instead. Being dropped at Trawangan and hopping across costs a second fare, a wait for one of only two scheduled circuits a day, and up to a couple of hours. Where the direct service runs, **Padang Bai to Gili Air is roughly 1.5-2 hours at sea**; Sanur is about 2h40 and Serangan about 3 hours. Our [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) start **from $15**, and we confirm which island the boat actually stops at before anything is paid. Our [fast boat guide](/bali/en/journal/gili-islands-fast-boat-guide) goes through the ports and operators in more detail.",
-          "The crossing is the short part of the day. The road leg from Seminyak, Canggu or Kuta to Padang Bai runs **1h10-2h30 depending on traffic**, and Ubud to Padang Bai is only **1-1.5 hours** — but operators collect you around 1.5 hours before sailing from the south and up to three hours ahead for some Ubud transfers, so an 08:00 departure can mean a **05:00-06:30 hotel pickup**. Realistic door-to-door from south Bali is **5-7 hours** each way. That arithmetic is why we are blunt about the [Gili day tour](/bali/en/tours/gili-island-tour) **from $115**: last boats off Gili Air generally leave between **15:15 and 15:35**, so a day trip buys roughly **3-5 hours ashore against 12-16 hours door to door**, and it only really adds up from east Bali. Snorkelling is best early morning and late afternoon, both outside that window, which is why the [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) **from $70** is materially better value from anywhere else — and why day trips are not recommended for young children, elderly travellers or anyone prone to motion sickness.",
+          "The crossing is the short part of the day. The road leg from Seminyak, Canggu or Kuta to Padang Bai runs **1h10-2h30 depending on traffic**, and Ubud to Padang Bai is only **1-1.5 hours** — but operators collect you around 1.5 hours before sailing from the south and up to three hours ahead for some Ubud transfers, so an 08:00 departure can mean a **05:00-06:30 hotel pickup**. Realistic door-to-door from south Bali is **5-7 hours** each way. That arithmetic is why we are blunt about the [Gili day tour](/bali/en/tours/gili-island-tour) **from $115**: last boats off Gili Air generally leave between **15:15 and 15:35**, so a day trip buys roughly **3-5 hours ashore against 12-16 hours door to door**, and it only really adds up from east Bali. Snorkelling is best early morning and late afternoon, both outside that window, which is why the [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) **from $70** is materially better value from anywhere else — and why day trips are not recommended for young children, elderly travellers or anyone prone to motion sickness. What a day trip does buy, hour by hour, is set out in our [Gili Islands day trip from Bali](/bali/en/journal/gili-islands-day-trip-from-bali).",
           "Coming via Lombok, Gili Air has the shortest crossing of the three: **Bangsal harbour to Gili Air is roughly 10-15 minutes** by fast or private boat, longer on the public one. That short hop is also a genuine safety advantage, since it is the fastest of the three islands to evacuate from. Buy the public-boat ticket at **the official office on the left side of the harbour** — touts outside it are a documented problem — and note that the boat **leaves when it fills, at around 20-40 passengers**, not to a timetable, with the ticket office open roughly 07:00-17:00. Landings on all three islands are shallow beach or short-jetty landings: carry your own bag and expect wet feet."
         ],
         "bullets": [
@@ -36964,7 +36964,7 @@ const JOURNAL_SEO_GUIDES = [
         "paragraphs": [
           "Meno has the **fewest direct connections from Bali** of the three islands. Some operators call here; many do not, and the common route is Bali to Gili Trawangan or Gili Air followed by a second local leg. Where a direct sailing exists, **Padang Bai to Meno runs roughly 1.5 to 2 hours at sea**; Sanur is about 2h40 and Serangan about 3 hours, on top of **1.5 to 2.5 hours by road** from South Bali or Ubud to the harbour. Realistic door to door from South Bali is **6 to 8 hours**, an hour or two longer than the other two islands because of that transfer. Whatever you book — including our [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) **from $15** — check whether the sailing actually calls at Meno before you pay, and read our [fast boat guide](/bali/en/journal/gili-islands-fast-boat-guide) for the ports and the operator differences.",
           "Then there is the constraint that defines a stay here: **the island-hopper runs twice a day and nothing else is scheduled**. The Bangsal circuit goes Bangsal-Gili Air-Gili Meno-Gili Trawangan and reverses, **leaving Bangsal at roughly 09:00 and again at 16:00** on schedules published for 2025-26 — confirm locally the day before, because these move. Miss the afternoon circuit and you are chartering a private boat, which starts in the several-hundred-thousand-rupiah range and climbs. Hopper fares are **reported between IDR 20,000 and IDR 45,000 per person per leg** and are asymmetric — the direction you travel changes the price — so treat any single quoted number with suspicion. Landings are shallow beach landings: expect wet feet and to carry your own bag.",
-          "A day trip is the wrong format for this island. Our [Gili day tour](/bali/en/tours/gili-island-tour) **from $115** buys roughly 3 to 5 hours ashore against about 8 hours in transit from South Bali, and on a day trip the sensible rule is one island, which in practice means Gili Trawangan. Meno only makes sense overnight, when the day boats have gone and the morning snorkelling window is yours — that is what our [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) **from $70** is built around. One booking rule regardless of operator: **never put the last boat back to Bali on the same day as an international flight.** Crossings are cancelled in rough weather and there is no bridge."
+          "A day trip is the wrong format for this island. Our [Gili day tour](/bali/en/tours/gili-island-tour) **from $115** buys roughly 3 to 5 hours ashore against about 8 hours in transit from South Bali, and on a day trip the sensible rule is one island, which in practice means Gili Trawangan. Meno only makes sense overnight, when the day boats have gone and the morning snorkelling window is yours — that is what our [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) **from $70** is built around. One booking rule regardless of operator: **never put the last boat back to Bali on the same day as an international flight.** Crossings are cancelled in rough weather and there is no bridge. The day-trip arithmetic for all three islands is in [a day trip to the Gili Islands from Bali](/bali/en/journal/gili-islands-day-trip-from-bali)."
         ]
       },
       {
@@ -37282,7 +37282,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Getting there with children, and why we do not day-trip it",
         "paragraphs": [
           "The standard route is a fast boat from **Padang Bai in east Bali**, crossing to Gili Trawangan in **about 1.5-2.5 hours**; sailings from Sanur, Serangan and Nusa Dua run 3-4 hours. Nobody counts the road leg, and with children it is the part that hurts: Seminyak, Kuta or Canggu to Padang Bai is **1h10 to 2h30 by road** and Ubud around 1-1.5 hours, while operators pick up roughly 1.5 hours before departure and up to three hours ahead for some Ubud transfers. An 08:00 sailing therefore means a **05:00-06:30 hotel pickup**, and 5-7 hours door to door. We sell [fast boat tickets with hotel pickup](/bali/en/tours/fast-boat-transfer-bali) **from $15**, booked on WhatsApp with no prepayment; if you would rather own the road leg, a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** means you leave when the children are actually awake.",
-          "The day-trip version exists — our [Gili day tour](/bali/en/tours/gili-island-tour) **from $115** — and we will say plainly that it is not the format for small children. Door to door from south Bali it runs **12-16 hours for roughly 3-5 hours ashore**, and one-day round trips are explicitly not recommended for young children, elderly travellers or anyone prone to motion sickness. It makes sense from east Bali, where the crossing is short, and it makes sense with teenagers. With a four-year-old it is two rough boat rides bracketing a nap. The [overnight Gili getaway](/bali/en/tours/gili-islands-getaway) **from $70** fixes the arithmetic: the last day boats leave, the island empties, and the good snorkelling hours — early morning and late afternoon — belong to people who stayed.",
+          "The day-trip version exists — our [Gili day tour](/bali/en/tours/gili-island-tour) **from $115** — and we will say plainly that it is not the format for small children. Door to door from south Bali it runs **12-16 hours for roughly 3-5 hours ashore**, and one-day round trips are explicitly not recommended for young children, elderly travellers or anyone prone to motion sickness. It makes sense from east Bali, where the crossing is short, and it makes sense with teenagers. With a four-year-old it is two rough boat rides bracketing a nap. The [overnight Gili getaway](/bali/en/tours/gili-islands-getaway) **from $70** fixes the arithmetic: the last day boats leave, the island empties, and the good snorkelling hours — early morning and late afternoon — belong to people who stayed. If one day is genuinely all you have, [our Gili day trip guide](/bali/en/journal/gili-islands-day-trip-from-bali) sets out the four hours ashore honestly.",
           "Two things to check at booking. First, **routing**: many Bali fast boats terminate at Gili Trawangan and never call at Gili Air, so a family booked on Air can land on the wrong island and wait for one of only two daily hopper circuits. Second, **fares**, which are a mess: aggregators list one-way tickets from around IDR 234,000 while Eka Jaya's own site published IDR 685,000, discounted to IDR 650,000 online, for 2025-2026. Sources disagree by roughly a factor of three, fares are seasonally tiered, and none of them is fixed. Budget separately for the **IDR 20,000 per person collected on arrival at Gili Air** (reported for 2026 — carry small notes and check at the landing) and Bali's own **IDR 150,000 tourist levy**, widely reported as not re-charged when you return from the Gilis, though we cannot confirm that against the regulation. Our [fast boat guide](/bali/en/journal/gili-islands-fast-boat-guide) goes operator by operator."
         ]
       },
@@ -38526,7 +38526,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Why a Gili day trip from Ubud does not work",
         "paragraphs": [
-          "Ubud is the only Bali base where a Gili day trip is even arithmetically possible, and it is still not worth doing. The earliest Padang Bai departure is **08:00**, which means a pickup at **06:00–06:30** and arrival on Gili Trawangan around **09:30–10:00**. The last boat back to Padang Bai leaves Gili T at about **15:15**, with a few operators running to **15:30–16:00**; from Gili Air it is around **15:35**. That puts you back at Padang Bai at **16:45–17:30** and in Ubud somewhere between **18:30 and 20:00**, on the worst traffic of the day.",
+          "Ubud is the only Bali base where a Gili day trip is even arithmetically possible, and it is still not worth doing. The earliest Padang Bai departure is **08:00**, which means a pickup at **06:00–06:30** and arrival on Gili Trawangan around **09:30–10:00**. The last boat back to Padang Bai leaves Gili T at about **15:15**, with a few operators running to **15:30–16:00**; from Gili Air it is around **15:35**. That puts you back at Padang Bai at **16:45–17:30** and in Ubud somewhere between **18:30 and 20:00**, on the worst traffic of the day. The version that does work, starting from Padang Bai or Candidasa, is in our [Gili Islands day trip from Bali](/bali/en/journal/gili-islands-day-trip-from-bali).",
           "Add it up and it is **roughly fourteen hours out for four or five usable hours** on an island whose entire appeal is that nothing is urgent. You spend more of the day moving than sitting still, and you do the return crossing tired. Every source we read on this route reaches the same conclusion: go for one night. Our [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) from $70 exists because of exactly that arithmetic.",
           "If what you actually want is an island day and you are based in Ubud, [Nusa Penida](/bali/en/tours/nusa-penida-full-day-tour) from $75 is the honest alternative — nearer harbour, shorter crossing, home for dinner. And from Canggu or Uluwatu the Gili day trip is not merely long but impossible: the Serangan boats turn around within the hour, which we set out in our [Gili from Canggu guide](/bali/en/journal/gili-islands-from-canggu)."
         ]
@@ -38664,7 +38664,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Why a Gili day trip from Canggu does not work",
         "paragraphs": [
-          "The honest answer to the day trip question is no, and the reason is the turnaround rather than the distance. The Serangan boats a Canggu guest would naturally take arrive at Gili Trawangan around **11:00-12:00** and depart back at **12:15**. That is somewhere between fifteen minutes and an hour on the island, for a **4h30-5h** journey in each direction. Nobody sells it in those terms, but that is what the timetable says.",
+          "The honest answer to the day trip question is no, and the reason is the turnaround rather than the distance. The Serangan boats a Canggu guest would naturally take arrive at Gili Trawangan around **11:00-12:00** and depart back at **12:15**. That is somewhere between fifteen minutes and an hour on the island, for a **4h30-5h** journey in each direction. Nobody sells it in those terms, but that is what the timetable says. From the eastern side of Bali the same day works differently — see [can you do a day trip to the Gili Islands from Bali](/bali/en/journal/gili-islands-day-trip-from-bali).",
           "The workaround — routing via Padang Bai to reach the later returns — makes the arithmetic worse, not better. It needs a pickup around **05:45**, it does buy you a genuine island window, and then it puts you back in Canggu around **19:00-20:00**, with the evening leg run in the worst traffic of the day. That is a fourteen-hour day for a few hours of beach. We will drive it if you insist, with a [car and driver for the day](/bali/en/tours/private-car-with-driver-bali) **from $59 per car**, but we would rather say plainly that it is not a good day out.",
           "One night fixes it. The [Gili overnight getaway](/bali/en/tours/gili-islands-getaway) **from $70** turns the same two crossings into a proper trip, because you sleep on the island and the return boat stops being a deadline. And if what you want is an island day trip that genuinely works from Canggu, take [Nusa Penida](/bali/en/tours/nusa-penida-full-day-tour) **from $75** — the crossing is a fraction of the length, the return boats run late enough to matter, and you are back for dinner."
         ]
@@ -39356,6 +39356,11 @@ const GUIDE_CLUSTERS = {
   /* Сезонность: когда ехать и что в этот момент закрыто. Тема отдельная от
      «лучшее время для Бали» — там общий вопрос, на который отвечают
      путеводители, а здесь конкретные события с датами и последствиями. */
+  /* Сезонность: когда ехать и что в этот момент закрыто. Объединённый список.
+     24.08.2026 ключ seasons был объявлен ДВАЖДЫ. В объектном литерале выигрывает
+     последний, и первый блок из девяти статей — включая пять сезонных, выпущенных
+     23 августа, — молча не работал: связанных статей у них не было вовсе.
+     Сборка про такое не сообщает, дубликат ключа для JS законен. */
   seasons: [
     "nyepi-what-actually-closes",
     "rice-terrace-season-jatiluwih-tegalalang",
@@ -39366,6 +39371,7 @@ const GUIDE_CLUSTERS = {
     "manta-ray-season-bali",
     "whale-shark-season-sumbawa",
     "bali-tours-in-rainy-season",
+    "best-time-clear-water-bali",
   ],
   /* Рафтинг вынесен из activities в свой кластер: там он лежал рядом с
      пляжными клубами и турами для пожилых, и внутренние ссылки между такими
@@ -39461,13 +39467,6 @@ const GUIDE_CLUSTERS = {
     "bali-entrance-fees-2026",
     "what-to-eat-in-bali-food-guide",
     "best-budget-restaurants-bali-warungs",
-  ],
-  seasons: [
-    "best-time-to-visit-bali-month-by-month",
-    "bali-tours-in-rainy-season",
-    "best-time-clear-water-bali",
-    "manta-ray-season-bali",
-    "whale-shark-season-sumbawa",
   ],
   beaches: [
     "best-beaches-bali-crystal-clear-water",
@@ -39599,6 +39598,30 @@ const GUIDE_CLUSTERS = {
     "gili-islands-from-canggu",
     "bali-to-lombok-transport",
   ],
+
+  /* Гили. Шестнадцать статей на одну тему жили без кластера вовсе: у хаба было
+     восемь входящих ссылок, а у спицы gili-islands-vs-nusa-penida — шестнадцать.
+     Сам хаб gili-islands-day-trip-from-bali сюда не входит: это легаси-файл вне
+     генератора, take() его молча пропустит. Ссылки на него идут текстом в статьях.
+     gili-islands-vs-nusa-penida оставлен в nusaPenida, чтобы не перетасовывать
+     соседний кластер. */
+  gili: [
+    "are-gili-islands-worth-it",
+    "gili-t-day-trip-from-seminyak",
+    "gili-trawangan-guide",
+    "gili-air-guide",
+    "gili-meno-guide",
+    "gili-trawangan-vs-air-vs-meno",
+    "gili-air-vs-gili-trawangan",
+    "gili-islands-fast-boat-guide",
+    "how-to-get-to-gili-trawangan-from-bali",
+    "gili-islands-snorkelling-turtles",
+    "gili-islands-from-canggu",
+    "gili-islands-from-ubud",
+    "gili-islands-with-kids",
+    "are-gili-islands-safe",
+  ],
+
 };
 
 const GUIDE_CLUSTER_PARTNERS = {
