@@ -301,17 +301,14 @@ function localeCoversTour(locale, slug) {
  *
  * Снять список, когда сборка отработает без предупреждения о переводе. */
 const ENGLISH_ONLY_GUIDES = new Set([
-  "bali-rafting-price-2026",
-  "ayung-vs-telaga-waja-rafting",
-  "rafting-from-seminyak-canggu-nusa-dua",
-  "is-bali-rafting-safe",
-  "bali-rafting-with-kids-age-limits",
-  "what-to-wear-rafting-bali",
-  "nyepi-what-actually-closes",
-  "rice-terrace-season-jatiluwih-tegalalang",
-  "lovina-dolphin-season-year-round",
-  "bali-waterfalls-by-season",
-  "galungan-kuningan-dates-what-changes",
+  /* Пусто с 24 августа 2026. Одиннадцать статей про рафтинг и сезоны вышли на
+     русском, испанском, французском и китайском. Google Translate так и не
+     отпустил — переводы сделаны вручную и засеяны прямо в кэш; заодно вычищены
+     384 записи, где вместо перевода лежал английский оригинал.
+
+     Механизм оставлен рабочим: следующая партия статей сначала попадает сюда,
+     переводится отдельным проходом и только потом уезжает на другие языки.
+     Немецкий этот список не решает — им управляет DE_WAVE_GUIDES ниже. */
 ]);
 
 function localeCoversGuide(locale, slug) {
@@ -43731,14 +43728,26 @@ function ensureBaliMainStabilityFix(html) {
 
 function patchBaliMainFile(filePath) {
   let html = fs.readFileSync(filePath, "utf8");
-  const brokenBaliDestinationsMenu =
-    '<ul role="list" class="t-menusub__list"> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
-    'href="/bali/en/main-page" data-menu-item-number="1">Bali, Indonesia</a> </li> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
-    'href="/bali/en/main-page" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul>';
-  const fixedBaliDestinationsMenu =
-    '<ul role="list" class="t-menusub__list"> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
-    'href="/dubai/en#tours" data-menu-item-number="1">Dubai, UAE</a> </li> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
-    'href="/bali/en/main-page" data-menu-item-number="1">Bali, Indonesia</a> </li> </ul>';
+  /* Восстановление пункта «Dubai, UAE» в переключателе направлений.
+
+     Шаблон приехал с дубайского сайта, и две замены ниже — «/dubai/en#tours» на
+     балийский адрес и «>Dubai, UAE<» на «>Bali, Indonesia<» — идут по всему файлу
+     разом. Заодно они попадают в единственное место, где ссылка на Дубай нужна:
+     в сам переключатель. Оба пункта становятся «Bali, Indonesia», и выбрать
+     Дубай из меню больше нельзя.
+
+     Здесь стояло сравнение с точной строкой. 23 августа 2026 из разметки убрали
+     якорь #tours, строка перестала совпадать, восстановление молча не сработало,
+     и сломанное меню уехало на прод: сборка была зелёной, потому что замена по
+     строке о непопадании не сообщает.
+
+     Теперь ищем регуляркой список из ДВУХ пунктов с одинаковой подписью
+     «Bali, Indonesia» и переписываем первый на Дубай. По адресу опознавать
+     нельзя: файл патчится на месте, и на следующей сборке у первого пункта
+     уже стоит /dubai/en/main-page от прошлого прогона, а подпись снова
+     затёрта заменой выше. Условие на адрес держалось ровно одну сборку. */
+  const baliDestinationsMenuRe =
+    /<ul role="list" class="t-menusub__list">\s*<li class="t-menusub__list-item[^"]*">\s*<a class="t-menusub__link-item[^"]*"\s*href="[^"]*"([^>]*)>Bali, Indonesia<\/a>\s*<\/li>\s*<li class="t-menusub__list-item[^"]*">\s*<a class="t-menusub__link-item[^"]*"\s*href="[^"]*"([^>]*)>Bali, Indonesia<\/a>\s*<\/li>\s*<\/ul>/g;
 
   const staticReplacements = [
     [
@@ -43779,7 +43788,18 @@ function patchBaliMainFile(filePath) {
   }
 
   // The Bali page keeps Bali-specific content, but this menu stays a destination switcher.
-  html = html.split(brokenBaliDestinationsMenu).join(fixedBaliDestinationsMenu);
+  const beforeMenuFix = html;
+  html = html.replace(baliDestinationsMenuRe, (_, attrsA, attrsB) =>
+    '<ul role="list" class="t-menusub__list"> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
+    `href="/dubai/en/main-page"${attrsA}>Dubai, UAE</a> </li> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n` +
+    `href="/bali/en/main-page"${attrsB}>Bali, Indonesia</a> </li> </ul>`);
+  /* Сторож на будущее: важен не факт замены, а итог — есть ли в переключателе
+     направлений живой пункт «Dubai, UAE». Молчаливая поломка 23 августа стоила
+     месяца с меню, из которого нельзя было попасть на дубайский сайт. */
+  if (html.includes('class="t-menusub__list"') && !html.includes(">Dubai, UAE<")) {
+    console.warn(`⚠ меню направлений: в ${path.basename(filePath)} нет пункта «Dubai, UAE» — переключатель направлений сломан`);
+  }
+  void beforeMenuFix;
 
   html = html
     .split("Bali North Tour: Dolphins Sunrise &amp; Hidden Waterfalls")
