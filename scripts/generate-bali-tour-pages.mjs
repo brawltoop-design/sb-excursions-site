@@ -43790,6 +43790,19 @@ function patchBaliMainFile(filePath) {
   }
 
   // The Bali page keeps Bali-specific content, but this menu stays a destination switcher.
+  /* Превью ссылки главной страницы.
+
+     Когда адрес sbexcursion.com кидают в WhatsApp или Телеграм, площадка
+     тянет og:image. До 24.08.2026 туда шло фото одного тура — по нему нельзя
+     понять, что за сайт. Владелец сделал баннер 1200x630 под эту задачу:
+     четыре кадра, логотип и предложение. Ставим его на все языки главной. */
+  const MAIN_OG = `${SITE_URL}/images/og/main-page.jpg`;
+  html = html
+    .replace(/(<meta property="og:image" content=")[^"]*(")/g, `$1${MAIN_OG}$2`)
+    .replace(/(<meta name="twitter:image" content=")[^"]*(")/g, `$1${MAIN_OG}$2`)
+    .replace(/(<meta property="og:image:width" content=")[^"]*(")/g, "$11200$2")
+    .replace(/(<meta property="og:image:height" content=")[^"]*(")/g, "$1630$2");
+
   const beforeMenuFix = html;
   html = html.replace(baliDestinationsMenuRe, (_, attrsA, attrsB) =>
     '<ul role="list" class="t-menusub__list"> <li class="t-menusub__list-item t-name t-name_xs"> <a class="t-menusub__link-item t-name t-name_xs"\n' +
