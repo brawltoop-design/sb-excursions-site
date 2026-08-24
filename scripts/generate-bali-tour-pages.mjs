@@ -43797,11 +43797,36 @@ function patchBaliMainFile(filePath) {
      понять, что за сайт. Владелец сделал баннер 1200x630 под эту задачу:
      четыре кадра, логотип и предложение. Ставим его на все языки главной. */
   const MAIN_OG = `${SITE_URL}/images/og/main-page.jpg`;
-  html = html
-    .replace(/(<meta property="og:image" content=")[^"]*(")/g, `$1${MAIN_OG}$2`)
-    .replace(/(<meta name="twitter:image" content=")[^"]*(")/g, `$1${MAIN_OG}$2`)
-    .replace(/(<meta property="og:image:width" content=")[^"]*(")/g, "$11200$2")
-    .replace(/(<meta property="og:image:height" content=")[^"]*(")/g, "$1630$2");
+  html = html.replace(/(<meta property="og:image" content=")[^"]*(")/g, `$1${MAIN_OG}$2`);
+
+  /* Размеры и twitter:card обязательны, иначе превью выходит МАЛЕНЬКИМ.
+
+     24.08.2026 баннер встал, но Телеграм нарисовал его крошечной иконкой
+     справа от текста, тогда как страницы туров показываются во всю ширину.
+     Разница была не в картинке: у туров рядом с og:image стоят og:image:width,
+     og:image:height и twitter:card="summary_large_image", а в тильдовской
+     шапке главной этих тегов нет вовсе. Замена по существующему тегу тут не
+     работает — заменять нечего, теги надо ДОБАВИТЬ.
+
+     Ставим их сразу после og:image, и только если их ещё нет: файл патчится
+     на месте, и повторная сборка иначе дописала бы второй комплект. */
+  const mainOgExtras = [
+    '<meta property="og:image:width" content="1200" />',
+    '<meta property="og:image:height" content="630" />',
+    '<meta property="og:image:type" content="image/jpeg" />',
+    `<meta property="og:image:alt" content="SB Excursions — Bali tours" />`,
+    '<meta name="twitter:card" content="summary_large_image" />',
+    `<meta name="twitter:image" content="${MAIN_OG}" />`,
+  ].filter((tag) => {
+    const key = /(?:property|name)="([^"]+)"/.exec(tag)[1];
+    return !new RegExp(`(?:property|name)="${key}"`).test(html);
+  });
+  if (mainOgExtras.length) {
+    html = html.replace(
+      /(<meta property="og:image" content="[^"]*"\s*\/?>)/,
+      `$1\n    ${mainOgExtras.join("\n    ")}`,
+    );
+  }
 
   const beforeMenuFix = html;
   html = html.replace(baliDestinationsMenuRe, (_, attrsA, attrsB) =>
