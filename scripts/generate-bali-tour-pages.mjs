@@ -192,34 +192,28 @@ const DE_WAVE_TOURS = new Set([
 ]);
 
 const DE_WAVE_GUIDES = new Set([
-  /* ВНИМАНИЕ, комментарий был неверен и правился 2026-08-21.
-     bali-canggu-beaches-guide, gili-islands-day-trip-from-bali и
-     swimming-with-whale-sharks-indonesia в списке ЕСТЬ, хотя старый текст
-     утверждал обратное. Немецкие версии генератор для них не собирает —
-     это отдельные HTML вне его.
+  /* Три слуга отсюда убраны 24.08.2026: bali-canggu-beaches-guide,
+     gili-islands-day-trip-from-bali, swimming-with-whale-sharks-indonesia.
 
-     Живой поломки при этом нет, и вот почему: карта сайта и hreflang берут
-     языки не отсюда напрямую, а через фильтр по существующим файлам
-     (add-hreflang.mjs строит список из тех, что реально лежат на диске).
-     Проверено: hreflang="de" на этих трёх страницах отсутствует, а
-     /bali/de/journal/... для них отдаёт 404 и в sitemap не попадает.
+     Их немецкие версии генератор не собирает — это отдельные HTML вне его.
+     Прежний комментарий утверждал, что живой поломки нет, потому что карта
+     сайта и hreflang фильтруются по факту наличия файла. Это верно, но не
+     полно: на localeCoversRoute теперь опирается ещё и подстановка языка в
+     ссылки внутри текста, и она честно поверила списку — четыре ссылки на
+     живых немецких страницах вели в 404.
 
-     Убирать слаги отсюда не стали: список читает и localeCoversGuide, и
-     трогать его без нужды — заводить новую несогласованность вместо
-     старой. Если появится генерация немецких версий легаси-гайдов, эти три
-     строки станут правдой сами. */
+     Список должен описывать то, что реально собирается. Появится генерация
+     немецких версий этих трёх — впишем обратно. */
   "best-time-to-visit-bali-month-by-month",
   "bali-safety-scams-and-health",
   "how-much-does-a-bali-trip-cost",
   "nusa-penida-with-kids",
-  "bali-canggu-beaches-guide",
   "is-mount-batur-safe",
   "bali-tours-for-seniors",
   "sanur-to-nusa-penida-fast-boat",
   "bali-private-driver-cost",
   "kelingking-beach-guide",
   "nusa-penida-day-trip-from-uluwatu",
-  "gili-islands-day-trip-from-bali",
   "best-beaches-uluwatu-bukit",
   "best-white-sand-beaches-bali",
   "ubud-vs-uluwatu",
@@ -267,7 +261,6 @@ const DE_WAVE_GUIDES = new Set([
   "mount-batur-vs-bromo-rinjani-ijen",
   "nusa-penida-vs-nusa-lembongan",
   "mount-batur-sunrise-from-south-bali",
-  "swimming-with-whale-sharks-indonesia",
   "ubud-in-one-day",
   "bali-7-day-itinerary",
   "bali-day-trips-with-kids",
@@ -47205,9 +47198,14 @@ function localizedJournalHubFileName(locale = "en") {
   return locale === "en" ? "bali-journal.html" : `bali-journal-${locale}.html`;
 }
 
+/* Тот же принцип, что и в rewriteBaliLocaleRoutesInHtml: не подставляем язык
+   в адрес страницы, которой нет. Отсюда шли ссылки в чипсах «наши PDF о Бали»
+   и в шапке — по двадцать несуществующих немецких адресов на страницу тура. */
 function localizedBaliInternalRoute(route, locale = "en") {
   const text = String(route || "");
   if (locale === "en") return text;
+  const path = text.replace(new RegExp(`^${escapeRegExp(SITE_URL)}`, "i"), "");
+  if (/^\/bali\/en(\/|$)/i.test(path) && !localeCoversRoute(path, locale)) return text;
   return text
     .replace(/^\/bali\/en(?=\/|$)/i, `/bali/${locale}`)
     .replace(new RegExp(`^${escapeRegExp(SITE_URL)}\\/bali\\/en(?=\\/|$)`, "i"), `${SITE_URL}/bali/${locale}`);
@@ -47234,11 +47232,39 @@ function switchBaliRouteLocale(route, locale = "en") {
     .replace(new RegExp(`^${escapeRegExp(SITE_URL)}\\/bali\\/[a-z]{2}(?=\\/|$|#)`, "i"), `${SITE_URL}/bali/${locale}`);
 }
 
+/* Перевод внутренних ссылок на язык страницы — с проверкой, что такая страница есть.
+
+   Раньше здесь стояла слепая замена префикса: любой /bali/en/… превращался в
+   /bali/<язык>/…, независимо от того, собрали мы эту страницу или нет. Для
+   русского, испанского и французского это работало, потому что они полные.
+   Немецкий раскатан волной на сто страниц из трёхсот семидесяти — и каждая
+   ссылка на непокрытую статью превращалась в 404.
+
+   Замер 24.08.2026: 1082 битые ссылки на 99 из 101 немецкой страницы, в среднем
+   по десять на страницу. Плюс по 30 на четырёх страницах у ru/es/fr/zh — это
+   статьи из ENGLISH_ONLY_GUIDES. Карта сайта и hreflang при этом были чистыми:
+   там проверка через localeCoversRoute стояла, а здесь её не было.
+
+   Цена не только в пользователе, который упирается в 404. Google идёт по этим
+   ссылкам и тратит на них обход — тот самый, которого немецким страницам не
+   хватает: на 24.08 из выборки в 12 адресов проиндексированы 3, а 5 роботу
+   вообще неизвестны. Частичная раскатка экономила место в индексе и одновременно
+   жгла обход на несуществующих адресах.
+
+   Теперь маршрут проверяется целиком. Нет локализованной версии — ссылка
+   остаётся английской: рабочая страница на чужом языке лучше, чем 404. */
 function rewriteBaliLocaleRoutesInHtml(html, locale = "en") {
   if (locale === "en") return html;
+  const swapLocale = (whole, site, rest) => {
+    const route = `/bali/en${rest || ""}`;
+    if (!localeCoversRoute(route, locale)) return whole;
+    return `${site || ""}/bali/${locale}${rest || ""}`;
+  };
   return String(html || "")
-    .replace(new RegExp(`${escapeRegExp(SITE_URL)}\\/bali\\/en(?=\\/|$|#|"|')`, "g"), `${SITE_URL}/bali/${locale}`)
-    .replace(/\/bali\/en(?=\/|$|#|"|')/g, `/bali/${locale}`)
+    .replace(
+      new RegExp(`(${escapeRegExp(SITE_URL)})?\\/bali\\/en((?:\\/[a-z0-9-]+)*)(?=$|["'#?\\s<])`, "g"),
+      swapLocale,
+    )
     // Планировщик берёт язык из адреса, а не из пути: /ai-planner?lang=xx
     .replace(/\/ai-planner\?lang=en\b/g, `/ai-planner?lang=${locale}`);
 }
@@ -48222,9 +48248,16 @@ function localizeUnescoShell(html, locale = "en", options = {}) {
     .replaceAll("/bali/en/main-page#tours", `${localizedMainPageRoute(currentLocale)}#tours`)
     .replaceAll('href="/bali/en/main-page"', `href="${localizedMainPageRoute(currentLocale)}"`)
     .replaceAll(`href="${JOURNAL_HUB_ROUTE}"`, `href="${localizedJournalHubRoute(currentLocale)}"`)
-    .replaceAll("/bali/en/journal/", `/bali/${currentLocale}/journal/`)
-    .replaceAll(`${SITE_URL}/bali/en/journal/`, `${SITE_URL}/bali/${currentLocale}/journal/`)
-    .replaceAll("/bali/en/tours/", `/bali/${currentLocale}/tours/`);
+    /* Четвёртая по счёту подстановка языка в адрес — и она шла последней,
+       отменяя проверки, сделанные выше при сборке чипсов. Отсюда на каждой
+       немецкой странице тура оставалось по два десятка ссылок в 404.
+       Теперь маршрут проверяется целиком: нет немецкой версии — адрес
+       остаётся английским. */
+    .replace(/\/bali\/en\/(journal|tours)((?:\/[a-z0-9-]+)*)/g, (whole, kind, rest) => (
+      localeCoversRoute(`/bali/en/${kind}${rest}`, currentLocale)
+        ? `/bali/${currentLocale}/${kind}${rest}`
+        : whole
+    ));
 
   localizedHtml = replaceEverywhere(localizedHtml, ">FAQ<", `>${escapeHtml(navFaqLabel)}<`);
 
@@ -48440,7 +48473,11 @@ function buildUnescoPdfChipsBlock(locale = "en") {
 
 function buildTourJournalChipsBlock(tour, locale = "en") {
   const ui = tour?.ui?.chipTravelGuide ? westUiLabels(tour) : unescoUiLabels(locale);
-  const journalBase = `/bali/${locale}/journal/${tour.slug}`;
+  /* Язык подставляем только если статьи-спутники на нём собраны. Немецкий их
+     не получает вовсе (см. localeCoversJournalArticle), и прямая интерполяция
+     давала по три ссылки в 404 на каждой немецкой странице тура. */
+  const chipLocale = localeCoversRoute(`/bali/en/journal/${tour.slug}/travel-guide`, locale) ? locale : "en";
+  const journalBase = `/bali/${chipLocale}/journal/${tour.slug}`;
   const chips = [
     [null, ui.chipTravelGuide, `${journalBase}/travel-guide`],
     [null, ui.chipTourSchedule, `${journalBase}/tour-schedule`],
@@ -49102,7 +49139,12 @@ function renderStandalonePage(type, locale) {
             <p style="color:#555;line-height:1.6;margin:0 0 32px;">${escapeHtml(content.intro)}</p>
             <div class="sb-guides-grid">
               ${guideArticles.map((g) => {
-                const guideRoute = `/bali/${locale}/journal/${g.guide.slug}`;
+                /* Индекс перечисляет все 190 гидов, а немецкий собран у 73.
+                   Ведём на английскую версию там, где немецкой нет: карточка на
+                   этой странице и так на английском, а 404 не помогает никому. */
+                const guideRoute = localeCoversRoute(`/bali/en/journal/${g.guide.slug}`, locale)
+                  ? `/bali/${locale}/journal/${g.guide.slug}`
+                  : `/bali/en/journal/${g.guide.slug}`;
                 return `<a class="sb-guide-card" href="${guideRoute}">
                 <h2>${escapeHtml(g.title)}</h2>
                 <p>${escapeHtml(g.description.slice(0, 120))}${g.description.length > 120 ? "..." : ""}</p>
