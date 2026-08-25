@@ -3,6 +3,17 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sbexcursions\\.com"
+        }
+      ],
+      "destination": "https://www.sbexcursion.com/$1",
+      "permanent": true
+    },
+    {
       "source": "/bali/en/tours/unesco-heritage-sites-tour",
       "destination": "/bali/en/tours/bali-unesco",
       "permanent": true
