@@ -6,6 +6,7 @@
     python3 scripts/status.py                # быстро: поиск и цены
     python3 scripts/status.py --index        # плюс проверка индексации, 60 адресов
     python3 scripts/status.py --index 150    # больше выборка, дольше
+    python3 scripts/status.py --targets      # куда писать дальше: три корзины
 
 Зачем это, а не обычный краулер. Краулер обходит наш сайт и ищет наши же
 ошибки — а их ловит сборка. Здесь другое: что об этом сайте думает Google.
@@ -99,6 +100,145 @@ near = [r for r in qs if 5 <= r["position"] <= 15 and r["impressions"] >= 8]
 for r in sorted(near, key=lambda x: -x["impressions"])[:12]:
     print(f"   {r['impressions']:>5}п {r['clicks']:>3}кл  поз {r['position']:>5.1f}   {r['keys'][0][:48]}")
 if not near: print("   пока нет")
+
+# ── 1б. ЦЕЛИ: ТРИ КОРЗИНЫ ────────────────────────────────────────────────
+# Зачем отдельным флагом. Обычный отчёт показывает, что есть. Этот раздел
+# отвечает на другой вопрос: во что вкладывать следующий час работы.
+#
+# Главное, что здесь учтено и чего не видно в интерфейсе Search Console:
+# на уровне запросов Google прячет большую часть данных (у нас видно около
+# четверти показов и десятую часть кликов — остальное «анонимные запросы»).
+# Поэтому корзины считаются по СТРАНИЦАМ, где данные полные, а запросы
+# нужны только чтобы понять, чего от страницы хотят.
+#
+# Второе: позиция сама по себе ничего не решает. Запрос с числовым ответом
+# («сколько стоит водитель») закрывается ответом Google прямо в выдаче, и
+# клика не будет ни с пятой позиции, ни с первой. Запрос, требующий
+# суждения («стоит ли ехать на Нусу Пениду»), одной строкой не закрывается.
+# Разница по нашим же данным при равных позициях — впятеро по CTR.
+if "--targets" in sys.argv:
+    h("ЦЕЛИ: куда писать дальше")
+
+    QD = 93          # окно: квартал, чтобы сгладить недельные скачки
+    def q(dims, rows=25000):
+        return sa(dims, 3, QD, rows)
+
+    pages, queries, qpairs = q(["page"]), q(["query"]), q(["query", "page"])
+    p_imp = sum(r["impressions"] for r in pages)
+    q_imp = sum(r["impressions"] for r in queries)
+    p_cl = sum(r["clicks"] for r in pages)
+    q_cl = sum(r["clicks"] for r in queries)
+    print(f"   за {QD} дней: показов {p_imp}, кликов {p_cl}")
+    print(f"   из них Google раскрывает на уровне запросов: {q_imp} показов ({q_imp/p_imp*100:.0f}%), "
+          f"{q_cl} кликов ({q_cl/p_cl*100 if p_cl else 0:.0f}%)")
+    print("   остальное — «анонимные запросы», поэтому корзины считаем по страницам\n")
+
+    # статья = один слаг во всех языках сразу: пишем-то мы одну статью
+    def slug_of(u):
+        u = u.replace(SITE[:-1], "")
+        m = re.match(r"^/(?:bali|dubai)/[a-z]{2}/(?:journal|tours|blog)/(.+)$", u)
+        return m.group(1) if m else None
+    art = collections.defaultdict(lambda: {"imp": 0, "cl": 0, "wpos": 0.0, "tours": False, "dubai": False})
+    for r in pages:
+        sg = slug_of(r["keys"][0])
+        if not sg: continue
+        a = art[sg]
+        a["imp"] += r["impressions"]; a["cl"] += r["clicks"]
+        a["wpos"] += r["position"] * r["impressions"]
+        if "/tours/" in r["keys"][0]: a["tours"] = True
+        if "/dubai/" in r["keys"][0]: a["dubai"] = True
+    for a in art.values():
+        a["pos"] = a["wpos"] / a["imp"] if a["imp"] else 0
+        a["ctr"] = a["cl"] / a["imp"] * 100 if a["imp"] else 0
+
+    # чего хочет человек, задающий этот запрос
+    NUMERIC = re.compile(r"\b(cost|price|prices|how much|cheap|fee|ferry|schedule|timetable|"
+                         r"time|times|timings|ticket|tickets|distance|how far|how long|"
+                         r"сколько стоит|цена|цены|расписание|билет)\b", re.I)
+    JUDGE = re.compile(r"\b(worth it|worth|better|vs|versus|or|safe|should|best|which|"
+                       r"стоит ли|лучше|или|безопасно)\b", re.I)
+    def intent(qq):
+        if NUMERIC.search(qq): return "число"      # ответ помещается в одну строку → его заберёт AI
+        if JUDGE.search(qq):   return "суждение"   # одной строкой не закрыть → человек кликает
+        return "прочее"
+
+    # какие запросы ведут на страницу и с какой позиции
+    by_slug = collections.defaultdict(list)
+    for r in qpairs:
+        qq, pg = r["keys"]
+        sg = slug_of(pg)
+        if sg: by_slug[sg].append((qq, r["impressions"], r["position"]))
+
+    # Страницы туров по отдельности до любого порога не дотягивают, и в
+    # корзины не попадают вовсе. Это и есть главная новость, поэтому
+    # выносим их отдельной строкой, а не прячем за фильтром.
+    t_imp = sum(a["imp"] for a in art.values() if a["tours"])
+    t_cl = sum(a["cl"] for a in art.values() if a["tours"])
+    j_imp = sum(a["imp"] for a in art.values() if not a["tours"] and not a["dubai"])
+    j_cl = sum(a["cl"] for a in art.values() if not a["tours"] and not a["dubai"])
+    print(f"   страницы туров:  {t_imp:>6} показов, {t_cl:>3} кликов   "
+          f"({t_imp/(t_imp+j_imp)*100 if t_imp+j_imp else 0:.1f}% всей видимости)")
+    print(f"   журнал:          {j_imp:>6} показов, {j_cl:>3} кликов")
+    print("   если первая строка сильно меньше второй — деньги приносит журнал,\n"
+          "   а коммерческие страницы в выдаче не участвуют\n")
+
+    MIN_IMP = 150      # ниже этого статья не окупит часа работы
+    buckets = {"усиливать": [], "писать новое": [], "не трогать": []}
+    for sg, a in art.items():
+        if a["imp"] < MIN_IMP or a["dubai"] or a["tours"]: continue
+        qs = sorted(by_slug.get(sg, []), key=lambda x: -x[1])
+        top = qs[0][0] if qs else ""
+        kinds = collections.Counter(intent(x[0]) for x in qs[:8])
+        it = kinds.most_common(1)[0][0] if kinds else "прочее"
+        row = (a["imp"], a["cl"], a["ctr"], a["pos"], sg, top, it)
+        if a["ctr"] >= 1.5:
+            continue                                   # уже работает, не цель
+        if it == "число":
+            buckets["не трогать"].append(row + ("ответ помещается в строку, его забирает AI-ответ",))
+        elif a["pos"] > 20:
+            buckets["писать новое"].append(row + ("страница есть, но выдача её не считает ответом",))
+        elif a["pos"] <= 15:
+            buckets["усиливать"].append(row + ("позиция есть, клика нет — вопрос к сниппету и intent",))
+        else:
+            buckets["писать новое"].append(row + ("между 15 и 20 — дешевле переписать, чем дотягивать",))
+
+    for name, why in [("усиливать", "страница на первой странице выдачи, но клика нет"),
+                      ("писать новое", "спрос есть, а нынешняя страница выдачу не устраивает"),
+                      ("не трогать", "клика не будет, сколько ни вкладывай")]:
+        rows_ = sorted(buckets[name], key=lambda x: -x[0])
+        got = sum(r[0] for r in rows_)
+        print(f"\n   ── {name.upper()}  ({len(rows_)} статей, {got} показов) — {why}")
+        if not rows_:
+            print("      пусто")
+            continue
+        for imp, cl, ctr, pos, sg, top, it, note in rows_[:12]:
+            print(f"      {imp:>5}п {cl:>3}кл {ctr:>4.1f}% поз {pos:>5.1f}  {sg[:40]:42} {it}")
+            print(f"            запрос: {top[:56]:58} {note}")
+        if len(rows_) > 12:
+            print(f"      … ещё {len(rows_)-12}, показов {sum(r[0] for r in rows_[12:])}")
+    print("\n   ⚠ пометка «прочее» значит, что тип запроса скриптом не опознан —")
+    print("     такие строки надо руками посмотреть в выдаче: если там Tripadvisor,")
+    print("     hotels.com и Instagram, это «не трогать», как бы ни была хороша позиция")
+
+    # что за тип статьи вообще получает клики — проверка гипотезы на своих данных
+    def kind_of(sg):
+        if "-vs-" in sg: return "сравнение X vs Y"
+        if re.match(r"^(is|are|can|do|does|should)-", sg): return "вопрос да/нет"
+        if re.search(r"(^how-much|cost|price)", sg): return "сколько стоит"
+        if re.match(r"^(how-to|where|when)-", sg): return "как / где / когда"
+        if sg.startswith("best-"): return "подборка best-N"
+        if "day-trip" in sg or "transfer" in sg: return "маршрут / трансфер"
+        if "things-to-do" in sg or "itinerary" in sg: return "чем заняться"
+        return "прочее"
+    print("\n   ── ЧТО ВООБЩЕ ПОЛУЧАЕТ КЛИКИ (только статьи с позицией <= 15)")
+    print("      если тип внизу списка — на него не стоит тратить следующий час\n")
+    kk = collections.defaultdict(lambda: {"imp": 0, "cl": 0, "n": 0})
+    for sg, a in art.items():
+        if a["pos"] > 15 or a["imp"] < 20: continue
+        e = kk[kind_of(sg)]; e["imp"] += a["imp"]; e["cl"] += a["cl"]; e["n"] += 1
+    for k, e in sorted(kk.items(), key=lambda x: -x[1]["cl"] / max(1, x[1]["imp"])):
+        if e["imp"] < 150: continue
+        print(f"      {k:22} {e['n']:>3} шт  {e['imp']:>6}п {e['cl']:>4}кл   CTR {e['cl']/e['imp']*100:>5.2f}%")
 
 # ── 2. ИНДЕКСАЦИЯ ────────────────────────────────────────────────────────
 if "--index" in sys.argv:
