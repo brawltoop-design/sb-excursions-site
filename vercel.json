@@ -3,6 +3,17 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "(?:www\\.)?sbexcursions\\.com"
+        }
+      ],
+      "destination": "https://www.sbexcursion.com/bali/en/main-page",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [
         {
