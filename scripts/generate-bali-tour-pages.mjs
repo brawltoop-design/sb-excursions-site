@@ -2327,8 +2327,8 @@ const tours = [
   },
   {
     slug: "atv-ride-adventure",
-    metaTitle: "ATV Ride Adventure in Bali | Off-Road Jungle Tracks from $25",
-    metaDescription: "Off-road ATV ride through Bali jungle trails, mud tracks and rice-field paths on a 4-6 hour half-day. From $25 with gear and guide. Book via WhatsApp.",
+    metaTitle: "ATV Ride Adventure in Bali | Off-Road Jungle Tracks from $39",
+    metaDescription: "Off-road ATV ride through Bali jungle trails, mud tracks and rice-field paths on a 4-6 hour half-day. From $39 with gear and guide. Book via WhatsApp.",
     title: "ATV Ride Adventure",
     mainPage: false,
     aiPlanner: false,
@@ -2338,7 +2338,7 @@ const tours = [
     bestFor: "Active couples and groups",
     format: "Adventure activity",
     area: "Bali off-road routes",
-    price: "From $25",
+    price: "From $39",
     image: sourceImage("tild6464-3137-4633-a638-383661353834__pexels-dnanoes-35399.webp"),
     imageAlt: "Off-road adventure route in Bali",
     lead:
@@ -2367,8 +2367,8 @@ const tours = [
   },
   {
     slug: "atv-quad-bikes",
-    metaTitle: "Ubud ATV Quad Bike Tour in Bali | Jungle Ride from $20",
-    metaDescription: "Ride quad bikes through Ubud jungle, rice fields, river crossings and tunnels on a 1.5-hour track. From $20 with gear, lunch and showers. Book via WhatsApp.",
+    metaTitle: "Ubud ATV Quad Bike Tour in Bali | Jungle Ride from $39",
+    metaDescription: "Ride quad bikes through Ubud jungle, rice fields, river crossings and tunnels on a 1.5-hour track. From $39 with gear, lunch and showers. Book via WhatsApp.",
     title: "Ubud ATV Quad Bike Adventure",
     eyebrow: "Jungle, rice fields, rivers, and tunnels",
     duration: "4-6 hours total with a 1.5-hour ATV ride",
@@ -2376,13 +2376,13 @@ const tours = [
     bestFor: "Adventure lovers, couples, friends, and first-time ATV riders",
     format: "Guided ATV quad bike adventure with lunch",
     area: "Ubud off-road jungle, rice field, river, and tunnel track",
-    price: "From $20",
+    price: "From $39",
     image: sourceImage("bali-tours/atv-quad-bikes.webp"),
     imageAlt: "ATV quad bike route through muddy jungle terrain in Ubud Bali",
     lead:
       "Ride one of Ubud's most fun off-road ATV tracks with jungle lanes, rice field scenery, muddy river crossings, and tunnel sections, then finish with lunch and an easy transfer or direct return.",
     summary:
-      "This Ubud ATV Quad Bike Adventure is built for travelers who want action without overcomplicating the day. The route combines Bali jungle, rice paddies, bumpy mud tracks, river sections, and natural tunnels in one guided ride, with safety gear, lunch, showers, and optional hotel transfer included from $20.",
+      "This Ubud ATV Quad Bike Adventure is built for travelers who want action without overcomplicating the day. The route combines Bali jungle, rice paddies, bumpy mud tracks, river sections, and natural tunnels in one guided ride, with safety gear, lunch, showers, and optional hotel transfer included from $39.",
     overview:
       "The experience works well because it stays exciting while still being beginner-friendly after the safety briefing. You can book a single ATV for a solo ride or choose a tandem setup for couples, friends, or one adult with a child, making it one of the easiest active half-day upgrades to add around Ubud.",
     highlights: [
@@ -3117,8 +3117,8 @@ const tours = [
   },
   {
     slug: "white-water-rafting",
-    metaTitle: "Bali White Water Rafting | Ayung River, Ubud from $49",
-    metaDescription: "Class II-III rafting on the Ayung River near Ubud — about 2 hours through a jungle gorge, gear and hotel pickup included. From $49. Book via WhatsApp.",
+    metaTitle: "Bali White Water Rafting | Ayung River, Ubud from $25",
+    metaDescription: "Class II-III rafting on the Ayung River near Ubud — about 2 hours through a jungle gorge, gear and hotel pickup included. From $25. Book via WhatsApp.",
     title: "Bali White Water Rafting, Ayung River",
     eyebrow: "River adventure in Bali",
     duration: "4-6 hours",
@@ -3126,7 +3126,7 @@ const tours = [
     bestFor: "Families, couples, and active groups",
     format: "Adventure activity",
     area: "Bali river routes",
-    price: "From $49",
+    price: "From $25",
     image: sourceImage("tild3165-6564-4638-b363-636366303266__rishi-lq2tr3apzi4-un.webp"),
     imageAlt: "Water adventure and river activity vibe in Bali",
     lead:
@@ -10839,7 +10839,7 @@ const JOURNAL_SEO_GUIDES = [
           "Gitgit shows the same problem in official form. Two pages published by the same Buleleng administration disagree: Kominfo in 2018 gives **35 m**, Disbudpar in 2024 gives **48 m**. The route descriptions differ too, **11 km** with a **250 m** walk on one page against **13.4 km**, **29 minutes** of driving and a **20-minute** walk on the other. Gitgit is a built-in stop on our Lovina sunrise day at **$69** for **8 hours** and on the North Bali day at **$79** for **10-12 hours**, which is the only way we think it is worth the distance.",
           "Sekumpul and Nung Nung we would rather you visit without us. Buleleng's Diskominfo estimates Sekumpul at **150 m** with a descent of **365** steps, while guidebooks widely print about **80 m** and about **500** steps; entry is **IDR 15,000** for adults and **IDR 5,000** for children, split between Lemukih and Sekumpul villages, with e-ticketing in place. Nung Nung is **50 m** with about **500** steep concrete steps, in Desa Pelaga, Petang, Badung, roughly **45 km** and **1.5-2 hours** from Denpasar; from January 2026 a foreign adult pays **IDR 30,000** and a child **IDR 20,000**, Indonesians **IDR 15,000** and **IDR 10,000**. Detik, on a January 2026 visit, found wet and slippery sections of the staircase. Each of these is a day on its own, we do not run either of them, and we are not going to bolt them onto a route to make a page look fuller.",
           "On safety, on 18 January 2024 the Buleleng tourism office, through Gede Dody Sukma Oktiva Askara, said it was working towards permanent lifeguard cover at every water attraction in the regency and a clean split between the guide role and the rescuer role, citing **120** certified basic-level rescuers. That was a statement of intent, not a rule that came into force, and drownings in Buleleng continued afterwards, at Kebo Iwa on 21 November 2025 and at Tembok Barak on 25-26 April 2026. We found no published wet-weather closure rule for any of the four falls above, which means the decision on a brown, loud day is yours and your driver's. What is fixed rather than announced is small: Sekumpul now runs on e-ticketing, and Tukad Cepung has handrails, a first-aid kit and insurance.",
-          "One last seasonal note that runs the other way. High flow is a problem at a waterfall and an advantage on a river, so the months when the catchments are full are the months to put [white-water rafting](/bali/en/tours/white-water-rafting) at **$49** per person into the plan instead of a long staircase. High flow is also a different thing from a flood day: after a night like 9 September 2025, the river is not a plan."
+          "One last seasonal note that runs the other way. High flow is a problem at a waterfall and an advantage on a river, so the months when the catchments are full are the months to put [white-water rafting](/bali/en/tours/white-water-rafting) at **$25** per person into the plan instead of a long staircase. High flow is also a different thing from a flood day: after a night like 9 September 2025, the river is not a plan."
         ]
       }
     ],
@@ -11033,7 +11033,7 @@ const JOURNAL_SEO_GUIDES = [
     "badge": "Travel guide",
     "slug": "bali-rafting-price-2026",
     "navLabel": "Rafting prices 2026",
-    "cardTourLabel": "Ayung rafting from $49",
+    "cardTourLabel": "Ayung rafting from $25",
     "heroTourSlug": "white-water-rafting",
     "relatedTourSlugs": [
       "white-water-rafting",
@@ -11098,7 +11098,7 @@ const JOURNAL_SEO_GUIDES = [
         "paragraphs": [
           "Sobek publishes one price list and it is identical on both rivers: **IDR 1,200,000** for a foreign adult, **IDR 800,000** for a child aged 7 to 15, and **IDR 600,000** for domestic guests with a KTP. The same three numbers cover the Ayung and Telaga Waja, which already tells you what kind of number it is. The two rivers are different lengths, different drives and different logistics, and a figure that does not move between them is a list price rather than a costing of the trip.",
           "Open the booking section of the same balisobek.com and the numbers change. The Ayung is **IDR 990,000** if you drive yourself and **IDR 1,200,000** with transfer; Telaga Waja is **IDR 900,000** self-drive and **IDR 1,200,000** with transfer. The gap between two sections of one website is **IDR 210,000**. Nobody is being dishonest — the list price bundles the shuttle and the booking engine unbundles it — but if you compare a quote against the list without checking which page the list came from, you are comparing two different products.",
-          "Then there is the partner channel. Wira Tour (raftingbali.net, prices held to 31 December 2026) sells the same Sobek departure on the Ayung at **IDR 440,000** per adult for a group of two to five and **IDR 425,000** at six to ten, with a child grid running alongside the adult one. With the shuttle the adult seat becomes **IDR 618,000**. That 440,000 is **37%** of the 1,200,000 list: the agent seat costs **2.7 times less** than the operator's own headline for the same boat, the same guide and the same river. Our [Ayung rafting trip](/bali/en/tours/white-water-rafting) sits in that agent band, from $49.",
+          "Then there is the partner channel. Wira Tour (raftingbali.net, prices held to 31 December 2026) sells the same Sobek departure on the Ayung at **IDR 440,000** per adult for a group of two to five and **IDR 425,000** at six to ten, with a child grid running alongside the adult one. With the shuttle the adult seat becomes **IDR 618,000**. That 440,000 is **37%** of the 1,200,000 list: the agent seat costs **2.7 times less** than the operator's own headline for the same boat, the same guide and the same river. Our [Ayung rafting trip](/bali/en/tours/white-water-rafting) sits in that agent band, from $25.",
           "One caveat worth stating plainly. Sobek does not itself describe **IDR 1,200,000** as a rack rate, and a different agent, water-sport-bali.com, calls Sobek's published price **IDR 600,000**. So the word published is doing marketing work rather than accounting work: it is an anchor a seller chooses, not a defined term you can audit. Treat any discount expressed as a percentage off a published price as unverifiable until the seller shows you which page that price came from."
         ]
       },
@@ -11440,7 +11440,7 @@ const JOURNAL_SEO_GUIDES = [
     "badge": "Travel guide",
     "slug": "is-bali-rafting-safe",
     "navLabel": "Rafting safety",
-    "cardTourLabel": "Ayung rafting from $49",
+    "cardTourLabel": "Ayung rafting from $25",
     "heroTourSlug": "white-water-rafting",
     "relatedTourSlugs": [
       "white-water-rafting",
@@ -11576,7 +11576,7 @@ const JOURNAL_SEO_GUIDES = [
     "badge": "Travel guide",
     "slug": "bali-rafting-with-kids-age-limits",
     "navLabel": "Rafting with kids",
-    "cardTourLabel": "Ayung rafting from $49",
+    "cardTourLabel": "Ayung rafting from $25",
     "heroTourSlug": "white-water-rafting",
     "relatedTourSlugs": [
       "white-water-rafting",
@@ -11712,7 +11712,7 @@ const JOURNAL_SEO_GUIDES = [
     "slug": "what-to-wear-rafting-bali",
     "badge": "Travel guide",
     "navLabel": "What to wear rafting",
-    "cardTourLabel": "Ayung rafting from $49",
+    "cardTourLabel": "Ayung rafting from $25",
     "heroTourSlug": "white-water-rafting",
     "relatedTourSlugs": [
       "white-water-rafting",
@@ -14710,7 +14710,7 @@ const JOURNAL_SEO_GUIDES = [
     ],
     "title": "7 Bali Day Trips With Kids That Actually Work in 2026",
     "description": "Seven Bali day trips that work with kids, ranked by a local operator — real 2026 prices from $20, age notes for ATV and rafting, and pacing tips.",
-    "excerpt": "Yes, Bali day trips work with kids — if you run them privately and at your family's pace. This guide ranks seven family day trips we drive year-round: the Ubud rice terrace and volcano route from $65 per car, Ayung River rafting from $49, Blue Lagoon snorkeling from $50, and an Ubud ATV track from $20. Every tour here is private, so nap stops, toilet breaks and early exits cost nothing but a word to your driver. Where an activity has age rules — ATV and rafting mainly — we say so plainly: operators set age minimums, and we confirm them for your kids' exact ages on WhatsApp before you pay anything. No deposits, no group buses, no schedule but yours.",
+    "excerpt": "Yes, Bali day trips work with kids — if you run them privately and at your family's pace. This guide ranks seven family day trips we drive year-round: the Ubud rice terrace and volcano route from $65 per car, Ayung River rafting from $25, Blue Lagoon snorkeling from $50, and an Ubud ATV track from $39. Every tour here is private, so nap stops, toilet breaks and early exits cost nothing but a word to your driver. Where an activity has age rules — ATV and rafting mainly — we say so plainly: operators set age minimums, and we confirm them for your kids' exact ages on WhatsApp before you pay anything. No deposits, no group buses, no schedule but yours.",
     "rankings": [
       {
         "name": "Ubud Rice Terrace, Temple & Volcano Tour",
@@ -14773,7 +14773,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Age rules, honestly: ATV, rafting and the volcano",
         "paragraphs": [
-          "The honest version of the age question: **operators set age minimums for ATV and rafting, and they vary — confirm on WhatsApp** with your children's exact ages before booking, not after. ATV days run **from $20** on the Ubud quad bike track and **from $25** on the longer off-road route; [Ayung River rafting](/bali/en/tours/white-water-rafting) runs **from $49** for a 4-6 hour day. Neither is a toddler activity, and anyone on the street who tells you otherwise is selling, not advising.",
+          "The honest version of the age question: **operators set age minimums for ATV and rafting, and they vary — confirm on WhatsApp** with your children's exact ages before booking, not after. ATV days run **from $39** on the Ubud quad bike track and **from $39** on the longer off-road route; [Ayung River rafting](/bali/en/tours/white-water-rafting) runs **from $25** for a 4-6 hour day. Neither is a toddler activity, and anyone on the street who tells you otherwise is selling, not advising.",
           "For water days, [Blue Lagoon snorkeling](/bali/en/tours/blue-lagoon-snorkeling) is where we point families first: a sheltered cove, gear included, and a guide who stays in the water with the group. For the volcano, the sunrise jeep removes the hike question entirely — children ride up warm and half-asleep instead of climbing in the dark. If your kids are older and genuinely active, the hike version exists **from $35**, but for families the jeep is the sensible default."
         ]
       },
@@ -14804,7 +14804,7 @@ const JOURNAL_SEO_GUIDES = [
     "faq": [
       {
         "question": "Can kids ride ATVs in Bali?",
-        "answer": "Often yes, but operators set age minimums for ATV riding and they differ by track. On the Ubud quad bike route — from $20, with a 1.5-hour ride inside a 4-6 hour day — send your children's exact ages on WhatsApp and we confirm with the operator before you book anything."
+        "answer": "Often yes, but operators set age minimums for ATV riding and they differ by track. On the Ubud quad bike route — from $39, with a 1.5-hour ride inside a 4-6 hour day — send your children's exact ages on WhatsApp and we confirm with the operator before you book anything."
       },
       {
         "question": "Is white water rafting in Bali safe for kids?",
@@ -14812,7 +14812,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How much does a private family day trip in Bali cost?",
-        "answer": "Real 2026 direct prices: the Ubud ATV day from $20, Ayung rafting from $49, Blue Lagoon snorkeling from $50 per person, the full Ubud sightseeing route from $69, and a private car with driver from $59 per car for a route you design yourself. Booking is on WhatsApp with no prepayment."
+        "answer": "Real 2026 direct prices: the Ubud ATV day from $39, Ayung rafting from $25, Blue Lagoon snorkeling from $50 per person, the full Ubud sightseeing route from $69, and a private car with driver from $59 per car for a route you design yourself. Booking is on WhatsApp with no prepayment."
       },
       {
         "question": "What is the best Bali day trip with a toddler?",
@@ -15288,11 +15288,11 @@ const JOURNAL_SEO_GUIDES = [
     "inlineStats": [
       "Beginner-friendly rapids",
       "4-6 hour door-to-door day",
-      "From $49"
+      "From $25"
     ],
     "title": "Bali White Water Rafting: Ayung River Guide for 2026",
-    "description": "Is white water rafting in Bali safe, and is the Ayung River worth a morning? An honest guide to the rapids, what to wear, the season and 2026 prices from $49.",
-    "excerpt": "Yes — white water rafting in Bali is safe for beginners, and the Ayung River near Ubud is where most first-timers should do it. The rapids are beginner-friendly, every raft carries a licensed guide, and life jackets and helmets are standard on every run. The full outing takes 4-6 hours door to door, and a private rafting day books direct from $49 over WhatsApp with no prepayment. The honest caveats are physical rather than aquatic: several hundred steps into and out of the gorge, equatorial sun on open water, and higher, faster flows in the November-March rainy season. This guide covers whether the river is safe, who it suits, what to wear, and how to fold rafting into an Ubud day without rushing either half.",
+    "description": "Is white water rafting in Bali safe, and is the Ayung River worth a morning? An honest guide to the rapids, what to wear, the season and 2026 prices from $25.",
+    "excerpt": "Yes — white water rafting in Bali is safe for beginners, and the Ayung River near Ubud is where most first-timers should do it. The rapids are beginner-friendly, every raft carries a licensed guide, and life jackets and helmets are standard on every run. The full outing takes 4-6 hours door to door, and a private rafting day books direct from $25 over WhatsApp with no prepayment. The honest caveats are physical rather than aquatic: several hundred steps into and out of the gorge, equatorial sun on open water, and higher, faster flows in the November-March rainy season. This guide covers whether the river is safe, who it suits, what to wear, and how to fold rafting into an Ubud day without rushing either half.",
     "rankings": [
       {
         "name": "The Ayung River gorge",
@@ -15362,7 +15362,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "Who the Ayung River suits — and who it does not",
         "paragraphs": [
-          "The Ayung suits families, couples and mixed groups where not everyone is athletic — which is exactly who our [Ayung River rafting day](/bali/en/tours/white-water-rafting) is built for, **from $49** with hotel pickup and a **4-6 hour** door-to-door day. Children join Ayung trips constantly; tell us their ages on WhatsApp when you book so the crew can plan seating and gear. Non-swimmers can go too — the life jacket and the raft do the floating, and being relaxed about getting splashed matters more than swimming ability. If you are building a family-wide day around it, our guide to [Bali day trips with kids](/bali/en/journal/bali-day-trips-with-kids) covers pacing.",
+          "The Ayung suits families, couples and mixed groups where not everyone is athletic — which is exactly who our [Ayung River rafting day](/bali/en/tours/white-water-rafting) is built for, **from $25** with hotel pickup and a **4-6 hour** door-to-door day. Children join Ayung trips constantly; tell us their ages on WhatsApp when you book so the crew can plan seating and gear. Non-swimmers can go too — the life jacket and the raft do the floating, and being relaxed about getting splashed matters more than swimming ability. If you are building a family-wide day around it, our guide to [Bali day trips with kids](/bali/en/journal/bali-day-trips-with-kids) covers pacing.",
           "Two groups should think twice. Adrenaline chasers who have rafted big water elsewhere may find the Ayung tame — east Bali's Telaga Waja river runs longer and pushier, and honesty says experienced paddlers will prefer it. And anyone with bad knees should weigh the stairs: on the main Ayung route it is about **509 steps down** into the gorge and **250 back up** at the finish, two separate staircases with a shuttle between them, and the hardest part of the day by a comfortable margin. If that is the constraint, Telaga Waja is the counterintuitive answer — around five steps at the start, and some operators sell it as the run with no staircase at the end. The river itself asks very little of you."
         ]
       },
@@ -15377,7 +15377,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Combining rafting with an Ubud day",
         "paragraphs": [
           "Rafting slots into an Ubud itinerary better than any other adventure on the island, because the Ayung gorge runs directly past Ubud's western edge. The clean combination is water in the morning and town in the afternoon: finish the run, change into dry clothes, and spend the rest of the day on Ubud's cafes, the Campuhan ridge and the Monkey Forest at your own pace. If you would rather cover the classics with a driver handling the route, the [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) — **from $65 per car, 10 hours — works better as a separate day than a same-day squeeze. Our [one-day Ubud plan](/bali/en/journal/ubud-in-one-day) shows how the pieces fit together.",
-          "For a double adventure day, pair the river with the [Ubud ATV quad bike ride](/bali/en/tours/atv-quad-bikes) — **from $20**, built around a 1.5-hour ride through jungle, rice field, river and tunnel track in the same part of the island. A 4-6 hour rafting slot leaves enough daylight for either combination; just ask for the morning pickup rather than midday when you book on WhatsApp."
+          "For a double adventure day, pair the river with the [Ubud ATV quad bike ride](/bali/en/tours/atv-quad-bikes) — **from $39**, built around a 1.5-hour ride through jungle, rice field, river and tunnel track in the same part of the island. A 4-6 hour rafting slot leaves enough daylight for either combination; just ask for the morning pickup rather than midday when you book on WhatsApp."
         ]
       }
     ],
@@ -15388,7 +15388,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "How much does white water rafting in Bali cost?",
-        "answer": "A private Ayung River rafting day books direct from $49 over WhatsApp with no prepayment, and the outing runs 4-6 hours including hotel pickup. When comparing quotes, check whether transport from your hotel is included — from south Bali the drive is a real part of the day."
+        "answer": "A private Ayung River rafting day books direct from $25 over WhatsApp with no prepayment, and the outing runs 4-6 hours including hotel pickup. When comparing quotes, check whether transport from your hotel is included — from south Bali the drive is a real part of the day."
       },
       {
         "question": "Can non-swimmers go rafting on the Ayung River?",
@@ -15430,18 +15430,18 @@ const JOURNAL_SEO_GUIDES = [
     "inlineStats": [
       "Rides from $20",
       "1.5 hours on the track",
-      "Rafting add-on from $49"
+      "Rafting add-on from $25"
     ],
     "title": "Bali ATV Tours: Quad Biking Prices, Tracks and the Mud",
-    "description": "What a Bali ATV tour is really like: quad biking from $20 in Ubud, the 1.5-hour jungle track, what to wear for the mud, and how the rafting combo works.",
-    "excerpt": "A Bali ATV tour costs from $20 per person and covers a 1.5-hour ride through jungle, rice fields, a river crossing and a dark tunnel track outside Ubud, inside a 4-6 hour door-to-door day. It is the easiest adventure activity on the island to research badly: dozens of tracks share the same marketing photos, tandem rules vary by operator, and nobody warns you how muddy you will get. This guide compares the two ATV days we actually run, breaks the ride into its stages so you know what the track really looks like, explains what to wear, and shows how riders pair the morning with white water rafting from $49 or a waterfall stop in the same Ubud day.",
+    "description": "What a Bali ATV tour is really like: quad biking from $39 in Ubud, the 1.5-hour jungle track, what to wear for the mud, and how the rafting combo works.",
+    "excerpt": "A Bali ATV tour costs from $39 per person and covers a 1.5-hour ride through jungle, rice fields, a river crossing and a dark tunnel track outside Ubud, inside a 4-6 hour door-to-door day. It is the easiest adventure activity on the island to research badly: dozens of tracks share the same marketing photos, tandem rules vary by operator, and nobody warns you how muddy you will get. This guide compares the two ATV days we actually run, breaks the ride into its stages so you know what the track really looks like, explains what to wear, and shows how riders pair the morning with white water rafting from $25 or a waterfall stop in the same Ubud day.",
     "rankings": [
       {
         "name": "Ubud ATV Quad Bike Adventure",
         "imageSrc": "/images/tours-real/atv-quad-bikes.jpg",
         "area": "Ubud",
         "bestFor": "First rides and couples",
-        "summary": "The standard Bali quad day: from $20, with a 1.5-hour ride that strings together jungle, rice fields, a river section and a tunnel. Choose hotel pickup or meet at the Gorilla ATV Adventure point; the whole day runs 4-6 hours door to door."
+        "summary": "The standard Bali quad day: from $39, with a 1.5-hour ride that strings together jungle, rice fields, a river section and a tunnel. Choose hotel pickup or meet at the Gorilla ATV Adventure point; the whole day runs 4-6 hours door to door."
       },
       {
         "name": "ATV Ride Adventure",
@@ -15476,7 +15476,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/tours-real/white-water-rafting.jpg",
         "area": "Ayung River, Ubud",
         "bestFor": "Doubling the adventure day",
-        "summary": "Ayung River rafting runs from $49 as its own 4-6 hour block with morning or midday pickup, which is exactly what makes the same-day pairing work. Book both on WhatsApp together so the two pickups are sequenced instead of overlapping."
+        "summary": "Ayung River rafting runs from $25 as its own 4-6 hour block with morning or midday pickup, which is exactly what makes the same-day pairing work. Book both on WhatsApp together so the two pickups are sequenced instead of overlapping."
       },
       {
         "name": "Pairing: a waterfall after the ride",
@@ -15490,7 +15490,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         "heading": "How a Bali ATV day works, and the tandem question",
         "paragraphs": [
-          "A Bali ATV tour is a guided off-road loop, not a rental: you ride a quad in a small group behind a guide, on a closed track built for the purpose. The [Ubud ATV Quad Bike Adventure](/bali/en/tours/atv-quad-bikes) is the standard version — **from $20**, with a **1.5-hour ride** across jungle, rice fields, a river section and a tunnel, inside a **4-6 hour door-to-door day**. Pickup is optional: we collect you from the hotel, or you meet at the Gorilla ATV Adventure point. The [ATV Ride Adventure](/bali/en/tours/atv-ride-adventure) is the alternative at **from $25** with flexible daytime pickup on Bali off-road routes, useful when the rest of your day is already planned around something else.",
+          "A Bali ATV tour is a guided off-road loop, not a rental: you ride a quad in a small group behind a guide, on a closed track built for the purpose. The [Ubud ATV Quad Bike Adventure](/bali/en/tours/atv-quad-bikes) is the standard version — **from $39**, with a **1.5-hour ride** across jungle, rice fields, a river section and a tunnel, inside a **4-6 hour door-to-door day**. Pickup is optional: we collect you from the hotel, or you meet at the Gorilla ATV Adventure point. The [ATV Ride Adventure](/bali/en/tours/atv-ride-adventure) is the alternative at **from $39** with flexible daytime pickup on Bali off-road routes, useful when the rest of your day is already planned around something else.",
           "Then there is the tandem question. Solo means your own machine and your own throttle; tandem means one person drives and the other rides passenger on the same quad. Couples often assume tandem is automatic and cheaper — sometimes it is, but machine availability, passenger rules and pricing differ between tracks and change without notice, so we deliberately do not print tandem specifics that would go stale. **Send your group size and who actually wants to drive on WhatsApp**, and the exact options and price are confirmed before you book, with no prepayment either way. If someone in your group would rather not drive at all, say so — riding passenger the whole way is a normal choice, not a downgrade."
         ]
       },
@@ -15518,9 +15518,9 @@ const JOURNAL_SEO_GUIDES = [
         ]
       },
       {
-        "heading": "Pairing the ride: rafting from $49 or a waterfall",
+        "heading": "Pairing the ride: rafting from $25 or a waterfall",
         "paragraphs": [
-          "The classic double is quads in the morning and [white water rafting on the Ayung River](/bali/en/tours/white-water-rafting) after — rafting runs **from $49**, takes its own **4-6 hour block**, and offers morning or midday pickup, which is what makes the sequence physically possible. Both activities sit in the same part of the island, so the day is spent on the track and the river rather than in transfers. It is a genuinely full day and you will finish it wet twice over; what the river itself is like, rapid by rapid, is covered in our [rafting guide](/bali/en/journal/white-water-rafting-bali-guide).",
+          "The classic double is quads in the morning and [white water rafting on the Ayung River](/bali/en/tours/white-water-rafting) after — rafting runs **from $25**, takes its own **4-6 hour block**, and offers morning or midday pickup, which is what makes the sequence physically possible. Both activities sit in the same part of the island, so the day is spent on the track and the river rather than in transfers. It is a genuinely full day and you will finish it wet twice over; what the river itself is like, rapid by rapid, is covered in our [rafting guide](/bali/en/journal/white-water-rafting-bali-guide).",
           "The other common pairing is a waterfall, and here is the honest version of that search: **the quad track does not include a waterfall stop**. The route is jungle, rice fields, river crossing and tunnel. To get both in one day, ride in the morning and hand the afternoon to a [private car with driver from $59 per car](/bali/en/tours/private-car-with-driver-bali) for the falls. Which ones justify the drive is ranked in [best waterfalls in Bali](/bali/en/journal/best-waterfalls-bali-day-trips), and if you want the ride folded into a bigger day of temples and terraces, the [Ubud in one day plan](/bali/en/journal/ubud-in-one-day) shows where it fits."
         ]
       }
@@ -15528,7 +15528,7 @@ const JOURNAL_SEO_GUIDES = [
     "faq": [
       {
         "question": "How much does an ATV tour in Bali cost?",
-        "answer": "From $20 per person for the Ubud ATV Quad Bike Adventure, which includes a 1.5-hour ride on a jungle, rice-field, river and tunnel track. The ATV Ride Adventure starts from $25 with flexible daytime pickup. Booking is direct on WhatsApp with no prepayment, so the quote is confirmed before you commit."
+        "answer": "From $39 per person for the Ubud ATV Quad Bike Adventure, which includes a 1.5-hour ride on a jungle, rice-field, river and tunnel track. The ATV Ride Adventure starts from $39 with flexible daytime pickup. Booking is direct on WhatsApp with no prepayment, so the quote is confirmed before you commit."
       },
       {
         "question": "Do you need a driving license for quad biking in Bali?",
@@ -15548,7 +15548,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "Can you do ATV and white water rafting on the same day in Bali?",
-        "answer": "Yes. Both run in the same part of Bali — the Ubud quad track and the Ayung River sit close enough to pair a morning ride with midday rafting from $49. Each takes a 4-6 hour block, so the combined day is genuinely full. Confirm both pickup times on WhatsApp when booking."
+        "answer": "Yes. Both run in the same part of Bali — the Ubud quad track and the Ayung River sit close enough to pair a morning ride with midday rafting from $25. Each takes a 4-6 hour block, so the combined day is genuinely full. Confirm both pickup times on WhatsApp when booking."
       },
       {
         "question": "Is quad biking in Bali safe for beginners?",
@@ -15657,7 +15657,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "When is the beginner season in Bali",
         "paragraphs": [
           "You can learn to surf in Bali in every month of the year — the beginner question is not whether there are waves, but how clean the mornings are. From **April to October** the dry season brings light offshore wind to the west-coast beaches at dawn: the whitewater is orderly, the sets are evenly spaced, and an early session feels like the ocean is cooperating. From **November to March** the wet season swings the wind onshore by early afternoon, so the same beach turns lumpy after lunch — still perfectly learnable, but book the earliest slot of the day.",
-          "Tide matters more than month. Every beginner beach has a window — usually around mid tide — when the whitewater rolls long and even instead of dumping on the sand. This is why the lesson time floats rather than being fixed: the instructor reads the tide chart, not the clock. For the bigger seasonal picture, see our [month-by-month guide to Bali](/bali/en/journal/best-time-to-visit-bali-month-by-month). And if a storm blows the surf out entirely, [white water rafting on the Ayung River](/bali/en/tours/white-water-rafting) from $49 is the standard swap — same adrenaline, no wind problem."
+          "Tide matters more than month. Every beginner beach has a window — usually around mid tide — when the whitewater rolls long and even instead of dumping on the sand. This is why the lesson time floats rather than being fixed: the instructor reads the tide chart, not the clock. For the bigger seasonal picture, see our [month-by-month guide to Bali](/bali/en/journal/best-time-to-visit-bali-month-by-month). And if a storm blows the surf out entirely, [white water rafting on the Ayung River](/bali/en/tours/white-water-rafting) from $25 is the standard swap — same adrenaline, no wind problem."
         ]
       },
       {
@@ -21414,7 +21414,7 @@ const JOURNAL_SEO_GUIDES = [
         area: "Per person",
         bestFor: "Planning the fun budget",
         summary:
-          "Temple entry **$3–8**, waterfall **$1.20–2**, Mount Batur sunrise trek around **$31**, surf lesson **$28–35**, Ayung rafting **$35–55**, full-day tour with driver **$49–65**.",
+          "Temple entry **$3–8**, waterfall **$1.20–2**, Mount Batur sunrise trek around **$31**, surf lesson **$28–35**, Ayung rafting **$35–55**, full-day tour with driver **$25–65**.",
       },
     ],
     sections: [
@@ -22544,7 +22544,7 @@ const JOURNAL_SEO_GUIDES = [
             ],
             [
               "Closed trainers with grip",
-              "Loose volcanic scree on Batur and dust on off-road tracks (ATV Ride Adventure, from $25); sandals are not allowed on quad bikes",
+              "Loose volcanic scree on Batur and dust on off-road tracks (ATV Ride Adventure, from $39); sandals are not allowed on quad bikes",
               "Essential for hikes and ATV"
             ],
             [
@@ -24958,18 +24958,18 @@ const JOURNAL_SEO_GUIDES = [
     "inlineStats": [
       "Wet season Nov-March",
       "Afternoon rain, 1-2 hours",
-      "Rafting from $49"
+      "Rafting from $25"
     ],
     "title": "Bali Tours in the Rainy Season: What Still Works",
     "description": "What still runs in Bali's rainy season, November to March: waterfalls and rafting at their best, sea days and fast boats the first to be cancelled.",
-    "excerpt": "Yes, Bali is worth it in the rainy season, and most of what we run goes ahead exactly as it does in August. The wet season lasts roughly **November to March**, and the rain usually turns up in the afternoon and passes within an hour or two rather than settling in for the day. What genuinely changes is the sea: fast boats and snorkeling trips get called off when the swell comes up, sometimes at short notice. Inland the same weather works for you — waterfalls run at full volume and the Ayung is faster, so [rafting](/bali/en/tours/white-water-rafting) from $49 is a better ride in January than in July. Here is what to book, what to keep loose, and what we move.",
+    "excerpt": "Yes, Bali is worth it in the rainy season, and most of what we run goes ahead exactly as it does in August. The wet season lasts roughly **November to March**, and the rain usually turns up in the afternoon and passes within an hour or two rather than settling in for the day. What genuinely changes is the sea: fast boats and snorkeling trips get called off when the swell comes up, sometimes at short notice. Inland the same weather works for you — waterfalls run at full volume and the Ayung is faster, so [rafting](/bali/en/tours/white-water-rafting) from $25 is a better ride in January than in July. Here is what to book, what to keep loose, and what we move.",
     "rankings": [
       {
         "name": "White water rafting on the Ayung",
         "imageSrc": "/images/places/ayung-river-rafting.jpg",
         "area": "Ayung River, near Ubud",
         "bestFor": "The one activity rain improves",
-        "summary": "More water means faster water. The Ayung run is a genuinely better ride from November to March than at the end of the dry season, and you finish soaked either way, so a downpour changes nothing. Our [rafting trip](/bali/en/tours/white-water-rafting) is from $49, 4-6 hours door to door, with a morning or midday pickup."
+        "summary": "More water means faster water. The Ayung run is a genuinely better ride from November to March than at the end of the dry season, and you finish soaked either way, so a downpour changes nothing. Our [rafting trip](/bali/en/tours/white-water-rafting) is from $25, 4-6 hours door to door, with a morning or midday pickup."
       },
       {
         "name": "Waterfalls at full flow",
@@ -24990,7 +24990,7 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/tours-real/atv-quad-bikes.jpg",
         "area": "Ubud off-road tracks",
         "bestFor": "People who came to get dirty",
-        "summary": "The jungle, rice-field, river and tunnel tracks around Ubud are mud in the wet season, which is the reason most people book an ATV in the first place. The [Ubud quad bike ride](/bali/en/tours/atv-quad-bikes) is from $20, with 1.5 hours on the machine inside a 4-6 hour slot. Wear clothes you do not mind ruining."
+        "summary": "The jungle, rice-field, river and tunnel tracks around Ubud are mud in the wet season, which is the reason most people book an ATV in the first place. The [Ubud quad bike ride](/bali/en/tours/atv-quad-bikes) is from $39, with 1.5 hours on the machine inside a 4-6 hour slot. Wear clothes you do not mind ruining."
       },
       {
         "name": "Batur sunrise with a hot spring finish",
@@ -25050,7 +25050,7 @@ const JOURNAL_SEO_GUIDES = [
         ],
         "bullets": [
           "**Waterfalls run at full volume.** Gitgit and the central Bali falls are heavy and loud from November to March instead of a thin sheet over rock. The trade-off: water often turns brown after a hard downpour, and the stairs get slippery. [Waterfall day trips](/bali/en/journal/best-waterfalls-bali-day-trips) covers which are worth the drive.",
-          "**Rafting is at its peak.** More water in the Ayung means a faster run. Our [white water rafting trip](/bali/en/tours/white-water-rafting) is from $49 over 4-6 hours, and the [full rafting guide](/bali/en/journal/white-water-rafting-bali-guide) explains what the day involves.",
+          "**Rafting is at its peak.** More water in the Ayung means a faster run. Our [white water rafting trip](/bali/en/tours/white-water-rafting) is from $25 over 4-6 hours, and the [full rafting guide](/bali/en/journal/white-water-rafting-bali-guide) explains what the day involves.",
           "**The rice terraces are actually green.** Tegalalang and the UNESCO terraces look in March the way the photos promised, which is not always true in September.",
           "**Cloud is better light for temples.** Flat overcast removes the harsh midday contrast that wrecks temple photos in the dry season.",
           "**Fewer people everywhere.** Outside the late-December holiday spike, the same viewpoints hold a fraction of the peak-season crowd.",
@@ -25078,7 +25078,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "How booking works when the forecast is unreliable",
         "paragraphs": [
           "We take bookings over WhatsApp with **no prepayment**, which matters more in the wet season than at any other time of year. If the boat does not sail, you have not paid for a boat. There is nothing to claim back and no voucher to argue about — we tell you the night before or first thing in the morning, and you either move the day or swap it for something inland.",
-          "The swap that works best is a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car. It is the one booking that lets you decide at 11:00 rather than at 07:00: if the sky goes black over Kintamani, you go somewhere else, and nobody has to rewrite anything. The other reliable substitutes for a cancelled sea day are rafting, an [ATV ride](/bali/en/tours/atv-quad-bikes) from $20, or a straight Ubud day — [things to do in Ubud](/bali/en/journal/things-to-do-ubud-bali-complete-guide) has more options that do not care about the weather. Prices for everything are listed openly in our [2026 tour price guide](/bali/en/journal/bali-tour-prices-2026-real-costs)."
+          "The swap that works best is a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car. It is the one booking that lets you decide at 11:00 rather than at 07:00: if the sky goes black over Kintamani, you go somewhere else, and nobody has to rewrite anything. The other reliable substitutes for a cancelled sea day are rafting, an [ATV ride](/bali/en/tours/atv-quad-bikes) from $39, or a straight Ubud day — [things to do in Ubud](/bali/en/journal/things-to-do-ubud-bali-complete-guide) has more options that do not care about the weather. Prices for everything are listed openly in our [2026 tour price guide](/bali/en/journal/bali-tour-prices-2026-real-costs)."
         ]
       }
     ],
@@ -25089,7 +25089,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "What can you do in Bali in the wet season?",
-        "answer": "Almost everything except boat trips. Waterfalls, rice terraces, temples, Ubud, the Kintamani caldera and ATV tracks all work in rain, and rafting is genuinely better because the Ayung runs higher — from $49 over 4-6 hours. Start early: an 08:00 pickup puts you several stops in before the afternoon cloud builds."
+        "answer": "Almost everything except boat trips. Waterfalls, rice terraces, temples, Ubud, the Kintamani caldera and ATV tracks all work in rain, and rafting is genuinely better because the Ayung runs higher — from $25 over 4-6 hours. Start early: an 08:00 pickup puts you several stops in before the afternoon cloud builds."
       },
       {
         "question": "Is Bali good in January?",
@@ -26333,7 +26333,7 @@ const JOURNAL_SEO_GUIDES = [
         "heading": "Once the transfer is done: getting around Ubud",
         "paragraphs": [
           "Central Ubud is walkable — the palace, the market and the main restaurant streets are within twenty minutes of each other on foot, though the pavements are uneven and Jalan Raya is loud with traffic most of the day. Everything else is a drive. Tegalalang, Tirta Empul and the Batur crater rim are all car trips, which is why most guests based in Ubud end up with a driver for at least one day of their stay. The overview of drivers, scooters and boats sits in [how to get around Bali](/bali/en/journal/how-to-get-around-bali).",
-          "The three things booked most often from Ubud all start close by. [Ayung river rafting](/bali/en/tours/white-water-rafting) is **from $49** over 4-6 hours, and the gorge runs just north-west of town. The [Ubud ATV quad bike track](/bali/en/tours/atv-quad-bikes) is **from $20**, with a 1.5-hour ride inside a 4-6 hour window and an optional hotel pickup. And the Batur sunrise trip means a **pre-dawn pickup** from your Ubud hotel — the timings from Ubud specifically are in [Mount Batur sunrise from Ubud](/bali/en/journal/mount-batur-sunrise-from-ubud)."
+          "The three things booked most often from Ubud all start close by. [Ayung river rafting](/bali/en/tours/white-water-rafting) is **from $25** over 4-6 hours, and the gorge runs just north-west of town. The [Ubud ATV quad bike track](/bali/en/tours/atv-quad-bikes) is **from $39**, with a 1.5-hour ride inside a 4-6 hour window and an optional hotel pickup. And the Batur sunrise trip means a **pre-dawn pickup** from your Ubud hotel — the timings from Ubud specifically are in [Mount Batur sunrise from Ubud](/bali/en/journal/mount-batur-sunrise-from-ubud)."
         ]
       }
     ],
@@ -31980,12 +31980,12 @@ const JOURNAL_SEO_GUIDES = [
     ],
     "inlineStats": [
       "4x4 jeep on Batur from $60",
-      "Ubud ATV from $20",
+      "Ubud ATV from $39",
       "1.5 hours of quad riding"
     ],
     "title": "Mount Batur ATV or Quad? There Is None — the Jeep From $60",
     "description": "There is no ATV or quad track on Mount Batur itself. The off-road ride on the volcano is the 4x4 sunrise jeep from $60, which crosses the black lava fields.",
-    "excerpt": "There is no ATV or quad bike track on Mount Batur in our programme — on the volcano itself, the off-road ride is the 4x4 sunrise jeep from $60. The jeep drives a separate track up to a crater-rim viewpoint for the 06:00-06:30 sunrise, then crosses the old black lava fields, where you can step out and walk on the solidified flows. If you want to drive the machine yourself, our ATV quad bikes run in the Ubud area from $20: a 4-6 hour door-to-door day built around a 1.5-hour ride through jungle, rice fields, a river and a tunnel track. The two pair naturally as separate days — Batur is about 90 minutes from Ubud, and the jeep morning starts with a night pickup. Everything is private, with hotel pickup and return included, and there is no prepayment: you confirm on WhatsApp and pay on the day.",
+    "excerpt": "There is no ATV or quad bike track on Mount Batur in our programme — on the volcano itself, the off-road ride is the 4x4 sunrise jeep from $60. The jeep drives a separate track up to a crater-rim viewpoint for the 06:00-06:30 sunrise, then crosses the old black lava fields, where you can step out and walk on the solidified flows. If you want to drive the machine yourself, our ATV quad bikes run in the Ubud area from $39: a 4-6 hour door-to-door day built around a 1.5-hour ride through jungle, rice fields, a river and a tunnel track. The two pair naturally as separate days — Batur is about 90 minutes from Ubud, and the jeep morning starts with a night pickup. Everything is private, with hotel pickup and return included, and there is no prepayment: you confirm on WhatsApp and pay on the day.",
     "rankings": [
       {
         "name": "Mount Batur Sunrise Jeep Tour",
@@ -32020,14 +32020,14 @@ const JOURNAL_SEO_GUIDES = [
         "imageSrc": "/images/places/mount-batur-jeep.jpg",
         "area": "Kintamani and Ubud, two days",
         "bestFor": "Getting both rides in one trip",
-        "summary": "The combination we recommend to anyone searching for 'mount batur quad bike': the 4x4 jeep across the lava fields one morning from $60, and the Ubud ATV track on another day from $20. Two separate private bookings, both confirmed on WhatsApp with no prepayment, both with hotel pickup and return included."
+        "summary": "The combination we recommend to anyone searching for 'mount batur quad bike': the 4x4 jeep across the lava fields one morning from $60, and the Ubud ATV track on another day from $39. Two separate private bookings, both confirmed on WhatsApp with no prepayment, both with hotel pickup and return included."
       }
     ],
     "sections": [
       {
         "heading": "What exists and what each option costs",
         "paragraphs": [
-          "Type 'mount batur atv' or 'mount batur quad bike' into a search bar and the results imply a quad track on the volcano. We should be straight about our own line-up: we do not run ATV on Mount Batur. On the mountain itself, the off-road ride is the private [4x4 sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) from **$60**, which drives a separate track to a crater-rim viewpoint and then crosses the old black lava fields. Our quad bikes exist — from **$20** — but they run in the Ubud area, on a jungle, rice field, river and tunnel track.",
+          "Type 'mount batur atv' or 'mount batur quad bike' into a search bar and the results imply a quad track on the volcano. We should be straight about our own line-up: we do not run ATV on Mount Batur. On the mountain itself, the off-road ride is the private [4x4 sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) from **$60**, which drives a separate track to a crater-rim viewpoint and then crosses the old black lava fields. Our quad bikes exist — from **$39** — but they run in the Ubud area, on a jungle, rice field, river and tunnel track.",
           "The table below matches each thing people actually want to the ride that delivers it, with the area and the price."
         ],
         "table": {
@@ -32105,7 +32105,7 @@ const JOURNAL_SEO_GUIDES = [
     "faq": [
       {
         "question": "Is there an ATV or quad bike tour on Mount Batur?",
-        "answer": "We do not run one on the volcano itself. On Mount Batur, our off-road ride is the private 4x4 sunrise jeep from $60: a separate track to a crater-rim viewpoint, then a crossing of the old black lava fields. Our ATV quad bikes run in the Ubud area from $20, and the two work well as separate days of one trip."
+        "answer": "We do not run one on the volcano itself. On Mount Batur, our off-road ride is the private 4x4 sunrise jeep from $60: a separate track to a crater-rim viewpoint, then a crossing of the old black lava fields. Our ATV quad bikes run in the Ubud area from $39, and the two work well as separate days of one trip."
       },
       {
         "question": "How much does the Mount Batur jeep tour cost?",
@@ -32125,7 +32125,7 @@ const JOURNAL_SEO_GUIDES = [
       },
       {
         "question": "Do I have to pay in advance to book the jeep or the ATV?",
-        "answer": "No. Both tours are booked over WhatsApp with no prepayment: you confirm the date and pickup time in chat and pay on the day. Both are private and include hotel pickup and return — the jeep from $60 in the Kintamani area, the ATV from $20 in the Ubud area."
+        "answer": "No. Both tours are booked over WhatsApp with no prepayment: you confirm the date and pickup time in chat and pay on the day. Both are private and include hotel pickup and return — the jeep from $60 in the Kintamani area, the ATV from $39 in the Ubud area."
       }
     ]
   },

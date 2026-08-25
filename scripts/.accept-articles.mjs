@@ -22,7 +22,7 @@ const CLUSTER = new Set(
 );
 const FORBIDDEN = /nestled|hidden gem|breathtaking|must-visit|paradise|!/i;
 // Актуальные цены туров после переценки августа-2026.
-const ALLOWED_PRICES = new Set(["$15", "$20", "$25", "$29", "$35", "$49", "$50", "$59", "$60", "$65", "$69", "$70", "$75", "$79", "$89", "$115", "$150"]);
+const ALLOWED_PRICES = new Set(["$15", "$20", "$25", "$29", "$35", "$39", "$49", "$50", "$59", "$60", "$65", "$69", "$70", "$75", "$79", "$89", "$115", "$150"]);
 
 const ok = [], rejected = [];
 for (const g of guides) {
