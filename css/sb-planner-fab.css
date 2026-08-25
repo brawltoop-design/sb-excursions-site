@@ -1,0 +1,110 @@
+/* Плавающая кнопка «бесплатный план поездки». Разметку создаёт
+   js/sb-planner-fab.js — здесь только оформление.
+
+   Градиент взят из фирменного футера сайта (BALI_FOOTER_GRADIENT_TO в
+   генераторе), а не выдуман: кнопка должна выглядеть частью сайта.
+
+   Правый нижний угол. Левый занят кнопкой согласия (left:14px, bottom:14px);
+   z-index ниже баннера согласия (2147483000), чтобы не перекрывать его. */
+
+.sb-plan-fab {
+  position: fixed;
+  right: 16px;
+  bottom: 18px;
+  z-index: 2147482000;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  max-width: calc(100vw - 32px);
+  height: 52px;
+  padding: 0 18px 0 15px;
+  border-radius: 26px;
+  color: #fff;
+  font-family: 'Cina GEO', 'TildaSans', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -.2px;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 6px 22px rgba(41, 66, 209, .34);
+
+  /* Переливание: фон шире кнопки, двигаем его позицию. Дёшево для браузера —
+     ни перерисовки макета, ни теней в анимации. */
+  background-image: linear-gradient(
+    90deg,
+    rgba(126, 196, 244, 1) 0%,
+    rgba(103, 137, 236, 1) 28%,
+    rgba(63, 68, 240, 1) 52%,
+    rgba(103, 137, 236, 1) 76%,
+    rgba(126, 196, 244, 1) 100%
+  );
+  background-size: 220% 100%;
+  background-position: 0% 50%;
+  animation: sb-plan-fab-shine 5.5s linear infinite;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity .22s ease, transform .22s ease, visibility .22s ease;
+}
+
+.sb-plan-fab.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+@keyframes sb-plan-fab-shine {
+  from { background-position: 0% 50%; }
+  to   { background-position: 220% 50%; }
+}
+
+.sb-plan-fab:hover,
+.sb-plan-fab:focus-visible {
+  color: #fff;
+  outline: none;
+  box-shadow: 0 8px 26px rgba(41, 66, 209, .46);
+}
+
+.sb-plan-fab:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .85), 0 0 0 6px rgba(63, 68, 240, .55);
+}
+
+.sb-plan-fab__ico {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .18);
+}
+
+.sb-plan-fab__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Узкий экран: шрифт мельче, кнопка ниже — на 375 px длинные переводы
+   («Бесплатный план поездки», «Kostenloser Reiseplan») иначе упираются в край. */
+@media (max-width: 420px) {
+  .sb-plan-fab {
+    height: 48px;
+    padding: 0 15px 0 12px;
+    gap: 8px;
+    font-size: 14px;
+  }
+  .sb-plan-fab__ico { width: 24px; height: 24px; }
+}
+
+/* Человек просил меньше движения — не переливаем и не выезжаем. */
+@media (prefers-reduced-motion: reduce) {
+  .sb-plan-fab {
+    animation: none;
+    background-position: 40% 50%;
+    transition: none;
+    transform: none;
+  }
+}
