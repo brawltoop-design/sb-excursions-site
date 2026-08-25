@@ -120,11 +120,21 @@ const JOURNAL_HUB_ROUTE = "/bali/en/journal";
 // файлами bali-journal-guide-<слаг>[-язык].html со всеми пятью языками. Список
 // нужен карте сайта — иначе эти страницы в ней отсутствуют и Google находит их
 // только по внутренним ссылкам.
-const LEGACY_GUIDE_SLUGS = [
-  "bali-tour-prices-2026-real-costs",
-  "mount-batur-sunrise-jeep-vs-hike",
-  "nusa-penida-tours-compared",
-];
+//
+// Читаем с диска, а не держим руками. Ручной список уже разъехался: в нём
+// лежало три слага из шести, и gili-islands-day-trip-from-bali (477 показов),
+// bali-canggu-beaches-guide и swimming-with-whale-sharks-indonesia не попадали
+// в карту сайта вообще. Такая правка молчит: сборка зелёная, страницы
+// открываются, а Google про них знает только по внутренним ссылкам.
+function legacyGuideSlugs() {
+  const generated = new Set(JOURNAL_SEO_GUIDES.map((guide) => guide.slug));
+  const found = new Set();
+  for (const name of fs.readdirSync(projectRoot)) {
+    const m = /^bali-journal-guide-(.+?)(?:-(?:ru|es|fr|zh|de))?\.html$/.exec(name);
+    if (m && !generated.has(m[1])) found.add(m[1]);
+  }
+  return [...found].sort();
+}
 const BALI_LANGUAGE_OPTIONS = [
   { code: "en", label: "English" },
   { code: "zh", label: "中文" },
@@ -4177,11 +4187,11 @@ function buildIncludes(tour) {
  */
 const TOUR_AREA_TIMING_NOTE = {
   "mount-batur-sunrise-hike":
-    "How long the day runs depends on where you stay. Ubud sits about an hour from the trailhead, Kuta and Seminyak about two, and Uluwatu, Jimbaran or Nusa Dua closer to three. From Ubud that means pickup near 02:30 and home by mid-morning; from the far south, pickup near 01:00 and home in the early afternoon once the return traffic clears.",
+    "How long the day runs depends on where you stay. Ubud sits about an hour from the trailhead, Kuta and Seminyak about two, and Uluwatu, Jimbaran, Canggu or Nusa Dua closer to three. From Ubud, Kuta or Seminyak: pickup 01:40-03:00 and back at your hotel between 10:30 and 12:00. From the far south: pickup 00:45-01:30 and back between 12:30 and 13:30, once the return traffic clears. Keep the afternoon free either way — most people sleep when they get back.",
   "mount-batur-sunrise-jeep-tour":
-    "How long the day runs depends on where you stay. Ubud sits about an hour from the sunrise point, Kuta and Seminyak about two, and Uluwatu, Jimbaran or Nusa Dua closer to three. From Ubud that means pickup near 02:30 and home by mid-morning; from the far south, pickup near 01:00 and home around midday once the return traffic clears.",
+    "How long the day runs depends on where you stay. Ubud sits about an hour from the sunrise point, Kuta and Seminyak about two, and Uluwatu, Jimbaran, Canggu or Nusa Dua closer to three. From Ubud, Kuta or Seminyak: pickup 01:40-03:00 and back at your hotel between 10:00 and 11:30. From the far south: pickup 00:45-01:30 and back between 12:00 and 13:00, once the return traffic clears. Keep the afternoon free either way.",
   "mount-batur-sunrise-jeep-hot-spring":
-    "How long the day runs depends on where you stay. Ubud sits about an hour from the sunrise point, Kuta and Seminyak about two, and Uluwatu, Jimbaran or Nusa Dua closer to three. From Ubud that means pickup near 02:30 and home around midday; from the far south, pickup near 01:00 and home in the early afternoon, because the hot spring stop adds about ninety minutes before the drive back through daytime traffic.",
+    "How long the day runs depends on where you stay. Ubud sits about an hour from the sunrise point, Kuta and Seminyak about two, and Uluwatu, Jimbaran, Canggu or Nusa Dua closer to three. From Ubud, Kuta or Seminyak: pickup 01:40-03:00 and back between 11:30 and 13:00. From the far south: pickup 00:45-01:30 and back between 13:30 and 14:30. This one finishes later than the other two because the hot spring stop adds about ninety minutes before the drive back through daytime traffic.",
 };
 
 // На локализованных турах заметка уже лежит в переведённом goodToKnow и faqs —
@@ -23685,8 +23695,8 @@ const JOURNAL_SEO_GUIDES = [
       "1.5-2 hours each way",
       "Day trip from $115"
     ],
-    "title": "Are the Gili Islands Worth It as a Day Trip from Bali?",
-    "description": "Are the Gili Islands worth it as a day trip from Bali? Yes for turtles and one island; no if you want all three. Real travel times, prices from $115.",
+    "title": "Are the Gili Islands Worth It? Yes, But Only One of Them",
+    "description": "Are the Gili Islands worth visiting? Yes for turtles and one car-free island; no if you expect all three in one go. Real travel times, 2026 prices from $115.",
     "excerpt": "Yes, the Gili Islands are worth it — but only in the right format, and honestly, a day trip buys you one island rather than three. The fast boat from east Bali takes roughly 1.5-2 hours each way, so a one-day run realistically means Gili Trawangan plus a snorkeling stop over Gili Meno, then the boat home. That day is genuinely good: near-certain turtles, flat clear water, sandy lanes with no cars, lunch on the beach. What it is not is island-hopping. Our private day trip runs 7-9 hours from $115 per person; the getaway route from $70 exists because two or three islands need a night on them. Here is who should book which.",
     "rankings": [
       {
@@ -49660,7 +49670,7 @@ function writeSitemap() {
     // Шесть гайдов прошлых поколений живут отдельными файлами и в
     // JOURNAL_SEO_GUIDES их нет — значит, в карту сайта они не попадали,
     // хотя все пять языковых версий каждого лежат на диске и открываются.
-    ...LEGACY_GUIDE_SLUGS.map((slug) => `/bali/en/journal/${slug}`),
+    ...legacyGuideSlugs().map((slug) => `/bali/en/journal/${slug}`),
   ];
 
   const dubaiSingles = [

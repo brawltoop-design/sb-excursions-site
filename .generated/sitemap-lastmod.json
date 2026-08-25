@@ -132,51 +132,51 @@
   "date": "2026-08-24"
  },
  "/bali/en/journal": {
-  "hash": "9d8d7cdfb4271ce5",
+  "hash": "c277f1d8a9d69139",
   "date": "2026-08-25"
  },
  "/bali/zh/journal": {
-  "hash": "4c7f7bac2047c666",
+  "hash": "4cf3647bd11fe769",
   "date": "2026-08-25"
  },
  "/bali/ru/journal": {
-  "hash": "6ea1de2d59663cab",
+  "hash": "da7abc4abe56cb18",
   "date": "2026-08-25"
  },
  "/bali/es/journal": {
-  "hash": "e5b6299926a8fe52",
+  "hash": "2adca73a61fe9eb9",
   "date": "2026-08-25"
  },
  "/bali/fr/journal": {
-  "hash": "1d5d4795736062aa",
+  "hash": "c3a5a853ca140e6b",
   "date": "2026-08-25"
  },
  "/bali/de/journal": {
-  "hash": "47de20b284062774",
+  "hash": "510671d2b5f49649",
   "date": "2026-08-25"
  },
  "/bali/en/guides": {
-  "hash": "f88f6c928b946da9",
+  "hash": "8884d6ec650a3a45",
   "date": "2026-08-25"
  },
  "/bali/zh/guides": {
-  "hash": "2497fdd8d6a877ed",
+  "hash": "87aa75ec1328698c",
   "date": "2026-08-25"
  },
  "/bali/ru/guides": {
-  "hash": "b6f649af7b4715a9",
+  "hash": "6ff61222286422d7",
   "date": "2026-08-25"
  },
  "/bali/es/guides": {
-  "hash": "6c7824a8049a468a",
+  "hash": "f0137bb8132288bc",
   "date": "2026-08-25"
  },
  "/bali/fr/guides": {
-  "hash": "c296363a7c8c320c",
+  "hash": "f19be157d7dd7a58",
   "date": "2026-08-25"
  },
  "/bali/de/guides": {
-  "hash": "480ef74fdab4bc84",
+  "hash": "332575941f06078b",
   "date": "2026-08-25"
  },
  "/bali/en/tours/ubud-highlights-tour": {
@@ -320,75 +320,75 @@
   "date": "2026-08-24"
  },
  "/bali/en/tours/mount-batur-sunrise-jeep-tour": {
-  "hash": "09f8fc80c094fc6a",
+  "hash": "e05aa2dba43bdb2b",
   "date": "2026-08-25"
  },
  "/bali/zh/tours/mount-batur-sunrise-jeep-tour": {
-  "hash": "8d3d6564a8a30a0a",
+  "hash": "996029dfb16d1ce1",
   "date": "2026-08-25"
  },
  "/bali/ru/tours/mount-batur-sunrise-jeep-tour": {
-  "hash": "1ee44ea3567e1d99",
+  "hash": "6338d2f010b3e856",
   "date": "2026-08-25"
  },
  "/bali/es/tours/mount-batur-sunrise-jeep-tour": {
-  "hash": "405bb5b7800831c2",
+  "hash": "79aa471565a00d7a",
   "date": "2026-08-25"
  },
  "/bali/fr/tours/mount-batur-sunrise-jeep-tour": {
-  "hash": "bf1d88291585a32d",
+  "hash": "c84a32ae6a2ba1ec",
   "date": "2026-08-25"
  },
  "/bali/de/tours/mount-batur-sunrise-jeep-tour": {
-  "hash": "22c6e68def022ca3",
+  "hash": "fd1ef62fe3cca49b",
   "date": "2026-08-25"
  },
  "/bali/en/tours/mount-batur-sunrise-jeep-hot-spring": {
-  "hash": "3640c62e2b8e75d9",
+  "hash": "af4f649f2c3724eb",
   "date": "2026-08-25"
  },
  "/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring": {
-  "hash": "fbe25a550137b373",
+  "hash": "62c8c2b781550a95",
   "date": "2026-08-25"
  },
  "/bali/ru/tours/mount-batur-sunrise-jeep-hot-spring": {
-  "hash": "b71ae27fafef8b36",
+  "hash": "61bdc82fa5ed4daa",
   "date": "2026-08-25"
  },
  "/bali/es/tours/mount-batur-sunrise-jeep-hot-spring": {
-  "hash": "94312162a4ad27ca",
+  "hash": "54697f9ccf142b61",
   "date": "2026-08-25"
  },
  "/bali/fr/tours/mount-batur-sunrise-jeep-hot-spring": {
-  "hash": "352d63b71d3bae9c",
+  "hash": "b529f26c14192904",
   "date": "2026-08-25"
  },
  "/bali/de/tours/mount-batur-sunrise-jeep-hot-spring": {
-  "hash": "5910a29005712f72",
+  "hash": "957dee3df6768f46",
   "date": "2026-08-25"
  },
  "/bali/en/tours/mount-batur-sunrise-hike": {
-  "hash": "347e830c143f9f41",
+  "hash": "833303cd30c42a82",
   "date": "2026-08-25"
  },
  "/bali/zh/tours/mount-batur-sunrise-hike": {
-  "hash": "09b1aefdef7ece27",
+  "hash": "3fb19862d1f4ee53",
   "date": "2026-08-25"
  },
  "/bali/ru/tours/mount-batur-sunrise-hike": {
-  "hash": "4cfb63fe1a367552",
+  "hash": "8e65ae335a19c12c",
   "date": "2026-08-25"
  },
  "/bali/es/tours/mount-batur-sunrise-hike": {
-  "hash": "9b6ee8cfa90fb17a",
+  "hash": "d94ae229016d749e",
   "date": "2026-08-25"
  },
  "/bali/fr/tours/mount-batur-sunrise-hike": {
-  "hash": "cc31e1275e4b2bcf",
+  "hash": "2898cf012d205ccf",
   "date": "2026-08-25"
  },
  "/bali/de/tours/mount-batur-sunrise-hike": {
-  "hash": "02f1987a2cd9f6d9",
+  "hash": "d2b04aeaceacc5b9",
   "date": "2026-08-25"
  },
  "/bali/en/tours/atv-ride-adventure": {
@@ -1208,183 +1208,183 @@
   "date": "2026-08-25"
  },
  "/bali/en/journal/mount-batur-sunrise-jeep-tour/why-book": {
-  "hash": "3b21f652dd9eb72f",
+  "hash": "d20c0be33a0f2630",
   "date": "2026-08-25"
  },
  "/bali/zh/journal/mount-batur-sunrise-jeep-tour/why-book": {
-  "hash": "f719f8ad72aa5e55",
+  "hash": "2941996612763dfa",
   "date": "2026-08-25"
  },
  "/bali/ru/journal/mount-batur-sunrise-jeep-tour/why-book": {
-  "hash": "85e6fc0a7e92152a",
+  "hash": "127d0f28de372593",
   "date": "2026-08-25"
  },
  "/bali/es/journal/mount-batur-sunrise-jeep-tour/why-book": {
-  "hash": "a97f624293242558",
+  "hash": "c506472b12f3f15d",
   "date": "2026-08-25"
  },
  "/bali/fr/journal/mount-batur-sunrise-jeep-tour/why-book": {
-  "hash": "b5c1192114e06ead",
+  "hash": "1d5c7a1e51e0ae9e",
   "date": "2026-08-25"
  },
  "/bali/en/journal/mount-batur-sunrise-jeep-tour/travel-guide": {
-  "hash": "d83acae83deff1ea",
+  "hash": "3854ecf2e413f225",
   "date": "2026-08-25"
  },
  "/bali/zh/journal/mount-batur-sunrise-jeep-tour/travel-guide": {
-  "hash": "ae6668f99d2df939",
+  "hash": "9a0b60ba5c0a97a0",
   "date": "2026-08-25"
  },
  "/bali/ru/journal/mount-batur-sunrise-jeep-tour/travel-guide": {
-  "hash": "eb46322f1313c762",
+  "hash": "461a800dab95116f",
   "date": "2026-08-25"
  },
  "/bali/es/journal/mount-batur-sunrise-jeep-tour/travel-guide": {
-  "hash": "916d01f6090babe2",
+  "hash": "5ea7e2fec8e9221e",
   "date": "2026-08-25"
  },
  "/bali/fr/journal/mount-batur-sunrise-jeep-tour/travel-guide": {
-  "hash": "76f673fa80dd641e",
+  "hash": "b0ec1934fb68c377",
   "date": "2026-08-25"
  },
  "/bali/en/journal/mount-batur-sunrise-jeep-tour/tour-schedule": {
-  "hash": "d1116cd629bba8b9",
+  "hash": "62d454669d0e3f7e",
   "date": "2026-08-25"
  },
  "/bali/zh/journal/mount-batur-sunrise-jeep-tour/tour-schedule": {
-  "hash": "8e95513e68aac4e2",
+  "hash": "48f0988780028e9c",
   "date": "2026-08-25"
  },
  "/bali/ru/journal/mount-batur-sunrise-jeep-tour/tour-schedule": {
-  "hash": "8aede69a7647350a",
+  "hash": "f9f5a4d86c1680ef",
   "date": "2026-08-25"
  },
  "/bali/es/journal/mount-batur-sunrise-jeep-tour/tour-schedule": {
-  "hash": "69b79bfb0a49a2b6",
+  "hash": "a1d5d7bb57f8efad",
   "date": "2026-08-25"
  },
  "/bali/fr/journal/mount-batur-sunrise-jeep-tour/tour-schedule": {
-  "hash": "c10798d18726545e",
+  "hash": "8c3667fb36dc7cd1",
   "date": "2026-08-25"
  },
  "/bali/en/journal/mount-batur-sunrise-jeep-hot-spring/why-book": {
-  "hash": "c352d030728b919a",
+  "hash": "9844b7c55b00f7e7",
   "date": "2026-08-25"
  },
  "/bali/zh/journal/mount-batur-sunrise-jeep-hot-spring/why-book": {
-  "hash": "bd2f66558f5a9618",
+  "hash": "a05d4f272c875538",
   "date": "2026-08-25"
  },
  "/bali/ru/journal/mount-batur-sunrise-jeep-hot-spring/why-book": {
-  "hash": "b6d498e907392752",
+  "hash": "da41708db1973ad8",
   "date": "2026-08-25"
  },
  "/bali/es/journal/mount-batur-sunrise-jeep-hot-spring/why-book": {
-  "hash": "e3d7b58a18b5068c",
+  "hash": "e44fbb424525b8c2",
   "date": "2026-08-25"
  },
  "/bali/fr/journal/mount-batur-sunrise-jeep-hot-spring/why-book": {
-  "hash": "27af2276626dc55e",
+  "hash": "bff0cbfe990cf53b",
   "date": "2026-08-25"
  },
  "/bali/en/journal/mount-batur-sunrise-jeep-hot-spring/travel-guide": {
-  "hash": "9b816f374f1932a3",
+  "hash": "7b417164036ee09e",
   "date": "2026-08-25"
  },
  "/bali/zh/journal/mount-batur-sunrise-jeep-hot-spring/travel-guide": {
-  "hash": "100dd7ed73830b61",
+  "hash": "57d6795cee2a1777",
   "date": "2026-08-25"
  },
  "/bali/ru/journal/mount-batur-sunrise-jeep-hot-spring/travel-guide": {
-  "hash": "a0c21db8840ee6c9",
+  "hash": "2c1961d73f62885c",
   "date": "2026-08-25"
  },
  "/bali/es/journal/mount-batur-sunrise-jeep-hot-spring/travel-guide": {
-  "hash": "5409cdda846be29d",
+  "hash": "a29728e236cbf58d",
   "date": "2026-08-25"
  },
  "/bali/fr/journal/mount-batur-sunrise-jeep-hot-spring/travel-guide": {
-  "hash": "c96611c2e1ab7a22",
+  "hash": "03882bbe8e368801",
   "date": "2026-08-25"
  },
  "/bali/en/journal/mount-batur-sunrise-jeep-hot-spring/tour-schedule": {
-  "hash": "85935403ec3de202",
+  "hash": "cff841f2fc4d9e5e",
   "date": "2026-08-25"
  },
  "/bali/zh/journal/mount-batur-sunrise-jeep-hot-spring/tour-schedule": {
-  "hash": "34dddb9f41b4bb0b",
+  "hash": "587b0d86ae23534d",
   "date": "2026-08-25"
  },
  "/bali/ru/journal/mount-batur-sunrise-jeep-hot-spring/tour-schedule": {
-  "hash": "d6fa5f9db9f8bd89",
+  "hash": "e1b8fdc89d7d0e65",
   "date": "2026-08-25"
  },
  "/bali/es/journal/mount-batur-sunrise-jeep-hot-spring/tour-schedule": {
-  "hash": "0f1f4b0d5b4b4a60",
+  "hash": "0371084df3a33f0b",
   "date": "2026-08-25"
  },
  "/bali/fr/journal/mount-batur-sunrise-jeep-hot-spring/tour-schedule": {
-  "hash": "a91f19da14205cca",
+  "hash": "2de076cfa3723bfc",
   "date": "2026-08-25"
  },
  "/bali/en/journal/mount-batur-sunrise-hike/why-book": {
-  "hash": "9d31820e8d4bbe37",
+  "hash": "3cb01602b961b5d5",
   "date": "2026-08-25"
  },
  "/bali/zh/journal/mount-batur-sunrise-hike/why-book": {
-  "hash": "fb10ad94e06b1f2d",
+  "hash": "181ec9f07be2463c",
   "date": "2026-08-25"
  },
  "/bali/ru/journal/mount-batur-sunrise-hike/why-book": {
-  "hash": "4f9530b20334fd26",
+  "hash": "3371b5d0fc057ed0",
   "date": "2026-08-25"
  },
  "/bali/es/journal/mount-batur-sunrise-hike/why-book": {
-  "hash": "ed3223132e724ae7",
+  "hash": "c4a3715954d1a96a",
   "date": "2026-08-25"
  },
  "/bali/fr/journal/mount-batur-sunrise-hike/why-book": {
-  "hash": "5ae6b9d093d03123",
+  "hash": "fe2ad2a2137a7813",
   "date": "2026-08-25"
  },
  "/bali/en/journal/mount-batur-sunrise-hike/travel-guide": {
-  "hash": "c19f4d6bf4eb9c82",
+  "hash": "db23dd7698f1329e",
   "date": "2026-08-25"
  },
  "/bali/zh/journal/mount-batur-sunrise-hike/travel-guide": {
-  "hash": "58a825fc58d652cd",
+  "hash": "21c327a10b22f193",
   "date": "2026-08-25"
  },
  "/bali/ru/journal/mount-batur-sunrise-hike/travel-guide": {
-  "hash": "29be252a817d09c5",
+  "hash": "366f5d33dfb58e64",
   "date": "2026-08-25"
  },
  "/bali/es/journal/mount-batur-sunrise-hike/travel-guide": {
-  "hash": "fd218468125445b2",
+  "hash": "6e646f18f0297373",
   "date": "2026-08-25"
  },
  "/bali/fr/journal/mount-batur-sunrise-hike/travel-guide": {
-  "hash": "0efa67e3474b5349",
+  "hash": "33fc6cc5bae38993",
   "date": "2026-08-25"
  },
  "/bali/en/journal/mount-batur-sunrise-hike/tour-schedule": {
-  "hash": "e608fd2919105a43",
+  "hash": "19e26f7011638cd0",
   "date": "2026-08-25"
  },
  "/bali/zh/journal/mount-batur-sunrise-hike/tour-schedule": {
-  "hash": "8b29a8ae57f3ba1c",
+  "hash": "a83c0b1131944539",
   "date": "2026-08-25"
  },
  "/bali/ru/journal/mount-batur-sunrise-hike/tour-schedule": {
-  "hash": "4fc1a2ed85501aad",
+  "hash": "5fd16d02651d2208",
   "date": "2026-08-25"
  },
  "/bali/es/journal/mount-batur-sunrise-hike/tour-schedule": {
-  "hash": "43dec75cb992bafe",
+  "hash": "760ced4c04faf504",
   "date": "2026-08-25"
  },
  "/bali/fr/journal/mount-batur-sunrise-hike/tour-schedule": {
-  "hash": "6e30a0b47e8bc2c5",
+  "hash": "a064d55672e78f18",
   "date": "2026-08-25"
  },
  "/bali/en/journal/atv-ride-adventure/why-book": {
@@ -2820,23 +2820,23 @@
   "date": "2026-08-25"
  },
  "/bali/en/journal/how-to-get-to-gili-trawangan-from-bali": {
-  "hash": "4fa4ba361c94a127",
+  "hash": "f802f77b19b2b030",
   "date": "2026-08-25"
  },
  "/bali/zh/journal/how-to-get-to-gili-trawangan-from-bali": {
-  "hash": "de0717e92fcabefd",
+  "hash": "5015b8c4a7c4d855",
   "date": "2026-08-25"
  },
  "/bali/ru/journal/how-to-get-to-gili-trawangan-from-bali": {
-  "hash": "5016c03279103c13",
+  "hash": "ec6444bad826fdeb",
   "date": "2026-08-25"
  },
  "/bali/es/journal/how-to-get-to-gili-trawangan-from-bali": {
-  "hash": "4f16557c9d4e1c37",
+  "hash": "9f6834c4ce7f27cb",
   "date": "2026-08-25"
  },
  "/bali/fr/journal/how-to-get-to-gili-trawangan-from-bali": {
-  "hash": "844e85b603c9d1d5",
+  "hash": "3760d6c20944bcc0",
   "date": "2026-08-25"
  },
  "/bali/en/journal/mount-batur-sunrise-from-ubud": {
@@ -3052,27 +3052,27 @@
   "date": "2026-08-25"
  },
  "/bali/en/journal/gili-air-vs-gili-trawangan": {
-  "hash": "5f77fbc2f02186fc",
+  "hash": "fc61f339764d0baf",
   "date": "2026-08-25"
  },
  "/bali/zh/journal/gili-air-vs-gili-trawangan": {
-  "hash": "30167a4ddb76e1fe",
+  "hash": "13ce54d6a90046d8",
   "date": "2026-08-25"
  },
  "/bali/ru/journal/gili-air-vs-gili-trawangan": {
-  "hash": "c5d569e1549a68e1",
+  "hash": "5bf8633d0f79fb9d",
   "date": "2026-08-25"
  },
  "/bali/es/journal/gili-air-vs-gili-trawangan": {
-  "hash": "36be105f10c6ddc0",
+  "hash": "6abac2d0794f11ff",
   "date": "2026-08-25"
  },
  "/bali/fr/journal/gili-air-vs-gili-trawangan": {
-  "hash": "d254299e7cdb7fe0",
+  "hash": "fbe5dd723105f6cd",
   "date": "2026-08-25"
  },
  "/bali/de/journal/gili-air-vs-gili-trawangan": {
-  "hash": "ff0dfddf96894edf",
+  "hash": "4611ac803f443c37",
   "date": "2026-08-25"
  },
  "/bali/en/journal/tanah-lot-vs-uluwatu-sunset": {
@@ -3580,23 +3580,23 @@
   "date": "2026-08-25"
  },
  "/bali/en/journal/gili-t-day-trip-from-seminyak": {
-  "hash": "de7544399183c845",
+  "hash": "10f356619a20f80e",
   "date": "2026-08-25"
  },
  "/bali/zh/journal/gili-t-day-trip-from-seminyak": {
-  "hash": "e19bbb2b9dca4a85",
+  "hash": "4ee0f3efa3ac2c12",
   "date": "2026-08-25"
  },
  "/bali/ru/journal/gili-t-day-trip-from-seminyak": {
-  "hash": "27848ec96dc045be",
+  "hash": "378fde1b4dfff134",
   "date": "2026-08-25"
  },
  "/bali/es/journal/gili-t-day-trip-from-seminyak": {
-  "hash": "e2826eed9ef341d4",
+  "hash": "82ff6171fbeb7c9f",
   "date": "2026-08-25"
  },
  "/bali/fr/journal/gili-t-day-trip-from-seminyak": {
-  "hash": "43ebecea30fa6b6a",
+  "hash": "2403291ba42f5b0a",
   "date": "2026-08-25"
  },
  "/bali/en/journal/blue-lagoon-padang-bai-guide": {
@@ -4524,27 +4524,27 @@
   "date": "2026-08-25"
  },
  "/bali/en/journal/are-gili-islands-worth-it": {
-  "hash": "a09442e2b41c2fca",
+  "hash": "c864a69d5ba276d2",
   "date": "2026-08-25"
  },
  "/bali/zh/journal/are-gili-islands-worth-it": {
-  "hash": "9f0be6a8f2258a3c",
+  "hash": "9b1d596cd0dc0a58",
   "date": "2026-08-25"
  },
  "/bali/ru/journal/are-gili-islands-worth-it": {
-  "hash": "86a6c0952b31bceb",
+  "hash": "568aa820b0f1fb57",
   "date": "2026-08-25"
  },
  "/bali/es/journal/are-gili-islands-worth-it": {
-  "hash": "e21aa1a2f31923ca",
+  "hash": "69e77029fc2fc72c",
   "date": "2026-08-25"
  },
  "/bali/fr/journal/are-gili-islands-worth-it": {
-  "hash": "384e122b3d975cd1",
+  "hash": "00330c96a8d9bbca",
   "date": "2026-08-25"
  },
  "/bali/de/journal/are-gili-islands-worth-it": {
-  "hash": "e633448a0b56716a",
+  "hash": "c73314ca1823953c",
   "date": "2026-08-25"
  },
  "/bali/en/journal/bali-entrance-fees-2026": {
@@ -4588,23 +4588,23 @@
   "date": "2026-08-25"
  },
  "/bali/en/journal/gili-trawangan-vs-air-vs-meno": {
-  "hash": "2da80a9ed3b074e3",
+  "hash": "f4b44f6005e12d8c",
   "date": "2026-08-25"
  },
  "/bali/zh/journal/gili-trawangan-vs-air-vs-meno": {
-  "hash": "ab7d0d5f125b0d48",
+  "hash": "3fccaac76abac636",
   "date": "2026-08-25"
  },
  "/bali/ru/journal/gili-trawangan-vs-air-vs-meno": {
-  "hash": "661ce324a0ac32e7",
+  "hash": "4a87ba17eb0ff3e7",
   "date": "2026-08-25"
  },
  "/bali/es/journal/gili-trawangan-vs-air-vs-meno": {
-  "hash": "d60b54ab4b0eee04",
+  "hash": "0442fd1d15b4a09f",
   "date": "2026-08-25"
  },
  "/bali/fr/journal/gili-trawangan-vs-air-vs-meno": {
-  "hash": "b621194cda14b261",
+  "hash": "3efdfb516cd80075",
   "date": "2026-08-25"
  },
  "/bali/en/journal/are-gili-islands-safe": {
@@ -6583,6 +6583,26 @@
   "hash": "f7e1f3eaf8a1f30e",
   "date": "2026-08-25"
  },
+ "/bali/en/journal/bali-canggu-beaches-guide": {
+  "hash": "eb8ce10204324dcf",
+  "date": "2026-08-25"
+ },
+ "/bali/zh/journal/bali-canggu-beaches-guide": {
+  "hash": "3dae2bf949ff7307",
+  "date": "2026-08-25"
+ },
+ "/bali/ru/journal/bali-canggu-beaches-guide": {
+  "hash": "7a96ad7898c4d994",
+  "date": "2026-08-25"
+ },
+ "/bali/es/journal/bali-canggu-beaches-guide": {
+  "hash": "0293aa1fd47a7fd2",
+  "date": "2026-08-25"
+ },
+ "/bali/fr/journal/bali-canggu-beaches-guide": {
+  "hash": "0075776336e1b57b",
+  "date": "2026-08-25"
+ },
  "/bali/en/journal/bali-tour-prices-2026-real-costs": {
   "hash": "58ef10931bc43e7a",
   "date": "2026-08-25"
@@ -6601,6 +6621,26 @@
  },
  "/bali/fr/journal/bali-tour-prices-2026-real-costs": {
   "hash": "200374c9d159ebc7",
+  "date": "2026-08-25"
+ },
+ "/bali/en/journal/gili-islands-day-trip-from-bali": {
+  "hash": "1ba7a1bab56eb419",
+  "date": "2026-08-25"
+ },
+ "/bali/zh/journal/gili-islands-day-trip-from-bali": {
+  "hash": "922d1d00954802dd",
+  "date": "2026-08-25"
+ },
+ "/bali/ru/journal/gili-islands-day-trip-from-bali": {
+  "hash": "45ae7097f1b83620",
+  "date": "2026-08-25"
+ },
+ "/bali/es/journal/gili-islands-day-trip-from-bali": {
+  "hash": "8fd4a754d6cc7861",
+  "date": "2026-08-25"
+ },
+ "/bali/fr/journal/gili-islands-day-trip-from-bali": {
+  "hash": "95135e51c1cc9e7f",
   "date": "2026-08-25"
  },
  "/bali/en/journal/mount-batur-sunrise-jeep-vs-hike": {
@@ -6641,6 +6681,26 @@
  },
  "/bali/fr/journal/nusa-penida-tours-compared": {
   "hash": "26a9bb9b2a81c564",
+  "date": "2026-08-25"
+ },
+ "/bali/en/journal/swimming-with-whale-sharks-indonesia": {
+  "hash": "24bfaa4f3304dab3",
+  "date": "2026-08-25"
+ },
+ "/bali/zh/journal/swimming-with-whale-sharks-indonesia": {
+  "hash": "b0bff9f9006ddf29",
+  "date": "2026-08-25"
+ },
+ "/bali/ru/journal/swimming-with-whale-sharks-indonesia": {
+  "hash": "404c839eeb61fbd8",
+  "date": "2026-08-25"
+ },
+ "/bali/es/journal/swimming-with-whale-sharks-indonesia": {
+  "hash": "0ca430ca4c18719b",
+  "date": "2026-08-25"
+ },
+ "/bali/fr/journal/swimming-with-whale-sharks-indonesia": {
+  "hash": "4e538f21a5495e2a",
   "date": "2026-08-25"
  }
 }
