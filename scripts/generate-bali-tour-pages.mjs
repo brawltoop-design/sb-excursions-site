@@ -40481,6 +40481,95 @@ function offerPriceOf(tour) {
   return match ? match[0] : String(tour.price || "");
 }
 
+/* Полоса фактов о маршруте в блоке бронирования.
+
+   Зачем. По запросу «uluwatu to nusa penida day trip» мы стоим первыми в
+   выдаче Индонезии — рынка, который даёт 26% показов и 125 кликов за
+   квартал, и это туристы, уже находящиеся на Бали. Человек с таким
+   запросом хочет не прочитать статью, а узнать три вещи: во сколько его
+   заберут ИЗ ЕГО РАЙОНА, во сколько вернут и сколько это стоит. Цены в
+   блоке были, а времени не было нигде — оно лежало в теле статьи, до
+   которого доскроллит один из десяти.
+
+   Цифры не выдуманы: каждая взята из текста той же статьи или из данных
+   тура. Панель, противоречащая собственному тексту страницы, хуже, чем
+   её отсутствие.
+
+   Обратное время считается от последней лодки, а не от рассвета: с
+   Пениды последний рейс в 17:00, реальный исход в 16:30, дальше вечерний
+   трафик через юг острова. Это и есть та часть дня, которую никто не
+   планирует, — про неё в статье про Улувату есть целый раздел.
+
+   Ключ — слаг статьи. Нет записи — полосы нет, блок работает как раньше. */
+const ROUTE_OFFERS = {
+  "nusa-penida-day-trip-from-uluwatu": {
+    ask: "Nusa Penida from Uluwatu",
+    facts: [
+      ["Pickup", "06:15-06:30 at your hotel"],
+      ["Drive to Sanur harbour", "60-90 minutes"],
+      ["Crossing", "40 minutes by fast boat"],
+      ["Back in Uluwatu", "18:00-19:00"],
+    ],
+  },
+  "nusa-penida-day-trip-from-sanur": {
+    ask: "Nusa Penida from Sanur",
+    facts: [
+      ["Pickup", "around 07:00 at your hotel"],
+      ["Drive to the harbour", "5-15 minutes, you are already there"],
+      ["Crossing", "30-45 minutes by fast boat"],
+      ["Back in Sanur", "17:15-17:45"],
+    ],
+  },
+  "nusa-penida-day-trip-from-canggu": {
+    ask: "Nusa Penida from Canggu",
+    facts: [
+      ["Pickup", "06:15-06:45 at your hotel"],
+      ["Drive to Sanur harbour", "60-90 minutes"],
+      ["Crossing", "30-45 minutes by fast boat"],
+      ["Back in Canggu", "18:00-19:00"],
+    ],
+  },
+  "nusa-penida-day-trip-from-ubud": {
+    ask: "Nusa Penida from Ubud",
+    facts: [
+      ["Pickup", "06:30-06:50 at your hotel"],
+      ["Drive to Sanur harbour", "45-70 minutes"],
+      ["Crossing", "30-45 minutes by fast boat"],
+      ["Back in Ubud", "17:45-18:45"],
+    ],
+  },
+  "gili-t-day-trip-from-seminyak": {
+    ask: "Gili Trawangan from Seminyak",
+    facts: [
+      ["Pickup", "confirmed on WhatsApp the day before"],
+      ["Drive to Padang Bai", "about 2 hours"],
+      ["Crossing", "90 minutes by fast boat"],
+      ["Door to door", "7-9 hours"],
+    ],
+  },
+};
+
+function renderRouteFacts(guide) {
+  const route = guide && ROUTE_OFFERS[guide.slug];
+  if (!route) return "";
+  const items = route.facts
+    .map(
+      ([k, v]) =>
+        `<div class="sboffer__fact"><dt>${escapeHtml(k)}</dt><dd>${escapeHtml(v)}</dd></div>`
+    )
+    .join("");
+  /* Текст сообщения называет маршрут целиком. Прежняя кнопка отправляла
+     «I want to book Nusa Penida Full Day Tour» — откуда человека забирать,
+     приходилось спрашивать отдельным сообщением. Каждый лишний вопрос до
+     цены теряет часть переписок. */
+  const wa =
+    `https://wa.me/${WHATSAPP_NUMBER}?text=` +
+    encodeWhatsAppText(`Hello! I want to book ${route.ask}. Please send the price and pickup time.`);
+  return `
+                <dl class="sboffer__facts">${items}</dl>
+                <a class="sboffer__ask" href="${wa}" target="_blank" rel="noopener noreferrer nofollow">Ask price for this route</a>`;
+}
+
 function renderGuideOfferBlock(article, variant = "top") {
   const offer = article.guide && article.guide.offer;
   if (!offer || !Array.isArray(offer.options)) return "";
@@ -40515,6 +40604,7 @@ function renderGuideOfferBlock(article, variant = "top") {
                 <p class="sboffer__eyebrow">${escapeHtml(offer.eyebrow || "Book it")}</p>
                 <h2 class="sboffer__title">${escapeHtml(heading || "")}</h2>
                 ${lead}
+                ${isClose ? "" : renderRouteFacts(article.guide)}
                 <ul class="sboffer__list">${rows}
                 </ul>
                 ${offer.note ? `<p class="sboffer__note">${renderRichText(offer.note)}</p>` : ""}
@@ -41223,6 +41313,33 @@ function renderJournalSharedStyles() {
     transition:background-color .2s ease
   }
   .sboffer__cta:hover{background:#000}
+  /* Полоса фактов о маршруте. Две колонки на широком экране, одна на узком:
+     контейнер статьи в этом шаблоне шире вьюпорта, поэтому проценты и
+     grid по содержимому тут уезжают за край — та же причина, что у
+     .sboffer__row ниже. */
+  .sboffer__facts{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px;
+    margin:0 0 18px;padding:14px 16px;border-radius:16px;
+    background:rgba(21,21,21,0.035)
+  }
+  .sboffer__fact{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:6px 0;min-width:0
+  }
+  .sboffer__facts dt{
+    margin:0;font-size:13px;line-height:1.4;color:#8a8a90;white-space:nowrap
+  }
+  .sboffer__facts dd{
+    margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#151515;
+    text-align:right;min-width:0
+  }
+  .sboffer__ask{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 0 18px;padding:12px 24px;border-radius:999px;
+    background:#b0741f;color:#fff !important;font-size:15px;font-weight:600;
+    text-decoration:none !important;transition:background-color .2s ease
+  }
+  .sboffer__ask:hover{background:#95611a}
   .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
   /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
      вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
@@ -41232,6 +41349,8 @@ function renderJournalSharedStyles() {
   @media (max-width:640px){
     .sboffer{padding:22px 20px}
     .sboffer__title{font-size:21px}
+    .sboffer__facts{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}
+    .sboffer__ask{width:100%}
     .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
     .sboffer__price{grid-column:1;font-size:17px}
     .sboffer__cta{grid-column:1;width:100%}
@@ -46183,6 +46302,52 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "Drive to Sanur harbour":
+      "Дорога до порта Санур",
+    "Drive to the harbour":
+      "Дорога до порта",
+    "Drive to Padang Bai":
+      "Дорога до Паданг-Бай",
+    "Crossing":
+      "Переправа",
+    "Back in Uluwatu":
+      "Возвращение в Улувату",
+    "Back in Sanur":
+      "Возвращение в Санур",
+    "Back in Canggu":
+      "Возвращение в Чангу",
+    "Back in Ubud":
+      "Возвращение в Убуд",
+    "Door to door":
+      "От двери до двери",
+    "06:15-06:30 at your hotel":
+      "06:15–06:30 от отеля",
+    "06:15-06:45 at your hotel":
+      "06:15–06:45 от отеля",
+    "06:30-06:50 at your hotel":
+      "06:30–06:50 от отеля",
+    "around 07:00 at your hotel":
+      "около 07:00 от отеля",
+    "60-90 minutes":
+      "60–90 минут",
+    "45-70 minutes":
+      "45–70 минут",
+    "about 2 hours":
+      "около 2 часов",
+    "5-15 minutes, you are already there":
+      "5–15 минут, вы уже рядом",
+    "40 minutes by fast boat":
+      "40 минут на катере",
+    "30-45 minutes by fast boat":
+      "30–45 минут на катере",
+    "90 minutes by fast boat":
+      "90 минут на катере",
+    "confirmed on WhatsApp the day before":
+      "подтверждаем в WhatsApp накануне",
+    "7-9 hours":
+      "7–9 часов",
+    "Ask price for this route":
+      "Узнать цену на этот маршрут",
     "Bali Tour Prices 2026: IDR 500,000-2,500,000 a Day":
       "Цены на туры по Бали: 500 тыс. — 2,5 млн IDR за день",
     "Grab vs Taxi in Bali: Grab Wins Until It Can&#39;t Reach You":
@@ -46429,6 +46594,52 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "Drive to Sanur harbour":
+      "Trayecto al puerto de Sanur",
+    "Drive to the harbour":
+      "Trayecto al puerto",
+    "Drive to Padang Bai":
+      "Trayecto a Padang Bai",
+    "Crossing":
+      "Travesía",
+    "Back in Uluwatu":
+      "Regreso a Uluwatu",
+    "Back in Sanur":
+      "Regreso a Sanur",
+    "Back in Canggu":
+      "Regreso a Canggu",
+    "Back in Ubud":
+      "Regreso a Ubud",
+    "Door to door":
+      "Puerta a puerta",
+    "06:15-06:30 at your hotel":
+      "06:15-06:30 en tu hotel",
+    "06:15-06:45 at your hotel":
+      "06:15-06:45 en tu hotel",
+    "06:30-06:50 at your hotel":
+      "06:30-06:50 en tu hotel",
+    "around 07:00 at your hotel":
+      "sobre las 07:00 en tu hotel",
+    "60-90 minutes":
+      "60-90 minutos",
+    "45-70 minutes":
+      "45-70 minutos",
+    "about 2 hours":
+      "unas 2 horas",
+    "5-15 minutes, you are already there":
+      "5-15 minutos, ya estás allí",
+    "40 minutes by fast boat":
+      "40 minutos en lancha rápida",
+    "30-45 minutes by fast boat":
+      "30-45 minutos en lancha rápida",
+    "90 minutes by fast boat":
+      "90 minutos en lancha rápida",
+    "confirmed on WhatsApp the day before":
+      "lo confirmamos por WhatsApp el día antes",
+    "7-9 hours":
+      "7-9 horas",
+    "Ask price for this route":
+      "Pedir precio para esta ruta",
     "Nusa Penida Tour Cost: IDR 700,000–1,200,000 Shared":
       "Cuánto cuesta un tour a Nusa Penida: desde 700 mil IDR",
     "Bali to Lombok: Fly South, Take the Fast Boat North":
@@ -46589,6 +46800,52 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "Drive to Sanur harbour":
+      "Route vers le port de Sanur",
+    "Drive to the harbour":
+      "Route vers le port",
+    "Drive to Padang Bai":
+      "Route vers Padang Bai",
+    "Crossing":
+      "Traversée",
+    "Back in Uluwatu":
+      "Retour à Uluwatu",
+    "Back in Sanur":
+      "Retour à Sanur",
+    "Back in Canggu":
+      "Retour à Canggu",
+    "Back in Ubud":
+      "Retour à Ubud",
+    "Door to door":
+      "De porte à porte",
+    "06:15-06:30 at your hotel":
+      "06h15-06h30 à votre hôtel",
+    "06:15-06:45 at your hotel":
+      "06h15-06h45 à votre hôtel",
+    "06:30-06:50 at your hotel":
+      "06h30-06h50 à votre hôtel",
+    "around 07:00 at your hotel":
+      "vers 07h00 à votre hôtel",
+    "60-90 minutes":
+      "60-90 minutes",
+    "45-70 minutes":
+      "45-70 minutes",
+    "about 2 hours":
+      "environ 2 heures",
+    "5-15 minutes, you are already there":
+      "5-15 minutes, vous y êtes déjà",
+    "40 minutes by fast boat":
+      "40 minutes en bateau rapide",
+    "30-45 minutes by fast boat":
+      "30-45 minutes en bateau rapide",
+    "90 minutes by fast boat":
+      "90 minutes en bateau rapide",
+    "confirmed on WhatsApp the day before":
+      "confirmée sur WhatsApp la veille",
+    "7-9 hours":
+      "7-9 heures",
+    "Ask price for this route":
+      "Demander le prix de cet itinéraire",
     "Bali Tour Prices 2026: IDR 500,000-2,500,000 a Day":
       "Prix des excursions à Bali : 500k à 2,5M IDR la journée",
     "Grab vs Taxi in Bali: Grab Wins Until It Can&#39;t Reach You":
@@ -46781,6 +47038,52 @@ const PINNED_TRANSLATIONS = {
       "Bali est-elle sûre en 2026 ? 7 arnaques courantes à éviter",
   },
   "zh-CN": {
+    "Drive to Sanur harbour":
+      "前往萨努尔港",
+    "Drive to the harbour":
+      "前往港口",
+    "Drive to Padang Bai":
+      "前往帕当拜",
+    "Crossing":
+      "海上航程",
+    "Back in Uluwatu":
+      "返回乌鲁瓦图",
+    "Back in Sanur":
+      "返回萨努尔",
+    "Back in Canggu":
+      "返回长谷",
+    "Back in Ubud":
+      "返回乌布",
+    "Door to door":
+      "全程往返",
+    "06:15-06:30 at your hotel":
+      "06:15-06:30 酒店出发",
+    "06:15-06:45 at your hotel":
+      "06:15-06:45 酒店出发",
+    "06:30-06:50 at your hotel":
+      "06:30-06:50 酒店出发",
+    "around 07:00 at your hotel":
+      "约 07:00 酒店出发",
+    "60-90 minutes":
+      "60-90 分钟",
+    "45-70 minutes":
+      "45-70 分钟",
+    "about 2 hours":
+      "约 2 小时",
+    "5-15 minutes, you are already there":
+      "5-15 分钟，您就在附近",
+    "40 minutes by fast boat":
+      "快艇 40 分钟",
+    "30-45 minutes by fast boat":
+      "快艇 30-45 分钟",
+    "90 minutes by fast boat":
+      "快艇 90 分钟",
+    "confirmed on WhatsApp the day before":
+      "前一天在 WhatsApp 确认",
+    "7-9 hours":
+      "7-9 小时",
+    "Ask price for this route":
+      "咨询此路线价格",
     "Nusa Penida Snorkeling: The 4 Stops and What Each Is Like":
       "努沙佩尼达浮潜：4 个浮潜点，每个都什么样",
     "Manta Bay or Manta Point? Two Different Stops, One Trip":
@@ -46811,6 +47114,54 @@ const PINNED_TRANSLATIONS = {
       "巴厘岛旅行要花多少钱？2026年真实物价与三档预算",
   },
   de: {
+    "Pickup":
+      "Abholung",
+    "Drive to Sanur harbour":
+      "Fahrt zum Hafen Sanur",
+    "Drive to the harbour":
+      "Fahrt zum Hafen",
+    "Drive to Padang Bai":
+      "Fahrt nach Padang Bai",
+    "Crossing":
+      "Überfahrt",
+    "Back in Uluwatu":
+      "Zurück in Uluwatu",
+    "Back in Sanur":
+      "Zurück in Sanur",
+    "Back in Canggu":
+      "Zurück in Canggu",
+    "Back in Ubud":
+      "Zurück in Ubud",
+    "Door to door":
+      "Von Tür zu Tür",
+    "06:15-06:30 at your hotel":
+      "06:15-06:30 an Ihrem Hotel",
+    "06:15-06:45 at your hotel":
+      "06:15-06:45 an Ihrem Hotel",
+    "06:30-06:50 at your hotel":
+      "06:30-06:50 an Ihrem Hotel",
+    "around 07:00 at your hotel":
+      "gegen 07:00 an Ihrem Hotel",
+    "60-90 minutes":
+      "60-90 Minuten",
+    "45-70 minutes":
+      "45-70 Minuten",
+    "about 2 hours":
+      "etwa 2 Stunden",
+    "5-15 minutes, you are already there":
+      "5-15 Minuten, Sie sind schon da",
+    "40 minutes by fast boat":
+      "40 Minuten mit dem Schnellboot",
+    "30-45 minutes by fast boat":
+      "30-45 Minuten mit dem Schnellboot",
+    "90 minutes by fast boat":
+      "90 Minuten mit dem Schnellboot",
+    "confirmed on WhatsApp the day before":
+      "wird am Vortag über WhatsApp bestätigt",
+    "7-9 hours":
+      "7-9 Stunden",
+    "Ask price for this route":
+      "Preis für diese Route anfragen",
     "Tours that fit this guide":
       "Passende Touren zu diesem Thema",
   },

@@ -261,6 +261,33 @@
     transition:background-color .2s ease
   }
   .sboffer__cta:hover{background:#000}
+  /* Полоса фактов о маршруте. Две колонки на широком экране, одна на узком:
+     контейнер статьи в этом шаблоне шире вьюпорта, поэтому проценты и
+     grid по содержимому тут уезжают за край — та же причина, что у
+     .sboffer__row ниже. */
+  .sboffer__facts{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px;
+    margin:0 0 18px;padding:14px 16px;border-radius:16px;
+    background:rgba(21,21,21,0.035)
+  }
+  .sboffer__fact{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:6px 0;min-width:0
+  }
+  .sboffer__facts dt{
+    margin:0;font-size:13px;line-height:1.4;color:#8a8a90;white-space:nowrap
+  }
+  .sboffer__facts dd{
+    margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#151515;
+    text-align:right;min-width:0
+  }
+  .sboffer__ask{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 0 18px;padding:12px 24px;border-radius:999px;
+    background:#b0741f;color:#fff !important;font-size:15px;font-weight:600;
+    text-decoration:none !important;transition:background-color .2s ease
+  }
+  .sboffer__ask:hover{background:#95611a}
   .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
   /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
      вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
@@ -270,6 +297,8 @@
   @media (max-width:640px){
     .sboffer{padding:22px 20px}
     .sboffer__title{font-size:21px}
+    .sboffer__facts{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}
+    .sboffer__ask{width:100%}
     .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
     .sboffer__price{grid-column:1;font-size:17px}
     .sboffer__cta{grid-column:1;width:100%}
@@ -1337,6 +1366,7 @@ body {
                 <p class="sboffer__eyebrow">直接预订</p>
                 <h2 class="sboffer__title">适合本指南的游览</h2>
 
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
@@ -1542,7 +1572,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>到达那里，以及回家的路上，人们陷入困境</h2>
-                <p>海神庙 (Tanah Lot) 距离坎古 (Canggu) 最近 — <strong>约13公里，30-50分钟</strong> — 然后是水明漾 <strong>60-90分钟</strong>，库塔和机场区 <strong>60-100</strong>, 乌布 在 <strong>90-120</strong>。从武吉（乌鲁瓦图、金巴兰、努沙杜瓦）出发，单程 1.5 至 2 小时，这使得只在日落时运行的夜晚变得非常漫长。这些只是范围而不是数字，因为巴厘岛收费公路的实际平均速度约为 30-35 公里/小时，并且必须在日落之前到达的路段正好落在 16:30-20:00 晚高峰。如果您自驾或搭出租车，请导航至 <strong>Pura 海神庙或 DTW 海神庙</strong> — 输入 Batu Bolong 会将您带到 13 公里外的 Canggu 海滩。</p><p><strong>Grab 和 Gojek 可以将您送到海神庙，但通常无法接您。</strong> 该地区已签订当地交通合作协议，因此应用程序司机不会或无法在门口接载，区域边界也没有明确的标志，在黑暗中逆着出站人群行走时找出终点，这对于晚上来说确实是一个糟糕的结局。要么安排一名司机等待，要么在时间紧迫的情况下接受当地协商的价格。一个 <a href="/bali/zh/tours/private-car-with-driver-bali">当天的汽车和司机</a> 每辆车 59 美元起，彻底解决了这个问题——当你在悬崖边时，汽车停在停车场。相比之下，巴厘岛私人司机的街头收费为每天 8 至 10 小时的 600,000 至 900,000 印尼盾，加班费为每小时 50,000 至 100,000 印尼盾，具体取决于消息来源。</p><p>每个人都在同一个半小时内离开，进入双车道道路，所以 <strong>日落后返回水明漾或库塔通常需要一到两个小时</strong>。不要预订 20:00 在水明漾欣赏海神庙日落的晚餐。如果海神庙是更伟大一天的结束，我们的 <a href="/bali/zh/tours/tanah-lot-bedugul-tour">海神庙和贝都古私人一日游</a> 每车 $65 起，上午走高地、傍晚到海边，这是唯一行得通的顺序——贝杜古尔从上午晚些时候起就会云雾笼罩，而日落时间无法提前。这一天从出门到返回请预留 11-13 小时；多数运营商宣传的 10 小时在真实的日落面前站不住脚。如果您当天抵达，一次 <a href="/bali/zh/tours/bali-airport-transfer">私人机场接机</a> 15 美元起是明智的第一段路程，因为机场到海神庙的路程需要 60-100 分钟，而且在飞行后不需要临时开车。</p>
+                <p>海神庙 (Tanah Lot) 距离坎古 (Canggu) 最近 — <strong>约13公里，30-50分钟</strong> — 然后是水明漾 <strong>60-90 分钟</strong>，库塔和机场区 <strong>60-100</strong>, 乌布 在 <strong>90-120</strong>。从武吉（乌鲁瓦图、金巴兰、努沙杜瓦）出发，单程 1.5 至 2 小时，这使得只在日落时运行的夜晚变得非常漫长。这些只是范围而不是数字，因为巴厘岛收费公路的实际平均速度约为 30-35 公里/小时，并且必须在日落之前到达的路段正好落在 16:30-20:00 晚高峰。如果您自驾或搭出租车，请导航至 <strong>Pura 海神庙或 DTW 海神庙</strong> — 输入 Batu Bolong 会将您带到 13 公里外的 Canggu 海滩。</p><p><strong>Grab 和 Gojek 可以将您送到海神庙，但通常无法接您。</strong> 该地区已签订当地交通合作协议，因此应用程序司机不会或无法在门口接载，区域边界也没有明确的标志，在黑暗中逆着出站人群行走时找出终点，这对于晚上来说确实是一个糟糕的结局。要么安排一名司机等待，要么在时间紧迫的情况下接受当地协商的价格。一个 <a href="/bali/zh/tours/private-car-with-driver-bali">当天的汽车和司机</a> 每辆车 59 美元起，彻底解决了这个问题——当你在悬崖边时，汽车停在停车场。相比之下，巴厘岛私人司机的街头收费为每天 8 至 10 小时的 600,000 至 900,000 印尼盾，加班费为每小时 50,000 至 100,000 印尼盾，具体取决于消息来源。</p><p>每个人都在同一个半小时内离开，进入双车道道路，所以 <strong>日落后返回水明漾或库塔通常需要一到两个小时</strong>。不要预订 20:00 在水明漾欣赏海神庙日落的晚餐。如果海神庙是更伟大一天的结束，我们的 <a href="/bali/zh/tours/tanah-lot-bedugul-tour">海神庙和贝都古私人一日游</a> 每车 $65 起，上午走高地、傍晚到海边，这是唯一行得通的顺序——贝杜古尔从上午晚些时候起就会云雾笼罩，而日落时间无法提前。这一天从出门到返回请预留 11-13 小时；多数运营商宣传的 10 小时在真实的日落面前站不住脚。如果您当天抵达，一次 <a href="/bali/zh/tours/bali-airport-transfer">私人机场接机</a> 15 美元起是明智的第一段路程，因为机场到海神庙的路程需要 60-100 分钟，而且在飞行后不需要临时开车。</p>
 
 
 
@@ -1562,6 +1592,7 @@ body {
                 <p class="sboffer__eyebrow">直接预订</p>
                 <h2 class="sboffer__title">预订哪一间</h2>
                 <p class="sboffer__decision">第一个选项是本指南所围绕的旅行。另外两个从不同的角度覆盖同一区域或同一天。</p>
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">

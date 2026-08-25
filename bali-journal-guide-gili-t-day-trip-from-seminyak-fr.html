@@ -261,6 +261,33 @@
     transition:background-color .2s ease
   }
   .sboffer__cta:hover{background:#000}
+  /* Полоса фактов о маршруте. Две колонки на широком экране, одна на узком:
+     контейнер статьи в этом шаблоне шире вьюпорта, поэтому проценты и
+     grid по содержимому тут уезжают за край — та же причина, что у
+     .sboffer__row ниже. */
+  .sboffer__facts{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px;
+    margin:0 0 18px;padding:14px 16px;border-radius:16px;
+    background:rgba(21,21,21,0.035)
+  }
+  .sboffer__fact{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:6px 0;min-width:0
+  }
+  .sboffer__facts dt{
+    margin:0;font-size:13px;line-height:1.4;color:#8a8a90;white-space:nowrap
+  }
+  .sboffer__facts dd{
+    margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#151515;
+    text-align:right;min-width:0
+  }
+  .sboffer__ask{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 0 18px;padding:12px 24px;border-radius:999px;
+    background:#b0741f;color:#fff !important;font-size:15px;font-weight:600;
+    text-decoration:none !important;transition:background-color .2s ease
+  }
+  .sboffer__ask:hover{background:#95611a}
   .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
   /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
      вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
@@ -270,6 +297,8 @@
   @media (max-width:640px){
     .sboffer{padding:22px 20px}
     .sboffer__title{font-size:21px}
+    .sboffer__facts{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}
+    .sboffer__ask{width:100%}
     .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
     .sboffer__price{grid-column:1;font-size:17px}
     .sboffer__cta{grid-column:1;width:100%}
@@ -1337,6 +1366,9 @@ body {
                 <p class="sboffer__eyebrow">Réservez directement</p>
                 <h2 class="sboffer__title">Nos excursions sur ce sujet</h2>
 
+
+                <dl class="sboffer__facts"><div class="sboffer__fact"><dt>Prise en charge</dt><dd>confirmée sur WhatsApp la veille</dd></div><div class="sboffer__fact"><dt>Route vers Padang Bai</dt><dd>environ 2 heures</dd></div><div class="sboffer__fact"><dt>Traversée</dt><dd>90 minutes en bateau rapide</dd></div><div class="sboffer__fact"><dt>De porte à porte</dt><dd>7-9 heures</dd></div></dl>
+                <a class="sboffer__ask" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20Gili%20Trawangan%20from%20Seminyak.%20Please%20send%20the%20price%20and%20pickup%20time." target="_blank" rel="noopener noreferrer nofollow">Demander le prix de cet itinéraire</a>
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
@@ -1501,6 +1533,7 @@ body {
                 <p class="sboffer__eyebrow">Réservez directement</p>
                 <h2 class="sboffer__title">Lequel réserver</h2>
                 <p class="sboffer__decision">La première option est le voyage autour duquel ce guide est rédigé. Les deux autres couvrent la même zone, ou le même jour, sous un angle différent.</p>
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">

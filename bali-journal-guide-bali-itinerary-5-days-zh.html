@@ -261,6 +261,33 @@
     transition:background-color .2s ease
   }
   .sboffer__cta:hover{background:#000}
+  /* Полоса фактов о маршруте. Две колонки на широком экране, одна на узком:
+     контейнер статьи в этом шаблоне шире вьюпорта, поэтому проценты и
+     grid по содержимому тут уезжают за край — та же причина, что у
+     .sboffer__row ниже. */
+  .sboffer__facts{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px;
+    margin:0 0 18px;padding:14px 16px;border-radius:16px;
+    background:rgba(21,21,21,0.035)
+  }
+  .sboffer__fact{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:6px 0;min-width:0
+  }
+  .sboffer__facts dt{
+    margin:0;font-size:13px;line-height:1.4;color:#8a8a90;white-space:nowrap
+  }
+  .sboffer__facts dd{
+    margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#151515;
+    text-align:right;min-width:0
+  }
+  .sboffer__ask{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 0 18px;padding:12px 24px;border-radius:999px;
+    background:#b0741f;color:#fff !important;font-size:15px;font-weight:600;
+    text-decoration:none !important;transition:background-color .2s ease
+  }
+  .sboffer__ask:hover{background:#95611a}
   .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
   /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
      вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
@@ -270,6 +297,8 @@
   @media (max-width:640px){
     .sboffer{padding:22px 20px}
     .sboffer__title{font-size:21px}
+    .sboffer__facts{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}
+    .sboffer__ask{width:100%}
     .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
     .sboffer__price{grid-column:1;font-size:17px}
     .sboffer__cta{grid-column:1;width:100%}
@@ -1337,6 +1366,7 @@ body {
                 <p class="sboffer__eyebrow">直接预订</p>
                 <h2 class="sboffer__title">适合本指南的游览</h2>
 
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
@@ -1466,7 +1496,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>交通：五天如何连接</h2>
-                <p>您无需为此行程租用摩托车或汽车 — <strong>每个重要的日子都包含酒店接送服务</strong>，而它们之间的一切都是围绕您的基地的短途出租车或叫车服务。距离很重要，因为道路时间：机场到水明漾-苍古地带 <strong>30-60 分钟，视交通情况而定</strong>;前往乌布的南部酒店是 <strong>60-90分钟</strong>;早上前往沙努尔港乘坐佩尼达船的时间是 <strong>30-60分钟</strong>，一旦通勤交通在 07:30 后增加，时间就会更长。这些范围很宽，因为巴厘岛的交通确实难以预测——围绕每个范围的顶部进行计划，并将任何更快的事情视为奖励。</p><p>对于第 5 天或任何免费的半天， <a href="/bali/zh/tours/private-car-with-driver-bali">带司机的私家车</a> 每辆车 59 美元起，将交通转为观光——参观寺庙，享用一顿丰盛的午餐，然后前往航站楼。有关司机、叫车应用程序、踏板车以及每种方式真正花费您时间的完整信息，请参阅 <a href="/bali/zh/journal/how-to-get-around-bali">如何游览巴厘岛</a>.</p>
+                <p>您无需为此行程租用摩托车或汽车 — <strong>每个重要的日子都包含酒店接送服务</strong>，而它们之间的一切都是围绕您的基地的短途出租车或叫车服务。距离很重要，因为道路时间：机场到水明漾-苍古地带 <strong>30-60 分钟，视交通情况而定</strong>;前往乌布的南部酒店是 <strong>60-90 分钟</strong>;早上前往沙努尔港乘坐佩尼达船的时间是 <strong>30-60分钟</strong>，一旦通勤交通在 07:30 后增加，时间就会更长。这些范围很宽，因为巴厘岛的交通确实难以预测——围绕每个范围的顶部进行计划，并将任何更快的事情视为奖励。</p><p>对于第 5 天或任何免费的半天， <a href="/bali/zh/tours/private-car-with-driver-bali">带司机的私家车</a> 每辆车 59 美元起，将交通转为观光——参观寺庙，享用一顿丰盛的午餐，然后前往航站楼。有关司机、叫车应用程序、踏板车以及每种方式真正花费您时间的完整信息，请参阅 <a href="/bali/zh/journal/how-to-get-around-bali">如何游览巴厘岛</a>.</p>
 
 
 
@@ -1486,6 +1516,7 @@ body {
                 <p class="sboffer__eyebrow">直接预订</p>
                 <h2 class="sboffer__title">预订哪一间</h2>
                 <p class="sboffer__decision">第一个选项是本指南所围绕的旅行。另外两个从不同的角度覆盖同一区域或同一天。</p>
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">

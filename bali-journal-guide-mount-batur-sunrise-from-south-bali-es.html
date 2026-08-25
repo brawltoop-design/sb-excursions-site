@@ -261,6 +261,33 @@
     transition:background-color .2s ease
   }
   .sboffer__cta:hover{background:#000}
+  /* Полоса фактов о маршруте. Две колонки на широком экране, одна на узком:
+     контейнер статьи в этом шаблоне шире вьюпорта, поэтому проценты и
+     grid по содержимому тут уезжают за край — та же причина, что у
+     .sboffer__row ниже. */
+  .sboffer__facts{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px;
+    margin:0 0 18px;padding:14px 16px;border-radius:16px;
+    background:rgba(21,21,21,0.035)
+  }
+  .sboffer__fact{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:6px 0;min-width:0
+  }
+  .sboffer__facts dt{
+    margin:0;font-size:13px;line-height:1.4;color:#8a8a90;white-space:nowrap
+  }
+  .sboffer__facts dd{
+    margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#151515;
+    text-align:right;min-width:0
+  }
+  .sboffer__ask{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 0 18px;padding:12px 24px;border-radius:999px;
+    background:#b0741f;color:#fff !important;font-size:15px;font-weight:600;
+    text-decoration:none !important;transition:background-color .2s ease
+  }
+  .sboffer__ask:hover{background:#95611a}
   .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
   /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
      вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
@@ -270,6 +297,8 @@
   @media (max-width:640px){
     .sboffer{padding:22px 20px}
     .sboffer__title{font-size:21px}
+    .sboffer__facts{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}
+    .sboffer__ask{width:100%}
     .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
     .sboffer__price{grid-column:1;font-size:17px}
     .sboffer__cta{grid-column:1;width:100%}
@@ -1344,6 +1373,7 @@ body {
                 <p class="sboffer__eyebrow">Reservar Monte Batur</p>
                 <h2 class="sboffer__title">Tres caminos hacia el monte Batur</h2>
 
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
@@ -1510,7 +1540,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>¿Es realista el monte Batur desde Seminyak, Canggu o Nusa Dua?</h2>
-                <p>Sí, el amanecer en el monte Batur funciona desde todas las zonas hoteleras del sur sin cambiar de alojamiento y es una de las rutas que conducimos con más frecuencia. Los tres formatos: el <a href="/bali/es/tours/mount-batur-sunrise-jeep-tour">Tour en jeep al amanecer por el monte Batur</a>, el <a href="/bali/es/tours/mount-batur-sunrise-jeep-hot-spring">jeep al amanecer con aguas termales</a> y el <a href="/bali/es/tours/mount-batur-sunrise-hike">caminata al amanecer</a> — incluye recogida en el hotel desde Seminyak, Canggu, Kuta, Jimbaran, Nusa Dua y Uluwatu. El precio honesto es el reloj: la caminata recoge a los visitantes entre <strong>01:30 y 03:00</strong>, el jeep con aguas termales alrededor <strong>02:00-03:30</strong>, y tu ranura exacta es <strong>confirmado por WhatsApp el día anterior</strong>, según la ubicación de su hotel en la ruta de recogida.</p><p>El camino hacia el norte corre <strong>1,5-2,5 horas por trayecto</strong> dependiendo de su zona y tráfico. Canggu y Seminyak se ubican en el extremo más corto; Nusa Dua y Uluwatu por más tiempo. Lo que sorprende a la gente es que el tramo de ida es el más fácil: a las 02:00 las carreteras de Bali están casi vacías, por lo que el camino suele aterrizar cerca del final de ese rango. El retorno en el tráfico diurno es la mitad más lento. Puerta a puerta desde el extremo sur, haga un presupuesto del extremo superior del período publicado de 6 a 8 horas de cada recorrido.</p>
+                <p>Sí, el amanecer en el monte Batur funciona desde todas las zonas hoteleras del sur sin cambiar de alojamiento y es una de las rutas que conducimos con más frecuencia. Los tres formatos: el <a href="/bali/es/tours/mount-batur-sunrise-jeep-tour">Tour en jeep al amanecer por el monte Batur</a>, el <a href="/bali/es/tours/mount-batur-sunrise-jeep-hot-spring">jeep al amanecer con aguas termales</a> y el <a href="/bali/es/tours/mount-batur-sunrise-hike">caminata al amanecer</a> — incluye recogida en el hotel desde Seminyak, Canggu, Kuta, Jimbaran, Nusa Dua y Uluwatu. El precio honesto es el reloj: la caminata recoge a los visitantes entre <strong>01:30 y 03:00</strong>, el jeep con aguas termales alrededor <strong>02:00-03:30</strong>, y tu ranura exacta es <strong>lo confirmamos por WhatsApp el día antes</strong>, según la ubicación de su hotel en la ruta de recogida.</p><p>El camino hacia el norte corre <strong>1,5-2,5 horas por trayecto</strong> dependiendo de su zona y tráfico. Canggu y Seminyak se ubican en el extremo más corto; Nusa Dua y Uluwatu por más tiempo. Lo que sorprende a la gente es que el tramo de ida es el más fácil: a las 02:00 las carreteras de Bali están casi vacías, por lo que el camino suele aterrizar cerca del final de ese rango. El retorno en el tráfico diurno es la mitad más lento. Puerta a puerta desde el extremo sur, haga un presupuesto del extremo superior del período publicado de 6 a 8 horas de cada recorrido.</p>
 
 
 
@@ -1546,6 +1576,7 @@ body {
                 <p class="sboffer__eyebrow">Reservar Monte Batur</p>
                 <h2 class="sboffer__title">cual reservar</h2>
                 <p class="sboffer__decision">A partir de aquí, la unidad decide la hora de recogida más que el formato. Si quieres llegar a la cumbre a pie, haz la caminata. Si quieres el mismo amanecer sin subir, toma el jeep. Si sientes frío antes del amanecer, añade las aguas termales.</p>
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">

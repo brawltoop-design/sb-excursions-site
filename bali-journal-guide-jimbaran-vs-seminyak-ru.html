@@ -261,6 +261,33 @@
     transition:background-color .2s ease
   }
   .sboffer__cta:hover{background:#000}
+  /* Полоса фактов о маршруте. Две колонки на широком экране, одна на узком:
+     контейнер статьи в этом шаблоне шире вьюпорта, поэтому проценты и
+     grid по содержимому тут уезжают за край — та же причина, что у
+     .sboffer__row ниже. */
+  .sboffer__facts{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px;
+    margin:0 0 18px;padding:14px 16px;border-radius:16px;
+    background:rgba(21,21,21,0.035)
+  }
+  .sboffer__fact{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:6px 0;min-width:0
+  }
+  .sboffer__facts dt{
+    margin:0;font-size:13px;line-height:1.4;color:#8a8a90;white-space:nowrap
+  }
+  .sboffer__facts dd{
+    margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#151515;
+    text-align:right;min-width:0
+  }
+  .sboffer__ask{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 0 18px;padding:12px 24px;border-radius:999px;
+    background:#b0741f;color:#fff !important;font-size:15px;font-weight:600;
+    text-decoration:none !important;transition:background-color .2s ease
+  }
+  .sboffer__ask:hover{background:#95611a}
   .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
   /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
      вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
@@ -270,6 +297,8 @@
   @media (max-width:640px){
     .sboffer{padding:22px 20px}
     .sboffer__title{font-size:21px}
+    .sboffer__facts{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}
+    .sboffer__ask{width:100%}
     .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
     .sboffer__price{grid-column:1;font-size:17px}
     .sboffer__cta{grid-column:1;width:100%}
@@ -1337,6 +1366,7 @@ body {
                 <p class="sboffer__eyebrow">Бронируйте напрямую</p>
                 <h2 class="sboffer__title">Туры по теме этой статьи</h2>
 
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
@@ -1497,7 +1527,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Как ваш район меняет ваши однодневные поездки?</h2>
-                <p>Это та часть, которую пропускают сравнения в блогах, и та часть, с которой мы живем. Почти все, что стоит провести день на юге, начинается с поездки, и то, где вы спите, решает, сколько времени съедает эта поездка.</p><p><strong>Нуса Пенида.</strong> Каждая переправа отправляется из порта в <strong>Санур</strong>, а сам быстроходный катер всего лишь <strong>30-45 минут</strong> — переменная достигает порта. От <strong>Семиньяк, продолжительность которого составляет 30-50 минут.</strong>, что делает его одной из самых удобных южных баз для отдыха на острове. <strong>Джимбаран находится на стороне Букита в аэропорту.</strong>и группа, которую мы публикуем для Uluwatu и Bukit, <strong>60-90 минут</strong>, а Джимбаран находится в самом конце. Та же лодка, более ранний пикап. По масштабу Чангу также <strong>60-90 минут</strong> и Убуд <strong>45-70</strong>. Наш <a href="/bali/ru/tours/nusa-penida-west-tour">Западный маршрут Нуса Пениды</a> есть <strong>от $49 за машину</strong>и <a href="/bali/ru/journal/nusa-penida-day-trip-from-seminyak">Путеводитель по Семиньяку и Пениде</a> ходит утром час за часом.</p><p><strong>Восход солнца на горе Батур.</strong> Здесь оба района равны, и оба проигрывают Убуду. Пикапы бегут <strong>01:30-03:30</strong> в зависимости от того, где вы спите, и <strong>южные районы отправляются примерно на час раньше, чем Убуд</strong> за тот же восход, ведь Убуд уже на полпути к острову — он сидит примерно <strong>1,5 часа</strong> от подножия вулкана. Если тревога в два часа ночи является препятствием для сделки, это говорит о совершенно другой базе, а не о другом южном районе. <a href="/bali/ru/journal/mount-batur-sunrise-from-south-bali">Восход солнца на горе Батур с юга Бали</a> у гида есть тайминги, и <a href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">версия джипа</a> есть <strong>от $60</strong> если вы предпочитаете не путешествовать в темноте.</p><p>Правило, лежащее в основе всего этого, в одном предложении: чем дальше ваш район от Санура и от Кинтамани, тем раньше вы встаете и тем больше времени уходит на дорогу. Это тот же день, только короче.</p>
+                <p>Это та часть, которую пропускают сравнения в блогах, и та часть, с которой мы живем. Почти все, что стоит провести день на юге, начинается с поездки, и то, где вы спите, решает, сколько времени съедает эта поездка.</p><p><strong>Нуса Пенида.</strong> Каждая переправа отправляется из порта в <strong>Санур</strong>, а сам быстроходный катер всего лишь <strong>30-45 минут</strong> — переменная достигает порта. От <strong>Семиньяк, продолжительность которого составляет 30-50 минут.</strong>, что делает его одной из самых удобных южных баз для отдыха на острове. <strong>Джимбаран находится на стороне Букита в аэропорту.</strong>и группа, которую мы публикуем для Uluwatu и Bukit, <strong>60–90 минут</strong>, а Джимбаран находится в самом конце. Та же лодка, более ранний пикап. По масштабу Чангу также <strong>60–90 минут</strong> и Убуд <strong>45-70</strong>. Наш <a href="/bali/ru/tours/nusa-penida-west-tour">Западный маршрут Нуса Пениды</a> есть <strong>от $49 за машину</strong>и <a href="/bali/ru/journal/nusa-penida-day-trip-from-seminyak">Путеводитель по Семиньяку и Пениде</a> ходит утром час за часом.</p><p><strong>Восход солнца на горе Батур.</strong> Здесь оба района равны, и оба проигрывают Убуду. Пикапы бегут <strong>01:30-03:30</strong> в зависимости от того, где вы спите, и <strong>южные районы отправляются примерно на час раньше, чем Убуд</strong> за тот же восход, ведь Убуд уже на полпути к острову — он сидит примерно <strong>1,5 часа</strong> от подножия вулкана. Если тревога в два часа ночи является препятствием для сделки, это говорит о совершенно другой базе, а не о другом южном районе. <a href="/bali/ru/journal/mount-batur-sunrise-from-south-bali">Восход солнца на горе Батур с юга Бали</a> у гида есть тайминги, и <a href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">версия джипа</a> есть <strong>от $60</strong> если вы предпочитаете не путешествовать в темноте.</p><p>Правило, лежащее в основе всего этого, в одном предложении: чем дальше ваш район от Санура и от Кинтамани, тем раньше вы встаете и тем больше времени уходит на дорогу. Это тот же день, только короче.</p>
 
 
 
@@ -1517,6 +1547,7 @@ body {
                 <p class="sboffer__eyebrow">Бронируйте напрямую</p>
                 <h2 class="sboffer__title">Какой из них забронировать</h2>
                 <p class="sboffer__decision">Первый вариант — это поездка, вокруг которой написан этот путеводитель. Два других покрывают ту же территорию или тот же день, но под другим углом.</p>
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">

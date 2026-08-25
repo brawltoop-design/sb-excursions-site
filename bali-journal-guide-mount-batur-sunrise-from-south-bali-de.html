@@ -261,6 +261,33 @@
     transition:background-color .2s ease
   }
   .sboffer__cta:hover{background:#000}
+  /* Полоса фактов о маршруте. Две колонки на широком экране, одна на узком:
+     контейнер статьи в этом шаблоне шире вьюпорта, поэтому проценты и
+     grid по содержимому тут уезжают за край — та же причина, что у
+     .sboffer__row ниже. */
+  .sboffer__facts{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px;
+    margin:0 0 18px;padding:14px 16px;border-radius:16px;
+    background:rgba(21,21,21,0.035)
+  }
+  .sboffer__fact{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:6px 0;min-width:0
+  }
+  .sboffer__facts dt{
+    margin:0;font-size:13px;line-height:1.4;color:#8a8a90;white-space:nowrap
+  }
+  .sboffer__facts dd{
+    margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#151515;
+    text-align:right;min-width:0
+  }
+  .sboffer__ask{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 0 18px;padding:12px 24px;border-radius:999px;
+    background:#b0741f;color:#fff !important;font-size:15px;font-weight:600;
+    text-decoration:none !important;transition:background-color .2s ease
+  }
+  .sboffer__ask:hover{background:#95611a}
   .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
   /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
      вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
@@ -270,6 +297,8 @@
   @media (max-width:640px){
     .sboffer{padding:22px 20px}
     .sboffer__title{font-size:21px}
+    .sboffer__facts{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}
+    .sboffer__ask{width:100%}
     .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
     .sboffer__price{grid-column:1;font-size:17px}
     .sboffer__cta{grid-column:1;width:100%}
@@ -1344,6 +1373,7 @@ body {
                 <p class="sboffer__eyebrow">Buchen Sie Mount Batur</p>
                 <h2 class="sboffer__title">Drei Wege hinauf zum Mount Batur</h2>
 
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
@@ -1510,7 +1540,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Ist der Berg Batur aus Seminyak, Canggu oder Nusa Dua realistisch?</h2>
-                <p>Ja – der Mount Batur-Sonnenaufgang ist von jedem südlichen Hotelgebiet aus möglich, ohne die Unterkunft wechseln zu müssen, und es ist eine der Routen, die wir am häufigsten fahren. Alle drei Formate – das <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Jeep-Tour bei Sonnenaufgang auf dem Mount Batur</a>, die <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Sonnenaufgangsjeep mit heißen Quellen</a> und die <a href="/bali/de/tours/mount-batur-sunrise-hike">Sonnenaufgangswanderung</a> — inklusive Abholung vom Hotel in Seminyak, Canggu, Kuta, Jimbaran, Nusa Dua und Uluwatu. Der ehrliche Preis ist die Uhr: Die Wanderung sammelt Gäste dazwischen <strong>01:30 und 03:00 Uhr</strong>, der Jeep mit heißen Quellen in der Nähe <strong>02:00-03:30</strong>, und Ihr genauer Slot ist <strong>am Vortag auf WhatsApp bestätigt</strong>, basierend darauf, wo sich Ihr Hotel auf der Abholroute befindet.</p><p>Die Fahrt nach Norden verläuft <strong>1,5-2,5 Stunden pro Strecke</strong> Abhängig von Ihrer Region und dem Verkehr. Canggu und Seminyak sitzen am kürzeren Ende; Nusa Dua und Uluwatu am längeren. Was die Leute überrascht, ist, dass die Hinfahrt die einfachste ist – um 02:00 Uhr sind Balis Straßen fast leer, sodass die Fahrt normalerweise am unteren Ende dieses Bereichs landet. Der Rückweg im Tagesverkehr ist die langsamere Hälfte. Von Tür zu Tür aus dem äußersten Süden: Planen Sie das obere Ende des veröffentlichten 6-8-Stunden-Fensters jeder Tour ein.</p>
+                <p>Ja – der Mount Batur-Sonnenaufgang ist von jedem südlichen Hotelgebiet aus möglich, ohne die Unterkunft wechseln zu müssen, und es ist eine der Routen, die wir am häufigsten fahren. Alle drei Formate – das <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Jeep-Tour bei Sonnenaufgang auf dem Mount Batur</a>, die <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Sonnenaufgangsjeep mit heißen Quellen</a> und die <a href="/bali/de/tours/mount-batur-sunrise-hike">Sonnenaufgangswanderung</a> — inklusive Abholung vom Hotel in Seminyak, Canggu, Kuta, Jimbaran, Nusa Dua und Uluwatu. Der ehrliche Preis ist die Uhr: Die Wanderung sammelt Gäste dazwischen <strong>01:30 und 03:00 Uhr</strong>, der Jeep mit heißen Quellen in der Nähe <strong>02:00-03:30</strong>, und Ihr genauer Slot ist <strong>wird am Vortag über WhatsApp bestätigt</strong>, basierend darauf, wo sich Ihr Hotel auf der Abholroute befindet.</p><p>Die Fahrt nach Norden verläuft <strong>1,5-2,5 Stunden pro Strecke</strong> Abhängig von Ihrer Region und dem Verkehr. Canggu und Seminyak sitzen am kürzeren Ende; Nusa Dua und Uluwatu am längeren. Was die Leute überrascht, ist, dass die Hinfahrt die einfachste ist – um 02:00 Uhr sind Balis Straßen fast leer, sodass die Fahrt normalerweise am unteren Ende dieses Bereichs landet. Der Rückweg im Tagesverkehr ist die langsamere Hälfte. Von Tür zu Tür aus dem äußersten Süden: Planen Sie das obere Ende des veröffentlichten 6-8-Stunden-Fensters jeder Tour ein.</p>
 
 
 
@@ -1546,6 +1576,7 @@ body {
                 <p class="sboffer__eyebrow">Buchen Sie Mount Batur</p>
                 <h2 class="sboffer__title">Welches soll ich buchen?</h2>
                 <p class="sboffer__decision">Von hier aus entscheidet das Laufwerk mehr über Ihre Abholzeit als das Format. Wenn Sie den Gipfel zu Fuß erreichen möchten, unternehmen Sie eine Wanderung. Wenn Sie den gleichen Sonnenaufgang ohne den Aufstieg wünschen, nehmen Sie den Jeep. Wenn Sie vor dem Morgengrauen die Kälte verspüren, fügen Sie die heiße Quelle hinzu.</p>
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">

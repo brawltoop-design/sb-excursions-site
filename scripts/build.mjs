@@ -29,6 +29,7 @@ const STEPS = [
   ["add-robots-meta.mjs", "разрешение на крупные картинки в выдаче Google"],
   ["build-favicons.mjs", "иконки сайта: тёмная тема и единый набор тегов"],
   ["fix-legacy-snippets.mjs", "заголовки и описания легаси-гайдов"],
+  ["add-legacy-route-panel.mjs", "полоса фактов о маршруте на легаси-гайдах"],
   ["fix-canonicals.mjs", "канониклы политик и служебные страницы вне индекса"],
   ["normalize-site-host.mjs", "единый домен www во всех адресах"],
   ["fix-mobile-tours-link.mjs", "живая ссылка «Туры» в мобильном меню"],

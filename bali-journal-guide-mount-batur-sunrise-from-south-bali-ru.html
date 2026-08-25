@@ -261,6 +261,33 @@
     transition:background-color .2s ease
   }
   .sboffer__cta:hover{background:#000}
+  /* Полоса фактов о маршруте. Две колонки на широком экране, одна на узком:
+     контейнер статьи в этом шаблоне шире вьюпорта, поэтому проценты и
+     grid по содержимому тут уезжают за край — та же причина, что у
+     .sboffer__row ниже. */
+  .sboffer__facts{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px;
+    margin:0 0 18px;padding:14px 16px;border-radius:16px;
+    background:rgba(21,21,21,0.035)
+  }
+  .sboffer__fact{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:6px 0;min-width:0
+  }
+  .sboffer__facts dt{
+    margin:0;font-size:13px;line-height:1.4;color:#8a8a90;white-space:nowrap
+  }
+  .sboffer__facts dd{
+    margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#151515;
+    text-align:right;min-width:0
+  }
+  .sboffer__ask{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 0 18px;padding:12px 24px;border-radius:999px;
+    background:#b0741f;color:#fff !important;font-size:15px;font-weight:600;
+    text-decoration:none !important;transition:background-color .2s ease
+  }
+  .sboffer__ask:hover{background:#95611a}
   .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
   /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
      вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
@@ -270,6 +297,8 @@
   @media (max-width:640px){
     .sboffer{padding:22px 20px}
     .sboffer__title{font-size:21px}
+    .sboffer__facts{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}
+    .sboffer__ask{width:100%}
     .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
     .sboffer__price{grid-column:1;font-size:17px}
     .sboffer__cta{grid-column:1;width:100%}
@@ -1344,6 +1373,7 @@ body {
                 <p class="sboffer__eyebrow">Забронировать гору Батур</p>
                 <h2 class="sboffer__title">Три пути на гору Батур</h2>
 
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
@@ -1510,7 +1540,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Реалистична ли гора Батур из Семиньяка, Чангу или Нуса Дуа?</h2>
-                <p>Да — восход на гору Батур работает из каждой южной гостиничной зоны без смены проживания, и это один из маршрутов, по которому мы ездим чаще всего. Все три формата — <a href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">Экскурсия на джипе на рассвете на гору Батур</a>, <a href="/bali/ru/tours/mount-batur-sunrise-jeep-hot-spring">Джип Санрайз с горячими источниками</a> и <a href="/bali/ru/tours/mount-batur-sunrise-hike">поход на рассвете</a> — включает трансфер из отеля из Семиньяка, Чангу, Куты, Джимбарана, Нуса-Дуа и Улувату. Честная стоимость — часы: поход собирает гостей между <strong>01:30 и 03:00</strong>, джип с горячими источниками вокруг <strong>02:00-03:30</strong>, и ваш точный слот <strong>подтверждено в WhatsApp накануне</strong>, в зависимости от того, где находится ваш отель на маршруте сбора.</p><p>Дорога на север проходит <strong>1,5-2,5 часа в одну сторону</strong> в зависимости от вашего региона и пробок. Чангу и Семиньяк сидят в более коротком конце; Нуса Дуа и Улувату дольше. Что удивляет людей, так это то, что исходящий участок самый простой — в 02:00 дороги Бали почти пусты, поэтому поездка обычно заканчивается в нижней части этого диапазона. Возврат в дневное время движения — более медленная половина. От двери к двери с крайнего юга, бюджетируйте верхнюю часть опубликованного 6-8-часового окна каждого тура.</p>
+                <p>Да — восход на гору Батур работает из каждой южной гостиничной зоны без смены проживания, и это один из маршрутов, по которому мы ездим чаще всего. Все три формата — <a href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">Экскурсия на джипе на рассвете на гору Батур</a>, <a href="/bali/ru/tours/mount-batur-sunrise-jeep-hot-spring">Джип Санрайз с горячими источниками</a> и <a href="/bali/ru/tours/mount-batur-sunrise-hike">поход на рассвете</a> — включает трансфер из отеля из Семиньяка, Чангу, Куты, Джимбарана, Нуса-Дуа и Улувату. Честная стоимость — часы: поход собирает гостей между <strong>01:30 и 03:00</strong>, джип с горячими источниками вокруг <strong>02:00-03:30</strong>, и ваш точный слот <strong>подтверждаем в WhatsApp накануне</strong>, в зависимости от того, где находится ваш отель на маршруте сбора.</p><p>Дорога на север проходит <strong>1,5-2,5 часа в одну сторону</strong> в зависимости от вашего региона и пробок. Чангу и Семиньяк сидят в более коротком конце; Нуса Дуа и Улувату дольше. Что удивляет людей, так это то, что исходящий участок самый простой — в 02:00 дороги Бали почти пусты, поэтому поездка обычно заканчивается в нижней части этого диапазона. Возврат в дневное время движения — более медленная половина. От двери к двери с крайнего юга, бюджетируйте верхнюю часть опубликованного 6-8-часового окна каждого тура.</p>
 
 
 
@@ -1546,6 +1576,7 @@ body {
                 <p class="sboffer__eyebrow">Забронировать гору Батур</p>
                 <h2 class="sboffer__title">Какой из них забронировать</h2>
                 <p class="sboffer__decision">Отсюда диск в большей степени определяет время захвата, чем формат. Если вы хотите подняться на вершину пешком, отправляйтесь в поход. Если вы хотите тот же восход солнца без подъема, возьмите джип. Если вы чувствуете холод перед рассветом, добавьте горячий источник.</p>
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">

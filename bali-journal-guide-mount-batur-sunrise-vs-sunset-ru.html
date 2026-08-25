@@ -261,6 +261,33 @@
     transition:background-color .2s ease
   }
   .sboffer__cta:hover{background:#000}
+  /* Полоса фактов о маршруте. Две колонки на широком экране, одна на узком:
+     контейнер статьи в этом шаблоне шире вьюпорта, поэтому проценты и
+     grid по содержимому тут уезжают за край — та же причина, что у
+     .sboffer__row ниже. */
+  .sboffer__facts{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px;
+    margin:0 0 18px;padding:14px 16px;border-radius:16px;
+    background:rgba(21,21,21,0.035)
+  }
+  .sboffer__fact{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:6px 0;min-width:0
+  }
+  .sboffer__facts dt{
+    margin:0;font-size:13px;line-height:1.4;color:#8a8a90;white-space:nowrap
+  }
+  .sboffer__facts dd{
+    margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#151515;
+    text-align:right;min-width:0
+  }
+  .sboffer__ask{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 0 18px;padding:12px 24px;border-radius:999px;
+    background:#b0741f;color:#fff !important;font-size:15px;font-weight:600;
+    text-decoration:none !important;transition:background-color .2s ease
+  }
+  .sboffer__ask:hover{background:#95611a}
   .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
   /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
      вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
@@ -270,6 +297,8 @@
   @media (max-width:640px){
     .sboffer{padding:22px 20px}
     .sboffer__title{font-size:21px}
+    .sboffer__facts{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}
+    .sboffer__ask{width:100%}
     .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
     .sboffer__price{grid-column:1;font-size:17px}
     .sboffer__cta{grid-column:1;width:100%}
@@ -1337,6 +1366,7 @@ body {
                 <p class="sboffer__eyebrow">Забронировать гору Батур</p>
                 <h2 class="sboffer__title">Три пути на гору Батур</h2>
 
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
@@ -1507,7 +1537,7 @@ body {
                 <p>Все трое поднимаются на один и тот же вулкан ради одного и того же рассвета. Что меняется, так это усилие, тревога и то, как заканчивается утро:</p>
                 <ul><li><a href="/bali/ru/tours/mount-batur-sunrise-hike">Восход на гору Батур</a> — <strong>от $35</strong>: классический подъем с гидом, примерно два часа при свете факелов. Пикап <strong>01:30-03:00</strong>, 5-8 часов от двери до двери.</li><li><a href="/bali/ru/tours/mount-batur-sunrise-jeep-hot-spring">Джип на рассвете на горе Батур и горячие источники</a> — <strong>от $75</strong>: поездка на внедорожнике до смотровой площадки, затем купание в горячих источниках на берегу озера Батур. Пикап <strong>02:00-03:30</strong>, 6-8 часов.</li><li><a href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">Джип-тур на восходе солнца на горе Батур</a> — <strong>от $60</strong>: 4x4 до точки обзора: сначала свет, затем поля черной лавы. Ночной или предрассветный пикап, <strong>6-8 часов</strong>, никакой настоящей ходьбы.</li></ul>
 
-                <p>Выбор между ними — это скорее вопрос, связанный со сном и коленями, чем с фитнесом, и мы разбиваем его на <a href="/bali/ru/journal/mount-batur-sunrise-jeep-vs-hike">джип против похода</a>. Там, где спишь, бьет будильник: из Убуда предрассветная поездка <strong>60-90 минут</strong> и пикапы падают в конце этих окон, покрытых <a href="/bali/ru/journal/mount-batur-sunrise-from-ubud">Восход солнца на горе Батур из Убуда</a>, а из Чангу, Семиньяка или Улувату вы добавляете час или больше в каждую сторону — см. <a href="/bali/ru/journal/mount-batur-sunrise-from-south-bali">в то же утро с юга Бали</a>. Каждый тур индивидуален, бронируется через WhatsApp, без предоплаты.</p>
+                <p>Выбор между ними — это скорее вопрос, связанный со сном и коленями, чем с фитнесом, и мы разбиваем его на <a href="/bali/ru/journal/mount-batur-sunrise-jeep-vs-hike">джип против похода</a>. Там, где спишь, бьет будильник: из Убуда предрассветная поездка <strong>60–90 минут</strong> и пикапы падают в конце этих окон, покрытых <a href="/bali/ru/journal/mount-batur-sunrise-from-ubud">Восход солнца на горе Батур из Убуда</a>, а из Чангу, Семиньяка или Улувату вы добавляете час или больше в каждую сторону — см. <a href="/bali/ru/journal/mount-batur-sunrise-from-south-bali">в то же утро с юга Бали</a>. Каждый тур индивидуален, бронируется через WhatsApp, без предоплаты.</p>
               </section>
 
               <section class="sb-journal-article-section">
@@ -1532,6 +1562,7 @@ body {
                 <p class="sboffer__eyebrow">Забронировать гору Батур</p>
                 <h2 class="sboffer__title">Какой из них забронировать</h2>
                 <p class="sboffer__decision">Все три формата, представленные ниже, относятся к восходу солнца, потому что именно об этом путешествии стоит позаботиться заранее. Если вы хотите подняться на вершину пешком, отправляйтесь в поход; если вы хотите увидеть вид без подъема, возьмите джип.</p>
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">

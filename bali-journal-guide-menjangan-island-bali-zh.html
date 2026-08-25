@@ -261,6 +261,33 @@
     transition:background-color .2s ease
   }
   .sboffer__cta:hover{background:#000}
+  /* Полоса фактов о маршруте. Две колонки на широком экране, одна на узком:
+     контейнер статьи в этом шаблоне шире вьюпорта, поэтому проценты и
+     grid по содержимому тут уезжают за край — та же причина, что у
+     .sboffer__row ниже. */
+  .sboffer__facts{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px;
+    margin:0 0 18px;padding:14px 16px;border-radius:16px;
+    background:rgba(21,21,21,0.035)
+  }
+  .sboffer__fact{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:6px 0;min-width:0
+  }
+  .sboffer__facts dt{
+    margin:0;font-size:13px;line-height:1.4;color:#8a8a90;white-space:nowrap
+  }
+  .sboffer__facts dd{
+    margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#151515;
+    text-align:right;min-width:0
+  }
+  .sboffer__ask{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 0 18px;padding:12px 24px;border-radius:999px;
+    background:#b0741f;color:#fff !important;font-size:15px;font-weight:600;
+    text-decoration:none !important;transition:background-color .2s ease
+  }
+  .sboffer__ask:hover{background:#95611a}
   .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
   /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
      вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
@@ -270,6 +297,8 @@
   @media (max-width:640px){
     .sboffer{padding:22px 20px}
     .sboffer__title{font-size:21px}
+    .sboffer__facts{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}
+    .sboffer__ask{width:100%}
     .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
     .sboffer__price{grid-column:1;font-size:17px}
     .sboffer__cta{grid-column:1;width:100%}
@@ -1337,6 +1366,7 @@ body {
                 <p class="sboffer__eyebrow">直接预订</p>
                 <h2 class="sboffer__title">适合本指南的游览</h2>
 
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
@@ -1516,6 +1546,7 @@ body {
                 <p class="sboffer__eyebrow">直接预订</p>
                 <h2 class="sboffer__title">预订哪一间</h2>
                 <p class="sboffer__decision">第一个选项是本指南所围绕的旅行。另外两个从不同的角度覆盖同一区域或同一天。</p>
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
@@ -1604,7 +1635,7 @@ body {
         <p class="sbtc-card__deck">这条路线是为那些想要海龟、清澈的海水和真正的吉利群岛体验而无需自行组织快艇、港口流动、浮潜后勤和当地协调的旅行者而设计的。私人浮潜设置让这一天感觉比基本的共享岛屿接送更干净、更优质。</p>
       </div>
       <dl class="sbtc-ledger sbtc-card__ledger">
-        <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">时长</dt><dd class="sbtc-ledger__val">7-9小时</dd></div>
+        <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">时长</dt><dd class="sbtc-ledger__val">7-9 小时</dd></div>
         <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">区域</dt><dd class="sbtc-ledger__val">吉利特拉旺安岛和吉利美诺岛</dd></div>
         <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">行程形式</dt><dd class="sbtc-ledger__val">私人浮潜一日游</dd></div>
         <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">最适合</dt><dd class="sbtc-ledger__val">想要在巴厘岛度过美好吉利日的海洋爱好者、情侣和旅行者</dd></div>
@@ -1746,7 +1777,7 @@ body {
                 <a class="sbtc-btn sbtc-btn_line" href="https://wa.me/6285333685020?text=Hello!%20I%20want%20to%20book%20the%20Gili%20Islands%20Private%20Snorkeling%20Day%20Trip%20from%20Bali.%20Please%20send%20availability%2C%20pickup%20options%2C%20and%20full%20details." target="_blank" rel="noopener noreferrer nofollow">通过 WhatsApp 预订</a>
               </div>
               <dl class="sbtc-ledger sbtc-rail__ledger">
-                <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">时长</dt><dd class="sbtc-ledger__val">7-9小时</dd></div>
+                <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">时长</dt><dd class="sbtc-ledger__val">7-9 小时</dd></div>
                 <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">区域</dt><dd class="sbtc-ledger__val">吉利特拉旺安岛和吉利美诺岛</dd></div>
                 <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">行程形式</dt><dd class="sbtc-ledger__val">私人浮潜一日游</dd></div>
                 <div class="sbtc-ledger__row"><dt class="sbtc-ledger__key">最适合</dt><dd class="sbtc-ledger__val">想要在巴厘岛度过美好吉利日的海洋爱好者、情侣和旅行者</dd></div>

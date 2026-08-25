@@ -261,6 +261,33 @@
     transition:background-color .2s ease
   }
   .sboffer__cta:hover{background:#000}
+  /* Полоса фактов о маршруте. Две колонки на широком экране, одна на узком:
+     контейнер статьи в этом шаблоне шире вьюпорта, поэтому проценты и
+     grid по содержимому тут уезжают за край — та же причина, что у
+     .sboffer__row ниже. */
+  .sboffer__facts{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px;
+    margin:0 0 18px;padding:14px 16px;border-radius:16px;
+    background:rgba(21,21,21,0.035)
+  }
+  .sboffer__fact{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:6px 0;min-width:0
+  }
+  .sboffer__facts dt{
+    margin:0;font-size:13px;line-height:1.4;color:#8a8a90;white-space:nowrap
+  }
+  .sboffer__facts dd{
+    margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#151515;
+    text-align:right;min-width:0
+  }
+  .sboffer__ask{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 0 18px;padding:12px 24px;border-radius:999px;
+    background:#b0741f;color:#fff !important;font-size:15px;font-weight:600;
+    text-decoration:none !important;transition:background-color .2s ease
+  }
+  .sboffer__ask:hover{background:#95611a}
   .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
   /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
      вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
@@ -270,6 +297,8 @@
   @media (max-width:640px){
     .sboffer{padding:22px 20px}
     .sboffer__title{font-size:21px}
+    .sboffer__facts{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}
+    .sboffer__ask{width:100%}
     .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
     .sboffer__price{grid-column:1;font-size:17px}
     .sboffer__cta{grid-column:1;width:100%}
@@ -1344,6 +1373,7 @@ body {
                 <p class="sboffer__eyebrow">Бронируйте напрямую</p>
                 <h2 class="sboffer__title">Туры по теме этой статьи</h2>
 
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
@@ -1513,7 +1543,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>Когда правильный ответ находится в совершенно другой области?</h2>
                 <p>Достаточно часто, чтобы мы предпочли сказать это, чем продать вам один из этих двух.</p>
-                <ul><li><strong>Санур</strong> — спокойная вода, тихая набережная, а также порт Нуса Пенида и Лембонган внутри района. Если дни на лодке являются основой вашего путешествия, ничто другое на материке не сравнится с этим.</li><li><strong>Убуд</strong> — моря вообще нет, и <strong>1,5-2,5 часа</strong> из аэропорта. Он все равно выигрывает, если вы приехали ради рисовых террас, храмов и интерьера, и возвращает вам час сна в день Батура. Не оставайтесь на побережье, чтобы оказаться рядом с пляжем, на котором вы не собираетесь купаться.</li><li><strong>Улувату и Букит</strong> — скалы, прибой мирового уровня и самый светлый на юге песок, за который платят ступеньки, спускающиеся к воде и <strong>60-90 минут</strong> в порт Санур.</li><li><strong>Джимбаран</strong> — залив, рыба, жаренная на песке, спокойнее Куты. Разумная середина, если вы хотите что-то близкое к тишине Нуса-Дуа и где-нибудь поесть.</li><li><strong>Кута и Легиан</strong> — самый густонаселенный туристический центр юга и ближайший к аэропорту. Прекрасно для первой или последней ночи, тяжелая работа на неделю.</li></ul>
+                <ul><li><strong>Санур</strong> — спокойная вода, тихая набережная, а также порт Нуса Пенида и Лембонган внутри района. Если дни на лодке являются основой вашего путешествия, ничто другое на материке не сравнится с этим.</li><li><strong>Убуд</strong> — моря вообще нет, и <strong>1,5-2,5 часа</strong> из аэропорта. Он все равно выигрывает, если вы приехали ради рисовых террас, храмов и интерьера, и возвращает вам час сна в день Батура. Не оставайтесь на побережье, чтобы оказаться рядом с пляжем, на котором вы не собираетесь купаться.</li><li><strong>Улувату и Букит</strong> — скалы, прибой мирового уровня и самый светлый на юге песок, за который платят ступеньки, спускающиеся к воде и <strong>60–90 минут</strong> в порт Санур.</li><li><strong>Джимбаран</strong> — залив, рыба, жаренная на песке, спокойнее Куты. Разумная середина, если вы хотите что-то близкое к тишине Нуса-Дуа и где-нибудь поесть.</li><li><strong>Кута и Легиан</strong> — самый густонаселенный туристический центр юга и ближайший к аэропорту. Прекрасно для первой или последней ночи, тяжелая работа на неделю.</li></ul>
 
                 <p>Если ваш вес по-прежнему превышает две области, наш <a href="/bali/ru/journal/where-to-stay-bali-first-time">сравнение шести областей для первых поездок</a> ставит их рядом. И на каком бы месте вы ни остановились, большая часть вопроса о расстоянии растворяется с <a href="/bali/ru/tours/private-car-with-driver-bali">личный автомобиль и водитель</a> от 59 долларов за машину: время посадки зависит от вас, а не от фиксированного отправления, что имеет гораздо большее значение, чем разрыв между этими двумя областями.</p>
               </section>
@@ -1532,6 +1562,7 @@ body {
                 <p class="sboffer__eyebrow">Бронируйте напрямую</p>
                 <h2 class="sboffer__title">Какой из них забронировать</h2>
                 <p class="sboffer__decision">Первый вариант — это поездка, вокруг которой написан этот путеводитель. Два других покрывают ту же территорию или тот же день, но под другим углом.</p>
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">

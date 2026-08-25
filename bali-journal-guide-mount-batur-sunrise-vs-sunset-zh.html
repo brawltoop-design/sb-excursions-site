@@ -261,6 +261,33 @@
     transition:background-color .2s ease
   }
   .sboffer__cta:hover{background:#000}
+  /* Полоса фактов о маршруте. Две колонки на широком экране, одна на узком:
+     контейнер статьи в этом шаблоне шире вьюпорта, поэтому проценты и
+     grid по содержимому тут уезжают за край — та же причина, что у
+     .sboffer__row ниже. */
+  .sboffer__facts{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px;
+    margin:0 0 18px;padding:14px 16px;border-radius:16px;
+    background:rgba(21,21,21,0.035)
+  }
+  .sboffer__fact{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:6px 0;min-width:0
+  }
+  .sboffer__facts dt{
+    margin:0;font-size:13px;line-height:1.4;color:#8a8a90;white-space:nowrap
+  }
+  .sboffer__facts dd{
+    margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#151515;
+    text-align:right;min-width:0
+  }
+  .sboffer__ask{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 0 18px;padding:12px 24px;border-radius:999px;
+    background:#b0741f;color:#fff !important;font-size:15px;font-weight:600;
+    text-decoration:none !important;transition:background-color .2s ease
+  }
+  .sboffer__ask:hover{background:#95611a}
   .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
   /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
      вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
@@ -270,6 +297,8 @@
   @media (max-width:640px){
     .sboffer{padding:22px 20px}
     .sboffer__title{font-size:21px}
+    .sboffer__facts{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}
+    .sboffer__ask{width:100%}
     .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
     .sboffer__price{grid-column:1;font-size:17px}
     .sboffer__cta{grid-column:1;width:100%}
@@ -1337,6 +1366,7 @@ body {
                 <p class="sboffer__eyebrow">预订巴杜尔山</p>
                 <h2 class="sboffer__title">登上巴杜尔山的三种方式</h2>
 
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
@@ -1507,7 +1537,7 @@ body {
                 <p>三个人都登上同一座火山，迎接同样的第一道曙光。改变的是努力、闹钟以及早晨的结束方式：</p>
                 <ul><li><a href="/bali/zh/tours/mount-batur-sunrise-hike">巴杜尔山日出徒步旅行</a> — <strong>35 美元起</strong>：经典的导游攀登，在火炬照明下大约需要两个小时。皮卡 <strong>01:30-03:00</strong>，5-8小时门到门。</li><li><a href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a> — <strong>75 美元起</strong>：乘坐四驱车前往观景台，然后泡在巴杜尔湖畔的温泉。皮卡 <strong>02:00-03:30</strong>，6-8小时。</li><li><a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a> — <strong>60 美元起</strong>： 4x4 到达第一道光的视点，然后到达黑色熔岩区。夜间或黎明前接载， <strong>6-8小时</strong>，没有真正的行走。</li></ul>
 
-                <p>在它们之间进行选择是一个膝盖和睡眠问题，而不是健身问题，我们将其分解为 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行</a>。你睡觉的地方会设置闹钟：从乌布出发，黎明前的车程是 <strong>60-90分钟</strong> 皮卡落在那些窗户的末端，上面覆盖着 <a href="/bali/zh/journal/mount-batur-sunrise-from-ubud">乌布的巴杜尔山日出</a>，而从苍古、水明漾或乌鲁瓦图出发，单程需增加一个小时或更长时间 — 请参阅 <a href="/bali/zh/journal/mount-batur-sunrise-from-south-bali">同一天早上从巴厘岛南部出发</a>。每次旅行都是私人的，通过 WhatsApp 预订，无需预付款。</p>
+                <p>在它们之间进行选择是一个膝盖和睡眠问题，而不是健身问题，我们将其分解为 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行</a>。你睡觉的地方会设置闹钟：从乌布出发，黎明前的车程是 <strong>60-90 分钟</strong> 皮卡落在那些窗户的末端，上面覆盖着 <a href="/bali/zh/journal/mount-batur-sunrise-from-ubud">乌布的巴杜尔山日出</a>，而从苍古、水明漾或乌鲁瓦图出发，单程需增加一个小时或更长时间 — 请参阅 <a href="/bali/zh/journal/mount-batur-sunrise-from-south-bali">同一天早上从巴厘岛南部出发</a>。每次旅行都是私人的，通过 WhatsApp 预订，无需预付款。</p>
               </section>
 
               <section class="sb-journal-article-section">
@@ -1532,6 +1562,7 @@ body {
                 <p class="sboffer__eyebrow">预订巴杜尔山</p>
                 <h2 class="sboffer__title">预订哪一间</h2>
                 <p class="sboffer__decision">下面的三种格式都是日出，因为这是值得提早报警的旅行。如果您想步行登顶，那就徒步旅行；如果你想看风景而不需要爬山，那就坐吉普车。</p>
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">

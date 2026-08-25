@@ -261,6 +261,33 @@
     transition:background-color .2s ease
   }
   .sboffer__cta:hover{background:#000}
+  /* Полоса фактов о маршруте. Две колонки на широком экране, одна на узком:
+     контейнер статьи в этом шаблоне шире вьюпорта, поэтому проценты и
+     grid по содержимому тут уезжают за край — та же причина, что у
+     .sboffer__row ниже. */
+  .sboffer__facts{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px;
+    margin:0 0 18px;padding:14px 16px;border-radius:16px;
+    background:rgba(21,21,21,0.035)
+  }
+  .sboffer__fact{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:6px 0;min-width:0
+  }
+  .sboffer__facts dt{
+    margin:0;font-size:13px;line-height:1.4;color:#8a8a90;white-space:nowrap
+  }
+  .sboffer__facts dd{
+    margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#151515;
+    text-align:right;min-width:0
+  }
+  .sboffer__ask{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 0 18px;padding:12px 24px;border-radius:999px;
+    background:#b0741f;color:#fff !important;font-size:15px;font-weight:600;
+    text-decoration:none !important;transition:background-color .2s ease
+  }
+  .sboffer__ask:hover{background:#95611a}
   .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
   /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
      вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
@@ -270,6 +297,8 @@
   @media (max-width:640px){
     .sboffer{padding:22px 20px}
     .sboffer__title{font-size:21px}
+    .sboffer__facts{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}
+    .sboffer__ask{width:100%}
     .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
     .sboffer__price{grid-column:1;font-size:17px}
     .sboffer__cta{grid-column:1;width:100%}
@@ -1344,6 +1373,7 @@ body {
                 <p class="sboffer__eyebrow">预订巴杜尔山</p>
                 <h2 class="sboffer__title">登上巴杜尔山的三种方式</h2>
 
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
@@ -1495,7 +1525,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>你什么时候离开乌布看日出</h2>
-                <p><strong>乌布日出之旅于 01:30 至 03:30 之间出发</strong>，具体的槽位取决于你如何上去。导游带领的徒步旅行会在 <strong>01:30 和 03:00</strong>，因为在天亮之前您大约需要在路上行驶两个小时。吉普车格式稍后会出现，大约 <strong>02:00-03:30</strong>，因为 4x4 可以为您覆盖大部分距离。您的确切时间会在前一天通过 WhatsApp 确认，根据该周的日出和您在乌布的住宿地点计算。开车前往金塔马尼需要 <strong>60-90分钟</strong> 那个时候——道路上空无一人，所以传播来自于酒店位置而不是交通状况。日出本身大约落在 <strong>全年 06:00 和 06:30</strong>，灯光秀通常在太阳离开地平线前 20-30 分钟开始。</p><p>乌布的优势是地势平坦。该镇坐落在通往金塔马尼边缘的道路上，因此凌晨 3 点您应尽量减少在车内的时间。当天早上从仓古、塞米亚克、乌鲁瓦图或沙努尔出发，意味着单程需要额外行驶一个小时或更长的时间，相应的闹钟也会提前——我们在 中单独介绍了这些时间。 <a href="/bali/zh/journal/mount-batur-sunrise-from-south-bali">巴厘岛南部的巴杜尔山日出</a> 指南中单独说明。如果行程允许你选择，就把火山安排在乌布这一段，把南部留给海滩日。相比之下乌布要轻松得多： <a href="/bali/zh/journal/canggu-to-mount-batur">仓古到巴杜尔山</a> 要为同一场日出提早整整一小时出发。</p>
+                <p><strong>乌布日出之旅于 01:30 至 03:30 之间出发</strong>，具体的槽位取决于你如何上去。导游带领的徒步旅行会在 <strong>01:30 和 03:00</strong>，因为在天亮之前您大约需要在路上行驶两个小时。吉普车格式稍后会出现，大约 <strong>02:00-03:30</strong>，因为 4x4 可以为您覆盖大部分距离。您的确切时间会在前一天通过 WhatsApp 确认，根据该周的日出和您在乌布的住宿地点计算。开车前往金塔马尼需要 <strong>60-90 分钟</strong> 那个时候——道路上空无一人，所以传播来自于酒店位置而不是交通状况。日出本身大约落在 <strong>全年 06:00 和 06:30</strong>，灯光秀通常在太阳离开地平线前 20-30 分钟开始。</p><p>乌布的优势是地势平坦。该镇坐落在通往金塔马尼边缘的道路上，因此凌晨 3 点您应尽量减少在车内的时间。当天早上从仓古、塞米亚克、乌鲁瓦图或沙努尔出发，意味着单程需要额外行驶一个小时或更长的时间，相应的闹钟也会提前——我们在 中单独介绍了这些时间。 <a href="/bali/zh/journal/mount-batur-sunrise-from-south-bali">巴厘岛南部的巴杜尔山日出</a> 指南中单独说明。如果行程允许你选择，就把火山安排在乌布这一段，把南部留给海滩日。相比之下乌布要轻松得多： <a href="/bali/zh/journal/canggu-to-mount-batur">仓古到巴杜尔山</a> 要为同一场日出提早整整一小时出发。</p>
 
 
 
@@ -1531,6 +1561,7 @@ body {
                 <p class="sboffer__eyebrow">预订巴杜尔山</p>
                 <h2 class="sboffer__title">预订哪一间</h2>
                 <p class="sboffer__decision">从这里开始，驱动器比格式更能决定您的取件时间。如果您想步行登顶，那就徒步吧。如果您想在不爬山的情况下看到同样的日出，可以乘坐吉普车。如果黎明前感觉寒冷，请补充温泉。</p>
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">

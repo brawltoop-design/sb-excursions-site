@@ -261,6 +261,33 @@
     transition:background-color .2s ease
   }
   .sboffer__cta:hover{background:#000}
+  /* Полоса фактов о маршруте. Две колонки на широком экране, одна на узком:
+     контейнер статьи в этом шаблоне шире вьюпорта, поэтому проценты и
+     grid по содержимому тут уезжают за край — та же причина, что у
+     .sboffer__row ниже. */
+  .sboffer__facts{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px;
+    margin:0 0 18px;padding:14px 16px;border-radius:16px;
+    background:rgba(21,21,21,0.035)
+  }
+  .sboffer__fact{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:6px 0;min-width:0
+  }
+  .sboffer__facts dt{
+    margin:0;font-size:13px;line-height:1.4;color:#8a8a90;white-space:nowrap
+  }
+  .sboffer__facts dd{
+    margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#151515;
+    text-align:right;min-width:0
+  }
+  .sboffer__ask{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 0 18px;padding:12px 24px;border-radius:999px;
+    background:#b0741f;color:#fff !important;font-size:15px;font-weight:600;
+    text-decoration:none !important;transition:background-color .2s ease
+  }
+  .sboffer__ask:hover{background:#95611a}
   .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
   /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
      вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
@@ -270,6 +297,8 @@
   @media (max-width:640px){
     .sboffer{padding:22px 20px}
     .sboffer__title{font-size:21px}
+    .sboffer__facts{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}
+    .sboffer__ask{width:100%}
     .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
     .sboffer__price{grid-column:1;font-size:17px}
     .sboffer__cta{grid-column:1;width:100%}
@@ -1344,6 +1373,7 @@ body {
                 <p class="sboffer__eyebrow">Réserver Mont Batur</p>
                 <h2 class="sboffer__title">Trois façons de monter au mont Batur</h2>
 
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
@@ -1510,7 +1540,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Le mont Batur est-il réaliste depuis Seminyak, Canggu ou Nusa Dua ?</h2>
-                <p>Oui, le lever du soleil sur le mont Batur fonctionne depuis toutes les zones hôtelières du sud sans changer d'hébergement, et c'est l'un des itinéraires que nous empruntons le plus souvent. Les trois formats - le <a href="/bali/fr/tours/mount-batur-sunrise-jeep-tour">Excursion en jeep au lever du soleil sur le mont Batur</a>, le <a href="/bali/fr/tours/mount-batur-sunrise-jeep-hot-spring">Jeep au lever du soleil avec sources chaudes</a> et le <a href="/bali/fr/tours/mount-batur-sunrise-hike">randonnée au lever du soleil</a> - incluent la prise en charge à l'hôtel depuis Seminyak, Canggu, Kuta, Jimbaran, Nusa Dua et Uluwatu. Le coût honnête est l'horloge : la randonnée rassemble les invités entre <strong>01h30 et 03h00</strong>, la jeep avec des sources chaudes autour <strong>02:00-03:30</strong>, et votre emplacement exact est <strong>confirmé sur WhatsApp la veille</strong>, en fonction de l'emplacement de votre hôtel sur l'itinéraire de collecte.</p><p>La route vers le nord passe <strong>1,5 à 2,5 heures dans chaque sens</strong> en fonction de votre zone et du trafic. Canggu et Seminyak sont assis à l'extrémité la plus courte ; Nusa Dua et Uluwatu au plus long. Ce qui surprend les gens, c'est que l'étape aller est la plus facile : à 02h00, les routes de Bali sont presque vides, donc le trajet atterrit généralement près du bas de cette fourchette. Le retour dans le trafic de jour est la moitié la plus lente. Porte à porte depuis l'extrême sud, prévoyez le haut de la fenêtre de 6 à 8 heures publiée pour chaque visite.</p>
+                <p>Oui, le lever du soleil sur le mont Batur fonctionne depuis toutes les zones hôtelières du sud sans changer d'hébergement, et c'est l'un des itinéraires que nous empruntons le plus souvent. Les trois formats - le <a href="/bali/fr/tours/mount-batur-sunrise-jeep-tour">Excursion en jeep au lever du soleil sur le mont Batur</a>, le <a href="/bali/fr/tours/mount-batur-sunrise-jeep-hot-spring">Jeep au lever du soleil avec sources chaudes</a> et le <a href="/bali/fr/tours/mount-batur-sunrise-hike">randonnée au lever du soleil</a> - incluent la prise en charge à l'hôtel depuis Seminyak, Canggu, Kuta, Jimbaran, Nusa Dua et Uluwatu. Le coût honnête est l'horloge : la randonnée rassemble les invités entre <strong>01h30 et 03h00</strong>, la jeep avec des sources chaudes autour <strong>02:00-03:30</strong>, et votre emplacement exact est <strong>confirmée sur WhatsApp la veille</strong>, en fonction de l'emplacement de votre hôtel sur l'itinéraire de collecte.</p><p>La route vers le nord passe <strong>1,5 à 2,5 heures dans chaque sens</strong> en fonction de votre zone et du trafic. Canggu et Seminyak sont assis à l'extrémité la plus courte ; Nusa Dua et Uluwatu au plus long. Ce qui surprend les gens, c'est que l'étape aller est la plus facile : à 02h00, les routes de Bali sont presque vides, donc le trajet atterrit généralement près du bas de cette fourchette. Le retour dans le trafic de jour est la moitié la plus lente. Porte à porte depuis l'extrême sud, prévoyez le haut de la fenêtre de 6 à 8 heures publiée pour chaque visite.</p>
 
 
 
@@ -1546,6 +1576,7 @@ body {
                 <p class="sboffer__eyebrow">Réserver Mont Batur</p>
                 <h2 class="sboffer__title">Lequel réserver</h2>
                 <p class="sboffer__decision">À partir de là, le lecteur décide de votre heure de prise en charge plus que le format. Si vous voulez le sommet à pied, faites la randonnée. Si vous voulez le même lever de soleil sans la montée, prenez la jeep. Si vous ressentez le froid avant l’aube, ajoutez la source chaude.</p>
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">

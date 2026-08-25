@@ -261,6 +261,33 @@
     transition:background-color .2s ease
   }
   .sboffer__cta:hover{background:#000}
+  /* Полоса фактов о маршруте. Две колонки на широком экране, одна на узком:
+     контейнер статьи в этом шаблоне шире вьюпорта, поэтому проценты и
+     grid по содержимому тут уезжают за край — та же причина, что у
+     .sboffer__row ниже. */
+  .sboffer__facts{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px;
+    margin:0 0 18px;padding:14px 16px;border-radius:16px;
+    background:rgba(21,21,21,0.035)
+  }
+  .sboffer__fact{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:6px 0;min-width:0
+  }
+  .sboffer__facts dt{
+    margin:0;font-size:13px;line-height:1.4;color:#8a8a90;white-space:nowrap
+  }
+  .sboffer__facts dd{
+    margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#151515;
+    text-align:right;min-width:0
+  }
+  .sboffer__ask{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 0 18px;padding:12px 24px;border-radius:999px;
+    background:#b0741f;color:#fff !important;font-size:15px;font-weight:600;
+    text-decoration:none !important;transition:background-color .2s ease
+  }
+  .sboffer__ask:hover{background:#95611a}
   .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
   /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
      вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
@@ -270,6 +297,8 @@
   @media (max-width:640px){
     .sboffer{padding:22px 20px}
     .sboffer__title{font-size:21px}
+    .sboffer__facts{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}
+    .sboffer__ask{width:100%}
     .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
     .sboffer__price{grid-column:1;font-size:17px}
     .sboffer__cta{grid-column:1;width:100%}
@@ -1344,6 +1373,7 @@ body {
                 <p class="sboffer__eyebrow">直接预订</p>
                 <h2 class="sboffer__title">适合本指南的游览</h2>
 
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
@@ -1505,7 +1535,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>谁不应该选择两者？</h2>
                 <p>我们希望您预订正确的区域，而不是我们的司机到达最快的区域。因此，这是谁应该完全寻找其他地方的简单版本。</p>
-                <ul><li><strong>与想要游泳的小孩一起旅行</strong> — 沙努尔或努沙杜瓦。家庭旅行的每一天，平静的水面胜过一家好的咖啡馆。</li><li><strong>这里主要为室内：梯田、寺庙、瀑布、火山</strong> — <a href="/bali/zh/journal/things-to-do-ubud-bali-complete-guide">乌布</a>。它比任何一个海滩区域都更靠近船只，位于 <strong>45-70分钟</strong> 从仓古 (Canggu) 或乌鲁瓦图 (Uluwatu) 乘 60-90 路前往沙努尔 (Sanur) 港口，大约在巴杜尔 (Batur) 脚下 <strong>1.5小时</strong> 离开，所以日出接机时间是一个小时后。</li><li><strong>短途旅行、迟到或早班机</strong> — 库塔、勒吉安或水明漾。它们是南部最密集的地区，距离机场最近，并且提供机场接送服务 <strong>15 美元起</strong> 无论您降落在哪个区域。</li><li><strong>你想要安静但又想步行去吃饭</strong> — Bukit 给了你第一个，却拿走了第二个。水明漾比乌鲁瓦图更适合步行。</li></ul>
+                <ul><li><strong>与想要游泳的小孩一起旅行</strong> — 沙努尔或努沙杜瓦。家庭旅行的每一天，平静的水面胜过一家好的咖啡馆。</li><li><strong>这里主要为室内：梯田、寺庙、瀑布、火山</strong> — <a href="/bali/zh/journal/things-to-do-ubud-bali-complete-guide">乌布</a>。它比任何一个海滩区域都更靠近船只，位于 <strong>45-70 分钟</strong> 从仓古 (Canggu) 或乌鲁瓦图 (Uluwatu) 乘 60-90 路前往沙努尔 (Sanur) 港口，大约在巴杜尔 (Batur) 脚下 <strong>1.5小时</strong> 离开，所以日出接机时间是一个小时后。</li><li><strong>短途旅行、迟到或早班机</strong> — 库塔、勒吉安或水明漾。它们是南部最密集的地区，距离机场最近，并且提供机场接送服务 <strong>15 美元起</strong> 无论您降落在哪个区域。</li><li><strong>你想要安静但又想步行去吃饭</strong> — Bukit 给了你第一个，却拿走了第二个。水明漾比乌鲁瓦图更适合步行。</li></ul>
 
                 <p>这些都不会影响这两个领域。而是“巴厘岛最好的地区”并不是一个真正的问题—— <a href="/bali/zh/journal/where-to-stay-bali-first-time">与第一次旅行相比的六个区域</a> 更接近决策的实际运作方式。</p>
               </section>
@@ -1524,6 +1554,7 @@ body {
                 <p class="sboffer__eyebrow">直接预订</p>
                 <h2 class="sboffer__title">预订哪一间</h2>
                 <p class="sboffer__decision">第一个选项是本指南所围绕的旅行。另外两个从不同的角度覆盖同一区域或同一天。</p>
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">

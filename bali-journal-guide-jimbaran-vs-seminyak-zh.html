@@ -261,6 +261,33 @@
     transition:background-color .2s ease
   }
   .sboffer__cta:hover{background:#000}
+  /* Полоса фактов о маршруте. Две колонки на широком экране, одна на узком:
+     контейнер статьи в этом шаблоне шире вьюпорта, поэтому проценты и
+     grid по содержимому тут уезжают за край — та же причина, что у
+     .sboffer__row ниже. */
+  .sboffer__facts{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px 22px;
+    margin:0 0 18px;padding:14px 16px;border-radius:16px;
+    background:rgba(21,21,21,0.035)
+  }
+  .sboffer__fact{
+    display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+    padding:6px 0;min-width:0
+  }
+  .sboffer__facts dt{
+    margin:0;font-size:13px;line-height:1.4;color:#8a8a90;white-space:nowrap
+  }
+  .sboffer__facts dd{
+    margin:0;font-size:14px;line-height:1.4;font-weight:600;color:#151515;
+    text-align:right;min-width:0
+  }
+  .sboffer__ask{
+    display:inline-flex;align-items:center;justify-content:center;
+    margin:0 0 18px;padding:12px 24px;border-radius:999px;
+    background:#b0741f;color:#fff !important;font-size:15px;font-weight:600;
+    text-decoration:none !important;transition:background-color .2s ease
+  }
+  .sboffer__ask:hover{background:#95611a}
   .sboffer__note{margin:16px 0 0;font-size:13px;line-height:1.55;color:#8a8a90}
   /* На узком экране колонки не делим: контейнер статьи в этом шаблоне шире
      вьюпорта (так же ведут себя .sbplan и таблицы гайдов), и цена в правой
@@ -270,6 +297,8 @@
   @media (max-width:640px){
     .sboffer{padding:22px 20px}
     .sboffer__title{font-size:21px}
+    .sboffer__facts{grid-template-columns:minmax(0,1fr);gap:0;padding:12px 14px}
+    .sboffer__ask{width:100%}
     .sboffer__row{grid-template-columns:minmax(0,1fr);row-gap:10px}
     .sboffer__price{grid-column:1;font-size:17px}
     .sboffer__cta{grid-column:1;width:100%}
@@ -1337,6 +1366,7 @@ body {
                 <p class="sboffer__eyebrow">直接预订</p>
                 <h2 class="sboffer__title">适合本指南的游览</h2>
 
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
@@ -1497,7 +1527,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>您所在的地区如何改变您的一日游？</h2>
-                <p>这是博客比较跳过的部分，也是我们生活的部分。南方几乎所有值得一天游览的地方都是从开车开始的，而你睡觉的地方决定了一天开车吃的时间。</p><p><strong>努沙佩尼达。</strong> 每个过境点均从港口出发 <strong>沙努尔</strong>，而快艇本身只是 <strong>30-45分钟</strong> — 变量正在到达端口。来自 <strong>水明漾跑步时间为 30-50 分钟</strong>，这使其成为南部岛屿度假最方便的基地之一。 <strong>金巴兰位于机场的武吉一侧</strong>，我们为乌鲁瓦图和武吉发布的乐队是 <strong>60-90分钟</strong>，金巴兰就在它的近端。同一条船，提早接载。就规模而言，苍古也 <strong>60-90分钟</strong> 和乌布 <strong>45-70</strong>。我们的 <a href="/bali/zh/tours/nusa-penida-west-tour">珀尼达岛西线</a> 是 <strong>每辆车 49 美元起</strong>，以及 <a href="/bali/zh/journal/nusa-penida-day-trip-from-seminyak">塞米亚克到佩尼达指南</a> 一个小时一个小时地走过早晨。</p><p><strong>巴杜尔山日出。</strong> 这里两区是平的，都输给了乌布。皮卡运行 <strong>01:30-03:30</strong> 取决于你睡觉的地方，以及 <strong>南部地区比乌布早一小时左右出发</strong> 同一日出，因为乌布已经在岛的半山腰了——它大约位于 <strong>1.5小时</strong> 从火山脚下。如果凌晨两点的警报会破坏交易，那就需要完全不同的基地，而不是不同的南部地区。的 <a href="/bali/zh/journal/mount-batur-sunrise-from-south-bali">巴厘岛南部的巴杜尔山日出</a> 指南有时间安排，并且 <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">吉普车版</a> 是 <strong>60 美元起</strong> 如果您不想在黑暗中徒步旅行。</p><p>所有这一切背后的规则，一句话：您所在的地区距离沙努尔和金塔马尼越远，您起床越早，一天中花在路上的时间就越多。这是同一天，只是更短。</p>
+                <p>这是博客比较跳过的部分，也是我们生活的部分。南方几乎所有值得一天游览的地方都是从开车开始的，而你睡觉的地方决定了一天开车吃的时间。</p><p><strong>努沙佩尼达。</strong> 每个过境点均从港口出发 <strong>沙努尔</strong>，而快艇本身只是 <strong>30-45分钟</strong> — 变量正在到达端口。来自 <strong>水明漾跑步时间为 30-50 分钟</strong>，这使其成为南部岛屿度假最方便的基地之一。 <strong>金巴兰位于机场的武吉一侧</strong>，我们为乌鲁瓦图和武吉发布的乐队是 <strong>60-90 分钟</strong>，金巴兰就在它的近端。同一条船，提早接载。就规模而言，苍古也 <strong>60-90 分钟</strong> 和乌布 <strong>45-70</strong>。我们的 <a href="/bali/zh/tours/nusa-penida-west-tour">珀尼达岛西线</a> 是 <strong>每辆车 49 美元起</strong>，以及 <a href="/bali/zh/journal/nusa-penida-day-trip-from-seminyak">塞米亚克到佩尼达指南</a> 一个小时一个小时地走过早晨。</p><p><strong>巴杜尔山日出。</strong> 这里两区是平的，都输给了乌布。皮卡运行 <strong>01:30-03:30</strong> 取决于你睡觉的地方，以及 <strong>南部地区比乌布早一小时左右出发</strong> 同一日出，因为乌布已经在岛的半山腰了——它大约位于 <strong>1.5小时</strong> 从火山脚下。如果凌晨两点的警报会破坏交易，那就需要完全不同的基地，而不是不同的南部地区。的 <a href="/bali/zh/journal/mount-batur-sunrise-from-south-bali">巴厘岛南部的巴杜尔山日出</a> 指南有时间安排，并且 <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">吉普车版</a> 是 <strong>60 美元起</strong> 如果您不想在黑暗中徒步旅行。</p><p>所有这一切背后的规则，一句话：您所在的地区距离沙努尔和金塔马尼越远，您起床越早，一天中花在路上的时间就越多。这是同一天，只是更短。</p>
 
 
 
@@ -1517,6 +1547,7 @@ body {
                 <p class="sboffer__eyebrow">直接预订</p>
                 <h2 class="sboffer__title">预订哪一间</h2>
                 <p class="sboffer__decision">第一个选项是本指南所围绕的旅行。另外两个从不同的角度覆盖同一区域或同一天。</p>
+
                 <ul class="sboffer__list">
                 <li class="sboffer__row">
                   <span class="sboffer__main">
