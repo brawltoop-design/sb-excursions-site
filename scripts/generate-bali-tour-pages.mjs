@@ -4160,6 +4160,37 @@ function buildIncludes(tour) {
   return Array.from(new Set(items)).slice(0, 6);
 }
 
+/*
+ * Сколько на самом деле длится предрассветный день на Батуре.
+ *
+ * Поле duration («5-8 hours») верно для Убуда — оттуда до тропы час езды.
+ * С юга дорога вдвое, а из Улувату почти втрое длиннее: человек читает
+ * «5-8 часов», а гуляет двенадцать. Вопрос «во сколько я вернусь» приходит
+ * в WhatsApp первым, и отвечать на него после брони — уже потерянное доверие.
+ *
+ * Отдельной строкой, а не правкой duration: duration уходит в schema.org,
+ * в чипы героя и в карточки туров на других страницах — там нужна короткая
+ * величина, а не абзац.
+ *
+ * Слово «traffic» в тексте не случайно: по нему westCopyEmoji ставит ⏱️,
+ * а westImportantLabel — метку «Timing can shift».
+ */
+const TOUR_AREA_TIMING_NOTE = {
+  "mount-batur-sunrise-hike":
+    "How long the day runs depends on where you stay. Ubud sits about an hour from the trailhead, Kuta and Seminyak about two, and Uluwatu, Jimbaran or Nusa Dua closer to three. From Ubud that means pickup near 02:30 and home by mid-morning; from the far south, pickup near 01:00 and home in the early afternoon once the return traffic clears.",
+  "mount-batur-sunrise-jeep-tour":
+    "How long the day runs depends on where you stay. Ubud sits about an hour from the sunrise point, Kuta and Seminyak about two, and Uluwatu, Jimbaran or Nusa Dua closer to three. From Ubud that means pickup near 02:30 and home by mid-morning; from the far south, pickup near 01:00 and home around midday once the return traffic clears.",
+  "mount-batur-sunrise-jeep-hot-spring":
+    "How long the day runs depends on where you stay. Ubud sits about an hour from the sunrise point, Kuta and Seminyak about two, and Uluwatu, Jimbaran or Nusa Dua closer to three. From Ubud that means pickup near 02:30 and home around midday; from the far south, pickup near 01:00 and home in the early afternoon, because the hot spring stop adds about ninety minutes before the drive back through daytime traffic.",
+};
+
+// На локализованных турах заметка уже лежит в переведённом goodToKnow и faqs —
+// без гарда по locale англ. копия дописалась бы второй строкой поверх перевода.
+function areaTimingNote(tour) {
+  if ((tour?.locale || "en") !== "en") return "";
+  return TOUR_AREA_TIMING_NOTE[tour?.slug] || "";
+}
+
 function buildGoodToKnow(tour) {
   if (tour.goodToKnow?.length) return ensureBringNote(tour.goodToKnow.slice(), tour);
   const notes = [
@@ -4173,7 +4204,12 @@ function buildGoodToKnow(tour) {
   if (tour.tags.includes("helicopter")) notes.push("Flight timing is subject to weather and operator safety checks.");
   if (tour.tags.includes("transfer")) notes.push("Final transfer timing should be aligned with your hotel area, luggage, and departure details.");
   notes.push("Send your hotel area before booking so the route and timing can be matched properly.");
-  return ensureBringNote(Array.from(new Set(notes)).slice(0, 6), tour);
+  const trimmed = Array.from(new Set(notes)).slice(0, 6);
+  // Вставляем после обрезки: внутри списка заметку вытеснил бы лимит в шесть,
+  // а поднимать лимит ради трёх туров — менять вид всех остальных страниц.
+  const timing = areaTimingNote(tour);
+  if (timing && !trimmed.includes(timing)) trimmed.splice(2, 0, timing);
+  return ensureBringNote(trimmed, tour);
 }
 
 // Заметка «что взять с собой» добавляется здесь, а не при рендере: так она
@@ -4746,6 +4782,12 @@ function buildWestFaqs(tour) {
       `How long does the ${tour.title} take?`,
       `${tour.title} usually takes ${collapseWhitespace(tour.duration).toLowerCase()}, with the exact finish time shaped by weather, traffic, and the hotel area.`,
     ],
+    // Отдельный вопрос, а не приписка к предыдущему ответу: «во сколько я
+    // вернусь» — самостоятельный запрос, и в FAQPage он идёт отдельной
+    // сущностью. Седьмым по счёту, чтобы пройти отсечку в двенадцать FAQ.
+    ...(areaTimingNote(tour)
+      ? [[`What time will I get back from the ${tour.title}?`, areaTimingNote(tour)]]
+      : []),
     [
       `Who is the ${tour.title} best for?`,
       `This route is best for ${collapseWhitespace(tour.bestFor).toLowerCase()} and usually feels strongest when you want ${collapseWhitespace(tour.format).toLowerCase()} pacing instead of improvising Bali logistics yourself.`,
@@ -9366,6 +9408,7 @@ const TOUR_LOCAL_CONTEXT = {
     insiderNote: "Guides cook breakfast eggs using volcanic steam vents on the caldera rim — a genuinely unique experience. If you add the hot springs, arrive before 9 AM while the pools are quiet.",
     practicalTips: [
       "Pickup from south Bali (Kuta, Seminyak, Nusa Dua) is around 01:40–02:00 AM. From Ubud it is around 02:30–03:00 AM.",
+      TOUR_AREA_TIMING_NOTE["mount-batur-sunrise-jeep-tour"],
       "The jeep ride avoids the 2-hour hike entirely — ideal for travelers who want the sunrise without the physical effort. The 4WD climbs to a viewpoint near the summit.",
       "Mount Batur stands at 1,717 m (5,633 ft). Even in the jeep, temperatures at the top feel 10–15 °C cooler than at sea level.",
       "Batur Natural Hot Spring entry costs around $15–20 and includes towel, welcome drink, and locker. The pools overlook Lake Batur.",
@@ -9387,6 +9430,7 @@ const TOUR_LOCAL_CONTEXT = {
     insiderNote: "Guides cook the breakfast eggs in volcanic steam vents on the crater rim — it is the detail everyone photographs. The coffee plantation stop on the way down is where you can try kopi luwak without the Ubud tourist markup.",
     practicalTips: [
       "Pickup from south Bali (Kuta, Seminyak, Nusa Dua) is around 01:40–02:00 AM. From Ubud it is around 02:30–03:00 AM.",
+      TOUR_AREA_TIMING_NOTE["mount-batur-sunrise-hike"],
       "The climb takes about 2 hours up and 1.5 hours down over loose volcanic gravel. Normal fitness is enough — this is a steady walk, not a technical climb.",
       "Mount Batur stands at 1,717 m (5,633 ft). Temperatures at the top feel 10–15 °C cooler than at sea level.",
       "A certified local guide is mandatory for all Batur treks — enforced by the Kintamani trekking association (HPPGB).",
@@ -9408,6 +9452,7 @@ const TOUR_LOCAL_CONTEXT = {
     insiderNote: "The hot springs are quietest before 9 AM, which is exactly when this tour arrives — later in the morning the same pools fill with day-trippers coming up from Ubud.",
     practicalTips: [
       "Pickup from south Bali (Kuta, Seminyak, Nusa Dua) is around 01:40–02:00 AM. From Ubud it is around 02:30–03:00 AM.",
+      TOUR_AREA_TIMING_NOTE["mount-batur-sunrise-jeep-hot-spring"],
       "No hiking is involved. The 4WD climbs to the viewpoint and there is only a short 5–10 minute walk to the best sunrise spot.",
       "After sunrise the jeep crosses the black lava field and the black sand stretch — the most photogenic part of the drive, with photo stops.",
       "Mount Batur stands at 1,717 m (5,633 ft). Even in the jeep, the top feels 10–15 °C cooler than at sea level.",
