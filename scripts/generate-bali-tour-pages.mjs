@@ -25264,6 +25264,13 @@ const JOURNAL_SEO_GUIDES = [
     ],
     "sections": [
       {
+        "heading": "The glass lift on the cliff, and why you cannot use it",
+        "paragraphs": [
+          "You will see it before you see the beach: a steel and glass tower pinned to the cliff face beside the staircase. It does not work and you cannot ride it. The lift was designed to carry visitors 182 metres down to the sand in about a minute, replacing the climb entirely. It was never finished. Getting to the beach is still done on foot, and the next section covers what that actually involves.",
+          "The short history, because everyone asks. Construction was suspended on 31 October 2025 after inspectors found the tower stood inside a designated disaster-mitigation zone, where building on that scale is banned. On 23 November the governor of Bali ordered it demolished and the hillside restored: six months for the tower, three more for the cliff. That deadline passed in May 2026 with nothing removed. The investor filed a counter-suit and the case now sits with the State Administrative Court, so the structure stays where it is, unfinished and unused, until a court decides otherwise. Plan your visit as though it were not there, because for the purpose of reaching the beach, it is not."
+        ]
+      },
+      {
         "heading": "What you actually see from the top",
         "paragraphs": [
           "The viewpoint sits on the clifftop on the west side of Nusa Penida, a short walk from the parking area, and **the view itself costs nothing**. What you are looking at is a headland shaped like a dinosaur's head and neck, with a curve of white sand in the bay far below and water that shifts colour through the day. It is one of the few places in Bali that looks like the photographs, mainly because the scale is impossible to overstate. Ten minutes at the edge is enough for most people to understand why they came.",
@@ -25319,6 +25326,10 @@ const JOURNAL_SEO_GUIDES = [
       }
     ],
     "faq": [
+      {
+        "question": "Is there a lift or elevator down to Kelingking Beach?",
+        "answer": "No. A 182-metre glass lift was built beside the staircase but was never completed and has never carried a single passenger. Construction was suspended in October 2025 and the governor of Bali ordered the tower demolished a month later. The developer is contesting that order in court, so the unfinished structure is still standing on the cliff. The only way down remains the staircase: roughly 45 minutes down and up to an hour back up."
+      },
       {
         "question": "How long does it take to climb down to Kelingking Beach?",
         "answer": "About 45 minutes down for someone reasonably fit, and up to an hour to climb back up. Add time at the bottom and the whole detour costs two and a half to three hours of your day. The way up is slower than the way down because it is a continuous steep climb with almost no shade."
@@ -46351,6 +46362,24 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "Bali Rafting Prices 2026: IDR 250k to 1.2M Explained":
+      "Цены на рафтинг на Бали в 2026: от 250 тыс. до 1,2 млн IDR",
+    "Ayung vs Telaga Waja: 509 Stairs or Class III+":
+      "Аюнг или Телага-Ваджа: 509 ступеней или третья категория",
+    "What to Wear Rafting in Bali: 4 Items Operators Agree On":
+      "Что надеть на рафтинг на Бали: 4 вещи, о которых говорят все",
+    "Lovina Dolphin Sunrise Tour, Bali":
+      "Ловина: дельфины на рассвете, Бали",
+    "The glass lift on the cliff, and why you cannot use it":
+      "Стеклянный лифт на скале и почему им нельзя воспользоваться",
+    "You will see it before you see the beach: a steel and glass tower pinned to the cliff face beside the staircase. It does not work and you cannot ride it. The lift was designed to carry visitors 182 metres down to the sand in about a minute, replacing the climb entirely. It was never finished. Getting to the beach is still done on foot, and the next section covers what that actually involves.":
+      "Вы увидите его раньше, чем сам пляж: башня из стали и стекла, прижатая к обрыву рядом с лестницей. Он не работает, и подняться или спуститься на нём нельзя. Лифт должен был опускать людей на 182 метра к песку примерно за минуту и полностью заменить подъём пешком. Его так и не достроили. К пляжу по-прежнему спускаются своими ногами, а что это на самом деле такое — в следующем разделе.",
+    "The short history, because everyone asks. Construction was suspended on 31 October 2025 after inspectors found the tower stood inside a designated disaster-mitigation zone, where building on that scale is banned. On 23 November the governor of Bali ordered it demolished and the hillside restored: six months for the tower, three more for the cliff. That deadline passed in May 2026 with nothing removed. The investor filed a counter-suit and the case now sits with the State Administrative Court, so the structure stays where it is, unfinished and unused, until a court decides otherwise. Plan your visit as though it were not there, because for the purpose of reaching the beach, it is not.":
+      "Коротко, что произошло, потому что спрашивают все. Стройку остановили 31 октября 2025 года: проверка установила, что башня стоит в зоне предупреждения стихийных бедствий, где строительство такого масштаба запрещено. 23 ноября губернатор Бали распорядился снести её и восстановить склон — шесть месяцев на башню и ещё три на скалу. Срок вышел в мае 2026 года, но не демонтировали ничего. Инвестор подал встречный иск, и дело теперь в административном суде, так что конструкция остаётся на месте — недостроенная и неработающая — пока суд не решит иначе. Планируйте поездку так, будто её нет: чтобы попасть на пляж, её действительно нет.",
+    "Is there a lift or elevator down to Kelingking Beach?":
+      "Есть ли лифт вниз на пляж Келингкинг?",
+    "No. A 182-metre glass lift was built beside the staircase but was never completed and has never carried a single passenger. Construction was suspended in October 2025 and the governor of Bali ordered the tower demolished a month later. The developer is contesting that order in court, so the unfinished structure is still standing on the cliff. The only way down remains the staircase: roughly 45 minutes down and up to an hour back up.":
+      "Нет. Рядом с лестницей построили стеклянный лифт высотой 182 метра, но его не достроили, и он не перевёз ни одного человека. Стройку остановили в октябре 2025 года, месяцем позже губернатор Бали распорядился снести башню. Застройщик оспаривает это решение в суде, поэтому недостроенная конструкция всё ещё стоит на скале. Вниз ведёт только лестница: примерно 45 минут вниз и до часа обратно.",
     "Drive to Sanur harbour":
       "Дорога до порта Санур",
     "Drive to the harbour":
@@ -46643,6 +46672,24 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "Bali Rafting Prices 2026: IDR 250k to 1.2M Explained":
+      "Precios del rafting en Bali 2026: de 250.000 a 1,2 M IDR",
+    "Ayung vs Telaga Waja: 509 Stairs or Class III+":
+      "Ayung o Telaga Waja: 509 escalones o clase III+",
+    "What to Wear Rafting in Bali: 4 Items Operators Agree On":
+      "Rafting en Bali: las 4 cosas en que coinciden los operadores",
+    "Lovina Dolphin Sunrise Tour, Bali":
+      "Amanecer con delfines en Lovina, Bali",
+    "The glass lift on the cliff, and why you cannot use it":
+      "El ascensor de cristal en el acantilado y por qué no puedes usarlo",
+    "You will see it before you see the beach: a steel and glass tower pinned to the cliff face beside the staircase. It does not work and you cannot ride it. The lift was designed to carry visitors 182 metres down to the sand in about a minute, replacing the climb entirely. It was never finished. Getting to the beach is still done on foot, and the next section covers what that actually involves.":
+      "Lo verás antes que la playa: una torre de acero y cristal pegada al acantilado, justo al lado de la escalera. No funciona y no puedes subirte. El ascensor debía bajar a los visitantes 182 metros hasta la arena en cosa de un minuto y sustituir por completo la subida a pie. Nunca se terminó. A la playa se sigue bajando andando, y la siguiente sección explica lo que eso supone de verdad.",
+    "The short history, because everyone asks. Construction was suspended on 31 October 2025 after inspectors found the tower stood inside a designated disaster-mitigation zone, where building on that scale is banned. On 23 November the governor of Bali ordered it demolished and the hillside restored: six months for the tower, three more for the cliff. That deadline passed in May 2026 with nothing removed. The investor filed a counter-suit and the case now sits with the State Administrative Court, so the structure stays where it is, unfinished and unused, until a court decides otherwise. Plan your visit as though it were not there, because for the purpose of reaching the beach, it is not.":
+      "El resumen, porque lo pregunta todo el mundo. Las obras se suspendieron el 31 de octubre de 2025, cuando los inspectores comprobaron que la torre estaba dentro de una zona declarada de prevención de catástrofes, donde no se puede construir a esa escala. El 23 de noviembre el gobernador de Bali ordenó derribarla y restaurar la ladera: seis meses para la torre y tres más para el acantilado. El plazo venció en mayo de 2026 sin que se desmontara nada. El inversor presentó un recurso y el caso está ahora en el tribunal administrativo, así que la estructura sigue donde está, sin terminar y sin uso, hasta que la justicia decida. Planifica la visita como si no existiera, porque para llegar a la playa no existe.",
+    "Is there a lift or elevator down to Kelingking Beach?":
+      "¿Hay ascensor para bajar a Kelingking Beach?",
+    "No. A 182-metre glass lift was built beside the staircase but was never completed and has never carried a single passenger. Construction was suspended in October 2025 and the governor of Bali ordered the tower demolished a month later. The developer is contesting that order in court, so the unfinished structure is still standing on the cliff. The only way down remains the staircase: roughly 45 minutes down and up to an hour back up.":
+      "No. Junto a la escalera se construyó un ascensor de cristal de 182 metros, pero nunca se terminó y jamás ha bajado a un solo pasajero. Las obras se suspendieron en octubre de 2025 y un mes después el gobernador de Bali ordenó derribar la torre. La promotora recurre esa orden ante los tribunales, así que la estructura sin terminar sigue en el acantilado. La única forma de bajar sigue siendo la escalera: unos 45 minutos de bajada y hasta una hora de vuelta.",
     "Drive to Sanur harbour":
       "Trayecto al puerto de Sanur",
     "Drive to the harbour":
@@ -46849,6 +46896,24 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "Bali Rafting Prices 2026: IDR 250k to 1.2M Explained":
+      "Prix du rafting à Bali en 2026 : de 250 000 à 1,2 M IDR",
+    "Ayung vs Telaga Waja: 509 Stairs or Class III+":
+      "Ayung ou Telaga Waja : 509 marches ou classe III+",
+    "What to Wear Rafting in Bali: 4 Items Operators Agree On":
+      "Rafting à Bali : les 4 affaires que tous les opérateurs citent",
+    "Lovina Dolphin Sunrise Tour, Bali":
+      "Lever de soleil avec les dauphins de Lovina, Bali",
+    "The glass lift on the cliff, and why you cannot use it":
+      "L'ascenseur en verre sur la falaise, et pourquoi vous ne pouvez pas l'emprunter",
+    "You will see it before you see the beach: a steel and glass tower pinned to the cliff face beside the staircase. It does not work and you cannot ride it. The lift was designed to carry visitors 182 metres down to the sand in about a minute, replacing the climb entirely. It was never finished. Getting to the beach is still done on foot, and the next section covers what that actually involves.":
+      "Vous le verrez avant de voir la plage : une tour d'acier et de verre plaquée contre la falaise, juste à côté de l'escalier. Il ne fonctionne pas et vous ne pouvez pas le prendre. L'ascenseur devait descendre les visiteurs 182 mètres jusqu'au sable en une minute environ, et remplacer entièrement la montée. Il n'a jamais été terminé. On rejoint toujours la plage à pied, et la section suivante explique ce que cela représente vraiment.",
+    "The short history, because everyone asks. Construction was suspended on 31 October 2025 after inspectors found the tower stood inside a designated disaster-mitigation zone, where building on that scale is banned. On 23 November the governor of Bali ordered it demolished and the hillside restored: six months for the tower, three more for the cliff. That deadline passed in May 2026 with nothing removed. The investor filed a counter-suit and the case now sits with the State Administrative Court, so the structure stays where it is, unfinished and unused, until a court decides otherwise. Plan your visit as though it were not there, because for the purpose of reaching the beach, it is not.":
+      "Le résumé, puisque la question revient sans cesse. Le chantier a été suspendu le 31 octobre 2025, les inspecteurs ayant constaté que la tour se dressait dans une zone classée de prévention des catastrophes, où une construction de cette ampleur est interdite. Le 23 novembre, le gouverneur de Bali en a ordonné la démolition et la remise en état du versant : six mois pour la tour, trois de plus pour la falaise. Cette échéance est passée en mai 2026 sans que rien ne soit démonté. L'investisseur a déposé un recours et l'affaire est désormais devant le tribunal administratif, si bien que la structure reste en place, inachevée et inutilisée, tant que la justice n'aura pas tranché. Préparez votre visite comme si elle n'existait pas, car pour rejoindre la plage, elle n'existe pas.",
+    "Is there a lift or elevator down to Kelingking Beach?":
+      "Y a-t-il un ascenseur pour descendre à Kelingking Beach ?",
+    "No. A 182-metre glass lift was built beside the staircase but was never completed and has never carried a single passenger. Construction was suspended in October 2025 and the governor of Bali ordered the tower demolished a month later. The developer is contesting that order in court, so the unfinished structure is still standing on the cliff. The only way down remains the staircase: roughly 45 minutes down and up to an hour back up.":
+      "Non. Un ascenseur en verre de 182 mètres a été construit à côté de l'escalier, mais il n'a jamais été achevé et n'a jamais transporté un seul passager. Le chantier a été suspendu en octobre 2025 et le gouverneur de Bali a ordonné la démolition de la tour un mois plus tard. Le promoteur conteste cette décision en justice, si bien que la structure inachevée est toujours sur la falaise. Le seul moyen de descendre reste l'escalier : environ 45 minutes à la descente et jusqu'à une heure à la remontée.",
     "Drive to Sanur harbour":
       "Route vers le port de Sanur",
     "Drive to the harbour":
@@ -47087,6 +47152,24 @@ const PINNED_TRANSLATIONS = {
       "Bali est-elle sûre en 2026 ? 7 arnaques courantes à éviter",
   },
   "zh-CN": {
+    "Bali Rafting Prices 2026: IDR 250k to 1.2M Explained":
+      "2026 巴厘岛漂流价格：25 万至 120 万印尼盾",
+    "Ayung vs Telaga Waja: 509 Stairs or Class III+":
+      "阿漾河还是特拉加瓦贾河：509 级台阶还是 III+ 级激流",
+    "What to Wear Rafting in Bali: 4 Items Operators Agree On":
+      "巴厘岛漂流穿什么：所有运营商都认同的 4 件装备",
+    "Lovina Dolphin Sunrise Tour, Bali":
+      "巴厘岛罗威那海豚日出之旅",
+    "The glass lift on the cliff, and why you cannot use it":
+      "崖壁上的玻璃电梯，以及为什么你坐不了",
+    "You will see it before you see the beach: a steel and glass tower pinned to the cliff face beside the staircase. It does not work and you cannot ride it. The lift was designed to carry visitors 182 metres down to the sand in about a minute, replacing the climb entirely. It was never finished. Getting to the beach is still done on foot, and the next section covers what that actually involves.":
+      "还没看到沙滩，你就会先看到它：一座钢与玻璃的塔，紧贴崖壁，就在楼梯旁边。它无法运行，你也乘不了。这部电梯原本要在约一分钟内把游客送下 182 米到沙滩，彻底取代徒步下山。它始终没有建成。去沙滩仍然只能靠双脚，下一节会讲清楚那究竟意味着什么。",
+    "The short history, because everyone asks. Construction was suspended on 31 October 2025 after inspectors found the tower stood inside a designated disaster-mitigation zone, where building on that scale is banned. On 23 November the governor of Bali ordered it demolished and the hillside restored: six months for the tower, three more for the cliff. That deadline passed in May 2026 with nothing removed. The investor filed a counter-suit and the case now sits with the State Administrative Court, so the structure stays where it is, unfinished and unused, until a court decides otherwise. Plan your visit as though it were not there, because for the purpose of reaching the beach, it is not.":
+      "简单说说来龙去脉，因为人人都问。2025 年 10 月 31 日工程被叫停，检查人员认定塔身位于划定的防灾区内，该区域禁止如此规模的建设。11 月 23 日，巴厘省长下令拆除并修复山体：塔身六个月，崖壁再加三个月。期限在 2026 年 5 月到期，却什么也没拆。投资方提起反诉，案件现在由行政法院审理，因此这座建筑就那样立着，未完工也不启用，直到法院另行裁定。请把行程当作它不存在来安排，因为就下到沙滩而言，它确实不存在。",
+    "Is there a lift or elevator down to Kelingking Beach?":
+      "有电梯可以下到 Kelingking Beach 吗？",
+    "No. A 182-metre glass lift was built beside the staircase but was never completed and has never carried a single passenger. Construction was suspended in October 2025 and the governor of Bali ordered the tower demolished a month later. The developer is contesting that order in court, so the unfinished structure is still standing on the cliff. The only way down remains the staircase: roughly 45 minutes down and up to an hour back up.":
+      "没有。楼梯旁建了一部 182 米高的玻璃电梯，但从未完工，也从未载过一位乘客。工程于 2025 年 10 月停工，一个月后巴厘省长下令拆除。开发商正在法院提出异议，因此这座未完工的建筑仍立在崖壁上。下去的唯一方式仍是楼梯：下行约 45 分钟，返回最多一小时。",
     "Drive to Sanur harbour":
       "前往萨努尔港",
     "Drive to the harbour":
@@ -47163,6 +47246,24 @@ const PINNED_TRANSLATIONS = {
       "巴厘岛旅行要花多少钱？2026年真实物价与三档预算",
   },
   de: {
+    "Bali Rafting Prices 2026: IDR 250k to 1.2M Explained":
+      "Rafting-Preise auf Bali 2026: 250.000 bis 1,2 Mio. IDR",
+    "Ayung vs Telaga Waja: 509 Stairs or Class III+":
+      "Ayung oder Telaga Waja: 509 Stufen oder Klasse III+",
+    "What to Wear Rafting in Bali: 4 Items Operators Agree On":
+      "Rafting auf Bali: die 4 Dinge, in denen sich alle Anbieter einig sind",
+    "Lovina Dolphin Sunrise Tour, Bali":
+      "Sonnenaufgang mit den Delfinen von Lovina, Bali",
+    "The glass lift on the cliff, and why you cannot use it":
+      "Der Glasaufzug an der Klippe, und warum Sie ihn nicht nutzen können",
+    "You will see it before you see the beach: a steel and glass tower pinned to the cliff face beside the staircase. It does not work and you cannot ride it. The lift was designed to carry visitors 182 metres down to the sand in about a minute, replacing the climb entirely. It was never finished. Getting to the beach is still done on foot, and the next section covers what that actually involves.":
+      "Sie sehen ihn, bevor Sie den Strand sehen: ein Turm aus Stahl und Glas, direkt neben der Treppe an die Felswand gesetzt. Er ist außer Betrieb, mitfahren können Sie nicht. Der Aufzug sollte Besucher in etwa einer Minute 182 Meter zum Sand hinunterbringen und den Aufstieg ganz ersetzen. Fertig wurde er nie. Zum Strand geht es weiterhin zu Fuß, und was das bedeutet, steht im nächsten Abschnitt.",
+    "The short history, because everyone asks. Construction was suspended on 31 October 2025 after inspectors found the tower stood inside a designated disaster-mitigation zone, where building on that scale is banned. On 23 November the governor of Bali ordered it demolished and the hillside restored: six months for the tower, three more for the cliff. That deadline passed in May 2026 with nothing removed. The investor filed a counter-suit and the case now sits with the State Administrative Court, so the structure stays where it is, unfinished and unused, until a court decides otherwise. Plan your visit as though it were not there, because for the purpose of reaching the beach, it is not.":
+      "Kurz, was passiert ist, denn danach fragen alle. Der Bau wurde am 31. Oktober 2025 gestoppt, nachdem Prüfer feststellten, dass der Turm in einer ausgewiesenen Katastrophenschutzzone steht, in der so große Bauten verboten sind. Am 23. November ordnete der Gouverneur von Bali den Abriss und die Wiederherstellung des Hangs an: sechs Monate für den Turm, drei weitere für die Klippe. Die Frist lief im Mai 2026 ab, abgebaut wurde nichts. Der Investor klagte dagegen, der Fall liegt nun beim Verwaltungsgericht, und so bleibt das Bauwerk unfertig und ungenutzt stehen, bis ein Gericht anders entscheidet. Planen Sie Ihren Besuch, als gäbe es ihn nicht: um an den Strand zu kommen, gibt es ihn nicht.",
+    "Is there a lift or elevator down to Kelingking Beach?":
+      "Gibt es einen Aufzug hinunter zum Kelingking Beach?",
+    "No. A 182-metre glass lift was built beside the staircase but was never completed and has never carried a single passenger. Construction was suspended in October 2025 and the governor of Bali ordered the tower demolished a month later. The developer is contesting that order in court, so the unfinished structure is still standing on the cliff. The only way down remains the staircase: roughly 45 minutes down and up to an hour back up.":
+      "Nein. Neben der Treppe wurde ein 182 Meter hoher Glasaufzug gebaut, er wurde jedoch nie fertiggestellt und hat nie einen einzigen Fahrgast befördert. Der Bau wurde im Oktober 2025 gestoppt, einen Monat später ordnete der Gouverneur von Bali den Abriss an. Der Bauherr klagt gegen diese Anordnung, deshalb steht das unfertige Bauwerk noch an der Klippe. Hinunter führt weiterhin nur die Treppe: rund 45 Minuten abwärts und bis zu einer Stunde zurück.",
     "Bali Sunset Cruise from Benoa":
       "Bootstour bei Sonnenuntergang, Benoa",
     "Bali Instagram Highlights Tour":
