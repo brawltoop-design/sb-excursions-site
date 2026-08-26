@@ -967,6 +967,30 @@ html .sbtc h3.sbtc-rail__title{
   @media screen and (max-width:480px){.sb-journal-tour-header__desktop{display:none}.sb-journal-tour-header__mobile{display:block;background:transparent;transition:background-color .35s ease,box-shadow .35s ease}.sb-journal-tour-header__mobile-bar{background:transparent;transition:background-color .35s ease,box-shadow .35s ease}.sb-journal-tour-header_scrolled .sb-journal-tour-header__mobile,.sb-journal-tour-header_open .sb-journal-tour-header__mobile{background:#333}.sb-journal-tour-header_scrolled .sb-journal-tour-header__mobile-bar,.sb-journal-tour-header_open .sb-journal-tour-header__mobile-bar{background:#333;box-shadow:0 10px 30px rgba(17,24,39,0.18)}.sb-journal-tour-header_scrolled .sb-journal-tour-header__burger,.sb-journal-tour-header_open .sb-journal-tour-header__burger,.sb-journal-tour-header_scrolled .sb-journal-tour-header__socials a,.sb-journal-tour-header_open .sb-journal-tour-header__socials a{color:#fff}.sb-journal-tour-header_scrolled .sb-journal-tour-header__mobile-logo,.sb-journal-tour-header_open .sb-journal-tour-header__mobile-logo,.sb-journal-tour-header_scrolled .sb-journal-tour-header__mobile .sb-journal-lang-switcher__summary img,.sb-journal-tour-header_open .sb-journal-tour-header__mobile .sb-journal-lang-switcher__summary img{filter:brightness(0) invert(1)}.sb-journal-main{padding:90px 14px 64px}.sb-journal-hero,.sb-journal-article-hero,.sb-journal-tour-card,.sb-journal-article,.sb-journal-sidebar-card,.sb-journal-ranking-card,.sb-journal-faq-card{border-radius:24px}.sb-journal-hero,.sb-journal-article-hero,.sb-journal-article{padding:20px}.sb-journal-featured-grid,.sb-journal-tour-grid,.sb-journal-ranking-grid,.sb-journal-faq-grid{gap:16px}.sb-journal-tour-card__copy{left:16px;right:16px;bottom:16px}.sb-journal-tour-card__copy h3{font-size:28px}.sb-journal-hero h1,.sb-journal-article-hero h1{font-size:34px;letter-spacing:-1.6px}.sb-journal-lead{font-size:17px}.sb-journal-section__head{align-items:flex-start;flex-direction:column}.sb-journal-section__head h2{font-size:28px}.sb-journal-card h3,.sb-journal-ranking-card h3,.sb-journal-faq-card h3{font-size:23px}.sb-journal-article-section h2{font-size:26px}.sb-journal-article-section p,.sb-journal-article-section li,.sb-journal-sidebar-card li,.sb-journal-ranking-card p,.sb-journal-faq-card p{font-size:15px}}
   </style>
   <style id="sb-bali-global-ui-fix">
+
+/* Заголовки героя на немецком, узкий экран.
+
+   Атом заголовка у Tilda — display:table-cell, и ячейка РАСШИРЯЕТСЯ под
+   неразрывное слово сверх заданной ширины. Поверх этого на элементе стоит
+   zoom около 1.17, который умножает результат: 22+305 превращается в
+   26+358=384 при экране 375, и хвост слова уходит под обрез. Поэтому ни
+   max-width, ни padding на ячейке не помогали — их таблица игнорирует.
+
+   Лечится сменой display на block: тогда max-width начинает действовать,
+   а слово переносится. Ограничиваем только заголовки h1/h2 и только на
+   немецком: на других языках слов такой длины нет, а трогать всю сетку
+   артборда ради этого незачем.
+
+   Правку видно только на немецких страницах туров — на английской тот же
+   короб тоже выходит за экран на 9px, но текст туда не дотягивается. */
+@media screen and (max-width: 479px) {
+  html[lang="de"] .t396__artboard h1.tn-atom,
+  html[lang="de"] .t396__artboard h2.tn-atom {
+    display: block !important;
+    max-width: calc(100% - 12px) !important;
+    overflow-wrap: break-word !important;
+  }
+}
 html,
 body {
   scrollbar-color: #4f9df7 #f5f9ff;
@@ -1048,9 +1072,26 @@ body {
     text-align: center !important;
   }
 
+  /* minmax(0,1fr), а не 1fr. Запись «1fr» означает minmax(auto,1fr), где
+     auto равен min-content — то есть колонка не может стать уже самого
+     длинного слова внутри. На немецком «Sonnenaufgangswanderung» и
+     «Aktivitätseinweisung» давали min-content 547px, и колонка распирала
+     контейнер шириной 375px: текст уезжал за правый край и обрезался.
+     Нолём в минимуме разрешаем колонке сжиматься, а перенос делает
+     overflow-wrap ниже. */
   #rec2121222013 .sb-private-offer-shell {
+    grid-template-columns: minmax(0, 1fr) !important;
     gap: 14px !important;
     padding: 8px 10px 18px !important;
+  }
+
+  /* Длинные немецкие составные слова рвём принудительно: без этого они
+     остаются одним неразрывным куском и снова расширяют контейнер. */
+  #rec2121222013 .sb-private-offer-text,
+  #rec2121222013 .sb-private-offer-benefit,
+  #rec2121222013 .sb-private-card-topline,
+  #rec2121222013 .sb-private-card-text {
+    overflow-wrap: anywhere !important;
   }
 
   #rec2121222013 .sb-private-card-media {
