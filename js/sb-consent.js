@@ -114,7 +114,7 @@
     var row = document.createElement('div');
     row.className = 'sbc-row';
     var ok = document.createElement('button');
-    ok.className = 'sbc-accept'; ok.type = 'button'; ok.textContent = t.accept;
+    ok.className = 'sbc-accept'; ok.type = 'button'; ok.textContent = '\uD83C\uDF6A ' + t.accept;
     var no = document.createElement('button');
     no.className = 'sbc-decline'; no.type = 'button'; no.textContent = t.decline;
     ok.addEventListener('click', function () {
@@ -167,14 +167,25 @@
     }
   }
 
+  /* Спрашиваем всех, а не только ЕЭЗ.
+
+     Раньше за пределами Европы счётчики включались молча, и человек видел
+     только кнопку 🍪. Формально это допустимо, но выбор в таком виде никто
+     не делает: его просто не показывают. Теперь окно появляется всем и
+     висит, пока не нажмут «принять» или «отклонить».
+
+     Цена решения честная: там, где раньше считалось по умолчанию, часть
+     людей теперь откажется, и данных оттуда станет меньше. Взамен согласие
+     становится настоящим, а не подразумеваемым.
+
+     Функция needsExplicitConsent оставлена: она больше не решает, показывать
+     ли окно, но по ней видно, где согласие обязательно по закону, а где мы
+     спрашиваем по своей воле. */
   function init() {
     var choice = getChoice();
     if (choice === 'granted') { activateTrackers(); showCookieBtn(); return; }
     if (choice === 'denied') { showCookieBtn(); return; }
-    if (needsExplicitConsent()) { showBanner(); return; }
-    // вне ЕЭЗ/UK — считаем сразу, отказаться можно кнопкой 🍪
-    activateTrackers();
-    showCookieBtn();
+    showBanner();
   }
 
   if (document.readyState === 'loading') {

@@ -26,6 +26,7 @@ const STEPS = [
   ["add-vercel-analytics.mjs", "счётчик посещаемости Vercel"],
   ["add-partner-ref.mjs", "партнёрская метка в ссылках WhatsApp"],
   ["add-planner-fab.mjs", "плавающая кнопка «бесплатный план поездки»"],
+  ["add-journal-analytics.mjs", "счётчики и окно согласия на страницы журнала"],
   ["add-robots-meta.mjs", "разрешение на крупные картинки в выдаче Google"],
   ["build-favicons.mjs", "иконки сайта: тёмная тема и единый набор тегов"],
   ["fix-legacy-snippets.mjs", "заголовки и описания легаси-гайдов"],
