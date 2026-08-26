@@ -303,19 +303,35 @@ function localeCoversTour(locale, slug) {
  * карту сайта не попадают.
  *
  * Снять список, когда сборка отработает без предупреждения о переводе. */
-const ENGLISH_ONLY_GUIDES = new Set([
-  /* Пусто с 24 августа 2026. Одиннадцать статей про рафтинг и сезоны вышли на
-     русском, испанском, французском и китайском. Google Translate так и не
-     отпустил — переводы сделаны вручную и засеяны прямо в кэш; заодно вычищены
-     384 записи, где вместо перевода лежал английский оригинал.
+const GUIDE_LOCALES = new Map([
+  /* Слаг → языки, на которых статья РЕАЛЬНО собрана и вычитана.
+     Слага здесь нет — статья выходит на всех языках, как раньше.
 
-     Механизм оставлен рабочим: следующая партия статей сначала попадает сюда,
-     переводится отдельным проходом и только потом уезжает на другие языки.
-     Немецкий этот список не решает — им управляет DE_WAVE_GUIDES ниже. */
+     Раньше это был Set «только английский». Стало картой, потому что
+     появился третий случай: статья написана и вычитана по-английски и
+     по-французски, а остальные языки ждут. Ждут не по лени: Google
+     Translate с августа 2026 отдаёт «0 строк добавлено», переводы идут
+     руками, и статья на 2000 слов — это 8000 слов ручной работы на
+     четыре языка. Выкладывать её на русском английским текстом хуже,
+     чем не выкладывать вовсе.
+
+     Заводить пятый список покрытия было нельзя: их уже четыре, и
+     четвёртый однажды разъехался с реальностью на 1082 битые ссылки.
+     Поэтому механизм тот же, изменился только его ответ.
+
+     Немецкий этой картой не управляется — им заведует DE_WAVE_GUIDES. */
+  ["bali-deux-semaines-itineraire-budget", ["en", "fr"]],
 ]);
 
+/* Собираем ли эту статью на этом языке. Отсутствие слага в карте значит
+   «на всех» — так список описывает исключения, а не весь сайт. */
+function guideHasLocale(slug, locale) {
+  const list = GUIDE_LOCALES.get(slug);
+  return !list || list.includes(locale);
+}
+
 function localeCoversGuide(locale, slug) {
-  if (locale !== "en" && ENGLISH_ONLY_GUIDES.has(slug)) return false;
+  if (!guideHasLocale(slug, locale)) return false;
   return locale !== "de" || DE_WAVE_GUIDES.has(slug);
 }
 /* Статьи-спутники туров немецкий не получает вовсе — см. комментарий выше. */
@@ -21926,7 +21942,7 @@ const JOURNAL_SEO_GUIDES = [
         heading: "🌦️ Dry and wet season, without the myths",
         paragraphs: [
           "**Dry season runs April to October, wet season November to March.** Daily temperatures sit around **26.5–28°C** all year, with a 22–32°C range, and the sea stays between **27 and 29°C**. Ubud and Kintamani run several degrees cooler than the coast.",
-          "The wet season does **not** mean all-day rain. The usual pattern is a heavy downpour of one to two hours in the late afternoon or evening, with sunshine either side. Even in January there are plenty of clear mornings. The trade is real though: more humidity and mosquitoes, rougher seas, occasional boat cancellations, and beach trash washing onto the west coast between December and February.",
+          "**The wet season does not mean all-day rain.** The usual pattern is a heavy downpour of one to two hours in the late afternoon or evening, with sunshine either side. Even in January there are plenty of clear mornings. The trade-off is real though: more humidity and mosquitoes, rougher seas, occasional boat cancellations, and beach trash washing onto the west coast between December and February.",
           "The practical strategy for green season is simply to front-load the day — outdoor plans before 14:00, indoor plans after.",
         ],
       },
@@ -46362,6 +46378,16 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "The usual pattern is a heavy downpour of one to two hours in the late afternoon or evening, with sunshine either side. Even in January there are plenty of clear mornings. The trade-off is real though: more humidity and mosquitoes, rougher seas, occasional boat cancellations, and beach trash washing onto the west coast between December and February.":
+      "Обычно это сильный ливень на час-два ближе к вечеру, а до и после — солнце. Даже в январе хватает ясных утр. Плата за это настоящая: выше влажность, больше комаров, море беспокойнее, лодки иногда отменяют, а на западное побережье с декабря по февраль выносит мусор.",
+    "— no arrivals, no departures. Roads and ports close, shops and restaurants shut, mobile data is switched off island-wide, and everyone including tourists must stay on hotel or villa grounds. Village security patrol to enforce it.":
+      "— ни одного прилёта, ни одного вылета. Закрываются дороги и порты, магазины и рестораны, по всему острову отключают мобильный интернет, и все, включая туристов, обязаны оставаться на территории отеля или виллы. Следят за этим печаланги — деревенская стража.",
+    "The wet season does not mean all-day rain.":
+      "Сезон дождей не значит, что дождь идёт весь день.",
+    "Village security patrol to enforce it.":
+      "Следят за этим печаланги — деревенская стража.",
+    "Snorkel with Manta Rays, Nusa Penida":
+      "Снорклинг с мантами, Нуса-Пенида",
     "Bali Rafting Prices 2026: IDR 250k to 1.2M Explained":
       "Цены на рафтинг на Бали в 2026: от 250 тыс. до 1,2 млн IDR",
     "Ayung vs Telaga Waja: 509 Stairs or Class III+":
@@ -46672,6 +46698,18 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "The usual pattern is a heavy downpour of one to two hours in the late afternoon or evening, with sunshine either side. Even in January there are plenty of clear mornings. The trade-off is real though: more humidity and mosquitoes, rougher seas, occasional boat cancellations, and beach trash washing onto the west coast between December and February.":
+      "Lo habitual es un aguacero fuerte de una o dos horas a última hora de la tarde, con sol antes y después. Incluso en enero hay muchas mañanas despejadas. La contrapartida es real: más humedad y mosquitos, mar más movido, barcos cancelados de vez en cuando y basura que llega a las playas de la costa oeste entre diciembre y febrero.",
+    "— no arrivals, no departures. Roads and ports close, shops and restaurants shut, mobile data is switched off island-wide, and everyone including tourists must stay on hotel or villa grounds. Village security patrol to enforce it.":
+      "— ni llegadas ni salidas. Cierran carreteras y puertos, tiendas y restaurantes, se corta el internet móvil en toda la isla y todo el mundo, turistas incluidos, debe permanecer dentro de su hotel o villa. De ello se encargan los pecalang, los vigilantes del pueblo.",
+    "Best Time to Visit Bali: A Month-by-Month Guide":
+      "Mejor época para visitar Bali: una guía mes a mes",
+    "The wet season does not mean all-day rain.":
+      "La temporada de lluvias no significa lluvia todo el día.",
+    "Village security patrol to enforce it.":
+      "De ello se encargan los pecalang, los vigilantes del pueblo.",
+    "Snorkel with Manta Rays, Nusa Penida":
+      "Snorkel con mantarrayas, Nusa Penida",
     "Bali Rafting Prices 2026: IDR 250k to 1.2M Explained":
       "Precios del rafting en Bali 2026: de 250.000 a 1,2 M IDR",
     "Ayung vs Telaga Waja: 509 Stairs or Class III+":
@@ -46896,6 +46934,18 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "The usual pattern is a heavy downpour of one to two hours in the late afternoon or evening, with sunshine either side. Even in January there are plenty of clear mornings. The trade-off is real though: more humidity and mosquitoes, rougher seas, occasional boat cancellations, and beach trash washing onto the west coast between December and February.":
+      "En général, c'est une grosse averse d'une à deux heures en fin d'après-midi ou en soirée, avec du soleil avant et après. Même en janvier, les matinées dégagées sont nombreuses. La contrepartie est réelle : plus d'humidité et de moustiques, une mer plus agitée, des bateaux parfois annulés, et des déchets rejetés sur les plages de la côte ouest entre décembre et février.",
+    "— no arrivals, no departures. Roads and ports close, shops and restaurants shut, mobile data is switched off island-wide, and everyone including tourists must stay on hotel or villa grounds. Village security patrol to enforce it.":
+      "— aucune arrivée, aucun départ. Les routes et les ports ferment, les commerces et les restaurants aussi, les données mobiles sont coupées sur toute l'île, et tout le monde, touristes compris, doit rester dans l'enceinte de son hôtel ou de sa villa. Ce sont les pecalang, les gardiens du village, qui y veillent.",
+    "Best Time to Visit Bali: A Month-by-Month Guide":
+      "Quand partir à Bali ? Le calendrier mois par mois",
+    "The wet season does not mean all-day rain.":
+      "La saison des pluies ne veut pas dire de la pluie toute la journée.",
+    "Village security patrol to enforce it.":
+      "Ce sont les pecalang, les gardiens du village, qui y veillent.",
+    "Snorkel with Manta Rays, Nusa Penida":
+      "Snorkeling avec les raies manta, Nusa Penida",
     "Bali Rafting Prices 2026: IDR 250k to 1.2M Explained":
       "Prix du rafting à Bali en 2026 : de 250 000 à 1,2 M IDR",
     "Ayung vs Telaga Waja: 509 Stairs or Class III+":
@@ -47152,6 +47202,18 @@ const PINNED_TRANSLATIONS = {
       "Bali est-elle sûre en 2026 ? 7 arnaques courantes à éviter",
   },
   "zh-CN": {
+    "The usual pattern is a heavy downpour of one to two hours in the late afternoon or evening, with sunshine either side. Even in January there are plenty of clear mornings. The trade-off is real though: more humidity and mosquitoes, rougher seas, occasional boat cancellations, and beach trash washing onto the west coast between December and February.":
+      "通常是傍晚一两个小时的大雨，前后都有阳光。即便在一月，晴朗的上午也不少。代价是实实在在的：湿度更高、蚊子更多、海况更差、船班偶有取消，十二月至二月还有垃圾被冲上西海岸的沙滩。",
+    "— no arrivals, no departures. Roads and ports close, shops and restaurants shut, mobile data is switched off island-wide, and everyone including tourists must stay on hotel or villa grounds. Village security patrol to enforce it.":
+      "——没有抵达，也没有起飞。道路和港口关闭，商店与餐厅停业，全岛切断移动数据，包括游客在内的所有人都必须留在酒店或别墅范围内。由村庄守卫 pecalang 负责执行。",
+    "Best Time to Visit Bali: A Month-by-Month Guide":
+      "巴厘岛最佳旅游时间：每月指南",
+    "The wet season does not mean all-day rain.":
+      "雨季并不意味着整天下雨。",
+    "Village security patrol to enforce it.":
+      "由村庄守卫 pecalang 负责执行。",
+    "Snorkel with Manta Rays, Nusa Penida":
+      "与蝠鲼一起浮潜，努沙佩尼达",
     "Bali Rafting Prices 2026: IDR 250k to 1.2M Explained":
       "2026 巴厘岛漂流价格：25 万至 120 万印尼盾",
     "Ayung vs Telaga Waja: 509 Stairs or Class III+":
@@ -47246,6 +47308,18 @@ const PINNED_TRANSLATIONS = {
       "巴厘岛旅行要花多少钱？2026年真实物价与三档预算",
   },
   de: {
+    "The usual pattern is a heavy downpour of one to two hours in the late afternoon or evening, with sunshine either side. Even in January there are plenty of clear mornings. The trade-off is real though: more humidity and mosquitoes, rougher seas, occasional boat cancellations, and beach trash washing onto the west coast between December and February.":
+      "Üblich ist ein kräftiger Guss von ein bis zwei Stunden am späten Nachmittag oder Abend, davor und danach Sonne. Selbst im Januar gibt es viele klare Vormittage. Der Preis dafür ist real: mehr Feuchtigkeit und Mücken, rauere See, gelegentlich ausfallende Boote und Strandmüll, der zwischen Dezember und Februar an die Westküste gespült wird.",
+    "— no arrivals, no departures. Roads and ports close, shops and restaurants shut, mobile data is switched off island-wide, and everyone including tourists must stay on hotel or villa grounds. Village security patrol to enforce it.":
+      "— keine Ankünfte, keine Abflüge. Straßen und Häfen schließen, Geschäfte und Restaurants ebenso, das mobile Internet wird inselweit abgeschaltet, und alle, auch Touristen, müssen auf dem Gelände ihres Hotels oder ihrer Villa bleiben. Darüber wachen die Pecalang, die Dorfwache.",
+    "Best Time to Visit Bali: A Month-by-Month Guide":
+      "Beste Reisezeit für Bali: Ein monatlicher Reiseführer",
+    "The wet season does not mean all-day rain.":
+      "Regenzeit bedeutet nicht, dass es den ganzen Tag regnet.",
+    "Village security patrol to enforce it.":
+      "Darüber wachen die Pecalang, die Dorfwache.",
+    "Snorkel with Manta Rays, Nusa Penida":
+      "Schnorcheln mit Mantarochen, Nusa Penida",
     "Bali Rafting Prices 2026: IDR 250k to 1.2M Explained":
       "Rafting-Preise auf Bali 2026: 250.000 bis 1,2 Mio. IDR",
     "Ayung vs Telaga Waja: 509 Stairs or Class III+":
@@ -47761,7 +47835,7 @@ function localeCoversRoute(route, locale) {
      покрытия, и он про адрес, а не про слаг — правя один, надо править все. */
   if (locale !== "en") {
     const only = text.match(/\/bali\/[a-z-]+\/journal\/([a-z0-9-]+)$/);
-    if (only && ENGLISH_ONLY_GUIDES.has(only[1])) return false;
+    if (only && !guideHasLocale(only[1], locale)) return false;
   }
   if (locale !== "de") return true;
   let match = text.match(/\/bali\/[a-z-]+\/tours\/([a-z0-9-]+)$/);
@@ -47877,7 +47951,8 @@ function switchBaliRouteLocale(route, locale = "en") {
 
    Замер 24.08.2026: 1082 битые ссылки на 99 из 101 немецкой страницы, в среднем
    по десять на страницу. Плюс по 30 на четырёх страницах у ru/es/fr/zh — это
-   статьи из ENGLISH_ONLY_GUIDES. Карта сайта и hreflang при этом были чистыми:
+   статьи с неполным покрытием языков (теперь этим ведает GUIDE_LOCALES).
+   Карта сайта и hreflang при этом были чистыми:
    там проверка через localeCoversRoute стояла, а здесь её не было.
 
    Цена не только в пользователе, который упирается в 404. Google идёт по этим
