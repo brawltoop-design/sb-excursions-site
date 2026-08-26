@@ -320,7 +320,7 @@ const GUIDE_LOCALES = new Map([
      Поэтому механизм тот же, изменился только его ответ.
 
      Немецкий этой картой не управляется — им заведует DE_WAVE_GUIDES. */
-  ["bali-deux-semaines-itineraire-budget", ["en", "fr"]],
+  ["bali-itinerary-14-days", ["en", "fr"]],
 ]);
 
 /* Собираем ли эту статью на этом языке. Отсутствие слага в карте значит
@@ -10384,6 +10384,130 @@ const JOURNAL_FEATURED_GUIDE_SLUGS = [
 ];
 
 const JOURNAL_SEO_GUIDES = [
+  {
+    "slug": "bali-itinerary-14-days",
+    "badge": "Travel guide",
+    "navLabel": "Bali in 14 days",
+    "cardTourLabel": "Nusa Penida tours",
+    "heroTourSlug": "nusa-penida-west-tour",
+    "relatedTourSlugs": [
+      "nusa-penida-west-tour",
+      "mount-batur-sunrise-hike",
+      "white-water-rafting"
+    ],
+    "inlineStats": [
+      "4 bases, not 10",
+      "IDR 150,000 levy everyone pays",
+      "Drive times per leg"
+    ],
+    "title": "Bali in 14 Days: Four Bases, and the Drives Nobody Counts",
+    "description": "A two-week Bali route built backwards from drive times, with entry fees and boat fares in rupiah. Four bases instead of ten, and why the ten-base plans do not fit.",
+    "excerpt": "Most two-week Bali itineraries fail on arithmetic rather than taste. They list ten bases, skip the drive between them, and quietly assume a 3-4 hour transfer costs nothing. This one goes the other way: four bases, every leg timed, every entry fee and boat fare in rupiah, and an honest account of what two weeks actually costs before flights. The stops are the same ones everybody names. What changes is how many times you pack.",
+    "rankings": [
+      {
+        "name": "Ubud and the interior",
+        "imageSrc": "/images/places/ayung-river-rafting.jpg",
+        "area": "Ubud",
+        "bestFor": "Days 1-4",
+        "summary": "Rice terraces, the Ayung for rafting, and the shortest pre-dawn run to Mount Batur of any base: 60-90 minutes on empty road."
+      },
+      {
+        "name": "Mount Batur before sunrise",
+        "imageSrc": "/images/tours-real/mount-batur-sunrise-hike.jpg",
+        "area": "Kintamani",
+        "bestFor": "Day 3 or 4",
+        "summary": "Do it from Ubud and early, while the sleep debt is small. From the south the same drive is two and a half to three hours."
+      },
+      {
+        "name": "Nusa Penida, slept on",
+        "imageSrc": "/images/tours-real/nusa-penida-west-tour.jpg",
+        "area": "Nusa Penida",
+        "bestFor": "Days 9-11",
+        "summary": "One crossing instead of two, and the west coast at first light before the day boats land."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Four bases, and why ten does not work",
+        "paragraphs": [
+          "The standard two-week plan you will find online lists eight to ten places to sleep. It reads like more of Bali for the same money. In practice it is the opposite: every base change costs two to four hours of road, plus packing, checking out and checking in, and those hours come out of the days you are counting. Ten bases over fourteen nights means a move every 1.4 days.",
+          "Four bases fit without hurrying: Ubud for the interior, Amed or Sidemen for the east, Nusa Penida for the island, and the south — Canggu, Seminyak or Uluwatu — for the last nights near the airport. Three to four nights each. You still see the same headline places; you just stop paying the transfer tax on them.",
+          "There is a second reason four beats ten, and it is not about time. Each base you add is another check-in, another set of directions to a driver who has not been there, another morning lost to logistics rather than to the island. The stops in this plan are the same ones every guide names — Tegallalang, Batur at dawn, Tirta Empul, the east coast, Kelingking, Uluwatu at sunset. What changes is that you see them from four beds instead of ten."
+        ]
+      },
+      {
+        "heading": "The legs, timed",
+        "paragraphs": [
+          "These are the drives the itineraries leave out. From the airport it is 45-90 minutes to Uluwatu depending on when you land, 40-60 minutes to Canggu and 75-90 at peak, and 60-90 minutes to Ubud. Once you are based, the numbers that matter are the ones towards the sea: Seminyak to Sanur harbour is 30-50 minutes, while Canggu and the Bukit are both 60-90 minutes from the same port. That gap is a full hour of sleep on a morning boat day.",
+          "The Nusa Penida crossing itself is short — 30-45 minutes from Sanur, sea state depending. The Gilis are the outlier people underestimate: direct morning boats from Sanur to Gili Trawangan run 3h to 3h45. A Gili day trip from the south of Bali is therefore a fourteen-hour day for about four hours ashore, which is why it belongs in a two-week plan as an overnight, not a day out.",
+          "Add these up across a fourteen-day plan and the number surprises people. A ten-base route with an average of two and a half hours between bases spends roughly twenty-five hours in a car on transfers alone, before any sightseeing driving. The four-base version spends about eight. That difference is two full days."
+        ]
+      },
+      {
+        "heading": "What it costs on the ground, in rupiah",
+        "paragraphs": [
+          "Two numbers are unavoidable and almost never mentioned. The Bali tourist levy is IDR 150,000 per foreign visitor, paid once through the Love Bali portal before you land. On top of that comes the visa. For a couple that is roughly IDR 300,000 of levy alone before the first coffee.",
+          "Entry fees are small individually and add up over fourteen days. From our own checks: Tegallalang rice terrace IDR 25,000, Jatiluwih IDR 75,000 for a foreign adult and IDR 50,000 for a child, Tanah Lot IDR 75,000, Sekumpul waterfall IDR 15,000 adult and IDR 5,000 child. The headline temples — Uluwatu, Tirta Empul, Besakih, Ulun Danu Beratan — sit at the top of the range, up to about IDR 100,000 per person. Budget IDR 50,000-100,000 per person on a sightseeing day and you will not be caught out.",
+          "Boats: Sanur to Nusa Penida runs IDR 150,000-250,000 through an agent, less direct from the operator. Sanur to Gili Trawangan is IDR 345,000-460,000 depending on the boat. Rafting on the Ayung starts at IDR 250,000, Telaga Waja at IDR 270,000, Melangit at IDR 300,000. All checked in August 2026.",
+          "Two things we will not print: a nightly accommodation figure and a flight price. Both move more than everything above combined — accommodation alone runs 30-40% below peak in the green season — and a made-up average would be the least reliable number on the page. What we can say is that the fixed part, the part nobody escapes, is the levy plus entries plus transport, and that part is knowable in advance."
+        ]
+      },
+      {
+        "heading": "Cars are priced per car, not per person",
+        "paragraphs": [
+          "Almost every budget you will read is written per person, which quietly punishes couples and rewards nobody. Most of what you actually book on Bali is priced per vehicle. A standard car with driver for a full day is IDR 600,000-900,000 on the open market, which four people split into about IDR 175,000 each, fuel and parking and waiting included.",
+          "The same logic runs through the island tours. Our own Nusa Penida west route is from $49 per car for up to six people, while the Manta Point snorkelling day is $29 per person because a boat seat is a seat. When you compare two operators, check which unit they are quoting before you compare the numbers."
+        ]
+      },
+      {
+        "heading": "Where the fourteen days go",
+        "paragraphs": [
+          "Days 1-4, Ubud. Arrival is a write-off whatever your plan says, so land, drive, sleep. Then the interior: rice terraces, the Ayung for rafting, and the pre-dawn run to Mount Batur — 60-90 minutes from Ubud on empty road, which is the shortest approach of any base and the reason Batur belongs to this leg rather than to the south.",
+          "Days 5-8, east. Sidemen for the valley or Amed for the water; Tulamben's Liberty wreck is a shore dive you can snorkel. This is the quietest stretch of the two weeks and the one people cut first, usually to their regret.",
+          "Days 9-11, Nusa Penida. Sleep on the island rather than doing it as a day trip from Bali: one crossing instead of two, and the west coast at first light before the day boats land. Days 12-14, the south, near the airport, for surf, sunset and the last flight."
+        ]
+      },
+      {
+        "heading": "When to go, and the one date that stops the island",
+        "paragraphs": [
+          "The dry season runs April to October and the wet season November to March, with the crowd and price peak in July and August. Air temperature sits at 22-32°C year-round and the sea at 27-29°C, so the season question is about rain, sea state and crowds rather than warmth. The wet season does not mean all-day rain: the usual pattern is a heavy downpour of one to two hours in the late afternoon, with sunshine either side.",
+          "One date overrides every plan. Nyepi, the Balinese day of silence, falls on Monday 8 March 2027 and runs 06:00 to 06:00. Ngurah Rai airport closes completely — no arrivals, no departures. Roads and ports close, mobile data is switched off island-wide, and everyone including tourists stays on hotel grounds. If your two weeks touch that date, arrive the day before at the latest and depart the day after, and confirm your hotel is serving meals. Galungan and Kuningan do not stop the island but do close coastal roads for processions, usually for thirty to sixty minutes and without warning."
+        ]
+      },
+      {
+        "heading": "Five mistakes that cost a day each",
+        "paragraphs": [
+          "Booking Nusa Penida as a day trip from the Bukit or Canggu. Both are 60-90 minutes from Sanur harbour, so the alarm goes before five and you reach Kelingking at the exact hour every other boat has landed. From Sanur the same day starts ninety minutes later.",
+          "Putting Mount Batur late in the trip. The pre-dawn drive is 60-90 minutes from Ubud and two and a half to three hours from the south. Batur belongs to the Ubud leg, and it belongs early, while the sleep debt is small.",
+          "Treating the Gilis as a day out. Three to three and three-quarter hours each way from Sanur. In fourteen days you have room to sleep there; in one day you have room to sit on a boat.",
+          "Assuming card payment. Entry gates, warungs and parking are cash. Carry 20,000 and 50,000 notes, and note that working ATMs on Nusa Penida are scarce.",
+          "Renting a scooter without the right licence. An international permit with category A is what insurers ask for, and without it a claim is refused. Bali drives on the left and the traffic does not forgive experiments."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is two weeks enough for Bali?",
+        "answer": "Comfortably, if you sleep in four places rather than ten. Fourteen nights across four bases gives three to four nights each, which is enough to unpack. The same fourteen nights across ten bases spends roughly a quarter of the trip in a car."
+      },
+      {
+        "question": "What does a two-week Bali trip cost before flights?",
+        "answer": "The fixed part is knowable: IDR 150,000 tourist levy per person, IDR 50,000-100,000 per person on entry fees for each sightseeing day, IDR 600,000-900,000 for a car and driver per day split between everyone in it, and IDR 150,000-250,000 for the Nusa Penida crossing. Accommodation is the variable that moves everything, and it runs 30-40% below peak in the green season."
+      },
+      {
+        "question": "Should I include the Gili Islands in two weeks on Bali?",
+        "answer": "Only as an overnight. The direct boat from Sanur to Gili Trawangan is 3h to 3h45 each way, so a day trip is a fourteen-hour day for about four hours ashore. With two weeks you have room to sleep there instead, which changes the trip entirely."
+      },
+      {
+        "question": "Do I have to pay the Bali tourist levy?",
+        "answer": "Yes, every foreign visitor pays IDR 150,000 once per trip, through the official Love Bali portal before arrival. It is separate from the visa. You receive a QR code that is scanned at the airport."
+      },
+      {
+        "question": "Is it better to stay on Nusa Penida or visit for the day?",
+        "answer": "On a two-week trip, stay. A day trip means two crossings and the west coast at exactly the hour every other boat has landed. A night on the island means one crossing and Kelingking before the crowds."
+      }
+    ]
+  },
   {
     "slug": "nyepi-what-actually-closes",
     "badge": "Culture guide",
@@ -46934,6 +47058,110 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "Days 5-8, east. Sidemen for the valley or Amed for the water; Tulamben&#39;s Liberty wreck is a shore dive you can snorkel. This is the quietest stretch of the two weeks and the one people cut first, usually to their regret.":
+      "Jours 5 à 8, l'est. Sidemen pour la vallée ou Amed pour l'eau ; l'épave du Liberty à Tulamben se rejoint depuis la plage et s'explore aussi en snorkeling. C'est le passage le plus calme des deux semaines, et le premier que l'on supprime — en général à regret.",
+    "Ubud and the interior":
+      "Ubud et l'intérieur des terres",
+    "Rice terraces, the Ayung for rafting, and the shortest pre-dawn run to Mount Batur of any base: 60-90 minutes on empty road.":
+      "Rizières, l'Ayung pour le rafting, et le trajet d'avant l'aube le plus court vers le mont Batur, toutes bases confondues : 60 à 90 minutes sur des routes vides.",
+    "Mount Batur before sunrise":
+      "Le mont Batur avant le lever du soleil",
+    "Do it from Ubud and early, while the sleep debt is small. From the south the same drive is two and a half to three hours.":
+      "À faire depuis Ubud, et tôt dans le séjour, tant que la dette de sommeil est faible. Depuis le sud, le même trajet dure deux heures et demie à trois heures.",
+    "Nusa Penida, slept on":
+      "Nusa Penida, avec une nuit sur place",
+    "One crossing instead of two, and the west coast at first light before the day boats land.":
+      "Une traversée au lieu de deux, et la côte ouest aux premières lueurs, avant l'arrivée des bateaux du jour.",
+    "Days 1-4":
+      "Jours 1 à 4",
+    "Day 3 or 4":
+      "Jour 3 ou 4",
+    "Days 9-11":
+      "Jours 9 à 11",
+    "Bali in 14 Days: Four Bases, and the Drives Nobody Counts":
+      "Bali en 2 semaines : quatre bases, et les trajets que personne ne compte",
+    "A two-week Bali route built backwards from drive times, with entry fees and boat fares in rupiah. Four bases instead of ten, and why the ten-base plans do not fit.":
+      "Un itinéraire de deux semaines à Bali construit à partir des temps de trajet, avec les entrées et les billets de bateau en roupies. Quatre bases au lieu de dix, et pourquoi les plans à dix bases ne tiennent pas.",
+    "Most two-week Bali itineraries fail on arithmetic rather than taste. They list ten bases, skip the drive between them, and quietly assume a 3-4 hour transfer costs nothing. This one goes the other way: four bases, every leg timed, every entry fee and boat fare in rupiah, and an honest account of what two weeks actually costs before flights. The stops are the same ones everybody names. What changes is how many times you pack.":
+      "La plupart des itinéraires de deux semaines à Bali échouent sur l'arithmétique, pas sur le goût. Ils alignent dix bases, sautent la route entre elles et supposent discrètement qu'un transfert de 3 à 4 heures ne coûte rien. Celui-ci fait l'inverse : quatre bases, chaque trajet chronométré, chaque entrée et chaque billet de bateau en roupies, et un compte honnête de ce que coûtent vraiment deux semaines, hors vols. Les étapes sont celles que tout le monde cite. Ce qui change, c'est le nombre de fois où vous refaites vos valises.",
+    "Four bases, and why ten does not work":
+      "Quatre bases, et pourquoi dix ne fonctionne pas",
+    "The standard two-week plan you will find online lists eight to ten places to sleep. It reads like more of Bali for the same money. In practice it is the opposite: every base change costs two to four hours of road, plus packing, checking out and checking in, and those hours come out of the days you are counting. Ten bases over fourteen nights means a move every 1.4 days.":
+      "Le plan classique de deux semaines que vous trouverez en ligne aligne huit à dix lieux de couchage. Sur le papier, c'est plus de Bali pour le même prix. En pratique, c'est l'inverse : chaque changement de base coûte deux à quatre heures de route, plus les valises, le départ et l'arrivée, et ces heures sont prises sur les journées que vous comptez. Dix bases sur quatorze nuits, cela fait un déménagement tous les 1,4 jour.",
+    "Four bases fit without hurrying: Ubud for the interior, Amed or Sidemen for the east, Nusa Penida for the island, and the south — Canggu, Seminyak or Uluwatu — for the last nights near the airport. Three to four nights each. You still see the same headline places; you just stop paying the transfer tax on them.":
+      "Quatre bases tiennent sans courir : Ubud pour l'intérieur, Amed ou Sidemen pour l'est, Nusa Penida pour l'île, et le sud — Canggu, Seminyak ou Uluwatu — pour les dernières nuits près de l'aéroport. Trois à quatre nuits chacune. Vous voyez toujours les mêmes lieux phares ; vous cessez simplement d'en payer la taxe de transfert.",
+    "There is a second reason four beats ten, and it is not about time. Each base you add is another check-in, another set of directions to a driver who has not been there, another morning lost to logistics rather than to the island. The stops in this plan are the same ones every guide names — Tegallalang, Batur at dawn, Tirta Empul, the east coast, Kelingking, Uluwatu at sunset. What changes is that you see them from four beds instead of ten.":
+      "Il y a une deuxième raison pour laquelle quatre vaut mieux que dix, et elle ne tient pas au temps. Chaque base ajoutée, c'est une arrivée de plus à gérer, une adresse de plus à expliquer à un chauffeur qui n'y est jamais allé, une matinée de plus perdue en logistique plutôt qu'à l'île. Les étapes de ce plan sont celles que citent tous les guides : Tegallalang, le Batur à l'aube, Tirta Empul, la côte est, Kelingking, Uluwatu au coucher du soleil. Ce qui change, c'est que vous les voyez depuis quatre lits au lieu de dix.",
+    "The legs, timed":
+      "Les trajets, chronomètre en main",
+    "These are the drives the itineraries leave out. From the airport it is 45-90 minutes to Uluwatu depending on when you land, 40-60 minutes to Canggu and 75-90 at peak, and 60-90 minutes to Ubud. Once you are based, the numbers that matter are the ones towards the sea: Seminyak to Sanur harbour is 30-50 minutes, while Canggu and the Bukit are both 60-90 minutes from the same port. That gap is a full hour of sleep on a morning boat day.":
+      "Voici les trajets que les itinéraires passent sous silence. Depuis l'aéroport, comptez 45 à 90 minutes jusqu'à Uluwatu selon l'heure d'atterrissage, 40 à 60 minutes jusqu'à Canggu et 75 à 90 aux heures de pointe, et 60 à 90 minutes jusqu'à Ubud. Une fois installé, les chiffres qui comptent sont ceux qui mènent à la mer : Seminyak est à 30-50 minutes du port de Sanur, tandis que Canggu et le Bukit sont tous deux à 60-90 minutes du même port. Cet écart, c'est une heure de sommeil entière un matin de bateau.",
+    "The Nusa Penida crossing itself is short — 30-45 minutes from Sanur, sea state depending. The Gilis are the outlier people underestimate: direct morning boats from Sanur to Gili Trawangan run 3h to 3h45. A Gili day trip from the south of Bali is therefore a fourteen-hour day for about four hours ashore, which is why it belongs in a two-week plan as an overnight, not a day out.":
+      "La traversée vers Nusa Penida est courte : 30 à 45 minutes depuis Sanur, selon l'état de la mer. Les Gili sont l'exception que l'on sous-estime : les bateaux directs du matin entre Sanur et Gili Trawangan mettent de 3 h à 3 h 45. Une excursion aux Gili à la journée depuis le sud de Bali, c'est donc quatorze heures pour environ quatre heures sur l'île — raison pour laquelle, sur deux semaines, elle a sa place comme nuitée, pas comme sortie d'une journée.",
+    "Add these up across a fourteen-day plan and the number surprises people. A ten-base route with an average of two and a half hours between bases spends roughly twenty-five hours in a car on transfers alone, before any sightseeing driving. The four-base version spends about eight. That difference is two full days.":
+      "Additionnez tout cela sur quatorze jours et le résultat surprend. Un itinéraire à dix bases, avec une moyenne de deux heures et demie entre chacune, passe environ vingt-cinq heures en voiture rien qu'en transferts, avant le moindre kilomètre de visite. La version à quatre bases en passe huit. L'écart, ce sont deux journées pleines.",
+    "What it costs on the ground, in rupiah":
+      "Ce que ça coûte sur place, en roupies",
+    "Two numbers are unavoidable and almost never mentioned. The Bali tourist levy is IDR 150,000 per foreign visitor, paid once through the Love Bali portal before you land. On top of that comes the visa. For a couple that is roughly IDR 300,000 of levy alone before the first coffee.":
+      "Deux montants sont incontournables et presque jamais cités. La taxe touristique de Bali s'élève à 150 000 IDR par visiteur étranger, réglée une seule fois via le portail Love Bali avant l'atterrissage. Le visa s'y ajoute. Pour un couple, cela fait environ 300 000 IDR de taxe avant le premier café.",
+    "Entry fees are small individually and add up over fourteen days. From our own checks: Tegallalang rice terrace IDR 25,000, Jatiluwih IDR 75,000 for a foreign adult and IDR 50,000 for a child, Tanah Lot IDR 75,000, Sekumpul waterfall IDR 15,000 adult and IDR 5,000 child. The headline temples — Uluwatu, Tirta Empul, Besakih, Ulun Danu Beratan — sit at the top of the range, up to about IDR 100,000 per person. Budget IDR 50,000-100,000 per person on a sightseeing day and you will not be caught out.":
+      "Les entrées sont modestes une par une et s'additionnent sur quatorze jours. D'après nos propres relevés : rizières de Tegallalang 25 000 IDR, Jatiluwih 75 000 IDR pour un adulte étranger et 50 000 IDR pour un enfant, Tanah Lot 75 000 IDR, cascade de Sekumpul 15 000 IDR adulte et 5 000 IDR enfant. Les grands temples — Uluwatu, Tirta Empul, Besakih, Ulun Danu Beratan — sont en haut de la fourchette, jusqu'à environ 100 000 IDR par personne. Prévoyez 50 000 à 100 000 IDR par personne les jours de visite et vous ne serez pas pris de court.",
+    "Boats: Sanur to Nusa Penida runs IDR 150,000-250,000 through an agent, less direct from the operator. Sanur to Gili Trawangan is IDR 345,000-460,000 depending on the boat. Rafting on the Ayung starts at IDR 250,000, Telaga Waja at IDR 270,000, Melangit at IDR 300,000. All checked in August 2026.":
+      "Les bateaux : Sanur – Nusa Penida coûte 150 000 à 250 000 IDR via une agence, moins cher en direct auprès de l'opérateur. Sanur – Gili Trawangan va de 345 000 à 460 000 IDR selon le bateau. Le rafting sur l'Ayung démarre à 250 000 IDR, la Telaga Waja à 270 000 IDR, la Melangit à 300 000 IDR. Tarifs vérifiés en août 2026.",
+    "Two things we will not print: a nightly accommodation figure and a flight price. Both move more than everything above combined — accommodation alone runs 30-40% below peak in the green season — and a made-up average would be the least reliable number on the page. What we can say is that the fixed part, the part nobody escapes, is the levy plus entries plus transport, and that part is knowable in advance.":
+      "Deux chiffres que nous n'imprimerons pas : un prix de nuitée et un prix de vol. Les deux varient plus que tout le reste réuni — l'hébergement seul se négocie 30 à 40 % sous le pic en saison verte — et une moyenne inventée serait le chiffre le moins fiable de la page. Ce que nous pouvons dire, c'est que la part fixe, celle à laquelle personne n'échappe, se compose de la taxe, des entrées et des transports, et que cette part-là se calcule à l'avance.",
+    "Cars are priced per car, not per person":
+      "Les voitures se paient à la voiture, pas à la personne",
+    "Almost every budget you will read is written per person, which quietly punishes couples and rewards nobody. Most of what you actually book on Bali is priced per vehicle. A standard car with driver for a full day is IDR 600,000-900,000 on the open market, which four people split into about IDR 175,000 each, fuel and parking and waiting included.":
+      "Presque tous les budgets que vous lirez sont exprimés par personne, ce qui pénalise discrètement les couples et n'avantage personne. Or l'essentiel de ce que l'on réserve à Bali se facture au véhicule. Une voiture avec chauffeur à la journée coûte 600 000 à 900 000 IDR au prix du marché, soit environ 175 000 IDR chacun à quatre, carburant, parking et temps d'attente compris.",
+    "The same logic runs through the island tours. Our own Nusa Penida west route is from $49 per car for up to six people, while the Manta Point snorkelling day is $29 per person because a boat seat is a seat. When you compare two operators, check which unit they are quoting before you compare the numbers.":
+      "La même logique vaut pour les excursions sur les îles. Notre circuit ouest de Nusa Penida démarre à 49 $ par voiture pour six personnes maximum, tandis que la journée de snorkeling à Manta Point est à 29 $ par personne, parce qu'une place sur un bateau reste une place. Avant de comparer deux prestataires, vérifiez d'abord dans quelle unité chacun affiche son prix.",
+    "Where the fourteen days go":
+      "Où passent les quatorze jours",
+    "Days 1-4, Ubud. Arrival is a write-off whatever your plan says, so land, drive, sleep. Then the interior: rice terraces, the Ayung for rafting, and the pre-dawn run to Mount Batur — 60-90 minutes from Ubud on empty road, which is the shortest approach of any base and the reason Batur belongs to this leg rather than to the south.":
+      "Jours 1 à 4, Ubud. Le jour d'arrivée est perdu quoi qu'en dise le programme : on atterrit, on roule, on dort. Ensuite l'intérieur : les rizières, l'Ayung pour le rafting, et la montée avant l'aube au mont Batur — 60 à 90 minutes depuis Ubud sur des routes vides, l'approche la plus courte de toutes les bases, et la raison pour laquelle le Batur appartient à cette étape et non au sud.",
+    "Days 5-8, east. Sidemen for the valley or Amed for the water; Tulamben's Liberty wreck is a shore dive you can snorkel. This is the quietest stretch of the two weeks and the one people cut first, usually to their regret.":
+      "Jours 5 à 8, l'est. Sidemen pour la vallée ou Amed pour l'eau ; l'épave du Liberty à Tulamben se rejoint depuis la plage et s'explore aussi en snorkeling. C'est le passage le plus calme des deux semaines, et le premier que l'on supprime — en général à regret.",
+    "Days 9-11, Nusa Penida. Sleep on the island rather than doing it as a day trip from Bali: one crossing instead of two, and the west coast at first light before the day boats land. Days 12-14, the south, near the airport, for surf, sunset and the last flight.":
+      "Jours 9 à 11, Nusa Penida. Dormez sur l'île plutôt que d'en faire une excursion à la journée depuis Bali : une traversée au lieu de deux, et la côte ouest aux premières lueurs, avant l'arrivée des bateaux du jour. Jours 12 à 14, le sud, près de l'aéroport, pour le surf, le coucher de soleil et le vol du retour.",
+    "When to go, and the one date that stops the island":
+      "Quand partir, et la seule date qui arrête l'île",
+    "The dry season runs April to October and the wet season November to March, with the crowd and price peak in July and August. Air temperature sits at 22-32°C year-round and the sea at 27-29°C, so the season question is about rain, sea state and crowds rather than warmth. The wet season does not mean all-day rain: the usual pattern is a heavy downpour of one to two hours in the late afternoon, with sunshine either side.":
+      "La saison sèche va d'avril à octobre, la saison des pluies de novembre à mars, avec le pic de fréquentation et de prix en juillet-août. L'air reste entre 22 et 32 °C toute l'année et la mer entre 27 et 29 °C : la question de la saison porte donc sur la pluie, l'état de la mer et la foule, pas sur la chaleur. La saison des pluies ne veut pas dire de la pluie toute la journée : le schéma habituel est une grosse averse d'une à deux heures en fin d'après-midi, avec du soleil avant et après.",
+    "One date overrides every plan. Nyepi, the Balinese day of silence, falls on Monday 8 March 2027 and runs 06:00 to 06:00. Ngurah Rai airport closes completely — no arrivals, no departures. Roads and ports close, mobile data is switched off island-wide, and everyone including tourists stays on hotel grounds. If your two weeks touch that date, arrive the day before at the latest and depart the day after, and confirm your hotel is serving meals. Galungan and Kuningan do not stop the island but do close coastal roads for processions, usually for thirty to sixty minutes and without warning.":
+      "Une date prime sur tous les plans. Nyepi, le jour du silence balinais, tombe le lundi 8 mars 2027 et court de 6 h à 6 h le lendemain. L'aéroport de Ngurah Rai ferme complètement : aucune arrivée, aucun départ. Les routes et les ports ferment, les données mobiles sont coupées sur toute l'île, et tout le monde, touristes compris, reste dans l'enceinte de son hôtel. Si vos deux semaines touchent cette date, arrivez la veille au plus tard et repartez le lendemain, et vérifiez que votre hôtel assure les repas. Galungan et Kuningan n'arrêtent pas l'île, mais les processions bloquent les routes côtières, en général trente à soixante minutes, sans prévenir.",
+    "Five mistakes that cost a day each":
+      "Cinq erreurs qui coûtent une journée chacune",
+    "Booking Nusa Penida as a day trip from the Bukit or Canggu. Both are 60-90 minutes from Sanur harbour, so the alarm goes before five and you reach Kelingking at the exact hour every other boat has landed. From Sanur the same day starts ninety minutes later.":
+      "Réserver Nusa Penida à la journée depuis le Bukit ou Canggu. Les deux sont à 60-90 minutes du port de Sanur : le réveil sonne avant cinq heures et vous arrivez à Kelingking à l'heure précise où tous les autres bateaux viennent d'accoster. Depuis Sanur, la même journée commence quatre-vingt-dix minutes plus tard.",
+    "Putting Mount Batur late in the trip. The pre-dawn drive is 60-90 minutes from Ubud and two and a half to three hours from the south. Batur belongs to the Ubud leg, and it belongs early, while the sleep debt is small.":
+      "Placer le mont Batur en fin de séjour. Le trajet d'avant l'aube dure 60 à 90 minutes depuis Ubud et deux heures et demie à trois heures depuis le sud. Le Batur appartient à l'étape d'Ubud, et il y appartient tôt, tant que la dette de sommeil est faible.",
+    "Treating the Gilis as a day out. Three to three and three-quarter hours each way from Sanur. In fourteen days you have room to sleep there; in one day you have room to sit on a boat.":
+      "Traiter les Gili comme une sortie d'une journée. Trois heures à trois heures quarante-cinq dans chaque sens depuis Sanur. En quatorze jours, vous avez la place d'y dormir ; en une journée, vous avez la place de rester assis sur un bateau.",
+    "Assuming card payment. Entry gates, warungs and parking are cash. Carry 20,000 and 50,000 notes, and note that working ATMs on Nusa Penida are scarce.":
+      "Compter sur la carte bancaire. Les guichets d'entrée, les warungs et les parkings fonctionnent en espèces. Prenez des billets de 20 000 et 50 000, et sachez que les distributeurs en état de marche sont rares sur Nusa Penida.",
+    "Renting a scooter without the right licence. An international permit with category A is what insurers ask for, and without it a claim is refused. Bali drives on the left and the traffic does not forgive experiments.":
+      "Louer un scooter sans le bon permis. Les assureurs exigent un permis international avec la catégorie A ; sans lui, toute indemnisation est refusée. On roule à gauche à Bali, et la circulation ne pardonne pas les expériences.",
+    "Is two weeks enough for Bali?":
+      "Deux semaines, est-ce assez pour Bali ?",
+    "Comfortably, if you sleep in four places rather than ten. Fourteen nights across four bases gives three to four nights each, which is enough to unpack. The same fourteen nights across ten bases spends roughly a quarter of the trip in a car.":
+      "Largement, à condition de dormir dans quatre endroits plutôt que dix. Quatorze nuits réparties sur quatre bases, cela fait trois à quatre nuits chacune : de quoi défaire ses valises. Les mêmes quatorze nuits réparties sur dix bases passent environ un quart du séjour en voiture.",
+    "What does a two-week Bali trip cost before flights?":
+      "Combien coûtent deux semaines à Bali, hors vols ?",
+    "The fixed part is knowable: IDR 150,000 tourist levy per person, IDR 50,000-100,000 per person on entry fees for each sightseeing day, IDR 600,000-900,000 for a car and driver per day split between everyone in it, and IDR 150,000-250,000 for the Nusa Penida crossing. Accommodation is the variable that moves everything, and it runs 30-40% below peak in the green season.":
+      "La part fixe se calcule : 150 000 IDR de taxe touristique par personne, 50 000 à 100 000 IDR par personne d'entrées chaque jour de visite, 600 000 à 900 000 IDR par jour pour la voiture avec chauffeur à partager entre tous les passagers, et 150 000 à 250 000 IDR pour la traversée vers Nusa Penida. L'hébergement est la variable qui fait bouger le reste, et il se négocie 30 à 40 % sous le pic en saison verte.",
+    "Should I include the Gili Islands in two weeks on Bali?":
+      "Faut-il inclure les îles Gili dans deux semaines à Bali ?",
+    "Only as an overnight. The direct boat from Sanur to Gili Trawangan is 3h to 3h45 each way, so a day trip is a fourteen-hour day for about four hours ashore. With two weeks you have room to sleep there instead, which changes the trip entirely.":
+      "Uniquement avec une nuit sur place. Le bateau direct Sanur – Gili Trawangan met 3 h à 3 h 45 dans chaque sens : une excursion à la journée, c'est quatorze heures pour environ quatre heures sur l'île. Sur deux semaines, vous avez la place d'y dormir, et cela change tout le séjour.",
+    "Do I have to pay the Bali tourist levy?":
+      "Faut-il payer la taxe touristique de Bali ?",
+    "Yes, every foreign visitor pays IDR 150,000 once per trip, through the official Love Bali portal before arrival. It is separate from the visa. You receive a QR code that is scanned at the airport.":
+      "Oui. Chaque visiteur étranger paie 150 000 IDR une fois par séjour, via le portail officiel Love Bali avant l'arrivée. C'est distinct du visa. Vous recevez un QR code qui est scanné à l'aéroport.",
+    "Is it better to stay on Nusa Penida or visit for the day?":
+      "Vaut-il mieux dormir à Nusa Penida ou y aller à la journée ?",
+    "On a two-week trip, stay. A day trip means two crossings and the west coast at exactly the hour every other boat has landed. A night on the island means one crossing and Kelingking before the crowds.":
+      "Sur un séjour de deux semaines, dormez sur place. Une excursion à la journée, ce sont deux traversées et la côte ouest à l'heure précise où tous les autres bateaux viennent d'arriver. Une nuit sur l'île, c'est une seule traversée et Kelingking avant la foule.",
     "The usual pattern is a heavy downpour of one to two hours in the late afternoon or evening, with sunshine either side. Even in January there are plenty of clear mornings. The trade-off is real though: more humidity and mosquitoes, rougher seas, occasional boat cancellations, and beach trash washing onto the west coast between December and February.":
       "En général, c'est une grosse averse d'une à deux heures en fin d'après-midi ou en soirée, avec du soleil avant et après. Même en janvier, les matinées dégagées sont nombreuses. La contrepartie est réelle : plus d'humidité et de moustiques, une mer plus agitée, des bateaux parfois annulés, et des déchets rejetés sur les plages de la côte ouest entre décembre et février.",
     "— no arrivals, no departures. Roads and ports close, shops and restaurants shut, mobile data is switched off island-wide, and everyone including tourists must stay on hotel or villa grounds. Village security patrol to enforce it.":

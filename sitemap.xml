@@ -363,7 +363,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.sbexcursion.com/bali/fr/guides"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.sbexcursion.com/bali/de/guides"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sbexcursion.com/bali/en/guides"/>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.sbexcursion.com/bali/zh/guides</loc>
@@ -374,7 +374,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.sbexcursion.com/bali/fr/guides"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.sbexcursion.com/bali/de/guides"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sbexcursion.com/bali/en/guides"/>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.sbexcursion.com/bali/ru/guides</loc>
@@ -385,7 +385,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.sbexcursion.com/bali/fr/guides"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.sbexcursion.com/bali/de/guides"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sbexcursion.com/bali/en/guides"/>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.sbexcursion.com/bali/es/guides</loc>
@@ -396,7 +396,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.sbexcursion.com/bali/fr/guides"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.sbexcursion.com/bali/de/guides"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sbexcursion.com/bali/en/guides"/>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.sbexcursion.com/bali/fr/guides</loc>
@@ -407,7 +407,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.sbexcursion.com/bali/fr/guides"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.sbexcursion.com/bali/de/guides"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sbexcursion.com/bali/en/guides"/>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.sbexcursion.com/bali/de/guides</loc>
@@ -418,7 +418,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.sbexcursion.com/bali/fr/guides"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://www.sbexcursion.com/bali/de/guides"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sbexcursion.com/bali/en/guides"/>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-26</lastmod>
   </url>
   <url>
     <loc>https://www.sbexcursion.com/bali/en/tours/ubud-highlights-tour</loc>
@@ -7037,6 +7037,26 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.sbexcursion.com/bali/fr/journal/fast-boat-transfer-bali/tour-schedule"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sbexcursion.com/bali/en/journal/fast-boat-transfer-bali/tour-schedule"/>
     <image:image><image:loc>https://www.sbexcursion.com/images/tours-real/fast-boat-transfer-bali.jpg</image:loc></image:image>
+    <lastmod>2026-08-26</lastmod>
+  </url>
+  <url>
+    <loc>https://www.sbexcursion.com/bali/en/journal/bali-itinerary-14-days</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sbexcursion.com/bali/en/journal/bali-itinerary-14-days"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sbexcursion.com/bali/fr/journal/bali-itinerary-14-days"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sbexcursion.com/bali/en/journal/bali-itinerary-14-days"/>
+    <image:image><image:loc>https://www.sbexcursion.com/images/places/ayung-river-rafting.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-hike.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.sbexcursion.com/images/tours-real/nusa-penida-west-tour.jpg</image:loc></image:image>
+    <lastmod>2026-08-26</lastmod>
+  </url>
+  <url>
+    <loc>https://www.sbexcursion.com/bali/fr/journal/bali-itinerary-14-days</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.sbexcursion.com/bali/en/journal/bali-itinerary-14-days"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.sbexcursion.com/bali/fr/journal/bali-itinerary-14-days"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.sbexcursion.com/bali/en/journal/bali-itinerary-14-days"/>
+    <image:image><image:loc>https://www.sbexcursion.com/images/places/ayung-river-rafting.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-hike.jpg</image:loc></image:image>
+    <image:image><image:loc>https://www.sbexcursion.com/images/tours-real/nusa-penida-west-tour.jpg</image:loc></image:image>
     <lastmod>2026-08-26</lastmod>
   </url>
   <url>

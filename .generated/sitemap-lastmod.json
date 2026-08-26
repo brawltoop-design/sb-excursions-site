@@ -60,27 +60,27 @@
   "date": "2026-08-26"
  },
  "/bali/en/main-page": {
-  "hash": "b93856036fe2dd13",
+  "hash": "f3d9604480e53459",
   "date": "2026-08-26"
  },
  "/bali/zh/main-page": {
-  "hash": "8d79f7b173c26a19",
+  "hash": "ddec1dc55286a76d",
   "date": "2026-08-26"
  },
  "/bali/ru/main-page": {
-  "hash": "368245a10cf659f0",
+  "hash": "b4611f930c05c524",
   "date": "2026-08-26"
  },
  "/bali/es/main-page": {
-  "hash": "2ff356735e2fa027",
+  "hash": "6e8a2939596521a7",
   "date": "2026-08-26"
  },
  "/bali/fr/main-page": {
-  "hash": "fd914ebf5acaeb82",
+  "hash": "394c9351b1542437",
   "date": "2026-08-26"
  },
  "/bali/de/main-page": {
-  "hash": "cbda0b13c514f064",
+  "hash": "c1d490492c5f0d65",
   "date": "2026-08-26"
  },
  "/bali/en/about": {
@@ -132,52 +132,52 @@
   "date": "2026-08-26"
  },
  "/bali/en/journal": {
-  "hash": "47b334aad7ebff6b",
+  "hash": "231060e3208aa2e4",
   "date": "2026-08-26"
  },
  "/bali/zh/journal": {
-  "hash": "400863623a194c96",
+  "hash": "fab5ed0d619b6a0d",
   "date": "2026-08-26"
  },
  "/bali/ru/journal": {
-  "hash": "23591df93fc86c14",
+  "hash": "e62b88462cda281b",
   "date": "2026-08-26"
  },
  "/bali/es/journal": {
-  "hash": "28581f6d2e1274d1",
+  "hash": "ad8a43ee5ee7365b",
   "date": "2026-08-26"
  },
  "/bali/fr/journal": {
-  "hash": "6d59cad2916b880e",
+  "hash": "7aa361a727f0ed5a",
   "date": "2026-08-26"
  },
  "/bali/de/journal": {
-  "hash": "2fee91d49fbe24fe",
+  "hash": "5022614b79cc1ea2",
   "date": "2026-08-26"
  },
  "/bali/en/guides": {
-  "hash": "fc38f2edea880218",
-  "date": "2026-08-25"
+  "hash": "67bcfc8bf380cddc",
+  "date": "2026-08-26"
  },
  "/bali/zh/guides": {
-  "hash": "1e8056580ff4cdf8",
-  "date": "2026-08-25"
+  "hash": "a0081fa845468160",
+  "date": "2026-08-26"
  },
  "/bali/ru/guides": {
-  "hash": "2ddd01a9c54e16f7",
-  "date": "2026-08-25"
+  "hash": "2c99bf8ca47c46b4",
+  "date": "2026-08-26"
  },
  "/bali/es/guides": {
-  "hash": "ec69fffd5f436ba4",
-  "date": "2026-08-25"
+  "hash": "ec356e9b9d2c6b58",
+  "date": "2026-08-26"
  },
  "/bali/fr/guides": {
-  "hash": "8a8e0f933d1d3202",
-  "date": "2026-08-25"
+  "hash": "72aaf54513fcbe9f",
+  "date": "2026-08-26"
  },
  "/bali/de/guides": {
-  "hash": "efe105e58387b0e1",
-  "date": "2026-08-25"
+  "hash": "b587af7da77f0ae1",
+  "date": "2026-08-26"
  },
  "/bali/en/tours/ubud-highlights-tour": {
   "hash": "1f67640489ab2e6b",
@@ -2525,6 +2525,14 @@
  },
  "/bali/fr/journal/fast-boat-transfer-bali/tour-schedule": {
   "hash": "78dbde7e19801ed6",
+  "date": "2026-08-26"
+ },
+ "/bali/en/journal/bali-itinerary-14-days": {
+  "hash": "a9ec92da03a69e7f",
+  "date": "2026-08-26"
+ },
+ "/bali/fr/journal/bali-itinerary-14-days": {
+  "hash": "c0b317e639bc3712",
   "date": "2026-08-26"
  },
  "/bali/en/journal/nyepi-what-actually-closes": {
@@ -5824,23 +5832,23 @@
   "date": "2026-08-26"
  },
  "/bali/en/journal/how-many-days-in-nusa-penida": {
-  "hash": "e37b1e28153e4de5",
+  "hash": "2dee4c23333694cc",
   "date": "2026-08-26"
  },
  "/bali/zh/journal/how-many-days-in-nusa-penida": {
-  "hash": "e3be66876f18118c",
+  "hash": "33ef3db3a0a52c87",
   "date": "2026-08-26"
  },
  "/bali/ru/journal/how-many-days-in-nusa-penida": {
-  "hash": "ecbe834a2f23e1b6",
+  "hash": "54d69e72d099bf75",
   "date": "2026-08-26"
  },
  "/bali/es/journal/how-many-days-in-nusa-penida": {
-  "hash": "c9d1fb7506d90bac",
+  "hash": "5880a7ee24132462",
   "date": "2026-08-26"
  },
  "/bali/fr/journal/how-many-days-in-nusa-penida": {
-  "hash": "a7387f67b5d6fc6c",
+  "hash": "48edd5666d5fa204",
   "date": "2026-08-26"
  },
  "/bali/en/journal/nusa-penida-snorkeling-non-swimmers": {
