@@ -47163,6 +47163,24 @@ const PINNED_TRANSLATIONS = {
       "巴厘岛旅行要花多少钱？2026年真实物价与三档预算",
   },
   de: {
+    "Bali Sunset Cruise from Benoa":
+      "Bootstour bei Sonnenuntergang, Benoa",
+    "Bali Instagram Highlights Tour":
+      "Instagram-Tour durch Bali",
+    "Sumbawa Whale Shark Snorkeling Trip":
+      "Schnorcheln mit Walhaien, Sumbawa",
+    "Mount Batur Sunrise Jeep Tour":
+      "Mount Batur: Jeep zum Sonnenaufgang",
+    "Bali Fast Boat Transfer":
+      "Transfer per Schnellboot, Bali",
+    "Mount Batur Sunrise Hike":
+      "Mount Batur: Wanderung zum Sonnenaufgang",
+    "Gili Islands Private Snorkeling Day Trip":
+      "Private Schnorcheltour, Gili-Inseln",
+    "East Bali Instagram Tour":
+      "Instagram-Tour durch Ost-Bali",
+    "Nusa Penida Private car Day Tour+Snorkeling Manta Point":
+      "Nusa Penida privat: Auto + Schnorcheln",
     "Pickup":
       "Abholung",
     "Drive to Sanur harbour":
