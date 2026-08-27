@@ -46611,6 +46611,14 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "Hello! I want to book Bali White Water Rafting, Ayung River. Please send details.":
+      "Здравствуйте! Хочу забронировать рафтинг на Бали по реке Аюнг. Пришлите, пожалуйста, детали.",
+    "Hello! I'm interested in your excursions. Could you help me with the booking details?":
+      "Здравствуйте! Меня интересуют ваши экскурсии. Подскажете детали бронирования?",
+    "Hello! I want to book a Bali tour. Please send availability, the best options, and full details.":
+      "Здравствуйте! Хочу забронировать экскурсию на Бали. Пришлите, пожалуйста, свободные даты, лучшие варианты и все детали.",
+    "Hello! I&#39;m interested in your excursions. Could you help me with the booking details?":
+      "Здравствуйте! Меня интересуют ваши экскурсии. Подскажете детали бронирования?",
     "Bali White Water Rafting: Ayung River Guide for 2026":
       "Рафтинг на Бали: три реки, цены и уровни на 2026 год",
     "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
@@ -46989,6 +46997,14 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "Hello! I want to book Bali White Water Rafting, Ayung River. Please send details.":
+      "¡Hola! Quiero reservar el rafting en aguas bravas de Bali, río Ayung. ¿Me envías los detalles?",
+    "Hello! I'm interested in your excursions. Could you help me with the booking details?":
+      "¡Hola! Me interesan sus excursiones. ¿Podrían ayudarme con los detalles de la reserva?",
+    "Hello! I want to book a Bali tour. Please send availability, the best options, and full details.":
+      "¡Hola! Quiero reservar una excursión en Bali. Envíenme disponibilidad, las mejores opciones y todos los detalles.",
+    "Hello! I&#39;m interested in your excursions. Could you help me with the booking details?":
+      "¡Hola! Me interesan sus excursiones. ¿Podrían ayudarme con los detalles de la reserva?",
     "Bali White Water Rafting: Ayung River Guide for 2026":
       "Rafting en Bali: los 3 ríos comparados, precios y niveles 2026",
     "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
@@ -47283,6 +47299,14 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "Hello! I want to book Bali White Water Rafting, Ayung River. Please send details.":
+      "Bonjour ! Je souhaite réserver le rafting en eaux vives à Bali, rivière Ayung. Merci de m'envoyer les détails.",
+    "Hello! I'm interested in your excursions. Could you help me with the booking details?":
+      "Bonjour ! Vos excursions m'intéressent. Pourriez-vous m'aider avec les détails de réservation ?",
+    "Hello! I want to book a Bali tour. Please send availability, the best options, and full details.":
+      "Bonjour ! Je souhaite réserver une excursion à Bali. Merci de m'envoyer les disponibilités, les meilleures options et tous les détails.",
+    "Hello! I&#39;m interested in your excursions. Could you help me with the booking details?":
+      "Bonjour ! Vos excursions m'intéressent. Pourriez-vous m'aider avec les détails de réservation ?",
     "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
       "Le vrai critère n'est pas les rapides, ce sont les marches. L'arrivée sur l'Ayung impose une longue remontée : environ 509 marches pour descendre dans la gorge et 250 pour remonter. Toute personne aux genoux fragiles, avec de jeunes enfants ou après une mauvaise nuit devrait choisir sur ce chiffre plutôt que sur la classe des rapides. Nous comparons les deux rivières principales côte à côte dans",
     "Telaga Waja: the fast one, and the easier day for your knees":
@@ -47729,6 +47753,14 @@ const PINNED_TRANSLATIONS = {
       "Bali est-elle sûre en 2026 ? 7 arnaques courantes à éviter",
   },
   "zh-CN": {
+    "Hello! I want to book Bali White Water Rafting, Ayung River. Please send details.":
+      "您好！我想预订巴厘岛阿漾河漂流，请发送详细信息。",
+    "Hello! I'm interested in your excursions. Could you help me with the booking details?":
+      "您好！我对你们的行程很感兴趣，能帮我了解预订细节吗？",
+    "Hello! I want to book a Bali tour. Please send availability, the best options, and full details.":
+      "您好！我想预订巴厘岛的行程，请发送可预订日期、推荐方案和完整信息。",
+    "Hello! I&#39;m interested in your excursions. Could you help me with the booking details?":
+      "您好！我对你们的行程很感兴趣，能帮我了解预订细节吗？",
     "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
       "真正的筛选条件不是急流，而是台阶。阿漾河的终点要走一段长长的上坡：下到峡谷约 509 级，返回约 250 级。膝盖不好、带着小孩或没睡好的人，应该按这个数字来选，而不是按急流等级。我们把两条主要河流并排对比，见",
     "Telaga Waja: the fast one, and the easier day for your knees":
@@ -47891,6 +47923,14 @@ const PINNED_TRANSLATIONS = {
       "巴厘岛旅行要花多少钱？2026年真实物价与三档预算",
   },
   de: {
+    "Hello! I want to book Bali White Water Rafting, Ayung River. Please send details.":
+      "Hallo! Ich möchte das Wildwasser-Rafting auf Bali am Ayung-Fluss buchen. Bitte senden Sie mir die Details.",
+    "Hello! I'm interested in your excursions. Could you help me with the booking details?":
+      "Hallo! Ich interessiere mich für Ihre Ausflüge. Können Sie mir mit den Buchungsdetails helfen?",
+    "Hello! I want to book a Bali tour. Please send availability, the best options, and full details.":
+      "Hallo! Ich möchte einen Ausflug auf Bali buchen. Bitte senden Sie mir Verfügbarkeit, die besten Optionen und alle Details.",
+    "Hello! I&#39;m interested in your excursions. Could you help me with the booking details?":
+      "Hallo! Ich interessiere mich für Ihre Ausflüge. Können Sie mir mit den Buchungsdetails helfen?",
     "Bali White Water Rafting: Ayung River Guide for 2026":
       "Rafting auf Bali: 3 Flüsse im Vergleich, Preise und Level 2026",
     "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
@@ -48673,6 +48713,14 @@ async function translateStandaloneHtmlVisibleText(html, locale = "en", options =
     return _;
   });
 
+  /* Заготовка сообщения в WhatsApp лежит в адресе ссылки — дважды закодированная,
+     сначала URL, потом HTML. Поэтому переводчик её не видел, и на французской
+     странице первая же попытка забронировать открывала чат с английским
+     текстом. При 86 показах и нуле кликов это прямая потеря, а не косметика. */
+  for (const raw of collectWhatsAppTexts(protectedHtml)) {
+    if (shouldTranslateTextValue(raw)) textValues.add(raw);
+  }
+
   const translationMap = await translateTextMap(Array.from(textValues), locale, { glossary: options.glossary || null });
 
   const translatePreservingWhitespace = (rawText) => {
@@ -48706,7 +48754,92 @@ async function translateStandaloneHtmlVisibleText(html, locale = "en", options =
   localizedHtml = restoreHtmlBlocks(localizedHtml, blocks);
   localizedHtml = localizedHtml.replace(/<html lang="[^"]+"/i, `<html lang="${locale}"`);
   localizedHtml = localizedHtml.replace(/("inLanguage"\s*:\s*")en(")/g, `$1${locale}$2`);
+  localizedHtml = translateJsonLdValues(localizedHtml, translatePreservingWhitespace);
+  localizedHtml = translateWhatsAppLinks(localizedHtml, translatePreservingWhitespace);
   return localizedHtml;
+}
+
+
+/* Перевод значений в JSON-LD.
+ *
+ * protectHtmlBlocks прячет ВСЕ <script>, включая application/ld+json, чтобы
+ * перевод не разломал разметку. Побочный эффект был тихим и дорогим: у
+ * французской страницы менялся только "inLanguage" на fr, а десять вопросов
+ * FAQPage оставались английскими при десяти французских на самой странице —
+ * пересечение нулевое. Разметка, не совпадающая с видимым текстом, права на
+ * FAQ-сниппет не даёт.
+ *
+ * Новых запросов к переводчику здесь не возникает: строки в разметке те же
+ * самые, что в видимом тексте, и лежат в уже собранном translationMap. Чего в
+ * нём нет — остаётся английским, то есть хуже, чем было, не станет.
+ *
+ * Переводим только человекочитаемые поля. Имена типов schema.org, адреса,
+ * идентификаторы и любые значения ключей с @ не трогаем: «FAQPage» на китайском
+ * уже однажды превратилось в несуществующий тип и выбросило всю разметку. */
+const JSON_LD_TEXT_KEYS = new Set([
+  "name", "headline", "description", "text", "alternateName", "caption",
+  "articleBody", "abstract", "disambiguatingDescription",
+]);
+
+function translateJsonLdNode(node, translate) {
+  if (Array.isArray(node)) return node.map((item) => translateJsonLdNode(item, translate));
+  if (!node || typeof node !== "object") return node;
+  const out = {};
+  for (const [key, value] of Object.entries(node)) {
+    if (typeof value === "string" && JSON_LD_TEXT_KEYS.has(key) && !NEVER_TRANSLATE.has(value)) {
+      const translated = translate(value);
+      out[key] = translated === value ? value : translated;
+    } else {
+      out[key] = translateJsonLdNode(value, translate);
+    }
+  }
+  return out;
+}
+
+function translateJsonLdValues(html, translate) {
+  return String(html || "").replace(
+    /(<script\b[^>]*type=["']application\/ld\+json["'][^>]*>)([\s\S]*?)(<\/script>)/gi,
+    (whole, open, body, close) => {
+      let data;
+      try {
+        data = JSON.parse(body);
+      } catch {
+        /* Битый JSON оставляем как есть: пусть его ловит тот, кто его сломал,
+           а не молчаливая подмена на пустую разметку. */
+        return whole;
+      }
+      return `${open}${JSON.stringify(translateJsonLdNode(data, translate))}${close}`;
+    },
+  );
+}
+
+/* Тексты заготовок WhatsApp из адресов ссылок.
+   Кодировка двойная: HTML поверх URL, поэтому и разбирать надо в два шага. */
+function decodeWhatsAppText(encoded) {
+  try {
+    return decodeURIComponent(String(encoded || "").replace(/&#0?39;/g, "'").replace(/&amp;/g, "&"));
+  } catch {
+    return "";
+  }
+}
+
+function collectWhatsAppTexts(html) {
+  const found = new Set();
+  for (const m of String(html || "").matchAll(/wa\.me\/\d+\?text=([^"'\s<>]+)/g)) {
+    const text = decodeWhatsAppText(m[1]).replace(/\s+/g, " ").trim();
+    if (text) found.add(text);
+  }
+  return found;
+}
+
+function translateWhatsAppLinks(html, translate) {
+  return String(html || "").replace(/(wa\.me\/\d+\?text=)([^"'\s<>]+)/g, (whole, prefix, encoded) => {
+    const source = decodeWhatsAppText(encoded).replace(/\s+/g, " ").trim();
+    if (!source) return whole;
+    const translated = translate(source).trim();
+    if (!translated || translated === source) return whole;
+    return `${prefix}${encodeURIComponent(translated).replace(/'/g, "&#39;")}`;
+  });
 }
 
 function renderJournalLanguageSwitcherMarkup(locale = "en", currentRoute = localizedJournalHubRoute(locale), variant = "desktop") {
