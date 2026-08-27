@@ -4125,7 +4125,13 @@ function guideImageSet(article) {
 
 /* Рейтинг и отзывы для сниппета — берём ровно то, что уже показано на странице
    (видимый рейтинг 4.9 и блок Guest Reviews), иначе разметка будет недостоверной. */
-const TOUR_VISIBLE_RATING = "4.9";
+/* Оценка Product считается по тем самым отзывам, что размечены ниже: три
+   пятёрки дают ровно 5,0. Раньше здесь стояло 4,9 — число из карточки
+   Google Maps, где отзывов 564. В одном узле смешивались оценка из Maps и
+   количество со страницы, и это не сходилось само с собой.
+   Рейтинг из Maps теперь живёт на узле TravelAgency, которому и
+   принадлежит: 4,9 из 564 — это оценка компании, а не конкретного тура. */
+const TOUR_VISIBLE_RATING = "5.0";
 function tourRatingNodes(tour) {
   // Размечаем ТОЛЬКО туры с реально собранными отзывами. У остальных
   // (три Батура, Manta Point, UNESCO) в блоке пока стоит текст-заглушка —
@@ -4195,6 +4201,7 @@ function guidePlaceImage(title, fallbackTourSlug) {
 // считает цену протухшей и не показывает товарный сниппет: за три недели
 // товарная разметка дала 11 показов при 140 страницах с Product — это и была
 // причина. Держим на конец года и продлеваем вместе с пересмотром прайса.
+const PRICE_VALID_FROM = "2026-01-01";
 const PRICE_VALID_UNTIL = "2026-12-31";
 
 function moneyOffer(tour) {
@@ -4206,7 +4213,17 @@ function moneyOffer(tour) {
     price: match[1] || match[2],
     url: absoluteTourUrl(tour),
     availability: "https://schema.org/InStock",
+    validFrom: PRICE_VALID_FROM,
     priceValidUntil: PRICE_VALID_UNTIL,
+    /* Возврат товара к однодневной экскурсии неприменим: везти назад
+       нечего. Так и заявляем, вместо того чтобы выдумывать условия.
+       shippingDetails по той же причине не ставим вовсе — доставки нет,
+       и Google переживёт эту мелкую пометку. */
+    hasMerchantReturnPolicy: {
+      "@type": "MerchantReturnPolicy",
+      applicableCountry: "ID",
+      returnPolicyCategory: "https://schema.org/MerchantReturnNotApplicable",
+    },
   };
 }
 
@@ -42992,7 +43009,6 @@ function renderStructuredData(tour) {
         url: absoluteTourUrl(tour),
         brand: { "@type": "Brand", name: "SB Excursions" },
         seller: { "@id": `${SITE_URL}/#organization` },
-        category: tour.area,
       },
       moneyOffer(tour) ? { offers: moneyOffer(tour) } : {},
       tourRatingNodes(tour) || {},
