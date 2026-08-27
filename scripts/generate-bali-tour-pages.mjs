@@ -46611,6 +46611,54 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "2.5–3 hours":
+      "2,5–3 часа",
+    "2–2.5 hours":
+      "2–2,5 часа",
+    "2–3 hours":
+      "2–3 часа",
+    "3.5 hours":
+      "3,5 часа",
+    "8–9 hours":
+      "8–9 часов",
+    "5 steps":
+      "5 ступеней",
+    "500 steps":
+      "500 ступеней",
+    "500-600 steps":
+      "500–600 ступеней",
+    "509 steps":
+      "509 ступеней",
+    "600 steps":
+      "600 ступеней",
+    "About":
+      "Около",
+    "Between":
+      "Между",
+    "From $49":
+      "От $49",
+    "from $49":
+      "от $49",
+    "It means":
+      "Это значит",
+    "Seminyak to Ayung: 1.5–2 hours":
+      "Семиньяк — Аюнг: 1,5–2 часа",
+    "and about":
+      "и около",
+    "down and":
+      "вниз и",
+    "from Kuta,":
+      "из Куты,",
+    "instead of":
+      "вместо",
+    "with":
+      "с",
+    ". Between roughly":
+      ". Между примерно",
+    "21:00 or before 07:00":
+      "21:00 или до 07:00",
+    "Spa, two massages each:":
+      "Спа, по два массажа на каждого:",
     "Hello! I want to book Bali White Water Rafting, Ayung River. Please send details.":
       "Здравствуйте! Хочу забронировать рафтинг на Бали по реке Аюнг. Пришлите, пожалуйста, детали.",
     "Hello! I'm interested in your excursions. Could you help me with the booking details?":
@@ -46997,6 +47045,54 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "2.5–3 hours":
+      "2,5 a 3 horas",
+    "2–2.5 hours":
+      "2 a 2,5 horas",
+    "2–3 hours":
+      "2 a 3 horas",
+    "3.5 hours":
+      "3,5 horas",
+    "8–9 hours":
+      "8 a 9 horas",
+    "5 steps":
+      "5 escalones",
+    "500 steps":
+      "500 escalones",
+    "500-600 steps":
+      "500-600 escalones",
+    "509 steps":
+      "509 escalones",
+    "600 steps":
+      "600 escalones",
+    "About":
+      "Unos",
+    "Between":
+      "Entre",
+    "From $49":
+      "Desde 49 $",
+    "from $49":
+      "desde 49 $",
+    "It means":
+      "Significa",
+    "Seminyak to Ayung: 1.5–2 hours":
+      "De Seminyak al Ayung: 1,5 a 2 horas",
+    "and about":
+      "y unos",
+    "down and":
+      "de bajada y",
+    "from Kuta,":
+      "desde Kuta,",
+    "instead of":
+      "en lugar de",
+    "with":
+      "con",
+    ". Between roughly":
+      ". Entre aproximadamente",
+    "21:00 or before 07:00":
+      "21:00 o antes de las 07:00",
+    "Spa, two massages each:":
+      "Spa, dos masajes cada uno:",
     "Hello! I want to book Bali White Water Rafting, Ayung River. Please send details.":
       "¡Hola! Quiero reservar el rafting en aguas bravas de Bali, río Ayung. ¿Me envías los detalles?",
     "Hello! I'm interested in your excursions. Could you help me with the booking details?":
@@ -47299,6 +47395,54 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "2.5–3 hours":
+      "2,5 à 3 heures",
+    "2–2.5 hours":
+      "2 à 2,5 heures",
+    "2–3 hours":
+      "2 à 3 heures",
+    "3.5 hours":
+      "3,5 heures",
+    "8–9 hours":
+      "8 à 9 heures",
+    "5 steps":
+      "5 marches",
+    "500 steps":
+      "500 marches",
+    "500-600 steps":
+      "500 à 600 marches",
+    "509 steps":
+      "509 marches",
+    "600 steps":
+      "600 marches",
+    "About":
+      "Environ",
+    "Between":
+      "Entre",
+    "From $49":
+      "À partir de 49 $",
+    "from $49":
+      "à partir de 49 $",
+    "It means":
+      "Cela signifie",
+    "Seminyak to Ayung: 1.5–2 hours":
+      "Seminyak vers l'Ayung : 1,5 à 2 heures",
+    "and about":
+      "et environ",
+    "down and":
+      "de descente et",
+    "from Kuta,":
+      "depuis Kuta,",
+    "instead of":
+      "au lieu de",
+    "with":
+      "avec",
+    ". Between roughly":
+      ". Entre environ",
+    "21:00 or before 07:00":
+      "21h00 ou avant 07h00",
+    "Spa, two massages each:":
+      "Spa, deux massages chacun :",
     "Hello! I want to book Bali White Water Rafting, Ayung River. Please send details.":
       "Bonjour ! Je souhaite réserver le rafting en eaux vives à Bali, rivière Ayung. Merci de m'envoyer les détails.",
     "Hello! I'm interested in your excursions. Could you help me with the booking details?":
@@ -47753,6 +47897,54 @@ const PINNED_TRANSLATIONS = {
       "Bali est-elle sûre en 2026 ? 7 arnaques courantes à éviter",
   },
   "zh-CN": {
+    "2.5–3 hours":
+      "2.5–3 小时",
+    "2–2.5 hours":
+      "2–2.5 小时",
+    "2–3 hours":
+      "2–3 小时",
+    "3.5 hours":
+      "3.5 小时",
+    "8–9 hours":
+      "8–9 小时",
+    "5 steps":
+      "5 级台阶",
+    "500 steps":
+      "500 级台阶",
+    "500-600 steps":
+      "500-600 级台阶",
+    "509 steps":
+      "509 级台阶",
+    "600 steps":
+      "600 级台阶",
+    "About":
+      "约",
+    "Between":
+      "介于",
+    "From $49":
+      "49 美元起",
+    "from $49":
+      "49 美元起",
+    "It means":
+      "这意味着",
+    "Seminyak to Ayung: 1.5–2 hours":
+      "水明漾到阿漾河：1.5–2 小时",
+    "and about":
+      "以及约",
+    "down and":
+      "级向下，以及",
+    "from Kuta,":
+      "从库塔出发，",
+    "instead of":
+      "而不是",
+    "with":
+      "带有",
+    ". Between roughly":
+      "。介于大约",
+    "21:00 or before 07:00":
+      "21:00 或 07:00 之前",
+    "Spa, two massages each:":
+      "水疗，每人两次按摩：",
     "Hello! I want to book Bali White Water Rafting, Ayung River. Please send details.":
       "您好！我想预订巴厘岛阿漾河漂流，请发送详细信息。",
     "Hello! I'm interested in your excursions. Could you help me with the booking details?":
@@ -47923,6 +48115,54 @@ const PINNED_TRANSLATIONS = {
       "巴厘岛旅行要花多少钱？2026年真实物价与三档预算",
   },
   de: {
+    "2.5–3 hours":
+      "2,5–3 Stunden",
+    "2–2.5 hours":
+      "2–2,5 Stunden",
+    "2–3 hours":
+      "2–3 Stunden",
+    "3.5 hours":
+      "3,5 Stunden",
+    "8–9 hours":
+      "8–9 Stunden",
+    "5 steps":
+      "5 Stufen",
+    "500 steps":
+      "500 Stufen",
+    "500-600 steps":
+      "500-600 Stufen",
+    "509 steps":
+      "509 Stufen",
+    "600 steps":
+      "600 Stufen",
+    "About":
+      "Etwa",
+    "Between":
+      "Zwischen",
+    "From $49":
+      "Ab 49 $",
+    "from $49":
+      "ab 49 $",
+    "It means":
+      "Das heißt",
+    "Seminyak to Ayung: 1.5–2 hours":
+      "Seminyak zum Ayung: 1,5–2 Stunden",
+    "and about":
+      "und etwa",
+    "down and":
+      "hinunter und",
+    "from Kuta,":
+      "von Kuta aus,",
+    "instead of":
+      "statt",
+    "with":
+      "mit",
+    ". Between roughly":
+      ". Zwischen etwa",
+    "21:00 or before 07:00":
+      "21:00 oder vor 07:00",
+    "Spa, two massages each:":
+      "Spa, je zwei Massagen:",
     "Hello! I want to book Bali White Water Rafting, Ayung River. Please send details.":
       "Hallo! Ich möchte das Wildwasser-Rafting auf Bali am Ayung-Fluss buchen. Bitte senden Sie mir die Details.",
     "Hello! I'm interested in your excursions. Could you help me with the booking details?":
