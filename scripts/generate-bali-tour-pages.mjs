@@ -39965,9 +39965,15 @@ function relatedGuidesFor(guide, limit = 4) {
   const cluster = guideClusterOf(guide.slug);
   const bySlug = new Map(JOURNAL_SEO_GUIDES.map((item) => [item.slug, item]));
   const picked = [];
-  const take = (slugs) => {
+  /* cap ограничивает добор ниже общего лимита. Нужен, чтобы свой кластер не
+     съедал все четыре слота: при семи статьях в кластере — как у рафтинга —
+     он забирал их целиком, и ни партнёрский, ни глобальный добор не
+     срабатывали никогда. В результате страница не ссылалась НИКУДА за
+     пределы своей темы, а статьи, на которые никто не ссылается снаружи,
+     Google просто не находит. Один слот держим свободным под чужую тему. */
+  const take = (slugs, cap = limit) => {
     for (const slug of slugs) {
-      if (picked.length >= limit) return;
+      if (picked.length >= Math.min(cap, limit)) return;
       if (slug === guide.slug || picked.some((item) => item.slug === slug)) continue;
       const match = bySlug.get(slug);
       if (match) picked.push(match);
@@ -39986,14 +39992,24 @@ function relatedGuidesFor(guide, limit = 4) {
   };
 
   if (cluster) {
-    take(rotate(GUIDE_CLUSTERS[cluster], guide.slug));
+    take(rotate(GUIDE_CLUSTERS[cluster], guide.slug), limit - 1);
     const partner = GUIDE_CLUSTERS[GUIDE_CLUSTER_PARTNERS[cluster]] || [];
     // партнёрский кластер сдвигаем на позицию статьи в своём, чтобы соседи
     // не тянули из партнёра одни и те же первые записи
     const offset = Math.max(0, GUIDE_CLUSTERS[cluster].indexOf(guide.slug));
     take(partner.length ? [...partner.slice(offset % partner.length), ...partner.slice(0, offset % partner.length)] : []);
   }
-  take(JOURNAL_SEO_GUIDES.map((item) => item.slug));
+  /* Глобальный добор тоже нужно вращать — иначе он всегда читает массив с
+     начала, и запасные ссылки достаются одним и тем же первым статьям, а всё,
+     что лежит глубже, не получает их НИ РАЗУ. Это та же поломка, от которой
+     выше лечили кластерный добор, только не исправленная. Цена ей высокая:
+     из 1678 адресов карты сайта примерно 235 Google вообще не знает, и среди
+     них ayung-vs-telaga-waja-rafting — страница, которая в Bing стоит первой
+     по своему запросу, а для Google не существует, потому что ссылок на неё
+     за пределами своего кластера нет ни одной.
+     Точка старта — позиция самой статьи, так что соседи не тянут одно и то же. */
+  const all = JOURNAL_SEO_GUIDES.map((item) => item.slug);
+  take(rotate(all, guide.slug));
   return picked.slice(0, limit);
 }
 
