@@ -15618,14 +15618,14 @@ const JOURNAL_SEO_GUIDES = [
         "paragraphs": [
           "Bali has three commercial rafting rivers and they are not interchangeable. The Ayung near Ubud is the gentle one: class II-III, about two hours on the water, and the only one most families and first-timers should consider. The Telaga Waja in the east runs faster and finishes with a drop that catches people out, and the Melangit is the quietest of the three, with the least traffic and the fewest operators.",
           "Price sorts them in the opposite order to difficulty. Checked in August 2026, online entry prices start at IDR 250,000 on the Ayung, IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, which has the highest floor of the three despite being the least known. Those are the entry rates before transfer, and a boat plus transfer often lands above an operator's own all-in package, so compare the total rather than the headline.",
-          "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up, and on the Telaga Waja the number is 509 steps. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the [Ayung versus Telaga Waja comparison](/bali/en/journal/ayung-vs-telaga-waja-rafting), and the full price picture across all three is in the [rafting price guide](/bali/en/journal/bali-rafting-price-2026)."
+          "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the [Ayung versus Telaga Waja comparison](/bali/en/journal/ayung-vs-telaga-waja-rafting), and the full price picture across all three is in the [rafting price guide](/bali/en/journal/bali-rafting-price-2026)."
         ]
       },
       {
-        "heading": "Telaga Waja: the fast one, and the run without the staircase",
+        "heading": "Telaga Waja: the fast one, and the easier day for your knees",
         "paragraphs": [
           "The Telaga Waja in east Bali is the river people book when the Ayung sounded too gentle. It runs faster, the rapids come closer together, and the descent finishes over a dam drop that catches out anyone who stopped paying attention. Entry prices start at IDR 270,000, checked in August 2026.",
-          "The counterintuitive part is the walking. The Ayung route costs you around 509 steps down and 250 back up; the Telaga Waja has roughly five at the start, and several operators sell it specifically as the run with no staircase at the end. If knees rather than nerve are the constraint, the harder river is the easier day.",
+          "The counterintuitive part is the walking. The Ayung route costs you around 509 steps down and 250 back up; on the Telaga Waja the same operator counts about five at the start and 250 at the finish, and some listings sell it as the run with no climb at all. Either way it is the lighter day. If knees rather than nerve are the constraint, the harder river is the easier choice.",
           "Distances reverse depending on where you sleep. From Ubud the Ayung is 20 minutes away and the Telaga Waja about 70. From Seminyak or Kuta it flips: the east river is roughly 95 minutes, against 1.5 to 2 hours to the Ayung launch point."
         ]
       },
@@ -15668,7 +15668,7 @@ const JOURNAL_SEO_GUIDES = [
     "faq": [
       {
         "question": "Which rafting river in Bali is best for beginners?",
-        "answer": "The Ayung near Ubud. It is class II-III, runs about two hours, and the rapids are spaced out enough that a first-timer has time between them. The Telaga Waja is faster and ends with a drop, and its exit is 509 steps. Prices start at IDR 250,000 on the Ayung against IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, checked August 2026."
+        "answer": "The Ayung near Ubud. It is class II-III, runs about two hours, and the rapids are spaced out enough that a first-timer has time between them. The Telaga Waja is faster and ends with a four-metre dam drop. Prices start at IDR 250,000 on the Ayung against IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, checked August 2026."
       },
       {
         "question": "Rafting or canyoning in Bali \u2014 what is the difference?",
@@ -39927,7 +39927,13 @@ const GUIDE_CLUSTERS = {
 
 };
 
+/* Кластер рафтинга не имел пары: ни он никого не подтягивал, ни его никто.
+   Отсюда у ayung-vs-telaga-waja и bali-rafting-price-2026 не было ни одной
+   входящей ссылки из-за пределов своих семи статей — Google их нашёл, но так
+   и не обошёл. Партнёрский слот срабатывает только там, где своих статей
+   меньше лимита в 4, поэтому парой назначен families (ровно 4 статьи). */
 const GUIDE_CLUSTER_PARTNERS = {
+  rafting: "activities",
   tanahLot: "templesWaterfalls",
   surf: "beaches",
   areaComparisons: "areas",
@@ -39942,7 +39948,7 @@ const GUIDE_CLUSTER_PARTNERS = {
   sunsets: "areas",
   templesWaterfalls: "areas",
   activities: "mountBatur",
-  families: "beaches",
+  families: "rafting",
   nusaPenida: "penidaDayTrips",
   penidaSpots: "nusaPenida",
   penidaDayTrips: "nusaPenida",
@@ -46605,6 +46611,18 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "Bali White Water Rafting: Ayung River Guide for 2026":
+      "Рафтинг на Бали: три реки, цены и уровни на 2026 год",
+    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
+      "Настоящий фильтр — не пороги, а ступени. Финиш на Аюнге — это долгий подъём наверх: около 509 ступеней вниз в ущелье и 250 обратно вверх. Тем, у кого колени, маленькие дети или бессонная ночь, выбирать стоит по этому числу, а не по классу порогов. Мы разбираем две главные реки бок о бок в",
+    "Telaga Waja: the fast one, and the easier day for your knees":
+      "Телага-Ваджа: быстрая река и более лёгкий день для коленей",
+    "The counterintuitive part is the walking. The Ayung route costs you around 509 steps down and 250 back up; on the Telaga Waja the same operator counts about five at the start and 250 at the finish, and some listings sell it as the run with no climb at all. Either way it is the lighter day. If knees rather than nerve are the constraint, the harder river is the easier choice.":
+      "Неочевидное — в ходьбе. Маршрут на Аюнге стоит примерно 509 ступеней вниз и 250 обратно вверх; на Телага-Ваджа тот же оператор насчитывает около пяти на старте и 250 на финише, а часть объявлений продаёт её как сплав вообще без подъёма. В любом случае это более лёгкий день. Если ограничение — колени, а не смелость, то более сложная река оказывается более простым выбором.",
+    "The Ayung near Ubud. It is class II-III, runs about two hours, and the rapids are spaced out enough that a first-timer has time between them. The Telaga Waja is faster and ends with a four-metre dam drop. Prices start at IDR 250,000 on the Ayung against IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, checked August 2026.":
+      "Аюнг рядом с Убудом. Класс II–III, около двух часов, и пороги расставлены достаточно редко, чтобы новичок успевал перевести дух. Телага-Ваджа быстрее и заканчивается сбросом с четырёхметровой плотины. Цены начинаются с 250 000 IDR на Аюнге против 270 000 IDR на Телага-Ваджа и 300 000 IDR на Мелангите, проверено в августе 2026 года.",
+    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night&#39;s sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
+      "Настоящий фильтр — не пороги, а ступени. Финиш на Аюнге — это долгий подъём наверх: около 509 ступеней вниз в ущелье и 250 обратно вверх. Тем, у кого колени, маленькие дети или бессонная ночь, выбирать стоит по этому числу, а не по классу порогов. Мы разбираем две главные реки бок о бок в",
     "Explore all 274 articles":
       "Все 274 статьи",
     "148 more guides — the full journal in one list":
@@ -46619,8 +46637,6 @@ const PINNED_TRANSLATIONS = {
       "На Бали три коммерческие реки для рафтинга, и они не взаимозаменяемы. Аюнг рядом с Убудом — спокойная: класс II–III, около двух часов на воде, и единственная, которую стоит рассматривать большинству семей и новичков. Телага-Ваджа на востоке идёт быстрее и заканчивается сбросом, который застаёт врасплох, а Мелангит — самая тихая из трёх, с наименьшим потоком и наименьшим числом операторов.",
     "Price sorts them in the opposite order to difficulty. Checked in August 2026, online entry prices start at IDR 250,000 on the Ayung, IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, which has the highest floor of the three despite being the least known. Those are the entry rates before transfer, and a boat plus transfer often lands above an operator&#39;s own all-in package, so compare the total rather than the headline.":
       "Цена выстраивает их в обратном порядке к сложности. По проверке в августе 2026 года входные онлайн-цены начинаются с 250 000 IDR на Аюнге, 270 000 IDR на Телага-Ваджа и 300 000 IDR на Мелангите — у самой малоизвестной реки самый высокий порог. Это входные тарифы без трансфера, и лодка плюс трансфер часто выходят дороже собственного пакета «всё включено» у оператора, поэтому сравнивайте итог, а не заголовок.",
-    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up, and on the Telaga Waja the number is 509 steps. Anyone with knees, small children or a bad night&#39;s sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
-      "Настоящий фильтр — не пороги, а ступени. Финиш на Аюнге — это долгий подъём наверх, а на Телага-Ваджа речь о 509 ступенях. Тем, у кого колени, маленькие дети или бессонная ночь, выбирать стоит по этому числу, а не по классу порогов. Мы разбираем две главные реки бок о бок в",
     "Ayung versus Telaga Waja comparison":
       "сравнении Аюнга и Телага-Ваджа",
     ", and the full price picture across all three is in the":
@@ -46629,22 +46645,14 @@ const PINNED_TRANSLATIONS = {
       "гайде по ценам на рафтинг",
     "Which rafting river in Bali is best for beginners?":
       "Какая река на Бали лучше для новичков в рафтинге?",
-    "The Ayung near Ubud. It is class II-III, runs about two hours, and the rapids are spaced out enough that a first-timer has time between them. The Telaga Waja is faster and ends with a drop, and its exit is 509 steps. Prices start at IDR 250,000 on the Ayung against IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, checked August 2026.":
-      "Аюнг рядом с Убудом. Класс II–III, около двух часов, и пороги расставлены достаточно редко, чтобы новичок успевал перевести дух. Телага-Ваджа быстрее и заканчивается сбросом, а выход с неё — 509 ступеней. Цены начинаются с 250 000 IDR на Аюнге против 270 000 IDR на Телага-Ваджа и 300 000 IDR на Мелангите, проверено в августе 2026 года.",
     "Ayung, Telaga Waja or Melangit: which Bali rafting river to pick, how bad the stairs really are, and 2026 prices from IDR 250,000.":
       "Аюнг, Телага-Ваджа или Мелангит: какую реку для рафтинга выбрать на Бали, чего стоят ступени и цены 2026 года от 250 000 IDR.",
     "Are the Gili Islands worth visiting? Yes for turtles and one car-free island; no if you expect all three in one go.":
       "Стоят ли острова Гили поездки? Да — ради черепах и одного острова без машин; нет — если рассчитываете охватить все три разом.",
     "Price sorts them in the opposite order to difficulty. Checked in August 2026, online entry prices start at IDR 250,000 on the Ayung, IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, which has the highest floor of the three despite being the least known. Those are the entry rates before transfer, and a boat plus transfer often lands above an operator's own all-in package, so compare the total rather than the headline.":
       "Цена выстраивает их в обратном порядке к сложности. По проверке в августе 2026 года входные онлайн-цены начинаются с 250 000 IDR на Аюнге, 270 000 IDR на Телага-Ваджа и 300 000 IDR на Мелангите — у самой малоизвестной реки самый высокий порог. Это входные тарифы без трансфера, и лодка плюс трансфер часто выходят дороже собственного пакета «всё включено» у оператора, поэтому сравнивайте итог, а не заголовок.",
-    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up, and on the Telaga Waja the number is 509 steps. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
-      "Настоящий фильтр — не пороги, а ступени. Финиш на Аюнге — это долгий подъём наверх, а на Телага-Ваджа речь о 509 ступенях. Тем, у кого колени, маленькие дети или бессонная ночь, выбирать стоит по этому числу, а не по классу порогов. Мы разбираем две главные реки бок о бок в",
-    "Telaga Waja: the fast one, and the run without the staircase":
-      "Телага-Ваджа: быстрая река без лестницы",
     "The Telaga Waja in east Bali is the river people book when the Ayung sounded too gentle. It runs faster, the rapids come closer together, and the descent finishes over a dam drop that catches out anyone who stopped paying attention. Entry prices start at IDR 270,000, checked in August 2026.":
       "Телага-Ваджа на востоке Бали — река, которую берут, когда Аюнг показался слишком спокойным. Течение быстрее, пороги идут плотнее, а спуск заканчивается сбросом с плотины, который застаёт врасплох любого, кто перестал следить за водой. Входные цены начинаются с 270 000 IDR, проверено в августе 2026 года.",
-    "The counterintuitive part is the walking. The Ayung route costs you around 509 steps down and 250 back up; the Telaga Waja has roughly five at the start, and several operators sell it specifically as the run with no staircase at the end. If knees rather than nerve are the constraint, the harder river is the easier day.":
-      "Неочевидное — в ходьбе. Маршрут на Аюнге стоит примерно 509 ступеней вниз и 250 обратно вверх; на Телага-Ваджа их около пяти на старте, и несколько операторов продают её именно как сплав без лестницы в конце. Если ограничение — колени, а не смелость, то более сложная река оказывается более лёгким днём.",
     "Distances reverse depending on where you sleep. From Ubud the Ayung is 20 minutes away and the Telaga Waja about 70. From Seminyak or Kuta it flips: the east river is roughly 95 minutes, against 1.5 to 2 hours to the Ayung launch point.":
       "Расстояния переворачиваются в зависимости от того, где вы живёте. Из Убуда до Аюнга 20 минут, до Телага-Ваджа около 70. Из Семиньяка или Куты всё наоборот: восточная река примерно в 95 минутах против полутора-двух часов до старта на Аюнге.",
     "Melangit: the quiet one in Klungkung":
@@ -46981,6 +46989,18 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "Bali White Water Rafting: Ayung River Guide for 2026":
+      "Rafting en Bali: los 3 ríos comparados, precios y niveles 2026",
+    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
+      "El filtro práctico no son los rápidos, son las escaleras. La salida del Ayung implica una larga subida: unos 509 escalones para bajar al cañón y 250 para volver a subir. Quien tenga las rodillas delicadas, niños pequeños o haya dormido mal debería elegir por esa cifra y no por la clase de los rápidos. Comparamos los dos ríos principales uno al lado del otro en",
+    "Telaga Waja: the fast one, and the easier day for your knees":
+      "Telaga Waja: el rápido, y el día más llevadero para las rodillas",
+    "The counterintuitive part is the walking. The Ayung route costs you around 509 steps down and 250 back up; on the Telaga Waja the same operator counts about five at the start and 250 at the finish, and some listings sell it as the run with no climb at all. Either way it is the lighter day. If knees rather than nerve are the constraint, the harder river is the easier choice.":
+      "Lo contraintuitivo está en el caminar. El recorrido del Ayung cuesta unos 509 escalones de bajada y 250 de subida; en el Telaga Waja el mismo operador cuenta unos cinco al principio y 250 al final, y algunos anuncios lo venden como el descenso sin ninguna subida. En cualquier caso es el día más llevadero. Si la limitación son las rodillas y no los nervios, el río más duro es la elección más fácil.",
+    "The Ayung near Ubud. It is class II-III, runs about two hours, and the rapids are spaced out enough that a first-timer has time between them. The Telaga Waja is faster and ends with a four-metre dam drop. Prices start at IDR 250,000 on the Ayung against IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, checked August 2026.":
+      "El Ayung, cerca de Ubud. Es de clase II-III, dura unas dos horas y los rápidos están lo bastante espaciados como para que un principiante tenga tiempo entre uno y otro. El Telaga Waja es más rápido y termina con una caída de presa de cuatro metros. Los precios arrancan en 250.000 IDR en el Ayung frente a 270.000 IDR en el Telaga Waja y 300.000 IDR en el Melangit, consultado en agosto de 2026.",
+    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night&#39;s sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
+      "El filtro práctico no son los rápidos, son las escaleras. La salida del Ayung implica una larga subida: unos 509 escalones para bajar al cañón y 250 para volver a subir. Quien tenga las rodillas delicadas, niños pequeños o haya dormido mal debería elegir por esa cifra y no por la clase de los rápidos. Comparamos los dos ríos principales uno al lado del otro en",
     "Explore all 274 articles":
       "Explora los 274 artículos",
     "148 more guides — the full journal in one list":
@@ -46995,8 +47015,6 @@ const PINNED_TRANSLATIONS = {
       "Bali tiene tres ríos comerciales de rafting y no son intercambiables. El Ayung, cerca de Ubud, es el suave: clase II-III, unas dos horas en el agua, y el único que deberían plantearse la mayoría de las familias y quienes van por primera vez. El Telaga Waja, al este, corre más rápido y termina con una caída que pilla desprevenido a más de uno, y el Melangit es el más tranquilo de los tres, con menos tráfico y menos operadores.",
     "Price sorts them in the opposite order to difficulty. Checked in August 2026, online entry prices start at IDR 250,000 on the Ayung, IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, which has the highest floor of the three despite being the least known. Those are the entry rates before transfer, and a boat plus transfer often lands above an operator&#39;s own all-in package, so compare the total rather than the headline.":
       "El precio los ordena al revés que la dificultad. Consultado en agosto de 2026, los precios de entrada en línea arrancan en 250.000 IDR en el Ayung, 270.000 IDR en el Telaga Waja y 300.000 IDR en el Melangit, que tiene el suelo más alto de los tres pese a ser el menos conocido. Son tarifas de entrada antes del traslado, y un bote más traslado suele salir por encima del paquete completo del propio operador, así que compara el total y no el titular.",
-    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up, and on the Telaga Waja the number is 509 steps. Anyone with knees, small children or a bad night&#39;s sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
-      "El filtro práctico no son los rápidos, son las escaleras. La salida del Ayung implica una larga subida, y en el Telaga Waja la cifra es de 509 escalones. Quien tenga las rodillas delicadas, niños pequeños o haya dormido mal debería elegir por esa cifra y no por la clase de los rápidos. Comparamos los dos ríos principales uno al lado del otro en",
     "Ayung versus Telaga Waja comparison":
       "la comparativa Ayung frente a Telaga Waja",
     ", and the full price picture across all three is in the":
@@ -47005,22 +47023,14 @@ const PINNED_TRANSLATIONS = {
       "la guía de precios del rafting",
     "Which rafting river in Bali is best for beginners?":
       "¿Qué río de rafting de Bali es mejor para principiantes?",
-    "The Ayung near Ubud. It is class II-III, runs about two hours, and the rapids are spaced out enough that a first-timer has time between them. The Telaga Waja is faster and ends with a drop, and its exit is 509 steps. Prices start at IDR 250,000 on the Ayung against IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, checked August 2026.":
-      "El Ayung, cerca de Ubud. Es de clase II-III, dura unas dos horas y los rápidos están lo bastante espaciados como para que un principiante tenga tiempo entre uno y otro. El Telaga Waja es más rápido y termina con una caída, y su salida son 509 escalones. Los precios arrancan en 250.000 IDR en el Ayung frente a 270.000 IDR en el Telaga Waja y 300.000 IDR en el Melangit, consultado en agosto de 2026.",
     "Ayung, Telaga Waja or Melangit: which Bali rafting river to pick, how bad the stairs really are, and 2026 prices from IDR 250,000.":
       "Ayung, Telaga Waja o Melangit: qué río de rafting elegir en Bali, cuánto pesan de verdad las escaleras y precios 2026 desde 250.000 IDR.",
     "Are the Gili Islands worth visiting? Yes for turtles and one car-free island; no if you expect all three in one go.":
       "¿Merecen la pena las islas Gili? Sí por las tortugas y una isla sin coches; no si esperas ver las tres de una vez.",
     "Price sorts them in the opposite order to difficulty. Checked in August 2026, online entry prices start at IDR 250,000 on the Ayung, IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, which has the highest floor of the three despite being the least known. Those are the entry rates before transfer, and a boat plus transfer often lands above an operator's own all-in package, so compare the total rather than the headline.":
       "El precio los ordena al revés que la dificultad. Consultado en agosto de 2026, los precios de entrada en línea arrancan en 250.000 IDR en el Ayung, 270.000 IDR en el Telaga Waja y 300.000 IDR en el Melangit, que tiene el suelo más alto de los tres pese a ser el menos conocido. Son tarifas de entrada antes del traslado, y un bote más traslado suele salir por encima del paquete completo del propio operador, así que compara el total y no el titular.",
-    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up, and on the Telaga Waja the number is 509 steps. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
-      "El filtro práctico no son los rápidos, son las escaleras. La salida del Ayung implica una larga subida, y en el Telaga Waja la cifra es de 509 escalones. Quien tenga las rodillas delicadas, niños pequeños o haya dormido mal debería elegir por esa cifra y no por la clase de los rápidos. Comparamos los dos ríos principales uno al lado del otro en",
-    "Telaga Waja: the fast one, and the run without the staircase":
-      "Telaga Waja: el rápido, y el descenso sin escaleras",
     "The Telaga Waja in east Bali is the river people book when the Ayung sounded too gentle. It runs faster, the rapids come closer together, and the descent finishes over a dam drop that catches out anyone who stopped paying attention. Entry prices start at IDR 270,000, checked in August 2026.":
       "El Telaga Waja, en el este de Bali, es el río que se reserva cuando el Ayung ha sonado demasiado suave. Corre más rápido, los rápidos se suceden más juntos y el descenso termina con una caída de presa que sorprende a quien haya dejado de prestar atención. Los precios de entrada arrancan en 270.000 IDR, consultado en agosto de 2026.",
-    "The counterintuitive part is the walking. The Ayung route costs you around 509 steps down and 250 back up; the Telaga Waja has roughly five at the start, and several operators sell it specifically as the run with no staircase at the end. If knees rather than nerve are the constraint, the harder river is the easier day.":
-      "Lo contraintuitivo está en el caminar. El recorrido del Ayung cuesta unos 509 escalones de bajada y 250 de subida; el Telaga Waja tiene alrededor de cinco al principio, y varios operadores lo venden precisamente como el descenso sin escalera al final. Si la limitación son las rodillas y no los nervios, el río más duro es el día más fácil.",
     "Distances reverse depending on where you sleep. From Ubud the Ayung is 20 minutes away and the Telaga Waja about 70. From Seminyak or Kuta it flips: the east river is roughly 95 minutes, against 1.5 to 2 hours to the Ayung launch point.":
       "Las distancias se invierten según dónde duermas. Desde Ubud, el Ayung queda a 20 minutos y el Telaga Waja a unos 70. Desde Seminyak o Kuta se da la vuelta: el río del este está a unos 95 minutos, frente a 1,5 o 2 horas hasta el punto de salida del Ayung.",
     "Melangit: the quiet one in Klungkung":
@@ -47273,6 +47283,16 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
+      "Le vrai critère n'est pas les rapides, ce sont les marches. L'arrivée sur l'Ayung impose une longue remontée : environ 509 marches pour descendre dans la gorge et 250 pour remonter. Toute personne aux genoux fragiles, avec de jeunes enfants ou après une mauvaise nuit devrait choisir sur ce chiffre plutôt que sur la classe des rapides. Nous comparons les deux rivières principales côte à côte dans",
+    "Telaga Waja: the fast one, and the easier day for your knees":
+      "Telaga Waja : la rapide, et la plus douce pour les genoux",
+    "The counterintuitive part is the walking. The Ayung route costs you around 509 steps down and 250 back up; on the Telaga Waja the same operator counts about five at the start and 250 at the finish, and some listings sell it as the run with no climb at all. Either way it is the lighter day. If knees rather than nerve are the constraint, the harder river is the easier choice.":
+      "Le paradoxe est dans la marche. Le parcours de l'Ayung coûte environ 509 marches à la descente et 250 à la remontée ; sur la Telaga Waja, le même opérateur en compte environ cinq au départ et 250 à l'arrivée, et certaines annonces la vendent comme la descente sans aucune montée. Dans les deux cas, c'est la journée la plus légère. Si la contrainte, ce sont les genoux et non le cran, la rivière la plus dure est le choix le plus facile.",
+    "The Ayung near Ubud. It is class II-III, runs about two hours, and the rapids are spaced out enough that a first-timer has time between them. The Telaga Waja is faster and ends with a four-metre dam drop. Prices start at IDR 250,000 on the Ayung against IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, checked August 2026.":
+      "L'Ayung, près d'Ubud. Elle est de classe II-III, dure environ deux heures, et les rapides sont assez espacés pour qu'un débutant ait le temps de souffler entre deux. La Telaga Waja est plus rapide et se termine par un saut de barrage de quatre mètres. Les prix démarrent à 250 000 IDR sur l'Ayung, contre 270 000 IDR sur la Telaga Waja et 300 000 IDR sur la Melangit, vérifié en août 2026.",
+    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night&#39;s sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
+      "Le vrai critère n'est pas les rapides, ce sont les marches. L'arrivée sur l'Ayung impose une longue remontée : environ 509 marches pour descendre dans la gorge et 250 pour remonter. Toute personne aux genoux fragiles, avec de jeunes enfants ou après une mauvaise nuit devrait choisir sur ce chiffre plutôt que sur la classe des rapides. Nous comparons les deux rivières principales côte à côte dans",
     "Explore all 274 articles":
       "Explorer les 274 articles",
     "148 more guides — the full journal in one list":
@@ -47293,8 +47313,6 @@ const PINNED_TRANSLATIONS = {
       "Le mont Batur avant le lever du soleil à Bali",
     "Nusa Penida, slept on in Bali":
       "Nusa Penida, avec une nuit sur place, à Bali",
-    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up, and on the Telaga Waja the number is 509 steps. Anyone with knees, small children or a bad night&#39;s sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
-      "Le vrai critère n'est pas les rapides, ce sont les marches. L'arrivée sur l'Ayung impose une longue remontée, et sur la Telaga Waja on compte 509 marches. Toute personne aux genoux fragiles, avec de jeunes enfants ou après une mauvaise nuit devrait choisir sur ce chiffre plutôt que sur la classe des rapides. Nous comparons les deux rivières principales côte à côte dans",
     "Ayung versus Telaga Waja comparison":
       "le comparatif Ayung / Telaga Waja",
     ", and the full price picture across all three is in the":
@@ -47305,14 +47323,8 @@ const PINNED_TRANSLATIONS = {
       "Ayung, Telaga Waja ou Melangit : quelle rivière de rafting choisir à Bali, ce que valent vraiment les marches et les prix 2026 dès 250 000 IDR.",
     "Are the Gili Islands worth visiting? Yes for turtles and one car-free island; no if you expect all three in one go.":
       "Les îles Gili valent-elles le détour ? Oui pour les tortues et une île sans voitures ; non si vous comptez faire les trois d'un coup.",
-    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up, and on the Telaga Waja the number is 509 steps. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
-      "Le vrai critère n'est pas les rapides, ce sont les marches. L'arrivée sur l'Ayung impose une longue remontée, et sur la Telaga Waja on compte 509 marches. Toute personne aux genoux fragiles, avec de jeunes enfants ou après une mauvaise nuit devrait choisir sur ce chiffre plutôt que sur la classe des rapides. Nous comparons les deux rivières principales côte à côte dans",
-    "Telaga Waja: the fast one, and the run without the staircase":
-      "Telaga Waja : la rapide, et la seule sans escalier",
     "The Telaga Waja in east Bali is the river people book when the Ayung sounded too gentle. It runs faster, the rapids come closer together, and the descent finishes over a dam drop that catches out anyone who stopped paying attention. Entry prices start at IDR 270,000, checked in August 2026.":
       "La Telaga Waja, dans l'est de Bali, est la rivière qu'on réserve quand l'Ayung a paru trop sage. Elle coule plus vite, les rapides s'enchaînent de plus près, et la descente se termine par un saut de barrage qui surprend quiconque a cessé d'être attentif. Les prix d'entrée démarrent à 270 000 IDR, vérifié en août 2026.",
-    "The counterintuitive part is the walking. The Ayung route costs you around 509 steps down and 250 back up; the Telaga Waja has roughly five at the start, and several operators sell it specifically as the run with no staircase at the end. If knees rather than nerve are the constraint, the harder river is the easier day.":
-      "Le paradoxe est dans la marche. Le parcours de l'Ayung coûte environ 509 marches à la descente et 250 à la remontée ; la Telaga Waja en compte à peu près cinq au départ, et plusieurs opérateurs la vendent précisément comme la descente sans escalier à l'arrivée. Si la contrainte, ce sont les genoux et non le cran, la rivière la plus dure est la journée la plus facile.",
     "Distances reverse depending on where you sleep. From Ubud the Ayung is 20 minutes away and the Telaga Waja about 70. From Seminyak or Kuta it flips: the east river is roughly 95 minutes, against 1.5 to 2 hours to the Ayung launch point.":
       "Les distances s'inversent selon l'endroit où vous dormez. Depuis Ubud, l'Ayung est à 20 minutes et la Telaga Waja à environ 70. Depuis Seminyak ou Kuta, c'est l'inverse : la rivière de l'est est à environ 95 minutes, contre 1h30 à 2h pour rejoindre le point de départ de l'Ayung.",
     "Melangit: the quiet one in Klungkung":
@@ -47337,14 +47349,12 @@ const PINNED_TRANSLATIONS = {
       "Les prix les classent dans l'ordre inverse de la difficulté. Relevés en août 2026, les tarifs d'entrée en ligne démarrent à 250 000 IDR sur l'Ayung, 270 000 IDR sur la Telaga Waja et 300 000 IDR sur la Melangit, qui affiche le plancher le plus élevé des trois alors qu'elle est la moins connue. Ce sont les tarifs d'entrée hors transfert : un bateau plus le transfert dépasse souvent le forfait tout compris d'un opérateur, alors comparez le total et non le prix d'appel.",
     "Price sorts them in the opposite order to difficulty. Checked in August 2026, online entry prices start at IDR 250,000 on the Ayung, IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, which has the highest floor of the three despite being the least known. Those are the entry rates before transfer, and a boat plus transfer often lands above an operator&#39;s own all-in package, so compare the total rather than the headline.":
       "Les prix les classent dans l'ordre inverse de la difficulté. Relevés en août 2026, les tarifs d'entrée en ligne démarrent à 250 000 IDR sur l'Ayung, 270 000 IDR sur la Telaga Waja et 300 000 IDR sur la Melangit, qui affiche le plancher le plus élevé des trois alors qu'elle est la moins connue. Ce sont les tarifs d'entrée hors transfert : un bateau plus le transfert dépasse souvent le forfait tout compris d'un opérateur, alors comparez le total et non le prix d'appel.",
-    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up, and on the Telaga Waja the number is 509 steps. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the [Ayung versus Telaga Waja comparison](/bali/en/journal/ayung-vs-telaga-waja-rafting), and the full price picture across all three is in the [rafting price guide](/bali/en/journal/bali-rafting-price-2026).":
+    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the [Ayung versus Telaga Waja comparison](/bali/en/journal/ayung-vs-telaga-waja-rafting), and the full price picture across all three is in the [rafting price guide](/bali/en/journal/bali-rafting-price-2026).":
       "Le vrai critère n'est pas les rapides, ce sont les marches. L'arrivée sur l'Ayung impose une longue remontée, et sur la Telaga Waja le chiffre est de 509 marches. Genoux fragiles, enfants en bas âge ou nuit trop courte : c'est sur ce nombre qu'il faut choisir, pas sur la classe des rapides. Nous comparons les deux principales rivières côte à côte dans le comparatif Ayung contre Telaga Waja, et le tableau complet des prix sur les trois se trouve dans le guide des tarifs du rafting.",
-    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up, and on the Telaga Waja the number is 509 steps. Anyone with knees, small children or a bad night&#39;s sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the [Ayung versus Telaga Waja comparison](/bali/en/journal/ayung-vs-telaga-waja-rafting), and the full price picture across all three is in the [rafting price guide](/bali/en/journal/bali-rafting-price-2026).":
+    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night&#39;s sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the [Ayung versus Telaga Waja comparison](/bali/en/journal/ayung-vs-telaga-waja-rafting), and the full price picture across all three is in the [rafting price guide](/bali/en/journal/bali-rafting-price-2026).":
       "Le vrai critère n'est pas les rapides, ce sont les marches. L'arrivée sur l'Ayung impose une longue remontée, et sur la Telaga Waja le chiffre est de 509 marches. Genoux fragiles, enfants en bas âge ou nuit trop courte : c'est sur ce nombre qu'il faut choisir, pas sur la classe des rapides. Nous comparons les deux principales rivières côte à côte dans le comparatif Ayung contre Telaga Waja, et le tableau complet des prix sur les trois se trouve dans le guide des tarifs du rafting.",
     "Which rafting river in Bali is best for beginners?":
       "Quelle rivière de rafting choisir à Bali quand on débute ?",
-    "The Ayung near Ubud. It is class II-III, runs about two hours, and the rapids are spaced out enough that a first-timer has time between them. The Telaga Waja is faster and ends with a drop, and its exit is 509 steps. Prices start at IDR 250,000 on the Ayung against IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, checked August 2026.":
-      "L'Ayung, près d'Ubud. Classe II-III, environ deux heures, et des rapides suffisamment espacés pour laisser souffler un débutant. La Telaga Waja est plus rapide et se termine par une chute, et sa sortie compte 509 marches. Les prix démarrent à 250 000 IDR sur l'Ayung, contre 270 000 IDR sur la Telaga Waja et 300 000 IDR sur la Melangit, relevés en août 2026.",
     "Days 5-8, east. Sidemen for the valley or Amed for the water; Tulamben&#39;s Liberty wreck is a shore dive you can snorkel. This is the quietest stretch of the two weeks and the one people cut first, usually to their regret.":
       "Jours 5 à 8, l'est. Sidemen pour la vallée ou Amed pour l'eau ; l'épave du Liberty à Tulamben se rejoint depuis la plage et s'explore aussi en snorkeling. C'est le passage le plus calme des deux semaines, et le premier que l'on supprime — en général à regret.",
     "Ubud and the interior":
@@ -47719,6 +47729,16 @@ const PINNED_TRANSLATIONS = {
       "Bali est-elle sûre en 2026 ? 7 arnaques courantes à éviter",
   },
   "zh-CN": {
+    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
+      "真正的筛选条件不是急流，而是台阶。阿漾河的终点要走一段长长的上坡：下到峡谷约 509 级，返回约 250 级。膝盖不好、带着小孩或没睡好的人，应该按这个数字来选，而不是按急流等级。我们把两条主要河流并排对比，见",
+    "Telaga Waja: the fast one, and the easier day for your knees":
+      "特拉加瓦贾河：更快的一条，对膝盖也更轻松",
+    "The counterintuitive part is the walking. The Ayung route costs you around 509 steps down and 250 back up; on the Telaga Waja the same operator counts about five at the start and 250 at the finish, and some listings sell it as the run with no climb at all. Either way it is the lighter day. If knees rather than nerve are the constraint, the harder river is the easier choice.":
+      "反直觉的部分在走路。阿漾河的路线大约要下 509 级台阶、再上 250 级；特拉加瓦贾河那边，同一家经营者算下来起点约五级、终点 250 级，还有些广告把它卖成完全不用爬的路线。无论怎么算，这都是更轻松的一天。如果限制在膝盖而不在胆量，更难的那条河反而是更省力的选择。",
+    "The Ayung near Ubud. It is class II-III, runs about two hours, and the rapids are spaced out enough that a first-timer has time between them. The Telaga Waja is faster and ends with a four-metre dam drop. Prices start at IDR 250,000 on the Ayung against IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, checked August 2026.":
+      "乌布附近的阿漾河。II-III 级，全程约两小时，急流之间间隔足够，初次体验者有喘息的时间。特拉加瓦贾河更快，结尾是一处四米高的堰坝落差。价格方面，阿漾河从 250,000 IDR 起，特拉加瓦贾河 270,000 IDR，梅朗吉河 300,000 IDR，2026 年 8 月核对。",
+    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night&#39;s sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
+      "真正的筛选条件不是急流，而是台阶。阿漾河的终点要走一段长长的上坡：下到峡谷约 509 级，返回约 250 级。膝盖不好、带着小孩或没睡好的人，应该按这个数字来选，而不是按急流等级。我们把两条主要河流并排对比，见",
     "Explore all 274 articles":
       "浏览全部 274 篇文章",
     "148 more guides — the full journal in one list":
@@ -47733,8 +47753,6 @@ const PINNED_TRANSLATIONS = {
       "巴厘岛有三条商业漂流河，它们并不能互相替代。乌布附近的阿漾河最温和：II-III 级，水上约两小时，也是大多数家庭和初次体验者唯一该考虑的一条。东部的特拉加瓦贾河水流更快，结尾有一处落差，常让人措手不及；梅朗吉河则是三条中最安静的，人流最少，经营者也最少。",
     "Price sorts them in the opposite order to difficulty. Checked in August 2026, online entry prices start at IDR 250,000 on the Ayung, IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, which has the highest floor of the three despite being the least known. Those are the entry rates before transfer, and a boat plus transfer often lands above an operator&#39;s own all-in package, so compare the total rather than the headline.":
       "价格的排序与难度相反。2026 年 8 月核对，网上入门价阿漾河从 250,000 IDR 起，特拉加瓦贾河 270,000 IDR，梅朗吉河 300,000 IDR——最不知名的一条门槛反而最高。这些是不含接送的入门价，而船票加接送往往高于经营者自己的全包套餐，所以要比总价，而不是标价。",
-    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up, and on the Telaga Waja the number is 509 steps. Anyone with knees, small children or a bad night&#39;s sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
-      "真正的筛选条件不是急流，而是台阶。阿漾河的终点要走一段长长的上坡，特拉加瓦贾河那边则是 509 级台阶。膝盖不好、带着小孩或没睡好的人，应该按这个数字来选，而不是按急流等级。我们把两条主要河流并排对比，见",
     "Ayung versus Telaga Waja comparison":
       "阿漾河与特拉加瓦贾河对比",
     ", and the full price picture across all three is in the":
@@ -47743,22 +47761,14 @@ const PINNED_TRANSLATIONS = {
       "漂流价格指南",
     "Which rafting river in Bali is best for beginners?":
       "巴厘岛哪条漂流河最适合初学者？",
-    "The Ayung near Ubud. It is class II-III, runs about two hours, and the rapids are spaced out enough that a first-timer has time between them. The Telaga Waja is faster and ends with a drop, and its exit is 509 steps. Prices start at IDR 250,000 on the Ayung against IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, checked August 2026.":
-      "乌布附近的阿漾河。II-III 级，全程约两小时，急流之间间隔足够，初次体验者有喘息的时间。特拉加瓦贾河更快，结尾有落差，出口是 509 级台阶。价格方面，阿漾河从 250,000 IDR 起，特拉加瓦贾河 270,000 IDR，梅朗吉河 300,000 IDR，2026 年 8 月核对。",
     "Ayung, Telaga Waja or Melangit: which Bali rafting river to pick, how bad the stairs really are, and 2026 prices from IDR 250,000.":
       "阿漾河、特拉加瓦贾河还是梅朗吉河：巴厘岛漂流选哪条，台阶到底有多难，2026 年价格 250,000 IDR 起。",
     "Are the Gili Islands worth visiting? Yes for turtles and one car-free island; no if you expect all three in one go.":
       "吉利群岛值得去吗？为了海龟和一座无车小岛，值得；若想一次跑完三座，不值得。",
     "Price sorts them in the opposite order to difficulty. Checked in August 2026, online entry prices start at IDR 250,000 on the Ayung, IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, which has the highest floor of the three despite being the least known. Those are the entry rates before transfer, and a boat plus transfer often lands above an operator's own all-in package, so compare the total rather than the headline.":
       "价格的排序与难度相反。2026 年 8 月核对，网上入门价阿漾河从 250,000 IDR 起，特拉加瓦贾河 270,000 IDR，梅朗吉河 300,000 IDR——最不知名的一条门槛反而最高。这些是不含接送的入门价，而船票加接送往往高于经营者自己的全包套餐，所以要比总价，而不是标价。",
-    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up, and on the Telaga Waja the number is 509 steps. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
-      "真正的筛选条件不是急流，而是台阶。阿漾河的终点要走一段长长的上坡，特拉加瓦贾河那边则是 509 级台阶。膝盖不好、带着小孩或没睡好的人，应该按这个数字来选，而不是按急流等级。我们把两条主要河流并排对比，见",
-    "Telaga Waja: the fast one, and the run without the staircase":
-      "特拉加瓦贾河：更快的一条，也是没有台阶的一条",
     "The Telaga Waja in east Bali is the river people book when the Ayung sounded too gentle. It runs faster, the rapids come closer together, and the descent finishes over a dam drop that catches out anyone who stopped paying attention. Entry prices start at IDR 270,000, checked in August 2026.":
       "巴厘岛东部的特拉加瓦贾河，是觉得阿漾河太温和的人会订的那条。水流更快，急流衔接更紧，下游以一处堰坝落差收尾，稍不留神就会被它打个措手不及。入门价从 270,000 IDR 起，2026 年 8 月核对。",
-    "The counterintuitive part is the walking. The Ayung route costs you around 509 steps down and 250 back up; the Telaga Waja has roughly five at the start, and several operators sell it specifically as the run with no staircase at the end. If knees rather than nerve are the constraint, the harder river is the easier day.":
-      "反直觉的部分在走路。阿漾河的路线大约要下 509 级台阶、再上 250 级；特拉加瓦贾河起点只有五级左右，好几家经营者正是把它当作「终点没有台阶」的路线来卖。如果限制在膝盖而不在胆量，更难的那条河反而是更轻松的一天。",
     "Distances reverse depending on where you sleep. From Ubud the Ayung is 20 minutes away and the Telaga Waja about 70. From Seminyak or Kuta it flips: the east river is roughly 95 minutes, against 1.5 to 2 hours to the Ayung launch point.":
       "距离会随你住在哪里而颠倒。从乌布出发，阿漾河 20 分钟，特拉加瓦贾河约 70 分钟。从水明漾或库塔出发则相反：东部这条河约 95 分钟，而到阿漾河下水点要 1.5 到 2 小时。",
     "Melangit: the quiet one in Klungkung":
@@ -47881,12 +47891,20 @@ const PINNED_TRANSLATIONS = {
       "巴厘岛旅行要花多少钱？2026年真实物价与三档预算",
   },
   de: {
-    "Telaga Waja: the fast one, and the run without the staircase":
-      "Telaga Waja: der schnelle Fluss ohne Treppe",
+    "Bali White Water Rafting: Ayung River Guide for 2026":
+      "Rafting auf Bali: 3 Flüsse im Vergleich, Preise und Level 2026",
+    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
+      "Der praktische Filter sind nicht die Stromschnellen, sondern die Treppen. Das Ende am Ayung bedeutet einen langen Aufstieg: rund 509 Stufen hinunter in die Schlucht und 250 wieder hinauf. Wer Knieprobleme, kleine Kinder oder eine schlechte Nacht hinter sich hat, sollte nach dieser Zahl entscheiden und nicht nach der Schwierigkeitsklasse. Wir stellen die beiden Hauptflüsse nebeneinander im",
+    "Telaga Waja: the fast one, and the easier day for your knees":
+      "Telaga Waja: der schnelle Fluss und der leichtere Tag für die Knie",
+    "The counterintuitive part is the walking. The Ayung route costs you around 509 steps down and 250 back up; on the Telaga Waja the same operator counts about five at the start and 250 at the finish, and some listings sell it as the run with no climb at all. Either way it is the lighter day. If knees rather than nerve are the constraint, the harder river is the easier choice.":
+      "Das Widersprüchliche liegt im Gehen. Die Ayung-Route kostet rund 509 Stufen hinunter und 250 wieder hinauf; am Telaga Waja zählt derselbe Anbieter etwa fünf am Start und 250 am Ausstieg, und manche Anzeigen verkaufen ihn als Tour ganz ohne Aufstieg. So oder so ist es der leichtere Tag. Wenn die Knie und nicht die Nerven die Grenze setzen, ist der schwerere Fluss die einfachere Wahl.",
+    "The Ayung near Ubud. It is class II-III, runs about two hours, and the rapids are spaced out enough that a first-timer has time between them. The Telaga Waja is faster and ends with a four-metre dam drop. Prices start at IDR 250,000 on the Ayung against IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, checked August 2026.":
+      "Der Ayung bei Ubud. Klasse II-III, etwa zwei Stunden, und die Stromschnellen liegen weit genug auseinander, dass ein Erstfahrer dazwischen Zeit hat. Der Telaga Waja ist schneller und endet mit einem vier Meter hohen Wehrabfall. Die Preise beginnen bei 250.000 IDR am Ayung gegenüber 270.000 IDR am Telaga Waja und 300.000 IDR am Melangit, geprüft im August 2026.",
+    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up: around 509 steps down into the gorge and 250 back up. Anyone with knees, small children or a bad night&#39;s sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
+      "Der praktische Filter sind nicht die Stromschnellen, sondern die Treppen. Das Ende am Ayung bedeutet einen langen Aufstieg: rund 509 Stufen hinunter in die Schlucht und 250 wieder hinauf. Wer Knieprobleme, kleine Kinder oder eine schlechte Nacht hinter sich hat, sollte nach dieser Zahl entscheiden und nicht nach der Schwierigkeitsklasse. Wir stellen die beiden Hauptflüsse nebeneinander im",
     "The Telaga Waja in east Bali is the river people book when the Ayung sounded too gentle. It runs faster, the rapids come closer together, and the descent finishes over a dam drop that catches out anyone who stopped paying attention. Entry prices start at IDR 270,000, checked in August 2026.":
       "Der Telaga Waja im Osten Balis ist der Fluss, den man bucht, wenn der Ayung zu zahm klang. Er fließt schneller, die Stromschnellen folgen dichter aufeinander, und die Abfahrt endet über einen Wehrabfall, der jeden überrascht, der aufgehört hat aufzupassen. Die Einstiegspreise beginnen bei 270.000 IDR, geprüft im August 2026.",
-    "The counterintuitive part is the walking. The Ayung route costs you around 509 steps down and 250 back up; the Telaga Waja has roughly five at the start, and several operators sell it specifically as the run with no staircase at the end. If knees rather than nerve are the constraint, the harder river is the easier day.":
-      "Das Widersprüchliche liegt im Gehen. Die Ayung-Route kostet rund 509 Stufen hinunter und 250 wieder hinauf; der Telaga Waja hat etwa fünf am Start, und mehrere Anbieter verkaufen ihn genau als die Tour ohne Treppe am Ende. Wenn die Knie und nicht die Nerven die Grenze setzen, ist der schwerere Fluss der leichtere Tag.",
     "Distances reverse depending on where you sleep. From Ubud the Ayung is 20 minutes away and the Telaga Waja about 70. From Seminyak or Kuta it flips: the east river is roughly 95 minutes, against 1.5 to 2 hours to the Ayung launch point.":
       "Die Entfernungen kehren sich um, je nachdem wo Sie schlafen. Von Ubud aus liegt der Ayung 20 Minuten entfernt, der Telaga Waja etwa 70. Von Seminyak oder Kuta ist es umgekehrt: Der Fluss im Osten liegt bei rund 95 Minuten, gegenüber 1,5 bis 2 Stunden bis zum Einstieg am Ayung.",
     "Melangit: the quiet one in Klungkung":
@@ -47915,8 +47933,6 @@ const PINNED_TRANSLATIONS = {
       "Bali hat drei kommerzielle Raftingflüsse, und sie sind nicht austauschbar. Der Ayung bei Ubud ist der sanfte: Klasse II-III, etwa zwei Stunden auf dem Wasser, und der einzige, den die meisten Familien und Erstfahrer in Betracht ziehen sollten. Der Telaga Waja im Osten fließt schneller und endet mit einem Absturz, der viele überrascht, und der Melangit ist der ruhigste der drei, mit dem wenigsten Betrieb und den wenigsten Anbietern.",
     "Price sorts them in the opposite order to difficulty. Checked in August 2026, online entry prices start at IDR 250,000 on the Ayung, IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, which has the highest floor of the three despite being the least known. Those are the entry rates before transfer, and a boat plus transfer often lands above an operator&#39;s own all-in package, so compare the total rather than the headline.":
       "Der Preis ordnet sie genau umgekehrt zur Schwierigkeit. Im August 2026 geprüft, beginnen die Online-Einstiegspreise bei 250.000 IDR am Ayung, 270.000 IDR am Telaga Waja und 300.000 IDR am Melangit, der trotz geringster Bekanntheit die höchste Untergrenze hat. Das sind Einstiegspreise ohne Transfer, und Boot plus Transfer liegt oft über dem Komplettpaket des Anbieters selbst — vergleichen Sie also die Gesamtsumme, nicht die Schlagzeile.",
-    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up, and on the Telaga Waja the number is 509 steps. Anyone with knees, small children or a bad night&#39;s sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
-      "Der praktische Filter sind nicht die Stromschnellen, sondern die Treppen. Das Ende am Ayung bedeutet einen langen Aufstieg, und am Telaga Waja sind es 509 Stufen. Wer Knieprobleme, kleine Kinder oder eine schlechte Nacht hinter sich hat, sollte nach dieser Zahl entscheiden und nicht nach der Schwierigkeitsklasse. Wir stellen die beiden Hauptflüsse nebeneinander im",
     "Ayung versus Telaga Waja comparison":
       "Vergleich Ayung gegen Telaga Waja",
     ", and the full price picture across all three is in the":
@@ -47925,16 +47941,12 @@ const PINNED_TRANSLATIONS = {
       "Rafting-Preisguide",
     "Which rafting river in Bali is best for beginners?":
       "Welcher Raftingfluss auf Bali eignet sich am besten für Anfänger?",
-    "The Ayung near Ubud. It is class II-III, runs about two hours, and the rapids are spaced out enough that a first-timer has time between them. The Telaga Waja is faster and ends with a drop, and its exit is 509 steps. Prices start at IDR 250,000 on the Ayung against IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, checked August 2026.":
-      "Der Ayung bei Ubud. Klasse II-III, etwa zwei Stunden, und die Stromschnellen liegen weit genug auseinander, dass ein Erstfahrer dazwischen Zeit hat. Der Telaga Waja ist schneller und endet mit einem Absturz, sein Ausstieg sind 509 Stufen. Die Preise beginnen bei 250.000 IDR am Ayung gegenüber 270.000 IDR am Telaga Waja und 300.000 IDR am Melangit, geprüft im August 2026.",
     "Ayung, Telaga Waja or Melangit: which Bali rafting river to pick, how bad the stairs really are, and 2026 prices from IDR 250,000.":
       "Ayung, Telaga Waja oder Melangit: welchen Raftingfluss auf Bali wählen, wie hart die Treppen wirklich sind und Preise 2026 ab 250.000 IDR.",
     "Are the Gili Islands worth visiting? Yes for turtles and one car-free island; no if you expect all three in one go.":
       "Lohnen sich die Gili-Inseln? Ja für Schildkröten und eine autofreie Insel; nein, wenn Sie alle drei auf einmal erwarten.",
     "Price sorts them in the opposite order to difficulty. Checked in August 2026, online entry prices start at IDR 250,000 on the Ayung, IDR 270,000 on the Telaga Waja and IDR 300,000 on the Melangit, which has the highest floor of the three despite being the least known. Those are the entry rates before transfer, and a boat plus transfer often lands above an operator's own all-in package, so compare the total rather than the headline.":
       "Der Preis ordnet sie genau umgekehrt zur Schwierigkeit. Im August 2026 geprüft, beginnen die Online-Einstiegspreise bei 250.000 IDR am Ayung, 270.000 IDR am Telaga Waja und 300.000 IDR am Melangit, der trotz geringster Bekanntheit die höchste Untergrenze hat. Das sind Einstiegspreise ohne Transfer, und Boot plus Transfer liegt oft über dem Komplettpaket des Anbieters selbst — vergleichen Sie also die Gesamtsumme, nicht die Schlagzeile.",
-    "The practical filter is not the rapids, it is the stairs. The Ayung finish involves a long climb back up, and on the Telaga Waja the number is 509 steps. Anyone with knees, small children or a bad night's sleep should choose on that number rather than on the class rating. We break the two main rivers down side by side in the":
-      "Der praktische Filter sind nicht die Stromschnellen, sondern die Treppen. Das Ende am Ayung bedeutet einen langen Aufstieg, und am Telaga Waja sind es 509 Stufen. Wer Knieprobleme, kleine Kinder oder eine schlechte Nacht hinter sich hat, sollte nach dieser Zahl entscheiden und nicht nach der Schwierigkeitsklasse. Wir stellen die beiden Hauptflüsse nebeneinander im",
     "The usual pattern is a heavy downpour of one to two hours in the late afternoon or evening, with sunshine either side. Even in January there are plenty of clear mornings. The trade-off is real though: more humidity and mosquitoes, rougher seas, occasional boat cancellations, and beach trash washing onto the west coast between December and February.":
       "Üblich ist ein kräftiger Guss von ein bis zwei Stunden am späten Nachmittag oder Abend, davor und danach Sonne. Selbst im Januar gibt es viele klare Vormittage. Der Preis dafür ist real: mehr Feuchtigkeit und Mücken, rauere See, gelegentlich ausfallende Boote und Strandmüll, der zwischen Dezember und Februar an die Westküste gespült wird.",
     "— no arrivals, no departures. Roads and ports close, shops and restaurants shut, mobile data is switched off island-wide, and everyone including tourists must stay on hotel or villa grounds. Village security patrol to enforce it.":
