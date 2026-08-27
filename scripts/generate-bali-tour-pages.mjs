@@ -48475,6 +48475,100 @@ let translateBudgetSpent = false;
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+/* Запасной канал перевода — официальный Cloud Translation.
+ *
+ * Бесплатная точка translate_a/single ушла в глухой отказ: пять запросов из
+ * пяти отдают 429, и это не разрыв в лимите, а стена. Пока она закрыта, любая
+ * новая строка остаётся английской, а немецкая версия сайта стоит на 35%
+ * наполнения кэша против французских 100%.
+ *
+ * Ключ берём тот же, что уже лежит для Search Console. Если Cloud Translation
+ * в проекте не включён, API отвечает 403 с текстом «has not been used in
+ * project … or it is disabled» — тогда канал помечается недоступным ОДИН раз,
+ * и сборка больше в него не стучится: иначе на каждую строку приходился бы
+ * лишний запрос и минуты ожидания впустую.
+ *
+ * Включается по адресу из текста ошибки, одной кнопкой в консоли проекта. */
+const CLOUD_TRANSLATE_KEY_PATH = process.env.SB_TRANSLATE_KEY
+  || path.join(process.env.HOME || "", ".config", "claude-seo", "service_account.json");
+let cloudTranslateState = null; // null — не пробовали, false — недоступен, объект — готов
+let cloudTokenCache = { token: null, expiresAt: 0 };
+
+async function cloudAccessToken(key) {
+  if (cloudTokenCache.token && Date.now() < cloudTokenCache.expiresAt - 60_000) return cloudTokenCache.token;
+  const crypto = await import("node:crypto");
+  const now = Math.floor(Date.now() / 1000);
+  const b64 = (obj) => Buffer.from(JSON.stringify(obj)).toString("base64url");
+  const claim = `${b64({ alg: "RS256", typ: "JWT" })}.${b64({
+    iss: key.client_email,
+    scope: "https://www.googleapis.com/auth/cloud-platform",
+    aud: "https://oauth2.googleapis.com/token",
+    exp: now + 3600,
+    iat: now,
+  })}`;
+  const signature = crypto.createSign("RSA-SHA256").update(claim).sign(key.private_key).toString("base64url");
+  const response = await fetch("https://oauth2.googleapis.com/token", {
+    method: "POST",
+    headers: { "content-type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+      assertion: `${claim}.${signature}`,
+    }),
+    signal: AbortSignal.timeout(15000),
+  });
+  if (!response.ok) throw new Error(`token ${response.status}`);
+  const data = await response.json();
+  cloudTokenCache = { token: data.access_token, expiresAt: Date.now() + data.expires_in * 1000 };
+  return cloudTokenCache.token;
+}
+
+async function fetchCloudTranslation(text, locale) {
+  if (cloudTranslateState === false) return null;
+  if (cloudTranslateState === null) {
+    try {
+      cloudTranslateState = JSON.parse(fs.readFileSync(CLOUD_TRANSLATE_KEY_PATH, "utf8"));
+    } catch {
+      cloudTranslateState = false;
+      console.warn("⚠ перевод: ключа Cloud Translation нет, запасного канала не будет");
+      return null;
+    }
+  }
+  const key = cloudTranslateState;
+  try {
+    const token = await cloudAccessToken(key);
+    const response = await fetch(
+      `https://translation.googleapis.com/v3/projects/${key.project_id}:translateText`,
+      {
+        method: "POST",
+        headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+        body: JSON.stringify({
+          contents: [text],
+          sourceLanguageCode: "en",
+          targetLanguageCode: translationLocaleCode(locale),
+          mimeType: "text/plain",
+        }),
+        signal: AbortSignal.timeout(20000),
+      },
+    );
+    if (!response.ok) {
+      const body = await response.text();
+      cloudTranslateState = false;
+      if (/has not been used in project|is disabled/.test(body)) {
+        console.warn("⚠ перевод: Cloud Translation в проекте не включён — включите его, и запасной канал заработает");
+      } else {
+        console.warn(`⚠ перевод: Cloud Translation отвечает ${response.status}, канал отключён на эту сборку`);
+      }
+      return null;
+    }
+    const data = await response.json();
+    return data?.translations?.[0]?.translatedText || null;
+  } catch (error) {
+    cloudTranslateState = false;
+    console.warn(`⚠ перевод: Cloud Translation недоступен (${String(error.message).slice(0, 60)}), канал отключён`);
+    return null;
+  }
+}
+
 async function fetchGoogleTranslation(text, locale = "en", attempt = 0) {
   if (Date.now() - translateStartedAt > TRANSLATE_BUDGET_MS) {
     if (!translateBudgetSpent) {
@@ -48506,6 +48600,8 @@ async function fetchGoogleTranslation(text, locale = "en", attempt = 0) {
     });
   } catch (error) {
     if (attempt < 1) { await sleep(1200); return fetchGoogleTranslation(text, locale, attempt + 1); }
+    const viaCloud = await fetchCloudTranslation(text, locale);
+    if (viaCloud) return viaCloud;
     throw error;
   }
   if (!response.ok) {
@@ -48514,6 +48610,8 @@ async function fetchGoogleTranslation(text, locale = "en", attempt = 0) {
       await sleep(2000);
       return fetchGoogleTranslation(text, locale, attempt + 1);
     }
+    const viaCloud = await fetchCloudTranslation(text, locale);
+    if (viaCloud) return viaCloud;
     throw new Error(`Translation request failed with ${response.status}`);
   }
 
