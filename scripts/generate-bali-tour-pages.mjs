@@ -15626,14 +15626,16 @@ const JOURNAL_SEO_GUIDES = [
         "paragraphs": [
           "The Telaga Waja in east Bali is the river people book when the Ayung sounded too gentle. It runs faster, the rapids come closer together, and the descent finishes over a dam drop that catches out anyone who stopped paying attention. Entry prices start at IDR 270,000, checked in August 2026.",
           "The counterintuitive part is the walking. The Ayung route costs you around 509 steps down and 250 back up; on the Telaga Waja the same operator counts about five at the start and 250 at the finish, and some listings sell it as the run with no climb at all. Either way it is the lighter day. If knees rather than nerve are the constraint, the harder river is the easier choice.",
-          "Distances reverse depending on where you sleep. From Ubud the Ayung is 20 minutes away and the Telaga Waja about 70. From Seminyak or Kuta it flips: the east river is roughly 95 minutes, against 1.5 to 2 hours to the Ayung launch point."
+          "Distances reverse depending on where you sleep. From Ubud the Ayung is 20 minutes away and the Telaga Waja about 70. From Seminyak or Kuta it flips: the east river is roughly 95 minutes, against 1.5 to 2 hours to the Ayung launch point.",
+          "The numbers, where operators publish them: Class III+ on Sobek's own site, III-IV on most aggregators, roughly 16 km of river in 2.5-3 hours. Do the division and the reputation deflates \u2014 that is 5.3 to 6.4 km/h, against 6 to 8 km/h on the shorter Ayung. The eastern river is longer, not faster."
         ]
       },
       {
         "heading": "Melangit: the quiet one in Klungkung",
         "paragraphs": [
           "The Melangit is the least known of the three and the one with the fewest operators working it, which is exactly its appeal \u2014 you are unlikely to queue at the launch point or share a rapid with three other rafts. It runs through the Klungkung regency in the island's east.",
-          "Being least known does not make it cheapest. Entry prices start at IDR 300,000, the highest floor of the three rivers, and one operator's child tariff for ages 7 to 12 runs at $20, $25 or $35 depending on whether you drive yourself, join a group transfer or take a private car. Fewer operators means less price competition, not more."
+          "Being least known does not make it cheapest. Entry prices start at IDR 300,000, the highest floor of the three rivers, and one operator's child tariff for ages 7 to 12 runs at $20, $25 or $35 depending on whether you drive yourself, join a group transfer or take a private car. Fewer operators means less price competition, not more.",
+          "The practical numbers: 21 km from central Ubud, about 50 minutes by road, and roughly five minutes on foot from the drop-off to the water. That last figure is the one to weigh against the Ayung's staircases if walking is the constraint."
         ]
       },
       {
@@ -46627,6 +46629,14 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "The numbers, where operators publish them: Class III+ on Sobek's own site, III-IV on most aggregators, roughly 16 km of river in 2.5-3 hours. Do the division and the reputation deflates — that is 5.3 to 6.4 km/h, against 6 to 8 km/h on the shorter Ayung. The eastern river is longer, not faster.":
+      "Цифры там, где операторы их публикуют: класс III+ на сайте Sobek, III–IV у большинства агрегаторов, около 16 км реки за 2,5–3 часа. Поделите одно на другое — и репутация сдувается: получается 5,3–6,4 км/ч против 6–8 км/ч на более коротком Аюнге. Восточная река длиннее, а не быстрее.",
+    "The practical numbers: 21 km from central Ubud, about 50 minutes by road, and roughly five minutes on foot from the drop-off to the water. That last figure is the one to weigh against the Ayung's staircases if walking is the constraint.":
+      "Практические цифры: 21 км от центра Убуда, около 50 минут по дороге и примерно пять минут пешком от высадки до воды. Именно последнее число стоит ставить рядом с лестницами Аюнга, если ограничение — ходьба.",
+    "The numbers, where operators publish them: Class III+ on Sobek&#39;s own site, III-IV on most aggregators, roughly 16 km of river in 2.5-3 hours. Do the division and the reputation deflates — that is 5.3 to 6.4 km/h, against 6 to 8 km/h on the shorter Ayung. The eastern river is longer, not faster.":
+      "Цифры там, где операторы их публикуют: класс III+ на сайте Sobek, III–IV у большинства агрегаторов, около 16 км реки за 2,5–3 часа. Поделите одно на другое — и репутация сдувается: получается 5,3–6,4 км/ч против 6–8 км/ч на более коротком Аюнге. Восточная река длиннее, а не быстрее.",
+    "The practical numbers: 21 km from central Ubud, about 50 minutes by road, and roughly five minutes on foot from the drop-off to the water. That last figure is the one to weigh against the Ayung&#39;s staircases if walking is the constraint.":
+      "Практические цифры: 21 км от центра Убуда, около 50 минут по дороге и примерно пять минут пешком от высадки до воды. Именно последнее число стоит ставить рядом с лестницами Аюнга, если ограничение — ходьба.",
     "2.5–3 hours":
       "2,5–3 часа",
     "2–2.5 hours":
@@ -47061,6 +47071,14 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "The numbers, where operators publish them: Class III+ on Sobek's own site, III-IV on most aggregators, roughly 16 km of river in 2.5-3 hours. Do the division and the reputation deflates — that is 5.3 to 6.4 km/h, against 6 to 8 km/h on the shorter Ayung. The eastern river is longer, not faster.":
+      "Los números, donde los operadores los publican: clase III+ en la web de Sobek, III-IV en la mayoría de agregadores, unos 16 km de río en 2,5 a 3 horas. Haz la división y la reputación se desinfla: son 5,3 a 6,4 km/h, frente a 6 a 8 km/h en el Ayung, que es más corto. El río del este es más largo, no más rápido.",
+    "The practical numbers: 21 km from central Ubud, about 50 minutes by road, and roughly five minutes on foot from the drop-off to the water. That last figure is the one to weigh against the Ayung's staircases if walking is the constraint.":
+      "Los números prácticos: 21 km desde el centro de Ubud, unos 50 minutos de carretera y alrededor de cinco minutos a pie desde donde te dejan hasta el agua. Esa última cifra es la que hay que comparar con las escaleras del Ayung si caminar es la limitación.",
+    "The numbers, where operators publish them: Class III+ on Sobek&#39;s own site, III-IV on most aggregators, roughly 16 km of river in 2.5-3 hours. Do the division and the reputation deflates — that is 5.3 to 6.4 km/h, against 6 to 8 km/h on the shorter Ayung. The eastern river is longer, not faster.":
+      "Los números, donde los operadores los publican: clase III+ en la web de Sobek, III-IV en la mayoría de agregadores, unos 16 km de río en 2,5 a 3 horas. Haz la división y la reputación se desinfla: son 5,3 a 6,4 km/h, frente a 6 a 8 km/h en el Ayung, que es más corto. El río del este es más largo, no más rápido.",
+    "The practical numbers: 21 km from central Ubud, about 50 minutes by road, and roughly five minutes on foot from the drop-off to the water. That last figure is the one to weigh against the Ayung&#39;s staircases if walking is the constraint.":
+      "Los números prácticos: 21 km desde el centro de Ubud, unos 50 minutos de carretera y alrededor de cinco minutos a pie desde donde te dejan hasta el agua. Esa última cifra es la que hay que comparar con las escaleras del Ayung si caminar es la limitación.",
     "2.5–3 hours":
       "2,5 a 3 horas",
     "2–2.5 hours":
@@ -47411,6 +47429,14 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "The numbers, where operators publish them: Class III+ on Sobek's own site, III-IV on most aggregators, roughly 16 km of river in 2.5-3 hours. Do the division and the reputation deflates — that is 5.3 to 6.4 km/h, against 6 to 8 km/h on the shorter Ayung. The eastern river is longer, not faster.":
+      "Les chiffres, là où les opérateurs les publient : classe III+ sur le site de Sobek, III-IV chez la plupart des agrégateurs, environ 16 km de rivière en 2,5 à 3 heures. Faites la division et la réputation se dégonfle : cela donne 5,3 à 6,4 km/h, contre 6 à 8 km/h sur l'Ayung, pourtant plus courte. La rivière de l'est est plus longue, pas plus rapide.",
+    "The practical numbers: 21 km from central Ubud, about 50 minutes by road, and roughly five minutes on foot from the drop-off to the water. That last figure is the one to weigh against the Ayung's staircases if walking is the constraint.":
+      "Les chiffres pratiques : 21 km depuis le centre d'Ubud, environ 50 minutes de route, et à peu près cinq minutes à pied entre la dépose et l'eau. C'est ce dernier chiffre qu'il faut mettre en face des escaliers de l'Ayung si la marche est la contrainte.",
+    "The numbers, where operators publish them: Class III+ on Sobek&#39;s own site, III-IV on most aggregators, roughly 16 km of river in 2.5-3 hours. Do the division and the reputation deflates — that is 5.3 to 6.4 km/h, against 6 to 8 km/h on the shorter Ayung. The eastern river is longer, not faster.":
+      "Les chiffres, là où les opérateurs les publient : classe III+ sur le site de Sobek, III-IV chez la plupart des agrégateurs, environ 16 km de rivière en 2,5 à 3 heures. Faites la division et la réputation se dégonfle : cela donne 5,3 à 6,4 km/h, contre 6 à 8 km/h sur l'Ayung, pourtant plus courte. La rivière de l'est est plus longue, pas plus rapide.",
+    "The practical numbers: 21 km from central Ubud, about 50 minutes by road, and roughly five minutes on foot from the drop-off to the water. That last figure is the one to weigh against the Ayung&#39;s staircases if walking is the constraint.":
+      "Les chiffres pratiques : 21 km depuis le centre d'Ubud, environ 50 minutes de route, et à peu près cinq minutes à pied entre la dépose et l'eau. C'est ce dernier chiffre qu'il faut mettre en face des escaliers de l'Ayung si la marche est la contrainte.",
     "2.5–3 hours":
       "2,5 à 3 heures",
     "2–2.5 hours":
@@ -47913,6 +47939,14 @@ const PINNED_TRANSLATIONS = {
       "Bali est-elle sûre en 2026 ? 7 arnaques courantes à éviter",
   },
   "zh-CN": {
+    "The numbers, where operators publish them: Class III+ on Sobek's own site, III-IV on most aggregators, roughly 16 km of river in 2.5-3 hours. Do the division and the reputation deflates — that is 5.3 to 6.4 km/h, against 6 to 8 km/h on the shorter Ayung. The eastern river is longer, not faster.":
+      "经营者公布的数据：Sobek 官网标为 III+ 级，多数聚合平台标 III-IV 级，河段约 16 公里，用时 2.5 至 3 小时。做个除法，名声就泄了气：这是每小时 5.3 到 6.4 公里，而更短的阿漾河是每小时 6 到 8 公里。东部这条河是更长，不是更快。",
+    "The practical numbers: 21 km from central Ubud, about 50 minutes by road, and roughly five minutes on foot from the drop-off to the water. That last figure is the one to weigh against the Ayung's staircases if walking is the constraint.":
+      "实用数据：距乌布市中心 21 公里，车程约 50 分钟，从下车点步行到水边约五分钟。如果限制在于走路，最该拿来和阿漾河的台阶作比较的就是最后这个数字。",
+    "The numbers, where operators publish them: Class III+ on Sobek&#39;s own site, III-IV on most aggregators, roughly 16 km of river in 2.5-3 hours. Do the division and the reputation deflates — that is 5.3 to 6.4 km/h, against 6 to 8 km/h on the shorter Ayung. The eastern river is longer, not faster.":
+      "经营者公布的数据：Sobek 官网标为 III+ 级，多数聚合平台标 III-IV 级，河段约 16 公里，用时 2.5 至 3 小时。做个除法，名声就泄了气：这是每小时 5.3 到 6.4 公里，而更短的阿漾河是每小时 6 到 8 公里。东部这条河是更长，不是更快。",
+    "The practical numbers: 21 km from central Ubud, about 50 minutes by road, and roughly five minutes on foot from the drop-off to the water. That last figure is the one to weigh against the Ayung&#39;s staircases if walking is the constraint.":
+      "实用数据：距乌布市中心 21 公里，车程约 50 分钟，从下车点步行到水边约五分钟。如果限制在于走路，最该拿来和阿漾河的台阶作比较的就是最后这个数字。",
     "2.5–3 hours":
       "2.5–3 小时",
     "2–2.5 hours":
@@ -48131,6 +48165,14 @@ const PINNED_TRANSLATIONS = {
       "巴厘岛旅行要花多少钱？2026年真实物价与三档预算",
   },
   de: {
+    "The numbers, where operators publish them: Class III+ on Sobek's own site, III-IV on most aggregators, roughly 16 km of river in 2.5-3 hours. Do the division and the reputation deflates — that is 5.3 to 6.4 km/h, against 6 to 8 km/h on the shorter Ayung. The eastern river is longer, not faster.":
+      "Die Zahlen, soweit die Anbieter sie veröffentlichen: Klasse III+ auf Sobeks eigener Seite, III-IV bei den meisten Aggregatoren, rund 16 km Fluss in 2,5 bis 3 Stunden. Rechnet man das um, verliert der Ruf an Luft: das sind 5,3 bis 6,4 km/h gegenüber 6 bis 8 km/h auf dem kürzeren Ayung. Der östliche Fluss ist länger, nicht schneller.",
+    "The practical numbers: 21 km from central Ubud, about 50 minutes by road, and roughly five minutes on foot from the drop-off to the water. That last figure is the one to weigh against the Ayung's staircases if walking is the constraint.":
+      "Die praktischen Zahlen: 21 km vom Zentrum Ubuds, etwa 50 Minuten Fahrt und rund fünf Minuten zu Fuß vom Absetzpunkt bis zum Wasser. Diese letzte Zahl ist die, die man den Treppen am Ayung gegenüberstellen sollte, wenn das Gehen die Grenze setzt.",
+    "The numbers, where operators publish them: Class III+ on Sobek&#39;s own site, III-IV on most aggregators, roughly 16 km of river in 2.5-3 hours. Do the division and the reputation deflates — that is 5.3 to 6.4 km/h, against 6 to 8 km/h on the shorter Ayung. The eastern river is longer, not faster.":
+      "Die Zahlen, soweit die Anbieter sie veröffentlichen: Klasse III+ auf Sobeks eigener Seite, III-IV bei den meisten Aggregatoren, rund 16 km Fluss in 2,5 bis 3 Stunden. Rechnet man das um, verliert der Ruf an Luft: das sind 5,3 bis 6,4 km/h gegenüber 6 bis 8 km/h auf dem kürzeren Ayung. Der östliche Fluss ist länger, nicht schneller.",
+    "The practical numbers: 21 km from central Ubud, about 50 minutes by road, and roughly five minutes on foot from the drop-off to the water. That last figure is the one to weigh against the Ayung&#39;s staircases if walking is the constraint.":
+      "Die praktischen Zahlen: 21 km vom Zentrum Ubuds, etwa 50 Minuten Fahrt und rund fünf Minuten zu Fuß vom Absetzpunkt bis zum Wasser. Diese letzte Zahl ist die, die man den Treppen am Ayung gegenüberstellen sollte, wenn das Gehen die Grenze setzt.",
     "2.5–3 hours":
       "2,5–3 Stunden",
     "2–2.5 hours":
