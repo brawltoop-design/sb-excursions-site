@@ -25,7 +25,12 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const TAG = '<script defer src="/_vercel/insights/script.js"></script>';
+const TAG =
+  '<script>try{if(!localStorage.getItem("va-disable")){var v=document.createElement("script");' +
+  'v.defer=true;v.src="/_vercel/insights/script.js";document.head.appendChild(v);}}catch(e){' +
+  'var v2=document.createElement("script");v2.defer=true;v2.src="/_vercel/insights/script.js";' +
+  'document.head.appendChild(v2);}</script>';
+const OLD_TAG = '<script defer src="/_vercel/insights/script.js"></script>';
 const MARKER = "/_vercel/insights/script.js";
 
 const DUBAI = new Set([
@@ -52,13 +57,22 @@ async function* walk(dir) {
   }
 }
 
-const stats = { added: 0, already: 0, skippedDubai: 0, noBody: 0 };
+const stats = { added: 0, migrated: 0, already: 0, skippedDubai: 0, noBody: 0 };
 
 for await (const file of walk(ROOT)) {
   const rel = path.relative(ROOT, file);
   if (!includeDubai && DUBAI.has(rel)) { stats.skippedDubai++; continue; }
 
-  const html = await fs.readFile(file, "utf8");
+  let html = await fs.readFile(file, "utf8");
+  /* Старая безусловная форма тега заменяется на условную. Проверка по
+     MARKER одинаково срабатывает на обеих, поэтому миграцию делаем до неё,
+     иначе страницы навсегда остались бы со старым тегом. */
+  if (html.includes(OLD_TAG)) {
+    html = html.replace(OLD_TAG, TAG);
+    await fs.writeFile(file, html);
+    stats.migrated++;
+    continue;
+  }
   if (html.includes(MARKER)) { stats.already++; continue; }
 
   // Фрагменты files/*body.html не самостоятельные документы — </body> в них
