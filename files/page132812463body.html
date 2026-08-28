@@ -3654,40 +3654,7 @@ alt='' imgfield='tn_img_1768942381874'
 /> </div> </div> <div class='t396__elem tn-elem tn-elem__18037182911768942433209' data-elem-id='1768942433209' data-elem-type='image' data-field-top-value="157" data-field-left-value="998" data-field-height-value="40" data-field-width-value="54" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="451" data-field-fileheight-value="334" data-field-widthmode-value="fixed" data-field-heightmode-value="hug" data-field-top-res-320-value="480" data-field-left-res-320-value="173" data-field-height-res-320-value="30" data-field-width-res-320-value="41" data-field-container-res-320-value="grid" data-field-top-res-640-value="298" data-field-left-res-640-value="315" data-field-height-res-640-value="40" data-field-width-res-640-value="54" data-field-container-res-640-value="grid" data-field-top-res-960-value="298" data-field-left-res-960-value="534" data-field-height-res-960-value="40"> <div class='tn-atom'> <img class='tn-atom__img t-img' data-original='/images/tilda/bitpay-6af06aea.png'
 src='/images/tilda/bitpay-c9ceb147.png'
 alt='' imgfield='tn_img_1768942433209'
-/> </div> </div> </div> </div> <script>t_onFuncLoad('t396_initialScale',function() {t396_initialScale('1803718291');});t_onReady(function() {t_onFuncLoad('t396_init',function() {t396_init('1803718291');});});</script> <!-- /T396 --> </div> </div> <!--/allrecords--><script id="sb-mobile-tours-link">
-(function () {
-  function toursHref() {
-    var parts = window.location.pathname.split("/");
-    var lang = parts[1] === "bali" && parts[2] ? parts[2] : "en";
-    return "/bali/" + lang + "/main-page";
-  }
-  function apply() {
-    if (window.location.pathname.indexOf("/bali/") !== 0) return;
-    var items = document.querySelectorAll(".t451 a.t451__link-item_submenu, .t451 a.t-menu__link-item_submenu");
-    Array.prototype.forEach.call(items, function (item) {
-      var href = toursHref();
-      if (item.getAttribute("href") !== href) item.setAttribute("href", href);
-      if (item.getAttribute("data-sb-tours-link") === "1") return;
-      item.setAttribute("data-sb-tours-link", "1");
-      item.addEventListener("click", function (e) {
-        e.stopPropagation();
-        e.preventDefault();
-        window.location.href = toursHref();
-      }, true);
-    });
-  }
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", apply);
-  } else {
-    apply();
-  }
-  window.addEventListener("load", apply);
-  setTimeout(apply, 500);
-  setTimeout(apply, 1500);
-  setTimeout(apply, 3000);
-})();
-</script>
-<script id="sb-west-page-layout-autofit">
+/> </div> </div> </div> </div> <script>t_onFuncLoad('t396_initialScale',function() {t396_initialScale('1803718291');});t_onReady(function() {t_onFuncLoad('t396_init',function() {t396_init('1803718291');});});</script> <!-- /T396 --> </div> </div> <!--/allrecords--><script id="sb-west-page-layout-autofit">
 
 (function () {
   /* Запуск геройского видео.
@@ -4905,4 +4872,38 @@ alt='' imgfield='tn_img_1768942433209'
   }
 })();
 
+</script>
+
+<script id="sb-mobile-tours-link">
+(function () {
+  function toursHref() {
+    var parts = window.location.pathname.split("/");
+    var lang = parts[1] === "bali" && parts[2] ? parts[2] : "en";
+    return "/bali/" + lang + "/main-page";
+  }
+  function apply() {
+    if (window.location.pathname.indexOf("/bali/") !== 0) return;
+    var items = document.querySelectorAll(".t451 a.t451__link-item_submenu, .t451 a.t-menu__link-item_submenu");
+    Array.prototype.forEach.call(items, function (item) {
+      var href = toursHref();
+      if (item.getAttribute("href") !== href) item.setAttribute("href", href);
+      if (item.getAttribute("data-sb-tours-link") === "1") return;
+      item.setAttribute("data-sb-tours-link", "1");
+      item.addEventListener("click", function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        window.location.href = toursHref();
+      }, true);
+    });
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", apply);
+  } else {
+    apply();
+  }
+  window.addEventListener("load", apply);
+  setTimeout(apply, 500);
+  setTimeout(apply, 1500);
+  setTimeout(apply, 3000);
+})();
 </script>

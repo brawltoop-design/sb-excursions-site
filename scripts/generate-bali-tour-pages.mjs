@@ -167,6 +167,13 @@ const BALI_LANGUAGE_OPTIONS = [
  * Вторая волна — после трёх недель наблюдения: индексируются ли эти сто и
  * растёт ли CTR в Германии. Расширять список здесь.
  */
+/* Немецкий выходил волнами: 27 туров и 69 гайдов из трёхсот с лишним
+   страниц. Причина была не в решении, а в переводе — бесплатная точка Google
+   в отказе, а руками столько строк не вписать. SB_DE_FULL=1 снимает волну
+   целиком: сначала для замера, сколько строк реально не хватает, потом для
+   самой раскатки. Держать волну имеет смысл только пока перевода нет. */
+const DE_FULL = process.env.SB_DE_FULL === "1";
+
 const DE_WAVE_TOURS = new Set([
   /* bali-unesco сюда не входит: её тексты переведены руками через
      UNESCO_PAGE_TRANSLATIONS, где есть только русский, и генератор для
@@ -287,7 +294,7 @@ const DE_WAVE_GUIDES = new Set([
 
 /* Покрыт ли слаг этим языком. Для всех языков кроме немецкого — всегда да. */
 function localeCoversTour(locale, slug) {
-  return locale !== "de" || DE_WAVE_TOURS.has(slug);
+  return locale !== "de" || DE_FULL || DE_WAVE_TOURS.has(slug);
 }
 /* Статьи, которые пока выходят только по-английски.
  *
@@ -332,11 +339,14 @@ function guideHasLocale(slug, locale) {
 
 function localeCoversGuide(locale, slug) {
   if (!guideHasLocale(slug, locale)) return false;
-  return locale !== "de" || DE_WAVE_GUIDES.has(slug);
+  return locale !== "de" || DE_FULL || DE_WAVE_GUIDES.has(slug);
 }
 /* Статьи-спутники туров немецкий не получает вовсе — см. комментарий выше. */
 function localeCoversJournalArticle(locale) {
-  return locale !== "de";
+  /* Спутники туров были для немецкого закрыты наглухо, пока не хватало
+     перевода. С SB_DE_FULL они собираются наравне с остальными языками:
+     у французского их 84, у немецкого было 0. */
+  return locale !== "de" || DE_FULL;
 }
 const TRANSLATION_CACHE_PATH = path.join(projectRoot, ".generated", "bali-translation-cache.json");
 const JOURNAL_PUBLISHED_DATE = "2026-05-21";
@@ -9277,8 +9287,24 @@ function ensureLegacyTildaTourLayout(filePath, tour = null) {
   writeGeneratedFile(filePath, injectWestPageSpecificStyle(html, tour));
 }
 
+/* Запасная заготовка сообщения собирается на лету из английской обёртки и уже
+   переведённого названия тура. Такая строка целиком не существует до рендера,
+   значит в кэш переводов она попасть не может и остаётся английской навсегда:
+   на немецких страницах туров так висели 49 кнопок брони из 54. Переводится не
+   строка, а сам шаблон — по языку тура. */
+const WHATSAPP_FALLBACK_TEMPLATE = {
+  en: (title) => `Hello! I want to book ${title}. Please send details.`,
+  ru: (title) => `Здравствуйте! Хочу забронировать ${title}. Пришлите, пожалуйста, детали.`,
+  es: (title) => `¡Hola! Quiero reservar ${title}. ¿Me envías los detalles?`,
+  fr: (title) => `Bonjour ! Je souhaite réserver ${title}. Merci de m'envoyer les détails.`,
+  de: (title) => `Hallo! Ich möchte ${title} buchen. Bitte senden Sie mir die Details.`,
+  zh: (title) => `您好！我想预订${title}，请发送详细信息。`,
+};
+
 function buildWhatsAppMessage(tour) {
-  return tour.whatsappText || `Hello! I want to book ${tour.title}. Please send details.`;
+  if (tour.whatsappText) return tour.whatsappText;
+  const template = WHATSAPP_FALLBACK_TEMPLATE[tour.locale] || WHATSAPP_FALLBACK_TEMPLATE.en;
+  return template(tour.title);
 }
 
 function journalHeaderWhatsAppHref(tour) {
@@ -48165,6 +48191,52 @@ const PINNED_TRANSLATIONS = {
       "巴厘岛旅行要花多少钱？2026年真实物价与三档预算",
   },
   de: {
+    "Hello! I want to book ATV-Fahrabenteuer. Please send details.":
+      "Hallo! Ich möchte ATV-Fahrabenteuer buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Bali Surfkurs für Anfänger. Please send details.":
+      "Hallo! Ich möchte Bali Surfkurs für Anfänger buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Bootstour bei Sonnenuntergang, Benoa. Please send details.":
+      "Hallo! Ich möchte Bootstour bei Sonnenuntergang, Benoa buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Flughafentransfer Bali. Please send details.":
+      "Hallo! Ich möchte Flughafentransfer Bali buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Ganztägige Tour nach Nusa Penida. Please send details.":
+      "Hallo! Ich möchte Ganztägige Tour nach Nusa Penida buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Instagram-Tour durch Bali. Please send details.":
+      "Hallo! Ich möchte Instagram-Tour durch Bali buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Instagram-Tour durch Ost-Bali. Please send details.":
+      "Hallo! Ich möchte Instagram-Tour durch Ost-Bali buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Kurzurlaub auf den Gili-Inseln von Bali. Please send details.":
+      "Hallo! Ich möchte Kurzurlaub auf den Gili-Inseln von Bali buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Mount Batur Sonnenaufgangs-Jeep und heiße Quelle. Please send details.":
+      "Hallo! Ich möchte Mount Batur Sonnenaufgangs-Jeep und heiße Quelle buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Mount Batur: Jeep zum Sonnenaufgang. Please send details.":
+      "Hallo! Ich möchte Mount Batur: Jeep zum Sonnenaufgang buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Mount Batur: Wanderung zum Sonnenaufgang. Please send details.":
+      "Hallo! Ich möchte Mount Batur: Wanderung zum Sonnenaufgang buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Nord-Bali-Tour und Lovina-Delfine. Please send details.":
+      "Hallo! Ich möchte Nord-Bali-Tour und Lovina-Delfine buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Nusa Penida Westtour. Please send details.":
+      "Hallo! Ich möchte Nusa Penida Westtour buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Nusa Penida privat: Auto + Schnorcheln. Please send details.":
+      "Hallo! Ich möchte Nusa Penida privat: Auto + Schnorcheln buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Privatwagen mit Fahrer auf Bali. Please send details.":
+      "Hallo! Ich möchte Privatwagen mit Fahrer auf Bali buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Schnorcheln in der Blauen Lagune, Padang Bai. Please send details.":
+      "Hallo! Ich möchte Schnorcheln in der Blauen Lagune, Padang Bai buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Schnorcheln mit Mantarochen, Nusa Penida. Please send details.":
+      "Hallo! Ich möchte Schnorcheln mit Mantarochen, Nusa Penida buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Schnorcheln mit Walhaien, Sumbawa. Please send details.":
+      "Hallo! Ich möchte Schnorcheln mit Walhaien, Sumbawa buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Tanah Lot- und Bedugul-Tour. Please send details.":
+      "Hallo! Ich möchte Tanah Lot- und Bedugul-Tour buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Transfer per Schnellboot, Bali. Please send details.":
+      "Hallo! Ich möchte Transfer per Schnellboot, Bali buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Ubud Reisterrassen-, Tempel- und Vulkantour. Please send details.":
+      "Hallo! Ich möchte Ubud Reisterrassen-, Tempel- und Vulkantour buchen. Bitte senden Sie mir die Details.",
+    "Hello! I want to book Wildwasser-Rafting auf Bali, Fluss Ayung. Please send details.":
+      "Hallo! Ich möchte Wildwasser-Rafting auf Bali, Fluss Ayung buchen. Bitte senden Sie mir die Details.",
+    "Hello! I&#039;m interested in your excursions. Could you help me with the booking details?":
+      "Hallo! Ich interessiere mich für Ihre Ausflüge. Können Sie mir mit den Buchungsdetails helfen?",
     "The numbers, where operators publish them: Class III+ on Sobek's own site, III-IV on most aggregators, roughly 16 km of river in 2.5-3 hours. Do the division and the reputation deflates — that is 5.3 to 6.4 km/h, against 6 to 8 km/h on the shorter Ayung. The eastern river is longer, not faster.":
       "Die Zahlen, soweit die Anbieter sie veröffentlichen: Klasse III+ auf Sobeks eigener Seite, III-IV bei den meisten Aggregatoren, rund 16 km Fluss in 2,5 bis 3 Stunden. Rechnet man das um, verliert der Ruf an Luft: das sind 5,3 bis 6,4 km/h gegenüber 6 bis 8 km/h auf dem kürzeren Ayung. Der östliche Fluss ist länger, nicht schneller.",
     "The practical numbers: 21 km from central Ubud, about 50 minutes by road, and roughly five minutes on foot from the drop-off to the water. That last figure is the one to weigh against the Ayung's staircases if walking is the constraint.":
@@ -48914,11 +48986,11 @@ function localeCoversRoute(route, locale) {
   }
   if (locale !== "de") return true;
   let match = text.match(/\/bali\/[a-z-]+\/tours\/([a-z0-9-]+)$/);
-  if (match) return DE_WAVE_TOURS.has(match[1]);
+  if (match) return DE_FULL || DE_WAVE_TOURS.has(match[1]);
   // статья-спутник тура: /bali/xx/journal/<тур>/<тип> — немецкий их не получает
-  if (/\/bali\/[a-z-]+\/journal\/[a-z0-9-]+\/[a-z0-9-]+$/.test(text)) return false;
+  if (/\/bali\/[a-z-]+\/journal\/[a-z0-9-]+\/[a-z0-9-]+$/.test(text)) return DE_FULL;
   match = text.match(/\/bali\/[a-z-]+\/journal\/([a-z0-9-]+)$/);
-  if (match) return DE_WAVE_GUIDES.has(match[1]);
+  if (match) return DE_FULL || DE_WAVE_GUIDES.has(match[1]);
   // главная, хаб журнала, about, faq, guides — немецкие версии есть у всех
   return true;
 }
@@ -49038,7 +49110,50 @@ function switchBaliRouteLocale(route, locale = "en") {
 
    Теперь маршрут проверяется целиком. Нет локализованной версии — ссылка
    остаётся английской: рабочая страница на чужом языке лучше, чем 404. */
+/* Общая заготовка сообщения в WhatsApp приходит из исходной вёрстки Tilda,
+   а не из генератора: она вшита в шапку и подвал готовым href. Через перевод
+   такая строка не проходит нигде — на немецких страницах туров её оставалось
+   108 штук по-английски, при живых пинах на все три формы апострофа.
+   Раз строка статическая, подставляем её по языку прямо здесь: эта функция
+   выполняется для КАЖДОЙ локализованной страницы, каким бы путём она ни
+   собиралась. Порядок пар важен: сначала длинные, потом короткие. */
+const STATIC_WHATSAPP_TEXTS = [
+  {
+    en: "Hello! I'm interested in your excursions. Could you help me with the booking details?",
+    ru: "Здравствуйте! Меня интересуют ваши экскурсии. Подскажете детали бронирования?",
+    es: "¡Hola! Me interesan sus excursiones. ¿Podrían ayudarme con los detalles de la reserva?",
+    fr: "Bonjour ! Vos excursions m'intéressent. Pourriez-vous m'aider avec les détails de réservation ?",
+    de: "Hallo! Ich interessiere mich für Ihre Ausflüge. Können Sie mir mit den Buchungsdetails helfen?",
+    zh: "您好！我对你们的行程很感兴趣，能帮我了解预订细节吗？",
+  },
+  {
+    en: "Hello! I want to book a Bali tour. Please send availability, the best options, and full details.",
+    ru: "Здравствуйте! Хочу забронировать экскурсию на Бали. Пришлите, пожалуйста, свободные даты, лучшие варианты и все детали.",
+    es: "¡Hola! Quiero reservar una excursión en Bali. Envíenme disponibilidad, las mejores opciones y todos los detalles.",
+    fr: "Bonjour ! Je souhaite réserver une excursion à Bali. Merci de m'envoyer les disponibilités, les meilleures options et tous les détails.",
+    de: "Hallo! Ich möchte einen Ausflug auf Bali buchen. Bitte senden Sie mir Verfügbarkeit, die besten Optionen und alle Details.",
+    zh: "您好！我想预订巴厘岛的行程，请发送可预订日期、推荐方案和完整信息。",
+  },
+];
+
+function localizeStaticWhatsAppTexts(html, locale) {
+  if (locale === "en") return html;
+  let out = String(html || "");
+  for (const item of STATIC_WHATSAPP_TEXTS) {
+    const target = item[locale];
+    if (!target) continue;
+    /* Апостроф в готовом HTML встречается в трёх видах: сырой, &#39; и &#039;.
+       Кодируем каждый вариант отдельно, иначе совпадёт только один. */
+    for (const raw of [item.en, item.en.replace(/'/g, "&#39;"), item.en.replace(/'/g, "&#039;")]) {
+      const encoded = encodeURIComponent(raw).replace(/%26%2339%3B/g, "&#39;").replace(/%26%23039%3B/g, "&#039;");
+      if (out.includes(encoded)) out = out.split(encoded).join(encodeURIComponent(target));
+    }
+  }
+  return out;
+}
+
 function rewriteBaliLocaleRoutesInHtml(html, locale = "en") {
+  html = localizeStaticWhatsAppTexts(html, locale);
   if (locale === "en") return html;
   const swapLocale = (whole, site, rest) => {
     const route = `/bali/en${rest || ""}`;
@@ -51003,6 +51118,19 @@ const STANDALONE_PAGE_CONTENT = {
   },
 };
 
+/* Синхронный доступ к уже накопленному переводу.
+   Нужен там, где рендер не может ждать сети: страница /bali/xx/guides
+   собирается синхронно, и её 190 карточек годами выходили английскими на
+   всех языках при lang="fr" или lang="de" в шапке. Заголовки и описания
+   гайдов в кэше есть — те же строки переводятся на хабе журнала, — так что
+   достаточно их оттуда взять. Чего в кэше нет, остаётся английским. */
+function cachedTranslation(text, locale) {
+  const source = String(text || "").replace(/\s+/g, " ").trim();
+  if (!source || locale === "en") return text;
+  const bucket = translationCacheBucket(locale);
+  return bucket[source] || bucket[escapeHtml(source)] || text;
+}
+
 function renderStandalonePage(type, locale) {
   const content = STANDALONE_PAGE_CONTENT[locale]?.[type] || STANDALONE_PAGE_CONTENT.en[type];
   const langCodes = BALI_LANGUAGE_OPTIONS.map((o) => o.code);
@@ -51029,9 +51157,11 @@ function renderStandalonePage(type, locale) {
                 const guideRoute = localeCoversRoute(`/bali/en/journal/${g.guide.slug}`, locale)
                   ? `/bali/${locale}/journal/${g.guide.slug}`
                   : `/bali/en/journal/${g.guide.slug}`;
+                const cardTitle = cachedTranslation(g.title, locale);
+                const cardText = cachedTranslation(g.description, locale);
                 return `<a class="sb-guide-card" href="${guideRoute}">
-                <h2>${escapeHtml(g.title)}</h2>
-                <p>${escapeHtml(g.description.slice(0, 120))}${g.description.length > 120 ? "..." : ""}</p>
+                <h2>${escapeHtml(cardTitle)}</h2>
+                <p>${escapeHtml(cardText.slice(0, 120))}${cardText.length > 120 ? "..." : ""}</p>
               </a>`;
               }).join("\n              ")}
             </div>`;
@@ -51128,7 +51258,10 @@ async function generatePages() {
       if (!localeCoversTour(locale, tour.slug)) continue;
       const localizedTour = await buildAutoLocalizedTour(tour, locale);
       if (!localizedTour) continue;
-      const localizedHtml = renderPage(localizedTour, allTours);
+      /* Страницы туров пишутся напрямую и через rewriteBaliLocaleRoutesInHtml
+         не проходят, поэтому вшитую в вёрстку заготовку WhatsApp подставляем
+         здесь отдельно — иначе на них остаются английские кнопки брони. */
+      const localizedHtml = localizeStaticWhatsAppTexts(renderPage(localizedTour, allTours), locale);
       const localizedFilePath = path.join(projectRoot, localizedTourFileName(tour.slug, locale));
       writeGeneratedFile(localizedFilePath, localizedHtml);
       localizedTargets.push({ filePath: localizedFilePath, tour: localizedTour });
