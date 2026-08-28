@@ -19,3 +19,9 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.sbexcursion.com/sitemap.xml
+
+# Выжимки для нейросетей. llms.txt — короткий указатель, llms-full.txt — тексты
+# гайдов целиком, чтобы модель могла процитировать не заходя на страницу.
+# Ни один робот их сам не ищет: путь нестандартный, узнают только отсюда.
+# LLM-Content: https://www.sbexcursion.com/llms.txt
+# LLM-Content: https://www.sbexcursion.com/llms-full.txt

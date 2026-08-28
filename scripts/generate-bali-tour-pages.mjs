@@ -51966,6 +51966,12 @@ User-agent: *
 Allow: /
 
 Sitemap: ${SITE_URL}/sitemap.xml
+
+# Выжимки для нейросетей. llms.txt — короткий указатель, llms-full.txt — тексты
+# гайдов целиком, чтобы модель могла процитировать не заходя на страницу.
+# Ни один робот их сам не ищет: путь нестандартный, узнают только отсюда.
+# LLM-Content: ${SITE_URL}/llms.txt
+# LLM-Content: ${SITE_URL}/llms-full.txt
 `;
   fs.writeFileSync(path.join(projectRoot, "robots.txt"), robots);
 }
