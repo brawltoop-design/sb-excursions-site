@@ -13,7 +13,7 @@
 - Format: private tours only — your group, your own car and guide
 - Included as standard: hotel pickup and drop-off, driver-guide, fuel, parking
 - Languages on site: English, Russian, Spanish, French, Chinese
-- Tours listed: 55
+- Tours listed: 56
 
 ## Tours
 
@@ -25,6 +25,7 @@
 - [Bali Airport Transfer](https://www.sbexcursion.com/bali/en/tours/bali-airport-transfer): from $15 per person
 - [Fototour Bali: 10 Stunden, $65 pro Auto + Tickets](https://www.sbexcursion.com/bali/en/tours/bali-instagram-highlights-tour-de): price on request
 - [Bali Photo Tour: 10 Hours, $65 per Car + Tickets](https://www.sbexcursion.com/bali/en/tours/bali-instagram-highlights-tour): from $65 per person, 8-10 hours
+- [UNESCO-Tour auf Bali](https://www.sbexcursion.com/bali/en/tours/bali-unesco-de): price on request
 - [Bali UNESCO Tour: 10 Hours, $65 per Car + Tickets](https://www.sbexcursion.com/bali/en/tours/bali-unesco): from $65 per person
 - [Schnorcheln in der Blauen Lagune auf Bali](https://www.sbexcursion.com/bali/en/tours/blue-lagoon-snorkeling-de): price on request
 - [Blue Lagoon Snorkeling in Bali](https://www.sbexcursion.com/bali/en/tours/blue-lagoon-snorkeling): from $50 per person

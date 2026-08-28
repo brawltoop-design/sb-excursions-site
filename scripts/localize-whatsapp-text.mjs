@@ -145,6 +145,57 @@ function localizeTourNames(html, locale) {
   return { html: out, count };
 }
 
+/* Ещё два шаблона, которые собираются на лету и потому не переводятся.
+   «I clicked the X button» — X это подпись кнопки, она уже локализована, а
+   обёртка вокруг осталась английской. «book the X. Please send availability…»
+   — вариант формулировки у части туров и легаси-гайдов. */
+const CLICK_TEMPLATE = {
+  ru: (b) => `Здравствуйте! Я нажал кнопку «${b}» на вашем сайте. Хочу узнать больше о турах.`,
+  es: (b) => `¡Hola! He pulsado el botón «${b}» en su web. Quiero saber más sobre sus tours.`,
+  fr: (b) => `Bonjour ! J'ai cliqué sur le bouton « ${b} » sur votre site. J'aimerais en savoir plus sur vos excursions.`,
+  de: (b) => `Hallo! Ich habe auf Ihrer Website den Button «${b}» angeklickt. Ich möchte mehr über Ihre Touren erfahren.`,
+  zh: (b) => `您好！我在你们网站上点击了「${b}」按钮，想了解更多行程信息。`,
+};
+
+const BOOK_LONG_TEMPLATE = {
+  ru: (t) => `Здравствуйте! Хочу забронировать ${t}. Пришлите, пожалуйста, свободные даты, варианты подачи и все детали.`,
+  es: (t) => `¡Hola! Quiero reservar ${t}. Envíenme disponibilidad, opciones de recogida y todos los detalles.`,
+  fr: (t) => `Bonjour ! Je souhaite réserver ${t}. Merci de m'envoyer les disponibilités, les options de prise en charge et tous les détails.`,
+  de: (t) => `Hallo! Ich möchte ${t} buchen. Bitte senden Sie mir Verfügbarkeit, Abholoptionen und alle Details.`,
+  zh: (t) => `您好！我想预订${t}，请发送可预订日期、接送方案和完整信息。`,
+};
+
+function localizeExtraTemplates(html, locale) {
+  let count = 0;
+  let out = String(html);
+  const click = CLICK_TEMPLATE[locale];
+  if (click) {
+    out = out.replace(
+      /(wa\.me\/\d+\?text=)Hello!%20I%20clicked%20the%20([^"'\s<>]+?)%20button%20on%20your%20website\.%20I%20want%20to%20know%20more%20about%20your%20tours\.?/g,
+      (whole, prefix, encodedLabel) => {
+        let label;
+        try { label = decodeURIComponent(encodedLabel); } catch { return whole; }
+        count += 1;
+        return `${prefix}${encodeURIComponent(click(label))}`;
+      },
+    );
+  }
+  const book = BOOK_LONG_TEMPLATE[locale];
+  if (book) {
+    out = out.replace(
+      /(wa\.me\/\d+\?text=)Hello!%20I%20want%20to%20book%20(?:the%20)?([^"'\s<>]+?)\.%20Please%20send%20availability[^"'\s<>]*/g,
+      (whole, prefix, encodedTitle) => {
+        let title;
+        try { title = decodeURIComponent(encodedTitle); } catch { return whole; }
+        count += 1;
+        const bucket = CACHE[locale === "zh" ? "zh-CN" : locale] || {};
+        return `${prefix}${encodeURIComponent(book(bucket[title] || title))}`;
+      },
+    );
+  }
+  return { html: out, count };
+}
+
 const LOCALE_FROM_NAME = /-(ru|es|fr|zh|de)\.html$/;
 
 let touched = 0;
@@ -170,6 +221,9 @@ for (const name of fs.readdirSync(ROOT)) {
   const booked = localizeBookLinks(html, locale);
   html = booked.html;
   replaced += booked.count;
+  const extra = localizeExtraTemplates(html, locale);
+  html = extra.html;
+  replaced += extra.count;
   const named = localizeTourNames(html, locale);
   html = named.html;
   renamed += named.count;
