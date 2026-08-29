@@ -9,15 +9,15 @@
 <text x="703.95" y="118" font-size="12" font-weight="600" fill="#1F2328">70.4%</text>
 <text x="788.8255841385783" y="137" font-size="12" fill="#6B7280">86.7%</text>
 <text x="316" y="176" font-size="13" fill="#1F2328" text-anchor="end">Авторы с партнёркой OTA</text>
-<rect x="330" y="164" width="87.1" height="15" rx="2" fill="#B45309"/>
-<rect x="330" y="183" width="53.5" height="15" rx="2" fill="#B45309" opacity="0.45"/>
-<text x="425.1" y="176" font-size="12" font-weight="600" fill="#1F2328">16.8%</text>
-<text x="391.483695971069" y="195" font-size="12" fill="#6B7280">10.3%</text>
+<rect x="330" y="164" width="101.4" height="15" rx="2" fill="#B45309"/>
+<rect x="330" y="183" width="55.8" height="15" rx="2" fill="#B45309" opacity="0.45"/>
+<text x="439.4" y="176" font-size="12" font-weight="600" fill="#1F2328">19.5%</text>
+<text x="393.7583747400327" y="195" font-size="12" fill="#6B7280">10.7%</text>
 <text x="316" y="234" font-size="13" fill="#1F2328" text-anchor="end">Упоминают OTA без метки</text>
-<rect x="330" y="222" width="43.6" height="15" rx="2" fill="#9CA3AF"/>
-<rect x="330" y="241" width="14.2" height="15" rx="2" fill="#9CA3AF" opacity="0.45"/>
-<text x="381.55" y="234" font-size="12" font-weight="600" fill="#1F2328">8.4%</text>
-<text x="352.15991273722733" y="253" font-size="12" fill="#6B7280">2.7%</text>
+<rect x="330" y="222" width="29.2" height="15" rx="2" fill="#9CA3AF"/>
+<rect x="330" y="241" width="11.9" height="15" rx="2" fill="#9CA3AF" opacity="0.45"/>
+<text x="367.25" y="234" font-size="12" font-weight="600" fill="#1F2328">5.6%</text>
+<text x="349.8852339682636" y="253" font-size="12" fill="#6B7280">2.3%</text>
 <text x="316" y="292" font-size="13" fill="#1F2328" text-anchor="end">Местные операторы</text>
 <rect x="330" y="280" width="19.5" height="15" rx="2" fill="#C2410C"/>
 <rect x="330" y="299" width="1.5" height="15" rx="2" fill="#C2410C" opacity="0.45"/>

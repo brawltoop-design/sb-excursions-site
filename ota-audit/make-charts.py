@@ -104,10 +104,13 @@ for v,r in uniq.items():
         rat[r["owner"]].append(vids[v]["views"]/c["subscribers"])
 med={k:statistics.median(v) for k,v in rat.items() if len(v)>=2}
 srt=sorted(med.items(),key=lambda x:-x[1])
-W,H=980,400
+# Высоту считаем от числа категорий: при шести строках фиксированные 400 px
+# наезжали подписями на сноску внизу.
+y0,gap=110,52
+W,H=980,y0+len(srt)*gap+96
 s=head(W,H,"Чей контент алгоритм разносит дальше своей аудитории",
        "медиана просмотров на одного подписчика канала")
-mx=max(med.values()); x0,bw=330,470; y0,gap=110,52
+mx=max(med.values()); x0,bw=330,470
 for i,(k,val) in enumerate(srt):
     y=y0+i*gap
     s.append(f'<text x="316" y="{y+18}" font-size="13" fill="{INK}" text-anchor="end">{esc(RU.get(k,k))}</text>')

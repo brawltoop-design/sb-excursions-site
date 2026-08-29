@@ -13,6 +13,10 @@ vids=json.load(open(f"{OUT}/yt-videos.json"))
 vid2chan={r["video_id"]:r["channel_id"] for r in rows}
 
 URL=re.compile(r"https?://[^\s<>\"'\)]+",re.I)
+# Фирменные шортенеры партнёрских порталов. Метки в URL у них нет по устройству:
+# идентификатор партнёра зашит в сам короткий адрес. Без них счёт аффилиатов
+# занижался вдвое — 19 каналов вместо 32, и лидером ошибочно выходил Klook.
+BRAND_SHORTENERS={"gyg.me/":"getyourguide","s.klook.com/":"klook","klk.st/":"klook"}
 OTA_DOM=re.compile(r"(getyourguide|gyg\.me|viator\.com|klook\.com|tripadvisor|booking\.com|agoda\.com|expedia|airbnb|abnb\.me|civitatis|headout|tiqets|kkday)",re.I)
 NET_DOM=re.compile(r"(tp\.media|\.tp\.st|travelpayouts|\.pxf\.io|impact\.com|awin\d?\.com|tidd\.ly|anrdoezrs\.net|jdoqocy\.com|dpbolvw\.net|kqzyfj\.com|tkqlhce\.com|shareasale\.com|prf\.hn)",re.I)
 AFF_TAG=re.compile(r"(partner_id=|partner=|[?&]pid=|[?&]aid=|[?&]mcid=|[?&]cid=|[?&]campaign_id=|affiliate|[?&]ref=|utm_medium=affiliate|[?&]irclickid=)",re.I)
@@ -31,6 +35,8 @@ for vid,v in vids.items():
             if AFF_TAG.search(u): chan[cid]["ota_tagged"].add(brand)
             else: chan[cid]["ota_plain"].add(brand)
         if NET_DOM.search(u): chan[cid]["net"].add(NET_DOM.search(u).group(1).lower())
+        for dom,brand in BRAND_SHORTENERS.items():
+            if dom in u.lower(): chan[cid]["ota_tagged"].add(brand)
 
 OTA_OWN=re.compile(r"^(getyourguide|viator|klook|tripadvisor|booking\.com|expedia|airbnb|civitatis|headout|tiqets|kkday|agoda)\b",re.I)
 MEDIA=re.compile(r"(lonely planet|condé nast|conde nast|national geographic|cnn|bbc|travel\s*\+\s*leisure|insider|expedia group|rick steves|cnbc|bloomberg|abc news|nbc|dw |deutsche welle|euronews)",re.I)

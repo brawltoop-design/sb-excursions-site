@@ -17,13 +17,18 @@ OTA_DOM=re.compile(r"(getyourguide|gyg\.me|viator\.com|klook\.com|tripadvisor|bo
 AFF_TAG=re.compile(r"(partner_id=|partner=|[?&]pid=|[?&]aid=|[?&]mcid=|[?&]campaign_id=|affiliate|utm_medium=affiliate|[?&]irclickid=)",re.I)
 TOUR_OTA=re.compile(r"(getyourguide|gyg\.me|viator\.com|klook\.com|civitatis|headout|tiqets|kkday)",re.I)
 
-strict=collections.defaultdict(set)   # только экскурсионные OTA с меткой
+# Фирменные шортенеры партнёрских порталов: метки в URL у них нет по устройству,
+# идентификатор партнёра зашит в сам короткий адрес. Без них счёт занижался вдвое.
+BRAND_SHORT={"gyg.me/":"getyourguide","s.klook.com/":"klook","klk.st/":"klook"}
+strict=collections.defaultdict(set)   # экскурсионные OTA: метка ИЛИ фирменный шортенер
 for vid,v in vids.items():
     cid=vid2chan.get(vid)
     if not cid: continue
     for u in URL.findall(v.get("description") or ""):
         if TOUR_OTA.search(u) and AFF_TAG.search(u):
             strict[cid].add(TOUR_OTA.search(u).group(1).lower())
+        for dom,brand in BRAND_SHORT.items():
+            if dom in u.lower(): strict[cid].add(brand)
 
 print("=== СТРОГО: каналы с партнёрской ссылкой именно на ЭКСКУРСИОННУЮ OTA ===")
 print(f"  каналов: {len(strict)} из {len(ch)}  ({len(strict)/len(ch)*100:.1f}%)")
