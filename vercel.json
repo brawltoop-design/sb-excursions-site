@@ -11,7 +11,7 @@
         }
       ],
       "destination": "https://www.sbexcursion.com/bali/en/main-page",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/(.*)",
@@ -22,97 +22,91 @@
         }
       ],
       "destination": "https://www.sbexcursion.com/$1",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/bali/en/tours/unesco-heritage-sites-tour",
       "destination": "/bali/en/tours/bali-unesco",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/bali/en/journal/unesco-heritage-sites-tour/tour-schedule",
       "destination": "/bali/en/journal/bali-unesco/tour-schedule",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/bali/en/journal/unesco-heritage-sites-tour/travel-guide",
       "destination": "/bali/en/journal/bali-unesco/travel-guide",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/bali/en/journal/unesco-heritage-sites-tour/why-book",
       "destination": "/bali/en/journal/bali-unesco/why-book",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/",
       "destination": "/bali/en/main-page",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/index.html",
       "destination": "/bali/en/main-page",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/tproduct/1366959501-735097005942-desert-safari-buggy-camel-ride-sandboard",
-      "destination": "/dubai/en/tours/full-day-dubai-desert-safari",
-      "permanent": false
+      "destination": "/dubai/en/tours/full-day-dubai-desert-safari"
     },
     {
       "source": "/tproduct/1366959501-232604178022-abu-dhabi-from-dubai",
-      "destination": "/dubai/en/tours/abu-dhabi-city-tour-from-dubai",
-      "permanent": false
+      "destination": "/dubai/en/tours/abu-dhabi-city-tour-from-dubai"
     },
     {
       "source": "/tproduct/1366959501-643417850282-classical-dubai-city-tour",
-      "destination": "/dubai/en",
-      "permanent": false
+      "destination": "/dubai/en"
     },
     {
       "source": "/tproduct/1366959501-910807092422-full-day-explore-dubai-city-tour",
-      "destination": "/dubai/en",
-      "permanent": false
+      "destination": "/dubai/en"
     },
     {
       "source": "/bali/en/tours/ubud-highlights",
-      "destination": "/bali/en/tours/ubud-highlights-tour",
-      "permanent": false
+      "destination": "/bali/en/tours/ubud-highlights-tour"
     },
     {
       "source": "/bali/en/tours/ubud-highlits-",
-      "destination": "/bali/en/tours/ubud-highlights-tour",
-      "permanent": false
+      "destination": "/bali/en/tours/ubud-highlights-tour"
     },
     {
       "source": "/bali/:lang/tours/bali-helicopter-scenic-tour",
       "destination": "/bali/:lang/main-page",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/bali/:lang/tours/volcano-coastline-helicopter-ride",
       "destination": "/bali/:lang/main-page",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/bali/:lang/tours/nusa-lembongan-ceningan-day-trip",
       "destination": "/bali/:lang/tours/nusa-penida-full-day-tour",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/bali/:lang/journal/bali-helicopter-scenic-tour/:type",
       "destination": "/bali/:lang/main-page",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/bali/:lang/journal/volcano-coastline-helicopter-ride/:type",
       "destination": "/bali/:lang/main-page",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/bali/:lang/journal/nusa-lembongan-ceningan-day-trip/:type",
       "destination": "/bali/:lang/tours/nusa-penida-full-day-tour",
-      "permanent": true
+      "statusCode": 301
     }
   ],
   "rewrites": [
