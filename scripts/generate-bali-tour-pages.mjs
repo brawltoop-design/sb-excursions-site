@@ -4225,14 +4225,18 @@ function moneyOffer(tour) {
     availability: "https://schema.org/InStock",
     validFrom: PRICE_VALID_FROM,
     priceValidUntil: PRICE_VALID_UNTIL,
-    /* Возврат товара к однодневной экскурсии неприменим: везти назад
-       нечего. Так и заявляем, вместо того чтобы выдумывать условия.
-       shippingDetails по той же причине не ставим вовсе — доставки нет,
-       и Google переживёт эту мелкую пометку. */
+    /* Возврат к однодневной экскурсии неприменим: везти назад нечего, и
+       предоплаты нет — отменяют бронь, а не возвращают товар.
+       Раньше здесь стояло MerchantReturnNotApplicable — такого значения в
+       schema.org НЕТ, я его выдумал. Google отчитался ошибкой «Недопустимое
+       перечислимое значение в returnPolicyCategory» на 168 страницах.
+       Перечисление MerchantReturnEnumeration допускает ровно четыре:
+       FiniteReturnWindow, UnlimitedWindow, NotPermitted, Unspecified.
+       Честное из них — NotPermitted. */
     hasMerchantReturnPolicy: {
       "@type": "MerchantReturnPolicy",
       applicableCountry: "ID",
-      returnPolicyCategory: "https://schema.org/MerchantReturnNotApplicable",
+      returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
     },
   };
 }
@@ -43098,6 +43102,12 @@ function renderStructuredData(tour) {
         image: tourImageSet(tour),
         url: absoluteTourUrl(tour),
         brand: { "@type": "Brand", name: "SB Excursions" },
+        /* Google просит «глобальный идентификатор, например GTIN или бренд».
+           GTIN — штрихкод физического товара, у однодневной экскурсии его нет
+           и выдумывать нельзя: это код из чужого реестра. Собственный код
+           продавца для этого и существует — sku. Берём слаг: он уникален,
+           стабилен и совпадает с адресом страницы. */
+        sku: tour.slug,
         seller: { "@id": `${SITE_URL}/#organization` },
       },
       moneyOffer(tour) ? { offers: moneyOffer(tour) } : {},
@@ -44709,11 +44719,20 @@ function mainPageItemList(html, locale) {
     .map((tour, i) => ({
       "@type": "ListItem",
       position: i + 1,
+      /* Товар внутри ItemList Google проверяет теми же правилами, что и
+         отдельную страницу товара. Урезанная карточка (только name, url и
+         цена) дала три ошибки в отчёте: нет image — критическая, страница
+         вылетает из товарных сниппетов, — плюс нет description и нет
+         идентификатора. Поэтому карточка здесь полная, а не ссылочная. */
       item: {
         "@type": "Product",
         "@id": `${absoluteTourUrl(tour)}#product`,
         name: tour.title,
+        description: tour.metaDescription || tour.summary,
+        image: (tourImageSet(tour) || []).slice(0, 1),
         url: localeTourUrl(tour, locale),
+        brand: { "@type": "Brand", name: "SB Excursions" },
+        sku: tour.slug,
         ...(moneyOffer(tour) ? { offers: moneyOffer(tour) } : {}),
       },
     }));
