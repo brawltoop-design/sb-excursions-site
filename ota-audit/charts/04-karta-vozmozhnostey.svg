@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="600" viewBox="0 0 980 600" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<rect width="980" height="600" fill="#FFFFFF"/>
+<text x="32" y="42" font-size="20" font-weight="700" fill="#1F2328">Карта свободных запросов</text>
+<text x="32" y="66" font-size="13" fill="#6B7280">чем выше — тем больше внимания, чем левее — тем ниже порог входа</text>
+<rect x="110" y="110" width="820" height="400" fill="none" stroke="#E5E7EB"/>
+<line x1="199" y1="110" x2="199" y2="510" stroke="#E5E7EB"/>
+<text x="199" y="530" font-size="11" fill="#6B7280" text-anchor="middle">1 тыс. подписчиков</text>
+<line x1="494" y1="110" x2="494" y2="510" stroke="#E5E7EB"/>
+<text x="494" y="530" font-size="11" fill="#6B7280" text-anchor="middle">10 тыс. подписчиков</text>
+<line x1="789" y1="110" x2="789" y2="510" stroke="#E5E7EB"/>
+<text x="789" y="530" font-size="11" fill="#6B7280" text-anchor="middle">100 тыс. подписчиков</text>
+<line x1="110" y1="467" x2="930" y2="467" stroke="#E5E7EB"/>
+<text x="100" y="471" font-size="11" fill="#6B7280" text-anchor="end">100 тыс.</text>
+<line x1="110" y1="323" x2="930" y2="323" stroke="#E5E7EB"/>
+<text x="100" y="327" font-size="11" fill="#6B7280" text-anchor="end">1 млн</text>
+<line x1="110" y1="179" x2="930" y2="179" stroke="#E5E7EB"/>
+<text x="100" y="183" font-size="11" fill="#6B7280" text-anchor="end">10 млн</text>
+<circle cx="710" cy="151" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="673" cy="158" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="805" cy="180" r="4.5" fill="#9CA3AF" opacity="0.42"/>
+<circle cx="888" cy="158" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="739" cy="199" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="681" cy="159" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="893" cy="210" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="721" cy="173" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="686" cy="239" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="772" cy="228" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="615" cy="310" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="688" cy="116" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="558" cy="257" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="623" cy="209" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="639" cy="302" r="4.5" fill="#9CA3AF" opacity="0.42"/>
+<circle cx="580" cy="337" r="4.5" fill="#9CA3AF" opacity="0.42"/>
+<circle cx="248" cy="388" r="7" fill="#C2410C" opacity="0.95"/>
+<text x="259" y="392" font-size="11" font-weight="600" fill="#1F2328">рафтинг Аюнг</text>
+<circle cx="583" cy="150" r="4.5" fill="#9CA3AF" opacity="0.42"/>
+<circle cx="259" cy="283" r="7" fill="#C2410C" opacity="0.95"/>
+<text x="270" y="287" font-size="11" font-weight="600" fill="#1F2328">кечак</text>
+<circle cx="207" cy="341" r="7" fill="#C2410C" opacity="0.95"/>
+<text x="218" y="345" font-size="11" font-weight="600" fill="#1F2328">манты</text>
+<circle cx="616" cy="286" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="308" cy="409" r="7" fill="#C2410C" opacity="0.95"/>
+<text x="319" y="413" font-size="11" font-weight="600" fill="#1F2328">Тегаллаланг</text>
+<circle cx="248" cy="223" r="7" fill="#C2410C" opacity="0.95"/>
+<text x="259" y="227" font-size="11" font-weight="600" fill="#1F2328">качели</text>
+<circle cx="515" cy="322" r="4.5" fill="#9CA3AF" opacity="0.42"/>
+<circle cx="624" cy="145" r="4.5" fill="#9CA3AF" opacity="0.42"/>
+<circle cx="225" cy="451" r="7" fill="#C2410C" opacity="0.95"/>
+<text x="236" y="455" font-size="11" font-weight="600" fill="#1F2328">Бесаких</text>
+<circle cx="351" cy="414" r="7" fill="#C2410C" opacity="0.95"/>
+<text x="362" y="418" font-size="11" font-weight="600" fill="#1F2328">Секумпул</text>
+<circle cx="720" cy="161" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="773" cy="207" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="374" cy="241" r="7" fill="#C2410C" opacity="0.95"/>
+<text x="385" y="245" font-size="11" font-weight="600" fill="#1F2328">цена водителя</text>
+<circle cx="619" cy="154" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="684" cy="157" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="653" cy="140" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="403" cy="376" r="7" fill="#C2410C" opacity="0.95"/>
+<text x="414" y="380" font-size="11" font-weight="600" fill="#1F2328">цена Батура</text>
+<circle cx="532" cy="261" r="4.5" fill="#9CA3AF" opacity="0.42"/>
+<circle cx="343" cy="340" r="7" fill="#C2410C" opacity="0.95"/>
+<text x="354" y="344" font-size="11" font-weight="600" fill="#1F2328">трансфер</text>
+<text x="354" y="357" font-size="11" font-weight="600" fill="#1F2328">из аэропорта</text>
+<circle cx="591" cy="166" r="4.5" fill="#1D4ED8" opacity="0.42"/>
+<circle cx="428" cy="274" r="4.5" fill="#9CA3AF" opacity="0.42"/>
+<circle cx="312" cy="361" r="4.5" fill="#9CA3AF" opacity="0.42"/>
+<circle cx="160" cy="453" r="4.5" fill="#9CA3AF" opacity="0.42"/>
+<circle cx="150" cy="548" r="6" fill="#C2410C"/><text x="164" y="552" font-size="12" fill="#1F2328">наши цели</text>
+<circle cx="300" cy="548" r="5" fill="#1D4ED8" opacity="0.5"/><text x="314" y="552" font-size="12" fill="#1F2328">продавцов в топ-20 нет</text>
+<circle cx="530" cy="548" r="5" fill="#9CA3AF" opacity="0.5"/><text x="544" y="552" font-size="12" fill="#1F2328">продавцы есть</text>
+<text x="32" y="584" font-size="11" fill="#6B7280">Обе оси логарифмические. 24 запроса из 40 не содержат в топ-20 ни одного продавца.</text>
+</svg>
