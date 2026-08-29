@@ -1,0 +1,776 @@
+<title>Дайв-операторы Бали</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root {
+  --ground:#eef2f1; --card:#ffffff; --edge:#d3dedc; --edge-soft:#e4ebea;
+  --ink:#101d20; --ink-2:#41575a; --ink-3:#6c8285;
+  --accent:#0d6d76; --accent-ink:#ffffff; --accent-soft:#dbeceb;
+  --good:#2c6b4f; --good-bg:#dcece3;
+  --warn:#9c4a1c; --warn-bg:#f3e3d8;
+  --flat-bg:#e6ecec; --flat-ink:#4a6063;
+  --wa:#128c7e; --wa-ink:#ffffff;
+  --shadow:0 1px 2px rgba(16,29,32,.06),0 6px 18px rgba(16,29,32,.05);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:#0b1618; --card:#122124; --edge:#20353a; --edge-soft:#1a2c30;
+    --ink:#e6efee; --ink-2:#a2b8ba; --ink-3:#7b9295;
+    --accent:#4fbfc6; --accent-ink:#06181a; --accent-soft:#12343a;
+    --good:#79c9a0; --good-bg:#14322a;
+    --warn:#e0996a; --warn-bg:#33231a;
+    --flat-bg:#1b2d31; --flat-ink:#9db3b6;
+    --wa:#25d366; --wa-ink:#06231a;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"] {
+  --ground:#0b1618; --card:#122124; --edge:#20353a; --edge-soft:#1a2c30;
+  --ink:#e6efee; --ink-2:#a2b8ba; --ink-3:#7b9295;
+  --accent:#4fbfc6; --accent-ink:#06181a; --accent-soft:#12343a;
+  --good:#79c9a0; --good-bg:#14322a;
+  --warn:#e0996a; --warn-bg:#33231a;
+  --flat-bg:#1b2d31; --flat-ink:#9db3b6;
+  --wa:#25d366; --wa-ink:#06231a;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+body {
+  margin:0; background:var(--ground); color:var(--ink);
+  font:400 16px/1.55 "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  -webkit-text-size-adjust:100%;
+}
+.wrap { max-width:980px; margin:0 auto; padding:28px 18px 72px; }
+
+.head { border-bottom:2px solid var(--ink); padding-bottom:18px; margin-bottom:8px; }
+.head h1 {
+  font-family:Archivo, sans-serif; font-weight:700; font-size:clamp(28px,6vw,42px);
+  line-height:1.05; margin:0 0 8px; letter-spacing:-.02em; text-wrap:balance;
+}
+.head p { margin:0; color:var(--ink-2); max-width:62ch; }
+.stat { display:flex; gap:22px; flex-wrap:wrap; margin-top:16px; }
+.stat b { font-family:"IBM Plex Mono", monospace; font-variant-numeric:tabular-nums;
+  font-size:22px; font-weight:500; display:block; color:var(--accent); }
+.stat span { font-family:Archivo,sans-serif; font-size:11px; font-weight:600;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--ink-3); }
+
+.nav { position:sticky; top:0; z-index:5; background:var(--ground);
+  padding:12px 0; margin-bottom:6px; border-bottom:1px solid var(--edge-soft);
+  display:flex; gap:8px; overflow-x:auto; scrollbar-width:none; }
+.nav::-webkit-scrollbar { display:none }
+.nav a { flex:0 0 auto; text-decoration:none; white-space:nowrap;
+  font-family:Archivo,sans-serif; font-size:12px; font-weight:600; letter-spacing:.04em;
+  color:var(--ink-2); background:var(--card); border:1px solid var(--edge);
+  padding:7px 13px; border-radius:999px; }
+.nav a:hover, .nav a:focus-visible { color:var(--accent-ink); background:var(--accent);
+  border-color:var(--accent); outline:none; }
+
+.reg { margin-top:34px; }
+.reg__head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap;
+  border-bottom:1px solid var(--edge); padding-bottom:9px; margin-bottom:16px; }
+.reg__head h2 { font-family:Archivo,sans-serif; font-size:20px; font-weight:700;
+  margin:0; letter-spacing:-.01em; }
+.reg__head p { margin:0; flex:1 1 260px; color:var(--ink-3); font-size:14px; }
+.reg__n { font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:13px; color:var(--accent); background:var(--accent-soft);
+  padding:2px 9px; border-radius:4px; }
+
+.grid { display:grid; gap:14px; grid-template-columns:1fr; }
+@media (min-width:760px) { .grid { grid-template-columns:1fr 1fr; } }
+
+.op { background:var(--card); border:1px solid var(--edge); border-radius:10px;
+  padding:16px 16px 14px; display:flex; flex-direction:column; gap:12px;
+  box-shadow:var(--shadow); }
+.op__top h3 { font-family:Archivo,sans-serif; font-size:17px; font-weight:600;
+  margin:0 0 3px; letter-spacing:-.01em; text-wrap:balance; }
+.op__where { margin:0; font-size:13px; color:var(--ink-3); }
+
+.op__data { margin:0; display:flex; flex-direction:column; gap:9px;
+  border-top:1px solid var(--edge-soft); border-bottom:1px solid var(--edge-soft);
+  padding:11px 0; }
+.op__data > div { display:grid; grid-template-columns:64px 1fr; gap:10px; align-items:start; }
+.op__data dt { font-family:Archivo,sans-serif; font-size:10px; font-weight:600;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--ink-3); padding-top:3px; }
+.op__data dd { margin:0; font-size:14px; color:var(--ink-2); }
+.op__data .num { font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-size:13px; line-height:1.5; color:var(--ink); }
+
+.chips { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:6px; }
+.chip { font-family:Archivo,sans-serif; font-size:11px; font-weight:600;
+  letter-spacing:.02em; padding:4px 9px; border-radius:5px; }
+.chip--yes { background:var(--good-bg); color:var(--good); }
+.chip--no { background:var(--warn-bg); color:var(--warn); }
+.chip--part { background:var(--flat-bg); color:var(--flat-ink); }
+.chip--flat { background:var(--flat-bg); color:var(--flat-ink); }
+
+.op__note { margin:0; font-size:13px; line-height:1.5; color:var(--ink-3);
+  border-left:2px solid var(--edge); padding-left:10px; }
+
+.op__foot { margin-top:auto; display:flex; gap:8px; align-items:stretch; }
+.wa { flex:1; display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  background:var(--wa); color:var(--wa-ink); text-decoration:none;
+  font-family:Archivo,sans-serif; font-weight:600; font-size:14px;
+  padding:11px 14px; border-radius:8px; min-height:44px; }
+.wa svg { width:17px; height:17px; fill:currentColor; flex:0 0 auto; }
+.wa:hover, .wa:focus-visible { filter:brightness(.93); outline:none;
+  box-shadow:0 0 0 3px var(--accent-soft); }
+.wa--off { background:var(--flat-bg); color:var(--flat-ink); font-size:13px; cursor:default; }
+.site { display:inline-flex; align-items:center; padding:11px 14px; min-height:44px;
+  border:1px solid var(--edge); border-radius:8px; text-decoration:none;
+  font-family:Archivo,sans-serif; font-weight:600; font-size:13px; color:var(--ink-2); }
+.site:hover, .site:focus-visible { border-color:var(--accent); color:var(--accent); outline:none; }
+
+.note { margin:26px 0 0; padding:15px 16px; background:var(--card);
+  border:1px solid var(--edge); border-left:3px solid var(--warn); border-radius:8px; }
+.note h2 { font-family:Archivo,sans-serif; font-size:14px; font-weight:700; margin:0 0 7px;
+  letter-spacing:.01em; }
+.note ul { margin:0; padding-left:19px; color:var(--ink-2); font-size:14px; }
+.note li + li { margin-top:5px; }
+.note b { font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+  font-weight:500; color:var(--ink); }
+.foot { margin-top:30px; padding-top:16px; border-top:1px solid var(--edge);
+  font-size:13px; color:var(--ink-3); }
+@media (prefers-reduced-motion:reduce) { *{transition:none!important;animation:none!important} }
+</style>
+
+<div class="wrap">
+  <header class="head">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <h1>Дайв-операторы Бали и Нуса Пениды</h1>
+    <p>Каждая цена проверена открытием страницы оператора. Кнопка открывает WhatsApp
+       с готовым запросом партнёрских условий — остаётся нажать «отправить».</p>
+    <div class="stat">
+      <div><b>29</b><span>операторов</span></div>
+      <div><b>26</b><span>с WhatsApp</span></div>
+      <div><b>5</b><span>районов</span></div>
+      <div><b>28.08</b><span>дата проверки</span></div>
+    </div>
+  </header>
+
+  <nav class="nav"><a href="#Nusa-Penida">Nusa Penida</a><a href="#Nusa-Lembongan">Nusa Lembongan</a><a href="#Sanur">Sanur</a><a href="#Padang-Bai">Padang Bai</a><a href="#Amed---Tulamben">Amed / Tulamben</a></nav>
+
+  <section class="reg" id="Nusa-Penida">
+<div class="reg__head"><h2>Nusa Penida</h2><p>База на острове. Катер с Бали в цену обычно не входит.</p><span class="reg__n">6</span></div>
+<div class="grid">
+<article class="op">
+  <header class="op__top">
+    <h3>Nusa Penida Dive Center</h3>
+    <p class="op__where">Toyapakeh, PED Road, 5 минут от гавани Banjar Nyuh; лодка отходит прям</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Отдельной цены за одно погружение нет. Минимальный блок — 2 погружения в день: IDR 1.500.000</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">2 dives in a day IDR 1.500.000; 3 dives in a day IDR 2.000.000; 6 dives over 2 days (вкл. 5%) IDR 3.800.000;…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">SSI</li>
+  </ul>
+  <p class="op__note">Самый дешёвый по цене «за день» из всех девяти: 750.000 за погружение в двухтанковом дне против 900.000–1.250.000 у остальных. Курсы опубликованы двумя колонками без подписей (Open Water 6.500.000 / 6.400.000, Advanced…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6287862264544?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://nusapenidadivecenter.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Octopus Dive Penida</h3>
+    <p class="op__where">Jalan Ped-Buyuk, Desa Ped; дайв-центр «прямо напротив пляжа», северное</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Северные сайты, одно погружение: IDR 850.000/чел («Price for one trip is IDR. 850K/person for a…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Северные сайты, пакет от 2 погружений: IDR 1.600.000/чел. Manta Point 66, пакет из 2 погружений (одно на…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--part">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">SSI</li>
+  </ul>
+  <p class="op__note">Самая низкая цена за погружение в выборке. Оговорка: сайт частично протух — половина страниц с lastmod 2019–2022, живы ковидные материалы, в комментариях блога висит спам. Опубликованные цены могут отставать от…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6281222688477?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://octopusdivepenida.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Diving Nusa Penida</h3>
+    <p class="op__where">Jalan Raya PED, Buyuk, северное побережье; SD и PED прямо перед дайв-ц</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Отдельной цены за одно погружение нет, всё продаётся трипами по 2 погружения по IDR 1.800.000…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">«One trip (2 dives) Manta Point + 1 local Penida site : 1.800.000 IDR per pax»; «2 dive sites Nusa…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI, статус 5* IDC Dive Center</li>
+  </ul>
+  <p class="op__note">Лучший кандидат под профиль SB Excursions: плоская цена 1.800.000 за любой двухтанковый трип, включая тот, что с Manta Point (никакой доплаты за удалённый сайт, в отличие от Legend и Two Fish), и пробное погружение с…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6282339751705?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://www.diving-penida.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Purple Dive Penida</h3>
+    <p class="op__where">Sental, Jln Raya Ped; сбор в дайв-центре, оттуда 5 минут на машине до </p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Отдельной цены за одно погружение нет. «2 tank boat dive: 1,950,000 IDR» (эквивалент 975.000 за…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">2 tank boat dive 1.950.000 IDR; 3 tank boat dives 2.500.000 IDR; PADI Open Water 6.850.000 IDR (включая…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">Самый жёсткий по ценовой политике из выборки — публично объясняет, почему не демпингует. Значит, торг за агентскую комиссию, скорее всего, упрётся в позицию бренда. Зато прозрачный прайс, малые группы и оба ключевых…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6281339986262?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://www.purpledivepenida.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Scuba Junkie Penida</h3>
+    <p class="op__where">Banjar Nyuh, Jln Raya Toyapakeh-Ped, Kec. Nusa Penida, Klungkung; собс</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Отдельной цены за одно погружение нет. «2 dives — 1,950,000 IDR» (эквивалент 975.000 за…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">2 dives 1.950.000 IDR; 3 dives 2.400.000 IDR; Snorkeling 400.000 IDR; 15L tank 75.000 IDR per tank; Extra 12L…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI, статус 5* IDC Dive Resort</li>
+  </ul>
+  <p class="op__note">Самый крупный и институциональный игрок: часть международной сети Scuba Junkie (Sipadan, Komodo, ливэборды), сильная линия по консервации, награды. ТЕХНИЧЕСКАЯ ОГОВОРКА: таблица цен подгружается скриптом (Ninja Tables…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/628113907078?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://www.scubajunkiepenida.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Two Fish Divers Penida</h3>
+    <p class="op__where">деревня Sampalan; трансфер от порта Sampalan до центра 150.000 IDR за </p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Single Dive Rp1.250.000 — единственный в выборке, кто публикует цену за одно погружение прямо.…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">2 Morning Dives — Low Season (1 Dec – 30 June) Rp1.825.000; 2 Morning Dives — High Season (1 Jul – 30 Nov)…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI, статус 5 Star Dive Center</li>
+  </ul>
+  <p class="op__note">Единственный, у кого прозрачно видно и цену за одно погружение, и надбавку именно за Manta Point (Rp150.000, от 4 человек — то есть группу надо собирать). Сезонность в прайсе: высокий сезон 1 июля – 30 ноября дороже на…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6281340069321?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://twofishdivers.com/diving-in/nusa-penida/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+</div></section>
+<section class="reg" id="Nusa-Lembongan">
+<div class="reg__head"><h2>Nusa Lembongan</h2><p>Ходят на Manta Point и Crystal Bay, катер отдельно.</p><span class="reg__n">6</span></div>
+<div class="grid">
+<article class="op">
+  <header class="op__top">
+    <h3>Scuba Center Asia</h3>
+    <p class="op__where">Nusa Lembongan</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Rp 1.800.000 за выезд из 2 погружений (сертифицированные). В цену входят полный комплект…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Отдельных пакетов нет; опубликована скидка 10% на выезд из 3 погружений. Курсы: Open Water Rp 6.500.000 (3…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">Самая низкая подтверждённая цена за выезд из 2 погружений среди всех девяти (900 000 за погружение) и самая низкая доплата за Manta Point (100 000). Сбор морского парка Nusa Penida отдельно на сайте не указан —…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6282247484788?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://www.scubacenterasia.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Lembongan Dive Center</h3>
+    <p class="op__where">Nusa Lembongan</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">IDR 1.100.000 за 2 погружения в день; низкий сезон январь–май IDR 1.000.000. Доплата Manta…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Скидки: 4–7 погружений 10%, 8–11 15%, 12+ 20%; PADI-профи со своим снаряжением 5%+5%. Пакеты с проживанием…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--part">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">Локальный центр в собственности местных, гиды с Лембонгана, соотношение максимум 4 гостя на инструктора, обед на лодке. Самая дешёвая базовая цена — но именно у неё внутреннее противоречие на сайте, это первый вопрос…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6281339752232?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://lembongandivecenter.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Tamarind Divers</h3>
+    <p class="op__where">Nusa Lembongan</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Fun Dive Trip (2 погружения) — 1.550.000 IDR в низкий сезон, 1.650.000 IDR в высокий…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Скидки по числу дней: 2–3 дня 10%, 4–6 дней 15%, 7+ дней 20%; со своим полным комплектом снаряжения 10%.…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">Единственный из девяти, кто прямо обещает бесплатный трансфер до жилья и обратно по Лембонгану, плюс обед и напитки на всех выездах. Честно предупреждает, что Manta Point и Manta Bay открыты для погружений только при…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6281238626677?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://www.tamarinddivers.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>World Diving Lembongan</h3>
+    <p class="op__where">Nusa Lembongan</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Morning Trip (2 погружения) — 2.000.000Rp; House Reef Afternoon Trip (1 погружение) —…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Фиксированных пакетов из N погружений нет, есть скидочная сетка: 6 погружений 10%, 12 погружений 20%, своё…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">Строят расписание по приливам: выход на подъёме воды, второе погружение в полную воду, чтобы избежать сильных течений — это сильный аргумент для новичков, который можно продавать. Максимум 4 гостя на одного дайвмастера.…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/628123900686?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://www.world-diving.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Blue Corner Dive</h3>
+    <p class="op__where">Nusa Lembongan</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Стандартный выезд из 2 погружений — 1.850.000 IDR. Поштучно: 925.000 IDR за погружение при 1–5…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Пакетов с фиксированной ценой нет, вместо них снижение цены за погружение с 925.000 до 832.500 начиная с…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--part">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">Один из немногих, кто прямо публикует сбор морского парка: Nusa Penida Marine Park 100.000 IDR с человека, а для Менджангана West Bali National Park 200.000 IDR с человека в день наличными. Соотношение 4 гостя на одного…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6281237618151?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://www.bluecornerdive.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Legend Diving Lembongan</h3>
+    <p class="op__where">Nusa Lembongan</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">945.000 IDR за одно погружение; 850.000 IDR за погружение в пакете 6–8 погружений; ночное…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Пакет 6–8 погружений по 850.000 за штуку. Курсы: Scuba Diver 5.300.000, Open Water 6.800.000, Advanced…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">Самая гибкая тарифная сетка на районе: единственные, кто продаёт именно поштучные погружения с прозрачной ценой, а не только выезд из двух. Для SB Excursions это удобно, если клиент хочет одно погружение. Обратная…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6281237418850?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://divinglembongan.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+</div></section>
+<section class="reg" id="Sanur">
+<div class="reg__head"><h2>Sanur</h2><p>Однодневный выезд с Бали. Катер включён — это твой формат.</p><span class="reg__n">6</span></div>
+<div class="grid">
+<article class="op">
+  <header class="op__top">
+    <h3>Bali Aqua Dive Center</h3>
+    <p class="op__where">Sanur</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Nusa Penida 2 погружения — IDR 2.500.000; 3 погружения — IDR 2.900.000 (за человека)</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Опубликованы также мультидневные: 2 Days Manta — IDR 6.100.000; 2 Days Liberty — IDR 5.100.000. Страница…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">САМЫЙ ДЕШЁВЫЙ из подтверждённых по Пениде и единственный, у кого явно опубликован Discover Scuba именно на Пениде с ценой — под новичков заказчика это ключевой пункт. Быстрый катер ВКЛЮЧЁН: в состав дневного выезда…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6281237779099?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://baliaqua.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Bali Diving Academy (scubali.com)</h3>
+    <p class="op__where">Sanur</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">3 погружения — IDR 3.000.000 (промо-цена на странице); 2 погружения — IDR 2.500.000</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Penida Special Trip East Coast (от 3–4 человек) — IDR 3.200.000. Снорклинг 3 точки — IDR 1.900.000. Аренда…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">ВНИМАНИЕ по катеру: на странице указан &#x27;BDA boat&#x27; и включённый &#x27;Return AC Hotel transfer from South Bali – based on sharing&#x27;, но тип судна (быстрый катер или обычный) НЕ уточнён — это надо спросить отдельно.…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/62882002230194?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://scubali.com/en/sanur-dive-center/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Atlantis Bali Diving / DUNE Bali</h3>
+    <p class="op__where">Sanur</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Nusa Penida 2 погружения — IDR 2.720.000; 3 погружения — IDR 3.040.000</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Отдельных пакетов из 2–3 дней по Пениде на прайс-странице не опубликовано. Сбор морского парка Нуса Пенида —…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--part">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--part">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">БЫСТРЫЙ КАТЕР ПОДТВЕРЖДЁН ТЕКСТОМ САЙТА: &#x27;Dive with a fast boat from Sanur Bay 5 minutes from our club for Nusa Penida&#x27;. Полный комплект снаряжения включён во все пакеты, кроме компьютера и фонаря. Open Water — IDR…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/628123805767?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://www.atlantis-bali-diving.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Scuba Go Indonesia (Sanur)</h3>
+    <p class="op__where">Sanur</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Nusa Penida — IDR 2.970.000 за 3 погружения (1 день)</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Combo 8 погружений за 3 дня — IDR 7.590.000. Padang Bai 2 погружения — IDR 2.090.000; Candidasa 3 погружения…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--part">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">В прайсе включены &#x27;Day Trip Boat&#x27;, трансфер из отеля или аэропорта, полный комплект снаряжения, питание и гид. НО тип судна как &#x27;быстрый катер&#x27; в прайсе НЕ прописан — уточнять. Входные сборы Нуса Пениды (Rp 10.000 для…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6285190681843?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://www.scubago.id/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Bali Scuba</h3>
+    <p class="op__where">Sanur</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Nusa Penida 3 погружения — IDR 3.100.000. Аренда полного комплекта снаряжения — IDR 400.000…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Опубликована полная лесенка: 2 дня / 4 погружения — IDR 3.400.000; 3 дня / 7 погружений — IDR 6.000.000; 4…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--no">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">Быстрый катер включён, трансферы из отеля включены, обед и напитки включены, нитрокс 32% бесплатно сертифицированным на два погружения. ГЛАВНОЕ ОГРАНИЧЕНИЕ ДЛЯ ЗАКАЗЧИКА: требование 25 логированных погружений отсекает…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6281805043888?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://www.baliscuba.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Crystal Divers Bali</h3>
+    <p class="op__where">Sanur</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Nusa Penida / Manta Point 3 погружения — IDR 3.500.000. Дополнительное погружение — IDR 600.000</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Мультидневных пакетов по Пениде на прайсе нет. Доплаты: нитрокс или баллон 15 л — IDR 100.000/баллон;…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">Самая прозрачная публикация включённого: &#x27;Prices includes all standard dive equipment including short wetsuit, lunch, snacks, towel, instructor and transport from Sanur to the dive site&#x27;, плюс сбор Bali Marine Protected…</p>
+  <footer class="op__foot">
+    <div class="wa wa--off">Номера нет — пиши через сайт</div>
+    <a class="site" href="https://www.crystal-divers.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+</div></section>
+<section class="reg" id="Padang-Bai">
+<div class="reg__head"><h2>Padang Bai</h2><p>Blue Lagoon у нас уже есть; отсюда же возят на Пениду.</p><span class="reg__n">5</span></div>
+<div class="grid">
+<article class="op">
+  <header class="op__top">
+    <h3>Geko Dive Bali</h3>
+    <p class="op__where">Padang Bai</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Padangbai: 1 погружение 900 000 IDR, 2 погружения 1 400 000 IDR, ночное 1 погружение 900 000…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Gili Tepekong + Mimpang 2 погр. 1 700 000 IDR; Gili Biaha 2 погр. 1 800 000; The Jetty 2 погр. 1 450 000;…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI 5 Star Dive Resort + PADI TecRec</li>
+  </ul>
+  <p class="op__note">Самый прозрачный рупиевый прайс в районе: все сайты в одной таблице, включая Пениду. В цену входят баллоны, грузы, бесплатный найтрокс 28% сертифицированным по запросу, весь транспорт от центра до сайта, обед в каждый…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/628113981997?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://gekodivebali.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>OK Divers Resort &amp; Spa</h3>
+    <p class="op__where">Padang Bai</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Padangbai (Blue Lagoon, Shark Point, Jepun, Drop Off, Channel, White Sand Beach): 2 погружения…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Padangbai Jetty (макро) 2 погр. 1 500 000 IDR (мин. 2); Gili Mimpang &amp; Tepekong 2 погр. 1 750 000 IDR (нужен…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI 5 Star Dive Resort</li>
+  </ul>
+  <p class="op__note">Единственный в подборке, кто честно проставил минимальное число дайверов и требуемую сертификацию по каждому сайту — важно для новичков: на Тепеконг/Мимпанг они требуют AOWD, на Манту хватает OWD. В цену входят напитки…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/628113858830?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://www.okdiversbali.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Padangbai Bali Dive</h3>
+    <p class="op__where">Padang Bai</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Padangbai: 2 погружения 1 100 000 IDR за человека — самая низкая опубликованная цена в районе.…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Все за 2 погружения: Jetty 1 200 000 IDR; Tulamben (Ship Wreck / Drop Off / Seraya) 1 200 000; Gili Tepekong…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">Лучшее соотношение цены и полноты прайса для массового клиента-новичка: рупии, всё расписано, дешевле остальных на 20–30%. В цену входят мануал PADI, сертификат, вода, обед, баллон и грузовой пояс — снаряжение отдельно…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6281337001665?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://padangbaibalidive.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Water WorxX Dive Center</h3>
+    <p class="op__where">Padang Bai</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Цены опубликованы в ЕВРО, не в рупиях. Blue Lagoon Area: 2 погружения 60 EUR со своим…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Все за 2 погружения, формат «своё снаряжение / с прокатом»: Jetty Tanah Ampo 65/85 EUR; Gili Mimpang и Gili…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">SSI</li>
+  </ul>
+  <p class="op__note">Внимание: цены в евро, а не в рупиях, — при партнёрстве курс придётся фиксировать отдельно, иначе маржа будет плавать. По пересчёту Blue Lagoon 60 EUR ≈ 1,05–1,1 млн IDR со своим снаряжением, то есть уровень Padangbai…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6281338511056?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="http://www.waterworxbali.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Sianmay Candidasa Diving (Sianmay Dive Bali)</h3>
+    <p class="op__where">выходы по Amuk Bay плюс дневные трипы на Нуса Пениду</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Цены в USD, за 2 погружения. Padang Bai, Tulamben, Gili Tepekong / Gili Mimpang — 95 USD с…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Gili Biaha, Amed, Kubu 105 USD; Tulamben макро 100; Nusa Penida 120. Снорклинг (полезно для стыковки с…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI Dive Center</li>
+  </ul>
+  <p class="op__note">Самая удобная для перепродажи структура цены: в 95 USD уже входят прокат снаряжения, морской и наземный трансфер, портер, park fee, обед, питьевая вода, чай/кофе, пляжное полотенце и дайв-лидер — ничего не всплывает на…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6281238480168?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://www.sianmaycandidasadiving.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+</div></section>
+<section class="reg" id="Amed---Tulamben">
+<div class="reg__head"><h2>Amed / Tulamben</h2><p>Затонувший USAT Liberty. На Пениду — с доплатой или не возят.</p><span class="reg__n">6</span></div>
+<div class="grid">
+<article class="op">
+  <header class="op__top">
+    <h3>Bali Reef Divers</h3>
+    <p class="op__where">Amed и Tulamben</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">2 погружения в день — 1.250.000 IDR; 3 погружения в день — 1.700.000 IDR; ночное — 800.000 IDR.…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">5 погружений / 2 дня — 2.800.000 IDR; 10 погружений / 4 дня — 5.500.000 IDR; от 11 погружений — 520.000 IDR…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">Лучший кандидат №1 для заказчика. Единственный из найденных, у кого одновременно: (а) базы и в Амеде, и в Туламбене, (б) опубликованная цена на выезд на Manta Point и Crystal Bay, (в) три WhatsApp-контакта. Осторожно с…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6285737039830?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://www.balireefdivers.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Bali Dive Resort &amp; Spa (+ Bali Dive Amed)</h3>
+    <p class="op__where">Tulamben</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">1 погружение в день — 670.000 IDR; 2 погружения — 1.250.000 IDR; 3 погружения — 1.700.000 IDR.…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Пакетная сетка по цене за погружение: 5–9 погружений — 540.000 IDR/погружение; 10–14 — 520.000; 15–19 —…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--yes">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">Кандидат №2. Сильная сторона — прозрачная арифметика: базовая цена + перечисленные надбавки, легко считать маржу. Нуса Пенида посчитана честно как надбавка, а не как отдельный тур, поэтому итог для клиента предсказуем.…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6285726456337?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://www.balidiveresortandspa.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Amed White Sand Divers</h3>
+    <p class="op__where">Amed</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Прайс-лист 2026 (PDF, 2 страницы): 2 утренних береговых погружения в Амеде или Туламбене —…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">6 погружений — 2.800.000 IDR; 8 погружений — 3.600.000 IDR; 10 погружений — 4.500.000 IDR; свыше 10 — по…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--part">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">Кандидат №3 и самый детальный прайс во всей подборке: полноценный PDF на 2026 год с курсами, fun dive, пакетами, лодочными выездами, снорклингом и рыбалкой. Условие «без предоплаты» и работа с сеткой своих отелей делают…</p>
+  <footer class="op__foot">
+    <div class="wa wa--off">Номера нет — пиши через сайт</div>
+    <a class="site" href="https://www.amedwhitesanddivers.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Amed Dive Center</h3>
+    <p class="op__where">Amed</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Цены разделены на высокий сезон (1 июля – 30 сентября) и низкий (1 октября – 30 июня), все с…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Отдельной сетки пакетов из 5–10 погружений нет; вместо неё пакеты «проживание + дайвинг» совместно с Hotel…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--no">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">SSI — зарегистрированный SSI Dive Center</li>
+  </ul>
+  <p class="op__note">Самые низкие подтверждённые цены на fun dive среди центров Амеда: 470.000 IDR за одиночное погружение в низкий сезон. Чистая, разбитая по сезонам сетка, редкость для этого рынка. Два минуса для модели заказчика: нет…</p>
+  <footer class="op__foot">
+    <div class="wa wa--off">Номера нет — пиши через сайт</div>
+    <a class="site" href="https://www.ameddivecenter.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Let&#x27;s Dive Tulamben</h3>
+    <p class="op__where">Tulamben</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Для сертифицированных, цены за погружения в один день, включают аренду снаряжения: 1 погружение…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Отдельных пакетов из 5 или 10 погружений нет — сетка ограничена одним, двумя и тремя погружениями в день.…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--no">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">Опрятный, самостоятельно поддерживаемый сайт с переключателем IDR/USD и honest-примечанием, что долларовые цены плавают по курсу. Локальный владелец, прямой WhatsApp, без прослойки. Для заказчика подходит как узкий…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6287861151767?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://letsdivetulamben.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+<article class="op">
+  <header class="op__top">
+    <h3>Wonder Dive Bali Tulamben</h3>
+    <p class="op__where">Tulamben</p>
+  </header>
+  <dl class="op__data">
+    <div><dt>Цена</dt><dd class="num">Прайс опубликован прямо на главной как «Diving Price List for direct bookings to 30 December…</dd></div>
+    <div><dt>Пакеты</dt><dd class="num">Отдельной пакетной сетки нет, скидка идёт по количеству погружений в день (1/2/3). Есть скидка 5% на дайвинг…</dd></div>
+  </dl>
+  <ul class="chips">
+    <li class="chip chip--no">Manta&nbsp;Point&nbsp;/&nbsp;Crystal&nbsp;Bay</li>
+    <li class="chip chip--yes">Пробное для новичков</li>
+    <li class="chip chip--flat">PADI</li>
+  </ul>
+  <p class="op__note">Самые низкие подтверждённые цены на fun dive во всём Туламбене: 470.000 IDR за одиночное и 890.000 за два в один день, при этом в цену уже включены деревенские сборы и портеры, которые у других идут отдельной строкой (у…</p>
+  <footer class="op__foot">
+    <a class="wa" href="https://wa.me/6285952667560?text=Hello%21%20This%20is%20SB%20Excursions%2C%20a%20private%20tour%20operator%20in%20Bali.%20We%20would%20like%20to%20send%20guests%20to%20you%20for%20diving.%20Could%20you%20share%20your%20current%20rates%2C%20what%20is%20included%2C%20and%20whether%20you%20have%20agent%20or%20partner%20rates%3F%20Thank%20you%21" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.7 2.6 4.1 3.6 1.6.6 2.2.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg>Написать в WhatsApp</a>
+    <a class="site" href="https://wonderdivebali.com/" target="_blank" rel="noopener">Сайт</a>
+  </footer>
+</article>
+</div></section>
+
+  <div class="note">
+    <h2>Что заложить в цену сверх тарифа</h2>
+    <ul>
+      <li>Морской парк Нуса Пенида: <b>100 000 IDR</b> с иностранца, разово</li>
+      <li>Входной билет турзоны Клунгкунг: <b>25 000 IDR</b> взрослый, <b>15 000</b> ребёнок</li>
+      <li>Manta Point у части операторов: топливная надбавка <b>150 000–200 000 IDR</b></li>
+      <li>Быстрый катер на Пениду у островных центров обычно <b>не включён</b></li>
+    </ul>
+  </div>
+
+  <div class="note">
+    <h2>Три вещи, которые меняют переговоры</h2>
+    <ul>
+      <li>На Бали и Пениде <b>нет ценового альянса</b>, в отличие от Гили — торг уместен</li>
+      <li>Партнёрских условий не публикует никто, комиссию надо запрашивать</li>
+      <li>Три центра с почти одинаковыми доменами: <b>nusapenidadivecenter.com</b>,
+          <b>divingpenida.com</b>, <b>diving-penida.com</b> — это разные компании</li>
+    </ul>
+  </div>
+
+  <p class="foot">Собрано 28 августа 2026 для SB Excursions. Цены розничные, опубликованные
+     операторами; партнёрские тарифы запрашиваются отдельно.</p>
+</div>
