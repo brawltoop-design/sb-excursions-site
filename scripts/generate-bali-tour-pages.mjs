@@ -49814,20 +49814,45 @@ const JSON_LD_TEXT_KEYS = new Set([
   "articleBody", "abstract", "disambiguatingDescription",
 ]);
 
-/* Апостроф расходится между двумя стадиями и молча срывает перевод.
-   Сбор текста со страницы кладёт в кэш ключ с сущностью — «Ayung&#39;s», —
-   а сюда значение приходит после JSON.parse, то есть с сырым «Ayung's».
-   Ключи не совпадают, перевод не находится, и в разметке остаётся
-   английский при переведённом видимом тексте: страница по-французски,
-   а FAQ, который читает Google, по-английски. Ошибка тихая — JSON валиден,
-   сборка зелёная. Поэтому пробуем обе формы записи апострофа. */
+/* Ключ расходится между двумя стадиями и молча срывает перевод.
+   Сбор текста со страницы работает с HTML, поэтому в кэш попадает ключ
+   с сущностями — «Ayung&#39;s», «Golf &amp; Resort», — а сюда значение
+   приходит после JSON.parse, то есть с сырыми «'» и «&». Ключи не
+   совпадают, перевод не находится, и в разметке остаётся английский при
+   переведённом видимом тексте: страница по-французски, а FAQ, который
+   читает Google, по-английски. Ошибка тихая — JSON валиден, сборка зелёная.
+
+   Поэтому пробуем все формы записи. Порядок важен: амперсанд кодируем
+   первым, иначе испортим сущности, которые сами начинаются с «&». */
+function jsonLdKeyVariants(value) {
+  const out = [value];
+  const hasAmp = value.includes("&");
+  const hasApos = value.includes("'");
+  const amp = hasAmp ? value.replace(/&/g, "&amp;") : value;
+  if (hasAmp) out.push(amp);
+  if (hasApos) {
+    out.push(value.replace(/'/g, "&#39;"));
+    out.push(value.replace(/'/g, "&#039;"));
+    if (hasAmp) {
+      out.push(amp.replace(/'/g, "&#39;"));
+      out.push(amp.replace(/'/g, "&#039;"));
+    }
+  }
+  return out;
+}
+
+function decodeJsonLdEntities(text) {
+  return String(text)
+    .replace(/&#0?39;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, "&");
+}
+
 function translateJsonLdText(value, translate) {
-  const direct = translate(value);
-  if (direct !== value) return direct;
-  if (!value.includes("'")) return value;
-  const entity = value.replace(/'/g, "&#39;");
-  const viaEntity = translate(entity);
-  if (viaEntity !== entity) return viaEntity.replace(/&#0?39;/g, "'");
+  for (const variant of jsonLdKeyVariants(value)) {
+    const translated = translate(variant);
+    if (translated !== variant) return decodeJsonLdEntities(translated);
+  }
   return value;
 }
 
