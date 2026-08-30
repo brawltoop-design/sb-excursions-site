@@ -54856,6 +54856,34 @@ function metaDescriptionLimit(locale) {
   return META_DESCRIPTION_LIMITS[locale] || 155;
 }
 
+/* Обрезка по границе иногда оставляет висящий союз или предлог: описание
+   кончается на «и», «et», «la», и в выдаче это читается как брак — Google
+   дорисовывает многоточие к слову, после которого ничего нет. Срезаем такие
+   хвосты вместе с пунктуацией. Список намеренно консервативный: лучше
+   оставить лишнее слово, чем отрезать осмысленное. */
+const DANGLING_TAIL = new RegExp(
+  "(?:\\s|^)(?:" + [
+    "and", "or", "with", "for", "from", "the", "of", "to", "in", "on", "at",
+    "et", "ou", "avec", "pour", "depuis", "les", "le", "la", "des", "du", "de", "aux", "au",
+    "y", "o", "con", "para", "desde", "los", "las", "el",
+    "und", "oder", "mit", "fur", "von", "der", "die", "das", "den", "dem", "zu", "im",
+    "\u0438", "\u0438\u043b\u0438", "\u0441", "\u0441\u043e", "\u0434\u043b\u044f", "\u043e\u0442", "\u0434\u043e", "\u043f\u043e",
+    "\u043d\u0430", "\u0432", "\u0432\u043e", "\u0430", "\u043d\u043e", "\u043a", "\u0443", "\u0438\u0437",
+  ].join("|") + ")$",
+  "i",
+);
+
+function trimDanglingTail(text) {
+  let out = String(text).replace(/[\s,;:\u2014\u2013]+$/, "");
+  /* Повторяем: после «des» может открыться «et», и обрезать надо оба. */
+  for (let i = 0; i < 3; i += 1) {
+    const next = out.replace(DANGLING_TAIL, "").replace(/[\s,;:\u2014\u2013]+$/, "");
+    if (next === out || !next) break;
+    out = next;
+  }
+  return out;
+}
+
 function fitMetaDescription(text, locale) {
   const collapsed = String(text || "").replace(/\s+/g, " ").trim();
   const limit = metaDescriptionLimit(locale);
@@ -54866,7 +54894,7 @@ function fitMetaDescription(text, locale) {
     let best = null;
     for (const match of collapsed.matchAll(pattern)) {
       const end = match[0].startsWith(" ") ? match.index : match.index + 1;
-      const candidate = collapsed.slice(0, end).replace(/[\s,;:—–]+$/, "");
+      const candidate = trimDanglingTail(collapsed.slice(0, end));
       if (candidate.length <= limit && (!best || candidate.length > best.length)) best = candidate;
     }
     /* Слишком короткий кусок хуже длинного: если граница отрезала больше
@@ -54875,7 +54903,7 @@ function fitMetaDescription(text, locale) {
   }
   const hard = collapsed.slice(0, limit + 1);
   const lastSpace = hard.lastIndexOf(" ");
-  return (lastSpace > 0 ? hard.slice(0, lastSpace) : hard.slice(0, limit)).replace(/[\s,;:—–]+$/, "");
+  return trimDanglingTail(lastSpace > 0 ? hard.slice(0, lastSpace) : hard.slice(0, limit));
 }
 
 function localizedMainPageRoute(locale = "en") {
