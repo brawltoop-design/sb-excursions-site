@@ -1,0 +1,1765 @@
+[
+ {
+  "id": "batur-jeep-sunrise",
+  "type": "тур",
+  "tour_slug": "mount-batur-sunrise-jeep-tour",
+  "title_ru": "Батур: рассвет на джипе без восхождения",
+  "goal": "Показать, что рассвет на Батуре можно получить без ночного трека, и снять страх перед подъёмом.",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "is_video": true,
+    "image": "videos/tours/mount-batur-sunrise-jeep-tour.mp4",
+    "headline_en": "Sunrise on Batur without the hike",
+    "headline_ru": "Рассвет на Батуре без подъёма",
+    "body_en": "The 4x4 does the climbing. You wake up in the dark, and by first light you are standing on a black lava field above Kintamani.",
+    "body_ru": "Наверх везёт джип. Встаёте затемно, а к первому свету уже стоите на чёрном лавовом поле над Кинтамани.",
+    "design_note": "Первый кадр видео — джип в темноте. Крупно «without the hike»."
+   },
+   {
+    "n": 2,
+    "role": "факт",
+    "is_video": false,
+    "image": "images/places/mount-batur-jeep.jpg",
+    "headline_en": "No summit hike. The jeep climbs.",
+    "headline_ru": "Никакого восхождения — везёт джип",
+    "body_en": "The classic Batur sunrise is a long uphill walk in the dark. Here the 4x4 takes the climb and your legs stay fresh for the viewpoint.",
+    "body_ru": "Классический Батур — это долгий подъём в темноте. Здесь подъём берёт на себя джип, а ноги остаются целыми.",
+    "design_note": "Крупно «4x4», остальное мелко."
+   },
+   {
+    "n": 3,
+    "role": "маршрут",
+    "is_video": false,
+    "image": "images/places/volcano-sunrise-above-clouds.jpg",
+    "headline_en": "The start is in the dark. On purpose.",
+    "headline_ru": "Выезд ночью — в этом весь смысл",
+    "body_en": "Pickup is at night or just before dawn, because the sunrise window on Batur is short and the road up takes real time.",
+    "body_ru": "Забираем от отеля ночью или перед рассветом: окно рассвета на Батуре короткое, а дорога наверх занимает время.",
+    "design_note": "Вынести словом «night pickup» поверх тёмного неба."
+   },
+   {
+    "n": 4,
+    "role": "факт",
+    "is_video": false,
+    "image": "images/places/warm-layer-for-sunrise.jpg",
+    "headline_en": "Bring one warm layer",
+    "headline_ru": "Возьмите что-нибудь тёплое",
+    "body_en": "You stand on open volcanic ground before the sun is up. A hoodie in the bag is the difference between watching the light and shivering.",
+    "body_ru": "Вы стоите на открытом вулканическом поле ещё до восхода. Худи в рюкзаке — разница между «смотрю рассвет» и «трясусь от холода».",
+    "design_note": "Совет-подсказка: другая типографика, как заметка от гида."
+   },
+   {
+    "n": 5,
+    "role": "маршрут",
+    "is_video": false,
+    "image": "images/places/mount-batur-cone.jpg",
+    "headline_en": "After sunrise the lava field opens",
+    "headline_ru": "После рассвета — чёрная лава",
+    "body_en": "The tour does not end when the sun is up. The jeep keeps going across the black lava terrain, which looks like nothing else on the island.",
+    "body_ru": "Тур не заканчивается на восходе. Джип идёт дальше по чёрному лавовому полю — такого ландшафта на Бали больше нигде нет.",
+    "design_note": "Контраст: чёрный грунт против светлого неба."
+   },
+   {
+    "n": 6,
+    "role": "факт",
+    "is_video": false,
+    "image": "images/places/lake-batur-caldera.jpg",
+    "headline_en": "Batur cone and lake in one frame",
+    "headline_ru": "Конус и озеро Батур в одном кадре",
+    "body_en": "From the Kintamani side the cone and the caldera lake sit in the same view. This is the shot people mean when they say Mount Batur.",
+    "body_ru": "Со стороны Кинтамани вулкан и озеро в кальдере видно одновременно. Именно этот кадр имеют в виду, когда говорят «Батур».",
+    "design_note": "Панорама во всю карточку, текст внизу узкой полосой."
+   },
+   {
+    "n": 7,
+    "role": "цена",
+    "is_video": false,
+    "image": "images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
+    "headline_en": "From $60, six to eight hours",
+    "headline_ru": "От $60, всего 6-8 часов",
+    "body_en": "Private tour, night or pre-dawn pickup from your hotel. You are back early enough that the rest of the day is still yours.",
+    "body_ru": "Частный тур, забираем от отеля ночью или перед рассветом. Возвращаетесь достаточно рано, чтобы день ещё остался при вас.",
+    "design_note": "$60 и 6-8h — двумя крупными блоками."
+   },
+   {
+    "n": 8,
+    "role": "призыв",
+    "is_video": false,
+    "image": "images/mount-batur-gallery-1.jpg",
+    "headline_en": "Send a date, we hold it",
+    "headline_ru": "Напишите дату — придержим",
+    "body_en": "Your dates and hotel on WhatsApp is enough. No prepayment, you pay on the day. Asking questions before you decide is normal.",
+    "body_ru": "Дата и отель в WhatsApp — этого хватит. Предоплаты нет, платите в день тура. Сначала спросить и подумать — нормально.",
+    "design_note": "Иконка WhatsApp, «no prepayment» отдельной плашкой."
+   }
+  ],
+  "caption_en": "Most Batur sunrise trips start with a long walk uphill in the dark. This one starts with a 4x4.\n\nNight or pre-dawn pickup, the jeep climbs to the lava-field viewpoints, sunrise over the caldera, then a run across the black volcanic terrain before the drive home. Six to eight hours total, from $60, private. You are back early enough to keep the rest of the day.\n\nBring one warm layer — that is the only thing people regret forgetting.\n\nDates and hotel by WhatsApp, no prepayment. SB Excursions.",
+  "caption_ru": "Обычно рассвет на Батуре начинается с долгого подъёма в темноте. Этот — с джипа.\n\nЗабираем ночью или перед рассветом, 4x4 поднимает к смотровым на лавовом поле, рассвет над кальдерой, потом ещё круг по чёрному вулканическому грунту и дорога обратно. Всего 6-8 часов, от $60, частный тур. Возвращаетесь рано — день ещё ваш.\n\nВозьмите что-то тёплое: это единственное, о чём жалеют, что забыли.\n\nДата и отель в WhatsApp, предоплаты нет. SB Excursions.",
+  "hashtags": "#bali #mountbatur #baturjeep #kintamani #balisunrise #balitour #baliadventure #jeeptour #visitbali #baliexcursions #балиэкскурсии #батур",
+  "reel_idea": "Собрать из videos/tours/mount-batur-sunrise-jeep-tour.mp4: первые три секунды — темнота, фары джипа, тряска на подъёме. Затем резкий переход на открытый рассвет и подпись «no hike, the jeep does the climbing». Финальный кадр — чёрное лавовое поле днём с подписью «6-8 hours, from $60». Без бодрой музыки: подойдёт родной звук мотора и ветра."
+ },
+ {
+  "id": "penida-west-four-stops",
+  "type": "тур",
+  "tour_slug": "nusa-penida-west-tour",
+  "title_ru": "Западная Пенида: четыре точки и очередь на Келингкинге",
+  "goal": "Продать западный маршрут Пениды через понимание тайминга: мы обходим полуденную очередь.",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "is_video": true,
+    "image": "videos/tours/nusa-penida-west-tour.mp4",
+    "headline_en": "Four cliffs, one day, from $49",
+    "headline_ru": "Четыре точки за день, от $49",
+    "body_en": "West Penida in one run: Kelingking, Broken Beach, Angel's Billabong, Crystal Bay. One car, one driver, no route planning on your side.",
+    "body_ru": "Западная Пенида за один заход: Келингкинг, Брокен-Бич, Ангелс-Биллабонг, Кристал-Бэй. Одна машина, один водитель, маршрут уже собран.",
+    "design_note": "Обложка — кадр с обрыва. Крупно цифра 4 и $49."
+   },
+   {
+    "n": 2,
+    "role": "факт",
+    "is_video": false,
+    "image": "images/places/kelingking-beach-t-rex-cliff.jpg",
+    "headline_en": "The T-Rex cliff is the reason",
+    "headline_ru": "Ради этой скалы сюда и едут",
+    "body_en": "Kelingking is the most famous viewpoint in Bali province. Almost everyone who crosses to Penida crosses for this one cliff.",
+    "body_ru": "Келингкинг — самая известная смотровая во всей провинции Бали. Большинство пересекает пролив именно ради неё.",
+    "design_note": "Фото без текста сверху, подпись узкой полосой снизу."
+   },
+   {
+    "n": 3,
+    "role": "факт",
+    "is_video": false,
+    "image": "images/places/kelingking-beach-viewpoint.jpg",
+    "headline_en": "The midday queue here is real",
+    "headline_ru": "Днём здесь реальная очередь",
+    "body_en": "The viewpoint jams up in the middle of the day. We take an early crossing and sequence the stops around the crowd instead of into it.",
+    "body_ru": "К середине дня на смотровой затор. Поэтому идём ранней лодкой и выстраиваем остановки вокруг толпы, а не в неё.",
+    "design_note": "Ключевая карточка. Слово «queue» / «очередь» крупно."
+   },
+   {
+    "n": 4,
+    "role": "маршрут",
+    "is_video": false,
+    "image": "images/places/broken-beach-arch.jpg",
+    "headline_en": "A sea arch that collapsed",
+    "headline_ru": "Обвалившаяся морская арка",
+    "body_en": "Broken Beach is a round bay with the ocean running in through a hole in the rock. A few minutes from Angel's Billabong on the same loop.",
+    "body_ru": "Брокен-Бич — круглая бухта, куда океан заходит через дыру в скале. От Ангелс-Биллабонга пара минут по тому же кругу.",
+    "design_note": "Кадр сверху, чтобы читалась круглая форма бухты."
+   },
+   {
+    "n": 5,
+    "role": "маршрут",
+    "is_video": false,
+    "image": "images/places/angels-billabong-rock-pool.jpg",
+    "headline_en": "A rock pool cut by the ocean",
+    "headline_ru": "Природный бассейн в скале",
+    "body_en": "Angel's Billabong sits right beside Broken Beach: a natural pool in the cliff shelf. Two stops, one short walk between them.",
+    "body_ru": "Ангелс-Биллабонг стоит вплотную к Брокен-Бич: естественная ванна в скальной полке. Две точки — и короткая прогулка между ними.",
+    "design_note": "Вынести «две точки — одна прогулка»."
+   },
+   {
+    "n": 6,
+    "role": "маршрут",
+    "is_video": false,
+    "image": "images/places/crystal-bay.jpg",
+    "headline_en": "Crystal Bay is where you cool off",
+    "headline_ru": "Кристал-Бэй — чтобы остыть",
+    "body_en": "The calmest swimming beach on the island and the last stop before the boat back. After a day spent on cliff edges, this is the reward.",
+    "body_ru": "Самый спокойный для купания пляж острова и последняя точка перед лодкой обратно. После дня на краю обрывов — то, что нужно.",
+    "design_note": "Тёплая, спокойная карточка после четырёх «острых»."
+   },
+   {
+    "n": 7,
+    "role": "цена",
+    "is_video": false,
+    "image": "images/places/fast-boat-from-sanur.jpg",
+    "headline_en": "Your driver waits at Banjar Nyuh",
+    "headline_ru": "Водитель ждёт в порту Банджар Нюх",
+    "body_en": "Hotel pickup, harbor check-in, fast boat from $15, island car from $49 for up to 6 people. Penida roads are slow, so timing is planned.",
+    "body_ru": "Забираем от отеля, чек-ин в порту, лодка от $15, машина на острове от $49 на шестерых. Дороги там медленные — потому тайминг и считаем.",
+    "design_note": "$15 и $49 разнести, чтобы не слиплись в одну цену."
+   },
+   {
+    "n": 8,
+    "role": "призыв",
+    "is_video": false,
+    "image": "images/places/diamond-beach-cliffs.jpg",
+    "headline_en": "Ask before you book anything",
+    "headline_ru": "Спросите до того, как бронировать",
+    "body_en": "Your dates and how many of you there are, on WhatsApp. No prepayment. If the day does not fit your plans, we will say so.",
+    "body_ru": "Напишите в WhatsApp даты и сколько вас. Предоплаты нет. Если день не ложится в ваши планы — так и скажем.",
+    "design_note": "WhatsApp крупно, тон спокойный, без восклицаний."
+   }
+  ],
+  "caption_en": "West Nusa Penida is four stops, and the whole day depends on the order you take them in.\n\nKelingking viewpoint, Broken Beach, Angel's Billabong, Crystal Bay. The cliffs are the easy part. The hard part is that island roads are slow and Kelingking jams up in the middle of the day — so we take an early crossing and the driver is already waiting at Banjar Nyuh harbor when the boat lands.\n\nFast boat from $15, island car from $49 for up to 6 people. Full day, 10-12 hours.\n\nDates and group size by WhatsApp, no prepayment. SB Excursions.",
+  "caption_ru": "Западная Пенида — это четыре точки, и весь день зависит от того, в каком порядке их брать.\n\nКелингкинг, Брокен-Бич, Ангелс-Биллабонг, Кристал-Бэй. Обрывы — простая часть. Сложная в том, что дороги на острове медленные, а на Келингкинге к середине дня затор. Поэтому идём ранней лодкой, и водитель уже ждёт в порту Банджар Нюх, когда вы сходите на берег.\n\nБыстрая лодка от $15, машина на острове от $49 на шестерых. Полный день, 10-12 часов.\n\nДаты и сколько вас — в WhatsApp, предоплаты нет. SB Excursions.",
+  "hashtags": "#nusapenida #kelingkingbeach #brokenbeach #angelsbillabong #crystalbay #bali #balitour #penidatrip #visitbali #baliexcursions #нусапенида #балиэкскурсии",
+  "reel_idea": "Из videos/tours/nusa-penida-west-tour.mp4 сделать рил про тайминг, а не про красоту. Открыть кадром пустой смотровой с подписью «рано утром», затем той же точкой в толпе с подписью «к полудню». Дальше быстрая нарезка четырёх остановок и финал на Кристал-Бэй с «от $49 за машину на шестерых». Текст на экране, голос не нужен."
+ },
+ {
+  "id": "ayung-rafting-halfday",
+  "type": "тур",
+  "tour_slug": "white-water-rafting",
+  "title_ru": "Рафтинг по Аюнгу: полдня, от $25",
+  "goal": "Показать рафтинг как самый простой способ добавить в поездку активность и снять страх «а справимся ли мы».",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "is_video": true,
+    "image": "videos/tours/white-water-rafting.mp4",
+    "headline_en": "Half a day on the Ayung, from $25",
+    "headline_ru": "Полдня на реке Аюнг, от $25",
+    "body_en": "The most affordable real adventure on the island. Four to six hours door to door, and the rest of the day stays free.",
+    "body_ru": "Самое доступное настоящее приключение на острове. Четыре-шесть часов от двери до двери, и остаток дня остаётся свободным.",
+    "design_note": "Первый кадр — брызги. $25 крупно, но без восклицаний."
+   },
+   {
+    "n": 2,
+    "role": "факт",
+    "is_video": false,
+    "image": "images/places/ayung-river-rafting.jpg",
+    "headline_en": "Nobody throws you in cold",
+    "headline_ru": "Никто не бросает вас в воду с ходу",
+    "body_en": "You get fitted with gear and walked through the safety briefing at the base first. Guides stay with the boat for the whole run.",
+    "body_ru": "Сначала на базе выдают снаряжение и проводят инструктаж. Гид идёт с лодкой весь маршрут, а не машет с берега.",
+    "design_note": "Успокаивающая карточка, спокойная типографика."
+   },
+   {
+    "n": 3,
+    "role": "маршрут",
+    "is_video": false,
+    "image": "images/places/ayung-river-gorge.jpg",
+    "headline_en": "The gorge is the real attraction",
+    "headline_ru": "Главное здесь — само ущелье",
+    "body_en": "The Ayung runs through jungle between carved cliff walls. Half the trip you are not paddling at all, you are looking up.",
+    "body_ru": "Аюнг идёт сквозь джунгли между резными скальными стенами. Половину сплава вы не гребёте, а смотрите вверх.",
+    "design_note": "Вертикальный кадр стены ущелья, текст сбоку."
+   },
+   {
+    "n": 4,
+    "role": "факт",
+    "is_video": false,
+    "image": "images/places/rafting-jungle-river.jpg",
+    "headline_en": "It works for a mixed group",
+    "headline_ru": "Подходит смешанной компании",
+    "body_en": "Couples, families with older kids, friends who do not all want the same intensity. This is the Bali activity that does not split a group.",
+    "body_ru": "Пары, семьи с подростками, друзья с разным аппетитом к адреналину. Активность, которая не делит компанию на две части.",
+    "design_note": "Кадр с людьми в лодке, а не пустой рекой."
+   },
+   {
+    "n": 5,
+    "role": "факт",
+    "is_video": false,
+    "image": "images/places/dry-bag.jpg",
+    "headline_en": "Everything in your pockets gets wet",
+    "headline_ru": "Всё, что в карманах, промокнет",
+    "body_en": "Nobody comes off this river dry. Phone, cash, passport: leave them behind or put them in a dry bag before you get on the water.",
+    "body_ru": "Сухим отсюда никто не выходит. Телефон, наличные, паспорт — оставьте или уберите в гермомешок до того, как сядете в лодку.",
+    "design_note": "Практическая заметка, отдельный стиль карточки-совета."
+   },
+   {
+    "n": 6,
+    "role": "цена",
+    "is_video": false,
+    "image": "images/tours-real/white-water-rafting.jpg",
+    "headline_en": "From $25, four to six hours",
+    "headline_ru": "От $25, четыре-шесть часов",
+    "body_en": "Morning or midday pickup, the river run, then a shower and lunch before the drive back. Easy to pair with a spa or a quiet second stop.",
+    "body_ru": "Забираем утром или днём, потом сплав, душ и обед перед обратной дорогой. Легко склеить со спа или спокойной второй остановкой.",
+    "design_note": "Таймлайн в три шага: pickup — river — shower & lunch."
+   },
+   {
+    "n": 7,
+    "role": "призыв",
+    "is_video": false,
+    "image": "images/places/bali-waterfall.jpg",
+    "headline_en": "Tell us how many and when",
+    "headline_ru": "Напишите, сколько вас и когда",
+    "body_en": "WhatsApp is enough: dates, group size, your hotel. No prepayment, you settle on the day. If another day suits you better, we will say so.",
+    "body_ru": "Хватит WhatsApp: даты, сколько человек, отель. Предоплаты нет, расчёт в день тура. Если другой день подойдёт лучше — скажем прямо.",
+    "design_note": "Тот же кадр, что и на 4-й, но кропнутый иначе."
+   }
+  ],
+  "caption_en": "The cheapest way to put a real adventure into a Bali trip: half a day on the Ayung River, from $25.\n\nMorning or midday pickup, gear and a safety briefing at the base, then the run itself through jungle and carved cliff walls, and a shower and lunch before the drive back. Four to six hours in total, so the afternoon or evening is still yours.\n\nIt works for a mixed group — couples, families with older kids, friends who do not all want the same intensity. And leave your phone in a dry bag: nobody comes off this river dry.\n\nDates and group size by WhatsApp, no prepayment. SB Excursions.",
+  "caption_ru": "Самый дешёвый способ добавить в поездку по Бали настоящее приключение: полдня на реке Аюнг, от $25.\n\nЗабираем утром или днём, на базе снаряжение и инструктаж, дальше сам сплав сквозь джунгли между скальными стенами, в конце душ и обед перед обратной дорогой. Всего четыре-шесть часов, так что вечер остаётся при вас.\n\nПодходит смешанной компании: пары, семьи с подростками, друзья с разным аппетитом к адреналину. И уберите телефон в гермомешок — сухим отсюда никто не выходит.\n\nДаты и сколько вас — в WhatsApp, предоплаты нет. SB Excursions.",
+  "hashtags": "#bali #rafting #ayungriver #baliadventure #whitewaterrafting #ubud #balitour #familytravel #visitbali #baliexcursions #рафтингбали #балиэкскурсии",
+  "reel_idea": "Взять videos/tours/white-water-rafting.mp4 и построить рил на контрасте «страшно / несложно». Открыть шумным порогом с брызгами, а на второй секунде дать спокойный кадр стен ущелья с подписью «half the trip looks like this». Дальше инструктаж на базе одним кадром и финал: «4-6 hours, from $25, no prepayment». Звук реки оставить родной."
+ },
+ {
+  "id": "driver-day-price",
+  "type": "информационный",
+  "title_ru": "Сколько стоит водитель на день на Бали",
+  "tour_slug": "private-car-with-driver-bali",
+  "goal": "Дать актуальную честную цену дня с водителем вместо устаревших цифр в поиске и объяснить, что в неё не входит.",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "headline_en": "From $59 per car, not per person",
+    "headline_ru": "От $59 за машину, а не с человека",
+    "body_en": "Most Bali driver day-rates you find in search were written years ago. Here is the actual number in 2026, and what it does not cover.",
+    "body_ru": "Цены на водителя, которые выдаёт поиск, написаны много лет назад. Вот сколько это стоит сейчас и что в сумму не входит.",
+    "image": "videos/tours/private-car-with-driver-bali.mp4",
+    "is_video": true,
+    "design_note": "Цифру $59 вынести максимально крупно, «за машину» — вторым размером прямо под ней. Текст класть на нижнюю треть кадра, там дорога темнее."
+   },
+   {
+    "n": 2,
+    "role": "цена",
+    "headline_en": "The price is the car, not the seat",
+    "headline_ru": "Цена за машину, а не за место",
+    "body_en": "From $59 buys the car and the driver for the day. The number does not multiply by how many of you get in, so a group splits it down fast.",
+    "body_ru": "От $59 — это машина с водителем на весь день. Сумма не умножается на число пассажиров: компанией делите и выходит копейки на человека.",
+    "image": "images/places/private-driver-in-bali.jpg",
+    "is_video": false,
+    "design_note": "Ключевой контраст: «$59 за машину» против зачёркнутого «$59 × 4». Зачёркивание сделать заметным, это главная мысль карточки."
+   },
+   {
+    "n": 3,
+    "role": "маршрут",
+    "headline_en": "The day starts at your hotel door",
+    "headline_ru": "День начинается у дверей отеля",
+    "body_en": "Hotel pickup runs on your schedule, not a fixed tour clock. You name the hour, the driver builds the day around it.",
+    "body_ru": "Забираем от отеля в то время, которое назовёте вы. Никакого общего расписания: день собирается вокруг вашего старта.",
+    "image": "images/places/tropical-road-palms.jpg",
+    "is_video": false,
+    "design_note": "Крупно вынести слово «ваше расписание» / «your schedule». Можно добавить мелкую иконку часов, но без цифры времени."
+   },
+   {
+    "n": 4,
+    "role": "маршрут",
+    "headline_en": "You build the route, not a script",
+    "headline_ru": "Маршрут строите вы, а не сценарий",
+    "body_en": "Beaches, temples, shopping, a run up north — all major Bali regions are on the table, and adding a stop mid-day breaks nothing.",
+    "body_ru": "Пляжи, храмы, шопинг, поездка на север — доступны все основные районы Бали. Захотели добавить точку в середине дня — ничего не рушится.",
+    "image": "images/places/country-road-asia.jpg",
+    "is_video": false,
+    "design_note": "Перечисление районов набрать списком в столбик, а не сплошной строкой — так читается на ходу."
+   },
+   {
+    "n": 5,
+    "role": "факт",
+    "headline_en": "Tickets and lunch are not included",
+    "headline_ru": "Билеты и обед в цену не входят",
+    "body_en": "A driver day is transport and nothing else. Entrance fees and food are paid on the spot, so plan cash for the stops you already know about.",
+    "body_ru": "День с водителем — это только транспорт. Входные билеты и еда оплачиваются на месте, так что наличные на известные точки берите с собой.",
+    "image": "images/places/money-exchange.jpg",
+    "is_video": false,
+    "design_note": "Самая крупная строка — «только транспорт». Слово «наличные» выделить цветом: это то, ради чего карточку сохраняют."
+   },
+   {
+    "n": 6,
+    "role": "цена",
+    "headline_en": "When all-inclusive is the better buy",
+    "headline_ru": "Когда выгоднее «всё включено»",
+    "body_en": "Our Ubud day runs from $65 per car and already covers every entrance ticket, buffet lunch and water. Worth comparing before you book a bare car.",
+    "body_ru": "Наш день по Убуду — от $65 за машину, и там уже все входные билеты, обед-буфет и вода. Сравните, прежде чем брать просто машину.",
+    "image": "images/tours-real/private-car-with-driver-bali.jpg",
+    "is_video": false,
+    "design_note": "Две цены рядом на одном уровне: $59 и $65, под каждой короткий список того, что входит. Это карточка-таблица, её и будут сохранять."
+   },
+   {
+    "n": 7,
+    "role": "цена",
+    "headline_en": "An airport run is not a day rate",
+    "headline_ru": "Трансфер из аэропорта — другой тариф",
+    "body_en": "One transfer from Ngurah Rai starts at $15. Paying a full day rate for a single hotel drop-off is the most common way people overpay here.",
+    "body_ru": "Один трансфер из Нгурах-Рай — от $15. Оплатить полный дневной тариф ради одной поездки в отель — самая частая переплата на острове.",
+    "image": "images/places/bluebird-taxi.jpg",
+    "is_video": false,
+    "design_note": "$15 крупно, рядом мелко «одна поездка». Слово «переплата» дать акцентным цветом."
+   },
+   {
+    "n": 8,
+    "role": "призыв",
+    "headline_en": "Tell us the day, we price it",
+    "headline_ru": "Опишите день — посчитаем",
+    "body_en": "Send your dates and roughly where you want to go on WhatsApp. You get one fixed number back. No prepayment, booking is just the chat.",
+    "body_ru": "Напишите в WhatsApp даты и примерно куда хотите. В ответ придёт одна фиксированная сумма. Предоплаты нет, бронь — это просто переписка.",
+    "image": "images/places/seminyak-sunset.jpg",
+    "is_video": false,
+    "design_note": "Спокойная финальная карточка: логотип SB Excursions, иконка WhatsApp, «без предоплаты» отдельной строкой. Без стрелок и восклицаний."
+   }
+  ],
+  "caption_en": "How much does a driver for the day actually cost in Bali? Most of the numbers you find in search were written years ago, so here is the current one.\n\nA private car with driver is from $59 per car. That is the car and the driver for a full day, not a per-person rate, so the price stays the same whether two of you get in or a whole family. Hotel pickup runs on your schedule and the route is yours to build across all major Bali regions.\n\nWhat it does not include: entrance tickets and food. Those are paid at each stop, so keep some cash on you. If you would rather not think about them at all, the all-inclusive Ubud day is from $65 per car with every entrance ticket, buffet lunch and water already covered.\n\nOne thing people get wrong often: a single airport run is not a day rate. That transfer starts at $15.\n\nSend your dates and a rough plan on WhatsApp and you get one fixed number back. No prepayment.\n\nSB Excursions",
+  "caption_ru": "Сколько на самом деле стоит водитель на день на Бали? Большинство цифр, которые выдаёт поиск, написаны много лет назад — вот актуальная.\n\nЧастная машина с водителем — от $59 за машину. Это машина и водитель на целый день, а не тариф с человека: сумма одна и для двоих, и для семьи. Забираем от отеля в удобное вам время, маршрут вы собираете сами по всем основным районам острова.\n\nЧто не входит: входные билеты и еда. Это оплачивается на месте, так что держите при себе наличные. Если не хочется об этом думать вовсе — день по Убуду «всё включено» стоит от $65 за машину, и там уже все билеты, обед-буфет и вода.\n\nЧастая ошибка: одна поездка из аэропорта — это не дневной тариф. Такой трансфер стоит от $15.\n\nНапишите в WhatsApp даты и примерный план — в ответ придёт одна фиксированная сумма. Без предоплаты.\n\nSB Excursions",
+  "hashtags": "#bali #balitravel #balitrip #balitours #balidriver #privatedriverbali #balitransport #balitips #balitraveltips #balionabudget #ubud #canggu #seminyak #balilife #sbexcursions",
+  "reel_idea": "Взять videos/tours/private-car-with-driver-bali.mp4 и построить рил на одном сравнении. Первые три секунды — вид из машины и текст поверх: «Прайсы на водителя в поиске — из 2017 года». Дальше три быстрых титра под кадры дороги: «от $59 за машину», «не за человека», «билеты и обед — отдельно». Финал — стоп-кадр с логотипом и строкой «посчитаем ваш день в WhatsApp, без предоплаты»."
+ },
+ {
+  "id": "airport-arrival-costs",
+  "type": "информационный",
+  "title_ru": "Как добраться из аэропорта и не переплатить",
+  "tour_slug": "bali-airport-transfer",
+  "goal": "Объяснить, как реально устроен выезд из Нгурах-Рай, и убрать три типичные переплаты на прилёте.",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "headline_en": "Three ways out of the airport",
+    "headline_ru": "Три способа уехать из аэропорта",
+    "body_en": "Same road, same hotel, very different bill. Here is how the arrivals hall at Ngurah Rai actually works and where the money leaks.",
+    "body_ru": "Одна дорога, один отель — а счёт разный. Разбираем, как на самом деле устроен зал прилёта в Нгурах-Рай и где утекают деньги.",
+    "image": "images/places/bali-airport-arrivals.jpg",
+    "is_video": false,
+    "design_note": "Цифра «3» крупным блоком слева, заголовок справа. Никаких цен на обложке — интрига держится на разнице в счёте."
+   },
+   {
+    "n": 2,
+    "role": "факт",
+    "headline_en": "Book against the flight, not a time",
+    "headline_ru": "Привязывайте трансфер к рейсу",
+    "body_en": "Immigration and baggage take as long as they take. Give the flight number, not a guessed hour, and the pickup is planned around your real arrival.",
+    "body_ru": "Паспортный контроль и багаж занимают столько, сколько занимают. Дайте номер рейса, а не выдуманный час, — встреча построится от реального прилёта.",
+    "image": "images/places/passport-control.jpg",
+    "is_video": false,
+    "design_note": "Крупно противопоставить два поля: «номер рейса» и зачёркнутое «время на глаз»."
+   },
+   {
+    "n": 3,
+    "role": "факт",
+    "headline_en": "The official counter is inside",
+    "headline_ru": "Официальная стойка — внутри",
+    "body_en": "Airport taxis are booked at the official desk in the arrivals hall, at a set rate. Anyone offering you a ride before that desk is not the desk.",
+    "body_ru": "Такси в аэропорту берут на официальной стойке в зале прилёта, по фиксированному тарифу. Все, кто предлагает поездку до неё, — не она.",
+    "image": "images/places/bluebird-taxi.jpg",
+    "is_video": false,
+    "design_note": "Слово «внутри» / «inside» вынести крупно. Хорошо сработает простая схема-стрелка: выход с багажа → стойка → машина."
+   },
+   {
+    "n": 4,
+    "role": "факт",
+    "headline_en": "Apps cannot meet you at the door",
+    "headline_ru": "Приложения к выходу не подъедут",
+    "body_en": "Ride-hailing pickups happen from the car park, not the arrivals kerb. That is a walk with all your luggage before the ride even starts.",
+    "body_ru": "Машины из приложений забирают только с парковки, а не от выхода. Это прогулка со всеми чемоданами ещё до начала поездки.",
+    "image": "images/places/ride-hailing-app.jpg",
+    "is_video": false,
+    "design_note": "Главное слово — «парковка» / «car park», дать его крупнее заголовка. Мелкая иконка чемодана уместна, эмодзи не нужен."
+   },
+   {
+    "n": 5,
+    "role": "факт",
+    "headline_en": "Late landings cost more",
+    "headline_ru": "Ночной прилёт стоит дороже",
+    "body_en": "Night arrivals carry a surcharge almost everywhere on the island. Agreeing the number before you land is the only way it stays that number.",
+    "body_ru": "За ночное время почти везде на острове берут доплату. Единственный способ, чтобы сумма не выросла, — согласовать её до посадки.",
+    "image": "images/places/money-exchange.jpg",
+    "is_video": false,
+    "design_note": "Акцент на словах «до посадки» / «before you land». Конкретную сумму доплаты не ставить — её нет в данных."
+   },
+   {
+    "n": 6,
+    "role": "факт",
+    "headline_en": "Bags, kids and car seats: say it",
+    "headline_ru": "Чемоданы и дети — скажите сразу",
+    "body_en": "Strollers and extra suitcases decide which car turns up. Mention them when you book and nothing has to be improvised at the kerb.",
+    "body_ru": "Коляска и лишний чемодан определяют, какая машина приедет. Скажите об этом при брони — и не придётся ничего решать на бордюре.",
+    "image": "images/places/digital-arrival-card.jpg",
+    "is_video": false,
+    "design_note": "Три иконки в ряд: чемодан, коляска, детское кресло. Текст под ними одной строкой."
+   },
+   {
+    "n": 7,
+    "role": "цена",
+    "headline_en": "Our transfer starts at $15",
+    "headline_ru": "Наш трансфер — от $15",
+    "body_en": "One fixed number for the car, agreed before you fly. Ride time depends on your hotel area, so you get a quote for your address, not a range.",
+    "body_ru": "Одна фиксированная сумма за машину, согласованная до вылета. Время в пути зависит от района отеля — считаем под ваш адрес, а не вилку.",
+    "image": "images/tours-real/bali-airport-transfer.jpg",
+    "is_video": false,
+    "design_note": "$15 — самый крупный элемент карусели. Под ним мелко «за машину, фиксированно»."
+   },
+   {
+    "n": 8,
+    "role": "маршрут",
+    "headline_en": "The way out matters too",
+    "headline_ru": "Обратная дорога — тоже задача",
+    "body_en": "Departures are where people lose flights. The same transfer, planned backwards from check-in instead of hoping the traffic behaves.",
+    "body_ru": "На вылете чаще всего и опаздывают. Тот же трансфер, только время считается назад от стойки регистрации, а не на удачу с пробками.",
+    "image": "images/places/tropical-road-palms.jpg",
+    "is_video": false,
+    "design_note": "Показать обратную стрелку времени: регистрация ← дорога ← выезд из отеля. Схема важнее текста."
+   },
+   {
+    "n": 9,
+    "role": "призыв",
+    "headline_en": "Send us your flight number",
+    "headline_ru": "Пришлите номер рейса",
+    "body_en": "Drop the flight number and hotel in WhatsApp, get the fixed fare back. No prepayment, and the pickup is built around your actual arrival time.",
+    "body_ru": "Скиньте в WhatsApp номер рейса и отель — в ответ придёт фиксированная цена. Предоплаты нет, встреча строится от реального времени прилёта.",
+    "image": "images/bali-tours/bali-airport-transfer.jpg",
+    "is_video": false,
+    "design_note": "Финальная карточка: логотип SB Excursions, иконка WhatsApp, строка «без предоплаты». Тон спокойный, без давления."
+   }
+  ],
+  "caption_en": "Landing at Ngurah Rai and wondering how not to overpay on the very first ride. Same road, same hotel, and the bill can differ several times over. Here is how the arrivals hall actually works.\n\nThe official airport taxis are booked at the counter inside the arrivals hall, at a set rate. Anyone offering you a ride before you reach that counter is not the counter.\n\nRide-hailing apps do not pick up at the arrivals kerb. Their cars wait in the car park, which means a walk with all your luggage before the ride even begins. Fine if you travel light, less fine with a stroller and three suitcases.\n\nNight arrivals carry a surcharge almost everywhere on the island. That is normal, but it is only a fixed number if you fix it before you land.\n\nOur airport transfer is from $15. One number for the car, agreed before you fly, planned around your flight rather than a guessed hour. Ride time depends on your hotel area, so we quote your address rather than a range.\n\nDepartures deserve the same care: that is where people actually lose flights.\n\nSend your flight number and hotel on WhatsApp. No prepayment.\n\nSB Excursions",
+  "caption_ru": "Прилетаете в Нгурах-Рай и думаете, как не переплатить на первой же поездке. Дорога одна, отель один, а счёт может отличаться в разы. Разбираем, как устроен зал прилёта.\n\nОфициальное такси берут на стойке внутри зала прилёта, по фиксированному тарифу. Все, кто предлагает поездку раньше, чем вы дошли до стойки, — это не стойка.\n\nПриложения не подъезжают к выходу. Их машины ждут на парковке, а значит, вам идти туда со всем багажом ещё до начала поездки. Налегке — нормально, с коляской и тремя чемоданами — уже нет.\n\nЗа ночной прилёт почти везде на острове берут доплату. Это нормально, но фиксированной сумма будет только если зафиксировать её до посадки.\n\nНаш трансфер — от $15. Одна сумма за машину, согласованная до вылета, встреча строится от рейса, а не от выдуманного часа. Время в пути зависит от района отеля, поэтому считаем под конкретный адрес, а не вилкой.\n\nОбратная дорога заслуживает того же внимания: именно на вылете чаще всего опаздывают.\n\nПришлите номер рейса и отель в WhatsApp. Без предоплаты.\n\nSB Excursions",
+  "hashtags": "#bali #balitravel #baliairport #ngurahrai #dpsairport #baliarrival #balitransfer #airporttransfer #balitips #balitraveltips #balionabudget #firsttimeinbali #balitrip #sbexcursions",
+  "reel_idea": "Готового видео аэропорта в репозитории нет, снять на месте. Кадр первый — двери зала прилёта, титр «три способа уехать». Дальше три коротких плана по 3 секунды: официальная стойка внутри, пустой бордюр с титром «приложения забирают с парковки», ночной кадр с титром «ночью дороже». Финал — статичный кадр с «от $15, фикс до вылета» и логотипом. Если съёмки нет, собрать рил слайдшоу из bali-airport-arrivals.jpg, bluebird-taxi.jpg и ride-hailing-app.jpg с медленным зумом."
+ },
+ {
+  "id": "batur-sunrise-cost",
+  "type": "информационный",
+  "title_ru": "Сколько стоит подъём на Батур",
+  "tour_slug": "mount-batur-sunrise-hike",
+  "goal": "Показать реальную цену и реальный график восхождения на Батур, включая выезд ночью и то, что стоит взять с собой.",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "headline_en": "Batur sunrise starts at $35",
+    "headline_ru": "Батур: от $35 и подъём в час ночи",
+    "body_en": "The hike is from $35, the jeep from $60. The part that never makes it into a price list is that your pickup can be as early as 01:30.",
+    "body_ru": "Пеший подъём — от $35, джип — от $60. В прайсах не пишут главное: машина может приехать за вами уже в 01:30.",
+    "image": "videos/tours/mount-batur-sunrise-hike.mp4",
+    "is_video": true,
+    "design_note": "На обложке две цифры-крючка: $35 и 01:30. Время дать так же крупно, как цену, — именно оно останавливает листание."
+   },
+   {
+    "n": 2,
+    "role": "маршрут",
+    "headline_en": "Pickup is between 01:30 and 03:00",
+    "headline_ru": "Выезд между 01:30 и 03:00",
+    "body_en": "How early depends on how far your hotel sits from Kintamani. The whole thing runs 5 to 8 hours, so you are back before most people eat breakfast.",
+    "body_ru": "Насколько рано — зависит от того, как далеко отель от Кинтамани. Всё занимает 5-8 часов, вы вернётесь раньше, чем большинство сядет завтракать.",
+    "image": "images/places/mount-batur-sunrise-trek.jpg",
+    "is_video": false,
+    "design_note": "Диапазон 01:30–03:00 набрать как циферблат или крупный интервал. Рядом мелко «5–8 часов всего»."
+   },
+   {
+    "n": 3,
+    "role": "факт",
+    "headline_en": "1.5 to 2 hours up, in the dark",
+    "headline_ru": "Полтора-два часа вверх, в темноте",
+    "body_en": "The trail to the 1717 m summit is a steady climb, not a scramble. A local guide sets the pace and headlamps are handed out at the trailhead.",
+    "body_ru": "Тропа на вершину 1717 м — ровный подъём, не скалолазание. Местный гид задаёт темп, налобные фонари выдают на старте.",
+    "image": "images/places/hiking-shoes.jpg",
+    "is_video": false,
+    "design_note": "Крупно «1717 м» и «1,5–2 часа». Фраза про фонари — мелким шрифтом внизу, это снимает главный страх."
+   },
+   {
+    "n": 4,
+    "role": "факт",
+    "headline_en": "Bring a layer, it is cold up top",
+    "headline_ru": "Возьмите кофту, наверху холодно",
+    "body_en": "You leave a warm island at night, then stand still at 1717 m waiting for the sun. The jacket you did not pack for Bali is the one you want.",
+    "body_ru": "Вы уезжаете с тёплого острова ночью, а потом стоите неподвижно на 1717 м и ждёте солнце. Нужна та куртка, которую вы на Бали не взяли.",
+    "image": "images/places/warm-layer-for-sunrise.jpg",
+    "is_video": false,
+    "design_note": "Самая сохраняемая карточка пачки. Слово «куртка» вынести крупно, остальное мелко — это чек-лист сборов."
+   },
+   {
+    "n": 5,
+    "role": "факт",
+    "headline_en": "Closed shoes, not flip-flops",
+    "headline_ru": "Закрытая обувь, не шлёпки",
+    "body_en": "The surface is loose volcanic grit and you walk it before dawn. Trainers are enough. Sandals turn an easy climb into a bad idea.",
+    "body_ru": "Под ногами сыпучая вулканическая крошка, и идёте вы затемно. Кроссовок хватит. В сандалиях лёгкий подъём превращается в плохую идею.",
+    "image": "images/tours-real/mount-batur-sunrise-hike.jpg",
+    "is_video": false,
+    "design_note": "Две иконки: кроссовок с галочкой, шлёпка с крестом. Текста минимум, картинка объясняет сама."
+   },
+   {
+    "n": 6,
+    "role": "факт",
+    "headline_en": "Breakfast steamed by the volcano",
+    "headline_ru": "Завтрак на вулканическом пару",
+    "body_en": "At the summit, breakfast is cooked over the mountain's own steam vents. It is the detail guests bring up long after the photos.",
+    "body_ru": "На вершине завтрак готовят на природном пару вулкана. Именно эту деталь потом вспоминают чаще, чем фотографии.",
+    "image": "images/places/volcano-sunrise-above-clouds.jpg",
+    "is_video": false,
+    "design_note": "Здесь текста меньше всего, а фото больше всего. Заголовок в один уровень, тело мелко в углу."
+   },
+   {
+    "n": 7,
+    "role": "цена",
+    "headline_en": "Not up for the climb? Take the jeep",
+    "headline_ru": "Не хотите пешком — есть джип",
+    "body_en": "From $60 a 4x4 takes you to the sunrise viewpoint and out across the black lava fields. Same morning, same light, no uphill section.",
+    "body_ru": "От $60 внедорожник довозит до смотровой к рассвету и вывозит на чёрные лавовые поля. То же утро и тот же свет, только без подъёма.",
+    "image": "images/places/mount-batur-cone.jpg",
+    "is_video": false,
+    "design_note": "Две колонки-сравнения: «пешком от $35 / 1,5–2 часа вверх» и «джип от $60 / без подъёма». Это вторая по сохраняемости карточка."
+   },
+   {
+    "n": 8,
+    "role": "маршрут",
+    "headline_en": "The morning is not over at sunrise",
+    "headline_ru": "Утро не кончается на рассвете",
+    "body_en": "You walk part of the crater rim, descend in daylight, and can finish with Kintamani coffee or a soak in the Batur hot spring.",
+    "body_ru": "Дальше — участок по кромке кратера, спуск уже светло, а закончить можно кофе в Кинтамани или горячими источниками у озера Батур.",
+    "image": "images/tours-real/mount-batur-sunrise-jeep-tour.jpg",
+    "is_video": false,
+    "design_note": "Три точки в строку: кромка кратера → спуск → кофе или источники. Простая горизонтальная линия времени."
+   },
+   {
+    "n": 9,
+    "role": "призыв",
+    "headline_en": "Pick your version in the chat",
+    "headline_ru": "Выберите вариант в переписке",
+    "body_en": "Send your hotel area on WhatsApp and we send back your pickup time and a fixed price. No prepayment. Hike from $35, jeep from $60.",
+    "body_ru": "Напишите в WhatsApp район отеля — в ответ придут ваше время выезда и фиксированная цена. Без предоплаты. Пешком от $35, джип от $60.",
+    "image": "images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg",
+    "is_video": false,
+    "design_note": "Финал: логотип SB Excursions, иконка WhatsApp, обе цены одной строкой, «без предоплаты» отдельно. Спокойно, без стрелок."
+   }
+  ],
+  "caption_en": "How much does Mount Batur at sunrise actually cost, and what does the price leave out.\n\nThe hike is from $35. The whole morning runs 5 to 8 hours, and your pickup falls somewhere between 01:30 and 03:00 depending on how far your hotel is from Kintamani. That early hour is the part nobody puts in a price list, and it is the part worth knowing before you book.\n\nThe climb itself is about 1.5 to 2 hours to the 1717 m summit. It is a steady walk rather than a scramble, a local guide sets the pace, and headlamps are handed out at the trailhead near Toya Bungkah. At the top, breakfast is steamed over the mountain's own vents while the sun comes up over Lake Batur and Mount Agung.\n\nTwo things to pack that people skip: a warm layer, because you stand still at altitude in the dark, and closed shoes, because the surface is loose volcanic grit.\n\nAfter sunrise you walk part of the crater rim and descend in daylight, and the morning can end with Kintamani coffee or a soak in the Batur hot spring.\n\nNot up for the climb? The jeep version is from $60 and drives you to the viewpoint and across the black lava fields instead.\n\nTell us your hotel area on WhatsApp and we send back your pickup time and a fixed price. No prepayment.\n\nSB Excursions",
+  "caption_ru": "Сколько на самом деле стоит рассвет на Батуре и что цена не показывает.\n\nПеший подъём — от $35. Всё утро занимает 5–8 часов, а машина приезжает за вами между 01:30 и 03:00, в зависимости от того, как далеко отель от Кинтамани. Именно этот час никто не пишет в прайсе, и именно его стоит знать до брони.\n\nСам подъём — примерно полтора-два часа до вершины 1717 м. Это ровная тропа, а не скалолазание: местный гид задаёт темп, налобные фонари выдают на старте у Тойя-Бунгках. Наверху завтрак готовят на природном пару вулкана, пока солнце поднимается над озером Батур и горой Агунг.\n\nДве вещи, которые обычно забывают: тёплая кофта — вы стоите неподвижно на высоте в темноте, и закрытая обувь — под ногами сыпучая вулканическая крошка.\n\nПосле рассвета идёте по кромке кратера, спускаетесь уже засветло, а закончить утро можно кофе в Кинтамани или горячими источниками у озера.\n\nНе хочется идти пешком? Есть вариант на джипе, от $60: внедорожник довозит до смотровой и вывозит на чёрные лавовые поля.\n\nНапишите в WhatsApp район отеля — пришлём ваше время выезда и фиксированную цену. Без предоплаты.\n\nSB Excursions",
+  "hashtags": "#bali #mountbatur #baturvolcano #balisunrise #mountbatursunrise #kintamani #balihiking #balitrekking #balitours #balitips #balitraveltips #balitrip #volcanohike #sbexcursions",
+  "reel_idea": "Основа — videos/tours/mount-batur-sunrise-hike.mp4, смонтированный по времени. Открыть тёмным кадром тропы с титром «01:30, за вами уже выехали», дальше цепочка фонарей с титром «1,5–2 часа вверх», затем рассвет над озером с титром «1717 м». Последние секунды — свет и завтрак на пару, поверх «от $35, без предоплаты». Музыку взять тихую, без дропа: смысл рила в честном графике, а не в драматизме."
+ },
+ {
+  "id": "instagram-vs-reality",
+  "type": "развлекательный",
+  "title_ru": "Instagram против реальности: четыре точки",
+  "tour_slug": "ubud-instagram-tour",
+  "goal": "Честно сравнить сохранённую картинку и то, что человек застанет на месте, и показать, что вопрос решается часом выезда и маршрутом.",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "image": "images/places/tegalalang-rice-terraces.jpg",
+    "is_video": false,
+    "headline_en": "Instagram vs the queue",
+    "headline_ru": "Instagram против очереди",
+    "body_en": "Four Bali spots everyone saves, and what they actually look like when you get there. Same places, no filter on the logistics.",
+    "body_ru": "Четыре точки Бали, которые все сохраняют, и то, как они выглядят вживую. Те же места, только без фильтра на очередь и время.",
+    "design_note": "Заголовок крупно поверх террас, слово «очередь» / queue выделить цветом."
+   },
+   {
+    "n": 2,
+    "role": "факт",
+    "image": "images/places/kelingking-beach-viewpoint.jpg",
+    "is_video": false,
+    "headline_en": "Kelingking: the cliff is real",
+    "headline_ru": "Келингкинг: скала не врёт",
+    "body_en": "The T-Rex view lives up to the photo. So does the line at the viewpoint in the middle of the day. Our west Penida route is built to get there before it.",
+    "body_ru": "Вид на «динозавра» действительно такой. Очередь на смотровой в середине дня — тоже. Западный маршрут по Пениде мы строим так, чтобы успеть раньше неё.",
+    "design_note": "Вынести крупно: «очередь в середине дня» / midday queue."
+   },
+   {
+    "n": 3,
+    "role": "маршрут",
+    "image": "videos/tours/nusa-penida-west-tour.mp4",
+    "is_video": true,
+    "headline_en": "The part photos skip",
+    "headline_ru": "То, что в кадр не попадает",
+    "body_en": "Kelingking is a whole day, not a stop. West Penida runs 10-12 hours: from $49 per car for up to 6 people, fast boat from $15.",
+    "body_ru": "Келингкинг — это целый день, а не остановка. Западная Пенида: 10-12 часов, от $49 за машину на шестерых, катер от $15.",
+    "design_note": "Цифры 10-12 часов и $49 крупно, поверх видео."
+   },
+   {
+    "n": 4,
+    "role": "факт",
+    "image": "images/places/bali-beach-club.jpg",
+    "is_video": false,
+    "headline_en": "Beach club: the empty shot is early",
+    "headline_ru": "Пляжный клуб: пустой кадр — ранний",
+    "body_en": "That calm daybed photo is taken hours before the crowd arrives. Come early for the pictures, stay late for the music. Two different places, one day.",
+    "body_ru": "Тот самый снимок с пустым лежаком делают задолго до толпы. Приезжайте рано ради кадров, оставайтесь ради музыки. Два разных места за один день.",
+    "design_note": "Разделить карточку пополам: «рано» и «поздно»."
+   },
+   {
+    "n": 5,
+    "role": "факт",
+    "image": "images/places/campuhan-ridge.jpg",
+    "is_video": false,
+    "headline_en": "Campuhan is a walk, not a spot",
+    "headline_ru": "Чампухан — это тропа, а не точка",
+    "body_en": "The famous frame is one bend of a long open ridge. Little shade, nowhere to cut across. Worth doing early, with the car meeting you at the far end.",
+    "body_ru": "Знаменитый кадр — один поворот длинного открытого хребта. Тени почти нет, срезать негде. Идти лучше рано, а машину подать к дальнему концу тропы.",
+    "design_note": "Показать протяжённость: заголовок вытянуть в строку вдоль хребта."
+   },
+   {
+    "n": 6,
+    "role": "факт",
+    "image": "images/places/ubud-monkey-forest.jpg",
+    "is_video": false,
+    "headline_en": "Monkeys read your hands",
+    "headline_ru": "Обезьяны читают руки",
+    "body_en": "In Monkey Forest a phone held out at arm's length is an invitation. It is one stop inside our 10-hour Ubud day, tickets included, from $65 per car.",
+    "body_ru": "В Лесу обезьян телефон на вытянутой руке — это приглашение. Это одна из остановок 10-часового дня по Убуду: билеты включены, от $65 за машину.",
+    "design_note": "Крупно «10 часов» и «$65 за машину»."
+   },
+   {
+    "n": 7,
+    "role": "цена",
+    "image": "images/places/private-driver-in-bali.jpg",
+    "is_video": false,
+    "headline_en": "The real trick is the hour",
+    "headline_ru": "Всё решает час выезда",
+    "body_en": "The same viewpoint two hours apart is two different photos. Our Ubud photo route leaves at 07:00: from $65 per car, entrance tickets $15 per person.",
+    "body_ru": "Та же смотровая с разницей в два часа — два разных снимка. Фотомаршрут по Убуду выезжает в 07:00: от $65 за машину, билеты $15 с человека.",
+    "design_note": "07:00 — самый крупный элемент карточки."
+   },
+   {
+    "n": 8,
+    "role": "призыв",
+    "image": "images/places/bali-rice-paddy-sunset.jpg",
+    "is_video": false,
+    "headline_en": "Show us the shot you saved",
+    "headline_ru": "Покажите кадр, который сохранили",
+    "body_en": "Send the photo to us on WhatsApp. We will say honestly what it takes — the hour, the queue, the walk — and build the day around it. No prepayment.",
+    "body_ru": "Пришлите фото в WhatsApp. Честно скажем, что нужно для такого кадра: час, очередь, пеший подход, — и соберём день вокруг него. Без предоплаты.",
+    "design_note": "Кнопка WhatsApp внизу, «без предоплаты» отдельной строкой."
+   }
+  ],
+  "caption_en": "Four Bali locations everyone saves, and what actually happens when you get there.\n\nKelingking looks exactly like the photo. The midday queue at the viewpoint is just as real, which is why the west Nusa Penida day runs 10-12 hours and starts early: from $49 per car for up to 6 people, fast boat from $15.\n\nCampuhan is a ridge walk, not a viewpoint. The beach club shot is an early-afternoon shot. Monkey Forest is one stop inside the 10-hour Ubud day, all entrance tickets included, from $65 per car.\n\nAnd the photo route through Lempuyang, Tirta Gangga, Tukad Cepung and Tegalalang leaves at 07:00 — from $65 per car, entrance tickets $15 per person, with lunch and the Tegalalang swing ticket included.\n\nSend us the shot you saved and we will tell you what it takes. WhatsApp, no prepayment.\n\nSB Excursions",
+  "caption_ru": "Четыре места на Бали, которые все сохраняют, и что там на самом деле.\n\nКелингкинг выглядит ровно как на фото. Очередь на смотровой в середине дня — тоже настоящая, поэтому день по западной Нуса-Пениде занимает 10-12 часов и начинается рано: от $49 за машину на шестерых, катер от $15.\n\nЧампухан — это прогулка по хребту, а не смотровая площадка. Пустой кадр в пляжном клубе снимают в начале дня. Лес обезьян — одна из остановок 10-часового дня по Убуду, все билеты включены, от $65 за машину.\n\nФотомаршрут через Лемпуянг, Тирта Гангга, Тукад Чепунг и Тегалаланг выезжает в 07:00 — от $65 за машину, входные билеты $15 с человека, обед и билет на качели в Тегалаланге включены.\n\nПришлите кадр, который сохранили, и мы честно скажем, что для него нужно. WhatsApp, без предоплаты.\n\nSB Excursions",
+  "hashtags": "#bali #balitravel #nusapenida #kelingkingbeach #tegalalang #campuhanridge #ubud #balitour #balitrip #privatedriverbali #baliphotospots #sbexcursions",
+  "reel_idea": "Склейка «сохранённый кадр — реальный кадр»: на каждой точке сначала идеальная картинка, через полсекунды тот же ракурс с людьми и очередью. Открывать видео videos/tours/nusa-penida-west-tour.mp4 — дорога и катер на Пениду, поверх текст «Келингкинг — это не остановка, это день». Финал: время на часах 07:00 и подпись «весь секрет — в часе выезда». Спокойный бит, без крикливой музыки."
+ },
+ {
+  "id": "uluwatu-kecak-fire-sunset",
+  "type": "развлекательный",
+  "title_ru": "Кечак в Улувату: огонь на закате",
+  "tour_slug": "private-car-with-driver-bali",
+  "goal": "Показать, почему кечак стоит увидеть вживую, и снять главный барьер — как туда доехать и уехать после шоу.",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "image": "images/places/uluwatu-cliffs-at-sunset.jpg",
+    "is_video": false,
+    "headline_en": "No instruments. Only voices.",
+    "headline_ru": "Ни одного инструмента",
+    "body_en": "Kecak at Uluwatu has no gamelan, no drums, no soundtrack. A circle of men chanting cak is the entire orchestra, on a cliff above the ocean.",
+    "body_ru": "У кечака в Улувату нет гамелана, барабанов и фонограммы. Весь оркестр — круг мужчин, повторяющих «чак», на скале над океаном.",
+    "design_note": "Точка после «инструмента» важна: заголовок в две строки, вторая тише."
+   },
+   {
+    "n": 2,
+    "role": "факт",
+    "image": "images/places/uluwatu-temple-cliff.jpg",
+    "is_video": false,
+    "headline_en": "The stage is the cliff edge",
+    "headline_ru": "Сцена стоит на краю обрыва",
+    "body_en": "The amphitheatre sits on the rock with open ocean behind it. Nothing is projected, nothing is lit. The backdrop is whatever the sea does that evening.",
+    "body_ru": "Амфитеатр вынесен на скалу, за ним открытый океан. Ни экранов, ни подсветки. Задник — то, что в этот вечер делает море.",
+    "design_note": "Дать воздух: текст в нижней трети, обрыв не перекрывать."
+   },
+   {
+    "n": 3,
+    "role": "факт",
+    "image": "images/places/uluwatu-cliff-golden-hour.jpg",
+    "is_video": false,
+    "headline_en": "It is written for the sunset",
+    "headline_ru": "Спектакль поставлен под закат",
+    "body_en": "The show is timed so the last act lands as the light goes. The sky does half the staging, which is why seats fill long before anything starts.",
+    "body_ru": "Показ рассчитан так, чтобы финал пришёлся на уходящий свет. Половину сценографии делает небо — поэтому места занимают задолго до начала.",
+    "design_note": "Вынести крупно «половину сценографии делает небо»."
+   },
+   {
+    "n": 4,
+    "role": "факт",
+    "image": "images/places/uluwatu-surf.jpg",
+    "is_video": false,
+    "headline_en": "Come before the show starts",
+    "headline_ru": "Приезжайте до начала",
+    "body_en": "The cliff path is worth an hour of daylight, and the water below is one of Bali's best-known surf breaks. Keep sunglasses in a bag: the monkeys here work fast.",
+    "body_ru": "Тропа по обрыву стоит того, чтобы прийти засветло, а внизу — один из самых известных сёрф-брейков Бали. Очки уберите в сумку: местные обезьяны работают быстро.",
+    "design_note": "Про очки — отдельной выделенной строкой, это то, что запоминают."
+   },
+   {
+    "n": 5,
+    "role": "факт",
+    "image": "images/places/temple-dress-code.jpg",
+    "is_video": false,
+    "headline_en": "Uluwatu is a working temple",
+    "headline_ru": "Улувату — действующий храм",
+    "body_en": "Shoulders and knees covered, sarong on, for the show as much as for the temple. On our temple routes the sarong simply travels with the car.",
+    "body_ru": "Плечи и колени закрыты, саронг обязателен — и на храм, и на шоу. На наших храмовых маршрутах саронг просто едет с машиной.",
+    "design_note": "Иконка саронга, короткий чек-лист в две строки."
+   },
+   {
+    "n": 6,
+    "role": "цена",
+    "image": "images/places/private-driver-in-bali.jpg",
+    "is_video": false,
+    "headline_en": "Everyone leaves at once",
+    "headline_ru": "Уезжают все одновременно",
+    "body_en": "The hard part is not the show, it is the road after it, when the whole cliff empties into one lane. A private car with driver is from $59, pickup on your schedule.",
+    "body_ru": "Сложное здесь не шоу, а дорога после него: весь обрыв выезжает в одну полосу. Частная машина с водителем от $59, подача по вашему времени.",
+    "design_note": "Крупно $59; фон — вечерняя дорога."
+   },
+   {
+    "n": 7,
+    "role": "призыв",
+    "image": "images/places/bukit-beach-club.jpg",
+    "is_video": false,
+    "headline_en": "Plan the evening around it",
+    "headline_ru": "Соберём вечер вокруг заката",
+    "body_en": "Write to us on WhatsApp and we will fit Uluwatu into the day so you arrive with daylight to spare and get home without the crush. No prepayment.",
+    "body_ru": "Напишите в WhatsApp — впишем Улувату в день так, чтобы приехать засветло и уехать без давки на выезде. Без предоплаты.",
+    "design_note": "Тёмная плашка внизу, кнопка WhatsApp, без восклицаний."
+   }
+  ],
+  "caption_en": "Kecak is the one Balinese performance with no orchestra at all. No gamelan, no drums, no recorded track — a circle of men chanting cak, and that is the entire sound.\n\nAt Uluwatu the amphitheatre sits on the cliff edge with open ocean behind it. The show is timed so the last act, Hanuman and the burning coconut husks, lands as the light goes. Nothing is projected. The sky does half the work.\n\nPractical things worth knowing: it is a working temple, so shoulders and knees stay covered and a sarong is required. Come with daylight to spare and walk the cliff path first — and keep your sunglasses in a bag, the monkeys here are quick.\n\nThe genuinely awkward part is leaving, when the whole cliff heads for the same road. A private car with driver is from $59 per car with hotel pickup on your schedule, which turns the evening back into a pleasure.\n\nWhatsApp us and we will plan it around the light. No prepayment.\n\nSB Excursions",
+  "caption_ru": "Кечак — единственный балийский спектакль вообще без оркестра. Ни гамелана, ни барабанов, ни фонограммы: круг мужчин повторяет «чак», и это весь звук.\n\nВ Улувату амфитеатр стоит на краю обрыва, за ним открытый океан. Показ рассчитан так, чтобы финал — Хануман и горящая кокосовая скорлупа — пришёлся на уходящий свет. Ничего не проецируют. Половину работы делает небо.\n\nЧто полезно знать заранее: это действующий храм, плечи и колени закрыты, саронг обязателен. Приезжайте засветло и пройдите сначала по тропе вдоль обрыва. Очки уберите в сумку — местные обезьяны работают быстро.\n\nСамое неудобное здесь — не шоу, а разъезд: весь обрыв едет по одной дороге. Частная машина с водителем от $59 за машину, подача к отелю по вашему времени, и вечер снова становится вечером.\n\nНапишите в WhatsApp — соберём день вокруг заката. Без предоплаты.\n\nSB Excursions",
+  "hashtags": "#uluwatu #kecakdance #kecakfiredance #uluwatutemple #bali #balisunset #balitravel #balitour #thingstodoinbali #privatedriverbali #sbexcursions",
+  "reel_idea": "Звук решает всё: первые три секунды — чёрный экран и только «чак-чак-чак», потом резкий выход на обрыв и закат. Дальше короткие планы: круг мужчин, огонь, силуэты на фоне моря, финальный кадр — пустеющий амфитеатр и текст «сложное здесь не шоу, а дорога после». Готового видео Улувату в библиотеке нет, снимать на месте; для закатной перебивки подойдёт videos/tours/tanah-lot-bedugul-tour.mp4. Музыку не накладывать, живой звук сильнее."
+ },
+ {
+  "id": "six-balinese-dishes",
+  "type": "развлекательный",
+  "title_ru": "Шесть балийских блюд, которые стоит попробовать",
+  "tour_slug": "private-car-with-driver-bali",
+  "goal": "Дать шесть блюд с деталью, которую знает только местный, и мягко привести к тому, что маршрут с водителем решает вопрос «где именно».",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "image": "images/places/balinese-warung-meal.jpg",
+    "is_video": false,
+    "headline_en": "Six Bali dishes worth ordering",
+    "headline_ru": "Шесть балийских блюд",
+    "body_en": "Not the smoothie bowls. The six plates Balinese kitchens are actually known for, and the one thing to know before you order each of them.",
+    "body_ru": "Не смузи-боулы. Шесть блюд, которыми на самом деле известна балийская кухня, и что стоит знать перед заказом каждого.",
+    "design_note": "Крупная цифра 6 поверх фото варунга."
+   },
+   {
+    "n": 2,
+    "role": "факт",
+    "image": "images/places/babi-guling-suckling-pig.jpg",
+    "is_video": false,
+    "headline_en": "Babi guling is a lunch dish",
+    "headline_ru": "Баби гулинг — обеденное блюдо",
+    "body_en": "Suckling pig with crackling, rice and spiced sides. Warungs roast one batch in the morning and close when it runs out. Come for lunch, not dinner.",
+    "body_ru": "Молочный поросёнок с хрустящей корочкой, рис и пряные гарниры. Варунги готовят партию с утра и закрываются, когда она кончилась. Идти на обед, не на ужин.",
+    "design_note": "Выделить «на обед, не на ужин» / lunch, not dinner."
+   },
+   {
+    "n": 3,
+    "role": "факт",
+    "image": "images/places/bebek-betutu-duck.jpg",
+    "is_video": false,
+    "headline_en": "Bebek betutu: order ahead",
+    "headline_ru": "Бебек бетуту: заказывать заранее",
+    "body_en": "Duck packed with spice paste, wrapped and slow-cooked until it falls apart. The real version is never a quick order — many places want to know a day before.",
+    "body_ru": "Утка, набитая пряной пастой, завёрнутая и томлённая до состояния, когда мясо распадается. Настоящую быстро не подают: во многих местах просят предупредить за день.",
+    "design_note": "Подсказка-фраза для гостя крупно: «за день до»."
+   },
+   {
+    "n": 4,
+    "role": "факт",
+    "image": "images/places/sate-lilit-satay.jpg",
+    "is_video": false,
+    "headline_en": "Sate lilit is not skewered",
+    "headline_ru": "Сате лилит не нанизывают",
+    "body_en": "Minced fish with coconut and lemongrass, wrapped around the stalk instead of speared on it. The lemongrass is the skewer and half the flavour.",
+    "body_ru": "Рубленая рыба с кокосом и лемонграссом, намотанная на стебель, а не насаженная на шпажку. Лемонграсс тут и шампур, и половина вкуса.",
+    "design_note": "Стрелка к стеблю лемонграсса на фото."
+   },
+   {
+    "n": 5,
+    "role": "факт",
+    "image": "images/places/lawar-salad.jpg",
+    "is_video": false,
+    "headline_en": "Lawar: ask which one",
+    "headline_ru": "Лавар: уточните какой",
+    "body_en": "Green beans, grated coconut, minced meat and serious spice. The red version is bound with fresh blood. If that is not for you, ask for lawar putih, the white one.",
+    "body_ru": "Стручковая фасоль, кокос, рубленое мясо и щедрые специи. Красный вариант заправляют свежей кровью. Если это не для вас — просите lawar putih, белый.",
+    "design_note": "«lawar putih» вынести как готовую фразу для заказа."
+   },
+   {
+    "n": 6,
+    "role": "факт",
+    "image": "images/places/nasi-campur-plate.jpg",
+    "is_video": false,
+    "headline_en": "Nasi campur: point, don't read",
+    "headline_ru": "Наси чампур: показывайте пальцем",
+    "body_en": "Rice in the middle, a little of everything around it. At the counter you point at what you want. The plate is assembled in front of you, not ordered from a menu.",
+    "body_ru": "Рис в центре, вокруг понемногу всего. У прилавка просто показываете, что положить: тарелку собирают при вас, а не выбирают по меню.",
+    "design_note": "Разложить подписи по кругу тарелки."
+   },
+   {
+    "n": 7,
+    "role": "факт",
+    "image": "images/places/tipat-cantok.jpg",
+    "is_video": false,
+    "headline_en": "Tipat cantok, if you skip meat",
+    "headline_ru": "Типат чанток, если без мяса",
+    "body_en": "Steamed vegetables and pressed rice cake under peanut sauce. The everyday Balinese plate that happens to be vegetarian, ordered by regulars without thinking.",
+    "body_ru": "Отварные овощи и прессованный рисовый кекс под арахисовым соусом. Повседневное балийское блюдо, которое заодно вегетарианское. Завсегдатаи берут не думая.",
+    "design_note": "Пометка «vegetarian» мелким шрифтом углом."
+   },
+   {
+    "n": 8,
+    "role": "призыв",
+    "image": "images/places/private-driver-in-bali.jpg",
+    "is_video": false,
+    "headline_en": "We know whose warung is good",
+    "headline_ru": "Мы знаем, чей варунг стоящий",
+    "body_en": "Message us on WhatsApp and we will fit the right stops into your route. A private car with driver is from $59, hotel pickup on your schedule. No prepayment.",
+    "body_ru": "Напишите в WhatsApp — впишем нужные остановки в маршрут. Частная машина с водителем от $59, подача к отелю по вашему времени. Без предоплаты.",
+    "design_note": "Крупно $59, кнопка WhatsApp внизу."
+   }
+  ],
+  "caption_en": "Six Balinese dishes, and the one thing worth knowing about each before you order.\n\nBabi guling — suckling pig with crackling. Warungs roast a batch in the morning and close when it is gone, so it is a lunch plan.\nBebek betutu — duck slow-cooked in spice paste. Never a quick order; many places want a day's notice.\nSate lilit — minced fish wrapped around lemongrass instead of speared on a skewer. The stalk is half the flavour.\nLawar — green beans, coconut and minced meat. The red version is bound with fresh blood; ask for lawar putih if that is not for you.\nNasi campur — rice in the middle, a little of everything around it. You point at the counter, no menu needed.\nTipat cantok — vegetables and pressed rice cake under peanut sauce, and it happens to be vegetarian.\n\nIf the food is part of why you came, the route matters more than the restaurant list. A private car with driver is from $59 per car with hotel pickup on your schedule, and our 10-hour Ubud day from $65 per car includes the Indonesian buffet lunch in Kintamani with Mount Batur views.\n\nWhatsApp us and we will build the stops in. No prepayment.\n\nSB Excursions",
+  "caption_ru": "Шесть балийских блюд и по одной детали, которую стоит знать до заказа.\n\nБаби гулинг — молочный поросёнок с хрустящей корочкой. Варунги готовят партию с утра и закрываются, когда она кончилась: это обед.\nБебек бетуту — утка, томлённая в пряной пасте. Быстро её не подают, во многих местах просят предупредить за день.\nСате лилит — рубленая рыба, намотанная на стебель лемонграсса, а не насаженная на шпажку. Стебель даёт половину вкуса.\nЛавар — фасоль, кокос и рубленое мясо. Красный вариант заправляют свежей кровью, если это не для вас — просите lawar putih.\nНаси чампур — рис в центре, вокруг понемногу всего. Показываете пальцем у прилавка, меню не нужно.\nТипат чанток — овощи и прессованный рисовый кекс под арахисовым соусом, заодно вегетарианское.\n\nЕсли еда — часть причины приехать, важнее не список ресторанов, а маршрут. Частная машина с водителем от $59 за машину, подача к отелю по вашему времени. А в 10-часовом дне по Убуду от $65 за машину уже включён индонезийский обед-буфет в Кинтамани с видом на вулкан Батур.\n\nНапишите в WhatsApp — впишем остановки в маршрут. Без предоплаты.\n\nSB Excursions",
+  "hashtags": "#balifood #babiguling #satelilit #nasicampur #bebekbetutu #warung #balinesefood #bali #balitravel #foodinbali #privatedriverbali #sbexcursions",
+  "reel_idea": "Шесть блюд по три секунды, крупные планы и один текстовый штрих на каждом: «варунг закрывается, когда кончилось», «заказывать за день», «спроси белый лавар». Голоса нет, только звук кухни и подписи. Финальный кадр — рука показывает пальцем на прилавке и текст «меню не нужно». Готового видео с едой в библиотеке нет, снимать на месте; для перебивки с дорогой подойдёт videos/tours/ubud-highlights-tour.mp4."
+ },
+ {
+  "id": "manta-point-nusa-penida",
+  "type": "тур",
+  "title_ru": "Манты у Нуса-Пениды: главный морской день Бали за $29",
+  "tour_slug": "nusa-penida-manta-rays-point",
+  "goal": "Показать, что настоящее морское впечатление на Бали стоит от $29, и снять страх новичка перед снорклингом.",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "headline_en": "Manta Point. Full day. From $29.",
+    "headline_ru": "Манта Пойнт. Целый день. От $29.",
+    "body_en": "The Nusa Penida snorkelling route where the manta rays are the whole point, not a bonus. A full day on the water, from $29.",
+    "body_ru": "Снорклинг-маршрут на Нуса-Пенида, где манты — не бонус, а главная цель. Целый день на воде, от $29.",
+    "image": "videos/tours/nusa-penida-manta-rays-point.mp4",
+    "is_video": true,
+    "design_note": "Наше видео с воды. Цену $29 крупно в нижней трети, чтобы читалась в ленте на скролле."
+   },
+   {
+    "n": 2,
+    "role": "факт",
+    "headline_en": "Manta Point comes first, not last",
+    "headline_ru": "Манта Пойнт — первым, а не в конце",
+    "body_en": "The strongest snorkelling stops are put at the start of the day. You see the main thing fresh, not on the last of your energy.",
+    "body_ru": "Самые сильные точки снорклинга ставим в начало дня. Главное вы увидите свежими, а не на остатках сил.",
+    "image": "images/places/manta-ray-snorkeling.jpg",
+    "is_video": false,
+    "design_note": "Крупно вынести слово «первым» / «first» — это вся мысль карточки."
+   },
+   {
+    "n": 3,
+    "role": "маршрут",
+    "headline_en": "Pickup, harbour, then open water",
+    "headline_ru": "Отель, порт, потом открытая вода",
+    "body_en": "Early hotel pickup, transfer to the harbour, the crossing, the snorkelling stops, then back across and a drop-off at your hotel.",
+    "body_ru": "Ранний выезд из отеля, трансфер в порт, переход, снорклинг, обратная переправа и высадка у отеля.",
+    "image": "images/places/boat-underway-blue.jpg",
+    "is_video": false,
+    "design_note": "Разбить тело на 4 короткие строки-этапа со стрелками — читается как схема дня."
+   },
+   {
+    "n": 4,
+    "role": "факт",
+    "headline_en": "The sea decides the day",
+    "headline_ru": "День решает море",
+    "body_en": "Conditions always matter on this route. We plan around them instead of promising you a sea that is not there that week.",
+    "body_ru": "Условия на этом маршруте решают всё. Мы планируем от моря, а не обещаем то, чего на этой неделе нет.",
+    "image": "images/places/snorkeller-over-reef.jpg",
+    "is_video": false,
+    "design_note": "Заголовок крупно, тело мелко. Карточка честности — без глянца, минимум декора."
+   },
+   {
+    "n": 5,
+    "role": "цена",
+    "headline_en": "From $29 for the whole day",
+    "headline_ru": "От $29 за целый день",
+    "body_en": "The simplest way to put one real marine memory into a Bali trip. No prepayment — you confirm the date in WhatsApp.",
+    "body_ru": "Самый простой способ привезти с Бали настоящее морское впечатление. Без предоплаты, дату подтверждаем в WhatsApp.",
+    "image": "images/places/reef-fish-shallow.jpg",
+    "is_video": false,
+    "design_note": "«$29» гигантом по центру, всё остальное подписью. Отдельно бейдж «no prepayment / без предоплаты»."
+   },
+   {
+    "n": 6,
+    "role": "факт",
+    "headline_en": "Made for first-time snorkellers",
+    "headline_ru": "Подходит тем, кто в маске впервые",
+    "body_en": "Couples, small groups and people putting on a mask for the first time. Nothing to assemble yourself — the route already works.",
+    "body_ru": "Пары, небольшие компании и те, кто впервые надевает маску. Собирать ничего не нужно — маршрут уже работает.",
+    "image": "images/tours-real/nusa-penida-manta-rays-point.jpg",
+    "is_video": false,
+    "design_note": "Наше фото с тура. Крупно «впервые» / «first-time» — карточка снимает страх."
+   },
+   {
+    "n": 7,
+    "role": "призыв",
+    "headline_en": "Ask about the next good day",
+    "headline_ru": "Спросите про ближайший хороший день",
+    "body_en": "Write to SB Excursions on WhatsApp with your dates. No prepayment, and we say honestly if your week looks wrong for the sea.",
+    "body_ru": "Напишите SB Excursions в WhatsApp и назовите даты. Предоплаты нет, и мы честно скажем, если неделя для моря неудачная.",
+    "image": "images/bali-tours/nusa-penida-manta-rays-point.webp",
+    "is_video": false,
+    "design_note": "Иконка WhatsApp + подпись SB Excursions. Личных имён на карточке нет."
+   }
+  ],
+  "caption_en": "Manta Point is the reason this route exists. Full day on Nusa Penida waters, from $29, with an early hotel pickup and a harbour transfer built in — the strongest snorkelling stops come first, while everyone is still fresh. Sea conditions are a real part of this trip, so we plan around them and tell you straight when a week looks wrong. Dates go through WhatsApp, no prepayment. SB Excursions.",
+  "caption_ru": "Манта Пойнт — то, ради чего этот маршрут вообще существует. Целый день в водах Нуса-Пениды, от $29, с ранним выездом из отеля и трансфером в порт. Сильнейшие точки снорклинга идут первыми, пока есть силы. Состояние моря здесь решает многое — мы планируем от него и честно говорим, если неделя неудачная. Даты — в WhatsApp, предоплаты нет. SB Excursions.",
+  "hashtags": "#nusapenida #mantapoint #bali #balitour #snorkelingbali #balitrip #нусапенида #бали #балиэкскурсии #снорклинг #манты #sbexcursions",
+  "reel_idea": "Собрать из videos/tours/nusa-penida-manta-rays-point.mp4 рилс на 15 секунд: первые две секунды — манта входит в кадр под сноркелером, без разгона и без титра-вступления. Дальше короткая склейка «выезд затемно — порт — вода», по одному кадру на этап. Титр на четвёртой секунде: «Manta Point comes first, not last». Финал — статичный кадр с воды и плашка «From $29 · WhatsApp»."
+ },
+ {
+  "id": "ubud-highlights-22-tickets",
+  "type": "тур",
+  "title_ru": "Убуд и Кинтамани: 10 часов, 22 билета, цена за машину",
+  "tour_slug": "ubud-highlights-tour",
+  "goal": "Объяснить, что цена за машину и 22 включённых билета делают день проще и предсказуемее, чем самостоятельная поездка.",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "headline_en": "10 hours, 22 tickets, one price",
+    "headline_ru": "10 часов, 22 билета, одна цена",
+    "body_en": "The Ubud and Kintamani day where nobody at the gate asks you for money. From $65 per car.",
+    "body_ru": "День по Убуду и Кинтамани, в котором на входах у вас не просят денег. От $65 за машину.",
+    "image": "videos/tours/ubud-highlights-tour.mp4",
+    "is_video": true,
+    "design_note": "Три числа — 10, 22, $65 — вынести крупным рядом поверх видео. Числа и есть хук."
+   },
+   {
+    "n": 2,
+    "role": "факт",
+    "headline_en": "08:00 at your hotel door",
+    "headline_ru": "08:00 у дверей вашего отеля",
+    "body_en": "Pickup from covered areas of Bali in a private air-conditioned car, and the same car brings you back at the end of the day.",
+    "body_ru": "Забираем из зон обслуживания на Бали на частной машине с кондиционером. Она же везёт вас обратно.",
+    "image": "images/places/private-driver-in-bali.jpg",
+    "is_video": false,
+    "design_note": "«08:00» крупно, как на циферблате. Остальное подписью."
+   },
+   {
+    "n": 3,
+    "role": "факт",
+    "headline_en": "22 entrance tickets, already paid",
+    "headline_ru": "22 входных билета уже оплачены",
+    "body_en": "Every entrance fee and local route fee of the day is inside the price. Bottled water too. Your wallet stays in the bag.",
+    "body_ru": "Все входные и дорожные сборы этого дня уже в цене. Вода тоже. Кошелёк остаётся в сумке.",
+    "image": "images/tours-real/ubud-highlights-tour.jpg",
+    "is_video": false,
+    "design_note": "Число 22 гигантом. Самый сильный факт всего поста — карточку не перегружать."
+   },
+   {
+    "n": 4,
+    "role": "маршрут",
+    "headline_en": "Batuan, Sebatu, Gunung Kawi",
+    "headline_ru": "Батуан, Себату, Гунунг Кави",
+    "body_en": "Three temple stops in one clean stretch of road, before the route climbs inland towards the volcano.",
+    "body_ru": "Три храмовые остановки одним отрезком дороги — до того, как маршрут поднимется вглубь острова к вулкану.",
+    "image": "images/places/tirta-empul-holy-spring.jpg",
+    "is_video": false,
+    "design_note": "Три названия списком в столбик. Подпись места под фото НЕ ставить: снимок общий храмовый, а в тексте названы храмы самого маршрута."
+   },
+   {
+    "n": 5,
+    "role": "факт",
+    "headline_en": "Lunch with Mount Batur in view",
+    "headline_ru": "Обед с видом на Батур",
+    "body_en": "An Indonesian buffet in Kintamani, included in the price, with the volcano and Lake Batur in front of the tables.",
+    "body_ru": "Индонезийский шведский стол в Кинтамани, уже в цене. Перед столиками — вулкан и озеро Батур.",
+    "image": "images/places/lake-batur-caldera.jpg",
+    "is_video": false,
+    "design_note": "Слово «included / включён» вынести отдельным бейджем."
+   },
+   {
+    "n": 6,
+    "role": "факт",
+    "headline_en": "Rice terraces, then coffee",
+    "headline_ru": "Рисовые террасы, потом кофе",
+    "body_en": "Tegalalang for the photographs, then a plantation stop for coffee and tea tasting. Part of the day, not an extra.",
+    "body_ru": "Тегалаланг для фотографий, потом плантация с дегустацией кофе и чая. Это часть дня, а не доплата.",
+    "image": "images/places/campuhan-ridge.jpg",
+    "is_video": false,
+    "design_note": "Акцент на «не доплата / not an extra» — контраст к типичным допродажам на маршруте."
+   },
+   {
+    "n": 7,
+    "role": "маршрут",
+    "headline_en": "Monkey Forest and Ubud Palace",
+    "headline_ru": "Лес обезьян и дворец Убуда",
+    "body_en": "The day ends in Ubud itself, not at a filler stop chosen to close the schedule. Then the transfer back to your hotel.",
+    "body_ru": "День заканчивается в самом Убуде, а не случайной остановкой ради расписания. Дальше — трансфер в отель.",
+    "image": "images/places/ubud-monkey-forest.jpg",
+    "is_video": false,
+    "design_note": "Маленькая метка «финал дня» в углу — карусель читается как таймлайн."
+   },
+   {
+    "n": 8,
+    "role": "призыв",
+    "headline_en": "From $65 per car, not per person",
+    "headline_ru": "От $65 за машину, а не с человека",
+    "body_en": "The price is for the car, so the group splits it. Send your dates to SB Excursions on WhatsApp — no prepayment needed.",
+    "body_ru": "Цена за машину, её делит вся компания. Отправьте даты SB Excursions в WhatsApp — предоплата не нужна.",
+    "image": "images/places/bali-rice-paddy-sunset.jpg",
+    "is_video": false,
+    "design_note": "«per car / за машину» подчеркнуть цветом — на этом строится вся выгода. Иконка WhatsApp, подпись SB Excursions."
+   }
+  ],
+  "caption_en": "Ten hours across central Bali with 22 entrance tickets already inside the price. Pickup is at 08:00 from covered areas in a private air-conditioned car: arts villages, Batuan, Sebatu and Gunung Kawi, then an Indonesian buffet lunch in Kintamani with Mount Batur in front of the tables, Tegalalang and a coffee tasting, Monkey Forest and Ubud Palace, then home. Water and all local route fees included. From $65 per car — the group splits one price. WhatsApp for dates, no prepayment. SB Excursions.",
+  "caption_ru": "Десять часов по центральному Бали, и 22 входных билета уже внутри цены. Выезд в 08:00 из зон обслуживания на частной машине с кондиционером: деревни ремесленников, Батуан, Себату и Гунунг Кави, потом шведский стол в Кинтамани с видом на Батур, Тегалаланг с дегустацией кофе, лес обезьян и дворец Убуда — и обратно в отель. Вода и все дорожные сборы включены. От $65 за машину: одну цену делит вся компания. Даты — в WhatsApp, без предоплаты. SB Excursions.",
+  "hashtags": "#ubud #bali #tegalalang #kintamani #monkeyforest #balitour #balitrip #убуд #бали #кинтамани #балиэкскурсии #тегалаланг #sbexcursions",
+  "reel_idea": "Из videos/tours/ubud-highlights-tour.mp4 сделать рилс-счётчик на 20 секунд. Первый кадр — крупный титр «22 tickets. You pay for none of them», дальше быстрая нарезка остановок: храм, обед с видом на Батур, террасы, лес обезьян, по полторы секунды на кадр, в углу тикает счётчик билетов. Предпоследний кадр — «10 hours», финал — «From $65 per car · WhatsApp». Без громкой музыки с вокалом, чтобы читались титры."
+ },
+ {
+  "id": "sumbawa-whale-shark",
+  "type": "тур",
+  "title_ru": "Китовые акулы Сумбавы: не прогулка, а экспедиция от $150",
+  "tour_slug": "sumbawa-whale-shark-snorkeling-trip",
+  "goal": "Продать редкость и честность формата: отсеять тех, кто ждёт лёгкий день, и притянуть тех, кому мало обычного моря.",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "headline_en": "Whale sharks. Not a Bali day trip.",
+    "headline_ru": "Китовые акулы. И это не Бали.",
+    "body_en": "The route runs in Sumbawa waters, and that distance is exactly why it feels like an expedition. From $150.",
+    "body_ru": "Маршрут идёт в водах Сумбавы, и именно расстояние делает его экспедицией. От $150.",
+    "image": "videos/tours/sumbawa-whale-shark-snorkeling-trip.mp4",
+    "is_video": true,
+    "design_note": "Наше видео. Слово «Sumbawa» крупно — противопоставление Бали и есть хук."
+   },
+   {
+    "n": 2,
+    "role": "факт",
+    "headline_en": "The whole trip is one animal",
+    "headline_ru": "Вся поездка ради одного",
+    "body_en": "Whale sharks are what separates this from every snorkelling day around Bali. Everything else in the plan serves that one window.",
+    "body_ru": "Китовая акула — то, чем поездка отличается от любого снорклинга у Бали. Всё остальное в плане служит ей.",
+    "image": "images/tours-real/sumbawa-whale-shark-snorkeling-trip.jpg",
+    "is_video": false,
+    "design_note": "Наше фото. Текста минимум, кадр работает сам."
+   },
+   {
+    "n": 3,
+    "role": "маршрут",
+    "headline_en": "A departure window, not a wake-up",
+    "headline_ru": "Не подъём, а стартовое окно",
+    "body_en": "The start is very early and planned around the window that works at sea. Wildlife timing sets the schedule, the clock does not.",
+    "body_ru": "Выезд очень ранний и рассчитан под окно, которое работает в море. Расписание задают не часы, а животные.",
+    "image": "images/places/boat-open-sea-aerial.jpg",
+    "is_video": false,
+    "design_note": "Крупно «very early / очень рано». Точное время не ставить — оно зависит от окна."
+   },
+   {
+    "n": 4,
+    "role": "маршрут",
+    "headline_en": "Then the search phase begins",
+    "headline_ru": "Дальше начинается поиск",
+    "body_en": "The middle of the day is the working part: moving across the water until the animals show, and only then the snorkelling window.",
+    "body_ru": "Середина дня — рабочая часть: идём по воде, пока не появятся акулы, и только потом окно снорклинга.",
+    "image": "images/places/snorkeler-beginner.jpg",
+    "is_video": false,
+    "design_note": "Подпись «этап 2 из 3» — карусель читается как разбор дня."
+   },
+   {
+    "n": 5,
+    "role": "факт",
+    "headline_en": "This one is not a casual day",
+    "headline_ru": "Это не лёгкая прогулка",
+    "body_en": "Distance, timing and sea conditions are part of the product here, not fine print. We say it before you book, not after.",
+    "body_ru": "Расстояние, время и состояние моря — часть продукта, а не мелкий шрифт. Мы говорим это до брони, а не после.",
+    "image": "images/places/boat-underway-blue.jpg",
+    "is_video": false,
+    "design_note": "Самая честная карточка поста — сверстать строго, без глянца и восклицаний."
+   },
+   {
+    "n": 6,
+    "role": "факт",
+    "headline_en": "For people who wanted something bigger",
+    "headline_ru": "Для тех, кому мало обычного моря",
+    "body_en": "Built for travellers who already have sea days behind them and want a rarer story than another snorkelling stop off Bali.",
+    "body_ru": "Для тех, у кого морские дни уже были и кто хочет историю реже, чем очередной снорклинг у Бали.",
+    "image": "images/places/boat-wake-turquoise.jpg",
+    "is_video": false,
+    "design_note": "Заголовок длинный — верстать в две строки, тело мельче."
+   },
+   {
+    "n": 7,
+    "role": "призыв",
+    "headline_en": "From $150. Ask before you plan it",
+    "headline_ru": "От $150. Спросите до планов",
+    "body_en": "Message SB Excursions on WhatsApp with your dates. No prepayment, and if the timing does not work we tell you straight.",
+    "body_ru": "Напишите SB Excursions в WhatsApp с датами. Предоплаты нет, и если сроки не складываются, мы скажем прямо.",
+    "image": "images/bali-tours/sumbawa-whale-shark-snorkeling-trip.webp",
+    "is_video": false,
+    "design_note": "«$150» крупно, иконка WhatsApp, подпись SB Excursions. Повтор кадра со второй карточки — закрывает круг."
+   }
+  ],
+  "caption_en": "This is the rare one. Whale sharks in Sumbawa waters, a very early planned departure, a long search phase on the water, and a long way back — an expedition-style day rather than a casual Bali sea trip. Distance, timing and sea conditions are a genuine part of the product here, and we say that before you book. Best for travellers who already have sea days behind them. From $150, dates through WhatsApp, no prepayment. SB Excursions.",
+  "caption_ru": "Это редкий формат. Китовые акулы в водах Сумбавы, очень ранний рассчитанный выезд, долгая фаза поиска на воде и долгая дорога обратно — экспедиция, а не лёгкий морской день у Бали. Расстояние, время и состояние моря здесь честно входят в продукт, и мы говорим об этом до брони, а не после. Подходит тем, у кого морские дни уже были. От $150, даты — в WhatsApp, предоплаты нет. SB Excursions.",
+  "hashtags": "#whaleshark #sumbawa #indonesia #balitrip #snorkeling #adventuretravel #китоваяакула #сумбава #бали #балиэкскурсии #снорклинг #sbexcursions",
+  "reel_idea": "Из videos/tours/sumbawa-whale-shark-snorkeling-trip.mp4 сделать рилс на 18-20 секунд с обратной драматургией. Начать не с акулы, а с пустой воды и титра «Most people should not book this one» — держать три секунды. Дальше кадры перехода и поиска под титры «very early start» и «Sumbawa, not Bali». Только на 12-й секунде выпустить в кадр китовую акулу вообще без титра. Финал — «From $150 · WhatsApp»."
+ },
+ {
+  "id": "gili-day",
+  "type": "тур",
+  "tour_slug": "gili-island-tour",
+  "title_ru": "Гили за один день: катер, свой снорклинг-бот, черепахи",
+  "goal": "Показать, что однодневная поездка на Гили реальна и собрана под ключ, и получить заявку в WhatsApp с датами.",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "headline_en": "One day from Bali to the Gilis",
+    "headline_ru": "За день с Бали на Гили",
+    "body_en": "Fast boat across the Lombok Strait, a private snorkeling boat, turtles. Seven to nine hours, door to door.",
+    "body_ru": "Быстроходный катер через пролив Ломбок, свой катер для снорклинга, черепахи. Семь-девять часов от двери до двери.",
+    "image": "videos/tours/gili-island-tour.mp4",
+    "is_video": true,
+    "design_note": "Заголовок крупно поверх видео, «7–9 часов» отдельной мелкой строкой. Видео собственное — не закрывать его плашками."
+   },
+   {
+    "n": 2,
+    "role": "маршрут",
+    "headline_en": "Check-in happens in Padang Bai",
+    "headline_ru": "Регистрация — в Паданг Бае",
+    "body_en": "Either we pick you up at the hotel, or you meet us at the Wannen Bali office in Padang Bai. The fast boat leaves from there.",
+    "body_ru": "Либо забираем от отеля, либо встречаемся в офисе Wannen Bali в Паданг Бае. Оттуда уходит катер.",
+    "image": "images/places/boat-wake-turquoise.jpg",
+    "is_video": false,
+    "design_note": "Крупно «Паданг Бай» / «Padang Bai», название офиса — мелким шрифтом как подпись."
+   },
+   {
+    "n": 3,
+    "role": "факт",
+    "headline_en": "Your own boat, not the group one",
+    "headline_ru": "Свой катер, а не общий",
+    "body_en": "On arrival you move to a private glass-bottom boat with a local guide. Safety briefing first, then the water. No waiting for thirty other people.",
+    "body_ru": "На месте пересаживаетесь на приватный катер со стеклянным дном и местным гидом. Сначала инструктаж, потом вода. Без ожидания тридцати попутчиков.",
+    "image": "images/places/calm-beach-in-bali.jpg",
+    "is_video": false,
+    "design_note": "Главное — противопоставление «свой» против «общий». Эти два слова выделить цветом."
+   },
+   {
+    "n": 4,
+    "role": "факт",
+    "headline_en": "Turtles, coral, underwater statues",
+    "headline_ru": "Черепахи, кораллы, подводные статуи",
+    "body_en": "The route covers the signature points around Gili Trawangan and Gili Meno. A GoPro films the whole session and the photos and video go to you.",
+    "body_ru": "Маршрут идёт по главным точкам вокруг Гили Траванган и Гили Мено. Всю сессию снимает GoPro, фото и видео отдаём вам.",
+    "image": "images/places/white-sand-beach-aerial.jpg",
+    "is_video": false,
+    "design_note": "Три объекта из заголовка — в три строки. «GoPro включена» маленьким бейджем в углу."
+   },
+   {
+    "n": 5,
+    "role": "маршрут",
+    "headline_en": "After the water the island is yours",
+    "headline_ru": "После воды остров ваш",
+    "body_en": "There is real free time on Gili Trawangan before the return boat: walk it end to end, rent a bicycle, lie on the sand or find a cafe.",
+    "body_ru": "До обратного катера остаётся настоящее свободное время на Гили Траванган: пройти остров, взять велосипед, полежать на песке, зайти в кафе.",
+    "image": "images/places/palm-beach-quiet.jpg",
+    "is_video": false,
+    "design_note": "Карточка-передышка: много воздуха, текст внизу кадра."
+   },
+   {
+    "n": 6,
+    "role": "цена",
+    "headline_en": "From $115, small stuff included",
+    "headline_ru": "От $115, мелочи уже внутри",
+    "body_en": "Roundtrip fast boat, snorkel gear, life jacket, harbour tax, water and insurance are all in. Hotel transfer too, if you take that option.",
+    "body_ru": "Катер туда-обратно, снаряжение, жилет, портовый сбор, вода и страховка — всё внутри. Трансфер от отеля — если берёте этот вариант.",
+    "image": "images/tours-real/gili-island-tour.jpg",
+    "is_video": false,
+    "design_note": "«$115» — самый крупный элемент. Список включённого — маркерами в два столбца, мелко. Кадр взять другим кропом, чем на карточке 2."
+   },
+   {
+    "n": 7,
+    "role": "призыв",
+    "headline_en": "One message is enough to hold a day",
+    "headline_ru": "Чтобы занять дату, хватит сообщения",
+    "body_en": "Send your dates on WhatsApp and we will say which package fits and how the sea looks that week. No prepayment.",
+    "body_ru": "Напишите даты в WhatsApp — подскажем, какой пакет подходит и что с морем на эти дни. Без предоплаты.",
+    "image": "images/tours-real/gili-islands-getaway.jpg",
+    "is_video": false,
+    "design_note": "Иконка WhatsApp, «без предоплаты» отдельной строкой. Без стрелок и восклицательных знаков."
+   }
+  ],
+  "caption_en": "A Gili day from Bali is doable. It is just a long one: seven to nine hours from pickup to return.\n\nRoundtrip fast boat across the Lombok Strait, then a private glass-bottom boat with a local guide for the snorkeling around Gili Trawangan and Gili Meno. Turtles, coral gardens, the underwater statues. A GoPro films the session and the photos and video come to you afterwards. Gear, life jacket, harbour tax, water and insurance are included, and so is a private Bali hotel transfer if you choose that option.\n\nAfter the water there is still free time on Gili Trawangan before the return boat, enough to walk it, cycle, or sit somewhere with a coffee.\n\nYou can start with hotel pickup or check in yourself at the Wannen Bali office in Padang Bai, whichever suits your morning. From $115.\n\nSea conditions decide which dates actually work, so it is worth asking before the rest of your week is planned. Send your dates on WhatsApp. No prepayment.",
+  "caption_ru": "Съездить на Гили с Бали за один день реально. Просто день длинный: семь-девять часов от подачи машины до возвращения.\n\nБыстроходный катер через пролив Ломбок туда и обратно, а на месте — приватный катер со стеклянным дном и местный гид. Снорклинг вокруг Гили Траванган и Гили Мено: черепахи, коралловые сады, подводные статуи. Всю сессию снимает GoPro, фото и видео отдаём вам. Снаряжение, жилет, портовый сбор, вода и страховка включены, трансфер от отеля на Бали — если выбираете этот вариант.\n\nПосле воды до обратного катера остаётся свободное время на Гили Траванган: пройти остров, взять велосипед, посидеть в кафе.\n\nНачать можно с трансфера от отеля или самостоятельно отметиться в офисе Wannen Bali в Паданг Бае — как удобнее. От $115.\n\nКакие даты подходят, решает море, поэтому лучше спросить до того, как расписана вся неделя. Напишите даты в WhatsApp. Без предоплаты.",
+  "hashtags": "#giliislands #gilitrawangan #gilimeno #snorkelingbali #balidaytrip #balitours #balitravel #sbexcursions",
+  "reel_idea": "Берём videos/tours/gili-island-tour.mp4 и режем под один вопрос: «Успеть на Гили за день — реально?». Первые две секунды — вода и след катера, поверх текст «7–9 часов от отеля до отеля». Дальше три быстрые подписи по таймингу маршрута: катер через пролив, свой бот со стеклянным дном, свободное время на острове. Финал — стоп-кадр с текстом «От $115, без предоплаты»."
+ },
+ {
+  "id": "tanah-lot-bedugul",
+  "type": "тур",
+  "tour_slug": "tanah-lot-bedugul-tour",
+  "title_ru": "Бедугул и Танах Лот: горы утром, океан на закате",
+  "goal": "Продать классический обзорный день без физических нагрузок, где закат на Танах Лоте — запланированный финал, а не везение.",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "headline_en": "Highlands by day, ocean at dusk",
+    "headline_ru": "Утром горы, к закату океан",
+    "body_en": "One route: the cool lake country around Bedugul, then Tanah Lot for the last light. Nine to eleven hours, from $65 per car.",
+    "body_ru": "Один маршрут: прохладные озёра Бедугула, потом Танах Лот на последнем свете. Девять-одиннадцать часов, от $65 за машину.",
+    "image": "videos/tours/tanah-lot-bedugul-tour.mp4",
+    "is_video": true,
+    "design_note": "Главное — контраст в заголовке. Две части развести по вертикали, как утро и вечер."
+   },
+   {
+    "n": 2,
+    "role": "маршрут",
+    "headline_en": "We climb early on purpose",
+    "headline_ru": "В горы выезжаем рано не просто так",
+    "body_en": "Morning pickup from the hotel. The drive up to Bedugul is done before the heat sets in and while the road is still moving.",
+    "body_ru": "Забираем от отеля утром. Подъём к Бедугулу проходит до жары и пока дорога ещё едет.",
+    "image": "images/places/country-road-asia.jpg",
+    "is_video": false,
+    "design_note": "Крупно вынести слово «утром». Объяснение про жару и дорогу — мелким текстом."
+   },
+   {
+    "n": 3,
+    "role": "факт",
+    "headline_en": "Bedugul is the cool half of Bali",
+    "headline_ru": "Бедугул — прохладная половина Бали",
+    "body_en": "Up here the tropical heat drops away. Lake temple views, the market and the viewpoints, plus a coffee stop if you want one.",
+    "body_ru": "Здесь тропическая жара отступает. Виды на храм у озера, рынок и смотровые площадки, плюс остановка на кофе, если захочется.",
+    "image": "images/places/bali-rice-paddy-sunset.jpg",
+    "is_video": false,
+    "design_note": "Можно добавить один смысловой знак-термометр или обойтись без него. Слово «прохладная» — акцентным цветом."
+   },
+   {
+    "n": 4,
+    "role": "факт",
+    "headline_en": "The order of stops is not fixed",
+    "headline_ru": "Порядок остановок не жёсткий",
+    "body_en": "The car is private, so the driver reads the weather and the traffic and reshuffles the route. Cloud over the lake does not cost you the day.",
+    "body_ru": "Машина частная, поэтому водитель смотрит на погоду и пробки и меняет очерёдность. Облака над озером не съедают весь день.",
+    "image": "images/tours-real/tanah-lot-bedugul-tour.jpg",
+    "is_video": false,
+    "design_note": "Кадр тот же, что на карточке 2 — взять другой кроп или зеркально отразить, чтобы не читался повтором."
+   },
+   {
+    "n": 5,
+    "role": "маршрут",
+    "headline_en": "Tanah Lot is the closing stop",
+    "headline_ru": "Танах Лот — последняя точка",
+    "body_en": "The day finishes on the coast and we head back after the best light. That is why the route runs nine to eleven hours and not six.",
+    "body_ru": "День заканчивается на побережье, и обратно едем после лучшего света. Поэтому маршрут длится девять-одиннадцать часов, а не шесть.",
+    "image": "images/places/tanah-lot-sunset.jpg",
+    "is_video": false,
+    "design_note": "Самая сильная картинка карусели. Текст минимальный, плашку не ставить на силуэт храма."
+   },
+   {
+    "n": 6,
+    "role": "цена",
+    "headline_en": "From $65 per car, not per person",
+    "headline_ru": "От $65 за машину, а не с человека",
+    "body_en": "Two of you or a family of four, the price is for the car. And there is no hiking anywhere on this route.",
+    "body_ru": "Вдвоём или семьёй из четырёх — цена за машину. И пеших подъёмов на маршруте нет.",
+    "image": "images/bali-tours/unesco-tanah-lot-coast.jpg",
+    "is_video": false,
+    "design_note": "«$65» — самый крупный элемент, рядом мелко «за машину». «Без пеших подъёмов» — отдельным бейджем."
+   },
+   {
+    "n": 7,
+    "role": "призыв",
+    "headline_en": "Booking is one WhatsApp message",
+    "headline_ru": "Бронь — одно сообщение в WhatsApp",
+    "body_en": "Send the date and how many of you there are. We reply with the pickup time and the plan for the day. No prepayment.",
+    "body_ru": "Пришлите дату и сколько вас. В ответ придёт время подачи и план на день. Без предоплаты.",
+    "image": "images/bali-tours/unesco-tanah-lot-sunset.jpg",
+    "is_video": false,
+    "design_note": "Тот же кадр, что на 5, но сильно затемнённый под текст. Иконка WhatsApp, без стрелок."
+   }
+  ],
+  "caption_en": "A classic Bali sightseeing day that does not ask anything of your legs.\n\nMorning pickup from the hotel, then the drive up to Bedugul while the road still moves and the heat has not arrived. Up in the highlands the air is genuinely cooler: lake temple views, the market, viewpoints, and a coffee break if you want one. The day closes on the coast at Tanah Lot, and we head back after the best light.\n\nBecause the car is private, the order is not locked. The driver reads the weather and the traffic and moves the stops around, which is why cloud over the lake does not write off the whole day.\n\nNine to eleven hours, from $65 per car. The price is for the car, so a couple and a family of four pay the same. Good for mixed-age groups for the same reason there is nothing to climb.\n\nSend the date and how many of you there are on WhatsApp and we will come back with a pickup time. No prepayment.",
+  "caption_ru": "Классический обзорный день по Бали, который ничего не требует от ног.\n\nУтром забираем от отеля и поднимаемся к Бедугулу, пока дорога ещё едет и жара не началась. Наверху воздух действительно прохладнее: виды на храм у озера, рынок, смотровые площадки, остановка на кофе по желанию. Заканчивается день на побережье, на Танах Лоте, и обратно едем после лучшего света.\n\nМашина частная, поэтому порядок точек не зафиксирован. Водитель смотрит на погоду и пробки и меняет очерёдность — именно поэтому облака над озером не списывают весь день.\n\nДевять-одиннадцать часов, от $65 за машину. Цена именно за машину: пара и семья из четырёх платят одинаково. Разновозрастным компаниям подходит по той же причине: ничего не надо штурмовать пешком.\n\nНапишите в WhatsApp дату и сколько вас — вернёмся со временем подачи. Без предоплаты.",
+  "hashtags": "#tanahlot #bedugul #balitemples #balidaytrip #balisunset #balitours #balitravel #sbexcursions",
+  "reel_idea": "Собираем из videos/tours/tanah-lot-bedugul-tour.mp4 рилс про один день от гор до океана. Открываем прохладными кадрами Бедугула с подписью «09:00, здесь ещё не жарко», держим их дольше обычного. Вторая половина — резкий переход на закатный Танах Лот с подписью «тот же день». В конце — «9–11 часов, от $65 за машину»."
+ },
+ {
+  "id": "private-driver",
+  "type": "тур",
+  "tour_slug": "private-car-with-driver-bali",
+  "title_ru": "Частный водитель на день: маршрут строите вы",
+  "goal": "Объяснить, что это не трансфер, а свободный день с машиной, и снять страх «у меня нет готового плана».",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "headline_en": "A driver for the day, from $59",
+    "headline_ru": "Водитель на день, от $59",
+    "body_en": "This is not a one-way transfer. The car and the driver are yours for the day, and the route is whatever you decide that morning.",
+    "body_ru": "Это не трансфер в одну сторону. Машина с водителем ваша на весь день, а маршрут вы решаете утром.",
+    "image": "videos/tours/private-car-with-driver-bali.mp4",
+    "is_video": true,
+    "design_note": "Цифру $59 вынести крупно уже на обложке — она и есть стоппер листания."
+   },
+   {
+    "n": 2,
+    "role": "факт",
+    "headline_en": "You name the area, we do the rest",
+    "headline_ru": "Вы называете район, остальное на нас",
+    "body_en": "The day starts with one question: which part of Bali matters to you. Roads, parking and timing after that are our side of the job.",
+    "body_ru": "День начинается с одного вопроса: какая часть Бали вам нужна. Дороги, парковки и тайминг дальше — наша часть работы.",
+    "image": "images/places/private-driver-in-bali.jpg",
+    "is_video": false,
+    "design_note": "Можно разбить на две колонки: «вы» — район; «мы» — дороги, парковки, время."
+   },
+   {
+    "n": 3,
+    "role": "маршрут",
+    "headline_en": "Stop wherever you feel like it",
+    "headline_ru": "Останавливайтесь там, где хочется",
+    "body_en": "No fixed script. A long lunch, one more beach, an extra temple, or skipping a stop you have gone cold on. All of it works.",
+    "body_ru": "Жёсткого сценария нет. Долгий обед, ещё один пляж, лишний храм или пропустить точку, которая разонравилась. Всё это можно.",
+    "image": "images/places/tropical-road-palms.jpg",
+    "is_video": false,
+    "design_note": "Список вариантов выгодно показать в столбик мелкими строками, заголовок — крупно."
+   },
+   {
+    "n": 4,
+    "role": "факт",
+    "headline_en": "Bali distances lie on the map",
+    "headline_ru": "Расстояния на Бали врут на карте",
+    "body_en": "Traffic and road quality decide the day here, not kilometres. A driver who knows both is the difference between four stops and two.",
+    "body_ru": "День здесь определяют пробки и качество дорог, а не километры. Водитель, который знает и то и другое, — это четыре точки вместо двух.",
+    "image": "images/places/country-road-asia.jpg",
+    "is_video": false,
+    "design_note": "Самая содержательная карточка. Крупно — «4 точки вместо 2»."
+   },
+   {
+    "n": 5,
+    "role": "факт",
+    "headline_en": "Made for families and mixed groups",
+    "headline_ru": "Для семей и разных возрастов",
+    "body_en": "Nobody is chased by a schedule someone else wrote. Naps in the car, snack stops and a slow morning all fit without a discussion.",
+    "body_ru": "Никто не гонит по чужому расписанию. Сон в машине, остановки на перекус и медленное утро вписываются без обсуждений.",
+    "image": "images/tours-real/private-car-with-driver-bali.jpg",
+    "is_video": false,
+    "design_note": "Тот же кадр, что на 2 — взять более крупный план, чтобы не читался повтором."
+   },
+   {
+    "n": 6,
+    "role": "цена",
+    "headline_en": "From $59 per car, any region",
+    "headline_ru": "От $59 за машину, любой район",
+    "body_en": "The price is for the car, not per seat, and the service covers all the main parts of the island. Pickup time is whatever suits you.",
+    "body_ru": "Цена за машину, а не за место, и работаем по всем основным районам острова. Время подачи — какое вам удобно.",
+    "image": "images/places/scooter-ride-hailing-driver.jpg",
+    "is_video": false,
+    "design_note": "«$59» крупно, рядом мелко «за машину, не за место». Кадр взять в другом кропе, чем на 3."
+   },
+   {
+    "n": 7,
+    "role": "призыв",
+    "headline_en": "Tell us the day, not the itinerary",
+    "headline_ru": "Назовите день, а не маршрут",
+    "body_en": "You do not need a finished plan to book. Message us on WhatsApp with your dates and a rough direction. No prepayment.",
+    "body_ru": "Готовый план для брони не нужен. Напишите в WhatsApp даты и примерное направление. Без предоплаты.",
+    "image": "images/places/bali-rice-paddy-sunset.jpg",
+    "is_video": false,
+    "design_note": "Снятие барьера — главное сообщение карточки. Иконка WhatsApp и «без предоплаты» внизу."
+   }
+  ],
+  "caption_en": "A private car with driver is the least glamorous thing we sell and probably the most useful.\n\nIt is not a one-way transfer. The car and driver are yours for the day, pickup at whatever time suits your morning, and the route is whatever you decide. Beaches, temples, shopping, a day trip, or a mix of all of it. Long lunch, an extra stop, or dropping a place you have gone cold on: none of that needs renegotiating.\n\nThe real value is local knowledge of the roads. On Bali the day is decided by traffic and road quality, not by kilometres on a map, and that is the difference between fitting in four stops and fitting in two.\n\nIt also suits families and mixed-age groups for a simple reason: nobody is being chased by a schedule someone else wrote.\n\nFrom $59 per car, across all the main regions of the island.\n\nYou do not need a finished itinerary to book. Send your dates and a rough direction on WhatsApp. No prepayment.",
+  "caption_ru": "Частная машина с водителем — самая неэффектная из наших услуг и, похоже, самая полезная.\n\nЭто не трансфер в одну сторону. Машина с водителем ваша на весь день, подача в удобное время, а маршрут вы решаете сами. Пляжи, храмы, шопинг, поездка на день или всё вместе. Долгий обед, лишняя остановка или отказ от точки, которая разонравилась, не требуют переговоров.\n\nГлавная ценность — знание дорог. На Бали день определяют пробки и качество покрытия, а не километры на карте. Именно это разница между четырьмя точками за день и двумя.\n\nПодходит семьям и разновозрастным компаниям по простой причине: никто не гонит по чужому расписанию.\n\nОт $59 за машину, по всем основным районам острова.\n\nГотовый маршрут для брони не нужен. Напишите в WhatsApp даты и примерное направление. Без предоплаты.",
+  "hashtags": "#balidriver #privatedriverbali #balitransport #baliitinerary #balidaytrip #balitours #balitravel #sbexcursions",
+  "reel_idea": "Из videos/tours/private-car-with-driver-bali.mp4 делаем рилс от лица пассажира: кадры дороги из окна, без монтажной суеты. На первом кадре текст «Маршрута нет. И это нормально». Дальше три подписи по ходу движения: «остановились где захотелось», «пообедали долго», «вернулись когда захотели». Финал — «От $59 за машину в день»."
+ },
+ {
+  "id": "before-you-fly-bali",
+  "type": "информационный",
+  "title_ru": "Что нужно сделать до вылета на Бали: виза и сборы",
+  "tour_slug": "bali-airport-transfer",
+  "goal": "Снять тревогу перед поездкой и получить сохранения и первые сообщения в WhatsApp по трансферу из аэропорта.",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "headline_en": "Six things to do before you fly",
+    "headline_ru": "Шесть дел до вылета на Бали",
+    "body_en": "Visa, arrival card, levy, SIM. All of it is done at home on a laptop, not in an airport queue after a night flight.",
+    "body_ru": "Виза, арривал-карта, сбор, симка. Всё делается дома за ноутбуком, а не в очереди после ночного перелёта.",
+    "image": "images/places/online-visa-application.jpg",
+    "is_video": false,
+    "design_note": "Крупно цифру 6 поверх ноутбука с паспортом. Заголовок в две строки, тело мелко внизу."
+   },
+   {
+    "n": 2,
+    "role": "факт",
+    "headline_en": "Apply for the e-visa before you fly",
+    "headline_ru": "Визу оформляйте заранее, онлайн",
+    "body_en": "Visa on arrival can be bought online in advance on the official Indonesian immigration site. Check the current fee and rules there, not in a blog post.",
+    "body_ru": "Визу по прибытии можно оплатить заранее на официальном сайте иммиграции Индонезии. Сумму и правила смотрите там, а не в блогах.",
+    "image": "images/places/bali-immigration.jpg",
+    "is_video": false,
+    "design_note": "Вынести крупно слово «онлайн» / online. Сумму не писать нигде — её мы намеренно не называем."
+   },
+   {
+    "n": 3,
+    "role": "факт",
+    "headline_en": "The arrival card is a separate step",
+    "headline_ru": "Арривал-карта это отдельный шаг",
+    "body_en": "Indonesia asks for a digital arrival and customs form before landing. Fill it on the official site and screenshot the QR while you still have wifi.",
+    "body_ru": "Перед посадкой заполняется цифровая форма прибытия и таможни. Сделайте это на официальном сайте и сохраните QR скриншотом, пока есть интернет.",
+    "image": "images/places/digital-arrival-card.jpg",
+    "is_video": false,
+    "design_note": "Крупно «отдельный шаг» / «separate» — главная ошибка в том, что люди считают это частью визы."
+   },
+   {
+    "n": 4,
+    "role": "факт",
+    "headline_en": "The Bali tourist levy is real",
+    "headline_ru": "Туристический сбор на Бали проверяют",
+    "body_en": "Bali charges a tourist levy paid online through the official Love Bali portal. Keep the QR on your phone: it gets checked at some sites.",
+    "body_ru": "На Бали есть туристический сбор, он платится онлайн через официальный портал Love Bali. QR держите в телефоне, на входах его спрашивают.",
+    "image": "images/places/love-bali-levy.jpg",
+    "is_video": false,
+    "design_note": "Выделить «Love Bali» — это название официального портала, люди его ищут по слуху."
+   },
+   {
+    "n": 5,
+    "role": "факт",
+    "headline_en": "Passport and onward ticket get read",
+    "headline_ru": "Паспорт и обратный билет смотрят",
+    "body_en": "Officers check passport validity and an onward ticket. The exact validity rule is on the immigration site, so read it before you book anything.",
+    "body_ru": "На стойке проверяют срок действия паспорта и билет с Бали. Точное правило по сроку смотрите на сайте иммиграции до покупки билетов.",
+    "image": "images/places/arrival-day-in-south-bali.jpg",
+    "is_video": false,
+    "design_note": "Внимание: файл passport-control.jpg байт-в-байт совпадает с bali-immigration.jpg со слайда 2. Дайте другой кроп и другой цветофильтр, либо замените на images/places/bali-airport-arrivals.jpg."
+   },
+   {
+    "n": 6,
+    "role": "факт",
+    "headline_en": "Land with every QR code offline",
+    "headline_ru": "Все QR должны лежать офлайн",
+    "body_en": "Airport wifi is slow when a full flight lands. Put visa, arrival card and levy QR codes in your phone gallery before you take off.",
+    "body_ru": "Wi-Fi в аэропорту умирает, когда садится полный рейс. Скриншоты визы, арривал-карты и сбора сложите в галерею телефона до вылета.",
+    "image": "images/places/bali-airport-arrivals.jpg",
+    "is_video": false,
+    "design_note": "Крупно слово «офлайн» / offline. Можно нарисовать три квадратика QR в углу."
+   },
+   {
+    "n": 7,
+    "role": "факт",
+    "headline_en": "Sort the SIM before you land",
+    "headline_ru": "Симку решите до посадки",
+    "body_en": "An eSIM bought at home works the moment the plane doors open. That is how your driver reaches you on WhatsApp without a queue at the airport counter.",
+    "body_ru": "eSIM, купленная дома, работает сразу после посадки. Так водитель найдёт вас в WhatsApp, а не вы его в очереди у стойки оператора.",
+    "image": "images/places/bali-sim-card.jpg",
+    "is_video": false,
+    "design_note": "Выделить eSIM. Мостик к последнему слайду: связь нужна, чтобы водитель вас нашёл."
+   },
+   {
+    "n": 8,
+    "role": "призыв",
+    "headline_en": "Then Bali starts at the curb",
+    "headline_ru": "Дальше Бали начинается у выхода",
+    "body_en": "Airport transfer from $15, driver meets you at arrivals. No prepayment: send us the flight number and your hotel area on WhatsApp.",
+    "body_ru": "Трансфер из аэропорта от $15, водитель встречает в зоне прилёта. Без предоплаты: пришлите в WhatsApp номер рейса и район отеля.",
+    "image": "images/places/calm-beach-in-bali.jpg",
+    "is_video": false,
+    "design_note": "Крупно «от $15» и иконка WhatsApp. Тон спокойный, без «Успей забронировать!»."
+   }
+  ],
+  "caption_en": "Six things Bali asks for before you land: the e-visa, the digital arrival card, the tourist levy, a valid passport with an onward ticket, every QR saved offline, and a working SIM.\n\nWe deliberately do not quote fee amounts here. They change, and the only numbers worth trusting are the ones on the official Indonesian immigration site and the Love Bali portal. Check them the week you fly.\n\nThe part after passport control is ours: airport transfer from $15, driver meeting you at arrivals, no prepayment. Send the flight number and hotel area on WhatsApp and it is booked.\n\nSB Excursions",
+  "caption_ru": "Шесть вещей, которые Бали спросит ещё до посадки: виза, цифровая арривал-карта, туристический сбор, действующий паспорт с билетом обратно, все QR офлайн и рабочая связь.\n\nСумм мы здесь намеренно не называем. Они меняются, и верить стоит только цифрам с официального сайта иммиграции Индонезии и портала Love Bali. Проверьте их на неделе вылета.\n\nВсё, что начинается после паспортного контроля, — наша часть: трансфер из аэропорта от $15, водитель встречает в зоне прилёта, без предоплаты. Пришлите в WhatsApp номер рейса и район отеля.\n\nSB Excursions",
+  "hashtags": "#bali #balitravel #balitips #baliguide #visitbali #balitraveltips #indonesia #balivisa #travelbali #balilife",
+  "reel_idea": "Экран телефона крупно: палец пролистывает шесть открытых вкладок — виза, арривал-карта, Love Bali, паспорт, галерея с QR, eSIM. На каждой вкладке замирание на полсекунды и подпись одним словом. Последние 3 секунды — кадр из videos/tours/private-car-with-driver-bali.mp4 и подпись «а дальше уже мы». Текст на экране, без озвучки, музыка спокойная."
+ },
+ {
+  "id": "bali-temple-etiquette",
+  "type": "информационный",
+  "title_ru": "Дресс-код в храмах и как себя вести",
+  "tour_slug": "bali-unesco",
+  "goal": "Показать, что мы знаем храмовые правила изнутри, и через это привести к маршруту ЮНЕСКО, где саронг и билеты уже включены.",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "headline_en": "The sarong is the easy part",
+    "headline_ru": "Саронг это самое простое",
+    "body_en": "Temples have rules that are actually enforced. Six of them, and none is complicated once you know it before the gate.",
+    "body_ru": "В храмах правила действительно проверяют. Их немного, и все простые, если знать заранее, а не на входе.",
+    "image": "images/places/temple-dress-code.jpg",
+    "is_video": false,
+    "design_note": "Крупно первую половину заголовка, «это самое простое» мельче — интрига держится на контрасте."
+   },
+   {
+    "n": 2,
+    "role": "факт",
+    "headline_en": "Shoulders and knees, men included",
+    "headline_ru": "Плечи и колени, мужчин тоже",
+    "body_en": "Sarong on the hips, sash tied at the waist, shoulders covered. Tank tops and short shorts stop at the entrance regardless of who is wearing them.",
+    "body_ru": "Саронг на бёдра, пояс завязать на талии, плечи закрыты. Майку и короткие шорты дальше входа не пускают, независимо от того, кто в них.",
+    "image": "images/places/tanah-lot-sunset.jpg",
+    "is_video": false,
+    "design_note": "Вынести крупно «мужчин тоже» / «men included» — это то, что чаще всего игнорируют."
+   },
+   {
+    "n": 3,
+    "role": "факт",
+    "headline_en": "Read the sign at the gate",
+    "headline_ru": "Табличка на входе не декор",
+    "body_en": "Balinese temples ask menstruating women, people with open wounds and those in recent mourning to stay outside the inner courtyard. It is written at the entrance.",
+    "body_ru": "На входе просят не заходить во внутренний двор женщинам во время месячных, людям с открытыми ранами и тем, у кого недавно умер близкий. Это написано на табличке.",
+    "image": "images/places/uluwatu-cliffs-at-sunset.jpg",
+    "is_video": false,
+    "design_note": "Тон нейтральный, без осуждения. Текст можно оформить как настоящую храмовую табличку, спокойным шрифтом."
+   },
+   {
+    "n": 4,
+    "role": "факт",
+    "headline_en": "At the holy spring, follow the line",
+    "headline_ru": "У источника идут по порядку",
+    "body_en": "At Tirta Empul people move spout to spout in order, in a wet sarong. Two spouts are used for funeral rites and everyone quietly passes them.",
+    "body_ru": "В Тирта Эмпул проходят фонтаны по очереди, в мокром саронге. Два фонтана используют в похоронных обрядах, их все молча пропускают.",
+    "image": "images/places/tirta-empul-holy-spring.jpg",
+    "is_video": false,
+    "design_note": "Крупно «по порядку». Можно дать простую графику: ряд кружков-фонтанов, два из них перечёркнуты."
+   },
+   {
+    "n": 5,
+    "role": "факт",
+    "headline_en": "Uluwatu monkeys work for a living",
+    "headline_ru": "Обезьяны в Улувату работают",
+    "body_en": "They take sunglasses, caps and phones off tourists and trade them back for fruit. Bag on the front, glasses off, nothing loose in your hands.",
+    "body_ru": "Они снимают очки, кепки и телефоны и меняют их обратно на фрукты. Сумку на живот, очки убрать, ничего в руках.",
+    "image": "images/places/uluwatu-temple-cliff.jpg",
+    "is_video": false,
+    "design_note": "Заголовок с иронией, но без восклицаний. Крупно три иконки: очки, кепка, телефон."
+   },
+   {
+    "n": 6,
+    "role": "факт",
+    "headline_en": "Monkey Forest: no food, no eye contact",
+    "headline_ru": "Лес обезьян: без еды и без взгляда",
+    "body_en": "No snacks, no plastic bags, no staring one in the eyes. A rustling bag reads as an invitation and a stare reads as a challenge.",
+    "body_ru": "Никакой еды, никаких пакетов, не смотрите обезьяне в глаза. Шуршащий пакет для них приглашение, прямой взгляд вызов.",
+    "image": "images/places/ubud-monkey-forest.jpg",
+    "is_video": false,
+    "design_note": "Заголовок в две строки, двоеточие переносом. Фото крупным планом морды работает само, текст не перегружать."
+   },
+   {
+    "n": 7,
+    "role": "факт",
+    "headline_en": "Do not step over the offerings",
+    "headline_ru": "Подношения не переступают",
+    "body_en": "Little palm baskets sit on pavements, steps and car bonnets every morning. Walk around them, never over them, and leave them where they are.",
+    "body_ru": "Плетёные корзинки с цветами лежат по утрам на тротуарах, ступенях и капотах. Их обходят, не переступают и не трогают.",
+    "image": "images/places/private-driver-in-bali.jpg",
+    "is_video": false,
+    "design_note": "Если найдётся кадр с чананг сари на асфальте — он сюда подойдёт лучше. Пока крупно слово «обходят»."
+   },
+   {
+    "n": 8,
+    "role": "призыв",
+    "headline_en": "Sarong is in the car already",
+    "headline_ru": "Саронг уже лежит в машине",
+    "body_en": "Our UNESCO route covers Taman Ayun, Ulun Danu, Jatiluwih and Tanah Lot in 10 hours from $65 per car, with entrance tickets and a temple sarong included.",
+    "body_ru": "Маршрут по объектам ЮНЕСКО: Таман Аюн, Улун Дану, Джатилувих и Танах Лот за 10 часов от $65 за машину. Билеты и саронг уже включены.",
+    "image": "videos/tours/bali-unesco.mp4",
+    "is_video": true,
+    "design_note": "Видеокарточка. Крупно «10 часов» и «от $65 за машину», ниже строкой «билеты и саронг включены» и иконка WhatsApp."
+   }
+  ],
+  "caption_en": "Six temple rules that are actually checked at the gate, not just printed on a leaflet.\n\nSarong and sash, shoulders covered, men included. The sign at the entrance asking menstruating women, people with open wounds and those in recent mourning to stay out of the inner courtyard. The order of the spouts at Tirta Empul, with two of them left alone. Uluwatu monkeys that take sunglasses and trade them back for fruit. No food, no plastic bags and no eye contact in the Monkey Forest. And the palm baskets on the pavement that you walk around, never over.\n\nOn our UNESCO route — Taman Ayun, Ulun Danu Beratan, Jatiluwih and Tanah Lot, 10 hours, from $65 per car — entrance tickets and a temple sarong are already included, so none of this becomes your problem at the gate. No prepayment, booking by WhatsApp.\n\nSB Excursions",
+  "caption_ru": "Шесть храмовых правил, которые действительно проверяют на входе, а не просто печатают в буклете.\n\nСаронг и пояс, закрытые плечи, мужчин это касается ровно так же. Табличка на входе, где просят не заходить во внутренний двор женщинам во время месячных, людям с открытыми ранами и тем, у кого недавно умер близкий. Порядок фонтанов в Тирта Эмпул, где два оставляют нетронутыми. Обезьяны Улувату, снимающие очки и меняющие их обратно на фрукты. Никакой еды, пакетов и прямых взглядов в Лесу обезьян. И корзинки с цветами на тротуаре, которые обходят, а не переступают.\n\nНа нашем маршруте по объектам ЮНЕСКО — Таман Аюн, Улун Дану Братан, Джатилувих и Танах Лот, 10 часов, от $65 за машину — входные билеты и саронг уже включены, так что на входе это перестаёт быть вашей заботой. Без предоплаты, бронь в WhatsApp.\n\nSB Excursions",
+  "hashtags": "#bali #balitemple #templeetiquette #balitravel #balitips #uluwatu #tirtaempul #ubud #visitbali #baliguide",
+  "reel_idea": "Первые 2 секунды: руки завязывают саронг, крупный план узла на талии. Дальше быстрая нарезка из videos/tours/bali-unesco.mp4 — храмовые ворота, озеро, террасы — по одной подписи на кадр: «плечи», «пояс», «табличка», «подношения обходим». Финальный кадр: саронг лежит на сиденье машины, подпись «он уже здесь, от $65 за машину». Без озвучки, текстом."
+ },
+ {
+  "id": "money-in-bali",
+  "type": "информационный",
+  "title_ru": "Деньги на Бали: карта или наличные",
+  "tour_slug": "private-car-with-driver-bali",
+  "goal": "Дать практическую систему «где карта, где наличные» и показать, что с нашими турами наличных нужно меньше.",
+  "slides": [
+   {
+    "n": 1,
+    "role": "обложка",
+    "headline_en": "Card in the mall, cash in the warung",
+    "headline_ru": "Карта в молле, наличные в варунге",
+    "body_en": "Bali runs on two payment systems at once, and the line between them is sharper than travellers expect.",
+    "body_ru": "На Бали работают две денежные системы сразу, и граница между ними жёстче, чем кажется.",
+    "image": "images/places/money-exchange.jpg",
+    "is_video": false,
+    "design_note": "Заголовок разделить пополам вертикальной чертой: слева «карта», справа «наличные». Это структура всей карусели."
+   },
+   {
+    "n": 2,
+    "role": "факт",
+    "headline_en": "Cards work in the polished places",
+    "headline_ru": "Карту берут там, где дорого",
+    "body_en": "Hotels, malls, beach clubs and big restaurants take cards, often with a surcharge. Service and tax are added on top of menu prices too.",
+    "body_ru": "Отели, моллы, пляжные клубы и крупные рестораны берут карты, часто с наценкой. Плюс к ценам в меню сверху добавляют сервис и налог.",
+    "image": "images/places/bali-beach-club.jpg",
+    "is_video": false,
+    "design_note": "Крупно «наценка» / surcharge. Про сервис и налог — второй строкой мельче."
+   },
+   {
+    "n": 3,
+    "role": "факт",
+    "headline_en": "Cash only, and no one warns you",
+    "headline_ru": "Наличные, и никто не предупредит",
+    "body_en": "Warungs, markets, temple donation boxes, parking attendants and small waterfall gates take cash and nothing else. Small notes, not one big one.",
+    "body_ru": "Варунги, рынки, ящики для пожертвований в храмах, парковщики и кассы у водопадов берут только наличные. И мелкими, а не одной крупной.",
+    "image": "images/places/balinese-warung-meal.jpg",
+    "is_video": false,
+    "design_note": "Список местами оформить в столбик по одному слову: варунг, рынок, храм, парковка, водопад."
+   },
+   {
+    "n": 4,
+    "role": "факт",
+    "headline_en": "Withdraw at BCA or BNI",
+    "headline_ru": "Снимайте в BCA или BNI",
+    "body_en": "Use ATMs attached to a bank branch, in daylight, ideally inside the lobby. Street machines in dark corners are the ones with skimming stories.",
+    "body_ru": "Банкоматы берите при отделении банка, днём, лучше внутри. Истории со скиммерами всегда про уличные автоматы в тёмных углах.",
+    "image": "images/places/bali-street-at-night.jpg",
+    "is_video": false,
+    "design_note": "BCA и BNI вынести самым крупным элементом слайда — это то, что сохраняют скриншотом."
+   },
+   {
+    "n": 5,
+    "role": "факт",
+    "headline_en": "Keep small notes for the small stuff",
+    "headline_ru": "Мелочь нужна каждый день",
+    "body_en": "Parking, a coconut, a village toilet, a scooter guy holding traffic for you. None of them can break a big note, and everyone waits while you look.",
+    "body_ru": "Парковка, кокос, туалет в деревне, парень, который придержал вам поток на дороге. Сдачи с крупной купюры нет ни у кого, и все ждут.",
+    "image": "images/places/budget-travel-in-bali.jpg",
+    "is_video": false,
+    "design_note": "Крупно «мелочь». Хорошо ложится перечисление в одну строку мелким шрифтом внизу."
+   },
+   {
+    "n": 6,
+    "role": "факт",
+    "headline_en": "Change money at a licensed counter",
+    "headline_ru": "Меняйте только в лицензированных",
+    "body_en": "A proper money changer has a permit on the wall, a real counter and no cardboard sign promising the best rate. Count the stack before you walk out.",
+    "body_ru": "У настоящего обменника есть лицензия на стене, нормальная касса и нет картонки с лучшим курсом. Пересчитайте деньги, не отходя от кассы.",
+    "image": "images/places/canggu-cafe.jpg",
+    "is_video": false,
+    "design_note": "Вынести крупно «пересчитайте» / «count it». Если найдётся кадр с вывеской обменника — заменить фото на него."
+   },
+   {
+    "n": 7,
+    "role": "факт",
+    "headline_en": "Always pay in rupiah",
+    "headline_ru": "Платите всегда в рупиях",
+    "body_en": "When the terminal offers your home currency, decline. That conversion is done by the machine at its own rate, and it is never the good one.",
+    "body_ru": "Если терминал предлагает списать в вашей валюте, откажитесь. Конвертацию сделает сам терминал по своему курсу, и он всегда хуже.",
+    "image": "images/places/ride-hailing-app.jpg",
+    "is_video": false,
+    "design_note": "Слайд-подсказка: нарисовать две кнопки терминала, IDR подсвечена, вторая перечёркнута."
+   },
+   {
+    "n": 8,
+    "role": "призыв",
+    "headline_en": "We take no prepayment",
+    "headline_ru": "Мы работаем без предоплаты",
+    "body_en": "Entrance tickets are already in the price of our guided day tours, so you carry less cash. A driver-only day is transport, tickets are paid on site.",
+    "body_ru": "В наших экскурсионных днях входные билеты уже в цене, поэтому наличных нужно меньше. День только с водителем — это транспорт, билеты платятся на месте.",
+    "image": "videos/tours/private-car-with-driver-bali.mp4",
+    "is_video": true,
+    "design_note": "Видеокарточка. Крупно «без предоплаты» и «от $59 за машину», иконка WhatsApp в углу."
+   }
+  ],
+  "caption_en": "Bali runs two payment systems at once and the line between them catches people out.\n\nCards work in hotels, malls, beach clubs and big restaurants, usually with a surcharge, and service and tax land on top of the menu price. Cash is the only option in warungs, markets, temple donation boxes, parking and small waterfall gates — in small notes, because nobody there can break a big one.\n\nWithdraw at BCA or BNI, at machines attached to a bank branch, in daylight. Change money only at a licensed counter with a permit on the wall, and count the stack before you leave it. When a terminal offers to charge you in your home currency, decline and pay in rupiah.\n\nOn our side: entrance tickets are already inside the tour prices, so there is less cash to carry, and we take no prepayment. A private car with driver starts from $59 per car. Ask on WhatsApp.\n\nSB Excursions",
+  "caption_ru": "На Бали одновременно работают две денежные системы, и граница между ними ловит почти всех.\n\nКарты принимают отели, моллы, пляжные клубы и крупные рестораны — обычно с наценкой, а к ценам в меню сверху добавляются сервис и налог. Наличные — единственный вариант в варунгах, на рынках, в ящиках для пожертвований в храмах, на парковках и у касс на водопадах. И именно мелкими: сдачи с крупной купюры там нет.\n\nСнимайте в BCA или BNI, в банкоматах при отделении банка и днём. Меняйте только в обменнике с лицензией на стене и пересчитывайте деньги, не отходя от кассы. Если терминал предлагает списать в вашей валюте — откажитесь и платите в рупиях.\n\nС нашей стороны: входные билеты уже включены в цену туров, значит наличных нужно меньше, и мы работаем без предоплаты. Машина с водителем от $59 за машину. Спросите в WhatsApp.\n\nSB Excursions",
+  "hashtags": "#bali #balitravel #balibudget #balitips #travelmoney #baliguide #visitbali #indonesia #balitraveltips #balilife",
+  "reel_idea": "Разделённый экран: слева терминал и карта, справа стопка рупий. Кадры чередуются по одному правилу: молл — карта, варунг — наличные, храм — наличные, отель — карта. Подписи одним словом, темп быстрый. В конце кадр из videos/tours/private-car-with-driver-bali.mp4 и подпись «билеты уже включены, предоплаты нет, от $59 за машину»."
+ }
+]
