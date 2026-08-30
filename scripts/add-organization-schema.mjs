@@ -25,7 +25,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { ORGANIZATION_SCHEMA } from "./site-identity.mjs";
+import { ORGANIZATION_SCHEMA, organizationSchemaFor } from "./site-identity.mjs";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const DRY = process.argv.includes("--dry");
@@ -40,8 +40,11 @@ const TARGET = /^(bali-(faq|guides|journal|prices-index|privacy|terms|review)[a-
    она в publisher или лежит отдельным узлом. */
 const MARK = "#organization";
 
-const block = `<script type="application/ld+json">
-${JSON.stringify(ORGANIZATION_SCHEMA, null, 2)}
+/* Язык берём из имени файла: bali-faq-de.html -> de. Английские страницы
+   идут без суффикса и получают английское описание. */
+const LOCALE_FROM_NAME = /-(ru|es|fr|de|zh)\.html$/;
+const blockFor = (file) => `<script type="application/ld+json">
+${JSON.stringify(organizationSchemaFor((file.match(LOCALE_FROM_NAME) || [])[1] || "en"), null, 2)}
 </script>
 `;
 
@@ -62,7 +65,7 @@ for (const file of fs.readdirSync(ROOT).sort()) {
   const at = html.toLowerCase().lastIndexOf("</head>");
   if (at === -1) { stats["некуда вставить"] += 1; skipped.push(file); continue; }
 
-  if (!DRY) fs.writeFileSync(full, html.slice(0, at) + block + html.slice(at));
+  if (!DRY) fs.writeFileSync(full, html.slice(0, at) + blockFor(file) + html.slice(at));
   stats.добавлено += 1;
 }
 

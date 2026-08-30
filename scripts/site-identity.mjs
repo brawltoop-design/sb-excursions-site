@@ -25,6 +25,22 @@ export const WHATSAPP_NUMBER = "6285333685020";
 // sameAs — то, чем поисковики и нейросети подтверждают, что за сайтом стоит
 // живая компания, а не одинокий лендинг: без внешних профилей подтвердить
 // нечем. Ссылки взяты те же, что стоят в подвале сайта.
+/* Описание организации по языкам.
+ *
+ * Разметку организации вставляет отдельный шаг сборки, уже ПОСЛЕ локализации
+ * страниц. Поэтому её строки мимо переводчика проходят всегда: на немецкой
+ * странице стояло английское описание, и так на 1556 страницах. Пины тут не
+ * помогают — переводить нечего, текст приходит готовым куском после того,
+ * как переводчик отработал. Значит язык надо выбирать здесь. */
+export const ORGANIZATION_DESCRIPTION = {
+  en: "Private guided day tours across Bali and the Nusa islands, booked directly over WhatsApp.",
+  ru: "Индивидуальные однодневные экскурсии с гидом по Бали и островам Nusa, бронирование напрямую через WhatsApp.",
+  es: "Excursiones privadas de un día con guía por Bali y las islas Nusa, reservadas directamente por WhatsApp.",
+  fr: "Excursions privées guidées à la journée à Bali et dans les îles Nusa, réservables directement sur WhatsApp.",
+  de: "Private geführte Tagestouren über Bali und die Nusa-Inseln, direkt über WhatsApp gebucht.",
+  zh: "覆盖巴厘岛和Nusa群岛的私人向导一日游，可通过WhatsApp直接预订。",
+};
+
 export const ORGANIZATION_SCHEMA = {
   // TravelAgency — подтип LocalBusiness: для локальных туристических
   // запросов и AI-ответов «tour operator in Bali» это сильнее голого
@@ -33,8 +49,7 @@ export const ORGANIZATION_SCHEMA = {
   "@id": `${SITE_URL}/#organization`,
   name: "SB Excursions",
   url: SITE_URL,
-  description:
-    "Private guided day tours across Bali and the Nusa islands, booked directly over WhatsApp.",
+  description: ORGANIZATION_DESCRIPTION.en,
   areaServed: { "@type": "Place", name: "Bali, Indonesia" },
   address: {
     "@type": "PostalAddress",
@@ -88,3 +103,12 @@ export const ORGANIZATION_SCHEMA = {
     availableLanguage: ["English", "Russian", "Spanish", "French", "Chinese"],
   },
 };
+
+
+/* Схема под конкретный язык страницы. Меняем только то, что действительно
+   зависит от языка: название компании, адрес, рейтинг и телефон одинаковы
+   везде, и переводить их нельзя. */
+export function organizationSchemaFor(locale) {
+  const description = ORGANIZATION_DESCRIPTION[locale] || ORGANIZATION_DESCRIPTION.en;
+  return { ...ORGANIZATION_SCHEMA, description };
+}

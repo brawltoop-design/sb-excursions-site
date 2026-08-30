@@ -44,11 +44,15 @@ s = io.open(GEN, encoding="utf8").read()
 before = len(s)
 total = 0
 for loc, section in LOCALES.items():
+    # Пачки бывают разные: tr-out/<лок>-1.json от первого прогона,
+    # tr2-out/<лок>.json от второго. Берём всё, что найдётся, чтобы
+    # скрипт не приходилось править под каждый новый заход.
     merged = {}
-    for b in (1, 2):
-        p = f"{SP}/tr-out/{loc}-{b}.json"
-        if not os.path.exists(p):
-            print(f"  ! {loc}-{b}: файла нет, пропускаю"); continue
+    import glob as _glob
+    found = sorted(_glob.glob(f"{SP}/tr*-out/{loc}-*.json") + _glob.glob(f"{SP}/tr*-out/{loc}.json"))
+    if not found:
+        print(f"  ! {loc}: файлов перевода не найдено"); continue
+    for p in found:
         merged.update(json.load(io.open(p, encoding="utf8")))
     if not merged:
         print(f"  {loc}: переводов нет"); continue
