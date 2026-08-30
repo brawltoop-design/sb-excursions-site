@@ -9318,6 +9318,42 @@ function journalHeaderWhatsAppHref(tour) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeWhatsAppText(message)}`;
 }
 
+const QUICK_ANSWER_MORE_LABEL = "This guide also answers:";
+
+/* Блок быстрого ответа наверху статьи.
+ *
+ * Нейросети и сниппеты Google берут не страницу, а отдельный кусок:
+ * короткое самодостаточное предложение вынимается целиком, длинный абзац
+ * с оговорками — нет. Замер 30.08.2026: у нас медиана предложения 21 слово
+ * и 48% коротких, у цитируемого конкурента — 12 слов и 82%.
+ *
+ * Ничего не переписываем. Первый вопрос FAQ почти всегда и есть главный
+ * вопрос страницы, а ответ на него уже написан, проверен и содержит цифру
+ * в 57% случаев. Просто поднимаем его наверх, под заголовок.
+ *
+ * Важно: берём строки ЦЕЛИКОМ, как они лежат в faq. Обрезанный кусок —
+ * это уже другая строка, её нет в кэше переводов, и на локализованных
+ * страницах она осталась бы английской. */
+function renderQuickAnswer(article) {
+  const faq = Array.isArray(article.faq) ? article.faq : [];
+  const first = faq.find((f) => f && f.question && f.answer);
+  if (!first) return "";
+  /* Дополнительные строки — только вопросы: они короткие и тоже переведены.
+     Берём те, в ответах которых есть число: они полезнее остальных. */
+  const more = faq
+    .filter((f) => f !== first && f && f.question && /\d/.test(String(f.answer || "")))
+    .slice(0, 3);
+  const list = more.length
+    ? `<p class="sb-quick-answer__more">${escapeHtml(QUICK_ANSWER_MORE_LABEL)}</p>
+              <ul class="sb-quick-answer__list">${more.map((f) => `<li>${escapeHtml(f.question)}</li>`).join("")}</ul>`
+    : "";
+  return `<div class="sb-quick-answer">
+              <p class="sb-quick-answer__q">${escapeHtml(first.question)}</p>
+              <p class="sb-quick-answer__a">${renderRichText(first.answer)}</p>
+              ${list}
+            </div>`;
+}
+
 function renderJournalHeader(tour) {
   const bookingHref = journalHeaderWhatsAppHref(tour);
 
@@ -41121,6 +41157,7 @@ ${JOURNAL_FOOTER_ASSETS}
             <p class="sb-journal-lead">${renderRichText(article.excerpt)}</p>
             <p class="sb-journal-dates">By Alex Moskvin, Founder of SB Excursions · Published 21 May 2026 · Updated 7 August 2026</p>
             <p class="sb-journal-deck">Tour on this route: <a href="${tourRoute(article.tour)}">${escapeHtml(article.tour.title)}</a> — ${escapeHtml(article.tour.price)}, ${escapeHtml(article.tour.duration.toLowerCase())}.</p>
+            ${renderQuickAnswer(article)}
             <div class="sb-journal-inline-stats">
               ${article.inlineStats.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}
             </div>
@@ -42298,6 +42335,13 @@ html .sbtc h3.sbtc-rail__title{
   .sb-journal-sidebar-card{background:var(--sbj-surface);border:1px solid var(--sbj-line);border-radius:var(--sbj-radius-xl);padding:22px;box-shadow:var(--sbj-shadow)}
   .sb-journal-sidebar-card h3{margin:0 0 14px;font-size:24px;line-height:1.08;letter-spacing:-0.9px}
   .sb-journal-inline-stats{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+  .sb-quick-answer{margin:22px 0 4px;padding:18px 20px;border-radius:18px;background:#f5f7ff;border:1px solid rgba(47,107,255,0.14)}
+  .sb-quick-answer__q{margin:0 0 8px;font-weight:600;font-size:17px;line-height:1.35;color:#101828}
+  .sb-quick-answer__a{margin:0;font-size:16px;line-height:1.6;color:#1f2937}
+  .sb-quick-answer__more{margin:14px 0 6px;font-size:13px;font-weight:600;color:#5b6478;text-transform:none}
+  .sb-quick-answer__list{margin:0;padding-left:18px;font-size:14px;line-height:1.6;color:#3d4557}
+  .sb-quick-answer__list li{margin:2px 0}
+  @media (max-width:639px){.sb-quick-answer{padding:15px 16px;border-radius:14px}.sb-quick-answer__q{font-size:16px}.sb-quick-answer__a{font-size:15px}}
   .sb-journal-article-hero__actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
   .sb-journal-article-hero__media img{width:100%;aspect-ratio:1.2;object-fit:cover;border-radius:24px}
   .sb-journal-footer{padding:0 20px 32px}
@@ -46986,6 +47030,8 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "This guide also answers:":
+      "Здесь же разобрано:",
     "142 crashes involving foreign tourists in 2024, up about 35% year on year, causing 21 deaths. Most travel insurance voids motorcycle claims without the correct licence.":
       "142 ДТП с участием иностранных туристов в 2024 году, рост примерно на 35% за год, 21 погибший. Большинство туристических страховок аннулируют выплаты по мотоциклу без прав нужной категории.",
     "30 days, single entry, payable by cash or card on arrival. Extendable once for another 30 days, for the same fee, giving 60 days maximum.":
@@ -48530,6 +48576,8 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "This guide also answers:":
+      "Esta guía también responde:",
     "142 crashes involving foreign tourists in 2024, up about 35% year on year, causing 21 deaths. Most travel insurance voids motorcycle claims without the correct licence.":
       "142 accidentes con turistas extranjeros en 2024, un 35% más interanual, con 21 fallecidos. La mayoría de los seguros de viaje anula las reclamaciones en moto sin el permiso correcto.",
     "30 days, single entry, payable by cash or card on arrival. Extendable once for another 30 days, for the same fee, giving 60 days maximum.":
@@ -49986,6 +50034,8 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "This guide also answers:":
+      "Ce guide répond aussi à :",
     "142 crashes involving foreign tourists in 2024, up about 35% year on year, causing 21 deaths. Most travel insurance voids motorcycle claims without the correct licence.":
       "142 accidents impliquant des touristes étrangers en 2024, en hausse d'environ 35 % sur un an, avec 21 décès. La plupart des assurances voyage annulent toute indemnisation moto sans le permis adéquat.",
     "30 days, single entry, payable by cash or card on arrival. Extendable once for another 30 days, for the same fee, giving 60 days maximum.":
@@ -51594,6 +51644,8 @@ const PINNED_TRANSLATIONS = {
       "Bali est-elle sûre en 2026 ? 7 arnaques courantes à éviter",
   },
   "zh-CN": {
+    "This guide also answers:":
+      "本指南还解答：",
     "142 crashes involving foreign tourists in 2024, up about 35% year on year, causing 21 deaths. Most travel insurance voids motorcycle claims without the correct licence.":
       "2024年涉及外国游客的事故142起，同比上升约35%，造成21人死亡。多数旅游保险在无相应驾照的情况下不受理摩托车理赔。",
     "30 days, single entry, payable by cash or card on arrival. Extendable once for another 30 days, for the same fee, giving 60 days maximum.":
@@ -52924,6 +52976,8 @@ const PINNED_TRANSLATIONS = {
       "巴厘岛旅行要花多少钱？2026年真实物价与三档预算",
   },
   de: {
+    "This guide also answers:":
+      "Dieser Leitfaden beantwortet außerdem:",
     "142 crashes involving foreign tourists in 2024, up about 35% year on year, causing 21 deaths. Most travel insurance voids motorcycle claims without the correct licence.":
       "142 Unfälle mit ausländischen Touristen im Jahr 2024, etwa 35% mehr als im Vorjahr, mit 21 Todesfällen. Die meisten Reiseversicherungen zahlen bei Motorradunfällen ohne den passenden Führerschein nicht.",
     "30 days, single entry, payable by cash or card on arrival. Extendable once for another 30 days, for the same fee, giving 60 days maximum.":
