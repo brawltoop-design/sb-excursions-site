@@ -9334,9 +9334,31 @@ const QUICK_ANSWER_MORE_LABEL = "This guide also answers:";
  * Важно: берём строки ЦЕЛИКОМ, как они лежат в faq. Обрезанный кусок —
  * это уже другая строка, её нет в кэше переводов, и на локализованных
  * страницах она осталась бы английской. */
+/* Данные FAQ приходят в двух видах: у статей журнала это объекты
+   {question, answer}, у туров — пары [вопрос, ответ] из buildFaqs.
+   Приводим к одному виду, чтобы блок был один на оба шаблона. */
+function quickAnswerPairs(source) {
+  const list = Array.isArray(source) ? source : [];
+  return list
+    .map((f) => (Array.isArray(f)
+      ? { question: f[0], answer: f[1] }
+      : (f && f.question ? { question: f.question, answer: f.answer } : null)))
+    .filter((f) => f && f.question && f.answer);
+}
+
+/* Берём ПЕРВЫЙ вопрос, а не самый «числовой».
+   Пробовал считать цифры в ответе — стало хуже: на четырёх из десяти
+   топовых статей выбор уезжал на второстепенный вопрос. «Есть ли на Бали
+   белый песок?» подменялось на «Как добраться до Гили Мено», что к статье
+   отношения не имеет. Первый вопрос FAQ пишется как главный вопрос
+   страницы, и это ровно то, что нужно наверху. */
+function pickQuickAnswer(pairs) {
+  return pairs[0] || null;
+}
+
 function renderQuickAnswer(article) {
-  const faq = Array.isArray(article.faq) ? article.faq : [];
-  const first = faq.find((f) => f && f.question && f.answer);
+  const faq = quickAnswerPairs(article.faq);
+  const first = pickQuickAnswer(faq);
   if (!first) return "";
   /* Дополнительные строки — только вопросы: они короткие и тоже переведены.
      Берём те, в ответах которых есть число: они полезнее остальных. */
