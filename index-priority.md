@@ -1,129 +1,111 @@
 # Куда тратить запросы индексирования в GSC
 
-Составлено 28 августа 2026. 299 статей журнала вне индекса.
-Отсортировано по спросу на тему — суммарные показы этой статьи на всех языках за 3 месяца.
+Пересобрано 30 августа 2026. Прошлый список был от 28-го, и за это время
+**Google взял 41 адресов из 120** — их вычеркнул.
 
-Лимит в GSC — около 10 адресов в сутки. Идти строго сверху вниз.
+Осталось 79. Лимит в GSC около 10 адресов в сутки.
+
+## Сначала эти: Google о них не знает
+
+31 адресов. Страницу поисковик не видел ни разу, и ручная подача
+реально ставит её в очередь на обход. Здесь запрос отрабатывает.
+
+| № | показы темы | язык | адрес |
+|---|---|---|---|
+| 1 | 1872 | de | `/bali/de/journal/sanur-to-nusa-penida-fast-boat` |
+| 2 | 675 | de | `/bali/de/journal/best-white-sand-beaches-bali` |
+| 3 | 659 | de | `/bali/de/journal/where-to-stay-bali-first-time` |
+| 4 | 460 | de | `/bali/de/journal/seminyak-vs-uluwatu` |
+| 5 | 430 | de | `/bali/de/journal/mount-batur-vs-mount-agung` |
+| 6 | 417 | de | `/bali/de/journal/canggu-vs-kuta` |
+| 7 | 399 | de | `/bali/de/journal/how-to-get-to-nusa-penida` |
+| 8 | 394 | de | `/bali/de/journal/sanur-vs-uluwatu` |
+| 9 | 378 | de | `/bali/de/journal/things-to-do-seminyak-bali-guide` |
+| 10 | 304 | de | `/bali/de/journal/is-nusa-penida-worth-it` |
+| 11 | 278 | de | `/bali/de/journal/are-gili-islands-worth-it` |
+| 12 | 259 | de | `/bali/de/journal/diamond-beach-nusa-penida-guide` |
+| 13 | 258 | de | `/bali/de/journal/canggu-vs-seminyak` |
+| 14 | 208 | de | `/bali/de/journal/is-nusa-penida-safe` |
+| 15 | 164 | de | `/bali/de/journal/surf-lessons-bali-beginners` |
+| 16 | 110 | de | `/bali/de/journal/nusa-penida-one-day-itinerary` |
+| 17 | 95 | ru | `/bali/ru/journal/what-to-eat-in-bali-food-guide` |
+| 18 | 87 | en | `/bali/en/journal/best-things-to-do-bali-for-couples` |
+| 19 | 69 | de | `/bali/de/journal/bali-tours-for-seniors` |
+| 20 | 0 | en | `/bali/en/journal/bali-airport-to-canggu-transfer` |
+| 21 | 0 | en | `/bali/en/journal/bali-airport-to-seminyak-transfer` |
+| 22 | 0 | en | `/bali/en/journal/bali-rafting-with-kids-age-limits` |
+| 23 | 0 | en | `/bali/en/journal/bali-surf-conditions-tides-swell-wind` |
+| 24 | 0 | en | `/bali/en/journal/east-bali-surf-spots` |
+| 25 | 0 | en | `/bali/en/journal/gili-islands-from-ubud` |
+| 26 | 0 | en | `/bali/en/journal/is-bali-rafting-safe` |
+| 27 | 0 | en | `/bali/en/journal/lovina-dolphin-season-year-round` |
+| 28 | 0 | en | `/bali/en/journal/nusa-penida-tour-cost` |
+| 29 | 0 | en | `/bali/en/journal/rafting-from-seminyak-canggu-nusa-dua` |
+| 30 | 0 | en | `/bali/en/journal/rice-terrace-season-jatiluwih-tegalalang` |
+| 31 | 0 | es | `/bali/es/journal/ayung-vs-telaga-waja-rafting` |
+
+## Потом эти, и без спешки: Google их видел и не взял
+
+48 адресов со статусом «Обнаружена, не проиндексирована».
+Поисковик о странице знает и **решил не индексировать**. Повторная подача
+такое решение почти не меняет: вопрос не к очереди, а к спросу на тему и
+к самой странице. Подавать их имеет смысл только после того, как
+закончится первый список.
 
 | № | показы темы | язык | адрес | статус |
 |---|---|---|---|---|
-| 1 | 1872 | de | `/bali/de/journal/sanur-to-nusa-penida-fast-boat` | не знает |
-| 2 | 1645 | de | `/bali/de/journal/best-beaches-bali-crystal-clear-water` | не обойдена |
-| 3 | 1499 | de | `/bali/de/journal/bali-private-driver-cost` | не знает |
-| 4 | 796 | de | `/bali/de/journal/kelingking-beach-guide` | не знает |
-| 5 | 766 | de | `/bali/de/journal/nusa-penida-day-trip-from-uluwatu` | не обойдена |
-| 6 | 731 | de | `/bali/de/journal/nusa-dua-vs-seminyak` | не обойдена |
-| 7 | 675 | de | `/bali/de/journal/best-white-sand-beaches-bali` | не обойдена |
-| 8 | 671 | de | `/bali/de/journal/how-much-does-a-bali-trip-cost` | не знает |
-| 9 | 659 | de | `/bali/de/journal/where-to-stay-bali-first-time` | не обойдена |
-| 10 | 564 | de | `/bali/de/journal/best-beaches-uluwatu-bukit` | не обойдена |
-| 11 | 515 | de | `/bali/de/journal/bali-safety-scams-and-health` | не обойдена |
-| 12 | 493 | de | `/bali/de/journal/mount-batur-hot-springs-guide` | не обойдена |
-| 13 | 476 | de | `/bali/de/journal/best-beaches-canggu-seminyak` | не знает |
-| 14 | 476 | de | `/bali/de/journal/ubud-vs-uluwatu` | не знает |
-| 15 | 460 | de | `/bali/de/journal/seminyak-vs-uluwatu` | не обойдена |
-| 16 | 430 | de | `/bali/de/journal/mount-batur-vs-mount-agung` | не обойдена |
-| 17 | 428 | de | `/bali/de/journal/best-sunset-spots-bali` | не обойдена |
-| 18 | 425 | de | `/bali/de/journal/bali-tourist-tax-levy-guide` | не знает |
-| 19 | 417 | de | `/bali/de/journal/canggu-vs-kuta` | не знает |
-| 20 | 399 | de | `/bali/de/journal/how-to-get-to-nusa-penida` | не обойдена |
-| 21 | 394 | de | `/bali/de/journal/sanur-vs-uluwatu` | не знает |
-| 22 | 391 | de | `/bali/de/journal/sanur-vs-seminyak` | не знает |
-| 23 | 378 | de | `/bali/de/journal/things-to-do-seminyak-bali-guide` | не обойдена |
-| 24 | 367 | de | `/bali/de/journal/grab-gojek-or-private-driver-bali` | не знает |
-| 25 | 365 | de | `/bali/de/journal/calm-beaches-bali-kids` | не знает |
-| 26 | 348 | de | `/bali/de/journal/mount-batur-vs-bromo-rinjani-ijen` | не знает |
-| 27 | 341 | de | `/bali/de/journal/white-water-rafting-bali-guide` | не знает |
-| 28 | 325 | de | `/bali/de/journal/bali-snorkeling-for-beginners` | не обойдена |
-| 29 | 325 | de | `/bali/de/journal/is-mount-batur-safe` | не обойдена |
-| 30 | 323 | de | `/bali/de/journal/nusa-penida-day-trip-from-sanur` | не обойдена |
-| 31 | 304 | de | `/bali/de/journal/is-nusa-penida-worth-it` | не знает |
-| 32 | 294 | de | `/bali/de/journal/airport-to-ubud-transfer` | не обойдена |
-| 33 | 278 | de | `/bali/de/journal/are-gili-islands-worth-it` | не обойдена |
-| 34 | 259 | de | `/bali/de/journal/diamond-beach-nusa-penida-guide` | не обойдена |
-| 35 | 258 | de | `/bali/de/journal/canggu-vs-seminyak` | не знает |
-| 36 | 255 | de | `/bali/de/journal/whale-shark-season-sumbawa` | не знает |
-| 37 | 254 | de | `/bali/de/journal/bali-airport-transfer-guide` | не знает |
-| 38 | 250 | de | `/bali/de/journal/are-gili-islands-safe` | не обойдена |
-| 39 | 235 | de | `/bali/de/journal/bali-7-day-itinerary` | не знает |
-| 40 | 228 | de | `/bali/de/journal/broken-beach-angels-billabong` | не обойдена |
-| 41 | 223 | de | `/bali/de/journal/is-mount-batur-an-active-volcano` | не обойдена |
-| 42 | 221 | de | `/bali/de/journal/best-beaches-nusa-penida` | не знает |
-| 43 | 218 | de | `/bali/de/journal/amed-tulamben-snorkeling` | не обойдена |
-| 44 | 217 | de | `/bali/de/journal/can-you-hike-mount-batur-without-a-guide` | не обойдена |
-| 45 | 217 | de | `/bali/de/journal/ubud-in-one-day` | не обойдена |
-| 46 | 215 | de | `/bali/de/journal/mount-batur-sunrise-from-ubud` | не обойдена |
-| 47 | 208 | de | `/bali/de/journal/is-nusa-penida-safe` | не обойдена |
-| 48 | 205 | de | `/bali/de/journal/snorkeling-with-turtles-bali` | не знает |
-| 49 | 201 | de | `/bali/de/journal/how-to-get-around-bali` | не обойдена |
-| 50 | 194 | de | `/bali/de/journal/nusa-penida-vs-nusa-lembongan` | не обойдена |
-| 51 | 180 | de | `/bali/de/journal/lovina-dolphin-tour-worth-it` | не обойдена |
-| 52 | 175 | de | `/bali/de/journal/tirta-empul-guide` | не знает |
-| 53 | 166 | de | `/bali/de/journal/best-time-to-visit-bali-month-by-month` | не обойдена |
-| 54 | 164 | de | `/bali/de/journal/surf-lessons-bali-beginners` | не знает |
-| 55 | 155 | en | `/bali/en/journal/can-you-swim-in-bali` | не обойдена |
-| 56 | 148 | de | `/bali/de/journal/tukad-cepung-waterfall-guide` | не знает |
-| 57 | 140 | de | `/bali/de/journal/gili-air-vs-gili-trawangan` | не знает |
-| 58 | 134 | de | `/bali/de/journal/seminyak-vs-ubud` | не обойдена |
-| 59 | 120 | de | `/bali/de/journal/nusa-penida-without-a-tour` | не знает |
-| 60 | 117 | de | `/bali/de/journal/bali-itinerary-10-days` | не знает |
-| 61 | 113 | de | `/bali/de/journal/mount-batur-sunrise-from-south-bali` | не знает |
-| 62 | 111 | de | `/bali/de/journal/bali-day-trips-with-kids` | не знает |
-| 63 | 110 | de | `/bali/de/journal/nusa-penida-one-day-itinerary` | не обойдена |
-| 64 | 95 | ru | `/bali/ru/journal/what-to-eat-in-bali-food-guide` | не знает |
-| 65 | 88 | ru | `/bali/ru/journal/menjangan-island-bali` | не обойдена |
-| 66 | 87 | en | `/bali/en/journal/best-things-to-do-bali-for-couples` | не знает |
-| 67 | 69 | de | `/bali/de/journal/bali-tours-for-seniors` | не знает |
-| 68 | 16 | en | `/bali/en/journal/mount-batur-sunrise-cost` | не обойдена |
-| 69 | 0 | en | `/bali/en/journal/ayung-vs-telaga-waja-rafting` | не обойдена |
-| 70 | 0 | en | `/bali/en/journal/bali-airport-to-canggu-transfer` | не знает |
-| 71 | 0 | en | `/bali/en/journal/bali-airport-to-sanur-transfer` | не обойдена |
-| 72 | 0 | en | `/bali/en/journal/bali-airport-to-seminyak-transfer` | не знает |
-| 73 | 0 | en | `/bali/en/journal/bali-airport-to-the-islands` | не знает |
-| 74 | 0 | en | `/bali/en/journal/bali-airport-to-uluwatu-transfer` | не обойдена |
-| 75 | 0 | en | `/bali/en/journal/bali-airport-transfer-cost` | не знает |
-| 76 | 0 | en | `/bali/en/journal/bali-grab-taxi-driver-cost` | не обойдена |
-| 77 | 0 | en | `/bali/en/journal/bali-itinerary-14-days` | не знает |
-| 78 | 0 | en | `/bali/en/journal/bali-rafting-price-2026` | не обойдена |
-| 79 | 0 | en | `/bali/en/journal/bali-rafting-with-kids-age-limits` | не знает |
-| 80 | 0 | en | `/bali/en/journal/bali-surf-conditions-tides-swell-wind` | не обойдена |
-| 81 | 0 | en | `/bali/en/journal/bali-surf-season-month-by-month` | не знает |
-| 82 | 0 | en | `/bali/en/journal/bali-surf-spots-for-beginners` | не обойдена |
-| 83 | 0 | en | `/bali/en/journal/bali-surf-spots-intermediate` | не знает |
-| 84 | 0 | en | `/bali/en/journal/bali-surfboard-rental-and-transport` | не обойдена |
-| 85 | 0 | en | `/bali/en/journal/bali-to-lombok-transport` | не знает |
-| 86 | 0 | en | `/bali/en/journal/bali-tour-prices-guide` | не знает |
-| 87 | 0 | en | `/bali/en/journal/bali-waterfalls-by-season` | не обойдена |
-| 88 | 0 | en | `/bali/en/journal/bedugul-highlands-guide` | не знает |
-| 89 | 0 | en | `/bali/en/journal/best-surf-spots-in-bali` | не знает |
-| 90 | 0 | en | `/bali/en/journal/canggu-surf-spots` | не знает |
-| 91 | 0 | en | `/bali/en/journal/east-bali-surf-spots` | не обойдена |
-| 92 | 0 | en | `/bali/en/journal/galungan-kuningan-dates-what-changes` | не обойдена |
-| 93 | 0 | en | `/bali/en/journal/gili-air-guide` | не обойдена |
-| 94 | 0 | en | `/bali/en/journal/gili-islands-fast-boat-guide` | не обойдена |
-| 95 | 0 | en | `/bali/en/journal/gili-islands-from-canggu` | не обойдена |
-| 96 | 0 | en | `/bali/en/journal/gili-islands-from-ubud` | не обойдена |
-| 97 | 0 | en | `/bali/en/journal/gili-islands-with-kids` | не знает |
-| 98 | 0 | en | `/bali/en/journal/gili-meno-guide` | не знает |
-| 99 | 0 | en | `/bali/en/journal/gili-trawangan-guide` | не обойдена |
-| 100 | 0 | en | `/bali/en/journal/handara-gate-bali-guide` | не знает |
-| 101 | 0 | en | `/bali/en/journal/handara-gate-vs-lempuyang-gates-of-heaven` | не обойдена |
-| 102 | 0 | en | `/bali/en/journal/is-bali-rafting-safe` | не знает |
-| 103 | 0 | en | `/bali/en/journal/is-surfing-in-bali-safe` | не знает |
-| 104 | 0 | en | `/bali/en/journal/lovina-dolphin-season-year-round` | не знает |
-| 105 | 0 | en | `/bali/en/journal/nusa-penida-tour-cost` | не знает |
-| 106 | 0 | en | `/bali/en/journal/nyepi-what-actually-closes` | не обойдена |
-| 107 | 0 | en | `/bali/en/journal/rafting-from-seminyak-canggu-nusa-dua` | не обойдена |
-| 108 | 0 | en | `/bali/en/journal/rice-terrace-season-jatiluwih-tegalalang` | не знает |
-| 109 | 0 | en | `/bali/en/journal/tanah-lot-bedugul-day-trip-route` | не обойдена |
-| 110 | 0 | en | `/bali/en/journal/tanah-lot-temple-guide` | не знает |
-| 111 | 0 | en | `/bali/en/journal/ulun-danu-beratan-temple-guide` | не знает |
-| 112 | 0 | en | `/bali/en/journal/uluwatu-surf-guide` | не знает |
-| 113 | 0 | en | `/bali/en/journal/west-bali-surf-medewi-balian` | не знает |
-| 114 | 0 | en | `/bali/en/journal/what-to-wear-rafting-bali` | не знает |
-| 115 | 0 | es | `/bali/es/journal/ayung-vs-telaga-waja-rafting` | не знает |
-| 116 | 0 | es | `/bali/es/journal/bali-airport-to-canggu-transfer` | не обойдена |
-| 117 | 0 | es | `/bali/es/journal/bali-airport-to-sanur-transfer` | не знает |
-| 118 | 0 | es | `/bali/es/journal/bali-airport-to-seminyak-transfer` | не знает |
-| 119 | 0 | es | `/bali/es/journal/bali-airport-to-the-islands` | не знает |
-| 120 | 0 | es | `/bali/es/journal/bali-airport-to-uluwatu-transfer` | не знает |
+| 1 | 1645 | de | `/bali/de/journal/best-beaches-bali-crystal-clear-water` | Обнаружена, не проиндексирована |
+| 2 | 1499 | de | `/bali/de/journal/bali-private-driver-cost` | Обнаружена, не проиндексирована |
+| 3 | 796 | de | `/bali/de/journal/kelingking-beach-guide` | Обнаружена, не проиндексирована |
+| 4 | 766 | de | `/bali/de/journal/nusa-penida-day-trip-from-uluwatu` | Обнаружена, не проиндексирована |
+| 5 | 731 | de | `/bali/de/journal/nusa-dua-vs-seminyak` | Обнаружена, не проиндексирована |
+| 6 | 671 | de | `/bali/de/journal/how-much-does-a-bali-trip-cost` | Обнаружена, не проиндексирована |
+| 7 | 564 | de | `/bali/de/journal/best-beaches-uluwatu-bukit` | Обнаружена, не проиндексирована |
+| 8 | 493 | de | `/bali/de/journal/mount-batur-hot-springs-guide` | Обнаружена, не проиндексирована |
+| 9 | 476 | de | `/bali/de/journal/best-beaches-canggu-seminyak` | Обнаружена, не проиндексирована |
+| 10 | 425 | de | `/bali/de/journal/bali-tourist-tax-levy-guide` | Обнаружена, не проиндексирована |
+| 11 | 391 | de | `/bali/de/journal/sanur-vs-seminyak` | Обнаружена, не проиндексирована |
+| 12 | 367 | de | `/bali/de/journal/grab-gojek-or-private-driver-bali` | Обнаружена, не проиндексирована |
+| 13 | 365 | de | `/bali/de/journal/calm-beaches-bali-kids` | Обнаружена, не проиндексирована |
+| 14 | 348 | de | `/bali/de/journal/mount-batur-vs-bromo-rinjani-ijen` | Обнаружена, не проиндексирована |
+| 15 | 341 | de | `/bali/de/journal/white-water-rafting-bali-guide` | Обнаружена, не проиндексирована |
+| 16 | 325 | de | `/bali/de/journal/is-mount-batur-safe` | Обнаружена, не проиндексирована |
+| 17 | 323 | de | `/bali/de/journal/nusa-penida-day-trip-from-sanur` | Обнаружена, не проиндексирована |
+| 18 | 294 | de | `/bali/de/journal/airport-to-ubud-transfer` | Обнаружена, не проиндексирована |
+| 19 | 255 | de | `/bali/de/journal/whale-shark-season-sumbawa` | Обнаружена, не проиндексирована |
+| 20 | 217 | de | `/bali/de/journal/can-you-hike-mount-batur-without-a-guide` | Обнаружена, не проиндексирована |
+| 21 | 205 | de | `/bali/de/journal/snorkeling-with-turtles-bali` | Обнаружена, не проиндексирована |
+| 22 | 194 | de | `/bali/de/journal/nusa-penida-vs-nusa-lembongan` | Обнаружена, не проиндексирована |
+| 23 | 180 | de | `/bali/de/journal/lovina-dolphin-tour-worth-it` | Обнаружена, не проиндексирована |
+| 24 | 175 | de | `/bali/de/journal/tirta-empul-guide` | Обнаружена, не проиндексирована |
+| 25 | 155 | en | `/bali/en/journal/can-you-swim-in-bali` | Обнаружена, не проиндексирована |
+| 26 | 140 | de | `/bali/de/journal/gili-air-vs-gili-trawangan` | Обнаружена, не проиндексирована |
+| 27 | 134 | de | `/bali/de/journal/seminyak-vs-ubud` | Страница просканирована, но пока не проиндексирована |
+| 28 | 117 | de | `/bali/de/journal/bali-itinerary-10-days` | Обнаружена, не проиндексирована |
+| 29 | 113 | de | `/bali/de/journal/mount-batur-sunrise-from-south-bali` | Обнаружена, не проиндексирована |
+| 30 | 111 | de | `/bali/de/journal/bali-day-trips-with-kids` | Обнаружена, не проиндексирована |
+| 31 | 88 | ru | `/bali/ru/journal/menjangan-island-bali` | Обнаружена, не проиндексирована |
+| 32 | 16 | en | `/bali/en/journal/mount-batur-sunrise-cost` | Обнаружена, не проиндексирована |
+| 33 | 0 | en | `/bali/en/journal/ayung-vs-telaga-waja-rafting` | Обнаружена, не проиндексирована |
+| 34 | 0 | en | `/bali/en/journal/bali-airport-to-sanur-transfer` | Обнаружена, не проиндексирована |
+| 35 | 0 | en | `/bali/en/journal/bali-itinerary-14-days` | Обнаружена, не проиндексирована |
+| 36 | 0 | en | `/bali/en/journal/bali-rafting-price-2026` | Обнаружена, не проиндексирована |
+| 37 | 0 | en | `/bali/en/journal/bali-surf-spots-for-beginners` | Обнаружена, не проиндексирована |
+| 38 | 0 | en | `/bali/en/journal/bali-surf-spots-intermediate` | Обнаружена, не проиндексирована |
+| 39 | 0 | en | `/bali/en/journal/bali-surfboard-rental-and-transport` | Обнаружена, не проиндексирована |
+| 40 | 0 | en | `/bali/en/journal/bali-waterfalls-by-season` | Обнаружена, не проиндексирована |
+| 41 | 0 | en | `/bali/en/journal/bedugul-highlands-guide` | Обнаружена, не проиндексирована |
+| 42 | 0 | en | `/bali/en/journal/gili-meno-guide` | Обнаружена, не проиндексирована |
+| 43 | 0 | en | `/bali/en/journal/handara-gate-bali-guide` | Обнаружена, не проиндексирована |
+| 44 | 0 | en | `/bali/en/journal/nyepi-what-actually-closes` | Обнаружена, не проиндексирована |
+| 45 | 0 | en | `/bali/en/journal/tanah-lot-bedugul-day-trip-route` | Обнаружена, не проиндексирована |
+| 46 | 0 | en | `/bali/en/journal/what-to-wear-rafting-bali` | Обнаружена, не проиндексирована |
+| 47 | 0 | es | `/bali/es/journal/bali-airport-to-sanur-transfer` | Обнаружена, не проиндексирована |
+| 48 | 0 | es | `/bali/es/journal/bali-airport-to-uluwatu-transfer` | Обнаружена, не проиндексирована |
+
+## Что уже в индексе
+
+41 адресов, проверено 30.08.2026. Подавать не нужно.
+
+По языкам: en — 21, de — 17, es — 3
+
