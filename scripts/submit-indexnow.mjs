@@ -12,6 +12,8 @@
  * Запуск:
  *   node scripts/submit-indexnow.mjs           — приоритетные страницы
  *   node scripts/submit-indexnow.mjs --all     — все URL из sitemap.xml
+ *   node scripts/submit-indexnow.mjs --changed — изменённые сегодня
+ *   node scripts/submit-indexnow.mjs --since=2026-08-29 — изменённые с этой даты
  *
  * ВАЖНО: файл ключа должен быть уже задеплоен, иначе придёт 403.
  */
@@ -102,19 +104,23 @@ async function sitemapUrls() {
 
    Запускать ПОСЛЕ деплоя, не в сборке: иначе поисковик придёт за свежим
    адресом раньше, чем туда доедет новое содержимое. */
-async function changedUrls() {
+async function changedUrls(since) {
   const manifestPath = path.join(ROOT, ".generated", "sitemap-lastmod.json");
   const manifest = JSON.parse(await fs.readFile(manifestPath, "utf8"));
-  const today = new Date().toISOString().slice(0, 10);
+  /* По умолчанию берём сегодняшний день, но правку нередко деплоят вечером,
+     а подают на переобход утром. Тогда «сегодня» пустое, а переобход нужен
+     вчерашнему. Поэтому дату можно задать: --since=2026-08-29. */
+  const from = since || new Date().toISOString().slice(0, 10);
   return Object.entries(manifest)
-    .filter(([, v]) => v && v.date === today)
+    .filter(([, v]) => v && v.date && v.date >= from)
     .map(([urlPath]) => `${SITE}${urlPath}`);
 }
 
+const sinceArg = (process.argv.find((a) => a.startsWith("--since=")) || "").split("=")[1] || null;
 const urls = process.argv.includes("--all")
   ? await sitemapUrls()
-  : process.argv.includes("--changed")
-    ? await changedUrls()
+  : (process.argv.includes("--changed") || sinceArg)
+    ? await changedUrls(sinceArg)
     : await priorityUrls();
 console.log(`адресов к отправке: ${urls.length}`);
 
