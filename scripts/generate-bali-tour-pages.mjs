@@ -3156,16 +3156,16 @@ const tours = [
   },
   {
     slug: "blue-lagoon-snorkeling",
-    metaTitle: "Blue Lagoon Snorkeling in Bali | Padang Bai Day Trip from $50",
-    metaDescription: "Snorkel Blue Lagoon and Tanjung Jepun at Padang Bai — calm, clear water suited to beginners. From $50 with gear, guide, lunch and pickup. Book on WhatsApp.",
+    metaTitle: "Blue Lagoon Snorkeling, Padang Bai | 2 Hours, from $19",
+    metaDescription: "Blue Lagoon and Tanjung Jepun by private boat, 2 hours. From $19 per person with guide and gear. Transfer from south Bali is quoted separately.",
     title: "Blue Lagoon Snorkeling, Padang Bai",
     eyebrow: "Easy Bali snorkeling day",
-    duration: "Half day to full day",
-    pickup: "Morning hotel pickup",
+    duration: "2 hours on the water",
+    pickup: "Boat leaves Padang Bai at 09:00",
     bestFor: "Beginners, couples, and mixed groups",
     format: "Snorkeling trip",
     area: "Padang Bai and Blue Lagoon",
-    price: "From $50",
+    price: "From $19",
     image: sourceImage("tild6264-3738-4937-b664-376133376233__pexels-laylia-215506.webp"),
     imageAlt: "Colorful coral reef in Bali snorkeling water",
     lead:
@@ -47052,6 +47052,16 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+    "From $19":
+      "От $19",
+    "2 hours on the water":
+      "2 часа на воде",
+    "Boat leaves Padang Bai at 09:00":
+      "Лодка отходит из Паданг Бая в 09:00",
+    "Blue Lagoon Snorkeling, Padang Bai | 2 Hours, from $19":
+      "Снорклинг в Blue Lagoon, Паданг Бай | 2 часа, от $19",
+    "Blue Lagoon and Tanjung Jepun by private boat, 2 hours. From $19 per person with guide and gear. Transfer from south Bali is quoted separately.":
+      "Blue Lagoon и Tanjung Jepun на лодке, 2 часа. От $19 с человека, гид и снаряжение. Трансфер с юга Бали — отдельно.",
     "This guide also answers:":
       "Здесь же разобрано:",
     "142 crashes involving foreign tourists in 2024, up about 35% year on year, causing 21 deaths. Most travel insurance voids motorcycle claims without the correct licence.":
@@ -48598,6 +48608,16 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+    "From $19":
+      "Desde 19$",
+    "2 hours on the water":
+      "2 horas en el agua",
+    "Boat leaves Padang Bai at 09:00":
+      "El barco sale de Padang Bai a las 09:00",
+    "Blue Lagoon Snorkeling, Padang Bai | 2 Hours, from $19":
+      "Snorkel en Blue Lagoon, Padang Bai | 2 horas, desde 19$",
+    "Blue Lagoon and Tanjung Jepun by private boat, 2 hours. From $19 per person with guide and gear. Transfer from south Bali is quoted separately.":
+      "Blue Lagoon y Tanjung Jepun en barco, 2 horas. Desde 19$ por persona con guía y equipo. Traslado desde el sur de Bali aparte.",
     "This guide also answers:":
       "Esta guía también responde:",
     "142 crashes involving foreign tourists in 2024, up about 35% year on year, causing 21 deaths. Most travel insurance voids motorcycle claims without the correct licence.":
@@ -50056,6 +50076,16 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+    "From $19":
+      "À partir de 19$",
+    "2 hours on the water":
+      "2 heures dans l'eau",
+    "Boat leaves Padang Bai at 09:00":
+      "Le bateau part de Padang Bai à 09:00",
+    "Blue Lagoon Snorkeling, Padang Bai | 2 Hours, from $19":
+      "Snorkeling à Blue Lagoon, Padang Bai | 2 heures, dès 19$",
+    "Blue Lagoon and Tanjung Jepun by private boat, 2 hours. From $19 per person with guide and gear. Transfer from south Bali is quoted separately.":
+      "Blue Lagoon et Tanjung Jepun en bateau, 2 heures. Dès 19$ par personne, guide et équipement. Transfert du sud de Bali en sus.",
     "This guide also answers:":
       "Ce guide répond aussi à :",
     "142 crashes involving foreign tourists in 2024, up about 35% year on year, causing 21 deaths. Most travel insurance voids motorcycle claims without the correct licence.":
@@ -51666,6 +51696,16 @@ const PINNED_TRANSLATIONS = {
       "Bali est-elle sûre en 2026 ? 7 arnaques courantes à éviter",
   },
   "zh-CN": {
+    "From $19":
+      "19 美元起",
+    "2 hours on the water":
+      "水上2小时",
+    "Boat leaves Padang Bai at 09:00":
+      "船只09:00从帕当拜出发",
+    "Blue Lagoon Snorkeling, Padang Bai | 2 Hours, from $19":
+      "帕当拜蓝色泻湖浮潜 | 2小时，19美元起",
+    "Blue Lagoon and Tanjung Jepun by private boat, 2 hours. From $19 per person with guide and gear. Transfer from south Bali is quoted separately.":
+      "乘私人船前往蓝色泻湖和Tanjung Jepun，全程2小时。每人19美元起，含向导和装备。从巴厘岛南部出发的接送另行报价。",
     "This guide also answers:":
       "本指南还解答：",
     "142 crashes involving foreign tourists in 2024, up about 35% year on year, causing 21 deaths. Most travel insurance voids motorcycle claims without the correct licence.":
@@ -52998,6 +53038,16 @@ const PINNED_TRANSLATIONS = {
       "巴厘岛旅行要花多少钱？2026年真实物价与三档预算",
   },
   de: {
+    "From $19":
+      "Ab 19 $",
+    "2 hours on the water":
+      "2 Stunden im Wasser",
+    "Boat leaves Padang Bai at 09:00":
+      "Das Boot legt um 09:00 in Padang Bai ab",
+    "Blue Lagoon Snorkeling, Padang Bai | 2 Hours, from $19":
+      "Schnorcheln in der Blue Lagoon, Padang Bai | 2 Stunden, ab 19 $",
+    "Blue Lagoon and Tanjung Jepun by private boat, 2 hours. From $19 per person with guide and gear. Transfer from south Bali is quoted separately.":
+      "Blue Lagoon und Tanjung Jepun per Boot, 2 Stunden. Ab 19 $ pro Person mit Guide und Ausrüstung. Transfer aus Südbali separat.",
     "This guide also answers:":
       "Dieser Leitfaden beantwortet außerdem:",
     "142 crashes involving foreign tourists in 2024, up about 35% year on year, causing 21 deaths. Most travel insurance voids motorcycle claims without the correct licence.":
