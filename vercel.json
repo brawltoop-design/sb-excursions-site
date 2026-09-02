@@ -7,6 +7,28 @@
       "has": [
         {
           "type": "host",
+          "value": "sb-excursions-public\\.vercel\\.app"
+        }
+      ],
+      "destination": "https://www.sbexcursion.com/bali/en/main-page",
+      "statusCode": 301
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "sb-excursions-public\\.vercel\\.app"
+        }
+      ],
+      "destination": "https://www.sbexcursion.com/$1",
+      "statusCode": 301
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
           "value": "(?:www\\.)?sbexcursions\\.com"
         }
       ],
