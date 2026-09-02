@@ -171,3 +171,71 @@ Ad Library: закат на Батуре не рекламирует **никт�
 - У Dharma Putra Bali Tour один креатив крутится на оба запроса (ID 2115487716058894) —
   это прайс-простыня на 8000 знаков. Работает ли такое, из Ad Library не видно:
   библиотека не показывает ни охваты, ни расход для коммерческой рекламы.
+
+---
+
+## 12. Сколько крутится каждое объявление
+
+Скриншоты не прикладываю: они отдают статичную картинку и устаревают за неделю.
+Вместо них — прямые ссылки на карточку в Ad Library. Открывается сам креатив,
+видео проигрывается, дата старта живая.
+
+**Почему длительность важнее креатива.** Meta не отключает рекламу сама —
+её отключает рекламодатель, когда она не окупается. Объявление, которое крутится
+сто дней, платит за себя сто дней подряд. Это единственный сигнал прибыльности,
+который Ad Library отдаёт по коммерческой рекламе: ни охватов, ни расхода там нет.
+
+Дни считаны от даты старта до 02.09.2026.
+
+### Батур
+
+| Дней | Рекламодатель | Старт | Карточка |
+|---:|---|---|---|
+| **103** | Batur Geopark Adventure | 22.05.2026 | [2165097667666749](https://www.facebook.com/ads/library/?id=2165097667666749) |
+| 29 | Visitmountbaturbali | 04.08.2026 | [1031271036277310](https://www.facebook.com/ads/library/?id=1031271036277310) |
+| 23 | Govoyaloop Travel Guide | 10.08.2026 | [1027168023415804](https://www.facebook.com/ads/library/?id=1027168023415804) |
+| 18 | Kintamani Tour Activity | 15.08.2026 | [1810823243268414](https://www.facebook.com/ads/library/?id=1810823243268414) |
+| 13 | Voyago Tours | 20.08.2026 | [1060500753288451](https://www.facebook.com/ads/library/?id=1060500753288451) |
+| 13 | Voyago Tours | 20.08.2026 | [1695086378382560](https://www.facebook.com/ads/library/?id=1695086378382560) |
+| 8 | Trip Kintamani Jeep | 25.08.2026 | [948306657530195](https://www.facebook.com/ads/library/?id=948306657530195) |
+| 5 | Bagus Bali Sunrise Trekking | 28.08.2026 | [2002525073760629](https://www.facebook.com/ads/library/?id=2002525073760629) |
+| 5 | Dharma Putra Bali Tour | 28.08.2026 | [2115487716058894](https://www.facebook.com/ads/library/?id=2115487716058894) |
+| 3 | Kintamani Jeep Bali | 30.08.2026 | [3024362241231955](https://www.facebook.com/ads/library/?id=3024362241231955) |
+| 2 | Bali Tour Advisors | 31.08.2026 | [1491982872946478](https://www.facebook.com/ads/library/?id=1491982872946478) |
+| 2 | Bali Bli Putu Tour and Travel | 31.08.2026 | [1074497284982942](https://www.facebook.com/ads/library/?id=1074497284982942) |
+| 1 | Kharismawisata99.com | 01.09.2026 | [1101410342571935](https://www.facebook.com/ads/library/?id=1101410342571935) |
+| 17 часов | BALI Transport Service & Tour | 01.09.2026 | [1052772957673035](https://www.facebook.com/ads/library/?id=1052772957673035) |
+
+### Manta Point / Nusa Penida
+
+| Дней | Рекламодатель | Старт | Карточка |
+|---:|---|---|---|
+| **225** | Balicopter Tours & Charters | 20.01.2026 | [881873051246958](https://www.facebook.com/ads/library/?id=881873051246958) |
+| **184** | Smile Nusa Penida | 02.03.2026 | [946013077939521](https://www.facebook.com/ads/library/?id=946013077939521) |
+| **100** | nusapenidacamping | 25.05.2026 | [928961456776831](https://www.facebook.com/ads/library/?id=928961456776831) |
+| 54 | Tour & Travel Nusa Penida | 10.07.2026 | [904717105310044](https://www.facebook.com/ads/library/?id=904717105310044) |
+| 6 | Sayap Bali | 27.08.2026 | [1635114578125765](https://www.facebook.com/ads/library/?id=1635114578125765) |
+| 5 | Dharma Putra Bali Tour | 28.08.2026 | [2115487716058894](https://www.facebook.com/ads/library/?id=2115487716058894) |
+| 4 | Trip in Penida | 29.08.2026 | [1536387904468158](https://www.facebook.com/ads/library/?id=1536387904468158) |
+| 4 | Trip in Penida | 29.08.2026 | [1380881333588584](https://www.facebook.com/ads/library/?id=1380881333588584) |
+| 2 | Bali Tour Advisors | 31.08.2026 | [1491982872946478](https://www.facebook.com/ads/library/?id=1491982872946478) |
+| 2 | Nusa Penida Island | 31.08.2026 | [1767725541314525](https://www.facebook.com/ads/library/?id=1767725541314525) |
+| 13 часов | Triyana Nusa Penida | 01.09.2026 | [1397417971781899](https://www.facebook.com/ads/library/?id=1397417971781899) |
+| 12 часов | nusapenidaenjoy | 01.09.2026 | [1568623461307137](https://www.facebook.com/ads/library/?id=1568623461307137) |
+
+### Что из этого следует
+
+Из 25 объявлений **четыре** перевалили за сто дней, и три из четырёх — по Пениде.
+Батур с его тридцатью одним объявлением держит ровно одного долгожителя.
+
+Это переворачивает картину из раздела 1. Батур выглядит плотнее по числу
+объявлений, но 10 из 14 там младше двух недель — это карусель новичков,
+которые зальют бюджет и отвалятся. Пенида выглядит реже, но там сидят
+три машины, которые окупаются по сто дней и больше.
+
+**Единственный долгожитель Батура** — Batur Geopark Adventure, 103 дня.
+Разбираем, что у него: вертикальное видео, короткий текст на четыре строки,
+кнопка WhatsApp, скидка в первом экране, ноль чек-листов.
+Полная противоположность прайс-простыням Dharma Putra, которые живут пять дней.
+
+**Копировать надо это**, а не самое красивое.
