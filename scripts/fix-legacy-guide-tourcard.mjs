@@ -50,6 +50,50 @@ const problems = [];
 // Ссылка на тур в первых абзацах. У свежих статей эту строку рисует шаблон
 // генератора, а эти шесть гайдов он не перезаписывает — берём готовую, уже
 // переведённую строку из статьи-донора и ставим под датой публикации.
+const DECK_RE = /<p class="sb-journal-deck">[\s\S]*?<\/p>/;
+// Цена в этой строке ставилась один раз и больше не обновлялась: при смене
+// прайса гайд годами показывал старую цифру, а сборка оставалась зелёной.
+// Меняем только число, чтобы не трогать локализованную форму записи
+// («From $45», «ab 45 $», «45 美元起» — порядок символов везде свой).
+function priceNumber(text) {
+  const m = text
+    .replace(/<[^>]+>/g, " ")
+    .match(/\$\s?(\d{1,4})(?![0-9])|(?<![0-9])(\d{1,4})\s?\$|(?<![0-9])(\d{1,4})\s?(?:美元|долларов|USD)/);
+  return m ? (m[1] || m[2] || m[3]) : null;
+}
+function refreshDeckPrice(html, donorHtml) {
+  const mine = html.match(DECK_RE);
+  const donor = donorHtml.match(DECK_RE);
+  if (!mine || !donor) return html;
+  const want = priceNumber(donor[0]);
+  const got = priceNumber(mine[0]);
+  if (!want || !got || want === got) return html;
+  let done = false;
+  const fixed = mine[0].replace(
+    /\$\s?\d{1,4}(?![0-9])|(?<![0-9])\d{1,4}\s?\$|(?<![0-9])\d{1,4}\s?(?:美元|долларов|USD)/,
+    (hit) => { done = true; return hit.replace(got, want); },
+  );
+  return done ? html.replace(mine[0], fixed) : html;
+}
+
+const CARD_PRICE_RE = /(<div class="sb-journal-tourcard__price">)([\s\S]*?)(<\/div>)/;
+// Та же болезнь, что и у строки с туром: цена в карточке сайдбара ставилась
+// один раз. Донор — свежесобранная статья тура, у неё цена всегда актуальна.
+function refreshCardPrice(html, donorHtml) {
+  const card = html.match(CARD_PRICE_RE);
+  const donorDeck = donorHtml.match(DECK_RE);
+  if (!card || !donorDeck) return html;
+  const want = priceNumber(donorDeck[0]);
+  const got = priceNumber(card[2]);
+  if (!want || !got || want === got) return html;
+  let done = false;
+  const fixed = card[2].replace(
+    /\$\s?\d{1,4}(?![0-9])|(?<![0-9])\d{1,4}\s?\$|(?<![0-9])\d{1,4}\s?(?:美元|долларов|USD)/,
+    (hit) => { done = true; return hit.replace(got, want); },
+  );
+  return done ? html.replace(card[0], `${card[1]}${fixed}${card[3]}`) : html;
+}
+
 function withTourDeck(html, donorHtml) {
   if (html.includes("sb-journal-deck")) return html;
   const deck = donorHtml.match(/<p class="sb-journal-deck">[\s\S]*?<\/p>/);
@@ -84,12 +128,24 @@ for (const name of files) {
   if (html.includes("sb-journal-tourcard")) {
     let refreshed = html.replace(/<style id="sb-journal-tourcard-css">[\s\S]*?<\/style>/, EXTRA_CSS);
     const donor = donorNameFor(name, html);
-    if (donor && !refreshed.includes("sb-journal-deck")) {
+    if (donor) {
       try {
         const donorHtml = await fs.readFile(path.join(ROOT, donor), "utf8");
-        const linked = withTourDeck(refreshed, donorHtml);
-        if (linked !== refreshed) { refreshed = linked; stats["строка с туром"]++; }
+        if (refreshed.includes("sb-journal-deck")) {
+          const repriced = refreshDeckPrice(refreshed, donorHtml);
+          if (repriced !== refreshed) { refreshed = repriced; stats["цена обновлена"] = (stats["цена обновлена"] || 0) + 1; }
+        } else {
+          const linked = withTourDeck(refreshed, donorHtml);
+          if (linked !== refreshed) { refreshed = linked; stats["строка с туром"]++; }
+        }
       } catch { /* донора нет — строку не ставим, это не повод падать */ }
+    }
+    if (donor) {
+      try {
+        const donorHtml = await fs.readFile(path.join(ROOT, donor), "utf8");
+        const carded = refreshCardPrice(refreshed, donorHtml);
+        if (carded !== refreshed) { refreshed = carded; stats["цена карточки"] = (stats["цена карточки"] || 0) + 1; }
+      } catch { /* донора нет — не повод падать */ }
     }
     if (refreshed !== html) await fs.writeFile(file, refreshed);
     stats["уже есть"]++;

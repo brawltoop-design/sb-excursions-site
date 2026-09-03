@@ -164,7 +164,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "巴杜尔山",
-            "description": "顶峰海拔 1,717 m；您可以在指导下在 1.5-2 小时内攀登约 700 m。接客时间为 01:30 至 03:00，日出时间为 06:00-06:30 巴杜尔湖，前面有阿贡山，地平线上有林贾尼山，您将于当天早上返回酒店。 5-8 小时挨家挨户徒步旅行费用为 35 美元起，乘坐吉普车费用为 60 美元，温泉 6-8 小时费用为 75 美元。",
+            "description": "顶峰海拔 1,717 m；您可以在指导下在 1.5-2 小时内攀登约 700 m。接客时间为 01:30 至 03:00，日出时间为 06:00-06:30 巴杜尔湖，前面有阿贡山，地平线上有林贾尼山，您将于当天早上返回酒店。 5-8 小时挨家挨户徒步旅行费用为 35 美元起，乘坐吉普车费用为 45 美元，温泉 6-8 小时费用为 55 美元。",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-hike.jpg"
           }
         },
@@ -241,7 +241,7 @@
           "name": "你们提供前往布罗莫 (Bromo)、伊真 (Ijen) 或林贾尼 (Rinjani) 的旅游吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "不。我们只经营巴杜尔山：私人日出徒步之旅从 35 美元起，四轮驱动吉普车之旅从 60 美元起，温泉吉普车从 75 美元起，全部包含酒店接送服务，无需预付款，通过 WhatsApp 预订。我们编写了此比较，以便您可以与爪哇岛和龙目岛的运营商诚实地计划其他火山。"
+            "text": "不。我们只经营巴杜尔山：私人日出徒步之旅从 35 美元起，四轮驱动吉普车之旅从 45 美元起，温泉吉普车从 55 美元起，全部包含酒店接送服务，无需预付款，通过 WhatsApp 预订。我们编写了此比较，以便您可以与爪哇岛和龙目岛的运营商诚实地计划其他火山。"
           }
         },
         {
@@ -1277,6 +1277,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1635,7 +1697,7 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">旅游指南</div>
             <h1>巴杜尔 vs 布罗莫 vs 林贾尼 vs 伊真：只有巴杜尔适合一个早晨</h1>
-            <p class="sb-journal-lead">巴杜尔山是您在巴厘岛一个早晨可以完成的四个景点中唯一的一个——布罗莫火山和伊真火山位于东爪哇，需要单独乘飞机旅行，而龙目岛的林贾尼火山是一次多日徒步旅行，至少需要 2 天 1 夜。巴杜尔峰海拔 1,717 m，您可以在指导下在 1.5-2 小时内攀登约 700 m，日出时间全年为 06:00 至 06:30。从乌布出发，车程约 90 分钟，带导游的徒步旅行需要 5-8 小时，价格为 35 美元；四轮驱动吉普车之旅需要 6-8 小时，价格为 60 美元；泡温泉的吉普车价格为 75 美元。我们只经营巴杜尔火山——这种比较的存在是为了让您可以诚实地决定爪哇火山还是龙目岛火山也属于您的行程。</p>
+            <p class="sb-journal-lead">巴杜尔山是您在巴厘岛一个早晨可以完成的四个景点中唯一的一个——布罗莫火山和伊真火山位于东爪哇，需要单独乘飞机旅行，而龙目岛的林贾尼火山是一次多日徒步旅行，至少需要 2 天 1 夜。巴杜尔峰海拔 1,717 m，您可以在指导下在 1.5-2 小时内攀登约 700 m，日出时间全年为 06:00 至 06:30。从乌布出发，车程约 90 分钟，带导游的徒步旅行需要 5-8 小时，价格为 35 美元；四轮驱动吉普车之旅需要 6-8 小时，价格为 45 美元；泡温泉的吉普车价格为 55 美元。我们只经营巴杜尔火山——这种比较的存在是为了让您可以诚实地决定爪哇火山还是龙目岛火山也属于您的行程。</p>
             <p class="sb-journal-dates">作者：Alex Moskvin，SB Excursions 创始人 · 发布于 2026 年 5 月 21 日 · 更新于 2026 年 8 月 7 日</p>
             <p class="sb-journal-deck">此路线游览： <a href="/bali/zh/tours/mount-batur-sunrise-hike">巴杜尔山日出徒步旅行</a> — 35 美元起，5-8 小时。</p>
             <div class="sb-quick-answer">
@@ -1680,7 +1742,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1688,7 +1750,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1710,7 +1772,7 @@ body {
           <span>无需离开巴厘岛即可登顶日出</span>
         </div>
         <h3>巴杜尔山</h3>
-        <p>顶峰海拔 1,717 m；您可以在指导下在 1.5-2 小时内攀登约 700 m。接客时间为 01:30 至 03:00，日出时间为 06:00-06:30 巴杜尔湖，前面有阿贡山，地平线上有林贾尼山，您将于当天早上返回酒店。 5-8 小时挨家挨户徒步旅行费用为 35 美元起，乘坐吉普车费用为 60 美元，温泉 6-8 小时费用为 75 美元。</p>
+        <p>顶峰海拔 1,717 m；您可以在指导下在 1.5-2 小时内攀登约 700 m。接客时间为 01:30 至 03:00，日出时间为 06:00-06:30 巴杜尔湖，前面有阿贡山，地平线上有林贾尼山，您将于当天早上返回酒店。 5-8 小时挨家挨户徒步旅行费用为 35 美元起，乘坐吉普车费用为 45 美元，温泉 6-8 小时费用为 55 美元。</p>
       </div>
     </article>
 
@@ -1772,7 +1834,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>为什么巴杜尔山是巴厘岛唯一的单早选择</h2>
-                <p>算术很简单。巴杜尔日出远足的接送服务运行于 <strong>01:30 和 03:00</strong> 取决于你住在哪里——乌布，大约 <strong>90分钟</strong> 从山上出发，获得岛上最新的接送服务 <strong>02:30</strong>，而水明漾 (Seminyak)、仓古 (Canggu) 和武吉 (Bukit) 则提前整整一个小时出发，前往 <strong>1.5-2.5小时</strong> 开车。 02:00 道路上空无一人，因此出境路段通常是整个行程中最快的车程。日出落在之间 <strong>06:00 和 06:30</strong> 全年，完整的郊游需要 <strong>5-8小时</strong> 门到门。我们的指南 <a href="/bali/zh/journal/what-time-to-leave-for-mount-batur-sunrise">按地区划分的出发时间</a> 逐个区域地分解此内容。</p><p>巴杜尔还以其他三者无法做到的方式扩展到健身领域。导游带领的徒步旅行，从 <strong>$35</strong>, 爬升约 <strong>700米</strong> 的 <strong>1,717 米</strong> 1.5-2小时内登顶。 4x4 吉普车之旅，从 <strong>$60</strong>，无需攀登即可到达日出观景点。带温泉的吉普车，从 <strong>$75</strong>，然后在天然湖畔泳池中浸泡。的 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行的比较</a> 涵盖谁应该选择哪个，以及 <a href="/bali/zh/journal/mount-batur-sunrise-cost">全部成本明细</a> 显示这些价格包含哪些内容。</p><p>你在高层所获得的东西在这家公司也同样适用。火山口边缘面向东，穿过巴图尔湖，朝向阿贡火山，在晴朗的早晨，林贾尼火山本身就在地平线上可见——您可以站在本文中的一座火山上观看另一座火山。巴杜尔被联合国教科文组织命名为世界地质公园 <strong>2012</strong>，印度尼西亚第一。这是一座活火山——最后一次喷发是在 <strong>2000</strong> — 但它受到持续监控，并且日出步道每天都会运行。</p>
+                <p>算术很简单。巴杜尔日出远足的接送服务运行于 <strong>01:30 和 03:00</strong> 取决于你住在哪里——乌布，大约 <strong>90分钟</strong> 从山上出发，获得岛上最新的接送服务 <strong>02:30</strong>，而水明漾 (Seminyak)、仓古 (Canggu) 和武吉 (Bukit) 则提前整整一个小时出发，前往 <strong>1.5-2.5小时</strong> 开车。 02:00 道路上空无一人，因此出境路段通常是整个行程中最快的车程。日出落在之间 <strong>06:00 和 06:30</strong> 全年，完整的郊游需要 <strong>5-8小时</strong> 门到门。我们的指南 <a href="/bali/zh/journal/what-time-to-leave-for-mount-batur-sunrise">按地区划分的出发时间</a> 逐个区域地分解此内容。</p><p>巴杜尔还以其他三者无法做到的方式扩展到健身领域。导游带领的徒步旅行，从 <strong>$35</strong>, 爬升约 <strong>700米</strong> 的 <strong>1,717 米</strong> 1.5-2小时内登顶。 4x4 吉普车之旅，从 <strong>$45</strong>，无需攀登即可到达日出观景点。带温泉的吉普车，从 <strong>$55</strong>，然后在天然湖畔泳池中浸泡。的 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行的比较</a> 涵盖谁应该选择哪个，以及 <a href="/bali/zh/journal/mount-batur-sunrise-cost">全部成本明细</a> 显示这些价格包含哪些内容。</p><p>你在高层所获得的东西在这家公司也同样适用。火山口边缘面向东，穿过巴图尔湖，朝向阿贡火山，在晴朗的早晨，林贾尼火山本身就在地平线上可见——您可以站在本文中的一座火山上观看另一座火山。巴杜尔被联合国教科文组织命名为世界地质公园 <strong>2012</strong>，印度尼西亚第一。这是一座活火山——最后一次喷发是在 <strong>2000</strong> — 但它受到持续监控，并且日出步道每天都会运行。</p>
 
 
 
@@ -1815,7 +1877,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1823,7 +1885,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1856,7 +1918,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>你们提供前往布罗莫 (Bromo)、伊真 (Ijen) 或林贾尼 (Rinjani) 的旅游吗？</h3>
-                    <p>不。我们只经营巴杜尔山：私人日出徒步之旅从 35 美元起，四轮驱动吉普车之旅从 60 美元起，温泉吉普车从 75 美元起，全部包含酒店接送服务，无需预付款，通过 WhatsApp 预订。我们编写了此比较，以便您可以与爪哇岛和龙目岛的运营商诚实地计划其他火山。</p>
+                    <p>不。我们只经营巴杜尔山：私人日出徒步之旅从 35 美元起，四轮驱动吉普车之旅从 45 美元起，温泉吉普车从 55 美元起，全部包含酒店接送服务，无需预付款，通过 WhatsApp 预订。我们编写了此比较，以便您可以与爪哇岛和龙目岛的运营商诚实地计划其他火山。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1892,7 +1954,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
@@ -1921,7 +1983,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>

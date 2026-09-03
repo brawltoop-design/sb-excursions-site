@@ -211,7 +211,7 @@
           "name": "Was kostet die Tour und was ist enthalten?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ab $75 pro Person für 6–8 Stunden, inklusive Hotelabholung und -rückfahrt, der 4x4-Fahrt zum Sonnenaufgang, der Stopps an schwarzer Lava und schwarzem Sand sowie dem Abschluss an der heißen Quelle."
+            "text": "Ab $55 pro Person für 6–8 Stunden, inklusive Hotelabholung und -rückfahrt, der 4x4-Fahrt zum Sonnenaufgang, der Stopps an schwarzer Lava und schwarzem Sand sowie dem Abschluss an der heißen Quelle."
           }
         }
       ]
@@ -1239,6 +1239,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1601,14 +1663,14 @@ body {
             <h1>Mount Batur Sunrise Jeep & Hot Spring – vollständige Reiseroute, Zeitplan und Packliste</h1>
             <p class="sb-journal-lead">Sie planen den Mount Batur Sunrise Jeep &amp; Hot Spring? Dieser Leitfaden behandelt den kompletten Ablauf, was Sie einpacken sollten und wann die beste Zeit ist. Beste Monate: April–Oktober für die klarsten Sonnenaufgänge.</p>
             <p class="sb-journal-dates">Von Alex Moskvin, Gründer von SB Excursions · Veröffentlicht am 21. Mai 2026 · Aktualisiert am 7. August 2026</p>
-            <p class="sb-journal-deck">Tour auf dieser Route: <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a> — Ab 75 $, 6–8 Stunden.</p>
+            <p class="sb-journal-deck">Tour auf dieser Route: <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a> — Ab 55 $, 6–8 Stunden.</p>
             <div class="sb-journal-inline-stats">
               <span>6-8 Stunden</span>
               <span>Privat- oder Kleingruppen-Jeep-Reise</span>
               <span>Kintamani und Mount Batur</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sunrise Jeep & Hot Spring – Ab 75 $</a>
+              <a class="sb-journal-primary" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sunrise Jeep &amp; Hot Spring — From $55</a>
               <a class="sb-journal-secondary" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie in WhatsApp</a>
             </div>
           </div>
@@ -1626,14 +1688,14 @@ body {
                 <li>🚐 Abholung: <strong>Abholung vor Tagesanbruch zwischen 02:00 und 03:30 Uhr</strong></li>
                 <li>📍 Gebiet: <strong>Kintamani und Mount Batur</strong></li>
                 <li>👥 Am besten für: <strong>Sonnenaufgangssuchende, die den Tag mit einem Bad ausklingen lassen möchten</strong></li>
-                <li>💰 Preis: <strong>Ab 75 $</strong></li>
+                <li>💰 Preis: <strong>Ab 55 $</strong></li>
               </ul>
             </aside>
 
               <section class="sb-journal-article-section">
                 <h2>📌 Die Tour auf einen Blick</h2>
                 <p>Diese Kombination fügt das hinzu, was die meisten Vulkanmorgen auslassen: ein Warmwasser-Ausklang vor der Rückfahrt. Es eignet sich für Paare und kleine Gruppen, die die komplette Batur-Sequenz – Aussichtspunkt bei Sonnenaufgang, Lavafelder und heiße Quelle – in einem einzigen Ausflug vor der Morgendämmerung ohne Gipfelwanderung erleben möchten.</p>
-                <ul><li>Dauer: <strong>6-8 Stunden</strong></li><li>Format: <strong>Privat- oder Kleingruppen-Jeep-Reise</strong></li><li>Gebiet: <strong>Kintamani und Mount Batur</strong></li><li>Abholung: <strong>Abholung vor Tagesanbruch zwischen 02:00 und 03:30 Uhr</strong></li><li>Am besten für: <strong>Sonnenaufgangssuchende, die den Tag mit einem Bad ausklingen lassen möchten</strong></li><li>Ab: <strong>Ab 75 $</strong></li></ul>
+                <ul><li>Dauer: <strong>6-8 Stunden</strong></li><li>Format: <strong>Privat- oder Kleingruppen-Jeep-Reise</strong></li><li>Gebiet: <strong>Kintamani und Mount Batur</strong></li><li>Abholung: <strong>Abholung vor Tagesanbruch zwischen 02:00 und 03:30 Uhr</strong></li><li>Am besten für: <strong>Sonnenaufgangssuchende, die den Tag mit einem Bad ausklingen lassen möchten</strong></li><li>Ab: <strong>Ab 55 $</strong></li></ul>
 
 
               </section>
@@ -1680,7 +1742,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>✉️ Buchung und Bestätigung — was Sie schicken müssen</h2>
-                <p>Für die Bestätigung des Mount Batur Sunrise Jeep &amp; Hot Spring benötigen wir Ihr Wunschdatum, den Hotelnamen und die Gegend sowie die Gruppengröße. So kann der Anbieter das passende Fahrzeug, den Guide und das Zeitfenster zuordnen.</p><p>Die Preise beginnen bei $75. Der genaue Preis hängt von Ihrer Gruppengröße, der Entfernung zum Hotel und möglichen Zusatzoptionen ab.</p>
+                <p>Für die Bestätigung des Mount Batur Sunrise Jeep &amp; Hot Spring benötigen wir Ihr Wunschdatum, den Hotelnamen und die Gegend sowie die Gruppengröße. So kann der Anbieter das passende Fahrzeug, den Guide und das Zeitfenster zuordnen.</p><p>Die Preise beginnen bei $55. Der genaue Preis hängt von Ihrer Gruppengröße, der Entfernung zum Hotel und möglichen Zusatzoptionen ab.</p>
                 <ul><li>Planung der Abholung und Rückkehr vom Hotel aus den wichtigsten Gebieten Balis</li><li>Aktivitätseinweisung und grundlegende Sicherheitsausrüstung</li><li>WhatsApp-Unterstützung für Bestätigungs-, Zeit- und Routenfragen</li></ul>
 
 
@@ -1718,7 +1780,7 @@ body {
 
                     <article class="sb-journal-faq-card">
                       <h3>Was kostet die Tour und was ist enthalten?</h3>
-                      <p>Ab $75 pro Person für 6–8 Stunden, inklusive Hotelabholung und -rückfahrt, der 4x4-Fahrt zum Sonnenaufgang, der Stopps an schwarzer Lava und schwarzem Sand sowie dem Abschluss an der heißen Quelle.</p>
+                      <p>Ab $55 pro Person für 6–8 Stunden, inklusive Hotelabholung und -rückfahrt, der 4x4-Fahrt zum Sonnenaufgang, der Stopps an schwarzer Lava und schwarzem Sand sowie dem Abschluss an der heißen Quelle.</p>
                     </article>
 
                 </div>
@@ -1754,12 +1816,12 @@ body {
               <h3 class="sbtc-rail__title"><a class="sbtc-rail__titlelink" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a></h3>
               <p class="sbtc-price sbtc-rail__price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
               <div class="sbtc-rail__actions">
-                <a class="sbtc-btn sbtc-btn_ink" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Tour ansehen – ab 75 $<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
+                <a class="sbtc-btn sbtc-btn_ink" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Tour ansehen – ab 55 $<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
                 <a class="sbtc-btn sbtc-btn_line" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie in WhatsApp</a>
               </div>
               <dl class="sbtc-ledger sbtc-rail__ledger">

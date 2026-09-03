@@ -205,7 +205,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "巴杜尔山日出吉普车之旅",
-            "description": "火山上空的日出无需让孩子在黑暗中攀爬：吉普车开上来，而孩子们在黎明前的接送后打瞌睡。每天 6 至 8 小时 60 美元起 — 提早出发才是真正的成本，所以请计划一个安静的下午。",
+            "description": "火山上空的日出无需让孩子在黑暗中攀爬：吉普车开上来，而孩子们在黎明前的接送后打瞌睡。每天 6 至 8 小时 45 美元起 — 提早出发才是真正的成本，所以请计划一个安静的下午。",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-tour.jpg"
           }
         },
@@ -272,7 +272,7 @@
           "name": "巴杜尔火山日出吉普车之旅适合儿童吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "是的——吉普车完全取代了火山徒步旅行，所以孩子们只需要处理黎明前的接送和寒冷的观点。旅程时长 6 至 8 小时，价格 60 美元起，大多数孩子在开车的过程中都在睡觉。带上保暖的衣服，因为日出前的火山口边缘确实很冷。"
+            "text": "是的——吉普车完全取代了火山徒步旅行，所以孩子们只需要处理黎明前的接送和寒冷的观点。旅程时长 6 至 8 小时，价格 45 美元起，大多数孩子在开车的过程中都在睡觉。带上保暖的衣服，因为日出前的火山口边缘确实很冷。"
           }
         },
         {
@@ -1324,6 +1324,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1817,7 +1879,7 @@ body {
           <span>无需徒步即可欣赏火山日出</span>
         </div>
         <h3>巴杜尔山日出吉普车之旅</h3>
-        <p>火山上空的日出无需让孩子在黑暗中攀爬：吉普车开上来，而孩子们在黎明前的接送后打瞌睡。每天 6 至 8 小时 60 美元起 — 提早出发才是真正的成本，所以请计划一个安静的下午。</p>
+        <p>火山上空的日出无需让孩子在黑暗中攀爬：吉普车开上来，而孩子们在黎明前的接送后打瞌睡。每天 6 至 8 小时 45 美元起 — 提早出发才是真正的成本，所以请计划一个安静的下午。</p>
       </div>
     </article>
 
@@ -1948,7 +2010,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>巴杜尔火山日出吉普车之旅适合儿童吗？</h3>
-                    <p>是的——吉普车完全取代了火山徒步旅行，所以孩子们只需要处理黎明前的接送和寒冷的观点。旅程时长 6 至 8 小时，价格 60 美元起，大多数孩子在开车的过程中都在睡觉。带上保暖的衣服，因为日出前的火山口边缘确实很冷。</p>
+                    <p>是的——吉普车完全取代了火山徒步旅行，所以孩子们只需要处理黎明前的接送和寒冷的观点。旅程时长 6 至 8 小时，价格 45 美元起，大多数孩子在开车的过程中都在睡觉。带上保暖的衣服，因为日出前的火山口边缘确实很冷。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">

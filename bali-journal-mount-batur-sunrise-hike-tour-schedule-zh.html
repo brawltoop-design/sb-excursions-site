@@ -203,7 +203,7 @@
           "name": "巴杜尔山日出徒步旅行包括哪些内容？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "该行程每人 35 美元起，门到门时间为 5 至 8 小时，包括酒店接送、认证导游和山顶早餐。温泉门票需单独付费，价格约为 15-20 美元。"
+            "text": "该行程每人 35 美元起，门到门时间为 5 至 8 小时，包括酒店接送、认证导游和山顶早餐。温泉门票需单独付费，价格约为 15-15 美元。"
           }
         },
         {
@@ -1239,6 +1239,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1649,7 +1711,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>💡 每一站都会发生什么——来自旅行者的提示</h2>
                 <p>下面的数字和详细信息可帮助您围绕真实体验（而不是宣传册版本）进行计划。</p>
-                <ul><li>从巴厘岛南部（库塔、水明漾、努沙杜瓦）出发的接客时间约为 01:40–02:00 AM。从乌布出发的时间约为 02:30–03:00 AM。</li><li>整天的时长取决于您住在哪里。从乌布到登山口约一小时车程，从库塔和水明漾约两小时，从乌鲁瓦图、金巴兰、Canggu 或努沙杜瓦则将近三小时。从乌布、库塔或水明漾出发：01:40-03:00 接您，10:30 至 12:00 之间回到酒店。从最南端出发：00:45-01:30 接您，等返程车流疏散后，12:30 至 13:30 之间回到酒店。无论哪种情况，请把下午空出来——大多数人回来后都会补觉。</li><li>在松散的火山砾石上攀登大约需要 2 小时，向下攀登大约需要 1.5 小时。正常的健身就足够了——这是稳定的步行，而不是技术性的攀登。</li><li>巴杜尔山海拔 1,717 m（5,633 英尺）。山顶的温度比海平面低 10–15 °C。</li><li>所有巴杜尔徒步旅行都必须配备经过认证的当地导游——由金塔马尼徒步协会 (HPPGB) 强制执行。</li><li>巴杜尔天然温泉的入场费约为 15-20 美元，包括毛巾、迎宾饮料和储物柜。游泳池俯瞰着巴杜尔湖。</li></ul>
+                <ul><li>从巴厘岛南部（库塔、水明漾、努沙杜瓦）出发的接客时间约为 01:40–02:00 AM。从乌布出发的时间约为 02:30–03:00 AM。</li><li>整天的时长取决于您住在哪里。从乌布到登山口约一小时车程，从库塔和水明漾约两小时，从乌鲁瓦图、金巴兰、Canggu 或努沙杜瓦则将近三小时。从乌布、库塔或水明漾出发：01:40-03:00 接您，10:30 至 12:00 之间回到酒店。从最南端出发：00:45-01:30 接您，等返程车流疏散后，12:30 至 13:30 之间回到酒店。无论哪种情况，请把下午空出来——大多数人回来后都会补觉。</li><li>在松散的火山砾石上攀登大约需要 2 小时，向下攀登大约需要 1.5 小时。正常的健身就足够了——这是稳定的步行，而不是技术性的攀登。</li><li>巴杜尔山海拔 1,717 m（5,633 英尺）。山顶的温度比海平面低 10–15 °C。</li><li>所有巴杜尔徒步旅行都必须配备经过认证的当地导游——由金塔马尼徒步协会 (HPPGB) 强制执行。</li><li>巴杜尔天然温泉的入场费约为 15-15 美元，包括毛巾、迎宾饮料和储物柜。游泳池俯瞰着巴杜尔湖。</li></ul>
 
 
               </section>
@@ -1713,7 +1775,7 @@ body {
 
                     <article class="sb-journal-faq-card">
                       <h3>巴杜尔山日出徒步旅行包括哪些内容？</h3>
-                      <p>该行程每人 35 美元起，门到门时间为 5 至 8 小时，包括酒店接送、认证导游和山顶早餐。温泉门票需单独付费，价格约为 15-20 美元。</p>
+                      <p>该行程每人 35 美元起，门到门时间为 5 至 8 小时，包括酒店接送、认证导游和山顶早餐。温泉门票需单独付费，价格约为 15-15 美元。</p>
                     </article>
 
                     <article class="sb-journal-faq-card">

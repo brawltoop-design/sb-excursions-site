@@ -194,7 +194,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "私人日出吉普车，直接预订",
-            "description": "6 至 8 小时 60 美元起，无需攀爬：驾驶四轮驱动车沿着单独的轨道前往火山口边缘的观景点，欣赏同样的 06:00 至 06:30 日出，然后穿过古老的黑色熔岩原，在那里您可以走出去，在凝固的熔岩流上行走。它预订的三种方式与徒步旅行相同；直接确认需要一次 WhatsApp 聊天。",
+            "description": "6 至 8 小时 45 美元起，无需攀爬：驾驶四轮驱动车沿着单独的轨道前往火山口边缘的观景点，欣赏同样的 06:00 至 06:30 日出，然后穿过古老的黑色熔岩原，在那里您可以走出去，在凝固的熔岩流上行走。它预订的三种方式与徒步旅行相同；直接确认需要一次 WhatsApp 聊天。",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-tour.jpg"
           }
         },
@@ -204,7 +204,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "私人吉普车+温泉组合",
-            "description": "75 美元起，02:00 至 03:30 之间取货，6 至 8 小时送货上门。吉普车早上照常行驶——火山口边缘的日出，然后是黑色的熔岩地——最后在白天开车返回之前泡在天然湖边温泉中。作为私人直接预订，浸泡时间可以根据您的团队的需要而持续。",
+            "description": "55 美元起，02:00 至 03:30 之间取货，6 至 8 小时送货上门。吉普车早上照常行驶——火山口边缘的日出，然后是黑色的熔岩地——最后在白天开车返回之前泡在天然湖边温泉中。作为私人直接预订，浸泡时间可以根据您的团队的需要而持续。",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg"
           }
         }
@@ -227,7 +227,7 @@
           "name": "巴杜尔火山日出之旅的费用是多少？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "我们的私人日出徒步旅行价格为每人 35 美元起，包含步道起点导游、酒店接送服务，无需预付款。私人吉普车60美元起，带温泉的吉普车75美元起。团体巴士座位通常是最便宜的方式，但车辆和时间表是共享的，平台价格包含运营商的费率加上佣金。"
+            "text": "我们的私人日出徒步旅行价格为每人 35 美元起，包含步道起点导游、酒店接送服务，无需预付款。私人吉普车45美元起，带温泉的吉普车55美元起。团体巴士座位通常是最便宜的方式，但车辆和时间表是共享的，平台价格包含运营商的费率加上佣金。"
           }
         },
         {
@@ -259,7 +259,7 @@
           "name": "我可以预订巴杜尔山吉普车之旅而不是徒步旅行吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "是的。日出吉普车价格为 60 美元起，需要 6 至 8 小时，无需攀爬：四轮驱动车沿着单独的轨道行驶到火山口边缘的观景点，在 06:00 至 06:30 观看日出，然后穿过古老的黑色熔岩原。它的预订方式与徒步旅行相同——平台将其列出，直接操作员通过 WhatsApp 确认，并在夜间或黎明前取货。"
+            "text": "是的。日出吉普车价格为 45 美元起，需要 6 至 8 小时，无需攀爬：四轮驱动车沿着单独的轨道行驶到火山口边缘的观景点，在 06:00 至 06:30 观看日出，然后穿过古老的黑色熔岩原。它的预订方式与徒步旅行相同——平台将其列出，直接操作员通过 WhatsApp 确认，并在夜间或黎明前取货。"
           }
         }
       ]
@@ -1287,6 +1287,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1690,7 +1752,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1698,7 +1760,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1765,7 +1827,7 @@ body {
           <span>无需爬700米就能看到日出</span>
         </div>
         <h3>私人日出吉普车，直接预订</h3>
-        <p>6 至 8 小时 60 美元起，无需攀爬：驾驶四轮驱动车沿着单独的轨道前往火山口边缘的观景点，欣赏同样的 06:00 至 06:30 日出，然后穿过古老的黑色熔岩原，在那里您可以走出去，在凝固的熔岩流上行走。它预订的三种方式与徒步旅行相同；直接确认需要一次 WhatsApp 聊天。</p>
+        <p>6 至 8 小时 45 美元起，无需攀爬：驾驶四轮驱动车沿着单独的轨道前往火山口边缘的观景点，欣赏同样的 06:00 至 06:30 日出，然后穿过古老的黑色熔岩原，在那里您可以走出去，在凝固的熔岩流上行走。它预订的三种方式与徒步旅行相同；直接确认需要一次 WhatsApp 聊天。</p>
       </div>
     </article>
 
@@ -1780,7 +1842,7 @@ body {
           <span>寒冷的早晨以温暖结束</span>
         </div>
         <h3>私人吉普车+温泉组合</h3>
-        <p>75 美元起，02:00 至 03:30 之间取货，6 至 8 小时送货上门。吉普车早上照常行驶——火山口边缘的日出，然后是黑色的熔岩地——最后在白天开车返回之前泡在天然湖边温泉中。作为私人直接预订，浸泡时间可以根据您的团队的需要而持续。</p>
+        <p>55 美元起，02:00 至 03:30 之间取货，6 至 8 小时送货上门。吉普车早上照常行驶——火山口边缘的日出，然后是黑色的熔岩地——最后在白天开车返回之前泡在天然湖边温泉中。作为私人直接预订，浸泡时间可以根据您的团队的需要而持续。</p>
       </div>
     </article>
 
@@ -1791,7 +1853,7 @@ body {
                 <h2>三种预订路线，一座山</h2>
                 <p>每次巴杜尔山日出之旅，无论采用何种形式，都是由当地运营商与管理步道起点的导游协会合作在地面进行。预订路线决定了围绕该核心的内容：平台增加了佣金和应用程序界面，团体巴士将其他人的酒店添加到您的夜晚，而直接 WhatsApp 预订除了对话之外什么也不增加。下表显示了每条路线在实践中的含义。</p><p>预订路线不变的一件事是时间。接载运行时间为 <strong>01:30 和 03:00</strong> 取决于您住宿的地点： 从乌布出发，车程约为 <strong>90分钟</strong> 接送就在附近 <strong>02:30</strong>，而水明漾、仓古和武吉则位于 <strong>1.5–2.5 小时</strong> 在路上，附近有接送服务 <strong>01:30</strong>。那个时候道路上空无一人，因此出境路段是整个行程中最快的车程。</p>
 
-                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">预订路线</th><th scope="col">钱包括什么</th><th scope="col">确认之前要仔细检查什么</th><th scope="col">这条路线适合谁</th></tr></thead><tbody><tr><th scope="row">预订平台（GetYourGuide、Klook、Viator）</th><td>当地运营商的行程加上标价内的平台佣金</td><td>哪个运营商实际负责行程，以及接送地点是从您的酒店还是集合点</td><td>希望在一款应用程序中进行卡付款和平台管理的取消预订的旅客</td></tr><tr><th scope="row">来自多家酒店的团体巴士旅游</th><td>共享车辆中的一个座位、固定的时间表和共享的登山口团体</td><td>巴士向北行驶之前会经过其他酒店，接送窗口的宽度是多少</td><td>预算紧张且接受固定行程的单独旅行者</td></tr><tr><th scope="row">直接通过 WhatsApp 与当地运营商预订</th><td>运营商自有价格，无平台佣金</td><td>登山口指南、酒店接送和返回均在聊天中以书面形式确认</td><td>希望行程负责人解答问题的旅客</td></tr><tr><th scope="row">SB Excursions 私人徒步旅行，直接预订</th><td>私人登山口导游、酒店接送服务，每人 35 美元起，无需预付款</td><td>您自己的接送时间 - 01:30 至 03:00 之间，具体取决于您所在的地区，乌布大约 02:30</td><td>想要自己的导游、汽车和节奏的情侣和小团体</td></tr><tr><th scope="row">SB Excursions 私人吉普车，直接预订</th><td>乘坐 4x4 越野车前往火山口边缘观景点以及黑色熔岩地，60 美元起，无需攀爬，无需预付款</td><td>你想要早上的观景点而不是山顶徒步</td><td>任何人在保持日出的同时跳过 700 m 的攀登</td></tr></tbody></table></div><p class="sb-journal-tablenote">我们是该表中的直接运营商之一。显示的美元价格是我们的；平台和团体价格因列表而异，因此我们不提供任何报价。</p>
+                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">预订路线</th><th scope="col">钱包括什么</th><th scope="col">确认之前要仔细检查什么</th><th scope="col">这条路线适合谁</th></tr></thead><tbody><tr><th scope="row">预订平台（GetYourGuide、Klook、Viator）</th><td>当地运营商的行程加上标价内的平台佣金</td><td>哪个运营商实际负责行程，以及接送地点是从您的酒店还是集合点</td><td>希望在一款应用程序中进行卡付款和平台管理的取消预订的旅客</td></tr><tr><th scope="row">来自多家酒店的团体巴士旅游</th><td>共享车辆中的一个座位、固定的时间表和共享的登山口团体</td><td>巴士向北行驶之前会经过其他酒店，接送窗口的宽度是多少</td><td>预算紧张且接受固定行程的单独旅行者</td></tr><tr><th scope="row">直接通过 WhatsApp 与当地运营商预订</th><td>运营商自有价格，无平台佣金</td><td>登山口指南、酒店接送和返回均在聊天中以书面形式确认</td><td>希望行程负责人解答问题的旅客</td></tr><tr><th scope="row">SB Excursions 私人徒步旅行，直接预订</th><td>私人登山口导游、酒店接送服务，每人 35 美元起，无需预付款</td><td>您自己的接送时间 - 01:30 至 03:00 之间，具体取决于您所在的地区，乌布大约 02:30</td><td>想要自己的导游、汽车和节奏的情侣和小团体</td></tr><tr><th scope="row">SB Excursions 私人吉普车，直接预订</th><td>乘坐 4x4 越野车前往火山口边缘观景点以及黑色熔岩地，45 美元起，无需攀爬，无需预付款</td><td>你想要早上的观景点而不是山顶徒步</td><td>任何人在保持日出的同时跳过 700 m 的攀登</td></tr></tbody></table></div><p class="sb-journal-tablenote">我们是该表中的直接运营商之一。显示的美元价格是我们的；平台和团体价格因列表而异，因此我们不提供任何报价。</p>
 
               </section>
 
@@ -1813,7 +1875,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>我们的立场，公开宣布</h2>
-                <p>坦白地说：我们是 SB Excursions，是本文介绍的直接运营商之一，当您直接向我们预订时，我们会受益。上述事实无论如何都是成立的。我们的 <a href="/bali/zh/tours/mount-batur-sunrise-hike">私人日出徒步旅行</a> 来自 <strong>$35</strong> 每人的私人吉普车 <strong>$60</strong>，还有温泉吉普车 <strong>$75</strong> — 全部私人，全部包含酒店接送和返回，全部通过 WhatsApp 确认，无需预付款。</p><p>无论谁接受您的预订，行程本身都是一样的： <strong>5-8小时</strong> 门到门，大致 <strong>1.5–2小时</strong> 攀爬 <strong>700米</strong> 到 <strong>1,717 米</strong> 峰会，一个 <strong>30–60 分钟</strong> 在顶部等待 <strong>06:00–06:30</strong> 日出，以及大约 <strong>1.5小时</strong> 白天回来。如果您的悬而未决的问题是攀登本身而不是预订路线， <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行的比较</a> 解决了。</p><p>无论您选择哪条路线，请应用这四个问题。如果平台列表、团体旅游咨询台或我们自己的 WhatsApp 聊天无法以书面形式确认包含登山口指南、您的酒店在接载列表中、格式是真正私人的或诚实共享的、并且天气政策很明确——请在其他地方预订。让每个操作员（包括我们）都遵守该标准是本指南的重点。</p>
+                <p>坦白地说：我们是 SB Excursions，是本文介绍的直接运营商之一，当您直接向我们预订时，我们会受益。上述事实无论如何都是成立的。我们的 <a href="/bali/zh/tours/mount-batur-sunrise-hike">私人日出徒步旅行</a> 来自 <strong>$35</strong> 每人的私人吉普车 <strong>$45</strong>，还有温泉吉普车 <strong>$55</strong> — 全部私人，全部包含酒店接送和返回，全部通过 WhatsApp 确认，无需预付款。</p><p>无论谁接受您的预订，行程本身都是一样的： <strong>5-8小时</strong> 门到门，大致 <strong>1.5–2小时</strong> 攀爬 <strong>700米</strong> 到 <strong>1,717 米</strong> 峰会，一个 <strong>30–60 分钟</strong> 在顶部等待 <strong>06:00–06:30</strong> 日出，以及大约 <strong>1.5小时</strong> 白天回来。如果您的悬而未决的问题是攀登本身而不是预订路线， <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行的比较</a> 解决了。</p><p>无论您选择哪条路线，请应用这四个问题。如果平台列表、团体旅游咨询台或我们自己的 WhatsApp 聊天无法以书面形式确认包含登山口指南、您的酒店在接载列表中、格式是真正私人的或诚实共享的、并且天气政策很明确——请在其他地方预订。让每个操作员（包括我们）都遵守该标准是本指南的重点。</p>
 
 
 
@@ -1840,7 +1902,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1848,7 +1910,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1866,7 +1928,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>巴杜尔火山日出之旅的费用是多少？</h3>
-                    <p>我们的私人日出徒步旅行价格为每人 35 美元起，包含步道起点导游、酒店接送服务，无需预付款。私人吉普车60美元起，带温泉的吉普车75美元起。团体巴士座位通常是最便宜的方式，但车辆和时间表是共享的，平台价格包含运营商的费率加上佣金。</p>
+                    <p>我们的私人日出徒步旅行价格为每人 35 美元起，包含步道起点导游、酒店接送服务，无需预付款。私人吉普车45美元起，带温泉的吉普车55美元起。团体巴士座位通常是最便宜的方式，但车辆和时间表是共享的，平台价格包含运营商的费率加上佣金。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1886,7 +1948,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>我可以预订巴杜尔山吉普车之旅而不是徒步旅行吗？</h3>
-                    <p>是的。日出吉普车价格为 60 美元起，需要 6 至 8 小时，无需攀爬：四轮驱动车沿着单独的轨道行驶到火山口边缘的观景点，在 06:00 至 06:30 观看日出，然后穿过古老的黑色熔岩原。它的预订方式与徒步旅行相同——平台将其列出，直接操作员通过 WhatsApp 确认，并在夜间或黎明前取货。</p>
+                    <p>是的。日出吉普车价格为 45 美元起，需要 6 至 8 小时，无需攀爬：四轮驱动车沿着单独的轨道行驶到火山口边缘的观景点，在 06:00 至 06:30 观看日出，然后穿过古老的黑色熔岩原。它的预订方式与徒步旅行相同——平台将其列出，直接操作员通过 WhatsApp 确认，并在夜间或黎明前取货。</p>
                   </article>
 
               </div>
@@ -1917,7 +1979,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
@@ -1946,7 +2008,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>

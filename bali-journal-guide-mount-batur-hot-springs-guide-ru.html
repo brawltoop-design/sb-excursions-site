@@ -34,7 +34,7 @@
       "@type": "BlogPosting",
       "@id": "https://www.sbexcursion.com/bali/ru/journal/mount-batur-hot-springs-guide#article",
       "headline": "Горячие источники Батура: ехать после рассвета, а не вместо",
-      "description": "Природные горячие источники на берегу озера Батур и почему они подходят для заката восхода утра, а не для самостоятельного путешествия. Что включает в себя тур на джипе и горячих источниках, от 75 долларов.",
+      "description": "Природные горячие источники на берегу озера Батур и почему они подходят для заката восхода утра, а не для самостоятельного путешествия. Что включает в себя тур на джипе и горячих источниках, от 55 долларов.",
       "datePublished": "2026-05-21",
       "dateModified": "2026-08-07",
       "speakable": {
@@ -121,7 +121,7 @@
       "@id": "https://www.sbexcursion.com/bali/ru/journal/mount-batur-hot-springs-guide#webpage",
       "url": "https://www.sbexcursion.com/bali/ru/journal/mount-batur-hot-springs-guide",
       "name": "Горячие источники Батура: ехать после рассвета, а не вместо",
-      "description": "Природные горячие источники на берегу озера Батур и почему они подходят для заката восхода утра, а не для самостоятельного путешествия. Что включает в себя тур на джипе и горячих источниках, от 75 долларов.",
+      "description": "Природные горячие источники на берегу озера Батур и почему они подходят для заката восхода утра, а не для самостоятельного путешествия. Что включает в себя тур на джипе и горячих источниках, от 55 долларов.",
       "inLanguage": "ru",
       "primaryImageOfPage": {
         "@type": "ImageObject",
@@ -205,7 +205,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "Когда их пропускать",
-            "description": "Купание увеличивает время к утру, которое уже началось в 02:00, и если вы тот путешественник, который хочет вернуться в отель и поспать, это реальная цена. Пропустите это, возьмите простой джип от 60 долларов и вместо этого потратьте час на свой день.",
+            "description": "Купание увеличивает время к утру, которое уже началось в 02:00, и если вы тот путешественник, который хочет вернуться в отель и поспать, это реальная цена. Пропустите это, возьмите простой джип от 45 долларов и вместо этого потратьте час на свой день.",
             "image": "https://www.sbexcursion.com/images/places/mount-batur-jeep.jpg"
           }
         }
@@ -228,7 +228,7 @@
           "name": "Сколько стоит тур на джипе к горе Батур и горячим источникам?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "От 75 долларов США на человека в течение 6–8 часов, трансфер около 02:00–03:30. Это частный трансфер, включающий трансфер из отеля и возвращение без предоплаты. Простой джип Sunrise без рессор стоит от 60 долларов."
+            "text": "От 55 долларов США на человека в течение 6–8 часов, трансфер около 02:00–03:30. Это частный трансфер, включающий трансфер из отеля и возвращение без предоплаты. Простой джип Sunrise без рессор стоит от 45 долларов."
           }
         },
         {
@@ -1288,6 +1288,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1646,9 +1708,9 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">Путеводитель</div>
             <h1>Горячие источники Батура: ехать после рассвета, а не вместо</h1>
-            <p class="sb-journal-lead">Горячие источники расположены у подножия вулкана рядом с озером Батур, и их реальная ценность заключается в своевременности, а не в новизне. Все версии восхода солнца на горе Батур заканчиваются одинаково: вы стоите на ветру на высоте 1717 м в течение 30–60 минут, вам холодно, и вам предстоит ехать домой. Теплая вода именно в этот момент принесет больше пользы утром, чем что-либо еще в меню. Тур на джипе и горячих источниках стоит от 75 долларов США и длится 6–8 часов с трансфером около 02:00–03:30 и добавляет купание к тому же восходу солнца на внедорожнике 4х4. В этом руководстве рассказывается, что такое источники, где они подходят утром, что взять с собой, а также честные причины их пропуска.</p>
+            <p class="sb-journal-lead">Горячие источники расположены у подножия вулкана рядом с озером Батур, и их реальная ценность заключается в своевременности, а не в новизне. Все версии восхода солнца на горе Батур заканчиваются одинаково: вы стоите на ветру на высоте 1717 м в течение 30–60 минут, вам холодно, и вам предстоит ехать домой. Теплая вода именно в этот момент принесет больше пользы утром, чем что-либо еще в меню. Тур на джипе и горячих источниках стоит от 55 долларов США и длится 6–8 часов с трансфером около 02:00–03:30 и добавляет купание к тому же восходу солнца на внедорожнике 4х4. В этом руководстве рассказывается, что такое источники, где они подходят утром, что взять с собой, а также честные причины их пропуска.</p>
             <p class="sb-journal-dates">Алекс Москвин, основатель SB Excursions · Опубликовано 21 мая 2026 г. · Обновлено 7 августа 2026 г.</p>
-            <p class="sb-journal-deck">Экскурсия по этому маршруту: <a href="/bali/ru/tours/mount-batur-sunrise-jeep-hot-spring">Джип на рассвете на горе Батур и горячие источники</a> — От $75, 6-8 часов.</p>
+            <p class="sb-journal-deck">Экскурсия по этому маршруту: <a href="/bali/ru/tours/mount-batur-sunrise-jeep-hot-spring">Джип на рассвете на горе Батур и горячие источники</a> — От $55, 6-8 часов.</p>
             <div class="sb-quick-answer">
               <p class="sb-quick-answer__q">Стоит ли посещать горячие источники на горе Батур?</p>
               <p class="sb-quick-answer__a">Стоит того, если вы чувствуете холод или залезли. Вы проводите 30-60 минут, стоя на ветру на высоте в ожидании восхода солнца, а затем вам предстоит поездка домой от одного до двух с половиной часов. Теплая вода между этими двумя вещами — лучшее средство от одного недостатка, которым страдает каждое утро Батура.</p>
@@ -1656,10 +1718,10 @@ body {
               <ul class="sb-quick-answer__list"><li>Сколько стоит тур на джипе к горе Батур и горячим источникам?</li><li>Могу ли я посетить горячие источники после похода на гору Батур?</li></ul>
             </div>
             <div class="sb-journal-inline-stats">
-              <span>Лейксайд, Кинтамани</span><span>От $75</span><span>После холодного саммита</span>
+              <span>Лейксайд, Кинтамани</span><span>От $55</span><span>После холодного саммита</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/ru/tours/mount-batur-sunrise-jeep-hot-spring">Джип на горе Батур и горячие источники — от 75 долларов.</a>
+              <a class="sb-journal-primary" href="/bali/ru/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sunrise Jeep &amp; Hot Spring — From $55</a>
               <a class="sb-journal-secondary" href="/bali/ru/journal">Просмотреть все руководства</a>
             </div>
           </div>
@@ -1683,7 +1745,7 @@ body {
                     <a class="sboffer__name" href="/bali/ru/tours/mount-batur-sunrise-jeep-hot-spring">Джип на рассвете на горе Батур и горячие источники</a>
                     <span class="sboffer__for">Тот же восход солнца на внедорожнике без восхождения, а затем купание в горячем источнике Кинтамани.</span>
                   </span>
-                  <span class="sboffer__price">От $75</span>
+                  <span class="sboffer__price">От $55</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%94%D0%B6%D0%B8%D0%BF%20%D0%BD%D0%B0%20%D1%80%D0%B0%D1%81%D1%81%D0%B2%D0%B5%D1%82%D0%B5%20%D0%BD%D0%B0%20%D0%B3%D0%BE%D1%80%D0%B5%20%D0%91%D0%B0%D1%82%D1%83%D1%80%20%D0%B8%20%D0%B3%D0%BE%D1%80%D1%8F%D1%87%D0%B8%D0%B5%20%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8.%20%D0%9F%D1%80%D0%B8%D1%88%D0%BB%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8." target="_blank" rel="noopener noreferrer nofollow">Забронируйте сейчас</a>
                 </li>
                 <li class="sboffer__row">
@@ -1691,7 +1753,7 @@ body {
                     <a class="sboffer__name" href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">Джип-тур на восходе солнца на горе Батур</a>
                     <span class="sboffer__for">Восход солнца из внедорожника без подъема, затем через поле черной лавы.</span>
                   </span>
-                  <span class="sboffer__price">От $60</span>
+                  <span class="sboffer__price">От $45</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%94%D0%B6%D0%B8%D0%BF-%D1%82%D1%83%D1%80%20%D0%BD%D0%B0%20%D0%B2%D0%BE%D1%81%D1%85%D0%BE%D0%B4%D0%B5%20%D1%81%D0%BE%D0%BB%D0%BD%D1%86%D0%B0%20%D0%BD%D0%B0%20%D0%B3%D0%BE%D1%80%D0%B5%20%D0%91%D0%B0%D1%82%D1%83%D1%80.%20%D0%9F%D1%80%D0%B8%D1%88%D0%BB%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8." target="_blank" rel="noopener noreferrer nofollow">Забронируйте сейчас</a>
                 </li>
                 <li class="sboffer__row">
@@ -1747,7 +1809,7 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>От $75 · 6-8 часов</span>
+          <span>From $55 · 6-8 hours</span>
           <span>Полная последовательность Батура</span>
         </div>
         <h3>Джип-тур и посещение горячих источников</h3>
@@ -1781,7 +1843,7 @@ body {
           <span>Плотный график и теплые сны</span>
         </div>
         <h3>Когда их пропускать</h3>
-        <p>Купание увеличивает время к утру, которое уже началось в 02:00, и если вы тот путешественник, который хочет вернуться в отель и поспать, это реальная цена. Пропустите это, возьмите простой джип от 60 долларов и вместо этого потратьте час на свой день.</p>
+        <p>Купание увеличивает время к утру, которое уже началось в 02:00, и если вы тот путешественник, который хочет вернуться в отель и поспать, это реальная цена. Пропустите это, возьмите простой джип от 45 долларов и вместо этого потратьте час на свой день.</p>
       </div>
     </article>
 
@@ -1792,7 +1854,7 @@ body {
                 <h2>Горячие источники с первого взгляда</h2>
                 <p>Вопрос, который люди на самом деле задают, заключается не в том, что такое пружины, а в том, стоят ли они дополнительного времени и денег в конце очень раннего утра. Вот такое решение изложено:</p>
 
-                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">Question</th><th scope="col">Ответ</th><th scope="col">От чего это зависит</th></tr></thead><tbody><tr><th scope="row">Где они?</th><td>У подножия вулкана, на берегу озера Батур в Кинтамани.</td><td>В нескольких минутах от места окончания маршрута на рассвете, а не в отдельной поездке.</td></tr><tr><th scope="row">Когда утром</th><td>Последний, после восхода солнца и лавовых полей</td><td>В этом весь смысл: теплая вода лучше всего действует, когда вам холодно.</td></tr><tr><th scope="row">Как забронировать</th><td>Тур на джипе и горячих источниках, от 75 долларов за 6-8 часов.</td><td>Встреча около 02:00-03:30, частная, трансфер из отеля включен.</td></tr><tr><th scope="row">Что это добавляет по сравнению с простым джипом</th><td>15 долларов и теплый финиш</td><td>Сам восход солнца идентичен в обоих форматах.</td></tr><tr><th scope="row">Что взять с собой</th><td>Купальник и полотенце</td><td>Ни того, ни другого не предусмотрено, да и купить в 03:00 негде.</td></tr><tr><th scope="row">Стоит пропустить, если</th><td>Ты хочешь вернуться в отель и заснуть</td><td>Купание продлевает утро, которое уже началось посреди ночи.</td></tr></tbody></table></div>
+                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">Question</th><th scope="col">Ответ</th><th scope="col">От чего это зависит</th></tr></thead><tbody><tr><th scope="row">Где они?</th><td>У подножия вулкана, на берегу озера Батур в Кинтамани.</td><td>В нескольких минутах от места окончания маршрута на рассвете, а не в отдельной поездке.</td></tr><tr><th scope="row">Когда утром</th><td>Последний, после восхода солнца и лавовых полей</td><td>В этом весь смысл: теплая вода лучше всего действует, когда вам холодно.</td></tr><tr><th scope="row">Как забронировать</th><td>Тур на джипе и горячих источниках, от 55 долларов за 6-8 часов.</td><td>Встреча около 02:00-03:30, частная, трансфер из отеля включен.</td></tr><tr><th scope="row">Что это добавляет по сравнению с простым джипом</th><td>15 долларов и теплый финиш</td><td>Сам восход солнца идентичен в обоих форматах.</td></tr><tr><th scope="row">Что взять с собой</th><td>Купальник и полотенце</td><td>Ни того, ни другого не предусмотрено, да и купить в 03:00 негде.</td></tr><tr><th scope="row">Стоит пропустить, если</th><td>Ты хочешь вернуться в отель и заснуть</td><td>Купание продлевает утро, которое уже началось посреди ночи.</td></tr></tbody></table></div>
 
               </section>
 
@@ -1814,7 +1876,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Честный случай их пропуска</h2>
-                <p>Если ваш приоритет — встретить восход солнца и вернуться обратно, равнина <a href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">Джип-тур на рассвете</a> в <strong>от $60</strong> дает вам тот же вид и возвращает час назад. Некоторым путешественникам искренне хочется вздремнуть больше, чем полежать, и в этом ответе нет ничего плохого.</p><p>Также важно, как выглядит остальная часть вашего дня. Утро Батура уже стоит вам ночного сна; Если у вас есть рейс, лодка до Нуса-Пениды или что-то еще с фиксированным временем, не добавляйте к этому дополнительный час.</p><p>А в сезон дождей, с ноября по март, взвесьте все по-другому: если облака забирают восход солнца, весна — это та часть утра, которую погода не может испортить. Это тот случай, когда мы предлагаем именно версию с горячими источниками.</p>
+                <p>Если ваш приоритет — встретить восход солнца и вернуться обратно, равнина <a href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">Джип-тур на рассвете</a> в <strong>от $45</strong> дает вам тот же вид и возвращает час назад. Некоторым путешественникам искренне хочется вздремнуть больше, чем полежать, и в этом ответе нет ничего плохого.</p><p>Также важно, как выглядит остальная часть вашего дня. Утро Батура уже стоит вам ночного сна; Если у вас есть рейс, лодка до Нуса-Пениды или что-то еще с фиксированным временем, не добавляйте к этому дополнительный час.</p><p>А в сезон дождей, с ноября по март, взвесьте все по-другому: если облака забирают восход солнца, весна — это та часть утра, которую погода не может испортить. Это тот случай, когда мы предлагаем именно версию с горячими источниками.</p>
 
 
 
@@ -1833,7 +1895,7 @@ body {
                     <a class="sboffer__name" href="/bali/ru/tours/mount-batur-sunrise-jeep-hot-spring">Джип на рассвете на горе Батур и горячие источники</a>
                     <span class="sboffer__for">Тот же восход солнца на внедорожнике без восхождения, а затем купание в горячем источнике Кинтамани.</span>
                   </span>
-                  <span class="sboffer__price">От $75</span>
+                  <span class="sboffer__price">От $55</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%94%D0%B6%D0%B8%D0%BF%20%D0%BD%D0%B0%20%D1%80%D0%B0%D1%81%D1%81%D0%B2%D0%B5%D1%82%D0%B5%20%D0%BD%D0%B0%20%D0%B3%D0%BE%D1%80%D0%B5%20%D0%91%D0%B0%D1%82%D1%83%D1%80%20%D0%B8%20%D0%B3%D0%BE%D1%80%D1%8F%D1%87%D0%B8%D0%B5%20%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8.%20%D0%9F%D1%80%D0%B8%D1%88%D0%BB%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8." target="_blank" rel="noopener noreferrer nofollow">Забронируйте сейчас</a>
                 </li>
                 <li class="sboffer__row">
@@ -1841,7 +1903,7 @@ body {
                     <a class="sboffer__name" href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">Джип-тур на восходе солнца на горе Батур</a>
                     <span class="sboffer__for">Восход солнца из внедорожника без подъема, затем через поле черной лавы.</span>
                   </span>
-                  <span class="sboffer__price">От $60</span>
+                  <span class="sboffer__price">От $45</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%94%D0%B6%D0%B8%D0%BF-%D1%82%D1%83%D1%80%20%D0%BD%D0%B0%20%D0%B2%D0%BE%D1%81%D1%85%D0%BE%D0%B4%D0%B5%20%D1%81%D0%BE%D0%BB%D0%BD%D1%86%D0%B0%20%D0%BD%D0%B0%20%D0%B3%D0%BE%D1%80%D0%B5%20%D0%91%D0%B0%D1%82%D1%83%D1%80.%20%D0%9F%D1%80%D0%B8%D1%88%D0%BB%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8." target="_blank" rel="noopener noreferrer nofollow">Забронируйте сейчас</a>
                 </li>
                 <li class="sboffer__row">
@@ -1867,7 +1929,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Сколько стоит тур на джипе к горе Батур и горячим источникам?</h3>
-                    <p>От 75 долларов США на человека в течение 6–8 часов, трансфер около 02:00–03:30. Это частный трансфер, включающий трансфер из отеля и возвращение без предоплаты. Простой джип Sunrise без рессор стоит от 60 долларов.</p>
+                    <p>От 55 долларов США на человека в течение 6–8 часов, трансфер около 02:00–03:30. Это частный трансфер, включающий трансфер из отеля и возвращение без предоплаты. Простой джип Sunrise без рессор стоит от 45 долларов.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1918,7 +1980,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">от</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">Без предоплаты</span>
         </p>
@@ -1947,7 +2009,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">от</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Без предоплаты</span>
         </p>
@@ -2043,12 +2105,12 @@ body {
               <h3 class="sbtc-rail__title"><a class="sbtc-rail__titlelink" href="/bali/ru/tours/mount-batur-sunrise-jeep-hot-spring">Джип на рассвете на горе Батур и горячие источники</a></h3>
               <p class="sbtc-price sbtc-rail__price">
           <span class="sbtc-price__lead sbtc-caps">от</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">Без предоплаты</span>
         </p>
               <div class="sbtc-rail__actions">
-                <a class="sbtc-btn sbtc-btn_ink" href="/bali/ru/tours/mount-batur-sunrise-jeep-hot-spring">Посмотреть тур — от $75<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
+                <a class="sbtc-btn sbtc-btn_ink" href="/bali/ru/tours/mount-batur-sunrise-jeep-hot-spring">Посмотреть тур — от $55<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
                 <a class="sbtc-btn sbtc-btn_line" href="https://wa.me/6285333685020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%94%D0%B6%D0%B8%D0%BF%20%D0%BD%D0%B0%20%D1%80%D0%B0%D1%81%D1%81%D0%B2%D0%B5%D1%82%D0%B5%20%D0%BD%D0%B0%20%D0%B3%D0%BE%D1%80%D0%B5%20%D0%91%D0%B0%D1%82%D1%83%D1%80%20%D0%B8%20%D0%B3%D0%BE%D1%80%D1%8F%D1%87%D0%B8%D0%B5%20%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8.%20%D0%9F%D1%80%D0%B8%D1%88%D0%BB%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8." target="_blank" rel="noopener noreferrer nofollow">Забронируйте в WhatsApp</a>
               </div>
               <dl class="sbtc-ledger sbtc-rail__ledger">

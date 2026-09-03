@@ -187,7 +187,7 @@
           "name": "Сколько я должен дать чаевые водителю на Бали?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Чаевые не обязательны, но приветствуются. 50 000–100 000 индонезийских рупий (≈ 3–7 долларов США) — это обычный жест за полный день хорошего обслуживания."
+            "text": "Чаевые не обязательны, но приветствуются. 50 000–100 000 индонезийских рупий (≈ 3–3 долларов США) — это обычный жест за полный день хорошего обслуживания."
           }
         }
       ]
@@ -1215,6 +1215,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1633,7 +1695,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>💡 Советы и местные знания</h2>
                 <p>Об этих деталях ваш гид может упомянуть вскользь, но знание их заранее поможет вам спланировать лучший день.</p>
-                <ul><li>Стандартное бронирование рассчитано на 10 часов. Дополнительные часы обычно могут быть добавлены за разумную плату.</li><li>Водители предоставляют автомобиль с кондиционером (обычно Toyota Avanza или аналогичный) с водой в бутылках.</li><li>Это место на катере и трансфер до порта, и больше ничего: на переправе нет входных билетов и питание не подаётся.</li><li>Обсудите свой маршрут с водителем при получении. Они могут предложить оптимальный маршрут с учетом пробок и часов работы.</li><li>Чаевые водителю приветствуются: 50 000–100 000 индонезийских рупий (≈ 3–7 долларов США) — это обычный жест за хорошее обслуживание.</li></ul>
+                <ul><li>Стандартное бронирование рассчитано на 10 часов. Дополнительные часы обычно могут быть добавлены за разумную плату.</li><li>Водители предоставляют автомобиль с кондиционером (обычно Toyota Avanza или аналогичный) с водой в бутылках.</li><li>Это место на катере и трансфер до порта, и больше ничего: на переправе нет входных билетов и питание не подаётся.</li><li>Обсудите свой маршрут с водителем при получении. Они могут предложить оптимальный маршрут с учетом пробок и часов работы.</li><li>Чаевые водителю приветствуются: 50 000–100 000 индонезийских рупий (≈ 3–3 долларов США) — это обычный жест за хорошее обслуживание.</li></ul>
 
 
               </section>
@@ -1679,7 +1741,7 @@ body {
 
                     <article class="sb-journal-faq-card">
                       <h3>Сколько я должен дать чаевые водителю на Бали?</h3>
-                      <p>Чаевые не обязательны, но приветствуются. 50 000–100 000 индонезийских рупий (≈ 3–7 долларов США) — это обычный жест за полный день хорошего обслуживания.</p>
+                      <p>Чаевые не обязательны, но приветствуются. 50 000–100 000 индонезийских рупий (≈ 3–3 долларов США) — это обычный жест за полный день хорошего обслуживания.</p>
                     </article>
 
                 </div>

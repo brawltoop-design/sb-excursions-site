@@ -205,7 +205,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "巴杜尔日出和温泉结束",
-            "description": "在雨季，日出本身是五五开的事，因为云会停在火山口内，有些早晨什么都看不到。让它仍然值得的是结尾：含温泉的吉普车行程 $75 起，无论景色如何都以泡温水收尾，黎明前接送时间约 02:00-03:30。",
+            "description": "在雨季，日出本身是五五开的事，因为云会停在火山口内，有些早晨什么都看不到。让它仍然值得的是结尾：含温泉的吉普车行程 $55 起，无论景色如何都以泡温水收尾，黎明前接送时间约 02:00-03:30。",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg"
           }
         },
@@ -1318,6 +1318,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1729,7 +1791,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">从无需攀爬的四轮驱动车上日出，然后穿越黑色熔岩原。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1811,7 +1873,7 @@ body {
           <span>想要后援的日出赌徒</span>
         </div>
         <h3>巴杜尔日出和温泉结束</h3>
-        <p>在潮湿的月份里，日出本身就像抛硬币一样，因为火山口中有云，有些早晨你什么也看不见。使它能够生存的是结局： <a href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">吉普车温泉之旅</a> 75 美元起，无论风景如何，都可以在黎明前于 02:00-03:30 左右完成温水接送。</p>
+        <p>在潮湿的月份里，日出本身就像抛硬币一样，因为火山口中有云，有些早晨你什么也看不见。使它能够生存的是结局： <a href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">吉普车温泉之旅</a> 55 美元起，无论风景如何，都可以在黎明前于 02:00-03:30 左右完成温水接送。</p>
       </div>
     </article>
 
@@ -1889,7 +1951,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>提前一天，下雨就不再重要了</h2>
-                <p>雨季最有用的习惯就是早点开始。我们的 <a href="/bali/zh/tours/ubud-highlights-tour">乌布梯田、寺庙和火山之旅</a> 有一个 <strong>08:00 酒店接载</strong> 并跑来跑去 <strong>10小时</strong>，每车 $65 起。等到午后云层聚起来时，你已经走完三四站，路线的最后一段本来也是回程。同样的道理也适用于 <a href="/bali/zh/tours/bali-unesco">联合国教科文组织遗产路线</a> 每车 $65 起，以及 <a href="/bali/zh/tours/tanah-lot-bedugul-tour">海神庙和贝杜古日</a> 每车 $65 起，全程 9-11 小时；不过这一条最后停在海边，而雨季的海边日落最不可靠。</p><p>日出旅行完全坐在雨窗外，这是好消息，而在云窗内，这是坏消息。一个 <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a> 60 美元起 在黑暗中出发，在下雨之前完成，但是否能看到太阳取决于 06:00 火山口里的情况。有些早晨，云层上方天气晴朗，比八月的任何天气都要晴朗。有些早晨天是灰色的。如果您想了解版本之间的几率和差异， <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行</a> 将它们列出来。</p>
+                <p>雨季最有用的习惯就是早点开始。我们的 <a href="/bali/zh/tours/ubud-highlights-tour">乌布梯田、寺庙和火山之旅</a> 有一个 <strong>08:00 酒店接载</strong> 并跑来跑去 <strong>10小时</strong>，每车 $65 起。等到午后云层聚起来时，你已经走完三四站，路线的最后一段本来也是回程。同样的道理也适用于 <a href="/bali/zh/tours/bali-unesco">联合国教科文组织遗产路线</a> 每车 $65 起，以及 <a href="/bali/zh/tours/tanah-lot-bedugul-tour">海神庙和贝杜古日</a> 每车 $65 起，全程 9-11 小时；不过这一条最后停在海边，而雨季的海边日落最不可靠。</p><p>日出旅行完全坐在雨窗外，这是好消息，而在云窗内，这是坏消息。一个 <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a> 45 美元起 在黑暗中出发，在下雨之前完成，但是否能看到太阳取决于 06:00 火山口里的情况。有些早晨，云层上方天气晴朗，比八月的任何天气都要晴朗。有些早晨天是灰色的。如果您想了解版本之间的几率和差异， <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行</a> 将它们列出来。</p>
 
 
 
@@ -1940,7 +2002,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">从无需攀爬的四轮驱动车上日出，然后穿越黑色熔岩原。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -2067,7 +2129,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>

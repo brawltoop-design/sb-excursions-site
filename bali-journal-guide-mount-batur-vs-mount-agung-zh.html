@@ -225,7 +225,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "成本和不加息的选择",
-            "description": "带导游的巴杜尔日出起价 35 美元，四驱车轨道意味着非徒步旅行者也可以乘坐，吉普车起价 60 美元。阿贡根本没有道路，那里的专业导游费用更高，而且根据路线的不同而不同。只有巴杜尔让一组人平分：一个人徒步，另一个人骑行。",
+            "description": "带导游的巴杜尔日出起价为 35 美元，四驱车轨道意味着非徒步旅行者也可以乘坐，吉普车起价为 45 美元。阿贡根本没有道路，那里的专业导游费用更高，而且根据路线的不同而不同。只有巴杜尔让一组人平分：一个人徒步，另一个人骑行。",
             "image": "https://www.sbexcursion.com/images/places/mount-batur-jeep.jpg"
           }
         }
@@ -272,7 +272,7 @@
           "name": "阿贡山有吉普车路吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "不可以。阿贡没有车辆通行——唯一的登顶路线是步行，通过 Besakih 路线到达 3,031 m 的山顶，或者通过较短的 Pura Pasar Agung 路线到达火山口边缘。巴杜尔火山拥有 4x4 赛道，提供吉普车日出选择，起价 60 美元。"
+            "text": "不可以。阿贡没有车辆通行——唯一的登顶路线是步行，通过 Besakih 路线到达 3,031 m 的山顶，或者通过较短的 Pura Pasar Agung 路线到达火山口边缘。巴杜尔火山拥有 4x4 赛道，提供吉普车日出选择，起价 45 美元。"
           }
         },
         {
@@ -280,7 +280,7 @@
           "name": "2026 年巴杜尔山日出之旅的价格是多少？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "2026 年直接价格，通过 WhatsApp 预订，无需预付款：带导游的日出徒步旅行 35 美元起，日出吉普车含温泉浸泡 75 美元起，全套日出吉普车之旅 60 美元起。这三个都是私人的，包括酒店接送服务，并提供 5-8 小时的门到门服务。"
+            "text": "2026 年直接价格，通过 WhatsApp 预订，无需预付款：带导游的日出徒步旅行 35 美元起，日出吉普车含温泉浸泡 55 美元起，全套日出吉普车之旅 45 美元起。这三个都是私人的，包括酒店接送服务，并提供 5-8 小时的门到门服务。"
           }
         },
         {
@@ -1324,6 +1324,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1727,7 +1789,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1735,7 +1797,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1847,7 +1909,7 @@ body {
           <span>混合团体和非徒步旅行者</span>
         </div>
         <h3>成本和不加息的选择</h3>
-        <p>带导游的巴杜尔日出起价 35 美元，四驱车轨道意味着非徒步旅行者也可以乘坐，吉普车起价 60 美元。阿贡根本没有道路，那里的专业导游费用更高，而且根据路线的不同而不同。只有巴杜尔让一组人平分：一个人徒步，另一个人骑行。</p>
+        <p>带导游的巴杜尔日出起价为 35 美元，四驱车轨道意味着非徒步旅行者也可以乘坐，吉普车起价为 45 美元。阿贡根本没有道路，那里的专业导游费用更高，而且根据路线的不同而不同。只有巴杜尔让一组人平分：一个人徒步，另一个人骑行。</p>
       </div>
     </article>
 
@@ -1858,7 +1920,7 @@ body {
                 <h2>巴杜尔和阿贡并肩：数字决定一切</h2>
                 <p>这两座火山并非同一个早晨的变体。身高、努力和接触方面的差距使得 Batur 成为几乎每个人的正确选择：</p>
 
-                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col"></th><th scope="col">巴杜尔山</th><th scope="col">阿贡山</th></tr></thead><tbody><tr><th scope="row">山顶高度</th><td>1,717 米</td><td>3,031 m — 巴厘岛最高、最神圣的海拔</td></tr><tr><th scope="row">你攀登的高度</th><td>约700m</td><td>接近2,000米</td></tr><tr><th scope="row">爬山需要多长时间</th><td>上行约2小时，下行约1.5小时</td><td>经布沙基 5-7 小时到达</td></tr><tr><th scope="row">总站立时间</th><td>5-8小时门到门</td><td>10-12小时</td></tr><tr><th scope="row">有没有一条路可以到达顶峰</th><td>4x4 赛道到达日出观景点</td><td>没有——唯一的方法是步行</td></tr><tr><th scope="row">如果团体中有人无法徒步</th><td>当其他人攀爬时可以骑上去</td><td>根本没有选择</td></tr><tr><th scope="row">步道封闭</th><td>很少</td><td>寺庙仪式周边</td></tr><tr><th scope="row">我们提供吗</th><td>是的 — 加息 35 美元起，吉普车 60 美元起，带温泉的吉普车 75 美元起</td><td>否</td></tr></tbody></table></div>
+                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col"></th><th scope="col">巴杜尔山</th><th scope="col">阿贡山</th></tr></thead><tbody><tr><th scope="row">山顶高度</th><td>1,717 米</td><td>3,031 m — 巴厘岛最高、最神圣的海拔</td></tr><tr><th scope="row">你攀登的高度</th><td>约700m</td><td>接近2,000米</td></tr><tr><th scope="row">爬山需要多长时间</th><td>上行约2小时，下行约1.5小时</td><td>经布沙基 5-7 小时到达</td></tr><tr><th scope="row">总站立时间</th><td>5-8小时门到门</td><td>10-12小时</td></tr><tr><th scope="row">有没有一条路可以到达顶峰</th><td>4x4 赛道到达日出观景点</td><td>没有——唯一的方法是步行</td></tr><tr><th scope="row">如果团体中有人无法徒步</th><td>当其他人攀爬时可以骑上去</td><td>根本没有选择</td></tr><tr><th scope="row">步道封闭</th><td>很少</td><td>寺庙仪式周边</td></tr><tr><th scope="row">我们提供吗</th><td>是的 — 加息 35 美元起，吉普车 45 美元起，带温泉的吉普车 55 美元起</td><td>否</td></tr></tbody></table></div>
 
               </section>
 
@@ -1881,7 +1943,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>我们的三种巴杜尔山选项和 2026 年价格</h2>
                 <p>我们提供三种私人巴杜尔日出形式，全部直接在 WhatsApp 上预订，无需预付款，并且全部包括酒店接送服务：</p>
-                <ul><li><strong>巴杜尔山日出徒步 — 35 美元起</strong>：黎明前01:30-03:00接载，约2小时导游攀登，5-8小时挨家挨户。经典版本和最便宜的升级方式。</li><li><strong><a href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a> — 75 美元起</strong>：02:00-03:30 左右接载，乘坐 4x4 车前往日出点而不是攀爬，然后泡在巴图尔湖畔的天然温泉中。 6-8小时。</li><li><strong><a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a> — 60 美元起</strong>：夜间或黎明前接载，穿越黑色熔岩田和观景点的完整吉普车路线，根本不徒步旅行。 6-8小时。</li></ul>
+                <ul><li><strong>巴杜尔山日出徒步 — 35 美元起</strong>：黎明前01:30-03:00接载，约2小时导游攀登，5-8小时挨家挨户。经典版本和最便宜的升级方式。</li><li><strong><a href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a> — 55 美元起</strong>：02:00-03:30 左右接载，乘坐 4x4 车前往日出点而不是攀爬，然后泡在巴图尔湖畔的天然温泉中。 6-8小时。</li><li><strong><a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a> — 45 美元起</strong>：夜间或黎明前接载，穿越黑色熔岩田和观景点的完整吉普车路线，根本不徒步旅行。 6-8小时。</li></ul>
 
                 <p>吉普车形式的存在是因为巴杜尔的决定在一个旅行团中很少是一致的——有人总是想要徒步登顶，有人想要睡觉和风景。由于每次旅行都是私人的，因此形式有所不同：徒步旅行者和骑手可以在山顶相遇，欣赏同一日出。如果你在两者之间左右为难， <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行</a> 详细分解该决定。</p>
               </section>
@@ -1915,7 +1977,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1923,7 +1985,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1956,12 +2018,12 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>阿贡山有吉普车路吗？</h3>
-                    <p>不可以。阿贡没有车辆通行——唯一的登顶路线是步行，通过 Besakih 路线到达 3,031 m 的山顶，或者通过较短的 Pura Pasar Agung 路线到达火山口边缘。巴杜尔火山拥有 4x4 赛道，提供吉普车日出选择，起价 60 美元。</p>
+                    <p>不可以。阿贡没有车辆通行——唯一的登顶路线是步行，通过 Besakih 路线到达 3,031 m 的山顶，或者通过较短的 Pura Pasar Agung 路线到达火山口边缘。巴杜尔火山拥有 4x4 赛道，提供吉普车日出选择，起价 45 美元。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
                     <h3>2026 年巴杜尔山日出之旅的价格是多少？</h3>
-                    <p>2026 年直接价格，通过 WhatsApp 预订，无需预付款：带导游的日出徒步旅行 35 美元起，日出吉普车含温泉浸泡 75 美元起，全套日出吉普车之旅 60 美元起。这三个都是私人的，包括酒店接送服务，并提供 5-8 小时的门到门服务。</p>
+                    <p>2026 年直接价格，通过 WhatsApp 预订，无需预付款：带导游的日出徒步旅行 35 美元起，日出吉普车含温泉浸泡 55 美元起，全套日出吉普车之旅 45 美元起。这三个都是私人的，包括酒店接送服务，并提供 5-8 小时的门到门服务。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -2031,7 +2093,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
@@ -2060,7 +2122,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
@@ -2086,7 +2148,7 @@ body {
 
                   <a class="sb-journal-related-guide" href="/bali/zh/journal/mount-batur-sunrise-cost">
                     <span class="sb-journal-related-guide__label">巴杜尔山费用</span>
-                    <span class="sb-journal-related-guide__title">巴杜尔山日出费用：步行 35 美元，吉普车 60 美元</span>
+                    <span class="sb-journal-related-guide__title">巴杜尔山日出费用：步行 35 美元，吉普车 45 美元</span>
                   </a>
 
                   <a class="sb-journal-related-guide" href="/bali/zh/journal/best-beach-clubs-bali-young-adults">

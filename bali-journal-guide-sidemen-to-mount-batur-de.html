@@ -205,7 +205,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "Die Jeep-Variante desselben Morgens",
-            "description": "Gleiche Nacht, kein Aufstieg. Ein 4x4 fährt eine eigene Piste zu einem Aussichtspunkt am Kraterrand und quert danach, wenn das Licht kommt, die alten schwarzen Lavafelder. Ab $60 über 6-8 Stunden, und die Abfahrt aus Sidemen liegt 30-60 Minuten später als bei der Wanderung, also etwa 03:00 bis 03:30.",
+            "description": "Gleiche Nacht, kein Aufstieg. Ein 4x4 fährt eine eigene Piste zu einem Aussichtspunkt am Kraterrand und quert danach, wenn das Licht kommt, die alten schwarzen Lavafelder. Ab $45 über 6-8 Stunden, und die Abfahrt aus Sidemen liegt 30-60 Minuten später als bei der Wanderung, also etwa 03:00 bis 03:30.",
             "image": "https://www.sbexcursion.com/images/places/mount-batur-jeep.jpg"
           }
         },
@@ -215,7 +215,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "Der Abschluss in den heißen Quellen am See",
-            "description": "Derselbe Jeep-Vormittag ab $75 über 6-8 Stunden, der statt eines langen Abstiegs in natürlichen heißen Quellen am See endet. Für eine Unterkunft 1.5 Stunden entfernt ist das die sanfteste Version des Ausflugs: kein Aufstieg, eine spätere Abfahrt als bei der Wanderung und ein Bad vor der Heimfahrt bei Tag.",
+            "description": "Derselbe Jeep-Vormittag ab $55 über 6-8 Stunden, der statt eines langen Abstiegs in natürlichen heißen Quellen am See endet. Für eine Unterkunft 1.5 Stunden entfernt ist das die sanfteste Version des Ausflugs: kein Aufstieg, eine spätere Abfahrt als bei der Wanderung und ein Bad vor der Heimfahrt bei Tag.",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg"
           }
         }
@@ -246,7 +246,7 @@
           "name": "Kann ich die Mount-Batur-Jeeptour von Sidemen aus statt der Wanderung machen?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja. Die Jeep-Formate starten von derselben Basis aus 30 bis 60 Minuten später als die Wanderung, von Sidemen also etwa 03:00 bis 03:30 Uhr, weil kein zweistündiger Aufstieg einzuplanen ist. Die Sunrise Jeep Tour gibt es ab $60 über 6 bis 8 Stunden, die Variante mit Abschluss an den heißen Quellen am See ab $75."
+            "text": "Ja. Die Jeep-Formate starten von derselben Basis aus 30 bis 60 Minuten später als die Wanderung, von Sidemen also etwa 03:00 bis 03:30 Uhr, weil kein zweistündiger Aufstieg einzuplanen ist. Die Sunrise Jeep Tour gibt es ab $45 über 6 bis 8 Stunden, die Variante mit Abschluss an den heißen Quellen am See ab $55."
           }
         },
         {
@@ -1298,6 +1298,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1701,7 +1763,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sie möchten den gleichen Sonnenaufgang ohne den Aufstieg – mit Kindern oder nach einem späten Flug.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1709,7 +1771,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Der Sonnenaufgang, dann ein Bad in den natürlichen heißen Quellen am Batursee.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1791,7 +1853,7 @@ body {
           <span>Alle, die nicht aufsteigen</span>
         </div>
         <h3>Die Jeep-Variante desselben Morgens</h3>
-        <p>Gleiche Nacht, kein Aufstieg. Ein 4x4 fährt eine eigene Piste zu einem Aussichtspunkt am Kraterrand und quert danach, wenn das Licht kommt, die alten schwarzen Lavafelder. Ab $60 über 6-8 Stunden, und die Abfahrt aus Sidemen liegt 30-60 Minuten später als bei der Wanderung, also etwa 03:00 bis 03:30.</p>
+        <p>Gleiche Nacht, kein Aufstieg. Ein 4x4 fährt eine eigene Piste zu einem Aussichtspunkt am Kraterrand und quert danach, wenn das Licht kommt, die alten schwarzen Lavafelder. Ab $45 über 6-8 Stunden, und die Abfahrt aus Sidemen liegt 30-60 Minuten später als bei der Wanderung, also etwa 03:00 bis 03:30.</p>
       </div>
     </article>
 
@@ -1806,7 +1868,7 @@ body {
           <span>Eine sanfte Landung nach einer kurzen Nacht</span>
         </div>
         <h3>Der Abschluss in den heißen Quellen am See</h3>
-        <p>Derselbe Jeep-Vormittag ab $75 über 6-8 Stunden, der statt eines langen Abstiegs in natürlichen heißen Quellen am See endet. Für eine Unterkunft 1.5 Stunden entfernt ist das die sanfteste Version des Ausflugs: kein Aufstieg, eine spätere Abfahrt als bei der Wanderung und ein Bad vor der Heimfahrt bei Tag.</p>
+        <p>Derselbe Jeep-Vormittag ab $55 über 6-8 Stunden, der statt eines langen Abstiegs in natürlichen heißen Quellen am See endet. Für eine Unterkunft 1.5 Stunden entfernt ist das die sanfteste Version des Ausflugs: kein Aufstieg, eine spätere Abfahrt als bei der Wanderung und ein Bad vor der Heimfahrt bei Tag.</p>
       </div>
     </article>
 
@@ -1839,7 +1901,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Der Erholungstag nach einer unterbrochenen Nacht</h2>
-                <p>Der ehrliche Preis der Sonnenaufgangstour ist der Tag danach, nicht der Betrag. Die Wanderung ist <strong>5 bis 8 Stunden</strong> von Tür zu Tür, eine Abfahrt um 02:30 bringt Sie also zwischen frühem und mittlerem Vormittag zurück nach Sidemen, und die meisten Gäste schlafen danach. Rechnen Sie den Rest des Tages ab. Legen Sie die Reihenfolge der Woche bewusst fest: ankommen, ein leichter Tag, der Vulkan, dann ein ruhiger Tag, dann der lange Besichtigungstag.</p><p>Ein Ruhetag in einem Reistal lässt sich angenehmer verbringen als ein Ruhetag in einer belebten Stadt, was ein weiteres Argument dafür ist, Batur von hier aus zu machen, statt für eine einzige Nacht das Quartier zu wechseln. Wenn Ihr Zeitfenster wirklich knapp ist, dann die <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Jeep-Tour</a> von <strong>$60</strong> nimmt den Aufstieg, aber nicht die Uhrzeit — die Abfahrt ist nur 30 bis 60 Minuten später, und die Nacht ist trotzdem weg. <a href="/bali/de/journal/mount-batur-sunrise-jeep-vs-hike">Jeep gegen Wanderung</a> stellt die beiden nebeneinander, und die <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Variante mit heißen Quellen</a> von <strong>$75</strong> endet immerhin in warmem Wasser am See.</p><p>Von November bis März ist der obere Weg rutschig und Wolken können die Sicht verdecken. Die Guides gehen an den meisten Morgen trotzdem los und sagen nur bei wirklich schlechtem Wetter ab, ausführlich behandelt in <a href="/bali/de/journal/mount-batur-in-rainy-season">Mount Batur in der Regenzeit</a>. Bei uns wird nichts im Voraus bezahlt, eine Entscheidung am Vorabend ist also immer noch eine Entscheidung, und <a href="/bali/de/journal/how-to-book-mount-batur-tour">wie man eine Mount-Batur-Tour bucht</a> erklärt, wie der WhatsApp-Verlauf funktioniert.</p>
+                <p>Der ehrliche Preis der Sonnenaufgangstour ist der Tag danach, nicht der Betrag. Die Wanderung ist <strong>5 bis 8 Stunden</strong> von Tür zu Tür, eine Abfahrt um 02:30 bringt Sie also zwischen frühem und mittlerem Vormittag zurück nach Sidemen, und die meisten Gäste schlafen danach. Rechnen Sie den Rest des Tages ab. Legen Sie die Reihenfolge der Woche bewusst fest: ankommen, ein leichter Tag, der Vulkan, dann ein ruhiger Tag, dann der lange Besichtigungstag.</p><p>Ein Ruhetag in einem Reistal lässt sich angenehmer verbringen als ein Ruhetag in einer belebten Stadt, was ein weiteres Argument dafür ist, Batur von hier aus zu machen, statt für eine einzige Nacht das Quartier zu wechseln. Wenn Ihr Zeitfenster wirklich knapp ist, dann die <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Jeep-Tour</a> von <strong>$45</strong> nimmt den Aufstieg, aber nicht die Uhrzeit — die Abfahrt ist nur 30 bis 60 Minuten später, und die Nacht ist trotzdem weg. <a href="/bali/de/journal/mount-batur-sunrise-jeep-vs-hike">Jeep gegen Wanderung</a> stellt die beiden nebeneinander, und die <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Variante mit heißen Quellen</a> von <strong>$55</strong> endet immerhin in warmem Wasser am See.</p><p>Von November bis März ist der obere Weg rutschig und Wolken können die Sicht verdecken. Die Guides gehen an den meisten Morgen trotzdem los und sagen nur bei wirklich schlechtem Wetter ab, ausführlich behandelt in <a href="/bali/de/journal/mount-batur-in-rainy-season">Mount Batur in der Regenzeit</a>. Bei uns wird nichts im Voraus bezahlt, eine Entscheidung am Vorabend ist also immer noch eine Entscheidung, und <a href="/bali/de/journal/how-to-book-mount-batur-tour">wie man eine Mount-Batur-Tour bucht</a> erklärt, wie der WhatsApp-Verlauf funktioniert.</p>
 
 
 
@@ -1866,7 +1928,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sie möchten den gleichen Sonnenaufgang ohne den Aufstieg – mit Kindern oder nach einem späten Flug.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1874,7 +1936,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Der Sonnenaufgang, dann ein Bad in den natürlichen heißen Quellen am Batursee.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1897,7 +1959,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Kann ich die Mount-Batur-Jeeptour von Sidemen aus statt der Wanderung machen?</h3>
-                    <p>Ja. Die Jeep-Formate starten von derselben Basis aus 30 bis 60 Minuten später als die Wanderung, von Sidemen also etwa 03:00 bis 03:30 Uhr, weil kein zweistündiger Aufstieg einzuplanen ist. Die Sunrise Jeep Tour gibt es ab $60 über 6 bis 8 Stunden, die Variante mit Abschluss an den heißen Quellen am See ab $75.</p>
+                    <p>Ja. Die Jeep-Formate starten von derselben Basis aus 30 bis 60 Minuten später als die Wanderung, von Sidemen also etwa 03:00 bis 03:30 Uhr, weil kein zweistündiger Aufstieg einzuplanen ist. Die Sunrise Jeep Tour gibt es ab $45 über 6 bis 8 Stunden, die Variante mit Abschluss an den heißen Quellen am See ab $55.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1972,7 +2034,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
@@ -2022,7 +2084,7 @@ body {
 
                   <a class="sb-journal-related-guide" href="/bali/de/journal/mount-batur-sunrise-from-ubud">
                     <span class="sb-journal-related-guide__label">Batur aus Ubud</span>
-                    <span class="sb-journal-related-guide__title">Mount Batur Sunrise von Ubud: Wanderung 35 $, Jeep 60 $</span>
+                    <span class="sb-journal-related-guide__title">Mount Batur Sunrise von Ubud: Wanderung 35 $, Jeep 45 $</span>
                   </a>
 
                   <a class="sb-journal-related-guide" href="/bali/de/journal/mount-batur-sunrise-from-south-bali">

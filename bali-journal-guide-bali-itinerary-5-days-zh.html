@@ -194,7 +194,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "第 4 天 — 巴杜尔山日出或吉利群岛",
-            "description": "选择槽。巴杜尔山日出之旅乘坐吉普车 60 美元起，步行 35 美元起，均提供黎明前接送服务和下午早些时候返回服务。另一种选择是吉利群岛全天浮潜 115 美元起——海龟、两个岛屿、更多的水上时间。",
+            "description": "选择槽。巴杜尔山日出之旅乘坐吉普车 45 美元起，步行 35 美元起，均提供黎明前接送服务和下午早些时候返回服务。另一种选择是吉利群岛全天浮潜 115 美元起——海龟、两个岛屿、更多的水上时间。",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-tour.jpg"
           }
         },
@@ -235,7 +235,7 @@
           "name": "短途旅行应该去巴杜尔山还是吉利群岛？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "如果您想看日出并且白天时间较短，请选择巴杜尔山——吉普车费用从 60 美元起，徒步旅行从 35 美元起，您可以在下午早些时候返回。如果您想要海龟和海滩时光，并接受在水上度过更长的一天，请选择 Gilis，价格为 115 美元起。"
+            "text": "如果您想看日出并且白天时间较短，请选择巴杜尔山——吉普车费用从 45 美元起，徒步旅行从 35 美元起，您可以在下午早些时候返回。如果您想要海龟和海滩时光，并接受在水上度过更长的一天，请选择 Gilis，价格为 115 美元起。"
           }
         },
         {
@@ -243,7 +243,7 @@
           "name": "巴厘岛5天行程中的一日游费用是多少？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "2026 年直订价格：机场接送 $15 起、乌布梯田与火山一日每车 $65 起、珀尼达岛西线每车 $49 起、巴杜尔山日出徒步 $35 起或吉普 $75 起、吉利群岛浮潜一日 $115 起。预订通过 WhatsApp 进行，无需预付。"
+            "text": "2026 年直订价格：机场接送 $15 起、乌布梯田与火山一日每车 $65 起、珀尼达岛西线每车 $49 起、巴杜尔山日出徒步 $35 起或吉普 $45 起、吉利群岛浮潜一日 $115 起。预订通过 WhatsApp 进行，无需预付。"
           }
         },
         {
@@ -1303,6 +1303,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1714,7 +1776,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">从无需攀爬的四轮驱动车上日出，然后穿越黑色熔岩原。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1781,7 +1843,7 @@ body {
           <span>日出或大海——您的选择</span>
         </div>
         <h3>第 4 天 — 巴杜尔山日出或吉利群岛</h3>
-        <p>选择槽。巴杜尔山日出之旅乘坐吉普车 60 美元起，步行 35 美元起，均提供黎明前接送服务和下午早些时候返回服务。另一种选择是吉利群岛全天浮潜 115 美元起——海龟、两个岛屿、更多的水上时间。</p>
+        <p>选择槽。巴杜尔山日出之旅乘坐吉普车 45 美元起，步行 35 美元起，均提供黎明前接送服务和下午早些时候返回服务。另一种选择是吉利群岛全天浮潜 115 美元起——海龟、两个岛屿、更多的水上时间。</p>
       </div>
     </article>
 
@@ -1816,7 +1878,7 @@ body {
                 <p><strong>第 1 天和第 5 天根据您的航班确定；第2、3、4天自由活动</strong> ——有三个规则。上面的顺序是默认的，因为它预先加载了更容易的物流：乌布是全天最温和的，佩尼达位于行程中间，仍然可以吸收汹涌的大海推迟，一旦你的生物钟调整好，黎明前火山就会开始。</p>
                 <ul><li><strong>给佩尼达最平静的一天。</strong> 这是唯一依赖船的一天。如果预测发生变化，可将第 3 天和第 4 天互换 — 通过 WhatsApp 直接预订，无需预付款，无需支付任何费用。</li><li><strong>切勿叠加两次黎明前的出发。</strong> 这 <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出</a> 根据选项，我们会在 01:30 到 03:30 之间来接您。保持前一天晚上的空旷和安静。</li><li><strong>时差反应是巴杜尔的一项资产。</strong> 从欧洲或美洲飞来的航班，您无论如何都会在第 2 天 03:00 起床 — 有些客人会将火山移到那里，并在旅途中收到最简单的警报。</li></ul>
 
-                <p>如果您在火山早晨的吉普车和徒步旅行之间左右为难，那么价格差距是真实存在的——从 60 美元到 35 美元——而且努力程度的差距也是如此。我们的 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行的比较</a> 详细地解决它，所以第四天只需要一个决定，而不是两个。</p>
+                <p>如果您在火山早晨的吉普车和徒步旅行之间左右为难，那么价格差距是真实存在的——从 45 美元到 35 美元——而且努力程度的差距也是如此。我们的 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行的比较</a> 详细地解决它，所以第四天只需要一个决定，而不是两个。</p>
               </section>
 
               <section class="sb-journal-article-section">
@@ -1864,7 +1926,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">从无需攀爬的四轮驱动车上日出，然后穿越黑色熔岩原。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1887,12 +1949,12 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>短途旅行应该去巴杜尔山还是吉利群岛？</h3>
-                    <p>如果您想看日出并且白天时间较短，请选择巴杜尔山——吉普车费用从 60 美元起，徒步旅行从 35 美元起，您可以在下午早些时候返回。如果您想要海龟和海滩时光，并接受在水上度过更长的一天，请选择 Gilis，价格为 115 美元起。</p>
+                    <p>如果您想看日出并且白天时间较短，请选择巴杜尔山——吉普车费用从 45 美元起，徒步旅行从 35 美元起，您可以在下午早些时候返回。如果您想要海龟和海滩时光，并接受在水上度过更长的一天，请选择 Gilis，价格为 115 美元起。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
                     <h3>巴厘岛5天行程中的一日游费用是多少？</h3>
-                    <p>2026 年直订价格：机场接送 $15 起、乌布梯田与火山一日每车 $65 起、珀尼达岛西线每车 $49 起、巴杜尔山日出徒步 $35 起或吉普 $75 起、吉利群岛浮潜一日 $115 起。预订通过 WhatsApp 进行，无需预付。</p>
+                    <p>2026 年直订价格：机场接送 $15 起、乌布梯田与火山一日每车 $65 起、珀尼达岛西线每车 $49 起、巴杜尔山日出徒步 $35 起或吉普 $45 起、吉利群岛浮潜一日 $115 起。预订通过 WhatsApp 进行，无需预付。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -2001,7 +2063,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>

@@ -175,7 +175,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "踏板车租赁",
-            "description": "110cc的Scoopy每天4–6.50美元，125–155cc的Vario或NMAX为6.50–13美元。按周或按月租可使日租金降低30–50%。",
+            "description": "110cc的Scoopy每天4–6.4美元，125–155cc的Vario或NMAX为6.50–6美元。按周或按月租可使日租金降低30–50%。",
             "image": "https://www.sbexcursion.com/images/places/scooter-in-bali.jpg"
           }
         },
@@ -238,7 +238,7 @@
           "name": "在巴厘岛租摩托车好还是雇司机好？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "适合长时间观光的司机，如果您是经验丰富的骑手，则适合短途本地跳跃的踏板车。全天司机的费用约为 40-55 美元（包括燃油），这通常比几个打车应用程序的旅行便宜，而且巴厘岛的交通压力要小得多。"
+            "text": "适合长时间观光的司机，如果您是经验丰富的骑手，则适合短途本地跳跃的踏板车。全天司机的费用约为 40-40 美元（包括燃油），这通常比几个打车应用程序的旅行便宜，而且巴厘岛的交通压力要小得多。"
           }
         },
         {
@@ -1290,6 +1290,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1807,7 +1869,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>🛵 滑板车问题，如实回答</h2>
-                <p>滑板车便宜又有趣，这也是巴厘岛大多数旅行保险索赔被拒绝的原因。从法律上讲你需要 <strong>两者</strong> 你的家庭摩托车执照 <strong>以及带有摩托车认可的国际驾驶许可证</strong>。大多数租赁店只要求护照——这并不意味着你合法，也不意味着你有保险。</p><p>这 <a href="/bali/zh/journal/bali-safety-scams-and-health">数字值得了解</a> 在你决定之前。巴厘岛记录 <strong>2023 年将发生 7,224 起车祸，632 人死亡</strong>，大约是前一年的两倍，大约 <strong>86%涉及摩托车</strong>。如果在没有有效执照的情况下出现问题，空中救护车将飞往新加坡 <strong>$50,000–100,000</strong> 以及一张国际标准病床 <strong>每天 1,000–5,000 美元</strong>.</p><p>有 <strong>没有禁令</strong> 关于 2026 年游客租赁滑板车的法案——拟议的法案从未实施。改变的是执法：在仓古、库塔、乌布和乌鲁瓦图，随机检查站是例行公事，通常是在上午。丢失文件的费用约为 <strong>300,000–500,000 印尼盾</strong> 每个，不戴头盔骑行都是瞬间 <strong>250,000 印尼盾</strong>.</p>
+                <p>滑板车便宜又有趣，这也是巴厘岛大多数旅行保险索赔被拒绝的原因。从法律上讲你需要 <strong>两者</strong> 你的家庭摩托车执照 <strong>以及带有摩托车认可的国际驾驶许可证</strong>。大多数租赁店只要求护照——这并不意味着你合法，也不意味着你有保险。</p><p>这 <a href="/bali/zh/journal/bali-safety-scams-and-health">数字值得了解</a> 在你决定之前。巴厘岛记录 <strong>2023 年将发生 7,224 起车祸，632 人死亡</strong>，大约是前一年的两倍，大约 <strong>86%涉及摩托车</strong>。如果在没有有效执照的情况下出现问题，空中救护车将飞往新加坡 <strong>$50,000–100,000</strong> 以及一张国际标准病床 <strong>每天 1,000–5,1 美元</strong>.</p><p>有 <strong>没有禁令</strong> 关于 2026 年游客租赁滑板车的法案——拟议的法案从未实施。改变的是执法：在仓古、库塔、乌布和乌鲁瓦图，随机检查站是例行公事，通常是在上午。丢失文件的费用约为 <strong>300,000–500,000 印尼盾</strong> 每个，不戴头盔骑行都是瞬间 <strong>250,000 印尼盾</strong>.</p>
 
 
 
@@ -1884,7 +1946,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>在巴厘岛租摩托车好还是雇司机好？</h3>
-                    <p>适合长时间观光的司机，如果您是经验丰富的骑手，则适合短途本地跳跃的踏板车。全天司机的费用约为 40-55 美元（包括燃油），这通常比几个打车应用程序的旅行便宜，而且巴厘岛的交通压力要小得多。</p>
+                    <p>适合长时间观光的司机，如果您是经验丰富的骑手，则适合短途本地跳跃的踏板车。全天司机的费用约为 40-40 美元（包括燃油），这通常比几个打车应用程序的旅行便宜，而且巴厘岛的交通压力要小得多。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">

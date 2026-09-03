@@ -240,7 +240,7 @@
           "name": "Сколько денег мне нужно на неделю в Бали?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Примерно 250–350 долларов на человека за неделю для туристов, 700–900 долларов в среднем диапазоне и 2000 долларов и выше за комфорт или роскошное путешествие. Это касается проживания, питания, транспорта и развлечений, но не международных рейсов."
+            "text": "Примерно 250–250 долларов на человека за неделю для туристов, 700–700 долларов в среднем диапазоне и 2 долларов и выше за комфорт или роскошное путешествие. Это касается проживания, питания, транспорта и развлечений, но не международных рейсов."
           }
         },
         {
@@ -1300,6 +1300,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1663,7 +1725,7 @@ body {
             <p class="sb-journal-deck">Экскурсия по этому маршруту: <a href="/bali/ru/tours/private-car-with-driver-bali">Частный автомобиль с водителем на Бали</a> — От 59 долларов за машину, гибкий график ежедневного использования.</p>
             <div class="sb-quick-answer">
               <p class="sb-quick-answer__q">Сколько денег мне нужно на неделю в Бали?</p>
-              <p class="sb-quick-answer__a">Примерно 250–350 долларов на человека за неделю для туристов, 700–900 долларов в среднем диапазоне и 2000 долларов и выше за комфорт или роскошное путешествие. Это касается проживания, питания, транспорта и развлечений, но не международных рейсов.</p>
+              <p class="sb-quick-answer__a">Примерно 250–250 долларов на человека за неделю для туристов, 700–700 долларов в среднем диапазоне и 2 долларов и выше за комфорт или роскошное путешествие. Это касается проживания, питания, транспорта и развлечений, но не международных рейсов.</p>
               <p class="sb-quick-answer__more">Здесь же разобрано:</p>
               <ul class="sb-quick-answer__list"><li>Бали дорогой?</li><li>Какова комиссия в размере 21% от счета в ресторане Бали?</li><li>Сколько стоит туристический налог на Бали?</li></ul>
             </div>
@@ -1729,7 +1791,7 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>25–50 долларов в день</span>
+          <span>25–25 долларов в день</span>
           <span>Хостелы, варунги, скутеры</span>
         </div>
         <h3>турист</h3>
@@ -1744,7 +1806,7 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>70–130 долларов в день</span>
+          <span>70–70 долларов в день</span>
           <span>Большинство путешественников</span>
         </div>
         <h3>Mid-range</h3>
@@ -1841,7 +1903,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>🧮 Реальный 7-дневный бюджет для пары</h2>
                 <p>Средний уровень, только стоимость земли, исключая международные рейсы. Это скорее типичная неделя, чем обещание: ваше собственное число будет зависеть в основном от проживания и того, как часто вы едите в ресторанах.</p>
-                <ul><li>Проживание, 6 ночей, около $85: <strong>~$510</strong></li><li>Еда и питье на двоих, 7 дней: <strong>~$630</strong></li><li>Транспорт — скутер, два дня водителя, трансфер из аэропорта: <strong>~$170</strong></li><li>Мероприятия — поход к вулкану, однодневная экскурсия, уроки серфинга, входные билеты: <strong>~$240</strong></li><li>Спа, по два массажа на каждого: <strong>~$80</strong></li><li>SIM-карты и туристический сбор на двоих: <strong>~$38</strong></li><li><strong>Итого: примерно 1670 долларов на пару.</strong>, примерно по $835 на человека</li></ul>
+                <ul><li>Проживание, 6 ночей, около $85: <strong>~$510</strong></li><li>Еда и питье на двоих, 7 дней: <strong>~$630</strong></li><li>Транспорт — скутер, два дня водителя, трансфер из аэропорта: <strong>~$170</strong></li><li>Мероприятия — поход к вулкану, однодневная экскурсия, уроки серфинга, входные билеты: <strong>~$240</strong></li><li>Спа, по два массажа на каждого: <strong>~$80</strong></li><li>SIM-карты и туристический сбор на двоих: <strong>~$38</strong></li><li><strong>Итого: примерно 1 долларов на пару.</strong>, примерно по $835 на человека</li></ul>
 
 
               </section>
@@ -1904,7 +1966,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Сколько денег мне нужно на неделю в Бали?</h3>
-                    <p>Примерно 250–350 долларов на человека за неделю для туристов, 700–900 долларов в среднем диапазоне и 2000 долларов и выше за комфорт или роскошное путешествие. Это касается проживания, питания, транспорта и развлечений, но не международных рейсов.</p>
+                    <p>Примерно 250–250 долларов на человека за неделю для туристов, 700–700 долларов в среднем диапазоне и 2 долларов и выше за комфорт или роскошное путешествие. Это касается проживания, питания, транспорта и развлечений, но не международных рейсов.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">

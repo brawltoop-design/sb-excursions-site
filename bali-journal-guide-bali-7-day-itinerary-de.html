@@ -205,7 +205,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "Tag 5: Sonnenaufgang am Mount Batur",
-            "description": "Wählen Sie die Jeep-Tour zum Sonnenaufgang am Mount Batur ab $60 oder die Sonnenaufgangswanderung ab $35 – der Jeep dauert 6-8 Stunden, die Wanderung 5-8, beide mit Abholung vor Tagesanbruch. Der Jeep erreicht den Kraterrand ohne Aufstieg; die Wanderung erarbeitet sich denselben Sonnenaufgang zu Fuß.",
+            "description": "Wählen Sie die Jeep-Tour zum Sonnenaufgang am Mount Batur ab $45 oder die Sonnenaufgangswanderung ab $35 – der Jeep dauert 6-8 Stunden, die Wanderung 5-8, beide mit Abholung vor Tagesanbruch. Der Jeep erreicht den Kraterrand ohne Aufstieg; die Wanderung erarbeitet sich denselben Sonnenaufgang zu Fuß.",
             "image": "https://www.sbexcursion.com/images/places/mount-batur-jeep.jpg"
           }
         },
@@ -248,7 +248,7 @@
           "name": "Wie viel kostet eine 7-tägige Bali-Reise an Rundreisen?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Jeder buchbare Tag beginnt zwischen $15 und $115: der Flughafentransfer ab $15, Ubud ab $65 pro Auto, Nusa Penida ab $49 pro Auto, Berg Batur ab $35 (Wanderung) oder ab $60 (Jeep), der Tag am Meer ab $50 oder ab $115 und Tanah Lot ab $59. Die Gesamtsumme hängt von der Gruppengröße ab, da manche Preise pro Auto gelten."
+            "text": "Jeder buchbare Tag beginnt zwischen $15 und $115: der Flughafentransfer ab $15, Ubud ab $65 pro Auto, Nusa Penida ab $49 pro Auto, Berg Batur ab $35 (Wanderung) oder ab $45 (Jeep), der Tag am Meer ab $50 oder ab $115 und Tanah Lot ab $59. Die Gesamtsumme hängt von der Gruppengröße ab, da manche Preise pro Auto gelten."
           }
         },
         {
@@ -272,7 +272,7 @@
           "name": "Lohnt sich ein einwöchiger Ausflug zum Sonnenaufgang am Mount Batur?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja, und Tag 5 ist der richtige Zeitpunkt: der kostenlose Strandtag davor, an dem Sie früh schlafen können, bevor es morgens losgeht. Wählen Sie den Jeep ab 60 $, wenn Sie den Blick auf den Kraterrand ohne Aufstieg genießen möchten, oder die Wanderung ab 35 $, wenn Sie sich den Sonnenaufgang lieber zu Fuß verdienen möchten."
+            "text": "Ja, und Tag 5 ist der richtige Zeitpunkt: der kostenlose Strandtag davor, an dem Sie früh schlafen können, bevor es morgens losgeht. Wählen Sie den Jeep ab 45 $, wenn Sie den Blick auf den Kraterrand ohne Aufstieg genießen möchten, oder die Wanderung ab 35 $, wenn Sie sich den Sonnenaufgang lieber zu Fuß verdienen möchten."
           }
         },
         {
@@ -1324,6 +1324,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1817,7 +1879,7 @@ body {
           <span>Sonnenaufgang über den Wolken</span>
         </div>
         <h3>Tag 5: Sonnenaufgang am Mount Batur</h3>
-        <p>Wählen Sie die <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Jeep-Tour bei Sonnenaufgang auf dem Mount Batur</a> ab 60 $ oder mehr <a href="/bali/de/tours/mount-batur-sunrise-hike">Sonnenaufgangswanderung</a> ab 35 $ – der Jeep fährt <strong>6-8 Stunden</strong>, die Wanderung <strong>5-8</strong>, beide von einer Abholung vor Tagesanbruch. Ohne Steigung erreicht der Jeep den Kraterrand; Die Wanderung bringt den gleichen Sonnenaufgang mit den Beinen mit sich.</p>
+        <p>Wählen Sie die <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Jeep-Tour bei Sonnenaufgang auf dem Mount Batur</a> ab 45 $ oder mehr <a href="/bali/de/tours/mount-batur-sunrise-hike">Sonnenaufgangswanderung</a> ab 35 $ – der Jeep fährt <strong>6-8 Stunden</strong>, die Wanderung <strong>5-8</strong>, beide von einer Abholung vor Tagesanbruch. Ohne Steigung erreicht der Jeep den Kraterrand; Die Wanderung bringt den gleichen Sonnenaufgang mit den Beinen mit sich.</p>
       </div>
     </article>
 
@@ -1873,7 +1935,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>Was die Woche im Jahr 2026 kostet</h2>
                 <p>Jeder buchbare Tag in diesem Plan beginnt <strong>zwischen 15 und 115 $</strong>, und es gibt keinen einzigen ehrlichen Gesamtpreis – einige Preise gelten pro Person, der Penida-Tag gilt pro Auto und Tag 4 kostet genauso viel wie Ihr Strandtag. Die tatsächlichen Startpreise für 2026, Tag für Tag:</p>
-                <ul><li><strong>Tag 1 – Flughafentransfer ab 15 $</strong>: Privatwagen von Ngurah Rai zu Ihrem Hotel</li><li><strong>Tag 2 – Ubud-Highlights ab 69 $</strong>: 10 Stunden, 08:00 Uhr Abholung vom Hotel</li><li><strong>Tag 3 – Nusa Penida West ab 49 $ pro Auto</strong>: ganztägig, frühe Abholung und Hafentransfer inklusive</li><li><strong>Tag 5 – Mount Batur ab 35 $ (Wanderung) oder ab 60 $ (Jeep)</strong>: Abholung vor Tagesanbruch</li><li><strong>Tag 6 – Blaue Lagune ab 50 $ oder Gili-Inseln-Tag ab 115 $</strong></li><li><strong>Tag 7 – Tanah Lot und Bedugul ab 59 $</strong>: 9–11 Stunden, morgendliche Abholung vom Hotel</li></ul>
+                <ul><li><strong>Tag 1 – Flughafentransfer ab 15 $</strong>: Privatwagen von Ngurah Rai zu Ihrem Hotel</li><li><strong>Tag 2 – Ubud-Highlights ab 69 $</strong>: 10 Stunden, 08:00 Uhr Abholung vom Hotel</li><li><strong>Tag 3 – Nusa Penida West ab 49 $ pro Auto</strong>: ganztägig, frühe Abholung und Hafentransfer inklusive</li><li><strong>Tag 5 – Mount Batur ab 35 $ (Wanderung) oder ab 45 $ (Jeep)</strong>: Abholung vor Tagesanbruch</li><li><strong>Tag 6 – Blaue Lagune ab 50 $ oder Gili-Inseln-Tag ab 115 $</strong></li><li><strong>Tag 7 – Tanah Lot und Bedugul ab 59 $</strong>: 9–11 Stunden, morgendliche Abholung vom Hotel</li></ul>
 
                 <p>Zwei Dinge bewegen die Mathematik. Prämiengruppen für die Preisgestaltung pro Auto – vier Personen am Penida-Tag teilen sich einen Preis von 49 US-Dollar pro Auto, weshalb Paare und Familien bei demselben Plan sehr unterschiedliche wöchentliche Gesamtsummen erhalten. Und die größte Einzellinie, die <a href="/bali/de/tours/gili-island-tour">Tagesausflug zu den Gili-Inseln</a> Ab 115 $ ist es auch am einfachsten, gegen Blue Lagoon ab 50 $ einzutauschen, wenn das Budget knapp ist.</p><p>Alles bucht man direkt über WhatsApp mit <strong>keine Vorauszahlung</strong>, sodass Sie nie an eine Zahl gebunden sind, bevor Sie nicht das Wetter oder Ihr eigenes Energieniveau sehen. Eine umfassendere Aufschlüsselung der Kosten für Touren, Fahrer und Transfers auf der ganzen Insel finden Sie in unserem <a href="/bali/de/journal/bali-tour-prices-2026-real-costs">Preisführer für Bali-Touren 2026</a> listet alle von uns veröffentlichten Preise auf.</p>
               </section>
@@ -1925,7 +1987,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Wie viel kostet eine 7-tägige Bali-Reise an Rundreisen?</h3>
-                    <p>Jeder buchbare Tag beginnt zwischen $15 und $115: der Flughafentransfer ab $15, Ubud ab $65 pro Auto, Nusa Penida ab $49 pro Auto, Berg Batur ab $35 (Wanderung) oder ab $60 (Jeep), der Tag am Meer ab $50 oder ab $115 und Tanah Lot ab $59. Die Gesamtsumme hängt von der Gruppengröße ab, da manche Preise pro Auto gelten.</p>
+                    <p>Jeder buchbare Tag beginnt zwischen $15 und $115: der Flughafentransfer ab $15, Ubud ab $65 pro Auto, Nusa Penida ab $49 pro Auto, Berg Batur ab $35 (Wanderung) oder ab $45 (Jeep), der Tag am Meer ab $50 oder ab $115 und Tanah Lot ab $59. Die Gesamtsumme hängt von der Gruppengröße ab, da manche Preise pro Auto gelten.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1940,7 +2002,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Lohnt sich ein einwöchiger Ausflug zum Sonnenaufgang am Mount Batur?</h3>
-                    <p>Ja, und Tag 5 ist der richtige Zeitpunkt: der kostenlose Strandtag davor, an dem Sie früh schlafen können, bevor es morgens losgeht. Wählen Sie den Jeep ab 60 $, wenn Sie den Blick auf den Kraterrand ohne Aufstieg genießen möchten, oder die Wanderung ab 35 $, wenn Sie sich den Sonnenaufgang lieber zu Fuß verdienen möchten.</p>
+                    <p>Ja, und Tag 5 ist der richtige Zeitpunkt: der kostenlose Strandtag davor, an dem Sie früh schlafen können, bevor es morgens losgeht. Wählen Sie den Jeep ab 45 $, wenn Sie den Blick auf den Kraterrand ohne Aufstieg genießen möchten, oder die Wanderung ab 35 $, wenn Sie sich den Sonnenaufgang lieber zu Fuß verdienen möchten.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">

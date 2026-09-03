@@ -1279,6 +1279,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1639,7 +1701,7 @@ body {
             <h1>Was Sie für Bali einpacken sollten: Eine praktische Checkliste nach Aktivität</h1>
             <p class="sb-journal-lead">Packen Sie für Bali wie für zwei Klimazonen in einer Tasche: <strong>27-30°C</strong> auf Meereshöhe das ganze Jahr über, und <strong>12-18°C</strong> am Kraterrand des Mount Batur, wo Sonnenaufgangsgruppen nach 1.5-2 Stunden Aufstieg im Dunkeln warten. Stand August 2026 sind die vier Dinge, die Reisende am häufigsten nicht dabeihaben: eine warme winddichte Schicht für den Vulkan, ein Sarong und eine Schulterbedeckung für die Tempelkleiderordnung, riffverträglicher Sonnenschutz und ein Dry Bag für die 30-45 Minuten lange Schnellbootüberfahrt nach Nusa Penida. Alles andere ist einfach. Wäsche ist günstig und meist am selben Tag fertig, fünf Tage Kleidung reichen also für zwei Wochen, und die Regenzeit (November-März) kommt eher mit einer leichten Regenjacke aus als mit einem Schirm. Die Tabelle unten gibt die vollständige Liste, wofür jedes Teil auf dieser Insel tatsächlich gut ist und was Sie bedenkenlos zu Hause lassen können.</p>
             <p class="sb-journal-dates">Von Alex Moskvin, Gründer von SB Excursions · Veröffentlicht am 21. Mai 2026 · Aktualisiert am 7. August 2026</p>
-            <p class="sb-journal-deck">Tour auf dieser Route: <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a> — Ab 60 $, 6–8 Stunden.</p>
+            <p class="sb-journal-deck">Tour auf dieser Route: <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a> — Ab 45 $, 6–8 Stunden.</p>
             <div class="sb-quick-answer">
               <p class="sb-quick-answer__q">Was soll ich auf Bali anziehen?</p>
               <p class="sb-quick-answer__a">Leichte, atmungsaktive Kleidung für die Hitze von 27–30°C, dazu etwas, das Schultern und Knie bedeckt, für Tempel. Nehmen Sie einen Hoodie oder Fleece mit, wenn Sie einen Sonnenaufgang am Vulkan planen, wo die Temperaturen vor der Dämmerung bei 12–18°C liegen.</p>
@@ -1650,7 +1712,7 @@ body {
               <span>Season-specific</span><span>Zusatzaktivitäten</span><span>Was Sie zu Hause lassen sollten</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur Sonnenaufgangs-Jeep-Tour – Ab 60 $</a>
+              <a class="sb-journal-primary" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur Sonnenaufgangs-Jeep-Tour – Ab 45 $</a>
               <a class="sb-journal-secondary" href="/bali/de/journal">Durchsuchen Sie alle Leitfäden</a>
             </div>
           </div>
@@ -1674,7 +1736,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sonnenaufgang aus einem 4x4 ohne Klettern, dann über das schwarze Lavafeld.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1832,7 +1894,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sonnenaufgang aus einem 4x4 ohne Klettern, dann über das schwarze Lavafeld.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1912,7 +1974,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
@@ -2037,12 +2099,12 @@ body {
               <h3 class="sbtc-rail__title"><a class="sbtc-rail__titlelink" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a></h3>
               <p class="sbtc-price sbtc-rail__price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
               <div class="sbtc-rail__actions">
-                <a class="sbtc-btn sbtc-btn_ink" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Tour ansehen – ab 60 $<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
+                <a class="sbtc-btn sbtc-btn_ink" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Tour ansehen – ab 45 $<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
                 <a class="sbtc-btn sbtc-btn_line" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie in WhatsApp</a>
               </div>
               <dl class="sbtc-ledger sbtc-rail__ledger">

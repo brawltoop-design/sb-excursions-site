@@ -174,7 +174,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "Mount Batur: Jeep zum Sonnenaufgang",
-            "description": "Gleiche Wetterlogik wie bei der Variante mit heißen Quellen, ein Stopp weniger. Der 4x4 erreicht den Sonnenaufgangs-Aussichtspunkt, niemand muss also im Dunkeln über rutschigen Vulkansand, und der Ausflug dauert 6–8 Stunden von Tür zu Tür ab $60. Seine eine Schwäche in der Regenzeit: Nehmen Wolken die Sicht, war die Sicht das Hauptereignis. Der Stopp an den heißen Quellen existiert genau, um diese Lücke zu schließen, deshalb setzen wir ihn in diesen Monaten höher.",
+            "description": "Gleiche Wetterlogik wie bei der Variante mit heißen Quellen, ein Stopp weniger. Der 4x4 erreicht den Sonnenaufgangs-Aussichtspunkt, niemand muss also im Dunkeln über rutschigen Vulkansand, und der Ausflug dauert 6–8 Stunden von Tür zu Tür ab $45. Seine eine Schwäche in der Regenzeit: Nehmen Wolken die Sicht, war die Sicht das Hauptereignis. Der Stopp an den heißen Quellen existiert genau, um diese Lücke zu schließen, deshalb setzen wir ihn in diesen Monaten höher.",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-tour.jpg"
           }
         },
@@ -235,7 +235,7 @@
           "name": "Was passiert, wenn es auf dem Gipfel des Mount Batur bewölkt ist?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Manchmal schluckt die Wolke den Blick vollständig, und zwischen November und März kann kein Anbieter ehrlich etwas anderes versprechen. Der Sonnenaufgang findet trotzdem zwischen 06:00 und 06:30 hinter der Wolke statt, und der Kraterrand, die Caldera und der Abstieg bleiben. Das ist das Argument für das Format mit Jeep und heißen Quellen ab $75: Wenn der Horizont ausfällt, trägt das Bad in den Quellen am See den Morgen trotzdem."
+            "text": "Manchmal schluckt die Wolke den Blick vollständig, und zwischen November und März kann kein Anbieter ehrlich etwas anderes versprechen. Der Sonnenaufgang findet trotzdem zwischen 06:00 und 06:30 hinter der Wolke statt, und der Kraterrand, die Caldera und der Abstieg bleiben. Das ist das Argument für das Format mit Jeep und heißen Quellen ab $55: Wenn der Horizont ausfällt, trägt das Bad in den Quellen am See den Morgen trotzdem."
           }
         },
         {
@@ -1287,6 +1287,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1645,9 +1707,9 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">Reiseführer</div>
             <h1>Mount Batur in der Regenzeit: Guides laufen an den meisten Morgen</h1>
-            <p class="sb-journal-lead">Den Mount Batur kann man in der Regenzeit besteigen: Von November bis März gehen unsere Guides an den meisten Morgen los und sagen nur bei wirklich schlechtem Wetter ab. Was sich ändert, ist die Beschaffenheit des Morgens, nicht der Zeitplan. Der obere Abschnitt aus lockerem Vulkansand wird nach Regen rutschig, die Wartezeit von 30–60 Minuten oben ist kälter, und Wolken können den Sonnenaufgang ganz verschlucken — Letzteres ist das eigentliche Risiko, denn in den nassen Monaten kann niemand eine Aussicht versprechen. Der ehrliche Umgang damit hat zwei Teile. Erstens: Halten Sie einen Ersatzmorgen frei; die Buchung erfolgt ohne Vorkasse, ein Wechsel auf den nächsten Tag kostet also nichts. Zweitens: Erwägen Sie das Format, dem das Wetter nicht den ganzen Ausflug verderben kann — die Sunrise Jeep &amp; Hot Spring Tour ab $75, die mit einem Bad in den natürlichen Quellen am See endet, ob der Horizont mitgespielt hat oder nicht. Unten folgt eine Aufschlüsselung Risiko für Risiko, was dort oben zwischen November und März tatsächlich passiert.</p>
+            <p class="sb-journal-lead">Den Mount Batur kann man in der Regenzeit besteigen: Von November bis März gehen unsere Guides an den meisten Morgen los und sagen nur bei wirklich schlechtem Wetter ab. Was sich ändert, ist die Beschaffenheit des Morgens, nicht der Zeitplan. Der obere Abschnitt aus lockerem Vulkansand wird nach Regen rutschig, die Wartezeit von 30–60 Minuten oben ist kälter, und Wolken können den Sonnenaufgang ganz verschlucken — Letzteres ist das eigentliche Risiko, denn in den nassen Monaten kann niemand eine Aussicht versprechen. Der ehrliche Umgang damit hat zwei Teile. Erstens: Halten Sie einen Ersatzmorgen frei; die Buchung erfolgt ohne Vorkasse, ein Wechsel auf den nächsten Tag kostet also nichts. Zweitens: Erwägen Sie das Format, dem das Wetter nicht den ganzen Ausflug verderben kann — die Sunrise Jeep &amp; Hot Spring Tour ab $55, die mit einem Bad in den natürlichen Quellen am See endet, ob der Horizont mitgespielt hat oder nicht. Unten folgt eine Aufschlüsselung Risiko für Risiko, was dort oben zwischen November und März tatsächlich passiert.</p>
             <p class="sb-journal-dates">Von Alex Moskvin, Gründer von SB Excursions · Veröffentlicht am 21. Mai 2026 · Aktualisiert am 7. August 2026</p>
-            <p class="sb-journal-deck">Tour auf dieser Route: <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a> — Ab 75 $, 6–8 Stunden.</p>
+            <p class="sb-journal-deck">Tour auf dieser Route: <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a> — Ab 55 $, 6–8 Stunden.</p>
             <div class="sb-quick-answer">
               <p class="sb-quick-answer__q">Kann man den Mount Batur im Dezember besteigen?</p>
               <p class="sb-quick-answer__a">Ja. Der Dezember liegt in der Regenzeit von November bis März, und die Guides gehen weiter an den meisten Morgen los und sagen nur bei wirklich schlechtem Wetter ab. Der Sonnenaufgang liegt wie das ganze Jahr über zwischen 06:00 und 06:30 Uhr. Die praktischen Unterschiede sind ein rutschiger oberer Abschnitt nach Regen und eine höhere Wahrscheinlichkeit, dass Wolken die Sicht nehmen; planen Sie den Aufstieg also früh in Ihrem Aufenthalt und halten Sie einen Ersatzmorgen frei.</p>
@@ -1655,10 +1717,10 @@ body {
               <ul class="sb-quick-answer__list"><li>Was passiert, wenn es auf dem Gipfel des Mount Batur bewölkt ist?</li><li>Ist der Pfad am Mount Batur bei Nässe gefährlich?</li><li>Was soll ich für den Mount Batur in der Regenzeit anziehen?</li></ul>
             </div>
             <div class="sb-journal-inline-stats">
-              <span>Der Sonnenaufgang liegt das ganze Jahr bei 06:00–06:30</span><span>Jeep mit heißer Quelle ab $75</span><span>Aufstieg 1.5–2 h im geführten Tempo</span>
+              <span>Der Sonnenaufgang liegt das ganze Jahr bei 06:00–06:30</span><span>Jeep mit heißer Quelle ab $55</span><span>Aufstieg 1.5–2 h im geführten Tempo</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sunrise Jeep & Hot Spring – Ab 75 $</a>
+              <a class="sb-journal-primary" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sunrise Jeep &amp; Hot Spring — From $55</a>
               <a class="sb-journal-secondary" href="/bali/de/journal">Durchsuchen Sie alle Leitfäden</a>
             </div>
           </div>
@@ -1690,7 +1752,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sie möchten den gleichen Sonnenaufgang ohne den Aufstieg – mit Kindern oder nach einem späten Flug.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1698,7 +1760,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Der Sonnenaufgang, dann ein Bad in den natürlichen heißen Quellen am Batursee.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1716,7 +1778,7 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>Private Tour, ab $75</span>
+          <span>Private tour, from $55</span>
           <span>Die Standardwahl in der Regenzeit — das Bad rettet einen zugezogenen Sonnenaufgang</span>
         </div>
         <h3>Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</h3>
@@ -1731,11 +1793,11 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>Private Tour, ab $60</span>
+          <span>Private Tour, ab $45</span>
           <span>Den nassen Pfad vermeiden, ohne für die Quellen zu zahlen</span>
         </div>
         <h3>Mount Batur: Jeep zum Sonnenaufgang</h3>
-        <p>Gleiche Wetterlogik wie bei der Variante mit heißen Quellen, ein Stopp weniger. Der 4x4 erreicht den Sonnenaufgangs-Aussichtspunkt, niemand muss also im Dunkeln über rutschigen Vulkansand, und der Ausflug dauert 6–8 Stunden von Tür zu Tür ab $60. Seine eine Schwäche in der Regenzeit: Nehmen Wolken die Sicht, war die Sicht das Hauptereignis. Der Stopp an den heißen Quellen existiert genau, um diese Lücke zu schließen, deshalb setzen wir ihn in diesen Monaten höher.</p>
+        <p>Gleiche Wetterlogik wie bei der Variante mit heißen Quellen, ein Stopp weniger. Der 4x4 erreicht den Sonnenaufgangs-Aussichtspunkt, niemand muss also im Dunkeln über rutschigen Vulkansand, und der Ausflug dauert 6–8 Stunden von Tür zu Tür ab $45. Seine eine Schwäche in der Regenzeit: Nehmen Wolken die Sicht, war die Sicht das Hauptereignis. Der Stopp an den heißen Quellen existiert genau, um diese Lücke zu schließen, deshalb setzen wir ihn in diesen Monaten höher.</p>
       </div>
     </article>
 
@@ -1805,7 +1867,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Warum Jeep und heiße Quelle das Format für die Regenzeit sind</h2>
-                <p>Jedes andere Batur-Format hat in den Regenmonaten einen einzigen Schwachpunkt: die Aussicht. Der Morgen mit Jeep und heißen Quellen, ab <strong>$75</strong>, ist so gebaut, dass das Wetter nicht alles nehmen kann. Die Abholung läuft <strong>02:00–03:30</strong>, ein 4x4 erreicht den Aussichtspunkt zum Sonnenaufgang — niemand fasst im Dunkeln nassen Sand an — und der Morgen endet mit einem Bad in den natürlichen heißen Quellen am Ufer des Lake Batur. Wenn der Sonnenaufgang klar zwischen <strong>06:00 und 06:30 Uhr</strong>, hatten Sie die ganze Show plus das Bad. Wenn Wolken ihn schlucken, endet Ihr Morgen trotzdem warm, im Wasser, mit Blick auf den See.</p><p>Der Vergleich mit den anderen beiden Formaten ist ehrlich, aber nicht knapp. Die Wanderung ab <strong>$35</strong> ist der bessere Morgen, wenn der Himmel mitspielt, und der schlechtere, wenn nicht; die einfache Jeep-Tour ab <strong>$60</strong> nimmt den nassen Pfad, behält aber alles, was in die Aussicht investiert ist. Wir gehen diese Abwägung durch in <a href="/bali/de/journal/mount-batur-sunrise-jeep-vs-hike">Jeep gegen Wanderung</a>, und die Quellen selbst behandelt unser <a href="/bali/de/journal/mount-batur-hot-springs-guide">Leitfaden zu den heißen Quellen</a>.</p>
+                <p>Jedes andere Batur-Format hat in den Regenmonaten einen einzigen Schwachpunkt: die Aussicht. Der Morgen mit Jeep und heißen Quellen, ab <strong>$55</strong>, ist so gebaut, dass das Wetter nicht alles nehmen kann. Die Abholung läuft <strong>02:00–03:30</strong>, ein 4x4 erreicht den Aussichtspunkt zum Sonnenaufgang — niemand fasst im Dunkeln nassen Sand an — und der Morgen endet mit einem Bad in den natürlichen heißen Quellen am Ufer des Lake Batur. Wenn der Sonnenaufgang klar zwischen <strong>06:00 und 06:30 Uhr</strong>, hatten Sie die ganze Show plus das Bad. Wenn Wolken ihn schlucken, endet Ihr Morgen trotzdem warm, im Wasser, mit Blick auf den See.</p><p>Der Vergleich mit den anderen beiden Formaten ist ehrlich, aber nicht knapp. Die Wanderung ab <strong>$35</strong> ist der bessere Morgen, wenn der Himmel mitspielt, und der schlechtere, wenn nicht; die einfache Jeep-Tour ab <strong>$45</strong> nimmt den nassen Pfad, behält aber alles, was in die Aussicht investiert ist. Wir gehen diese Abwägung durch in <a href="/bali/de/journal/mount-batur-sunrise-jeep-vs-hike">Jeep gegen Wanderung</a>, und die Quellen selbst behandelt unser <a href="/bali/de/journal/mount-batur-hot-springs-guide">Leitfaden zu den heißen Quellen</a>.</p>
 
 
 
@@ -1840,7 +1902,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sie möchten den gleichen Sonnenaufgang ohne den Aufstieg – mit Kindern oder nach einem späten Flug.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1848,7 +1910,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Der Sonnenaufgang, dann ein Bad in den natürlichen heißen Quellen am Batursee.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1871,7 +1933,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Was passiert, wenn es auf dem Gipfel des Mount Batur bewölkt ist?</h3>
-                    <p>Manchmal schluckt die Wolke den Blick vollständig, und zwischen November und März kann kein Anbieter ehrlich etwas anderes versprechen. Der Sonnenaufgang findet trotzdem zwischen 06:00 und 06:30 hinter der Wolke statt, und der Kraterrand, die Caldera und der Abstieg bleiben. Das ist das Argument für das Format mit Jeep und heißen Quellen ab $75: Wenn der Horizont ausfällt, trägt das Bad in den Quellen am See den Morgen trotzdem.</p>
+                    <p>Manchmal schluckt die Wolke den Blick vollständig, und zwischen November und März kann kein Anbieter ehrlich etwas anderes versprechen. Der Sonnenaufgang findet trotzdem zwischen 06:00 und 06:30 hinter der Wolke statt, und der Kraterrand, die Caldera und der Abstieg bleiben. Das ist das Argument für das Format mit Jeep und heißen Quellen ab $55: Wenn der Horizont ausfällt, trägt das Bad in den Quellen am See den Morgen trotzdem.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1917,7 +1979,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
@@ -2042,12 +2104,12 @@ body {
               <h3 class="sbtc-rail__title"><a class="sbtc-rail__titlelink" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a></h3>
               <p class="sbtc-price sbtc-rail__price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
               <div class="sbtc-rail__actions">
-                <a class="sbtc-btn sbtc-btn_ink" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Tour ansehen – ab 75 $<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
+                <a class="sbtc-btn sbtc-btn_ink" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Tour ansehen – ab 55 $<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
                 <a class="sbtc-btn sbtc-btn_line" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie in WhatsApp</a>
               </div>
               <dl class="sbtc-ledger sbtc-rail__ledger">

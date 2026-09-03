@@ -205,7 +205,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "Der Jeep-Aussichtspunkt am Kraterrand",
-            "description": "Der 4x4 fährt eine eigene Piste zu einem Aussichtspunkt am Kraterrand, sodass dieselbe nach Osten ausgerichtete Sonnenaufgangsgeometrie — Agung, der See, der Nebel — ganz ohne Aufstieg zu haben ist. Für die Fotografie heißt das frische Beine um 06:00 und Platz im Fahrzeug für jede Ausrüstung, die Sie mitnehmen wollen. Ab $60, 6-8 Stunden von Tür zu Tür.",
+            "description": "Der 4x4 fährt eine eigene Piste zu einem Aussichtspunkt am Kraterrand, sodass dieselbe nach Osten ausgerichtete Sonnenaufgangsgeometrie — Agung, der See, der Nebel — ganz ohne Aufstieg zu haben ist. Für die Fotografie heißt das frische Beine um 06:00 und Platz im Fahrzeug für jede Ausrüstung, die Sie mitnehmen wollen. Ab $45, 6-8 Stunden von Tür zu Tür.",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-tour.jpg"
           }
         },
@@ -215,7 +215,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "Heiße Quellen am Seeufer",
-            "description": "Das Format mit Jeep und heißen Quellen endet mit einem Bad in natürlichen Quellen am Seeufer, während der Vulkan, über dem Sie gerade den Sonnenaufgang gesehen haben, gegenüber am Wasser steht. Es ist der einzige Ort auf dieser Liste, der auf Wasserhöhe statt von oben fotografiert wird, und das Tageslicht lässt sich dann bereits gut nutzen. Ab $75, Abholung 02:00-03:30.",
+            "description": "Das Format mit Jeep und heißen Quellen endet mit einem Bad in natürlichen Quellen am Seeufer, während der Vulkan, über dem Sie gerade den Sonnenaufgang gesehen haben, gegenüber am Wasser steht. Es ist der einzige Ort auf dieser Liste, der auf Wasserhöhe statt von oben fotografiert wird, und das Tageslicht lässt sich dann bereits gut nutzen. Ab $55, Abholung 02:00-03:30.",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg"
           }
         }
@@ -246,7 +246,7 @@
           "name": "Wo liegen die schwarzen Lavafelder am Mount Batur?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Auf dem Kraterboden, den die 4x4-Jeeproute nach dem Sonnenaufgang quert. Es sind erstarrte Ströme früherer Ausbrüche — der letzte im Jahr 2000 — und Sie können aussteigen und darauf laufen. Der Wanderweg führt den Kegel hinauf und berührt sie nie, dieses Bild gehört also zu den Jeep-Formaten, ab $60."
+            "text": "Auf dem Kraterboden, den die 4x4-Jeeproute nach dem Sonnenaufgang quert. Es sind erstarrte Ströme früherer Ausbrüche — der letzte im Jahr 2000 — und Sie können aussteigen und darauf laufen. Der Wanderweg führt den Kegel hinauf und berührt sie nie, dieses Bild gehört also zu den Jeep-Formaten, ab $45."
           }
         },
         {
@@ -270,7 +270,7 @@
           "name": "Ist die Jeep-Tour am Mount Batur gut zum Fotografieren?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja — der 4x4 fährt eine eigene Piste zu einem Aussichtspunkt am Kraterrand, Sie bekommen also denselben Sonnenaufgang nach Osten über dem Lake Batur ohne Aufstieg, danach die schwarzen Lavafelder, die der Wanderweg nie erreicht. Ein Fahrzeug trägt außerdem mehr Ausrüstung als eine Hosentasche. Ab $60, 6-8 Stunden von Tür zu Tür."
+            "text": "Ja — der 4x4 fährt eine eigene Piste zu einem Aussichtspunkt am Kraterrand, Sie bekommen also denselben Sonnenaufgang nach Osten über dem Lake Batur ohne Aufstieg, danach die schwarzen Lavafelder, die der Wanderweg nie erreicht. Ein Fahrzeug trägt außerdem mehr Ausrüstung als eine Hosentasche. Ab $45, 6-8 Stunden von Tür zu Tür."
           }
         }
       ]
@@ -1298,6 +1298,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1701,7 +1763,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sonnenaufgang aus einem 4x4 ohne Klettern, dann über das schwarze Lavafeld.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1709,7 +1771,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Derselbe Sonnenaufgang im Geländewagen ohne Klettern, gefolgt von einem Bad in einer heißen Quelle in Kintamani.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1791,7 +1853,7 @@ body {
           <span>Sonnenaufgang ohne Aufstieg</span>
         </div>
         <h3>Der Jeep-Aussichtspunkt am Kraterrand</h3>
-        <p>Der 4x4 fährt eine eigene Piste zu einem Aussichtspunkt am Kraterrand, sodass dieselbe nach Osten ausgerichtete Sonnenaufgangsgeometrie — Agung, der See, der Nebel — ganz ohne Aufstieg zu haben ist. Für die Fotografie heißt das frische Beine um 06:00 und Platz im Fahrzeug für jede Ausrüstung, die Sie mitnehmen wollen. Ab $60, 6-8 Stunden von Tür zu Tür.</p>
+        <p>Der 4x4 fährt eine eigene Piste zu einem Aussichtspunkt am Kraterrand, sodass dieselbe nach Osten ausgerichtete Sonnenaufgangsgeometrie — Agung, der See, der Nebel — ganz ohne Aufstieg zu haben ist. Für die Fotografie heißt das frische Beine um 06:00 und Platz im Fahrzeug für jede Ausrüstung, die Sie mitnehmen wollen. Ab $45, 6-8 Stunden von Tür zu Tür.</p>
       </div>
     </article>
 
@@ -1806,7 +1868,7 @@ body {
           <span>Das entspannte Foto zum Ende des Vormittags</span>
         </div>
         <h3>Heiße Quellen am Seeufer</h3>
-        <p>Das Format mit Jeep und heißen Quellen endet mit einem Bad in natürlichen Quellen am Seeufer, während der Vulkan, über dem Sie gerade den Sonnenaufgang gesehen haben, gegenüber am Wasser steht. Es ist der einzige Ort auf dieser Liste, der auf Wasserhöhe statt von oben fotografiert wird, und das Tageslicht lässt sich dann bereits gut nutzen. Ab $75, Abholung 02:00-03:30.</p>
+        <p>Das Format mit Jeep und heißen Quellen endet mit einem Bad in natürlichen Quellen am Seeufer, während der Vulkan, über dem Sie gerade den Sonnenaufgang gesehen haben, gegenüber am Wasser steht. Es ist der einzige Ort auf dieser Liste, der auf Wasserhöhe statt von oben fotografiert wird, und das Tageslicht lässt sich dann bereits gut nutzen. Ab $55, Abholung 02:00-03:30.</p>
       </div>
     </article>
 
@@ -1817,7 +1879,7 @@ body {
                 <h2>Jedes Mount-Batur-Foto, einer Zeit und einem Ort zugeordnet</h2>
                 <p>Fotografie am Mount Batur ist zuerst ein Timing-Problem und erst dann eine Frage des Könnens. Der Kraterrand blickt nach Osten, die Sonne erscheint hinter dem Mount Agung zwischen <strong>06:00 und 06:30 Uhr</strong> jeden Tag im Jahr, und jedes der berühmten Motive — der Nebel, die Silhouetten, die schwarze Lava — gehört zu einem bestimmten Punkt am Morgen. Die Tabelle unten ist der ganze Plan: was das Foto ist, wo und wann es passiert und welches unserer privaten Formate Sie davor stellt.</p><p>Zwei Zeilen verdienen eine Anmerkung. Die Lavafelder sind ein reines Jeep-Motiv — der Wanderweg steigt den Kegel hinauf und quert nie den Calderaboden. Und die Zeile zum Heiratsantrag ist eine logistische Tatsache, keine Verkaufsformel: Auf einer Sammelbustour gehören Zeitplan und Gruppe allen an Bord; auf einer privaten Tour gehört das Timing Ihnen.</p>
 
-                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">Das Foto</th><th scope="col">Wo und wann es stattfindet</th><th scope="col">Tourformat, das dorthin führt</th></tr></thead><tbody><tr><th scope="row">Sonnenaufgang hinter dem Mount Agung</th><td>Kraterrand nach Osten, 06:00-06:30 das ganze Jahr</td><td>Sonnenaufgangs-Wanderung ab $35 oder Jeeptour ab $60</td></tr><tr><th scope="row">Nebel über dem Lake Batur</th><td>Vom Kraterrand beim ersten Licht, bevor die Sonne höher steigt</td><td>Jedes Sonnenaufgangsformat; der Nebel löst sich auf, sobald es morgens wärmer wird</td></tr><tr><th scope="row">Mount Rinjani am Horizont</th><td>Nach Osten über den Mount Agung hinaus, nur an klaren Morgen</td><td>Gleiche Aussichtspunkte; es hängt vom Wetter ab, nicht vom Format</td></tr><tr><th scope="row">Porträts im warmen Morgenlicht</th><td>Kraterrand, während der 30-60 Minuten Wartezeit, nachdem die Sonne erschienen ist</td><td>Wanderung oder Jeep; das Licht erreicht beide Aussichtspunkte</td></tr><tr><th scope="row">Schwarze Lavafelder</th><td>Kraterboden nach Sonnenaufgang, entlang der 4x4-Piste</td><td>Jeep-Tour ab $60 oder Jeep mit heißer Quelle ab $75</td></tr><tr><th scope="row">Fotos vom Heiratsantrag bei Sonnenaufgang</th><td>Aufbau in der Dunkelheit vor dem Morgengrauen, der Moment um 06:00-06:30</td><td>Privates Format; Details werden über WhatsApp abgestimmt</td></tr></tbody></table></div><p class="sb-journal-tablenote">Alle unsere Formate sind privat, Abholung und Rückfahrt zum Hotel sind enthalten, und es gibt keine Vorauszahlung — Sie bestätigen im Chat und zahlen am Tag selbst.</p>
+                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">Das Foto</th><th scope="col">Wo und wann es stattfindet</th><th scope="col">Tourformat, das dorthin führt</th></tr></thead><tbody><tr><th scope="row">Sonnenaufgang hinter dem Mount Agung</th><td>Kraterrand nach Osten, 06:00-06:30 das ganze Jahr</td><td>Sonnenaufgangs-Wanderung ab $35 oder Jeeptour ab $45</td></tr><tr><th scope="row">Nebel über dem Lake Batur</th><td>Vom Kraterrand beim ersten Licht, bevor die Sonne höher steigt</td><td>Jedes Sonnenaufgangsformat; der Nebel löst sich auf, sobald es morgens wärmer wird</td></tr><tr><th scope="row">Mount Rinjani am Horizont</th><td>Nach Osten über den Mount Agung hinaus, nur an klaren Morgen</td><td>Gleiche Aussichtspunkte; es hängt vom Wetter ab, nicht vom Format</td></tr><tr><th scope="row">Porträts im warmen Morgenlicht</th><td>Kraterrand, während der 30-60 Minuten Wartezeit, nachdem die Sonne erschienen ist</td><td>Wanderung oder Jeep; das Licht erreicht beide Aussichtspunkte</td></tr><tr><th scope="row">Schwarze Lavafelder</th><td>Kraterboden nach Sonnenaufgang, entlang der 4x4-Piste</td><td>Jeep-Tour ab $45 oder Jeep mit heißer Quelle ab $55</td></tr><tr><th scope="row">Fotos vom Heiratsantrag bei Sonnenaufgang</th><td>Aufbau in der Dunkelheit vor dem Morgengrauen, der Moment um 06:00-06:30</td><td>Privates Format; Details werden über WhatsApp abgestimmt</td></tr></tbody></table></div><p class="sb-journal-tablenote">Alle unsere Formate sind privat, Abholung und Rückfahrt zum Hotel sind enthalten, und es gibt keine Vorauszahlung — Sie bestätigen im Chat und zahlen am Tag selbst.</p>
 
               </section>
 
@@ -1839,7 +1901,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Der Heiratsantrag zum Sonnenaufgang, geplant wie Logistik</h2>
-                <p>Ein Antrag am Batur funktioniert, weil der Ablauf das Verbergen für Sie übernimmt. Die Abholung liegt tief in der Nacht, der Aufstieg passiert im Dunkeln, und niemand — auch die Person neben Ihnen nicht — erkennt beim Licht der Stirnlampe, was in einer Tasche steckt. Die Vorbereitung gehört in die Dunkelheit vor der Dämmerung; der Moment gehört dem Sonnenaufgang um <strong>06:00-06:30</strong>.</p><p>Die Wahl des Formats ist praktisch, nicht romantisch. Unsere Touren sind privat, über Abholzeit, Tempo und den Platz am Kraterrand entscheiden also zwei Personen statt einer Busladung — das ist eine Tatsache der Logistik privater Touren und kein Versprechen, dass der Gipfel leer sein wird. Die Wanderung (ab <strong>$35</strong>) erarbeitet sich den Moment mit einem Aufstieg; der Jeep (ab <strong>$60</strong>) schont gute Kleidung und zittrige Beine.</p><p>Die Nacht zeitlich richtig zu planen ist der Teil, der genau stimmen muss — die Abholzeiten nach Gebiet stehen in <a href="/bali/de/journal/what-time-to-leave-for-mount-batur-sunrise">wann man zum Sonnenaufgang losfährt</a>. Sagen Sie uns per WhatsApp, dass der Morgen ein Heiratsantrag werden soll, und wir planen die Details mit Ihnen; es gibt keine Vorauszahlung, nichts an dem Plan steckt also in einem Buchungsformular.</p>
+                <p>Ein Antrag am Batur funktioniert, weil der Ablauf das Verbergen für Sie übernimmt. Die Abholung liegt tief in der Nacht, der Aufstieg passiert im Dunkeln, und niemand — auch die Person neben Ihnen nicht — erkennt beim Licht der Stirnlampe, was in einer Tasche steckt. Die Vorbereitung gehört in die Dunkelheit vor der Dämmerung; der Moment gehört dem Sonnenaufgang um <strong>06:00-06:30</strong>.</p><p>Die Wahl des Formats ist praktisch, nicht romantisch. Unsere Touren sind privat, über Abholzeit, Tempo und den Platz am Kraterrand entscheiden also zwei Personen statt einer Busladung — das ist eine Tatsache der Logistik privater Touren und kein Versprechen, dass der Gipfel leer sein wird. Die Wanderung (ab <strong>$35</strong>) erarbeitet sich den Moment mit einem Aufstieg; der Jeep (ab <strong>$45</strong>) schont gute Kleidung und zittrige Beine.</p><p>Die Nacht zeitlich richtig zu planen ist der Teil, der genau stimmen muss — die Abholzeiten nach Gebiet stehen in <a href="/bali/de/journal/what-time-to-leave-for-mount-batur-sunrise">wann man zum Sonnenaufgang losfährt</a>. Sagen Sie uns per WhatsApp, dass der Morgen ein Heiratsantrag werden soll, und wir planen die Details mit Ihnen; es gibt keine Vorauszahlung, nichts an dem Plan steckt also in einem Buchungsformular.</p>
 
 
 
@@ -1866,7 +1928,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sonnenaufgang aus einem 4x4 ohne Klettern, dann über das schwarze Lavafeld.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1874,7 +1936,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Derselbe Sonnenaufgang im Geländewagen ohne Klettern, gefolgt von einem Bad in einer heißen Quelle in Kintamani.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1897,7 +1959,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Wo liegen die schwarzen Lavafelder am Mount Batur?</h3>
-                    <p>Auf dem Kraterboden, den die 4x4-Jeeproute nach dem Sonnenaufgang quert. Es sind erstarrte Ströme früherer Ausbrüche — der letzte im Jahr 2000 — und Sie können aussteigen und darauf laufen. Der Wanderweg führt den Kegel hinauf und berührt sie nie, dieses Bild gehört also zu den Jeep-Formaten, ab $60.</p>
+                    <p>Auf dem Kraterboden, den die 4x4-Jeeproute nach dem Sonnenaufgang quert. Es sind erstarrte Ströme früherer Ausbrüche — der letzte im Jahr 2000 — und Sie können aussteigen und darauf laufen. Der Wanderweg führt den Kegel hinauf und berührt sie nie, dieses Bild gehört also zu den Jeep-Formaten, ab $45.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1912,7 +1974,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Ist die Jeep-Tour am Mount Batur gut zum Fotografieren?</h3>
-                    <p>Ja — der 4x4 fährt eine eigene Piste zu einem Aussichtspunkt am Kraterrand, Sie bekommen also denselben Sonnenaufgang nach Osten über dem Lake Batur ohne Aufstieg, danach die schwarzen Lavafelder, die der Wanderweg nie erreicht. Ein Fahrzeug trägt außerdem mehr Ausrüstung als eine Hosentasche. Ab $60, 6-8 Stunden von Tür zu Tür.</p>
+                    <p>Ja — der 4x4 fährt eine eigene Piste zu einem Aussichtspunkt am Kraterrand, Sie bekommen also denselben Sonnenaufgang nach Osten über dem Lake Batur ohne Aufstieg, danach die schwarzen Lavafelder, die der Wanderweg nie erreicht. Ein Fahrzeug trägt außerdem mehr Ausrüstung als eine Hosentasche. Ab $45, 6-8 Stunden von Tür zu Tür.</p>
                   </article>
 
               </div>
@@ -1943,7 +2005,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
@@ -1972,7 +2034,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
@@ -1998,7 +2060,7 @@ body {
 
                   <a class="sb-journal-related-guide" href="/bali/de/journal/mount-batur-sunrise-from-ubud">
                     <span class="sb-journal-related-guide__label">Batur aus Ubud</span>
-                    <span class="sb-journal-related-guide__title">Mount Batur Sunrise von Ubud: Wanderung 35 $, Jeep 60 $</span>
+                    <span class="sb-journal-related-guide__title">Mount Batur Sunrise von Ubud: Wanderung 35 $, Jeep 45 $</span>
                   </a>
 
                   <a class="sb-journal-related-guide" href="/bali/de/journal/bali-honeymoon-day-trips">

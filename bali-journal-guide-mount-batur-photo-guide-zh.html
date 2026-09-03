@@ -205,7 +205,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "火山口边缘吉普车观景台",
-            "description": "四轮驱动车驾驶一条单独的轨道到达火山口边缘的观景点，因此相同的朝东日出几何形状 - 阿贡、湖泊、薄雾 - 无需攀爬即可获得。对于摄影而言，这意味着在 06:00 保持腿部活力，并在车内提供足够的空间来容纳您想要携带的任何装备。 60 美元起，6-8 小时送货上门。",
+            "description": "四轮驱动车驾驶一条单独的轨道到达火山口边缘的观景点，因此相同的朝东日出几何形状 - 阿贡、湖泊、薄雾 - 无需攀爬即可获得。对于摄影而言，这意味着在 06:00 保持腿部活力，并在车内提供足够的空间来容纳您想要携带的任何装备。 45 美元起，6-8 小时送货上门。",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-tour.jpg"
           }
         },
@@ -215,7 +215,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "湖岸边的温泉",
-            "description": "吉普车和温泉的形式以浸泡在天然湖畔温泉中结束，您刚刚站在水面上观看火山日出。这是此列表中唯一一个在水平面而不是从上方拍摄的位置，到那时日光就很容易使用。 75 美元起，取货时间 02:00-03:30。",
+            "description": "吉普车和温泉的形式以浸泡在天然湖畔温泉中结束，您刚刚站在水面上观看火山日出。这是此列表中唯一一个在水平面而不是从上方拍摄的位置，到那时日光就很容易使用。 55 美元起，取货时间 02:00-03:30。",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg"
           }
         }
@@ -246,7 +246,7 @@
           "name": "巴杜尔山的黑色熔岩场在哪里？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "在火山口地面上，日出后穿过 4x4 吉普车路线。它们是过去火山喷发（最近一次发生在 2000 年）的凝固流，您可以走出去，在上面行走。远足路线爬上圆锥体，但从未接触到它们，因此这张照片属于吉普车格式，60 美元起。"
+            "text": "在火山口地面上，日出后穿过 4x4 吉普车路线。它们是过去火山喷发（最近一次发生在 2000 年）的凝固流，您可以走出去，在上面行走。远足路线爬上圆锥体，但从未接触到它们，因此这张照片属于吉普车格式，45 美元起。"
           }
         },
         {
@@ -270,7 +270,7 @@
           "name": "巴杜尔山吉普车之旅适合拍照吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "是的，四轮驱动车沿着自己的轨道行驶到火山口边缘的观景点，因此您无需攀登即可欣赏到巴杜尔湖上同样朝东的日出，以及之后的黑色熔岩田，这是徒步旅行路线永远无法到达的。车辆携带的装备也比口袋多。 60 美元起，6-8 小时送货上门。"
+            "text": "是的，四轮驱动车沿着自己的轨道行驶到火山口边缘的观景点，因此您无需攀登即可欣赏到巴杜尔湖上同样朝东的日出，以及之后的黑色熔岩田，这是徒步旅行路线永远无法到达的。车辆携带的装备也比口袋多。 45 美元起，6-8 小时送货上门。"
           }
         }
       ]
@@ -1298,6 +1298,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1701,7 +1763,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">从无需攀爬的四轮驱动车上日出，然后穿越黑色熔岩原。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1709,7 +1771,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">同样的日出四驱车，无需攀爬，然后泡在金塔马尼温泉。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1791,7 +1853,7 @@ body {
           <span>日出无需攀登</span>
         </div>
         <h3>火山口边缘吉普车观景台</h3>
-        <p>四轮驱动车驾驶一条单独的轨道到达火山口边缘的观景点，因此相同的朝东日出几何形状 - 阿贡、湖泊、薄雾 - 无需攀爬即可获得。对于摄影而言，这意味着在 06:00 保持腿部活力，并在车内提供足够的空间来容纳您想要携带的任何装备。 60 美元起，6-8 小时送货上门。</p>
+        <p>四轮驱动车驾驶一条单独的轨道到达火山口边缘的观景点，因此相同的朝东日出几何形状 - 阿贡、湖泊、薄雾 - 无需攀爬即可获得。对于摄影而言，这意味着在 06:00 保持腿部活力，并在车内提供足够的空间来容纳您想要携带的任何装备。 45 美元起，6-8 小时送货上门。</p>
       </div>
     </article>
 
@@ -1806,7 +1868,7 @@ body {
           <span>清晨的轻松镜头</span>
         </div>
         <h3>湖岸边的温泉</h3>
-        <p>吉普车和温泉的形式以浸泡在天然湖畔温泉中结束，您刚刚站在水面上观看火山日出。这是此列表中唯一一个在水平面而不是从上方拍摄的位置，到那时日光就很容易使用。 75 美元起，取货时间 02:00-03:30。</p>
+        <p>吉普车和温泉的形式以浸泡在天然湖畔温泉中结束，您刚刚站在水面上观看火山日出。这是此列表中唯一一个在水平面而不是从上方拍摄的位置，到那时日光就很容易使用。 55 美元起，取货时间 02:00-03:30。</p>
       </div>
     </article>
 
@@ -1817,7 +1879,7 @@ body {
                 <h2>每一张巴杜尔山的照片都映射到时间和地点</h2>
                 <p>巴杜尔山摄影首先是时机问题，然后是技巧问题。边缘朝东，太阳出现在阿贡山后面 <strong>06:00 和 06:30</strong> 一年中的每一天，每一个著名的画面——薄雾、剪影、黑色熔岩——都属于早晨的一个特定时刻。下表是整个计划：照片是什么，照片发生的地点和时间，以及我们的哪种私人格式将您放在照片前面。</p><p>两行应该有一个标志。熔岩原是吉普车专用的框架——远足小径沿着圆锥体攀登，但从未穿过火山口地面。提案行是一个物流事实，而不是销售行：在拼车巴士旅行中，时间表和人群属于车上的每个人；在私人旅行中，时间属于您。</p>
 
-                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">照片</th><th scope="col">发生地点和时间</th><th scope="col">到达它的旅游形式</th></tr></thead><tbody><tr><th scope="row">阿贡火山后面的日出</th><td>山顶边缘朝东，全年 06:00-06:30</td><td>日出远足 35 美元起，或吉普车之旅 60 美元起</td></tr><tr><th scope="row">巴杜尔湖上空弥漫着薄雾</th><td>在太阳升起之前，第一道曙光从火山口边缘开始</td><td>任何日出格式；随着早晨的温暖，雾气逐渐变薄</td></tr><tr><th scope="row">林贾尼山在地平线上</th><td>阿贡山以东，仅限晴朗的早晨</td><td>观点相同；这取决于天气，而不是格式</td></tr><tr><th scope="row">温暖晨光下的肖像</th><td>山顶边缘，太阳出现后 30-60 分钟的等待时间</td><td>徒步旅行或吉普车；光线到达两个视点</td></tr><tr><th scope="row">黑色熔岩原</th><td>日出后的火山口地面，沿着 4x4 赛道</td><td>吉普车之旅 60 美元起或吉普车温泉之旅 75 美元起</td></tr><tr><th scope="row">日出时的求婚照</th><td>设置在黎明前的黑暗中，06:00-06:30 时刻</td><td>私有格式；详情已在 WhatsApp 上安排</td></tr></tbody></table></div><p class="sb-journal-tablenote">我们所有的形式都是私人的，包括酒店接送和返回，并且没有预付款 - 您在聊天中确认并在当天付款。</p>
+                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">照片</th><th scope="col">发生地点和时间</th><th scope="col">到达它的旅游形式</th></tr></thead><tbody><tr><th scope="row">阿贡火山后面的日出</th><td>山顶边缘朝东，全年 06:00-06:30</td><td>日出远足 35 美元起，或吉普车之旅 45 美元起</td></tr><tr><th scope="row">巴杜尔湖上空弥漫着薄雾</th><td>在太阳升起之前，第一道曙光从火山口边缘开始</td><td>任何日出格式；随着早晨的温暖，雾气逐渐变薄</td></tr><tr><th scope="row">林贾尼山在地平线上</th><td>阿贡山以东，仅限晴朗的早晨</td><td>观点相同；这取决于天气，而不是格式</td></tr><tr><th scope="row">温暖晨光下的肖像</th><td>山顶边缘，太阳出现后 30-60 分钟的等待时间</td><td>徒步旅行或吉普车；光线到达两个视点</td></tr><tr><th scope="row">黑色熔岩原</th><td>日出后的火山口地面，沿着 4x4 赛道</td><td>吉普车之旅 45 美元起或吉普车温泉之旅 55 美元起</td></tr><tr><th scope="row">日出时的求婚照</th><td>设置在黎明前的黑暗中，06:00-06:30 时刻</td><td>私有格式；详情已在 WhatsApp 上安排</td></tr></tbody></table></div><p class="sb-journal-tablenote">我们所有的形式都是私人的，包括酒店接送和返回，并且没有预付款 - 您在聊天中确认并在当天付款。</p>
 
               </section>
 
@@ -1839,7 +1901,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>日出提案，像物流一样计划</h2>
-                <p>巴杜尔求婚之所以有效，是因为日程安排为你隐藏了一切。接机是在深夜，进场是在黑暗中进行，没有人（包括你旁边的人）可以通过头灯读取行李中的物品。场景属于黎明前的黑暗；这一刻属于日出 <strong>06:00-06:30</strong>.</p><p>格式的选择是实用的，而不是浪漫的。我们的旅行是私人的，因此接载时间、速度和边缘位置都是由两个人而不是一辆车决定的——这是私人旅行的后勤事实，而不是保证山顶将是空的。徒步旅行（从 <strong>$35</strong>）通过攀登赢得时刻；吉普车（来自 <strong>$60</strong>）保护好衣服，抖腿。</p><p>晚上的时间安排是值得精确把握的部分——按区域划分的接送窗口已在 <a href="/bali/zh/journal/what-time-to-leave-for-mount-batur-sunrise">什么时间出发看日出</a>。在 WhatsApp 上告诉我们，早上是求婚，我们将与您一起计划细节；无需预付款，因此预订表格中不会包含该计划的任何内容。</p>
+                <p>巴杜尔求婚之所以有效，是因为日程安排为你隐藏了一切。接机是在深夜，进场是在黑暗中进行，没有人（包括你旁边的人）可以通过头灯读取行李中的物品。场景属于黎明前的黑暗；这一刻属于日出 <strong>06:00-06:30</strong>.</p><p>格式的选择是实用的，而不是浪漫的。我们的旅行是私人的，因此接载时间、速度和边缘位置都是由两个人而不是一辆车决定的——这是私人旅行的后勤事实，而不是保证山顶将是空的。徒步旅行（从 <strong>$35</strong>）通过攀登赢得时刻；吉普车（来自 <strong>$45</strong>）保护好衣服，抖腿。</p><p>晚上的时间安排是值得精确把握的部分——按区域划分的接送窗口已在 <a href="/bali/zh/journal/what-time-to-leave-for-mount-batur-sunrise">什么时间出发看日出</a>。在 WhatsApp 上告诉我们，早上是求婚，我们将与您一起计划细节；无需预付款，因此预订表格中不会包含该计划的任何内容。</p>
 
 
 
@@ -1866,7 +1928,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">从无需攀爬的四轮驱动车上日出，然后穿越黑色熔岩原。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1874,7 +1936,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">同样的日出四驱车，无需攀爬，然后泡在金塔马尼温泉。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1897,7 +1959,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>巴杜尔山的黑色熔岩场在哪里？</h3>
-                    <p>在火山口地面上，日出后穿过 4x4 吉普车路线。它们是过去火山喷发（最近一次发生在 2000 年）的凝固流，您可以走出去，在上面行走。远足路线爬上圆锥体，但从未接触到它们，因此这张照片属于吉普车格式，60 美元起。</p>
+                    <p>在火山口地面上，日出后穿过 4x4 吉普车路线。它们是过去火山喷发（最近一次发生在 2000 年）的凝固流，您可以走出去，在上面行走。远足路线爬上圆锥体，但从未接触到它们，因此这张照片属于吉普车格式，45 美元起。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1912,7 +1974,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>巴杜尔山吉普车之旅适合拍照吗？</h3>
-                    <p>是的，四轮驱动车沿着自己的轨道行驶到火山口边缘的观景点，因此您无需攀登即可欣赏到巴杜尔湖上同样朝东的日出，以及之后的黑色熔岩田，这是徒步旅行路线永远无法到达的。车辆携带的装备也比口袋多。 60 美元起，6-8 小时送货上门。</p>
+                    <p>是的，四轮驱动车沿着自己的轨道行驶到火山口边缘的观景点，因此您无需攀登即可欣赏到巴杜尔湖上同样朝东的日出，以及之后的黑色熔岩田，这是徒步旅行路线永远无法到达的。车辆携带的装备也比口袋多。 45 美元起，6-8 小时送货上门。</p>
                   </article>
 
               </div>
@@ -1943,7 +2005,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
@@ -1972,7 +2034,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
@@ -1998,7 +2060,7 @@ body {
 
                   <a class="sb-journal-related-guide" href="/bali/zh/journal/mount-batur-sunrise-from-ubud">
                     <span class="sb-journal-related-guide__label">从乌布出发的巴杜尔</span>
-                    <span class="sb-journal-related-guide__title">乌布出发的巴杜尔山日出：徒步旅行 35 美元，吉普车 60 美元</span>
+                    <span class="sb-journal-related-guide__title">乌布出发的巴杜尔山日出：徒步旅行 35 美元，吉普车 45 美元</span>
                   </a>
 
                   <a class="sb-journal-related-guide" href="/bali/zh/journal/bali-honeymoon-day-trips">

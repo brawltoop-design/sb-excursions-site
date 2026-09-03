@@ -1207,6 +1207,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1567,7 +1629,7 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">卖文章</div>
             <h1>为什么要预订巴厘岛乌布 ATV 四轮摩托车探险——值得吗？</h1>
-            <p class="sb-journal-lead">这款乌布 ATV 四轮摩托车冒险之旅专为想要行动而又不想让一天变得过于复杂的旅行者而设计。这条路线将巴厘岛丛林、稻田、崎岖不平的泥路、河段和天然隧道融为一体，包含在一次导游带领下，并提供安全装备、午餐、淋浴和可选的酒店接送服务，费用为 20 美元起。四轮摩托车之旅提供了穿越巴厘岛乡村的较短但同样令人兴奋的越野体验。较小的车辆对于初学者来说更容易操作。</p>
+            <p class="sb-journal-lead">这款乌布 ATV 四轮摩托车冒险之旅专为想要行动而又不想让一天变得过于复杂的旅行者而设计。这条路线将巴厘岛丛林、稻田、崎岖不平的泥路、河段和天然隧道融为一体，包含在一次导游带领下，并提供安全装备、午餐、淋浴和可选的酒店接送服务，费用为 39 美元起。四轮摩托车之旅提供了穿越巴厘岛乡村的较短但同样令人兴奋的越野体验。较小的车辆对于初学者来说更容易操作。</p>
             <p class="sb-journal-dates">作者：Alex Moskvin，SB Excursions 创始人 · 发布于 2026 年 5 月 21 日 · 更新于 2026 年 8 月 7 日</p>
             <p class="sb-journal-deck">此路线游览： <a href="/bali/zh/tours/atv-quad-bikes">乌布 ATV 四轮摩托车冒险</a> — 39 美元起，总共 4-6 小时，其中包括 1.5 小时的沙滩车骑行。</p>
             <div class="sb-journal-inline-stats">

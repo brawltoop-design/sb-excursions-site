@@ -1308,6 +1308,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1848,7 +1910,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>为什么其他转账页面的美元价格是错误的</h2>
-                <p>卢比坐在附近 <strong>17,800 印尼盾兑美元</strong> 到 2026 年 8 月——上个月中间市场利率约为 17,762 至 18,087。您会发现大多数转账页面都是在汇率为 15,000-16,000 时编写的，并且从未重新转换过，因此它们的美元栏夸大了您实际要交出的金额，大约为 <strong>10-18%</strong>。转账金额约为 350,000 印尼盾 <strong>20 美元</strong> 今天；该文章引用了相同的卢比数字，称其为 23-25 美元，并且已经这样做了两年。</p><p>这就是为什么我们以卢比开头并在上面盖上日期。即使印尼盾的数字也值得健康警告，因为互联网的这个角落会自我循环：一个日期为 2026 年的页面引用了库塔、乌鲁瓦图和乌布等地 70,000-150,000 印尼盾的统一区间，但这对这三个城市来说并非如此；另一种说法是 Canggu 是 300,000，然后是 350,000-500,000，相隔两行。范围和机制仍然存在；单不权威价格。我们的 <a href="/bali/zh/journal/bali-grab-taxi-driver-cost">Grab、出租车和私人司机费用指南</a> 离开机场后，应用相同的算法进行出行。</p>
+                <p>卢比坐在附近 <strong>17,800 印尼盾兑美元</strong> 到 2026 年 8 月——上个月中间市场利率约为 17,762 至 18,087。您会发现大多数转账页面都是在汇率为 15,000-16,000 时编写的，并且从未重新转换过，因此它们的美元栏夸大了您实际要交出的金额，大约为 <strong>10-18%</strong>。转账金额约为 350,000 印尼盾 <strong>20 美元</strong> 今天；该文章引用了相同的卢比数字，称其为 23-23 美元，并且已经这样做了两年。</p><p>这就是为什么我们以卢比开头并在上面盖上日期。即使印尼盾的数字也值得健康警告，因为互联网的这个角落会自我循环：一个日期为 2026 年的页面引用了库塔、乌鲁瓦图和乌布等地 70,000-150,000 印尼盾的统一区间，但这对这三个城市来说并非如此；另一种说法是 Canggu 是 300,000，然后是 350,000-500,000，相隔两行。范围和机制仍然存在；单不权威价格。我们的 <a href="/bali/zh/journal/bali-grab-taxi-driver-cost">Grab、出租车和私人司机费用指南</a> 离开机场后，应用相同的算法进行出行。</p>
 
 
 

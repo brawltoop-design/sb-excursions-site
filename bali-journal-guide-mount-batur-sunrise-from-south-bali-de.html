@@ -274,7 +274,7 @@
           "name": "Wie viel kostet eine Sonnenaufgangstour auf den Mount Batur im Jahr 2026?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Direkte Preise für 2026 über WhatsApp gebucht: die Sonnenaufgangswanderung auf dem Mount Batur ab 35 $, der Sonnenaufgangs-Jeep mit heißen Quellen ab 75 $ und die Sonnenaufgangs-Jeep-Tour ab 60 $. Alle drei beinhalten die Abholung vom Hotel und es gibt keine Vorauszahlung – Sie bestätigen den Plan im Chat und zahlen am Tag."
+            "text": "Direkte Preise für 2026 über WhatsApp gebucht: die Sonnenaufgangswanderung auf dem Mount Batur ab 35 $, der Sonnenaufgangs-Jeep mit heißen Quellen ab 55 $ und die Sonnenaufgangs-Jeep-Tour ab 45 $. Alle drei beinhalten die Abholung vom Hotel und es gibt keine Vorauszahlung – Sie bestätigen den Plan im Chat und zahlen am Tag."
           }
         },
         {
@@ -1334,6 +1334,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1692,9 +1754,9 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">Reiseführer</div>
             <h1>Mount Batur von Seminyak oder Canggu: Abholung um 01:30 Uhr, ab 35 $</h1>
-            <p class="sb-journal-lead">Ja – der Mount Batur-Sonnenaufgang funktioniert von Seminyak, Canggu und Nusa Dua aus, ohne das Hotel wechseln zu müssen; Die Fahrt erfolgt mitten in der Nacht und die Fahrt dauert jeweils 1,5 bis 2,5 Stunden. Alle drei Tourformate holen Gäste aus den südlichen Hotelgebieten ab: die Sonnenaufgangswanderung ab 35 $, der Jeep mit heißen Quellen ab 75 $ und der Sonnenaufgangsjeep ab 60 $, wobei Ihre genaue Abholzeit am Vortag auf WhatsApp bestätigt wird. Dieser Leitfaden unterteilt die Nacht in Etappen – wie sich die Abholung von der Südküste tatsächlich anfühlt, welches Format die Fahrt am besten übersteht, wie man den Schlaf plant, damit der nächste Tag nicht aufgebraucht wird, und die beiden Fälle, in denen es wirklich Sinn macht, die vorherige Nacht in Ubud zu verbringen.</p>
+            <p class="sb-journal-lead">Ja – der Mount Batur-Sonnenaufgang funktioniert von Seminyak, Canggu und Nusa Dua aus, ohne das Hotel wechseln zu müssen; Die Fahrt erfolgt mitten in der Nacht und die Fahrt dauert jeweils 1,5 bis 2,5 Stunden. Alle drei Tourformate holen Gäste aus den südlichen Hotelgebieten ab: die Sonnenaufgangswanderung ab 35 $, der Jeep mit heißen Quellen ab 55 $ und der Sonnenaufgangsjeep ab 45 $, wobei Ihre genaue Abholzeit am Vortag auf WhatsApp bestätigt wird. Dieser Leitfaden unterteilt die Nacht in Etappen – wie sich die Abholung von der Südküste tatsächlich anfühlt, welches Format die Fahrt am besten übersteht, wie man den Schlaf plant, damit der nächste Tag nicht aufgebraucht wird, und die beiden Fälle, in denen es wirklich Sinn macht, die vorherige Nacht in Ubud zu verbringen.</p>
             <p class="sb-journal-dates">Von Alex Moskvin, Gründer von SB Excursions · Veröffentlicht am 21. Mai 2026 · Aktualisiert am 7. August 2026</p>
-            <p class="sb-journal-deck">Tour auf dieser Route: <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a> — Ab 60 $, 6–8 Stunden.</p>
+            <p class="sb-journal-deck">Tour auf dieser Route: <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a> — Ab 45 $, 6–8 Stunden.</p>
             <div class="sb-quick-answer">
               <p class="sb-quick-answer__q">Können Sie den Sonnenaufgang auf dem Mount Batur von Seminyak oder Canggu aus erleben?</p>
               <p class="sb-quick-answer__a">Ja. Alle drei Mount-Batur-Touren beinhalten die Abholung vom Hotel in Seminyak, Canggu, Nusa Dua und den anderen südlichen Gebieten. Erwarten Sie eine Abholung tief in der Nacht – 01:30–03:00 Uhr für die Wanderung, etwa 02:00–03:30 Uhr für den Jeep mit heißen Quellen – und eine 1,5–2,5-stündige Fahrt pro Strecke.</p>
@@ -1705,7 +1767,7 @@ body {
               <span>3 Tourformate ab 35 $</span><span>1,5-2,5 Stunden Nachtfahrt</span><span>WhatsApp-Buchung, keine Vorauszahlung</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur Sonnenaufgangs-Jeep-Tour – Ab 60 $</a>
+              <a class="sb-journal-primary" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur Sonnenaufgangs-Jeep-Tour – Ab 45 $</a>
               <a class="sb-journal-secondary" href="/bali/de/journal">Durchsuchen Sie alle Leitfäden</a>
             </div>
           </div>
@@ -1737,7 +1799,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sie möchten den gleichen Sonnenaufgang ohne den Aufstieg – mit Kindern oder nach einem späten Flug.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1745,7 +1807,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Der Sonnenaufgang, dann ein Bad in den natürlichen heißen Quellen am Batursee.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1823,7 +1885,7 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>Ab 60 $ · 6–8 Stunden</span>
+          <span>Ab 45 $ · 6–8 Stunden</span>
           <span>Die am wenigsten brutale Nacht</span>
         </div>
         <h3>Option 1: Mount Batur Sunrise Jeep Tour</h3>
@@ -1838,7 +1900,7 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>Ab 75 $ · 6–8 Stunden</span>
+          <span>From $55 · 6-8 hours</span>
           <span>In den Tag integrierte Erholung</span>
         </div>
         <h3>Option 2: Sunrise Jeep und Hot Spring</h3>
@@ -1883,7 +1945,7 @@ body {
                 <h2>Mount Batur aus dem Süden auf einen Blick: die Nacht, Format für Format</h2>
                 <p>Von Seminyak, Canggu, Kuta oder Nusa Dua aus dauert die Fahrt nach Norden jeweils 1,5 bis 2,5 Stunden, und der Abholer landet eine ganze Stunde früher als für Gäste in Ubud. Diese zusätzliche Stunde sollte über Ihr Format entscheiden:</p>
 
-                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">Formatieren</th><th scope="col">Preis</th><th scope="col">Abholzeit</th><th scope="col">Was diese Nacht verlangt</th></tr></thead><tbody><tr><th scope="row">Mount Batur: Jeep zum Sonnenaufgang</th><td>Ab 60 $, 6–8 Stunden</td><td>Nacht oder vor Sonnenaufgang</td><td>Die am wenigsten brutale Option: Sie schlafen beide Antriebsbeine und verschwenden Ihre Energie auf nichts anderes als die Aussicht</td></tr><tr><th scope="row">Sonnenaufgangsjeep und heiße Quelle</th><td>Ab 75 $, 6–8 Stunden</td><td>Etwa 02:00-03:30 Uhr</td><td>Derselbe Jeep-Sonnenaufgang, der in den Quellen am Seeufer endet – der beste Neustart vor der Heimfahrt</td></tr><tr><th scope="row">Mount Batur: Wanderung zum Sonnenaufgang</th><td>Ab 35 $, 5–8 Stunden</td><td>01:30–03:00 Uhr, das früheste der drei Fenster</td><td>Ungefähr zwei Stunden Klettern im Dunkeln, gestapelt auf der längsten Fahrt auf der Speisekarte</td></tr></tbody></table></div><p class="sb-journal-tablenote">Wofür Sie sich auch entscheiden, planen Sie für diesen Nachmittag nichts außer dem Pool ein und begrenzen Sie Ihr Nickerchen auf etwa 90 Minuten, damit Sie auch in der nächsten Nacht schlafen können.</p>
+                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">Formatieren</th><th scope="col">Preis</th><th scope="col">Abholzeit</th><th scope="col">Was diese Nacht verlangt</th></tr></thead><tbody><tr><th scope="row">Mount Batur: Jeep zum Sonnenaufgang</th><td>Ab 45 $, 6–8 Stunden</td><td>Nacht oder vor Sonnenaufgang</td><td>Die am wenigsten brutale Option: Sie schlafen beide Antriebsbeine und verschwenden Ihre Energie auf nichts anderes als die Aussicht</td></tr><tr><th scope="row">Sonnenaufgangsjeep und heiße Quelle</th><td>From $55, 6-8 hours</td><td>Etwa 02:00-03:30 Uhr</td><td>Derselbe Jeep-Sonnenaufgang, der in den Quellen am Seeufer endet – der beste Neustart vor der Heimfahrt</td></tr><tr><th scope="row">Mount Batur: Wanderung zum Sonnenaufgang</th><td>Ab 35 $, 5–8 Stunden</td><td>01:30–03:00 Uhr, das früheste der drei Fenster</td><td>Ungefähr zwei Stunden Klettern im Dunkeln, gestapelt auf der längsten Fahrt auf der Speisekarte</td></tr></tbody></table></div><p class="sb-journal-tablenote">Wofür Sie sich auch entscheiden, planen Sie für diesen Nachmittag nichts außer dem Pool ein und begrenzen Sie Ihr Nickerchen auf etwa 90 Minuten, damit Sie auch in der nächsten Nacht schlafen können.</p>
 
               </section>
 
@@ -1897,7 +1959,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Welches Format übersteht die Nacht aus dem Süden am besten?</h2>
-                <p>Aus den südlichen Gebieten sind die Jeep-Formate für die meisten Reisenden besser geeignet als die Wanderung, da es schon lange Nacht ist, bevor der Vulkan ausbricht. Auf der <strong>Jeep-Tour ab 60 $</strong> Sie schlafen beide Antriebsstränge, fahren zum Sonnenaufgangspunkt und verschwenden Ihre Energie nur auf die Aussicht. Die <strong>Jeep mit heißen Quellen ab 75 $</strong> fügt anschließend ein Bad in den Quellen am See hinzu, was Sie vor der Heimfahrt besser in Form bringt als alles andere auf der Speisekarte. Die <strong>Erhöhung ab 35 $</strong> ist der günstigste Weg nach oben und der lohnendste Gipfel, aber zusätzlich zum frühesten Abholfenster – von Nusa Dua oder Uluwatu aus – ist das eine ernste Nacht.</p><p>Wenn Sie sich zwischen Klettern und Reiten eher aufgrund Ihrer Fitness und Vorlieben als wegen der Logistik entscheiden, ist unser <a href="/bali/de/journal/mount-batur-sunrise-jeep-vs-hike">Jeep vs. Hike-Vergleich</a> behandelt den Weg selbst im Detail. Der Blickwinkel dieses Reiseführers ist die südliche Nacht, und in dieser Hinsicht ist die Regel einfach: Wenn Sie in einem fahrenden Auto nicht schlafen können, nehmen Sie den Jeep.</p>
+                <p>Aus den südlichen Gebieten sind die Jeep-Formate für die meisten Reisenden besser geeignet als die Wanderung, da es schon lange Nacht ist, bevor der Vulkan ausbricht. Auf der <strong>Jeep-Tour ab 45 $</strong> Sie schlafen beide Antriebsstränge, fahren zum Sonnenaufgangspunkt und verschwenden Ihre Energie nur auf die Aussicht. Die <strong>Jeep mit heißen Quellen ab 55 $</strong> fügt anschließend ein Bad in den Quellen am See hinzu, was Sie vor der Heimfahrt besser in Form bringt als alles andere auf der Speisekarte. Die <strong>Erhöhung ab 35 $</strong> ist der günstigste Weg nach oben und der lohnendste Gipfel, aber zusätzlich zum frühesten Abholfenster – von Nusa Dua oder Uluwatu aus – ist das eine ernste Nacht.</p><p>Wenn Sie sich zwischen Klettern und Reiten eher aufgrund Ihrer Fitness und Vorlieben als wegen der Logistik entscheiden, ist unser <a href="/bali/de/journal/mount-batur-sunrise-jeep-vs-hike">Jeep vs. Hike-Vergleich</a> behandelt den Weg selbst im Detail. Der Blickwinkel dieses Reiseführers ist die südliche Nacht, und in dieser Hinsicht ist die Regel einfach: Wenn Sie in einem fahrenden Auto nicht schlafen können, nehmen Sie den Jeep.</p>
 
 
 
@@ -1940,7 +2002,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sie möchten den gleichen Sonnenaufgang ohne den Aufstieg – mit Kindern oder nach einem späten Flug.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1948,7 +2010,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Der Sonnenaufgang, dann ein Bad in den natürlichen heißen Quellen am Batursee.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1976,7 +2038,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Wie viel kostet eine Sonnenaufgangstour auf den Mount Batur im Jahr 2026?</h3>
-                    <p>Direkte Preise für 2026 über WhatsApp gebucht: die Sonnenaufgangswanderung auf dem Mount Batur ab 35 $, der Sonnenaufgangs-Jeep mit heißen Quellen ab 75 $ und die Sonnenaufgangs-Jeep-Tour ab 60 $. Alle drei beinhalten die Abholung vom Hotel und es gibt keine Vorauszahlung – Sie bestätigen den Plan im Chat und zahlen am Tag.</p>
+                    <p>Direkte Preise für 2026 über WhatsApp gebucht: die Sonnenaufgangswanderung auf dem Mount Batur ab 35 $, der Sonnenaufgangs-Jeep mit heißen Quellen ab 55 $ und die Sonnenaufgangs-Jeep-Tour ab 45 $. Alle drei beinhalten die Abholung vom Hotel und es gibt keine Vorauszahlung – Sie bestätigen den Plan im Chat und zahlen am Tag.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -2027,7 +2089,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
@@ -2056,7 +2118,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
@@ -2152,12 +2214,12 @@ body {
               <h3 class="sbtc-rail__title"><a class="sbtc-rail__titlelink" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a></h3>
               <p class="sbtc-price sbtc-rail__price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
               <div class="sbtc-rail__actions">
-                <a class="sbtc-btn sbtc-btn_ink" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Tour ansehen – ab 60 $<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
+                <a class="sbtc-btn sbtc-btn_ink" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Tour ansehen – ab 45 $<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
                 <a class="sbtc-btn sbtc-btn_line" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie in WhatsApp</a>
               </div>
               <dl class="sbtc-ledger sbtc-rail__ledger">

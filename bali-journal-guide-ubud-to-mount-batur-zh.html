@@ -215,7 +215,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "当天早上的吉普车版",
-            "description": "同样早起，但不用爬山。吉普车行程开到火山侧翼的观景点，之后穿越旧熔岩场，$60 起，历时 6-8 小时。含温泉的版本 $75 起，以在湖边泡水收尾。",
+            "description": "同样早起，但不用爬山。吉普车行程开到火山侧翼的观景点，之后穿越旧熔岩场，$45 起，历时 6-8 小时。含温泉的版本 $55 起，以在湖边泡水收尾。",
             "image": "https://www.sbexcursion.com/images/places/mount-batur-jeep.jpg"
           }
         },
@@ -280,7 +280,7 @@
           "name": "从 乌布 前往巴杜尔火山需要多少钱？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "我们的日出徒步起价 $35，往返全程5-8小时。吉普车加温泉线路起价 $75，历时6-8小时，吉普车日出之旅起价 $60。作为乌布全日游一部分的白天金塔马尼行程起价 $65 每车。通过WhatsApp预订，无需预付款。"
+            "text": "我们的日出徒步起价 $35，往返全程5-8小时。吉普车加温泉线路起价 $55，历时6-8小时，吉普车日出之旅起价 $45。作为乌布全日游一部分的白天金塔马尼行程起价 $65 每车。通过WhatsApp预订，无需预付款。"
           }
         }
       ]
@@ -1308,6 +1308,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1711,7 +1773,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1719,7 +1781,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1816,7 +1878,7 @@ body {
           <span>谁不上来</span>
         </div>
         <h3>当天早上的吉普车版</h3>
-        <p>同样的警报，没有攀爬。的 <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">吉普车之旅</a> 驱车前往火山侧翼的观景台，然后穿过古老的熔岩原，6 至 8 小时 60 美元起。的 <a href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">温泉版</a> 75 美元起，在湖边的水中完成。</p>
+        <p>同样的警报，没有攀爬。的 <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">吉普车之旅</a> 驱车前往火山侧翼的观景台，然后穿过古老的熔岩原，6 至 8 小时 45 美元起。的 <a href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">温泉版</a> 55 美元起，在湖边的水中完成。</p>
       </div>
     </article>
 
@@ -1857,7 +1919,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>从乌布出发的接载时间及其背后的算术</h2>
                 <p>一切都是从太阳开始倒推计算的。巴厘岛的日出大约介于 <strong>06:00 和 06:30</strong> 全年，您希望有空闲时间而不是匆忙攀登。从那开始回溯：六点前到达山顶，四点左右到达步道起点，在此之前开车九十分钟——然后你到达 <strong>02:30 左右乌布接载</strong>。这不是我们选择听起来戏剧化的时候。这是唯一有效的。</p><p>以下是我们实际运行的行程中的情况，以及发布的窗口：</p>
-                <ul><li><strong><a href="/bali/zh/tours/mount-batur-sunrise-hike">巴杜尔山日出徒步旅行</a></strong> — 35 美元起，5-8 小时，黎明前接载 01:30-03:00。乌布位于该窗口的最后一端，因为您已经到了一半。</li><li><strong><a href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a></strong> — 75 美元起，6-8 小时，02:00-03:30 左右接载，最后在水中结束，而不是长途步行。</li><li><strong><a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a></strong> — 60 美元起，6-8 小时，夜间或黎明前接送，完全不涉及攀登。</li><li><strong>从坎古、水明漾、库塔或努沙杜瓦出发</strong> — 为乌布客人所做的事情增加一个小时，所以大约是 01:30，而不是 02:30。</li><li><strong>住在乌布以北</strong> 在德格拉朗 (Tegalalang) 或佩艳安 (Payangan)，您已经在上山的一半了，皮卡车通常会在十五分钟后滑行。</li><li><strong>改为白天</strong> — 的 <a href="/bali/zh/tours/ubud-highlights-tour">乌布梯田、寺庙和火山之旅</a> 起价 $65 每车，08:00出发，在充足的日光下抵达金塔马尼火山口边缘。</li></ul>
+                <ul><li><strong><a href="/bali/zh/tours/mount-batur-sunrise-hike">巴杜尔山日出徒步旅行</a></strong> — 35 美元起，5-8 小时，黎明前接载 01:30-03:00。乌布位于该窗口的最后一端，因为您已经到了一半。</li><li><strong><a href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a></strong> — 55 美元起，6-8 小时，02:00-03:30 左右接载，最后在水中结束，而不是长途步行。</li><li><strong><a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a></strong> — 45 美元起，6-8 小时，夜间或黎明前接送，完全不涉及攀登。</li><li><strong>从坎古、水明漾、库塔或努沙杜瓦出发</strong> — 为乌布客人所做的事情增加一个小时，所以大约是 01:30，而不是 02:30。</li><li><strong>住在乌布以北</strong> 在德格拉朗 (Tegalalang) 或佩艳安 (Payangan)，您已经在上山的一半了，皮卡车通常会在十五分钟后滑行。</li><li><strong>改为白天</strong> — 的 <a href="/bali/zh/tours/ubud-highlights-tour">乌布梯田、寺庙和火山之旅</a> 起价 $65 每车，08:00出发，在充足的日光下抵达金塔马尼火山口边缘。</li></ul>
 
                 <p>一旦我们知道您的别墅及其所在的车道，我们就会在前一天晚上通过 WhatsApp 确认确切的时间。乌布的一些地址无法开车到门口，最好在 21:00 安排，比 02:30 司机在黑暗中盘旋要好得多。也没有预付费用，所以如果您在晚餐时决定不能面对警报，请告诉我们，然后就结束了。</p>
               </section>
@@ -1907,7 +1969,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1915,7 +1977,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1953,7 +2015,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>从 乌布 前往巴杜尔火山需要多少钱？</h3>
-                    <p>我们的日出徒步起价 $35，往返全程5-8小时。吉普车加温泉线路起价 $75，历时6-8小时，吉普车日出之旅起价 $60。作为乌布全日游一部分的白天金塔马尼行程起价 $65 每车。通过WhatsApp预订，无需预付款。</p>
+                    <p>我们的日出徒步起价 $35，往返全程5-8小时。吉普车加温泉线路起价 $55，历时6-8小时，吉普车日出之旅起价 $45。作为乌布全日游一部分的白天金塔马尼行程起价 $65 每车。通过WhatsApp预订，无需预付款。</p>
                   </article>
 
               </div>
@@ -2013,7 +2075,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
@@ -2063,7 +2125,7 @@ body {
 
                   <a class="sb-journal-related-guide" href="/bali/zh/journal/mount-batur-sunrise-cost">
                     <span class="sb-journal-related-guide__label">巴杜尔山费用</span>
-                    <span class="sb-journal-related-guide__title">巴杜尔山日出费用：步行 35 美元，吉普车 60 美元</span>
+                    <span class="sb-journal-related-guide__title">巴杜尔山日出费用：步行 35 美元，吉普车 45 美元</span>
                   </a>
 
                   <a class="sb-journal-related-guide" href="/bali/zh/journal/what-time-to-leave-for-mount-batur-sunrise">

@@ -173,7 +173,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "日出吉普车之旅",
-            "description": "一辆四驱车开往日出观景点，因此没有人在黑暗中爬上火山沙。私人旅游 60 美元起，6-8 小时挨家挨户，提供夜间或黎明前接送服务。这里的全景与徒步旅行者所获得的一样：下面是巴图尔湖，东面隔水而过的阿贡火山，以及在您身边升起的活跃火山口。",
+            "description": "一辆四驱车开往日出观景点，因此没有人在黑暗中爬上火山沙。私人旅游 45 美元起，6-8 小时挨家挨户，提供夜间或黎明前接送服务。这里的全景与徒步旅行者所获得的一样：下面是巴图尔湖，东面隔水而过的阿贡火山，以及在您身边升起的活跃火山口。",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-tour.jpg"
           }
         },
@@ -183,7 +183,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "日出吉普车和温泉",
-            "description": "同样的四轮驱动日出，然后在巴杜尔湖岸边浸泡天然温泉——这是感受巴杜尔脚下的地面仍然温暖的最直接方式。 75 美元起，6-8 小时送货上门，接货时间为 02:00 至 03:30。它适合那些希望火山早晨在温暖的水中结束而不是长时间下降的旅行者。",
+            "description": "同样的四轮驱动日出，然后在巴杜尔湖岸边浸泡天然温泉——这是感受巴杜尔脚下的地面仍然温暖的最直接方式。 55 美元起，6-8 小时送货上门，接货时间为 02:00 至 03:30。它适合那些希望火山早晨在温暖的水中结束而不是长时间下降的旅行者。",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg"
           }
         },
@@ -1276,6 +1276,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1679,7 +1741,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">从无需攀爬的四轮驱动车上日出，然后穿越黑色熔岩原。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1687,7 +1749,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">同样的日出四驱车，无需攀爬，然后泡在金塔马尼温泉。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1724,7 +1786,7 @@ body {
           <span>无需攀爬即可欣赏活火山景观</span>
         </div>
         <h3>日出吉普车之旅</h3>
-        <p>一辆四驱车开往日出观景点，因此没有人在黑暗中爬上火山沙。私人旅游 60 美元起，6-8 小时挨家挨户，提供夜间或黎明前接送服务。这里的全景与徒步旅行者所获得的一样：下面是巴图尔湖，东面隔水而过的阿贡火山，以及在您身边升起的活跃火山口。</p>
+        <p>一辆四驱车开往日出观景点，因此没有人在黑暗中爬上火山沙。私人旅游 45 美元起，6-8 小时挨家挨户，提供夜间或黎明前接送服务。这里的全景与徒步旅行者所获得的一样：下面是巴图尔湖，东面隔水而过的阿贡火山，以及在您身边升起的活跃火山口。</p>
       </div>
     </article>
 
@@ -1739,7 +1801,7 @@ body {
           <span>感受火山的热量而不仅仅是看到它</span>
         </div>
         <h3>日出吉普车和温泉</h3>
-        <p>同样的四轮驱动日出，然后在巴杜尔湖岸边浸泡天然温泉——这是感受巴杜尔脚下的地面仍然温暖的最直接方式。 75 美元起，6-8 小时送货上门，接货时间为 02:00 至 03:30。它适合那些希望火山早晨在温暖的水中结束而不是长时间下降的旅行者。</p>
+        <p>同样的四轮驱动日出，然后在巴杜尔湖岸边浸泡天然温泉——这是感受巴杜尔脚下的地面仍然温暖的最直接方式。 55 美元起，6-8 小时送货上门，接货时间为 02:00 至 03:30。它适合那些希望火山早晨在温暖的水中结束而不是长时间下降的旅行者。</p>
       </div>
     </article>
 
@@ -1787,7 +1849,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>亲自观赏活火山的四种方式</h2>
-                <p>完整的体验是 <a href="/bali/zh/tours/mount-batur-sunrise-hike">私人日出徒步旅行</a> — 来自 <strong>$35</strong> 每人， <strong>5-8小时</strong> 门到门，中间有酒店接送 <strong>01:30 和 03:00</strong> 取决于您所在的地区（乌布大约是 02:30，岛上最晚时间）。你爬来爬去 <strong>700米</strong>，从火山口边缘观看日出，并在白天下山。在山顶，许多带导游的攀登活动都包括在火山蒸气中蒸鸡蛋的当地传统——这是一个可食用的小东西，提醒人们山上很温暖；在 WhatsApp 上确认您的约会内容。</p><p>如果在黑暗中攀爬火山沙没有吸引力，则可以乘坐四驱车到达日出观景台：吉普车之旅从 <strong>$60</strong>，还有温泉版吉普车，来自 <strong>$75</strong>，最后在湖岸泡天然温泉。两种格式之间的权衡在 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行</a>.</p><p>还有一个选项根本没有闹钟。金塔马尼边缘道路是公共的，白天的火山口景观不需要任何费用；一辆私家车，司机来自 <strong>$59</strong> 每辆车使它成为灵活的一天中的一个轻松停留。吉普车轨道崎岖不平，徒步旅行也很费力，所以如果您怀孕了或有健康问题，白天的环路是一条温和的路线——医生的建议比旅行社告诉您的任何建议都更有价值。</p>
+                <p>完整的体验是 <a href="/bali/zh/tours/mount-batur-sunrise-hike">私人日出徒步旅行</a> — 来自 <strong>$35</strong> 每人， <strong>5-8小时</strong> 门到门，中间有酒店接送 <strong>01:30 和 03:00</strong> 取决于您所在的地区（乌布大约是 02:30，岛上最晚时间）。你爬来爬去 <strong>700米</strong>，从火山口边缘观看日出，并在白天下山。在山顶，许多带导游的攀登活动都包括在火山蒸气中蒸鸡蛋的当地传统——这是一个可食用的小东西，提醒人们山上很温暖；在 WhatsApp 上确认您的约会内容。</p><p>如果在黑暗中攀爬火山沙没有吸引力，则可以乘坐四驱车到达日出观景台：吉普车之旅从 <strong>$45</strong>，还有温泉版吉普车，来自 <strong>$55</strong>，最后在湖岸泡天然温泉。两种格式之间的权衡在 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行</a>.</p><p>还有一个选项根本没有闹钟。金塔马尼边缘道路是公共的，白天的火山口景观不需要任何费用；一辆私家车，司机来自 <strong>$59</strong> 每辆车使它成为灵活的一天中的一个轻松停留。吉普车轨道崎岖不平，徒步旅行也很费力，所以如果您怀孕了或有健康问题，白天的环路是一条温和的路线——医生的建议比旅行社告诉您的任何建议都更有价值。</p>
 
 
 
@@ -1814,7 +1876,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">从无需攀爬的四轮驱动车上日出，然后穿越黑色熔岩原。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1822,7 +1884,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">同样的日出四驱车，无需攀爬，然后泡在金塔马尼温泉。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1891,7 +1953,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
@@ -1920,7 +1982,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>

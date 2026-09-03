@@ -224,7 +224,7 @@
           "name": "Darf man den Berg Batur hinauffahren?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja, aber nur im 4x4 auf der separaten Jeep-Strecke – nicht auf dem Wanderweg und nicht im Mietwagen oder auf dem Roller. Die Jeeps erklimmen die schwarze Lavaflanke zu einem Aussichtspunkt für den Sonnenaufgang, sodass Sie den gleichen Sonnenaufgang erleben können, ohne zu Fuß gehen zu müssen. Ab 60 $ oder ab 75 $ mit anschließendem Bad in einer heißen Quelle, jeweils 6–8 Stunden."
+            "text": "Ja, aber nur im 4x4 auf der separaten Jeep-Strecke – nicht auf dem Wanderweg und nicht im Mietwagen oder auf dem Roller. Die Jeeps erklimmen die schwarze Lavaflanke zu einem Aussichtspunkt für den Sonnenaufgang, sodass Sie den gleichen Sonnenaufgang erleben können, ohne zu Fuß gehen zu müssen. Ab 45 $ oder ab 55 $ mit anschließendem Bad in einer heißen Quelle, jeweils 6–8 Stunden."
           }
         },
         {
@@ -1276,6 +1276,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1634,7 +1696,7 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">Reiseführer</div>
             <h1>Kann man den Mount Batur ohne Führer besteigen? In der Praxis nein</h1>
-            <p class="sb-journal-lead">In der Praxis nein – Sie können den Mount Batur nicht ohne Führer besteigen. Es gibt kein indonesisches Gesetz, das Solowandern verbietet, aber der Weg aus den Dörfern am Seeufer wird von der örtlichen Führervereinigung kontrolliert, und Reisende, die um 03:00 Uhr ankommen und planen, alleine hinaufzuwandern, werden am Ausgangspunkt zurückgewiesen. Das ist die Situation vor Ort im Jahr 2026, was auch immer ältere Blogbeiträge vermuten lassen. Zwei Optionen funktionieren tatsächlich: die geführte Sonnenaufgangswanderung ab 35 $, die den erforderlichen Führer beinhaltet, oder der Jeep ab 60 $, der ohne Fußmarsch über eine separate Straße zu einem Aussichtspunkt bei Sonnenaufgang führt. In diesem Leitfaden erfahren Sie, wer den Weg kontrolliert, was passiert, wenn Sie ihn alleine versuchen und wann der Berg frei zum Wandern ist.</p>
+            <p class="sb-journal-lead">In der Praxis nein – Sie können den Mount Batur nicht ohne Führer besteigen. Es gibt kein indonesisches Gesetz, das Solowandern verbietet, aber der Weg aus den Dörfern am Seeufer wird von der örtlichen Führervereinigung kontrolliert, und Reisende, die um 03:00 Uhr ankommen und planen, alleine hinaufzuwandern, werden am Ausgangspunkt zurückgewiesen. Das ist die Situation vor Ort im Jahr 2026, was auch immer ältere Blogbeiträge vermuten lassen. Zwei Optionen funktionieren tatsächlich: die geführte Sonnenaufgangswanderung ab 35 $, die den erforderlichen Führer beinhaltet, oder der Jeep ab 45 $, der ohne Fußmarsch über eine separate Straße zu einem Aussichtspunkt bei Sonnenaufgang führt. In diesem Leitfaden erfahren Sie, wer den Weg kontrolliert, was passiert, wenn Sie ihn alleine versuchen und wann der Berg frei zum Wandern ist.</p>
             <p class="sb-journal-dates">Von Alex Moskvin, Gründer von SB Excursions · Veröffentlicht am 21. Mai 2026 · Aktualisiert am 7. August 2026</p>
             <p class="sb-journal-deck">Tour auf dieser Route: <a href="/bali/de/tours/mount-batur-sunrise-hike">Mount Batur: Wanderung zum Sonnenaufgang</a> — Ab 35 $, 5–8 Stunden.</p>
             <div class="sb-quick-answer">
@@ -1679,7 +1741,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sonnenaufgang aus einem 4x4 ohne Klettern, dann über das schwarze Lavafeld.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1757,7 +1819,7 @@ body {
                 <h2>Ihre Möglichkeiten auf dem Mount Batur auf einen Blick</h2>
                 <p>Der Ausgangspunkt wird vom örtlichen Wanderführerverband verwaltet und Alleinwanderer werden regelmäßig umgeleitet. Damit bleiben fünf realistische Möglichkeiten, den Vulkan zu sehen, und nur eine davon ist ein Problem:</p>
 
-                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">Option</th><th scope="col">Ist ein Führer erforderlich</th><th scope="col">Preis</th><th scope="col">Was Sie bekommen</th></tr></thead><tbody><tr><th scope="row">Geführte Sonnenaufgangswanderung</th><td>Im Preis inbegriffen</td><td>Ab 35 $, 5–8 Stunden</td><td>Der Gipfel vor dem ersten Licht, 1,5–2 Stunden Aufstieg, Führer, der die sicheren Linien auf dem Geröll kennt</td></tr><tr><th scope="row">Sunrise Jeep zum Aussichtspunkt</th><td>Überhaupt kein Klettern – ein Fahrer, kein Führer</td><td>Ab 60 $, 6–8 Stunden</td><td>Der gleiche Caldera-Sonnenaufgang aus der Sicht eines Allradfahrzeugs, kein Geröll</td></tr><tr><th scope="row">Jeep mit heißer Quelle</th><td>Kein Klettern</td><td>Ab 75 $, 6–8 Stunden</td><td>Der Jeep-Sonnenaufgang und ein Bad am Batursee</td></tr><tr><th scope="row">Den Weg alleine aufbrechen</th><td>Dies ist die Option, die fehlschlägt</td><td>—</td><td>Im Dunkeln gabelt sich der Weg immer wieder und der Verein wendet Alleinwanderer ab</td></tr></tbody></table></div>
+                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">Option</th><th scope="col">Ist ein Führer erforderlich</th><th scope="col">Preis</th><th scope="col">Was Sie bekommen</th></tr></thead><tbody><tr><th scope="row">Geführte Sonnenaufgangswanderung</th><td>Im Preis inbegriffen</td><td>Ab 35 $, 5–8 Stunden</td><td>Der Gipfel vor dem ersten Licht, 1,5–2 Stunden Aufstieg, Führer, der die sicheren Linien auf dem Geröll kennt</td></tr><tr><th scope="row">Sunrise Jeep zum Aussichtspunkt</th><td>Überhaupt kein Klettern – ein Fahrer, kein Führer</td><td>Ab 45 $, 6–8 Stunden</td><td>Der gleiche Caldera-Sonnenaufgang aus der Sicht eines Allradfahrzeugs, kein Geröll</td></tr><tr><th scope="row">Jeep mit heißer Quelle</th><td>Kein Klettern</td><td>From $55, 6-8 hours</td><td>Der Jeep-Sonnenaufgang und ein Bad am Batursee</td></tr><tr><th scope="row">Den Weg alleine aufbrechen</th><td>Dies ist die Option, die fehlschlägt</td><td>—</td><td>Im Dunkeln gabelt sich der Weg immer wieder und der Verein wendet Alleinwanderer ab</td></tr></tbody></table></div>
 
               </section>
 
@@ -1779,7 +1841,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Können Sie stattdessen den Berg Batur hinauffahren?</h2>
-                <p>Ja, und das ist der Teil, den die meisten Menschen vermissen. Die Jeeps benutzen den Wanderweg überhaupt nicht – sie erklimmen einen separaten Weg die schwarze Lavaflanke des Vulkans hinauf, weshalb das Hinauffahren das Leitargument völlig umgeht und eine völlig legale Möglichkeit ist, im Morgengrauen auf dem Berg zu sein. Die <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Jeep-Tour bei Sonnenaufgang auf dem Mount Batur</a> läuft <strong>ab 60 $</strong> vorbei <strong>6-8 Stunden</strong> mit einer Abholung in der Nacht oder vor Tagesanbruch, und das <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Jeep mit heißer Quelle</a> Version – <strong>ab 75 $</strong>, Abholung <strong>02:00-03:30</strong> – lässt den Morgen mit einem Bad am See ausklingen.</p><p>Zwei ehrliche Vorbehalte. Der Jeep setzt Sie an einem Aussichtspunkt für den Sonnenaufgang ab, nicht auf dem Gipfel, den Sie zu Fuß erreichen würden. Wenn der Aussichtspunkt am Morgen also auf einem Vulkan steht, ist dies nicht der Fall. Und dies ist keine Straße für Ihren Mietroller oder ein normales Auto – es ist eine holprige 4x4-Strecke, die von Einheimischen befahren wird, die sie jeden Morgen befahren. Wenn Sie die beiden Formate richtig und nicht nur nach dem Preis abwägen, ist unser <a href="/bali/de/journal/mount-batur-sunrise-jeep-vs-hike">Jeep vs. Hike-Vergleich</a> geht es Station für Station durch.</p>
+                <p>Ja, und das ist der Teil, den die meisten Menschen vermissen. Die Jeeps benutzen den Wanderweg überhaupt nicht – sie erklimmen einen separaten Weg die schwarze Lavaflanke des Vulkans hinauf, weshalb das Hinauffahren das Leitargument völlig umgeht und eine völlig legale Möglichkeit ist, im Morgengrauen auf dem Berg zu sein. Die <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Jeep-Tour bei Sonnenaufgang auf dem Mount Batur</a> läuft <strong>ab 45 $</strong> vorbei <strong>6-8 Stunden</strong> mit einer Abholung in der Nacht oder vor Tagesanbruch, und das <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Jeep mit heißer Quelle</a> Version – <strong>ab 55 $</strong>, Abholung <strong>02:00-03:30</strong> – lässt den Morgen mit einem Bad am See ausklingen.</p><p>Zwei ehrliche Vorbehalte. Der Jeep setzt Sie an einem Aussichtspunkt für den Sonnenaufgang ab, nicht auf dem Gipfel, den Sie zu Fuß erreichen würden. Wenn der Aussichtspunkt am Morgen also auf einem Vulkan steht, ist dies nicht der Fall. Und dies ist keine Straße für Ihren Mietroller oder ein normales Auto – es ist eine holprige 4x4-Strecke, die von Einheimischen befahren wird, die sie jeden Morgen befahren. Wenn Sie die beiden Formate richtig und nicht nur nach dem Preis abwägen, ist unser <a href="/bali/de/journal/mount-batur-sunrise-jeep-vs-hike">Jeep vs. Hike-Vergleich</a> geht es Station für Station durch.</p>
 
 
 
@@ -1796,7 +1858,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>Welche Option zu Ihrem Morgen passt</h2>
                 <p>Bei der Entscheidung geht es selten um Prinzipien. Es kommt darauf an, wie viel Schlaf Sie bereit sind zu verlieren, was Ihre Knie aus einem lockeren Abstieg machen und ob es Ihnen wichtig ist, auf dem eigentlichen Gipfel zu stehen. So sortiert: Unabhängig davon, bei welcher Option Sie landen, stellt der Antrieb den Alarm ein, bevor der Trail dies tut: <a href="/bali/de/journal/canggu-to-mount-batur">Canggu zum Berg Batur</a> Beginn ist um 01:30 Uhr.</p>
-                <ul><li><strong>Sie wollten alleine gehen, um Geld zu sparen</strong>: Die geführte Wanderung ist <strong>ab 35 $</strong> inklusive Abholung, die ein Soloversuch plus Transport selten übertrifft, wenn das Gespräch am Anfang gegen Sie ausgeht.</li><li><strong>Du wolltest Einsamkeit</strong>: Sie werden es auf dem Gipfelweg weder im Juli noch im August finden. Fahren Sie in den Nebenmonaten oder fahren Sie mit dem Jeep zu einem ruhigeren Aussichtspunkt.</li><li><strong>Sie haben schlechte Knie oder kleine Kinder</strong>: der Jeep, <strong>ab 60 $</strong>, oder <strong>ab 75 $</strong> mit der heißen Quelle. Das ist eine Formatwahl, kein Kompromiss.</li><li><strong>Sie wohnen in Ubud</strong>: Sie haben die kürzeste Nachtfahrt auf der Insel – <a href="/bali/de/journal/mount-batur-sunrise-from-ubud">Batur-Sonnenaufgang von Ubud</a> hat die Zeitangaben.</li><li><strong>Sie übernachten in Seminyak, Canggu oder Uluwatu</strong>: Die Fahrt ist der tatsächliche Preis für heute Morgen, nicht der Reiseführer – siehe <a href="/bali/de/journal/mount-batur-sunrise-from-south-bali">Batur-Sonnenaufgang aus Süd-Bali</a>.</li><li><strong>Du willst einen größeren, härteren Berg</strong>: Batur ist der Einfache, und <a href="/bali/de/journal/mount-batur-vs-mount-agung">Batur gegen Agung</a> vergleicht sie, bevor Sie sich dazu verpflichten.</li></ul>
+                <ul><li><strong>Sie wollten alleine gehen, um Geld zu sparen</strong>: Die geführte Wanderung ist <strong>ab 35 $</strong> inklusive Abholung, die ein Soloversuch plus Transport selten übertrifft, wenn das Gespräch am Anfang gegen Sie ausgeht.</li><li><strong>Du wolltest Einsamkeit</strong>: Sie werden es auf dem Gipfelweg weder im Juli noch im August finden. Fahren Sie in den Nebenmonaten oder fahren Sie mit dem Jeep zu einem ruhigeren Aussichtspunkt.</li><li><strong>Sie haben schlechte Knie oder kleine Kinder</strong>: der Jeep, <strong>ab 45 $</strong>, oder <strong>ab 55 $</strong> mit der heißen Quelle. Das ist eine Formatwahl, kein Kompromiss.</li><li><strong>Sie wohnen in Ubud</strong>: Sie haben die kürzeste Nachtfahrt auf der Insel – <a href="/bali/de/journal/mount-batur-sunrise-from-ubud">Batur-Sonnenaufgang von Ubud</a> hat die Zeitangaben.</li><li><strong>Sie übernachten in Seminyak, Canggu oder Uluwatu</strong>: Die Fahrt ist der tatsächliche Preis für heute Morgen, nicht der Reiseführer – siehe <a href="/bali/de/journal/mount-batur-sunrise-from-south-bali">Batur-Sonnenaufgang aus Süd-Bali</a>.</li><li><strong>Du willst einen größeren, härteren Berg</strong>: Batur ist der Einfache, und <a href="/bali/de/journal/mount-batur-vs-mount-agung">Batur gegen Agung</a> vergleicht sie, bevor Sie sich dazu verpflichten.</li></ul>
 
                 <p>Wie auch immer die Buchung erfolgt, der Buchungsteil ist identisch: eine WhatsApp-Nachricht, keine Vorauszahlung und eine am Vortag bestätigte Abholzeit. Der einzige Plan, von dem wir Ihnen abraten würden, ist, um 03:00 Uhr zum Ausgangspunkt der Wanderung zu fahren, um es selbst herauszufinden. Dieses Experiment wurde viele Male durchgeführt und endete auf die gleiche Weise – mit einem Führer, eine Stunde später und der Sonnenaufgang begann bereits.</p>
               </section>
@@ -1822,7 +1884,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sonnenaufgang aus einem 4x4 ohne Klettern, dann über das schwarze Lavafeld.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1845,7 +1907,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Darf man den Berg Batur hinauffahren?</h3>
-                    <p>Ja, aber nur im 4x4 auf der separaten Jeep-Strecke – nicht auf dem Wanderweg und nicht im Mietwagen oder auf dem Roller. Die Jeeps erklimmen die schwarze Lavaflanke zu einem Aussichtspunkt für den Sonnenaufgang, sodass Sie den gleichen Sonnenaufgang erleben können, ohne zu Fuß gehen zu müssen. Ab 60 $ oder ab 75 $ mit anschließendem Bad in einer heißen Quelle, jeweils 6–8 Stunden.</p>
+                    <p>Ja, aber nur im 4x4 auf der separaten Jeep-Strecke – nicht auf dem Wanderweg und nicht im Mietwagen oder auf dem Roller. Die Jeeps erklimmen die schwarze Lavaflanke zu einem Aussichtspunkt für den Sonnenaufgang, sodass Sie den gleichen Sonnenaufgang erleben können, ohne zu Fuß gehen zu müssen. Ab 45 $ oder ab 55 $ mit anschließendem Bad in einer heißen Quelle, jeweils 6–8 Stunden.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1920,7 +1982,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>

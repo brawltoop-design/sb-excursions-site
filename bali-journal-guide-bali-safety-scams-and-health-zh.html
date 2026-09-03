@@ -246,7 +246,7 @@
           "name": "去巴厘岛需要旅行保险吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "是的，并且有至少 250,000 美元的医疗和疏散保险。医院需要预先付款，紧急就诊费用为 200-500 美元，飞往新加坡的空中救护车费用为 55,000-100,000 美元。如果您打算使用踏板车，请检查政策是否明确涵盖摩托车骑行。"
+            "text": "是的，并且有至少 250,250 美元的医疗和疏散保险。医院需要预先付款，紧急就诊费用为 200-200 美元，飞往新加坡的空中救护车费用为 55,000-100,55 美元。如果您打算使用踏板车，请检查政策是否明确涵盖摩托车骑行。"
           }
         },
         {
@@ -1298,6 +1298,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1823,7 +1885,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>🛵 滑板车：人们低估的风险</h2>
-                <p>这才是游客真正受伤的地方。从法律上讲你需要一个 <strong>摩托车国际驾驶许可证（A）加注</strong>，并有国内摩托车驾照 — 仅驾驶汽车的 IDP 无效。自 2025 年以来，路边驾照和头盔检查有所增加。</p><p>保险后果是昂贵的部分。大多数政策 <strong>摩托车索赔无效</strong> 如果您没有正确的驾照、未戴头盔或体内含有酒精。遣返受伤乘客通常要花费数万美元，这就是为什么为受伤旅行者筹集资金的呼吁如此普遍。</p><p>巴厘岛特有的危险值得了解：没有灯光的坑洼和开放的路边排水沟、海滩附近角落的沙子、在倾盆大雨中变得光滑的油漆道路标记、路上的狗以及不可预测的通行权。夜间骑行和酒后骑行在死亡人数中所占比例过高。</p><p>如果其中任何一个让您犹豫不决，请聘请 <a href="/bali/zh/journal/how-to-get-around-bali-transport-guide">私人司机</a> 一整天的费用约为 40-55 美元，包括燃料——相对于风险来说便宜，而且它完全消除了你假期中的导航和停车。</p>
+                <p>这才是游客真正受伤的地方。从法律上讲你需要一个 <strong>摩托车国际驾驶许可证（A）加注</strong>，并有国内摩托车驾照 — 仅驾驶汽车的 IDP 无效。自 2025 年以来，路边驾照和头盔检查有所增加。</p><p>保险后果是昂贵的部分。大多数政策 <strong>摩托车索赔无效</strong> 如果您没有正确的驾照、未戴头盔或体内含有酒精。遣返受伤乘客通常要花费数万美元，这就是为什么为受伤旅行者筹集资金的呼吁如此普遍。</p><p>巴厘岛特有的危险值得了解：没有灯光的坑洼和开放的路边排水沟、海滩附近角落的沙子、在倾盆大雨中变得光滑的油漆道路标记、路上的狗以及不可预测的通行权。夜间骑行和酒后骑行在死亡人数中所占比例过高。</p><p>如果其中任何一个让您犹豫不决，请聘请 <a href="/bali/zh/journal/how-to-get-around-bali-transport-guide">私人司机</a> 一整天的费用约为 40-40 美元，包括燃料——相对于风险来说便宜，而且它完全消除了你假期中的导航和停车。</p>
 
 
 
@@ -1953,7 +2015,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>去巴厘岛需要旅行保险吗？</h3>
-                    <p>是的，并且有至少 250,000 美元的医疗和疏散保险。医院需要预先付款，紧急就诊费用为 200-500 美元，飞往新加坡的空中救护车费用为 55,000-100,000 美元。如果您打算使用踏板车，请检查政策是否明确涵盖摩托车骑行。</p>
+                    <p>是的，并且有至少 250,250 美元的医疗和疏散保险。医院需要预先付款，紧急就诊费用为 200-200 美元，飞往新加坡的空中救护车费用为 55,000-100,55 美元。如果您打算使用踏板车，请检查政策是否明确涵盖摩托车骑行。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">

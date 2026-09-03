@@ -215,7 +215,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "回程开车，或者泡温泉",
-            "description": "回程是白天正常交通，所以比前一天晚上空旷的道路要慢一些——全程门到门需要5-8小时。如果您不想直接返回酒店，可以选择吉普车+温泉模式，价格为 75 美元，最后在湖边的天然温泉中浸泡，结束早晨的生活。",
+            "description": "回程是白天正常交通，所以比前一天晚上空旷的道路要慢一些——全程门到门需要5-8小时。如果您不想直接返回酒店，可以选择吉普车+温泉模式，价格为 55 美元，最后在湖边的天然温泉中浸泡，结束早晨的生活。",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg"
           }
         }
@@ -1298,6 +1298,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1701,7 +1763,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">从无需攀爬的四轮驱动车上日出，然后穿越黑色熔岩原。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1709,7 +1771,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">同样的日出四驱车，无需攀爬，然后泡在金塔马尼温泉。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1806,7 +1868,7 @@ body {
           <span>在温水中结束早晨</span>
         </div>
         <h3>回程开车，或者泡温泉</h3>
-        <p>回程是白天正常交通，所以比前一天晚上空旷的道路要慢一些——全程门到门需要5-8小时。如果您不想直接返回酒店，可以选择吉普车+温泉模式，价格为 75 美元，最后在湖边的天然温泉中浸泡，结束早晨的生活。</p>
+        <p>回程是白天正常交通，所以比前一天晚上空旷的道路要慢一些——全程门到门需要5-8小时。如果您不想直接返回酒店，可以选择吉普车+温泉模式，价格为 55 美元，最后在湖边的天然温泉中浸泡，结束早晨的生活。</p>
       </div>
     </article>
 
@@ -1831,7 +1893,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>阿贡背后的日出和白天的下降</h2>
-                <p>火山口边缘面向东，穿过巴图尔湖，直指阿贡山，太阳从阿贡肩膀后面升起 <strong>06:00 和 06:30</strong>。在晴朗的早晨，龙目岛的林贾尼山矗立在更东边的地平线上——这是另一个岛上的一座火山，从这个岛上的山顶就可以看到。光线不会一下子全部到达：天空是灰色的，橙色的带子在阿贡的剪影后面形成，火山口从你下面的黑暗中自行组装起来——首先是湖泊，然后是海岸线的村庄，然后是锥体底部的黑色火山岩。</p><p>下降是没有人拍照但每个人都记得的部分。大约需要 <strong>1.5小时</strong> 在白天，上层松散的黑沙像滚珠轴承一样在脚下滚动。较短的台阶和具有真实胎面的鞋子将其从令人惊慌变为真正的乐趣 - 这是您第一次看到您所攀爬的东西：整个火山口，湖泊，以及通往小道起点的之字形小道。</p><p>回到车上，回程比去程慢，因为白天的交通已经苏醒了——这就是为什么 <a href="/bali/zh/tours/mount-batur-sunrise-hike">巴杜尔山日出徒步旅行</a> 被引用于 <strong>5-8小时</strong> 挨家挨户而不是固定的时钟时间。如果您宁愿在温水中结束早晨而不是在汽车、吉普车和温泉版本中， <strong>75 美元起</strong>，最后在湖岸的天然温泉中浸泡。</p>
+                <p>火山口边缘面向东，穿过巴图尔湖，直指阿贡山，太阳从阿贡肩膀后面升起 <strong>06:00 和 06:30</strong>。在晴朗的早晨，龙目岛的林贾尼山矗立在更东边的地平线上——这是另一个岛上的一座火山，从这个岛上的山顶就可以看到。光线不会一下子全部到达：天空是灰色的，橙色的带子在阿贡的剪影后面形成，火山口从你下面的黑暗中自行组装起来——首先是湖泊，然后是海岸线的村庄，然后是锥体底部的黑色火山岩。</p><p>下降是没有人拍照但每个人都记得的部分。大约需要 <strong>1.5小时</strong> 在白天，上层松散的黑沙像滚珠轴承一样在脚下滚动。较短的台阶和具有真实胎面的鞋子将其从令人惊慌变为真正的乐趣 - 这是您第一次看到您所攀爬的东西：整个火山口，湖泊，以及通往小道起点的之字形小道。</p><p>回到车上，回程比去程慢，因为白天的交通已经苏醒了——这就是为什么 <a href="/bali/zh/tours/mount-batur-sunrise-hike">巴杜尔山日出徒步旅行</a> 被引用于 <strong>5-8小时</strong> 挨家挨户而不是固定的时钟时间。如果您宁愿在温水中结束早晨而不是在汽车、吉普车和温泉版本中， <strong>55 美元起</strong>，最后在湖岸的天然温泉中浸泡。</p>
 
 
 
@@ -1839,7 +1901,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>多云的早晨仍然给你带来什么</h2>
-                <p>在雨季，大约 <strong>十一月至三月</strong>云是交易的一部分：上面的小路变得很滑，云可能会在错误的时刻吞噬视野。大多数早上导游仍然运行，只有在真正恶劣的天气下才会取消，所以前一天晚上手机上的灰色天气预报本身并不是退出的理由——山上的天气是由山决定的，而不是在应用程序中决定的。</p><p>阴天的日出并不空虚。头灯的攀登仍然会发生，黑暗仍然会变成灰色，然后是银色，然后是明亮，边缘的热饮仍然比海平面上的任何咖啡味道都要好，而日光下的火山口仍然存在。这个高度的云也会移动——它经常前一分钟遮住了阿贡，下一分钟就在湖面上打开了一个宽阔的缝隙，通过这些缝隙拍摄的照片是我们传回的最好的照片之一。</p><p>两个实用的对冲。首先，如果你的日期允许，保留一个备用的早晨——这一决定就消除了计划中的大部分天气风险。其次，白天从金塔马尼环路观看同一火山口的景色是公开的，而且无需付费，因此即使是完全阴天的山顶也可以在当天下午由汽车和司机修复。如果您担心的是雨季小径本身， <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行的比较</a> 涵盖了 4x4 越野车攀爬的形式， <strong>60 美元起</strong>.</p>
+                <p>在雨季，大约 <strong>十一月至三月</strong>云是交易的一部分：上面的小路变得很滑，云可能会在错误的时刻吞噬视野。大多数早上导游仍然运行，只有在真正恶劣的天气下才会取消，所以前一天晚上手机上的灰色天气预报本身并不是退出的理由——山上的天气是由山决定的，而不是在应用程序中决定的。</p><p>阴天的日出并不空虚。头灯的攀登仍然会发生，黑暗仍然会变成灰色，然后是银色，然后是明亮，边缘的热饮仍然比海平面上的任何咖啡味道都要好，而日光下的火山口仍然存在。这个高度的云也会移动——它经常前一分钟遮住了阿贡，下一分钟就在湖面上打开了一个宽阔的缝隙，通过这些缝隙拍摄的照片是我们传回的最好的照片之一。</p><p>两个实用的对冲。首先，如果你的日期允许，保留一个备用的早晨——这一决定就消除了计划中的大部分天气风险。其次，白天从金塔马尼环路观看同一火山口的景色是公开的，而且无需付费，因此即使是完全阴天的山顶也可以在当天下午由汽车和司机修复。如果您担心的是雨季小径本身， <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行的比较</a> 涵盖了 4x4 越野车攀爬的形式， <strong>45 美元起</strong>.</p>
 
 
 
@@ -1866,7 +1928,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">从无需攀爬的四轮驱动车上日出，然后穿越黑色熔岩原。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1874,7 +1936,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">同样的日出四驱车，无需攀爬，然后泡在金塔马尼温泉。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1943,7 +2005,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
@@ -1972,7 +2034,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>

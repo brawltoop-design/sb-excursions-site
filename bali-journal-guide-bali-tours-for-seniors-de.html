@@ -185,7 +185,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "Mount Batur: Jeep zum Sonnenaufgang",
-            "description": "Der Jeep fährt bis zum Aussichtspunkt für den Sonnenaufgang, daher entfällt der berühmte schwierige Teil einfach. Ab 60 $ für 6–8 Stunden mit Abholung in der Nacht oder vor Sonnenaufgang. Die tatsächlichen Kosten sind die Startzeit und die Kälte am Rand, nicht Ihre Beine. Die meisten Gäste dösen während der Auffahrt.",
+            "description": "Der Jeep fährt bis zum Aussichtspunkt für den Sonnenaufgang, daher entfällt der berühmte schwierige Teil einfach. Ab 45 $ für 6–8 Stunden mit Abholung in der Nacht oder vor Sonnenaufgang. Die tatsächlichen Kosten sind die Startzeit und die Kälte am Rand, nicht Ihre Beine. Die meisten Gäste dösen während der Auffahrt.",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-tour.jpg"
           }
         },
@@ -195,7 +195,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "Mount Batur Sonnenaufgangs-Jeep und heiße Quelle",
-            "description": "Der gleiche Jeep und das gleiche Fehlen von Steigungen, ab 75 $ über 6–8 Stunden mit Abholung zwischen 02:00 und 03:30 Uhr, Abschluss in einer heißen Quelle. Warmes Wasser nach einem kalten Morgen tut wirklich gut gegen steife Knie. Die einzigen wirklichen Schritte des Tages sind die in den Pool.",
+            "description": "Der gleiche Jeep und das gleiche Fehlen von Steigungen, ab 55 $ über 6–8 Stunden mit Abholung zwischen 02:00 und 03:30 Uhr, Abschluss in einer heißen Quelle. Warmes Wasser nach einem kalten Morgen tut wirklich gut gegen steife Knie. Die einzigen wirklichen Schritte des Tages sind die in den Pool.",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg"
           }
         },
@@ -258,7 +258,7 @@
           "name": "Was sind die einfachsten Tagesausflüge nach Bali?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Die Tanah Lot- und Bedugul-Route ab 59 $ ist die sanfteste Tagestour – Tempelgärten am Seeufer und flache Aussichtsterrassen über 9–11 Stunden. Der Mount Batur Sunrise Jeep ab 60 $ erfordert überhaupt kein Klettern, da das Fahrzeug den Aussichtspunkt erreicht. Eine Bootsfahrt bei Sonnenuntergang ab Benoa ab 150 $ sorgt dafür, dass Sie den ganzen Abend sitzen bleiben. Alle drei beginnen mit der Abholung vom Hotel."
+            "text": "Die Tanah Lot- und Bedugul-Route ab 59 $ ist die sanfteste Tagestour – Tempelgärten am Seeufer und flache Aussichtsterrassen über 9–11 Stunden. Der Mount Batur Sunrise Jeep ab 45 $ erfordert überhaupt kein Klettern, da das Fahrzeug den Aussichtspunkt erreicht. Eine Bootsfahrt bei Sonnenuntergang ab Benoa ab 150 $ sorgt dafür, dass Sie den ganzen Abend sitzen bleiben. Alle drei beginnen mit der Abholung vom Hotel."
           }
         },
         {
@@ -274,7 +274,7 @@
           "name": "Können Senioren den Sonnenaufgang am Mount Batur erleben?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja, mit dem Jeep. Das Fahrzeug fährt bis zum Aussichtspunkt für den Sonnenaufgang, sodass kein Wandern erforderlich ist – die Mount Batur Sunrise Jeep Tour kostet ab 60 $ über 6–8 Stunden mit einer Abholung in der Nacht oder vor Sonnenaufgang. Die Fußwanderung ist etwas anderes und wir empfehlen sie nicht bei Knie-, Hüft- oder Atemproblemen. Bringen Sie in jedem Fall eine warme Schicht mit; Der Rand ist vor Tagesanbruch kalt."
+            "text": "Ja, mit dem Jeep. Das Fahrzeug fährt bis zum Aussichtspunkt für den Sonnenaufgang, sodass kein Wandern erforderlich ist – die Mount Batur Sunrise Jeep Tour kostet ab 45 $ über 6–8 Stunden mit einer Abholung in der Nacht oder vor Sonnenaufgang. Die Fußwanderung ist etwas anderes und wir empfehlen sie nicht bei Knie-, Hüft- oder Atemproblemen. Bringen Sie in jedem Fall eine warme Schicht mit; Der Rand ist vor Tagesanbruch kalt."
           }
         },
         {
@@ -1318,6 +1318,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1729,7 +1791,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sonnenaufgang aus einem 4x4 ohne Klettern, dann über das schwarze Lavafeld.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1781,7 +1843,7 @@ body {
           <span>Vulkansonnenaufgang ohne Aufstieg</span>
         </div>
         <h3>Mount Batur: Jeep zum Sonnenaufgang</h3>
-        <p>Der Jeep fährt bis zum Aussichtspunkt für den Sonnenaufgang, daher entfällt der berühmte schwierige Teil einfach. Ab 60 $ für 6–8 Stunden mit Abholung in der Nacht oder vor Sonnenaufgang. Die tatsächlichen Kosten sind die Startzeit und die Kälte am Rand, nicht Ihre Beine. Die meisten Gäste dösen während der Auffahrt.</p>
+        <p>Der Jeep fährt bis zum Aussichtspunkt für den Sonnenaufgang, daher entfällt der berühmte schwierige Teil einfach. Ab 45 $ für 6–8 Stunden mit Abholung in der Nacht oder vor Sonnenaufgang. Die tatsächlichen Kosten sind die Startzeit und die Kälte am Rand, nicht Ihre Beine. Die meisten Gäste dösen während der Auffahrt.</p>
       </div>
     </article>
 
@@ -1796,7 +1858,7 @@ body {
           <span>Sunrise plus warmes Wasser für steife Gelenke</span>
         </div>
         <h3>Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</h3>
-        <p>Der gleiche Jeep und das gleiche Fehlen von Steigungen, ab 75 $ über 6–8 Stunden mit Abholung zwischen 02:00 und 03:30 Uhr, Abschluss in einer heißen Quelle. Warmes Wasser nach einem kalten Morgen tut wirklich gut gegen steife Knie. Die einzigen wirklichen Schritte des Tages sind die in den Pool.</p>
+        <p>Der gleiche Jeep und das gleiche Fehlen von Steigungen, ab 55 $ über 6–8 Stunden mit Abholung zwischen 02:00 und 03:30 Uhr, Abschluss in einer heißen Quelle. Warmes Wasser nach einem kalten Morgen tut wirklich gut gegen steife Knie. Die einzigen wirklichen Schritte des Tages sind die in den Pool.</p>
       </div>
     </article>
 
@@ -1866,14 +1928,14 @@ body {
               <section class="sb-journal-article-section">
                 <h2>Wie viel Fußmarsch jeder Bali-Tagesausflug wirklich braucht</h2>
                 <p>Die ehrliche Art, Bali-Touren für ältere Reisende zu sortieren, ist nicht nach Landschaft, sondern nach Treppen. Fast jede wichtige Sehenswürdigkeit ist von einem Parkplatz aus zu erreichen, und der Unterschied zwischen einem einfachen und einem schmerzhaften Tag ist die letzte Strecke zwischen dem Auto und der Aussicht. Bali-Sightseeing findet in kurzen Etappen statt: Parken Sie, gehen Sie fünf bis zehn Minuten auf ebenem Boden oder einem flachen Hang, schauen Sie, gehen Sie zurück und sitzen Sie dann die nächste Stunde in der Klimaanlage. <strong>Dieser Rhythmus passt besser zu älteren Beinen als ein europäischer Stadttag</strong>, weil man nie drei Stunden am Stück auf den Beinen ist.</p><p>Die Ausnahmen sind spezifisch und es lohnt sich, sie zu benennen, bevor Sie etwas buchen. <strong>Die Abstiege zum Kelingking Beach und Diamond Beach auf Nusa Penida sind für Personen mit Knieproblemen nicht geeignet</strong> – Dabei handelt es sich um lange, steile Treppenwege, die in eine Felswand gehauen sind, und der Aufstieg zurück ist schwieriger als der Abstieg, bei voller Sonne und ohne vernünftige Möglichkeit, auf halbem Weg anzuhalten. Alles andere auf dieser Liste ist entweder flach oder eine überschaubare Reihe von Stufen an einem Tempeltor.</p>
-                <ul><li><strong>Überhaupt kein Gehen</strong>: die Sonnenuntergangskreuzfahrt ab Benoa, ab 150 $ – den ganzen Abend sitzen, sobald Sie an Bord sind</li><li><strong>Fast keine</strong>: Mount Batur mit dem Jeep ab 60 $ – das Fahrzeug erreicht den Aussichtspunkt, Sie steigen aus und schauen</li><li><strong>Flach, mit Stufen am Tor</strong>: Tanah Lot, der Bedugul-Seetempel, die Tempel der Heritage Route</li><li><strong>Kurze Pisten, die Länge bleibt Ihnen überlassen</strong>: Tegalalang-Reisterrassen und die Aussichtspunkte Kintamani</li><li><strong>Echte Treppen, völlig optional</strong>: die Plattformen auf den Klippen von Nusa Penida – die Aussicht ist von oben, der Abstieg ist nicht obligatorisch</li><li><strong>Nicht geeignet bei schlechten Knien</strong>: die Abfahrten Kelingking und Diamond Beach sowie den Mount Batur zu Fuß</li></ul>
+                <ul><li><strong>Überhaupt kein Gehen</strong>: die Sonnenuntergangskreuzfahrt ab Benoa, ab 150 $ – den ganzen Abend sitzen, sobald Sie an Bord sind</li><li><strong>Fast keine</strong>: Mount Batur mit dem Jeep ab 45 $ – das Fahrzeug erreicht den Aussichtspunkt, Sie steigen aus und schauen</li><li><strong>Flach, mit Stufen am Tor</strong>: Tanah Lot, der Bedugul-Seetempel, die Tempel der Heritage Route</li><li><strong>Kurze Pisten, die Länge bleibt Ihnen überlassen</strong>: Tegalalang-Reisterrassen und die Aussichtspunkte Kintamani</li><li><strong>Echte Treppen, völlig optional</strong>: die Plattformen auf den Klippen von Nusa Penida – die Aussicht ist von oben, der Abstieg ist nicht obligatorisch</li><li><strong>Nicht geeignet bei schlechten Knien</strong>: die Abfahrten Kelingking und Diamond Beach sowie den Mount Batur zu Fuß</li></ul>
 
                 <p>Wenn Sie die beiden Batur-Formate vor Ihrer Entscheidung gründlich vergleichen möchten, stellen wir sie nebeneinander <a href="/bali/de/journal/mount-batur-sunrise-jeep-vs-hike">Jeep vs. Wanderung auf dem Berg Batur</a>. Für ältere Reisende ist die Antwort nicht ganz so nah.</p>
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>Mount Batur ohne Wanderung</h2>
-                <p>Der Vulkan-Sonnenaufgang ist der Ausflug, von dem die meisten Leute annehmen, dass er mit 70 vom Tisch ist, aber das ist nicht der Fall. <strong>Der Jeep fährt zum Aussichtspunkt zum Sonnenaufgang</strong> — keine Gehstrecke, keine Stirnlampe, kein zweistündiger Aufstieg im Dunkeln. Man wird zu einem Bergrücken oberhalb des Kraters gefahren, man steigt aus, sieht zu, wie die Sonne aufgeht, und steigt wieder ein <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a> läuft <strong>ab 60 $</strong> Mehr als 6–8 Stunden bei Abholung in der Nacht oder vor Tagesanbruch, und die Auffahrt ist der Teil, den die meisten Gäste verschlafen.</p><p>Zwei ehrliche Vorbehalte. Die eigentliche Schwierigkeit liegt in der Startzeit: Dies ist ein 6-8-Stunden-Tag, der mitten in der Nacht beginnt, und die Version, die im warmen Wasser endet, <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Jeep plus heiße Quelle ab 75 $</a>, holt zwischen 02:00 und 03:30 Uhr ab. Planen Sie für den folgenden Nachmittag nichts. Und der Kraterrand vor der Morgendämmerung ist für Bali-Verhältnisse wirklich kalt – eine Fleecejacke und lange Hosen sind hier wichtiger als irgendwo sonst auf der Insel, was bei uns der Fall ist <a href="/bali/de/journal/what-to-pack-for-bali">Bali-Packführer</a> deckt ausführlicher ab.</p><p>Die Gehversion von Batur kostet weniger und wir empfehlen sie dennoch niemandem mit Knie-, Hüft- oder Atemproblemen. Es handelt sich um einen steilen Aufstieg vor der Morgendämmerung auf lockerem Vulkankies, und beim Abstieg bei Tageslicht passieren die meisten Verletzungen, nicht beim Aufstieg.</p>
+                <p>Der Vulkan-Sonnenaufgang ist der Ausflug, von dem die meisten Leute annehmen, dass er mit 70 vom Tisch ist, aber das ist nicht der Fall. <strong>Der Jeep fährt zum Aussichtspunkt zum Sonnenaufgang</strong> — keine Gehstrecke, keine Stirnlampe, kein zweistündiger Aufstieg im Dunkeln. Man wird zu einem Bergrücken oberhalb des Kraters gefahren, man steigt aus, sieht zu, wie die Sonne aufgeht, und steigt wieder ein <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a> läuft <strong>ab 45 $</strong> Mehr als 6–8 Stunden bei Abholung in der Nacht oder vor Tagesanbruch, und die Auffahrt ist der Teil, den die meisten Gäste verschlafen.</p><p>Zwei ehrliche Vorbehalte. Die eigentliche Schwierigkeit liegt in der Startzeit: Dies ist ein 6-8-Stunden-Tag, der mitten in der Nacht beginnt, und die Version, die im warmen Wasser endet, <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Jeep plus heiße Quelle ab 55 $</a>, holt zwischen 02:00 und 03:30 Uhr ab. Planen Sie für den folgenden Nachmittag nichts. Und der Kraterrand vor der Morgendämmerung ist für Bali-Verhältnisse wirklich kalt – eine Fleecejacke und lange Hosen sind hier wichtiger als irgendwo sonst auf der Insel, was bei uns der Fall ist <a href="/bali/de/journal/what-to-pack-for-bali">Bali-Packführer</a> deckt ausführlicher ab.</p><p>Die Gehversion von Batur kostet weniger und wir empfehlen sie dennoch niemandem mit Knie-, Hüft- oder Atemproblemen. Es handelt sich um einen steilen Aufstieg vor der Morgendämmerung auf lockerem Vulkankies, und beim Abstieg bei Tageslicht passieren die meisten Verletzungen, nicht beim Aufstieg.</p>
 
 
 
@@ -1940,7 +2002,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sonnenaufgang aus einem 4x4 ohne Klettern, dann über das schwarze Lavafeld.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1958,7 +2020,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Was sind die einfachsten Tagesausflüge nach Bali?</h3>
-                    <p>Die Tanah Lot- und Bedugul-Route ab 59 $ ist die sanfteste Tagestour – Tempelgärten am Seeufer und flache Aussichtsterrassen über 9–11 Stunden. Der Mount Batur Sunrise Jeep ab 60 $ erfordert überhaupt kein Klettern, da das Fahrzeug den Aussichtspunkt erreicht. Eine Bootsfahrt bei Sonnenuntergang ab Benoa ab 150 $ sorgt dafür, dass Sie den ganzen Abend sitzen bleiben. Alle drei beginnen mit der Abholung vom Hotel.</p>
+                    <p>Die Tanah Lot- und Bedugul-Route ab 59 $ ist die sanfteste Tagestour – Tempelgärten am Seeufer und flache Aussichtsterrassen über 9–11 Stunden. Der Mount Batur Sunrise Jeep ab 45 $ erfordert überhaupt kein Klettern, da das Fahrzeug den Aussichtspunkt erreicht. Eine Bootsfahrt bei Sonnenuntergang ab Benoa ab 150 $ sorgt dafür, dass Sie den ganzen Abend sitzen bleiben. Alle drei beginnen mit der Abholung vom Hotel.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1968,7 +2030,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Können Senioren den Sonnenaufgang am Mount Batur erleben?</h3>
-                    <p>Ja, mit dem Jeep. Das Fahrzeug fährt bis zum Aussichtspunkt für den Sonnenaufgang, sodass kein Wandern erforderlich ist – die Mount Batur Sunrise Jeep Tour kostet ab 60 $ über 6–8 Stunden mit einer Abholung in der Nacht oder vor Sonnenaufgang. Die Fußwanderung ist etwas anderes und wir empfehlen sie nicht bei Knie-, Hüft- oder Atemproblemen. Bringen Sie in jedem Fall eine warme Schicht mit; Der Rand ist vor Tagesanbruch kalt.</p>
+                    <p>Ja, mit dem Jeep. Das Fahrzeug fährt bis zum Aussichtspunkt für den Sonnenaufgang, sodass kein Wandern erforderlich ist – die Mount Batur Sunrise Jeep Tour kostet ab 45 $ über 6–8 Stunden mit einer Abholung in der Nacht oder vor Sonnenaufgang. Die Fußwanderung ist etwas anderes und wir empfehlen sie nicht bei Knie-, Hüft- oder Atemproblemen. Bringen Sie in jedem Fall eine warme Schicht mit; Der Rand ist vor Tagesanbruch kalt.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -2067,7 +2129,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>

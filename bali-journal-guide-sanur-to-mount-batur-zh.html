@@ -163,7 +163,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "巴杜尔山日出吉普车之旅",
-            "description": "6-8 小时 60 美元起，夜间或黎明前从沙努尔出发接车。无需攀爬：驾驶四轮驱动车沿着一条单独的轨道到达火山口边缘的观景点，观看 06:00-06:30 的日出，然后穿过古老的黑色熔岩原，在那里您可以走出去，在凝固的熔岩流上行走。如果计划中有乘船日，那么这是显而易见的选择。",
+            "description": "6-8 小时 45 美元起，夜间或黎明前从沙努尔出发接车。无需攀爬：驾驶四轮驱动车沿着一条单独的轨道到达火山口边缘的观景点，观看 06:00-06:30 的日出，然后穿过古老的黑色熔岩原，在那里您可以走出去，在凝固的熔岩流上行走。如果计划中有乘船日，那么这是显而易见的选择。",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-tour.jpg"
           }
         },
@@ -183,7 +183,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "巴杜尔山日出吉普车和温泉",
-            "description": "6 至 8 小时 75 美元起，接载时间为 02:00 至 03:30。早上沿着吉普车路线——火山口边缘的日出，然后是黑色的熔岩地——最后在巴图尔湖岸边泡个天然温泉，然后开车返回沙努尔。温水对于两点醒来的身体有很大帮助。",
+            "description": "6 至 8 小时 55 美元起，接载时间为 02:00 至 03:30。早上沿着吉普车路线——火山口边缘的日出，然后是黑色的熔岩地——最后在巴图尔湖岸边泡个天然温泉，然后开车返回沙努尔。温水对于两点醒来的身体有很大帮助。",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg"
           }
         },
@@ -240,7 +240,7 @@
           "name": "不徒步从沙努尔可以看到巴杜尔火山吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "是的，有两种方法。日出吉普车之旅从 60 美元起，驾驶一条单独的 4x4 赛道前往火山口边缘的观景点，并穿越古老的黑色熔岩原 - 根本无需攀爬。或者乘坐带司机的私家车，每辆车 59 美元起，前往 Penelokan 一侧的公共边缘道路，在那里免费欣赏巴杜尔湖 (Lake Batur) 的经典日间景观。"
+            "text": "是的，有两种方法。日出吉普车之旅从 45 美元起，驾驶一条单独的 4x4 赛道前往火山口边缘的观景点，并穿越古老的黑色熔岩原 - 根本无需攀爬。或者乘坐带司机的私家车，每辆车 59 美元起，前往 Penelokan 一侧的公共边缘道路，在那里免费欣赏巴杜尔湖 (Lake Batur) 的经典日间景观。"
           }
         },
         {
@@ -248,7 +248,7 @@
           "name": "从 沙努尔 到 巴杜尔山 旅行需要多少钱？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "私人日出徒步之旅 35 美元起，日出吉普车之旅 60 美元起，湖畔温泉吉普车 75 美元起。这三项服务均包括沙努尔的酒店接送服务，并以私人旅行形式运行，而不是拼车巴士。通过 WhatsApp 进行预订，无需预付款 - 您可以在聊天中确认并在当天付款。"
+            "text": "私人日出徒步之旅 35 美元起，日出吉普车之旅 45 美元起，湖畔温泉吉普车 55 美元起。这三项服务均包括沙努尔的酒店接送服务，并以私人旅行形式运行，而不是拼车巴士。通过 WhatsApp 进行预订，无需预付款 - 您可以在聊天中确认并在当天付款。"
           }
         }
       ]
@@ -1276,6 +1276,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1634,9 +1696,9 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">旅游指南</div>
             <h1>沙努尔至巴杜尔山：1.5-2 小时，接客时间 01:30-02:00</h1>
-            <p class="sb-journal-lead">从沙努尔到巴杜尔山的车程大约需要 1.5-2 小时，日出接客时间为 01:30-02:00 - 明显比岛的最南端要温和。从驾车角度来看，沙努尔位于乌布和海滩城镇之间，因此您无需停留内陆即可享受乌布的大部分短途交通。 02:00道路上空无一人，这使得出境段成为整个行程中最快的车程；回程车在白天行驶，速度较慢。火山口边缘的日出时间为全年 06:00 至 06:30，向东越过巴图尔湖眺望阿贡火山。由于沙努尔也是前往珀尼达岛 (Nusa Penida) 的渡轮门户，因此许多客人将巴杜尔 (Batur) 早晨与珀尼达 (Penida) 日配对 - 诚实的建议是在两者之间保留休息日。我们从沙努尔出发提供三种私人形式：加息车 35 美元起、吉普车 60 美元起、温泉吉普车 75 美元起，全部包含酒店接送服务，通过 WhatsApp 预订，无需预付款。</p>
+            <p class="sb-journal-lead">从沙努尔到巴杜尔山的车程大约需要 1.5-2 小时，日出接客时间为 01:30-02:00 - 明显比岛的最南端要温和。从驾车角度来看，沙努尔位于乌布和海滩城镇之间，因此您无需停留内陆即可享受乌布的大部分短途交通。 02:00道路上空无一人，这使得出境段成为整个行程中最快的车程；回程车在白天行驶，速度较慢。火山口边缘的日出时间为全年 06:00 至 06:30，向东越过巴图尔湖眺望阿贡火山。由于沙努尔也是前往珀尼达岛 (Nusa Penida) 的渡轮门户，因此许多客人将巴杜尔 (Batur) 早晨与珀尼达 (Penida) 日配对 - 诚实的建议是在两者之间保留休息日。我们从沙努尔出发提供三种私人形式：加息车 35 美元起、吉普车 45 美元起、温泉吉普车 55 美元起，全部包含酒店接送服务，通过 WhatsApp 预订，无需预付款。</p>
             <p class="sb-journal-dates">作者：Alex Moskvin，SB Excursions 创始人 · 发布于 2026 年 5 月 21 日 · 更新于 2026 年 8 月 7 日</p>
-            <p class="sb-journal-deck">此路线游览： <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a> — 60 美元起，6-8 小时。</p>
+            <p class="sb-journal-deck">此路线游览： <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a> — 45 美元起，6-8 小时。</p>
             <div class="sb-quick-answer">
               <p class="sb-quick-answer__q">从 沙努尔 到 巴杜尔山 开车需要多长时间？</p>
               <p class="sb-quick-answer__a">单程大约1.5-2小时。 02:00左右的出站路段是整个行程中最快的车程，因为道路上空无一人；回程在白天交通中运行，并且需要更长的时间。从驾车角度来看，沙努尔位于乌布和南部海滩城镇之间，这就是为什么它的换乘时间比水明漾或乌鲁瓦图短。</p>
@@ -1644,10 +1706,10 @@ body {
               <ul class="sb-quick-answer__list"><li>沙努尔的接客时间是几点？观看巴杜尔山日出？</li><li>我可以从沙努尔出发前往巴杜尔山和珀尼达岛吗？</li><li>从沙努尔出发的巴杜尔山接送时间比从乌布出发的时间早吗？</li></ul>
             </div>
             <div class="sb-journal-inline-stats">
-              <span>距沙努尔 1.5-2 小时</span><span>接载时间 01:30-02:00</span><span>吉普车之旅 60 美元起</span>
+              <span>距沙努尔 1.5-2 小时</span><span>接载时间 01:30-02:00</span><span>吉普车之旅 45 美元起</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅 — 60 美元起</a>
+              <a class="sb-journal-primary" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅 — 45 美元起</a>
               <a class="sb-journal-secondary" href="/bali/zh/journal">浏览所有指南</a>
             </div>
           </div>
@@ -1679,7 +1741,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1687,7 +1749,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1709,7 +1771,7 @@ body {
           <span>客人们为了努沙佩尼达日而保留自己的双腿</span>
         </div>
         <h3>巴杜尔山日出吉普车之旅</h3>
-        <p>6-8 小时 60 美元起，夜间或黎明前从沙努尔出发接车。无需攀爬：驾驶四轮驱动车沿着一条单独的轨道到达火山口边缘的观景点，观看 06:00-06:30 的日出，然后穿过古老的黑色熔岩原，在那里您可以走出去，在凝固的熔岩流上行走。如果计划中有乘船日，那么这是显而易见的选择。</p>
+        <p>6-8 小时 45 美元起，夜间或黎明前从沙努尔出发接车。无需攀爬：驾驶四轮驱动车沿着一条单独的轨道到达火山口边缘的观景点，观看 06:00-06:30 的日出，然后穿过古老的黑色熔岩原，在那里您可以走出去，在凝固的熔岩流上行走。如果计划中有乘船日，那么这是显而易见的选择。</p>
       </div>
     </article>
 
@@ -1739,7 +1801,7 @@ body {
           <span>为您的旅程的清晨画上一个温柔的句号</span>
         </div>
         <h3>巴杜尔山日出吉普车和温泉</h3>
-        <p>6 至 8 小时 75 美元起，接载时间为 02:00 至 03:30。早上沿着吉普车路线——火山口边缘的日出，然后是黑色的熔岩地——最后在巴图尔湖岸边泡个天然温泉，然后开车返回沙努尔。温水对于两点醒来的身体有很大帮助。</p>
+        <p>6 至 8 小时 55 美元起，接载时间为 02:00 至 03:30。早上沿着吉普车路线——火山口边缘的日出，然后是黑色的熔岩地——最后在巴图尔湖岸边泡个天然温泉，然后开车返回沙努尔。温水对于两点醒来的身体有很大帮助。</p>
       </div>
     </article>
 
@@ -1779,7 +1841,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>用努沙佩尼达日对巴杜尔山进行排序</h2>
-                <p>沙努尔是前往珀尼达岛 (Nusa Penida) 的渡轮门户，大多数入住那里的客人都计划在某个地方度过游船日。两次旅行都需要一个早上，而且都很早就开始，所以诚实的排序建议很简单：不要将它们背靠背堆叠。巴杜尔日出意味着 <strong>01:30-02:00</strong> 凌晨报警并返回；佩尼达日意味着提早从港口出发并进行一整天的游览。在两人之间休息一天，两人都会保持愉快的心情。</p><p>顺序比缓冲区更重要。 Batur 首先效果很好——火山早上很早就结束，下午属于泳池，休息日让你的双腿在乘船前恢复。首先佩尼达也是可行的。如果你想让火山早晨温柔地结束，带温泉的吉普车，从 <strong>$75</strong>，在开车回家之前在天然湖畔泳池中泡个澡结束——我们的 <a href="/bali/zh/journal/mount-batur-hot-springs-guide">巴杜尔山温泉指南</a> 解释了浸泡如何适合早晨。</p><p>所有三种 Batur 模式均以私人旅行形式运营，包含沙努尔酒店接送服务，已通过 WhatsApp 确认 <strong>没有预付款</strong>。如果一艘船改变了你的一周，改变火山早晨只是聊天中的一条消息，而不是退款要求。</p>
+                <p>沙努尔是前往珀尼达岛 (Nusa Penida) 的渡轮门户，大多数入住那里的客人都计划在某个地方度过游船日。两次旅行都需要一个早上，而且都很早就开始，所以诚实的排序建议很简单：不要将它们背靠背堆叠。巴杜尔日出意味着 <strong>01:30-02:00</strong> 凌晨报警并返回；佩尼达日意味着提早从港口出发并进行一整天的游览。在两人之间休息一天，两人都会保持愉快的心情。</p><p>顺序比缓冲区更重要。 Batur 首先效果很好——火山早上很早就结束，下午属于泳池，休息日让你的双腿在乘船前恢复。首先佩尼达也是可行的。如果你想让火山早晨温柔地结束，带温泉的吉普车，从 <strong>$55</strong>，在开车回家之前在天然湖畔泳池中泡个澡结束——我们的 <a href="/bali/zh/journal/mount-batur-hot-springs-guide">巴杜尔山温泉指南</a> 解释了浸泡如何适合早晨。</p><p>所有三种 Batur 模式均以私人旅行形式运营，包含沙努尔酒店接送服务，已通过 WhatsApp 确认 <strong>没有预付款</strong>。如果一艘船改变了你的一周，改变火山早晨只是聊天中的一条消息，而不是退款要求。</p>
 
 
 
@@ -1787,7 +1849,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>从沙努尔徒步或吉普车</h2>
-                <p>此次徒步旅行，从 <strong>$35</strong>，是经典版本：关于 <strong>700米</strong> 上升超过 <strong>1.5-2小时</strong> 在导游的带领下，山顶附近有松散的火山沙，日出从 <strong>1,717 米</strong> 山顶和大致 <strong>1.5小时</strong> 白天回来。巡演进行 <strong>5-8小时</strong> 门到门。</p><p>吉普车，从 <strong>$60</strong>，完全消除爬升。 4x4 驱动一条单独的轨道到火山口边缘的观察点，以获得相同的效果 <strong>06:00-06:30</strong> 日出，然后穿过古老的黑色熔岩原——过去喷发的凝固流，你可以下车继续行走。这两种格式在以下位置进行了正确比较 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">巴杜尔山日出吉普车与徒步旅行</a>.</p><p>不管怎样，着装都是为了篮筐，而不是为了沙努尔。山顶的寒冷是风寒而不是深寒，受苦的是穿着沙滩装抵达的客人。保暖层和有抓地力的鞋子解决了大部分问题 — <a href="/bali/zh/journal/what-to-wear-mount-batur-sunrise">巴杜尔山日出穿什么衣服</a> 有短名单。</p>
+                <p>此次徒步旅行，从 <strong>$35</strong>，是经典版本：关于 <strong>700米</strong> 上升超过 <strong>1.5-2小时</strong> 在导游的带领下，山顶附近有松散的火山沙，日出从 <strong>1,717 米</strong> 山顶和大致 <strong>1.5小时</strong> 白天回来。巡演进行 <strong>5-8小时</strong> 门到门。</p><p>吉普车，从 <strong>$45</strong>，完全消除爬升。 4x4 驱动一条单独的轨道到火山口边缘的观察点，以获得相同的效果 <strong>06:00-06:30</strong> 日出，然后穿过古老的黑色熔岩原——过去喷发的凝固流，你可以下车继续行走。这两种格式在以下位置进行了正确比较 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">巴杜尔山日出吉普车与徒步旅行</a>.</p><p>不管怎样，着装都是为了篮筐，而不是为了沙努尔。山顶的寒冷是风寒而不是深寒，受苦的是穿着沙滩装抵达的客人。保暖层和有抓地力的鞋子解决了大部分问题 — <a href="/bali/zh/journal/what-to-wear-mount-batur-sunrise">巴杜尔山日出穿什么衣服</a> 有短名单。</p>
 
 
 
@@ -1814,7 +1876,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1822,7 +1884,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1855,12 +1917,12 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>不徒步从沙努尔可以看到巴杜尔火山吗？</h3>
-                    <p>是的，有两种方法。日出吉普车之旅从 60 美元起，驾驶一条单独的 4x4 赛道前往火山口边缘的观景点，并穿越古老的黑色熔岩原 - 根本无需攀爬。或者乘坐带司机的私家车，每辆车 59 美元起，前往 Penelokan 一侧的公共边缘道路，在那里免费欣赏巴杜尔湖 (Lake Batur) 的经典日间景观。</p>
+                    <p>是的，有两种方法。日出吉普车之旅从 45 美元起，驾驶一条单独的 4x4 赛道前往火山口边缘的观景点，并穿越古老的黑色熔岩原 - 根本无需攀爬。或者乘坐带司机的私家车，每辆车 59 美元起，前往 Penelokan 一侧的公共边缘道路，在那里免费欣赏巴杜尔湖 (Lake Batur) 的经典日间景观。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
                     <h3>从 沙努尔 到 巴杜尔山 旅行需要多少钱？</h3>
-                    <p>私人日出徒步之旅 35 美元起，日出吉普车之旅 60 美元起，湖畔温泉吉普车 75 美元起。这三项服务均包括沙努尔的酒店接送服务，并以私人旅行形式运行，而不是拼车巴士。通过 WhatsApp 进行预订，无需预付款 - 您可以在聊天中确认并在当天付款。</p>
+                    <p>私人日出徒步之旅 35 美元起，日出吉普车之旅 45 美元起，湖畔温泉吉普车 55 美元起。这三项服务均包括沙努尔的酒店接送服务，并以私人旅行形式运行，而不是拼车巴士。通过 WhatsApp 进行预订，无需预付款 - 您可以在聊天中确认并在当天付款。</p>
                   </article>
 
               </div>
@@ -1920,7 +1982,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
@@ -1970,7 +2032,7 @@ body {
 
                   <a class="sb-journal-related-guide" href="/bali/zh/journal/mount-batur-atv-quad-or-jeep">
                     <span class="sb-journal-related-guide__label">ATV、四轮车或吉普车</span>
-                    <span class="sb-journal-related-guide__title">巴杜尔山全地形车还是四轮驱动车？没有——吉普车 60 美元起</span>
+                    <span class="sb-journal-related-guide__title">巴杜尔山全地形车还是四轮驱动车？没有——吉普车 45 美元起</span>
                   </a>
 
                   <a class="sb-journal-related-guide" href="/bali/zh/journal/how-to-book-mount-batur-tour">
@@ -2016,12 +2078,12 @@ body {
               <h3 class="sbtc-rail__title"><a class="sbtc-rail__titlelink" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a></h3>
               <p class="sbtc-price sbtc-rail__price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
               <div class="sbtc-rail__actions">
-                <a class="sbtc-btn sbtc-btn_ink" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">查看游览 — 60 美元起<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
+                <a class="sbtc-btn sbtc-btn_ink" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">查看游览 — 45 美元起<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
                 <a class="sbtc-btn sbtc-btn_line" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">通过 WhatsApp 预订</a>
               </div>
               <dl class="sbtc-ledger sbtc-rail__ledger">

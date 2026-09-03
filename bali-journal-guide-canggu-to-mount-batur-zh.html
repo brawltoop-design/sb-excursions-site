@@ -224,7 +224,7 @@
           "name": "不徒步可以从坎古看到巴杜尔山日出吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "是的。私人吉普车之旅 60 美元起，乘坐四轮驱动车前往日出观景点，无需攀爬，因此您可以在两个驱动腿上睡觉。它提供 6 至 8 小时的门到门服务，包括酒店接送服务和从仓古返回的服务。吉普车和温泉版本的价格为 75 美元，在开车回家之前可以浸泡在天然湖畔温泉中。"
+            "text": "是的。私人吉普车之旅 45 美元起，乘坐四轮驱动车前往日出观景点，无需攀爬，因此您可以在两个驱动腿上睡觉。它提供 6 至 8 小时的门到门服务，包括酒店接送服务和从仓古返回的服务。吉普车和温泉版本的价格为 55 美元，在开车回家之前可以浸泡在天然湖畔温泉中。"
           }
         },
         {
@@ -1276,6 +1276,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1634,9 +1696,9 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">旅游指南</div>
             <h1>坎古 (Canggu) 至巴杜尔山 (Mount Batur)：1.5-2.5 小时，01:30 接载</h1>
-            <p class="sb-journal-lead">从仓古 (Canggu) 到巴杜尔山 (Mount Batur) 的车程单程需要 1.5 至 2.5 小时，这就是为什么仓古 (Canggu) 的日出接送服务于 01:30 左右开始，比乌布 (Ubud) 早了整整一个小时。令人欣慰的是，02:00 穿过巴厘岛内陆的道路空无一人，因此出境路段通常是整个行程中最快的车程；白天交通的返回速度明显较慢。全年日出时间为 06:00 至 06:30，每次出发时间均从该固定点倒推。从仓古出发，有三种私人格式。吉普车售价 60 美元起，让您可以通过两条驱动腿睡觉。此次加价从 35 美元起，增加了 1.5 至 2 小时的攀爬时间，这已经是所有接送区中最长的夜晚。带温泉的吉普车起价 75 美元，最后在缓慢开车回家之前泡个澡。所有服务均包含酒店接送服务，通过 WhatsApp 预订，无需预付款。</p>
+            <p class="sb-journal-lead">从仓古 (Canggu) 到巴杜尔山 (Mount Batur) 的车程单程需要 1.5 至 2.5 小时，这就是为什么仓古 (Canggu) 的日出接送服务于 01:30 左右开始，比乌布 (Ubud) 早了整整一个小时。令人欣慰的是，02:00 穿过巴厘岛内陆的道路空无一人，因此出境路段通常是整个行程中最快的车程；白天交通的返回速度明显较慢。全年日出时间为 06:00 至 06:30，每次出发时间均从该固定点倒推。从仓古出发，有三种私人格式。吉普车售价 45 美元起，让您可以通过两条驱动腿睡觉。此次加价从 35 美元起，增加了 1.5 至 2 小时的攀爬时间，这已经是所有接送区中最长的夜晚。带温泉的吉普车起价 55 美元，最后在缓慢开车回家之前泡个澡。所有服务均包含酒店接送服务，通过 WhatsApp 预订，无需预付款。</p>
             <p class="sb-journal-dates">作者：Alex Moskvin，SB Excursions 创始人 · 发布于 2026 年 5 月 21 日 · 更新于 2026 年 8 月 7 日</p>
-            <p class="sb-journal-deck">此路线游览： <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a> — 60 美元起，6-8 小时。</p>
+            <p class="sb-journal-deck">此路线游览： <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a> — 45 美元起，6-8 小时。</p>
             <div class="sb-quick-answer">
               <p class="sb-quick-answer__q">巴杜尔火山 离 Canggu有多远?</p>
               <p class="sb-quick-answer__a">计划单程 1.5 至 2.5 小时的驾驶时间；在巴厘岛的山路上，时间比公里更重要。 02:00 左右的去程路段道路空旷，因此通常是整个行程中最快的行驶路线，而白天交通中的回程路线则是速度较慢的一端。</p>
@@ -1644,10 +1706,10 @@ body {
               <ul class="sb-quick-answer__list"><li>何时可以在坎古 (Canggu) 接载巴杜尔火山 (Mount Batur) 日出？</li><li>不徒步可以从坎古看到巴杜尔山日出吗？</li><li>攀登巴杜尔山之前我应该在乌布过夜吗？</li></ul>
             </div>
             <div class="sb-journal-inline-stats">
-              <span>单程 1.5-2.5 小时</span><span>01:30 开始接载</span><span>吉普车 60 美元起</span>
+              <span>单程 1.5-2.5 小时</span><span>01:30 开始接载</span><span>吉普车 45 美元起</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅 — 60 美元起</a>
+              <a class="sb-journal-primary" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅 — 45 美元起</a>
               <a class="sb-journal-secondary" href="/bali/zh/journal">浏览所有指南</a>
             </div>
           </div>
@@ -1679,7 +1741,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1687,7 +1749,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1705,7 +1767,7 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>吉普车格式，60 美元起</span>
+          <span>吉普车格式，45 美元起</span>
           <span>通过两条驱动腿睡觉</span>
         </div>
         <h3>巴杜尔山日出吉普车之旅</h3>
@@ -1720,7 +1782,7 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>吉普车和温泉，75 美元起</span>
+          <span>吉普车和温泉，55 美元起</span>
           <span>在缓慢开车回家之前恢复</span>
         </div>
         <h3>巴杜尔山日出吉普车和温泉</h3>
@@ -1787,7 +1849,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>当驱动器这么长时选择格式</h2>
-                <p>与 <strong>1.5-2.5小时</strong> 一路开车，苍谷的格式问题确实是一个睡眠问题。吉普车之旅，从 <strong>$60</strong>，是对大多数苍古旅行者的诚实推荐：一辆四轮驱动车前往日出观景点，无需攀爬，您可以从别墅到火山口再睡一觉，然后再返回。它运行 <strong>6-8小时</strong> 挨家挨户，完整的权衡是在我们的 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行的比较</a>.</p><p>此次徒步旅行，从 <strong>$35</strong>，是最便宜的方式，也是唯一能让您进入的格式 <strong>1,717 米</strong> 峰会本身——但要诚实地说明你报名的目的： <strong>1.5-2小时</strong> 攀登和关于 <strong>1.5小时</strong> 下来，堆放在岛上最早的上车区。它适合想要攀爬本身并愿意在前一天晚上放弃的旅行者。</p><p>吉普车和温泉的组合，来自 <strong>$75</strong>，正是为这条路线而建造的：日出后，您可以在巴杜尔湖岸边浸泡天然温泉，然后在白天缓慢地开车回家——我们的 <a href="/bali/zh/journal/mount-batur-hot-springs-guide">温泉指南</a> 涵盖了它是如何工作的。如果晚上出发完全不可能——怀孕、小孩、医生建议不要进行剧烈的徒步旅行或崎岖不平的 4x4 赛道——金塔马尼环路是公共的，白天的火山口景观不需要花费任何费用，并且有一辆私家车和司机从 <strong>每辆车 59 美元</strong> 使其成为正常时间的一日游。</p>
+                <p>与 <strong>1.5-2.5小时</strong> 一路开车，苍谷的格式问题确实是一个睡眠问题。吉普车之旅，从 <strong>$45</strong>，是对大多数苍古旅行者的诚实推荐：一辆四轮驱动车前往日出观景点，无需攀爬，您可以从别墅到火山口再睡一觉，然后再返回。它运行 <strong>6-8小时</strong> 挨家挨户，完整的权衡是在我们的 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行的比较</a>.</p><p>此次徒步旅行，从 <strong>$35</strong>，是最便宜的方式，也是唯一能让您进入的格式 <strong>1,717 米</strong> 峰会本身——但要诚实地说明你报名的目的： <strong>1.5-2小时</strong> 攀登和关于 <strong>1.5小时</strong> 下来，堆放在岛上最早的上车区。它适合想要攀爬本身并愿意在前一天晚上放弃的旅行者。</p><p>吉普车和温泉的组合，来自 <strong>$55</strong>，正是为这条路线而建造的：日出后，您可以在巴杜尔湖岸边浸泡天然温泉，然后在白天缓慢地开车回家——我们的 <a href="/bali/zh/journal/mount-batur-hot-springs-guide">温泉指南</a> 涵盖了它是如何工作的。如果晚上出发完全不可能——怀孕、小孩、医生建议不要进行剧烈的徒步旅行或崎岖不平的 4x4 赛道——金塔马尼环路是公共的，白天的火山口景观不需要花费任何费用，并且有一辆私家车和司机从 <strong>每辆车 59 美元</strong> 使其成为正常时间的一日游。</p>
 
 
 
@@ -1814,7 +1876,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1822,7 +1884,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1845,7 +1907,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>不徒步可以从坎古看到巴杜尔山日出吗？</h3>
-                    <p>是的。私人吉普车之旅 60 美元起，乘坐四轮驱动车前往日出观景点，无需攀爬，因此您可以在两个驱动腿上睡觉。它提供 6 至 8 小时的门到门服务，包括酒店接送服务和从仓古返回的服务。吉普车和温泉版本的价格为 75 美元，在开车回家之前可以浸泡在天然湖畔温泉中。</p>
+                    <p>是的。私人吉普车之旅 45 美元起，乘坐四轮驱动车前往日出观景点，无需攀爬，因此您可以在两个驱动腿上睡觉。它提供 6 至 8 小时的门到门服务，包括酒店接送服务和从仓古返回的服务。吉普车和温泉版本的价格为 55 美元，在开车回家之前可以浸泡在天然湖畔温泉中。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1920,7 +1982,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
@@ -2016,12 +2078,12 @@ body {
               <h3 class="sbtc-rail__title"><a class="sbtc-rail__titlelink" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a></h3>
               <p class="sbtc-price sbtc-rail__price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
               <div class="sbtc-rail__actions">
-                <a class="sbtc-btn sbtc-btn_ink" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">查看游览 — 60 美元起<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
+                <a class="sbtc-btn sbtc-btn_ink" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">查看游览 — 45 美元起<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
                 <a class="sbtc-btn sbtc-btn_line" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">通过 WhatsApp 预订</a>
               </div>
               <dl class="sbtc-ledger sbtc-rail__ledger">

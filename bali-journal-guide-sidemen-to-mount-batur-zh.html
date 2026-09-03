@@ -205,7 +205,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "当天早上的吉普车版",
-            "description": "当晚，没有上升。一辆四驱车沿着一条单独的轨道行驶到火山口边缘的一个观察点，然后在光线到达后穿过古老的黑色熔岩区。 6-8 小时 60 美元起，从 Sidemen 出发的时间比徒步旅行晚 30-60 分钟，所以大约是 03:00 到 03:30。",
+            "description": "当晚，没有上升。一辆四驱车沿着一条单独的轨道行驶到火山口边缘的一个观察点，然后在光线到达后穿过古老的黑色熔岩区。 6-8 小时 45 美元起，从 Sidemen 出发的时间比徒步旅行晚 30-60 分钟，所以大约是 03:00 到 03:30。",
             "image": "https://www.sbexcursion.com/images/places/mount-batur-jeep.jpg"
           }
         },
@@ -215,7 +215,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "温泉在湖边结束",
-            "description": "同样的早上吉普车，价格为 75 美元，行程 6-8 小时，最终在天然湖畔温泉结束，而不是长途步行。对于距基地 1.5 小时的路程来说，这是旅程中最温和的版本：无需攀爬，出发时间比徒步旅行晚，在白天开车回家之前泡个澡。",
+            "description": "同样的早上吉普车，价格为 55 美元，行程 6-8 小时，最终在天然湖畔温泉结束，而不是长途步行。对于距基地 1.5 小时的路程来说，这是旅程中最温和的版本：无需攀爬，出发时间比徒步旅行晚，在白天开车回家之前泡个澡。",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg"
           }
         }
@@ -246,7 +246,7 @@
           "name": "我可以参加从席德门出发的巴杜尔山吉普车之旅而不是徒步旅行吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "是的。吉普车的出发时间比从同一基地徒步旅行晚 30 至 60 分钟，因此从 Sidemen 出发的时间约为 03:00 至 03:30，因为没有安排两小时的攀登活动。日出吉普车之旅的价格从 60 美元起，持续 6 至 8 小时，以湖畔温泉结束的版本价格从 75 美元起。"
+            "text": "是的。吉普车的出发时间比从同一基地徒步旅行晚 30 至 60 分钟，因此从 Sidemen 出发的时间约为 03:00 至 03:30，因为没有安排两小时的攀登活动。日出吉普车之旅的价格从 45 美元起，持续 6 至 8 小时，以湖畔温泉结束的版本价格从 55 美元起。"
           }
         },
         {
@@ -1298,6 +1298,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1701,7 +1763,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1709,7 +1771,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1791,7 +1853,7 @@ body {
           <span>不爬山的人</span>
         </div>
         <h3>当天早上的吉普车版</h3>
-        <p>当晚，没有上升。一辆四驱车沿着一条单独的轨道行驶到火山口边缘的一个观察点，然后在光线到达后穿过古老的黑色熔岩区。 6-8 小时 60 美元起，从 Sidemen 出发的时间比徒步旅行晚 30-60 分钟，所以大约是 03:00 到 03:30。</p>
+        <p>当晚，没有上升。一辆四驱车沿着一条单独的轨道行驶到火山口边缘的一个观察点，然后在光线到达后穿过古老的黑色熔岩区。 6-8 小时 45 美元起，从 Sidemen 出发的时间比徒步旅行晚 30-60 分钟，所以大约是 03:00 到 03:30。</p>
       </div>
     </article>
 
@@ -1806,7 +1868,7 @@ body {
           <span>短暂一夜后软着陆</span>
         </div>
         <h3>温泉在湖边结束</h3>
-        <p>同样的早上吉普车，价格为 75 美元，行程 6-8 小时，最终在天然湖畔温泉结束，而不是长途步行。对于距基地 1.5 小时的路程来说，这是旅程中最温和的版本：无需攀爬，出发时间比徒步旅行晚，在白天开车回家之前泡个澡。</p>
+        <p>同样的早上吉普车，价格为 55 美元，行程 6-8 小时，最终在天然湖畔温泉结束，而不是长途步行。对于距基地 1.5 小时的路程来说，这是旅程中最温和的版本：无需攀爬，出发时间比徒步旅行晚，在白天开车回家之前泡个澡。</p>
       </div>
     </article>
 
@@ -1839,7 +1901,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>破碎的一夜后的休息日</h2>
-                <p>日出之旅的诚实成本是第二天而不是价格。这次徒步旅行是 <strong>5至8小时</strong> 门到门服务，因此 02:30 出发的航班会让您在凌晨到中午之间返回席德门，大多数客人在此之后就睡觉。将这一天剩下的时间视为过去。刻意安排一周的顺序：到达，轻松的一天，火山，然后安静的一天，然后漫长的观光一天。</p><p>在稻谷休息一天比在繁忙的城镇休息一天更容易度过，这也是从这里出发而不是搬家过夜的另一个理由。如果你的窗户确实很紧， <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">吉普车之旅</a> 来自 <strong>$60</strong> 取消了攀爬，但没有取消时间——仅在 30 到 60 分钟后出发，但你仍然会错过夜晚。 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行</a> 将两者并排放置，并且 <a href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">温泉版</a> 来自 <strong>$75</strong> 至少在湖边的温水里结束。</p><p>从 11 月到 3 月，上面的步道很滑，云层会遮挡视线。大多数早上导游仍然运行，只有在真正恶劣的天气下才会取消，这在 <a href="/bali/zh/journal/mount-batur-in-rainy-season">雨季的巴杜尔山</a>。我们这边没有预付任何费用，所以前一天晚上的决定仍然是决定，并且 <a href="/bali/zh/journal/how-to-book-mount-batur-tour">如何预订巴杜尔火山之旅</a> 解释 WhatsApp 线程的工作原理。</p>
+                <p>日出之旅的诚实成本是第二天而不是价格。这次徒步旅行是 <strong>5至8小时</strong> 门到门服务，因此 02:30 出发的航班会让您在凌晨到中午之间返回席德门，大多数客人在此之后就睡觉。将这一天剩下的时间视为过去。刻意安排一周的顺序：到达，轻松的一天，火山，然后安静的一天，然后漫长的观光一天。</p><p>在稻谷休息一天比在繁忙的城镇休息一天更容易度过，这也是从这里出发而不是搬家过夜的另一个理由。如果你的窗户确实很紧， <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">吉普车之旅</a> 来自 <strong>$45</strong> 取消了攀爬，但没有取消时间——仅在 30 到 60 分钟后出发，但你仍然会错过夜晚。 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">吉普车与徒步旅行</a> 将两者并排放置，并且 <a href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">温泉版</a> 来自 <strong>$55</strong> 至少在湖边的温水里结束。</p><p>从 11 月到 3 月，上面的步道很滑，云层会遮挡视线。大多数早上导游仍然运行，只有在真正恶劣的天气下才会取消，这在 <a href="/bali/zh/journal/mount-batur-in-rainy-season">雨季的巴杜尔山</a>。我们这边没有预付任何费用，所以前一天晚上的决定仍然是决定，并且 <a href="/bali/zh/journal/how-to-book-mount-batur-tour">如何预订巴杜尔火山之旅</a> 解释 WhatsApp 线程的工作原理。</p>
 
 
 
@@ -1866,7 +1928,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1874,7 +1936,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1897,7 +1959,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>我可以参加从席德门出发的巴杜尔山吉普车之旅而不是徒步旅行吗？</h3>
-                    <p>是的。吉普车的出发时间比从同一基地徒步旅行晚 30 至 60 分钟，因此从 Sidemen 出发的时间约为 03:00 至 03:30，因为没有安排两小时的攀登活动。日出吉普车之旅的价格从 60 美元起，持续 6 至 8 小时，以湖畔温泉结束的版本价格从 75 美元起。</p>
+                    <p>是的。吉普车的出发时间比从同一基地徒步旅行晚 30 至 60 分钟，因此从 Sidemen 出发的时间约为 03:00 至 03:30，因为没有安排两小时的攀登活动。日出吉普车之旅的价格从 45 美元起，持续 6 至 8 小时，以湖畔温泉结束的版本价格从 55 美元起。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1972,7 +2034,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
@@ -2022,7 +2084,7 @@ body {
 
                   <a class="sb-journal-related-guide" href="/bali/zh/journal/mount-batur-sunrise-from-ubud">
                     <span class="sb-journal-related-guide__label">从乌布出发的巴杜尔</span>
-                    <span class="sb-journal-related-guide__title">乌布出发的巴杜尔山日出：徒步旅行 35 美元，吉普车 60 美元</span>
+                    <span class="sb-journal-related-guide__title">乌布出发的巴杜尔山日出：徒步旅行 35 美元，吉普车 45 美元</span>
                   </a>
 
                   <a class="sb-journal-related-guide" href="/bali/zh/journal/mount-batur-sunrise-from-south-bali">

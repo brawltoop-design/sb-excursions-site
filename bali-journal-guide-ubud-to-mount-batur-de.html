@@ -215,7 +215,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "Die Jeep-Variante desselben Morgens",
-            "description": "Gleicher Wecker, kein Aufstieg. Die Jeep-Tour fährt zu einem Aussichtspunkt an der Flanke des Vulkans und quert anschließend das alte Lavafeld, ab $60 über 6-8 Stunden. Die Variante mit heißen Quellen ab $75 endet im Wasser am See.",
+            "description": "Gleicher Wecker, kein Aufstieg. Die Jeep-Tour fährt zu einem Aussichtspunkt an der Flanke des Vulkans und quert anschließend das alte Lavafeld, ab $45 über 6-8 Stunden. Die Variante mit heißen Quellen ab $55 endet im Wasser am See.",
             "image": "https://www.sbexcursion.com/images/places/mount-batur-jeep.jpg"
           }
         },
@@ -280,7 +280,7 @@
           "name": "Was kostet ein Ausflug zum Mount Batur ab Ubud?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Unsere Sonnenaufgangswanderung beginnt bei $35 und dauert 5-8 Stunden von Tür zu Tür. Die Route mit Jeep und heißen Quellen beginnt bei $75 über 6-8 Stunden, und die Jeep-Sonnenaufgangstour bei $60. Ein Besuch in Kintamani bei Tag als Teil einer ganzen Ubud-Tagestour beginnt bei $65 pro Auto. Gebucht wird über WhatsApp, ohne Vorauszahlung."
+            "text": "Unsere Sonnenaufgangswanderung beginnt bei $35 und dauert 5-8 Stunden von Tür zu Tür. Die Route mit Jeep und heißen Quellen beginnt bei $55 über 6-8 Stunden, und die Jeep-Sonnenaufgangstour bei $45. Ein Besuch in Kintamani bei Tag als Teil einer ganzen Ubud-Tagestour beginnt bei $65 pro Auto. Gebucht wird über WhatsApp, ohne Vorauszahlung."
           }
         }
       ]
@@ -1308,6 +1308,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1711,7 +1773,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sie möchten den gleichen Sonnenaufgang ohne den Aufstieg – mit Kindern oder nach einem späten Flug.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1719,7 +1781,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Der Sonnenaufgang, dann ein Bad in den natürlichen heißen Quellen am Batursee.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1816,7 +1878,7 @@ body {
           <span>Alle, die nicht hochlaufen</span>
         </div>
         <h3>Die Jeep-Variante desselben Morgens</h3>
-        <p>Gleicher Wecker, kein Aufstieg. Die <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Jeep-Tour</a> fährt zu einem Aussichtspunkt an der Flanke des Vulkans und quert danach das alte Lavafeld, ab $60 über 6-8 Stunden. Die <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Variante mit heißen Quellen</a> ab $75 endet im Wasser am See.</p>
+        <p>Gleicher Wecker, kein Aufstieg. Die <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Jeep-Tour</a> fährt zu einem Aussichtspunkt an der Flanke des Vulkans und quert danach das alte Lavafeld, ab $45 über 6-8 Stunden. Die <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Variante mit heißen Quellen</a> ab $55 endet im Wasser am See.</p>
       </div>
     </article>
 
@@ -1857,7 +1919,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>Abholzeiten ab Ubud und die Rechnung dahinter</h2>
                 <p>Alles wird rückwärts von der Sonne gerechnet. Der Sonnenaufgang auf Bali fällt etwa zwischen <strong>06:00 und 06:30 Uhr</strong> das ganze Jahr über, und Sie wollen mit Zeitpuffer an Ort und Stelle sein, statt in Eile hinaufzusteigen. Rechnen Sie davon zurück: vor sechs auf dem Gipfel, gegen vier am Startpunkt, davor neunzig Minuten Fahrt — und Sie kommen auf <strong>eine Abholung in Ubud gegen 02:30</strong>. Diese Uhrzeit haben wir nicht gewählt, um dramatisch zu klingen. Sie ist die einzige, die funktioniert.</p><p>So sieht das bei den Touren aus, die wir tatsächlich anbieten, mit den veröffentlichten Zeitfenstern:</p>
-                <ul><li><strong><a href="/bali/de/tours/mount-batur-sunrise-hike">Mount Batur: Wanderung zum Sonnenaufgang</a></strong> — ab $35, 5-8 Stunden, Abholung vor der Dämmerung 01:30-03:00. Ubud liegt am späten Ende dieses Fensters, weil Sie bereits auf halber Strecke sind.</li><li><strong><a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a></strong> — ab $75, 6-8 Stunden, Abholung gegen 02:00-03:30, mit Abschluss im Wasser statt auf einem langen Abstieg.</li><li><strong><a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a></strong> — ab $60, 6-8 Stunden, Abholung nachts oder vor der Dämmerung, ganz ohne Klettern.</li><li><strong>Von Canggu, Seminyak, Kuta oder Nusa Dua</strong> — rechnen Sie eine Stunde auf das, was ein Gast in Ubud macht, also grob 01:30 statt 02:30.</li><li><strong>Übernachten nördlich von Ubud</strong> in Tegalalang oder Payangan — Sie sind bereits ein Stück den Hügel hinauf, und die Abholung verschiebt sich meist um fünfzehn Minuten nach hinten.</li><li><strong>Stattdessen am Tag</strong> – die <a href="/bali/de/tours/ubud-highlights-tour">Ubud-Reisterrassen-, Tempel- und Vulkantour</a> ab $65 pro Auto startet um 08:00 und erreicht den Kraterrand von Kintamani bei vollem Tageslicht.</li></ul>
+                <ul><li><strong><a href="/bali/de/tours/mount-batur-sunrise-hike">Mount Batur: Wanderung zum Sonnenaufgang</a></strong> — ab $35, 5-8 Stunden, Abholung vor der Dämmerung 01:30-03:00. Ubud liegt am späten Ende dieses Fensters, weil Sie bereits auf halber Strecke sind.</li><li><strong><a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a></strong> — ab $55, 6-8 Stunden, Abholung gegen 02:00-03:30, mit Abschluss im Wasser statt auf einem langen Abstieg.</li><li><strong><a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a></strong> — ab $45, 6-8 Stunden, Abholung nachts oder vor der Dämmerung, ganz ohne Klettern.</li><li><strong>Von Canggu, Seminyak, Kuta oder Nusa Dua</strong> — rechnen Sie eine Stunde auf das, was ein Gast in Ubud macht, also grob 01:30 statt 02:30.</li><li><strong>Übernachten nördlich von Ubud</strong> in Tegalalang oder Payangan — Sie sind bereits ein Stück den Hügel hinauf, und die Abholung verschiebt sich meist um fünfzehn Minuten nach hinten.</li><li><strong>Stattdessen am Tag</strong> – die <a href="/bali/de/tours/ubud-highlights-tour">Ubud-Reisterrassen-, Tempel- und Vulkantour</a> ab $65 pro Auto startet um 08:00 und erreicht den Kraterrand von Kintamani bei vollem Tageslicht.</li></ul>
 
                 <p>Die genaue Minute bestätigen wir am Abend zuvor über WhatsApp, sobald wir Ihre Villa und die Gasse kennen, an der sie liegt. Manche Adressen in Ubud lassen kein Auto bis ans Tor, und das klärt man deutlich besser um 21:00 als um 02:30, während ein Fahrer im Dunkeln im Kreis fährt. Vorausbezahlt wird ebenfalls nichts: Wenn Sie beim Abendessen entscheiden, dass Sie den Wecker nicht ertragen, sagen Sie uns Bescheid, und damit ist die Sache erledigt.</p>
               </section>
@@ -1907,7 +1969,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sie möchten den gleichen Sonnenaufgang ohne den Aufstieg – mit Kindern oder nach einem späten Flug.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1915,7 +1977,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Der Sonnenaufgang, dann ein Bad in den natürlichen heißen Quellen am Batursee.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1953,7 +2015,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Was kostet ein Ausflug zum Mount Batur ab Ubud?</h3>
-                    <p>Unsere Sonnenaufgangswanderung beginnt bei $35 und dauert 5-8 Stunden von Tür zu Tür. Die Route mit Jeep und heißen Quellen beginnt bei $75 über 6-8 Stunden, und die Jeep-Sonnenaufgangstour bei $60. Ein Besuch in Kintamani bei Tag als Teil einer ganzen Ubud-Tagestour beginnt bei $65 pro Auto. Gebucht wird über WhatsApp, ohne Vorauszahlung.</p>
+                    <p>Unsere Sonnenaufgangswanderung beginnt bei $35 und dauert 5-8 Stunden von Tür zu Tür. Die Route mit Jeep und heißen Quellen beginnt bei $55 über 6-8 Stunden, und die Jeep-Sonnenaufgangstour bei $45. Ein Besuch in Kintamani bei Tag als Teil einer ganzen Ubud-Tagestour beginnt bei $65 pro Auto. Gebucht wird über WhatsApp, ohne Vorauszahlung.</p>
                   </article>
 
               </div>
@@ -2013,7 +2075,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
@@ -2063,7 +2125,7 @@ body {
 
                   <a class="sb-journal-related-guide" href="/bali/de/journal/mount-batur-sunrise-cost">
                     <span class="sb-journal-related-guide__label">Kosten für den Berg Batur</span>
-                    <span class="sb-journal-related-guide__title">Kosten für den Sonnenaufgang am Mount Batur: 35 $ zu Fuß, 60 $ mit dem Jeep</span>
+                    <span class="sb-journal-related-guide__title">Kosten für den Sonnenaufgang am Mount Batur: 35 $ zu Fuß, 45 $ mit dem Jeep</span>
                   </a>
 
                   <a class="sb-journal-related-guide" href="/bali/de/journal/what-time-to-leave-for-mount-batur-sunrise">

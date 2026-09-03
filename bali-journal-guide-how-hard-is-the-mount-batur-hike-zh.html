@@ -253,7 +253,7 @@
           "name": "巴杜尔山下山难吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "这是人们发现最难的部分。上面的小路是松散的黑色火山沙，下山时脚下会塌陷。短而缓慢的步伐和具有真实胎面的鞋子可以解决大部分问题。如果您的膝盖在下坡路段已经感到不适，可以乘坐 60 美元起的吉普车。"
+            "text": "这是人们发现最难的部分。上面的小路是松散的黑色火山沙，下山时脚下会塌陷。短而缓慢的步伐和具有真实胎面的鞋子可以解决大部分问题。如果您的膝盖在下坡路段已经感到不适，可以乘坐 45 美元起的吉普车。"
           }
         },
         {
@@ -1297,6 +1297,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1700,7 +1762,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1708,7 +1770,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1801,7 +1863,7 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>60 美元起，无攀爬</span>
+          <span>45 美元起，无攀爬</span>
           <span>膝盖、孩子和短夜</span>
         </div>
         <h3>何时改乘吉普车</h3>
@@ -1822,7 +1884,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>您可以在家进行的测试</h2>
-                <p>如果你能平稳地爬楼梯 <strong>一个半小时</strong> 无需长时间停留，您就能完成这次攀登。这并不是一个粗略的类比——它与路线要求的值很接近，但减去了海拔，1,717 m 的海拔不足以有意义地改变任何人的呼吸。</p><p>两个诚实的限定条件是配速和睡眠。步伐比你为自己设定的要慢，因为团队一起移动并定期停下来；这使得攀登比原始数据显示的更容易。睡眠则相反：拾取介于两者之间 <strong>01:30 和 03:00</strong>，所以你是在一个破碎的夜晚做这件事，而疲劳的代价比健身的代价更大。</p><p>如果楼梯让您气喘吁吁，或者您的膝盖在下坡时感到不适，那就是预订的信号 <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">sunrise jeep</a> 来自 <strong>$60</strong> 而不是强行通过。观点是一样的。</p>
+                <p>如果你能平稳地爬楼梯 <strong>一个半小时</strong> 无需长时间停留，您就能完成这次攀登。这并不是一个粗略的类比——它与路线要求的值很接近，但减去了海拔，1,717 m 的海拔不足以有意义地改变任何人的呼吸。</p><p>两个诚实的限定条件是配速和睡眠。步伐比你为自己设定的要慢，因为团队一起移动并定期停下来；这使得攀登比原始数据显示的更容易。睡眠则相反：拾取介于两者之间 <strong>01:30 和 03:00</strong>，所以你是在一个破碎的夜晚做这件事，而疲劳的代价比健身的代价更大。</p><p>如果楼梯让您气喘吁吁，或者您的膝盖在下坡时感到不适，那就是预订的信号 <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">sunrise jeep</a> 来自 <strong>$45</strong> 而不是强行通过。观点是一样的。</p>
 
 
 
@@ -1865,7 +1927,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1873,7 +1935,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1901,7 +1963,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>巴杜尔山下山难吗？</h3>
-                    <p>这是人们发现最难的部分。上面的小路是松散的黑色火山沙，下山时脚下会塌陷。短而缓慢的步伐和具有真实胎面的鞋子可以解决大部分问题。如果您的膝盖在下坡路段已经感到不适，可以乘坐 60 美元起的吉普车。</p>
+                    <p>这是人们发现最难的部分。上面的小路是松散的黑色火山沙，下山时脚下会塌陷。短而缓慢的步伐和具有真实胎面的鞋子可以解决大部分问题。如果您的膝盖在下坡路段已经感到不适，可以乘坐 45 美元起的吉普车。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1971,7 +2033,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
@@ -2000,7 +2062,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>

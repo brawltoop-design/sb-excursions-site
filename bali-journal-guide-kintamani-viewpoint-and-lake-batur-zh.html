@@ -173,7 +173,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "巴杜尔湖岸边的天然温泉",
-            "description": "天然温泉位于火山口内的湖面，中午和日出后的泉水效果一样好。大多数游客都是在 75 美元起的日出吉普车和温泉之旅的最后一站与他们见面，但私家车可以带你白天泡个澡，无需夜间接送——水并不关心你什么时间到达。",
+            "description": "天然温泉位于火山口内的湖面，中午和日出后的泉水效果一样好。大多数游客都是在 55 美元起的日出吉普车和温泉之旅的最后一站与他们见面，但私家车可以带你白天泡个澡，无需夜间接送——水并不关心你什么时间到达。",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg"
           }
         },
@@ -183,7 +183,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "日出吉普车之旅到黎明观景台",
-            "description": "06:00-06:30 一辆四驱车会开到观景点观看日出，所以没有人攀爬任何东西。夜间或黎明前接送服务 60 美元起，提供 6-8 小时的门到门服务，适合那些希望在黎明时分看到湖面而不需要 700 m 攀登的人们。它回答了一个与白天边缘停车不同的问题——黎明毫不费力，而不是没有闹钟的白天。",
+            "description": "06:00-06:30 一辆四驱车会开到观景点观看日出，所以没有人攀爬任何东西。夜间或黎明前接送服务 45 美元起，提供 6-8 小时的门到门服务，适合那些希望在黎明时分看到湖面而不需要 700 m 攀登的人们。它回答了一个与白天边缘停车不同的问题——黎明毫不费力，而不是没有闹钟的白天。",
             "image": "https://www.sbexcursion.com/images/places/mount-batur-jeep.jpg"
           }
         },
@@ -224,7 +224,7 @@
           "name": "白天可以去巴杜尔湖温泉吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "是的。湖岸上的天然温泉白天的运作与日出后的运作完全一样。大多数人将它们作为日出吉普车和温泉之旅的最后一站，价格为 75 美元，但白天的私家车之旅可以包括浸泡，无需夜间接送。"
+            "text": "是的。湖岸上的天然温泉白天的运作与日出后的运作完全一样。大多数人将它们作为日出吉普车和温泉之旅的最后一站，价格为 55 美元，但白天的私家车之旅可以包括浸泡，无需夜间接送。"
           }
         },
         {
@@ -1276,6 +1276,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1679,7 +1741,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">同样的日出四驱车，无需攀爬，然后泡在金塔马尼温泉。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1687,7 +1749,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">从无需攀爬的四轮驱动车上日出，然后穿越黑色熔岩原。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1724,7 +1786,7 @@ body {
           <span>日光下的温暖浸泡</span>
         </div>
         <h3>巴杜尔湖岸边的天然温泉</h3>
-        <p>天然温泉位于火山口内的湖面，中午和日出后的泉水效果一样好。大多数游客都是在 75 美元起的日出吉普车和温泉之旅的最后一站与他们见面，但私家车可以带你白天泡个澡，无需夜间接送——水并不关心你什么时间到达。</p>
+        <p>天然温泉位于火山口内的湖面，中午和日出后的泉水效果一样好。大多数游客都是在 55 美元起的日出吉普车和温泉之旅的最后一站与他们见面，但私家车可以带你白天泡个澡，无需夜间接送——水并不关心你什么时间到达。</p>
       </div>
     </article>
 
@@ -1739,7 +1801,7 @@ body {
           <span>黎明之光洒满湖面，无需攀登</span>
         </div>
         <h3>日出吉普车之旅到黎明观景台</h3>
-        <p>06:00-06:30 一辆四驱车会开到观景点观看日出，所以没有人攀爬任何东西。夜间或黎明前接送服务 60 美元起，提供 6-8 小时的门到门服务，适合那些希望在黎明时分看到湖面而不需要 700 m 攀登的人们。它回答了一个与白天边缘停车不同的问题——黎明毫不费力，而不是没有闹钟的白天。</p>
+        <p>06:00-06:30 一辆四驱车会开到观景点观看日出，所以没有人攀爬任何东西。夜间或黎明前接送服务 45 美元起，提供 6-8 小时的门到门服务，适合那些希望在黎明时分看到湖面而不需要 700 m 攀登的人们。它回答了一个与白天边缘停车不同的问题——黎明毫不费力，而不是没有闹钟的白天。</p>
       </div>
     </article>
 
@@ -1765,7 +1827,7 @@ body {
                 <h2>比较观察巴杜尔火山口的各种方式</h2>
                 <p>金塔马尼坐落在巴杜尔湖和火山本身的火山口边缘，而佩内洛坎是其最著名的观景点。边缘道路是公共的，白天欣赏火山口景观不需要任何费用，这将规划问题从金塔马尼之旅的费用转变为您想如何认识这座火山：中午从边缘，从湖面的热水池，还是黎明时从山顶。该表将每个选项视为一个完整的答案，因为它们都不是另一个选项的升级或降级。</p>
 
-                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">观看火山口的方式</th><th scope="col">需要体力</th><th scope="col">旅行费用</th><th scope="col">此选项是更好选择的情况</th></tr></thead><tbody><tr><th scope="row">白天在 Penelokan 观景台停留</th><td>毫不费力——距离停放的汽车仅几步之遥</td><td>景观免费；全程带司机的私家车费用为每辆车 59 美元起</td><td>如果您想要看没有闹钟的火山 - 上午离开乌布，大约 90 分钟后站在火山边缘</td></tr><tr><th scope="row">白天泡湖边温泉</th><td>省力——泳池位于湖面，可通过公路到达</td><td>私家车每辆车 59 美元起；预订时通过WhatsApp确认温泉详情</td><td>当温暖的浸泡比黎明的光线更重要时，泉水在中午和日出后都可以发挥作用</td></tr><tr><th scope="row">巴杜尔山日出徒步登顶</th><td>高强度 — 在黑暗中爬升约 700 m，历时 1.5-2 小时</td><td>35 美元起，含酒店接送服务</td><td>这就是日出之旅本身——选择站在 1,717 m 的高度，因为 06:00-06:30 日出是一天中的重点</td></tr><tr><th scope="row">巴杜尔山日出吉普车之旅</th><td>省力——四轮驱动到达观景点，无需爬坡</td><td>60 美元起，含酒店接送服务</td><td>这是无需攀爬的日出之旅——当黎明的曙光很重要但夜间徒步旅行不那么吸引人时，请选择它</td></tr><tr><th scope="row">日出吉普车之旅在温泉结束</th><td>省力 — 开车前往观景台，然后在湖面浸泡</td><td>75 美元起，含酒店接送服务</td><td>这是日出加温泉之旅——选择在一次 6-8 小时的郊游中将黎明的光线和温水结合起来</td></tr></tbody></table></div><p class="sb-journal-tablenote">价格是私人旅行的起始价格，包括酒店接送服务。没有任何费用是预付的；每个预订均通过 WhatsApp 确认。日出产品和白天边缘景观是不同的体验——两者互不替代。</p>
+                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">观看火山口的方式</th><th scope="col">需要体力</th><th scope="col">旅行费用</th><th scope="col">此选项是更好选择的情况</th></tr></thead><tbody><tr><th scope="row">白天在 Penelokan 观景台停留</th><td>毫不费力——距离停放的汽车仅几步之遥</td><td>景观免费；全程带司机的私家车费用为每辆车 59 美元起</td><td>如果您想要看没有闹钟的火山 - 上午离开乌布，大约 90 分钟后站在火山边缘</td></tr><tr><th scope="row">白天泡湖边温泉</th><td>省力——泳池位于湖面，可通过公路到达</td><td>私家车每辆车 59 美元起；预订时通过WhatsApp确认温泉详情</td><td>当温暖的浸泡比黎明的光线更重要时，泉水在中午和日出后都可以发挥作用</td></tr><tr><th scope="row">巴杜尔山日出徒步登顶</th><td>高强度 — 在黑暗中爬升约 700 m，历时 1.5-2 小时</td><td>35 美元起，含酒店接送服务</td><td>这就是日出之旅本身——选择站在 1,717 m 的高度，因为 06:00-06:30 日出是一天中的重点</td></tr><tr><th scope="row">巴杜尔山日出吉普车之旅</th><td>省力——四轮驱动到达观景点，无需爬坡</td><td>45 美元起，含酒店接送服务</td><td>这是无需攀爬的日出之旅——当黎明的曙光很重要但夜间徒步旅行不那么吸引人时，请选择它</td></tr><tr><th scope="row">日出吉普车之旅在温泉结束</th><td>省力 — 开车前往观景台，然后在湖面浸泡</td><td>From $55 with hotel pickup and return included</td><td>这是日出加温泉之旅——选择在一次 6-8 小时的郊游中将黎明的光线和温水结合起来</td></tr></tbody></table></div><p class="sb-journal-tablenote">价格是私人旅行的起始价格，包括酒店接送服务。没有任何费用是预付的；每个预订均通过 WhatsApp 确认。日出产品和白天边缘景观是不同的体验——两者互不替代。</p>
 
               </section>
 
@@ -1787,7 +1849,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>如何预订金塔马尼日间旅行</h2>
-                <p>老实说，金塔马尼之旅就是一辆车、一个司机和一条公共道路。我们带司机的私家车起价为 <strong>每辆车 59 美元</strong>，不按人计算，提供酒店接送服务，司机会在每一站等待——观景台、午餐、温泉——只要您愿意，就等多久。无需提前支付任何费用：您在 WhatsApp 上同意该计划并在当天结算。同一辆汽车覆盖巴厘岛所有主要地区，因此火山口可以与回程中的其他站点共享一天。</p><p>如果日间景观稍后引导您进入山顶，日出产品每天都会在相同的无预付费基础上运行：从 <strong>$35</strong> 在 <strong>5-8小时</strong> 门到门，吉普车之旅 <strong>$60</strong>，吉普车终点站是温泉 <strong>$75</strong>，均在 <strong>6-8小时</strong>。首先在白天看到边缘是一个有用的侦察——你会确切地知道你要攀爬什么，以及人们为什么要设置闹钟。</p>
+                <p>老实说，金塔马尼之旅就是一辆车、一个司机和一条公共道路。我们带司机的私家车起价为 <strong>每辆车 59 美元</strong>，不按人计算，提供酒店接送服务，司机会在每一站等待——观景台、午餐、温泉——只要您愿意，就等多久。无需提前支付任何费用：您在 WhatsApp 上同意该计划并在当天结算。同一辆汽车覆盖巴厘岛所有主要地区，因此火山口可以与回程中的其他站点共享一天。</p><p>如果日间景观稍后引导您进入山顶，日出产品每天都会在相同的无预付费基础上运行：从 <strong>$35</strong> 在 <strong>5-8小时</strong> 门到门，吉普车之旅 <strong>$45</strong>，吉普车终点站是温泉 <strong>$55</strong>，均在 <strong>6-8小时</strong>。首先在白天看到边缘是一个有用的侦察——你会确切地知道你要攀爬什么，以及人们为什么要设置闹钟。</p>
 
 
 
@@ -1814,7 +1876,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">同样的日出四驱车，无需攀爬，然后泡在金塔马尼温泉。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1822,7 +1884,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">从无需攀爬的四轮驱动车上日出，然后穿越黑色熔岩原。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1845,7 +1907,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>白天可以去巴杜尔湖温泉吗？</h3>
-                    <p>是的。湖岸上的天然温泉白天的运作与日出后的运作完全一样。大多数人将它们作为日出吉普车和温泉之旅的最后一站，价格为 75 美元，但白天的私家车之旅可以包括浸泡，无需夜间接送。</p>
+                    <p>是的。湖岸上的天然温泉白天的运作与日出后的运作完全一样。大多数人将它们作为日出吉普车和温泉之旅的最后一站，价格为 55 美元，但白天的私家车之旅可以包括浸泡，无需夜间接送。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1891,7 +1953,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
@@ -1920,7 +1982,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>

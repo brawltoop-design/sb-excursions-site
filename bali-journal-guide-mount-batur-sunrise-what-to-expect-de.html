@@ -215,7 +215,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "Die Rückfahrt oder die heißen Quellen",
-            "description": "Die Rückfahrt trifft auf normalen Tagesverkehr und ist deshalb langsamer als die leeren Straßen der Nacht zuvor — der gesamte Ausflug dauert 5-8 Stunden von Tür zu Tür. Wenn Sie nicht direkt ins Hotel zurück möchten: Das Format mit Jeep und heißer Quelle, ab $75, beendet den Vormittag mit einem Bad in natürlichen heißen Quellen am See.",
+            "description": "Die Rückfahrt trifft auf normalen Tagesverkehr und ist deshalb langsamer als die leeren Straßen der Nacht zuvor — der gesamte Ausflug dauert 5-8 Stunden von Tür zu Tür. Wenn Sie nicht direkt ins Hotel zurück möchten: Das Format mit Jeep und heißer Quelle, ab $55, beendet den Vormittag mit einem Bad in natürlichen heißen Quellen am See.",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg"
           }
         }
@@ -1298,6 +1298,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1701,7 +1763,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sonnenaufgang aus einem 4x4 ohne Klettern, dann über das schwarze Lavafeld.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1709,7 +1771,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Derselbe Sonnenaufgang im Geländewagen ohne Klettern, gefolgt von einem Bad in einer heißen Quelle in Kintamani.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1806,7 +1868,7 @@ body {
           <span>Den Morgen in warmem Wasser ausklingen lassen</span>
         </div>
         <h3>Die Rückfahrt oder die heißen Quellen</h3>
-        <p>Die Rückfahrt trifft auf normalen Tagesverkehr und ist deshalb langsamer als die leeren Straßen der Nacht zuvor — der gesamte Ausflug dauert 5-8 Stunden von Tür zu Tür. Wenn Sie nicht direkt ins Hotel zurück möchten: Das Format mit Jeep und heißer Quelle, ab $75, beendet den Vormittag mit einem Bad in natürlichen heißen Quellen am See.</p>
+        <p>Die Rückfahrt trifft auf normalen Tagesverkehr und ist deshalb langsamer als die leeren Straßen der Nacht zuvor — der gesamte Ausflug dauert 5-8 Stunden von Tür zu Tür. Wenn Sie nicht direkt ins Hotel zurück möchten: Das Format mit Jeep und heißer Quelle, ab $55, beendet den Vormittag mit einem Bad in natürlichen heißen Quellen am See.</p>
       </div>
     </article>
 
@@ -1831,7 +1893,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Sonnenaufgang hinter dem Agung und der Abstieg bei Tageslicht</h2>
-                <p>Der Kraterrand blickt nach Osten über den Lake Batur, direkt auf den Mount Agung, und die Sonne kommt hinter der Schulter des Agung hoch, zwischen <strong>06:00 und 06:30 Uhr</strong>. An klaren Morgen steht der Mount Rinjani auf Lombok weiter östlich am Horizont — ein Vulkan auf einer anderen Insel, sichtbar vom Gipfel dieser hier. Das Licht kommt nicht auf einmal: Der Himmel wird grau, orange Bänder bauen sich hinter der Silhouette des Agung auf, und die Caldera setzt sich unter Ihnen aus dem Dunkel zusammen — zuerst der See, dann die Dörfer am Ufer, dann das dunkle Vulkangestein am Fuß des Kegels.</p><p>Der Abstieg ist der Teil, den niemand fotografiert und an den sich alle erinnern. Er dauert etwa <strong>1,5 Stunden</strong> bei vollem Tageslicht, und der obere Abschnitt aus lockerem schwarzem Sand rollt unter den Füßen wie Kugellager. Kürzere Schritte und Schuhe mit echtem Profil machen daraus statt einer heiklen eine wirklich schöne Sache — und zum ersten Mal sehen Sie, was Sie erstiegen haben: die ganze Caldera, den See und den Weg, der sich in Serpentinen zum Startpunkt hinunterzieht.</p><p>Zurück am Auto ist die Rückfahrt langsamer als die Hinfahrt, weil der Tagesverkehr erwacht ist — und deshalb <a href="/bali/de/tours/mount-batur-sunrise-hike">Sonnenaufgangswanderung auf dem Mount Batur</a> wird angegeben mit <strong>5-8 Stunden</strong> von Tür zu Tür statt einer festen Uhrzeit. Wenn Sie den Morgen lieber in warmem Wasser als im Auto beenden, ist die Version mit Jeep und heißen Quellen, <strong>ab 75 $</strong>, endet mit einem Bad in natürlichen heißen Quellen am Seeufer.</p>
+                <p>Der Kraterrand blickt nach Osten über den Lake Batur, direkt auf den Mount Agung, und die Sonne kommt hinter der Schulter des Agung hoch, zwischen <strong>06:00 und 06:30 Uhr</strong>. An klaren Morgen steht der Mount Rinjani auf Lombok weiter östlich am Horizont — ein Vulkan auf einer anderen Insel, sichtbar vom Gipfel dieser hier. Das Licht kommt nicht auf einmal: Der Himmel wird grau, orange Bänder bauen sich hinter der Silhouette des Agung auf, und die Caldera setzt sich unter Ihnen aus dem Dunkel zusammen — zuerst der See, dann die Dörfer am Ufer, dann das dunkle Vulkangestein am Fuß des Kegels.</p><p>Der Abstieg ist der Teil, den niemand fotografiert und an den sich alle erinnern. Er dauert etwa <strong>1,5 Stunden</strong> bei vollem Tageslicht, und der obere Abschnitt aus lockerem schwarzem Sand rollt unter den Füßen wie Kugellager. Kürzere Schritte und Schuhe mit echtem Profil machen daraus statt einer heiklen eine wirklich schöne Sache — und zum ersten Mal sehen Sie, was Sie erstiegen haben: die ganze Caldera, den See und den Weg, der sich in Serpentinen zum Startpunkt hinunterzieht.</p><p>Zurück am Auto ist die Rückfahrt langsamer als die Hinfahrt, weil der Tagesverkehr erwacht ist — und deshalb <a href="/bali/de/tours/mount-batur-sunrise-hike">Sonnenaufgangswanderung auf dem Mount Batur</a> wird angegeben mit <strong>5-8 Stunden</strong> von Tür zu Tür statt einer festen Uhrzeit. Wenn Sie den Morgen lieber in warmem Wasser als im Auto beenden, ist die Version mit Jeep und heißen Quellen, <strong>ab 55 $</strong>, endet mit einem Bad in natürlichen heißen Quellen am Seeufer.</p>
 
 
 
@@ -1839,7 +1901,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Was ein bewölkter Morgen trotzdem bietet</h2>
-                <p>In der Regenzeit, ungefähr <strong>November bis März</strong>, gehören Wolken dazu: der obere Pfad wird rutschig, und Wolken können den Blick genau im falschen Moment schlucken. Guides gehen trotzdem an den meisten Morgen los und sagen nur bei wirklich schlechtem Wetter ab, eine graue Vorhersage auf dem Handy am Abend zuvor ist also für sich genommen kein Grund abzusagen — Bergwetter entscheidet sich am Berg, nicht in der App.</p><p>Ein bewölkter Sonnenaufgang ist kein leerer. Der Aufstieg mit der Stirnlampe findet trotzdem statt, das Dunkel wird trotzdem grau, dann silbern, dann hell, das heiße Getränk am Kraterrand schmeckt trotzdem besser als jeder Kaffee auf Meereshöhe, und der Abstieg über die Caldera bei Tageslicht bleibt. Wolken in dieser Höhe bewegen sich außerdem — sie verdecken den Agung in der einen Minute und geben in der nächsten einen weiten Blick über den See frei, und die Fotos durch diese Lücken gehören zu den besten, die uns erreichen.</p><p>Zwei praktische Absicherungen. Erstens: Wenn Ihre Daten es zulassen, halten Sie einen Ersatzmorgen frei — diese eine Entscheidung nimmt den größten Teil des Wetterrisikos aus dem Plan. Zweitens ist der Blick auf dieselbe Caldera bei Tag von der Kraterrandstraße in Kintamani öffentlich und kostenlos, ein komplett zugezogener Gipfel lässt sich also noch am selben Nachmittag mit Auto und Fahrer reparieren. Und wenn Sie der Weg in der Regenzeit selbst beunruhigt, der <a href="/bali/de/journal/mount-batur-sunrise-jeep-vs-hike">Vergleich zwischen Jeep und Wanderung</a> behandelt das Format, bei dem ein 4x4 den Aufstieg übernimmt, <strong>ab 60 $</strong>.</p>
+                <p>In der Regenzeit, ungefähr <strong>November bis März</strong>, gehören Wolken dazu: der obere Pfad wird rutschig, und Wolken können den Blick genau im falschen Moment schlucken. Guides gehen trotzdem an den meisten Morgen los und sagen nur bei wirklich schlechtem Wetter ab, eine graue Vorhersage auf dem Handy am Abend zuvor ist also für sich genommen kein Grund abzusagen — Bergwetter entscheidet sich am Berg, nicht in der App.</p><p>Ein bewölkter Sonnenaufgang ist kein leerer. Der Aufstieg mit der Stirnlampe findet trotzdem statt, das Dunkel wird trotzdem grau, dann silbern, dann hell, das heiße Getränk am Kraterrand schmeckt trotzdem besser als jeder Kaffee auf Meereshöhe, und der Abstieg über die Caldera bei Tageslicht bleibt. Wolken in dieser Höhe bewegen sich außerdem — sie verdecken den Agung in der einen Minute und geben in der nächsten einen weiten Blick über den See frei, und die Fotos durch diese Lücken gehören zu den besten, die uns erreichen.</p><p>Zwei praktische Absicherungen. Erstens: Wenn Ihre Daten es zulassen, halten Sie einen Ersatzmorgen frei — diese eine Entscheidung nimmt den größten Teil des Wetterrisikos aus dem Plan. Zweitens ist der Blick auf dieselbe Caldera bei Tag von der Kraterrandstraße in Kintamani öffentlich und kostenlos, ein komplett zugezogener Gipfel lässt sich also noch am selben Nachmittag mit Auto und Fahrer reparieren. Und wenn Sie der Weg in der Regenzeit selbst beunruhigt, der <a href="/bali/de/journal/mount-batur-sunrise-jeep-vs-hike">Vergleich zwischen Jeep und Wanderung</a> behandelt das Format, bei dem ein 4x4 den Aufstieg übernimmt, <strong>ab 45 $</strong>.</p>
 
 
 
@@ -1866,7 +1928,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sonnenaufgang aus einem 4x4 ohne Klettern, dann über das schwarze Lavafeld.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1874,7 +1936,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Derselbe Sonnenaufgang im Geländewagen ohne Klettern, gefolgt von einem Bad in einer heißen Quelle in Kintamani.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1943,7 +2005,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
@@ -1972,7 +2034,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>

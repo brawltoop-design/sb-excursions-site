@@ -246,7 +246,7 @@
           "name": "不徒步可以从水明漾看到巴杜尔山日出吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "是的。日出吉普车之旅 60 美元起，从塞米亚克出发，乘坐四轮驱动车送您前往观景点，因此任何时候都无需攀爬。温泉版本 75 美元起，最后在天然湖畔泳池中浸泡。两者都运行 6-8 小时，挨家挨户，下午之前返回。"
+            "text": "是的。日出吉普车之旅 45 美元起，从塞米亚克出发，乘坐四轮驱动车送您前往观景点，因此任何时候都无需攀爬。温泉版本 55 美元起，最后在天然湖畔泳池中浸泡。两者都运行 6-8 小时，挨家挨户，下午之前返回。"
           }
         },
         {
@@ -270,7 +270,7 @@
           "name": "从水明漾出发的巴杜尔火山之旅需要提前付款吗？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "不需要。我们所有的巴杜尔旅行都是通过 WhatsApp 预订的，无需预付款，每一次都是私人旅行，包括水明漾的酒店接送服务。日出徒步每人 35 美元起，吉普车之旅 60 美元起，温泉吉普车 75 美元起。您在聊天中确认详细信息和接载时间。"
+            "text": "不需要。我们所有的巴杜尔旅行都是通过 WhatsApp 预订的，无需预付款，每一次都是私人旅行，包括水明漾的酒店接送服务。日出徒步每人 35 美元起，吉普车之旅 45 美元起，温泉吉普车 55 美元起。您在聊天中确认详细信息和接载时间。"
           }
         }
       ]
@@ -1298,6 +1298,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1656,9 +1718,9 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">旅游指南</div>
             <h1>水明漾至巴杜尔山：1.5-2.5 小时，01:30 接载</h1>
-            <p class="sb-journal-lead">水明漾到巴杜尔山的单程车程为 1.5-2.5 小时，对于日出之旅，这意味着司机会在 01:30 左右到达您的门口，比入住乌布的客人提前整整一个小时。这个数字就可以重新安排你的整个晚上。水明漾是一个晚餐和饮料的小镇，日出和夜晚并不适合在同一个夜晚：晚餐提前结束，第二轮被跳过，你在闹钟响之前而不是响之后睡觉。奖励是您在岛上最快的驾驶时间（02:00 道路上空无一人）以及从 1,717 m 处越过巴图尔湖的第一道曙光。水明漾提供三种私人套餐：日出徒步 35 美元起、吉普车之旅 60 美元起（完全无需攀爬）以及吉普车带湖畔温泉 75 美元起。本指南按小时列出了夜晚的情况，并帮助您选择适合的形式。</p>
+            <p class="sb-journal-lead">水明漾到巴杜尔山的单程车程为 1.5-2.5 小时，对于日出之旅，这意味着司机会在 01:30 左右到达您的门口，比入住乌布的客人提前整整一个小时。这个数字就可以重新安排你的整个晚上。水明漾是一个晚餐和饮料的小镇，日出和夜晚并不适合在同一个夜晚：晚餐提前结束，第二轮被跳过，你在闹钟响之前而不是响之后睡觉。奖励是您在岛上最快的驾驶时间（02:00 道路上空无一人）以及从 1,717 m 处越过巴图尔湖的第一道曙光。水明漾提供三种私人套餐：日出徒步 35 美元起、吉普车之旅 45 美元起（完全无需攀爬）以及吉普车带湖畔温泉 55 美元起。本指南按小时列出了夜晚的情况，并帮助您选择适合的形式。</p>
             <p class="sb-journal-dates">作者：Alex Moskvin，SB Excursions 创始人 · 发布于 2026 年 5 月 21 日 · 更新于 2026 年 8 月 7 日</p>
-            <p class="sb-journal-deck">此路线游览： <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a> — 60 美元起，6-8 小时。</p>
+            <p class="sb-journal-deck">此路线游览： <a href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a> — 45 美元起，6-8 小时。</p>
             <div class="sb-quick-answer">
               <p class="sb-quick-answer__q">巴杜尔山 离 塞米亚克有多远?</p>
               <p class="sb-quick-answer__a">根据路线和交通情况，计划单程行驶 1.5-2.5 小时。水明漾位于巴厘岛的西南海岸，巴杜尔山矗立在东北部的金塔马尼高地，因此您可以穿越岛屿的大部分地区。晚上开车出去通常很快，因为道路上空无一人。白天的返回是慢一半。</p>
@@ -1666,10 +1728,10 @@ body {
               <ul class="sb-quick-answer__list"><li>塞米亚克巴杜尔山日出徒步旅行的接客时间是什么时候？</li><li>不徒步可以从水明漾看到巴杜尔山日出吗？</li><li>从水明漾出发的巴杜尔山之旅之前您需要睡多少觉？</li></ul>
             </div>
             <div class="sb-journal-inline-stats">
-              <span>单程 1.5-2.5 小时车程</span><span>水明漾接载时间约 01:30</span><span>日出吉普车 60 美元起</span>
+              <span>单程 1.5-2.5 小时车程</span><span>水明漾接载时间约 01:30</span><span>日出吉普车 45 美元起</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅 — 60 美元起</a>
+              <a class="sb-journal-primary" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅 — 45 美元起</a>
               <a class="sb-journal-secondary" href="/bali/zh/journal">浏览所有指南</a>
             </div>
           </div>
@@ -1701,7 +1763,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1709,7 +1771,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1727,7 +1789,7 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>60 美元起 · 6-8 小时</span>
+          <span>45 美元起 · 6-8 小时</span>
           <span>水明漾之夜后的默认选择</span>
         </div>
         <h3>巴杜尔山日出吉普车之旅</h3>
@@ -1757,7 +1819,7 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>75 美元起 · 6-8 小时</span>
+          <span>From $55 · 6-8 hours</span>
           <span>早上恢复</span>
         </div>
         <h3>巴杜尔山日出吉普车和温泉</h3>
@@ -1831,7 +1893,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>水明漾之夜适合哪种形式</h2>
-                <p>三种日出形式从塞米亚克出发，均为私人，包含酒店接送服务和 <strong>没有预付款</strong> — 您通过 WhatsApp 预订，确切时间会在前一天确认。徒步旅行从 <strong>$35</strong> 是最便宜而且最早的。吉普车之旅从 <strong>$60</strong> 完全消除了攀爬，因为 4x4 自己到达了观景点。温泉吉普车 <strong>$75</strong> 最后在天然湖畔泳池中浸泡。步行和骑行之间的诚实权衡载于 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">巴杜尔山日出：吉普车与徒步旅行</a>.</p><p>水明漾以一种特定的方式改变了计算方式：这是一个人们选择其餐厅和鸡尾酒吧的城镇，而日出之旅悄悄地花费了你一个晚上的时间。如果您已经接受了早起的夜晚， <strong>$35</strong> 徒步旅行最有回报。如果计划是外出晚餐和合理的就寝时间，那么吉普车的格式会更宽容——你的两条驱动腿都睡觉，没有人要求你的腿在 04:00 做任何事情。行不通的就是把差异分开：在午夜结束的夜晚，然后是 01:30 的闹钟，这是这次旅行中最糟糕的版本。</p><p>还有一个根本没有警报的版本。金塔马尼边缘道路是公共的，白天的火山口景观无需花费任何费用，因此 <a href="/bali/zh/tours/private-car-with-driver-bali">带司机的私家车</a> 来自 <strong>每辆车 59 美元</strong> 将巴杜尔变成了一次普通的一日游——没有山顶，没有日出，但有火山、湖泊和美景上的午餐。对于那些真正不适合夜间行程的人来说，包括怀孕或不确定自己的健康状况的人来说，这是正确的答案：吉普车轨道崎岖不平，徒步旅行很费力，所以环路加上医生的建议胜过猜测。</p>
+                <p>三种日出形式从塞米亚克出发，均为私人，包含酒店接送服务和 <strong>没有预付款</strong> — 您通过 WhatsApp 预订，确切时间会在前一天确认。徒步旅行从 <strong>$35</strong> 是最便宜而且最早的。吉普车之旅从 <strong>$45</strong> 完全消除了攀爬，因为 4x4 自己到达了观景点。温泉吉普车 <strong>$55</strong> 最后在天然湖畔泳池中浸泡。步行和骑行之间的诚实权衡载于 <a href="/bali/zh/journal/mount-batur-sunrise-jeep-vs-hike">巴杜尔山日出：吉普车与徒步旅行</a>.</p><p>水明漾以一种特定的方式改变了计算方式：这是一个人们选择其餐厅和鸡尾酒吧的城镇，而日出之旅悄悄地花费了你一个晚上的时间。如果您已经接受了早起的夜晚， <strong>$35</strong> 徒步旅行最有回报。如果计划是外出晚餐和合理的就寝时间，那么吉普车的格式会更宽容——你的两条驱动腿都睡觉，没有人要求你的腿在 04:00 做任何事情。行不通的就是把差异分开：在午夜结束的夜晚，然后是 01:30 的闹钟，这是这次旅行中最糟糕的版本。</p><p>还有一个根本没有警报的版本。金塔马尼边缘道路是公共的，白天的火山口景观无需花费任何费用，因此 <a href="/bali/zh/tours/private-car-with-driver-bali">带司机的私家车</a> 来自 <strong>每辆车 59 美元</strong> 将巴杜尔变成了一次普通的一日游——没有山顶，没有日出，但有火山、湖泊和美景上的午餐。对于那些真正不适合夜间行程的人来说，包括怀孕或不确定自己的健康状况的人来说，这是正确的答案：吉普车轨道崎岖不平，徒步旅行很费力，所以环路加上医生的建议胜过猜测。</p>
 
 
 
@@ -1866,7 +1928,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a>
                     <span class="sboffer__for">您想要在不爬山的情况下欣赏同样的日出——带着孩子，或者在晚点的航班之后。</span>
                   </span>
-                  <span class="sboffer__price">60 美元起</span>
+                  <span class="sboffer__price">45 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 <li class="sboffer__row">
@@ -1874,7 +1936,7 @@ body {
                     <a class="sboffer__name" href="/bali/zh/tours/mount-batur-sunrise-jeep-hot-spring">巴杜尔山日出吉普车和温泉</a>
                     <span class="sboffer__for">日出，然后泡在巴图尔湖畔的天然温泉中。</span>
                   </span>
-                  <span class="sboffer__price">75 美元起</span>
+                  <span class="sboffer__price">55 美元起</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E5%92%8C%E6%B8%A9%E6%B3%89%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">立即预订</a>
                 </li>
                 </ul>
@@ -1897,7 +1959,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>不徒步可以从水明漾看到巴杜尔山日出吗？</h3>
-                    <p>是的。日出吉普车之旅 60 美元起，从塞米亚克出发，乘坐四轮驱动车送您前往观景点，因此任何时候都无需攀爬。温泉版本 75 美元起，最后在天然湖畔泳池中浸泡。两者都运行 6-8 小时，挨家挨户，下午之前返回。</p>
+                    <p>是的。日出吉普车之旅 45 美元起，从塞米亚克出发，乘坐四轮驱动车送您前往观景点，因此任何时候都无需攀爬。温泉版本 55 美元起，最后在天然湖畔泳池中浸泡。两者都运行 6-8 小时，挨家挨户，下午之前返回。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1912,7 +1974,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>从水明漾出发的巴杜尔火山之旅需要提前付款吗？</h3>
-                    <p>不需要。我们所有的巴杜尔旅行都是通过 WhatsApp 预订的，无需预付款，每一次都是私人旅行，包括水明漾的酒店接送服务。日出徒步每人 35 美元起，吉普车之旅 60 美元起，温泉吉普车 75 美元起。您在聊天中确认详细信息和接载时间。</p>
+                    <p>不需要。我们所有的巴杜尔旅行都是通过 WhatsApp 预订的，无需预付款，每一次都是私人旅行，包括水明漾的酒店接送服务。日出徒步每人 35 美元起，吉普车之旅 45 美元起，温泉吉普车 55 美元起。您在聊天中确认详细信息和接载时间。</p>
                   </article>
 
               </div>
@@ -1943,7 +2005,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
@@ -2001,7 +2063,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
@@ -2068,12 +2130,12 @@ body {
               <h3 class="sbtc-rail__title"><a class="sbtc-rail__titlelink" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">巴杜尔山日出吉普车之旅</a></h3>
               <p class="sbtc-price sbtc-rail__price">
           <span class="sbtc-price__lead sbtc-caps">低至</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">无需预付款</span>
         </p>
               <div class="sbtc-rail__actions">
-                <a class="sbtc-btn sbtc-btn_ink" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">查看游览 — 60 美元起<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
+                <a class="sbtc-btn sbtc-btn_ink" href="/bali/zh/tours/mount-batur-sunrise-jeep-tour">查看游览 — 45 美元起<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
                 <a class="sbtc-btn sbtc-btn_line" href="https://wa.me/6285333685020?text=%E6%82%A8%E5%A5%BD%EF%BC%81%E6%88%91%E6%83%B3%E9%A2%84%E8%AE%A2%E5%B7%B4%E6%9D%9C%E5%B0%94%E5%B1%B1%E6%97%A5%E5%87%BA%E5%90%89%E6%99%AE%E8%BD%A6%E4%B9%8B%E6%97%85%EF%BC%8C%E8%AF%B7%E5%8F%91%E9%80%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF%E3%80%82" target="_blank" rel="noopener noreferrer nofollow">通过 WhatsApp 预订</a>
               </div>
               <dl class="sbtc-ledger sbtc-rail__ledger">

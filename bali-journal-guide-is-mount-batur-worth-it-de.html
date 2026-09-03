@@ -34,7 +34,7 @@
       "@type": "BlogPosting",
       "@id": "https://www.sbexcursion.com/bali/de/journal/is-mount-batur-worth-it#article",
       "headline": "Lohnt sich der Mount Batur? Nur wenn ein 02:00-Alarm in Ordnung ist",
-      "description": "Lohnt sich, wenn Sie zwei Stunden im Dunkeln bergauf gehen können und ein Wecker um 02:00 für Sie passt. Wenn eines von beiden zu viel ist, bringt Ihnen der Jeep denselben Sonnenaufgang ab $60.",
+      "description": "Lohnt sich, wenn Sie zwei Stunden im Dunkeln bergauf gehen können und ein Wecker um 02:00 für Sie passt. Wenn eines von beiden zu viel ist, bringt Ihnen der Jeep denselben Sonnenaufgang ab $45.",
       "datePublished": "2026-05-21",
       "dateModified": "2026-08-07",
       "speakable": {
@@ -121,7 +121,7 @@
       "@id": "https://www.sbexcursion.com/bali/de/journal/is-mount-batur-worth-it#webpage",
       "url": "https://www.sbexcursion.com/bali/de/journal/is-mount-batur-worth-it",
       "name": "Lohnt sich der Mount Batur? Nur wenn ein 02:00-Alarm in Ordnung ist",
-      "description": "Lohnt sich, wenn Sie zwei Stunden im Dunkeln bergauf gehen können und ein Wecker um 02:00 für Sie passt. Wenn eines von beiden zu viel ist, bringt Ihnen der Jeep denselben Sonnenaufgang ab $60.",
+      "description": "Lohnt sich, wenn Sie zwei Stunden im Dunkeln bergauf gehen können und ein Wecker um 02:00 für Sie passt. Wenn eines von beiden zu viel ist, bringt Ihnen der Jeep denselben Sonnenaufgang ab $45.",
       "inLanguage": "de",
       "primaryImageOfPage": {
         "@type": "ImageObject",
@@ -225,7 +225,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "Lohnt sich mit Badestopp: Jeep und heiße Quelle",
-            "description": "Derselbe Jeep-Sonnenaufgang mit heißer Quelle am Ende, ab $75 über 6-8 Stunden, Abholung um 02:00-03:30. Nachdem man im ersten Licht im Wind gestanden hat, ist warmes Wasser ein besserer Abschluss als eine schweigsame Heimfahrt. Es ist die Variante, die die meisten Gäste wählen, sobald sie davon hören.",
+            "description": "Derselbe Jeep-Sonnenaufgang mit heißer Quelle am Ende, ab $55 über 6-8 Stunden, Abholung um 02:00-03:30. Nachdem man im ersten Licht im Wind gestanden hat, ist warmes Wasser ein besserer Abschluss als eine schweigsame Heimfahrt. Es ist die Variante, die die meisten Gäste wählen, sobald sie davon hören.",
             "image": "https://www.sbexcursion.com/images/tours-real/mount-batur-sunrise-jeep-hot-spring.jpg"
           }
         }
@@ -240,7 +240,7 @@
           "name": "Lohnt sich der Mount Batur?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Lohnt sich, wenn Sie etwa zwei Stunden bergauf gehen können und ein Start um 02:00 für Sie wirklich in Ordnung ist. Für halbwegs fitte Reisende ist es in der Trockenzeit einer der besten Morgen auf Bali. Wenn Treppen anstrengend sind, Ihre Knie beim Bergabgehen schmerzen oder eine durchwachte Nacht Ihren Tag ruiniert, lohnt es sich nicht — nehmen Sie stattdessen den Jeep ab $60."
+            "text": "Lohnt sich, wenn Sie etwa zwei Stunden bergauf gehen können und ein Start um 02:00 für Sie wirklich in Ordnung ist. Für halbwegs fitte Reisende ist es in der Trockenzeit einer der besten Morgen auf Bali. Wenn Treppen anstrengend sind, Ihre Knie beim Bergabgehen schmerzen oder eine durchwachte Nacht Ihren Tag ruiniert, lohnt es sich nicht — nehmen Sie stattdessen den Jeep ab $45."
           }
         },
         {
@@ -256,7 +256,7 @@
           "name": "Lohnt sich die Jeep-Tour am Mount Batur?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja, wenn Sie den Sonnenaufgang ohne Aufstieg wollen. Ein 4x4 fährt die Vulkanpiste hinauf zu einem Aussichtspunkt für dieselbe Lichtstunde — ab $60 über 6-8 Stunden oder ab $75 mit anschließendem Bad in einer heißen Quelle und Abholung um 02:00-03:30. Das nimmt Ihnen weder das nächtliche Aufstehen noch das Wetterrisiko, aber es nimmt Ihnen zwei Stunden Laufen im Dunkeln."
+            "text": "Ja, wenn Sie den Sonnenaufgang ohne Aufstieg wollen. Ein 4x4 fährt die Vulkanpiste hinauf zu einem Aussichtspunkt für dieselbe Lichtstunde — ab $45 über 6-8 Stunden oder ab $55 mit anschließendem Bad in einer heißen Quelle und Abholung um 02:00-03:30. Das nimmt Ihnen weder das nächtliche Aufstehen noch das Wetterrisiko, aber es nimmt Ihnen zwei Stunden Laufen im Dunkeln."
           }
         },
         {
@@ -1308,6 +1308,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1666,17 +1728,17 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">Ehrliches Fazit</div>
             <h1>Lohnt sich der Mount Batur? Nur wenn ein 02:00-Alarm in Ordnung ist</h1>
-            <p class="sb-journal-lead">Der Mount Batur lohnt sich, wenn Sie zwei Stunden im Dunkeln bergauf gehen können und ein Wecker um 02:00 für Sie wirklich in Ordnung ist. Wenn eines von beiden schwerfällt, lohnt er sich nicht — und es gibt einen Jeep, der Sie ohne Aufstieg zum selben Sonnenaufgang bringt. Der ehrliche Morgen: Abholung um 01:30-03:00, etwa zwei Stunden stetiges Steigen im Licht der Stirnlampe, dann Warten im kalten Wind auf das Licht. Von April bis Oktober ist die Aussicht verlässlich; von November bis März können Wolken sie vollständig schließen und Sie sehen nichts. Die Wanderung gibt es ab $35 über 5-8 Stunden; der Sonnenaufgangs-Jeep ab $60 lässt das Laufen ganz weg.</p>
+            <p class="sb-journal-lead">Der Mount Batur lohnt sich, wenn Sie zwei Stunden im Dunkeln bergauf gehen können und ein Wecker um 02:00 für Sie wirklich in Ordnung ist. Wenn eines von beiden schwerfällt, lohnt er sich nicht — und es gibt einen Jeep, der Sie ohne Aufstieg zum selben Sonnenaufgang bringt. Der ehrliche Morgen: Abholung um 01:30-03:00, etwa zwei Stunden stetiges Steigen im Licht der Stirnlampe, dann Warten im kalten Wind auf das Licht. Von April bis Oktober ist die Aussicht verlässlich; von November bis März können Wolken sie vollständig schließen und Sie sehen nichts. Die Wanderung gibt es ab $35 über 5-8 Stunden; der Sonnenaufgangs-Jeep ab $45 lässt das Laufen ganz weg.</p>
             <p class="sb-journal-dates">Von Alex Moskvin, Gründer von SB Excursions · Veröffentlicht am 21. Mai 2026 · Aktualisiert am 7. August 2026</p>
             <p class="sb-journal-deck">Tour auf dieser Route: <a href="/bali/de/tours/mount-batur-sunrise-hike">Mount Batur: Wanderung zum Sonnenaufgang</a> — Ab 35 $, 5–8 Stunden.</p>
             <div class="sb-quick-answer">
               <p class="sb-quick-answer__q">Lohnt sich der Mount Batur?</p>
-              <p class="sb-quick-answer__a">Lohnt sich, wenn Sie etwa zwei Stunden bergauf gehen können und ein Start um 02:00 für Sie wirklich in Ordnung ist. Für halbwegs fitte Reisende ist es in der Trockenzeit einer der besten Morgen auf Bali. Wenn Treppen anstrengend sind, Ihre Knie beim Bergabgehen schmerzen oder eine durchwachte Nacht Ihren Tag ruiniert, lohnt es sich nicht — nehmen Sie stattdessen den Jeep ab $60.</p>
+              <p class="sb-quick-answer__a">Lohnt sich, wenn Sie etwa zwei Stunden bergauf gehen können und ein Start um 02:00 für Sie wirklich in Ordnung ist. Für halbwegs fitte Reisende ist es in der Trockenzeit einer der besten Morgen auf Bali. Wenn Treppen anstrengend sind, Ihre Knie beim Bergabgehen schmerzen oder eine durchwachte Nacht Ihren Tag ruiniert, lohnt es sich nicht — nehmen Sie stattdessen den Jeep ab $45.</p>
               <p class="sb-quick-answer__more">Dieser Leitfaden beantwortet außerdem:</p>
               <ul class="sb-quick-answer__list"><li>Lohnt sich die Jeep-Tour am Mount Batur?</li><li>Lohnt sich ein Besuch am Mount Batur?</li><li>Um welche Uhrzeit muss man für den Mount Batur aufstehen?</li></ul>
             </div>
             <div class="sb-journal-inline-stats">
-              <span>02:00 Weckzeit, 2 Stunden Aufstieg</span><span>Wanderung ab 35 $</span><span>Jeep ab $60, kein Aufstieg</span>
+              <span>02:00 Weckzeit, 2 Stunden Aufstieg</span><span>Wanderung ab 35 $</span><span>Jeep ab $45, kein Aufstieg</span>
             </div>
             <div class="sb-journal-article-hero__actions">
               <a class="sb-journal-primary" href="/bali/de/tours/mount-batur-sunrise-hike">Sonnenaufgangswanderung auf dem Mount Batur – Ab 35 $</a>
@@ -1711,7 +1773,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sie möchten den gleichen Sonnenaufgang ohne den Aufstieg – mit Kindern oder nach einem späten Flug.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1719,7 +1781,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Der Sonnenaufgang, dann ein Bad in den natürlichen heißen Quellen am Batursee.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1831,7 +1893,7 @@ body {
           <span>Kalte Morgen und Familien</span>
         </div>
         <h3>Lohnt sich mit Badestopp: Jeep und heiße Quelle</h3>
-        <p>Derselbe Jeep-Sonnenaufgang mit heißer Quelle am Ende, ab $75 über 6-8 Stunden, Abholung um 02:00-03:30. Nachdem man im ersten Licht im Wind gestanden hat, ist warmes Wasser ein besserer Abschluss als eine schweigsame Heimfahrt. Es ist die Variante, die die meisten Gäste wählen, sobald sie davon hören.</p>
+        <p>Derselbe Jeep-Sonnenaufgang mit heißer Quelle am Ende, ab $55 über 6-8 Stunden, Abholung um 02:00-03:30. Nachdem man im ersten Licht im Wind gestanden hat, ist warmes Wasser ein besserer Abschluss als eine schweigsame Heimfahrt. Es ist die Variante, die die meisten Gäste wählen, sobald sie davon hören.</p>
       </div>
     </article>
 
@@ -1842,14 +1904,14 @@ body {
                 <h2>Lohnt sich oder nicht, je nachdem, wer fragt</h2>
                 <p>Die ehrliche Antwort hängt weniger vom Vulkan ab als von Ihnen. Suchen Sie die Zeile, die zu Ihrer Situation passt:</p>
 
-                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">Ihre Situation</th><th scope="col">Unsere Antwort</th><th scope="col">Die bessere Option</th><th scope="col">Warum</th></tr></thead><tbody><tr><th scope="row">Sie gehen regelmäßig zu Fuß und schlafen in der Nacht davor früh</th><td>Lohnt sich</td><td>Die Wanderung, ab $35</td><td>Zwei Stunden bergauf sind eine lange Treppeneinheit, und der Gipfel ist der Lohn, für den Sie gekommen sind</td></tr><tr><th scope="row">Ihre Knie melden sich beim Abstieg</th><td>Nicht die Wanderung</td><td>Der Jeep, ab $60</td><td>Beim Abstieg über das Geröll tun sich viele schwer, und der Jeep nimmt ihn ganz weg</td></tr><tr><th scope="row">Sie reisen mit kleinen Kindern</th><td>Nicht die Wanderung</td><td>Der Jeep, ab $60</td><td>Kinder dösen während der Fahrt und steigen am Aussichtspunkt aus</td></tr><tr><th scope="row">Eine zerrissene Nacht würde den nächsten Tag ruinieren</th><td>Denken Sie noch einmal nach</td><td>Eine Kintamani-Route bei Tag</td><td>Die Abholung liegt zwischen 01:30 und 03:30, welches Format Sie auch wählen</td></tr><tr><th scope="row">Sie wollen den Vulkan und einen warmen Abschluss</th><td>Lohnt sich</td><td>Jeep mit heißer Quelle, ab $75</td><td>Nachdem man im ersten Licht im Wind gestanden hat, schlägt warmes Wasser alles andere</td></tr><tr><th scope="row">Ihre Termine liegen zwischen November und März</th><td>Lohnt sich mit einem Plan B</td><td>Jedes Format, plus ein Ersatzmorgen</td><td>Wolken können die Sicht schlucken; Guides fahren an den meisten Morgen trotzdem</td></tr></tbody></table></div>
+                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">Ihre Situation</th><th scope="col">Unsere Antwort</th><th scope="col">Die bessere Option</th><th scope="col">Warum</th></tr></thead><tbody><tr><th scope="row">Sie gehen regelmäßig zu Fuß und schlafen in der Nacht davor früh</th><td>Lohnt sich</td><td>Die Wanderung, ab $35</td><td>Zwei Stunden bergauf sind eine lange Treppeneinheit, und der Gipfel ist der Lohn, für den Sie gekommen sind</td></tr><tr><th scope="row">Ihre Knie melden sich beim Abstieg</th><td>Nicht die Wanderung</td><td>Der Jeep, ab $45</td><td>Beim Abstieg über das Geröll tun sich viele schwer, und der Jeep nimmt ihn ganz weg</td></tr><tr><th scope="row">Sie reisen mit kleinen Kindern</th><td>Nicht die Wanderung</td><td>Der Jeep, ab $45</td><td>Kinder dösen während der Fahrt und steigen am Aussichtspunkt aus</td></tr><tr><th scope="row">Eine zerrissene Nacht würde den nächsten Tag ruinieren</th><td>Denken Sie noch einmal nach</td><td>Eine Kintamani-Route bei Tag</td><td>Die Abholung liegt zwischen 01:30 und 03:30, welches Format Sie auch wählen</td></tr><tr><th scope="row">Sie wollen den Vulkan und einen warmen Abschluss</th><td>Lohnt sich</td><td>Jeep mit heißer Quelle, ab $55</td><td>Nachdem man im ersten Licht im Wind gestanden hat, schlägt warmes Wasser alles andere</td></tr><tr><th scope="row">Ihre Termine liegen zwischen November und März</th><td>Lohnt sich mit einem Plan B</td><td>Jedes Format, plus ein Ersatzmorgen</td><td>Wolken können die Sicht schlucken; Guides fahren an den meisten Morgen trotzdem</td></tr></tbody></table></div>
 
               </section>
 
               <section class="sb-journal-article-section">
                 <h2>Die ehrliche Antwort: Für manche lohnt es sich, für andere wirklich nicht</h2>
                 <p>Der Mount Batur lohnt sich für eine enge, klar umrissene Gruppe: Reisende, die bergauf gehen können, und zwar <strong>etwa zwei Stunden</strong> ohne alle paar Minuten stehen zu bleiben, die ehrlich gesagt gut zurechtkommen mit einem <strong>02:00 Weckzeit</strong>, und die akzeptieren, dass der Sonnenaufgang selbst vom Wetter abhängt. Für diese Gruppe ist es einer der besten Morgen auf Bali. Für alle anderen ist es eine zerrissene Nacht, gefolgt von einem harten Aufstieg und, im falschen Monat, einer Wolkenwand. Das ist das ganze Urteil, und es lohnt sich, das vor jeder Buchung deutlich zu sagen.</p>
-                <ul><li><strong>Lohnt sich</strong> wenn Sie zu Hause regelmäßig zu Fuß unterwegs sind, am Abend davor früh ins Bett gehen und zwischen April und Oktober reisen</li><li><strong>Lohnt sich</strong> wenn Ihnen der Blick in die Caldera und die schwarze Lavalandschaft wichtiger sind als die Geschichte, die Sie danach erzählen</li><li><strong>Auslassen</strong> wenn Treppen Sie außer Atem bringen oder Ihre Knie bergab protestieren — der Abstieg besteht aus lockerem Vulkansand</li><li><strong>Auslassen</strong> wenn Sie ohne Schlaf nicht funktionieren; der Wecker klingelt gegen 02:00, und der Nachmittag ist abgeschrieben</li><li><strong>Nehmen Sie stattdessen den Jeep</strong> wenn Sie den Sonnenaufgang ohne den Aufstieg wollen — ab $60, oder ab $75 mit heißer Quelle danach</li><li><strong>Auf einen besseren Morgen warten</strong> in der Regenzeit, statt an Ihrem einzigen freien Tag in die Wolken zu steigen</li></ul>
+                <ul><li><strong>Lohnt sich</strong> wenn Sie zu Hause regelmäßig zu Fuß unterwegs sind, am Abend davor früh ins Bett gehen und zwischen April und Oktober reisen</li><li><strong>Lohnt sich</strong> wenn Ihnen der Blick in die Caldera und die schwarze Lavalandschaft wichtiger sind als die Geschichte, die Sie danach erzählen</li><li><strong>Auslassen</strong> wenn Treppen Sie außer Atem bringen oder Ihre Knie bergab protestieren — der Abstieg besteht aus lockerem Vulkansand</li><li><strong>Auslassen</strong> wenn Sie ohne Schlaf nicht funktionieren; der Wecker klingelt gegen 02:00, und der Nachmittag ist abgeschrieben</li><li><strong>Nehmen Sie stattdessen den Jeep</strong> wenn Sie den Sonnenaufgang ohne den Aufstieg wollen — ab $45, oder ab $55 mit heißer Quelle danach</li><li><strong>Auf einen besseren Morgen warten</strong> in der Regenzeit, statt an Ihrem einzigen freien Tag in die Wolken zu steigen</li></ul>
 
                 <p>Nichts davon macht die Wanderung technisch schwierig — es gibt keine Kletterstellen und keine Absturzgefahr, und unsere <a href="/bali/de/journal/is-mount-batur-safe">Sicherheitsleitfaden für den Mount Batur</a> geht die tatsächlichen Risiken einzeln durch. Hier geht es um etwas anderes: ob der Tausch, den Sie eingehen — eine Nacht Schlaf und ein anstrengender Marsch im Dunkeln — für Sie persönlich genug einbringt.</p>
               </section>
@@ -1872,7 +1934,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Lohnt sich die Jeep-Tour am Mount Batur?</h2>
-                <p><strong>Ja, wenn Sie den Sonnenaufgang wollen und nicht die Anstrengung.</strong> Ein 4x4 fährt die Vulkanpiste zu einem Aussichtspunkt, Sie bekommen also dieselbe Stunde, dasselbe Licht und dieselbe Landschaft aus schwarzer Lava ohne den zweistündigen Aufstieg. Die <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Jeep-Tour bei Sonnenaufgang auf dem Mount Batur</a> ist <strong>ab 60 $</strong> vorbei <strong>6-8 Stunden</strong> mit einer Abholung in der Nacht oder vor Tagesanbruch, und das <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Jeep mit heißer Quelle</a> Version ist <strong>ab 75 $</strong> mit Abholung um <strong>02:00-03:30</strong>, zum Abschluss ein Bad am See, sobald die Sonne oben ist.</p><p>Was der Jeep nicht löst: Sie stehen trotzdem mitten in der Nacht auf, und Sie verlieren die Aussicht trotzdem, wenn die Wolken tief hängen. Es ist außerdem ein Morgen im Fahrzeug statt einer Wanderung — wenn also die körperliche Leistung überhaupt der Grund war, warum Batur Sie gereizt hat, wird der Jeep dünn wirken. Für einen Vergleich der beiden Formate Stopp für Stopp: unser <a href="/bali/de/journal/mount-batur-sunrise-jeep-vs-hike">Jeep vs. Wanderung: Panne</a> geht tiefer als diese Seite.</p>
+                <p><strong>Ja, wenn Sie den Sonnenaufgang wollen und nicht die Anstrengung.</strong> Ein 4x4 fährt die Vulkanpiste zu einem Aussichtspunkt, Sie bekommen also dieselbe Stunde, dasselbe Licht und dieselbe Landschaft aus schwarzer Lava ohne den zweistündigen Aufstieg. Die <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Jeep-Tour bei Sonnenaufgang auf dem Mount Batur</a> ist <strong>ab 45 $</strong> vorbei <strong>6-8 Stunden</strong> mit einer Abholung in der Nacht oder vor Tagesanbruch, und das <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Jeep mit heißer Quelle</a> Version ist <strong>ab 55 $</strong> mit Abholung um <strong>02:00-03:30</strong>, zum Abschluss ein Bad am See, sobald die Sonne oben ist.</p><p>Was der Jeep nicht löst: Sie stehen trotzdem mitten in der Nacht auf, und Sie verlieren die Aussicht trotzdem, wenn die Wolken tief hängen. Es ist außerdem ein Morgen im Fahrzeug statt einer Wanderung — wenn also die körperliche Leistung überhaupt der Grund war, warum Batur Sie gereizt hat, wird der Jeep dünn wirken. Für einen Vergleich der beiden Formate Stopp für Stopp: unser <a href="/bali/de/journal/mount-batur-sunrise-jeep-vs-hike">Jeep vs. Wanderung: Panne</a> geht tiefer als diese Seite.</p>
 
 
 
@@ -1888,7 +1950,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Was es kostet und die zwei Dinge, die entscheiden, ob es Ihnen gefällt</h2>
-                <p><strong>Ab $35 macht die Wanderung zu einem der günstigsten Highlights der Insel</strong>, was mit ein Grund ist, warum die Frage so oft gestellt wird — bei diesem Preis wägen Sie nicht wirklich das Geld ab. Sie wägen den Schlaf ab. Die Jeep-Varianten kosten mehr, <strong>ab $60 und ab $75</strong>, und kaufen die zwei Stunden Aufstieg zurück. Alle drei laufen als private Touren, die über WhatsApp ohne Vorauszahlung gebucht werden, es ist also nichts festgeschrieben, wenn die Vorhersage am Vortag gegen Sie kippt.</p><p>Zwei Dinge entscheiden, ob der Morgen gut oder grimmig wird, egal welches Format Sie wählen. Erstens eine warme Schicht: Sie kommen verschwitzt oben an, stehen dann still im Wind, und wer nur ein T-Shirt eingepackt hat, verbringt den Sonnenaufgang zitternd statt schauend. Zweitens Schuhe mit echtem Profil für den Abstieg auf losem Sand. Unser <a href="/bali/de/journal/what-to-pack-for-bali">Bali-Packführer</a> behandelt den Rest, und <a href="/bali/de/journal/bali-tour-prices-2026-real-costs">echte Tourpreise 2026</a> zeigt, wo Batur im Vergleich zu allem anderen steht, was Sie in dieser Woche buchen könnten.</p>
+                <p><strong>Ab $35 macht die Wanderung zu einem der günstigsten Highlights der Insel</strong>, was mit ein Grund ist, warum die Frage so oft gestellt wird — bei diesem Preis wägen Sie nicht wirklich das Geld ab. Sie wägen den Schlaf ab. Die Jeep-Varianten kosten mehr, <strong>ab $45 und ab $55</strong>, und kaufen die zwei Stunden Aufstieg zurück. Alle drei laufen als private Touren, die über WhatsApp ohne Vorauszahlung gebucht werden, es ist also nichts festgeschrieben, wenn die Vorhersage am Vortag gegen Sie kippt.</p><p>Zwei Dinge entscheiden, ob der Morgen gut oder grimmig wird, egal welches Format Sie wählen. Erstens eine warme Schicht: Sie kommen verschwitzt oben an, stehen dann still im Wind, und wer nur ein T-Shirt eingepackt hat, verbringt den Sonnenaufgang zitternd statt schauend. Zweitens Schuhe mit echtem Profil für den Abstieg auf losem Sand. Unser <a href="/bali/de/journal/what-to-pack-for-bali">Bali-Packführer</a> behandelt den Rest, und <a href="/bali/de/journal/bali-tour-prices-2026-real-costs">echte Tourpreise 2026</a> zeigt, wo Batur im Vergleich zu allem anderen steht, was Sie in dieser Woche buchen könnten.</p>
 
 
 
@@ -1915,7 +1977,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sie möchten den gleichen Sonnenaufgang ohne den Aufstieg – mit Kindern oder nach einem späten Flug.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1923,7 +1985,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Der Sonnenaufgang, dann ein Bad in den natürlichen heißen Quellen am Batursee.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1936,7 +1998,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Lohnt sich der Mount Batur?</h3>
-                    <p>Lohnt sich, wenn Sie etwa zwei Stunden bergauf gehen können und ein Start um 02:00 für Sie wirklich in Ordnung ist. Für halbwegs fitte Reisende ist es in der Trockenzeit einer der besten Morgen auf Bali. Wenn Treppen anstrengend sind, Ihre Knie beim Bergabgehen schmerzen oder eine durchwachte Nacht Ihren Tag ruiniert, lohnt es sich nicht — nehmen Sie stattdessen den Jeep ab $60.</p>
+                    <p>Lohnt sich, wenn Sie etwa zwei Stunden bergauf gehen können und ein Start um 02:00 für Sie wirklich in Ordnung ist. Für halbwegs fitte Reisende ist es in der Trockenzeit einer der besten Morgen auf Bali. Wenn Treppen anstrengend sind, Ihre Knie beim Bergabgehen schmerzen oder eine durchwachte Nacht Ihren Tag ruiniert, lohnt es sich nicht — nehmen Sie stattdessen den Jeep ab $45.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1946,7 +2008,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Lohnt sich die Jeep-Tour am Mount Batur?</h3>
-                    <p>Ja, wenn Sie den Sonnenaufgang ohne Aufstieg wollen. Ein 4x4 fährt die Vulkanpiste hinauf zu einem Aussichtspunkt für dieselbe Lichtstunde — ab $60 über 6-8 Stunden oder ab $75 mit anschließendem Bad in einer heißen Quelle und Abholung um 02:00-03:30. Das nimmt Ihnen weder das nächtliche Aufstehen noch das Wetterrisiko, aber es nimmt Ihnen zwei Stunden Laufen im Dunkeln.</p>
+                    <p>Ja, wenn Sie den Sonnenaufgang ohne Aufstieg wollen. Ein 4x4 fährt die Vulkanpiste hinauf zu einem Aussichtspunkt für dieselbe Lichtstunde — ab $45 über 6-8 Stunden oder ab $55 mit anschließendem Bad in einer heißen Quelle und Abholung um 02:00-03:30. Das nimmt Ihnen weder das nächtliche Aufstehen noch das Wetterrisiko, aber es nimmt Ihnen zwei Stunden Laufen im Dunkeln.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -2021,7 +2083,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
@@ -2050,7 +2112,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>

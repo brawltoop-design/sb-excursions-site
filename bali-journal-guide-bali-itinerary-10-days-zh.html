@@ -195,7 +195,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "第四天：巴杜尔山日出",
-            "description": "选择您的方式：日出吉普车 60 美元起，温泉吉普车 75 美元起，或徒步旅行吉普车 35 美元起——所有这些都在黎明前约 01:30 至 03:30 之间接送。您在下午早些时候回来，当天的主要活动已经结束。之后什么也不做；下午是为了睡觉而存在的。",
+            "description": "选择您的方式：日出吉普车 45 美元起，温泉吉普车 55 美元起，或徒步旅行吉普车 35 美元起——所有这些都在黎明前约 01:30 至 03:30 之间接送。您在下午早些时候回来，当天的主要活动已经结束。之后什么也不做；下午是为了睡觉而存在的。",
             "image": "https://www.sbexcursion.com/images/places/mount-batur-jeep.jpg"
           }
         },
@@ -278,7 +278,7 @@
           "name": "巴厘岛10天行程的一日游费用是多少？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "本方案中五个预订日程的 2026 年直订价格：乌布每车 $65 起，巴杜尔山日出徒步 $35 起、吉普 $60 起，珀尼达岛 $75 起，巴厘岛东部 $69 起，罗威纳一日 $79 起。机场接送 $15 起。"
+            "text": "本方案中五个预订日程的 2026 年直订价格：乌布每车 $65 起，巴杜尔山日出徒步 $35 起、吉普 $45 起，珀尼达岛 $75 起，巴厘岛东部 $69 起，罗威纳一日 $79 起。机场接送 $15 起。"
           }
         },
         {
@@ -1354,6 +1354,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1832,7 +1894,7 @@ body {
           <span>日出，然后下午休息</span>
         </div>
         <h3>第四天：巴杜尔山日出</h3>
-        <p>选择您的方式：日出吉普车 60 美元起，温泉吉普车 75 美元起，或徒步旅行吉普车 35 美元起——所有这些都在黎明前约 01:30 至 03:30 之间接送。您在下午早些时候回来，当天的主要活动已经结束。之后什么也不做；下午是为了睡觉而存在的。</p>
+        <p>选择您的方式：日出吉普车 45 美元起，温泉吉普车 55 美元起，或徒步旅行吉普车 35 美元起——所有这些都在黎明前约 01:30 至 03:30 之间接送。您在下午早些时候回来，当天的主要活动已经结束。之后什么也不做；下午是为了睡觉而存在的。</p>
       </div>
     </article>
 
@@ -2008,7 +2070,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>巴厘岛10天行程的一日游费用是多少？</h3>
-                    <p>本方案中五个预订日程的 2026 年直订价格：乌布每车 $65 起，巴杜尔山日出徒步 $35 起、吉普 $60 起，珀尼达岛 $75 起，巴厘岛东部 $69 起，罗威纳一日 $79 起。机场接送 $15 起。</p>
+                    <p>本方案中五个预订日程的 2026 年直订价格：乌布每车 $65 起，巴杜尔山日出徒步 $35 起、吉普 $45 起，珀尼达岛 $75 起，巴厘岛东部 $69 起，罗威纳一日 $79 起。机场接送 $15 起。</p>
                   </article>
 
                   <article class="sb-journal-faq-card">

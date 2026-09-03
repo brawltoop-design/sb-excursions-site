@@ -235,7 +235,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "Surya Mandala 的 Kecak 和火舞",
-            "description": "场地内的 Surya Mandala 舞台上有 Kecak 和火舞表演，门票与门票分开，现场票价为 100,000 印尼盾，2026 年在线预订票价约为 90,000 印尼盾；代理列表显示价格为 7-8 美元，并加价。没有人提及的问题是：它贯穿日落时间，大约 18:00 到 19:00，所以它是表演或观景台步行，而不是两者兼而有之。这也是与更为知名的乌鲁瓦图凯卡（Uluwatu Kecak）不同的表演。",
+            "description": "场地内的 Surya Mandala 舞台上有 Kecak 和火舞表演，门票与门票分开，现场票价为 100,000 印尼盾，2026 年在线预订票价约为 90,000 印尼盾；代理列表显示价格为 7-7 美元，并加价。没有人提及的问题是：它贯穿日落时间，大约 18:00 到 19:00，所以它是表演或观景台步行，而不是两者兼而有之。这也是与更为知名的乌鲁瓦图凯卡（Uluwatu Kecak）不同的表演。",
             "image": "https://www.sbexcursion.com/images/places/uluwatu-temple-cliff.jpg"
           }
         },
@@ -1328,6 +1328,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1866,7 +1928,7 @@ body {
           <span>吸收出口流量</span>
         </div>
         <h3>Surya Mandala 的 Kecak 和火舞</h3>
-        <p>场地内的 Surya Mandala 舞台上有 Kecak 和火舞表演，门票与门票分开，现场票价为 100,000 印尼盾，2026 年在线预订票价约为 90,000 印尼盾；代理列表显示价格为 7-8 美元，并加价。没有人提及的问题是：它贯穿日落时间，大约 18:00 到 19:00，所以它是表演或观景台步行，而不是两者兼而有之。这也是与更为知名的乌鲁瓦图凯卡（Uluwatu Kecak）不同的表演。</p>
+        <p>场地内的 Surya Mandala 舞台上有 Kecak 和火舞表演，门票与门票分开，现场票价为 100,000 印尼盾，2026 年在线预订票价约为 90,000 印尼盾；代理列表显示价格为 7-7 美元，并加价。没有人提及的问题是：它贯穿日落时间，大约 18:00 到 19:00，所以它是表演或观景台步行，而不是两者兼而有之。这也是与更为知名的乌鲁瓦图凯卡（Uluwatu Kecak）不同的表演。</p>
       </div>
     </article>
 
@@ -1906,7 +1968,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>门票、开放时间以及登机口所需的现金</h2>
-                <p>条目是 <strong>外国成人 75,000 印尼盾，外国儿童 40,000 印尼盾</strong> — 价格自 2024 年 1 月 1 日起生效，并且仍然显示在网站自己的票务页面上 <strong>2026 年 8 月</strong>。印度尼西亚游客成人需支付 30,000 印尼盾，儿童需支付 20,000 印尼盾。以美元计算，75,000 印尼盾大约相当于 4.50-5 美元，但任何美元数字均视为近似值。停车位是 <strong>摩托车 3,000 印尼盾，汽车 5,000 印尼盾，巴士 10,000 印尼盾</strong>。门口的一切都是 <strong>只收现金</strong> — 读卡器不可靠，现场没有 ATM，最近的机器位于谏义里 (Kediri) 或仓古 (Canggu)。</p><p>该费用不断上涨并不断推迟，因此 <strong>检查门口的牌子</strong>。管理层于 2025 年 12 月宣布，从 2026 年 4 月 1 日起，外国成人将支付 10 万印尼盾，外国儿童将支付 6 万印尼盾，停车费大约增加一倍。 2026 年 3 月 29 日，该网站自己的推广办公室确认涨价被推迟，4 月初，塔巴南旅游办公室表示已推迟到明年，理由是前往该县的外国游客急剧下降。尚未确定新的日期。相当多的英文页面已经打印了 100,000 印尼盾，就像现场直播一样；同样大量的人仍然打印 60,000 印尼盾，这自 2024 年初以来一直是错误的。</p>
+                <p>条目是 <strong>外国成人 75,000 印尼盾，外国儿童 40,000 印尼盾</strong> — 价格自 2024 年 1 月 1 日起生效，并且仍然显示在网站自己的票务页面上 <strong>2026 年 8 月</strong>。印度尼西亚游客成人需支付 30,000 印尼盾，儿童需支付 20,000 印尼盾。以美元计算，75,000 印尼盾大约相当于 4.50-4 美元，但任何美元数字均视为近似值。停车位是 <strong>摩托车 3,000 印尼盾，汽车 5,000 印尼盾，巴士 10,000 印尼盾</strong>。门口的一切都是 <strong>只收现金</strong> — 读卡器不可靠，现场没有 ATM，最近的机器位于谏义里 (Kediri) 或仓古 (Canggu)。</p><p>该费用不断上涨并不断推迟，因此 <strong>检查门口的牌子</strong>。管理层于 2025 年 12 月宣布，从 2026 年 4 月 1 日起，外国成人将支付 10 万印尼盾，外国儿童将支付 6 万印尼盾，停车费大约增加一倍。 2026 年 3 月 29 日，该网站自己的推广办公室确认涨价被推迟，4 月初，塔巴南旅游办公室表示已推迟到明年，理由是前往该县的外国游客急剧下降。尚未确定新的日期。相当多的英文页面已经打印了 100,000 印尼盾，就像现场直播一样；同样大量的人仍然打印 60,000 印尼盾，这自 2024 年初以来一直是错误的。</p>
                 <ul><li><strong>开放时间：消息人士对上午的说法不一致。</strong> 06:00、06:30 和 07:00 均以印刷形式出现，官方售票页面根本没有列出任何时间。的 <strong>19:00收盘一致</strong>，并在其之前大约 30 分钟报告最后一个条目</li><li><strong>巴厘岛之爱旅游税需单独支付</strong> — 每位外国游客每次进入巴厘岛需缴纳 150,000 印尼盾，可在线或在机场（而非海神庙）向该省支付。这里是否真的检查是有争议的，所以无论怎样，请保留手机上的二维码凭证</li><li><strong>没有网上预订</strong> 门票。当天在摊位付款</li><li><strong>携带小纸条</strong> 用于厕所和捐款。大多数街区收费 2,000-5,000 印尼盾，但售票柜台附近有一个免费街区</li><li><strong>不需要纱笼</strong> 对于一般场地来说——这是开放的沿海公园，内殿无论如何都是关闭的。遮盖肩膀和膝盖是礼貌的默认行为，如果您在春天接受祝福，则需要穿着纱笼。任何人告诉我们必须穿纱笼才能走进去，这都是被推销的。我们的司机在车里备有备用纱笼，所以我们外出时永远不会出现这个问题</li></ul>
 
 

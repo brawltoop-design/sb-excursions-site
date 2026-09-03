@@ -243,7 +243,7 @@
           "name": "Wie weit ist der Mount Batur von Ubud entfernt?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Etwa 90 Minuten pro Richtung, was Ubud zur nächstgelegenen gängigen Basis für den Vulkan macht. Abholungen zum Sonnenaufgang ab Ubud liegen bei etwa 02:30, den spätesten auf der Insel. Unsere privaten Sonnenaufgangstouren holen an jedem Hotel in Ubud ab: die Wanderung ab $35, der 4x4-Jeep ab $60 und der Jeep mit heißen Quellen ab $75, alle ohne Vorauszahlung."
+            "text": "Etwa 90 Minuten pro Richtung, was Ubud zur nächstgelegenen gängigen Basis für den Vulkan macht. Abholungen zum Sonnenaufgang ab Ubud liegen bei etwa 02:30, den spätesten auf der Insel. Unsere privaten Sonnenaufgangstouren holen an jedem Hotel in Ubud ab: die Wanderung ab $35, der 4x4-Jeep ab $45 und der Jeep mit heißen Quellen ab $55, alle ohne Vorauszahlung."
           }
         },
         {
@@ -259,7 +259,7 @@
           "name": "Kann man den Mount Batur ohne Wanderung sehen?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja. Die öffentliche Kraterrandstraße auf der Seite von Penelokan bietet den klassischen Blick bei Tag über den Batur-See, kostenlos. Zum Sonnenaufgang fährt die 4x4-Jeep-Tour ab $60 auf einer eigenen Piste ohne Aufstieg zu einem Aussichtspunkt am Kraterrand und quert dann die alten schwarzen Lavafelder. Ein Privatwagen mit Fahrer ab $59 pro Wagen deckt einen Besuch in Kintamani bei Tag ab."
+            "text": "Ja. Die öffentliche Kraterrandstraße auf der Seite von Penelokan bietet den klassischen Blick bei Tag über den Batur-See, kostenlos. Zum Sonnenaufgang fährt die 4x4-Jeep-Tour ab $45 auf einer eigenen Piste ohne Aufstieg zu einem Aussichtspunkt am Kraterrand und quert dann die alten schwarzen Lavafelder. Ein Privatwagen mit Fahrer ab $59 pro Wagen deckt einen Besuch in Kintamani bei Tag ab."
           }
         }
       ]
@@ -1287,6 +1287,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1647,7 +1709,7 @@ body {
             <h1>Wo ist der Berg Batur? Lage, nächstgelegene Stadt und Flughafen</h1>
             <p class="sb-journal-lead">Der Mount Batur liegt in der Region Kintamani im Hochland im Nordosten Balis, etwa 90 Minuten Fahrt von Ubud und 1.5 bis 2.5 Stunden von den Strandorten im Süden entfernt. Der Vulkan steht in einer riesigen Caldera, in der auch der Lake Batur liegt, und die öffentliche Straße auf dem Kraterrand bei Penelokan bietet den klassischen Tagesblick kostenlos. In der Nähe des Vulkans gibt es keinen Flughafen: Balis einziger Flughafen ist DPS, Ngurah Rai, ganz im Süden bei Kuta und Jimbaran, jeder Besucher kommt also über die Straße. Diese Geografie prägt den gesamten Ablauf zum Sonnenaufgang — die Abholung erfolgt je nach Hotelgegend etwa zwischen 01:30 und 02:30, die Hinfahrt läuft über leere Straßen, und die Rückfahrt fällt in den Tagesverkehr. Dieser Leitfaden verortet den Berg auf der Karte, nennt die Fahrzeit aus jeder größeren Hotelgegend und die dazu passende Abholzeit.</p>
             <p class="sb-journal-dates">Von Alex Moskvin, Gründer von SB Excursions · Veröffentlicht am 21. Mai 2026 · Aktualisiert am 7. August 2026</p>
-            <p class="sb-journal-deck">Tour auf dieser Route: <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a> — Ab 60 $, 6–8 Stunden.</p>
+            <p class="sb-journal-deck">Tour auf dieser Route: <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a> — Ab 45 $, 6–8 Stunden.</p>
             <div class="sb-quick-answer">
               <p class="sb-quick-answer__q">Wo liegt der Mount Batur auf Bali?</p>
               <p class="sb-quick-answer__a">Der Mount Batur liegt in der Region Kintamani im Hochland im Nordosten Balis. Der Vulkan steht in einer großen Caldera, in der auch der Lake Batur liegt, und der Gipfel erreicht 1,717 m. In Fahrzeit ausgedrückt sind es etwa 90 Minuten von Ubud und 1.5 bis 2.5 Stunden von den Strandgegenden im Süden wie Seminyak, Kuta und Uluwatu.</p>
@@ -1658,7 +1720,7 @@ body {
               <span>Gipfel auf 1,717 m</span><span>Etwa 90 Min. ab Ubud</span><span>Sonnenaufgang um 06:00-06:30 das ganze Jahr</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur Sonnenaufgangs-Jeep-Tour – Ab 60 $</a>
+              <a class="sb-journal-primary" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur Sonnenaufgangs-Jeep-Tour – Ab 45 $</a>
               <a class="sb-journal-secondary" href="/bali/de/journal">Durchsuchen Sie alle Leitfäden</a>
             </div>
           </div>
@@ -1682,7 +1744,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sonnenaufgang aus einem 4x4 ohne Klettern, dann über das schwarze Lavafeld.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1698,7 +1760,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Derselbe Sonnenaufgang im Geländewagen ohne Klettern, gefolgt von einem Bad in einer heißen Quelle in Kintamani.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1805,7 +1867,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Der nächste Flughafen ist DPS — und alle fahren mit dem Auto</h2>
-                <p>Bali hat genau einen Flughafen: DPS, Ngurah Rai International, im äußersten Süden der Insel bei Kuta und Jimbaran. Am Vulkan gibt es keinen Flughafen, jeder Besucher erreicht den Mount Batur also auf der Straße. Wenn Sie in DPS landen und direkt ins Hochland fahren, liegt die einfache Fahrt in derselben <strong>1.5 bis 2.5 Stunden</strong> Spanne wie die südlichen Resorts.</p><p>Das nächtliche Timing spielt Ihnen in die Hände. Gegen <strong>02:00</strong> sind die Straßen leer und die Hinfahrt ist die schnellste Fahrt der ganzen Reise; die Rückfahrt läuft im Tagesverkehr und dauert länger. Für die drei häufigsten Ausgangsorte haben wir Aufschlüsselungen Strecke für Strecke: <a href="/bali/de/journal/ubud-to-mount-batur">Ubud zum Berg Batur</a>, <a href="/bali/de/journal/canggu-to-mount-batur">Canggu zum Berg Batur</a> und <a href="/bali/de/journal/seminyak-to-mount-batur">Von Seminyak zum Mount Batur</a>.</p><p>Alle unsere Touren zum Mount Batur sind privat und beinhalten Abholung und Rückfahrt zum Hotel aus jeder Gegend in der Tabelle: die Sonnenaufgangswanderung ab <strong>$35</strong>, der Sonnenaufgangs-Jeep ab <strong>$60</strong> und der Jeep mit Abschluss an den heißen Quellen ab <strong>$75</strong>. Es gibt keine Vorauszahlung — Sie bestätigen über WhatsApp und zahlen am Tag selbst. Für einen Besuch in Kintamani bei Tag kostet ein Privatwagen mit Fahrer ab <strong>$59</strong> pro Auto.</p>
+                <p>Bali hat genau einen Flughafen: DPS, Ngurah Rai International, im äußersten Süden der Insel bei Kuta und Jimbaran. Am Vulkan gibt es keinen Flughafen, jeder Besucher erreicht den Mount Batur also auf der Straße. Wenn Sie in DPS landen und direkt ins Hochland fahren, liegt die einfache Fahrt in derselben <strong>1.5 bis 2.5 Stunden</strong> Spanne wie die südlichen Resorts.</p><p>Das nächtliche Timing spielt Ihnen in die Hände. Gegen <strong>02:00</strong> sind die Straßen leer und die Hinfahrt ist die schnellste Fahrt der ganzen Reise; die Rückfahrt läuft im Tagesverkehr und dauert länger. Für die drei häufigsten Ausgangsorte haben wir Aufschlüsselungen Strecke für Strecke: <a href="/bali/de/journal/ubud-to-mount-batur">Ubud zum Berg Batur</a>, <a href="/bali/de/journal/canggu-to-mount-batur">Canggu zum Berg Batur</a> und <a href="/bali/de/journal/seminyak-to-mount-batur">Von Seminyak zum Mount Batur</a>.</p><p>Alle unsere Touren zum Mount Batur sind privat und beinhalten Abholung und Rückfahrt zum Hotel aus jeder Gegend in der Tabelle: die Sonnenaufgangswanderung ab <strong>$35</strong>, der Sonnenaufgangs-Jeep ab <strong>$45</strong> und der Jeep mit Abschluss an den heißen Quellen ab <strong>$55</strong>. Es gibt keine Vorauszahlung — Sie bestätigen über WhatsApp und zahlen am Tag selbst. Für einen Besuch in Kintamani bei Tag kostet ein Privatwagen mit Fahrer ab <strong>$59</strong> pro Auto.</p>
 
 
 
@@ -1832,7 +1894,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sonnenaufgang aus einem 4x4 ohne Klettern, dann über das schwarze Lavafeld.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1848,7 +1910,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Derselbe Sonnenaufgang im Geländewagen ohne Klettern, gefolgt von einem Bad in einer heißen Quelle in Kintamani.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1876,7 +1938,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Wie weit ist der Mount Batur von Ubud entfernt?</h3>
-                    <p>Etwa 90 Minuten pro Richtung, was Ubud zur nächstgelegenen gängigen Basis für den Vulkan macht. Abholungen zum Sonnenaufgang ab Ubud liegen bei etwa 02:30, den spätesten auf der Insel. Unsere privaten Sonnenaufgangstouren holen an jedem Hotel in Ubud ab: die Wanderung ab $35, der 4x4-Jeep ab $60 und der Jeep mit heißen Quellen ab $75, alle ohne Vorauszahlung.</p>
+                    <p>Etwa 90 Minuten pro Richtung, was Ubud zur nächstgelegenen gängigen Basis für den Vulkan macht. Abholungen zum Sonnenaufgang ab Ubud liegen bei etwa 02:30, den spätesten auf der Insel. Unsere privaten Sonnenaufgangstouren holen an jedem Hotel in Ubud ab: die Wanderung ab $35, der 4x4-Jeep ab $45 und der Jeep mit heißen Quellen ab $55, alle ohne Vorauszahlung.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1886,7 +1948,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Kann man den Mount Batur ohne Wanderung sehen?</h3>
-                    <p>Ja. Die öffentliche Kraterrandstraße auf der Seite von Penelokan bietet den klassischen Blick bei Tag über den Batur-See, kostenlos. Zum Sonnenaufgang fährt die 4x4-Jeep-Tour ab $60 auf einer eigenen Piste ohne Aufstieg zu einem Aussichtspunkt am Kraterrand und quert dann die alten schwarzen Lavafelder. Ein Privatwagen mit Fahrer ab $59 pro Wagen deckt einen Besuch in Kintamani bei Tag ab.</p>
+                    <p>Ja. Die öffentliche Kraterrandstraße auf der Seite von Penelokan bietet den klassischen Blick bei Tag über den Batur-See, kostenlos. Zum Sonnenaufgang fährt die 4x4-Jeep-Tour ab $45 auf einer eigenen Piste ohne Aufstieg zu einem Aussichtspunkt am Kraterrand und quert dann die alten schwarzen Lavafelder. Ein Privatwagen mit Fahrer ab $59 pro Wagen deckt einen Besuch in Kintamani bei Tag ab.</p>
                   </article>
 
               </div>
@@ -1946,7 +2008,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
@@ -2042,12 +2104,12 @@ body {
               <h3 class="sbtc-rail__title"><a class="sbtc-rail__titlelink" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a></h3>
               <p class="sbtc-price sbtc-rail__price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
               <div class="sbtc-rail__actions">
-                <a class="sbtc-btn sbtc-btn_ink" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Tour ansehen – ab 60 $<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
+                <a class="sbtc-btn sbtc-btn_ink" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Tour ansehen – ab 45 $<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
                 <a class="sbtc-btn sbtc-btn_line" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie in WhatsApp</a>
               </div>
               <dl class="sbtc-ledger sbtc-rail__ledger">

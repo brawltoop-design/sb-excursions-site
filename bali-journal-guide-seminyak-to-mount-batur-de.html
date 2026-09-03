@@ -246,7 +246,7 @@
           "name": "Kann ich den Sonnenaufgang am Mount Batur von Seminyak aus ohne Wanderung sehen?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ja. Die Sonnenaufgangs-Jeep-Tour ab $60 holt in Seminyak ab und bringt Sie im 4x4 zum Aussichtspunkt, geklettert wird also an keiner Stelle. Die Variante mit heißen Quellen ab $75 endet mit einem Bad in natürlichen Becken am See. Beide dauern 6-8 Stunden von Tür zu Tür und sind vor dem Nachmittag zurück."
+            "text": "Ja. Die Sonnenaufgangs-Jeep-Tour ab $45 holt in Seminyak ab und bringt Sie im 4x4 zum Aussichtspunkt, geklettert wird also an keiner Stelle. Die Variante mit heißen Quellen ab $55 endet mit einem Bad in natürlichen Becken am See. Beide dauern 6-8 Stunden von Tür zu Tür und sind vor dem Nachmittag zurück."
           }
         },
         {
@@ -270,7 +270,7 @@
           "name": "Muss ich eine Mount-Batur-Tour ab Seminyak im Voraus bezahlen?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nein. Alle unsere Batur-Ausflüge werden über WhatsApp ohne Vorauszahlung gebucht, und jeder ist privat, mit Abholung am Hotel und Rückfahrt von Seminyak. Die Sonnenaufgangswanderung beginnt bei $35 pro Person, die Jeep-Tour bei $60 und der Jeep mit heißen Quellen bei $75. Die Details und Ihre Abholzeit bestätigen Sie im Chat."
+            "text": "Nein. Alle unsere Batur-Ausflüge werden über WhatsApp ohne Vorauszahlung gebucht, und jeder ist privat, mit Abholung am Hotel und Rückfahrt von Seminyak. Die Sonnenaufgangswanderung beginnt bei $35 pro Person, die Jeep-Tour bei $45 und der Jeep mit heißen Quellen bei $55. Die Details und Ihre Abholzeit bestätigen Sie im Chat."
           }
         }
       ]
@@ -1298,6 +1298,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1656,9 +1718,9 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">Reiseführer</div>
             <h1>Von Seminyak zum Mount Batur: 1,5–2,5 Stunden, Abholung um 01:30 Uhr</h1>
-            <p class="sb-journal-lead">Von Seminyak zum Mount Batur sind es 1.5-2.5 Stunden mit dem Auto pro Richtung, und für den Sonnenaufgangsausflug heißt das: ein Fahrer gegen 01:30 an Ihrem Tor — eine volle Stunde vor Gästen in Ubud. Diese eine Zahl ordnet Ihren ganzen Abend neu. Seminyak ist ein Ort für Abendessen und Drinks, und der Sonnenaufgang und der Abend passen nicht in dieselbe Nacht: Das Essen endet früh, die zweite Runde fällt aus, und Sie schlafen vor dem Wecker statt danach. Die Belohnung ist die schnellste Fahrt, die Sie auf der Insel haben werden — um 02:00 sind die Straßen leer — und das erste Licht über dem Lake Batur aus 1,717 m. Drei private Formate holen in Seminyak ab: die Sonnenaufgangswanderung ab $35, die Jeep-Tour ab $60 ganz ohne Klettern und der Jeep mit heißen Quellen am See ab $75. Dieser Guide legt die Nacht Stunde für Stunde aus und hilft Ihnen, das passende Format zu wählen.</p>
+            <p class="sb-journal-lead">Von Seminyak zum Mount Batur sind es 1.5-2.5 Stunden mit dem Auto pro Richtung, und für den Sonnenaufgangsausflug heißt das: ein Fahrer gegen 01:30 an Ihrem Tor — eine volle Stunde vor Gästen in Ubud. Diese eine Zahl ordnet Ihren ganzen Abend neu. Seminyak ist ein Ort für Abendessen und Drinks, und der Sonnenaufgang und der Abend passen nicht in dieselbe Nacht: Das Essen endet früh, die zweite Runde fällt aus, und Sie schlafen vor dem Wecker statt danach. Die Belohnung ist die schnellste Fahrt, die Sie auf der Insel haben werden — um 02:00 sind die Straßen leer — und das erste Licht über dem Lake Batur aus 1,717 m. Drei private Formate holen in Seminyak ab: die Sonnenaufgangswanderung ab $35, die Jeep-Tour ab $45 ganz ohne Klettern und der Jeep mit heißen Quellen am See ab $55. Dieser Guide legt die Nacht Stunde für Stunde aus und hilft Ihnen, das passende Format zu wählen.</p>
             <p class="sb-journal-dates">Von Alex Moskvin, Gründer von SB Excursions · Veröffentlicht am 21. Mai 2026 · Aktualisiert am 7. August 2026</p>
-            <p class="sb-journal-deck">Tour auf dieser Route: <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a> — Ab 60 $, 6–8 Stunden.</p>
+            <p class="sb-journal-deck">Tour auf dieser Route: <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a> — Ab 45 $, 6–8 Stunden.</p>
             <div class="sb-quick-answer">
               <p class="sb-quick-answer__q">Wie weit ist der Mount Batur von Seminyak entfernt?</p>
               <p class="sb-quick-answer__a">Rechnen Sie mit 1.5-2.5 Stunden Fahrt pro Richtung, je nach Route und Verkehr. Seminyak liegt an Balis Südwestküste und der Mount Batur im Hochland von Kintamani im Nordosten, Sie durchqueren also fast die ganze Insel. Die nächtliche Hinfahrt geht meist schnell, weil die Straßen leer sind; die Rückfahrt am Tag ist die langsame Hälfte.</p>
@@ -1666,10 +1728,10 @@ body {
               <ul class="sb-quick-answer__list"><li>Wann ist die Abholung in Seminyak für die Sonnenaufgangswanderung am Mount Batur?</li><li>Kann ich den Sonnenaufgang am Mount Batur von Seminyak aus ohne Wanderung sehen?</li><li>Wie viel Schlaf bleibt vor einem Mount-Batur-Ausflug ab Seminyak?</li></ul>
             </div>
             <div class="sb-journal-inline-stats">
-              <span>1.5-2.5 h Fahrt pro Richtung</span><span>Abholung in Seminyak gegen 01:30</span><span>Sonnenaufgangs-Jeep ab $60</span>
+              <span>1.5-2.5 h Fahrt pro Richtung</span><span>Abholung in Seminyak gegen 01:30</span><span>Sonnenaufgangs-Jeep ab $45</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur Sonnenaufgangs-Jeep-Tour – Ab 60 $</a>
+              <a class="sb-journal-primary" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur Sonnenaufgangs-Jeep-Tour – Ab 45 $</a>
               <a class="sb-journal-secondary" href="/bali/de/journal">Durchsuchen Sie alle Leitfäden</a>
             </div>
           </div>
@@ -1701,7 +1763,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sie möchten den gleichen Sonnenaufgang ohne den Aufstieg – mit Kindern oder nach einem späten Flug.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1709,7 +1771,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Der Sonnenaufgang, dann ein Bad in den natürlichen heißen Quellen am Batursee.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1727,7 +1789,7 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>Ab 60 $ · 6–8 Stunden</span>
+          <span>Ab 45 $ · 6–8 Stunden</span>
           <span>Die Standardwahl nach einem Abend in Seminyak</span>
         </div>
         <h3>Mount Batur: Jeep zum Sonnenaufgang</h3>
@@ -1757,7 +1819,7 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>Ab 75 $ · 6–8 Stunden</span>
+          <span>From $55 · 6-8 hours</span>
           <span>Erholung fest im Morgen eingeplant</span>
         </div>
         <h3>Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</h3>
@@ -1831,7 +1893,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Welches Format nach einem Abend in Seminyak passt</h2>
-                <p>Drei Sonnenaufgangsformate holen in Seminyak ab, alle privat, mit Hotelabholung und Rückfahrt und <strong>keine Vorauszahlung</strong> — Sie buchen per WhatsApp und Ihre genaue Zeit wird am Vortag bestätigt. Die Wanderung von <strong>$35</strong> ist die günstigste und die früheste. Die Jeep-Tour ab <strong>$60</strong> nimmt den Aufstieg vollständig, weil der 4x4 den Aussichtspunkt allein erreicht. Der Jeep mit heißen Quellen ab <strong>$75</strong> ergänzt am Ende ein Bad in natürlichen Becken am See. Die ehrlichen Abwägungen zwischen Wandern und Fahren stehen in <a href="/bali/de/journal/mount-batur-sunrise-jeep-vs-hike">Sonnenaufgang am Mount Batur: Jeep vs. Wanderung</a>.</p><p>Seminyak verändert die Rechnung auf eine bestimmte Weise: Diesen Ort wählt man wegen der Restaurants und Cocktailbars, und der Sonnenaufgangsausflug kostet Sie stillschweigend einen dieser Abende. Wenn Sie den frühen Abend schon akzeptiert haben, ist die <strong>$35</strong> Wanderung belohnt das am meisten. Wenn Abendessen auswärts und eine vernünftige Schlafenszeit geplant sind, verzeihen die Jeep-Varianten mehr — Sie schlafen auf beiden Fahrtstrecken, und niemand verlangt um 04:00 etwas von Ihren Beinen. Was nicht funktioniert, ist der Mittelweg: eine Nacht, die um Mitternacht endet, gefolgt von einem Wecker um 01:30, ist die schlechteste Version dieser Reise.</p><p>Es gibt auch eine Variante ganz ohne Wecker. Die Kraterrandstraße von Kintamani ist öffentlich und der Blick in die Caldera bei Tag kostet nichts, also ist ein <a href="/bali/de/tours/private-car-with-driver-bali">Privatwagen mit Fahrer</a> von <strong>59 $ pro Auto</strong> macht aus Batur einen gewöhnlichen Tagesausflug — kein Gipfel, kein Sonnenaufgang, aber der Vulkan, der See und Mittagessen über der Aussicht. Das ist die richtige Antwort für alle, denen der Nachtplan wirklich nicht passt, auch für Schwangere oder Menschen, die sich gesundheitlich unsicher sind: die Jeep-Piste ist holprig und die Wanderung anstrengend, die Straße am Kraterrand plus ärztlicher Rat schlägt also das Raten.</p>
+                <p>Drei Sonnenaufgangsformate holen in Seminyak ab, alle privat, mit Hotelabholung und Rückfahrt und <strong>keine Vorauszahlung</strong> — Sie buchen per WhatsApp und Ihre genaue Zeit wird am Vortag bestätigt. Die Wanderung von <strong>$35</strong> ist die günstigste und die früheste. Die Jeep-Tour ab <strong>$45</strong> nimmt den Aufstieg vollständig, weil der 4x4 den Aussichtspunkt allein erreicht. Der Jeep mit heißen Quellen ab <strong>$55</strong> ergänzt am Ende ein Bad in natürlichen Becken am See. Die ehrlichen Abwägungen zwischen Wandern und Fahren stehen in <a href="/bali/de/journal/mount-batur-sunrise-jeep-vs-hike">Sonnenaufgang am Mount Batur: Jeep vs. Wanderung</a>.</p><p>Seminyak verändert die Rechnung auf eine bestimmte Weise: Diesen Ort wählt man wegen der Restaurants und Cocktailbars, und der Sonnenaufgangsausflug kostet Sie stillschweigend einen dieser Abende. Wenn Sie den frühen Abend schon akzeptiert haben, ist die <strong>$35</strong> Wanderung belohnt das am meisten. Wenn Abendessen auswärts und eine vernünftige Schlafenszeit geplant sind, verzeihen die Jeep-Varianten mehr — Sie schlafen auf beiden Fahrtstrecken, und niemand verlangt um 04:00 etwas von Ihren Beinen. Was nicht funktioniert, ist der Mittelweg: eine Nacht, die um Mitternacht endet, gefolgt von einem Wecker um 01:30, ist die schlechteste Version dieser Reise.</p><p>Es gibt auch eine Variante ganz ohne Wecker. Die Kraterrandstraße von Kintamani ist öffentlich und der Blick in die Caldera bei Tag kostet nichts, also ist ein <a href="/bali/de/tours/private-car-with-driver-bali">Privatwagen mit Fahrer</a> von <strong>59 $ pro Auto</strong> macht aus Batur einen gewöhnlichen Tagesausflug — kein Gipfel, kein Sonnenaufgang, aber der Vulkan, der See und Mittagessen über der Aussicht. Das ist die richtige Antwort für alle, denen der Nachtplan wirklich nicht passt, auch für Schwangere oder Menschen, die sich gesundheitlich unsicher sind: die Jeep-Piste ist holprig und die Wanderung anstrengend, die Straße am Kraterrand plus ärztlicher Rat schlägt also das Raten.</p>
 
 
 
@@ -1866,7 +1928,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sie möchten den gleichen Sonnenaufgang ohne den Aufstieg – mit Kindern oder nach einem späten Flug.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1874,7 +1936,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Der Sonnenaufgang, dann ein Bad in den natürlichen heißen Quellen am Batursee.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 </ul>
@@ -1897,7 +1959,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Kann ich den Sonnenaufgang am Mount Batur von Seminyak aus ohne Wanderung sehen?</h3>
-                    <p>Ja. Die Sonnenaufgangs-Jeep-Tour ab $60 holt in Seminyak ab und bringt Sie im 4x4 zum Aussichtspunkt, geklettert wird also an keiner Stelle. Die Variante mit heißen Quellen ab $75 endet mit einem Bad in natürlichen Becken am See. Beide dauern 6-8 Stunden von Tür zu Tür und sind vor dem Nachmittag zurück.</p>
+                    <p>Ja. Die Sonnenaufgangs-Jeep-Tour ab $45 holt in Seminyak ab und bringt Sie im 4x4 zum Aussichtspunkt, geklettert wird also an keiner Stelle. Die Variante mit heißen Quellen ab $55 endet mit einem Bad in natürlichen Becken am See. Beide dauern 6-8 Stunden von Tür zu Tür und sind vor dem Nachmittag zurück.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1912,7 +1974,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Muss ich eine Mount-Batur-Tour ab Seminyak im Voraus bezahlen?</h3>
-                    <p>Nein. Alle unsere Batur-Ausflüge werden über WhatsApp ohne Vorauszahlung gebucht, und jeder ist privat, mit Abholung am Hotel und Rückfahrt von Seminyak. Die Sonnenaufgangswanderung beginnt bei $35 pro Person, die Jeep-Tour bei $60 und der Jeep mit heißen Quellen bei $75. Die Details und Ihre Abholzeit bestätigen Sie im Chat.</p>
+                    <p>Nein. Alle unsere Batur-Ausflüge werden über WhatsApp ohne Vorauszahlung gebucht, und jeder ist privat, mit Abholung am Hotel und Rückfahrt von Seminyak. Die Sonnenaufgangswanderung beginnt bei $35 pro Person, die Jeep-Tour bei $45 und der Jeep mit heißen Quellen bei $55. Die Details und Ihre Abholzeit bestätigen Sie im Chat.</p>
                   </article>
 
               </div>
@@ -1943,7 +2005,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
@@ -2001,7 +2063,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
@@ -2068,12 +2130,12 @@ body {
               <h3 class="sbtc-rail__title"><a class="sbtc-rail__titlelink" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a></h3>
               <p class="sbtc-price sbtc-rail__price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
               <div class="sbtc-rail__actions">
-                <a class="sbtc-btn sbtc-btn_ink" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Tour ansehen – ab 60 $<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
+                <a class="sbtc-btn sbtc-btn_ink" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Tour ansehen – ab 45 $<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
                 <a class="sbtc-btn sbtc-btn_line" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie in WhatsApp</a>
               </div>
               <dl class="sbtc-ledger sbtc-rail__ledger">

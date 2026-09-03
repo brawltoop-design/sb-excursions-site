@@ -187,7 +187,7 @@
           "name": "我应该给巴厘岛司机多少小费？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "小费不是强制性的，但值得赞赏。 50,000–100,000 印尼盾（约 3–7 美元）是获得一整天优质服务的常见方式。"
+            "text": "小费不是强制性的，但值得赞赏。 50,000–100,000 印尼盾（约 3–3 美元）是获得一整天优质服务的常见方式。"
           }
         }
       ]
@@ -1215,6 +1215,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1633,7 +1695,7 @@ body {
               <section class="sb-journal-article-section">
                 <h2>💡 内幕贴士和当地知识</h2>
                 <p>这些细节是您的导游可能会顺便提到的事情 - 但提前了解它们可以帮助您计划更好的一天。</p>
-                <ul><li>标准预订时间为 10 小时。通常可以增加额外的工作时间，但需支付合理的费用。</li><li>司机会为空调车（通常是丰田 Avanza 或类似车）提供瓶装水。</li><li>这项服务只包含一个船位和前往码头的接送，仅此而已——渡海行程没有任何门票，也不提供餐食。</li><li>接载时与司机讨论您的行程。他们可以根据交通和开放时间建议最佳路线。</li><li>给司机小费是值得赞赏的 — 50,000–100,000 印尼盾（约 3–7 美元）是获得良好服务的常见做法。</li></ul>
+                <ul><li>标准预订时间为 10 小时。通常可以增加额外的工作时间，但需支付合理的费用。</li><li>司机会为空调车（通常是丰田 Avanza 或类似车）提供瓶装水。</li><li>这项服务只包含一个船位和前往码头的接送，仅此而已——渡海行程没有任何门票，也不提供餐食。</li><li>接载时与司机讨论您的行程。他们可以根据交通和开放时间建议最佳路线。</li><li>给司机小费是值得赞赏的 — 50,000–100,000 印尼盾（约 3–3 美元）是获得良好服务的常见做法。</li></ul>
 
 
               </section>
@@ -1679,7 +1741,7 @@ body {
 
                     <article class="sb-journal-faq-card">
                       <h3>我应该给巴厘岛司机多少小费？</h3>
-                      <p>小费不是强制性的，但值得赞赏。 50,000–100,000 印尼盾（约 3–7 美元）是获得一整天优质服务的常见方式。</p>
+                      <p>小费不是强制性的，但值得赞赏。 50,000–100,000 印尼盾（约 3–3 美元）是获得一整天优质服务的常见方式。</p>
                     </article>
 
                 </div>

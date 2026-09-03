@@ -274,7 +274,7 @@
           "name": "Сколько будет стоить тур на восход солнца на гору Батур в 2026 году?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Прямые цены на 2026 год, бронируемые через WhatsApp: поход на восход солнца на гору Батур от 35 долларов, джип на рассвете с горячими источниками от 75 долларов и тур на джипах на рассвете от 60 долларов. Во все три включен трансфер из отеля, предоплаты нет — подтверждаете план в чате и платите в день обращения."
+            "text": "Прямые цены на 2026 год, бронируемые через WhatsApp: поход на восход солнца на гору Батур от 35 долларов, джип на рассвете с горячими источниками от 55 долларов и тур на джипах на рассвете от 45 долларов. Во все три включен трансфер из отеля, предоплаты нет — подтверждаете план в чате и платите в день обращения."
           }
         },
         {
@@ -1334,6 +1334,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1692,9 +1754,9 @@ body {
           <div class="sb-journal-article-hero__copy">
             <div class="sb-journal-kicker">Путеводитель</div>
             <h1>Батур из Семиньяка и Чангу: выезд в 01:30, от $35</h1>
-            <p class="sb-journal-lead">Да — восход солнца на горе Батур работает из Семиньяка, Чангу и Нуса Дуа без смены отелей; сделка - это пикап посреди ночи и 1,5-2,5 часа езды в одну сторону. Все три формата тура собирают гостей из южных гостиничных зон: поход на рассвете от 35 долларов, джип с горячими источниками от 75 долларов и джип на рассвете от 60 долларов, точное время встречи подтверждено в WhatsApp накануне. Это руководство разбивает ночь на этапы: как на самом деле ощущается пикап с южного побережья, какой формат лучше всего выдерживает поездку, как спланировать сон, чтобы следующий день не был списан со счетов, и два случая, когда провести предыдущую ночь в Убуде действительно имеет смысл.</p>
+            <p class="sb-journal-lead">Да — восход солнца на горе Батур работает из Семиньяка, Чангу и Нуса Дуа без смены отелей; сделка - это пикап посреди ночи и 1,5-2,5 часа езды в одну сторону. Все три формата тура собирают гостей из южных гостиничных зон: поход на рассвете от 35 долларов, джип с горячими источниками от 55 долларов и джип на рассвете от 45 долларов, точное время встречи подтверждено в WhatsApp накануне. Это руководство разбивает ночь на этапы: как на самом деле ощущается пикап с южного побережья, какой формат лучше всего выдерживает поездку, как спланировать сон, чтобы следующий день не был списан со счетов, и два случая, когда провести предыдущую ночь в Убуде действительно имеет смысл.</p>
             <p class="sb-journal-dates">Алекс Москвин, основатель SB Excursions · Опубликовано 21 мая 2026 г. · Обновлено 7 августа 2026 г.</p>
-            <p class="sb-journal-deck">Экскурсия по этому маршруту: <a href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">Джип-тур на восходе солнца на горе Батур</a> — От $60, 6-8 часов.</p>
+            <p class="sb-journal-deck">Экскурсия по этому маршруту: <a href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">Джип-тур на восходе солнца на горе Батур</a> — От $45, 6-8 часов.</p>
             <div class="sb-quick-answer">
               <p class="sb-quick-answer__q">Можете ли вы увидеть восход солнца на горе Батур из Семиньяка или Чангу?</p>
               <p class="sb-quick-answer__a">Да. Все три тура на гору Батур включают трансфер из отеля из Семиньяка, Чангу, Нуса-Дуа и других южных районов. Ожидайте посадки глубокой ночью — 01:30–03:00 для похода, около 02:00–03:30 для джипа с горячими источниками — и 1,5–2,5 часа езды в одну сторону.</p>
@@ -1705,7 +1767,7 @@ body {
               <span>3 формата тура от 35$</span><span>1,5-2,5 часа ночной езды</span><span>Запись в WhatsApp, без предоплаты</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">Джип-тур на гору Батур на рассвете — от 60 долларов.</a>
+              <a class="sb-journal-primary" href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">Джип-тур на гору Батур на рассвете — от 45 долларов.</a>
               <a class="sb-journal-secondary" href="/bali/ru/journal">Просмотреть все руководства</a>
             </div>
           </div>
@@ -1737,7 +1799,7 @@ body {
                     <a class="sboffer__name" href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">Джип-тур на восходе солнца на горе Батур</a>
                     <span class="sboffer__for">Хотите тот же рассвет без подъема — с детьми или после позднего перелета.</span>
                   </span>
-                  <span class="sboffer__price">От $60</span>
+                  <span class="sboffer__price">От $45</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%94%D0%B6%D0%B8%D0%BF-%D1%82%D1%83%D1%80%20%D0%BD%D0%B0%20%D0%B2%D0%BE%D1%81%D1%85%D0%BE%D0%B4%D0%B5%20%D1%81%D0%BE%D0%BB%D0%BD%D1%86%D0%B0%20%D0%BD%D0%B0%20%D0%B3%D0%BE%D1%80%D0%B5%20%D0%91%D0%B0%D1%82%D1%83%D1%80.%20%D0%9F%D1%80%D0%B8%D1%88%D0%BB%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8." target="_blank" rel="noopener noreferrer nofollow">Забронируйте сейчас</a>
                 </li>
                 <li class="sboffer__row">
@@ -1745,7 +1807,7 @@ body {
                     <a class="sboffer__name" href="/bali/ru/tours/mount-batur-sunrise-jeep-hot-spring">Джип на рассвете на горе Батур и горячие источники</a>
                     <span class="sboffer__for">Восход солнца, затем купание в природных горячих источниках на берегу озера Батур.</span>
                   </span>
-                  <span class="sboffer__price">От $75</span>
+                  <span class="sboffer__price">От $55</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%94%D0%B6%D0%B8%D0%BF%20%D0%BD%D0%B0%20%D1%80%D0%B0%D1%81%D1%81%D0%B2%D0%B5%D1%82%D0%B5%20%D0%BD%D0%B0%20%D0%B3%D0%BE%D1%80%D0%B5%20%D0%91%D0%B0%D1%82%D1%83%D1%80%20%D0%B8%20%D0%B3%D0%BE%D1%80%D1%8F%D1%87%D0%B8%D0%B5%20%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8.%20%D0%9F%D1%80%D0%B8%D1%88%D0%BB%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8." target="_blank" rel="noopener noreferrer nofollow">Забронируйте сейчас</a>
                 </li>
                 </ul>
@@ -1823,7 +1885,7 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>От $60 · 6-8 часов</span>
+          <span>От $45 · 6-8 часов</span>
           <span>Наименее жестокая ночь</span>
         </div>
         <h3>Вариант 1: Джип-тур на восход солнца на горе Батур</h3>
@@ -1838,7 +1900,7 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>От $75 · 6-8 часов</span>
+          <span>From $55 · 6-8 hours</span>
           <span>Восстановление, встроенное в день</span>
         </div>
         <h3>Вариант 2: Джип «Санрайз» и горячие источники.</h3>
@@ -1883,7 +1945,7 @@ body {
                 <h2>Гора Батур с юга: ночь, формат за форматом</h2>
                 <p>Из Семиньяка, Чангу, Куты или Нуса-Дуа поездка на север занимает 1,5-2,5 часа в одну сторону, а пикап приземляется на целый час раньше, чем для гостей в Убуде. Этот дополнительный час должен определить ваш формат:</p>
 
-                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">Формат</th><th scope="col">Цена</th><th scope="col">Время получения</th><th scope="col">Чего требует эта ночь</th></tr></thead><tbody><tr><th scope="row">Джип-тур на восходе солнца на горе Батур</th><td>От $60, 6-8 часов</td><td>Ночь или предрассветный день</td><td>Наименее брутальный вариант: спишь обеими ногами и тратишь силы только на вид.</td></tr><tr><th scope="row">Джип Санрайз и Горячий источник</th><td>От $75, 6-8 часов</td><td>Около 02:00-03:30</td><td>Тот же джиповый восход, заканчивающийся у озерных источников — лучший отдых перед поездкой домой.</td></tr><tr><th scope="row">Восход на гору Батур</th><td>От $35, 5-8 часов</td><td>01:30-03:00, самое раннее окно из трех</td><td>Примерно два часа восхождения в темноте в дополнение к самой длинной поездке в меню.</td></tr></tbody></table></div><p class="sb-journal-tablenote">Что бы вы ни выбрали, не планируйте на этот день ничего, кроме бассейна, и ограничьте сон примерно 90 минутами, чтобы сохранить сон на следующую ночь.</p>
+                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">Формат</th><th scope="col">Цена</th><th scope="col">Время получения</th><th scope="col">Чего требует эта ночь</th></tr></thead><tbody><tr><th scope="row">Джип-тур на восходе солнца на горе Батур</th><td>От $45, 6-8 часов</td><td>Ночь или предрассветный день</td><td>Наименее брутальный вариант: спишь обеими ногами и тратишь силы только на вид.</td></tr><tr><th scope="row">Джип Санрайз и Горячий источник</th><td>From $55, 6-8 hours</td><td>Около 02:00-03:30</td><td>Тот же джиповый восход, заканчивающийся у озерных источников — лучший отдых перед поездкой домой.</td></tr><tr><th scope="row">Восход на гору Батур</th><td>От $35, 5-8 часов</td><td>01:30-03:00, самое раннее окно из трех</td><td>Примерно два часа восхождения в темноте в дополнение к самой длинной поездке в меню.</td></tr></tbody></table></div><p class="sb-journal-tablenote">Что бы вы ни выбрали, не планируйте на этот день ничего, кроме бассейна, и ограничьте сон примерно 90 минутами, чтобы сохранить сон на следующую ночь.</p>
 
               </section>
 
@@ -1897,7 +1959,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Какой формат с юга лучше всего переживает ночь</h2>
-                <p>Из южных районов большинству путешественников лучше подходят джиповые форматы, чем пешие, ведь до начала вулкана уже наступает ночь. На <strong>джип-тур от 60$</strong> вы спите обеими ногами, едете к точке восхода солнца и тратите свою энергию ни на что, кроме вида. <strong>джип с горячими источниками от 75$</strong> добавляет после этого купание в источниках на берегу озера, что восстанавливает силы лучше, чем что-либо еще в меню перед поездкой домой. <strong>повышение от $35</strong> Это самый дешевый путь наверх и самая полезная вершина, но он требует примерно двух часов восхождения в темноте поверх самого раннего окна посадки — из Нуса-Дуа или Улувату, это серьезная ночь.</p><p>Если вы выбираете между скалолазанием и катанием по фитнесу и предпочтениям, а не по логистике, наш <a href="/bali/ru/journal/mount-batur-sunrise-jeep-vs-hike">Сравнение джипа и похода</a> подробно описывает саму тропу. Угол обзора этого гида — южная ночь, и в этом отношении правило простое: если вы не можете вздремнуть в движущейся машине, садитесь на джип.</p>
+                <p>Из южных районов большинству путешественников лучше подходят джиповые форматы, чем пешие, ведь до начала вулкана уже наступает ночь. На <strong>джип-тур от 45$</strong> вы спите обеими ногами, едете к точке восхода солнца и тратите свою энергию ни на что, кроме вида. <strong>джип с горячими источниками от 55$</strong> добавляет после этого купание в источниках на берегу озера, что восстанавливает силы лучше, чем что-либо еще в меню перед поездкой домой. <strong>повышение от $35</strong> Это самый дешевый путь наверх и самая полезная вершина, но он требует примерно двух часов восхождения в темноте поверх самого раннего окна посадки — из Нуса-Дуа или Улувату, это серьезная ночь.</p><p>Если вы выбираете между скалолазанием и катанием по фитнесу и предпочтениям, а не по логистике, наш <a href="/bali/ru/journal/mount-batur-sunrise-jeep-vs-hike">Сравнение джипа и похода</a> подробно описывает саму тропу. Угол обзора этого гида — южная ночь, и в этом отношении правило простое: если вы не можете вздремнуть в движущейся машине, садитесь на джип.</p>
 
 
 
@@ -1940,7 +2002,7 @@ body {
                     <a class="sboffer__name" href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">Джип-тур на восходе солнца на горе Батур</a>
                     <span class="sboffer__for">Хотите тот же рассвет без подъема — с детьми или после позднего перелета.</span>
                   </span>
-                  <span class="sboffer__price">От $60</span>
+                  <span class="sboffer__price">От $45</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%94%D0%B6%D0%B8%D0%BF-%D1%82%D1%83%D1%80%20%D0%BD%D0%B0%20%D0%B2%D0%BE%D1%81%D1%85%D0%BE%D0%B4%D0%B5%20%D1%81%D0%BE%D0%BB%D0%BD%D1%86%D0%B0%20%D0%BD%D0%B0%20%D0%B3%D0%BE%D1%80%D0%B5%20%D0%91%D0%B0%D1%82%D1%83%D1%80.%20%D0%9F%D1%80%D0%B8%D1%88%D0%BB%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8." target="_blank" rel="noopener noreferrer nofollow">Забронируйте сейчас</a>
                 </li>
                 <li class="sboffer__row">
@@ -1948,7 +2010,7 @@ body {
                     <a class="sboffer__name" href="/bali/ru/tours/mount-batur-sunrise-jeep-hot-spring">Джип на рассвете на горе Батур и горячие источники</a>
                     <span class="sboffer__for">Восход солнца, затем купание в природных горячих источниках на берегу озера Батур.</span>
                   </span>
-                  <span class="sboffer__price">От $75</span>
+                  <span class="sboffer__price">От $55</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%94%D0%B6%D0%B8%D0%BF%20%D0%BD%D0%B0%20%D1%80%D0%B0%D1%81%D1%81%D0%B2%D0%B5%D1%82%D0%B5%20%D0%BD%D0%B0%20%D0%B3%D0%BE%D1%80%D0%B5%20%D0%91%D0%B0%D1%82%D1%83%D1%80%20%D0%B8%20%D0%B3%D0%BE%D1%80%D1%8F%D1%87%D0%B8%D0%B5%20%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8.%20%D0%9F%D1%80%D0%B8%D1%88%D0%BB%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8." target="_blank" rel="noopener noreferrer nofollow">Забронируйте сейчас</a>
                 </li>
                 </ul>
@@ -1976,7 +2038,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Сколько будет стоить тур на восход солнца на гору Батур в 2026 году?</h3>
-                    <p>Прямые цены на 2026 год, бронируемые через WhatsApp: поход на восход солнца на гору Батур от 35 долларов, джип на рассвете с горячими источниками от 75 долларов и тур на джипах на рассвете от 60 долларов. Во все три включен трансфер из отеля, предоплаты нет — подтверждаете план в чате и платите в день обращения.</p>
+                    <p>Прямые цены на 2026 год, бронируемые через WhatsApp: поход на восход солнца на гору Батур от 35 долларов, джип на рассвете с горячими источниками от 55 долларов и тур на джипах на рассвете от 45 долларов. Во все три включен трансфер из отеля, предоплаты нет — подтверждаете план в чате и платите в день обращения.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -2027,7 +2089,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">от</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Без предоплаты</span>
         </p>
@@ -2056,7 +2118,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">от</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">Без предоплаты</span>
         </p>
@@ -2152,12 +2214,12 @@ body {
               <h3 class="sbtc-rail__title"><a class="sbtc-rail__titlelink" href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">Джип-тур на восходе солнца на горе Батур</a></h3>
               <p class="sbtc-price sbtc-rail__price">
           <span class="sbtc-price__lead sbtc-caps">от</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Без предоплаты</span>
         </p>
               <div class="sbtc-rail__actions">
-                <a class="sbtc-btn sbtc-btn_ink" href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">Посмотреть тур — от $60<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
+                <a class="sbtc-btn sbtc-btn_ink" href="/bali/ru/tours/mount-batur-sunrise-jeep-tour">Посмотреть тур — от $45<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
                 <a class="sbtc-btn sbtc-btn_line" href="https://wa.me/6285333685020?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%94%D0%B6%D0%B8%D0%BF-%D1%82%D1%83%D1%80%20%D0%BD%D0%B0%20%D0%B2%D0%BE%D1%81%D1%85%D0%BE%D0%B4%D0%B5%20%D1%81%D0%BE%D0%BB%D0%BD%D1%86%D0%B0%20%D0%BD%D0%B0%20%D0%B3%D0%BE%D1%80%D0%B5%20%D0%91%D0%B0%D1%82%D1%83%D1%80.%20%D0%9F%D1%80%D0%B8%D1%88%D0%BB%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8." target="_blank" rel="noopener noreferrer nofollow">Забронируйте в WhatsApp</a>
               </div>
               <dl class="sbtc-ledger sbtc-rail__ledger">

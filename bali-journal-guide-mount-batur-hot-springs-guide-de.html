@@ -34,7 +34,7 @@
       "@type": "BlogPosting",
       "@id": "https://www.sbexcursion.com/bali/de/journal/mount-batur-hot-springs-guide#article",
       "headline": "Heiße Quellen am Berg Batur: nach dem Sonnenaufgang, nicht statt",
-      "description": "Die natürlichen heißen Quellen am Batur-See und warum sie eher zum Abschluss eines Sonnenaufgangsmorgens als zu einem eigenständigen Ausflug gehören. Was die Jeep- und Thermalquellen-Tour beinhaltet, ab 75 $.",
+      "description": "Die natürlichen heißen Quellen am Batur-See und warum sie eher zum Abschluss eines Sonnenaufgangsmorgens als zu einem eigenständigen Ausflug gehören. Was die Jeep- und Thermalquellen-Tour beinhaltet, ab 55 $.",
       "datePublished": "2026-05-21",
       "dateModified": "2026-08-07",
       "speakable": {
@@ -121,7 +121,7 @@
       "@id": "https://www.sbexcursion.com/bali/de/journal/mount-batur-hot-springs-guide#webpage",
       "url": "https://www.sbexcursion.com/bali/de/journal/mount-batur-hot-springs-guide",
       "name": "Heiße Quellen am Berg Batur: nach dem Sonnenaufgang, nicht statt",
-      "description": "Die natürlichen heißen Quellen am Batur-See und warum sie eher zum Abschluss eines Sonnenaufgangsmorgens als zu einem eigenständigen Ausflug gehören. Was die Jeep- und Thermalquellen-Tour beinhaltet, ab 75 $.",
+      "description": "Die natürlichen heißen Quellen am Batur-See und warum sie eher zum Abschluss eines Sonnenaufgangsmorgens als zu einem eigenständigen Ausflug gehören. Was die Jeep- und Thermalquellen-Tour beinhaltet, ab 55 $.",
       "inLanguage": "de",
       "primaryImageOfPage": {
         "@type": "ImageObject",
@@ -205,7 +205,7 @@
           "item": {
             "@type": "TouristAttraction",
             "name": "Wann man sie überspringen sollte",
-            "description": "Das Einweichen verlängert den Morgen, der bereits um 02:00 Uhr begonnen hat, und wenn Sie zu den Reisenden gehören, die zurück im Hotel sein und schlafen möchten, ist das ein echter Kostenfaktor. Überspringen Sie es, nehmen Sie den einfachen Jeep ab 60 $ und investieren Sie stattdessen die Stunde in Ihren Nachmittag.",
+            "description": "Das Einweichen verlängert den Morgen, der bereits um 02:00 Uhr begonnen hat, und wenn Sie zu den Reisenden gehören, die zurück im Hotel sein und schlafen möchten, ist das ein echter Kostenfaktor. Überspringen Sie es, nehmen Sie den einfachen Jeep ab 45 $ und investieren Sie stattdessen die Stunde in Ihren Nachmittag.",
             "image": "https://www.sbexcursion.com/images/places/mount-batur-jeep.jpg"
           }
         }
@@ -228,7 +228,7 @@
           "name": "Wie viel kostet die Jeep- und Thermalquellen-Tour zum Mount Batur?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ab 75 $ pro Person für 6–8 Stunden, Abholung zwischen 02:00 und 03:30 Uhr. Es ist privat, beinhaltet die Abholung und Rückgabe vom und zum Hotel und erfordert keine Vorauszahlung. Der einfache Sunrise Jeep ohne Federn kostet ab 60 $."
+            "text": "Ab 55 $ pro Person für 6–8 Stunden, Abholung zwischen 02:00 und 03:30 Uhr. Es ist privat, beinhaltet die Abholung und Rückgabe vom und zum Hotel und erfordert keine Vorauszahlung. Der einfache Sunrise Jeep ohne Federn kostet ab 45 $."
           }
         },
         {
@@ -1288,6 +1288,68 @@ body {
   padding-bottom: 18px !important;
 }
 
+/* Две карточки в блоке цен. Включаются модификатором на подвале карточки,
+   поэтому туры с одной ценой ничего не замечают. */
+#rec2121222013 .sb-private-card-footer-dual {
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 16px !important;
+}
+
+#rec2121222013 .sb-price-opts {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 12px !important;
+  width: 100% !important;
+}
+
+#rec2121222013 .sb-price-opt {
+  padding: 14px 16px !important;
+  border: 1px solid rgba(17, 24, 39, 0.1) !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#rec2121222013 .sb-price-opt-addon {
+  background: #f6f6f6 !important;
+}
+
+#rec2121222013 .sb-price-opt-note {
+  color: #7a7a7a !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+#rec2121222013 .sb-price-opt-value {
+  margin-top: 6px !important;
+  color: #111111 !important;
+  font-size: clamp(28px, 3.2vw, 38px) !important;
+  line-height: 0.95 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+#rec2121222013 .sb-price-opt-desc {
+  margin-top: 8px !important;
+  color: #676767 !important;
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+#rec2121222013 .sb-private-card-footer-dual .sb-private-card-cta {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 639px) {
+  #rec2121222013 .sb-price-opts {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 #rec2121222013 .sb-private-card-body {
   padding-bottom: 22px !important;
 }
@@ -1648,7 +1710,7 @@ body {
             <h1>Heiße Quellen am Berg Batur: nach dem Sonnenaufgang, nicht statt</h1>
             <p class="sb-journal-lead">Die heißen Quellen befinden sich am Fuße des Vulkans neben dem Batur-See und ihr wahrer Wert liegt eher im Timing als in der Neuheit. Jede Version eines Mount Batur-Sonnenaufgangs endet auf die gleiche Weise: Sie stehen 30 bis 60 Minuten lang auf 1.717 m im Wind, Ihnen ist kalt und Sie müssen nach Hause fahren. Genau zu diesem Zeitpunkt tut warmes Wasser morgens besser als alles andere auf der Speisekarte. Die Jeep- und Thermalquellen-Tour kostet ab 75 US-Dollar und dauert 6–8 Stunden. Die Abholung erfolgt zwischen 02:00 und 03:30 Uhr. Zum Sonnenaufgang im Allradfahrzeug gibt es zusätzlich noch ein Bad. In diesem Leitfaden erfahren Sie, was die Quellen sind, wo sie morgens hineinpassen, was Sie mitbringen sollten und warum man sie lieber weglassen sollte.</p>
             <p class="sb-journal-dates">Von Alex Moskvin, Gründer von SB Excursions · Veröffentlicht am 21. Mai 2026 · Aktualisiert am 7. August 2026</p>
-            <p class="sb-journal-deck">Tour auf dieser Route: <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a> — Ab 75 $, 6–8 Stunden.</p>
+            <p class="sb-journal-deck">Tour auf dieser Route: <a href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a> — Ab 55 $, 6–8 Stunden.</p>
             <div class="sb-quick-answer">
               <p class="sb-quick-answer__q">Lohnen sich die heißen Quellen des Mount Batur?</p>
               <p class="sb-quick-answer__a">Es lohnt sich, wenn Ihnen kalt ist oder Sie geklettert sind. Sie verbringen 30 bis 60 Minuten still im Wind in der Höhe und warten auf den Sonnenaufgang. Anschließend müssen Sie ein bis zweieinhalb Stunden nach Hause fahren. Warmes Wasser zwischen diesen beiden Dingen ist die beste Lösung für den einen Fehler, den jeder Batur-Morgen teilt.</p>
@@ -1656,10 +1718,10 @@ body {
               <ul class="sb-quick-answer__list"><li>Wie viel kostet die Jeep- und Thermalquellen-Tour zum Mount Batur?</li><li>Kann ich die heißen Quellen nach der Mount Batur-Wanderung besuchen?</li></ul>
             </div>
             <div class="sb-journal-inline-stats">
-              <span>Seeufer, Kintamani</span><span>Ab 75 $</span><span>Nach dem kalten Gipfel</span>
+              <span>Seeufer, Kintamani</span><span>Ab 55 $</span><span>Nach dem kalten Gipfel</span>
             </div>
             <div class="sb-journal-article-hero__actions">
-              <a class="sb-journal-primary" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sunrise Jeep & Hot Spring – Ab 75 $</a>
+              <a class="sb-journal-primary" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sunrise Jeep &amp; Hot Spring — From $55</a>
               <a class="sb-journal-secondary" href="/bali/de/journal">Durchsuchen Sie alle Leitfäden</a>
             </div>
           </div>
@@ -1683,7 +1745,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Derselbe Sonnenaufgang im Geländewagen ohne Klettern, gefolgt von einem Bad in einer heißen Quelle in Kintamani.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1691,7 +1753,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sonnenaufgang aus einem 4x4 ohne Klettern, dann über das schwarze Lavafeld.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1747,7 +1809,7 @@ body {
       </div>
       <div class="sb-journal-ranking-card__body">
         <div class="sb-journal-ranking-card__meta">
-          <span>Ab 75 $ · 6–8 Stunden</span>
+          <span>From $55 · 6-8 hours</span>
           <span>Die komplette Batur-Sequenz</span>
         </div>
         <h3>Die Jeep- und Thermalquellen-Tour</h3>
@@ -1781,7 +1843,7 @@ body {
           <span>Enge Zeitpläne und warme Schläfer</span>
         </div>
         <h3>Wann man sie überspringen sollte</h3>
-        <p>Das Einweichen verlängert den Morgen, der bereits um 02:00 Uhr begonnen hat, und wenn Sie zu den Reisenden gehören, die zurück im Hotel sein und schlafen möchten, ist das ein echter Kostenfaktor. Überspringen Sie es, nehmen Sie den einfachen Jeep ab 60 $ und investieren Sie stattdessen die Stunde in Ihren Nachmittag.</p>
+        <p>Das Einweichen verlängert den Morgen, der bereits um 02:00 Uhr begonnen hat, und wenn Sie zu den Reisenden gehören, die zurück im Hotel sein und schlafen möchten, ist das ein echter Kostenfaktor. Überspringen Sie es, nehmen Sie den einfachen Jeep ab 45 $ und investieren Sie stattdessen die Stunde in Ihren Nachmittag.</p>
       </div>
     </article>
 
@@ -1792,7 +1854,7 @@ body {
                 <h2>Die heißen Quellen auf einen Blick</h2>
                 <p>Die Frage, die sich die Leute tatsächlich stellen, ist nicht, was die Federn sind, sondern ob sie die zusätzliche Zeit und das Geld am Ende eines sehr frühen Morgens wert sind. Dies ist die Entscheidung, die dargelegt wurde:</p>
 
-                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">Question</th><th scope="col">Die Antwort</th><th scope="col">Worauf es ankommt</th></tr></thead><tbody><tr><th scope="row">Wo sind sie?</th><td>Am Fuße des Vulkans, am Ufer des Batur-Sees in Kintamani</td><td>Minuten ab dem Ende der Sonnenaufgangsroute, keine separate Fahrt</td></tr><tr><th scope="row">Wenn am Morgen</th><td>Zuletzt, nach dem Sonnenaufgang und den Lavafeldern</td><td>Das ist der springende Punkt: Warmes Wasser landet am besten, wenn es kalt ist</td></tr><tr><th scope="row">So buchen Sie es</th><td>Jeep- und Thermalquellen-Tour, ab 75 $ für 6–8 Stunden</td><td>Abholung zwischen 02:00 und 03:30 Uhr, privat, Abholung vom Hotel inbegriffen</td></tr><tr><th scope="row">Was es gegenüber dem einfachen Jeep hinzufügt</th><td>15 $ und der warme Abgang</td><td>Der Sonnenaufgang selbst ist in beiden Formaten identisch</td></tr><tr><th scope="row">Was Sie mitbringen sollten</th><td>Ein Badeanzug und ein Handtuch</td><td>Beides wird nicht angeboten und um 03:00 Uhr gibt es auch keinen Ort, an dem man eines kaufen kann</td></tr><tr><th scope="row">Es lohnt sich, es zu überspringen, wenn</th><td>Sie möchten wieder im Hotel sein und schlafen</td><td>Das Einweichen verlängert einen Morgen, der bereits mitten in der Nacht begonnen hat</td></tr></tbody></table></div>
+                <div class="sb-journal-tablewrap"><table class="sb-journal-table"><thead><tr><th scope="col">Question</th><th scope="col">Die Antwort</th><th scope="col">Worauf es ankommt</th></tr></thead><tbody><tr><th scope="row">Wo sind sie?</th><td>Am Fuße des Vulkans, am Ufer des Batur-Sees in Kintamani</td><td>Minuten ab dem Ende der Sonnenaufgangsroute, keine separate Fahrt</td></tr><tr><th scope="row">Wenn am Morgen</th><td>Zuletzt, nach dem Sonnenaufgang und den Lavafeldern</td><td>Das ist der springende Punkt: Warmes Wasser landet am besten, wenn es kalt ist</td></tr><tr><th scope="row">So buchen Sie es</th><td>Jeep- und Thermalquellen-Tour, ab 55 $ für 6–8 Stunden</td><td>Abholung zwischen 02:00 und 03:30 Uhr, privat, Abholung vom Hotel inbegriffen</td></tr><tr><th scope="row">Was es gegenüber dem einfachen Jeep hinzufügt</th><td>15 $ und der warme Abgang</td><td>Der Sonnenaufgang selbst ist in beiden Formaten identisch</td></tr><tr><th scope="row">Was Sie mitbringen sollten</th><td>Ein Badeanzug und ein Handtuch</td><td>Beides wird nicht angeboten und um 03:00 Uhr gibt es auch keinen Ort, an dem man eines kaufen kann</td></tr><tr><th scope="row">Es lohnt sich, es zu überspringen, wenn</th><td>Sie möchten wieder im Hotel sein und schlafen</td><td>Das Einweichen verlängert einen Morgen, der bereits mitten in der Nacht begonnen hat</td></tr></tbody></table></div>
 
               </section>
 
@@ -1814,7 +1876,7 @@ body {
 
               <section class="sb-journal-article-section">
                 <h2>Der ehrliche Grund, sie zu überspringen</h2>
-                <p>Wenn Ihre Priorität darin besteht, den Sonnenaufgang zu genießen und zurückzukommen, dann die Ebene <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Jeep-Tour bei Sonnenaufgang</a> bei <strong>ab 60 $</strong> gibt Ihnen die gleiche Ansicht und gibt Ihnen die Stunde zurück. Manche Reisende wünschen sich wirklich lieber ein Nickerchen als ein Bad, und an dieser Antwort ist nichts auszusetzen.</p><p>Es ist auch wichtig, wie der Rest Ihres Tages aussieht. Ein Batur-Morgen kostet Sie bereits eine Nacht Schlaf; Wenn Sie einen Flug, ein Boot nach Nusa Penida oder etwas anderes mit einer festen Zeit haben, stapeln Sie keine optionale Stunde darauf.</p><p>Und in der Regenzeit von November bis März ist es anders: Wenn die Wolken den Sonnenaufgang verdecken, sind die Frühlinge der Teil des Morgens, den das Wetter nicht verderben kann. Das ist der einzige Fall, in dem wir speziell die Version mit heißen Quellen empfehlen.</p>
+                <p>Wenn Ihre Priorität darin besteht, den Sonnenaufgang zu genießen und zurückzukommen, dann die Ebene <a href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Jeep-Tour bei Sonnenaufgang</a> bei <strong>ab 45 $</strong> gibt Ihnen die gleiche Ansicht und gibt Ihnen die Stunde zurück. Manche Reisende wünschen sich wirklich lieber ein Nickerchen als ein Bad, und an dieser Antwort ist nichts auszusetzen.</p><p>Es ist auch wichtig, wie der Rest Ihres Tages aussieht. Ein Batur-Morgen kostet Sie bereits eine Nacht Schlaf; Wenn Sie einen Flug, ein Boot nach Nusa Penida oder etwas anderes mit einer festen Zeit haben, stapeln Sie keine optionale Stunde darauf.</p><p>Und in der Regenzeit von November bis März ist es anders: Wenn die Wolken den Sonnenaufgang verdecken, sind die Frühlinge der Teil des Morgens, den das Wetter nicht verderben kann. Das ist der einzige Fall, in dem wir speziell die Version mit heißen Quellen empfehlen.</p>
 
 
 
@@ -1833,7 +1895,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a>
                     <span class="sboffer__for">Derselbe Sonnenaufgang im Geländewagen ohne Klettern, gefolgt von einem Bad in einer heißen Quelle in Kintamani.</span>
                   </span>
-                  <span class="sboffer__price">Ab 75 $</span>
+                  <span class="sboffer__price">Ab 55 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1841,7 +1903,7 @@ body {
                     <a class="sboffer__name" href="/bali/de/tours/mount-batur-sunrise-jeep-tour">Mount Batur: Jeep zum Sonnenaufgang</a>
                     <span class="sboffer__for">Sonnenaufgang aus einem 4x4 ohne Klettern, dann über das schwarze Lavafeld.</span>
                   </span>
-                  <span class="sboffer__price">Ab 60 $</span>
+                  <span class="sboffer__price">Ab 45 $</span>
                   <a class="sboffer__cta" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep-Tour%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie jetzt</a>
                 </li>
                 <li class="sboffer__row">
@@ -1867,7 +1929,7 @@ body {
 
                   <article class="sb-journal-faq-card">
                     <h3>Wie viel kostet die Jeep- und Thermalquellen-Tour zum Mount Batur?</h3>
-                    <p>Ab 75 $ pro Person für 6–8 Stunden, Abholung zwischen 02:00 und 03:30 Uhr. Es ist privat, beinhaltet die Abholung und Rückgabe vom und zum Hotel und erfordert keine Vorauszahlung. Der einfache Sunrise Jeep ohne Federn kostet ab 60 $.</p>
+                    <p>Ab 55 $ pro Person für 6–8 Stunden, Abholung zwischen 02:00 und 03:30 Uhr. Es ist privat, beinhaltet die Abholung und Rückgabe vom und zum Hotel und erfordert keine Vorauszahlung. Der einfache Sunrise Jeep ohne Federn kostet ab 45 $.</p>
                   </article>
 
                   <article class="sb-journal-faq-card">
@@ -1918,7 +1980,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
@@ -1947,7 +2009,7 @@ body {
       <div class="sbtc-card__foot">
         <p class="sbtc-price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$60</span>
+          <span class="sbtc-price__fig">$45</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
@@ -2043,12 +2105,12 @@ body {
               <h3 class="sbtc-rail__title"><a class="sbtc-rail__titlelink" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Mount Batur Sonnenaufgangs-Jeep und heiße Quelle</a></h3>
               <p class="sbtc-price sbtc-rail__price">
           <span class="sbtc-price__lead sbtc-caps">Von</span>
-          <span class="sbtc-price__fig">$75</span>
+          <span class="sbtc-price__fig">$55</span>
 
           <span class="sbtc-price__note sbtc-caps">Keine Vorauszahlung</span>
         </p>
               <div class="sbtc-rail__actions">
-                <a class="sbtc-btn sbtc-btn_ink" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Tour ansehen – ab 75 $<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
+                <a class="sbtc-btn sbtc-btn_ink" href="/bali/de/tours/mount-batur-sunrise-jeep-hot-spring">Tour ansehen – ab 55 $<svg class="sbtc-arrow" viewBox="0 0 16 9" aria-hidden="true" focusable="false"><path d="M0 4.5h13.6M10 1l3.6 3.5L10 8"/></svg></a>
                 <a class="sbtc-btn sbtc-btn_line" href="https://wa.me/6285333685020?text=Hallo!%20Ich%20m%C3%B6chte%20Mount%20Batur%20Sonnenaufgangs-Jeep%20und%20hei%C3%9Fe%20Quelle%20buchen.%20Bitte%20senden%20Sie%20mir%20Details." target="_blank" rel="noopener noreferrer nofollow">Buchen Sie in WhatsApp</a>
               </div>
               <dl class="sbtc-ledger sbtc-rail__ledger">
