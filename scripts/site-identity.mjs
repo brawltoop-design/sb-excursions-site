@@ -58,13 +58,11 @@ export const ORGANIZATION_SCHEMA = {
     addressRegion: "Bali",
     addressCountry: "ID",
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    bestRating: "5",
-    worstRating: "1",
-    reviewCount: "564",
-  },
+  /* aggregateRating здесь стоял на 1844 страницах, а объекты Review — только
+     на 138. Разметка рейтинга организации, не подкреплённая отзывами на самой
+     странице, — прямое нарушение правил структурированных данных и повод для
+     ручных санкций. Рейтинг остаётся видимым текстом в карточке тура и в
+     разметке Product там, где отзывы реально есть. */
   priceRange: "$15-$150",
   telephone: "+62 853 3368 5020",
   logo: {

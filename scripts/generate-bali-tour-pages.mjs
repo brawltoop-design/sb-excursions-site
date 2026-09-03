@@ -365,6 +365,32 @@ const JOURNAL_AUTHOR = {
 // блоки). Обновлять руками при реальных правках контента — не при каждой
 // сборке, иначе сигнал свежести превращается в шум.
 const JOURNAL_MODIFIED_DATE = "2026-08-07";
+
+/* Дата обновления по конкретной странице, а не одна на весь журнал.
+   Константа выше отставала на 27 дней и 151 коммит: правки шли, а сайт
+   продолжал заявлять 7 августа. Для генеративного поиска свежесть — один
+   из самых сильных сигналов, и общая дата на 1640 страниц его обнуляет.
+   Источник правды — .generated/sitemap-lastmod.json: там дата меняется
+   только когда меняется хеш содержимого, то есть при реальной правке,
+   а не при каждой сборке. Файл пишется поздним шагом, поэтому на входе
+   лежит результат предыдущей сборки — это и нужно: дата последнего
+   изменения, а не текущего запуска. */
+const JOURNAL_LASTMOD = (() => {
+  try {
+    const raw = fs.readFileSync(path.join(projectRoot, ".generated", "sitemap-lastmod.json"), "utf8");
+    return JSON.parse(raw);
+  } catch {
+    return {};
+  }
+})();
+function journalModifiedDate(url) {
+  const route = String(url || "").replace(/^https?:\/\/[^/]+/, "");
+  const hit = JOURNAL_LASTMOD[route] || JOURNAL_LASTMOD[route.replace(/\/$/, "")];
+  const date = hit && hit.date;
+  if (!date || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return JOURNAL_MODIFIED_DATE;
+  // Дата обновления не может быть раньше даты публикации.
+  return date < JOURNAL_PUBLISHED_DATE ? JOURNAL_PUBLISHED_DATE : date;
+}
 // speakable — подсказка голосовым и генеративным движкам, какой фрагмент
 // страницы читать как ответ: заголовок и лид.
 const JOURNAL_SPEAKABLE = {
@@ -41197,7 +41223,7 @@ function renderSeoGuidePage(article) {
       headline: article.title,
       description: article.description,
       datePublished: JOURNAL_PUBLISHED_DATE,
-      dateModified: JOURNAL_MODIFIED_DATE,
+      dateModified: journalModifiedDate(article.url),
       speakable: JOURNAL_SPEAKABLE,
       inLanguage: "en",
       image: guideImageSet(article),
@@ -41283,7 +41309,7 @@ function renderSeoGuidePage(article) {
     <meta property="og:image" content="${journalOgImage(article.guide?.heroTourSlug, absoluteJournalImageUrl(article.heroImage))}">
     ${journalOgMetaBlock(journalDocumentTitle(article.title), article.description, journalOgImage(article.guide?.heroTourSlug, absoluteJournalImageUrl(article.heroImage)))}
     <meta property="article:published_time" content="${JOURNAL_PUBLISHED_DATE}">
-    <meta property="article:modified_time" content="${JOURNAL_MODIFIED_DATE}">
+    <meta property="article:modified_time" content="${journalModifiedDate(article.url)}">
     <link rel="preload" as="image" href="${article.heroImage}" fetchpriority="high">
     <link rel="preload" as="font" type="font/woff2" href="/css/fonts/cina-geo/CinaGEO-Regular.woff2" crossorigin>
     <link rel="canonical" href="${article.url}">
@@ -41421,7 +41447,7 @@ function renderJournalArticlePage(article) {
     <meta property="og:image" content="${journalOgImage(article.tour?.slug, `${SITE_URL}${publicImagePath(article.tour)}`)}">
     ${journalOgMetaBlock(journalDocumentTitle(article.title), article.description, journalOgImage(article.tour?.slug, `${SITE_URL}${publicImagePath(article.tour)}`))}
     <meta property="article:published_time" content="${JOURNAL_PUBLISHED_DATE}">
-    <meta property="article:modified_time" content="${JOURNAL_MODIFIED_DATE}">
+    <meta property="article:modified_time" content="${journalModifiedDate(article.url)}">
     <link rel="preload" as="image" href="${publicImagePath(article.tour)}" fetchpriority="high">
     <link rel="preload" as="font" type="font/woff2" href="/css/fonts/cina-geo/CinaGEO-Regular.woff2" crossorigin>
     <link rel="canonical" href="${article.url}">
@@ -41437,7 +41463,7 @@ ${JOURNAL_FOOTER_ASSETS}
           headline: article.title,
           description: article.description,
           datePublished: JOURNAL_PUBLISHED_DATE,
-          dateModified: JOURNAL_MODIFIED_DATE,
+          dateModified: journalModifiedDate(article.url),
           speakable: JOURNAL_SPEAKABLE,
           inLanguage: "en",
           image: tourImageSet(article.tour),
@@ -47205,6 +47231,8 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
+      "SB Excursions":
+        "SB Excursions",
     "From $19":
       "От $19",
     "2 hours on the water":
@@ -48761,6 +48789,8 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
+      "SB Excursions":
+        "SB Excursions",
     "From $19":
       "Desde 19$",
     "2 hours on the water":
@@ -50229,6 +50259,8 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
+      "SB Excursions":
+        "SB Excursions",
     "From $19":
       "À partir de 19$",
     "2 hours on the water":
@@ -51849,6 +51881,8 @@ const PINNED_TRANSLATIONS = {
       "Bali est-elle sûre en 2026 ? 7 arnaques courantes à éviter",
   },
   "zh-CN": {
+      "SB Excursions":
+        "SB Excursions",
     "From $19":
       "19 美元起",
     "2 hours on the water":
@@ -53191,6 +53225,8 @@ const PINNED_TRANSLATIONS = {
       "巴厘岛旅行要花多少钱？2026年真实物价与三档预算",
   },
   de: {
+      "SB Excursions":
+        "SB Excursions",
     "From $19":
       "Ab 19 $",
     "2 hours on the water":

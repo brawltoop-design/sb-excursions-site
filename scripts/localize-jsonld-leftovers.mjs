@@ -22,6 +22,16 @@ const LOCALE_FROM_NAME = /^(bali-.*)-(ru|es|fr|de|zh)\.html$/;
 const TEXT_KEYS = new Set(["name", "headline", "description", "text", "alternateName",
   "caption", "articleBody", "abstract", "disambiguatingDescription"]);
 
+/* Имя организации переводить нельзя: один и тот же @id не может называться
+   в шести языках по-разному, иначе поисковик и языковая модель видят шесть
+   разных компаний вместо одной. Описание — можно и нужно, имя — нет. */
+const BRAND_TYPES = new Set([
+  "Organization", "TravelAgency", "Brand", "LocalBusiness",
+  "Corporation", "TouristInformationCenter", "TravelAgencyBusiness",
+]);
+const isBrandNode = (node) =>
+  [].concat(node["@type"] || []).some((t) => BRAND_TYPES.has(t));
+
 const cachePath = path.join(ROOT, ".generated", "bali-translation-cache.json");
 let CACHE = {};
 try {
@@ -102,7 +112,11 @@ for (const file of fs.readdirSync(ROOT).sort()) {
       if (Array.isArray(n)) return n.map(fix);
       if (!n || typeof n !== "object") return n;
       const res = {};
+      const keepName = isBrandNode(n);
       for (const [k, v] of Object.entries(n)) {
+        if (keepName && (k === "name" || k === "legalName" || k === "alternateName")) {
+          res[k] = v; continue;
+        }
         if (typeof v === "string" && TEXT_KEYS.has(k) && english.has(v) && bucket[v] && bucket[v] !== v) {
           res[k] = bucket[v]; changed = true; hits += 1;
         } else if (typeof v === "string" && TEXT_KEYS.has(k) && english.has(v) && v.length >= 12) {

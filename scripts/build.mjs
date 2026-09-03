@@ -35,6 +35,7 @@ const STEPS = [
   ["normalize-site-host.mjs", "единый домен www во всех адресах"],
   ["fix-mobile-tours-link.mjs", "живая ссылка «Туры» в мобильном меню"],
   ["fix-legacy-guide-tourcard.mjs", "карточка тура в сайдбаре шести старых гайдов"],
+  ["fix-legacy-de-locale.mjs", "легаси-гайды: canonical на свой язык и единое имя бренда"],
   ["add-hreflang.mjs", "hreflang-теги пяти языковых версий"],
   ["dubai-noindex.mjs", "дубайский блог — вон из индекса Google"],
   ["build-llms-txt.mjs", "llms.txt — карта сайта для нейросетей"],
