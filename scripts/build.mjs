@@ -36,6 +36,8 @@ const STEPS = [
   ["fix-mobile-tours-link.mjs", "живая ссылка «Туры» в мобильном меню"],
   ["fix-legacy-guide-tourcard.mjs", "карточка тура в сайдбаре шести старых гайдов"],
   ["fix-legacy-de-locale.mjs", "легаси-гайды: canonical на свой язык и единое имя бренда"],
+  ["link-primary-sources.mjs", "ссылки на первоисточники: UNESCO, BMKG, e-VOA"],
+  ["materialize-policies.mjs", "текст политик в HTML, а не в джаваскрипте"],
   ["add-hreflang.mjs", "hreflang-теги пяти языковых версий"],
   ["dubai-noindex.mjs", "дубайский блог — вон из индекса Google"],
   ["build-llms-txt.mjs", "llms.txt — карта сайта для нейросетей"],

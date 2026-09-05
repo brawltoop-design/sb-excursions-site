@@ -391,6 +391,20 @@ function journalModifiedDate(url) {
   // Дата обновления не может быть раньше даты публикации.
   return date < JOURNAL_PUBLISHED_DATE ? JOURNAL_PUBLISHED_DATE : date;
 }
+/* Видимая дата обновления. До этого в шаблоне стоял литерал «7 August 2026»,
+   и он расходился с dateModified в разметке — сайт одновременно заявлял две
+   разные даты. Расхождение хуже любой из них по отдельности: видимую дату
+   сверяют с размеченной. Берём то же значение, что уходит в JSON-LD. */
+const ARTICLE_DATE_MONTHS = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+function formatArticleDate(iso) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(iso || ""));
+  if (!m) return "";
+  return `${Number(m[3])} ${ARTICLE_DATE_MONTHS[Number(m[2]) - 1]} ${m[1]}`;
+}
+
 // speakable — подсказка голосовым и генеративным движкам, какой фрагмент
 // страницы читать как ответ: заголовок и лид.
 const JOURNAL_SPEAKABLE = {
@@ -2370,6 +2384,11 @@ const tours = [
   },
   {
     slug: "mount-batur-sunrise-jeep-tour",
+    priceOptions: {
+      firstDesc: "You meet the jeep in Kintamani",
+      secondValue: "$60",
+      secondDesc: "Hotel pickup and drop-off, anywhere in Bali",
+    },
     metaTitle: "Mount Batur Sunrise Jeep Tour in Bali | No Hiking, from $45",
     metaDescription: "Watch sunrise from Mount Batur in a 4x4 jeep, no hiking needed, then the black lava field and black sand. 6-8 hours from $45, hotel pickup. Book via WhatsApp.",
     title: "Mount Batur Sunrise Jeep Tour",
@@ -2410,6 +2429,11 @@ const tours = [
   },
   {
     slug: "mount-batur-sunrise-jeep-hot-spring",
+    priceOptions: {
+      firstDesc: "You meet the jeep in Kintamani",
+      secondValue: "$70",
+      secondDesc: "Hotel pickup and drop-off, anywhere in Bali",
+    },
     metaTitle: "Mount Batur Sunrise Jeep and Hot Spring, Bali | from $55",
     metaDescription: "Jeep to Batur's Sunrise Point, no hiking, then a soak in a Kintamani hot spring. 6-8 hours from $55, hotel pickup included. Book via WhatsApp, no prepayment.",
     title: "Mount Batur Sunrise Jeep & Hot Spring",
@@ -3018,6 +3042,11 @@ const tours = [
   },
   {
     slug: "nusa-penida-manta-rays-point",
+    priceOptions: {
+      firstDesc: "Snorkeling, guide and gear",
+      secondValue: "$46",
+      secondDesc: "With return fast boat from Sanur",
+    },
     metaTitle: "Snorkel with Manta Rays in Bali | Nusa Penida Day Trip from $29",
     metaDescription: "Nusa Penida boat trip to Manta Point with Crystal Bay and Gamat Bay stops. From $29 per person with gear and guide. Hotel pickup is $34 per car.",
     title: "Snorkel with Manta Rays, Nusa Penida",
@@ -3031,7 +3060,6 @@ const tours = [
     /* Две карточки в блоке цен вместо одной. Снорклинг считается с человека,
        забор от отеля — за машину до пяти гостей: трансфера в закупке нет,
        а страница раньше обещала «hotel pickup included, from $29». */
-    priceOptions: "pickup-addon",
     mainPageFeatures: [
       ["🤿", "Snorkeling Experience"],
       ["🐢", "Gamat Bay with chance to spot sea turtles"],
@@ -6741,7 +6769,18 @@ function renderWestStylePage(tour) {
      подставляем через функцию-replacer: у строковой замены «+$34» съелся бы
      как спецпоследовательность. Апострофов в подписях нет ни на одном языке,
      иначе литерал бы порвался. */
-  if (tour.priceOptions === "pickup-addon") {
+  /* Ядровой пассаж ставим перед первой записью с видимым текстом тура. */
+  const coreAnchor = '<div id="rec2121222003"';
+  if (html.includes(coreAnchor)) {
+    const core = buildTourCoreAnswerRecord(tour);
+    if (core) html = html.replace(coreAnchor, `${core}\n${coreAnchor}`);
+  }
+
+  html = fixReviewsRecordImage(html, imagePath);
+  html = replaceRouteRecord(html, map, tour.slug);
+
+  if (tour.priceOptions) {
+    const opts = tour.priceOptions;
     const priceBlockPattern =
       /'<div class="sb-private-card-price">'\s*\+\s*'<div class="sb-private-card-price-note">([^<]*)<\/div>'\s*\+\s*'<div class="sb-private-card-price-value">([^<]*)<\/div>'\s*\+\s*'<\/div>'/;
     if (!priceBlockPattern.test(html)) {
@@ -6753,12 +6792,12 @@ function renderWestStylePage(tour) {
         `'<div class="sb-price-opt">'`,
         `'<div class="sb-price-opt-note">${note}</div>'`,
         `'<div class="sb-price-opt-value">${value}</div>'`,
-        `'<div class="sb-price-opt-desc">Snorkeling, guide and gear</div>'`,
+        `'<div class="sb-price-opt-desc">${escapeJsSingleQuoted(opts.firstDesc)}</div>'`,
         `'</div>'`,
         `'<div class="sb-price-opt sb-price-opt-addon">'`,
-        `'<div class="sb-price-opt-note">per car, up to 5 guests</div>'`,
-        `'<div class="sb-price-opt-value">+$34</div>'`,
-        `'<div class="sb-price-opt-desc">Hotel pickup and drop-off</div>'`,
+        `'<div class="sb-price-opt-note">${note}</div>'`,
+        `'<div class="sb-price-opt-value">${escapeJsSingleQuoted(matchPriceShape(value, opts.secondValue))}</div>'`,
+        `'<div class="sb-price-opt-desc">${escapeJsSingleQuoted(opts.secondDesc)}</div>'`,
         `'</div>'`,
         `'</div>'`,
       ].join(" +\n      "),
@@ -41336,7 +41375,7 @@ ${JOURNAL_FOOTER_ASSETS}
             <div class="sb-journal-kicker">${escapeHtml(article.articleType.badge)}</div>
             <h1>${escapeHtml(article.title)}</h1>
             <p class="sb-journal-lead">${renderRichText(article.excerpt)}</p>
-            <p class="sb-journal-dates">By Alex Moskvin, Founder of SB Excursions · Published 21 May 2026 · Updated 7 August 2026</p>
+            <p class="sb-journal-dates">By Alex Moskvin, Founder of SB Excursions · Published ${formatArticleDate(JOURNAL_PUBLISHED_DATE)} · Updated ${formatArticleDate(journalModifiedDate(article.url))}</p>
             <p class="sb-journal-deck">Tour on this route: <a href="${tourRoute(article.tour)}">${escapeHtml(article.tour.title)}</a> — ${escapeHtml(article.tour.price)}, ${escapeHtml(article.tour.duration.toLowerCase())}.</p>
             ${renderQuickAnswer(article)}
             <div class="sb-journal-inline-stats">
@@ -41532,8 +41571,9 @@ ${JOURNAL_FOOTER_ASSETS}
             <div class="sb-journal-kicker">${escapeHtml(article.articleType.badge)}</div>
             <h1>${escapeHtml(article.title)}</h1>
             <p class="sb-journal-lead">${renderRichText(article.excerpt)}</p>
-            <p class="sb-journal-dates">By Alex Moskvin, Founder of SB Excursions · Published 21 May 2026 · Updated 7 August 2026</p>
+            <p class="sb-journal-dates">By Alex Moskvin, Founder of SB Excursions · Published ${formatArticleDate(JOURNAL_PUBLISHED_DATE)} · Updated ${formatArticleDate(journalModifiedDate(article.url))}</p>
             <p class="sb-journal-deck">Tour on this route: <a href="${tourRoute(article.tour)}">${escapeHtml(article.tour.title)}</a> — ${escapeHtml(article.tour.price)}, ${escapeHtml(article.tour.duration.toLowerCase())}.</p>
+            ${renderQuickAnswer(article)}
             <div class="sb-journal-inline-stats">
               <span>${escapeHtml(article.tour.duration)}</span>
               <span>${escapeHtml(article.tour.format)}</span>
@@ -45299,6 +45339,165 @@ function buildCompactWeatherRecord(primaryRoute = WEATHER_MAIN_PAGE_ROUTE) {
   return replaceWeatherTourLinksConfig(compactWeatherRecordTemplateCache, primaryRoute);
 }
 
+/* Вторая карточка в той же записи валюты, что и первая.
+
+   secondValue задан литералом «$60», а первая карточка приходит уже
+   локализованной: «45 $» по-немецки, «45 美元» по-китайски. Рядом это читалось
+   как разнобой. Берём форму первой карточки и подставляем в неё другое число. */
+function matchPriceShape(localized, target) {
+  const amount = String(target).match(/\d[\d.,]*/);
+  const shape = String(localized).match(/\d[\d.,]*/);
+  if (!amount || !shape) return target;
+  return String(localized).replace(shape[0], amount[0]);
+}
+
+/* Фиксированные куски блока маршрута. Составную английскую строку переводить
+   бесполезно: её нет в кэше, а бюджет переводчика исчерпан — возвращается
+   английский как есть. Закрепляем короткие фрагменты и собираем заголовок
+   и текст уже из переведённых частей плюс название тура и топонимы. */
+const MAP_TITLE_SUFFIX = "route on Google Maps";
+const MAP_TEXT_LEAD = "Key map points";
+const MAP_TEXT_TAIL = "Final timing, pickup, and stop order are confirmed after booking.";
+
+/* Ядровой пассаж на странице тура.
+
+   Аудит: самодостаточных блоков длиной 134-167 слов на сайте 1,3%, медиана
+   абзаца 29 слов, а на 168 страницах туров не было ни блока быстрого ответа,
+   ни одного заголовка-вопроса. Языковой модели нечего процитировать целиком:
+   факты рассыпаны по коротким подписям Tilda.
+
+   Собираем один связный абзац из полей самого тура — ничего не выдумывая, —
+   и ставим его туда, где начинается видимый текст. Длину доводим до полосы
+   134-167 слов, добавляя пункты включённого и хайлайты по одному. */
+function tourCoreAnswerText(tour) {
+  /* Никаких английских связок. Первая версия склеивала предложение словами
+     «is a», «around», «and it runs» — перевод бьёт строку на сегменты, значения
+     переводились, а связки оставались английскими, и на китайском выходила
+     каша. Собираем только из уже переведённых полей тура, соединяя знаками
+     препинания: так текст корректен на всех шести языках. Тезис в 60-90 слов
+     и верный важнее 150 слов и сломанных. */
+  const chunks = [
+    collapseWhitespace(tour.title),
+    collapseWhitespace(tour.format || ""),
+    collapseWhitespace(tour.area || ""),
+    collapseWhitespace(tour.duration || ""),
+    collapseWhitespace(String(tour.price || "")),
+    collapseWhitespace(tour.pickup || ""),
+    collapseWhitespace(tour.bestFor || ""),
+  ].filter(Boolean);
+  const includes = buildIncludes(tour).map(collapseWhitespace).filter(Boolean).slice(0, 5);
+  return [chunks.join(" — "), includes.join(", ")].filter(Boolean).join(". ") + ".";
+}
+
+const TOUR_CORE_HEADING = "The tour in short";
+
+function buildTourCoreAnswerRecord(tour) {
+  const text = tourCoreAnswerText(tour);
+  if (!text) return "";
+  const question = collapseWhitespace(tour.coreHeading || TOUR_CORE_HEADING);
+  return `<div id="rec2121221950" class="r t-rec t-rec_pt_0 t-rec_pb_0" style="padding-top:0px;padding-bottom:0px;" data-record-type="123">
+  <div class="t123">
+    <div class="t-container_100">
+      <div class="t-width t-width_100">
+        <div class="sb-tour-core">
+          <h2 class="sb-tour-core__q">${escapeHtml(question)}</h2>
+          <p class="sb-tour-core__a">${escapeHtml(text)}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style id="sb-tour-core-css">
+#rec2121221950 .sb-tour-core{max-width:1100px;margin:0 auto;padding:22px 20px 6px;box-sizing:border-box;font-family:"Cina GEO","Tilda Sans","TildaSans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+#rec2121221950 .sb-tour-core__q{margin:0 0 10px;font-size:clamp(20px,2.2vw,26px);line-height:1.2;font-weight:400;letter-spacing:-0.02em;color:#111}
+#rec2121221950 .sb-tour-core__a{margin:0;font-size:16px;line-height:1.6;color:#333}
+@media screen and (max-width:639px){#rec2121221950 .sb-tour-core{padding:16px 14px 4px}#rec2121221950 .sb-tour-core__a{font-size:15px}}
+</style>`;
+}
+
+/* Фотография чужого тура в блоке отзывов.
+
+   Запись rec2121222073 несёт фон /images/tours-real/nusa-penida-west-tour.jpg
+   на всех 168 страницах туров: три вхождения, включая meta itemprop="image",
+   то есть в микроразметке страницы Батура объявлена фотография Пениды.
+   Меняем в границах одной записи, чтобы не задеть законные ссылки на West Tour
+   в блоках перелинковки. */
+function fixReviewsRecordImage(html, imageSrc) {
+  const open = html.indexOf('<div id="rec2121222073"');
+  if (open === -1) return html;
+  const next = html.indexOf('<div id="rec', open + 12);
+  const end = next === -1 ? html.length : next;
+  const head = html.slice(0, open);
+  const body = html.slice(open, end);
+  if (!body.includes("nusa-penida-west-tour.jpg")) return html;
+  return head + body.split("/images/tours-real/nusa-penida-west-tour.jpg").join(imageSrc) + html.slice(end);
+}
+
+/* Статический блок маршрута.
+
+   В шаблоне запись rec2122133073 — зеро-блок Tilda: иллюстрированная карта
+   Нуса-Пениды с булавками, подписанными под West Tour. Подпись, описание,
+   шесть булавок и фотография там чужие на всех 168 страницах туров.
+   Правильное содержимое подставляла инлайновая функция replaceRouteMap(),
+   но ИИ-краулеры JS не исполняют: на странице Батура модель читала описание
+   Пениды. Это не пробел в разметке, а прямая дезинформация.
+
+   Меняем запись целиком на статическую. Булавки переименовать нельзя —
+   у них координаты на картинке Пениды, и «Тоя Бунгках» в точке Кристал-Бэй
+   врал бы ровно так же. У статической версии нет .t396__artboard, поэтому
+   replaceRouteMap() выходит по своей же проверке и ничего не ломает.
+   CSS класса sb-route-map-* уже лежит в шаблоне. */
+function buildStaticRouteRecord(map) {
+  const stops = (map.stops || [])
+    .map((stop) => collapseWhitespace(stop))
+    .filter(Boolean)
+    .slice(0, 8);
+  const chips = stops
+    .map((stop) => `<span class="sb-route-map-stop">${escapeHtml(stop)}</span>`)
+    .join("\n              ");
+  return `<div id="rec2122133073" class="r t-rec t-rec_pt_0 t-rec_pb_15" style="padding-top:0px;padding-bottom:15px;" data-record-type="123">
+  <div class="t123">
+    <div class="t-container_100">
+      <div class="t-width t-width_100">
+        <div class="sb-route-map-shell">
+          <div class="sb-route-map-copy">
+            <div class="sb-route-map-label">${escapeHtml(map.label)}</div>
+            <h2 class="sb-route-map-title">${escapeHtml(map.title)}</h2>
+            <p class="sb-route-map-text">${escapeHtml(map.text)}</p>
+          </div>
+          <div class="sb-route-map-frame">
+            <iframe loading="lazy" title="${escapeHtml(map.title)}" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="${escapeHtml(map.embedRoute)}"></iframe>
+          </div>
+          <div class="sb-route-map-actions">
+            <a class="sb-route-map-link" href="${escapeHtml(map.openRoute)}" target="_blank" rel="noopener noreferrer">Open google maps route</a>
+          </div>
+          <div class="sb-route-map-stops">
+              ${chips}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>`;
+}
+
+/* Вырезаем запись по границам соседних записей. Если границы не нашлись или
+   кусок подозрительно мал, падаем громко: молча оставить чужой текст хуже,
+   чем остановить сборку. */
+function replaceRouteRecord(html, map, slug) {
+  const open = html.indexOf('<div id="rec2122133073"');
+  if (open === -1) return html;
+  const next = html.indexOf('<div id="rec', open + 12);
+  const end = next === -1 ? html.indexOf("<!--footer-->", open) : next;
+  if (end === -1 || end <= open) {
+    throw new Error(`маршрут: не нашлась граница записи на ${slug}`);
+  }
+  if (end - open < 2000) {
+    throw new Error(`маршрут: запись подозрительно мала на ${slug} (${end - open} символов)`);
+  }
+  return `${html.slice(0, open)}${buildStaticRouteRecord(map)}\n${html.slice(end)}`;
+}
+
 function buildJeepHotSpringRouteRecord() {
   const title = "Mount Batur Sunrise Jeep & Hot Spring route on Google Maps";
   const text =
@@ -47231,8 +47430,40 @@ function translationLocaleCode(locale = "en") {
    перевода. */
 const PINNED_TRANSLATIONS = {
   ru: {
-      "SB Excursions":
-        "SB Excursions",
+    "Sunrise route":
+      "Рассветный маршрут",
+    "Water route":
+      "Водный маршрут",
+    "Island route":
+      "Островной маршрут",
+    "Heritage route":
+      "Маршрут наследия",
+    "Photo route":
+      "Фотомаршрут",
+    "Adventure route":
+      "Приключенческий маршрут",
+    "Transfer route":
+      "Трансферный маршрут",
+    "Flight route":
+      "Маршрут полёта",
+    "Bali route":
+      "Маршрут по Бали",
+    "route on Google Maps":
+      "маршрут на Google Maps",
+    "Key map points":
+      "Ключевые точки маршрута",
+    "Final timing, pickup, and stop order are confirmed after booking.":
+      "Точное время, забор и порядок остановок подтверждаются после бронирования.",
+    "The tour in short":
+      "Коротко о туре",
+    "You meet the jeep in Kintamani":
+      "Встреча с джипом в Кинтамани",
+    "Hotel pickup and drop-off, anywhere in Bali":
+      "Забор и возврат от отеля в любой части Бали",
+    "With return fast boat from Sanur":
+      "С быстрой лодкой из Санура туда и обратно",
+    "SB Excursions":
+      "SB Excursions",
     "From $19":
       "От $19",
     "2 hours on the water":
@@ -48789,8 +49020,40 @@ const PINNED_TRANSLATIONS = {
       "Батур или Агунг | На какой вулкан Бали подниматься в 2026",
   },
   es: {
-      "SB Excursions":
-        "SB Excursions",
+    "Sunrise route":
+      "Ruta del amanecer",
+    "Water route":
+      "Ruta acuática",
+    "Island route":
+      "Ruta isleña",
+    "Heritage route":
+      "Ruta del patrimonio",
+    "Photo route":
+      "Ruta fotográfica",
+    "Adventure route":
+      "Ruta de aventura",
+    "Transfer route":
+      "Ruta de traslado",
+    "Flight route":
+      "Ruta de vuelo",
+    "Bali route":
+      "Ruta por Bali",
+    "route on Google Maps":
+      "ruta en Google Maps",
+    "Key map points":
+      "Puntos clave del recorrido",
+    "Final timing, pickup, and stop order are confirmed after booking.":
+      "El horario exacto, la recogida y el orden de las paradas se confirman tras la reserva.",
+    "The tour in short":
+      "El tour en resumen",
+    "You meet the jeep in Kintamani":
+      "Encuentro con el jeep en Kintamani",
+    "Hotel pickup and drop-off, anywhere in Bali":
+      "Recogida y regreso al hotel en cualquier zona de Bali",
+    "With return fast boat from Sanur":
+      "Con lancha rápida de ida y vuelta desde Sanur",
+    "SB Excursions":
+      "SB Excursions",
     "From $19":
       "Desde 19$",
     "2 hours on the water":
@@ -50259,8 +50522,40 @@ const PINNED_TRANSLATIONS = {
       "5 Mejores Cascadas de Bali | Cómo Llegar y Cuándo Ir",
   },
   fr: {
-      "SB Excursions":
-        "SB Excursions",
+    "Sunrise route":
+      "Itinéraire au lever du soleil",
+    "Water route":
+      "Itinéraire nautique",
+    "Island route":
+      "Itinéraire insulaire",
+    "Heritage route":
+      "Itinéraire du patrimoine",
+    "Photo route":
+      "Itinéraire photo",
+    "Adventure route":
+      "Itinéraire aventure",
+    "Transfer route":
+      "Itinéraire de transfert",
+    "Flight route":
+      "Itinéraire de vol",
+    "Bali route":
+      "Itinéraire à Bali",
+    "route on Google Maps":
+      "itinéraire sur Google Maps",
+    "Key map points":
+      "Points clés du parcours",
+    "Final timing, pickup, and stop order are confirmed after booking.":
+      "Les horaires exacts, la prise en charge et la succession des arrêts sont confirmés après la réservation.",
+    "The tour in short":
+      "Le circuit en bref",
+    "You meet the jeep in Kintamani":
+      "Rendez-vous avec le jeep à Kintamani",
+    "Hotel pickup and drop-off, anywhere in Bali":
+      "Prise en charge et retour à votre hôtel, partout à Bali",
+    "With return fast boat from Sanur":
+      "Avec le bateau rapide aller-retour depuis Sanur",
+    "SB Excursions":
+      "SB Excursions",
     "From $19":
       "À partir de 19$",
     "2 hours on the water":
@@ -51881,8 +52176,40 @@ const PINNED_TRANSLATIONS = {
       "Bali est-elle sûre en 2026 ? 7 arnaques courantes à éviter",
   },
   "zh-CN": {
-      "SB Excursions":
-        "SB Excursions",
+    "Sunrise route":
+      "日出路线",
+    "Water route":
+      "水上路线",
+    "Island route":
+      "海岛路线",
+    "Heritage route":
+      "文化遗产路线",
+    "Photo route":
+      "摄影路线",
+    "Adventure route":
+      "探险路线",
+    "Transfer route":
+      "接送路线",
+    "Flight route":
+      "飞行路线",
+    "Bali route":
+      "巴厘岛路线",
+    "route on Google Maps":
+      "路线（Google 地图）",
+    "Key map points":
+      "路线关键点",
+    "Final timing, pickup, and stop order are confirmed after booking.":
+      "确切时间、接送与停靠顺序将在预订后确认。",
+    "The tour in short":
+      "行程要点",
+    "You meet the jeep in Kintamani":
+      "在金塔马尼与吉普车会合",
+    "Hotel pickup and drop-off, anywhere in Bali":
+      "巴厘岛任何区域的酒店接送",
+    "With return fast boat from Sanur":
+      "含从萨努尔往返的快艇",
+    "SB Excursions":
+      "SB Excursions",
     "From $19":
       "19 美元起",
     "2 hours on the water":
@@ -53225,8 +53552,40 @@ const PINNED_TRANSLATIONS = {
       "巴厘岛旅行要花多少钱？2026年真实物价与三档预算",
   },
   de: {
-      "SB Excursions":
-        "SB Excursions",
+    "Sunrise route":
+      "Sonnenaufgangsroute",
+    "Water route":
+      "Wasserroute",
+    "Island route":
+      "Inselroute",
+    "Heritage route":
+      "Kulturroute",
+    "Photo route":
+      "Fotoroute",
+    "Adventure route":
+      "Abenteuerroute",
+    "Transfer route":
+      "Transferroute",
+    "Flight route":
+      "Flugroute",
+    "Bali route":
+      "Bali-Route",
+    "route on Google Maps":
+      "Route auf Google Maps",
+    "Key map points":
+      "Wichtigste Punkte der Route",
+    "Final timing, pickup, and stop order are confirmed after booking.":
+      "Genaue Zeiten, Abholung und Reihenfolge der Stopps werden nach der Buchung bestätigt.",
+    "The tour in short":
+      "Die Tour in Kürze",
+    "You meet the jeep in Kintamani":
+      "Treffpunkt mit dem Jeep in Kintamani",
+    "Hotel pickup and drop-off, anywhere in Bali":
+      "Abholung und Rückfahrt zum Hotel, überall auf Bali",
+    "With return fast boat from Sanur":
+      "Mit Schnellboot ab Sanur, hin und zurück",
+    "SB Excursions":
+      "SB Excursions",
     "From $19":
       "Ab 19 $",
     "2 hours on the water":
@@ -55794,6 +56153,22 @@ function collectAutoTourTranslations(tour) {
   };
 
   [
+    /* Подписи двух карточек цены и заголовок ядрового пассажа. Без сбора здесь
+       они не попадают в plainMap, и withTranslatedText молча возвращает
+       английский: пин есть, а применить его не к чему. Карточки цены вдобавок
+       живут внутри инлайнового JS, откуда общий сборщик текста их не берёт. */
+    tour.coreHeading || TOUR_CORE_HEADING,
+    tour.priceOptions?.firstDesc,
+    tour.priceOptions?.secondDesc,
+    /* Подпись, заголовок и текст блока маршрута. Если у тура нет явных полей,
+       buildWestMapModel собирает их сам — но делает это ПОСЛЕ локализации,
+       из уже переведённого названия и английского хвоста. Получалось
+       «Джип-тур на восходе солнца route on Google Maps». Считаем английские
+       значения заранее и переводим целиком. */
+    tour.mapLabel || westRouteLabel(tour),
+    MAP_TITLE_SUFFIX,
+    MAP_TEXT_LEAD,
+    MAP_TEXT_TAIL,
     tour.title,
     tour.metaTitle,
     tour.metaDescription,
@@ -55926,13 +56301,28 @@ async function buildAutoLocalizedTour(baseTour, locale = "en") {
     whatsappText: withTranslatedText(baseTour.whatsappText, plainMap),
     privateOfferEyebrow: withTranslatedText(baseTour.privateOfferEyebrow, plainMap),
     privateOfferTopline: withTranslatedText(baseTour.privateOfferTopline, plainMap),
-    mapLabel: withTranslatedText(baseTour.mapLabel, plainMap),
-    mapTitle: withTranslatedText(baseTour.mapTitle, plainMap),
-    mapText: withTranslatedText(baseTour.mapText, plainMap),
+    mapLabel: withTranslatedText(baseTour.mapLabel || westRouteLabel(baseTour), plainMap),
+    mapTitle: baseTour.mapTitle
+      ? withTranslatedText(baseTour.mapTitle, plainMap)
+      : `${withTranslatedText(collapseWhitespace(baseTour.title), plainMap)} — ${withTranslatedText(MAP_TITLE_SUFFIX, plainMap)}`,
+    mapText: baseTour.mapText
+      ? withTranslatedText(baseTour.mapText, plainMap)
+      : `${withTranslatedText(MAP_TEXT_LEAD, plainMap)}: ${buildWestRouteStops(baseTour).map((s) => withTranslatedText(collapseWhitespace(s), plainMap)).filter(Boolean).join(", ")}. ${withTranslatedText(MAP_TEXT_TAIL, plainMap)}`,
     miniPromoText: withTranslatedText(baseTour.miniPromoText, plainMap),
     miniPromoEyebrow: withTranslatedText(baseTour.miniPromoEyebrow, plainMap),
     miniPromoSideText: withTranslatedText(baseTour.miniPromoSideText, plainMap),
     ctaLabel: withTranslatedText(baseTour.ctaLabel, plainMap),
+    /* Заголовок ядрового пассажа. Страница тура рендерится из уже
+       локализованного объекта, поэтому английская константа в генераторе
+       до перевода не доходит — гоним её тем же путём, что и ctaLabel. */
+    coreHeading: withTranslatedText(baseTour.coreHeading || TOUR_CORE_HEADING, plainMap),
+    priceOptions: baseTour.priceOptions
+      ? {
+          ...baseTour.priceOptions,
+          firstDesc: withTranslatedText(baseTour.priceOptions.firstDesc, plainMap),
+          secondDesc: withTranslatedText(baseTour.priceOptions.secondDesc, plainMap),
+        }
+      : baseTour.priceOptions,
     faqIntro: withTranslatedText(baseTour.faqIntro, plainMap),
     breadcrumbHome: withTranslatedText(baseTour.breadcrumbHome, plainMap),
     breadcrumbTours: withTranslatedText(baseTour.breadcrumbTours, plainMap),
