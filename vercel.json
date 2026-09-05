@@ -133,6 +133,10 @@
   ],
   "rewrites": [
     {
+      "source": "/r/viton13",
+      "destination": "/partner-viton13.html"
+    },
+    {
       "source": "/bali/en/tour-prices",
       "destination": "/bali-prices-index.html"
     },
@@ -314,6 +318,19 @@
     }
   ],
   "headers": [
+    {
+      "source": "/r/viton13",
+      "headers": [
+        {
+          "key": "Set-Cookie",
+          "value": "sb_ref=VITON13; Path=/; Max-Age=34560000; SameSite=Lax; Secure"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
     {
       "source": "/(.*)",
       "has": [

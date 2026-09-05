@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>SB Excursions</title>
+<link rel="canonical" href="https://www.sbexcursion.com/bali/en/main-page">
+<!--
+  Партнёрская ссылка VITON13.
+
+  Саму куку ставит Vercel заголовком Set-Cookie на путь /r/viton13 (см. vercel.json).
+  Это принципиально: куку, поставленную джаваскриптом через document.cookie,
+  Safari по правилам ITP обрезает до семи суток, а поставленную сервером — нет.
+  Срок 34 560 000 секунд = 400 дней: это верхний предел, Chrome с версии 104
+  режет до него любое большее значение, так что просить больше бессмысленно.
+
+  Здесь остаётся только запасное хранилище и переход. localStorage не имеет
+  срока годности вообще и переживёт истечение куки, но живёт в своём браузере
+  и стирается вместе с данными сайта.
+-->
+<meta http-equiv="refresh" content="0; url=/bali/en/main-page?utm_source=partner&amp;utm_medium=referral&amp;utm_campaign=VITON13">
+<style>
+  html,body{height:100%;margin:0}
+  body{display:flex;align-items:center;justify-content:center;
+       font:16px/1.5 "Tilda Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+       color:#111;background:#fff}
+  a{color:#111}
+</style>
+</head>
+<body>
+<p>Redirecting to <a href="/bali/en/main-page?utm_source=partner&amp;utm_medium=referral&amp;utm_campaign=VITON13">SB Excursions</a>…</p>
+<script>
+(function () {
+  var CODE = "VITON13";
+  var TARGET = "/bali/en/main-page?utm_source=partner&utm_medium=referral&utm_campaign=" + CODE;
+
+  /* Запасное хранилище на случай, если куку почистят: срока годности у него нет.
+     Первое касание не перезаписываем — важно, кто привёл человека изначально. */
+  try {
+    if (!localStorage.getItem("sb_ref")) {
+      localStorage.setItem("sb_ref", CODE);
+      localStorage.setItem("sb_ref_at", new Date().toISOString().slice(0, 10));
+    }
+  } catch (e) { /* приватный режим или запрет хранилища — не повод падать */ }
+
+  /* replace, а не href: страница не остаётся в истории, и кнопка «назад»
+     возвращает человека туда, откуда он пришёл, а не в петлю редиректа. */
+  location.replace(TARGET);
+})();
+</script>
+</body>
+</html>
