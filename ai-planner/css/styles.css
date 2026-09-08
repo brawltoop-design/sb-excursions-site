@@ -1178,3 +1178,61 @@ html.is-embed .app { height: 100vh; }
 .leaflet-tile-pane {
   filter: grayscale(1) brightness(1.07) contrast(.88);
 }
+
+
+/* Свободный ввод над формой. Оформлен как подсказка, а не как второй герой:
+   форма остаётся главной, это короткий путь для тех, кто не хочет щёлкать поля. */
+.ask { margin: 0 0 18px; }
+.ask__label {
+  display: block;
+  font-size: 12.5px;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+  opacity: .62;
+  margin: 0 0 7px;
+}
+.ask__row { display: flex; gap: 8px; align-items: stretch; }
+.ask__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 15px;
+  color: inherit;
+  background: #fff;
+  border: 1px solid var(--line, #e6e1d8);
+  border-radius: 11px;
+}
+.ask__input::placeholder { opacity: .45; }
+.ask__input:focus {
+  outline: none;
+  border-color: #2f6bff;
+  box-shadow: 0 0 0 3px rgba(47, 107, 255, .13);
+}
+.ask__btn {
+  flex: none;
+  padding: 12px 18px;
+  font: inherit;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #fff;
+  background: #111;
+  border: 0;
+  border-radius: 11px;
+  cursor: pointer;
+}
+.ask__btn:hover { background: #2f6bff; }
+.ask__btn:disabled { opacity: .45; cursor: default; }
+/* Строка «что понял»: подтверждение, что ввод сработал. Без неё человек
+   не замечает, что поля ниже изменились. */
+.ask__got {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #2f6bff;
+}
+.ask__got--miss { color: inherit; opacity: .6; }
+@media (max-width: 560px) {
+  .ask__row { flex-wrap: wrap; }
+  .ask__btn { width: 100%; }
+}

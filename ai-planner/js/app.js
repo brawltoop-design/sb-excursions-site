@@ -65,7 +65,8 @@
     pcRating: $('pcRating'), pcDesc: $('pcDesc'), pcTourName: $('pcTourName'),
     pcTourPrice: $('pcTourPrice'), pcTourLink: $('pcTourLink'), pcBook: $('pcBook'),
     pcAdd: $('pcAdd'), pcMaps: $('pcMaps'), pcTour: $('pcTour'),
-    wpWrap: $('wpWrap'), wpPack: $('sbWelcomePack'), wpNote: $('wpNote')
+    wpWrap: $('wpWrap'), wpPack: $('sbWelcomePack'), wpNote: $('wpNote'),
+    ask: $('sbAsk'), askBtn: $('sbAskBtn'), askGot: $('sbAskGot')
   };
 
   var LOC = {};
@@ -1354,6 +1355,80 @@
   els.areaSelect.addEventListener('change', function () { state.area = els.areaSelect.value; });
   els.groupSelect.addEventListener('change', function () { state.group = els.groupSelect.value; });
   els.budgetSelect.addEventListener('change', function () { state.budget = els.budgetSelect.value; });
+  /* ---------- Свободный ввод: фраза → поля формы ---------- */
+  /* Ничего не выдумываем: поле, для которого в фразе нет сигнала, остаётся
+     как было. Человеку показываем строкой, что именно поняли, — иначе он не
+     заметит, что селекты ниже поменялись, и решит, что кнопка не сработала. */
+  function applyAsk() {
+    if (!els.ask || !window.SB_PARSE) return;
+    var raw = els.ask.value || '';
+    if (!raw.trim()) return;
+    var got = window.SB_PARSE.parse(raw, state.lang);
+    var told = [];
+
+    if (got.fields.area) {
+      els.areaSelect.value = got.fields.area;
+      state.area = got.fields.area;
+      told.push(optText(els.areaSelect));
+    }
+    if (got.fields.group) {
+      els.groupSelect.value = got.fields.group;
+      state.group = got.fields.group;
+      told.push(optText(els.groupSelect));
+    }
+    if (got.fields.budget) {
+      els.budgetSelect.value = got.fields.budget;
+      state.budget = got.fields.budget;
+      told.push(optText(els.budgetSelect));
+    }
+    if (got.fields.days) {
+      /* Дат человек не называл — ставим от завтрашнего дня, чтобы поездка
+         не начиналась в прошлом и планировщик не спорил сам с собой. */
+      var start = els.startDate.value;
+      if (!start) {
+        var t = new Date(); t.setDate(t.getDate() + 1);
+        start = t.toISOString().slice(0, 10);
+        els.startDate.value = start;
+      }
+      els.endDate.value = isoAddDays(start, got.fields.days - 1);
+      told.push(got.fields.days + ' ' + T('дней'));
+    }
+    if (got.interests.length) {
+      got.interests.forEach(function (id) {
+        state.interests[id] = true;
+        var chip = els.interestChips && els.interestChips.querySelector('[data-interest="' + id + '"]');
+        if (chip) chip.classList.add('is-active');
+      });
+      var labels = got.interests.map(function (id) {
+        var it = SB_INTERESTS.filter(function (x) { return x.id === id; })[0];
+        return it ? T(it.label) : id;
+      });
+      told.push(labels.join(', '));
+    }
+
+    if (els.askGot) {
+      els.askGot.hidden = false;
+      if (told.length) {
+        els.askGot.className = 'ask__got';
+        els.askGot.textContent = T('Понял:') + ' ' + told.join(' · ');
+      } else {
+        /* Честно говорим, что не разобрали, вместо тихого бездействия. */
+        els.askGot.className = 'ask__got ask__got--miss';
+        els.askGot.textContent = T('Не понял фразу — заполните поля ниже, они рабочие.');
+      }
+    }
+    try {
+      if (typeof window.va === 'function') {
+        window.va('event', { name: 'planner_ask', data: { filled: told.length } });
+      }
+    } catch (e) { /* аналитика не должна ломать ввод */ }
+  }
+
+  if (els.askBtn) els.askBtn.addEventListener('click', applyAsk);
+  if (els.ask) els.ask.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') { e.preventDefault(); applyAsk(); }
+  });
+
   if (els.wpPack) els.wpPack.addEventListener('change', function () {
     trackWelcomePack(els.wpPack.checked);
     updatePlanWa();
