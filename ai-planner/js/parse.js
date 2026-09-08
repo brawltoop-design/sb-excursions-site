@@ -28,10 +28,23 @@
       .toLowerCase()
       .replace(/[ё]/g, "е")
       .replace(/[–—]/g, "-")
+      /* Апостроф пишут четырьмя разными знаками, а часто не пишут вовсе:
+         «chutes d'eau», «chutes d’eau», «chutes d eau». Заменяем его на
+         пробел И в тексте, И в терминах словаря — тогда все написания
+         сходятся в одно. */
+      .replace(/['’‘`´]/g, " ")
       .replace(/[-_/]+/g, " ")
       .replace(/\s+/g, " ")
       .trim();
   }
+
+  /* Корни слов «неделя» на шести языках: по ним список длительности делится
+     на дневные и недельные термины. 周/週/星期 — китайские написания. */
+  var WEEK_ROOT = /недел|week|semaine|semana|woche|周|週|星期/i;
+
+  /* Число и слово о друзьях рядом — на шести языках. Число от трёх: вдвоём
+     ездят и пары, и друзья, и эта развилка решается словарём, а не счётом. */
+  var COMPANY_COUNT = /\b([3-9]|1[0-2])\s+(?:friends|amis|amigos|amigas|freunde|freunden|друз[а-я]*|подруг[а-я]*|个朋友|位朋友)\b/i;
 
   /* Слова-числа: длительность чаще пишут словом, чем цифрой. */
   var WORD_NUMBERS = {
@@ -158,6 +171,12 @@
     if (area) fields.area = area;
 
     var group = bestOf(matchGroup(text, lex.group));
+    /* «нас трое», «we are 3 friends», «somos 4 amigos» — счёт компании.
+       Голое слово «friends» в словарь класть нельзя: оно живёт внутри
+       «girlfriend», и тогда пара превращается в компанию друзей. Поэтому
+       считаем компанией только число рядом со словом о друзьях, а если
+       словарь уже определил группу иначе — не спорим с ним. */
+    if (!group && COMPANY_COUNT.test(text)) group = "friends";
     if (group) fields.group = group;
 
     /* Сумма важнее слов: «люкс, но до 40 долларов» — верим числу. */
@@ -168,7 +187,17 @@
       if (budget) fields.budget = budget;
     }
 
-    var days = extractDays(textNoMoney, lex.dayWords || ["день", "дня", "дней", "day"], lex.weekWords || ["недел", "week"]);
+    /* Словарь отдаёт один список слов длительности, а извлечение различает
+       дни и недели: неделя умножается на семь. Делим по корню, а не просим
+       у словаря два отдельных списка — их легко забыть заполнить, и тогда
+       немецкое «zwei Wochen» и испанское «10 dias» молча не находятся. */
+    var dayList = (lex.days || []).filter(function (w) { return !WEEK_ROOT.test(w); });
+    var weekList = (lex.days || []).filter(function (w) { return WEEK_ROOT.test(w); });
+    var days = extractDays(
+      textNoMoney,
+      dayList.length ? dayList : ["день", "дня", "дней", "day", "dia", "día", "tag", "jour"],
+      weekList.length ? weekList : ["недел", "week", "semana", "semaine", "woche"],
+    );
     if (days) fields.days = days;
 
     /* Уверенность — доля заполненных полей. Показываем её человеку словами,

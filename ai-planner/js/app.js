@@ -1366,6 +1366,20 @@
     var got = window.SB_PARSE.parse(raw, state.lang);
     var told = [];
 
+    /* Разбор — это замена, а не добавление. Без сброса второй заход
+       накладывался на первый: человек исправлял «пляжи» на «водопады»,
+       а в плане оставалось и то, и другое, причём молча. Снимаем только
+       интересы: район, компания и бюджет — селекты, они перезаписываются
+       сами, а то, чего в новой фразе нет, разумнее оставить как было. */
+    if (got.interests.length) {
+      state.interests = {};
+      if (els.interestChips) {
+        Array.prototype.forEach.call(els.interestChips.querySelectorAll(".chip"), function (chip) {
+          chip.classList.remove("is-active");
+        });
+      }
+    }
+
     if (got.fields.area) {
       els.areaSelect.value = got.fields.area;
       state.area = got.fields.area;
