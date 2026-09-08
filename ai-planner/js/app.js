@@ -136,7 +136,7 @@
   }
 
   /* ============================================================
-     КАРТА (Leaflet + тайлы CARTO Positron light_all)
+     КАРТА (Leaflet + светло-серая подложка Esri)
      ============================================================ */
   var map = L.map('map', {
     zoomControl: false, attributionControl: true,
@@ -146,10 +146,22 @@
   // Убираем флаг из стандартной подписи Leaflet (по умолчанию «🇺🇦 Leaflet»),
   // оставляя кредит Leaflet и обязательную атрибуцию OSM/CARTO ниже.
   map.attributionControl.setPrefix('<a href="https://leafletjs.com" title="Leaflet">Leaflet</a>');
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    subdomains: 'abcd', maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+  /* CARTO к сентябрю 2026 закрыл бесплатные тайлы: картинка по-прежнему
+     приходит с кодом 200 и нужного размера, но поверх неё напечатано
+     «API KEY REQUIRED». Поломку не ловит ни проверка кода ответа, ни
+     naturalWidth — надпись видно только глазами, и она стояла на живой карте.
+     Voyager закрыт так же, ключа нет ни у одного из них.
+
+     Взамен — обычный OpenStreetMap, который бесплатен и не требует ключа, но
+     он цветной и спорит с маршрутами. Поэтому подложка обесцвечивается и
+     осветляется фильтром в CSS: фильтр висит на слое тайлов, а линии дней и
+     пины лежат в других слоях и остаются яркими. Получается прежний светлый
+     вид Positron, только с дорогами и подписями. */
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
+
   setTimeout(function () { map.invalidateSize(); }, 60);
   window.addEventListener('resize', function () { map.invalidateSize(); });
   // Следим за самим контейнером: при смене раскладки (мобильный стек, embed)
