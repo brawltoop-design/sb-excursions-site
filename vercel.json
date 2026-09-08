@@ -129,6 +129,36 @@
       "source": "/bali/:lang/journal/nusa-lembongan-ceningan-day-trip/:type",
       "destination": "/bali/:lang/tours/nusa-penida-full-day-tour",
       "statusCode": 301
+    },
+    {
+      "source": "/bali/en/journal/bali-itinerary-7-days-first-time",
+      "destination": "/bali/en/journal/bali-7-day-itinerary",
+      "permanent": true
+    },
+    {
+      "source": "/bali/ru/journal/bali-itinerary-7-days-first-time",
+      "destination": "/bali/ru/journal/bali-7-day-itinerary",
+      "permanent": true
+    },
+    {
+      "source": "/bali/es/journal/bali-itinerary-7-days-first-time",
+      "destination": "/bali/es/journal/bali-7-day-itinerary",
+      "permanent": true
+    },
+    {
+      "source": "/bali/fr/journal/bali-itinerary-7-days-first-time",
+      "destination": "/bali/fr/journal/bali-7-day-itinerary",
+      "permanent": true
+    },
+    {
+      "source": "/bali/de/journal/bali-itinerary-7-days-first-time",
+      "destination": "/bali/de/journal/bali-7-day-itinerary",
+      "permanent": true
+    },
+    {
+      "source": "/bali/zh/journal/bali-itinerary-7-days-first-time",
+      "destination": "/bali/zh/journal/bali-7-day-itinerary",
+      "permanent": true
     }
   ],
   "rewrites": [

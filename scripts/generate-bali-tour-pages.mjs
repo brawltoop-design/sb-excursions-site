@@ -17843,6 +17843,28 @@ const JOURNAL_SEO_GUIDES = [
           "Everything books direct over WhatsApp with **no prepayment**, so you are never locked into a number before you see the weather or your own energy level. For a wider breakdown of what tours, drivers and transfers cost across the island, our [2026 Bali tour prices guide](/bali/en/journal/bali-tour-prices-2026-real-costs) lists every price we publish."
         ]
       }
+    ,
+      {
+        "heading": "What actually decides whether the week works",
+        "paragraphs": [
+          "Group the days by region, not by wish list. Bali has no motorway across the middle, so distance on a map means very little: **Kuta to Ubud** can take up to two hours, **Canggu to Uluwatu** around 90 minutes, and **Ubud to Mount Batur** about an hour and a half. The map lies, the clock does not.",
+          "The practical consequence is simple: change your base once, not every night. Three or four nights in the south and three in Ubud cover the whole island comfortably. Hopping hotels daily eats the holiday in checkouts and transfers, and it is the single most common way a first week gets spent on the road instead of on the island."
+        ]
+      },
+      {
+        "heading": "Where to put the early starts",
+        "paragraphs": [
+          "The two best mornings on the island both begin in the dark. Mount Batur pickups run from around **01:30 in the south** and **02:30 from Ubud**; the Nusa Penida boat leaves **Sanur** in the early morning, which pulls the alarm back further the further west you sleep. Our [sunrise jeep tour](/bali/en/tours/mount-batur-sunrise-jeep-tour) starts from $45.",
+          "Never stack those two days back to back, and never put either the night before a flight. Leave a deliberately empty afternoon after each one. That single habit is what separates a week people remember fondly from one they need a holiday to recover from — and it costs nothing but a line in the plan."
+        ]
+      },
+      {
+        "heading": "If you have five days, or ten",
+        "paragraphs": [
+          "For **five days**, cut one south-coast day and one inland day rather than rushing all seven: keep Ubud, keep the volcano sunrise, and choose either Nusa Penida or the waterfalls, not both. The full version is in our [five-day Bali plan](/bali/en/journal/bali-itinerary-5-days).",
+          "For **ten days**, the best additions are not more day trips from the same two bases. Add the Gili Islands or Nusa Lembongan for two or three nights, or go to Amed or Munduk for a quieter side of the island entirely. That version is laid out in the [ten-day plan](/bali/en/journal/bali-itinerary-10-days)."
+        ]
+      }
     ],
     "faq": [
       {
@@ -20342,7 +20364,7 @@ const JOURNAL_SEO_GUIDES = [
           "**At the airport:** use a fixed-price transfer counter or a pre-booked driver, not a tout",
           "**Day one:** buy a SIM in town, settle into your first booked nights, and do nothing ambitious",
           "**Days two to three:** view any monthly villa in person before paying a deposit; sort out a scooter or a regular driver",
-          "**Then:** start booking the experiences — and read the [7-day itinerary](/bali/en/journal/bali-itinerary-7-days-first-time) so you group them by area instead of sitting in traffic",
+          "**Then:** start booking the experiences — and read the [7-day itinerary](/bali/en/journal/bali-7-day-itinerary) so you group them by area instead of sitting in traffic",
         ],
       },
     ],
@@ -20672,7 +20694,7 @@ const JOURNAL_SEO_GUIDES = [
           "Search traffic often asks for the best places to visit in Bali, but the smarter question is which places create the clearest memory in the time you actually have.",
         ],
         bullets: [
-          "Combine [Ubud](/bali/en/journal/things-to-do-ubud-bali-complete-guide) landmarks together instead of mixing them with long south-coast jumps on the same day — see the [7-day itinerary](/bali/en/journal/bali-itinerary-7-days-first-time) for a worked example.",
+          "Combine [Ubud](/bali/en/journal/things-to-do-ubud-bali-complete-guide) landmarks together instead of mixing them with long south-coast jumps on the same day — see the [7-day itinerary](/bali/en/journal/bali-7-day-itinerary) for a worked example.",
           "Use one coastline day for sunsets and beaches rather than adding five extra inland stops.",
           "Save island routes like Nusa Penida for a dedicated full-day experience.",
         ],
@@ -21803,144 +21825,6 @@ const JOURNAL_SEO_GUIDES = [
     ],
   },
   {
-    key: "itinerary7",
-    slug: "bali-itinerary-7-days-first-time",
-    badge: "Travel guide",
-    navLabel: "7-day itinerary",
-    cardTourLabel: "Trip planning",
-    heroTourSlug: "ubud-highlights-tour",
-    relatedTourSlugs: ["ubud-highlights-tour", "nusa-penida-west-tour", "mount-batur-sunrise-jeep-tour"],
-    inlineStats: ["Day-by-day plan", "Balanced pacing", "Built around real drive times"],
-    title: "The Perfect 7-Day Bali Itinerary for First-Time Visitors (Day by Day)",
-    description:
-      "A realistic 7-day Bali itinerary that accounts for actual drive times: where to base yourself, which days to pair, and how to fit Ubud, Nusa Penida, Mount Batur and the south coast without burning out.",
-    excerpt:
-      "Most Bali itineraries fail for one reason: they ignore driving time. Bali looks small on a map, but Canggu to Uluwatu can take **90 minutes** and Kuta to Ubud can take **two hours** in traffic. This plan groups stops by area so you spend your week seeing Bali instead of sitting in a car.",
-    rankings: [
-      {
-        name: "Day 1 — Arrive and stay south",
-        imageTitle: "Arrival day in south Bali",
-        area: "Seminyak or Canggu",
-        bestFor: "Recovering from the flight",
-        summary:
-          "Land at Ngurah Rai (DPS), transfer to your south Bali base and do nothing ambitious. A beach walk and an early dinner beat forcing a temple run on zero sleep.",
-      },
-      {
-        name: "Day 2 — South coast and sunset temple",
-        imageTitle: "Uluwatu cliffs at sunset",
-        area: "Uluwatu and the Bukit",
-        bestFor: "Easing into the island",
-        summary:
-          "Beaches in the morning, Uluwatu Temple for sunset and the Kecak fire dance. Short distances, big payoff, no alarm clock required.",
-      },
-      {
-        name: "Day 3 — Move to Ubud, culture en route",
-        imageTitle: "Tegalalang rice terraces",
-        area: "Central Bali",
-        bestFor: "Temples, rice terraces, craft villages",
-        summary:
-          "Check out of the south and make the drive productive: craft villages, Tegalalang rice terraces and a Kintamani lunch with volcano views before settling into Ubud.",
-      },
-      {
-        name: "Day 4 — Sunrise volcano, slow afternoon",
-        imageTitle: "Mount Batur sunrise",
-        area: "Kintamani",
-        bestFor: "The signature Bali sunrise",
-        summary:
-          "Pickup is around **02:00–03:00**, so plan a genuinely lazy afternoon afterwards. A spa or pool day is the correct call, not another temple.",
-      },
-      {
-        name: "Day 5 — Nusa Penida day trip",
-        imageTitle: "Kelingking Beach viewpoint",
-        area: "Nusa Penida",
-        bestFor: "The island's most dramatic scenery",
-        summary:
-          "A long but unforgettable day: **30–45 minute** speedboat from Sanur, then Kelingking, Broken Beach and Angel's Billabong. Book the earliest boat you can.",
-      },
-      {
-        name: "Day 6 — Waterfalls or adventure",
-        imageTitle: "Bali waterfall",
-        area: "Ubud and Bangli",
-        bestFor: "Choosing your own pace",
-        summary:
-          "Pick one lane: waterfalls, white water rafting on the Ayung, or an ATV route through rice paddies and river beds. One is plenty for a day.",
-      },
-      {
-        name: "Day 7 — Back south and fly out",
-        imageTitle: "Bali beach club",
-        area: "Seminyak or Canggu",
-        bestFor: "A soft landing before the airport",
-        summary:
-          "Return to the coast, keep it low-key with a beach club or a massage, and leave buffer for airport traffic. Do not schedule a tour on departure day.",
-      },
-    ],
-    sections: [
-      {
-        heading: "🚗 The one rule that makes a Bali itinerary work",
-        paragraphs: [
-          "Group your days by region, not by wish list. Bali has no motorways across the middle, so distance on a map means very little. **Kuta to Ubud** can take up to two hours, **Canggu to Uluwatu** around 90 minutes, and **Ubud to Mount Batur** about an hour and a half.",
-          "The practical consequence is simple: change your base once, not every night. Three or four nights in the south and three in Ubud covers the whole island comfortably. Hopping hotels daily eats your holiday in checkouts and transfers.",
-        ],
-        bullets: [
-          "Base 1: [**Seminyak**](/bali/en/journal/things-to-do-seminyak-bali-guide), [**Canggu**](/bali/en/journal/things-to-do-canggu-bali-guide) or [**Uluwatu**](/bali/en/journal/things-to-do-uluwatu-bali-guide) for beaches, sunsets and food",
-          "Base 2: [**Ubud**](/bali/en/journal/things-to-do-ubud-bali-complete-guide) for temples, rice terraces, waterfalls and the volcano",
-          "Day trips from either base: [**Nusa Penida**](/bali/en/journal/nusa-penida-complete-guide), Gili Islands, north Bali",
-        ],
-      },
-      {
-        heading: "🌅 Where to put the early starts",
-        paragraphs: [
-          "Bali's two best experiences both begin in the dark. Mount Batur sunrise pickups run from around **02:00 in the south** and **02:30–03:00 from Ubud**. The Nusa Penida boat leaves Sanur around **07:30–08:00**, which means leaving Ubud by 06:30.",
-          "Never stack those two days back to back, and never put one the night before a flight. Put a deliberately empty afternoon after each — that is what separates a trip people enjoy from one they need a holiday to recover from.",
-        ],
-      },
-      {
-        heading: "📆 If you only have 5 days — or have 10",
-        paragraphs: [
-          "For a **5-day trip**, cut Day 6 and one of the south coast days. Keep Ubud, keep the volcano sunrise, and choose either Nusa Penida or waterfalls, not both.",
-          "For a **10-day trip**, the best additions are not more day trips from the same bases. Add the Gili Islands or Nusa Lembongan for two or three nights, or head to Amed or Munduk for a completely different, quieter side of the island.",
-        ],
-      },
-      {
-        heading: "💡 Mistakes that cost first-timers a day",
-        bullets: [
-          "Booking a tour for the morning after a red-eye arrival",
-          "Putting Mount Batur and Nusa Penida on consecutive days",
-          "Staying in Kuta and day-tripping to Ubud repeatedly instead of moving base",
-          "Scheduling anything on departure day — airport traffic is unpredictable",
-          "Underestimating [**Nyepi**](/bali/en/journal/best-time-to-visit-bali-month-by-month), when the whole island including the airport shuts for 24 hours",
-        ],
-      },
-    ],
-    faq: [
-      {
-        question: "Is 7 days enough for Bali?",
-        answer:
-          "Yes, seven days is enough to see Ubud, the south coast, a volcano sunrise and one island day trip without rushing — provided you split your stay between two bases instead of moving hotels every night.",
-      },
-      {
-        question: "Where should I stay for a 7-day Bali trip?",
-        answer:
-          "Split it: three or four nights in the south (Seminyak, Canggu or Uluwatu) for beaches and food, then three nights in Ubud for temples, rice terraces and the volcano. One hotel change, not six.",
-      },
-      {
-        question: "How many days do I need in Ubud?",
-        answer:
-          "Three nights is the sweet spot. That covers a culture day, a sunrise volcano trip with a recovery afternoon, and one waterfall or adventure day without feeling rushed.",
-      },
-      {
-        question: "Should I rent a scooter or hire a driver for a week in Bali?",
-        answer:
-          "For a first trip, a private driver for the long days is far less stressful — full-day charters typically run around $30–50 and remove all navigation and parking problems. Scooters make sense for short local hops if you are already an experienced rider.",
-      },
-      {
-        question: "What is the best order to do things in Bali?",
-        answer:
-          "South coast first while you recover from the flight, then move inland to Ubud for culture and the volcano, then return south for the last night so you are close to the airport on departure day.",
-      },
-    ],
-  },
-  {
     key: "ubudArea",
     slug: "things-to-do-ubud-bali-complete-guide",
     badge: "Travel guide",
@@ -22008,7 +21892,7 @@ const JOURNAL_SEO_GUIDES = [
       {
         heading: "📍 Why Ubud is the best inland base",
         paragraphs: [
-          "Ubud sits roughly in the middle of everything worth driving to, which is why the [7-day itinerary](/bali/en/journal/bali-itinerary-7-days-first-time) uses it as the inland base. Mount Batur is about **90 minutes** away, the main waterfalls **30–50 minutes**, and the Ayung River gorge is on the doorstep. From the south coast, every one of those becomes a much longer day.",
+          "Ubud sits roughly in the middle of everything worth driving to, which is why the [7-day itinerary](/bali/en/journal/bali-7-day-itinerary) uses it as the inland base. Mount Batur is about **90 minutes** away, the main waterfalls **30–50 minutes**, and the Ayung River gorge is on the doorstep. From the south coast, every one of those becomes a much longer day.",
           "The town also solves evenings. You can walk to dinner, a market and a dance performance without arranging transport, which is not true of most Bali areas. That ninety minutes is also what makes the volcano viable before dawn, since [a Mount Batur sunrise morning from Ubud](/bali/en/journal/mount-batur-sunrise-from-ubud) starts later than the same trip from anywhere on the coast.",
         ],
       },
@@ -22556,7 +22440,7 @@ const JOURNAL_SEO_GUIDES = [
           "**Manta rays**: year-round at Manta Point, most reliable **April–October**, numbers peak in **May**",
           "**Mola-mola (ocean sunfish)**: **July–October** at Crystal Bay — water can drop to **18–20°C**",
           "**Waterfalls**: strongest **November–March**, but best photographed **late March–April** for full flow without brown water",
-          "[**Mount Batur sunrise**](/bali/en/journal/bali-itinerary-7-days-first-time): **April–October**, clearest **June–September**, best crowd-to-weather balance **April–June**",
+          "[**Mount Batur sunrise**](/bali/en/journal/bali-7-day-itinerary): **April–October**, clearest **June–September**, best crowd-to-weather balance **April–June**",
         ],
       },
       {
@@ -41704,6 +41588,543 @@ const JOURNAL_SEO_GUIDES = [
         "answer": "Sanur for anyone who wants flat ground and water they can get into: the seafront path is level, the lagoon is shallow and the transfers are short. Ubud works too, but it means hills, steps at the temples and terraces, and a drive to reach any sea at all."
       }
     ]
+  },
+  {
+    "slug": "seminyak-to-jimbaran",
+    "badge": "Travel guide",
+    "navLabel": "Seminyak to Jimbaran",
+    "cardTourLabel": "South Bali evenings by car",
+    "heroTourSlug": "private-car-with-driver-bali",
+    "relatedTourSlugs": [
+      "private-car-with-driver-bali",
+      "bali-airport-transfer",
+      "sunset-cruise-bali"
+    ],
+    "inlineStats": [
+      "Seminyak to airport 30-50 min",
+      "Airport to Jimbaran 6-8 km",
+      "Evening peak 16:00-19:00"
+    ],
+    "title": "Seminyak to Jimbaran: When to Leave for Dinner on the Sand",
+    "description": "Seminyak to Jimbaran is two published legs either side of the airport: 30-50 minutes plus 15-30. Leave before the 16:00-19:00 peak and the evening works.",
+    "excerpt": "Seminyak to Jimbaran is one of the few south Bali drives we will not hand you as a single number, because we do not measure it as one. What we publish is the two legs it is built from: Seminyak to the airport is **30-50 minutes**, and Jimbaran sits **6-8 km beyond the terminal, 15-30 minutes** away. The total is those two figures added together, which on a clear road lands close to an hour. The catch is that the road runs past the airport, and the airport corridor has an evening peak from **16:00 to 19:00** — exactly when you want to be driving towards a fish grill on the sand. In that window the Seminyak leg alone stretches to **45-75 minutes**, while the short Jimbaran side barely changes. So the question that decides your evening is not how far Jimbaran is. It is what time you leave, and this guide answers that.",
+    "rankings": [
+      {
+        "name": "Leg one: Seminyak to the airport",
+        "imageSrc": "/images/places/seminyak-sunset.jpg",
+        "area": "30-50 min, 45-75 at peak",
+        "bestFor": "Seeing where the time actually goes",
+        "summary": "The published band is 30-50 minutes, and 45-75 minutes between 07:00-09:00 and 16:00-19:00, because everything moving in and out of the airport funnels through the Kuta corridor and Sunset Road. This leg carries all of the uncertainty in the journey. Every minute you save on a Jimbaran evening is saved here."
+      },
+      {
+        "name": "Leg two: the airport to Jimbaran",
+        "imageSrc": "/images/places/bali-airport-arrivals.jpg",
+        "area": "6-8 km, 15-30 minutes",
+        "bestFor": "The short half of the journey",
+        "summary": "Jimbaran is only 6-8 km from Ngurah Rai airport and we plan 15-30 minutes for it, which is why we use it as the calibration point for the whole Bukit. It sits before the climb up onto the peninsula, so it does not collect the delay that Uluwatu does. Whatever the traffic, this half stays roughly the same."
+      },
+      {
+        "name": "The 16:00-19:00 window",
+        "imageSrc": "/images/places/tropical-road-palms.jpg",
+        "area": "The whole decision",
+        "bestFor": "Choosing when to set off",
+        "summary": "The corridor carries two daily peaks, 07:00-09:00 and 16:00-19:00, and the evening one is the peak that matters for a Jimbaran dinner. Two of the flows that compound in it land on this exact route: the sunset rush up onto the Bukit, and the Sunset Road and Kerobokan congestion feeding Seminyak. Leaving before 16:00 avoids both."
+      },
+      {
+        "name": "Dinner on the sand in Jimbaran",
+        "imageSrc": "/images/places/palm-beach-quiet.jpg",
+        "area": "Jimbaran bay",
+        "bestFor": "The reason you are making the drive",
+        "summary": "A bay rather than an open coast, fish restaurants setting their tables straight onto the sand, grills that run late and a pace clearly calmer than Kuta. It is not a district you wander on foot the way you do in Seminyak, which matters less on an evening you arrive by car: you came for one stretch of beach."
+      },
+      {
+        "name": "Uluwatu before the bay",
+        "imageSrc": "/images/places/uluwatu-temple-cliff.jpg",
+        "area": "20-40 min from Jimbaran",
+        "bestFor": "Turning a drive into an evening",
+        "summary": "From most Jimbaran and Bukit hotels the cliff temple is 20-40 minutes away, so an afternoon on the peninsula followed by dinner in the bay means one crossing of the airport corridor instead of two. From Seminyak, Uluwatu alone runs 90 minutes to 2 hours at rush hour, which is the strongest argument for combining them."
+      },
+      {
+        "name": "The ride home to Seminyak",
+        "imageSrc": "/images/places/bali-street-at-night.jpg",
+        "area": "Easier after 19:00",
+        "bestFor": "The half of the evening nobody plans",
+        "summary": "The evening peak ends at 19:00 and dinner ends after it, so the return runs on a quieter road than the way out. The variable is not the traffic but the car: app surge is reliable on Friday and Saturday nights between 21:00 and 01:00 in the Canggu-Seminyak corridor, and instantly in heavy rain. A private car from $59 per car simply waits for you."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Seminyak to Jimbaran: how long does the drive really take?",
+        "paragraphs": [
+          "There is no single measured figure for this drive, and we would rather say so than invent one. What we publish is the two legs it is made of: **Seminyak to the airport is 30-50 minutes**, and **Jimbaran is 6-8 km beyond the terminal, 15-30 minutes**. Add them and, on a clear road, that comes to about an hour door to door in a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car. That total is arithmetic rather than a stopwatch, and you should know which it is.",
+          "We lead with the legs because **the road between the two areas passes the airport**, and that corridor carries two daily peaks: **07:00-09:00 and 16:00-19:00**. The evening one is the whole story here. Between **16:00 and 19:00** the Seminyak leg alone stretches to **45-75 minutes**, while the short Jimbaran side barely changes. The distance is fixed. Only your departure time is negotiable."
+        ]
+      },
+      {
+        "heading": "What time should you leave Seminyak for a Jimbaran evening?",
+        "paragraphs": [
+          "Leave before **16:00** if the day allows it. That is the honest instruction and it costs nothing but an earlier start: you arrive with daylight in hand, walk the bay before the tables fill and miss the worst hour of the corridor entirely. The published band for the Seminyak leg is **30-50 minutes** off-peak against **45-75 minutes** in the peak, so an early departure removes most of the difference. Our [airport to Seminyak guide](/bali/en/journal/bali-airport-to-seminyak-transfer) covers the same stretch of road in the other direction.",
+          "If you cannot leave early, at least leave knowing why it is slow. Three flows compound in the evening peak, and **two of them land on this exact route**: the sunset rush up onto the Bukit, and the Sunset Road and Kerobokan congestion that feeds Seminyak. The third, the commuter exodus out of Denpasar, mostly damages the Ubud run instead. No app, no shortcut and no driver changes that hour. Only the clock does."
+        ]
+      },
+      {
+        "heading": "Why does the airport decide this drive?",
+        "paragraphs": [
+          "Look at where the two areas sit. **Seminyak is 12-15 km from Ngurah Rai airport**, on the north-west side of it. **Jimbaran is 6-8 km from the same airport**, on the Bukit side. The terminal and its access roads sit between them, which is why we describe the trip as two legs rather than one distance — and why we do not add the two kilometre figures into a road distance. The road bends around the runway, so the sum would flatter it.",
+          "Kilometres mislead here for a second reason. **Bali's realised average speed is around 30-35 km/h off the toll road**, and the Kuta-Seminyak-Canggu strip is where map estimates are most optimistic. For scale, reaching Uluwatu from Seminyak at rush hour takes **90 minutes to 2 hours** across this same corridor. Jimbaran stops short of the climb onto the Bukit, so it is the shorter version of that run — our [airport to Uluwatu guide](/bali/en/journal/bali-airport-to-uluwatu-transfer) uses Jimbaran as its calibration point for precisely this reason."
+        ]
+      },
+      {
+        "heading": "Is Jimbaran worth the drive for dinner?",
+        "paragraphs": [
+          "For an evening, yes, and the reason is specific rather than romantic. Jimbaran is **a bay**, so the water sits inside a curve of coast instead of facing the open swell, and the fish restaurants set their tables directly onto the sand with the grills running late. It is clearly calmer than Kuta. It is also **not walkable the way Seminyak is**, which matters far less on a night you arrive by car: you came for one stretch of beach, not for a district. The full area comparison is in [Jimbaran or Seminyak as a base](/bali/en/journal/jimbaran-vs-seminyak).",
+          "Make it an evening rather than an errand and the drive pays for itself. **Uluwatu temple is 20-40 minutes from most Jimbaran hotels**, so the cliff temple, a Bukit beach and then dinner on the sand is one crossing of the airport corridor instead of two. From a Seminyak base the same temple runs **90 minutes to 2 hours** at rush hour, which is the argument for pairing them rather than treating them as separate outings. Our [sunset temple comparison](/bali/en/journal/tanah-lot-vs-uluwatu-sunset) sets out which one your area should choose."
+        ]
+      },
+      {
+        "heading": "How do you get back to Seminyak after dinner?",
+        "paragraphs": [
+          "The return is the easy half, which is worth knowing in advance. The corridor's evening peak runs to **19:00**, and a dinner that starts around sunset ends after it, so the road home is quieter than the road out. Later still it empties: **at 02:00 the stretch past Jimbaran is genuinely empty**, which is why the late version of this drive is the fastest one you will do in the south.",
+          "The real choice is between an app and a car that waits. **Grab and Gojek are cheapest for short hops**, but app surge is reliable on Friday and Saturday nights between **21:00 and 01:00** in the Canggu-Seminyak corridor and instantly in heavy rain — which is exactly when a table on the sand runs long. For a comparable cross-airport hop the apps price Seminyak to Nusa Dua at **IDR 160,000-200,000**. A [private car with driver](/bali/en/tours/private-car-with-driver-bali) is **from $59 per car** for the day and waits while you eat; we weigh the two in [Grab, Gojek or a private driver](/bali/en/journal/grab-gojek-or-private-driver-bali)."
+        ]
+      },
+      {
+        "heading": "Should you sleep in Jimbaran instead of driving over?",
+        "paragraphs": [
+          "For one dinner, no. A hotel move costs more of your day than the drive does, and the evening works from Seminyak as long as you leave before the peak. Where the calculation changes is the flight home: **Jimbaran is 15-30 minutes from the terminal** against **30-50 minutes from Seminyak**, so a last night on the Bukit side turns a departure morning into a short hop. Our [airport transfer](/bali/en/tours/bali-airport-transfer) is **from $15 per car** from either area.",
+          "The rest of the week points the other way. From Jimbaran the port at Sanur, where every Nusa Penida crossing leaves, is a planned **60-90 minutes** against Seminyak's **30-50 minutes**, and the whole Bukit side sits further from the island's day trips. If a different evening on that side appeals, the [sunset cruise from Benoa](/bali/en/tours/sunset-cruise-bali) is **from $150**, and that harbour is **15-30 minutes** from Jimbaran against **30-60 minutes** from Seminyak. For the seafood alone, though, book the car and keep your room. We take no prepayment and confirm the time on WhatsApp."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How long does it take to drive from Seminyak to Jimbaran?",
+        "answer": "We publish it as two legs, because that is how we measure it: Seminyak to the airport is 30-50 minutes, and Jimbaran is 6-8 km beyond the terminal, another 15-30 minutes. Added together that lands close to an hour on a clear road, and comfortably more inside the evening peak."
+      },
+      {
+        "question": "When is the worst time to drive to Jimbaran?",
+        "answer": "Between 16:00 and 19:00. That is when the airport corridor peaks, and in that window the Seminyak leg alone stretches from 30-50 minutes to 45-75. The morning peak, 07:00-09:00, does the same thing to the same road. Leave before 16:00 and the trip becomes predictable again."
+      },
+      {
+        "question": "Is the drive back from Jimbaran to Seminyak quicker?",
+        "answer": "Usually, yes. The evening peak ends at 19:00 and dinner on the sand ends later than that, so the return runs on a quieter road than the way out. Very late it is quicker still: at 02:00 the stretch past Jimbaran is empty. Plan the outbound leg carefully and the return looks after itself."
+      },
+      {
+        "question": "How far is Jimbaran from Bali airport?",
+        "answer": "Jimbaran is 6-8 km from Ngurah Rai airport and we plan 15-30 minutes for it, which makes it one of the shortest transfers on the island. That is also why the run from Seminyak feels longer than a map suggests: Seminyak sits 12-15 km away on the other side of the same airport."
+      },
+      {
+        "question": "Can I visit Uluwatu temple and eat in Jimbaran the same evening?",
+        "answer": "Yes, and it is the better version of the trip. The cliff temple is 20-40 minutes from most Jimbaran hotels, so you cross the airport corridor once, spend the late afternoon on the Bukit and come down to the bay for dinner. From Seminyak the temple alone is 90 minutes to 2 hours at rush hour."
+      },
+      {
+        "question": "Do I need a private driver, or is Grab enough for one dinner?",
+        "answer": "Either works. Apps are cheapest for a single hop, but surge is reliable on Friday and Saturday nights between 21:00 and 01:00 and in heavy rain, and a long dinner ends inside that window. A private car with driver is from $59 per car for the day, waits while you eat and takes no prepayment."
+      }
+    ]
+  },
+  {
+    "slug": "seminyak-to-kuta",
+    "badge": "Travel guide",
+    "navLabel": "Seminyak to Kuta",
+    "cardTourLabel": "Getting around south Bali",
+    "heroTourSlug": "private-car-with-driver-bali",
+    "relatedTourSlugs": [
+      "private-car-with-driver-bali",
+      "bali-airport-transfer",
+      "surf-lesson-experience"
+    ],
+    "inlineStats": [
+      "Kuta to Seminyak: about 5 km",
+      "App car Rp35,000-60,000",
+      "Airport: 15-30 min vs 30-50 min"
+    ],
+    "title": "Seminyak to Kuta: 5 km, and Traffic Is the Variable",
+    "description": "Seminyak to Kuta is about 5 km along one continuous strip with Legian between them. The distance is trivial; the traffic is the only real variable.",
+    "excerpt": "Seminyak and Kuta are neighbours, not two separate destinations. They sit on the same coast with Legian between them, about **5 km** apart by road, and the built-up strip never breaks: you cross from one into the next without a sign telling you it happened. We will not quote you a drive time, because this is the stretch where map estimates fail. Bali's realised average speed off the toll road is around **30-35 km/h**, and the Kuta-Seminyak-Canggu strip is where those estimates are most optimistic. What decides the trip is the hour you travel, not the distance. An app car covers the hop for roughly **Rp35,000-60,000** and the same ride on the back of a bike for **Rp15,000-25,000**, both checked in August 2026. And if you would rather not sit in traffic at all, the sand between the two districts is unbroken.",
+    "rankings": [
+      {
+        "name": "The road between them",
+        "imageSrc": "/images/places/tropical-road-palms.jpg",
+        "area": "About 5 km by road",
+        "bestFor": "Getting the scale right",
+        "summary": "Kuta, Legian and Seminyak sit on one continuous coastal strip, and the gap between the first and the last is about 5 km by road. There is no open country in between and no obvious boundary: shopfronts, villas and small restaurants simply keep going. Treat it as one long town with three names and you will plan the day correctly."
+      },
+      {
+        "name": "A Grab or Gojek car",
+        "imageSrc": "/images/places/ride-hailing-app.jpg",
+        "area": "Rp35,000-60,000",
+        "bestFor": "Two people, bags, or rain",
+        "summary": "The default choice. A short app car hop between Kuta and Seminyak runs roughly Rp35,000-60,000, checked August 2026, and a second set of worked examples puts the same ride at Rp40,000-60,000. The fare is low enough that it is never the deciding factor: your pickup point and the hour you travel are."
+      },
+      {
+        "name": "The back of a bike",
+        "imageSrc": "/images/places/scooter-ride-hailing-driver.jpg",
+        "area": "Rp15,000-25,000",
+        "bestFor": "One person in a hurry",
+        "summary": "A Grab or Gojek bike covers the same ground for Rp15,000-25,000, roughly half to two-thirds cheaper than the car and immune to a blocked road, which on this strip matters more than the money does. It is the wrong choice with luggage, with a small child, or once the rain starts and every bike disappears."
+      },
+      {
+        "name": "The beach walk through Legian",
+        "imageSrc": "/images/places/bali-surf-beach.jpg",
+        "area": "Unbroken dark sand",
+        "bestFor": "Anyone who is not in a hurry",
+        "summary": "The sand runs continuously from Seminyak through Legian into Kuta, so the walk is possible, and at low tide with the surf beside you it is the pleasant version of this trip. We do not put a time on it, because neither district is a point on a map: Seminyak alone runs about three kilometres along its main road."
+      },
+      {
+        "name": "The airport, from either end",
+        "imageSrc": "/images/places/bali-airport-arrivals.jpg",
+        "area": "15-30 min vs 30-50 min",
+        "bestFor": "Judging the real distance",
+        "summary": "The best-documented markers this pair has. Ngurah Rai sits beside Kuta: the transfer runs 15-30 minutes against 30-50 minutes to Seminyak, and app fares checked on a May 2026 morning came to IDR 106,500 and IDR 136,000 per car. The Seminyak run uses the same road and carries on past Kuta."
+      },
+      {
+        "name": "A car and driver for the day",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "From $59 per car",
+        "bestFor": "Kuta as one stop, not the trip",
+        "summary": "Worth it only when the hop is part of a longer day: a surf at one end, lunch, shopping, a sunset at the other. Our private car with driver is from $59 per car, the driver waits while you are out, and the parking and the traffic stop being your problem. For a single 5 km hop it is money spent on nothing."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "How far is Seminyak from Kuta, and are they close?",
+        "paragraphs": [
+          "**They are close — close enough that neighbours is a fairer word than destinations.** Kuta, Legian and Seminyak run into one another along the same coast, and an app car covers the hop for about **Rp35,000-60,000** over roughly **5 km**. The clearest proof is the airport road: our [private airport transfer](/bali/en/tours/bali-airport-transfer) from **$15 per car** serves both districts on the same road out of the terminal, and the Seminyak run simply carries on past Kuta.",
+          "Those airport figures are the only well-documented distance markers this pair has, and they set the scale honestly. Ngurah Rai sits beside Kuta: the drive there runs **15-30 minutes** against **30-50 minutes** to Seminyak, and app fares checked on a May 2026 morning came out at **IDR 106,500** to Kuta and **IDR 136,000** to Seminyak per car. That is two neighbouring zones on one taxi map, not two destinations. If your real question is where to sleep rather than how to travel between them, that is answered in [Kuta or Seminyak](/bali/en/journal/kuta-vs-seminyak)."
+        ]
+      },
+      {
+        "heading": "Can you walk between the two along the beach?",
+        "paragraphs": [
+          "**Along the sand, yes: the beach is unbroken the whole way.** Seminyak, Legian and Kuta share one continuous beach of dark volcanic sand, and nothing interrupts it between them. At low tide, with the surf on one side and the beach bars on the other, this is the pleasant version of the journey and the only version with no traffic in it at all. The beaches on this coast are compared stretch by stretch in [the Canggu and Seminyak beach guide](/bali/en/journal/best-beaches-canggu-seminyak).",
+          "**We will not put a time on that walk, because neither district is a point on a map.** Seminyak alone runs about three kilometres along its main road, and Kuta is strung out the same way, so where you start and where you stop change the walk far more than the gap between the two districts does. Carry water and expect no shade. The road version of the same walk is a different matter: the pavements come and go, scooters use the gaps, and very few people do it twice."
+        ]
+      },
+      {
+        "heading": "What is the quickest way to get from Seminyak to Kuta?",
+        "paragraphs": [
+          "**An app car if you are two people with bags, and an app bike if you are one person in a hurry.** The car hop runs about **Rp35,000-60,000** and the same trip on the back of a bike **Rp15,000-25,000**, both checked in August 2026. Bikes are roughly half to two-thirds cheaper and they are immune to a blocked road, which on this strip is the argument that matters more than the fare. The full picture is in [what a Grab or a driver costs in Bali](/bali/en/journal/bali-grab-taxi-driver-cost).",
+          "Two things move those prices. App surge is reliable on Friday and Saturday nights between **21:00** and **01:00** in the Canggu-Seminyak corridor, and it arrives instantly in heavy rain, which spikes demand for cars and empties the bike supply at the same moment. So if the plan is dinner at one end and a late night at the other, price the ride home before you set out. That is the leg of the evening people forget to budget for."
+        ]
+      },
+      {
+        "heading": "Why does a 5 km trip take as long as it does?",
+        "paragraphs": [
+          "**Because your 5 km share a road with everyone else's.** Bali's realised average speed off the toll road is around **30-35 km/h**, and the Kuta-Seminyak-Canggu strip is specifically where map estimates are most optimistic. Everything heading north-west out of the airport funnels through the Kuta corridor and Sunset Road, so what you meet between the two districts is not local traffic at all. It is the whole south coast passing through.",
+          "The windows to avoid are **07:00-09:00** and, much worse, **16:00-19:00**. At the Kuta end sits Simpang Siur, the Dewa Ruci roundabout, where Kuta, the airport, Sanur, the toll road and the bypass all meet; between **16:30** and 19:00 it is the reason a short drive stops being short. The same peak stretches the airport run to Seminyak from **30-50 minutes** out to **45-75**, and that road is described in detail in [the airport to Seminyak guide](/bali/en/journal/bali-airport-to-seminyak-transfer)."
+        ]
+      },
+      {
+        "heading": "Is Kuta beach different from Seminyak beach?",
+        "paragraphs": [
+          "**No, and that surprises people who make the trip expecting different water.** Both are dark volcanic sand with a real shore break, and the sand-bottom beaches from Kuta up to Canggu behave as one system rather than several. The water holds **27-29°C** all year, which is why this whole strip is where beginners learn: our [beginner surf lesson](/bali/en/tours/surf-lesson-experience) from **$35** puts a board, leash and instructor in the water with you on exactly this sand.",
+          "Two honest warnings apply at both ends equally. Research at Kuta found rip currents present about **83%** of the time, so the surf here is genuine rather than decorative. And from **November to March** the monsoon returns river waste to these west-facing beaches: up to **60 tonnes** of plastic a day has been collected from Kuta and Legian at the peak of it. If you came to swim rather than to surf, neither end of this strip is the answer, and [where you can actually swim in Bali](/bali/en/journal/can-you-swim-in-bali) lists the alternatives."
+        ]
+      },
+      {
+        "heading": "Do you need a car for the day, or just an app?",
+        "paragraphs": [
+          "For the hop itself, an app. **A car and driver earns its price only when Kuta is one stop in a longer day**, not the destination. Our [private car with driver](/bali/en/tours/private-car-with-driver-bali) from **$59 per car** exists for that shape of day: the driver waits while you eat, shop or surf, moves you on when a place is not working, and takes the parking and the traffic off your hands. For a single **5 km** hop, booking a car for the day is money spent on nothing.",
+          "It also helps to know that neither district changes what you can reach. Both sit on the same side of the island for the boats, with Sanur port **30-50 minutes** from Seminyak and Kuta on the same road, so a [Nusa Penida day](/bali/en/journal/nusa-penida-day-trip-from-seminyak) starts at the same hour from either. Moving hotels between the two buys you a different street, not a different island. Going across for an evening buys you the same thing for the price of two app rides."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How far is Kuta from Seminyak?",
+        "answer": "About 5 km by road, with Legian in between and no open ground anywhere along the way. The built-up strip is continuous, so there is no moment when one district visibly ends and the next begins. The airport figures give the honest scale: 15-30 minutes to Kuta against 30-50 minutes to Seminyak on the same road."
+      },
+      {
+        "question": "How long does it take to walk from Seminyak to Kuta?",
+        "answer": "We do not quote a walking time, because neither district is a single point. Seminyak alone runs about three kilometres along its main road, so the answer changes completely with your hotel. The sand is unbroken from Seminyak through Legian into Kuta, so the walk is possible; take water and go at low tide."
+      },
+      {
+        "question": "How much is a taxi from Seminyak to Kuta?",
+        "answer": "A Grab or Gojek car runs roughly Rp35,000-60,000 for the hop and the same ride on the back of a bike Rp15,000-25,000, both checked in August 2026. Expect more on Friday and Saturday nights between 21:00 and 01:00, when surge is reliable in this corridor, and the moment heavy rain starts."
+      },
+      {
+        "question": "Is Kuta or Seminyak closer to the airport?",
+        "answer": "Kuta, and by a clear margin. Ngurah Rai sits beside it: the transfer runs 15-30 minutes against 30-50 minutes to Seminyak. App fares checked on a May 2026 morning were IDR 106,500 to Kuta and IDR 136,000 to Seminyak per car. Our own airport transfer is from $15 per car to either."
+      },
+      {
+        "question": "Should I move hotels from Seminyak to Kuta for a night?",
+        "answer": "Almost never. The two share a coast, a beach, a road and a traffic pattern, so a move buys you a different street rather than a different holiday. Go across for an evening instead and pay for two app rides. The one case that makes sense is a dawn flight, since Kuta sits beside the terminal."
+      },
+      {
+        "question": "Is the traffic between Seminyak and Kuta really that bad?",
+        "answer": "It is the variable that decides your trip. Bali's realised average speed off the toll road is around 30-35 km/h, and this strip is where map estimates are most optimistic. The windows to avoid are 07:00-09:00 and, much worse, 16:00-19:00, when the Simpang Siur roundabout at the Kuta end backs up."
+      }
+    ]
+  },
+  {
+    "slug": "seminyak-to-nusa-dua",
+    "badge": "Travel guide",
+    "navLabel": "Seminyak to Nusa Dua",
+    "cardTourLabel": "Cars and transfers in south Bali",
+    "heroTourSlug": "private-car-with-driver-bali",
+    "relatedTourSlugs": [
+      "private-car-with-driver-bali",
+      "bali-airport-transfer",
+      "nusa-penida-west-tour"
+    ],
+    "inlineStats": [
+      "Nusa Dua side: 15-30 min, any hour",
+      "Seminyak side: 30-50 min, 45-75 at peak",
+      "App car fare: IDR 160,000-200,000"
+    ],
+    "title": "Seminyak to Nusa Dua: The Toll Road and What It Saves",
+    "description": "Seminyak to Nusa Dua runs past the airport in two legs: 15-30 minutes on the toll road side, 30-50 on the Seminyak side, 45-75 at peak.",
+    "excerpt": "Seminyak and Nusa Dua sit on opposite sides of the airport, so the drive between them passes it, and the journey is really two airport runs joined end to end. Only one of them is protected. The Nusa Dua half sits on the Bali Mandara toll road and holds 15-30 minutes at any hour of the day. The Seminyak half is ordinary surface road: 30-50 minutes in normal conditions, stretching to 45-75 between roughly 07:00-09:00 and 16:00-19:00, when everything heading north-west out of the airport funnels through the Kuta corridor and Sunset Road. Add the two legs and you have the figure to plan against, and we will say plainly that it is a sum of two runs we measure separately rather than one drive we have timed end to end. This guide sets out each half, what the hour of the day does to it, what a car costs either way, and when the trip is worth making at all.",
+    "rankings": [
+      {
+        "name": "The toll road does the southern half",
+        "imageSrc": "/images/places/tropical-road-palms.jpg",
+        "area": "Leg 2, 15-30 min",
+        "bestFor": "Anyone travelling at rush hour",
+        "summary": "The Bali Mandara toll road runs from the airport corridor down to Nusa Dua, which is why that leg holds 15-30 minutes at any hour while the rest of south Bali crawls. Our airport guide puts the same run at 25-40 minutes. Both figures agree on the part that matters: this half does not lengthen in the evening."
+      },
+      {
+        "name": "The Seminyak half is not protected",
+        "imageSrc": "/images/places/seminyak-sunset.jpg",
+        "area": "Leg 1, 30-50 min",
+        "bestFor": "Seeing where the delay comes from",
+        "summary": "Seminyak sits 12-15 km from the terminal on the north-west side, on ordinary surface roads with no toll and no bypass. That leg runs 30-50 minutes normally and 45-75 in the rush, because the traffic heading north-west out of the airport funnels through the Kuta corridor and Sunset Road. Almost every minute of variance in this journey belongs to this leg."
+      },
+      {
+        "name": "The airport sits in the middle",
+        "imageSrc": "/images/places/bali-airport-arrivals.jpg",
+        "area": "The halfway point",
+        "bestFor": "Arrival and departure days",
+        "summary": "Ngurah Rai sits between the two areas, so the drive passes it in either direction. That is worth knowing on the day you fly: moving between Seminyak and Nusa Dua on an arrival or departure day is not an extra journey, it is the airport transfer you were making anyway with the second half attached."
+      },
+      {
+        "name": "The two windows to avoid",
+        "imageSrc": "/images/places/bali-street-at-night.jpg",
+        "area": "07:00-09:00, 16:00-19:00",
+        "bestFor": "Choosing when to set off",
+        "summary": "Two windows do the damage, and both of them hit the Seminyak half: 07:00-09:00 and, much worse, 16:00-19:00, when the Denpasar commute, the sunset rush onto the Bukit and ordinary Kuta and Kerobokan congestion all land together. Travel outside them and that leg sits near the short end of 30-50 minutes instead of the long end of 45-75."
+      },
+      {
+        "name": "A car from an app",
+        "imageSrc": "/images/places/ride-hailing-app.jpg",
+        "area": "IDR 160,000-200,000",
+        "bestFor": "One person, one bag, one trip",
+        "summary": "One worked example prices a ride-hailing car between Seminyak and Nusa Dua at IDR 160,000-200,000, with about IDR 14,000 of Bali Mandara toll on top if the driver uses it. For a single hop with hand luggage that is the cheapest way to make this trip, and we would rather tell you that than sell you a car you do not need."
+      },
+      {
+        "name": "A car with a driver for the day",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "From $59 per car",
+        "bestFor": "Luggage, stops, or an evening return",
+        "summary": "A private car with driver is from $59 per car for a flexible day, and the rate covers the vehicle rather than the seat, so two people and four pay the same figure. It is more car than a single transfer needs. It starts to make sense the moment the day has stops in it, real suitcases, or a return leg landing in the evening peak."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "How long does the drive from Seminyak to Nusa Dua take?",
+        "paragraphs": [
+          "The honest answer is two numbers rather than one. The two areas sit on opposite sides of the airport, so the drive passes it, and each half behaves differently: **15-30 minutes between the airport and Nusa Dua at any hour of the day**, and **30-50 minutes between the airport and Seminyak**, stretching to **45-75 minutes** in the rush. Add them and you have the figure to plan against. Guests who make this trip more than once usually take a [private car with driver](/bali/en/tours/private-car-with-driver-bali) from $59 per car instead.",
+          "We say plainly that this is a sum. Those are two legs we time separately, not one drive we have timed end to end, and the door-to-door bands by hour of day are set out in our area comparison, [Nusa Dua or Seminyak](/bali/en/journal/nusa-dua-vs-seminyak). What this guide adds is the part that decides your morning: **all of the variance sits in the Seminyak half**, and none of it in the Nusa Dua half."
+        ]
+      },
+      {
+        "heading": "Why does the drive go past the airport?",
+        "paragraphs": [
+          "Because Ngurah Rai is between them. Seminyak sits **12-15 km** from the terminal on the north-west side; Nusa Dua sits on the southern side, at the end of the toll road. The road distance between the two areas is **18-22 km**, and the spread is real rather than sloppy measurement: Seminyak alone runs about three kilometres along its main street, so which two doors you are travelling between moves the number.",
+          "The **Bali Mandara toll road** is why the southern half is quick. Nusa Dua sits at the end of it, on a toll and bypass corridor built for exactly this run, and the toll costs **IDR 14,000** for a normal car, a rate set in April 2024 and still current. What the toll cannot do is help the other half of your journey: it stops at the airport corridor, and the road out to Seminyak is ordinary traffic from there on."
+        ]
+      },
+      {
+        "heading": "What time of day should you leave?",
+        "paragraphs": [
+          "Outside **07:00-09:00 and 16:00-19:00** if you have any choice. Those are the two windows that do the damage in south Bali, and the evening one is worse, because the Denpasar commute, the sunset rush onto the Bukit and ordinary Kuta and Kerobokan congestion all land at once. Inside them the Seminyak leg goes from **30-50 minutes** to **45-75**; the same road is covered in more detail in our [airport to Seminyak guide](/bali/en/journal/bali-airport-to-seminyak-transfer).",
+          "Late at night this is a different road. At **02:00** there is nothing on it and the airport-to-Seminyak leg is a genuine **20 minutes**. The Nusa Dua half barely moves in either direction, which is the whole point of the toll road, so a night-time departure improves one half of your journey and leaves the other exactly as it was."
+        ]
+      },
+      {
+        "heading": "What does the trip cost?",
+        "paragraphs": [
+          "A ride-hailing car between the two areas is priced at **IDR 160,000-200,000** in one worked example, plus about **IDR 14,000** of toll if the driver takes it. App prices move with demand rather than sitting still: surge is reliable on Friday and Saturday nights between **21:00 and 01:00** in the Canggu-Seminyak corridor, and instantly in heavy rain. The trade-offs between apps and a booked car are in [Grab, Gojek or a private driver](/bali/en/journal/grab-gojek-or-private-driver-bali).",
+          "If you are flying the same day, the sensible booking is not a transfer between the areas at all. An [airport transfer](/bali/en/tours/bali-airport-transfer) is **from $15 per car**, fixed, with no prepayment and the driver waiting however late the plane lands. If the day has stops in it, a car and driver **from $59 per car** covers the whole vehicle for the day, so two people and four pay the same figure."
+        ]
+      },
+      {
+        "heading": "Are you moving hotels, or going for the day?",
+        "paragraphs": [
+          "If you are changing base mid-trip, move in the middle of the day. Ordinary checkout hours put you on the road between the two rush windows, which is when this drive is at its most predictable. Put the luggage in the car rather than moving it through an app pickup point, and book the trip as one journey rather than two, because the second half of it is the easy half.",
+          "If you are going over for the day and coming back, plan the return leg first. The outbound run in the morning is usually fine; the leg back to Seminyak between **16:00-19:00** is the one that turns a short drive into a long one. Either leave the beach early, or accept a late dinner and let the road empty out first. This is the single most common way this journey goes wrong."
+        ]
+      },
+      {
+        "heading": "Does the move change your day trips?",
+        "paragraphs": [
+          "Barely, and this surprises people. Every fast boat to Nusa Penida leaves from Sanur port: from Seminyak that drive is **30-50 minutes**, and Nusa Dua makes a comparable southern run from the other side of the airport, with a **30-45 minute** crossing on top. Our [Nusa Penida west route](/bali/en/tours/nusa-penida-west-tour) is from $49 per car with hotel pickup, and it collects from either area.",
+          "Mount Batur treats them almost the same too. Both are southern bases, both sit in the **1.5-2.5 hour** band to the Kintamani highlands, and pickup lands around **01:30** either way, a full hour before guests in Ubud. Nusa Dua sits at the top of that range, which is the one place the move costs you anything at all; [Nusa Dua to Mount Batur](/bali/en/journal/nusa-dua-to-mount-batur) sets that night out hour by hour."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How far is Nusa Dua from Seminyak?",
+        "answer": "The road distance is 18-22 km, and the spread is genuine: Seminyak alone runs about three kilometres along its main street, so which two doors you travel between moves the figure. We quote this journey in legs rather than kilometres, because the airport sits between the two areas and the drive passes it."
+      },
+      {
+        "question": "How long does it take to get from Seminyak to Nusa Dua by car?",
+        "answer": "Add the two halves. The airport to Nusa Dua holds 15-30 minutes at any hour because of the toll road, and the airport to Seminyak runs 30-50 minutes, stretching to 45-75 between roughly 07:00-09:00 and 16:00-19:00. That is a sum of two measured legs, not a drive we have timed end to end."
+      },
+      {
+        "question": "Is there a toll road between Seminyak and Nusa Dua?",
+        "answer": "Only on the southern half. The Bali Mandara toll road runs from the airport corridor to Nusa Dua and costs IDR 14,000 for a normal car, which is why that leg holds 15-30 minutes in any hour. Nothing protects the Seminyak side, so that is where any delay in your journey will come from."
+      },
+      {
+        "question": "How much is a Grab or Gojek from Seminyak to Nusa Dua?",
+        "answer": "One worked example puts a ride-hailing car between the two at IDR 160,000-200,000, with about IDR 14,000 of toll on top if the driver uses it. App prices move with demand, so treat that as a band rather than a quote. For one person with a small bag it is the cheapest way to make the trip."
+      },
+      {
+        "question": "When is the worst time to drive between the two areas?",
+        "answer": "Between 16:00 and 19:00, and to a lesser extent 07:00 to 09:00. The evening window is the bad one because the Denpasar commute, the sunset traffic heading onto the Bukit and ordinary Kuta congestion arrive together. Outside those hours the Seminyak leg drops back towards 30-50 minutes."
+      },
+      {
+        "question": "Is it worth moving from Seminyak to Nusa Dua for a few nights?",
+        "answer": "Only if you want what Nusa Dua actually has: flat reef water you can walk into and the most predictable white sand on the mainland. It will not shorten your day trips, since both areas are southern bases with much the same drive to Sanur port. If the goal is one beach day, take a car instead."
+      }
+    ]
+  },
+  {
+    "slug": "seminyak-to-ubud",
+    "badge": "Travel guide",
+    "navLabel": "Seminyak to Ubud",
+    "cardTourLabel": "Ubud days from Seminyak",
+    "heroTourSlug": "ubud-highlights-tour",
+    "relatedTourSlugs": [
+      "ubud-highlights-tour",
+      "private-car-with-driver-bali",
+      "mount-batur-sunrise-jeep-tour"
+    ],
+    "inlineStats": [
+      "Seminyak to Ubud: 60-90 min",
+      "Ubud day from $65 per car",
+      "Batur pickup: 01:30 against 02:30"
+    ],
+    "title": "Seminyak to Ubud: 60-90 Minutes, and a 10-Hour Day",
+    "description": "Seminyak to Ubud takes 60-90 minutes by car, but the Ubud day itself runs 10 hours. When to day-trip, when to move base, and when to leave.",
+    "excerpt": "Ubud is about 60-90 minutes from Seminyak, and that number is what misleads people. The drive is short; the day is not. A full loop with stops takes all of it, which is why our Ubud day runs 10 hours from an 08:00 hotel pickup and puts you back on the coast inside the evening peak. So the honest question is not how far Ubud is, but how many days of your trip belong to the interior. One inland day on a beach holiday: day-trip, and give it the whole day rather than a morning. Three or more, or a Mount Batur sunrise in the plan: move base for a few nights, because the pre-dawn pickup relaxes from around 01:30 in the south to around 02:30 in Ubud for the same sunrise. This guide sets out the drive, the hours that decide it, what a day trip really costs you, and when moving wins.",
+    "rankings": [
+      {
+        "name": "The drive north",
+        "imageSrc": "/images/places/tropical-road-palms.jpg",
+        "area": "60-90 minutes",
+        "bestFor": "Planning the morning honestly",
+        "summary": "Seminyak to Ubud is about 60-90 minutes each way, and where you land in that range is decided by the hour you set off rather than by the road. For a morning start we plan 1-1.5 hours, and the southern hotel areas as a group sit 45-90 minutes out. Nothing on this axis is quick after lunch."
+      },
+      {
+        "name": "The hour you leave Seminyak",
+        "imageSrc": "/images/places/private-driver-in-bali.jpg",
+        "area": "Before 08:00",
+        "bestFor": "Getting the short version of the drive",
+        "summary": "Mornings move fastest before the traffic builds, which is why our Ubud day collects you at 08:00 and the photo route at 07:00. The two windows that do the damage are 07:00-09:00 and 16:00-19:00. Leave late and you pay twice: once on the way up, once on the way back, with less of Ubud in between."
+      },
+      {
+        "name": "What a full Ubud day holds",
+        "imageSrc": "/images/places/tegalalang-rice-terraces.jpg",
+        "area": "10 hours from $65",
+        "bestFor": "Seeing the area, not the road",
+        "summary": "The loop we run from the coast is a 10-hour day from $65 per car: rice terraces, a temple stop and the Kintamani crater view, with an 08:00 hotel pickup and no prepayment. It is a long day by design. Ubud is only 60-90 minutes away, but a full loop with stops takes the whole day."
+      },
+      {
+        "name": "The evening return",
+        "imageSrc": "/images/places/bali-street-at-night.jpg",
+        "area": "16:00-19:00",
+        "bestFor": "The half nobody plans for",
+        "summary": "A day that starts at 08:00 and runs 10 hours ends inside the worst traffic window on the island, and the south Bali commute adds 17:00-19:00 on top of it. Friday afternoons climb towards Ubud and Sunday evenings come back down. With a driver the return leg is dull; driving yourself, it spoils the day."
+      },
+      {
+        "name": "Moving base instead of driving",
+        "imageSrc": "/images/places/campuhan-ridge.jpg",
+        "area": "Two nights or more",
+        "bestFor": "Trips with several inland days",
+        "summary": "One inland day is a fair trade for one drive. Three of them means the same road four or six times over. From a room in Ubud the Ayung rafting put-in is about 20 minutes away, Tegalalang 25 and Tirta Empul 30-40, against 1.5-2 hours or more from Seminyak for the same places."
+      },
+      {
+        "name": "The Mount Batur argument",
+        "imageSrc": "/images/places/mount-batur-sunrise-trek.jpg",
+        "area": "01:30 against 02:30",
+        "bestFor": "Anyone set on the sunrise",
+        "summary": "Sunrise pickups from Seminyak land around 01:30 and from Ubud around 02:30, because the drive is 1.5-2.5 hours against about 90 minutes; the island-wide window runs 01:30-03:30. That is a full hour of sleep for an identical sunrise, and it is the strongest reason to sleep inland for a night or two."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Seminyak to Ubud: day trip or move base?",
+        "paragraphs": [
+          "The drive is **60-90 minutes** each way, so both answers work. Day-trip from Seminyak if Ubud is one item on a coast holiday: our [Ubud rice terrace, temple and volcano day](/bali/en/tours/ubud-highlights-tour) runs **10 hours from $65 per car** with an **08:00** hotel pickup, and you sleep in your own bed. Move base for a few nights if the interior is three days of your trip or more, because from the coast each of those days is a separate long drive.",
+          "What decides it is not distance but repetition. **One inland day out of Seminyak is a fair trade; three of them means the same road four or six times over**, always with the return leg in the afternoon. At that point a hotel move costs you one drive and hands back the early mornings, which are the hours Ubud is actually good at. The two areas as bases — evenings, beaches, who each one suits — are compared in [Seminyak or Ubud](/bali/en/journal/seminyak-vs-ubud).",
+          "One thing to say plainly before the detail: **there is no version of this drive that is short in the afternoon.** Leaving Seminyak before the morning build-up keeps the run near the bottom of its range, and coming back between **16:00 and 19:00** puts you in the worst traffic window on the island. Every plan below is built around that asymmetry rather than around the map."
+        ]
+      },
+      {
+        "heading": "Seminyak to Ubud distance: why we quote hours, not kilometres",
+        "paragraphs": [
+          "The honest answer to how far Ubud is from Seminyak is **60-90 minutes**, and we give it in time deliberately. Off the toll road Bali's realised average speed is around **30-35 km/h**, and the Kuta, Seminyak and Canggu strip is where map estimates are most optimistic. A figure in kilometres tells you almost nothing about when you will arrive. The hour you set off tells you nearly everything.",
+          "The band people actually report is wider than any single number. From Seminyak we plan **1-1.5 hours** for a morning start, and the honest spread is **45 minutes to 2 hours** depending on when you leave; the southern hotel areas as a group sit **45-90 minutes** from Ubud. Rain, a temple ceremony road closure or a Friday afternoon can push any of that, and none of it appears in a map app. [Ubud in one day](/bali/en/journal/ubud-in-one-day) builds its stop order on the same figures."
+        ]
+      },
+      {
+        "heading": "What time should you leave, and when do you get back?",
+        "paragraphs": [
+          "Leave early, and earlier than feels necessary. **Mornings move fastest before the traffic builds**, which is why our Ubud day collects you at 08:00 and the photo-led [Ubud Instagram tour](/bali/en/tours/ubud-instagram-tour) at 07:00, both from $65 per car over 10 hours. The two windows that do the damage are **07:00-09:00 and 16:00-19:00**, and on this route the second one is unavoidable if you want a full day up there.",
+          "The return is the half nobody plans for. **A 10-hour day that begins at 08:00 ends inside the evening peak**, and the south Bali commute runs 17:00-19:00 on top of it. **Friday afternoons climb towards Ubud and Sunday evenings come back down**, so a weekend day trip is the slowest version of this drive. With a driver the return leg is merely dull. Driving yourself at the end of a long day, it is the part that spoils it."
+        ]
+      },
+      {
+        "heading": "Is one day in Ubud enough from Seminyak?",
+        "paragraphs": [
+          "It is enough for the core, as long as you accept losing both ends of it. The Ubud day that works starts on the Campuhan Ridge before **08:00** and reaches the Monkey Forest for its **09:00** opening, then Tegalalang late morning, the Tukad Cepung light beams around midday, lunch on the Kintamani crater rim and Tirta Empul on the way down. From a Seminyak hotel the first two of those are gone before you set off.",
+          "That is the mistake we see most often: a rushed Ubud day trip that becomes two long road legs wrapped around three stops. **Tegalalang sits 25 minutes north of central Ubud and is quiet only before 09:00**, which from the coast means leaving in the dark. The Monkey Forest keeps over 1,200 macaques and rewards the first hour after opening, which a coastal start also takes away. [Things to do in Ubud](/bali/en/journal/things-to-do-ubud-bali-complete-guide) is honest about what earns the drive."
+        ]
+      },
+      {
+        "heading": "When is it worth moving to Ubud instead?",
+        "paragraphs": [
+          "Move when the interior is more than one day of your trip. **From Ubud the Ayung rafting put-in is about 20 minutes away, against 1.5-2 hours from Seminyak**, Tirta Empul is 30-40 minutes, Tegalalang 25 minutes, and Jatiluwih 1.5-2 hours against 2-2.5 from the coast. Our [Ayung River rafting](/bali/en/tours/white-water-rafting) day is **from $25** over 4-6 hours: a morning from Ubud, most of a day from Seminyak.",
+          "The clearest case is the volcano. **Mount Batur pickups from the south land around 01:30 and from Ubud around 02:30**, because the drive is 1.5-2.5 hours against about 90 minutes. That is a full hour of sleep for the same sunrise. Both versions are set out in [Seminyak to Mount Batur](/bali/en/journal/seminyak-to-mount-batur) and [Ubud to Mount Batur](/bali/en/journal/ubud-to-mount-batur), and the [sunrise jeep](/bali/en/tours/mount-batur-sunrise-jeep-tour) from $45 removes the climb."
+        ]
+      },
+      {
+        "heading": "What does the trip cost, and what should you book?",
+        "paragraphs": [
+          "For a day of stops, a car beats app rides. Grab and Gojek are cheapest for short hops, but across a full day a [private car with driver](/bali/en/tours/private-car-with-driver-bali) **from $59 per car** costs less, and the car waits while you walk a terrace or sit down to eat. That rate covers the whole vehicle for a flexible **10-12 hour** day, so a couple and a family of four pay the same figure. The detail is in [what a private driver costs](/bali/en/journal/bali-private-driver-cost).",
+          "If you would rather not plan it, the [Ubud rice terrace, temple and volcano tour](/bali/en/tours/ubud-highlights-tour) is that day already built: **from $65 per car, 10 hours, an 08:00 pickup**, no prepayment. If you are moving base, use the car for the move and put stops in between: Ubud check-in is commonly 14:00. Keep the last nights on the coast. The airport is **30-50 minutes from Seminyak against 1.5-2.5 hours from Ubud**, as [the airport to Ubud guide](/bali/en/journal/airport-to-ubud-transfer) shows."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "question": "How long does it take to get from Seminyak to Ubud?",
+        "answer": "About 60-90 minutes each way by car, depending on traffic. Leaving before the morning build-up keeps it near the short end, and we plan 1-1.5 hours for a normal morning start. The late afternoon is the slow version, because the run back south lands inside the 16:00-19:00 window."
+      },
+      {
+        "question": "How far is Ubud from Seminyak in kilometres?",
+        "answer": "We quote this route in time rather than distance, because distance predicts nothing useful here. Off the toll road Bali's realised average speed is around 30-35 km/h, and the Kuta, Seminyak and Canggu strip is where map estimates are most optimistic. Plan 60-90 minutes and set off early."
+      },
+      {
+        "question": "Can you visit Ubud as a day trip from Seminyak?",
+        "answer": "Yes, and most guests on a coast holiday do exactly that. Our Ubud rice terrace, temple and volcano day runs 10 hours from $65 per car with an 08:00 hotel pickup and returns you to Seminyak in the evening. Treat it as a whole day rather than a morning, and keep that night free."
+      },
+      {
+        "question": "Should I move from Seminyak to Ubud or just drive up?",
+        "answer": "Move if the interior is more than one day of your trip; day-trip if it is one item on a beach holiday. A hotel move costs a single drive and hands back the early mornings, which is when Ubud is at its best. For a short trip, one base and one long day is simpler and cheaper."
+      },
+      {
+        "question": "What time should I leave Seminyak to reach Ubud?",
+        "answer": "As early as you reasonably can. Mornings move fastest before the traffic builds, our Ubud day collects at 08:00 and the photo route at 07:00, and the two bad windows are 07:00-09:00 and 16:00-19:00. A late start costs you the quiet hour at the rice terraces as well as the time."
+      },
+      {
+        "question": "How much does a car from Seminyak to Ubud cost?",
+        "answer": "A private car with driver is from $59 per car for a flexible day of 10-12 hours, and the set Ubud route is from $65 per car over 10 hours. Both prices are per vehicle rather than per person, both include hotel pickup in Seminyak, and both are booked on WhatsApp with no prepayment."
+      }
+    ]
   }
 ];
 
@@ -41812,7 +42233,6 @@ const GUIDE_CLUSTERS = {
     "where-to-stay-bali-first-time",
   ],
   itineraries: [
-    "bali-itinerary-7-days-first-time",
     "bali-7-day-itinerary",
     "bali-itinerary-5-days",
     "bali-itinerary-10-days",
@@ -41820,6 +42240,10 @@ const GUIDE_CLUSTERS = {
     "bali-layover-day-tour",
   ],
   transport: [
+    "seminyak-to-ubud",
+    "seminyak-to-nusa-dua",
+    "seminyak-to-kuta",
+    "seminyak-to-jimbaran",
     "how-to-get-around-bali-transport-guide",
     "how-to-get-around-bali",
     "bali-airport-transfer-guide",
@@ -42338,7 +42762,6 @@ const JOURNAL_HUB_ROWS = [
     title: "Plan your first trip",
     subtitle: "The essentials, in the order you need them",
     slugs: [
-      "bali-itinerary-7-days-first-time",
       "best-time-to-visit-bali-month-by-month",
       "how-much-does-a-bali-trip-cost",
       "bali-visa-entry-requirements",
@@ -42954,7 +43377,16 @@ function renderGuideOfferBlock(article, variant = "top") {
             </section>`;
 }
 
-function renderTripPlannerCta() {
+/* Слаги, где читатель уже смотрит на готовый маршрут: ему не нужно
+   предлагать «спланировать неделю», он именно её и читает. Для таких статей
+   у блока свой заголовок — «наш вариант вы видели, соберите свой». */
+const ITINERARY_SLUGS = new Set([
+  "bali-7-day-itinerary", "bali-itinerary-5-days", "bali-itinerary-10-days",
+  "bali-itinerary-14-days", "nusa-penida-one-day-itinerary", "ubud-in-one-day",
+  "how-many-days-in-nusa-penida",
+]);
+
+function renderTripPlannerCta(article) {
   const arrow =
     '<svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">' +
     '<path d="M2.5 8h11M9 3.5 13.5 8 9 12.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
@@ -42969,12 +43401,14 @@ function renderTripPlannerCta() {
     '<circle cx="190" cy="40" r="12.5" fill="none" stroke="#b0741f" stroke-width="1.2" opacity=".35"/>' +
     "</svg>";
 
+  const onItinerary = ITINERARY_SLUGS.has(article?.guide?.slug || article?.slug || "");
+
   return `
             <section class="sb-journal-article-section">
               <aside class="sbplan">
                 <div class="sbplan__copy">
-                  <p class="sbplan__eyebrow">Your whole trip, day by day</p>
-                  <h2 class="sbplan__title">You have planned one day. Now plan the whole week.</h2>
+                  <p class="sbplan__eyebrow">${onItinerary ? "Your dates, your bases" : "Your whole trip, day by day"}</p>
+                  <h2 class="sbplan__title">${onItinerary ? "That was our week. Build the one that fits yours." : "You have planned one day. Now plan the whole week."}</h2>
                   <p class="sbplan__text">Set your dates, the area you are staying in and what you are into. The planner lays the days out on the island map — real SB Excursions tours, real prices, and room left for the days you want to keep free.</p>
                   <div class="sbplan__actions">
                     <a class="sbplan__cta" href="/ai-planner?lang=en">Open the trip planner ${arrow}</a>
@@ -43223,7 +43657,7 @@ ${renderGuideOfferBlock(article, "close")}
               </div>
             </section>
             ` : ""}
-${renderTripPlannerCta()}
+${renderTripPlannerCta(article)}
           </article>
 
 ${renderJournalTourPinCard(article.tour)}
@@ -43398,7 +43832,7 @@ ${JOURNAL_FOOTER_ASSETS}
                 </div>
               </section>
             ` : ""}
-${renderTripPlannerCta()}
+${renderTripPlannerCta(article)}
           </article>
 
 ${renderJournalTourPinCard(article.tour)}
@@ -47589,7 +48023,7 @@ const UNESCO_PDF_CHIPS = [
   [null, "Budget Eats", `${JOURNAL_HUB_ROUTE}/best-budget-restaurants-bali-warungs`],
   [null, "Beach Clubs", `${JOURNAL_HUB_ROUTE}/best-beach-clubs-bali-young-adults`],
   [null, "Couples Guide", `${JOURNAL_HUB_ROUTE}/best-things-to-do-bali-for-couples`],
-  [null, "7-Day Itinerary", `${JOURNAL_HUB_ROUTE}/bali-itinerary-7-days-first-time`],
+  [null, "7-Day Itinerary", `${JOURNAL_HUB_ROUTE}/bali-7-day-itinerary`],
   [null, "When to Go", `${JOURNAL_HUB_ROUTE}/best-time-to-visit-bali-month-by-month`],
   [null, "Trip Cost", `${JOURNAL_HUB_ROUTE}/how-much-does-a-bali-trip-cost`],
   [null, "Visa & Entry", `${JOURNAL_HUB_ROUTE}/bali-visa-entry-requirements`],

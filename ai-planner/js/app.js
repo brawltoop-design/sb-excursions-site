@@ -150,17 +150,29 @@
      приходит с кодом 200 и нужного размера, но поверх неё напечатано
      «API KEY REQUIRED». Поломку не ловит ни проверка кода ответа, ни
      naturalWidth — надпись видно только глазами, и она стояла на живой карте.
-     Voyager закрыт так же, ключа нет ни у одного из них.
 
-     Взамен — обычный OpenStreetMap, который бесплатен и не требует ключа, но
-     он цветной и спорит с маршрутами. Поэтому подложка обесцвечивается и
-     осветляется фильтром в CSS: фильтр висит на слое тайлов, а линии дней и
-     пины лежат в других слоях и остаются яркими. Получается прежний светлый
-     вид Positron, только с дорогами и подписями. */
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+     Positron, который был раньше, — это данные OpenStreetMap, осветлённые и
+     обесцвеченные. Пробовали светло-серую подложку Esri: ключа не требует, но
+     она беднее — половина дорог и подписей пропадает. Поэтому берём сам OSM,
+     где детали на месте, и повторяем стиль Positron фильтром в CSS. Ключ не
+     нужен, вид прежний, детализация даже выше. */
+  var baseTiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
+
+  /* Запасная подложка. Один провайдер уже сменил правила молча и без
+     предупреждения; если это повторится, карта не должна остаться пустой. */
+  var baseSwapped = false;
+  baseTiles.on('tileerror', function () {
+    if (baseSwapped) return;
+    baseSwapped = true;
+    map.removeLayer(baseTiles);
+    L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 16,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; Esri'
+    }).addTo(map);
+  });
 
   setTimeout(function () { map.invalidateSize(); }, 60);
   window.addEventListener('resize', function () { map.invalidateSize(); });
