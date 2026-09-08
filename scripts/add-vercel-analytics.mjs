@@ -41,7 +41,10 @@ const DUBAI = new Set([
   "files/page106026336body.html",
 ]);
 
-const SKIP_DIRS = new Set([".git", "node_modules", "_to_delete", "ai-planner"]);
+/* ai-planner раньше был исключён, и это делало планировщик слепой зоной:
+   4500 строк логики, кнопка в WhatsApp — и ни одного замера, пользуется ли
+   им кто-нибудь. Без счётчика невозможно проверить и стартовый пакет. */
+const SKIP_DIRS = new Set([".git", "node_modules", "_to_delete"]);
 const includeDubai = process.argv.includes("--include-dubai");
 
 async function* walk(dir) {

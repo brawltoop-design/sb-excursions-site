@@ -64,7 +64,8 @@
     pcImg: $('pcImg'), pcBadge: $('pcBadge'), pcCat: $('pcCat'), pcTitle: $('pcTitle'),
     pcRating: $('pcRating'), pcDesc: $('pcDesc'), pcTourName: $('pcTourName'),
     pcTourPrice: $('pcTourPrice'), pcTourLink: $('pcTourLink'), pcBook: $('pcBook'),
-    pcAdd: $('pcAdd'), pcMaps: $('pcMaps'), pcTour: $('pcTour')
+    pcAdd: $('pcAdd'), pcMaps: $('pcMaps'), pcTour: $('pcTour'),
+    wpWrap: $('wpWrap'), wpPack: $('sbWelcomePack'), wpNote: $('wpNote')
   };
 
   var LOC = {};
@@ -1013,6 +1014,11 @@
     });
     L.push('— — —');
     L.push('📊 ' + p.stats.stops + ' ' + T('точек маршрута') + ' · ~' + p.stats.km + ' ' + T('км'));
+    /* Стартовый пакет идёт отдельной строкой, а не пунктом дня: это не
+       экскурсия, а встреча с интернетом в первые полчаса после посадки. */
+    if (els.wpPack && els.wpPack.checked) {
+      L.push('🚐 ' + T('Нужен трансфер из аэропорта и eSIM') + ' · ' + p.stats.days + ' ' + T('дней'));
+    }
     L.push(T('Хочу забронировать эту поездку 🙌'));
     return L.join('\n');
   }
@@ -1021,6 +1027,23 @@
     els.planWa.href = 'https://wa.me/' + SB_WA_PHONE + '?text=' + encodeURIComponent(buildWaMessage());
     if (els.planWaWrap) els.planWaWrap.hidden = false;
     if (els.planWaNote) els.planWaNote.hidden = false;
+    if (els.wpWrap) els.wpWrap.hidden = false;
+    /* Длительность eSIM берём из уже выбранных дат: пакеты продаются на
+       3/5/7/10/15/30 дней, и человеку полезнее увидеть свой срок, чем
+       абстрактную вилку. Цену не называем, пока нет поставщика. */
+    if (els.wpNote && state.plan) {
+      var d = state.plan.stats.days;
+      els.wpNote.textContent = fmt('Трансфер от $15 за машину, eSIM на {n} дней', { n: d });
+    }
+  }
+
+  /* Замер спроса. Галочка — единственный способ узнать, нужен ли пакет
+     вообще, до того как договариваться с поставщиком eSIM. Событие уходит
+     в Vercel Analytics, если счётчик на странице есть; без него молчим. */
+  function trackWelcomePack(on) {
+    try {
+      if (typeof window.va === 'function') window.va('event', { name: 'welcome_pack', data: { on: on ? 1 : 0 } });
+    } catch (e) { /* аналитика не должна ломать планировщик */ }
   }
 
   /* ---------- Финал без анимации (reduced-motion) ---------- */
@@ -1307,6 +1330,10 @@
   els.areaSelect.addEventListener('change', function () { state.area = els.areaSelect.value; });
   els.groupSelect.addEventListener('change', function () { state.group = els.groupSelect.value; });
   els.budgetSelect.addEventListener('change', function () { state.budget = els.budgetSelect.value; });
+  if (els.wpPack) els.wpPack.addEventListener('change', function () {
+    trackWelcomePack(els.wpPack.checked);
+    updatePlanWa();
+  });
   state.area = els.areaSelect.value;
   state.group = els.groupSelect.value;
   state.budget = els.budgetSelect.value;
