@@ -58307,6 +58307,39 @@ function buildJournalLanguageSwitcherAssets() {
 </style>`;
 }
 
+/* Замена блока целиком, с учётом вложенности.
+
+   Регулярка вида /<div class="X"[\s\S]*?<\/div>/ выглядит безобидно, но
+   останавливается на ПЕРВОМ закрывающем теге — а внутри переключателя языков
+   лежит ещё один div (меню). Поэтому старая разметка вырезалась не до конца:
+   хвост «</details></div>» оставался в документе, к нему дописывался новый
+   переключатель, и на странице оказывалось шесть </details> против двух
+   открывающих. Лишние закрывающие теги схлопывали обёртку .sb-journal-page,
+   main выпадал наружу, и min-height:100vh давал пустой экран во весь вьюпорт:
+   человек из поиска видел белизну, пока не проматывал вниз. 1459 страниц,
+   все локализованные — английские собираются без этого шага и были целы.
+
+   Считаем баланс div от места открытия и режем по настоящему концу блока. */
+function replaceDivBlock(html, openTagPattern, replacement) {
+  const match = html.match(openTagPattern);
+  if (!match || match.index == null) return html;
+
+  const start = match.index;
+  const tag = /<\/?div\b/gi;
+  tag.lastIndex = start;
+  let depth = 0;
+  let found;
+  while ((found = tag.exec(html))) {
+    depth += found[0][1] === "/" ? -1 : 1;
+    if (depth === 0) {
+      const end = html.indexOf(">", found.index);
+      if (end === -1) return html;
+      return html.slice(0, start) + replacement + html.slice(end + 1);
+    }
+  }
+  return html;
+}
+
 function localizeJournalShell(html, locale = "en", currentRoute = localizedJournalHubRoute(locale)) {
   let localizedHtml = html.replace(/<html lang="[^"]+"/i, `<html lang="${locale}"`);
   const assets = buildJournalLanguageSwitcherAssets();
@@ -58316,13 +58349,15 @@ function localizeJournalShell(html, locale = "en", currentRoute = localizedJourn
 
   localizedHtml = rewriteBaliLocaleRoutesInHtml(localizedHtml, locale);
 
-  localizedHtml = localizedHtml.replace(
-    /<div class="sb-journal-tour-header__langs"[\s\S]*?<\/div>/,
+  localizedHtml = replaceDivBlock(
+    localizedHtml,
+    /<div class="sb-journal-tour-header__langs"[^>]*>/,
     `<div class="sb-journal-tour-header__langs">${renderJournalLanguageSwitcherMarkup(locale, currentRoute, "desktop")}</div>`,
   );
 
-  localizedHtml = localizedHtml.replace(
-    /<div class="sb-journal-tour-header__socials"[\s\S]*?<\/div>/,
+  localizedHtml = replaceDivBlock(
+    localizedHtml,
+    /<div class="sb-journal-tour-header__socials"[^>]*>/,
     `<div class="sb-journal-tour-header__socials" aria-label="Language selector">${renderJournalLanguageSwitcherMarkup(locale, currentRoute, "mobile")}</div>`,
   );
 
