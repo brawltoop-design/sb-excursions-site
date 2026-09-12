@@ -24,7 +24,7 @@ const version = createHash("sha256")
   .slice(0, 8);
 
 const TAG = `<script defer src="/${SRC}?v=${version}"></script>`;
-const ANY_TAG = /<script defer src="\/js\/sb-swipe-guard\.js(?:\?v=[a-f0-9]+)?"><\/script>/g;
+const ANY_TAG = /<script defer src="\/js\/sb-swipe-guard\.js(?:\?v=[0-9a-zA-Z]+)?"><\/script>/g;
 
 /* Признак страницы с каруселью: класс слайдера или ленты туров в разметке. */
 const NEEDS = /t-slds|t1003__/;
@@ -82,6 +82,10 @@ for await (const file of walk(ROOT)) {
      Требовать сторож от куска разметки бессмысленно. */
   if (!html.includes("</body>")) continue;
   if (NEEDS.test(html) && !html.includes(`/${SRC}`)) missing.push(path.basename(file));
+  /* Два тега — два события на клик. Версию штампует ещё и stamp-css-version.mjs,
+     и если она когда-нибудь окажется не шестнадцатеричной, ANY_TAG её не
+     узнает и вставит тег второй раз — ловим это здесь, а не в отчётах. */
+  if (html.split(`/${SRC}`).length > 2) missing.push(`${path.basename(file)} (тег дважды)`);
 }
 
 console.log(JSON.stringify({

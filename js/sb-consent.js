@@ -182,6 +182,12 @@
      ли окно, но по ней видно, где согласие обязательно по закону, а где мы
      спрашиваем по своей воле. */
   function init() {
+    /* Внутри чужого окна — ни баннера, ни счётчиков. Планировщик во вкладке
+       AI PLANNER на главной живёт в iframe: согласие уже спросила и
+       счётчики уже включила родительская страница; второй Clarity в iframe
+       удвоил бы сессии, а второй баннер — выглядел бы ошибкой. Отдельно
+       открытый /ai-planner — обычная страница, для неё всё как везде. */
+    try { if (window.self !== window.top) return; } catch (e) { return; }
     var choice = getChoice();
     if (choice === 'granted') { activateTrackers(); showCookieBtn(); return; }
     if (choice === 'denied') { showCookieBtn(); return; }

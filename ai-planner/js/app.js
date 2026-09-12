@@ -1047,9 +1047,49 @@
     L.push(T('Хочу забронировать эту поездку 🙌'));
     return L.join('\n');
   }
+  /* Клик по WhatsApp из планировщика — конверсия, и считается она двумя
+     путями в зависимости от того, где планировщик открыт.
+     - Во вкладке AI PLANNER на главной он живёт в iframe: согласие на
+       счётчики человек дал родительской странице, там же стоят GA и GTM.
+       Отдаём клик родителю через postMessage, его принимает
+       js/sb-wa-track.js и шлёт planner_whatsapp в свою аналитику.
+     - Отдельно открытый /ai-planner (на него ведут 1720 ссылок из статей —
+       главный путь с журнала) — обычная страница: сборка ставит на неё
+       согласие и счётчики, как на журнал, и клик считаем здесь же тем же
+       правилом «есть gtag — gtag, иначе dataLayer», что и sb-wa-track.js.
+     Одно и то же событие никогда не уходит обоими путями. */
+  function notifyWa(place, context) {
+    var data = {
+      place: String(place || '').slice(0, 120),
+      context: context || 'ai_planner',
+      page_type: 'planner',
+      locale: (document.documentElement.lang || 'en').slice(0, 2),
+      page_path: window.location.pathname,
+    };
+    try {
+      if (window.parent && window.parent !== window) {
+        window.parent.postMessage({ sb: 'planner_whatsapp', place: data.place, context: data.context }, window.location.origin);
+        return;
+      }
+    } catch (e) {}
+    try {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'planner_whatsapp', Object.assign({ transport_type: 'beacon' }, data));
+      } else {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(Object.assign({ event: 'planner_whatsapp' }, data));
+      }
+    } catch (e) {}
+    try { if (typeof window.ym === 'function') window.ym(106783251, 'reachGoal', 'planner_whatsapp', data); } catch (e) {}
+  }
+  var planWaTracked = false;
   function updatePlanWa() {
     if (!els.planWa) return;
     els.planWa.href = 'https://wa.me/' + SB_WA_PHONE + '?text=' + encodeURIComponent(buildWaMessage());
+    if (!planWaTracked) {
+      planWaTracked = true;
+      els.planWa.addEventListener('click', function () { notifyWa('FULL PLAN', 'full_plan'); });
+    }
     if (els.planWaWrap) els.planWaWrap.hidden = false;
     if (els.planWaNote) els.planWaNote.hidden = false;
     if (els.wpWrap) els.wpWrap.hidden = false;
@@ -1282,6 +1322,7 @@
     lines.push(T('Подскажите, пожалуйста, свободные даты и цену.'));
     // 'noopener' в features заставляет window.open вернуть null даже при успехе,
     // поэтому по результату судить нельзя — обнуляем opener вручную.
+    notifyWa(els.pcTitle ? els.pcTitle.textContent : '', 'ai_planner');
     var w = window.open('https://wa.me/' + SB_WA_PHONE + '?text=' + encodeURIComponent(lines.join('\n')), '_blank');
     if (w) w.opener = null;
     els.pcBook.textContent = T('Заявка отправлена'); els.pcBook.classList.add('is-done'); els.pcBook.disabled = true;

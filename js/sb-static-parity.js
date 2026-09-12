@@ -127,25 +127,10 @@
           return;
         }
 
-        // Any WhatsApp click — the actual conversion signal.
-        const wa = target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]');
-        if (wa) {
-          const isFullPlan = wa.id === "sbPlanWaBtn";
-          const inPlanner =
-            isFullPlan ||
-            !!wa.closest("#sbAiResultsGrid, .sb-ai-results, .sb-place-card, .sb-ai-result-card");
-          const card = wa.closest(".sb-place-card, .sb-ai-result-card");
-          const titleNode = card ? card.querySelector(".sb-place-title, h4, h3") : null;
-          sbTrack(inPlanner ? "planner_whatsapp" : "whatsapp_click", {
-            place: isFullPlan
-              ? "FULL PLAN"
-              : titleNode
-                ? titleNode.textContent.trim().slice(0, 120)
-                : "",
-            context: isFullPlan ? "full_plan" : inPlanner ? "ai_planner" : "site",
-            page_path: location.pathname,
-          });
-        }
+        // WhatsApp clicks are tracked by js/sb-wa-track.js on every page
+        // (this file is only on tours and the main page; the journal — 98 %
+        // of search clicks — had no tracking at all). Kept out of here so the
+        // event never fires twice on the pages that load both.
       },
       true,
     );

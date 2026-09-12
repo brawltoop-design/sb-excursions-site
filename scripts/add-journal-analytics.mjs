@@ -19,7 +19,7 @@
  * Идемпотентно: повторный запуск ничего не добавляет.
  * Запуск из scripts/build.mjs.
  */
-import { promises as fs } from "node:fs";
+import { promises as fs, existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -66,9 +66,17 @@ const IS_JOURNAL = /^bali-(journal|guides)[a-z0-9-]*\.html$/;
 
 const stats = { добавлено: 0, "уже стоит": 0, "счётчики уже были": 0, "не журнал": 0, "без body": 0 };
 
-for (const name of (await fs.readdir(ROOT)).filter((f) => f.endsWith(".html"))) {
-  if (!IS_JOURNAL.test(name)) { stats["не журнал"]++; continue; }
+/* Планировщик как отдельная страница: на него ведут 1720 ссылок из статей,
+   и до 12.09.2026 там не было ни согласия, ни счётчиков — путь «статья →
+   планировщик → WhatsApp» был невидим целиком. Внутри iframe на главной
+   этот же файл ничего не включает: sb-consent.js молчит во вложенном окне. */
+const EXTRA = ["ai-planner/index.html"];
+
+const targets = (await fs.readdir(ROOT)).filter((f) => f.endsWith(".html") && IS_JOURNAL.test(f)).concat(EXTRA);
+stats["не журнал"] = (await fs.readdir(ROOT)).filter((f) => f.endsWith(".html") && !IS_JOURNAL.test(f)).length;
+for (const name of targets) {
   const file = path.join(ROOT, name);
+  if (!existsSync(file)) continue;
   let html = await fs.readFile(file, "utf8");
 
   if (html.includes(MARK)) { stats["уже стоит"]++; continue; }

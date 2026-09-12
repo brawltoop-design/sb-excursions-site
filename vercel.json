@@ -47,6 +47,26 @@
       "statusCode": 301
     },
     {
+      "source": "/bali",
+      "destination": "/bali/en/main-page",
+      "statusCode": 301
+    },
+    {
+      "source": "/bali/en/tours",
+      "destination": "/bali/en/tour-prices",
+      "statusCode": 301
+    },
+    {
+      "source": "/bali/:lang(ru|es|fr|de|zh)/tours",
+      "destination": "/bali/:lang/main-page",
+      "statusCode": 301
+    },
+    {
+      "source": "/bali/:lang(en|ru|es|fr|de|zh)",
+      "destination": "/bali/:lang/main-page",
+      "statusCode": 301
+    },
+    {
       "source": "/bali/en/tours/unesco-heritage-sites-tour",
       "destination": "/bali/en/tours/bali-unesco",
       "statusCode": 301

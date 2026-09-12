@@ -1,0 +1,96 @@
+# Ручная индексация: GSC → Проверка URL → «Запросить индексирование».
+# По 8 в день, сверху вниз. Все адреса проверены 12.09.2026 — код ответа в скобках.
+# Ставь дату в конце строки, когда отправил.
+
+
+## P1 маршруты
+
+# День 1
+https://www.sbexcursion.com/bali/en/journal/seminyak-to-kuta  (200)
+https://www.sbexcursion.com/bali/fr/journal/seminyak-to-kuta  (200)
+https://www.sbexcursion.com/bali/es/journal/seminyak-to-kuta  (200)
+https://www.sbexcursion.com/bali/ru/journal/seminyak-to-kuta  (200)
+https://www.sbexcursion.com/bali/en/journal/seminyak-to-jimbaran  (200)
+https://www.sbexcursion.com/bali/fr/journal/seminyak-to-jimbaran  (200)
+https://www.sbexcursion.com/bali/es/journal/seminyak-to-jimbaran  (200)
+https://www.sbexcursion.com/bali/ru/journal/seminyak-to-jimbaran  (200)
+
+# День 2
+https://www.sbexcursion.com/bali/en/journal/seminyak-to-nusa-dua  (200)
+https://www.sbexcursion.com/bali/fr/journal/seminyak-to-nusa-dua  (200)
+https://www.sbexcursion.com/bali/es/journal/seminyak-to-nusa-dua  (200)
+https://www.sbexcursion.com/bali/ru/journal/seminyak-to-nusa-dua  (200)
+https://www.sbexcursion.com/bali/en/journal/seminyak-to-ubud  (200)
+https://www.sbexcursion.com/bali/fr/journal/seminyak-to-ubud  (200)
+https://www.sbexcursion.com/bali/es/journal/seminyak-to-ubud  (200)
+https://www.sbexcursion.com/bali/ru/journal/seminyak-to-ubud  (200)
+
+## P2 сравнения en
+
+# День 3
+https://www.sbexcursion.com/bali/en/journal/is-nusa-dua-worth-it  (200)
+https://www.sbexcursion.com/bali/en/journal/is-nusa-dua-a-good-base-for-day-trips  (200)
+https://www.sbexcursion.com/bali/en/journal/can-you-swim-in-nusa-dua  (200)
+https://www.sbexcursion.com/bali/en/journal/kuta-vs-uluwatu  (200)
+https://www.sbexcursion.com/bali/en/journal/kuta-vs-ubud  (200)
+https://www.sbexcursion.com/bali/en/journal/kuta-vs-sanur  (200)
+https://www.sbexcursion.com/bali/en/journal/kuta-vs-nusa-dua  (200)
+https://www.sbexcursion.com/bali/en/journal/canggu-vs-sanur  (200)
+
+# День 4
+https://www.sbexcursion.com/bali/en/journal/canggu-vs-nusa-dua  (200)
+https://www.sbexcursion.com/bali/en/journal/sanur-vs-nusa-dua  (200)
+https://www.sbexcursion.com/bali/en/journal/ubud-vs-sanur  (200)
+https://www.sbexcursion.com/bali/en/journal/ubud-vs-nusa-dua  (200)
+https://www.sbexcursion.com/bali/en/journal/uluwatu-vs-nusa-dua  (200)
+
+## P3 сравнения fr/es/ru
+https://www.sbexcursion.com/bali/fr/journal/is-nusa-dua-worth-it  (200)
+https://www.sbexcursion.com/bali/es/journal/is-nusa-dua-worth-it  (200)
+https://www.sbexcursion.com/bali/ru/journal/is-nusa-dua-worth-it  (200)
+
+# День 5
+https://www.sbexcursion.com/bali/fr/journal/is-nusa-dua-a-good-base-for-day-trips  (200)
+https://www.sbexcursion.com/bali/es/journal/is-nusa-dua-a-good-base-for-day-trips  (200)
+https://www.sbexcursion.com/bali/ru/journal/is-nusa-dua-a-good-base-for-day-trips  (200)
+https://www.sbexcursion.com/bali/fr/journal/can-you-swim-in-nusa-dua  (200)
+https://www.sbexcursion.com/bali/es/journal/can-you-swim-in-nusa-dua  (200)
+https://www.sbexcursion.com/bali/ru/journal/can-you-swim-in-nusa-dua  (200)
+https://www.sbexcursion.com/bali/fr/journal/kuta-vs-uluwatu  (200)
+https://www.sbexcursion.com/bali/es/journal/kuta-vs-uluwatu  (200)
+
+# День 6
+https://www.sbexcursion.com/bali/ru/journal/kuta-vs-uluwatu  (200)
+https://www.sbexcursion.com/bali/fr/journal/kuta-vs-ubud  (200)
+https://www.sbexcursion.com/bali/es/journal/kuta-vs-ubud  (200)
+https://www.sbexcursion.com/bali/ru/journal/kuta-vs-ubud  (200)
+https://www.sbexcursion.com/bali/fr/journal/kuta-vs-sanur  (200)
+https://www.sbexcursion.com/bali/es/journal/kuta-vs-sanur  (200)
+https://www.sbexcursion.com/bali/ru/journal/kuta-vs-sanur  (200)
+https://www.sbexcursion.com/bali/fr/journal/kuta-vs-nusa-dua  (200)
+
+# День 7
+https://www.sbexcursion.com/bali/es/journal/kuta-vs-nusa-dua  (200)
+https://www.sbexcursion.com/bali/ru/journal/kuta-vs-nusa-dua  (200)
+https://www.sbexcursion.com/bali/fr/journal/canggu-vs-sanur  (200)
+https://www.sbexcursion.com/bali/es/journal/canggu-vs-sanur  (200)
+https://www.sbexcursion.com/bali/ru/journal/canggu-vs-sanur  (200)
+https://www.sbexcursion.com/bali/fr/journal/canggu-vs-nusa-dua  (200)
+https://www.sbexcursion.com/bali/es/journal/canggu-vs-nusa-dua  (200)
+https://www.sbexcursion.com/bali/ru/journal/canggu-vs-nusa-dua  (200)
+
+# День 8
+https://www.sbexcursion.com/bali/fr/journal/sanur-vs-nusa-dua  (200)
+https://www.sbexcursion.com/bali/es/journal/sanur-vs-nusa-dua  (200)
+https://www.sbexcursion.com/bali/ru/journal/sanur-vs-nusa-dua  (200)
+https://www.sbexcursion.com/bali/fr/journal/ubud-vs-sanur  (200)
+https://www.sbexcursion.com/bali/es/journal/ubud-vs-sanur  (200)
+https://www.sbexcursion.com/bali/ru/journal/ubud-vs-sanur  (200)
+https://www.sbexcursion.com/bali/fr/journal/ubud-vs-nusa-dua  (200)
+https://www.sbexcursion.com/bali/es/journal/ubud-vs-nusa-dua  (200)
+
+# День 9
+https://www.sbexcursion.com/bali/ru/journal/ubud-vs-nusa-dua  (200)
+https://www.sbexcursion.com/bali/fr/journal/uluwatu-vs-nusa-dua  (200)
+https://www.sbexcursion.com/bali/es/journal/uluwatu-vs-nusa-dua  (200)
+https://www.sbexcursion.com/bali/ru/journal/uluwatu-vs-nusa-dua  (200)

@@ -68,16 +68,44 @@ function resolve(urlPath) {
   return urlPath;
 }
 
-/* Метки версий ?v=... вырезаем: правка одного файла стилей не делает
-   изменившимися все страницы сайта. */
+/* Из отпечатка вырезаем то, что меняется сборкой, а не содержимым:
+   - метки версий ?v=... — правка одного файла стилей не делает
+     изменившимися все страницы сайта;
+   - наши собственные подключаемые скрипты <script … src="/js/sb-*.js">:
+     12 сентября 2026 шаг add-wa-track.mjs добавил один тег на все страницы,
+     и карта сказала «изменились 1758 из 1759» — ровно то, от чего этот
+     скрипт уходит. Счётчик или сторож не меняют содержимое для читателя
+     и для Google, значит и дату менять не должны.
+   Версии допускаем буквенно-цифровые: stamp-css-version.mjs ставит хеш, но
+   руками встречались и даты вроде ?v=20260730e. */
 const fingerprint = (html) =>
-  createHash("sha256").update(String(html).replace(/\?v=[a-f0-9]+/g, "")).digest("hex").slice(0, 16);
+  createHash("sha256")
+    .update(
+      String(html)
+        .replace(/\?v=[0-9a-zA-Z]+/g, "")
+        .replace(/<script[^>]*\ssrc="\/js\/sb-[a-z0-9-]+\.js"[^>]*><\/script>/g, ""),
+    )
+    .digest("hex")
+    .slice(0, 16);
+
+/* Старый отпечаток — только для перехода: вырезал одни метки ?v=, а тега
+   sb-wa-track на страницах ещё не было. Когда в выводе сборки счётчик
+   «перенесено на новый отпечаток» станет нулём, этот блок можно удалить. */
+const legacyFingerprint = (html) =>
+  createHash("sha256")
+    .update(
+      String(html)
+        .replace(/\?v=[a-f0-9]+/g, "")
+        .replace(/<script defer src="\/js\/sb-wa-track\.js"><\/script>/g, ""),
+    )
+    .digest("hex")
+    .slice(0, 16);
 
 const sitemap = fs.readFileSync(SITEMAP, "utf8");
 let manifest = {};
 try { manifest = JSON.parse(fs.readFileSync(MANIFEST, "utf8")); } catch {}
 
-const stats = { всего: 0, изменились: 0, "дата сохранена": 0, "файл не найден": 0, впервые: 0 };
+const stats = { всего: 0, изменились: 0, "дата сохранена": 0, "перенесено на новый отпечаток": 0, "файл не найден": 0, впервые: 0 };
 const next = {};
 
 /* Идём по <url> целиком: <loc> и <lastmod> лежат в одном блоке, а
@@ -100,11 +128,17 @@ const out = sitemap.replace(/<url>([\s\S]*?)<\/url>/g, (block, inner) => {
     date = manifest[urlPath]?.date || TODAY;
     next[urlPath] = { hash: manifest[urlPath]?.hash || "", date };
   } else {
-    const hash = fingerprint(fs.readFileSync(file, "utf8"));
+    const html = fs.readFileSync(file, "utf8");
+    const hash = fingerprint(html);
     const prev = manifest[urlPath];
     if (!prev) { date = TODAY; stats.впервые += 1; }
-    else if (prev.hash !== hash) { date = TODAY; stats.изменились += 1; }
-    else { date = prev.date; stats["дата сохранена"] += 1; }
+    else if (prev.hash === hash) { date = prev.date; stats["дата сохранена"] += 1; }
+    else if (legacyFingerprint(html) === prev.hash) {
+      /* Одноразовый переход 12.09.2026: манифест считан старым отпечатком,
+         содержимое не менялось — переносим хеш, дату оставляем. */
+      date = prev.date; stats["перенесено на новый отпечаток"] += 1;
+    }
+    else { date = TODAY; stats.изменились += 1; }
     next[urlPath] = { hash, date };
   }
 
