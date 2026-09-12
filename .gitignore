@@ -7,3 +7,4 @@ node_modules/
 
 # Пакет для Instagram: медиа копируется из images/ и videos/, в git не нужно
 instagram-pack/*/
+audit/.venv/

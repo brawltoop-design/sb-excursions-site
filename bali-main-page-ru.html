@@ -893,10 +893,10 @@ font-family: "Cina GEO", "TildaSans", "Tilda Sans", -apple-system, BlinkMacSyste
 -moz-osx-font-smoothing: grayscale;
 text-rendering: optimizeLegibility;
 /* clip, а не hidden. По спецификации visible рядом с hidden по другой оси
-   вычисляется в auto — секция становилась скролл-контейнером, и липкая
-   лента фильтров внутри переставала липнуть (position:sticky считает
-   ближайший скроллпорт, а им оказывалась сама секция). clip отсекает так же,
-   но скролл-контейнер не создаёт, и visible рядом с ним остаётся visible. */
+   вычисляется в auto — секция становилась скролл-контейнером со всеми
+   последствиями: лишний скроллпорт для sticky-потомков, программная
+   прокручиваемость вбок. clip отсекает так же, но скролл-контейнер не
+   создаёт, и visible рядом с ним остаётся visible. */
 overflow-x: clip;
 overflow-y: visible;
 position: relative;
@@ -923,13 +923,18 @@ max-width: none;
 margin: 0;
 padding: 0 20px;
 }
+/* Не липкая. Была объявлена sticky с самого начала, но не липла никогда:
+   секция #sb-excursions-page вычислялась в скролл-контейнер, и sticky
+   считала свой порог от неё, а не от окна. 12 сентября 2026 секцию
+   починили (overflow: clip), липкость включилась впервые — и пилюля
+   AI PLANNER повисла под шапкой и тряслась при прокрутке: sticky вместе с
+   backdrop-filter и прячущейся шапкой Tilda даёт дрожание в iOS Safari.
+   Владелец попросил вернуть как было. Фон и размытие сняты вместе с
+   липкостью — статичному блоку ничего не проезжает под низом. */
 #sb-excursions-page .sb-filters-shell {
-position: sticky;
-top: 0;
-z-index: 20;
+position: static;
 padding: 2px 0 10px;
-background: linear-gradient(to bottom, rgba(255,255,255,0.98), rgba(255,255,255,0.93));
-backdrop-filter: blur(10px);
+background: #fff;
 }
 #sb-excursions-page .sb-filters {
 display: flex;
