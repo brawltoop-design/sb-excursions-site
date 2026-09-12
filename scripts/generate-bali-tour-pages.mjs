@@ -45732,7 +45732,7 @@ function renderReviewFormBlock(tour) {
     .sb-review-cta .srf-star:hover { transform: scale(1.15); }
     .sb-review-cta .srf-row { display: flex; gap: 12px; }
     .sb-review-cta .srf-row > div { flex: 1; }
-    .sb-review-cta input, .sb-review-cta textarea { width: 100%; box-sizing: border-box; font-family: inherit; font-size: 14.5px; color: #191919; border: 1px solid rgba(21,21,21,0.16); border-radius: 12px; padding: 12px 15px; background: #fff; }
+    .sb-review-cta input, .sb-review-cta textarea { width: 100%; box-sizing: border-box; font-family: inherit; font-size: 16px; color: #191919; border: 1px solid rgba(21,21,21,0.16); border-radius: 12px; padding: 12px 15px; background: #fff; }
     .sb-review-cta input:focus, .sb-review-cta textarea:focus { border-color: #2f6bff; outline: none; }
     .sb-review-cta textarea { min-height: 110px; resize: vertical; }
     .sb-review-cta .srf-send { display: inline-flex; align-items: center; gap: 9px; margin-top: 18px; border-radius: 999px; border: none; background: #191919; color: #fff; font-size: 15px; font-weight: 500; padding: 14px 28px; cursor: pointer; font-family: inherit; transition: background .25s ease, transform .25s ease; }

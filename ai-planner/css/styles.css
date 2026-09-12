@@ -236,12 +236,19 @@ html.is-embed .app { height: 100vh; }
   font-size: 12.5px; font-weight: 600;
   margin-bottom: clamp(4px, 0.8vh, 7px);
 }
+/* Ровно 16px, и меньше нельзя. iOS Safari при фокусе на поле с кеглем
+   меньше 16px увеличивает ВСЮ вкладку, и обратно она сама не возвращается:
+   после этого визуальный вьюпорт таскается пальцем, шапка position:fixed
+   срезается краем экрана, содержимое уходит влево. Именно так выглядела
+   жалоба «всё поехало, хедер уехал, влево-вправо ходит» 9 сентября 2026 —
+   планировщик вставляется в главную айфреймом (js/sb-static-parity.js),
+   поэтому зум с формы разъезжается на всю страницу под ней. */
 .field-input {
   width: 100%;
   max-width: 100%;
   min-width: 0;
   font-family: var(--font);
-  font-size: 14px;
+  font-size: 16px;
   color: var(--ink);
   border-radius: 12px;
   border: 1px solid rgba(21, 21, 21, 0.16);
@@ -1192,12 +1199,14 @@ html.is-embed .app { height: 100vh; }
   margin: 0 0 7px;
 }
 .ask__row { display: flex; gap: 8px; align-items: stretch; }
+/* 16px — см. причину у .field-input. Это поле стоит первым в форме, палец
+   попадает в него сразу, поэтому оно и стало главным входом в автозум. */
 .ask__input {
   flex: 1 1 auto;
   min-width: 0;
   padding: 12px 14px;
   font: inherit;
-  font-size: 15px;
+  font-size: 16px;
   color: inherit;
   background: #fff;
   border: 1px solid var(--line, #e6e1d8);

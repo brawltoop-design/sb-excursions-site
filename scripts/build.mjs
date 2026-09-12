@@ -54,6 +54,8 @@ const STEPS = [
   ["check-pinned-translations.mjs", "проверка: в закреплённых переводах нет дублей и чужих кодов языка"],
   ["check-header-logo.mjs", "проверка: логотип в мобильной шапке темнее фона"],
   ["check-inline-js.mjs", "проверка: инлайновый JS парсится на всех страницах"],
+  ["fix-input-font-size.mjs", "кегль полей в страницах, которые генератор патчит на месте"],
+  ["check-input-font-size.mjs", "проверка: поля ввода не мельче 16px — иначе iOS зумит всю вкладку"],
 ];
 
 for (const [script, label] of STEPS) {
